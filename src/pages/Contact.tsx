@@ -80,9 +80,9 @@ const Contact = () => {
                 {
                   icon: Phone,
                   title: 'Call Us',
-                  content: '+1 (234) 567-890',
-                  description: 'Mon-Fri: 8AM - 6PM',
-                  link: 'tel:+1234567890',
+                  content: '+968 93754388',
+                  description: 'Sun-Fri: 8AM - 6PM',
+                  link: 'tel:+96893754388',
                 },
                 {
                   icon: Mail,
@@ -101,8 +101,8 @@ const Contact = () => {
                 {
                   icon: MapPin,
                   title: 'Visit Us',
-                  content: '123 Chemical Street',
-                  description: 'Industrial Zone, UAE',
+                  content: 'Office-3, Building Number 1737',
+                  description: 'Near Oman LNG, Ghala, Muscat, Sultanate of Oman',
                   link: null,
                 },
               ].map((item, index) => {
@@ -246,15 +246,11 @@ const Contact = () => {
                       <h3 className="font-semibold text-foreground mb-3">Business Hours</h3>
                       <div className="space-y-2 text-sm">
                         <div className="flex justify-between">
-                          <span className="text-muted-foreground">Monday - Friday:</span>
+                          <span className="text-muted-foreground">Sunday - Friday:</span>
                           <span className="font-medium">8:00 AM - 6:00 PM</span>
                         </div>
                         <div className="flex justify-between">
                           <span className="text-muted-foreground">Saturday:</span>
-                          <span className="font-medium">9:00 AM - 2:00 PM</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-muted-foreground">Sunday:</span>
                           <span className="font-medium">Closed</span>
                         </div>
                       </div>
@@ -313,7 +309,7 @@ const Contact = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
-                <a href="tel:+1234567890">
+                <a href="tel:+96893754388">
                   <Phone className="w-5 h-5 mr-2" />
                   Call Now
                 </a>
