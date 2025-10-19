@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin } from 'lucide-react';
-import logo from '@/assets/gcoman-logo.png';
+import logo from '@/assets/global-chemicals-logo.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -15,7 +15,7 @@ const Footer = () => {
               <img 
                 src={logo} 
                 alt="Global Chemicals LLC Logo" 
-                className="h-12 w-auto brightness-0 invert opacity-90 hover:opacity-100 transition-opacity"
+                className="h-16 w-auto hover:opacity-90 transition-opacity"
               />
             </Link>
             <p className="text-white/70 text-sm leading-relaxed">
