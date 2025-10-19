@@ -9,7 +9,7 @@ const QuickActions = () => {
       title: 'Product Finder',
       description: 'Find the perfect chemical solution for your needs',
       link: '/products',
-      color: 'from-blue-500 to-blue-600',
+      color: 'from-secondary to-secondary/80',
     },
     {
       icon: MessageSquare,
@@ -23,14 +23,14 @@ const QuickActions = () => {
       title: 'Technical Resources',
       description: 'Download SDS, specs, and technical guides',
       link: '/resources',
-      color: 'from-green-500 to-green-600',
+      color: 'from-tertiary to-tertiary/80',
     },
     {
       icon: FileText,
       title: 'Sample Request',
       description: 'Order product samples for testing',
       link: '/contact',
-      color: 'from-purple-500 to-purple-600',
+      color: 'from-accent to-primary',
     },
   ];
 
