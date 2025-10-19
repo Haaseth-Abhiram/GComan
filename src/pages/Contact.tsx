@@ -273,8 +273,8 @@ const Contact = () => {
                       <p className="text-sm text-muted-foreground mb-3">
                         Expert guidance for product selection and application
                       </p>
-                      <a href="mailto:technical@gcoman.com" className="text-sm text-primary hover:text-primary/80 font-medium">
-                        technical@gcoman.com
+                      <a href="mailto:support@gcoman.com" className="text-sm text-primary hover:text-primary/80 font-medium">
+                        support@gcoman.com
                       </a>
                     </div>
                   </div>
