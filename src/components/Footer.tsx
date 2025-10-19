@@ -68,13 +68,13 @@ const Footer = () => {
               <li className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <span className="text-white/70 text-sm">
-                  123 Chemical Street, Industrial Zone, City, Country
+                  Office-3, Building Number 1737, Near Oman LNG, Ghala, Muscat, Sultanate of Oman
                 </span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                <a href="tel:+1234567890" className="text-white/70 hover:text-primary transition-colors text-sm">
-                  +1 (234) 567-890
+                <a href="tel:+96893754388" className="text-white/70 hover:text-primary transition-colors text-sm">
+                  +968 93754388
                 </a>
               </li>
               <li className="flex items-center space-x-3">
