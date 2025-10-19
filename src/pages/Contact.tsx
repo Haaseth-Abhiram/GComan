@@ -81,7 +81,7 @@ const Contact = () => {
                   icon: Phone,
                   title: 'Call Us',
                   content: '+968 93754388',
-                  description: 'Sun-Fri: 8AM - 6PM',
+                  description: 'Sun-Thu: 8AM - 6PM',
                   link: 'tel:+96893754388',
                 },
                 {
@@ -246,11 +246,11 @@ const Contact = () => {
                       <h3 className="font-semibold text-foreground mb-3">Business Hours</h3>
                       <div className="space-y-2 text-sm">
                         <div className="flex justify-between">
-                          <span className="text-muted-foreground">Sunday - Friday:</span>
+                          <span className="text-muted-foreground">Sunday - Thursday:</span>
                           <span className="font-medium">8:00 AM - 6:00 PM</span>
                         </div>
                         <div className="flex justify-between">
-                          <span className="text-muted-foreground">Saturday:</span>
+                          <span className="text-muted-foreground">Friday - Saturday:</span>
                           <span className="font-medium">Closed</span>
                         </div>
                       </div>
