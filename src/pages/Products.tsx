@@ -16,7 +16,6 @@ interface Product {
   image?: string;
   details?: {
     formula?: string;
-    casNumber?: string;
     fullDescription?: string;
     applications?: string[];
   };
@@ -36,7 +35,6 @@ const Products = () => {
       icon: Droplets,
       details: {
         formula: 'Al2(SO4)3',
-        casNumber: '10043-01-3',
         fullDescription: 'Aluminium Sulphate is an inorganic salt that, in its liquid form, is an aqueous solution of the compound. It is widely used across various industries due to its effectiveness as a flocculant and coagulant.',
         applications: ['Water purification', 'Wastewater treatment', 'Paper manufacturing', 'Textile processing'],
       },
@@ -49,7 +47,6 @@ const Products = () => {
       icon: Droplets,
       details: {
         formula: 'CaCl2',
-        casNumber: '10043-52-4',
         fullDescription: "It's an inorganic compound, a salt of calcium and chlorine. Highly hygroscopic, meaning it readily absorbs moisture from the air.",
         applications: ['De-icing', 'Dust control', 'Food processing', 'Concrete acceleration', 'Wastewater treatment'],
       },
@@ -62,7 +59,6 @@ const Products = () => {
       icon: Droplets,
       details: {
         formula: 'Ca(ClO)2',
-        casNumber: '7778-54-3',
         fullDescription: 'Calcium hypochlorite is a white, solid disinfectant and bleaching agent commonly known as "bleaching powder" that is widely used to sanitize swimming pools and drinking water.',
         applications: ['Water purification', 'Pool sanitation', 'Bleaching', 'Disinfection', 'Algae control'],
       },
@@ -75,7 +71,6 @@ const Products = () => {
       icon: Droplets,
       details: {
         formula: 'NaOH',
-        casNumber: '1310-73-2',
         fullDescription: 'Caustic soda is an inorganic compound that, in its pure form, is a white, odorless, crystalline solid. Highly hygroscopic and forms a highly alkaline solution with pH of 14.',
         applications: ['Paper production', 'Water treatment', 'Cleaning agents', 'Soap making', 'Aluminum extraction'],
       },
@@ -88,7 +83,6 @@ const Products = () => {
       icon: Droplets,
       details: {
         formula: 'C18H30O6',
-        casNumber: '67701-29-5',
         fullDescription: 'Antifoam agents work by lowering the surface tension of the liquid, which destabilizes the walls of the foam bubbles and causes them to collapse.',
         applications: ['Food processing', 'Wastewater treatment', 'Pulp and paper', 'Petrochemicals'],
       },
@@ -123,7 +117,6 @@ const Products = () => {
       icon: Droplets,
       details: {
         formula: 'C3Cl3N3O3',
-        casNumber: '87-90-1',
         fullDescription: 'Trichloroisocyanuric Acid (TCCA) is a stabilized form of organic chlorine, commonly found as white, crystalline powder, granules, or tablets.',
         applications: ['Water treatment', 'Pool sanitation', 'Disinfection', 'Cleaning', 'Agriculture', 'Bleaching'],
       },
@@ -184,7 +177,6 @@ const Products = () => {
       icon: FlaskConical,
       details: {
         formula: 'CaCO3',
-        casNumber: '471-34-1',
         fullDescription: 'Calcium carbonate is a common chemical compound that is the main component of substances like chalk, limestone, marble, and shells of marine organisms.',
         applications: ['Construction materials', 'Plastics filler', 'Paper manufacturing', 'Paint industry', 'Calcium supplements'],
       },
@@ -225,7 +217,6 @@ const Products = () => {
       icon: Beaker,
       details: {
         formula: 'C6H8O7',
-        casNumber: '77-92-9',
         fullDescription: 'Citric acid is a white, crystalline, odorless solid with a strong sour taste. Highly soluble in water and key intermediate in the citric acid cycle.',
         applications: ['Food preservative', 'Flavoring agent', 'Cleaning', 'pH adjustment', 'Buffer solutions'],
       },
@@ -568,12 +559,6 @@ const Products = () => {
                   </div>
                 )}
 
-                {selectedProduct.details?.casNumber && (
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-2">CAS Number</h4>
-                    <p className="text-muted-foreground font-mono">{selectedProduct.details.casNumber}</p>
-                  </div>
-                )}
 
                 {selectedProduct.details?.fullDescription && (
                   <div>
