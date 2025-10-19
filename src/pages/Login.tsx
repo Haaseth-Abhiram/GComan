@@ -8,7 +8,7 @@ import { Separator } from '@/components/ui/separator';
 import { useToast } from '@/hooks/use-toast';
 import { Eye, EyeOff, Mail, Lock, ArrowLeft } from 'lucide-react';
 import { z } from 'zod';
-import logo from '@/assets/gcoman-logo.png';
+import logo from '@/assets/global-chemicals-logo.png';
 
 // Validation schemas
 const loginSchema = z.object({
