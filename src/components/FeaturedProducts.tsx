@@ -14,12 +14,12 @@ const FeaturedProducts = () => {
       image: 'https://images.unsplash.com/photo-1581093458791-9f3c3250a531?w=500',
     },
     {
-      icon: Beaker,
-      name: 'Lab Chemicals & Reagents',
-      category: 'Laboratory',
-      description: 'High-purity chemicals for research, analysis, and quality control applications.',
-      features: ['99.9% Purity', 'ISO Certified', 'Fast Delivery'],
-      image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=500',
+      icon: Droplets,
+      name: 'Oil & Gas Solutions',
+      category: 'Energy',
+      description: 'Specialized chemicals for drilling, production, and refining operations in the oil and gas industry.',
+      features: ['Performance Proven', 'Industry Standard', 'Technical Support'],
+      image: 'https://images.unsplash.com/photo-1566228015668-4c45dbc4e2f5?w=500',
     },
     {
       icon: Wrench,
