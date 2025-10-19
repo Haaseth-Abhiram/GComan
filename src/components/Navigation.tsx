@@ -15,13 +15,12 @@ const Navigation = () => {
     { label: 'INDUSTRIES', path: '/industries' },
     { label: 'RESOURCES', path: '/resources' },
     { label: 'BLOG/NEWS', path: '/blog' },
-    { label: 'SUPPORTS', path: '/supports' },
+    { label: 'CONTACT', path: '/contact' },
   ];
 
   const utilityLinks = [
     { label: 'Partners', path: '/partners' },
     { label: 'Career', path: '/career' },
-    { label: 'Contact', path: '/contact' },
     { label: 'Login', path: '/login' },
   ];
 

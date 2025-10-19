@@ -90,7 +90,7 @@ const Hero = () => {
                 <span className="w-2 h-2 bg-primary rounded-full" />
                 Download SDS
               </a>
-              <a href="/supports" className="text-white/80 hover:text-white transition-colors flex items-center gap-2">
+              <a href="/contact" className="text-white/80 hover:text-white transition-colors flex items-center gap-2">
                 <span className="w-2 h-2 bg-secondary rounded-full" />
                 Technical Support
               </a>
