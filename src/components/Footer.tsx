@@ -25,39 +25,60 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4 text-white">Company</h3>
             <ul className="space-y-2">
-              {['About', 'Products', 'Industries', 'Resources', 'Blog/News', 'Supports'].map((item) => (
-                <li key={item}>
-                  <Link
-                    to={`/${item.toLowerCase().replace('/', '-')}`}
-                    className="text-white/70 hover:text-primary transition-colors text-sm"
-                  >
-                    {item}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link to="/about" className="text-white/70 hover:text-primary transition-colors text-sm">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/career" className="text-white/70 hover:text-primary transition-colors text-sm">
+                  Careers
+                </Link>
+              </li>
+              <li>
+                <Link to="/partners" className="text-white/70 hover:text-primary transition-colors text-sm">
+                  Partners
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog" className="text-white/70 hover:text-primary transition-colors text-sm">
+                  News & Insights
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-white/70 hover:text-primary transition-colors text-sm">
+                  Contact Us
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Solutions */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">Our Services</h3>
+            <h3 className="text-lg font-semibold mb-4 text-white">Solutions</h3>
             <ul className="space-y-2">
-              {[
-                'Water Treatment',
-                'Lab Equipment',
-                'Lab Chemicals',
-                'Lubricants & Greases',
-                'Specialty Chemicals',
-                'Food & Beverages',
-              ].map((item) => (
-                <li key={item}>
-                  <Link to="/products" className="text-white/70 hover:text-primary transition-colors text-sm">
-                    {item}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link to="/products" className="text-white/70 hover:text-primary transition-colors text-sm">
+                  All Products
+                </Link>
+              </li>
+              <li>
+                <Link to="/industries" className="text-white/70 hover:text-primary transition-colors text-sm">
+                  Industries We Serve
+                </Link>
+              </li>
+              <li>
+                <Link to="/resources" className="text-white/70 hover:text-primary transition-colors text-sm">
+                  Technical Resources
+                </Link>
+              </li>
+              <li>
+                <Link to="/supports" className="text-white/70 hover:text-primary transition-colors text-sm">
+                  Customer Support
+                </Link>
+              </li>
             </ul>
           </div>
 
