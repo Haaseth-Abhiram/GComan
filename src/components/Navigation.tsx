@@ -18,7 +18,7 @@ const Navigation = () => {
   ];
 
   const utilityLinks = [
-    { label: 'Partners', path: '/partners' },
+    { label: 'Customers', path: '/customers' },
     { label: 'Career', path: '/career' },
     { label: 'Login', path: '/login' },
   ];
