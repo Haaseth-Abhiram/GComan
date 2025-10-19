@@ -16,7 +16,7 @@ const QuickActions = () => {
       title: 'Request Quote',
       description: 'Get a custom quote for bulk orders',
       link: '/contact',
-      color: 'from-primary to-orange-600',
+      color: 'from-primary to-accent',
     },
     {
       icon: Download,

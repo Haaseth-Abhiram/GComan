@@ -36,8 +36,8 @@ const IndustrySelector = () => {
       icon: Fuel,
       name: 'Oil & Gas',
       description: 'Specialized solutions for energy sector',
-      color: 'from-orange-500/10 to-orange-600/10',
-      iconColor: 'text-orange-600',
+      color: 'from-accent/10 to-accent/20',
+      iconColor: 'text-accent',
     },
     {
       icon: Waves,
