@@ -3,53 +3,417 @@ import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Beaker, Droplets, Wrench, Zap, FlaskConical, TestTube } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
+import { Beaker, Droplets, Wrench, Zap, FlaskConical, TestTube, Factory, Building2, Wheat, Microscope, Sparkles, FlaskRound, Flame, Wind, Wine } from 'lucide-react';
+import { useState } from 'react';
+
+interface Product {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  icon: any;
+  image?: string;
+  details?: {
+    formula?: string;
+    casNumber?: string;
+    fullDescription?: string;
+    applications?: string[];
+  };
+}
 
 const Products = () => {
-  const products = [
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+
+  const products: Product[] = [
+    // Water Treatment Chemicals
     {
-      icon: FlaskConical,
-      title: 'Calcium Carbonate',
-      description:
-        'High-purity calcium carbonate for various industrial applications including plastics, paint, and paper industries.',
-      category: 'Specialty Chemicals',
-    },
-    {
-      icon: Wrench,
-      title: 'Lubricants & Greases',
-      description:
-        'Premium quality lubricants and greases designed for industrial machinery and automotive applications.',
-      category: 'Industrial',
-    },
-    {
+      id: 'aluminium-sulphate',
+      title: 'Aluminium Sulphate',
+      description: 'Inorganic salt used as a flocculant and coagulant in water treatment applications.',
+      category: 'water-treatment',
       icon: Droplets,
-      title: 'Water Treatment',
-      description:
-        'Comprehensive range of chemicals for water and wastewater treatment, ensuring clean and safe water.',
-      category: 'Treatment Solutions',
+      details: {
+        formula: 'Al2(SO4)3',
+        casNumber: '10043-01-3',
+        fullDescription: 'Aluminium Sulphate is an inorganic salt that, in its liquid form, is an aqueous solution of the compound. It is widely used across various industries due to its effectiveness as a flocculant and coagulant.',
+        applications: ['Water purification', 'Wastewater treatment', 'Paper manufacturing', 'Textile processing'],
+      },
     },
     {
+      id: 'calcium-chloride',
+      title: 'Calcium Chloride',
+      description: 'Highly hygroscopic salt used for de-icing, dust control, and industrial applications.',
+      category: 'water-treatment',
+      icon: Droplets,
+      details: {
+        formula: 'CaCl2',
+        casNumber: '10043-52-4',
+        fullDescription: "It's an inorganic compound, a salt of calcium and chlorine. Highly hygroscopic, meaning it readily absorbs moisture from the air.",
+        applications: ['De-icing', 'Dust control', 'Food processing', 'Concrete acceleration', 'Wastewater treatment'],
+      },
+    },
+    {
+      id: 'calcium-hypochlorite',
+      title: 'Calcium Hypochlorite',
+      description: 'Powerful disinfectant and bleaching agent for water treatment and sanitation.',
+      category: 'water-treatment',
+      icon: Droplets,
+      details: {
+        formula: 'Ca(ClO)2',
+        casNumber: '7778-54-3',
+        fullDescription: 'Calcium hypochlorite is a white, solid disinfectant and bleaching agent commonly known as "bleaching powder" that is widely used to sanitize swimming pools and drinking water.',
+        applications: ['Water purification', 'Pool sanitation', 'Bleaching', 'Disinfection', 'Algae control'],
+      },
+    },
+    {
+      id: 'caustic-soda',
+      title: 'Caustic Soda',
+      description: 'Strong alkaline compound used in manufacturing, cleaning, and chemical processing.',
+      category: 'water-treatment',
+      icon: Droplets,
+      details: {
+        formula: 'NaOH',
+        casNumber: '1310-73-2',
+        fullDescription: 'Caustic soda is an inorganic compound that, in its pure form, is a white, odorless, crystalline solid. Highly hygroscopic and forms a highly alkaline solution with pH of 14.',
+        applications: ['Paper production', 'Water treatment', 'Cleaning agents', 'Soap making', 'Aluminum extraction'],
+      },
+    },
+    {
+      id: 'antifoam',
+      title: 'Antifoam',
+      description: 'Chemical agents that prevent foam formation in industrial processes.',
+      category: 'water-treatment',
+      icon: Droplets,
+      details: {
+        formula: 'C18H30O6',
+        casNumber: '67701-29-5',
+        fullDescription: 'Antifoam agents work by lowering the surface tension of the liquid, which destabilizes the walls of the foam bubbles and causes them to collapse.',
+        applications: ['Food processing', 'Wastewater treatment', 'Pulp and paper', 'Petrochemicals'],
+      },
+    },
+    {
+      id: 'antiscalant',
+      title: 'Antiscalant',
+      description: 'Prevents scale formation in water treatment systems and RO membranes.',
+      category: 'water-treatment',
+      icon: Droplets,
+      details: {
+        fullDescription: 'Antiscalant is a chemical additive used to prevent the formation of scale—hard mineral deposits—on surfaces in water treatment systems.',
+        applications: ['RO membrane protection', 'Desalination', 'Cooling systems', 'Boiler efficiency', 'Maintenance reduction'],
+      },
+    },
+    {
+      id: 'biocides',
+      title: 'Biocides',
+      description: 'Antimicrobial agents for controlling bacteria, viruses, and fungi.',
+      category: 'water-treatment',
+      icon: Droplets,
+      details: {
+        fullDescription: 'Biocides work by disrupting the cellular functions of harmful organisms like bacteria, viruses, fungi, and algae.',
+        applications: ['Water treatment', 'Healthcare', 'Agriculture', 'Consumer products', 'Microbial contamination prevention'],
+      },
+    },
+    {
+      id: 'tcca',
+      title: 'Trichloroisocyanuric Acid (TCCA)',
+      description: 'Stabilized chlorine compound for long-lasting disinfection and sanitation.',
+      category: 'water-treatment',
+      icon: Droplets,
+      details: {
+        formula: 'C3Cl3N3O3',
+        casNumber: '87-90-1',
+        fullDescription: 'Trichloroisocyanuric Acid (TCCA) is a stabilized form of organic chlorine, commonly found as white, crystalline powder, granules, or tablets.',
+        applications: ['Water treatment', 'Pool sanitation', 'Disinfection', 'Cleaning', 'Agriculture', 'Bleaching'],
+      },
+    },
+
+    // Lubricants & Greases
+    {
+      id: 'shell-lubricants',
+      title: 'Shell Lubricants',
+      description: 'Comprehensive range of Shell automotive and industrial lubricants for optimal performance.',
+      category: 'lubricants',
+      icon: Wrench,
+      details: {
+        fullDescription: "Shell's portfolio includes Shell Helix engine oils, Shell Advance for motorcycles, Shell Rimula for heavy-duty diesel, Shell Gadus greases, Shell Tellus hydraulic fluids, and Shell Omala gear oils.",
+        applications: ['Engine protection', 'Hydraulic systems', 'Gear systems', 'Compressors', 'Turbines', 'Machine tools'],
+      },
+    },
+    {
+      id: 'mobil-lubricants',
+      title: 'Mobil Lubricants',
+      description: 'Advanced synthetic and conventional lubricants including Mobil 1 and Mobil Delvac.',
+      category: 'lubricants',
+      icon: Wrench,
+      details: {
+        fullDescription: 'Mobil offers Mobil 1 synthetic engine oils, Mobil Super conventional oils, Mobil Delvac for heavy-duty diesel, Mobil DTE hydraulic fluids, Mobilgear, and Mobil SHC synthetic lubricants.',
+        applications: ['Automotive protection', 'Commercial vehicles', 'Industrial machinery', 'Hydraulic systems', 'Extreme conditions'],
+      },
+    },
+    {
+      id: 'castrol-lubricants',
+      title: 'Castrol Lubricants',
+      description: 'Premium "Liquid Engineering" solutions with Castrol EDGE and MAGNATEC technologies.',
+      category: 'lubricants',
+      icon: Wrench,
+      details: {
+        fullDescription: "Castrol's range includes Castrol EDGE full-synthetic, Castrol MAGNATEC with intelligent molecules, Castrol GTX, Castrol VECTON for heavy-duty diesel, and industrial fluids.",
+        applications: ['Maximum engine performance', 'Start-up protection', 'Sludge prevention', 'Heavy-duty vehicles', 'Industrial equipment'],
+      },
+    },
+    {
+      id: 'gp-lubricants',
+      title: 'GP (IPOL) Lubricants',
+      description: 'IPOL brand automotive and industrial lubricants including metal working fluids.',
+      category: 'lubricants',
+      icon: Wrench,
+      details: {
+        fullDescription: "GP Petroleums' IPOL range includes automotive engine oils, hydraulic oils, gear oils, spindle oils, turbine oils, metal working fluids, and specialty greases.",
+        applications: ['Automotive engines', 'Industrial machinery', 'Metal working', 'Rubber processing', 'Sugar industry'],
+      },
+    },
+
+    // Calcium Carbonate
+    {
+      id: 'calcium-carbonate',
+      title: 'Calcium Carbonate',
+      description: 'High-purity calcium carbonate for construction, plastics, and industrial applications.',
+      category: 'calcium-carbonate',
+      icon: FlaskConical,
+      details: {
+        formula: 'CaCO3',
+        casNumber: '471-34-1',
+        fullDescription: 'Calcium carbonate is a common chemical compound that is the main component of substances like chalk, limestone, marble, and shells of marine organisms.',
+        applications: ['Construction materials', 'Plastics filler', 'Paper manufacturing', 'Paint industry', 'Calcium supplements'],
+      },
+    },
+
+    // Additives
+    {
+      id: 'additives',
+      title: 'Industrial Additives',
+      description: 'Specialized additives to enhance product performance across multiple industries.',
+      category: 'additives',
       icon: Zap,
-      title: 'Additives',
-      description:
-        'Specialized additives to enhance product performance across multiple industries and applications.',
-      category: 'Performance',
+      details: {
+        fullDescription: 'Comprehensive range of additives designed to improve performance, stability, and quality of industrial products and processes.',
+        applications: ['Performance enhancement', 'Stability improvement', 'Process optimization', 'Quality control'],
+      },
     },
+
+    // Lab Equipment
     {
+      id: 'lab-equipment',
+      title: 'Laboratory Handling Equipment',
+      description: 'Premium laboratory equipment including beakers, flasks, and specialized vessels.',
+      category: 'lab-equipment',
       icon: TestTube,
-      title: 'Lab Equipment',
-      description:
-        'Professional laboratory equipment and instruments for research, quality control, and testing facilities.',
-      category: 'Laboratory',
+      details: {
+        fullDescription: 'Our product range includes borosilicate glass beakers, crucibles, Erlenmeyer flasks, volumetric flasks, and distillation flasks, expertly crafted for specific laboratory processes.',
+        applications: ['Chemical reactions', 'Titrations', 'Solution preparation', 'Distillation', 'Laboratory testing'],
+      },
     },
+
+    // Lab Chemicals
     {
+      id: 'citric-acid',
+      title: 'Citric Acid',
+      description: 'High-purity citric acid for food, pharmaceutical, and industrial applications.',
+      category: 'lab-chemicals',
       icon: Beaker,
-      title: 'Lab Chemicals',
-      description:
-        'High-grade laboratory chemicals and reagents for analytical and research applications.',
-      category: 'Laboratory',
+      details: {
+        formula: 'C6H8O7',
+        casNumber: '77-92-9',
+        fullDescription: 'Citric acid is a white, crystalline, odorless solid with a strong sour taste. Highly soluble in water and key intermediate in the citric acid cycle.',
+        applications: ['Food preservative', 'Flavoring agent', 'Cleaning', 'pH adjustment', 'Buffer solutions'],
+      },
+    },
+
+    // Swimming Pool Chemicals
+    {
+      id: 'pool-chlorine',
+      title: 'Pool Chlorination Products',
+      description: 'Complete range of chlorine-based sanitizers for swimming pool maintenance.',
+      category: 'swimming-pool',
+      icon: Droplets,
+      details: {
+        fullDescription: 'Comprehensive pool chemical solutions including calcium hypochlorite, TCCA tablets, and liquid chlorine for effective pool sanitation.',
+        applications: ['Water sanitization', 'Algae prevention', 'pH balance', 'Shock treatment', 'Regular maintenance'],
+      },
+    },
+
+    // Oilfield & Refinery
+    {
+      id: 'oilfield-chemicals',
+      title: 'Oilfield & Refinery Chemicals',
+      description: 'Specialized chemicals for oil extraction, drilling, and refinery operations.',
+      category: 'oilfield',
+      icon: Factory,
+      details: {
+        fullDescription: 'Range of chemicals designed for the oil and gas industry including drilling fluids, production chemicals, and refinery additives.',
+        applications: ['Drilling operations', 'Production enhancement', 'Refinery processes', 'Pipeline maintenance'],
+      },
+    },
+
+    // Construction
+    {
+      id: 'construction-chemicals',
+      title: 'Construction Chemicals',
+      description: 'Advanced chemicals for construction projects including concrete additives and sealants.',
+      category: 'construction',
+      icon: Building2,
+      details: {
+        fullDescription: 'Reliable products and innovative technologies that enhance efficiency, safety, and quality in construction from infrastructure to specialized building solutions.',
+        applications: ['Concrete acceleration', 'Waterproofing', 'Structural strengthening', 'Surface treatment'],
+      },
+    },
+
+    // Food & Beverage
+    {
+      id: 'food-beverage-chemicals',
+      title: 'Food & Beverage Grade Chemicals',
+      description: 'Food-safe chemicals ensuring quality and safety in food processing.',
+      category: 'food-beverage',
+      icon: Wine,
+      details: {
+        fullDescription: 'Innovative solutions that ensure quality, safety, and efficiency in food and beverage production from strict hygiene standards to consistent product quality.',
+        applications: ['Food processing', 'Beverage production', 'Sanitation', 'Quality control', 'Preservation'],
+      },
+    },
+
+    // Agro Products
+    {
+      id: 'agro-products',
+      title: 'Agricultural Products',
+      description: 'Agricultural chemicals and solutions for crop protection and enhancement.',
+      category: 'agro',
+      icon: Wheat,
+      details: {
+        fullDescription: 'Comprehensive range of agricultural chemicals designed to support modern farming practices and enhance crop yields.',
+        applications: ['Crop protection', 'Soil treatment', 'Fertilizers', 'Growth enhancers'],
+      },
+    },
+
+    // Soap & Detergent Chemicals
+    {
+      id: 'soap-detergent',
+      title: 'Soap & Detergent Chemicals',
+      description: 'Complete range of raw materials for soap and detergent manufacturing.',
+      category: 'soap-detergent',
+      icon: Sparkles,
+      details: {
+        fullDescription: 'Reliable source for a comprehensive range of chemicals specifically designed for the detergent and soap industry.',
+        applications: ['Soap manufacturing', 'Detergent production', 'Cleaning products', 'Surface active agents'],
+      },
+    },
+
+    // Solvents
+    {
+      id: 'industrial-solvents',
+      title: 'Industrial Solvents',
+      description: 'High-quality solvents for industrial cleaning, processing, and manufacturing.',
+      category: 'solvents',
+      icon: FlaskRound,
+      details: {
+        fullDescription: 'Comprehensive range of solvents for various industrial applications including cleaning, extraction, and processing.',
+        applications: ['Industrial cleaning', 'Chemical processing', 'Extraction', 'Manufacturing'],
+      },
+    },
+
+    // Inorganic Chemicals
+    {
+      id: 'inorganic-chemicals',
+      title: 'Inorganic Chemicals',
+      description: 'Wide range of inorganic compounds for industrial processes.',
+      category: 'inorganic',
+      icon: Microscope,
+      details: {
+        fullDescription: 'Diverse portfolio of inorganic chemicals supporting various industrial manufacturing and processing needs.',
+        applications: ['Chemical manufacturing', 'Industrial processes', 'Water treatment', 'Metal processing'],
+      },
+    },
+
+    // Chlorinated Solvents
+    {
+      id: 'chlorinated-solvents',
+      title: 'Chlorinated Solvents',
+      description: 'Specialized chlorinated solvents for degreasing and industrial cleaning.',
+      category: 'chlorinated',
+      icon: Flame,
+      details: {
+        fullDescription: 'Range of chlorinated solvents designed for demanding industrial cleaning and degreasing applications.',
+        applications: ['Metal degreasing', 'Industrial cleaning', 'Dry cleaning', 'Chemical intermediates'],
+      },
+    },
+
+    // Ethanolamines
+    {
+      id: 'ethanolamines',
+      title: 'Ethanolamines',
+      description: 'Versatile ethanolamines for gas treatment, detergents, and chemical synthesis.',
+      category: 'ethanolamines',
+      icon: Beaker,
+      details: {
+        fullDescription: 'Family of organic compounds used in various industrial applications from gas sweetening to surfactant production.',
+        applications: ['Gas treatment', 'Surfactant production', 'Chemical synthesis', 'Metalworking fluids'],
+      },
+    },
+
+    // Glycols
+    {
+      id: 'glycols',
+      title: 'Glycols',
+      description: 'Industrial glycols for antifreeze, coolants, and chemical manufacturing.',
+      category: 'glycols',
+      icon: Wind,
+      details: {
+        fullDescription: 'Range of glycols including ethylene glycol and propylene glycol for diverse industrial applications.',
+        applications: ['Antifreeze', 'Coolants', 'Chemical intermediates', 'De-icing', 'Heat transfer'],
+      },
+    },
+
+    // Alcohols
+    {
+      id: 'industrial-alcohols',
+      title: 'Industrial Alcohols',
+      description: 'High-purity alcohols for solvents, sanitizers, and chemical processing.',
+      category: 'alcohols',
+      icon: FlaskRound,
+      details: {
+        fullDescription: 'Comprehensive range of industrial-grade alcohols for various manufacturing and processing applications.',
+        applications: ['Solvents', 'Sanitizers', 'Chemical synthesis', 'Fuel additives', 'Cleaning agents'],
+      },
     },
   ];
+
+  const categories = [
+    { id: 'all', name: 'All Products', icon: FlaskConical },
+    { id: 'water-treatment', name: 'Water Treatment Chemicals', icon: Droplets },
+    { id: 'lubricants', name: 'Lubricants & Greases', icon: Wrench },
+    { id: 'calcium-carbonate', name: 'Calcium Carbonate', icon: FlaskConical },
+    { id: 'additives', name: 'Additives', icon: Zap },
+    { id: 'lab-equipment', name: 'Lab Equipment', icon: TestTube },
+    { id: 'lab-chemicals', name: 'Lab Chemicals', icon: Beaker },
+    { id: 'swimming-pool', name: 'Swimming Pool Chemicals', icon: Droplets },
+    { id: 'oilfield', name: 'Oilfield & Refinery', icon: Factory },
+    { id: 'construction', name: 'Construction', icon: Building2 },
+    { id: 'food-beverage', name: 'Food & Beverage', icon: Wine },
+    { id: 'agro', name: 'Agro Products', icon: Wheat },
+    { id: 'soap-detergent', name: 'Soap & Detergent', icon: Sparkles },
+    { id: 'solvents', name: 'Solvents', icon: FlaskRound },
+    { id: 'inorganic', name: 'Inorganic Chemicals', icon: Microscope },
+    { id: 'chlorinated', name: 'Chlorinated Solvents', icon: Flame },
+    { id: 'ethanolamines', name: 'Ethanolamines', icon: Beaker },
+    { id: 'glycols', name: 'Glycols', icon: Wind },
+    { id: 'alcohols', name: 'Alcohols', icon: FlaskRound },
+  ];
+
+  const getFilteredProducts = (categoryId: string) => {
+    if (categoryId === 'all') return products;
+    return products.filter((product) => product.category === categoryId);
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -68,51 +432,156 @@ const Products = () => {
         </div>
       </section>
 
-      {/* Products Overview */}
+      {/* Products Section with Tabs */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-12 animate-fade-in-up">
             <p className="text-lg text-muted-foreground leading-relaxed">
               Global Chemicals LLC specializes in supplying a wide range of high-quality chemicals for various
-              industries. We take pride in offering exceptional solutions that meet the unique needs of our customers.
-              Our diverse product portfolio includes:
+              industries. Browse our comprehensive product portfolio by category below.
             </p>
           </div>
 
-          {/* Product Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {products.map((product, index) => {
-              const Icon = product.icon;
-              return (
-                <Card
-                  key={index}
-                  className="group p-6 hover:shadow-xl transition-all animate-fade-in border-border hover:border-primary/50 cursor-pointer"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <div className="space-y-4">
-                    <div className="flex items-start justify-between">
-                      <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <Icon className="w-7 h-7 text-primary" />
-                      </div>
-                      <Badge variant="secondary" className="text-xs">
-                        {product.category}
-                      </Badge>
-                    </div>
-                    <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
-                      {product.title}
-                    </h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{product.description}</p>
-                    <button className="text-primary font-semibold text-sm hover:underline flex items-center gap-2 group/btn">
-                      Learn More
-                      <span className="group-hover/btn:translate-x-1 transition-transform">→</span>
-                    </button>
+          <Tabs defaultValue="all" className="w-full max-w-7xl mx-auto">
+            <div className="mb-8 overflow-x-auto">
+              <TabsList className="inline-flex w-auto flex-wrap min-w-full justify-start gap-2 bg-transparent p-0">
+                {categories.map((category) => {
+                  const Icon = category.icon;
+                  return (
+                    <TabsTrigger
+                      key={category.id}
+                      value={category.id}
+                      className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground px-4 py-2 rounded-lg border border-border bg-card hover:bg-accent transition-all"
+                    >
+                      <Icon className="w-4 h-4 mr-2" />
+                      {category.name}
+                    </TabsTrigger>
+                  );
+                })}
+              </TabsList>
+            </div>
+
+            {categories.map((category) => (
+              <TabsContent key={category.id} value={category.id} className="mt-8">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {getFilteredProducts(category.id).map((product, index) => {
+                    const Icon = product.icon;
+                    return (
+                      <Card
+                        key={product.id}
+                        onClick={() => setSelectedProduct(product)}
+                        className="group p-6 hover:shadow-xl transition-all animate-fade-in border-border hover:border-primary/50 cursor-pointer"
+                        style={{ animationDelay: `${index * 0.05}s` }}
+                      >
+                        <div className="space-y-4">
+                          <div className="flex items-start justify-between">
+                            <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                              <Icon className="w-6 h-6 text-primary" />
+                            </div>
+                          </div>
+                          <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors line-clamp-2">
+                            {product.title}
+                          </h3>
+                          <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
+                            {product.description}
+                          </p>
+                          <button className="text-primary font-semibold text-sm hover:underline flex items-center gap-2 group/btn">
+                            View Details
+                            <span className="group-hover/btn:translate-x-1 transition-transform">→</span>
+                          </button>
+                        </div>
+                      </Card>
+                    );
+                  })}
+                </div>
+
+                {getFilteredProducts(category.id).length === 0 && (
+                  <div className="text-center py-16">
+                    <p className="text-muted-foreground text-lg">
+                      No products available in this category at the moment.
+                    </p>
                   </div>
-                </Card>
-              );
-            })}
-          </div>
+                )}
+              </TabsContent>
+            ))}
+          </Tabs>
         </div>
       </section>
+
+      {/* Product Details Dialog */}
+      <Dialog open={!!selectedProduct} onOpenChange={() => setSelectedProduct(null)}>
+        <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+          {selectedProduct && (
+            <>
+              <DialogHeader>
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center flex-shrink-0">
+                    {(() => {
+                      const Icon = selectedProduct.icon;
+                      return <Icon className="w-8 h-8 text-primary" />;
+                    })()}
+                  </div>
+                  <div>
+                    <DialogTitle className="text-2xl font-bold text-foreground">
+                      {selectedProduct.title}
+                    </DialogTitle>
+                    <p className="text-muted-foreground mt-1">{selectedProduct.description}</p>
+                  </div>
+                </div>
+              </DialogHeader>
+
+              <div className="space-y-6">
+                {selectedProduct.details?.formula && (
+                  <div>
+                    <h4 className="font-semibold text-foreground mb-2">Chemical Formula</h4>
+                    <p className="text-muted-foreground font-mono text-lg">{selectedProduct.details.formula}</p>
+                  </div>
+                )}
+
+                {selectedProduct.details?.casNumber && (
+                  <div>
+                    <h4 className="font-semibold text-foreground mb-2">CAS Number</h4>
+                    <p className="text-muted-foreground font-mono">{selectedProduct.details.casNumber}</p>
+                  </div>
+                )}
+
+                {selectedProduct.details?.fullDescription && (
+                  <div>
+                    <h4 className="font-semibold text-foreground mb-2">Description</h4>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {selectedProduct.details.fullDescription}
+                    </p>
+                  </div>
+                )}
+
+                {selectedProduct.details?.applications && selectedProduct.details.applications.length > 0 && (
+                  <div>
+                    <h4 className="font-semibold text-foreground mb-3">Applications</h4>
+                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                      {selectedProduct.details.applications.map((app, index) => (
+                        <li key={index} className="flex items-start gap-2">
+                          <span className="text-primary mt-1 flex-shrink-0">•</span>
+                          <span className="text-muted-foreground text-sm">{app}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                <div className="pt-4 border-t border-border">
+                  <p className="text-sm text-muted-foreground">
+                    For more information about this product, pricing, or technical specifications, please{' '}
+                    <a href="/contact" className="text-primary hover:underline font-semibold">
+                      contact us
+                    </a>
+                    .
+                  </p>
+                </div>
+              </div>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
 
       {/* Product Features */}
       <section className="py-16 bg-muted/30">
