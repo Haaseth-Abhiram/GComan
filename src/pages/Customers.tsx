@@ -8,46 +8,55 @@ import { Building2, Award, Users, TrendingUp, Quote } from 'lucide-react';
 
 interface Customer {
   name: string;
-  logo?: string;
+  logo: string;
   industry: string;
   description: string;
   testimonial?: string;
   contactPerson?: string;
+  featured?: boolean;
 }
 
 const Customers = () => {
   const customers: Customer[] = [
     {
       name: 'OKO',
+      logo: '/placeholder.svg',
       industry: 'Oil & Gas',
       description: 'Leading oil and gas company leveraging our chemical solutions for enhanced production efficiency',
       testimonial: 'Global Chemicals LLC has been instrumental in optimizing our operations with their high-quality chemical solutions and exceptional technical support.',
-      contactPerson: 'Operations Director'
+      contactPerson: 'Operations Director',
+      featured: true
     },
     {
       name: 'PDO (Petroleum Development Oman)',
+      logo: '/placeholder.svg',
       industry: 'Oil & Gas',
       description: 'Major petroleum development company utilizing our specialized chemicals for drilling and production',
       testimonial: 'Their commitment to quality and timely delivery has made them our trusted partner for critical chemical supplies.',
-      contactPerson: 'Procurement Manager'
+      contactPerson: 'Procurement Manager',
+      featured: true
     },
     {
       name: 'Oman Water Treatment Co.',
+      logo: '/placeholder.svg',
       industry: 'Water Treatment',
       description: 'Municipal water treatment facility using our advanced chemical solutions for water purification'
     },
     {
       name: 'Al-Jazeera Steel Manufacturing',
+      logo: '/placeholder.svg',
       industry: 'Manufacturing',
       description: 'Industrial manufacturing plant relying on our chemicals for production processes'
     },
     {
       name: 'Muscat Pharmaceutical Labs',
+      logo: '/placeholder.svg',
       industry: 'Pharmaceutical',
       description: 'Pharmaceutical research facility utilizing our high-purity laboratory chemicals'
     },
     {
       name: 'Salalah Construction Group',
+      logo: '/placeholder.svg',
       industry: 'Construction',
       description: 'Construction company using our specialty chemicals for concrete and material processing'
     }
@@ -143,38 +152,84 @@ const Customers = () => {
         </div>
       </section>
 
-      {/* Customer Logo Grid */}
+      {/* Featured Customer Logos */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+              Featured Clients
+            </h2>
+            <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+              Proud partners with leading organizations in Oman's key industries
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+              {customers.filter(c => c.featured).map((customer, index) => (
+                <Card 
+                  key={index} 
+                  className="hover:shadow-xl transition-all hover:-translate-y-1 group animate-fade-in overflow-hidden"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <CardHeader className="pb-4">
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="flex-1">
+                        <div className="h-24 bg-background rounded-lg border-2 border-border flex items-center justify-center p-4 mb-4 group-hover:border-primary/50 transition-colors">
+                          <img 
+                            src={customer.logo} 
+                            alt={`${customer.name} logo`}
+                            className="max-h-full max-w-full object-contain opacity-80 group-hover:opacity-100 transition-opacity"
+                          />
+                        </div>
+                        <Badge variant="secondary" className="mb-2">{customer.industry}</Badge>
+                        <CardTitle className="text-2xl group-hover:text-primary transition-colors">
+                          {customer.name}
+                        </CardTitle>
+                      </div>
+                    </div>
+                    <CardDescription className="mt-3 text-base">
+                      {customer.description}
+                    </CardDescription>
+                  </CardHeader>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* All Customer Logos Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-              Trusted by Industry Leaders
+              Our Valued Customers
             </h2>
             <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-              We're honored to partner with some of the most respected organizations across various industries in Oman
+              Serving excellence across multiple industries throughout Oman
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
               {customers.map((customer, index) => (
                 <Card 
                   key={index} 
                   className="hover:shadow-xl transition-all hover:-translate-y-1 group animate-fade-in"
                   style={{ animationDelay: `${index * 50}ms` }}
                 >
-                  <CardHeader>
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center group-hover:from-primary/20 group-hover:to-primary/10 transition-colors">
-                        <Building2 className="h-8 w-8 text-primary" />
-                      </div>
-                      <Badge variant="secondary">{customer.industry}</Badge>
+                  <CardContent className="p-6">
+                    <div className="aspect-square bg-background border-2 border-border rounded-lg flex items-center justify-center p-4 mb-4 group-hover:border-primary/50 transition-colors">
+                      <img 
+                        src={customer.logo} 
+                        alt={`${customer.name} logo`}
+                        className="max-h-full max-w-full object-contain opacity-70 group-hover:opacity-100 transition-opacity"
+                      />
                     </div>
-                    <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                    <h3 className="font-semibold text-center text-sm line-clamp-2 group-hover:text-primary transition-colors">
                       {customer.name}
-                    </CardTitle>
-                    <CardDescription className="mt-2">
-                      {customer.description}
-                    </CardDescription>
-                  </CardHeader>
+                    </h3>
+                    <p className="text-xs text-muted-foreground text-center mt-1">
+                      {customer.industry}
+                    </p>
+                  </CardContent>
                 </Card>
               ))}
             </div>
