@@ -13,7 +13,7 @@ const Hero = () => {
           alt="Laboratory with blue chemical test tubes"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/75" />
         
         {/* Animated particles */}
         <div className="absolute inset-0 opacity-30">
@@ -57,7 +57,7 @@ const Hero = () => {
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
               Transforming Industries with
               <br />
-              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              <span className="text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]">
                 Premium Chemicals
               </span>
             </h1>
@@ -78,7 +78,7 @@ const Hero = () => {
               </a>
               <a
                 href="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg border-2 border-white/30 backdrop-blur-sm transition-all transform hover:scale-105"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-white hover:bg-white/90 text-secondary font-semibold rounded-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-105"
               >
                 Request a Quote
               </a>
