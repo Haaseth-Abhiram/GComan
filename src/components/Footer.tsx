@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import logo from '@/assets/gcoman-logo.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,15 +11,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-secondary to-secondary/80 flex items-center justify-center">
-                <span className="text-white font-bold text-lg">G</span>
-              </div>
-              <div>
-                <div className="text-primary font-bold text-base leading-tight">GLOBAL</div>
-                <div className="text-secondary font-bold text-xs leading-tight">CHEMICALS LLC</div>
-              </div>
-            </div>
+            <Link to="/" className="inline-block">
+              <img 
+                src={logo} 
+                alt="Global Chemicals LLC Logo" 
+                className="h-12 w-auto brightness-0 invert opacity-90 hover:opacity-100 transition-opacity"
+              />
+            </Link>
             <p className="text-white/70 text-sm leading-relaxed">
               Leading provider of specialty chemicals, delivering high-quality products and innovative solutions.
             </p>

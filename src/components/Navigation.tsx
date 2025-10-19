@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import logo from '@/assets/gcoman-logo.png';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,16 +50,12 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 group">
-            <div className="relative">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-secondary to-secondary/80 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow">
-                <span className="text-white font-bold text-xl">G</span>
-              </div>
-            </div>
-            <div className="hidden md:block">
-              <div className="text-primary font-bold text-xl leading-tight">GLOBAL</div>
-              <div className="text-secondary font-bold text-sm leading-tight">CHEMICALS LLC</div>
-            </div>
+          <Link to="/" className="flex items-center group">
+            <img 
+              src={logo} 
+              alt="Global Chemicals LLC Logo" 
+              className="h-12 md:h-14 w-auto transition-transform group-hover:scale-105"
+            />
           </Link>
 
           {/* Desktop Navigation */}
