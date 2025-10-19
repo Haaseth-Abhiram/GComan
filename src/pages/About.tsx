@@ -19,43 +19,24 @@ const About = () => {
   const values = [
     {
       icon: Shield,
-      title: 'Quality Products',
-      description: 'We maintain the highest standards in every product we deliver, ensuring reliability and excellence through rigorous testing and quality control.',
+      title: 'Quality Assurance',
+      description: 'ISO 9001 certified with rigorous testing and quality control ensuring reliability and excellence in every product.',
     },
     {
       icon: Lightbulb,
-      title: 'Innovation & Research',
-      description: 'Continuously developing new solutions through cutting-edge research and development initiatives to stay ahead of industry trends.',
+      title: 'Innovation',
+      description: 'Cutting-edge research and development delivering innovative chemical solutions for evolving industry needs.',
     },
     {
       icon: Leaf,
-      title: 'Environmental Sustainability',
-      description: 'Committed to sustainable practices that protect our environment for future generations through eco-friendly products and processes.',
+      title: 'Sustainability',
+      description: 'Committed to eco-friendly practices and products that protect our environment for future generations.',
     },
     {
       icon: Heart,
-      title: 'Customer-Centric Approach',
-      description: 'Your success is our priority. We listen, understand, and deliver tailored solutions that exceed expectations.',
+      title: 'Customer Focus',
+      description: 'Personalized service and tailored solutions that exceed expectations and drive your success.',
     },
-    {
-      icon: Shield,
-      title: 'Health and Safety',
-      description: 'Ensuring the safety of our team, customers, and communities in all our operations with strict safety protocols.',
-    },
-    {
-      icon: Award,
-      title: 'Ethical Business Practices',
-      description: 'Conducting business with integrity, transparency, and respect for all stakeholders in everything we do.',
-    },
-  ];
-
-  const milestones = [
-    { year: '2009', title: 'Company Founded', description: 'Global Chemicals LLC established in Muscat, Oman' },
-    { year: '2012', title: 'ISO Certification', description: 'Achieved ISO 9001 certification for quality management' },
-    { year: '2015', title: 'Regional Expansion', description: 'Extended operations across the Middle East region' },
-    { year: '2018', title: '500+ Clients', description: 'Reached milestone of serving over 500 satisfied clients' },
-    { year: '2020', title: 'Modern Facility', description: 'Opened state-of-the-art storage and distribution center' },
-    { year: '2024', title: 'Industry Leader', description: 'Recognized as one of Oman\'s leading chemical suppliers' },
   ];
 
   return (
@@ -136,13 +117,9 @@ const About = () => {
                   Your Trusted Partner in Chemical Solutions
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  At Global Chemicals LLC, we are a leading provider of specialty chemicals, dedicated to delivering
-                  high-quality products and innovative solutions to meet the diverse needs of our customers.
-                </p>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  With a strong reputation for reliability, excellence, and customer satisfaction, we strive to be your
-                  preferred partner in the chemical industry. Our comprehensive product portfolio includes specialty and
-                  commodity chemicals that cater to various industries worldwide.
+                  Global Chemicals LLC is a leading provider of specialty chemicals in Oman, delivering high-quality products 
+                  and innovative solutions across diverse industries. With ISO 9001 certification and 15+ years of expertise, 
+                  we combine technical excellence with personalized service to be your trusted chemical supply partner.
                 </p>
                 <div className="flex gap-4 pt-4">
                   <div className="flex items-center gap-2">
@@ -198,10 +175,8 @@ const About = () => {
                   <h3 className="text-3xl font-bold text-foreground">Our Mission</h3>
                 </div>
                 <p className="text-muted-foreground leading-relaxed text-lg">
-                  To be a trusted global provider of specialty and commodity chemicals, delivering exceptional solutions
-                  that meet the diverse needs of our customers. We aim to achieve this by offering high-quality products,
-                  personalized service, and innovative solutions, while fostering sustainable practices and long-lasting
-                  partnerships.
+                  To deliver exceptional chemical solutions through high-quality products, personalized service, and 
+                  innovative practices while fostering sustainable partnerships that drive customer success.
                 </p>
               </Card>
 
@@ -213,10 +188,8 @@ const About = () => {
                   <h3 className="text-3xl font-bold text-foreground">Our Vision</h3>
                 </div>
                 <p className="text-muted-foreground leading-relaxed text-lg">
-                  To be a leader in the chemical industry, recognized for our commitment to excellence, customer
-                  satisfaction, and environmental responsibility. We strive to continually expand our product portfolio,
-                  leveraging cutting-edge technologies and industry expertise to provide innovative solutions that drive
-                  our customers' success.
+                  To be recognized as the leading chemical supplier in the region, setting industry standards for 
+                  excellence, innovation, and environmental responsibility.
                 </p>
               </Card>
             </div>
@@ -236,22 +209,22 @@ const About = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {values.map((value, index) => {
                 const Icon = value.icon;
                 return (
                   <Card
                     key={index}
-                    className="p-8 hover:shadow-2xl transition-all hover:-translate-y-1 group animate-fade-in"
+                    className="p-6 hover:shadow-xl transition-all hover:-translate-y-1 group animate-fade-in"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all">
-                      <Icon className="w-7 h-7 text-primary" />
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-all">
+                      <Icon className="w-6 h-6 text-primary" />
                     </div>
-                    <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                    <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                       {value.title}
                     </h3>
-                    <p className="text-muted-foreground leading-relaxed">{value.description}</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{value.description}</p>
                   </Card>
                 );
               })}
@@ -286,62 +259,11 @@ const About = () => {
                   Meet the Team Behind Our Success
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Our experienced team of chemical engineers, technical experts, and customer service professionals
-                  brings decades of combined industry knowledge to serve your needs.
+                  Our team of chemical engineers, technical experts, and customer service professionals combines 
+                  decades of industry knowledge with a commitment to excellence. We provide expert technical guidance, 
+                  24/7 support, and deep understanding of industry-specific requirements to ensure your success.
                 </p>
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-1">Technical Expertise</h4>
-                      <p className="text-muted-foreground">Qualified chemical engineers providing expert guidance</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-1">Customer Support</h4>
-                      <p className="text-muted-foreground">24/7 dedicated support team ready to assist you</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-1">Industry Knowledge</h4>
-                      <p className="text-muted-foreground">Deep understanding of diverse industry requirements</p>
-                    </div>
-                  </div>
-                </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Journey Timeline */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16 animate-fade-in">
-              <Badge variant="outline" className="text-primary border-primary/30 mb-4">Our Journey</Badge>
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">15+ Years of Excellence</h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Key milestones in our journey to becoming Oman's leading chemical supplier
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {milestones.map((milestone, index) => (
-                <Card
-                  key={index}
-                  className="p-6 hover:shadow-xl transition-all hover:-translate-y-1 animate-fade-in"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <div className="text-primary text-4xl font-bold mb-4">{milestone.year}</div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">{milestone.title}</h3>
-                  <p className="text-muted-foreground">{milestone.description}</p>
-                </Card>
-              ))}
             </div>
           </div>
         </div>
@@ -351,11 +273,11 @@ const About = () => {
       <section className="py-20 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Ready to Partner With Us?
             </h2>
-            <p className="text-xl text-muted-foreground mb-8">
-              Join 500+ satisfied clients who trust Global Chemicals LLC for their chemical supply needs
+            <p className="text-lg text-muted-foreground mb-6">
+              Join 500+ satisfied clients across 50+ countries
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
