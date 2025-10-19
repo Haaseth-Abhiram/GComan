@@ -2,11 +2,10 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import { Card } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
-import { Beaker, Droplets, Wrench, Zap, FlaskConical, TestTube, Factory, Building2, Wheat, Microscope, Sparkles, FlaskRound, Flame, Wind, Wine } from 'lucide-react';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Beaker, Droplets, Wrench, Zap, FlaskConical, TestTube, Factory, Building2, Wheat, Microscope, Sparkles, FlaskRound, Flame, Wind, Wine, ChevronRight } from 'lucide-react';
 import { useState } from 'react';
+import { cn } from '@/lib/utils';
 
 interface Product {
   id: string;
@@ -25,6 +24,7 @@ interface Product {
 
 const Products = () => {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [activeCategory, setActiveCategory] = useState('all');
 
   const products: Product[] = [
     // Water Treatment Chemicals
@@ -432,39 +432,71 @@ const Products = () => {
         </div>
       </section>
 
-      {/* Products Section with Tabs */}
+      {/* Products Section with Sidebar */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center mb-12 animate-fade-in-up">
+          <div className="max-w-6xl mx-auto text-center mb-12 animate-fade-in-up">
             <p className="text-lg text-muted-foreground leading-relaxed">
               Global Chemicals LLC specializes in supplying a wide range of high-quality chemicals for various
-              industries. Browse our comprehensive product portfolio by category below.
+              industries. Browse our comprehensive product portfolio by category.
             </p>
           </div>
 
-          <Tabs defaultValue="all" className="w-full max-w-7xl mx-auto">
-            <div className="mb-8 overflow-x-auto">
-              <TabsList className="inline-flex w-auto flex-wrap min-w-full justify-start gap-2 bg-transparent p-0">
-                {categories.map((category) => {
-                  const Icon = category.icon;
-                  return (
-                    <TabsTrigger
-                      key={category.id}
-                      value={category.id}
-                      className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground px-4 py-2 rounded-lg border border-border bg-card hover:bg-accent transition-all"
-                    >
-                      <Icon className="w-4 h-4 mr-2" />
-                      {category.name}
-                    </TabsTrigger>
-                  );
-                })}
-              </TabsList>
-            </div>
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-col lg:flex-row gap-8">
+              {/* Sidebar - Category Navigation */}
+              <aside className="lg:w-72 flex-shrink-0">
+                <div className="sticky top-24 space-y-2">
+                  <h3 className="font-semibold text-foreground mb-4 text-sm uppercase tracking-wide px-3">
+                    Product Categories
+                  </h3>
+                  <nav className="space-y-1">
+                    {categories.map((category) => {
+                      const Icon = category.icon;
+                      const isActive = activeCategory === category.id;
+                      return (
+                        <button
+                          key={category.id}
+                          onClick={() => setActiveCategory(category.id)}
+                          className={cn(
+                            'w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left transition-all group',
+                            isActive
+                              ? 'bg-primary text-primary-foreground shadow-md'
+                              : 'bg-card hover:bg-accent text-foreground border border-border hover:border-primary/50'
+                          )}
+                        >
+                          <Icon className={cn('w-5 h-5 flex-shrink-0', isActive ? 'text-primary-foreground' : 'text-primary')} />
+                          <span className="flex-1 text-sm font-medium">{category.name}</span>
+                          <ChevronRight className={cn('w-4 h-4 transition-transform', isActive ? 'translate-x-0' : '-translate-x-1 opacity-0 group-hover:translate-x-0 group-hover:opacity-100')} />
+                        </button>
+                      );
+                    })}
+                  </nav>
+                  <div className="mt-6 p-4 bg-muted/50 rounded-lg border border-border">
+                    <p className="text-xs text-muted-foreground">
+                      Can't find what you're looking for?{' '}
+                      <a href="/contact" className="text-primary hover:underline font-semibold">
+                        Contact us
+                      </a>{' '}
+                      for custom solutions.
+                    </p>
+                  </div>
+                </div>
+              </aside>
 
-            {categories.map((category) => (
-              <TabsContent key={category.id} value={category.id} className="mt-8">
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {getFilteredProducts(category.id).map((product, index) => {
+              {/* Main Content - Product Grid */}
+              <main className="flex-1 min-w-0">
+                <div className="mb-6">
+                  <h2 className="text-2xl font-bold text-foreground">
+                    {categories.find((c) => c.id === activeCategory)?.name || 'All Products'}
+                  </h2>
+                  <p className="text-sm text-muted-foreground mt-1">
+                    {getFilteredProducts(activeCategory).length} products available
+                  </p>
+                </div>
+
+                <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-6">
+                  {getFilteredProducts(activeCategory).map((product, index) => {
                     const Icon = product.icon;
                     return (
                       <Card
@@ -474,10 +506,8 @@ const Products = () => {
                         style={{ animationDelay: `${index * 0.05}s` }}
                       >
                         <div className="space-y-4">
-                          <div className="flex items-start justify-between">
-                            <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                              <Icon className="w-6 h-6 text-primary" />
-                            </div>
+                          <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <Icon className="w-6 h-6 text-primary" />
                           </div>
                           <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors line-clamp-2">
                             {product.title}
@@ -495,16 +525,16 @@ const Products = () => {
                   })}
                 </div>
 
-                {getFilteredProducts(category.id).length === 0 && (
+                {getFilteredProducts(activeCategory).length === 0 && (
                   <div className="text-center py-16">
                     <p className="text-muted-foreground text-lg">
                       No products available in this category at the moment.
                     </p>
                   </div>
                 )}
-              </TabsContent>
-            ))}
-          </Tabs>
+              </main>
+            </div>
+          </div>
         </div>
       </section>
 
