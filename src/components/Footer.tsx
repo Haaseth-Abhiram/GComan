@@ -84,12 +84,14 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4 text-white">Our Services</h3>
             <ul className="space-y-2">
               {[
-                'Water Treatment',
-                'Lab Equipment',
-                'Lab Chemicals',
+                'Water Treatment Chemicals',
+                'Oil & Gas Solutions',
                 'Lubricants & Greases',
+                'Construction Chemicals',
+                'Swimming Pool Chemicals',
+                'Laboratory Supplies',
+                'Food & Beverage Grade',
                 'Specialty Chemicals',
-                'Food & Beverages',
               ].map((item) => (
                 <li key={item}>
                   <Link to="/products" className="text-white/80 hover:text-primary transition-colors text-sm inline-block hover:translate-x-1 transition-all">
