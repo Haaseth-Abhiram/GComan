@@ -85,12 +85,9 @@ const Footer = () => {
             <ul className="space-y-2">
               {[
                 'Water Treatment Chemicals',
-                'Oil & Gas Solutions',
+                'Oil & Gas Chemicals',
                 'Lubricants & Greases',
                 'Construction Chemicals',
-                'Swimming Pool Chemicals',
-                'Laboratory Supplies',
-                'Food & Beverage Grade',
                 'Specialty Chemicals',
               ].map((item) => (
                 <li key={item}>
