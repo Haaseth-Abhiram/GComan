@@ -25,7 +25,7 @@ const Footer = () => {
               <img 
                 src={logo} 
                 alt="Global Chemicals LLC Logo" 
-                className="h-16 w-auto hover:opacity-90 transition-opacity brightness-0 invert"
+                className="h-16 w-auto hover:opacity-90 transition-opacity"
               />
             </Link>
             <p className="text-white/80 text-sm leading-relaxed">
