@@ -21,11 +21,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
           <div className="space-y-6">
-            <Link to="/" className="inline-block">
+            <Link to="/" className="inline-block bg-white rounded-lg p-4 hover:shadow-lg transition-all">
               <img 
                 src={logo} 
                 alt="Global Chemicals LLC Logo" 
-                className="h-16 w-auto hover:opacity-90 transition-opacity"
+                className="h-12 w-auto"
               />
             </Link>
             <p className="text-white/80 text-sm leading-relaxed">
