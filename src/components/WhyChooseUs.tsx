@@ -11,7 +11,7 @@ const WhyChooseUs = () => {
     {
       icon: Zap,
       title: 'Fast Delivery',
-      description: 'Efficient logistics network ensures timely delivery across 50+ countries worldwide.',
+      description: 'Efficient logistics network ensures timely delivery across Oman and the region.',
     },
     {
       icon: Headphones,
@@ -26,7 +26,7 @@ const WhyChooseUs = () => {
     {
       icon: Award,
       title: 'Industry Leader',
-      description: '15+ years of excellence with numerous industry awards and recognitions.',
+      description: '10+ years of excellence with numerous industry awards and recognitions.',
     },
     {
       icon: Leaf,

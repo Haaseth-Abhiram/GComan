@@ -10,10 +10,10 @@ import teamImage from '@/assets/about-team.jpg';
 
 const About = () => {
   const stats = [
-    { icon: Award, value: '15+', label: 'Years of Excellence', color: 'text-primary' },
-    { icon: Globe2, value: '50+', label: 'Countries Served', color: 'text-secondary' },
-    { icon: Factory, value: '1000+', label: 'Quality Products', color: 'text-primary' },
-    { icon: Users, value: '500+', label: 'Trusted Clients', color: 'text-secondary' },
+    { icon: Award, value: '10+', label: 'Years of Excellence', color: 'text-primary' },
+    { icon: Factory, value: '1000+', label: 'Quality Products', color: 'text-secondary' },
+    { icon: Users, value: '500+', label: 'Trusted Clients', color: 'text-primary' },
+    { icon: Globe2, value: '98%', label: 'Customer Satisfaction', color: 'text-secondary' },
   ];
 
   const values = [
@@ -62,7 +62,7 @@ const About = () => {
               Leading the Chemical Industry with Excellence
             </h1>
             <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-              15+ years of delivering high-quality specialty chemicals and innovative solutions to industries across Oman and beyond
+              10+ years of delivering high-quality specialty chemicals and innovative solutions to industries across Oman
             </p>
           </div>
         </div>
@@ -118,7 +118,7 @@ const About = () => {
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   Global Chemicals LLC is a leading provider of specialty chemicals in Oman, delivering high-quality products 
-                  and innovative solutions across diverse industries. With ISO 9001 certification and 15+ years of expertise, 
+                  and innovative solutions across diverse industries. With ISO 9001 certification and 10+ years of expertise, 
                   we combine technical excellence with personalized service to be your trusted chemical supply partner.
                 </p>
                 <div className="flex gap-4 pt-4">
@@ -128,7 +128,7 @@ const About = () => {
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-5 h-5 text-primary" />
-                    <span className="text-foreground font-medium">15+ Years Experience</span>
+                    <span className="text-foreground font-medium">10+ Years Experience</span>
                   </div>
                 </div>
               </div>
@@ -277,7 +277,7 @@ const About = () => {
               Ready to Partner With Us?
             </h2>
             <p className="text-lg text-muted-foreground mb-6">
-              Join 500+ satisfied clients across 50+ countries
+              Join 500+ satisfied clients in Oman and the region
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

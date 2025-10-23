@@ -34,11 +34,11 @@ const Hero = () => {
             </Badge>
             <Badge variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white px-4 py-2">
               <Award className="w-4 h-4 mr-2" />
-              15+ Years Excellence
+              10+ Years Excellence
             </Badge>
             <Badge variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white px-4 py-2">
               <Sparkles className="w-4 h-4 mr-2" />
-              50+ Countries
+              Based in Oman
             </Badge>
           </div>
 
