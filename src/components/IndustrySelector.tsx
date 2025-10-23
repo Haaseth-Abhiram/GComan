@@ -1,6 +1,8 @@
 import { Card } from '@/components/ui/card';
-import { Apple, Pill, Factory, Fuel, Waves, ArrowRight } from 'lucide-react';
+import { Apple, Pill, Factory, Fuel, Waves, ArrowRight, Droplet } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Badge } from '@/components/ui/badge';
+import oilGasBg from '@/assets/oil-gas-card-bg.jpg';
 
 const IndustrySelector = () => {
   const industries = [
@@ -53,9 +55,56 @@ const IndustrySelector = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 max-w-7xl mx-auto">
           {industries.map((industry, index) => {
             const Icon = industry.icon;
+            
+            // Special design for Oil & Gas
+            if (industry.name === 'Oil & Gas') {
+              return (
+                <Link key={index} to="/industries" className="md:col-span-2 lg:col-span-2">
+                  <Card
+                    className="group overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer border-border hover:border-primary/50 animate-scale-in h-full"
+                    style={{ animationDelay: `${index * 0.05}s` }}
+                  >
+                    <div className="relative h-48 overflow-hidden">
+                      <img 
+                        src={oilGasBg} 
+                        alt="Oil & Gas Industry" 
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute top-4 left-4 w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-lg">
+                        <Droplet className="w-7 h-7 text-primary" />
+                      </div>
+                      <div className="absolute top-4 left-24">
+                        <Badge variant="secondary" className="bg-white/90 text-foreground font-semibold px-4 py-1">
+                          Energy
+                        </Badge>
+                      </div>
+                    </div>
+                    <div className="p-6 space-y-4">
+                      <h3 className="text-2xl font-bold text-primary group-hover:text-primary/80 transition-colors">
+                        Oil & Gas Solutions
+                      </h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        Specialized chemicals for drilling, production, and refining operations in the oil and gas industry.
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        <Badge variant="outline" className="text-xs">Performance Proven</Badge>
+                        <Badge variant="outline" className="text-xs">Industry Standard</Badge>
+                        <Badge variant="outline" className="text-xs">Technical Support</Badge>
+                      </div>
+                      <div className="flex items-center gap-2 text-primary font-semibold pt-2">
+                        <span>Learn More</span>
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </div>
+                  </Card>
+                </Link>
+              );
+            }
+            
+            // Standard design for other industries
             return (
               <Link key={index} to="/industries">
                 <Card
