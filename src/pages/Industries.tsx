@@ -7,8 +7,8 @@ import { Card } from '@/components/ui/card';
 import { CheckCircle2 } from 'lucide-react';
 
 // Import images
-import oilGasImg from '@/assets/industries/oil-gas.jpg';
-import waterTreatmentImg from '@/assets/industries/water-treatment.jpg';
+import oilGasImg from '@/assets/products/oil-gas.jpg';
+import waterTreatmentImg from '@/assets/products/water-treatment.jpg';
 import manufacturingImg from '@/assets/industries/manufacturing.jpg';
 import foodBeverageImg from '@/assets/industries/food-beverage.jpg';
 import pharmaceuticalImg from '@/assets/industries/pharmaceutical.jpg';
