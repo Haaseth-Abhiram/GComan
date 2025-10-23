@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, LogOut, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useAuth } from '@/contexts/AuthContext';
 import logo from '@/assets/global-chemicals-logo.png';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { user, signOut } = useAuth();
 
   const navItems = [
     { label: 'HOME', path: '/' },
@@ -20,7 +22,6 @@ const Navigation = () => {
   const utilityLinks = [
     { label: 'Customers', path: '/customers' },
     { label: 'Career', path: '/career' },
-    { label: 'Login', path: '/login' },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -40,6 +41,28 @@ const Navigation = () => {
                 {link.label}
               </Link>
             ))}
+            {user ? (
+              <div className="flex items-center gap-4">
+                <span className="text-sm text-muted-foreground flex items-center gap-2">
+                  <User className="w-4 h-4" />
+                  {user.email}
+                </span>
+                <button
+                  onClick={signOut}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-1"
+                >
+                  <LogOut className="w-4 h-4" />
+                  Logout
+                </button>
+              </div>
+            ) : (
+              <Link
+                to="/login"
+                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
+                Login
+              </Link>
+            )}
           </div>
         </div>
       </div>
@@ -119,6 +142,32 @@ const Navigation = () => {
                   {link.label}
                 </Link>
               ))}
+              {user ? (
+                <>
+                  <div className="text-sm text-muted-foreground py-1 flex items-center gap-2">
+                    <User className="w-4 h-4" />
+                    {user.email}
+                  </div>
+                  <button
+                    onClick={() => {
+                      signOut();
+                      setIsOpen(false);
+                    }}
+                    className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1 flex items-center gap-2"
+                  >
+                    <LogOut className="w-4 h-4" />
+                    Logout
+                  </button>
+                </>
+              ) : (
+                <Link
+                  to="/login"
+                  onClick={() => setIsOpen(false)}
+                  className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1"
+                >
+                  Login
+                </Link>
+              )}
             </div>
           </div>
         </div>

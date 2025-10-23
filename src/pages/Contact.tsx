@@ -9,6 +9,16 @@ import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useToast } from '@/hooks/use-toast';
 import { useState } from 'react';
+import { z } from 'zod';
+
+const contactSchema = z.object({
+  name: z.string().trim().min(2, "Name must be at least 2 characters").max(100, "Name must be less than 100 characters"),
+  email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters"),
+  phone: z.string().trim().max(20, "Phone number must be less than 20 characters").optional(),
+  company: z.string().trim().max(100, "Company name must be less than 100 characters").optional(),
+  subject: z.string().min(1, "Please select a subject"),
+  message: z.string().trim().min(10, "Message must be at least 10 characters").max(2000, "Message must be less than 2000 characters"),
+});
 
 const Contact = () => {
   const { toast } = useToast();
@@ -26,28 +36,55 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message sent successfully!",
-        description: "Our team will get back to you within 24 hours.",
-      });
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        subject: '',
-        message: '',
-      });
+    try {
+      // Validate form data
+      contactSchema.parse(formData);
+
+      // Simulate form submission
+      setTimeout(() => {
+        toast({
+          title: "Message sent successfully!",
+          description: "Our team will get back to you within 24 hours.",
+        });
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          company: '',
+          subject: '',
+          message: '',
+        });
+        setIsSubmitting(false);
+      }, 1000);
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        toast({
+          title: "Validation error",
+          description: error.errors[0].message,
+          variant: "destructive"
+        });
+      } else {
+        toast({
+          title: "Error",
+          description: "An unexpected error occurred. Please try again.",
+          variant: "destructive"
+        });
+      }
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value
+    }));
+  };
+
+  const handleSubjectChange = (value: string) => {
+    setFormData(prev => ({
+      ...prev,
+      subject: value
     }));
   };
 
@@ -96,7 +133,7 @@ const Contact = () => {
                   title: 'Live Chat',
                   content: 'WhatsApp Support',
                   description: 'Instant assistance',
-                  link: 'https://wa.me/1234567890',
+                  link: 'https://wa.me/96893754388',
                 },
                 {
                   icon: MapPin,
@@ -188,7 +225,7 @@ const Contact = () => {
 
                     <div className="space-y-2">
                       <Label htmlFor="subject">Subject *</Label>
-                      <Select name="subject" required>
+                      <Select name="subject" value={formData.subject} onValueChange={handleSubjectChange} required>
                         <SelectTrigger>
                           <SelectValue placeholder="Select a subject" />
                         </SelectTrigger>
@@ -315,7 +352,7 @@ const Contact = () => {
                 </a>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/96893754388" target="_blank" rel="noopener noreferrer">
                   <MessageSquare className="w-5 h-5 mr-2" />
                   WhatsApp Chat
                 </a>
