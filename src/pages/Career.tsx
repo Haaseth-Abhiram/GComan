@@ -291,8 +291,36 @@ const Career = () => {
         return;
       }
 
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      // Create FormData for multipart upload
+      const formDataToSend = new FormData();
+      formDataToSend.append('name', formData.fullName);
+      formDataToSend.append('email', formData.email);
+      formDataToSend.append('phone', formData.phone);
+      formDataToSend.append('position', formData.position);
+      formDataToSend.append('experience', formData.experience);
+      formDataToSend.append('coverLetter', formData.coverLetter);
+      if (formData.linkedIn) {
+        formDataToSend.append('linkedinUrl', formData.linkedIn);
+      }
+      formDataToSend.append('resume', selectedFile);
+
+      // Submit to edge function
+      const response = await fetch(
+        `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/submit-job-application`,
+        {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+          },
+          body: formDataToSend,
+        }
+      );
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Submission failed');
+      }
 
       toast({
         title: "Application submitted successfully!",
@@ -322,7 +350,7 @@ const Career = () => {
       } else {
         toast({
           title: "Submission failed",
-          description: "Please try again later",
+          description: error instanceof Error ? error.message : "Please try again later",
           variant: "destructive"
         });
       }
