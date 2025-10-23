@@ -3,7 +3,6 @@ import { Shield, Award, CheckCircle2, Leaf, FileCheck, Lock } from 'lucide-react
 const TrustBadges = () => {
   const badges = [
     { icon: Shield, label: 'ISO 9001 Certified' },
-    { icon: FileCheck, label: 'FDA Approved' },
     { icon: Leaf, label: 'Eco-Friendly' },
     { icon: CheckCircle2, label: 'Quality Assured' },
     { icon: Lock, label: 'Safe & Secure' },
