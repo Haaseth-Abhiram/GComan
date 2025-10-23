@@ -8,7 +8,7 @@ const StatsSection = () => {
   const stats = [
     { icon: Award, value: 10, suffix: '+', label: 'Years of Excellence', color: 'text-primary' },
     { icon: Package, value: 1000, suffix: '+', label: 'Quality Products', color: 'text-secondary' },
-    { icon: Users, value: 500, suffix: '+', label: 'Trusted Clients', color: 'text-primary' },
+    { icon: Users, value: 200, suffix: '+', label: 'Trusted Clients', color: 'text-primary' },
     { icon: Globe2, value: 98, suffix: '%', label: 'Customer Satisfaction', color: 'text-secondary' },
   ];
 

@@ -72,7 +72,7 @@ const Customers = () => {
   ];
 
   const stats = [
-    { icon: Building2, value: '150+', label: 'Active Clients' },
+    { icon: Building2, value: '200+', label: 'Active Clients' },
     { icon: Award, value: '10+', label: 'Years Experience' },
     { icon: Users, value: '98%', label: 'Client Retention' },
     { icon: TrendingUp, value: '500+', label: 'Projects Completed' }

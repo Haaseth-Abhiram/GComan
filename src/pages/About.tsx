@@ -12,7 +12,7 @@ const About = () => {
   const stats = [
     { icon: Award, value: '10+', label: 'Years of Excellence', color: 'text-primary' },
     { icon: Factory, value: '1000+', label: 'Quality Products', color: 'text-secondary' },
-    { icon: Users, value: '500+', label: 'Trusted Clients', color: 'text-primary' },
+    { icon: Users, value: '200+', label: 'Trusted Clients', color: 'text-primary' },
     { icon: Globe2, value: '98%', label: 'Customer Satisfaction', color: 'text-secondary' },
   ];
 
@@ -277,7 +277,7 @@ const About = () => {
               Ready to Partner With Us?
             </h2>
             <p className="text-lg text-muted-foreground mb-6">
-              Join 500+ satisfied clients in Oman and the region
+              Join 200+ satisfied clients in Oman and the region
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

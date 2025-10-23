@@ -64,7 +64,7 @@ const Hero = () => {
 
             {/* Value Proposition */}
             <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-              Delivering high-quality specialty chemicals and innovative solutions to 500+ trusted clients worldwide
+              Delivering high-quality specialty chemicals and innovative solutions to 200+ trusted clients worldwide
             </p>
 
             {/* CTA Buttons */}
