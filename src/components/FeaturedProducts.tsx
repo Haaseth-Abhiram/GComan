@@ -2,6 +2,9 @@ import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, Beaker, Droplets, Wrench } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import waterTreatmentImg from '@/assets/products/water-treatment.jpg';
+import oilGasImg from '@/assets/products/oil-gas.jpg';
+import industrialLubricantsImg from '@/assets/products/industrial-lubricants.jpg';
 
 const FeaturedProducts = () => {
   const products = [
@@ -11,7 +14,7 @@ const FeaturedProducts = () => {
       category: 'Treatment',
       description: 'Advanced formulations for industrial water purification and wastewater management.',
       features: ['High Efficiency', 'Cost-Effective', 'Eco-Friendly'],
-      image: 'https://images.unsplash.com/photo-1581093458791-9f3c3250a531?w=500',
+      image: waterTreatmentImg,
     },
     {
       icon: Droplets,
@@ -19,7 +22,7 @@ const FeaturedProducts = () => {
       category: 'Energy',
       description: 'Specialized chemicals for drilling, production, and refining operations in the oil and gas industry.',
       features: ['Performance Proven', 'Industry Standard', 'Technical Support'],
-      image: 'https://images.unsplash.com/photo-1566228015668-4c45dbc4e2f5?w=500',
+      image: oilGasImg,
     },
     {
       icon: Wrench,
@@ -27,7 +30,7 @@ const FeaturedProducts = () => {
       category: 'Industrial',
       description: 'Premium lubricants engineered for maximum performance and equipment longevity.',
       features: ['Long-Lasting', 'Temperature Stable', 'Reduced Friction'],
-      image: 'https://images.unsplash.com/photo-1581092918484-8313e1f7e8c1?w=500',
+      image: industrialLubricantsImg,
     },
   ];
 
