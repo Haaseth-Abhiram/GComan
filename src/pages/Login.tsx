@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -9,6 +9,7 @@ import { useToast } from '@/hooks/use-toast';
 import { Eye, EyeOff, Mail, Lock, ArrowLeft } from 'lucide-react';
 import { z } from 'zod';
 import logo from '@/assets/global-chemicals-logo.png';
+import { supabase } from '@/integrations/supabase/client';
 
 // Validation schemas
 const loginSchema = z.object({
@@ -44,6 +45,17 @@ const Login = () => {
     confirmPassword: '' 
   });
 
+  // Check if user is already logged in
+  useEffect(() => {
+    const checkAuth = async () => {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (session) {
+        navigate('/');
+      }
+    };
+    checkAuth();
+  }, [navigate]);
+
   const handleLoginSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
@@ -52,16 +64,42 @@ const Login = () => {
       // Validate input
       loginSchema.parse(loginData);
 
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
-
-      toast({
-        title: "Login successful!",
-        description: "Welcome back to Global Chemicals LLC",
+      // Authenticate with backend
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email: loginData.email,
+        password: loginData.password,
       });
 
-      // Navigate to home
-      navigate('/');
+      if (error) {
+        if (error.message.includes('Invalid login credentials')) {
+          toast({
+            title: "Login failed",
+            description: "Invalid email or password. Please try again.",
+            variant: "destructive"
+          });
+        } else if (error.message.includes('Email not confirmed')) {
+          toast({
+            title: "Email not confirmed",
+            description: "Please confirm your email before logging in.",
+            variant: "destructive"
+          });
+        } else {
+          toast({
+            title: "Login failed",
+            description: error.message,
+            variant: "destructive"
+          });
+        }
+        return;
+      }
+
+      if (data.session) {
+        toast({
+          title: "Login successful!",
+          description: "Welcome back to Global Chemicals LLC",
+        });
+        navigate('/');
+      }
 
     } catch (error) {
       if (error instanceof z.ZodError) {
@@ -73,7 +111,7 @@ const Login = () => {
       } else {
         toast({
           title: "Login failed",
-          description: "Please check your credentials and try again",
+          description: "An unexpected error occurred. Please try again.",
           variant: "destructive"
         });
       }
@@ -90,17 +128,49 @@ const Login = () => {
       // Validate input
       signupSchema.parse(signupData);
 
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
-
-      toast({
-        title: "Account created successfully!",
-        description: "Welcome to Global Chemicals LLC. You can now log in.",
+      // Create account with backend
+      const { data, error } = await supabase.auth.signUp({
+        email: signupData.email,
+        password: signupData.password,
+        options: {
+          emailRedirectTo: `${window.location.origin}/`,
+          data: {
+            name: signupData.name,
+          }
+        }
       });
 
-      // Switch to login view
-      setIsLogin(true);
-      setSignupData({ name: '', email: '', password: '', confirmPassword: '' });
+      if (error) {
+        if (error.message.includes('User already registered')) {
+          toast({
+            title: "Account exists",
+            description: "An account with this email already exists. Please login instead.",
+            variant: "destructive"
+          });
+        } else {
+          toast({
+            title: "Signup failed",
+            description: error.message,
+            variant: "destructive"
+          });
+        }
+        return;
+      }
+
+      if (data.session) {
+        toast({
+          title: "Account created successfully!",
+          description: "Welcome to Global Chemicals LLC",
+        });
+        navigate('/');
+      } else {
+        toast({
+          title: "Account created!",
+          description: "Please check your email to confirm your account.",
+        });
+        setIsLogin(true);
+        setSignupData({ name: '', email: '', password: '', confirmPassword: '' });
+      }
 
     } catch (error) {
       if (error instanceof z.ZodError) {
@@ -112,7 +182,7 @@ const Login = () => {
       } else {
         toast({
           title: "Signup failed",
-          description: "Please try again later",
+          description: "An unexpected error occurred. Please try again.",
           variant: "destructive"
         });
       }
