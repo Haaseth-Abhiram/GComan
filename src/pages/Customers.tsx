@@ -5,6 +5,16 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Building2, Award, Users, TrendingUp, Quote } from 'lucide-react';
+import oqLogo from '@/assets/customers/oq-logo.png';
+import oxyLogo from '@/assets/customers/oxy-logo.png';
+import pdoLogo from '@/assets/customers/pdo-logo.jpg';
+import arabianFoodLogo from '@/assets/customers/arabian-food-logo.jpg';
+import napcoLogo from '@/assets/customers/napco-logo.jpg';
+import mohLogo from '@/assets/customers/moh-logo.png';
+import oneicLogo from '@/assets/customers/oneic-logo.png';
+import oswsLogo from '@/assets/customers/osws-logo.jpg';
+import altasnimLogo from '@/assets/customers/altasnim-logo.jpg';
+import soharPorcelainLogo from '@/assets/customers/sohar-porcelain-logo.jpg';
 
 interface Customer {
   name: string;
@@ -19,56 +29,82 @@ interface Customer {
 const Customers = () => {
   const customers: Customer[] = [
     {
-      name: 'OKO',
-      logo: '/placeholder.svg',
+      name: 'OQ',
+      logo: oqLogo,
       industry: 'Oil & Gas',
-      description: 'Leading oil and gas company leveraging our chemical solutions for enhanced production efficiency',
-      testimonial: 'Global Chemicals LLC has been instrumental in optimizing our operations with their high-quality chemical solutions and exceptional technical support.',
-      contactPerson: 'Operations Director',
+      description: 'Oman\'s integrated energy company operating across the hydrocarbon value chain',
+      testimonial: 'Global Chemicals LLC has been instrumental in providing high-quality chemical solutions that meet our stringent requirements for oil and gas operations.',
+      contactPerson: 'Procurement Director',
       featured: true
     },
     {
-      name: 'PDO (Petroleum Development Oman)',
-      logo: '/placeholder.svg',
+      name: 'Petroleum Development Oman (PDO)',
+      logo: pdoLogo,
       industry: 'Oil & Gas',
-      description: 'Major petroleum development company utilizing our specialized chemicals for drilling and production',
-      testimonial: 'Their commitment to quality and timely delivery has made them our trusted partner for critical chemical supplies.',
-      contactPerson: 'Procurement Manager',
+      description: 'Leading oil and gas exploration and production company in Oman',
+      testimonial: 'Their commitment to quality, safety standards, and timely delivery has made them our trusted partner for critical chemical supplies.',
+      contactPerson: 'Supply Chain Manager',
       featured: true
     },
     {
-      name: 'Oman Water Treatment Co.',
-      logo: '/placeholder.svg',
-      industry: 'Water Treatment',
-      description: 'Municipal water treatment facility using our advanced chemical solutions for water purification'
+      name: 'Occidental Petroleum (Oxy)',
+      logo: oxyLogo,
+      industry: 'Oil & Gas',
+      description: 'International oil and gas exploration and production company operating in Oman'
     },
     {
-      name: 'Al-Jazeera Steel Manufacturing',
-      logo: '/placeholder.svg',
+      name: 'NAPCO',
+      logo: napcoLogo,
       industry: 'Manufacturing',
-      description: 'Industrial manufacturing plant relying on our chemicals for production processes'
+      description: 'National Aluminum Products Company - leading manufacturer in Oman'
     },
     {
-      name: 'Muscat Pharmaceutical Labs',
-      logo: '/placeholder.svg',
-      industry: 'Pharmaceutical',
-      description: 'Pharmaceutical research facility utilizing our high-purity laboratory chemicals'
+      name: 'Arabian Food Industries',
+      logo: arabianFoodLogo,
+      industry: 'Food & Beverage',
+      description: 'Premium food and beverage manufacturing company in Oman'
     },
     {
-      name: 'Salalah Construction Group',
-      logo: '/placeholder.svg',
+      name: 'Ministry of Health Oman',
+      logo: mohLogo,
+      industry: 'Healthcare',
+      description: 'Government healthcare provider ensuring quality medical services across Oman'
+    },
+    {
+      name: 'ONEIC',
+      logo: oneicLogo,
       industry: 'Construction',
-      description: 'Construction company using our specialty chemicals for concrete and material processing'
+      description: 'Oman National Engineering & Investment Company - construction and engineering'
+    },
+    {
+      name: 'OSWS',
+      logo: oswsLogo,
+      industry: 'Services',
+      description: 'Oman Sails and Water Sports - marine and recreational services'
+    },
+    {
+      name: 'Al Tasnim',
+      logo: altasnimLogo,
+      industry: 'Water & Beverages',
+      description: 'Water bottling and beverage production company'
+    },
+    {
+      name: 'Sohar Porcelain',
+      logo: soharPorcelainLogo,
+      industry: 'Manufacturing',
+      description: 'Leading porcelain and ceramic manufacturing company in Sohar'
     }
   ];
 
   const industries = [
     'All Industries',
     'Oil & Gas',
-    'Water Treatment',
     'Manufacturing',
-    'Pharmaceutical',
-    'Construction'
+    'Food & Beverage',
+    'Healthcare',
+    'Construction',
+    'Water & Beverages',
+    'Services'
   ];
 
   const stats = [
