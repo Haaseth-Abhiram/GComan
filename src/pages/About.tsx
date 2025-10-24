@@ -140,11 +140,6 @@ const About = () => {
                     alt="Fine Chemical Synthesis Laboratory"
                     className="w-full h-[500px] object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                  <div className="absolute bottom-6 left-6 right-6">
-                    <p className="text-white font-semibold text-lg">State-of-the-Art Facilities</p>
-                    <p className="text-white/80 text-sm">Modern infrastructure ensuring quality and efficiency</p>
-                  </div>
                 </div>
               </div>
             </div>
