@@ -137,7 +137,7 @@ const About = () => {
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                   <img
                     src={facilityImage}
-                    alt="Chemical Manufacturing Facility"
+                    alt="Fine Chemical Synthesis Laboratory"
                     className="w-full h-[500px] object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
