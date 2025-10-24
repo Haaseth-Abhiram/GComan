@@ -913,6 +913,7 @@ const Products = () => {
 
   const categories = [
     { id: 'all', name: 'All Products', icon: FlaskConical },
+    { id: 'oilfield', name: 'Oilfield & Refinery', icon: Factory },
     { id: 'water-treatment', name: 'Water Treatment Chemicals', icon: Droplets },
     { id: 'lubricants', name: 'Lubricants & Greases', icon: Wrench },
     { id: 'calcium-carbonate', name: 'Calcium Carbonate', icon: FlaskConical },
@@ -920,7 +921,6 @@ const Products = () => {
     { id: 'lab-equipment', name: 'Lab Equipment', icon: TestTube },
     { id: 'lab-chemicals', name: 'Lab Chemicals', icon: Beaker },
     { id: 'swimming-pool', name: 'Swimming Pool Chemicals', icon: Droplets },
-    { id: 'oilfield', name: 'Oilfield & Refinery', icon: Factory },
     { id: 'construction', name: 'Construction', icon: Building2 },
     { id: 'food-beverage', name: 'Food & Beverage', icon: Wine },
     { id: 'agro', name: 'Agro Products', icon: Wheat },
