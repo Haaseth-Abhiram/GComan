@@ -14,6 +14,8 @@ import mohLogo from '@/assets/customers/moh-logo.png';
 import dalilPetroleumLogo from '@/assets/customers/dalil-petroleum-logo.png';
 import oswsLogo from '@/assets/customers/osws-logo.jpg';
 import soharPorcelainLogo from '@/assets/customers/sohar-porcelain-logo.jpg';
+import omanLngLogo from '@/assets/customers/oman-lng-logo.png';
+import omifcoLogo from '@/assets/customers/omifco-logo.jpg';
 
 interface Customer {
   name: string;
@@ -86,6 +88,18 @@ const Customers = () => {
       logo: soharPorcelainLogo,
       industry: 'Manufacturing',
       description: 'Leading porcelain and ceramic manufacturing company in Sohar'
+    },
+    {
+      name: 'Oman LNG',
+      logo: omanLngLogo,
+      industry: 'Oil & Gas',
+      description: 'Liquefied natural gas producer and exporter in Oman'
+    },
+    {
+      name: 'Omifco',
+      logo: omifcoLogo,
+      industry: 'Manufacturing',
+      description: 'Oman India Fertiliser Company - ammonia and urea production'
     }
   ];
 
