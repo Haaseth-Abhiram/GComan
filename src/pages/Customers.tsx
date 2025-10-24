@@ -15,7 +15,7 @@ import dalilPetroleumLogo from '@/assets/customers/dalil-petroleum-logo.png';
 import oswsLogo from '@/assets/customers/osws-logo.jpg';
 import soharPorcelainLogo from '@/assets/customers/sohar-porcelain-logo.jpg';
 import omanLngLogo from '@/assets/customers/oman-lng-logo.png';
-import omifcoLogo from '@/assets/customers/omifco-logo.jpg';
+import omifcoLogo from '@/assets/customers/omifco-logo.png';
 
 interface Customer {
   name: string;
