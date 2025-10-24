@@ -11,9 +11,8 @@ import pdoLogo from '@/assets/customers/pdo-logo.jpg';
 import arabianFoodLogo from '@/assets/customers/arabian-food-logo.jpg';
 import napcoLogo from '@/assets/customers/napco-logo.jpg';
 import mohLogo from '@/assets/customers/moh-logo.png';
-import oneicLogo from '@/assets/customers/oneic-logo.png';
+import dalilPetroleumLogo from '@/assets/customers/dalil-petroleum-logo.png';
 import oswsLogo from '@/assets/customers/osws-logo.jpg';
-import altasnimLogo from '@/assets/customers/altasnim-logo.jpg';
 import soharPorcelainLogo from '@/assets/customers/sohar-porcelain-logo.jpg';
 
 interface Customer {
@@ -53,6 +52,12 @@ const Customers = () => {
       description: 'International oil and gas exploration and production company operating in Oman'
     },
     {
+      name: 'Dalil Petroleum',
+      logo: dalilPetroleumLogo,
+      industry: 'Oil & Gas',
+      description: 'Oil and gas services company providing specialized solutions in Oman'
+    },
+    {
       name: 'NAPCO',
       logo: napcoLogo,
       industry: 'Manufacturing',
@@ -71,22 +76,10 @@ const Customers = () => {
       description: 'Government healthcare provider ensuring quality medical services across Oman'
     },
     {
-      name: 'ONEIC',
-      logo: oneicLogo,
-      industry: 'Construction',
-      description: 'Oman National Engineering & Investment Company - construction and engineering'
-    },
-    {
       name: 'OSWS',
       logo: oswsLogo,
       industry: 'Services',
       description: 'Oman Sails and Water Sports - marine and recreational services'
-    },
-    {
-      name: 'Al Tasnim',
-      logo: altasnimLogo,
-      industry: 'Water & Beverages',
-      description: 'Water bottling and beverage production company'
     },
     {
       name: 'Sohar Porcelain',
