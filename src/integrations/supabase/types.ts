@@ -14,6 +14,48 @@ export type Database = {
   }
   public: {
     Tables: {
+      contact_submissions: {
+        Row: {
+          company: string | null
+          created_at: string
+          email: string
+          id: string
+          message: string
+          name: string
+          phone: string | null
+          subject: string
+          synced_to_zoho: boolean | null
+          updated_at: string
+          zoho_lead_id: string | null
+        }
+        Insert: {
+          company?: string | null
+          created_at?: string
+          email: string
+          id?: string
+          message: string
+          name: string
+          phone?: string | null
+          subject: string
+          synced_to_zoho?: boolean | null
+          updated_at?: string
+          zoho_lead_id?: string | null
+        }
+        Update: {
+          company?: string | null
+          created_at?: string
+          email?: string
+          id?: string
+          message?: string
+          name?: string
+          phone?: string | null
+          subject?: string
+          synced_to_zoho?: boolean | null
+          updated_at?: string
+          zoho_lead_id?: string | null
+        }
+        Relationships: []
+      }
       job_applications: {
         Row: {
           cover_letter: string
