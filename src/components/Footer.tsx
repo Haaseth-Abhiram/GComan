@@ -8,11 +8,11 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: Facebook, href: 'https://facebook.com', label: 'Facebook' },
-    { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
-    { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: Instagram, href: 'https://instagram.com', label: 'Instagram' },
-    { icon: Youtube, href: 'https://youtube.com', label: 'YouTube' },
+    { icon: Facebook, href: 'https://www.facebook.com/people/Global-Chemicals-LLC/61552652407210/', label: 'Facebook' },
+    { icon: Twitter, href: 'https://x.com/LlcChemica92705', label: 'Twitter' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/global-chemicals-llc/', label: 'LinkedIn' },
+    { icon: Instagram, href: 'https://www.instagram.com/globalchemicalsllc/?next=%2F', label: 'Instagram' },
+    { icon: Youtube, href: 'https://www.youtube.com/@GlobalChemicalsLLC', label: 'YouTube' },
   ];
 
   return (
