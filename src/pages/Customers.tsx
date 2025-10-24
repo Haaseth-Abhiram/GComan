@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Building2, Award, Users, TrendingUp, Quote } from 'lucide-react';
 import oqLogo from '@/assets/customers/oq-logo.png';
 import oxyLogo from '@/assets/customers/oxy-logo.png';
-import pdoLogo from '@/assets/customers/pdo-logo.jpg';
+import pdoLogo from '@/assets/customers/pdo-logo.png';
 import arabianFoodLogo from '@/assets/customers/arabian-food-logo.jpg';
 import napcoLogo from '@/assets/customers/napco-logo.jpg';
 import mohLogo from '@/assets/customers/moh-logo.png';
