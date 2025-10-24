@@ -3,7 +3,7 @@ import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import { Card } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { Beaker, Droplets, Wrench, Zap, FlaskConical, TestTube, Factory, Building2, Wheat, Microscope, Sparkles, FlaskRound, Flame, Wind, Wine, ChevronRight } from 'lucide-react';
+import { Beaker, Droplets, Wrench, Zap, FlaskConical, TestTube, Factory, Building2, Wheat, Microscope, Sparkles, FlaskRound, Flame, Wind, Wine, ChevronRight, Shield, SprayCan } from 'lucide-react';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
 
@@ -1011,6 +1011,227 @@ const Products = () => {
       icon: Wine,
     },
 
+    // Corrosion Inhibitor
+    {
+      id: 'corrosion-inhibitor-multi-metal',
+      title: 'Corrosion Inhibitor For Multi Metal Cooling Water',
+      description: 'Specialized corrosion protection for multi-metal cooling water systems.',
+      category: 'corrosion-inhibitor',
+      icon: Shield,
+    },
+    {
+      id: 'corrosion-inhibitor-2000',
+      title: 'Corrosion Inhibitor 2000',
+      description: 'Advanced formula for comprehensive metal protection in industrial systems.',
+      category: 'corrosion-inhibitor',
+      icon: Shield,
+    },
+    {
+      id: 'corrosion-inhibitor-rust-preventive',
+      title: 'Corrosion Inhibitor For Metal Rust Preventive',
+      description: 'Rust prevention solution for metal surfaces and equipment.',
+      category: 'corrosion-inhibitor',
+      icon: Shield,
+    },
+    {
+      id: 'corrosion-inhibitor-molybdate',
+      title: 'Corrosion Inhibitor Closed Cooling System Molybdate',
+      description: 'Molybdate-based corrosion protection for closed cooling systems.',
+      category: 'corrosion-inhibitor',
+      icon: Shield,
+    },
+    {
+      id: 'corrosion-inhibitor-general',
+      title: 'Corrosion Inhibitor',
+      description: 'General-purpose corrosion prevention chemical for industrial applications.',
+      category: 'corrosion-inhibitor',
+      icon: Shield,
+    },
+    {
+      id: 'corrosion-inhibitor-gas-compressor',
+      title: 'Corrosion Inhibitor For Gas Compressor',
+      description: 'Specialized protection for gas compressor systems and components.',
+      category: 'corrosion-inhibitor',
+      icon: Shield,
+    },
+    {
+      id: 'sodium-molybdate',
+      title: 'Sodium Molybdate',
+      description: 'Anodic corrosion inhibitor for cooling water treatment systems.',
+      category: 'corrosion-inhibitor',
+      icon: Shield,
+    },
+    {
+      id: 'oxygen-scavenger',
+      title: 'Oxygen Scavenger',
+      description: 'Removes dissolved oxygen to prevent corrosion in water systems.',
+      category: 'corrosion-inhibitor',
+      icon: Shield,
+    },
+    {
+      id: 'ph-booster-corrosion-inhibitor',
+      title: 'Ph Booster Cum Corrosion Inhibitor',
+      description: 'Dual-action formula for pH control and corrosion prevention.',
+      category: 'corrosion-inhibitor',
+      icon: Shield,
+    },
+    {
+      id: 'corrosion-inhibitor-closed-system',
+      title: 'Corrosion Inhibitor Closed Cooling System',
+      description: 'Comprehensive protection for closed-loop cooling systems.',
+      category: 'corrosion-inhibitor',
+      icon: Shield,
+    },
+
+    // Tank Cleaners
+    {
+      id: 'hcf-remover',
+      title: 'HCF Remover',
+      description: 'Heavy carbon and fouling remover for industrial tank cleaning.',
+      category: 'tank-cleaners',
+      icon: SprayCan,
+    },
+    {
+      id: 'resin-clean',
+      title: 'Resin Clean',
+      description: 'Specialized cleaner for resin and polymer residue removal.',
+      category: 'tank-cleaners',
+      icon: SprayCan,
+    },
+    {
+      id: 'universal-wash',
+      title: 'Universal Wash',
+      description: 'Multi-purpose cleaning solution for various tank applications.',
+      category: 'tank-cleaners',
+      icon: SprayCan,
+    },
+    {
+      id: 'methanol-tech-grade-cleaner',
+      title: 'Methanol Tech Grade',
+      description: 'Technical grade methanol for industrial cleaning and degreasing.',
+      category: 'tank-cleaners',
+      icon: SprayCan,
+    },
+    {
+      id: 'tank-degreaser-heavy-duty',
+      title: 'Tank Degreaser Heavy Duty',
+      description: 'Industrial-strength degreaser for heavy oil and grease removal.',
+      category: 'tank-cleaners',
+      icon: SprayCan,
+    },
+    {
+      id: 'lye-sodium-hydroxide-liquid',
+      title: 'Lye Sodium Hydroxide Liquid',
+      description: 'Alkaline cleaning solution for industrial tank maintenance.',
+      category: 'tank-cleaners',
+      icon: SprayCan,
+    },
+    {
+      id: 'tank-cleaner-general',
+      title: 'Tank Cleaner',
+      description: 'General-purpose tank cleaning formulation for industrial use.',
+      category: 'tank-cleaners',
+      icon: SprayCan,
+    },
+    {
+      id: 'sewage-deformer',
+      title: 'Sewage Deformer',
+      description: 'Foam control agent for sewage and wastewater tank systems.',
+      category: 'tank-cleaners',
+      icon: SprayCan,
+    },
+    {
+      id: 'alkaleen-cleaner-safety',
+      title: 'Alkaleen Cleaner Safety Liquid',
+      description: 'Safe alkaline cleaner for various industrial cleaning applications.',
+      category: 'tank-cleaners',
+      icon: SprayCan,
+    },
+    {
+      id: 'emulsion-sludge-breaker',
+      title: 'Emulsion Sludge Breaker',
+      description: 'Breaks down emulsions and sludge in storage tanks.',
+      category: 'tank-cleaners',
+      icon: SprayCan,
+    },
+    {
+      id: 'oil-spill-dispersent-type-3',
+      title: 'Oil Spill Dispersent Type 3',
+      description: 'Type 3 dispersant for oil spill response and tank cleaning.',
+      category: 'tank-cleaners',
+      icon: SprayCan,
+    },
+    {
+      id: 'aqua-clean-hd',
+      title: 'Aqua Clean HD',
+      description: 'Heavy-duty aqueous cleaning solution for industrial tanks.',
+      category: 'tank-cleaners',
+      icon: SprayCan,
+    },
+    {
+      id: 'cold-washer-hd',
+      title: 'Cold Washer HD',
+      description: 'Cold-water heavy-duty cleaner for efficient tank washing.',
+      category: 'tank-cleaners',
+      icon: SprayCan,
+    },
+    {
+      id: 'passivation-liquid',
+      title: 'Passivation Liquid',
+      description: 'Chemical passivation treatment for stainless steel tanks.',
+      category: 'tank-cleaners',
+      icon: SprayCan,
+    },
+    {
+      id: 'edge-sol-cleaner',
+      title: 'Edge Sol Cleaner',
+      description: 'Solvent-based edge and seam cleaning solution.',
+      category: 'tank-cleaners',
+      icon: SprayCan,
+    },
+    {
+      id: 'enviro-soft-2000',
+      title: 'Enviro Soft 2000',
+      description: 'Environmentally friendly softening and cleaning agent.',
+      category: 'tank-cleaners',
+      icon: SprayCan,
+    },
+    {
+      id: 'dual-hd-cleaner',
+      title: 'Dual HD Cleaner',
+      description: 'Dual-action heavy-duty cleaner for versatile tank applications.',
+      category: 'tank-cleaners',
+      icon: SprayCan,
+    },
+    {
+      id: 'metal-bright',
+      title: 'Metal Bright',
+      description: 'Metal brightening and cleaning solution for tank surfaces.',
+      category: 'tank-cleaners',
+      icon: SprayCan,
+    },
+    {
+      id: 'p-xylene-pure',
+      title: 'P Xylene Pure',
+      description: 'Pure p-xylene solvent for industrial cleaning applications.',
+      category: 'tank-cleaners',
+      icon: SprayCan,
+    },
+    {
+      id: 'ctc-volc-cleaner',
+      title: 'CTC Volc Cleaner',
+      description: 'Volcanic ash and carbon cleaner for specialized tank cleaning.',
+      category: 'tank-cleaners',
+      icon: SprayCan,
+    },
+    {
+      id: 'aquatuff-ship-hold-cleaner',
+      title: 'Aquatuff Ship Hold Cleaner',
+      description: 'Marine-grade cleaner for ship holds and cargo tanks.',
+      category: 'tank-cleaners',
+      icon: SprayCan,
+    },
+
     // Agro Products
     {
       id: 'agro-products',
@@ -1257,6 +1478,8 @@ const Products = () => {
     { id: 'swimming-pool', name: 'Swimming Pool Chemicals', icon: Droplets },
     { id: 'construction', name: 'Construction', icon: Building2 },
     { id: 'food-beverage', name: 'Food & Beverage', icon: Wine },
+    { id: 'corrosion-inhibitor', name: 'Corrosion Inhibitor', icon: Shield },
+    { id: 'tank-cleaners', name: 'Tank Cleaners', icon: SprayCan },
     { id: 'agro', name: 'Agro Products', icon: Wheat },
     { id: 'soap-detergent', name: 'Soap & Detergent', icon: Sparkles },
     { id: 'solvents', name: 'Solvents', icon: FlaskRound },
