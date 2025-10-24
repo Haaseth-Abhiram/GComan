@@ -13,7 +13,7 @@ import napcoLogo from '@/assets/customers/napco-logo.jpg';
 import mohLogo from '@/assets/customers/moh-logo.png';
 import dalilPetroleumLogo from '@/assets/customers/dalil-petroleum-logo.png';
 import oswsLogo from '@/assets/customers/osws-logo.jpg';
-import soharPorcelainLogo from '@/assets/customers/sohar-porcelain-logo.jpg';
+import soharAluminiumLogo from '@/assets/customers/sohar-aluminium-logo.png';
 import omanLngLogo from '@/assets/customers/oman-lng-logo.png';
 import omifcoLogo from '@/assets/customers/omifco-logo.png';
 
@@ -84,10 +84,10 @@ const Customers = () => {
       description: 'Oman Sails and Water Sports - marine and recreational services'
     },
     {
-      name: 'Sohar Porcelain',
-      logo: soharPorcelainLogo,
+      name: 'Sohar Aluminium',
+      logo: soharAluminiumLogo,
       industry: 'Manufacturing',
-      description: 'Leading porcelain and ceramic manufacturing company in Sohar'
+      description: 'Leading aluminum smelter and one of Oman\'s largest industrial companies'
     },
     {
       name: 'Oman LNG',
