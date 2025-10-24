@@ -855,15 +855,39 @@ const Products = () => {
 
     // Construction
     {
-      id: 'construction-chemicals',
-      title: 'Construction Chemicals',
-      description: 'Advanced chemicals for construction projects including concrete additives and sealants.',
+      id: 'epoxy-coating',
+      title: 'Epoxy Coating',
+      description: 'High-performance protective coating for concrete surfaces and structural elements.',
       category: 'construction',
       icon: Building2,
-      details: {
-        fullDescription: 'Reliable products and innovative technologies that enhance efficiency, safety, and quality in construction from infrastructure to specialized building solutions.',
-        applications: ['Concrete acceleration', 'Waterproofing', 'Structural strengthening', 'Surface treatment'],
-      },
+    },
+    {
+      id: 'paraffin-oil-construction',
+      title: 'Paraffin Oil',
+      description: 'Industrial grade paraffin oil for construction applications and formulations.',
+      category: 'construction',
+      icon: Building2,
+    },
+    {
+      id: 'polymer-bonding-agent',
+      title: 'Polymer Bonding Agent',
+      description: 'Advanced bonding agent for enhanced adhesion between concrete layers.',
+      category: 'construction',
+      icon: Building2,
+    },
+    {
+      id: 'polymer-modified-mortar',
+      title: 'Polymer Modified Mortar',
+      description: 'High-strength mortar with polymer additives for superior bonding and flexibility.',
+      category: 'construction',
+      icon: Building2,
+    },
+    {
+      id: 'mould-releasing-agents',
+      title: 'Mould Releasing Agents',
+      description: 'Formwork release agents for easy concrete demolding and smooth finishes.',
+      category: 'construction',
+      icon: Building2,
     },
 
     // Food & Beverage
