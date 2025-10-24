@@ -182,7 +182,7 @@ const Industries = () => {
     },
     {
       id: 'swimming-pool',
-      title: 'Swimming Pool & Spa',
+      title: 'Swimming Pool',
       image: swimmingPoolImg,
       intro: 'Crystal clear, safe water for swimming pools, spas, and recreational facilities.',
       content: 'Maintaining pristine pool water requires the right chemical balance and consistent treatment. Global Chemicals LLC offers a complete range of pool chemicals that ensure safe, clear, and inviting water for commercial pools, resorts, and recreational facilities.',
