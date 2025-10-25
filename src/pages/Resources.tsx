@@ -248,8 +248,15 @@ const Resources = () => {
 
   const handleDownload = (resource: Resource) => {
     if (resource.downloadUrl) {
-      // Open the download URL in a new tab
-      window.open(resource.downloadUrl, '_blank');
+      // Create a temporary anchor element to trigger download
+      const link = document.createElement('a');
+      link.href = resource.downloadUrl;
+      link.download = resource.downloadUrl.split('/').pop() || 'download.pdf';
+      link.target = '_blank';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      
       toast({
         title: "Download Started",
         description: `${resource.title} is being downloaded.`,
