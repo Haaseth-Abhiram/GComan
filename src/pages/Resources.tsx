@@ -24,6 +24,7 @@ import {
 } from 'lucide-react';
 import BrochureGlobal from '@/assets/brochures/Global-Chemicals-LLC-Brochure.pdf';
 import BrochureCDC from '@/assets/brochures/CDC-Anti-Clog-Brochure.pdf';
+import BrochureProducts from '@/assets/brochures/Global-Chemicals-Products-Brochure.pdf';
 
 interface Resource {
   id: string;
@@ -95,6 +96,16 @@ const Resources = () => {
     },
     {
       id: '3',
+      title: 'Global Chemicals LLC Products Catalog',
+      description: 'Complete product catalog featuring our comprehensive range of chemical products and solutions',
+      category: 'catalogs',
+      fileSize: '3.2 MB',
+      icon: BookOpen,
+      badge: 'New',
+      downloadUrl: BrochureProducts
+    },
+    {
+      id: '4',
       title: 'Complete Product Catalog 2024',
       description: 'Comprehensive catalog featuring our full range of industrial chemicals and laboratory supplies',
       category: 'catalogs',
@@ -102,7 +113,7 @@ const Resources = () => {
       icon: BookOpen
     },
     {
-      id: '4',
+      id: '5',
       title: 'Safety Data Sheets Collection',
       description: 'Complete SDS documentation for all chemical products including handling and storage guidelines',
       category: 'sds',
@@ -111,7 +122,7 @@ const Resources = () => {
       badge: 'Updated'
     },
     {
-      id: '5',
+      id: '6',
       title: 'ISO Certifications Package',
       description: 'Official ISO 9001, ISO 14001, and ISO 45001 certification documents',
       category: 'certificates',
@@ -119,7 +130,7 @@ const Resources = () => {
       icon: Award
     },
     {
-      id: '6',
+      id: '7',
       title: 'Chemical Storage Guidelines',
       description: 'Technical guide for proper storage, handling, and disposal of industrial chemicals',
       category: 'technical',
@@ -127,7 +138,7 @@ const Resources = () => {
       icon: FileText
     },
     {
-      id: '7',
+      id: '8',
       title: 'Laboratory Equipment Manual',
       description: 'Detailed specifications and usage instructions for laboratory equipment and instruments',
       category: 'technical',
@@ -135,7 +146,7 @@ const Resources = () => {
       icon: Beaker
     },
     {
-      id: '8',
+      id: '9',
       title: 'Water Treatment Solutions Guide',
       description: 'Industry best practices and product recommendations for water treatment applications',
       category: 'guides',
@@ -143,7 +154,7 @@ const Resources = () => {
       icon: BookOpen
     },
     {
-      id: '9',
+      id: '10',
       title: 'Pharmaceutical Grade Chemicals',
       description: 'Specialized catalog for pharmaceutical industry with compliance documentation',
       category: 'catalogs',
@@ -151,7 +162,7 @@ const Resources = () => {
       icon: BookOpen
     },
     {
-      id: '10',
+      id: '11',
       title: 'Quality Assurance Certificates',
       description: 'Certificate of Analysis (COA) templates and quality assurance documentation',
       category: 'certificates',
@@ -159,7 +170,7 @@ const Resources = () => {
       icon: Award
     },
     {
-      id: '11',
+      id: '12',
       title: 'Oil & Gas Industry Solutions',
       description: 'Technical guide for chemical applications in oil and gas sector operations',
       category: 'guides',
