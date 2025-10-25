@@ -58,25 +58,37 @@ export type Database = {
       }
       download_leads: {
         Row: {
+          company: string
+          country: string
           created_at: string
           email: string
           id: string
+          industry: string | null
+          marketing_consent: boolean | null
           name: string
           phone: string
           resource_title: string
         }
         Insert: {
+          company: string
+          country: string
           created_at?: string
           email: string
           id?: string
+          industry?: string | null
+          marketing_consent?: boolean | null
           name: string
           phone: string
           resource_title: string
         }
         Update: {
+          company?: string
+          country?: string
           created_at?: string
           email?: string
           id?: string
+          industry?: string | null
+          marketing_consent?: boolean | null
           name?: string
           phone?: string
           resource_title?: string
