@@ -7,6 +7,8 @@ import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 import { Download, Loader2 } from 'lucide-react';
 import { z } from 'zod';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Checkbox } from '@/components/ui/checkbox';
 
 interface DownloadGateDialogProps {
   open: boolean;
@@ -20,6 +22,10 @@ const downloadLeadSchema = z.object({
   name: z.string().trim().min(2, { message: "Name must be at least 2 characters" }).max(100, { message: "Name must be less than 100 characters" }),
   email: z.string().trim().email({ message: "Please enter a valid email address" }).max(255, { message: "Email must be less than 255 characters" }),
   phone: z.string().trim().min(8, { message: "Please enter a valid phone number" }).max(20, { message: "Phone number must be less than 20 characters" }),
+  company: z.string().trim().min(2, { message: "Company name must be at least 2 characters" }).max(150, { message: "Company name must be less than 150 characters" }),
+  country: z.string().trim().min(2, { message: "Please select your country" }).max(100),
+  industry: z.string().optional(),
+  marketingConsent: z.boolean(),
 });
 
 export const DownloadGateDialog = ({ 
@@ -34,7 +40,11 @@ export const DownloadGateDialog = ({
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phone: ''
+    phone: '',
+    company: '',
+    country: '',
+    industry: '',
+    marketingConsent: false
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
 
@@ -68,6 +78,10 @@ export const DownloadGateDialog = ({
           name: formData.name,
           email: formData.email,
           phone: formData.phone,
+          company: formData.company,
+          country: formData.country,
+          industry: formData.industry || null,
+          marketing_consent: formData.marketingConsent,
           resource_title: resourceTitle
         });
 
@@ -88,7 +102,7 @@ export const DownloadGateDialog = ({
       });
 
       // Reset form and close dialog
-      setFormData({ name: '', email: '', phone: '' });
+      setFormData({ name: '', email: '', phone: '', company: '', country: '', industry: '', marketingConsent: false });
       onDownloadSuccess();
       onOpenChange(false);
     } catch (error) {
@@ -113,57 +127,152 @@ export const DownloadGateDialog = ({
           </DialogTitle>
           <DialogDescription>
             Please provide your details to download <strong>{resourceTitle}</strong>. 
-            Our team may reach out to assist you with product inquiries.
+            We respect your privacy and will only use this information to assist you with product inquiries.
           </DialogDescription>
         </DialogHeader>
         
         <form onSubmit={handleSubmit} className="space-y-4 mt-4">
-          <div className="space-y-2">
-            <Label htmlFor="name">Full Name *</Label>
-            <Input
-              id="name"
-              type="text"
-              placeholder="John Doe"
-              value={formData.name}
-              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className={errors.name ? 'border-destructive' : ''}
-              required
-            />
-            {errors.name && (
-              <p className="text-sm text-destructive">{errors.name}</p>
-            )}
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <Label htmlFor="name">Full Name *</Label>
+              <Input
+                id="name"
+                type="text"
+                placeholder="John Doe"
+                value={formData.name}
+                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                className={errors.name ? 'border-destructive' : ''}
+                required
+              />
+              {errors.name && (
+                <p className="text-sm text-destructive">{errors.name}</p>
+              )}
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="email">Email Address *</Label>
+              <Input
+                id="email"
+                type="email"
+                placeholder="john@company.com"
+                value={formData.email}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                className={errors.email ? 'border-destructive' : ''}
+                required
+              />
+              {errors.email && (
+                <p className="text-sm text-destructive">{errors.email}</p>
+              )}
+            </div>
           </div>
 
-          <div className="space-y-2">
-            <Label htmlFor="email">Email Address *</Label>
-            <Input
-              id="email"
-              type="email"
-              placeholder="john@company.com"
-              value={formData.email}
-              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className={errors.email ? 'border-destructive' : ''}
-              required
-            />
-            {errors.email && (
-              <p className="text-sm text-destructive">{errors.email}</p>
-            )}
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <Label htmlFor="phone">Phone Number *</Label>
+              <Input
+                id="phone"
+                type="tel"
+                placeholder="+968 12345678"
+                value={formData.phone}
+                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                className={errors.phone ? 'border-destructive' : ''}
+                required
+              />
+              {errors.phone && (
+                <p className="text-sm text-destructive">{errors.phone}</p>
+              )}
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="company">Company Name *</Label>
+              <Input
+                id="company"
+                type="text"
+                placeholder="Company LLC"
+                value={formData.company}
+                onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                className={errors.company ? 'border-destructive' : ''}
+                required
+              />
+              {errors.company && (
+                <p className="text-sm text-destructive">{errors.company}</p>
+              )}
+            </div>
           </div>
 
-          <div className="space-y-2">
-            <Label htmlFor="phone">Phone Number *</Label>
-            <Input
-              id="phone"
-              type="tel"
-              placeholder="+968 12345678"
-              value={formData.phone}
-              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-              className={errors.phone ? 'border-destructive' : ''}
-              required
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <Label htmlFor="country">Country *</Label>
+              <Select
+                value={formData.country}
+                onValueChange={(value) => setFormData({ ...formData, country: value })}
+                required
+              >
+                <SelectTrigger className={errors.country ? 'border-destructive' : ''}>
+                  <SelectValue placeholder="Select your country" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="Oman">Oman</SelectItem>
+                  <SelectItem value="UAE">United Arab Emirates</SelectItem>
+                  <SelectItem value="Saudi Arabia">Saudi Arabia</SelectItem>
+                  <SelectItem value="Qatar">Qatar</SelectItem>
+                  <SelectItem value="Kuwait">Kuwait</SelectItem>
+                  <SelectItem value="Bahrain">Bahrain</SelectItem>
+                  <SelectItem value="India">India</SelectItem>
+                  <SelectItem value="Pakistan">Pakistan</SelectItem>
+                  <SelectItem value="Other">Other</SelectItem>
+                </SelectContent>
+              </Select>
+              {errors.country && (
+                <p className="text-sm text-destructive">{errors.country}</p>
+              )}
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="industry">Industry (Optional)</Label>
+              <Select
+                value={formData.industry}
+                onValueChange={(value) => setFormData({ ...formData, industry: value })}
+              >
+                <SelectTrigger>
+                  <SelectValue placeholder="Select your industry" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="Oil & Gas">Oil & Gas</SelectItem>
+                  <SelectItem value="Water Treatment">Water Treatment</SelectItem>
+                  <SelectItem value="Manufacturing">Manufacturing</SelectItem>
+                  <SelectItem value="Construction">Construction</SelectItem>
+                  <SelectItem value="Food & Beverage">Food & Beverage</SelectItem>
+                  <SelectItem value="Pharmaceutical">Pharmaceutical</SelectItem>
+                  <SelectItem value="Laboratory">Laboratory</SelectItem>
+                  <SelectItem value="Swimming Pool">Swimming Pool</SelectItem>
+                  <SelectItem value="Other">Other</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+
+          <div className="flex items-start space-x-3 bg-muted/50 p-3 rounded-md">
+            <Checkbox
+              id="consent"
+              checked={formData.marketingConsent}
+              onCheckedChange={(checked) => 
+                setFormData({ ...formData, marketingConsent: checked as boolean })
+              }
             />
-            {errors.phone && (
-              <p className="text-sm text-destructive">{errors.phone}</p>
-            )}
+            <div className="grid gap-1.5 leading-none">
+              <label
+                htmlFor="consent"
+                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer"
+              >
+                Keep me updated
+              </label>
+              <p className="text-xs text-muted-foreground">
+                I agree to receive product updates and industry insights from Global Chemicals LLC. 
+                You can unsubscribe at any time. View our{' '}
+                <a href="/privacy" className="underline hover:text-primary">Privacy Policy</a>.
+              </p>
+            </div>
           </div>
 
           <div className="flex gap-3 pt-4">
