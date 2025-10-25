@@ -76,26 +76,6 @@ const Resources = () => {
   const resources: Resource[] = [
     {
       id: '1',
-      title: 'Global Chemicals LLC Company Overview',
-      description: 'Comprehensive company overview featuring industries we serve, general introduction, services, capabilities, and product range',
-      category: 'catalogs',
-      fileSize: '2.8 MB',
-      icon: BookOpen,
-      badge: 'New',
-      downloadUrl: BrochureGlobal
-    },
-    {
-      id: '2',
-      title: 'CDC Anti-Clog Solution Brochure',
-      description: 'Detailed product information and technical specifications for CDC Anti-Clog chemical solutions',
-      category: 'catalogs',
-      fileSize: '1.5 MB',
-      icon: Beaker,
-      badge: 'New',
-      downloadUrl: BrochureCDC
-    },
-    {
-      id: '3',
       title: 'Global Chemicals LLC Products Catalog',
       description: 'Complete product catalog featuring our comprehensive range of chemical products and solutions',
       category: 'catalogs',
@@ -105,15 +85,27 @@ const Resources = () => {
       downloadUrl: BrochureProducts
     },
     {
-      id: '4',
-      title: 'Complete Product Catalog 2024',
-      description: 'Comprehensive catalog featuring our full range of industrial chemicals and laboratory supplies',
+      id: '2',
+      title: 'Global Chemicals LLC Company Overview',
+      description: 'Comprehensive company overview featuring industries we serve, general introduction, services, capabilities, and product range',
       category: 'catalogs',
-      fileSize: '12.5 MB',
-      icon: BookOpen
+      fileSize: '2.8 MB',
+      icon: BookOpen,
+      badge: 'New',
+      downloadUrl: BrochureGlobal
     },
     {
-      id: '5',
+      id: '3',
+      title: 'CDC Anti-Clog Solution Brochure',
+      description: 'Detailed product information and technical specifications for CDC Anti-Clog chemical solutions',
+      category: 'catalogs',
+      fileSize: '1.5 MB',
+      icon: Beaker,
+      badge: 'New',
+      downloadUrl: BrochureCDC
+    },
+    {
+      id: '4',
       title: 'Safety Data Sheets Collection',
       description: 'Complete SDS documentation for all chemical products including handling and storage guidelines',
       category: 'sds',
@@ -122,7 +114,7 @@ const Resources = () => {
       badge: 'Updated'
     },
     {
-      id: '6',
+      id: '5',
       title: 'ISO Certifications Package',
       description: 'Official ISO 9001, ISO 14001, and ISO 45001 certification documents',
       category: 'certificates',
@@ -130,7 +122,7 @@ const Resources = () => {
       icon: Award
     },
     {
-      id: '7',
+      id: '6',
       title: 'Chemical Storage Guidelines',
       description: 'Technical guide for proper storage, handling, and disposal of industrial chemicals',
       category: 'technical',
@@ -138,7 +130,7 @@ const Resources = () => {
       icon: FileText
     },
     {
-      id: '8',
+      id: '7',
       title: 'Laboratory Equipment Manual',
       description: 'Detailed specifications and usage instructions for laboratory equipment and instruments',
       category: 'technical',
@@ -146,7 +138,7 @@ const Resources = () => {
       icon: Beaker
     },
     {
-      id: '9',
+      id: '8',
       title: 'Water Treatment Solutions Guide',
       description: 'Industry best practices and product recommendations for water treatment applications',
       category: 'guides',
@@ -154,15 +146,7 @@ const Resources = () => {
       icon: BookOpen
     },
     {
-      id: '10',
-      title: 'Pharmaceutical Grade Chemicals',
-      description: 'Specialized catalog for pharmaceutical industry with compliance documentation',
-      category: 'catalogs',
-      fileSize: '9.3 MB',
-      icon: BookOpen
-    },
-    {
-      id: '11',
+      id: '9',
       title: 'Quality Assurance Certificates',
       description: 'Certificate of Analysis (COA) templates and quality assurance documentation',
       category: 'certificates',
@@ -170,7 +154,7 @@ const Resources = () => {
       icon: Award
     },
     {
-      id: '12',
+      id: '10',
       title: 'Oil & Gas Industry Solutions',
       description: 'Technical guide for chemical applications in oil and gas sector operations',
       category: 'guides',
