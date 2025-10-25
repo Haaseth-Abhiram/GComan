@@ -79,7 +79,7 @@ const Resources = () => {
       fileSize: '2.8 MB',
       icon: BookOpen,
       badge: 'New',
-      downloadUrl: 'https://gcoman.com/wp-content/uploads/2025/08/Global-Chemicals-LLC-Brochure-.pdf'
+      downloadUrl: '/brochures/Global-Chemicals-LLC-Brochure.pdf'
     },
     {
       id: '2',
@@ -89,7 +89,7 @@ const Resources = () => {
       fileSize: '1.5 MB',
       icon: Beaker,
       badge: 'New',
-      downloadUrl: 'https://gcoman.com/wp-content/uploads/2025/08/CDC-Anti-Clog-Brochure.pdf'
+      downloadUrl: '/brochures/CDC-Anti-Clog-Brochure.pdf'
     },
     {
       id: '3',
