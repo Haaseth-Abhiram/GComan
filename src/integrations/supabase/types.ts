@@ -56,6 +56,33 @@ export type Database = {
         }
         Relationships: []
       }
+      download_leads: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+          name: string
+          phone: string
+          resource_title: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id?: string
+          name: string
+          phone: string
+          resource_title: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+          name?: string
+          phone?: string
+          resource_title?: string
+        }
+        Relationships: []
+      }
       job_applications: {
         Row: {
           cover_letter: string

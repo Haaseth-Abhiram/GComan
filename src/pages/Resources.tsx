@@ -25,6 +25,8 @@ import {
 import BrochureGlobal from '@/assets/brochures/Global-Chemicals-LLC-Brochure.pdf';
 import BrochureCDC from '@/assets/brochures/CDC-Anti-Clog-Brochure.pdf';
 import BrochureProducts from '@/assets/brochures/Global-Chemicals-Products-Brochure.pdf';
+import BrochureProductsList from '@/assets/brochures/Global-Chemicals-Products-List.pdf';
+import { DownloadGateDialog } from '@/components/DownloadGateDialog';
 
 interface Resource {
   id: string;
@@ -53,6 +55,8 @@ const Resources = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedDownloadCategory, setSelectedDownloadCategory] = useState('all');
   const [selectedArticleCategory, setSelectedArticleCategory] = useState('All');
+  const [downloadDialogOpen, setDownloadDialogOpen] = useState(false);
+  const [selectedResource, setSelectedResource] = useState<Resource | null>(null);
 
   const downloadCategories = [
     { id: 'all', label: 'All Resources' },
@@ -106,6 +110,16 @@ const Resources = () => {
     },
     {
       id: '4',
+      title: 'Global Chemicals Products List',
+      description: 'Comprehensive list of all available chemical products with specifications and applications',
+      category: 'catalogs',
+      fileSize: '2.1 MB',
+      icon: FileText,
+      badge: 'New',
+      downloadUrl: BrochureProductsList
+    },
+    {
+      id: '5',
       title: 'Safety Data Sheets Collection',
       description: 'Complete SDS documentation for all chemical products including handling and storage guidelines',
       category: 'sds',
@@ -114,7 +128,7 @@ const Resources = () => {
       badge: 'Updated'
     },
     {
-      id: '5',
+      id: '6',
       title: 'ISO Certifications Package',
       description: 'Official ISO 9001, ISO 14001, and ISO 45001 certification documents',
       category: 'certificates',
@@ -122,7 +136,7 @@ const Resources = () => {
       icon: Award
     },
     {
-      id: '6',
+      id: '7',
       title: 'Chemical Storage Guidelines',
       description: 'Technical guide for proper storage, handling, and disposal of industrial chemicals',
       category: 'technical',
@@ -130,7 +144,7 @@ const Resources = () => {
       icon: FileText
     },
     {
-      id: '7',
+      id: '8',
       title: 'Laboratory Equipment Manual',
       description: 'Detailed specifications and usage instructions for laboratory equipment and instruments',
       category: 'technical',
@@ -138,7 +152,7 @@ const Resources = () => {
       icon: Beaker
     },
     {
-      id: '8',
+      id: '9',
       title: 'Water Treatment Solutions Guide',
       description: 'Industry best practices and product recommendations for water treatment applications',
       category: 'guides',
@@ -146,7 +160,7 @@ const Resources = () => {
       icon: BookOpen
     },
     {
-      id: '9',
+      id: '10',
       title: 'Quality Assurance Certificates',
       description: 'Certificate of Analysis (COA) templates and quality assurance documentation',
       category: 'certificates',
@@ -154,7 +168,7 @@ const Resources = () => {
       icon: Award
     },
     {
-      id: '10',
+      id: '11',
       title: 'Oil & Gas Industry Solutions',
       description: 'Technical guide for chemical applications in oil and gas sector operations',
       category: 'guides',
@@ -245,19 +259,8 @@ const Resources = () => {
 
   const handleDownload = (resource: Resource) => {
     if (resource.downloadUrl) {
-      // Create a link element and trigger download
-      const link = document.createElement('a');
-      link.href = resource.downloadUrl;
-      link.download = resource.title.replace(/\s+/g, '-') + '.pdf';
-      link.style.display = 'none';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      
-      toast({
-        title: "Download Started",
-        description: `${resource.title} is being downloaded.`,
-      });
+      setSelectedResource(resource);
+      setDownloadDialogOpen(true);
     } else {
       toast({
         title: "Coming Soon",
@@ -265,6 +268,10 @@ const Resources = () => {
         variant: "destructive",
       });
     }
+  };
+
+  const handleDownloadSuccess = () => {
+    // Additional actions after successful download can be added here
   };
 
   return (
@@ -545,6 +552,17 @@ const Resources = () => {
       </section>
 
       <Footer />
+      
+      {/* Download Gate Dialog */}
+      {selectedResource && (
+        <DownloadGateDialog
+          open={downloadDialogOpen}
+          onOpenChange={setDownloadDialogOpen}
+          resourceTitle={selectedResource.title}
+          downloadUrl={selectedResource.downloadUrl || ''}
+          onDownloadSuccess={handleDownloadSuccess}
+        />
+      )}
     </div>
   );
 };
