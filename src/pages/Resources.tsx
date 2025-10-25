@@ -250,17 +250,20 @@ const Resources = () => {
 
   const handleDownload = (resource: Resource) => {
     if (resource.downloadUrl) {
-      // Open PDF in new tab so users can view or download; fallback to same-tab if blocked
-      const win = window.open(resource.downloadUrl, '_blank');
-      if (!win) {
-        window.location.href = resource.downloadUrl;
-      }
+      // Create a link element and trigger download
+      const link = document.createElement('a');
+      link.href = resource.downloadUrl;
+      link.download = resource.title.replace(/\s+/g, '-') + '.pdf';
+      link.style.display = 'none';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      
       toast({
-        title: "Opening Document",
-        description: `${resource.title} is opening in a new tab.`,
+        title: "Download Started",
+        description: `${resource.title} is being downloaded.`,
       });
     } else {
-      // Show message for resources without download links
       toast({
         title: "Coming Soon",
         description: "This resource will be available for download soon. Please contact us for immediate access.",
@@ -509,7 +512,7 @@ const Resources = () => {
                               className="gap-2"
                             >
                               <Download className="h-4 w-4" />
-                              View PDF
+                              Download
                             </Button>
                           </div>
                         </CardContent>
