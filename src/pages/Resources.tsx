@@ -75,8 +75,8 @@ const Resources = () => {
   const resources: Resource[] = [
     {
       id: '1',
-      title: 'Global Chemicals LLC Company Brochure',
-      description: 'Comprehensive company brochure showcasing our services, capabilities, and product range',
+      title: 'Global Chemicals LLC Company Overview',
+      description: 'Comprehensive company overview featuring industries we serve, general introduction, services, capabilities, and product range',
       category: 'catalogs',
       fileSize: '2.8 MB',
       icon: BookOpen,
