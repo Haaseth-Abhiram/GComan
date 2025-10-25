@@ -22,6 +22,8 @@ import {
   ChevronRight,
   Tag
 } from 'lucide-react';
+import BrochureGlobal from '@/assets/brochures/Global-Chemicals-LLC-Brochure.pdf';
+import BrochureCDC from '@/assets/brochures/CDC-Anti-Clog-Brochure.pdf';
 
 interface Resource {
   id: string;
@@ -79,7 +81,7 @@ const Resources = () => {
       fileSize: '2.8 MB',
       icon: BookOpen,
       badge: 'New',
-      downloadUrl: '/brochures/Global-Chemicals-LLC-Brochure.pdf'
+      downloadUrl: BrochureGlobal
     },
     {
       id: '2',
@@ -89,7 +91,7 @@ const Resources = () => {
       fileSize: '1.5 MB',
       icon: Beaker,
       badge: 'New',
-      downloadUrl: '/brochures/CDC-Anti-Clog-Brochure.pdf'
+      downloadUrl: BrochureCDC
     },
     {
       id: '3',
@@ -248,9 +250,11 @@ const Resources = () => {
 
   const handleDownload = (resource: Resource) => {
     if (resource.downloadUrl) {
-      // Open PDF in new tab so users can view or download
-      window.open(resource.downloadUrl, '_blank');
-      
+      // Open PDF in new tab so users can view or download; fallback to same-tab if blocked
+      const win = window.open(resource.downloadUrl, '_blank');
+      if (!win) {
+        window.location.href = resource.downloadUrl;
+      }
       toast({
         title: "Opening Document",
         description: `${resource.title} is opening in a new tab.`,
@@ -505,7 +509,7 @@ const Resources = () => {
                               className="gap-2"
                             >
                               <Download className="h-4 w-4" />
-                              Download
+                              View PDF
                             </Button>
                           </div>
                         </CardContent>
