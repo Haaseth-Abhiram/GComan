@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { useToast } from '@/hooks/use-toast';
 import { 
   Download, 
   FileText, 
@@ -30,6 +31,7 @@ interface Resource {
   fileSize: string;
   icon: React.ComponentType<{ className?: string }>;
   badge?: string;
+  downloadUrl?: string;
 }
 
 interface Article {
@@ -44,6 +46,7 @@ interface Article {
 }
 
 const Resources = () => {
+  const { toast } = useToast();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedDownloadCategory, setSelectedDownloadCategory] = useState('all');
   const [selectedArticleCategory, setSelectedArticleCategory] = useState('All');
@@ -75,7 +78,8 @@ const Resources = () => {
       category: 'catalogs',
       fileSize: '2.8 MB',
       icon: BookOpen,
-      badge: 'New'
+      badge: 'New',
+      downloadUrl: 'https://gcoman.com/wp-content/uploads/2025/08/Global-Chemicals-LLC-Brochure-.pdf'
     },
     {
       id: '2',
@@ -84,7 +88,8 @@ const Resources = () => {
       category: 'catalogs',
       fileSize: '1.5 MB',
       icon: Beaker,
-      badge: 'New'
+      badge: 'New',
+      downloadUrl: 'https://gcoman.com/wp-content/uploads/2025/08/CDC-Anti-Clog-Brochure.pdf'
     },
     {
       id: '3',
@@ -241,9 +246,22 @@ const Resources = () => {
   const featuredArticle = articles.find((article) => article.featured);
   const regularArticles = filteredArticles.filter((article) => !article.featured);
 
-  const handleDownload = (resourceTitle: string) => {
-    // In production, this would trigger actual file download
-    console.log('Downloading:', resourceTitle);
+  const handleDownload = (resource: Resource) => {
+    if (resource.downloadUrl) {
+      // Open the download URL in a new tab
+      window.open(resource.downloadUrl, '_blank');
+      toast({
+        title: "Download Started",
+        description: `${resource.title} is being downloaded.`,
+      });
+    } else {
+      // Show message for resources without download links
+      toast({
+        title: "Coming Soon",
+        description: "This resource will be available for download soon. Please contact us for immediate access.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
@@ -481,7 +499,7 @@ const Resources = () => {
                               {resource.fileSize}
                             </span>
                             <Button 
-                              onClick={() => handleDownload(resource.title)}
+                              onClick={() => handleDownload(resource)}
                               size="sm"
                               className="gap-2"
                             >
