@@ -1,10 +1,10 @@
+import { useState, useEffect } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import { Card } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Beaker, Droplets, Wrench, Zap, FlaskConical, TestTube, Factory, Building2, Wheat, Microscope, Sparkles, FlaskRound, Flame, Wind, Wine, ChevronRight, Shield, SprayCan } from 'lucide-react';
-import { useState } from 'react';
 import { cn } from '@/lib/utils';
 
 interface Product {
@@ -24,6 +24,43 @@ interface Product {
 const Products = () => {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [activeCategory, setActiveCategory] = useState('all');
+
+  useEffect(() => {
+    // SEO Meta Tags
+    document.title = 'Chemical Products Catalog | 500+ Products | Global Chemicals LLC Oman';
+    
+    const updateOrCreateMeta = (name: string, content: string, property?: boolean) => {
+      const attribute = property ? 'property' : 'name';
+      let meta = document.querySelector(`meta[${attribute}="${name}"]`);
+      if (meta) {
+        meta.setAttribute('content', content);
+      } else {
+        meta = document.createElement('meta');
+        meta.setAttribute(attribute, name);
+        meta.setAttribute('content', content);
+        document.head.appendChild(meta);
+      }
+    };
+
+    updateOrCreateMeta('description', 'Browse 500+ chemical products from Global Chemicals LLC. Water treatment chemicals, industrial lubricants, laboratory reagents, swimming pool chemicals, and more. ISO certified quality. Request quote today.');
+    updateOrCreateMeta('keywords', 'chemical products Oman, water treatment chemicals, industrial lubricants, laboratory chemicals, swimming pool chemicals, caustic soda, calcium hypochlorite, PAC, Shell lubricants, Mobil oils');
+    
+    // Open Graph
+    updateOrCreateMeta('og:title', 'Chemical Products Catalog | 500+ Quality Products | Global Chemicals LLC', true);
+    updateOrCreateMeta('og:description', 'Complete range of specialty and industrial chemicals for all industries. Water treatment, lubricants, lab equipment, and more.', true);
+    updateOrCreateMeta('og:url', 'https://www.gcoman.com/products', true);
+    
+    // Canonical
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      canonical.setAttribute('href', 'https://www.gcoman.com/products');
+    } else {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      canonical.setAttribute('href', 'https://www.gcoman.com/products');
+      document.head.appendChild(canonical);
+    }
+  }, []);
 
   const products: Product[] = [
     // Water Treatment Chemicals

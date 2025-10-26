@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -91,6 +91,43 @@ const categories = [
 const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
+
+  useEffect(() => {
+    // SEO Meta Tags
+    document.title = 'Chemical Industry Blog & News | Expert Insights | Global Chemicals LLC';
+    
+    const updateOrCreateMeta = (name: string, content: string, property?: boolean) => {
+      const attribute = property ? 'property' : 'name';
+      let meta = document.querySelector(`meta[${attribute}="${name}"]`);
+      if (meta) {
+        meta.setAttribute('content', content);
+      } else {
+        meta = document.createElement('meta');
+        meta.setAttribute(attribute, name);
+        meta.setAttribute('content', content);
+        document.head.appendChild(meta);
+      }
+    };
+
+    updateOrCreateMeta('description', 'Stay informed with Global Chemicals LLC blog. Latest chemical industry news, technical guides, safety practices, product updates, and expert insights for Oman\'s industrial sectors.');
+    updateOrCreateMeta('keywords', 'chemical industry blog, chemical news Oman, technical guides chemicals, safety best practices, chemical innovations, industry insights');
+    
+    // Open Graph
+    updateOrCreateMeta('og:title', 'Chemical Industry Blog & News | Global Chemicals LLC', true);
+    updateOrCreateMeta('og:description', 'Expert insights, industry news, and technical guidance for chemical applications across Oman\'s key sectors.', true);
+    updateOrCreateMeta('og:url', 'https://www.gcoman.com/blog', true);
+    
+    // Canonical
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      canonical.setAttribute('href', 'https://www.gcoman.com/blog');
+    } else {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      canonical.setAttribute('href', 'https://www.gcoman.com/blog');
+      document.head.appendChild(canonical);
+    }
+  }, []);
 
   const filteredPosts = blogPosts.filter((post) => {
     const matchesCategory = selectedCategory === "All" || post.category === selectedCategory;

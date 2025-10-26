@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -9,6 +10,42 @@ import facilityImage from '@/assets/about-facility.jpg';
 import teamImage from '@/assets/about-team.jpg';
 
 const About = () => {
+  useEffect(() => {
+    // SEO Meta Tags
+    document.title = 'About Us | 10+ Years Excellence | Global Chemicals LLC Oman';
+    
+    const updateOrCreateMeta = (name: string, content: string, property?: boolean) => {
+      const attribute = property ? 'property' : 'name';
+      let meta = document.querySelector(`meta[${attribute}="${name}"]`);
+      if (meta) {
+        meta.setAttribute('content', content);
+      } else {
+        meta = document.createElement('meta');
+        meta.setAttribute(attribute, name);
+        meta.setAttribute('content', content);
+        document.head.appendChild(meta);
+      }
+    };
+
+    updateOrCreateMeta('description', 'Learn about Global Chemicals LLC - ISO 9001 certified chemical supplier in Oman with 10+ years excellence. Our mission, vision, values, and commitment to quality serving 200+ clients across diverse industries.');
+    updateOrCreateMeta('keywords', 'about global chemicals, chemical supplier Oman, ISO 9001 certified, chemical company Muscat, specialty chemicals Oman, industrial chemicals supplier');
+    
+    // Open Graph
+    updateOrCreateMeta('og:title', 'About Global Chemicals LLC - Leading Chemical Supplier in Oman', true);
+    updateOrCreateMeta('og:description', 'ISO 9001 certified with 10+ years of excellence. Trusted by 200+ clients. Quality chemicals, expert service, sustainable practices.', true);
+    updateOrCreateMeta('og:url', 'https://www.gcoman.com/about', true);
+    
+    // Canonical
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      canonical.setAttribute('href', 'https://www.gcoman.com/about');
+    } else {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      canonical.setAttribute('href', 'https://www.gcoman.com/about');
+      document.head.appendChild(canonical);
+    }
+  }, []);
   const stats = [
     { icon: Award, value: '10+', label: 'Years of Excellence', color: 'text-primary' },
     { icon: Factory, value: '1000+', label: 'Quality Products', color: 'text-secondary' },

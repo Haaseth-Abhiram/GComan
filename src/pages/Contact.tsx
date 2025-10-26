@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -8,7 +9,6 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useToast } from '@/hooks/use-toast';
-import { useState } from 'react';
 import { z } from 'zod';
 
 const contactSchema = z.object({
@@ -31,6 +31,43 @@ const Contact = () => {
     subject: '',
     message: '',
   });
+
+  useEffect(() => {
+    // SEO Meta Tags
+    document.title = 'Contact Us | Get Quote | Global Chemicals LLC Muscat Oman';
+    
+    const updateOrCreateMeta = (name: string, content: string, property?: boolean) => {
+      const attribute = property ? 'property' : 'name';
+      let meta = document.querySelector(`meta[${attribute}="${name}"]`);
+      if (meta) {
+        meta.setAttribute('content', content);
+      } else {
+        meta = document.createElement('meta');
+        meta.setAttribute(attribute, name);
+        meta.setAttribute('content', content);
+        document.head.appendChild(meta);
+      }
+    };
+
+    updateOrCreateMeta('description', 'Contact Global Chemicals LLC in Muscat, Oman. Request quote, technical support, or product inquiry. Call +968 93754388 or email info@gcoman.com. Sun-Thu: 8AM-6PM. Expert chemical solutions team ready to help.');
+    updateOrCreateMeta('keywords', 'contact global chemicals, chemical supplier Muscat, request quote chemicals, technical support chemicals Oman, chemical inquiry');
+    
+    // Open Graph
+    updateOrCreateMeta('og:title', 'Contact Global Chemicals LLC | Request Quote | Muscat Oman', true);
+    updateOrCreateMeta('og:description', 'Get in touch with Oman\'s leading chemical supplier. Phone, email, or visit our Muscat office. Expert support ready to assist.', true);
+    updateOrCreateMeta('og:url', 'https://www.gcoman.com/contact', true);
+    
+    // Canonical
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      canonical.setAttribute('href', 'https://www.gcoman.com/contact');
+    } else {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      canonical.setAttribute('href', 'https://www.gcoman.com/contact');
+      document.head.appendChild(canonical);
+    }
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
