@@ -6,6 +6,8 @@ import { Card } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Beaker, Droplets, Wrench, Zap, FlaskConical, TestTube, Factory, Building2, Wheat, Microscope, Sparkles, FlaskRound, Flame, Wind, Wine, ChevronRight, Shield, SprayCan } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Drawer, DrawerContent, DrawerHeader, DrawerTitle, DrawerDescription } from '@/components/ui/drawer';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 interface Product {
   id: string;
@@ -24,6 +26,7 @@ interface Product {
 const Products = () => {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [activeCategory, setActiveCategory] = useState('all');
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     // SEO Meta Tags
@@ -1805,73 +1808,144 @@ const Products = () => {
         </div>
       </section>
 
-      {/* Product Details Dialog */}
-      <Dialog open={!!selectedProduct} onOpenChange={() => setSelectedProduct(null)}>
-        <DialogContent className="max-w-[95vw] sm:max-w-2xl max-h-[85vh] overflow-y-auto">
-          {selectedProduct && (
-            <>
-              <DialogHeader>
-                <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center flex-shrink-0">
-                    {(() => {
-                      const Icon = selectedProduct.icon;
-                      return <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />;
-                    })()}
+      {/* Product Details - Responsive Drawer/Dialog */}
+      {isMobile ? (
+        <Drawer open={!!selectedProduct} onOpenChange={(open) => !open && setSelectedProduct(null)}>
+          <DrawerContent className="max-h-[85vh] overflow-y-auto">
+            {selectedProduct && (
+              <>
+                <DrawerHeader>
+                  <div className="flex items-start gap-3 mb-2">
+                    <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center flex-shrink-0">
+                      {(() => {
+                        const Icon = selectedProduct.icon;
+                        return <Icon className="w-6 h-6 text-primary" />;
+                      })()}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <DrawerTitle className="text-lg font-bold text-foreground leading-tight">
+                        {selectedProduct.title}
+                      </DrawerTitle>
+                      <DrawerDescription className="mt-1 text-sm">
+                        {selectedProduct.description}
+                      </DrawerDescription>
+                    </div>
                   </div>
-                  <div className="flex-1 min-w-0">
-                    <DialogTitle className="text-xl sm:text-2xl font-bold text-foreground leading-tight">
-                      {selectedProduct.title}
-                    </DialogTitle>
-                    <p className="text-muted-foreground mt-1 sm:mt-2 text-sm sm:text-base">{selectedProduct.description}</p>
-                  </div>
-                </div>
-              </DialogHeader>
+                </DrawerHeader>
 
-              <div className="space-y-4 sm:space-y-6">
-                {selectedProduct.details?.formula && (
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-2 text-sm sm:text-base">Chemical Formula</h4>
-                    <p className="text-muted-foreground font-mono text-base sm:text-lg">{selectedProduct.details.formula}</p>
-                  </div>
-                )}
+                <div className="px-4 pb-4 space-y-4">
+                  {selectedProduct.details?.formula && (
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2 text-sm">Chemical Formula</h4>
+                      <p className="text-muted-foreground font-mono text-base">{selectedProduct.details.formula}</p>
+                    </div>
+                  )}
 
-                {selectedProduct.details?.fullDescription && (
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-2 text-sm sm:text-base">Description</h4>
-                    <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
-                      {selectedProduct.details.fullDescription}
+                  {selectedProduct.details?.fullDescription && (
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2 text-sm">Description</h4>
+                      <p className="text-muted-foreground leading-relaxed text-sm">
+                        {selectedProduct.details.fullDescription}
+                      </p>
+                    </div>
+                  )}
+
+                  {selectedProduct.details?.applications && selectedProduct.details.applications.length > 0 && (
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-3 text-sm">Applications</h4>
+                      <ul className="grid grid-cols-1 gap-2">
+                        {selectedProduct.details.applications.map((app, index) => (
+                          <li key={index} className="flex items-start gap-2">
+                            <span className="text-primary mt-1 flex-shrink-0 text-lg">•</span>
+                            <span className="text-muted-foreground text-xs">{app}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  <div className="pt-3 border-t border-border">
+                    <p className="text-xs text-muted-foreground">
+                      For more information about this product, pricing, or technical specifications, please{' '}
+                      <a href="/contact" className="text-primary hover:underline font-semibold">
+                        contact us
+                      </a>
+                      .
                     </p>
                   </div>
-                )}
-
-                {selectedProduct.details?.applications && selectedProduct.details.applications.length > 0 && (
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-3 text-sm sm:text-base">Applications</h4>
-                    <ul className="grid grid-cols-1 gap-2">
-                      {selectedProduct.details.applications.map((app, index) => (
-                        <li key={index} className="flex items-start gap-2">
-                          <span className="text-primary mt-1 flex-shrink-0 text-lg">•</span>
-                          <span className="text-muted-foreground text-xs sm:text-sm">{app}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-
-                <div className="pt-3 sm:pt-4 border-t border-border">
-                  <p className="text-xs sm:text-sm text-muted-foreground">
-                    For more information about this product, pricing, or technical specifications, please{' '}
-                    <a href="/contact" className="text-primary hover:underline font-semibold">
-                      contact us
-                    </a>
-                    .
-                  </p>
                 </div>
-              </div>
-            </>
-          )}
-        </DialogContent>
-      </Dialog>
+              </>
+            )}
+          </DrawerContent>
+        </Drawer>
+      ) : (
+        <Dialog open={!!selectedProduct} onOpenChange={() => setSelectedProduct(null)}>
+          <DialogContent className="max-w-[95vw] sm:max-w-2xl max-h-[85vh] overflow-y-auto">
+            {selectedProduct && (
+              <>
+                <DialogHeader>
+                  <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center flex-shrink-0">
+                      {(() => {
+                        const Icon = selectedProduct.icon;
+                        return <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />;
+                      })()}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <DialogTitle className="text-xl sm:text-2xl font-bold text-foreground leading-tight">
+                        {selectedProduct.title}
+                      </DialogTitle>
+                      <p className="text-muted-foreground mt-1 sm:mt-2 text-sm sm:text-base">{selectedProduct.description}</p>
+                    </div>
+                  </div>
+                </DialogHeader>
+
+                <div className="space-y-4 sm:space-y-6">
+                  {selectedProduct.details?.formula && (
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2 text-sm sm:text-base">Chemical Formula</h4>
+                      <p className="text-muted-foreground font-mono text-base sm:text-lg">{selectedProduct.details.formula}</p>
+                    </div>
+                  )}
+
+                  {selectedProduct.details?.fullDescription && (
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2 text-sm sm:text-base">Description</h4>
+                      <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+                        {selectedProduct.details.fullDescription}
+                      </p>
+                    </div>
+                  )}
+
+                  {selectedProduct.details?.applications && selectedProduct.details.applications.length > 0 && (
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-3 text-sm sm:text-base">Applications</h4>
+                      <ul className="grid grid-cols-1 gap-2">
+                        {selectedProduct.details.applications.map((app, index) => (
+                          <li key={index} className="flex items-start gap-2">
+                            <span className="text-primary mt-1 flex-shrink-0 text-lg">•</span>
+                            <span className="text-muted-foreground text-xs sm:text-sm">{app}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  <div className="pt-3 sm:pt-4 border-t border-border">
+                    <p className="text-xs sm:text-sm text-muted-foreground">
+                      For more information about this product, pricing, or technical specifications, please{' '}
+                      <a href="/contact" className="text-primary hover:underline font-semibold">
+                        contact us
+                      </a>
+                      .
+                    </p>
+                  </div>
+                </div>
+              </>
+            )}
+          </DialogContent>
+        </Dialog>
+      )}
 
       {/* Product Features */}
       <section className="py-16 bg-muted/30">
