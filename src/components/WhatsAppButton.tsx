@@ -1,4 +1,4 @@
-import { MessageCircle } from 'lucide-react';
+import whatsappIcon from '@/assets/whatsapp-icon.png';
 
 const WhatsAppButton = () => {
   const handleClick = () => {
@@ -14,7 +14,7 @@ const WhatsAppButton = () => {
       className="fixed bottom-8 left-8 z-50 w-14 h-14 bg-tertiary hover:bg-tertiary/90 text-white rounded-full shadow-xl hover:shadow-2xl transition-all transform hover:scale-110 flex items-center justify-center group"
       aria-label="Contact us on WhatsApp"
     >
-      <MessageCircle className="w-7 h-7 group-hover:animate-pulse" />
+      <img src={whatsappIcon} alt="WhatsApp" className="w-7 h-7 group-hover:animate-pulse" />
     </button>
   );
 };
