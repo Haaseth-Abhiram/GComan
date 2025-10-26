@@ -55,7 +55,7 @@ const StatsSection = () => {
     }, [isVisible, end]);
 
     return (
-      <span className="text-4xl md:text-5xl font-bold">
+      <span className="text-3xl sm:text-4xl md:text-5xl font-bold">
         {count}
         {suffix}
       </span>

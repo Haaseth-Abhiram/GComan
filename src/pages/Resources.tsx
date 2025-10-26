@@ -317,13 +317,13 @@ const Resources = () => {
       <WhatsAppButton />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-primary/5 via-background to-background">
+      <section className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 bg-gradient-to-br from-primary/5 via-background to-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 sm:mb-6 px-4">
               Resources & Insights
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 px-4">
               Access downloadable resources, industry news, technical guides, and expert insights
             </p>
             
@@ -346,21 +346,22 @@ const Resources = () => {
       <section className="py-12">
         <div className="container mx-auto px-4">
           <Tabs defaultValue="articles" className="max-w-7xl mx-auto">
-            <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-12">
-              <TabsTrigger value="articles" className="text-base">Articles & News</TabsTrigger>
-              <TabsTrigger value="downloads" className="text-base">Downloads</TabsTrigger>
+            <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-8 sm:mb-12">
+              <TabsTrigger value="articles" className="text-sm sm:text-base py-2 sm:py-3">Articles & News</TabsTrigger>
+              <TabsTrigger value="downloads" className="text-sm sm:text-base py-2 sm:py-3">Downloads</TabsTrigger>
             </TabsList>
 
             {/* Articles Tab */}
             <TabsContent value="articles" className="space-y-12">
               {/* Article Category Filters */}
-              <div className="flex flex-wrap gap-3 justify-center">
+              <div className="flex flex-wrap gap-2 sm:gap-3 justify-center px-2">
                 {articleCategories.map((category) => (
                   <Button
                     key={category}
                     variant={selectedArticleCategory === category ? "default" : "outline"}
                     onClick={() => setSelectedArticleCategory(category)}
                     size="sm"
+                    className="text-xs sm:text-sm"
                   >
                     {category}
                   </Button>
@@ -477,20 +478,20 @@ const Resources = () => {
               )}
 
               {/* Newsletter CTA */}
-              <div className="mt-16 bg-gradient-to-br from-primary/5 to-background rounded-lg p-8 md:p-12">
+              <div className="mt-16 bg-gradient-to-br from-primary/5 to-background rounded-lg p-6 sm:p-8 md:p-12">
                 <div className="max-w-3xl mx-auto text-center">
-                  <Tag className="w-12 h-12 text-primary mx-auto mb-6" />
-                  <h2 className="text-3xl md:text-4xl font-bold mb-4">Stay Updated</h2>
-                  <p className="text-lg text-muted-foreground mb-8">
+                  <Tag className="w-10 h-10 sm:w-12 sm:h-12 text-primary mx-auto mb-4 sm:mb-6" />
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Stay Updated</h2>
+                  <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8">
                     Subscribe for the latest industry insights, product updates, and expert guidance.
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-xl mx-auto">
+                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center max-w-xl mx-auto">
                     <Input
                       type="email"
                       placeholder="Enter your email address"
                       className="flex-1"
                     />
-                    <Button size="lg">
+                    <Button size="lg" className="w-full sm:w-auto">
                       Subscribe Now
                     </Button>
                   </div>
@@ -501,13 +502,13 @@ const Resources = () => {
             {/* Downloads Tab */}
             <TabsContent value="downloads" className="space-y-8">
               {/* Download Category Filter */}
-              <div className="flex items-center gap-2 overflow-x-auto pb-2 justify-center flex-wrap">
+              <div className="flex items-center gap-2 overflow-x-auto pb-2 justify-center flex-wrap px-2">
                 {downloadCategories.map((category) => (
                   <Button
                     key={category.id}
                     variant={selectedDownloadCategory === category.id ? 'default' : 'outline'}
                     onClick={() => setSelectedDownloadCategory(category.id)}
-                    className="whitespace-nowrap"
+                    className="whitespace-nowrap text-xs sm:text-sm"
                     size="sm"
                   >
                     {category.label}
@@ -562,13 +563,13 @@ const Resources = () => {
               )}
 
               {/* Downloads CTA */}
-              <div className="mt-12 bg-primary/5 rounded-lg p-8 md:p-12">
+              <div className="mt-12 bg-primary/5 rounded-lg p-6 sm:p-8 md:p-12">
                 <Card className="max-w-3xl mx-auto text-center border-0 shadow-none bg-transparent">
                   <CardHeader>
-                    <CardTitle className="text-2xl md:text-3xl">
+                    <CardTitle className="text-xl sm:text-2xl md:text-3xl">
                       Need Custom Documentation?
                     </CardTitle>
-                    <CardDescription className="text-base mt-4">
+                    <CardDescription className="text-sm sm:text-base mt-4">
                       Can't find what you're looking for? Our team can provide customized technical documentation, 
                       product specifications, or industry-specific solutions tailored to your requirements.
                     </CardDescription>

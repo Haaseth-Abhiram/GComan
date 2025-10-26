@@ -54,7 +54,7 @@ const Hero = () => {
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight px-4">
               Transforming Industries with
               <br />
               <span className="text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]">
@@ -63,22 +63,22 @@ const Hero = () => {
             </h1>
 
             {/* Value Proposition */}
-            <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed px-4">
               Delivering high-quality specialty chemicals and innovative solutions to 200+ trusted clients worldwide
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 pt-6 px-4">
               <a
                 href="/products"
-                className="group inline-flex items-center gap-2 px-8 py-4 bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-105"
+                className="group inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 text-center"
               >
                 Explore Our Products
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
               </a>
               <a
                 href="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-white hover:bg-white/90 text-secondary font-semibold rounded-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-105"
+                className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white hover:bg-white/90 text-secondary font-semibold rounded-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 text-center"
               >
                 Request a Quote
               </a>
