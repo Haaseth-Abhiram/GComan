@@ -1686,11 +1686,11 @@ const Products = () => {
       <WhatsAppButton />
 
       {/* Page Header */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-primary/10 to-secondary/10">
+      <section className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 bg-gradient-to-br from-primary/10 to-secondary/10">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center animate-fade-in">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Our Products</h1>
-            <p className="text-lg text-muted-foreground">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-3 sm:mb-4 px-4">Our Products</h1>
+            <p className="text-base sm:text-lg text-muted-foreground px-4">
               High-quality chemical solutions for diverse industrial needs
             </p>
           </div>
@@ -1711,11 +1711,11 @@ const Products = () => {
             <div className="flex flex-col lg:flex-row gap-8">
               {/* Sidebar - Category Navigation */}
               <aside className="lg:w-72 flex-shrink-0">
-                <div className="sticky top-24 space-y-2">
-                  <h3 className="font-semibold text-foreground mb-4 text-sm uppercase tracking-wide px-3">
+                <div className="lg:sticky lg:top-24 space-y-2">
+                  <h3 className="font-semibold text-foreground mb-3 sm:mb-4 text-xs sm:text-sm uppercase tracking-wide px-2 sm:px-3">
                     Product Categories
                   </h3>
-                  <nav className="space-y-1">
+                  <nav className="space-y-1 max-h-[60vh] lg:max-h-none overflow-y-auto">
                     {categories.map((category) => {
                       const Icon = category.icon;
                       const isActive = activeCategory === category.id;
@@ -1724,20 +1724,20 @@ const Products = () => {
                           key={category.id}
                           onClick={() => setActiveCategory(category.id)}
                           className={cn(
-                            'w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left transition-all group',
+                            'w-full flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2 sm:py-3 rounded-lg text-left transition-all group',
                             isActive
                               ? 'bg-primary text-primary-foreground shadow-md'
                               : 'bg-card hover:bg-accent text-foreground border border-border hover:border-primary/50'
                           )}
                         >
-                          <Icon className={cn('w-5 h-5 flex-shrink-0', isActive ? 'text-primary-foreground' : 'text-primary')} />
-                          <span className="flex-1 text-sm font-medium">{category.name}</span>
-                          <ChevronRight className={cn('w-4 h-4 transition-transform', isActive ? 'translate-x-0' : '-translate-x-1 opacity-0 group-hover:translate-x-0 group-hover:opacity-100')} />
+                          <Icon className={cn('w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0', isActive ? 'text-primary-foreground' : 'text-primary')} />
+                          <span className="flex-1 text-xs sm:text-sm font-medium">{category.name}</span>
+                          <ChevronRight className={cn('w-3 h-3 sm:w-4 sm:h-4 transition-transform', isActive ? 'translate-x-0' : '-translate-x-1 opacity-0 group-hover:translate-x-0 group-hover:opacity-100')} />
                         </button>
                       );
                     })}
                   </nav>
-                  <div className="mt-6 p-4 bg-muted/50 rounded-lg border border-border">
+                  <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-muted/50 rounded-lg border border-border">
                     <p className="text-xs text-muted-foreground">
                       Can't find what you're looking for?{' '}
                       <a href="/contact" className="text-primary hover:underline font-semibold">
@@ -1751,39 +1751,41 @@ const Products = () => {
 
               {/* Main Content - Product Grid */}
               <main className="flex-1 min-w-0">
-                <div className="mb-6">
-                  <h2 className="text-2xl font-bold text-foreground">
+                <div className="mb-4 sm:mb-6">
+                  <h2 className="text-xl sm:text-2xl font-bold text-foreground">
                     {categories.find((c) => c.id === activeCategory)?.name || 'All Products'}
                   </h2>
-                  <p className="text-sm text-muted-foreground mt-1">
-                    {getFilteredProducts(activeCategory).length} products available
+                  <p className="text-xs sm:text-sm text-muted-foreground mt-1">
+                    {getFilteredProducts(activeCategory).length} products available · Tap any product to view details
                   </p>
                 </div>
 
-                <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6">
                   {getFilteredProducts(activeCategory).map((product, index) => {
                     const Icon = product.icon;
                     return (
                       <Card
                         key={product.id}
                         onClick={() => setSelectedProduct(product)}
-                        className="group p-6 hover:shadow-xl transition-all animate-fade-in border-border hover:border-primary/50 cursor-pointer"
+                        className="group p-4 sm:p-6 hover:shadow-xl transition-all animate-fade-in border-2 border-border hover:border-primary cursor-pointer active:scale-95"
                         style={{ animationDelay: `${index * 0.05}s` }}
                       >
-                        <div className="space-y-4">
-                          <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                            <Icon className="w-6 h-6 text-primary" />
+                        <div className="space-y-3 sm:space-y-4">
+                          <div className="flex items-center justify-between">
+                            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                              <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+                            </div>
+                            <span className="text-xs sm:text-sm font-medium text-primary flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 bg-primary/10 rounded-full">
+                              Tap to view
+                              <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
+                            </span>
                           </div>
-                          <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors line-clamp-2">
+                          <h3 className="text-base sm:text-lg font-bold text-foreground group-hover:text-primary transition-colors line-clamp-2 min-h-[2.5rem] sm:min-h-[3rem]">
                             {product.title}
                           </h3>
-                          <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
+                          <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed line-clamp-2 sm:line-clamp-3">
                             {product.description}
                           </p>
-                          <button className="text-primary font-semibold text-sm hover:underline flex items-center gap-2 group/btn">
-                            View Details
-                            <span className="group-hover/btn:translate-x-1 transition-transform">→</span>
-                          </button>
                         </div>
                       </Card>
                     );
@@ -1805,39 +1807,38 @@ const Products = () => {
 
       {/* Product Details Dialog */}
       <Dialog open={!!selectedProduct} onOpenChange={() => setSelectedProduct(null)}>
-        <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+        <DialogContent className="max-w-[95vw] sm:max-w-2xl max-h-[85vh] overflow-y-auto">
           {selectedProduct && (
             <>
               <DialogHeader>
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center flex-shrink-0">
                     {(() => {
                       const Icon = selectedProduct.icon;
-                      return <Icon className="w-8 h-8 text-primary" />;
+                      return <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />;
                     })()}
                   </div>
-                  <div>
-                    <DialogTitle className="text-2xl font-bold text-foreground">
+                  <div className="flex-1 min-w-0">
+                    <DialogTitle className="text-xl sm:text-2xl font-bold text-foreground leading-tight">
                       {selectedProduct.title}
                     </DialogTitle>
-                    <p className="text-muted-foreground mt-1">{selectedProduct.description}</p>
+                    <p className="text-muted-foreground mt-1 sm:mt-2 text-sm sm:text-base">{selectedProduct.description}</p>
                   </div>
                 </div>
               </DialogHeader>
 
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 {selectedProduct.details?.formula && (
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2">Chemical Formula</h4>
-                    <p className="text-muted-foreground font-mono text-lg">{selectedProduct.details.formula}</p>
+                    <h4 className="font-semibold text-foreground mb-2 text-sm sm:text-base">Chemical Formula</h4>
+                    <p className="text-muted-foreground font-mono text-base sm:text-lg">{selectedProduct.details.formula}</p>
                   </div>
                 )}
 
-
                 {selectedProduct.details?.fullDescription && (
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2">Description</h4>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <h4 className="font-semibold text-foreground mb-2 text-sm sm:text-base">Description</h4>
+                    <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
                       {selectedProduct.details.fullDescription}
                     </p>
                   </div>
@@ -1845,20 +1846,20 @@ const Products = () => {
 
                 {selectedProduct.details?.applications && selectedProduct.details.applications.length > 0 && (
                   <div>
-                    <h4 className="font-semibold text-foreground mb-3">Applications</h4>
-                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    <h4 className="font-semibold text-foreground mb-3 text-sm sm:text-base">Applications</h4>
+                    <ul className="grid grid-cols-1 gap-2">
                       {selectedProduct.details.applications.map((app, index) => (
                         <li key={index} className="flex items-start gap-2">
-                          <span className="text-primary mt-1 flex-shrink-0">•</span>
-                          <span className="text-muted-foreground text-sm">{app}</span>
+                          <span className="text-primary mt-1 flex-shrink-0 text-lg">•</span>
+                          <span className="text-muted-foreground text-xs sm:text-sm">{app}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                 )}
 
-                <div className="pt-4 border-t border-border">
-                  <p className="text-sm text-muted-foreground">
+                <div className="pt-3 sm:pt-4 border-t border-border">
+                  <p className="text-xs sm:text-sm text-muted-foreground">
                     For more information about this product, pricing, or technical specifications, please{' '}
                     <a href="/contact" className="text-primary hover:underline font-semibold">
                       contact us
