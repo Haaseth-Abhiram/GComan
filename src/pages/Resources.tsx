@@ -345,10 +345,10 @@ const Resources = () => {
       {/* Main Content with Tabs */}
       <section className="py-12">
         <div className="container mx-auto px-4">
-          <Tabs defaultValue="articles" className="max-w-7xl mx-auto">
+          <Tabs defaultValue="downloads" className="max-w-7xl mx-auto">
             <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-8 sm:mb-12">
-              <TabsTrigger value="articles" className="text-sm sm:text-base py-2 sm:py-3">Articles & News</TabsTrigger>
               <TabsTrigger value="downloads" className="text-sm sm:text-base py-2 sm:py-3">Downloads</TabsTrigger>
+              <TabsTrigger value="articles" className="text-sm sm:text-base py-2 sm:py-3">Articles & News</TabsTrigger>
             </TabsList>
 
             {/* Articles Tab */}
