@@ -154,63 +154,6 @@ const Resources = () => {
       icon: FileText,
       badge: 'New',
       downloadUrl: BrochureProductsList
-    },
-    {
-      id: '5',
-      title: 'Safety Data Sheets Collection',
-      description: 'Complete SDS documentation for all chemical products including handling and storage guidelines',
-      category: 'sds',
-      fileSize: '8.2 MB',
-      icon: ShieldCheck,
-      badge: 'Updated'
-    },
-    {
-      id: '6',
-      title: 'ISO Certifications Package',
-      description: 'Official ISO 9001, ISO 14001, and ISO 45001 certification documents',
-      category: 'certificates',
-      fileSize: '2.1 MB',
-      icon: Award
-    },
-    {
-      id: '7',
-      title: 'Chemical Storage Guidelines',
-      description: 'Technical guide for proper storage, handling, and disposal of industrial chemicals',
-      category: 'technical',
-      fileSize: '3.8 MB',
-      icon: FileText
-    },
-    {
-      id: '8',
-      title: 'Laboratory Equipment Manual',
-      description: 'Detailed specifications and usage instructions for laboratory equipment and instruments',
-      category: 'technical',
-      fileSize: '6.4 MB',
-      icon: Beaker
-    },
-    {
-      id: '9',
-      title: 'Water Treatment Solutions Guide',
-      description: 'Industry best practices and product recommendations for water treatment applications',
-      category: 'guides',
-      fileSize: '4.7 MB',
-      icon: BookOpen
-    },
-    {
-      id: '10',
-      title: 'Quality Assurance Certificates',
-      description: 'Certificate of Analysis (COA) templates and quality assurance documentation',
-      category: 'certificates',
-      fileSize: '1.9 MB',
-      icon: Award
-    },
-    {
-      id: '11',
-      title: 'Oil & Gas Industry Solutions',
-      description: 'Technical guide for chemical applications in oil and gas sector operations',
-      category: 'guides',
-      fileSize: '5.6 MB',
-      icon: FileText
     }
   ];
 
@@ -346,156 +289,53 @@ const Resources = () => {
       <section className="py-12">
         <div className="container mx-auto px-4">
           <Tabs defaultValue="downloads" className="max-w-7xl mx-auto">
-            <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-8 sm:mb-12">
-              <TabsTrigger value="downloads" className="text-sm sm:text-base py-2 sm:py-3">Downloads</TabsTrigger>
-              <TabsTrigger value="articles" className="text-sm sm:text-base py-2 sm:py-3">Articles & News</TabsTrigger>
+            <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-8 sm:mb-12 bg-muted/30 p-1 rounded-lg border border-border">
+              <TabsTrigger 
+                value="downloads" 
+                className="text-sm sm:text-base py-2.5 sm:py-3 data-[state=active]:bg-background data-[state=active]:shadow-sm data-[state=active]:text-foreground rounded-md transition-all"
+              >
+                Downloads
+              </TabsTrigger>
+              <TabsTrigger 
+                value="articles" 
+                className="text-sm sm:text-base py-2.5 sm:py-3 data-[state=active]:bg-background data-[state=active]:shadow-sm data-[state=active]:text-foreground rounded-md transition-all"
+              >
+                Articles & News
+              </TabsTrigger>
             </TabsList>
 
             {/* Articles Tab */}
             <TabsContent value="articles" className="space-y-12">
-              {/* Article Category Filters */}
-              <div className="flex flex-wrap gap-2 sm:gap-3 justify-center px-2">
-                {articleCategories.map((category) => (
-                  <Button
-                    key={category}
-                    variant={selectedArticleCategory === category ? "default" : "outline"}
-                    onClick={() => setSelectedArticleCategory(category)}
-                    size="sm"
-                    className="text-xs sm:text-sm"
-                  >
-                    {category}
-                  </Button>
-                ))}
-              </div>
-
-              {/* Featured Article */}
-              {featuredArticle && selectedArticleCategory === "All" && !searchQuery && (
-                <div>
-                  <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                    <span className="w-1 h-8 bg-primary rounded-full"></span>
-                    Featured Article
-                  </h2>
-                  <Card className="overflow-hidden hover:shadow-xl transition-shadow group">
-                    <div className="grid lg:grid-cols-2 gap-6">
-                      <div className="relative h-64 lg:h-full bg-muted">
-                        <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent group-hover:from-primary/30 transition-colors" />
-                        <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
-                          Featured Image
-                        </div>
-                      </div>
-                      <div className="p-8 flex flex-col justify-center">
-                        <Badge className="w-fit mb-4">{featuredArticle.category}</Badge>
-                        <h3 className="text-3xl font-bold mb-4 group-hover:text-primary transition-colors">
-                          {featuredArticle.title}
-                        </h3>
-                        <p className="text-muted-foreground mb-6 text-lg">
-                          {featuredArticle.excerpt}
-                        </p>
-                        <div className="flex items-center gap-6 text-sm text-muted-foreground mb-6">
-                          <div className="flex items-center gap-2">
-                            <User className="w-4 h-4" />
-                            {featuredArticle.author}
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <Calendar className="w-4 h-4" />
-                            {new Date(featuredArticle.date).toLocaleDateString('en-US', { 
-                              month: 'long', 
-                              day: 'numeric', 
-                              year: 'numeric' 
-                            })}
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <Clock className="w-4 h-4" />
-                            {featuredArticle.readTime}
-                          </div>
-                        </div>
-                        <Button className="w-fit group/btn">
-                          Read Full Article
-                          <ChevronRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                        </Button>
-                      </div>
-                    </div>
-                  </Card>
-                </div>
-              )}
-
-              {/* Articles Grid */}
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {regularArticles.map((article) => (
-                  <Card key={article.id} className="overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1 group">
-                    <div className="relative h-48 bg-muted">
-                      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent group-hover:from-primary/20 transition-colors" />
-                      <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
-                        Article Image
-                      </div>
-                    </div>
-                    <CardHeader>
-                      <div className="flex items-center justify-between mb-3">
-                        <Badge variant="secondary">{article.category}</Badge>
-                        <span className="text-xs text-muted-foreground flex items-center gap-1">
-                          <Clock className="w-3 h-3" />
-                          {article.readTime}
-                        </span>
-                      </div>
-                      <CardTitle className="group-hover:text-primary transition-colors line-clamp-2">
-                        {article.title}
-                      </CardTitle>
-                      <CardDescription className="line-clamp-3">
-                        {article.excerpt}
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                        <div className="flex items-center gap-1">
-                          <User className="w-3 h-3" />
-                          {article.author}
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Calendar className="w-3 h-3" />
-                          {new Date(article.date).toLocaleDateString('en-US', { 
-                            month: 'short', 
-                            day: 'numeric',
-                            year: 'numeric'
-                          })}
-                        </div>
-                      </div>
-                    </CardContent>
-                    <CardFooter>
-                      <Button variant="ghost" className="w-full group/btn">
-                        Read More
-                        <ChevronRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                      </Button>
-                    </CardFooter>
-                  </Card>
-                ))}
-              </div>
-
-              {/* No Articles Found */}
-              {filteredArticles.length === 0 && (
-                <div className="text-center py-12">
-                  <p className="text-muted-foreground">No articles found matching your criteria.</p>
-                </div>
-              )}
-
-              {/* Newsletter CTA */}
-              <div className="mt-16 bg-gradient-to-br from-primary/5 to-background rounded-lg p-6 sm:p-8 md:p-12">
-                <div className="max-w-3xl mx-auto text-center">
-                  <Tag className="w-10 h-10 sm:w-12 sm:h-12 text-primary mx-auto mb-4 sm:mb-6" />
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Stay Updated</h2>
-                  <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8">
-                    Subscribe for the latest industry insights, product updates, and expert guidance.
+              {/* Stay Updated Message */}
+              <div className="max-w-2xl mx-auto text-center py-16 px-4">
+                <div className="mb-8">
+                  <Tag className="w-16 h-16 text-primary mx-auto mb-6 animate-fade-in" />
+                  <h2 className="text-3xl sm:text-4xl font-bold mb-4 animate-fade-in">Stay Updated</h2>
+                  <p className="text-lg text-muted-foreground animate-fade-in">
+                    Our articles and industry news section is coming soon. Subscribe to our newsletter to receive the latest updates, product announcements, and technical insights directly to your inbox.
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center max-w-xl mx-auto">
-                    <Input
-                      type="email"
-                      placeholder="Enter your email address"
-                      className="flex-1"
-                    />
-                    <Button size="lg" className="w-full sm:w-auto">
-                      Subscribe Now
-                    </Button>
-                  </div>
                 </div>
+                
+                <Card className="max-w-xl mx-auto animate-fade-in">
+                  <CardHeader>
+                    <CardTitle>Subscribe to Our Newsletter</CardTitle>
+                    <CardDescription>
+                      Get the latest chemical industry insights and product updates
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="flex flex-col sm:flex-row gap-3">
+                      <Input
+                        type="email"
+                        placeholder="Enter your email address"
+                        className="flex-1"
+                      />
+                      <Button className="w-full sm:w-auto">
+                        Subscribe Now
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
               </div>
             </TabsContent>
 
