@@ -8,6 +8,8 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Badge } from '@/components/ui/badge';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { ScrollArea } from '@/components/ui/scroll-area';
 import { 
   Briefcase, 
   MapPin, 
@@ -53,6 +55,7 @@ const applicationSchema = z.object({
 const Career = () => {
   const { toast } = useToast();
   const [selectedJob, setSelectedJob] = useState<string>('');
+  const [viewingJob, setViewingJob] = useState<JobOpening | null>(null);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
@@ -460,30 +463,25 @@ const Career = () => {
                       )}
                     </div>
 
-                    <div className="space-y-3 pt-4 border-t">
-                      <div>
-                        <h4 className="font-semibold mb-2">Key Requirements:</h4>
-                        <ul className="text-sm text-muted-foreground space-y-1">
-                          {job.requirements.slice(0, 3).map((req, i) => (
-                            <li key={i} className="flex items-start gap-2">
-                              <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                              <span>{req}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+                    <div className="flex gap-2 mt-4">
+                      <Button 
+                        variant="outline"
+                        className="flex-1" 
+                        onClick={() => setViewingJob(job)}
+                      >
+                        View Details
+                      </Button>
+                      <Button 
+                        className="flex-1" 
+                        onClick={() => {
+                          setSelectedJob(job.id);
+                          setFormData(prev => ({ ...prev, position: job.title }));
+                          document.getElementById('application-form')?.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                      >
+                        Apply Now
+                      </Button>
                     </div>
-
-                    <Button 
-                      className="w-full mt-4" 
-                      onClick={() => {
-                        setSelectedJob(job.id);
-                        setFormData(prev => ({ ...prev, position: job.title }));
-                        document.getElementById('application-form')?.scrollIntoView({ behavior: 'smooth' });
-                      }}
-                    >
-                      Apply Now
-                    </Button>
                   </CardContent>
                 </Card>
               ))}
@@ -660,6 +658,95 @@ const Career = () => {
       </section>
 
       <Footer />
+
+      {/* Job Details Dialog */}
+      <Dialog open={!!viewingJob} onOpenChange={(open) => !open && setViewingJob(null)}>
+        <DialogContent className="max-w-[95vw] sm:max-w-3xl max-h-[85vh]">
+          <DialogHeader>
+            <DialogTitle className="text-xl sm:text-2xl flex items-center gap-2">
+              {viewingJob?.title}
+              {viewingJob?.featured && (
+                <Badge variant="default" className="text-xs">Featured</Badge>
+              )}
+            </DialogTitle>
+            <DialogDescription className="flex flex-wrap gap-3 sm:gap-4 text-xs sm:text-sm pt-2">
+              <span className="flex items-center gap-1">
+                <MapPin className="h-3 w-3 sm:h-4 sm:w-4" />
+                {viewingJob?.location}
+              </span>
+              <span className="flex items-center gap-1">
+                <Clock className="h-3 w-3 sm:h-4 sm:w-4" />
+                {viewingJob?.type}
+              </span>
+              <span className="flex items-center gap-1">
+                <Briefcase className="h-3 w-3 sm:h-4 sm:w-4" />
+                {viewingJob?.experience}
+              </span>
+            </DialogDescription>
+          </DialogHeader>
+          
+          <ScrollArea className="max-h-[60vh] pr-4">
+            <div className="space-y-6">
+              {/* Description */}
+              <div>
+                <h3 className="font-semibold text-base sm:text-lg mb-2">About the Role</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {viewingJob?.description}
+                </p>
+              </div>
+
+              {/* Requirements */}
+              <div>
+                <h3 className="font-semibold text-base sm:text-lg mb-3">Requirements</h3>
+                <ul className="space-y-2">
+                  {viewingJob?.requirements.map((req, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm">
+                      <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                      <span>{req}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Responsibilities */}
+              <div>
+                <h3 className="font-semibold text-base sm:text-lg mb-3">Key Responsibilities</h3>
+                <ul className="space-y-2">
+                  {viewingJob?.responsibilities.map((resp, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm">
+                      <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                      <span>{resp}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </ScrollArea>
+
+          <div className="flex flex-col sm:flex-row gap-3 pt-4 border-t">
+            <Button 
+              variant="outline" 
+              onClick={() => setViewingJob(null)}
+              className="w-full sm:flex-1"
+            >
+              Close
+            </Button>
+            <Button 
+              onClick={() => {
+                setSelectedJob(viewingJob?.id || '');
+                setFormData(prev => ({ ...prev, position: viewingJob?.title || '' }));
+                setViewingJob(null);
+                setTimeout(() => {
+                  document.getElementById('application-form')?.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+              }}
+              className="w-full sm:flex-1"
+            >
+              Apply for this Position
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
