@@ -82,7 +82,7 @@ const Career = () => {
       }
     };
 
-    updateOrCreateMeta('description', 'Join Global Chemicals LLC in Oman. Current job openings: Sales Manager, Chemical Engineer, Warehouse Supervisor, QC Analyst. Competitive salary, health insurance, training opportunities. Apply now!');
+    updateOrCreateMeta('description', 'Join Global Chemicals LLC in Oman. Current job openings: Sales Manager, Chemical Engineer, Proposal Engineer. Professional development, work-life balance, supportive team culture. Apply now!');
     updateOrCreateMeta('keywords', 'chemical jobs Oman, careers Muscat, chemical engineer jobs, sales manager jobs Oman, warehouse jobs, laboratory jobs, chemical industry careers');
     
     // Open Graph
@@ -111,20 +111,31 @@ const Career = () => {
       type: 'Full-time',
       experience: '5+ years',
       salary: 'Competitive',
-      description: 'Lead our sales team to drive growth and expand our market presence in the chemical industry.',
+      description: 'We are seeking an experienced Sales Manager to lead our sales team and drive business growth across Oman. As a Sales Manager at Global Chemicals LLC, you will be responsible for developing and implementing strategic sales plans, building long-term relationships with industrial clients, and achieving revenue targets. You will work closely with our technical team to provide customized chemical solutions to clients in oil & gas, water treatment, manufacturing, and construction industries. This role requires a strong understanding of the Omani industrial landscape, excellent leadership skills, and proven experience in B2B chemical sales. You will manage a team of sales representatives, oversee key accounts, negotiate contracts, and identify new business opportunities in emerging markets. The ideal candidate will have a track record of exceeding sales targets, strong negotiation skills, and the ability to build trust with decision-makers at major industrial companies.',
       requirements: [
-        'Bachelor\'s degree in Business, Chemistry, or related field',
-        '5+ years of experience in B2B sales, preferably in chemicals',
-        'Strong understanding of the chemical industry in Oman',
-        'Excellent communication and negotiation skills',
-        'Valid Oman driving license'
+        'Bachelor\'s degree in Business Administration, Chemistry, Chemical Engineering, or related field',
+        'Minimum 5 years of proven experience in B2B sales, preferably in the chemical industry',
+        'Strong knowledge of Oman\'s industrial sectors including oil & gas, manufacturing, and construction',
+        'Excellent communication, presentation, and negotiation skills in both English and Arabic',
+        'Demonstrated ability to lead and motivate a sales team',
+        'Valid Oman driving license and willingness to travel within Oman',
+        'Proficiency in CRM software and Microsoft Office Suite',
+        'Strong analytical skills with ability to interpret sales data and market trends',
+        'Proven track record of meeting or exceeding sales targets',
+        'Understanding of chemical products, applications, and safety regulations is highly preferred'
       ],
       responsibilities: [
-        'Develop and execute sales strategies to achieve revenue targets',
-        'Build and maintain relationships with key clients',
-        'Lead, mentor, and manage the sales team',
-        'Identify new business opportunities and market trends',
-        'Prepare sales reports and forecasts'
+        'Develop and execute comprehensive sales strategies to achieve and exceed annual revenue targets',
+        'Lead, coach, and manage the sales team to maximize performance and professional development',
+        'Build and maintain strong relationships with key clients in oil & gas, manufacturing, water treatment, and construction sectors',
+        'Identify and pursue new business opportunities through market research, networking, and client visits',
+        'Prepare detailed sales forecasts, budgets, and reports for senior management',
+        'Negotiate contracts, pricing, and terms with major clients while maintaining profitability',
+        'Collaborate with technical team to develop customized chemical solutions for client needs',
+        'Monitor competitor activities, market conditions, and industry trends',
+        'Represent the company at industry events, trade shows, and client meetings',
+        'Ensure customer satisfaction through regular follow-ups and addressing concerns promptly',
+        'Maintain accurate records of sales activities, client interactions, and pipeline in CRM system'
       ],
       featured: true
     },
@@ -135,128 +146,76 @@ const Career = () => {
       location: 'Muscat, Oman',
       type: 'Full-time',
       experience: '3-5 years',
-      description: 'Provide technical expertise and support to customers for chemical applications and solutions.',
+      description: 'Global Chemicals LLC is looking for a talented Chemical Engineer to join our technical team and provide expert support to our clients across various industries. In this role, you will serve as the technical expert for our chemical products and solutions, working closely with clients to understand their process requirements and recommend optimal chemical applications. You will be responsible for conducting product demonstrations, troubleshooting application issues, developing customized formulations, and ensuring proper product usage. This position requires a solid foundation in chemical engineering principles, hands-on experience with industrial chemical processes, and excellent problem-solving skills. You will work with clients in water treatment plants, oil refineries, manufacturing facilities, and construction sites to optimize chemical performance and efficiency. The ideal candidate will have strong technical knowledge combined with excellent communication skills to explain complex chemical concepts to non-technical stakeholders. You will also support our sales team by providing technical presentations and participating in client meetings.',
       requirements: [
-        'Bachelor\'s degree in Chemical Engineering',
-        '3-5 years of industry experience',
-        'Knowledge of industrial chemical processes',
-        'Strong analytical and problem-solving skills',
-        'Proficiency in English and Arabic'
+        'Bachelor\'s degree in Chemical Engineering from an accredited university (Master\'s degree is a plus)',
+        '3-5 years of hands-on experience in chemical industry, preferably in application engineering or technical support',
+        'Strong understanding of chemical processes in water treatment, oil & gas, or industrial applications',
+        'Knowledge of chemical product formulations, mixing procedures, and safety protocols',
+        'Proficiency in process simulation software and chemical analysis tools',
+        'Excellent analytical and problem-solving skills with attention to detail',
+        'Strong communication skills in English (Arabic is a plus) with ability to explain technical concepts clearly',
+        'Experience in conducting laboratory tests, quality control, and product trials',
+        'Familiarity with MSDS, chemical safety regulations, and environmental compliance',
+        'Ability to work independently and as part of a multidisciplinary team',
+        'Willingness to visit client sites and conduct field work when required'
       ],
       responsibilities: [
-        'Provide technical support to customers',
-        'Develop chemical formulations and solutions',
-        'Conduct product testing and quality analysis',
-        'Create technical documentation and reports',
-        'Support sales team with technical presentations'
+        'Provide technical support and consultation to clients on chemical product selection and application',
+        'Conduct on-site assessments of client facilities to understand process requirements and challenges',
+        'Develop customized chemical formulations and solutions tailored to specific client needs',
+        'Perform laboratory testing, quality analysis, and product trials to ensure optimal performance',
+        'Troubleshoot chemical application issues and recommend corrective actions',
+        'Create comprehensive technical documentation including reports, specifications, and application guides',
+        'Deliver technical presentations and training sessions to clients and internal sales team',
+        'Collaborate with sales team during client meetings to provide technical expertise and support',
+        'Monitor product performance at client sites and conduct regular follow-up visits',
+        'Stay updated on industry trends, new chemical technologies, and best practices',
+        'Ensure compliance with safety regulations, environmental standards, and quality requirements',
+        'Maintain accurate records of technical activities, test results, and client interactions'
       ],
       featured: true
     },
     {
       id: '3',
-      title: 'Warehouse Supervisor',
-      department: 'Operations',
-      location: 'Sohar, Oman',
+      title: 'Proposal Engineer',
+      department: 'Business Development',
+      location: 'Muscat, Oman',
       type: 'Full-time',
       experience: '2-4 years',
-      description: 'Manage warehouse operations ensuring safe handling and storage of chemical products.',
+      description: 'We are seeking a detail-oriented Proposal Engineer to join our business development team and play a critical role in winning new projects and contracts. As a Proposal Engineer, you will be responsible for preparing comprehensive technical and commercial proposals for chemical supply tenders, RFPs, and client inquiries. You will work closely with sales, technical, and operations teams to develop competitive bids that showcase our capabilities and meet client specifications. This role requires strong technical writing skills, understanding of chemical products and applications, and ability to interpret tender documents accurately. You will be responsible for coordinating proposal development activities, ensuring compliance with tender requirements, conducting cost analysis, and meeting submission deadlines. The ideal candidate will have experience in proposal writing for the chemical industry, excellent attention to detail, and ability to manage multiple proposals simultaneously. You will play a key role in our growth by creating compelling proposals that win major contracts with government agencies, oil companies, and industrial clients.',
       requirements: [
-        'Diploma or Bachelor\'s degree',
-        '2-4 years of warehouse management experience',
-        'Knowledge of chemical storage safety regulations',
-        'Strong organizational and leadership skills',
-        'Forklift operation certification preferred'
+        'Bachelor\'s degree in Chemical Engineering, Chemistry, Business Administration, or related field',
+        '2-4 years of experience in proposal writing, tendering, or bid management, preferably in chemical industry',
+        'Strong understanding of chemical products, specifications, and industrial applications',
+        'Excellent technical writing and documentation skills in English (Arabic is a plus)',
+        'Experience with government and corporate tender processes in Oman',
+        'Proficiency in Microsoft Office (Word, Excel, PowerPoint) with advanced formatting skills',
+        'Strong analytical skills with ability to interpret tender requirements and technical specifications',
+        'Excellent attention to detail and ability to ensure proposal accuracy and completeness',
+        'Good understanding of pricing, costing, and commercial terms in chemical supply contracts',
+        'Ability to work under pressure and meet tight deadlines',
+        'Strong coordination and communication skills to work with cross-functional teams'
       ],
       responsibilities: [
-        'Oversee daily warehouse operations and staff',
-        'Ensure compliance with safety regulations',
-        'Manage inventory and stock levels',
-        'Coordinate shipments and deliveries',
-        'Maintain warehouse documentation and records'
-      ]
-    },
-    {
-      id: '4',
-      title: 'Quality Control Analyst',
-      department: 'Quality Assurance',
-      location: 'Muscat, Oman',
-      type: 'Full-time',
-      experience: '1-3 years',
-      description: 'Conduct quality testing and ensure products meet required standards and specifications.',
-      requirements: [
-        'Bachelor\'s degree in Chemistry or related field',
-        '1-3 years of laboratory experience',
-        'Familiarity with analytical instruments',
-        'Attention to detail and accuracy',
-        'ISO standards knowledge is a plus'
+        'Review and analyze tender documents, RFPs, and EOIs to understand client requirements and evaluation criteria',
+        'Coordinate with sales, technical, and operations teams to gather necessary information for proposals',
+        'Prepare comprehensive technical and commercial proposals that highlight our capabilities and competitive advantages',
+        'Develop detailed compliance matrices to ensure proposals meet all mandatory requirements',
+        'Conduct cost analysis and pricing calculations in coordination with finance team',
+        'Create professional proposal documents with proper formatting, branding, and presentation',
+        'Prepare technical specifications, product datasheets, and supporting documentation',
+        'Ensure proposals are submitted on time with all required documents and certifications',
+        'Maintain a proposal database and tracking system for all submitted bids',
+        'Conduct post-submission reviews and lessons learned to improve future proposals',
+        'Stay updated on industry trends, competitor activities, and tender opportunities',
+        'Coordinate with legal and compliance teams to ensure contract terms are acceptable'
       ],
-      responsibilities: [
-        'Perform quality control tests on chemical products',
-        'Document test results and maintain records',
-        'Ensure compliance with quality standards',
-        'Calibrate and maintain laboratory equipment',
-        'Report quality issues and recommend corrective actions'
-      ]
-    },
-    {
-      id: '5',
-      title: 'Customer Service Representative',
-      department: 'Customer Support',
-      location: 'Muscat, Oman',
-      type: 'Full-time',
-      experience: '1-2 years',
-      description: 'Provide excellent customer service and support to clients regarding product inquiries and orders.',
-      requirements: [
-        'Bachelor\'s degree or equivalent',
-        '1-2 years of customer service experience',
-        'Excellent communication skills in English and Arabic',
-        'Computer proficiency',
-        'Customer-focused attitude'
-      ],
-      responsibilities: [
-        'Handle customer inquiries via phone, email, and in-person',
-        'Process orders and coordinate with logistics',
-        'Maintain customer records and documentation',
-        'Resolve customer complaints professionally',
-        'Support sales team with customer communications'
-      ]
-    },
-    {
-      id: '6',
-      title: 'Logistics Coordinator',
-      department: 'Supply Chain',
-      location: 'Muscat, Oman',
-      type: 'Full-time',
-      experience: '2-3 years',
-      description: 'Coordinate logistics operations to ensure timely delivery of chemical products to customers.',
-      requirements: [
-        'Bachelor\'s degree in Logistics, Supply Chain, or related field',
-        '2-3 years of logistics experience',
-        'Knowledge of dangerous goods regulations',
-        'Strong coordination and planning skills',
-        'ERP system experience preferred'
-      ],
-      responsibilities: [
-        'Plan and coordinate product deliveries',
-        'Manage relationships with transport providers',
-        'Ensure compliance with hazardous materials regulations',
-        'Track shipments and resolve delivery issues',
-        'Optimize logistics costs and efficiency'
-      ]
+      featured: true
     }
   ];
 
   const benefits = [
-    {
-      icon: DollarSign,
-      title: 'Competitive Salary',
-      description: 'Attractive compensation packages with performance bonuses'
-    },
-    {
-      icon: Heart,
-      title: 'Health Insurance',
-      description: 'Comprehensive medical coverage for you and your family'
-    },
     {
       icon: GraduationCap,
       title: 'Learning & Development',
