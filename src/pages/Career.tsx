@@ -433,16 +433,13 @@ const Career = () => {
                         {job.featured && (
                           <Badge className="mb-2" variant="default">Featured</Badge>
                         )}
-                        <CardTitle className="text-2xl mb-2">{job.title}</CardTitle>
+                        <CardTitle className="text-xl sm:text-2xl mb-2">{job.title}</CardTitle>
                         <Badge variant="secondary">{job.department}</Badge>
                       </div>
                     </div>
-                    <CardDescription className="text-base mt-3">
-                      {job.description}
-                    </CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
+                    <div className="flex flex-wrap gap-3 sm:gap-4 text-xs sm:text-sm text-muted-foreground">
                       <div className="flex items-center gap-2">
                         <MapPin className="h-4 w-4" />
                         {job.location}
@@ -455,15 +452,9 @@ const Career = () => {
                         <Briefcase className="h-4 w-4" />
                         {job.experience}
                       </div>
-                      {job.salary && (
-                        <div className="flex items-center gap-2">
-                          <DollarSign className="h-4 w-4" />
-                          {job.salary}
-                        </div>
-                      )}
                     </div>
 
-                    <div className="flex gap-2 mt-4">
+                    <div className="flex flex-col sm:flex-row gap-3 mt-6">
                       <Button 
                         variant="outline"
                         className="flex-1" 
@@ -476,7 +467,7 @@ const Career = () => {
                         onClick={() => {
                           setSelectedJob(job.id);
                           setFormData(prev => ({ ...prev, position: job.title }));
-                          document.getElementById('application-form')?.scrollIntoView({ behavior: 'smooth' });
+                          document.getElementById("application-form")?.scrollIntoView({ behavior: "smooth" });
                         }}
                       >
                         Apply Now
