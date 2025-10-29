@@ -289,16 +289,16 @@ const Resources = () => {
       <section className="py-12">
         <div className="container mx-auto px-4">
           <Tabs defaultValue="downloads" className="max-w-7xl mx-auto">
-            <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-8 sm:mb-12 bg-muted/30 p-1 rounded-lg border border-border">
+            <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-8 sm:mb-12">
               <TabsTrigger 
                 value="downloads" 
-                className="text-sm sm:text-base py-2.5 sm:py-3 data-[state=active]:bg-background data-[state=active]:shadow-sm data-[state=active]:text-foreground rounded-md transition-all"
+                className="text-sm sm:text-base"
               >
                 Downloads
               </TabsTrigger>
               <TabsTrigger 
                 value="articles" 
-                className="text-sm sm:text-base py-2.5 sm:py-3 data-[state=active]:bg-background data-[state=active]:shadow-sm data-[state=active]:text-foreground rounded-md transition-all"
+                className="text-sm sm:text-base"
               >
                 Articles & News
               </TabsTrigger>
