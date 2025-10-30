@@ -67,17 +67,17 @@ const Terms = () => {
               <h2 className="text-2xl font-bold mb-4">3. Products and Services</h2>
               <h3 className="text-xl font-semibold mb-3 mt-6">3.1 Product Information</h3>
               <p className="text-muted-foreground mb-4">
-                We strive to provide accurate product information, including descriptions, specifications, and pricing. However, we do not warrant that product descriptions or other content is accurate, complete, reliable, or error-free.
+                We strive to provide accurate product information, including descriptions, specifications, and technical data. However, we do not warrant that product descriptions or other content is accurate, complete, reliable, or error-free. All sales are conducted through direct business inquiry and quotation process.
               </p>
 
-              <h3 className="text-xl font-semibold mb-3 mt-6">3.2 Pricing</h3>
+              <h3 className="text-xl font-semibold mb-3 mt-6">3.2 Quotation Process</h3>
               <p className="text-muted-foreground mb-4">
-                All prices are subject to change without notice. We reserve the right to modify or discontinue products at any time. Prices displayed on our website do not include applicable taxes, duties, or shipping costs unless otherwise stated.
+                All pricing is provided through customized quotations based on business requirements. We reserve the right to modify product availability and specifications at any time. Quotations are valid for the period specified in the quote document and are subject to product availability and market conditions.
               </p>
 
-              <h3 className="text-xl font-semibold mb-3 mt-6">3.3 Orders and Payment</h3>
+              <h3 className="text-xl font-semibold mb-3 mt-6">3.3 Business Inquiries and Purchase Terms</h3>
               <p className="text-muted-foreground mb-4">
-                By placing an order, you make an offer to purchase products subject to these Terms. We reserve the right to refuse or cancel any order for any reason, including but not limited to product availability, errors in pricing, or suspected fraudulent activity.
+                By submitting a business inquiry or quotation request, you initiate a consultation process for potential bulk orders. We serve B2B clients exclusively. All purchase terms, including volume requirements, delivery schedules, and payment terms, are established through direct negotiation and formal purchase agreements. We reserve the right to decline any business inquiry based on product availability, order volume requirements, or business compatibility.
               </p>
             </div>
 
@@ -126,16 +126,16 @@ const Terms = () => {
             </div>
 
             <div className="bg-card p-8 rounded-lg shadow-sm mb-8">
-              <h2 className="text-2xl font-bold mb-4">9. Shipping and Delivery</h2>
+              <h2 className="text-2xl font-bold mb-4">9. Delivery Terms</h2>
               <p className="text-muted-foreground mb-4">
-                Shipping terms, delivery times, and costs vary depending on the product and destination. We are not responsible for delays caused by customs, shipping carriers, or other factors beyond our control. Title and risk of loss pass to you upon delivery to the carrier.
+                Delivery terms, schedules, and logistics are specified in individual purchase agreements and quotations. All deliveries are subject to product availability and agreed-upon commercial terms. We are not responsible for delays caused by customs clearance, transportation providers, force majeure events, or other circumstances beyond our reasonable control. Title and risk of loss transfer according to the agreed Incoterms specified in each purchase agreement.
               </p>
             </div>
 
             <div className="bg-card p-8 rounded-lg shadow-sm mb-8">
-              <h2 className="text-2xl font-bold mb-4">10. Returns and Refunds</h2>
+              <h2 className="text-2xl font-bold mb-4">10. Product Returns and Technical Support</h2>
               <p className="text-muted-foreground mb-4">
-                Our return and refund policy is subject to the specific terms applicable to each product. Chemical products may have special handling requirements and return restrictions. Please contact our customer service team for information about returns and refunds.
+                Returns, if applicable, are subject to the specific terms outlined in your purchase agreement and the nature of the chemical products supplied. Due to the specialized nature of industrial chemicals, most products have special handling requirements and regulatory restrictions that may limit return eligibility. Any return requests must be initiated within the timeframe specified in your purchase agreement. Please contact our technical support team to discuss product concerns or technical inquiries. Our team provides ongoing technical consultation and support for proper product application and usage.
               </p>
             </div>
 

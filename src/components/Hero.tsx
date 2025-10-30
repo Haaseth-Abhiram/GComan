@@ -10,34 +10,34 @@ const slides = [
   {
     image: waterTreatment,
     alt: "Water Treatment Chemicals",
-    preheading: "Water Treatment Excellence",
+    preheading: "B2B Water Treatment Excellence",
     title: "Advanced Water Treatment",
     highlight: "Solutions",
-    description: "Delivering cutting-edge water treatment chemicals for municipal, industrial, and commercial applications worldwide"
+    description: "B2B supplier of cutting-edge water treatment chemicals for municipal, industrial, and commercial enterprises. Request a quote for bulk orders."
   },
   {
     image: oilGas,
     alt: "Oil & Gas Industry Chemicals",
-    preheading: "Oil & Gas Solutions",
+    preheading: "B2B Oil & Gas Solutions",
     title: "Premium Chemicals for",
     highlight: "Oil & Gas Industry",
-    description: "Specialized chemical solutions for drilling, production, and refining operations in the energy sector"
+    description: "Specialized B2B chemical solutions for drilling, production, and refining operations. Volume discounts available for enterprise clients."
   },
   {
     image: industrialLubricants,
     alt: "Industrial Lubricants",
-    preheading: "Industrial Performance",
+    preheading: "B2B Industrial Performance",
     title: "High-Performance",
     highlight: "Industrial Lubricants",
-    description: "Superior lubrication solutions ensuring optimal performance and extended equipment life"
+    description: "Superior B2B lubrication solutions for industrial enterprises with technical consultation and bulk supply agreements."
   },
   {
     image: heroLab,
     alt: "Laboratory Chemical Solutions",
-    preheading: "Industry-Leading Chemical Solutions",
+    preheading: "Your Trusted B2B Chemical Partner",
     title: "Transforming Industries with",
     highlight: "Premium Chemicals",
-    description: "Delivering high-quality specialty chemicals and innovative solutions to 200+ trusted clients worldwide"
+    description: "Leading B2B supplier delivering specialty chemicals and enterprise solutions to 200+ business clients in Oman with ISO 9001 certification."
   }
 ];
 
