@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import heroLab from '@/assets/hero-lab.jpg';
-import waterTreatment from '@/assets/products/water-treatment.jpg';
+import waterTreatment from '@/assets/hero-water-treatment.webp';
 import oilGas from '@/assets/products/oil-gas.jpg';
 import industrialLubricants from '@/assets/products/industrial-lubricants.jpg';
 import { Badge } from '@/components/ui/badge';
