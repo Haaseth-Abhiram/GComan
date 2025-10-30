@@ -15,6 +15,109 @@ interface ApplicationData {
   linkedinUrl?: string;
 }
 
+// Validation functions
+function isValidEmail(email: string): boolean {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email) && email.length <= 255;
+}
+
+function isValidPhone(phone: string): boolean {
+  const phoneRegex = /^[\d\s\+\-\(\)]+$/;
+  return phoneRegex.test(phone) && phone.length >= 7 && phone.length <= 20;
+}
+
+function isValidUrl(url: string): boolean {
+  try {
+    const urlObj = new URL(url);
+    return (urlObj.protocol === 'http:' || urlObj.protocol === 'https:') && url.length <= 255;
+  } catch {
+    return false;
+  }
+}
+
+function sanitizeString(str: string): string {
+  return str.trim().replace(/[<>]/g, '');
+}
+
+function validateApplicationData(data: ApplicationData): { valid: boolean; error?: string } {
+  // Name validation
+  if (!data.name || data.name.trim().length < 2 || data.name.length > 100) {
+    return { valid: false, error: 'Name must be between 2 and 100 characters' };
+  }
+
+  // Email validation
+  if (!isValidEmail(data.email)) {
+    return { valid: false, error: 'Invalid email format or email too long' };
+  }
+
+  // Phone validation
+  if (!isValidPhone(data.phone)) {
+    return { valid: false, error: 'Invalid phone number format' };
+  }
+
+  // Position validation
+  if (!data.position || data.position.trim().length < 2 || data.position.length > 100) {
+    return { valid: false, error: 'Position must be between 2 and 100 characters' };
+  }
+
+  // Experience validation
+  if (!data.experience || data.experience.trim().length < 1 || data.experience.length > 500) {
+    return { valid: false, error: 'Experience must be between 1 and 500 characters' };
+  }
+
+  // Cover letter validation
+  if (!data.coverLetter || data.coverLetter.trim().length < 10 || data.coverLetter.length > 2000) {
+    return { valid: false, error: 'Cover letter must be between 10 and 2000 characters' };
+  }
+
+  // LinkedIn URL validation (optional)
+  if (data.linkedinUrl && data.linkedinUrl.trim() !== '' && !isValidUrl(data.linkedinUrl)) {
+    return { valid: false, error: 'Invalid LinkedIn URL format' };
+  }
+
+  return { valid: true };
+}
+
+// Rate limiting function
+async function checkRateLimit(supabase: any, email: string): Promise<{ allowed: boolean; error?: string }> {
+  const oneHourAgo = new Date(Date.now() - 60 * 60 * 1000).toISOString();
+  const oneDayAgo = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
+
+  // Check applications in last hour (max 2)
+  const { data: recentApps, error: hourError } = await supabase
+    .from('job_applications')
+    .select('id')
+    .eq('email', email)
+    .gte('created_at', oneHourAgo);
+
+  if (hourError) {
+    console.error('Rate limit check error (hour):', hourError);
+    return { allowed: true }; // Allow on error to avoid blocking legitimate users
+  }
+
+  if (recentApps && recentApps.length >= 2) {
+    return { allowed: false, error: 'Too many applications. Please wait at least 1 hour before submitting again.' };
+  }
+
+  // Check applications in last day (max 3)
+  const { data: dailyApps, error: dayError } = await supabase
+    .from('job_applications')
+    .select('id')
+    .eq('email', email)
+    .gte('created_at', oneDayAgo);
+
+  if (dayError) {
+    console.error('Rate limit check error (day):', dayError);
+    return { allowed: true };
+  }
+
+  if (dailyApps && dailyApps.length >= 3) {
+    return { allowed: false, error: 'Maximum applications per day reached. Please try again tomorrow.' };
+  }
+
+  return { allowed: true };
+}
+
 Deno.serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
@@ -29,23 +132,34 @@ Deno.serve(async (req) => {
     // Parse multipart form data
     const formData = await req.formData();
     
-    // Extract application data
+    // Extract and sanitize application data
     const applicationData: ApplicationData = {
-      name: formData.get('name') as string,
-      email: formData.get('email') as string,
-      phone: formData.get('phone') as string,
-      position: formData.get('position') as string,
-      experience: formData.get('experience') as string,
-      coverLetter: formData.get('coverLetter') as string,
-      linkedinUrl: formData.get('linkedinUrl') as string || undefined,
+      name: sanitizeString(formData.get('name') as string || ''),
+      email: (formData.get('email') as string || '').trim().toLowerCase(),
+      phone: (formData.get('phone') as string || '').trim(),
+      position: sanitizeString(formData.get('position') as string || ''),
+      experience: sanitizeString(formData.get('experience') as string || ''),
+      coverLetter: sanitizeString(formData.get('coverLetter') as string || ''),
+      linkedinUrl: (formData.get('linkedinUrl') as string || '').trim() || undefined,
     };
 
-    // Validate required fields
-    if (!applicationData.name || !applicationData.email || !applicationData.phone || 
-        !applicationData.position || !applicationData.experience || !applicationData.coverLetter) {
+    // Comprehensive validation
+    const validation = validateApplicationData(applicationData);
+    if (!validation.valid) {
+      console.log('Validation failed:', validation.error);
       return new Response(
-        JSON.stringify({ error: 'Missing required fields' }),
+        JSON.stringify({ error: validation.error }),
         { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
+    // Rate limiting check
+    const rateLimitCheck = await checkRateLimit(supabase, applicationData.email);
+    if (!rateLimitCheck.allowed) {
+      console.log('Rate limit exceeded for:', applicationData.email);
+      return new Response(
+        JSON.stringify({ error: rateLimitCheck.error }),
+        { status: 429, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       );
     }
 
