@@ -2,7 +2,7 @@ import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, Beaker, Droplets, Wrench } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import waterTreatmentImg from '@/assets/products/water-treatment.jpg';
+import waterTreatmentImg from '@/assets/products/water-treatment-optimized.webp';
 import oilGasImg from '@/assets/products/oil-gas.jpg';
 import industrialLubricantsImg from '@/assets/products/industrial-lubricants.jpg';
 

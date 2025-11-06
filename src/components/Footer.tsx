@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Youtube, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import logo from '@/assets/global-chemicals-logo.png';
+import logo from '@/assets/global-chemicals-logo-optimized.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();

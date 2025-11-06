@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, LogOut, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/contexts/AuthContext';
-import logo from '@/assets/global-chemicals-logo.png';
+import logo from '@/assets/global-chemicals-logo-optimized.png';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
