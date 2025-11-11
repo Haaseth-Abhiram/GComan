@@ -29,8 +29,8 @@ const Products = () => {
   const isMobile = useIsMobile();
 
   useEffect(() => {
-    // SEO Meta Tags
-    document.title = 'Chemical Products Catalog | 500+ Products | Global Chemicals LLC Oman';
+    // Enhanced SEO Meta Tags for Oman Product Searches
+    document.title = '500+ Chemical Products | Buy in Oman | Global Chemicals LLC Muscat';
     
     const updateOrCreateMeta = (name: string, content: string, property?: boolean) => {
       const attribute = property ? 'property' : 'name';
@@ -45,12 +45,12 @@ const Products = () => {
       }
     };
 
-    updateOrCreateMeta('description', 'Browse 500+ chemical products from Global Chemicals LLC. Water treatment chemicals, industrial lubricants, laboratory reagents, swimming pool chemicals, and more. ISO certified quality. Request quote today.');
-    updateOrCreateMeta('keywords', 'chemical products Oman, water treatment chemicals, industrial lubricants, laboratory chemicals, swimming pool chemicals, caustic soda, calcium hypochlorite, PAC, Shell lubricants, Mobil oils');
+    updateOrCreateMeta('description', 'Browse 500+ chemical products in Oman. PAC, caustic soda, calcium hypochlorite, Shell lubricants, Mobil oils, lab chemicals. ISO certified. Fast delivery in Muscat, Sohar, Salalah. Request quote!');
+    updateOrCreateMeta('keywords', 'chemical products Oman, water treatment chemicals Oman, PAC Oman, caustic soda Oman, calcium hypochlorite Oman, industrial lubricants Oman, Shell lubricants Oman, Mobil oils Oman, laboratory chemicals Muscat, swimming pool chemicals Oman, chemical supplier Muscat, buy chemicals Oman, Sohar chemicals, Castrol Oman');
     
     // Open Graph
-    updateOrCreateMeta('og:title', 'Chemical Products Catalog | 500+ Quality Products | Global Chemicals LLC', true);
-    updateOrCreateMeta('og:description', 'Complete range of specialty and industrial chemicals for all industries. Water treatment, lubricants, lab equipment, and more.', true);
+    updateOrCreateMeta('og:title', '500+ Chemical Products in Oman | Global Chemicals LLC Muscat', true);
+    updateOrCreateMeta('og:description', 'Complete chemical catalog for Oman. Water treatment, industrial lubricants, lab chemicals. ISO certified. Serving Muscat, Sohar, Salalah.', true);
     updateOrCreateMeta('og:url', 'https://www.gcoman.com/products', true);
     
     // Canonical

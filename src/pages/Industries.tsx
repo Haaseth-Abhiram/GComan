@@ -18,27 +18,39 @@ import laboratoryImg from '@/assets/industries/laboratory.jpg';
 
 const Industries = () => {
   useEffect(() => {
-    // SEO Meta Tags
-    document.title = 'Industries We Serve | Chemical Solutions by Sector | Global Chemicals LLC';
+    // Enhanced SEO Meta Tags for Oman Industry-Specific Searches
+    document.title = 'Chemical Solutions for Oman Industries | Oil & Gas, Water Treatment | Global Chemicals LLC';
     
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'Specialized chemical solutions for Oil & Gas, Water Treatment, Manufacturing, Food & Beverage, Pharmaceuticals, Construction, Pools, and Laboratories. 500+ products. ISO certified.');
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = 'Specialized chemical solutions for Oil & Gas, Water Treatment, Manufacturing, Food & Beverage, Pharmaceuticals, Construction, Pools, and Laboratories. 500+ products. ISO certified.';
-      document.head.appendChild(meta);
-    }
+    const updateOrCreateMeta = (name: string, content: string, property?: boolean) => {
+      const attribute = property ? 'property' : 'name';
+      let meta = document.querySelector(`meta[${attribute}="${name}"]`);
+      if (meta) {
+        meta.setAttribute('content', content);
+      } else {
+        meta = document.createElement('meta');
+        meta.setAttribute(attribute, name);
+        meta.setAttribute('content', content);
+        document.head.appendChild(meta);
+      }
+    };
 
-    const metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (metaKeywords) {
-      metaKeywords.setAttribute('content', 'oil gas chemicals, water treatment chemicals, food grade chemicals, pharmaceutical chemicals, construction chemicals, pool chemicals, laboratory reagents, industrial chemicals supplier');
+    updateOrCreateMeta('description', 'Specialized chemical solutions for Oman industries: Oil & Gas, Water Treatment, Manufacturing, Food & Beverage, Pharmaceuticals, Construction, Pools, Laboratories. Serving Muscat, Sohar, Salalah. ISO certified.');
+    updateOrCreateMeta('keywords', 'oil gas chemicals Oman, water treatment Oman, industrial chemicals Muscat, food grade chemicals Oman, pharmaceutical chemicals Oman, construction chemicals Oman, pool chemicals Oman, laboratory chemicals Oman, chemical solutions Oman, Sohar industrial chemicals, PDO chemical supplier, Oman LNG chemicals');
+    
+    // Open Graph
+    updateOrCreateMeta('og:title', 'Chemical Solutions for Oman Industries | Global Chemicals LLC', true);
+    updateOrCreateMeta('og:description', 'Specialized chemicals for Oman\'s Oil & Gas, Water Treatment, Manufacturing, and more. ISO certified. Serving major industries across Oman.', true);
+    updateOrCreateMeta('og:url', 'https://www.gcoman.com/industries', true);
+    
+    // Canonical
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      canonical.setAttribute('href', 'https://www.gcoman.com/industries');
     } else {
-      const meta = document.createElement('meta');
-      meta.name = 'keywords';
-      meta.content = 'oil gas chemicals, water treatment chemicals, food grade chemicals, pharmaceutical chemicals, construction chemicals, pool chemicals, laboratory reagents, industrial chemicals supplier';
-      document.head.appendChild(meta);
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      canonical.setAttribute('href', 'https://www.gcoman.com/industries');
+      document.head.appendChild(canonical);
     }
   }, []);
 
