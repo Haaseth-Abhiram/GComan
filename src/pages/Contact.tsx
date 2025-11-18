@@ -17,7 +17,7 @@ const contactSchema = z.object({
   phone: z.string().trim().max(20, "Phone number must be less than 20 characters").optional(),
   company: z.string().trim().max(100, "Company name must be less than 100 characters").optional(),
   subject: z.string().min(1, "Please select a subject"),
-  message: z.string().trim().min(10, "Message must be at least 10 characters").max(2000, "Message must be less than 2000 characters"),
+  message: z.string().trim().min(10, "Message must be at least 10 characters").max(5000, "Message must be less than 5000 characters"),
 });
 
 const Contact = () => {
@@ -74,25 +74,63 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Validate form data
+      // Client-side validation for better UX
       contactSchema.parse(formData);
 
-      // Simulate form submission
-      setTimeout(() => {
-        toast({
-          title: "Message sent successfully!",
-          description: "Our team will get back to you within 24 hours.",
-        });
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          company: '',
-          subject: '',
-          message: '',
-        });
+      // Call the Edge Function
+      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+      const response = await fetch(`${supabaseUrl}/functions/v1/submit-contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        // Handle specific error codes
+        if (result.code === 'RATE_LIMIT_EXCEEDED') {
+          toast({
+            title: "Too Many Requests",
+            description: "You've submitted too many forms recently. Please try again in an hour.",
+            variant: "destructive",
+          });
+        } else if (result.code === 'VALIDATION_ERROR') {
+          toast({
+            title: "Validation Error",
+            description: result.error,
+            variant: "destructive",
+          });
+        } else {
+          toast({
+            title: "Submission Failed",
+            description: result.error || "Please try again later.",
+            variant: "destructive",
+          });
+        }
         setIsSubmitting(false);
-      }, 1000);
+        return;
+      }
+
+      // Success
+      toast({
+        title: "Message sent successfully!",
+        description: result.message || "Our team will get back to you within 24 hours.",
+      });
+      
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        company: '',
+        subject: '',
+        message: '',
+      });
+      setIsSubmitting(false);
+
     } catch (error) {
       if (error instanceof z.ZodError) {
         toast({
@@ -101,9 +139,10 @@ const Contact = () => {
           variant: "destructive"
         });
       } else {
+        console.error('Contact form error:', error);
         toast({
           title: "Error",
-          description: "An unexpected error occurred. Please try again.",
+          description: "Failed to send message. Please check your connection and try again.",
           variant: "destructive"
         });
       }
