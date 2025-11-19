@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -6,6 +7,16 @@ import { Shield } from 'lucide-react';
 const Privacy = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Privacy Policy | Global Chemicals LLC</title>
+        <meta name="description" content="Privacy policy for Global Chemicals LLC. Learn how we collect, use, and protect your personal information when you visit our website or use our services." />
+        <meta name="keywords" content="privacy policy, data protection, Global Chemicals LLC, Oman" />
+        <meta property="og:title" content="Privacy Policy | Global Chemicals LLC" />
+        <meta property="og:description" content="Privacy policy for Global Chemicals LLC. Learn how we collect, use, and protect your personal information." />
+        <meta property="og:url" content="https://www.gcoman.com/privacy" />
+        <meta property="og:image" content="https://www.gcoman.com/og-image.jpg" />
+        <link rel="canonical" href="https://www.gcoman.com/privacy" />
+      </Helmet>
       <Navigation />
       <WhatsAppButton />
       

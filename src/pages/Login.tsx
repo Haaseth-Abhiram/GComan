@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -193,6 +194,16 @@ const Login = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary/5 via-background to-background flex items-center justify-center p-4">
+      <Helmet>
+        <title>Login | Global Chemicals LLC</title>
+        <meta name="description" content="Login to Global Chemicals LLC customer portal. Access your orders, invoices, technical documentation, and account information securely." />
+        <meta name="keywords" content="login, customer portal, Global Chemicals LLC, account access" />
+        <meta property="og:title" content="Login | Global Chemicals LLC" />
+        <meta property="og:description" content="Login to Global Chemicals LLC customer portal for secure account access." />
+        <meta property="og:url" content="https://www.gcoman.com/login" />
+        <meta property="og:image" content="https://www.gcoman.com/og-image.jpg" />
+        <link rel="canonical" href="https://www.gcoman.com/login" />
+      </Helmet>
       <div className="w-full max-w-6xl grid lg:grid-cols-2 gap-8 items-center">
         {/* Left Side - Branding */}
         <div className="hidden lg:flex flex-col justify-center space-y-8 animate-fade-in">
@@ -206,6 +217,7 @@ const Login = () => {
               src={logo} 
               alt="Global Chemicals LLC" 
               className="h-16 w-auto"
+              loading="lazy"
             />
             <div>
               <h1 className="text-4xl font-bold text-foreground mb-4">

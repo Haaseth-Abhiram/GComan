@@ -62,6 +62,7 @@ const About = () => {
             src={heroImage}
             alt="Global Chemicals Laboratory"
             className="w-full h-full object-cover"
+            loading="eager"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-background" />
         </div>
@@ -150,6 +151,7 @@ const About = () => {
                     src={facilityImage}
                     alt="Fine Chemical Synthesis Laboratory"
                     className="w-full h-[500px] object-cover"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -250,6 +252,7 @@ const About = () => {
                     src={teamImage}
                     alt="Global Chemicals Team"
                     className="w-full h-[500px] object-cover"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                   <div className="absolute bottom-6 left-6 right-6">

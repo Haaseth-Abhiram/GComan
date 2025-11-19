@@ -232,6 +232,7 @@ const Customers = () => {
                             src={customer.logo} 
                             alt={`${customer.name} logo`}
                             className="max-h-full max-w-full object-contain opacity-80 group-hover:opacity-100 transition-opacity"
+                            loading="lazy"
                           />
                         </div>
                         <Badge variant="secondary" className="mb-2">{customer.industry}</Badge>
@@ -275,6 +276,7 @@ const Customers = () => {
                         src={customer.logo} 
                         alt={`${customer.name} logo`}
                         className="max-h-full max-w-full object-contain opacity-70 group-hover:opacity-100 transition-opacity"
+                        loading="lazy"
                       />
                     </div>
                     <h3 className="font-semibold text-center text-sm line-clamp-2 group-hover:text-primary transition-colors">
