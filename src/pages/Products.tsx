@@ -1654,6 +1654,7 @@ const Products = () => {
       <Navigation />
       <WhatsAppButton />
 
+      <main id="main-content">
       {/* Page Header */}
       <section className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 bg-gradient-to-br from-primary/10 to-secondary/10">
         <div className="container mx-auto px-4">
@@ -1952,6 +1953,7 @@ const Products = () => {
           </div>
         </div>
       </section>
+      </main>
 
       <Footer />
     </div>
