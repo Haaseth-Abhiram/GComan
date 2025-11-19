@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -31,43 +32,6 @@ const Contact = () => {
     subject: '',
     message: '',
   });
-
-  useEffect(() => {
-    // SEO Meta Tags
-    document.title = 'Contact Us | Get Quote | Global Chemicals LLC Muscat Oman';
-    
-    const updateOrCreateMeta = (name: string, content: string, property?: boolean) => {
-      const attribute = property ? 'property' : 'name';
-      let meta = document.querySelector(`meta[${attribute}="${name}"]`);
-      if (meta) {
-        meta.setAttribute('content', content);
-      } else {
-        meta = document.createElement('meta');
-        meta.setAttribute(attribute, name);
-        meta.setAttribute('content', content);
-        document.head.appendChild(meta);
-      }
-    };
-
-    updateOrCreateMeta('description', 'Contact Global Chemicals LLC in Muscat, Oman. Request quote, technical support, or product inquiry. Call +968 93754388 or email info@gcoman.com. Sun-Thu: 8AM-6PM. Expert chemical solutions team ready to help.');
-    updateOrCreateMeta('keywords', 'contact global chemicals, chemical supplier Muscat, request quote chemicals, technical support chemicals Oman, chemical inquiry');
-    
-    // Open Graph
-    updateOrCreateMeta('og:title', 'Contact Global Chemicals LLC | Request Quote | Muscat Oman', true);
-    updateOrCreateMeta('og:description', 'Get in touch with Oman\'s leading chemical supplier. Phone, email, or visit our Muscat office. Expert support ready to assist.', true);
-    updateOrCreateMeta('og:url', 'https://www.gcoman.com/contact', true);
-    
-    // Canonical
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (canonical) {
-      canonical.setAttribute('href', 'https://www.gcoman.com/contact');
-    } else {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      canonical.setAttribute('href', 'https://www.gcoman.com/contact');
-      document.head.appendChild(canonical);
-    }
-  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -166,6 +130,16 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Contact Us | Get Quote | Global Chemicals LLC</title>
+        <meta name="description" content="Contact Global Chemicals LLC in Muscat, Oman. Request quote, technical support, or product inquiry. Call +968 93754388 or email info@gcoman.com. Sun-Thu: 8AM-6PM. Expert chemical solutions team ready to help." />
+        <meta name="keywords" content="contact global chemicals, chemical supplier Muscat, request quote chemicals, technical support chemicals Oman, chemical inquiry" />
+        <meta property="og:title" content="Contact Global Chemicals LLC | Request Quote | Muscat Oman" />
+        <meta property="og:description" content="Get in touch with Oman's leading chemical supplier. Phone, email, or visit our Muscat office. Expert support ready to assist." />
+        <meta property="og:url" content="https://www.gcoman.com/contact" />
+        <meta property="og:image" content="https://www.gcoman.com/og-image.jpg" />
+        <link rel="canonical" href="https://www.gcoman.com/contact" />
+      </Helmet>
       <Navigation />
       <WhatsAppButton />
 

@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -57,43 +58,6 @@ const Resources = () => {
   const [selectedArticleCategory, setSelectedArticleCategory] = useState('All');
   const [downloadDialogOpen, setDownloadDialogOpen] = useState(false);
   const [selectedResource, setSelectedResource] = useState<Resource | null>(null);
-
-  useEffect(() => {
-    // SEO Meta Tags
-    document.title = 'Resources & Downloads | SDS, Catalogs, Technical Guides | Global Chemicals LLC';
-    
-    const updateOrCreateMeta = (name: string, content: string, property?: boolean) => {
-      const attribute = property ? 'property' : 'name';
-      let meta = document.querySelector(`meta[${attribute}="${name}"]`);
-      if (meta) {
-        meta.setAttribute('content', content);
-      } else {
-        meta = document.createElement('meta');
-        meta.setAttribute(attribute, name);
-        meta.setAttribute('content', content);
-        document.head.appendChild(meta);
-      }
-    };
-
-    updateOrCreateMeta('description', 'Download chemical product catalogs, safety data sheets (SDS), technical guides, certifications, and industry resources from Global Chemicals LLC. Free access to essential chemical documentation.');
-    updateOrCreateMeta('keywords', 'chemical SDS download, product catalogs, safety data sheets, ISO certificates, technical guides, chemical documentation, brochures download');
-    
-    // Open Graph
-    updateOrCreateMeta('og:title', 'Chemical Resources & Downloads | SDS, Catalogs, Guides | Global Chemicals LLC', true);
-    updateOrCreateMeta('og:description', 'Access comprehensive chemical resources: product catalogs, safety data sheets, technical documentation, and certifications. Download now.', true);
-    updateOrCreateMeta('og:url', 'https://www.gcoman.com/resources', true);
-    
-    // Canonical
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (canonical) {
-      canonical.setAttribute('href', 'https://www.gcoman.com/resources');
-    } else {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      canonical.setAttribute('href', 'https://www.gcoman.com/resources');
-      document.head.appendChild(canonical);
-    }
-  }, []);
 
   const downloadCategories = [
     { id: 'all', label: 'All Resources' },
@@ -256,6 +220,16 @@ const Resources = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Chemical Resources & SDS | Global Chemicals LLC</title>
+        <meta name="description" content="Download chemical product catalogs, safety data sheets (SDS), technical guides, certifications, and industry resources from Global Chemicals LLC. Free access to essential chemical documentation." />
+        <meta name="keywords" content="chemical SDS download, product catalogs, safety data sheets, ISO certificates, technical guides, chemical documentation, brochures download" />
+        <meta property="og:title" content="Chemical Resources & Downloads | SDS, Catalogs, Guides | Global Chemicals LLC" />
+        <meta property="og:description" content="Access comprehensive chemical resources: product catalogs, safety data sheets, technical documentation, and certifications. Download now." />
+        <meta property="og:url" content="https://www.gcoman.com/resources" />
+        <meta property="og:image" content="https://www.gcoman.com/og-image.jpg" />
+        <link rel="canonical" href="https://www.gcoman.com/resources" />
+      </Helmet>
       <Navigation />
       <WhatsAppButton />
 

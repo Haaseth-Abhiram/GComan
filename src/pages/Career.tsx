@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -67,43 +68,6 @@ const Career = () => {
     coverLetter: '',
     linkedIn: ''
   });
-
-  useEffect(() => {
-    // SEO Meta Tags
-    document.title = 'Careers & Jobs | Join Our Team | Global Chemicals LLC Oman';
-    
-    const updateOrCreateMeta = (name: string, content: string, property?: boolean) => {
-      const attribute = property ? 'property' : 'name';
-      let meta = document.querySelector(`meta[${attribute}="${name}"]`);
-      if (meta) {
-        meta.setAttribute('content', content);
-      } else {
-        meta = document.createElement('meta');
-        meta.setAttribute(attribute, name);
-        meta.setAttribute('content', content);
-        document.head.appendChild(meta);
-      }
-    };
-
-    updateOrCreateMeta('description', 'Join Global Chemicals LLC in Oman. Current job openings: Sales Manager, Chemical Engineer, Proposal Engineer. Professional development, work-life balance, supportive team culture. Apply now!');
-    updateOrCreateMeta('keywords', 'chemical jobs Oman, careers Muscat, chemical engineer jobs, sales manager jobs Oman, warehouse jobs, laboratory jobs, chemical industry careers');
-    
-    // Open Graph
-    updateOrCreateMeta('og:title', 'Careers at Global Chemicals LLC | Job Opportunities in Oman', true);
-    updateOrCreateMeta('og:description', 'Build your career with Oman\'s leading chemical supplier. Competitive benefits, professional development, supportive culture. Apply today!', true);
-    updateOrCreateMeta('og:url', 'https://www.gcoman.com/career', true);
-    
-    // Canonical
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (canonical) {
-      canonical.setAttribute('href', 'https://www.gcoman.com/career');
-    } else {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      canonical.setAttribute('href', 'https://www.gcoman.com/career');
-      document.head.appendChild(canonical);
-    }
-  }, []);
 
   const jobOpenings: JobOpening[] = [
     {
@@ -360,6 +324,16 @@ const Career = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Careers & Jobs | Join Our Team | Global Chemicals LLC</title>
+        <meta name="description" content="Join Global Chemicals LLC in Oman. Current job openings: Sales Manager, Chemical Engineer, Proposal Engineer. Professional development, work-life balance, supportive team culture. Apply now!" />
+        <meta name="keywords" content="chemical jobs Oman, careers Muscat, chemical engineer jobs, sales manager jobs Oman, warehouse jobs, laboratory jobs, chemical industry careers" />
+        <meta property="og:title" content="Careers at Global Chemicals LLC | Job Opportunities in Oman" />
+        <meta property="og:description" content="Build your career with Oman's leading chemical supplier. Competitive benefits, professional development, supportive culture. Apply today!" />
+        <meta property="og:url" content="https://www.gcoman.com/career" />
+        <meta property="og:image" content="https://www.gcoman.com/og-image.jpg" />
+        <link rel="canonical" href="https://www.gcoman.com/career" />
+      </Helmet>
       <Navigation />
       <WhatsAppButton />
 
