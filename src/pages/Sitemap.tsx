@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -42,6 +43,16 @@ const Sitemap = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Sitemap | Global Chemicals LLC</title>
+        <meta name="description" content="Complete sitemap for Global Chemicals LLC website. Navigate all pages including products, industries, resources, and company information." />
+        <meta name="keywords" content="sitemap, site navigation, Global Chemicals LLC, website map" />
+        <meta property="og:title" content="Sitemap | Global Chemicals LLC" />
+        <meta property="og:description" content="Complete sitemap for Global Chemicals LLC website navigation." />
+        <meta property="og:url" content="https://www.gcoman.com/sitemap" />
+        <meta property="og:image" content="https://www.gcoman.com/og-image.jpg" />
+        <link rel="canonical" href="https://www.gcoman.com/sitemap" />
+      </Helmet>
       <Navigation />
       <WhatsAppButton />
       

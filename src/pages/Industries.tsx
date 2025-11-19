@@ -258,6 +258,7 @@ const Industries = () => {
                       src={industry.image}
                       alt={industry.title}
                       className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                     <div className="absolute bottom-6 left-6 right-6">
