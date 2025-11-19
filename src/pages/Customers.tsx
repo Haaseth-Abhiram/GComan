@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -29,43 +29,6 @@ interface Customer {
 }
 
 const Customers = () => {
-  useEffect(() => {
-    // SEO Meta Tags
-    document.title = 'Our Customers | Trusted by 200+ Clients | Global Chemicals LLC Oman';
-    
-    const updateOrCreateMeta = (name: string, content: string, property?: boolean) => {
-      const attribute = property ? 'property' : 'name';
-      let meta = document.querySelector(`meta[${attribute}="${name}"]`);
-      if (meta) {
-        meta.setAttribute('content', content);
-      } else {
-        meta = document.createElement('meta');
-        meta.setAttribute(attribute, name);
-        meta.setAttribute('content', content);
-        document.head.appendChild(meta);
-      }
-    };
-
-    updateOrCreateMeta('description', 'Global Chemicals LLC serves 200+ leading organizations in Oman including OQ, PDO, Oxy, Sohar Aluminium, Oman LNG, MOH. Trusted chemical supplier with 98% client retention rate.');
-    updateOrCreateMeta('keywords', 'chemical customers Oman, OQ supplier, PDO supplier, oil gas chemical supplier, industrial clients Oman, chemical testimonials');
-    
-    // Open Graph
-    updateOrCreateMeta('og:title', 'Our Valued Customers | Leading Organizations Trust Us | Global Chemicals', true);
-    updateOrCreateMeta('og:description', '200+ active clients, 98% retention rate, 10+ years serving Oman\'s key industries. Join our growing family of satisfied customers.', true);
-    updateOrCreateMeta('og:url', 'https://www.gcoman.com/customers', true);
-    
-    // Canonical
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (canonical) {
-      canonical.setAttribute('href', 'https://www.gcoman.com/customers');
-    } else {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      canonical.setAttribute('href', 'https://www.gcoman.com/customers');
-      document.head.appendChild(canonical);
-    }
-  }, []);
-
   const customers: Customer[] = [
     {
       name: 'OQ',
@@ -161,6 +124,16 @@ const Customers = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Our Customers | Trusted by 200+ | Global Chemicals</title>
+        <meta name="description" content="Global Chemicals LLC serves 200+ leading organizations in Oman including OQ, PDO, Oxy, Sohar Aluminium, Oman LNG, MOH. Trusted chemical supplier with 98% client retention rate." />
+        <meta name="keywords" content="chemical customers Oman, OQ supplier, PDO supplier, oil gas chemical supplier, industrial clients Oman, chemical testimonials" />
+        <meta property="og:title" content="Our Valued Customers | Leading Organizations Trust Us | Global Chemicals" />
+        <meta property="og:description" content="200+ active clients, 98% retention rate, 10+ years serving Oman's key industries. Join our growing family of satisfied customers." />
+        <meta property="og:url" content="https://www.gcoman.com/customers" />
+        <meta property="og:image" content="https://www.gcoman.com/og-image.jpg" />
+        <link rel="canonical" href="https://www.gcoman.com/customers" />
+      </Helmet>
       <Navigation />
       <WhatsAppButton />
 

@@ -64,6 +64,7 @@ const Hero = () => {
             key={index}
             src={s.image}
             alt={s.alt}
+            loading={index === 0 ? "eager" : "lazy"}
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
               index === currentSlide ? 'opacity-100' : 'opacity-0'
             }`}

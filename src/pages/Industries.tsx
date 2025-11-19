@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -17,43 +17,6 @@ import swimmingPoolImg from '@/assets/industries/swimming-pool.jpg';
 import laboratoryImg from '@/assets/industries/laboratory.jpg';
 
 const Industries = () => {
-  useEffect(() => {
-    // Enhanced SEO Meta Tags for Oman Industry-Specific Searches
-    document.title = 'Chemical Solutions for Oman Industries | Oil & Gas, Water Treatment | Global Chemicals LLC';
-    
-    const updateOrCreateMeta = (name: string, content: string, property?: boolean) => {
-      const attribute = property ? 'property' : 'name';
-      let meta = document.querySelector(`meta[${attribute}="${name}"]`);
-      if (meta) {
-        meta.setAttribute('content', content);
-      } else {
-        meta = document.createElement('meta');
-        meta.setAttribute(attribute, name);
-        meta.setAttribute('content', content);
-        document.head.appendChild(meta);
-      }
-    };
-
-    updateOrCreateMeta('description', 'Specialized chemical solutions for Oman industries: Oil & Gas, Water Treatment, Manufacturing, Food & Beverage, Pharmaceuticals, Construction, Pools, Laboratories. Serving Muscat, Sohar, Salalah. ISO certified.');
-    updateOrCreateMeta('keywords', 'oil gas chemicals Oman, water treatment Oman, industrial chemicals Muscat, food grade chemicals Oman, pharmaceutical chemicals Oman, construction chemicals Oman, pool chemicals Oman, laboratory chemicals Oman, chemical solutions Oman, Sohar industrial chemicals, PDO chemical supplier, Oman LNG chemicals');
-    
-    // Open Graph
-    updateOrCreateMeta('og:title', 'Chemical Solutions for Oman Industries | Global Chemicals LLC', true);
-    updateOrCreateMeta('og:description', 'Specialized chemicals for Oman\'s Oil & Gas, Water Treatment, Manufacturing, and more. ISO certified. Serving major industries across Oman.', true);
-    updateOrCreateMeta('og:url', 'https://www.gcoman.com/industries', true);
-    
-    // Canonical
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (canonical) {
-      canonical.setAttribute('href', 'https://www.gcoman.com/industries');
-    } else {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      canonical.setAttribute('href', 'https://www.gcoman.com/industries');
-      document.head.appendChild(canonical);
-    }
-  }, []);
-
   const industries = [
     {
       id: 'oil-gas',
@@ -242,6 +205,16 @@ const Industries = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Industry Chemicals Oman | Global Chemicals LLC</title>
+        <meta name="description" content="Specialized chemical solutions for Oman industries: Oil & Gas, Water Treatment, Manufacturing, Food & Beverage, Pharmaceuticals, Construction, Pools, Laboratories. Serving Muscat, Sohar, Salalah. ISO certified." />
+        <meta name="keywords" content="oil gas chemicals Oman, water treatment Oman, industrial chemicals Muscat, food grade chemicals Oman, pharmaceutical chemicals Oman, construction chemicals Oman, pool chemicals Oman, laboratory chemicals Oman, chemical solutions Oman, Sohar industrial chemicals, PDO chemical supplier, Oman LNG chemicals" />
+        <meta property="og:title" content="Chemical Solutions for Oman Industries | Global Chemicals LLC" />
+        <meta property="og:description" content="Specialized chemicals for Oman's Oil & Gas, Water Treatment, Manufacturing, and more. ISO certified. Serving major industries across Oman." />
+        <meta property="og:url" content="https://www.gcoman.com/industries" />
+        <meta property="og:image" content="https://www.gcoman.com/og-image.jpg" />
+        <link rel="canonical" href="https://www.gcoman.com/industries" />
+      </Helmet>
       <Navigation />
       <WhatsAppButton />
 

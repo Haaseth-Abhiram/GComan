@@ -7,6 +7,7 @@ interface SEOProps {
   ogTitle?: string;
   ogDescription?: string;
   ogUrl?: string;
+  ogImage?: string;
   canonical?: string;
 }
 
@@ -17,6 +18,7 @@ export const SEO = ({
   ogTitle,
   ogDescription,
   ogUrl,
+  ogImage,
   canonical,
 }: SEOProps) => {
   return (
@@ -29,10 +31,12 @@ export const SEO = ({
       <meta property="og:title" content={ogTitle || title} />
       <meta property="og:description" content={ogDescription || description} />
       {ogUrl && <meta property="og:url" content={ogUrl} />}
+      <meta property="og:image" content={ogImage || "https://www.gcoman.com/og-image.jpg"} />
       
       {/* Twitter */}
       <meta name="twitter:title" content={ogTitle || title} />
       <meta name="twitter:description" content={ogDescription || description} />
+      <meta name="twitter:image" content={ogImage || "https://www.gcoman.com/og-image.jpg"} />
       
       {/* Canonical */}
       {canonical && <link rel="canonical" href={canonical} />}
