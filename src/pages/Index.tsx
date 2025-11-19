@@ -25,13 +25,15 @@ const Index = () => {
       />
       <Navigation />
       <WhatsAppButton />
-      <Hero />
-      <TrustBadges />
-      <StatsSection />
-      <FeaturedProducts />
-      <IndustrySelector />
-      <WhyChooseUs />
-      <QuickActions />
+      <main id="main-content">
+        <Hero />
+        <TrustBadges />
+        <StatsSection />
+        <FeaturedProducts />
+        <IndustrySelector />
+        <WhyChooseUs />
+        <QuickActions />
+      </main>
       <Footer />
     </div>
   );

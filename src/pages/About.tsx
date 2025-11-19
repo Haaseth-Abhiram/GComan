@@ -55,6 +55,7 @@ const About = () => {
       <Navigation />
       <WhatsAppButton />
 
+      <main id="main-content">
       {/* Hero Section with Image */}
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -305,6 +306,7 @@ const About = () => {
           </div>
         </div>
       </section>
+      </main>
 
       <Footer />
     </div>

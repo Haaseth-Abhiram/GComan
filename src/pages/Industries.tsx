@@ -218,6 +218,7 @@ const Industries = () => {
       <Navigation />
       <WhatsAppButton />
 
+      <main id="main-content">
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-br from-primary/10 via-secondary/5 to-background relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-5" />
@@ -331,6 +332,7 @@ const Industries = () => {
           </div>
         </div>
       </section>
+      </main>
 
       <Footer />
     </div>

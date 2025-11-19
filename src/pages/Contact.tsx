@@ -143,6 +143,7 @@ const Contact = () => {
       <Navigation />
       <WhatsAppButton />
 
+      <main id="main-content">
       {/* Hero Section */}
       <section className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 bg-gradient-to-br from-primary/5 via-background to-background">
         <div className="container mx-auto px-4">
@@ -411,6 +412,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
+      </main>
 
       <Footer />
     </div>
