@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
+import { useAuth } from '@/contexts/AuthContext';
 import { supabase } from '@/integrations/supabase/client';
 import { Download, Loader2 } from 'lucide-react';
 import { z } from 'zod';
@@ -36,6 +37,7 @@ export const DownloadGateDialog = ({
   onDownloadSuccess 
 }: DownloadGateDialogProps) => {
   const { toast } = useToast();
+  const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -47,6 +49,60 @@ export const DownloadGateDialog = ({
     marketingConsent: false
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
+
+  const handleDirectDownload = () => {
+    // Trigger download for authenticated users
+    const link = document.createElement('a');
+    link.href = downloadUrl;
+    link.download = resourceTitle.replace(/\s+/g, '-') + '.pdf';
+    link.style.display = 'none';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    toast({
+      title: "Download Started",
+      description: `${resourceTitle} is being downloaded.`,
+    });
+
+    onDownloadSuccess();
+    onOpenChange(false);
+  };
+
+  // If user is authenticated, show simple download confirmation
+  if (user) {
+    return (
+      <Dialog open={open} onOpenChange={onOpenChange}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-2">
+              <Download className="h-5 w-5 text-primary" />
+              Download Resource
+            </DialogTitle>
+            <DialogDescription>
+              You're about to download <strong>{resourceTitle}</strong>
+            </DialogDescription>
+          </DialogHeader>
+          <div className="flex gap-3 mt-4">
+            <Button
+              variant="outline"
+              onClick={() => onOpenChange(false)}
+              className="flex-1"
+            >
+              Cancel
+            </Button>
+            <Button
+              onClick={handleDirectDownload}
+              className="flex-1 gap-2"
+            >
+              <Download className="h-4 w-4" />
+              Download
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
+    );
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -117,6 +173,7 @@ export const DownloadGateDialog = ({
     }
   };
 
+  // For non-authenticated users, show the full form
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-[95vw] sm:max-w-[500px] max-h-[90vh] overflow-y-auto">
