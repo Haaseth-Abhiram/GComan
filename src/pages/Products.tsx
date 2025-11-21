@@ -1642,7 +1642,7 @@ const Products = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Chemical Products Oman | Global Chemicals</title>
-        <meta name="description" content="Browse 500+ chemical products in Oman. PAC, caustic soda, calcium hypochlorite, Shell lubricants, Mobil oils, lab chemicals. ISO certified. Fast delivery in Muscat, Sohar, Salalah. Request quote!" />
+        <meta name="description" content="Browse 500+ chemical products in Oman: water treatment, oil & gas, lab chemicals, lubricants. ISO certified. Fast delivery across Muscat." />
         <meta name="keywords" content="chemical products Oman, water treatment chemicals Oman, PAC Oman, caustic soda Oman, calcium hypochlorite Oman, industrial lubricants Oman, Shell lubricants Oman, Mobil oils Oman, laboratory chemicals Muscat, swimming pool chemicals Oman, chemical supplier Muscat, buy chemicals Oman, Sohar chemicals, Castrol Oman" />
         <meta property="og:title" content="Chemical Products in Oman | Global Chemicals" />
         <meta property="og:description" content="Complete chemical catalog for Oman. Water treatment, industrial lubricants, lab chemicals. ISO certified. Serving Muscat, Sohar, Salalah." />

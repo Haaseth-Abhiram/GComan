@@ -107,7 +107,7 @@ const Blog = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Chemical Blog & News | Global Chemicals LLC</title>
-        <meta name="description" content="Stay informed with Global Chemicals LLC blog. Latest chemical industry news, technical guides, safety practices, product updates, and expert insights for Oman's industrial sectors." />
+        <meta name="description" content="Chemical industry news, water treatment tips, laboratory best practices & product updates from Global Chemicals LLC Oman experts." />
         <meta name="keywords" content="chemical industry blog, chemical news Oman, technical guides chemicals, safety best practices, chemical innovations, industry insights" />
         <meta property="og:title" content="Chemical Industry Blog & News | Global Chemicals LLC" />
         <meta property="og:description" content="Expert insights, industry news, and technical guidance for chemical applications across Oman's key sectors." />

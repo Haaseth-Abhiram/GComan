@@ -44,7 +44,7 @@ const About = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>About Us | Global Chemicals LLC Oman</title>
-        <meta name="description" content="Learn about Global Chemicals LLC - ISO 9001 certified chemical supplier in Oman with 10+ years excellence. Our mission, vision, values, and commitment to quality serving 200+ clients across diverse industries." />
+        <meta name="description" content="ISO 9001 certified chemical supplier in Oman. 10+ years excellence serving 200+ clients. Quality chemicals, expert service, sustainable practices." />
         <meta name="keywords" content="about global chemicals, chemical supplier Oman, ISO 9001 certified, chemical company Muscat, specialty chemicals Oman, industrial chemicals supplier" />
         <meta property="og:title" content="About Global Chemicals LLC - Leading Chemical Supplier in Oman" />
         <meta property="og:description" content="ISO 9001 certified with 10+ years of excellence. Trusted by 200+ clients. Quality chemicals, expert service, sustainable practices." />
