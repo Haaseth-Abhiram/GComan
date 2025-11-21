@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { useToast } from '@/hooks/use-toast';
 import { Eye, EyeOff, Mail, Lock, ArrowLeft } from 'lucide-react';
 import { z } from 'zod';
@@ -38,6 +39,9 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [showResetDialog, setShowResetDialog] = useState(false);
+  const [resetEmail, setResetEmail] = useState('');
+  const [isResetting, setIsResetting] = useState(false);
   const [loginData, setLoginData] = useState({ email: '', password: '' });
   const [signupData, setSignupData] = useState({ 
     name: '', 
@@ -192,6 +196,47 @@ const Login = () => {
     }
   };
 
+  const handlePasswordReset = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsResetting(true);
+
+    try {
+      // Validate email
+      const emailSchema = z.string().email("Please enter a valid email address");
+      emailSchema.parse(resetEmail);
+
+      const { error } = await supabase.auth.resetPasswordForEmail(resetEmail, {
+        redirectTo: `${window.location.origin}/login`,
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Password reset email sent!",
+        description: "Please check your email for a password reset link.",
+      });
+
+      setShowResetDialog(false);
+      setResetEmail('');
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        toast({
+          title: "Invalid email",
+          description: error.errors[0].message,
+          variant: "destructive"
+        });
+      } else {
+        toast({
+          title: "Error",
+          description: "Failed to send password reset email. Please try again.",
+          variant: "destructive"
+        });
+      }
+    } finally {
+      setIsResetting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary/5 via-background to-background flex items-center justify-center p-4">
       <Helmet>
@@ -303,12 +348,7 @@ const Login = () => {
                         type="button"
                         variant="link"
                         className="px-0 text-xs"
-                        onClick={() => {
-                          toast({
-                            title: "Password reset",
-                            description: "Please contact admin@gcoman.com for password reset",
-                          });
-                        }}
+                        onClick={() => setShowResetDialog(true)}
                       >
                         Forgot password?
                       </Button>
@@ -486,6 +526,49 @@ const Login = () => {
           </p>
         </div>
       </div>
+
+      {/* Password Reset Dialog */}
+      <Dialog open={showResetDialog} onOpenChange={setShowResetDialog}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle>Reset Password</DialogTitle>
+            <DialogDescription>
+              Enter your email address and we'll send you a link to reset your password.
+            </DialogDescription>
+          </DialogHeader>
+          <form onSubmit={handlePasswordReset} className="space-y-4">
+            <div className="space-y-2">
+              <Label htmlFor="reset-email">Email Address</Label>
+              <div className="relative">
+                <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                <Input
+                  id="reset-email"
+                  type="email"
+                  placeholder="you@example.com"
+                  value={resetEmail}
+                  onChange={(e) => setResetEmail(e.target.value)}
+                  className="pl-10"
+                  required
+                />
+              </div>
+            </div>
+            <div className="flex gap-3">
+              <Button
+                type="button"
+                variant="outline"
+                onClick={() => setShowResetDialog(false)}
+                className="flex-1"
+                disabled={isResetting}
+              >
+                Cancel
+              </Button>
+              <Button type="submit" className="flex-1" disabled={isResetting}>
+                {isResetting ? 'Sending...' : 'Send Reset Link'}
+              </Button>
+            </div>
+          </form>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
