@@ -326,7 +326,7 @@ const Career = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Careers & Jobs | Join Our Team | Global Chemicals LLC</title>
-        <meta name="description" content="Join Global Chemicals LLC in Oman. Current job openings: Sales Manager, Chemical Engineer, Proposal Engineer. Professional development, work-life balance, supportive team culture. Apply now!" />
+        <meta name="description" content="Join Global Chemicals LLC team in Oman. View open positions, submit applications, grow your career in chemical industry. Apply now." />
         <meta name="keywords" content="chemical jobs Oman, careers Muscat, chemical engineer jobs, sales manager jobs Oman, warehouse jobs, laboratory jobs, chemical industry careers" />
         <meta property="og:title" content="Careers at Global Chemicals LLC | Job Opportunities in Oman" />
         <meta property="og:description" content="Build your career with Oman's leading chemical supplier. Competitive benefits, professional development, supportive culture. Apply today!" />

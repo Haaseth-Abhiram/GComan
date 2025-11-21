@@ -126,7 +126,7 @@ const Customers = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Our Customers | Trusted by 200+ | Global Chemicals</title>
-        <meta name="description" content="Global Chemicals LLC serves 200+ leading organizations in Oman including OQ, PDO, Oxy, Sohar Aluminium, Oman LNG, MOH. Trusted chemical supplier with 98% client retention rate." />
+        <meta name="description" content="Trusted chemical supplier for 200+ clients in Oman including oil & gas, water treatment, manufacturing & construction industries." />
         <meta name="keywords" content="chemical customers Oman, OQ supplier, PDO supplier, oil gas chemical supplier, industrial clients Oman, chemical testimonials" />
         <meta property="og:title" content="Our Valued Customers | Leading Organizations Trust Us | Global Chemicals" />
         <meta property="og:description" content="200+ active clients, 98% retention rate, 10+ years serving Oman's key industries. Join our growing family of satisfied customers." />

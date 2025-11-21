@@ -207,7 +207,7 @@ const Industries = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Industry Chemicals Oman | Global Chemicals LLC</title>
-        <meta name="description" content="Specialized chemical solutions for Oman industries: Oil & Gas, Water Treatment, Manufacturing, Food & Beverage, Pharmaceuticals, Construction, Pools, Laboratories. Serving Muscat, Sohar, Salalah. ISO certified." />
+        <meta name="description" content="Chemical solutions for water treatment, oil & gas, manufacturing, food, pharma & construction in Oman. Trusted by 200+ companies." />
         <meta name="keywords" content="oil gas chemicals Oman, water treatment Oman, industrial chemicals Muscat, food grade chemicals Oman, pharmaceutical chemicals Oman, construction chemicals Oman, pool chemicals Oman, laboratory chemicals Oman, chemical solutions Oman, Sohar industrial chemicals, PDO chemical supplier, Oman LNG chemicals" />
         <meta property="og:title" content="Chemical Solutions for Oman Industries | Global Chemicals LLC" />
         <meta property="og:description" content="Specialized chemicals for Oman's Oil & Gas, Water Treatment, Manufacturing, and more. ISO certified. Serving major industries across Oman." />

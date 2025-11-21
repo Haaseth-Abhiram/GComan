@@ -132,7 +132,7 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Contact Us | Get Quote | Global Chemicals LLC</title>
-        <meta name="description" content="Contact Global Chemicals LLC in Muscat, Oman. Request quote, technical support, or product inquiry. Call +968 93754388 or email info@gcoman.com. Sun-Thu: 8AM-6PM. Expert chemical solutions team ready to help." />
+        <meta name="description" content="Contact Global Chemicals LLC in Muscat, Oman. Get quotes & product info. Call +968-93754388 or email info@gcoman.com. 24-hour response." />
         <meta name="keywords" content="contact global chemicals, chemical supplier Muscat, request quote chemicals, technical support chemicals Oman, chemical inquiry" />
         <meta property="og:title" content="Contact Global Chemicals LLC | Request Quote | Muscat Oman" />
         <meta property="og:description" content="Get in touch with Oman's leading chemical supplier. Phone, email, or visit our Muscat office. Expert support ready to assist." />
