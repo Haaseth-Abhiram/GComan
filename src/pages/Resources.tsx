@@ -222,7 +222,7 @@ const Resources = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Chemical Resources & SDS | Global Chemicals LLC</title>
-        <meta name="description" content="Download Safety Data Sheets (SDS), product catalogs, technical documentation & chemical handling guides from Global Chemicals LLC." />
+        <meta name="description" content="Download Safety Data Sheets (SDS), product catalogs, technical documentation & chemical handling guides from Global Chemicals LLC Oman. Free resources." />
         <meta name="keywords" content="chemical SDS download, product catalogs, safety data sheets, ISO certificates, technical guides, chemical documentation, brochures download" />
         <meta property="og:title" content="Chemical Resources & Downloads | SDS, Catalogs, Guides | Global Chemicals LLC" />
         <meta property="og:description" content="Access comprehensive chemical resources: product catalogs, safety data sheets, technical documentation, and certifications. Download now." />
