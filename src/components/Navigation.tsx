@@ -1,14 +1,16 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, LogOut, User } from 'lucide-react';
+import { Menu, X, LogOut, User, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/contexts/AuthContext';
+import { useUserRole } from '@/hooks/useUserRole';
 import logo from '@/assets/global-chemicals-logo-optimized.png';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const { user, signOut } = useAuth();
+  const { isAdmin } = useUserRole();
 
   const navItems = [
     { label: 'HOME', path: '/' },
@@ -43,6 +45,15 @@ const Navigation = () => {
             ))}
             {user ? (
               <div className="flex items-center gap-4">
+                {isAdmin && (
+                  <Link
+                    to="/admin"
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-1"
+                  >
+                    <Shield className="w-4 h-4" />
+                    Admin
+                  </Link>
+                )}
                 <span className="text-sm text-muted-foreground flex items-center gap-2">
                   <User className="w-4 h-4" />
                   {user.email}
@@ -144,6 +155,16 @@ const Navigation = () => {
               ))}
               {user ? (
                 <>
+                  {isAdmin && (
+                    <Link
+                      to="/admin"
+                      onClick={() => setIsOpen(false)}
+                      className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1 flex items-center gap-2"
+                    >
+                      <Shield className="w-4 h-4" />
+                      Admin
+                    </Link>
+                  )}
                   <div className="text-sm text-muted-foreground py-1 flex items-center gap-2">
                     <User className="w-4 h-4" />
                     {user.email}

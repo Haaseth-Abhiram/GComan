@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { AuthProvider } from "./contexts/AuthContext";
+import { ProtectedRoute } from "./components/ProtectedRoute";
 import CookieConsent from "./components/CookieConsent";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { Loading } from "./components/Loading";
@@ -20,6 +21,7 @@ const Contact = lazy(() => import("./pages/Contact"));
 const Customers = lazy(() => import("./pages/Customers"));
 const Career = lazy(() => import("./pages/Career"));
 const Login = lazy(() => import("./pages/Login"));
+const Admin = lazy(() => import("./pages/Admin"));
 const Blog = lazy(() => import("./pages/Blog"));
 const Privacy = lazy(() => import("./pages/Privacy"));
 const Terms = lazy(() => import("./pages/Terms"));
@@ -55,6 +57,11 @@ const App = () => (
                 <Route path="/customers" element={<Customers />} />
                 <Route path="/career" element={<Career />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/admin/*" element={
+                  <ProtectedRoute>
+                    <Admin />
+                  </ProtectedRoute>
+                } />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/terms" element={<Terms />} />
