@@ -98,8 +98,9 @@ const FeaturedProducts = () => {
                   <Link
                     to="/products"
                     className="flex items-center gap-2 text-primary font-semibold text-sm group/link hover:gap-3 transition-all"
+                    aria-label={`Learn more about ${product.name}`}
                   >
-                    Learn More
+                    Learn More About {product.name}
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
