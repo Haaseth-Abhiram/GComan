@@ -30,11 +30,12 @@ const StatsSection = () => {
   }, []);
 
   const Counter = ({ end, suffix }: { end: number; suffix: string }) => {
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(end); // Start with the final value to avoid showing 0
 
     useEffect(() => {
       if (!isVisible) return;
 
+      setCount(0); // Reset to 0 only when visible
       const duration = 2000;
       const steps = 60;
       const increment = end / steps;
