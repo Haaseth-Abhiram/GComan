@@ -9,6 +9,7 @@ import { Beaker, Droplets, Wrench, Zap, FlaskConical, TestTube, Factory, Buildin
 import { cn } from '@/lib/utils';
 import { Drawer, DrawerContent, DrawerHeader, DrawerTitle, DrawerDescription } from '@/components/ui/drawer';
 import { useIsMobile } from '@/hooks/use-mobile';
+import { ProductCard } from '@/components/products/ProductCard';
 
 interface Product {
   id: string;
@@ -24,20 +25,16 @@ interface Product {
   };
 }
 
-const Products = () => {
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
-  const [activeCategory, setActiveCategory] = useState('all');
-  const isMobile = useIsMobile();
-
-  const products: Product[] = [
-    // Water Treatment Chemicals
-    {
-      id: 'activated-carbon-water',
-      title: 'Activated Carbon',
-      description: 'High-performance adsorbent for removing impurities, odors, and contaminants from water.',
-      category: 'water-treatment',
-      icon: Droplets,
-    },
+// Products data - exported for use in ProductDetail page
+export const products: Product[] = [
+  // Water Treatment Chemicals
+  {
+    id: 'activated-carbon-water',
+    title: 'Activated Carbon',
+    description: 'High-performance adsorbent for removing impurities, odors, and contaminants from water.',
+    category: 'water-treatment',
+    icon: Droplets,
+  },
     {
       id: 'aluminium-sulphate-liquid',
       title: 'Aluminium Sulphate - Liquid',
@@ -1607,6 +1604,11 @@ const Products = () => {
     },
   ];
 
+const Products = () => {
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [activeCategory, setActiveCategory] = useState('all');
+  const isMobile = useIsMobile();
+
   const categories = [
     { id: 'all', name: 'All Products', icon: FlaskConical },
     { id: 'oilfield', name: 'Oilfield & Refinery', icon: Factory },
@@ -1731,35 +1733,12 @@ const Products = () => {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6">
-                  {getFilteredProducts(activeCategory).map((product, index) => {
-                    const Icon = product.icon;
-                    return (
-                      <Card
-                        key={product.id}
-                        onClick={() => setSelectedProduct(product)}
-                        className="group p-4 sm:p-6 hover:shadow-xl transition-all animate-fade-in border-2 border-border hover:border-primary cursor-pointer active:scale-95"
-                        style={{ animationDelay: `${index * 0.05}s` }}
-                      >
-                        <div className="space-y-3 sm:space-y-4">
-                          <div className="flex items-center justify-between">
-                            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                              <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
-                            </div>
-                            <span className="text-xs sm:text-sm font-medium text-primary flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 bg-primary/10 rounded-full">
-                              Tap to view
-                              <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
-                            </span>
-                          </div>
-                          <h3 className="text-base sm:text-lg font-bold text-foreground group-hover:text-primary transition-colors line-clamp-2 min-h-[2.5rem] sm:min-h-[3rem]">
-                            {product.title}
-                          </h3>
-                          <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed line-clamp-2 sm:line-clamp-3">
-                            {product.description}
-                          </p>
-                        </div>
-                      </Card>
-                    );
-                  })}
+                  {getFilteredProducts(activeCategory).map((product) => (
+                    <ProductCard 
+                      key={product.id} 
+                      product={product}
+                    />
+                  ))}
                 </div>
 
                 {getFilteredProducts(activeCategory).length === 0 && (
