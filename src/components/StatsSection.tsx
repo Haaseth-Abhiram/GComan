@@ -29,35 +29,11 @@ const StatsSection = () => {
     return () => observer.disconnect();
   }, []);
 
+  // No animation - just display the static value for trust signals
   const Counter = ({ end, suffix }: { end: number; suffix: string }) => {
-    const [count, setCount] = useState(end); // Start with the final value to avoid showing 0
-
-    useEffect(() => {
-      if (!isVisible) return;
-
-      setCount(0); // Reset to 0 only when visible
-      const duration = 2000;
-      const steps = 60;
-      const increment = end / steps;
-      const stepDuration = duration / steps;
-      let current = 0;
-
-      const timer = setInterval(() => {
-        current += increment;
-        if (current >= end) {
-          setCount(end);
-          clearInterval(timer);
-        } else {
-          setCount(Math.floor(current));
-        }
-      }, stepDuration);
-
-      return () => clearInterval(timer);
-    }, [isVisible, end]);
-
     return (
       <span className="text-3xl sm:text-4xl md:text-5xl font-bold">
-        {count}
+        {end}
         {suffix}
       </span>
     );
