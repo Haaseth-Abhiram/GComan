@@ -10,6 +10,8 @@ import { cn } from '@/lib/utils';
 import { Drawer, DrawerContent, DrawerHeader, DrawerTitle, DrawerDescription } from '@/components/ui/drawer';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { ProductCard } from '@/components/products/ProductCard';
+import { SEO } from '@/components/SEO';
+import { OrganizationStructuredData } from '@/components/StructuredData';
 
 interface Product {
   id: string;
@@ -22,6 +24,11 @@ interface Product {
     formula?: string;
     fullDescription?: string;
     applications?: string[];
+    casNumber?: string;
+    alternativeNames?: string[];
+    technicalSpecs?: string[];
+    seoKeywords?: string[];
+    longDescription?: string;
   };
 }
 
@@ -98,13 +105,101 @@ export const products: Product[] = [
       category: 'water-treatment',
       icon: Droplets,
     },
-    {
-      id: 'caustic-soda-liquid',
-      title: 'Caustic Soda Liquid',
-      description: 'Liquid sodium hydroxide for industrial cleaning and chemical processing.',
-      category: 'water-treatment',
-      icon: Droplets,
+  {
+    id: 'caustic-soda-liquid',
+    title: 'Caustic Soda Liquid',
+    description: 'Liquid sodium hydroxide for industrial cleaning and chemical processing.',
+    category: 'water-treatment',
+    icon: Droplets,
+    details: {
+      formula: 'NaOH',
+      casNumber: '1310-73-2',
+      alternativeNames: ['Sodium hydroxide liquid', 'Liquid caustic', 'NaOH solution', 'Lye liquid'],
+      seoKeywords: ['caustic soda Oman', 'sodium hydroxide Muscat', 'caustic soda supplier Oman', 'NaOH Oman'],
+      fullDescription: 'Caustic Soda Liquid (Sodium Hydroxide) is a strong alkaline solution widely used across Oman for pH adjustment, neutralization, and chemical processing. Our high-purity caustic soda liquid ensures consistent quality for water treatment, chemical manufacturing, and industrial cleaning applications.',
+      longDescription: 'Buy Caustic Soda Liquid in Oman from Global Chemicals LLC - the leading supplier of sodium hydroxide in Muscat, Sohar, and Salalah. Our caustic soda liquid is ideal for water treatment, pH control, pulp and paper manufacturing, and industrial cleaning. Available in various concentrations with safe handling and delivery across Oman.',
+      applications: [
+        'Water treatment pH adjustment',
+        'Wastewater neutralization',
+        'Pulp and paper manufacturing',
+        'Chemical manufacturing',
+        'Industrial cleaning and degreasing',
+        'Soap and detergent production',
+        'Oil refining processes'
+      ],
+      technicalSpecs: [
+        'NaOH concentration: 32%, 48%, or 50%',
+        'Appearance: Clear colorless liquid',
+        'Specific gravity: 1.33-1.52',
+        'Available in IBC tanks and bulk',
+        'High purity grade available'
+      ]
     },
+  },
+  {
+    id: 'calcium-hypochlorite-water',
+    title: 'Calcium Hypochlorite 65–75%',
+    description: 'Powerful oxidizing agent and disinfectant for water sanitization and bleaching.',
+    category: 'water-treatment',
+    icon: Droplets,
+    details: {
+      formula: 'Ca(ClO)2',
+      casNumber: '7778-54-3',
+      alternativeNames: ['Cal hypo', 'Calcium hypochlorite granules', 'Chlorine powder', 'HTH'],
+      seoKeywords: ['calcium hypochlorite Oman', 'chlorine powder Oman', 'water disinfectant Oman', 'HTH Oman'],
+      fullDescription: 'Calcium Hypochlorite is a highly effective chlorine-based disinfectant containing 65-75% available chlorine. Widely used throughout Oman for water disinfection, swimming pool sanitation, and wastewater treatment. More stable and easier to handle than liquid chlorine.',
+      longDescription: 'Premium Calcium Hypochlorite supplier in Oman - Global Chemicals LLC. Buy calcium hypochlorite 65-75% for swimming pools, drinking water treatment, and industrial water disinfection in Muscat, Sohar, and across Oman. High available chlorine content ensures effective disinfection. Technical support and bulk delivery available.',
+      applications: [
+        'Swimming pool disinfection',
+        'Drinking water chlorination',
+        'Wastewater treatment disinfection',
+        'Industrial water sanitization',
+        'Emergency water purification',
+        'Bleaching applications',
+        'Odor control in wastewater'
+      ],
+      technicalSpecs: [
+        'Available chlorine: 65-75%',
+        'Appearance: White granular powder',
+        'Moisture content: <10%',
+        'Available in 25kg, 45kg drums',
+        'Stable dry storage',
+        'Longer shelf life than liquid chlorine'
+      ]
+    },
+  },
+  {
+    id: 'sodium-hypochlorite',
+    title: 'Sodium Hypochlorite',
+    description: 'Liquid bleach and disinfectant for water purification.',
+    category: 'water-treatment',
+    icon: Droplets,
+    details: {
+      formula: 'NaClO',
+      casNumber: '7681-52-9',
+      alternativeNames: ['Liquid chlorine', 'Bleach', 'Hypo', 'Liquid bleach', 'Chlorine bleach'],
+      seoKeywords: ['sodium hypochlorite Oman', 'liquid chlorine Oman', 'bleach Oman', 'water disinfection Oman'],
+      fullDescription: 'Sodium Hypochlorite is a liquid chlorine solution used extensively for water disinfection and sanitization across Oman. Available in various concentrations, it provides reliable and cost-effective disinfection for municipal water treatment, swimming pools, and industrial applications.',
+      longDescription: 'Sodium Hypochlorite supplier in Oman - Global Chemicals LLC provides high-quality liquid chlorine for water treatment plants, swimming pools, and industrial facilities in Muscat, Sohar, Salalah. Our sodium hypochlorite ensures effective disinfection with reliable delivery and technical support throughout Oman.',
+      applications: [
+        'Municipal water treatment',
+        'Swimming pool chlorination',
+        'Wastewater disinfection',
+        'Food and beverage sanitation',
+        'Hospital and healthcare disinfection',
+        'Industrial water systems',
+        'Cooling tower biocide'
+      ],
+      technicalSpecs: [
+        'Available chlorine: 12-15%',
+        'Appearance: Pale yellow liquid',
+        'pH: 11-13',
+        'Specific gravity: 1.20-1.25',
+        'Available in drums and bulk',
+        'On-site generation available'
+      ]
+    },
+  },
     {
       id: 'caustic-soda-prills',
       title: 'Caustic Soda Prills',
@@ -231,20 +326,64 @@ export const products: Product[] = [
       category: 'water-treatment',
       icon: Droplets,
     },
-    {
-      id: 'pac-liquid',
-      title: 'Poly Aluminium Chloride Liquid',
-      description: 'Advanced liquid coagulant for superior water clarification.',
-      category: 'water-treatment',
-      icon: Droplets,
+  {
+    id: 'pac-liquid',
+    title: 'Poly Aluminium Chloride Liquid',
+    description: 'Advanced liquid coagulant for superior water clarification.',
+    category: 'water-treatment',
+    icon: Droplets,
+    details: {
+      formula: 'Al2(OH)nCl6-n',
+      casNumber: '1327-41-9',
+      alternativeNames: ['PAC', 'Polyaluminium chloride', 'Aluminium chlorohydrate', 'PAC liquid'],
+      seoKeywords: ['PAC Oman', 'poly aluminium chloride Muscat', 'water coagulant Oman', 'PAC supplier Oman'],
+      fullDescription: 'Poly Aluminium Chloride (PAC) is a highly effective water treatment chemical used as a coagulant in municipal and industrial water treatment plants across Oman. PAC liquid offers superior performance compared to traditional aluminum sulfate, providing better coagulation efficiency, lower dosage requirements, and wider pH range effectiveness.',
+      longDescription: 'Buy Poly Aluminium Chloride (PAC) liquid in Oman from Global Chemicals LLC. PAC is the leading coagulant for water treatment plants in Muscat, Sohar, and Salalah. Our high-quality PAC ensures optimal water clarification for drinking water treatment, wastewater treatment, and industrial effluent treatment. Available in bulk quantities with technical support.',
+      applications: [
+        'Drinking water treatment plants',
+        'Wastewater treatment facilities',
+        'Industrial effluent treatment',
+        'Swimming pool water treatment',
+        'Paper manufacturing',
+        'Textile industry wastewater'
+      ],
+      technicalSpecs: [
+        'Al2O3 content: 10-11%',
+        'Basicity: 40-90%',
+        'pH (1% aqueous solution): 3.5-5.0',
+        'Appearance: Clear to light yellow liquid',
+        'Effective pH range: 5.0-9.0'
+      ]
     },
-    {
-      id: 'pac-powder',
-      title: 'Poly Aluminium Chloride Powder',
-      description: 'High-efficiency powder coagulant for municipal and industrial water treatment.',
-      category: 'water-treatment',
-      icon: Droplets,
+  },
+  {
+    id: 'pac-powder',
+    title: 'Poly Aluminium Chloride Powder',
+    description: 'High-efficiency powder coagulant for municipal and industrial water treatment.',
+    category: 'water-treatment',
+    icon: Droplets,
+    details: {
+      formula: 'Al2(OH)nCl6-n',
+      casNumber: '1327-41-9',
+      alternativeNames: ['PAC powder', 'Polyaluminium chloride powder', 'PAC granules'],
+      seoKeywords: ['PAC powder Oman', 'poly aluminium chloride powder', 'water treatment powder Oman'],
+      fullDescription: 'Poly Aluminium Chloride powder is a concentrated form of PAC offering easy storage, handling, and dosing for water treatment applications. The powder form provides longer shelf life and reduced transportation costs.',
+      applications: [
+        'Municipal water treatment',
+        'Industrial water clarification',
+        'Wastewater treatment',
+        'Paper and pulp industry',
+        'Mining wastewater treatment'
+      ],
+      technicalSpecs: [
+        'Al2O3 content: 28-30%',
+        'Basicity: 40-90%',
+        'Water insoluble: <0.6%',
+        'Appearance: White to yellow powder',
+        'Shelf life: 2 years'
+      ]
     },
+  },
     {
       id: 'polyelectrolyte',
       title: 'Polyelectrolyte',
@@ -1642,29 +1781,38 @@ const Products = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Chemical Products Oman | Global Chemicals</title>
-        <meta name="description" content="Browse 500+ chemical products in Oman: water treatment, oil & gas, lab chemicals, lubricants. ISO certified. Fast delivery across Muscat." />
-        <meta name="keywords" content="chemical products Oman, water treatment chemicals Oman, PAC Oman, caustic soda Oman, calcium hypochlorite Oman, industrial lubricants Oman, Shell lubricants Oman, Mobil oils Oman, laboratory chemicals Muscat, swimming pool chemicals Oman, chemical supplier Muscat, buy chemicals Oman, Sohar chemicals, Castrol Oman" />
-        <meta property="og:title" content="Chemical Products in Oman | Global Chemicals" />
-        <meta property="og:description" content="Complete chemical catalog for Oman. Water treatment, industrial lubricants, lab chemicals. ISO certified. Serving Muscat, Sohar, Salalah." />
-        <meta property="og:url" content="https://www.gcoman.com/products" />
-        <meta property="og:image" content="https://www.gcoman.com/og-image.jpg" />
-        <link rel="canonical" href="https://www.gcoman.com/products" />
-      </Helmet>
+      <SEO 
+        title="Chemical Products Catalog | Water Treatment & Industrial Chemicals | Global Chemicals Oman"
+        description="Comprehensive catalog of water treatment chemicals, industrial lubricants, laboratory chemicals, and specialty chemicals in Oman. PAC, caustic soda, calcium hypochlorite, Shell & Mobil lubricants. Serving Muscat, Sohar, Salalah, Duqm. ISO certified supplier."
+        keywords="water treatment chemicals Oman, PAC Oman, caustic soda Oman, calcium hypochlorite Oman, industrial chemicals Muscat, laboratory chemicals Oman, Shell lubricants Oman, Mobil oils Oman, chemical supplier Muscat, chemicals Sohar, Salalah chemicals, industrial lubricants Oman, RO chemicals Oman, cooling tower chemicals, swimming pool chemicals Oman"
+        ogTitle="Chemical Products | Water Treatment & Industrial Chemicals Oman"
+        ogDescription="Leading chemical supplier in Oman. Browse our complete catalog of water treatment chemicals, industrial lubricants, and specialty chemicals. Serving Muscat, Sohar, Salalah."
+        ogUrl="https://www.gcoman.com/products"
+        canonical="https://www.gcoman.com/products"
+      />
+      <OrganizationStructuredData includeService={true} />
       
       <Navigation />
       <WhatsAppButton />
 
       <main id="main-content">
-      {/* Page Header */}
-      <section className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 bg-gradient-to-br from-primary/10 to-secondary/10">
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-16 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center animate-fade-in">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-3 sm:mb-4 px-4">Our Products</h1>
-            <p className="text-base sm:text-lg text-muted-foreground px-4">
-              High-quality chemical solutions for diverse industrial needs
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+              Premium Chemical Products for Oman
+            </h1>
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
+              Comprehensive range of water treatment chemicals, industrial lubricants, laboratory chemicals, and specialty products. 
+              Serving industries across Muscat, Sohar, Duqm, Salalah, and Rusayl Industrial Area with ISO-certified quality and technical excellence.
             </p>
+            <div className="flex flex-wrap gap-3 justify-center text-sm">
+              <span className="px-4 py-2 bg-primary/10 text-primary rounded-full font-medium">ISO 9001 Certified</span>
+              <span className="px-4 py-2 bg-secondary/10 text-secondary rounded-full font-medium">10+ Years Experience</span>
+              <span className="px-4 py-2 bg-accent/10 text-accent rounded-full font-medium">1000+ Products</span>
+              <span className="px-4 py-2 bg-tertiary/10 text-tertiary rounded-full font-medium">Technical Support</span>
+            </div>
           </div>
         </div>
       </section>
@@ -1893,30 +2041,28 @@ const Products = () => {
         </Dialog>
       )}
 
-      {/* Product Features */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-foreground mb-4">Why Choose Our Products</h2>
+            <h2 className="text-3xl font-bold text-center text-foreground mb-4">Why Choose Our Chemical Products</h2>
             <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-              We continuously strive to expand our product offerings, staying at the forefront of industry trends and
-              innovations.
+              Leading chemical supplier in Oman with proven track record serving oil & gas, manufacturing, water treatment, and industrial sectors across Muscat, Sohar, Salalah, and Duqm.
             </p>
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
                   title: 'Comprehensive Range',
-                  description: 'Wide selection of specialty and commodity chemicals for all your industrial needs.',
+                  description: 'Over 1000+ water treatment chemicals, industrial lubricants, and specialty products from trusted global manufacturers.',
                 },
                 {
-                  title: 'Quality Assured',
+                  title: 'ISO Quality Assured',
                   description:
-                    'Every product meets stringent quality standards and undergoes rigorous testing procedures.',
+                    'ISO 9001 certified operations. Every product meets international standards with complete technical documentation and safety data sheets.',
                 },
                 {
-                  title: 'Expert Support',
+                  title: 'Expert Technical Support',
                   description:
-                    'Technical support and guidance from our team of experienced chemical industry professionals.',
+                    '10+ years expertise in chemical supply. Our team provides product selection guidance, application support, and after-sales technical assistance.',
                 },
               ].map((feature, index) => (
                 <div

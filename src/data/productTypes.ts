@@ -9,6 +9,11 @@ export interface Product {
     formula?: string;
     fullDescription?: string;
     applications?: string[];
+    casNumber?: string;
+    alternativeNames?: string[]; // For SEO - different search terms
+    technicalSpecs?: string[];
+    seoKeywords?: string[]; // Target keywords for this product
+    longDescription?: string; // Extended SEO-optimized description
   };
 }
 
