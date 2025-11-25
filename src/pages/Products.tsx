@@ -469,6 +469,30 @@ export const products: Product[] = [
       description: 'Water-free citric acid for descaling, cleaning, and pH control.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        formula: 'C6H8O7',
+        casNumber: '77-92-9',
+        alternativeNames: ['Anhydrous citric acid', '2-Hydroxypropane-1,2,3-tricarboxylic acid', 'Citric acid anhydrous'],
+        seoKeywords: ['citric acid anhydrous Oman', 'citric acid Muscat', 'descaling agent Oman', 'citric acid supplier Oman'],
+        longDescription: 'Citric Acid Anhydrous supplier in Oman - Global Chemicals LLC provides food grade and technical grade anhydrous citric acid for descaling, cleaning, pH control, and food processing in Muscat, Sohar, Salalah. Our water-free citric acid offers higher purity, longer shelf life, and effective chelating properties for diverse applications.',
+        applications: [
+          'Descaling boilers and equipment',
+          'pH adjustment in water treatment',
+          'Food and beverage acidulant',
+          'Pharmaceutical formulations',
+          'Cosmetics and personal care',
+          'Cleaning product manufacturing',
+          'Metal cleaning and passivation'
+        ],
+        technicalSpecs: [
+          'Purity: 99.5% min',
+          'Appearance: White crystalline powder',
+          'Moisture content: <0.5%',
+          'pH (1% solution): 2.2',
+          'Available in 25kg bags',
+          'Food grade (E330) and technical grade'
+        ]
+      }
     },
     {
       id: 'citric-acid-monohydrate',
@@ -476,6 +500,30 @@ export const products: Product[] = [
       description: 'Hydrated citric acid for chelating metals and preventing scale buildup.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        formula: 'C6H8O7·H2O',
+        casNumber: '5949-29-1',
+        alternativeNames: ['Citric acid monohydrate', 'Hydrated citric acid', 'Citric acid 1-hydrate'],
+        seoKeywords: ['citric acid monohydrate Oman', 'hydrated citric acid Muscat', 'citric acid food grade Oman', 'chelating agent Oman'],
+        longDescription: 'Citric Acid Monohydrate supplier in Oman - Global Chemicals LLC provides food grade and technical grade citric acid monohydrate for food processing, beverages, water treatment, and industrial applications in Muscat, Sohar, Salalah. Our monohydrate form offers excellent metal chelation, pH control, and antioxidant properties.',
+        applications: [
+          'Food and beverage industry',
+          'Soft drink acidulant',
+          'Pharmaceutical formulations',
+          'Water treatment chelating agent',
+          'Cosmetics and toiletries',
+          'Industrial cleaning',
+          'Detergent builder'
+        ],
+        technicalSpecs: [
+          'Purity: 99.5% min (anhydrous basis)',
+          'Appearance: White crystalline powder',
+          'Water of crystallization: 7.5-9.0%',
+          'pH (1% solution): 2.2',
+          'Available in 25kg bags',
+          'Food grade (E330) certified'
+        ]
+      }
     },
     {
       id: 'copper-sulphate-liquid',
@@ -483,6 +531,30 @@ export const products: Product[] = [
       description: 'Algaecide and fungicide for controlling algae growth in water bodies.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        formula: 'CuSO4',
+        casNumber: '7758-98-7',
+        alternativeNames: ['Copper sulfate solution', 'Cupric sulfate liquid', 'Blue vitriol solution', 'Copper sulphate pentahydrate liquid'],
+        seoKeywords: ['copper sulfate Oman', 'algaecide Oman', 'copper sulphate liquid Muscat', 'pond algae control Oman'],
+        longDescription: 'Copper Sulphate Liquid supplier in Oman - Global Chemicals LLC provides copper sulfate solution for algae control, fungicide applications, and industrial uses in Muscat, Sohar, Salalah. Our liquid copper sulphate offers easy application, effective algae treatment, and controlled dosing for ponds, lakes, and industrial water systems.',
+        applications: [
+          'Algae control in ponds and lakes',
+          'Swimming pool algaecide',
+          'Irrigation water treatment',
+          'Root killer in sewer lines',
+          'Fungicide in agriculture',
+          'Leather tanning',
+          'Electroplating solutions'
+        ],
+        technicalSpecs: [
+          'CuSO4 concentration: 25-30%',
+          'Appearance: Blue liquid',
+          'Copper (Cu) content: 6-8%',
+          'pH: 3-4',
+          'Available in drums and IBC tanks',
+          'Easy dosing and application'
+        ]
+      }
     },
     {
       id: 'corrosion-inhibitor-water',
@@ -490,6 +562,28 @@ export const products: Product[] = [
       description: 'Protects metal surfaces from corrosion in water systems and pipelines.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        alternativeNames: ['Corrosion control chemical', 'Rust inhibitor', 'Anti-corrosion additive', 'Metal protector'],
+        seoKeywords: ['corrosion inhibitor Oman', 'rust prevention Oman', 'corrosion control Muscat', 'water system protection Oman'],
+        longDescription: 'Corrosion Inhibitor supplier in Oman - Global Chemicals LLC provides advanced corrosion control chemicals for cooling systems, boilers, pipelines, and industrial water systems in Muscat, Sohar, Salalah. Our corrosion inhibitors form protective films on metal surfaces, preventing rust, pitting, and galvanic corrosion while extending equipment life.',
+        applications: [
+          'Cooling water systems',
+          'Boiler feedwater treatment',
+          'Closed loop heating systems',
+          'Chilled water systems',
+          'Oil and gas pipelines',
+          'Industrial process water',
+          'HVAC systems protection'
+        ],
+        technicalSpecs: [
+          'Types: Phosphate, molybdate, organic inhibitors',
+          'Appearance: Clear to amber liquid',
+          'pH: 6-9 (as supplied)',
+          'Dosage: 10-50 ppm (depends on system)',
+          'Available in drums and IBC tanks',
+          'Compatible with all metals'
+        ]
+      }
     },
     {
       id: 'deg-water',
@@ -497,6 +591,30 @@ export const products: Product[] = [
       description: 'Solvent and humectant for industrial water treatment applications.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        formula: 'C4H10O3',
+        casNumber: '111-46-6',
+        alternativeNames: ['Diethylene glycol', 'DEG', '2,2-Oxydiethanol', 'Diglycol'],
+        seoKeywords: ['DEG Oman', 'diethylene glycol Oman', 'DEG solvent Muscat', 'diethylene glycol supplier Oman'],
+        longDescription: 'Diethylene Glycol (DEG) supplier in Oman - Global Chemicals LLC provides high-purity DEG for solvent, humectant, antifreeze, and industrial applications in Muscat, Sohar, Salalah. Our DEG offers excellent solvency, hygroscopic properties, and freeze point depression for diverse chemical processes.',
+        applications: [
+          'Natural gas dehydration',
+          'Solvent for resins and dyes',
+          'Humectant in products',
+          'Antifreeze formulations',
+          'Polyester fiber production',
+          'Brake fluid component',
+          'Textile processing'
+        ],
+        technicalSpecs: [
+          'Purity: 99.5% min',
+          'Appearance: Clear colorless liquid',
+          'Boiling point: 245°C',
+          'Freezing point: -8°C',
+          'Specific gravity: 1.118',
+          'Available in drums and IBC tanks'
+        ]
+      }
     },
     {
       id: 'edta-powder-water',
@@ -504,6 +622,30 @@ export const products: Product[] = [
       description: 'Chelating agent for metal ion sequestration and water softening.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        formula: 'C10H16N2O8',
+        casNumber: '60-00-4',
+        alternativeNames: ['Ethylenediaminetetraacetic acid', 'EDTA disodium', 'EDTA tetrasodium', 'Chelating agent'],
+        seoKeywords: ['EDTA powder Oman', 'chelating agent Oman', 'EDTA Muscat', 'metal sequestrant Oman'],
+        longDescription: 'EDTA Powder supplier in Oman - Global Chemicals LLC provides pharmaceutical and technical grade EDTA for water treatment, metal chelation, and industrial applications in Muscat, Sohar, Salalah. Our EDTA powder binds calcium, magnesium, iron, and heavy metals, preventing scale and improving process efficiency.',
+        applications: [
+          'Water softening',
+          'Boiler scale prevention',
+          'Metal cleaning and pickling',
+          'Pharmaceutical formulations',
+          'Food preservation',
+          'Textile processing',
+          'Pulp and paper industry'
+        ],
+        technicalSpecs: [
+          'Purity: 99% min',
+          'Appearance: White crystalline powder',
+          'pH (1% solution): 4.5-5.5',
+          'Forms: Disodium, tetrasodium salts',
+          'Available in 25kg bags',
+          'Excellent chelating capacity'
+        ]
+      }
     },
     {
       id: 'ethanol-99',
@@ -511,6 +653,30 @@ export const products: Product[] = [
       description: 'High-purity ethanol for disinfection and chemical synthesis.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        formula: 'C2H5OH',
+        casNumber: '64-17-5',
+        alternativeNames: ['Ethyl alcohol', 'Absolute ethanol', 'Pure alcohol', 'Grain alcohol 99%'],
+        seoKeywords: ['ethanol 99 Oman', 'ethyl alcohol Oman', 'absolute ethanol Muscat', 'ethanol supplier Oman'],
+        longDescription: 'Ethanol 99% supplier in Oman - Global Chemicals LLC provides USP and technical grade ethanol for pharmaceutical, laboratory, disinfection, and industrial applications in Muscat, Sohar, Salalah. Our 99% ethanol meets international quality standards for sanitizers, solvents, and chemical synthesis.',
+        applications: [
+          'Hand sanitizer manufacturing',
+          'Pharmaceutical production',
+          'Laboratory reagent',
+          'Chemical synthesis',
+          'Solvent extraction',
+          'Disinfection and sterilization',
+          'Cosmetics manufacturing'
+        ],
+        technicalSpecs: [
+          'Purity: 99% min',
+          'Appearance: Clear colorless liquid',
+          'Specific gravity: 0.789',
+          'Boiling point: 78°C',
+          'Available in drums and IBC tanks',
+          'USP/BP and technical grades'
+        ]
+      }
     },
     {
       id: 'ferric-chloride-liquid',
@@ -518,6 +684,30 @@ export const products: Product[] = [
       description: 'Powerful coagulant for wastewater treatment and phosphorus removal.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        formula: 'FeCl3',
+        casNumber: '7705-08-0',
+        alternativeNames: ['Iron(III) chloride', 'Ferric chloride solution', 'Iron trichloride', 'FeCl3 40%'],
+        seoKeywords: ['ferric chloride Oman', 'iron chloride Oman', 'ferric chloride wastewater Muscat', 'coagulant Oman'],
+        longDescription: 'Ferric Chloride Liquid 40% supplier in Oman - Global Chemicals LLC provides industrial grade ferric chloride for wastewater treatment, phosphorus removal, and PCB etching in Muscat, Sohar, Salalah. Our FeCl3 offers superior coagulation, wide pH range effectiveness, and excellent phosphorus precipitation for municipal and industrial applications.',
+        applications: [
+          'Wastewater coagulation',
+          'Phosphorus removal',
+          'Industrial effluent treatment',
+          'Sludge conditioning',
+          'PCB manufacturing (etching)',
+          'Drinking water treatment',
+          'Metal surface treatment'
+        ],
+        technicalSpecs: [
+          'FeCl3 concentration: 38-42%',
+          'Appearance: Dark brown liquid',
+          'Specific gravity: 1.40-1.50',
+          'pH (1% solution): <2',
+          'Available in IBC tanks and bulk',
+          'Effective pH range: 4-11'
+        ]
+      }
     },
     {
       id: 'ferrous-sulphate',
@@ -525,6 +715,30 @@ export const products: Product[] = [
       description: 'Flocculant and reducing agent for industrial wastewater treatment.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        formula: 'FeSO4·7H2O',
+        casNumber: '7782-63-0',
+        alternativeNames: ['Iron(II) sulfate', 'Ferrous sulfate heptahydrate', 'Copperas', 'Green vitriol'],
+        seoKeywords: ['ferrous sulfate Oman', 'iron sulfate Oman', 'ferrous sulphate Muscat', 'copperas Oman'],
+        longDescription: 'Ferrous Sulphate supplier in Oman - Global Chemicals LLC provides technical and agricultural grade ferrous sulfate for wastewater treatment, chromium reduction, hydrogen sulfide control, and fertilizer applications in Muscat, Sohar, Salalah. Our ferrous sulfate offers effective reducing power and flocculant properties.',
+        applications: [
+          'Chromium reduction in wastewater',
+          'Hydrogen sulfide odor control',
+          'Phosphate precipitation',
+          'Iron supplement in fertilizers',
+          'Pigment manufacturing',
+          'Water treatment flocculant',
+          'Concrete coloring'
+        ],
+        technicalSpecs: [
+          'FeSO4·7H2O purity: 98% min',
+          'Appearance: Light green crystals',
+          'Iron (Fe) content: 19-20%',
+          'Water insoluble: <0.05%',
+          'Available in 25kg, 50kg bags',
+          'pH (5% solution): 3-4'
+        ]
+      }
     },
     {
       id: 'glycerine-water',
@@ -532,6 +746,30 @@ export const products: Product[] = [
       description: 'Humectant and solvent used in various water treatment formulations.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        formula: 'C3H8O3',
+        casNumber: '56-81-5',
+        alternativeNames: ['Glycerol', 'Glycerin', '1,2,3-Propanetriol', 'Glycerine USP'],
+        seoKeywords: ['glycerine Oman', 'glycerol Oman', 'glycerin Muscat', 'glycerine USP Oman'],
+        longDescription: 'Glycerine supplier in Oman - Global Chemicals LLC provides USP, BP, and technical grade glycerine for pharmaceutical, food, cosmetic, and industrial applications in Muscat, Sohar, Salalah. Our glycerine offers excellent humectant, solvent, and sweetening properties for diverse formulations.',
+        applications: [
+          'Pharmaceutical formulations',
+          'Food and beverage sweetener',
+          'Cosmetics and skincare',
+          'Antifreeze formulations',
+          'Humectant in tobacco',
+          'Explosives (nitroglycerin)',
+          'Personal care products'
+        ],
+        technicalSpecs: [
+          'Purity: 99.5% min (USP grade)',
+          'Appearance: Clear viscous liquid',
+          'Specific gravity: 1.26',
+          'Boiling point: 290°C',
+          'Available in drums and IBC tanks',
+          'USP, BP, Food grade available'
+        ]
+      }
     },
     {
       id: 'hydrated-lime',
@@ -539,6 +777,30 @@ export const products: Product[] = [
       description: 'Calcium hydroxide for pH adjustment and water softening.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        formula: 'Ca(OH)2',
+        casNumber: '1305-62-0',
+        alternativeNames: ['Calcium hydroxide', 'Slaked lime', 'Hydrated lime powder', 'Lime hydrate'],
+        seoKeywords: ['hydrated lime Oman', 'calcium hydroxide Oman', 'slaked lime Muscat', 'lime water treatment Oman'],
+        longDescription: 'Hydrated Lime Technical Grade supplier in Oman - Global Chemicals LLC provides high-reactivity calcium hydroxide for pH adjustment, water softening, wastewater neutralization, and construction applications in Muscat, Sohar, Salalah. Our hydrated lime offers excellent alkali strength and neutralization capacity.',
+        applications: [
+          'pH adjustment in water treatment',
+          'Wastewater neutralization',
+          'Flue gas desulfurization',
+          'Water softening',
+          'Soil stabilization',
+          'Construction mortar and plaster',
+          'Sugar refining'
+        ],
+        technicalSpecs: [
+          'Ca(OH)2 purity: 90-96%',
+          'Appearance: White fine powder',
+          'Available calcium oxide: 68-74%',
+          'pH (1% suspension): 12.4',
+          'Available in 25kg, 50kg bags',
+          'Bulk delivery available'
+        ]
+      }
     },
     {
       id: 'hydrazine-hydrate-water',
@@ -546,13 +808,61 @@ export const products: Product[] = [
       description: 'Oxygen scavenger for boiler water treatment and corrosion prevention.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        formula: 'N2H4·H2O',
+        casNumber: '7803-57-8',
+        alternativeNames: ['Hydrazine monohydrate', 'Hydrazine solution', 'Hydrazinium hydroxide', 'N2H4 hydrate'],
+        seoKeywords: ['hydrazine hydrate Oman', 'oxygen scavenger Oman', 'hydrazine boiler treatment Muscat', 'N2H4 Oman'],
+        longDescription: 'Hydrazine Hydrate supplier in Oman - Global Chemicals LLC provides hydrazine hydrate for boiler oxygen scavenging, corrosion prevention, and chemical synthesis in Muscat, Sohar, Salalah. Our hydrazine hydrate effectively removes dissolved oxygen from feedwater, preventing corrosion in high-pressure boilers and steam systems.',
+        applications: [
+          'Boiler oxygen scavenging',
+          'Steam system corrosion control',
+          'Power plant water treatment',
+          'Chemical synthesis intermediate',
+          'Pharmaceutical manufacturing',
+          'Polymer production',
+          'Rocket fuel component'
+        ],
+        technicalSpecs: [
+          'Concentration: 35%, 64%, 80%',
+          'Appearance: Clear colorless liquid',
+          'Effective oxygen removal',
+          'Dosage: 1-2 ppm per ppm O2',
+          'Available in drums',
+          'Requires careful handling'
+        ]
+      }
     },
     {
       id: 'meg-water',
-      title: 'MEG (Monoethanol Glycol)',
+      title: 'MEG (Monoethylene Glycol)',
       description: 'Antifreeze and heat transfer fluid for cooling systems.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        formula: 'C2H6O2',
+        casNumber: '107-21-1',
+        alternativeNames: ['Monoethylene glycol', 'Ethylene glycol', 'MEG', '1,2-Ethanediol'],
+        seoKeywords: ['MEG Oman', 'monoethylene glycol Oman', 'ethylene glycol Muscat', 'MEG antifreeze Oman'],
+        longDescription: 'Monoethylene Glycol (MEG) supplier in Oman - Global Chemicals LLC provides industrial grade MEG for antifreeze, coolant, HVAC, and gas dehydration applications in Muscat, Sohar, Salalah. Our MEG offers excellent freeze protection, heat transfer properties, and hydrate inhibition for diverse industrial systems.',
+        applications: [
+          'Automotive antifreeze and coolant',
+          'HVAC chilled water systems',
+          'Heat transfer fluid',
+          'Natural gas dehydration',
+          'Polyester and polyethylene production',
+          'Aircraft de-icing',
+          'Industrial cooling systems'
+        ],
+        technicalSpecs: [
+          'Purity: 99.9% min',
+          'Appearance: Clear colorless liquid',
+          'Freezing point: -13°C',
+          'Boiling point: 197°C',
+          'Specific gravity: 1.115',
+          'Available in drums and IBC tanks'
+        ]
+      }
     },
     {
       id: 'mpg-water',
@@ -560,6 +870,30 @@ export const products: Product[] = [
       description: 'Food-grade antifreeze and coolant for water systems.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        formula: 'C3H8O2',
+        casNumber: '57-55-6',
+        alternativeNames: ['Monopropylene glycol', 'Propylene glycol', 'MPG', '1,2-Propanediol'],
+        seoKeywords: ['MPG Oman', 'propylene glycol Oman', 'food grade antifreeze Muscat', 'MPG USP Oman'],
+        longDescription: 'Monopropylene Glycol (MPG) supplier in Oman - Global Chemicals LLC provides USP and food-grade MPG for pharmaceutical, food, cosmetic, and HVAC applications in Muscat, Sohar, Salalah. Our MPG is non-toxic, making it ideal for food processing plants, breweries, and potable water contact systems.',
+        applications: [
+          'Food-grade antifreeze systems',
+          'Pharmaceutical formulations',
+          'Cosmetics and personal care',
+          'Food processing cooling',
+          'Brewery glycol chillers',
+          'E-liquid for vaping',
+          'Aircraft de-icing fluid'
+        ],
+        technicalSpecs: [
+          'Purity: 99.8% min (USP grade)',
+          'Appearance: Clear colorless liquid',
+          'Food grade (FDA approved)',
+          'Boiling point: 188°C',
+          'Specific gravity: 1.036',
+          'Available in drums and IBC tanks'
+        ]
+      }
     },
     {
       id: 'paraffin-wax',
@@ -567,6 +901,28 @@ export const products: Product[] = [
       description: 'Hydrocarbon wax used in water treatment and industrial applications.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        alternativeNames: ['Paraffin', 'Petroleum wax', 'Mineral wax', 'Hydrocarbon wax'],
+        seoKeywords: ['paraffin wax Oman', 'petroleum wax Oman', 'paraffin Muscat', 'candle wax Oman'],
+        longDescription: 'Paraffin Wax supplier in Oman - Global Chemicals LLC provides fully refined and semi-refined paraffin wax for candles, packaging, coatings, and industrial applications in Muscat, Sohar, Salalah. Our paraffin wax offers various melting points (54-68°C) to suit diverse manufacturing requirements.',
+        applications: [
+          'Candle manufacturing',
+          'Wax coating for paper and board',
+          'Rubber compounding',
+          'Hot melt adhesives',
+          'Cosmetics and personal care',
+          'Waterproofing applications',
+          'Matches and fireworks'
+        ],
+        technicalSpecs: [
+          'Melting point: 54-68°C (various grades)',
+          'Appearance: White solid blocks',
+          'Oil content: <0.5% (fully refined)',
+          'Congealing point: 52-70°C',
+          'Available in 5kg slabs, 25kg cartons',
+          'Grades: Fully refined, semi-refined'
+        ]
+      }
     },
     {
       id: 'petroleum-jelly',
@@ -574,6 +930,28 @@ export const products: Product[] = [
       description: 'Protective coating and lubricant for water treatment equipment.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        alternativeNames: ['Petrolatum', 'Vaseline', 'White petrolatum', 'Soft paraffin'],
+        seoKeywords: ['petroleum jelly Oman', 'petrolatum Oman', 'white petrolatum Muscat', 'petroleum jelly USP Oman'],
+        longDescription: 'Petroleum Jelly supplier in Oman - Global Chemicals LLC provides USP and technical grade petroleum jelly for pharmaceutical, cosmetic, and industrial applications in Muscat, Sohar, Salalah. Our petroleum jelly offers excellent moisture barrier, skin protection, and lubrication properties.',
+        applications: [
+          'Pharmaceutical ointments',
+          'Cosmetics and skincare',
+          'Skin moisturizer and protectant',
+          'Rust prevention coating',
+          'Equipment lubrication',
+          'Electrical insulation',
+          'Leather conditioning'
+        ],
+        technicalSpecs: [
+          'Grade: USP, BP, Technical',
+          'Appearance: White to yellow semi-solid',
+          'Melting point: 38-60°C',
+          'Viscosity: 8-9 cSt @ 100°C',
+          'Available in drums and pails',
+          'Non-toxic (USP grade)'
+        ]
+      }
     },
   {
     id: 'pac-liquid',
@@ -639,6 +1017,28 @@ export const products: Product[] = [
       description: 'Polymer flocculant for solid-liquid separation and sludge dewatering.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        alternativeNames: ['Polymer flocculant', 'Polyacrylamide', 'PAM', 'Anionic/cationic polymer'],
+        seoKeywords: ['polyelectrolyte Oman', 'polymer flocculant Oman', 'polyacrylamide Muscat', 'sludge dewatering Oman'],
+        longDescription: 'Polyelectrolyte supplier in Oman - Global Chemicals LLC provides anionic, cationic, and non-ionic polyelectrolytes for wastewater treatment, sludge dewatering, and solid-liquid separation in Muscat, Sohar, Salalah. Our polymers enhance flocculation, improve settling, and reduce sludge volume across diverse industries.',
+        applications: [
+          'Wastewater treatment flocculation',
+          'Sludge dewatering',
+          'Mining and mineral processing',
+          'Papermaking retention aid',
+          'Drinking water clarification',
+          'Oil field water treatment',
+          'Industrial effluent treatment'
+        ],
+        technicalSpecs: [
+          'Types: Anionic, Cationic, Non-ionic',
+          'Molecular weight: 5-20 million',
+          'Appearance: White powder or emulsion',
+          'Dosage: 0.1-10 ppm',
+          'Available in 25kg bags',
+          'Powder and liquid forms'
+        ]
+      }
     },
     {
       id: 'potassium-hydroxide-water',
@@ -646,6 +1046,30 @@ export const products: Product[] = [
       description: 'Strong alkali for pH adjustment and neutralization processes.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        formula: 'KOH',
+        casNumber: '1310-58-3',
+        alternativeNames: ['Caustic potash', 'Potassium hydrate', 'KOH', 'Potash lye'],
+        seoKeywords: ['potassium hydroxide Oman', 'caustic potash Oman', 'KOH Muscat', 'potassium hydroxide flakes Oman'],
+        longDescription: 'Potassium Hydroxide supplier in Oman - Global Chemicals LLC provides high-purity KOH flakes and liquid for pH adjustment, chemical processing, battery manufacturing, and industrial applications in Muscat, Sohar, Salalah. Our potassium hydroxide offers strong alkalinity and excellent solubility.',
+        applications: [
+          'pH adjustment in water treatment',
+          'Alkaline battery electrolyte',
+          'Biodiesel production',
+          'Soap and detergent manufacturing',
+          'Chemical synthesis',
+          'Food processing (food grade)',
+          'Fertilizer production'
+        ],
+        technicalSpecs: [
+          'KOH purity: 85-90% (flakes), 45-50% (liquid)',
+          'Appearance: White flakes or clear liquid',
+          'pH (1% solution): 13-14',
+          'Available in 25kg bags, drums',
+          'Technical and food grade',
+          'Highly hygroscopic'
+        ]
+      }
     },
     {
       id: 'soda-ash-water',
@@ -653,6 +1077,30 @@ export const products: Product[] = [
       description: 'Sodium carbonate for water softening and pH control.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        formula: 'Na2CO3',
+        casNumber: '497-19-8',
+        alternativeNames: ['Sodium carbonate', 'Washing soda', 'Soda crystals', 'Soda ash dense/light'],
+        seoKeywords: ['soda ash Oman', 'sodium carbonate Oman', 'soda ash dense Muscat', 'soda ash light Oman'],
+        longDescription: 'Soda Ash supplier in Oman - Global Chemicals LLC provides dense and light soda ash for water treatment, glass manufacturing, detergent production, and industrial processes in Muscat, Sohar, Salalah. Our sodium carbonate offers effective pH adjustment, water softening, and alkalinity building.',
+        applications: [
+          'Water softening',
+          'pH adjustment',
+          'Glass manufacturing',
+          'Detergent and soap production',
+          'Paper and pulp industry',
+          'Chemical manufacturing',
+          'Swimming pool pH balance'
+        ],
+        technicalSpecs: [
+          'Na2CO3 purity: 99.2% min',
+          'Grades: Dense (heavy), Light',
+          'Appearance: White powder/granules',
+          'Bulk density: 900-1100 kg/m³ (dense)',
+          'pH (1% solution): 11.3-11.7',
+          'Available in 25kg, 50kg bags'
+        ]
+      }
     },
     {
       id: 'sodium-bicarbonate-water',
@@ -660,6 +1108,30 @@ export const products: Product[] = [
       description: 'Alkalinity builder and pH buffer for water treatment systems.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        formula: 'NaHCO3',
+        casNumber: '144-55-8',
+        alternativeNames: ['Baking soda', 'Bicarbonate of soda', 'Sodium hydrogen carbonate', 'NaHCO3'],
+        seoKeywords: ['sodium bicarbonate Oman', 'baking soda industrial Oman', 'sodium bicarbonate Muscat', 'bicarbonate supplier Oman'],
+        longDescription: 'Sodium Bicarbonate supplier in Oman - Global Chemicals LLC provides food grade and technical grade sodium bicarbonate for water treatment, food processing, fire extinguishers, and industrial applications in Muscat, Sohar, Salalah. Our sodium bicarbonate offers pH buffering, alkalinity control, and neutralization.',
+        applications: [
+          'pH buffering in water treatment',
+          'Alkalinity adjustment',
+          'Flue gas desulfurization',
+          'Food processing and baking',
+          'Fire extinguisher powder',
+          'Pharmaceutical manufacturing',
+          'Animal feed supplement'
+        ],
+        technicalSpecs: [
+          'NaHCO3 purity: 99% min',
+          'Appearance: White crystalline powder',
+          'pH (1% solution): 8.3',
+          'Available in 25kg bags',
+          'Food grade and technical grade',
+          'Excellent buffering capacity'
+        ]
+      }
     },
     {
       id: 'sodium-bisulphate-bisulphite',
@@ -667,6 +1139,29 @@ export const products: Product[] = [
       description: 'Reducing agent and dechlorination chemical for water treatment.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        formula: 'NaHSO4 / NaHSO3',
+        alternativeNames: ['Sodium bisulfate', 'Sodium bisulfite', 'Dry acid', 'Sodium hydrogen sulfate/sulfite'],
+        seoKeywords: ['sodium bisulfate Oman', 'sodium bisulfite Oman', 'dechlorination Muscat', 'dry acid Oman'],
+        longDescription: 'Sodium Bisulphate/Bisulphite supplier in Oman - Global Chemicals LLC provides sodium bisulfate (dry acid) and sodium bisulfite (reducing agent) for pH control, dechlorination, and industrial applications in Muscat, Sohar, Salalah. Safe alternatives to mineral acids for various water treatment needs.',
+        applications: [
+          'Swimming pool pH reduction',
+          'Dechlorination of water',
+          'Wastewater neutralization',
+          'Food preservation',
+          'Textile bleaching',
+          'Cleaning compound manufacturing',
+          'Boiler water treatment'
+        ],
+        technicalSpecs: [
+          'Bisulfate purity: 93% min',
+          'Bisulfite: 38-40% solution',
+          'Appearance: White granules / liquid',
+          'Safer than mineral acids',
+          'Available in 25kg bags, drums',
+          'Effective pH control'
+        ]
+      }
     },
     {
       id: 'sodium-hexametaphosphate',
@@ -674,13 +1169,61 @@ export const products: Product[] = [
       description: 'Sequestering agent for preventing scale and corrosion in water systems.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        formula: '(NaPO3)6',
+        casNumber: '68915-31-1',
+        alternativeNames: ['SHMP', 'Sodium polyphosphate', 'Grahams salt', 'Calgon'],
+        seoKeywords: ['sodium hexametaphosphate Oman', 'SHMP Oman', 'water softener Muscat', 'scale inhibitor Oman'],
+        longDescription: 'Sodium Hexametaphosphate (SHMP) supplier in Oman - Global Chemicals LLC provides food grade and technical grade SHMP for water softening, scale prevention, detergent formulation, and food processing in Muscat, Sohar, Salalah. Our SHMP chelates hardness ions, preventing scale in water systems.',
+        applications: [
+          'Water softening',
+          'Scale and corrosion inhibition',
+          'Detergent builder',
+          'Food processing emulsifier',
+          'Ceramic industry',
+          'Metal surface treatment',
+          'Drilling mud dispersant'
+        ],
+        technicalSpecs: [
+          'P2O5 content: 68% min',
+          'Appearance: White powder/granules',
+          'pH (1% solution): 5.8-7.3',
+          'Available in 25kg bags',
+          'Food grade and technical grade',
+          'Excellent chelating properties'
+        ]
+      }
     },
     {
-      id: 'sodium-hypochlorite',
-      title: 'Sodium Hypochlorite',
+      id: 'sodium-hypochlorite-2',
+      title: 'Sodium Hypochlorite Solution',
       description: 'Liquid bleach and disinfectant for water purification.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        formula: 'NaOCl',
+        casNumber: '7681-52-9',
+        alternativeNames: ['Liquid chlorine', 'Bleach solution', 'Hypo', 'Sodium hypochlorite 12-15%'],
+        seoKeywords: ['sodium hypochlorite solution Oman', 'liquid bleach Oman', 'hypo Muscat', 'liquid chlorine Oman'],
+        longDescription: 'Sodium Hypochlorite Solution supplier in Oman - Global Chemicals LLC provides bulk sodium hypochlorite for water treatment, disinfection, and industrial applications in Muscat, Sohar, Salalah. Our liquid chlorine offers reliable disinfection with on-site generation options available.',
+        applications: [
+          'Municipal water disinfection',
+          'Wastewater treatment',
+          'Swimming pool chlorination',
+          'Industrial bleaching',
+          'Surface sanitation',
+          'Odor control',
+          'CIP cleaning'
+        ],
+        technicalSpecs: [
+          'Available chlorine: 12-15%',
+          'Appearance: Pale yellow liquid',
+          'pH: 11-13',
+          'Specific gravity: 1.20-1.25',
+          'Available in IBC tanks and bulk',
+          'On-site generation available'
+        ]
+      }
     },
     {
       id: 'sodium-meta-silicate',
@@ -688,6 +1231,30 @@ export const products: Product[] = [
       description: 'Alkaline builder and detergent for industrial cleaning and water treatment.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        formula: 'Na2SiO3',
+        casNumber: '6834-92-0',
+        alternativeNames: ['Sodium metasilicate', 'Sodium silicate', 'Waterglass', 'Liquid glass'],
+        seoKeywords: ['sodium metasilicate Oman', 'sodium silicate Oman', 'waterglass Muscat', 'alkaline cleaner Oman'],
+        longDescription: 'Sodium Meta Silicate supplier in Oman - Global Chemicals LLC provides sodium metasilicate pentahydrate and anhydrous forms for detergent manufacturing, metal cleaning, and industrial applications in Muscat, Sohar, Salalah. Our sodium silicate offers alkalinity, deflocculation, and corrosion inhibition.',
+        applications: [
+          'Detergent and soap manufacturing',
+          'Metal cleaning and degreasing',
+          'Concrete surface treatment',
+          'Pulp and paper processing',
+          'Ore flotation',
+          'Adhesive production',
+          'Fireproofing agent'
+        ],
+        technicalSpecs: [
+          'Forms: Pentahydrate, Anhydrous',
+          'Appearance: White crystalline powder',
+          'pH (1% solution): 12-13',
+          'Available in 25kg bags',
+          'Strong alkaline properties',
+          'Excellent dispersing action'
+        ]
+      }
     },
     {
       id: 'sodium-metabisulphite',
@@ -695,6 +1262,30 @@ export const products: Product[] = [
       description: 'Preservative and dechlorination agent for water treatment.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        formula: 'Na2S2O5',
+        casNumber: '7681-57-4',
+        alternativeNames: ['Sodium metabisulfite', 'SMBS', 'Disodium metabisulfite', 'Sodium pyrosulfite'],
+        seoKeywords: ['sodium metabisulfite Oman', 'SMBS Oman', 'dechlorination Muscat', 'sodium metabisulphite Oman'],
+        longDescription: 'Sodium Metabisulphite supplier in Oman - Global Chemicals LLC provides food grade and technical grade SMBS for dechlorination, food preservation, and industrial applications in Muscat, Sohar, Salalah. Our sodium metabisulfite effectively removes residual chlorine and serves as antioxidant.',
+        applications: [
+          'Dechlorination of water',
+          'Food and beverage preservation',
+          'Wine and beer making',
+          'Textile bleaching',
+          'Photography chemicals',
+          'Boiler water oxygen scavenging',
+          'Gold extraction in mining'
+        ],
+        technicalSpecs: [
+          'Na2S2O5 purity: 96% min',
+          'Appearance: White crystalline powder',
+          'SO2 content: 65% min',
+          'pH (1% solution): 4.0-5.5',
+          'Available in 25kg bags',
+          'Food grade and technical grade'
+        ]
+      }
     },
     {
       id: 'sodium-sulphite',
@@ -702,6 +1293,30 @@ export const products: Product[] = [
       description: 'Oxygen scavenger and preservative for boiler water treatment.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        formula: 'Na2SO3',
+        casNumber: '7757-83-7',
+        alternativeNames: ['Sodium sulfite', 'Disodium sulfite', 'Sulfurous acid disodium salt'],
+        seoKeywords: ['sodium sulfite Oman', 'oxygen scavenger Oman', 'sodium sulphite Muscat', 'boiler treatment Oman'],
+        longDescription: 'Sodium Sulphite supplier in Oman - Global Chemicals LLC provides sodium sulfite for boiler oxygen scavenging, dechlorination, and food preservation in Muscat, Sohar, Salalah. Our sodium sulfite removes dissolved oxygen from feedwater, preventing corrosion in boiler systems.',
+        applications: [
+          'Boiler oxygen scavenging',
+          'Dechlorination',
+          'Food preservation',
+          'Photographic development',
+          'Textile processing',
+          'Pulp and paper bleaching',
+          'Water treatment'
+        ],
+        technicalSpecs: [
+          'Na2SO3 purity: 96% min',
+          'Appearance: White crystalline powder',
+          'pH (1% solution): 9-10',
+          'Available in 25kg bags',
+          'Reacts with dissolved oxygen',
+          'Food grade and technical grade'
+        ]
+      }
     },
     {
       id: 'sulphamic-acid',
@@ -709,6 +1324,30 @@ export const products: Product[] = [
       description: 'Descaling agent for removing mineral deposits from equipment.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        formula: 'H3NSO3',
+        casNumber: '5329-14-6',
+        alternativeNames: ['Sulfamic acid', 'Amidosulfonic acid', 'Aminosulfonic acid'],
+        seoKeywords: ['sulfamic acid Oman', 'descaling agent Oman', 'sulphamic acid Muscat', 'scale remover Oman'],
+        longDescription: 'Sulphamic Acid supplier in Oman - Global Chemicals LLC provides high-purity sulfamic acid for descaling, cleaning, and industrial applications in Muscat, Sohar, Salalah. Our sulfamic acid effectively removes calcium carbonate, rust, and scale from boilers, heat exchangers, and equipment.',
+        applications: [
+          'Descaling boilers and heat exchangers',
+          'Cleaning industrial equipment',
+          'Bathroom and kitchen cleaners',
+          'Pulp and paper industry',
+          'Catalyst preparation',
+          'Electroplating baths',
+          'Herbicide formulation'
+        ],
+        technicalSpecs: [
+          'Purity: 99.5% min',
+          'Appearance: White crystalline powder',
+          'pH (1% solution): <1',
+          'Non-volatile and stable',
+          'Available in 25kg bags',
+          'Safer than mineral acids'
+        ]
+      }
     },
     {
       id: 'tri-ethanol-amine',
@@ -716,6 +1355,30 @@ export const products: Product[] = [
       description: 'Corrosion inhibitor and pH adjuster for water systems.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        formula: 'C6H15NO3',
+        casNumber: '102-71-6',
+        alternativeNames: ['Triethanolamine', 'TEA', 'Trolamine', 'Nitrilotriethanol'],
+        seoKeywords: ['triethanolamine Oman', 'TEA Oman', 'triethanolamine Muscat', 'TEA supplier Oman'],
+        longDescription: 'Triethanolamine (TEA) supplier in Oman - Global Chemicals LLC provides TEA for corrosion inhibition, pH adjustment, emulsifier, and industrial applications in Muscat, Sohar, Salalah. Our TEA serves as pH adjuster, surfactant, and corrosion inhibitor in diverse formulations.',
+        applications: [
+          'Corrosion inhibitor in coolants',
+          'pH adjuster in water treatment',
+          'Emulsifier in cosmetics',
+          'Cement grinding aid',
+          'Metalworking fluids',
+          'Gas treating (CO2 removal)',
+          'Textile processing'
+        ],
+        technicalSpecs: [
+          'Purity: 99% min',
+          'Appearance: Colorless viscous liquid',
+          'pH (1% solution): 10-11',
+          'Boiling point: 335°C',
+          'Available in drums and IBC tanks',
+          'Fully water soluble'
+        ]
+      }
     },
     {
       id: 'tsp-water',
@@ -723,6 +1386,30 @@ export const products: Product[] = [
       description: 'Heavy-duty cleaner and degreaser for industrial water treatment.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        formula: 'Na3PO4',
+        casNumber: '7601-54-9',
+        alternativeNames: ['Trisodium phosphate', 'Sodium phosphate tribasic', 'TSP cleaner', 'Na3PO4'],
+        seoKeywords: ['trisodium phosphate Oman', 'TSP Oman', 'heavy duty cleaner Muscat', 'TSP degreaser Oman'],
+        longDescription: 'Trisodium Phosphate (TSP) supplier in Oman - Global Chemicals LLC provides TSP for heavy-duty cleaning, degreasing, water softening, and industrial applications in Muscat, Sohar, Salalah. Our TSP offers powerful alkaline cleaning and pH adjustment properties.',
+        applications: [
+          'Heavy-duty industrial cleaning',
+          'Paint preparation and removal',
+          'Metal surface degreasing',
+          'Water softening',
+          'Boiler water treatment',
+          'Food processing equipment cleaning',
+          'Concrete etching and preparation'
+        ],
+        technicalSpecs: [
+          'Na3PO4 purity: 98% min',
+          'Appearance: White crystalline powder',
+          'pH (1% solution): 11.5-12',
+          'Available in 25kg bags',
+          'Strong alkaline cleaner',
+          'Excellent grease cutting power'
+        ]
+      }
     },
 
     // Lubricants & Greases
