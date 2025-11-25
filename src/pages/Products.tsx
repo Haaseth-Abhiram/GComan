@@ -41,6 +41,28 @@ export const products: Product[] = [
     description: 'High-performance adsorbent for removing impurities, odors, and contaminants from water.',
     category: 'water-treatment',
     icon: Droplets,
+    details: {
+      casNumber: '64365-11-3',
+      alternativeNames: ['Active carbon', 'Activated charcoal', 'AC filter media', 'Carbon adsorbent'],
+      seoKeywords: ['activated carbon Oman', 'water filter carbon Muscat', 'activated charcoal Oman', 'carbon adsorbent supplier'],
+      longDescription: 'Premium Activated Carbon supplier in Oman - Global Chemicals LLC provides high-quality activated carbon for water treatment, air purification, and industrial applications in Muscat, Sohar, Salalah. Our activated carbon offers superior adsorption capacity for removing organic compounds, chlorine, odors, and contaminants from water and air. Available in granular, powder, and pellet forms.',
+      applications: [
+        'Drinking water purification',
+        'Wastewater treatment',
+        'Air purification and odor control',
+        'Industrial effluent treatment',
+        'Gold recovery and mining',
+        'Food and beverage decolorization',
+        'Solvent recovery'
+      ],
+      technicalSpecs: [
+        'Iodine number: >900 mg/g',
+        'Surface area: 900-1200 m²/g',
+        'Available in granular (8x30 mesh) and powder forms',
+        'Moisture content: <5%',
+        'Bulk density: 0.40-0.55 g/cm³'
+      ]
+    }
   },
     {
       id: 'aluminium-sulphate-liquid',
@@ -48,6 +70,28 @@ export const products: Product[] = [
       description: 'Liquid coagulant for efficient flocculation in water and wastewater treatment.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        formula: 'Al2(SO4)3',
+        casNumber: '10043-01-3',
+        alternativeNames: ['Liquid alum', 'Aluminum sulfate solution', 'Alum liquid', 'Al2(SO4)3 liquid'],
+        seoKeywords: ['aluminum sulfate Oman', 'liquid alum Oman', 'alum coagulant Muscat', 'water treatment alum Oman'],
+        longDescription: 'Buy Aluminum Sulphate Liquid in Oman from Global Chemicals LLC. Liquid alum is a widely used coagulant for municipal water treatment, wastewater treatment, and industrial effluent treatment in Muscat, Sohar, Salalah. Our aluminum sulfate liquid offers excellent flocculation performance for turbidity removal and phosphorus precipitation.',
+        applications: [
+          'Municipal water treatment plants',
+          'Wastewater treatment coagulation',
+          'Industrial effluent clarification',
+          'Paper manufacturing',
+          'Textile wastewater treatment',
+          'Phosphorus removal'
+        ],
+        technicalSpecs: [
+          'Al2O3 content: 8-9%',
+          'Appearance: Clear to light yellow liquid',
+          'pH (1% solution): 3.0-4.0',
+          'Specific gravity: 1.25-1.35',
+          'Available in bulk and IBC tanks'
+        ]
+      }
     },
     {
       id: 'aluminium-sulphate-powder',
@@ -55,6 +99,28 @@ export const products: Product[] = [
       description: 'Powder form coagulant for water clarification and purification processes.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        formula: 'Al2(SO4)3',
+        casNumber: '10043-01-3',
+        alternativeNames: ['Alum powder', 'Aluminum sulfate powder', 'Powdered alum', 'Filter alum'],
+        seoKeywords: ['aluminum sulfate powder Oman', 'alum powder Muscat', 'powdered alum Oman', 'water treatment chemicals Oman'],
+        longDescription: 'Aluminum Sulphate Powder supplier in Oman - Global Chemicals LLC. Buy high-grade alum powder for water treatment plants in Muscat, Sohar, Salalah. Our aluminum sulfate powder offers excellent solubility and coagulation performance for turbidity removal, color reduction, and phosphorus removal in water and wastewater treatment.',
+        applications: [
+          'Drinking water clarification',
+          'Wastewater treatment',
+          'Industrial water treatment',
+          'Swimming pool clarification',
+          'Paper sizing agent',
+          'Soil pH adjustment'
+        ],
+        technicalSpecs: [
+          'Al2O3 content: 17-18%',
+          'Appearance: White to off-white powder',
+          'Water insoluble: <0.5%',
+          'Iron (Fe) content: <0.5%',
+          'Available in 25kg, 50kg bags'
+        ]
+      }
     },
     {
       id: 'antifoam-water',
@@ -62,6 +128,27 @@ export const products: Product[] = [
       description: 'Controls foam in water treatment processes and industrial applications.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        alternativeNames: ['Defoamer', 'Foam control agent', 'Antifoaming agent', 'Foam suppressant'],
+        seoKeywords: ['antifoam Oman', 'defoamer Oman', 'foam control water treatment Oman', 'antifoaming agent Muscat'],
+        longDescription: 'Antifoam and Defoamer supplier in Oman - Global Chemicals LLC provides industrial antifoam agents for water treatment, wastewater treatment, and industrial processes in Muscat, Sohar, Salalah. Our antifoam products effectively control and eliminate foam in various applications, improving process efficiency.',
+        applications: [
+          'Wastewater treatment plants',
+          'Pulp and paper manufacturing',
+          'Textile processing',
+          'Food and beverage processing',
+          'Chemical manufacturing',
+          'Fermentation processes',
+          'Cooling tower water treatment'
+        ],
+        technicalSpecs: [
+          'Active content: 10-100%',
+          'Appearance: White to off-white emulsion',
+          'Silicone or non-silicone based',
+          'Low dosage requirement: 10-100 ppm',
+          'Compatible with various water chemistries'
+        ]
+      }
     },
     {
       id: 'antiscalant-water',
@@ -69,6 +156,28 @@ export const products: Product[] = [
       description: 'Prevents scale formation in RO systems, boilers, and cooling towers.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        alternativeNames: ['Scale inhibitor', 'Antiscale', 'RO antiscalant', 'Scale prevention chemical'],
+        seoKeywords: ['antiscalant Oman', 'scale inhibitor Oman', 'RO antiscalant Muscat', 'membrane antiscalant Oman'],
+        longDescription: 'Antiscalant supplier in Oman - Global Chemicals LLC provides high-performance antiscalants for reverse osmosis (RO) systems, boilers, and cooling towers in Muscat, Sohar, Salalah. Our antiscalant products prevent calcium carbonate, calcium sulfate, barium sulfate, and silica scale formation, extending membrane life and system efficiency.',
+        applications: [
+          'Reverse osmosis (RO) desalination plants',
+          'Ultrafiltration (UF) systems',
+          'Boiler feed water treatment',
+          'Cooling tower scale prevention',
+          'Industrial water systems',
+          'Membrane protection',
+          'Geothermal systems'
+        ],
+        technicalSpecs: [
+          'Effective dosage: 2-5 ppm',
+          'pH range: 3-10',
+          'Compatible with all RO membrane types',
+          'Non-toxic and biodegradable',
+          'Liquid form for easy dosing',
+          'Wide operating temperature range'
+        ]
+      }
     },
     {
       id: 'biocide-water',
@@ -76,6 +185,28 @@ export const products: Product[] = [
       description: 'Antimicrobial agent for controlling bacteria, algae, and fungi in water systems.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        alternativeNames: ['Bactericide', 'Antimicrobial', 'Water disinfectant', 'Microbiocide'],
+        seoKeywords: ['biocide Oman', 'water biocide Muscat', 'bactericide Oman', 'cooling tower biocide Oman'],
+        longDescription: 'Industrial Biocide supplier in Oman - Global Chemicals LLC supplies broad-spectrum biocides for water treatment, cooling towers, and industrial water systems in Muscat, Sohar, Salalah. Our biocide products effectively control bacteria, algae, fungi, and biofilm formation in water systems, ensuring microbiological control.',
+        applications: [
+          'Cooling tower water treatment',
+          'Wastewater treatment biocide',
+          'RO feed water disinfection',
+          'Industrial process water',
+          'Swimming pool water treatment',
+          'Oil and gas water systems',
+          'Paper mill slime control'
+        ],
+        technicalSpecs: [
+          'Broad-spectrum antimicrobial activity',
+          'Non-oxidizing and oxidizing types available',
+          'Effective dosage: 10-50 ppm',
+          'Fast-acting formulation',
+          'Compatible with water treatment chemicals',
+          'Low environmental impact'
+        ]
+      }
     },
     {
       id: 'calcium-carbonate-water',
@@ -83,6 +214,29 @@ export const products: Product[] = [
       description: 'Mineral supplement for pH adjustment and alkalinity control in water treatment.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        formula: 'CaCO3',
+        casNumber: '471-34-1',
+        alternativeNames: ['Limestone', 'Calcite', 'Chalk', 'Calcium carbonate powder'],
+        seoKeywords: ['calcium carbonate Oman', 'limestone powder Oman', 'pH adjustment chemical Oman', 'water treatment minerals Muscat'],
+        longDescription: 'Calcium Carbonate supplier in Oman - Global Chemicals LLC provides high-purity calcium carbonate for water treatment, pH adjustment, and alkalinity control in Muscat, Sohar, Salalah. Our calcium carbonate is ideal for remineralization of RO water, pH buffering, and water softening applications.',
+        applications: [
+          'RO water remineralization',
+          'pH adjustment in water treatment',
+          'Alkalinity control',
+          'Water hardness adjustment',
+          'Neutralization of acidic water',
+          'Industrial wastewater treatment',
+          'Aquaculture water conditioning'
+        ],
+        technicalSpecs: [
+          'CaCO3 purity: 95-98%',
+          'Appearance: White powder',
+          'Particle size: 200-325 mesh',
+          'pH (10% slurry): 8-10',
+          'Available in 25kg, 50kg bags'
+        ]
+      }
     },
     {
       id: 'calcium-chloride-water',
@@ -90,6 +244,29 @@ export const products: Product[] = [
       description: 'Desiccant and de-icing agent used in wastewater treatment and concrete acceleration.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        formula: 'CaCl2',
+        casNumber: '10043-52-4',
+        alternativeNames: ['Calcium chloride dihydrate', 'CaCl2', 'Calcium dichloride', 'Ice melt'],
+        seoKeywords: ['calcium chloride Oman', 'CaCl2 Oman', 'desiccant Oman', 'calcium chloride supplier Muscat'],
+        longDescription: 'Calcium Chloride supplier in Oman - Global Chemicals LLC provides calcium chloride in various forms (liquid, flakes, pellets, powder) for desiccation, de-icing, wastewater treatment, concrete acceleration, and dust control in Muscat, Sohar, Salalah. Our calcium chloride offers excellent moisture absorption and freezing point depression.',
+        applications: [
+          'Desiccant and moisture control',
+          'De-icing and snow melting',
+          'Concrete acceleration',
+          'Wastewater treatment',
+          'Dust control on roads',
+          'Oil and gas drilling fluids',
+          'Food processing (firming agent)'
+        ],
+        technicalSpecs: [
+          'CaCl2 content: 77-94%',
+          'Available forms: Liquid (32%), Flakes, Pellets, Powder',
+          'Appearance: White granules/liquid',
+          'Moisture absorption: Excellent hygroscopic properties',
+          'Available in 25kg bags and bulk'
+        ]
+      }
     },
     {
       id: 'calcium-hypochlorite-water',
@@ -104,6 +281,30 @@ export const products: Product[] = [
       description: 'Sodium hydroxide in flake form for pH adjustment and neutralization.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        formula: 'NaOH',
+        casNumber: '1310-73-2',
+        alternativeNames: ['Sodium hydroxide flakes', 'NaOH flakes', 'Caustic flakes', 'Lye flakes'],
+        seoKeywords: ['caustic soda flakes Oman', 'sodium hydroxide flakes Muscat', 'NaOH flakes Oman', 'caustic flakes supplier Oman'],
+        longDescription: 'Caustic Soda Flakes supplier in Oman - Global Chemicals LLC provides high-purity sodium hydroxide flakes for pH adjustment, chemical processing, soap manufacturing, and water treatment in Muscat, Sohar, Salalah. Our caustic soda flakes offer 98-99% purity, easy handling, and reliable performance across industries.',
+        applications: [
+          'pH adjustment in water treatment',
+          'Soap and detergent manufacturing',
+          'Pulp and paper processing',
+          'Chemical manufacturing',
+          'Textile mercerization',
+          'Aluminum refining (Bayer process)',
+          'Food processing (peeling, pH control)'
+        ],
+        technicalSpecs: [
+          'NaOH purity: 98-99%',
+          'Appearance: White flakes',
+          'Moisture content: <1%',
+          'Na2CO3: <0.8%',
+          'Available in 25kg bags',
+          'Long shelf life in dry conditions'
+        ]
+      }
     },
   {
     id: 'caustic-soda-liquid',
@@ -206,6 +407,30 @@ export const products: Product[] = [
       description: 'High-purity sodium hydroxide beads for precise dosing and handling.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        formula: 'NaOH',
+        casNumber: '1310-73-2',
+        alternativeNames: ['Sodium hydroxide prills', 'NaOH prills', 'Caustic prills', 'Caustic pearls', 'Caustic beads'],
+        seoKeywords: ['caustic soda prills Oman', 'sodium hydroxide prills Muscat', 'NaOH prills Oman', 'caustic pearls supplier Oman'],
+        longDescription: 'Caustic Soda Prills (Pearls) supplier in Oman - Global Chemicals LLC provides premium sodium hydroxide prills for industrial applications in Muscat, Sohar, Salalah. Our caustic soda prills offer superior flowability, low dust formation, easy dissolution, and precise dosing for chemical processing and water treatment.',
+        applications: [
+          'pH control in water treatment',
+          'Chemical manufacturing',
+          'Soap and detergent production',
+          'Textile processing',
+          'Petroleum refining',
+          'Aluminum processing',
+          'Food processing industry'
+        ],
+        technicalSpecs: [
+          'NaOH purity: 99%+',
+          'Appearance: White spherical beads',
+          'Particle size: 0.5-1.0 mm',
+          'Low dust formation',
+          'Excellent flowability',
+          'Available in 25kg bags'
+        ]
+      }
     },
     {
       id: 'chlorine-tablets',
@@ -213,6 +438,30 @@ export const products: Product[] = [
       description: 'Stabilized chlorine tablets for continuous water disinfection and sanitation.',
       category: 'water-treatment',
       icon: Droplets,
+      details: {
+        formula: 'C3Cl3N3O3',
+        casNumber: '87-90-1',
+        alternativeNames: ['TCCA tablets', 'Trichloroisocyanuric acid tablets', 'Stabilized chlorine tablets', 'Slow dissolving chlorine'],
+        seoKeywords: ['TCCA tablets Oman', 'chlorine tablets Oman', 'stabilized chlorine Muscat', 'TCCA supplier Oman'],
+        longDescription: 'TCCA Chlorine Tablets supplier in Oman - Global Chemicals LLC provides high-quality Trichloroisocyanuric Acid (TCCA) tablets for swimming pools, water treatment, and disinfection in Muscat, Sohar, Salalah. Our TCCA tablets contain 90% available chlorine with built-in stabilizer (cyanuric acid) for longer-lasting disinfection.',
+        applications: [
+          'Swimming pool disinfection',
+          'Drinking water chlorination',
+          'Industrial water treatment',
+          'Cooling tower disinfection',
+          'Wastewater treatment',
+          'Spa and hot tub sanitation',
+          'Emergency water purification'
+        ],
+        technicalSpecs: [
+          'Available chlorine: 90%',
+          'Tablet size: 20g, 200g',
+          'Contains cyanuric acid stabilizer',
+          'Slow-dissolving for sustained release',
+          'Appearance: White tablets',
+          'Available in 5kg, 25kg, 50kg drums'
+        ]
+      }
     },
     {
       id: 'citric-acid-anhydrous',
