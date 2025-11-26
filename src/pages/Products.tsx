@@ -2302,8 +2302,28 @@ export const products: Product[] = [
       icon: Factory,
       details: {
         casNumber: '9000-11-7',
-        alternativeNames: ['Carboxymethyl cellulose', 'CMC', 'Sodium CMC'],
-        seoKeywords: ['CMC Oman', 'carboxymethylcellulose Muscat', 'drilling fluid additive Oman'],
+        alternativeNames: ['Carboxymethyl cellulose', 'CMC', 'Sodium CMC', 'Drilling grade CMC', 'Cellulose gum'],
+        seoKeywords: ['CMC Oman', 'carboxymethylcellulose Muscat', 'drilling fluid additive Oman', 'CMC drilling Sohar', 'fluid loss control Oman', 'PAC alternative Oman'],
+        longDescription: 'CMC (Carboxymethylcellulose) supplier in Oman - Global Chemicals LLC provides API-grade CMC for drilling fluid applications in Muscat, Sohar, Duqm, Salalah. Our sodium CMC is a highly effective fluid loss control additive and viscosifier for water-based drilling muds. CMC reduces filtration rates, stabilizes rheology, and improves hole cleaning efficiency. The polymer provides excellent performance in fresh, brackish, and saltwater systems. Available in various viscosity grades (LV, HV) to meet specific drilling requirements. Essential for all water-based drilling operations, workover fluids, and completion applications. CMC offers cost-effective fluid loss control compared to PAC polymers. Widely used by drilling contractors and oilfield service companies across Oman.',
+        applications: [
+          'Fluid loss control in water-based drilling muds',
+          'Viscosity building and rheology control',
+          'Shale stabilization and wellbore support',
+          'Filtration rate reduction',
+          'Workover and completion fluid additive',
+          'Drilling in freshwater and saltwater systems',
+          'Polymer mud formulations',
+          'Hole cleaning enhancement'
+        ],
+        technicalSpecs: [
+          'API 13A specification grade',
+          'Available grades: Low Viscosity (LV), High Viscosity (HV)',
+          'Degree of substitution: 0.65-0.95',
+          'Typical dosage: 1-5 lb/bbl',
+          'Compatible with most drilling fluid additives',
+          'Effective in pH 7-11 range',
+          'Packaging: 25kg bags, bulk bags'
+        ]
       },
     },
     {
@@ -2433,8 +2453,29 @@ export const products: Product[] = [
       details: {
         formula: 'HCOOH',
         casNumber: '64-18-6',
-        alternativeNames: ['Methanoic acid', 'Formic acid 85%'],
-        seoKeywords: ['formic acid Oman', 'methanoic acid Muscat', 'acidizing agent Oman'],
+        alternativeNames: ['Methanoic acid', 'Formic acid 85%', 'Formic acid 94%', 'HCOOH solution'],
+        seoKeywords: ['formic acid Oman', 'methanoic acid Muscat', 'acidizing agent Oman', 'formic acid oilfield Sohar', 'well stimulation Oman', 'HCOOH Oman'],
+        longDescription: 'Formic Acid supplier in Oman - Global Chemicals LLC provides high-purity formic acid for oilfield acidizing, drilling fluids, and industrial applications in Muscat, Sohar, Duqm, Salalah. Our formic acid (HCOOH) is widely used in well stimulation treatments, particularly for carbonate reservoirs and sandstone formations. Formic acid provides effective scale removal with less corrosion than hydrochloric acid. The compound is also used in formate-based drilling and completion fluids for high-density, low-corrosion applications. Essential for matrix acidizing, scale dissolution, and high-performance brine systems. Formic acid offers environmental advantages with better biodegradability. Widely used across Oman\'s oil & gas industry for production enhancement and well servicing.',
+        applications: [
+          'Matrix acidizing of carbonate formations',
+          'Sandstone acidizing treatments',
+          'Scale removal from wellbores and equipment',
+          'Formate brine formulations (potassium/cesium formate)',
+          'Drilling fluid pH control',
+          'Completion fluid weighting agent',
+          'Less corrosive alternative to HCl',
+          'Environmentally-friendly acidizing'
+        ],
+        technicalSpecs: [
+          'Available concentrations: 85%, 94%',
+          'Appearance: Clear colorless liquid',
+          'pH: <2 (concentrated solution)',
+          'Specific gravity: 1.22 at 20°C (94%)',
+          'Typical dosage: 3-15% in acidizing',
+          'Lower corrosion rate than HCl',
+          'Biodegradable organic acid',
+          'Available in drums, IBCs, ISO tanks'
+        ]
       },
     },
     {
@@ -2641,8 +2682,28 @@ export const products: Product[] = [
       details: {
         formula: 'KCl',
         casNumber: '7447-40-7',
-        alternativeNames: ['Potassium chloride', 'KCl', 'Muriate of potash'],
-        seoKeywords: ['potassium chloride Oman', 'KCl drilling Muscat', 'shale inhibitor Oman'],
+        alternativeNames: ['Potassium chloride', 'KCl', 'Muriate of potash', 'Drilling grade KCl'],
+        seoKeywords: ['potassium chloride Oman', 'KCl drilling Muscat', 'shale inhibitor Oman', 'KCl oilfield Sohar', 'clay stabilizer Oman', 'KCl drilling mud Oman'],
+        longDescription: 'Potassium Chloride (KCl) supplier in Oman - Global Chemicals LLC provides drilling-grade potassium chloride for water-based drilling fluids in Muscat, Sohar, Duqm, Salalah. Our KCl is the most widely used shale stabilizer and clay inhibitor in drilling operations. Potassium ions exchange with sodium and calcium in clays, preventing swelling and maintaining wellbore stability. KCl inhibits reactive shales, reduces torque and drag, and improves rate of penetration. Essential for drilling through troublesome shale formations, highly reactive clays, and water-sensitive zones. The compound is cost-effective, readily available, and compatible with all water-based drilling fluid systems. Widely used by drilling contractors across Oman for maintaining wellbore integrity.',
+        applications: [
+          'Shale inhibition in water-based drilling muds',
+          'Clay swelling prevention',
+          'Wellbore stability in reactive formations',
+          'Torque and drag reduction',
+          'Rate of penetration improvement',
+          'Inhibitive drilling fluid formulations',
+          'Horizontal and directional drilling',
+          'Workover and completion fluids'
+        ],
+        technicalSpecs: [
+          'Purity: 99% minimum (drilling grade)',
+          'Typical concentration: 3-10% in drilling fluids',
+          'Appearance: White crystalline powder',
+          'Solubility: 34g/100ml water at 20°C',
+          'Compatible with all water-based systems',
+          'Cost-effective shale inhibitor',
+          'Packaging: 25kg, 50kg bags, bulk'
+        ]
       },
     },
     {
@@ -2679,8 +2740,28 @@ export const products: Product[] = [
       icon: Factory,
       details: {
         casNumber: '112926-00-8',
-        alternativeNames: ['Blue silica gel', 'Indicating silica gel', 'Cobalt silica gel'],
-        seoKeywords: ['silica gel blue Oman', 'indicating desiccant Muscat', 'moisture control Oman'],
+        alternativeNames: ['Blue silica gel', 'Indicating silica gel', 'Cobalt silica gel', 'Self-indicating silica gel'],
+        seoKeywords: ['silica gel blue Oman', 'indicating desiccant Muscat', 'moisture control Oman', 'blue desiccant Sohar', 'silica gel oilfield Oman'],
+        longDescription: 'Blue Silica Gel supplier in Oman - Global Chemicals LLC provides indicating silica gel for moisture control and gas dehydration in Muscat, Sohar, Duqm, Salalah. Our blue silica gel contains moisture indicators that change color from blue (dry) to pink (saturated), providing visual indication of moisture absorption status. The high-capacity desiccant protects sensitive equipment, instruments, and stored materials from moisture damage. Essential for instrument air systems, compressed air drying, natural gas dehydration, and equipment protection in humid environments. Silica gel is regenerable by heating, offering cost-effective long-term moisture control. Widely used in refineries, gas processing plants, and industrial facilities across Oman.',
+        applications: [
+          'Instrument air and compressed air drying',
+          'Natural gas moisture removal',
+          'Equipment and spare parts protection',
+          'Electrical control panel moisture control',
+          'Transformer breather applications',
+          'Container and packaging desiccant',
+          'Laboratory humidity control',
+          'Hydrocarbon stream drying'
+        ],
+        technicalSpecs: [
+          'Color indication: Blue (dry) to Pink (saturated)',
+          'Moisture capacity: 35-40% by weight',
+          'Bead sizes: 2-4mm, 3-5mm, 4-8mm',
+          'Bulk density: 0.70-0.75 kg/L',
+          'Regeneration temperature: 120-180°C',
+          'Reusable after regeneration',
+          'Packaging: 1kg, 5kg, 25kg bags, drums'
+        ]
       },
     },
     {
@@ -2703,8 +2784,29 @@ export const products: Product[] = [
       icon: Factory,
       details: {
         casNumber: '112926-00-8',
-        alternativeNames: ['White silica gel', 'Silica gel desiccant'],
-        seoKeywords: ['silica gel white Oman', 'desiccant white Muscat', 'moisture absorber Oman'],
+        alternativeNames: ['White silica gel', 'Silica gel desiccant', 'Non-indicating silica gel', 'Standard silica gel'],
+        seoKeywords: ['silica gel white Oman', 'desiccant white Muscat', 'moisture absorber Oman', 'silica gel industrial Sohar', 'standard silica gel Oman'],
+        longDescription: 'White Silica Gel supplier in Oman - Global Chemicals LLC provides non-indicating silica gel for industrial moisture control and gas dehydration in Muscat, Sohar, Duqm, Salalah. Our white silica gel offers maximum moisture absorption capacity without color indicators, making it ideal for large-scale applications and bulk drying. The amorphous silica structure provides exceptional water vapor adsorption across a wide humidity range. Essential for compressed air systems, gas dehydration, packaging, and equipment protection. White silica gel is regenerable by heating (120-180°C), offering economical long-term moisture control. Widely used in refineries, petrochemical plants, gas processing facilities, and industrial operations across Oman for protecting processes and equipment from moisture damage.',
+        applications: [
+          'Industrial compressed air drying',
+          'Natural gas and process gas dehydration',
+          'Bulk packaging and container desiccant',
+          'Equipment and machinery protection',
+          'Transformer and switchgear moisture control',
+          'Storage area humidity control',
+          'Pharmaceutical and food packaging',
+          'Chromatography and laboratory applications'
+        ],
+        technicalSpecs: [
+          'Appearance: White translucent beads',
+          'Moisture capacity: 40% by weight at 90% RH',
+          'Bead sizes: 1-3mm, 2-5mm, 3-6mm, 4-8mm',
+          'Surface area: 650-800 m²/g',
+          'Bulk density: 0.68-0.72 kg/L',
+          'Regeneration temperature: 120-180°C',
+          'Reusable multiple times',
+          'Packaging: 25kg bags, drums, bulk bags'
+        ]
       },
     },
     {
@@ -2716,8 +2818,28 @@ export const products: Product[] = [
       details: {
         formula: 'Na2CO3',
         casNumber: '497-19-8',
-        alternativeNames: ['Sodium carbonate dense', 'Soda ash heavy', 'Na2CO3'],
-        seoKeywords: ['soda ash dense Oman', 'sodium carbonate Muscat', 'soda ash Oman'],
+        alternativeNames: ['Sodium carbonate dense', 'Soda ash heavy', 'Na2CO3', 'Sodium carbonate heavy', 'Dense soda ash'],
+        seoKeywords: ['soda ash dense Oman', 'sodium carbonate Muscat', 'soda ash Oman', 'Na2CO3 oilfield Sohar', 'drilling fluid pH control Oman'],
+        longDescription: 'Soda Ash Dense supplier in Oman - Global Chemicals LLC provides high-quality dense sodium carbonate for oilfield, water treatment, and industrial applications in Muscat, Sohar, Duqm, Salalah. Our soda ash dense (Na2CO3) is widely used in drilling fluids for pH control, hardness precipitation, and alkalinity adjustment. The dense grade offers better handling, less dust, and improved dissolution compared to light soda ash. Essential for maintaining proper pH in water-based drilling muds, removing calcium and magnesium hardness, and neutralizing acid gases. Soda ash also serves in water treatment, glass manufacturing, and chemical processing. Widely used by drilling contractors, oilfield service companies, and industrial facilities across Oman.',
+        applications: [
+          'pH control in drilling fluids',
+          'Calcium and magnesium precipitation',
+          'Alkalinity adjustment in muds',
+          'Water softening and treatment',
+          'Acid gas neutralization',
+          'Cement contamination treatment',
+          'Chemical manufacturing intermediate',
+          'Glass and detergent production'
+        ],
+        technicalSpecs: [
+          'Purity: 99.2% minimum Na2CO3',
+          'Appearance: White granular powder',
+          'Bulk density: 1.0-1.2 kg/L (dense grade)',
+          'pH (1% solution): 11.5-12.0',
+          'Typical dosage: 0.5-2 lb/bbl in drilling fluids',
+          'Low dust, easy handling',
+          'Packaging: 25kg, 50kg bags, bulk bags'
+        ]
       },
     },
     {
