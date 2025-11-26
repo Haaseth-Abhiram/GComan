@@ -2159,8 +2159,28 @@ export const products: Product[] = [
       details: {
         formula: 'Na2B4O7·10H2O',
         casNumber: '1303-96-4',
-        alternativeNames: ['Sodium borate', 'Sodium tetraborate decahydrate', 'Borax decahydrate'],
-        seoKeywords: ['borax Oman', 'sodium borate Muscat', 'borax powder Oman'],
+        alternativeNames: ['Sodium borate', 'Sodium tetraborate decahydrate', 'Borax decahydrate', 'Borax 10-mol', 'Sodium borate decahydrate'],
+        seoKeywords: ['borax Oman', 'sodium borate Muscat', 'borax powder Oman', 'borax oilfield Sohar', 'sodium tetraborate Oman'],
+        longDescription: 'Borax Powder supplier in Oman - Global Chemicals LLC provides high-quality borax (sodium borate decahydrate) for oilfield, industrial, and chemical applications in Muscat, Sohar, Duqm, Salalah. Our borax powder serves as a crosslinking agent in fracturing fluids, pH buffer in drilling muds, and corrosion inhibitor in completion fluids. Essential for gelling guar-based fracturing fluids, providing thermal stability, and controlling rheology in high-temperature wells. Borax also finds use in glass manufacturing, ceramic glazes, welding fluxes, and as a precursor for boron compounds. The versatile compound offers excellent buffering capacity and is compatible with most drilling and completion fluid systems. Widely used across Oman\'s oil & gas industry for hydraulic fracturing and drilling operations.',
+        applications: [
+          'Crosslinking agent in fracturing fluids',
+          'pH buffer in drilling muds',
+          'Corrosion inhibitor in completion fluids',
+          'Guar gum crosslinker for high-temp fracturing',
+          'Glass and ceramic manufacturing',
+          'Welding flux and brazing',
+          'Boron compound production',
+          'Fire retardant formulations'
+        ],
+        technicalSpecs: [
+          'Chemical form: Sodium tetraborate decahydrate',
+          'Boron content: 11.3%',
+          'Appearance: White crystalline powder',
+          'Solubility: 5g/100ml water at 20°C',
+          'pH (1% solution): 9.0-9.5',
+          'Typical dosage: 0.5-2 lb/1000 gal in fracturing',
+          'Packaging: 25kg, 50kg bags, bulk'
+        ]
       },
     },
     {
@@ -2172,8 +2192,28 @@ export const products: Product[] = [
       details: {
         formula: 'H3BO3',
         casNumber: '10043-35-3',
-        alternativeNames: ['Boracic acid', 'Hydrogen borate', 'Orthoboric acid'],
-        seoKeywords: ['boric acid Oman', 'boracic acid Muscat', 'boric acid powder Oman'],
+        alternativeNames: ['Boracic acid', 'Hydrogen borate', 'Orthoboric acid', 'Acidum boricum'],
+        seoKeywords: ['boric acid Oman', 'boracic acid Muscat', 'boric acid powder Oman', 'H3BO3 Sohar', 'boric acid industrial Oman'],
+        longDescription: 'Boric Acid supplier in Oman - Global Chemicals LLC provides high-purity boric acid for oilfield, chemical, and industrial applications in Muscat, Sohar, Duqm, Salalah. Our boric acid (H3BO3) serves as a pH buffer in drilling fluids, corrosion inhibitor in completion fluids, and temperature-stable additive for high-temperature wells. Essential for controlling pH in water-based drilling muds, reducing friction in drilling operations, and inhibiting bacterial growth. Boric acid also finds extensive use in nuclear applications, glass and ceramic production, flame retardants, and as a precursor for boron compounds. The weak acid properties provide effective buffering without aggressive corrosion. Widely used in oilfield operations, refineries, and chemical processing facilities across Oman.',
+        applications: [
+          'pH control in drilling fluids',
+          'Corrosion inhibitor in completion fluids',
+          'High-temperature wellbore stabilizer',
+          'Biocide in drilling mud systems',
+          'Nuclear coolant and moderator',
+          'Glass and ceramic manufacturing',
+          'Flame retardant production',
+          'Chemical intermediate and catalyst'
+        ],
+        technicalSpecs: [
+          'Purity: 99.5% minimum',
+          'Appearance: White crystalline powder or flakes',
+          'Molecular weight: 61.83 g/mol',
+          'Solubility: 5.7g/100ml water at 25°C',
+          'pH (saturated solution): 5.1',
+          'Temperature stable - ideal for high-temp wells',
+          'Packaging: 25kg bags, drums, bulk'
+        ]
       },
     },
     {
@@ -2185,8 +2225,29 @@ export const products: Product[] = [
       details: {
         formula: 'C6H14O2',
         casNumber: '111-76-2',
-        alternativeNames: ['2-Butoxyethanol', 'Butyl cellosolve', 'Ethylene glycol monobutyl ether'],
-        seoKeywords: ['butyl glycol Oman', 'butyl cellosolve Muscat', 'solvent Oman'],
+        alternativeNames: ['2-Butoxyethanol', 'Butyl cellosolve', 'Ethylene glycol monobutyl ether', 'EGBE', 'Butyl oxitol'],
+        seoKeywords: ['butyl glycol Oman', 'butyl cellosolve Muscat', 'solvent Oman', '2-butoxyethanol Sohar', 'EGBE Oman', 'glycol ether Oman'],
+        longDescription: 'Butyl Glycol (2-Butoxyethanol) supplier in Oman - Global Chemicals LLC provides high-quality butyl glycol for oilfield, coatings, and industrial cleaning applications in Muscat, Sohar, Duqm, Salalah. Our butyl glycol serves as an excellent solvent for oils, resins, greases, and dirt, making it essential for oilfield cleaning operations and industrial degreasers. The compound effectively dissolves both water-soluble and oil-soluble contaminants. Widely used in paint and coating formulations, well stimulation treatments, and production chemical additives. Butyl glycol provides superior coupling and solvency in cleaning formulations for wellhead equipment, pipelines, and industrial facilities. The slow evaporation rate and good water miscibility make it ideal for heavy-duty cleaning applications across Oman.',
+        applications: [
+          'Industrial degreaser formulations',
+          'Oilfield equipment cleaning',
+          'Paint and coating solvent',
+          'Well stimulation fluid additive',
+          'Drilling mud surfactant',
+          'Production chemical formulations',
+          'Household and institutional cleaners',
+          'Ink and printing industry'
+        ],
+        technicalSpecs: [
+          'Purity: 99% minimum',
+          'Appearance: Clear colorless liquid',
+          'Boiling point: 171°C',
+          'Flash point: 61°C',
+          'Miscible with water and most organic solvents',
+          'Specific gravity: 0.902 at 20°C',
+          'Slow evaporation - extended working time',
+          'Available in drums, IBCs, bulk'
+        ]
       },
     },
     {
@@ -2231,8 +2292,29 @@ export const products: Product[] = [
       details: {
         formula: 'C6H8O7',
         casNumber: '77-92-9',
-        alternativeNames: ['Citric acid monohydrate', 'Food grade citric acid'],
-        seoKeywords: ['citric acid food grade Oman', 'citric acid Muscat', 'acidizing agent Oman'],
+        alternativeNames: ['Citric acid monohydrate', 'Food grade citric acid', 'Citric acid powder food grade'],
+        seoKeywords: ['citric acid food grade Oman', 'citric acid Muscat', 'acidizing agent Oman', 'food grade acid Sohar', 'citric acid cleaning Oman'],
+        longDescription: 'Food Grade Citric Acid supplier in Oman - Global Chemicals LLC provides USP/food-grade citric acid for oilfield, food processing, and industrial cleaning in Muscat, Sohar, Duqm, Salalah. Our food-grade citric acid meets the highest purity standards for well stimulation treatments where environmental concerns require non-toxic, biodegradable acids. Essential for offshore operations, environmentally sensitive areas, and food-contact surface cleaning. Citric acid provides effective scale removal and pH adjustment with excellent safety profile. The biodegradable organic acid is preferred for applications requiring minimal environmental impact. Widely used in food processing equipment cleaning, beverage production, pharmaceutical applications, and eco-friendly well treatments across Oman.',
+        applications: [
+          'Environmentally-friendly well acidizing',
+          'Offshore platform cleaning operations',
+          'Food processing equipment cleaning',
+          'Beverage industry pH control',
+          'Pharmaceutical cleaning applications',
+          'Scale removal in sensitive areas',
+          'Biodegradable acidizing treatments',
+          'Water treatment pH adjustment'
+        ],
+        technicalSpecs: [
+          'Purity: USP/Food Grade 99.5%+',
+          'Form: Monohydrate powder',
+          'Appearance: White crystalline powder',
+          'pH (5% solution): 2.2',
+          'Biodegradable organic acid',
+          'Non-toxic - safe for food contact',
+          'Meets FDA/USP specifications',
+          'Packaging: 25kg bags, drums'
+        ]
       },
     },
     {
@@ -2277,8 +2359,29 @@ export const products: Product[] = [
       details: {
         formula: 'C6H8O7',
         casNumber: '77-92-9',
-        alternativeNames: ['Citric acid solution', 'Liquid citric acid'],
-        seoKeywords: ['citric acid liquid Oman', 'acidizing agent Muscat', 'well stimulation Oman'],
+        alternativeNames: ['Citric acid solution', 'Liquid citric acid', 'Citric acid 50%', 'Citric acid aqueous'],
+        seoKeywords: ['citric acid liquid Oman', 'acidizing agent Muscat', 'well stimulation Oman', 'liquid acid Sohar', 'citric acid solution Oman'],
+        longDescription: 'Liquid Citric Acid supplier in Oman - Global Chemicals LLC provides concentrated citric acid solution for well stimulation, scale removal, and industrial cleaning in Muscat, Sohar, Duqm, Salalah. Our liquid citric acid offers convenient handling and precise dosing for oilfield acidizing treatments. The pre-dissolved solution provides immediate activity without mixing requirements. Essential for matrix acidizing in carbonate formations, scale dissolution, and equipment cleaning. Citric acid is biodegradable and environmentally friendly, making it ideal for offshore operations and sensitive areas. The liquid format ensures uniform distribution and consistent treatment results. Widely used for well productivity enhancement, scale removal, and surface facility cleaning across Oman\'s oil & gas industry.',
+        applications: [
+          'Matrix acidizing in carbonate reservoirs',
+          'Iron scale and rust removal',
+          'Calcium carbonate scale dissolution',
+          'Equipment and pipeline cleaning',
+          'Environmentally-friendly well treatments',
+          'Offshore platform acidizing operations',
+          'Downhole tool cleaning',
+          'Surface facility descaling'
+        ],
+        technicalSpecs: [
+          'Concentration: 50% typical (can vary)',
+          'Appearance: Clear colorless to pale yellow liquid',
+          'pH: <2 (concentrated solution)',
+          'Ready-to-use or dilutable',
+          'Biodegradable organic acid',
+          'Low corrosion compared to mineral acids',
+          'Chelating properties for iron control',
+          'Available in drums, IBCs, bulk'
+        ]
       },
     },
     {
@@ -2290,8 +2393,29 @@ export const products: Product[] = [
       details: {
         formula: 'C6H8O7',
         casNumber: '77-92-9',
-        alternativeNames: ['Citric acid anhydrous', 'Citric acid crystals'],
-        seoKeywords: ['citric acid powder Oman', 'scale remover Muscat', 'acidizing powder Oman'],
+        alternativeNames: ['Citric acid anhydrous', 'Citric acid crystals', 'Anhydrous citric acid powder'],
+        seoKeywords: ['citric acid powder Oman', 'scale remover Muscat', 'acidizing powder Oman', 'citric acid anhydrous Sohar', 'acid powder oilfield Oman'],
+        longDescription: 'Citric Acid Powder supplier in Oman - Global Chemicals LLC provides anhydrous citric acid powder for well acidizing, scale removal, and industrial applications in Muscat, Sohar, Duqm, Salalah. Our citric acid powder offers economical storage, long shelf life, and flexible field preparation for acidizing treatments. The anhydrous form provides maximum citric acid content per weight for cost-effective transportation and handling. Essential for field-mixed acidizing treatments, batch operations, and remote locations. The powder dissolves readily to create treating solutions at desired concentrations. Widely used by oilfield service companies for well stimulation, scale removal, and equipment cleaning across Oman. The biodegradable nature makes it suitable for environmentally sensitive operations.',
+        applications: [
+          'Field-prepared acidizing solutions',
+          'Matrix acidizing treatments',
+          'Scale removal in wellbores',
+          'Equipment descaling operations',
+          'Batch chemical preparation',
+          'Remote location well treatments',
+          'Chelating agent for iron control',
+          'Environmentally-friendly stimulation'
+        ],
+        technicalSpecs: [
+          'Form: Anhydrous powder (no water of crystallization)',
+          'Purity: 99.5% minimum',
+          'Appearance: White crystalline powder',
+          'Solubility: 133g/100ml water at 20°C',
+          'Dissolves rapidly for solution preparation',
+          'Long shelf life when stored dry',
+          'Maximum citric acid content',
+          'Packaging: 25kg bags, drums, bulk'
+        ]
       },
     },
     {
@@ -2334,8 +2458,29 @@ export const products: Product[] = [
       icon: Factory,
       details: {
         casNumber: '57-13-6',
-        alternativeNames: ['DEF', 'AdBlue', 'Urea solution 32.5%'],
-        seoKeywords: ['DEF Oman', 'diesel exhaust fluid Muscat', 'AdBlue Oman'],
+        alternativeNames: ['DEF', 'AdBlue', 'Urea solution 32.5%', 'AUS 32', 'Diesel exhaust fluid'],
+        seoKeywords: ['DEF Oman', 'diesel exhaust fluid Muscat', 'AdBlue Oman', 'DEF oilfield Sohar', 'SCR fluid Oman', 'urea solution Oman'],
+        longDescription: 'Diesel Exhaust Fluid (DEF/AdBlue) supplier in Oman - Global Chemicals LLC provides high-purity DEF for SCR emission control systems in Muscat, Sohar, Duqm, Salalah. Our DEF is a precisely formulated 32.5% urea solution that reduces nitrogen oxide (NOx) emissions from diesel engines by up to 90%. Essential for modern diesel vehicles, trucks, heavy equipment, and oilfield machinery equipped with Selective Catalytic Reduction (SCR) technology. DEF meets ISO 22241 standards for purity and ensures optimal SCR system performance. The non-toxic, non-flammable solution is required for EPA Tier 4 and Euro 6 compliant diesel engines. Widely used by oilfield operators, trucking companies, and industrial facilities across Oman to meet environmental regulations.',
+        applications: [
+          'SCR emission control in diesel vehicles',
+          'Oilfield equipment and drilling rigs',
+          'Heavy-duty trucks and transport',
+          'Construction and mining equipment',
+          'Power generation diesel engines',
+          'Marine diesel engines',
+          'Agricultural machinery',
+          'Industrial diesel equipment'
+        ],
+        technicalSpecs: [
+          'Urea content: 32.5% ± 0.5% (by weight)',
+          'Meets ISO 22241 / AUS 32 standards',
+          'Appearance: Clear colorless liquid',
+          'Freezing point: -11°C',
+          'pH: 9-10',
+          'Non-toxic, non-flammable',
+          'Purity: >99.5% reagent grade urea',
+          'Available in 10L, 20L, 200L drums, IBCs, bulk'
+        ]
       },
     },
     {
@@ -2358,8 +2503,29 @@ export const products: Product[] = [
       details: {
         formula: 'C4H11NO2',
         casNumber: '111-42-2',
-        alternativeNames: ['Diethanolamine', 'DEA', '2,2-Iminodiethanol'],
-        seoKeywords: ['DEA Oman', 'diethanolamine Muscat', 'gas sweetening Oman', 'acid gas removal Oman'],
+        alternativeNames: ['Diethanolamine', 'DEA', '2,2-Iminodiethanol', 'Bis(2-hydroxyethyl)amine', 'Diethylolamine'],
+        seoKeywords: ['DEA Oman', 'diethanolamine Muscat', 'gas sweetening Oman', 'acid gas removal Oman', 'DEA gas treatment Sohar', 'amine gas treating Oman'],
+        longDescription: 'Diethanolamine (DEA) supplier in Oman - Global Chemicals LLC provides high-purity DEA for gas treating and acid gas removal in Muscat, Sohar, Duqm, Salalah. Our diethanolamine is a secondary amine that effectively removes H2S and CO2 from natural gas, refinery gases, and synthesis gas streams. DEA offers balanced performance between MEA and MDEA with moderate selectivity for H2S over CO2. Essential for gas processing plants, refineries, and petrochemical facilities requiring reliable acid gas removal. DEA provides lower corrosion rates than MEA while offering better CO2 absorption than MDEA. The compound is regenerable with moderate heat requirements. Widely used across Oman\'s oil & gas industry for meeting gas specifications and protecting equipment from acid gas corrosion.',
+        applications: [
+          'Natural gas H2S and CO2 removal',
+          'Refinery sour gas treatment',
+          'Synthesis gas purification',
+          'LPG and NGL sweetening',
+          'Ammonia plant CO2 capture',
+          'Mixed amine systems',
+          'Tail gas treating',
+          'Gas dehydration applications'
+        ],
+        technicalSpecs: [
+          'Purity: 99% minimum',
+          'Appearance: Clear colorless to pale yellow viscous liquid',
+          'Molecular weight: 105.14 g/mol',
+          'Boiling point: 268°C',
+          'Specific gravity: 1.097 at 20°C',
+          'Typical solution strength: 25-30% DEA',
+          'Moderate heat of regeneration',
+          'Available in drums, IBCs, ISO tanks, bulk'
+        ]
       },
     },
     {
@@ -2403,8 +2569,29 @@ export const products: Product[] = [
       category: 'oilfield',
       icon: Factory,
       details: {
-        alternativeNames: ['Heavy duty degreaser', 'Industrial degreaser', 'HD degreaser'],
-        seoKeywords: ['degreaser Oman', 'heavy duty degreaser Muscat', 'industrial degreaser Oman'],
+        alternativeNames: ['Heavy duty degreaser', 'Industrial degreaser', 'HD degreaser', 'Heavy-duty cleaner', 'Industrial strength degreaser'],
+        seoKeywords: ['degreaser Oman', 'heavy duty degreaser Muscat', 'industrial degreaser Oman', 'HD degreaser Sohar', 'oilfield degreaser Oman'],
+        longDescription: 'Heavy-Duty Degreaser supplier in Oman - Global Chemicals LLC provides industrial-strength degreasers for oilfield equipment, machinery, and facility cleaning in Muscat, Sohar, Duqm, Salalah. Our HD degreaser formulations effectively remove heavy oil, grease, carbon deposits, and stubborn contaminants from drilling rigs, wellheads, pipelines, and production equipment. The concentrated formula provides superior cleaning power with quick penetration and emulsification of oils and greases. Essential for maintenance operations, equipment overhauls, and facility housekeeping in oil & gas operations. Available in solvent-based and water-based formulations to meet specific application requirements. The heavy-duty cleaning action reduces downtime and extends equipment life. Widely used across Oman\'s oil & gas, marine, and industrial sectors.',
+        applications: [
+          'Drilling rig and equipment cleaning',
+          'Wellhead and production equipment degreasing',
+          'Pipeline and valve cleaning',
+          'Engine and machinery degreasing',
+          'Warehouse and facility floor cleaning',
+          'Parts washing before maintenance',
+          'Marine equipment cleaning',
+          'Industrial facility housekeeping'
+        ],
+        technicalSpecs: [
+          'Available types: Solvent-based, water-based',
+          'Concentrated formula - dilutable',
+          'pH: 12-14 (alkaline formulations)',
+          'Rapid emulsification of oils and greases',
+          'Low foam for pressure washing',
+          'Biodegradable formulations available',
+          'Typical dilution: 1:5 to 1:20',
+          'Available in 5L, 20L, 200L drums'
+        ]
       },
     },
     {
@@ -2414,8 +2601,29 @@ export const products: Product[] = [
       category: 'oilfield',
       icon: Factory,
       details: {
-        alternativeNames: ['Descaling agent', 'Scale remover', 'Mineral scale cleaner'],
-        seoKeywords: ['descalant Oman', 'scale remover Muscat', 'descaling agent Oman'],
+        alternativeNames: ['Descaling agent', 'Scale remover', 'Mineral scale cleaner', 'Descaler', 'Scale dissolver'],
+        seoKeywords: ['descalant Oman', 'scale remover Muscat', 'descaling agent Oman', 'mineral scale cleaner Sohar', 'descaler oilfield Oman'],
+        longDescription: 'Industrial Descalant supplier in Oman - Global Chemicals LLC provides effective descaling chemicals for removing mineral scale from wellbores, pipelines, and equipment in Muscat, Sohar, Duqm, Salalah. Our descalants dissolve carbonate scales (calcium/magnesium carbonate), sulfate scales (barium/strontium/calcium sulfate), and iron deposits from production systems. The formulated blends contain acids, chelants, and surfactants for maximum scale removal efficiency. Essential for restoring flow capacity in scaled wells, cleaning heat exchangers, and removing deposits from production equipment. Descalants improve equipment efficiency, reduce energy consumption, and extend asset life. Available in various formulations for specific scale types and applications. Widely used across Oman\'s oil & gas, desalination, and industrial water treatment sectors.',
+        applications: [
+          'Wellbore scale removal and stimulation',
+          'Pipeline and tubing descaling',
+          'Heat exchanger cleaning',
+          'Equipment and vessel descaling',
+          'Desalination plant maintenance',
+          'Cooling tower cleaning',
+          'Boiler scale removal',
+          'Production equipment restoration'
+        ],
+        technicalSpecs: [
+          'Types: Acid-based, chelant-based, combination',
+          'Effective on: Carbonate, sulfate, iron scales',
+          'pH: Varies by formulation (acidic to neutral)',
+          'Biodegradable formulations available',
+          'Corrosion inhibited for equipment protection',
+          'Typical treatment time: 2-24 hours',
+          'Available concentrated or ready-to-use',
+          'Packaging: 20L, 200L drums, IBCs, bulk'
+        ]
       },
     },
     {
@@ -2427,8 +2635,29 @@ export const products: Product[] = [
       details: {
         formula: 'C10H16N2O8',
         casNumber: '60-00-4',
-        alternativeNames: ['EDTA solution', 'Ethylenediaminetetraacetic acid liquid'],
-        seoKeywords: ['EDTA liquid Oman', 'chelating agent Muscat', 'scale remover Oman'],
+        alternativeNames: ['EDTA solution', 'Ethylenediaminetetraacetic acid liquid', 'EDTA tetrasodium salt', 'Chelating agent liquid'],
+        seoKeywords: ['EDTA liquid Oman', 'chelating agent Muscat', 'scale remover Oman', 'EDTA solution Sohar', 'metal chelator Oman'],
+        longDescription: 'EDTA Liquid supplier in Oman - Global Chemicals LLC provides liquid ethylenediaminetetraacetic acid for scale removal, metal chelation, and oilfield applications in Muscat, Sohar, Duqm, Salalah. Our EDTA liquid solution effectively chelates calcium, magnesium, iron, and heavy metals, making it ideal for scale dissolution and metal ion control. Essential for removing calcium carbonate scale, iron deposits, and preventing scale formation in production systems. The liquid format provides convenient handling and precise dosing for field operations. EDTA offers environmentally-friendly scale removal without the corrosive effects of strong mineral acids. Widely used in well stimulation, pipeline cleaning, and water treatment across Oman\'s oil & gas industry. The chelating action also prevents metal-catalyzed degradation of polymers and chemicals.',
+        applications: [
+          'Carbonate scale removal from wellbores',
+          'Iron deposit chelation and removal',
+          'Heavy metal control in water systems',
+          'Pipeline and equipment descaling',
+          'Polymer stability enhancement',
+          'Water treatment metal sequestration',
+          'Well stimulation fluid additive',
+          'Environmentally-friendly acidizing'
+        ],
+        technicalSpecs: [
+          'Form: Tetrasodium EDTA solution (typical)',
+          'Concentration: 38-40% typical',
+          'Appearance: Clear to pale yellow liquid',
+          'pH: 11-12 (tetrasodium salt)',
+          'Strong chelating properties',
+          'Environmentally biodegradable',
+          'Less corrosive than mineral acids',
+          'Available in drums, IBCs, bulk'
+        ]
       },
     },
     {
@@ -2440,8 +2669,29 @@ export const products: Product[] = [
       details: {
         formula: 'C10H16N2O8',
         casNumber: '60-00-4',
-        alternativeNames: ['EDTA powder', 'Ethylenediaminetetraacetic acid'],
-        seoKeywords: ['EDTA powder Oman', 'chelating agent powder Muscat', 'EDTA Oman'],
+        alternativeNames: ['EDTA powder', 'Ethylenediaminetetraacetic acid', 'EDTA disodium salt', 'Chelating powder'],
+        seoKeywords: ['EDTA powder Oman', 'chelating agent powder Muscat', 'EDTA Oman', 'EDTA disodium Sohar', 'metal chelator Oman'],
+        longDescription: 'EDTA Powder supplier in Oman - Global Chemicals LLC provides ethylenediaminetetraacetic acid powder for oilfield, water treatment, and industrial applications in Muscat, Sohar, Duqm, Salalah. Our EDTA powder offers economical storage, long shelf life, and flexible field preparation for chelating and descaling operations. The powder form provides easy measurement and mixing for batch operations. Essential for creating acidizing solutions, scale removal treatments, and metal control formulations on-site. EDTA powder effectively chelates calcium, magnesium, iron, and heavy metals without the corrosive effects of mineral acids. The powder dissolves readily to prepare treating solutions at desired concentrations. Widely used by oilfield service companies and water treatment operations across Oman for scale control and metal sequestration.',
+        applications: [
+          'Field-prepared scale removal solutions',
+          'Metal ion sequestration in water systems',
+          'Analytical laboratory applications',
+          'Acidizing fluid preparation',
+          'Cleaning chemical formulations',
+          'Water softening treatments',
+          'Boiler scale prevention',
+          'Textile and dyeing operations'
+        ],
+        technicalSpecs: [
+          'Available forms: Disodium, tetrasodium salts',
+          'Purity: 99% minimum',
+          'Appearance: White crystalline powder',
+          'Solubility: Variable by salt form',
+          'Strong chelating capacity',
+          'pH (1% solution): 4-5 (disodium), 11-12 (tetrasodium)',
+          'Long shelf life when stored dry',
+          'Packaging: 25kg bags, drums, bulk'
+        ]
       },
     },
     {
@@ -2521,8 +2771,29 @@ export const products: Product[] = [
       details: {
         formula: 'MgO',
         casNumber: '1309-48-4',
-        alternativeNames: ['Magnesia', 'Calcined magnesite', 'MgO'],
-        seoKeywords: ['magnesium oxide Oman', 'magnesia Muscat', 'MgO Oman'],
+        alternativeNames: ['Magnesia', 'Calcined magnesite', 'MgO', 'Magnesium oxide powder', 'Periclase'],
+        seoKeywords: ['magnesium oxide Oman', 'magnesia Muscat', 'MgO Oman', 'refractory material Sohar', 'magnesium oxide oilfield Oman'],
+        longDescription: 'Magnesium Oxide supplier in Oman - Global Chemicals LLC provides high-quality magnesia for drilling fluids, cementing, and industrial applications in Muscat, Sohar, Duqm, Salalah. Our magnesium oxide (MgO) serves as a cement additive for controlling thickening time, high-temperature stabilizer in drilling fluids, and alkalinity source. Essential for high-temperature well cementing operations where extended thickening time is required. MgO reacts slowly with water to provide sustained pH control and prevents premature setting of cement. Also used in refractory materials, chemical processing, and environmental applications. The product is available in various grades including light-burned and dead-burned magnesia. Widely used across Oman\'s oil & gas industry for cementing deep wells and high-temperature applications.',
+        applications: [
+          'Oil well cement thickening time extender',
+          'High-temperature drilling fluid stabilizer',
+          'pH buffer in drilling muds',
+          'Refractory material production',
+          'Chemical intermediate and catalyst',
+          'Wastewater neutralization',
+          'Magnesium compound manufacturing',
+          'Animal feed supplement'
+        ],
+        technicalSpecs: [
+          'Purity: 85-98% MgO (grade dependent)',
+          'Appearance: White to off-white powder',
+          'Available grades: Light-burned, dead-burned',
+          'Reactivity: Variable by grade',
+          'pH (slurry): 10-12',
+          'Cement additive dosage: 0.5-3% BWOC',
+          'High temperature stability',
+          'Packaging: 25kg bags, bulk bags'
+        ]
       },
     },
     {
@@ -2669,8 +2940,29 @@ export const products: Product[] = [
       details: {
         formula: 'K2CO3',
         casNumber: '584-08-7',
-        alternativeNames: ['Potash carbonate', 'Pearl ash', 'K2CO3'],
-        seoKeywords: ['potassium carbonate Oman', 'potash carbonate Muscat', 'K2CO3 Oman'],
+        alternativeNames: ['Potash carbonate', 'Pearl ash', 'K2CO3', 'Potassium carbonate anhydrous', 'Salt of tartar'],
+        seoKeywords: ['potassium carbonate Oman', 'potash carbonate Muscat', 'K2CO3 Oman', 'pearl ash Sohar', 'potassium carbonate gas treating Oman'],
+        longDescription: 'Potassium Carbonate supplier in Oman - Global Chemicals LLC provides high-purity potassium carbonate for gas treating, chemical processing, and industrial applications in Muscat, Sohar, Duqm, Salalah. Our K2CO3 is used in hot potassium carbonate (hot pot) processes for CO2 removal from natural gas and synthesis gas streams. Essential for high-pressure CO2 removal systems in ammonia plants, hydrogen production, and gas processing facilities. Potassium carbonate offers selective CO2 absorption with lower energy requirements compared to amine systems at high CO2 partial pressures. The compound also serves in specialty glass manufacturing, soap production, and as a chemical intermediate. Widely used across Oman\'s petrochemical and chemical processing industries.',
+        applications: [
+          'Hot potassium carbonate CO2 removal process',
+          'Synthesis gas CO2 scrubbing',
+          'Ammonia plant CO2 capture',
+          'Specialty glass manufacturing',
+          'Chemical synthesis intermediate',
+          'Soap and detergent production',
+          'Food additive (acidity regulator)',
+          'pH control in industrial processes'
+        ],
+        technicalSpecs: [
+          'Purity: 99% minimum K2CO3',
+          'Appearance: White granular powder',
+          'Hygroscopic - absorbs moisture',
+          'pH (1% solution): 11-12',
+          'Solubility: 112g/100ml water at 25°C',
+          'Hot pot solution: 20-40% K2CO3',
+          'Lower regeneration energy vs amines',
+          'Packaging: 25kg bags, bulk bags'
+        ]
       },
     },
     {
@@ -2715,8 +3007,29 @@ export const products: Product[] = [
       details: {
         formula: 'KOH',
         casNumber: '1310-58-3',
-        alternativeNames: ['Caustic potash', 'KOH', 'Potassium hydrate'],
-        seoKeywords: ['potassium hydroxide Oman', 'caustic potash Muscat', 'KOH Oman'],
+        alternativeNames: ['Caustic potash', 'KOH', 'Potassium hydrate', 'Potassium hydroxide solution', 'Lye potassium'],
+        seoKeywords: ['potassium hydroxide Oman', 'caustic potash Muscat', 'KOH Oman', 'potassium hydroxide industrial Sohar', 'caustic potash oilfield Oman'],
+        longDescription: 'Potassium Hydroxide (Caustic Potash) supplier in Oman - Global Chemicals LLC provides KOH in liquid and flake forms for oilfield, chemical, and industrial applications in Muscat, Sohar, Duqm, Salalah. Our potassium hydroxide serves as a strong alkali for pH control, chemical synthesis, and neutralization operations. Essential for manufacturing potassium compounds, producing biodiesel, and alkaline cleaning formulations. KOH offers higher solubility than sodium hydroxide and is preferred for applications requiring potassium salts. Used in drilling fluids for pH adjustment, battery electrolyte production, and specialty chemical manufacturing. The strong base effectively neutralizes acids and removes acidic contaminants. Widely used across Oman\'s chemical processing, petroleum, and manufacturing sectors.',
+        applications: [
+          'pH control in drilling and production fluids',
+          'Potassium salt manufacturing',
+          'Biodiesel production catalyst',
+          'Alkaline battery electrolyte',
+          'Chemical synthesis and processing',
+          'Specialty cleaner formulations',
+          'Food processing (pH adjustment)',
+          'Pharmaceutical manufacturing'
+        ],
+        technicalSpecs: [
+          'Available forms: Flakes (90%), liquid (45-50%)',
+          'Purity: 90% minimum (flakes)',
+          'Appearance: White flakes or clear liquid',
+          'pH (1% solution): 13-14',
+          'Highly hygroscopic - absorbs moisture',
+          'Corrosive - handle with care',
+          'Higher solubility than NaOH',
+          'Available in drums, IBCs, bulk'
+        ]
       },
     },
     {
@@ -2728,8 +3041,29 @@ export const products: Product[] = [
       details: {
         formula: 'KI',
         casNumber: '7681-11-0',
-        alternativeNames: ['Potassium iodide', 'KI'],
-        seoKeywords: ['potassium iodide Oman', 'KI Muscat', 'reagent Oman'],
+        alternativeNames: ['Potassium iodide', 'KI', 'Potassium iodide reagent', 'KI crystals'],
+        seoKeywords: ['potassium iodide Oman', 'KI Muscat', 'reagent Oman', 'potassium iodide oilfield Sohar', 'analytical reagent Oman'],
+        longDescription: 'Potassium Iodide supplier in Oman - Global Chemicals LLC provides high-purity potassium iodide for analytical, pharmaceutical, and industrial applications in Muscat, Sohar, Duqm, Salalah. Our KI serves as an essential analytical reagent for iodometric titrations, redox reactions, and chemical analysis. Essential for laboratory testing, quality control, and oilfield fluid analysis. Potassium iodide is used to detect oxidizing agents, measure dissolved oxygen, and in various chemical synthesis operations. The compound also finds pharmaceutical applications as an expectorant and thyroid protectant. In oilfield operations, KI is used in analytical testing of biocides, oxidizers, and for detecting contamination. Widely used by laboratories, pharmaceutical companies, and quality control facilities across Oman.',
+        applications: [
+          'Analytical chemistry and iodometric titrations',
+          'Oilfield fluid analysis and testing',
+          'Oxidizer detection and measurement',
+          'Pharmaceutical formulations',
+          'Laboratory reagent applications',
+          'Photography and imaging',
+          'Chemical synthesis intermediate',
+          'Nutritional supplements'
+        ],
+        technicalSpecs: [
+          'Purity: 99% minimum (reagent grade)',
+          'Appearance: White crystalline powder',
+          'Molecular weight: 166.00 g/mol',
+          'Solubility: 140g/100ml water at 25°C',
+          'Light-sensitive - store in amber containers',
+          'Analytical grade available',
+          'USP/pharmaceutical grade available',
+          'Packaging: 100g, 500g, 1kg bottles, 25kg drums'
+        ]
       },
     },
     {
@@ -2772,8 +3106,29 @@ export const products: Product[] = [
       icon: Factory,
       details: {
         casNumber: '112926-00-8',
-        alternativeNames: ['Orange silica gel', 'Indicating silica gel'],
-        seoKeywords: ['silica gel orange Oman', 'desiccant Muscat', 'humidity control Oman'],
+        alternativeNames: ['Orange silica gel', 'Indicating silica gel', 'Orange indicating desiccant', 'Self-indicating silica gel'],
+        seoKeywords: ['silica gel orange Oman', 'desiccant Muscat', 'humidity control Oman', 'indicating desiccant Sohar', 'orange silica gel oilfield Oman'],
+        longDescription: 'Orange Silica Gel supplier in Oman - Global Chemicals LLC provides color-indicating silica gel for moisture control and humidity monitoring in Muscat, Sohar, Duqm, Salalah. Our orange silica gel changes color from orange (dry) to dark green/black (saturated), providing clear visual indication of moisture absorption status without cobalt chloride concerns. The environmentally-safer alternative to blue indicating silica gel offers the same high-capacity moisture adsorption. Essential for protecting sensitive equipment, instruments, and stored materials from moisture damage while providing easy moisture status monitoring. The gel is regenerable by heating, offering cost-effective long-term humidity control. Widely used in oil & gas facilities, electronics, pharmaceuticals, and industrial operations across Oman.',
+        applications: [
+          'Instrument air and compressed air systems',
+          'Equipment and spare parts protection',
+          'Electrical control panels and switchgear',
+          'Pharmaceutical and chemical storage',
+          'Electronics and precision instrument protection',
+          'Container and packaging desiccant',
+          'Laboratory humidity control',
+          'Transformer breather applications'
+        ],
+        technicalSpecs: [
+          'Color indication: Orange (dry) to Dark green/black (saturated)',
+          'Moisture capacity: 35-40% by weight',
+          'Bead sizes: 2-4mm, 3-5mm, 4-8mm',
+          'Cobalt-free - environmentally safer',
+          'Regeneration temperature: 120-180°C',
+          'Reusable after regeneration',
+          'EU compliant - safer alternative to blue gel',
+          'Packaging: 1kg, 5kg, 25kg bags, drums'
+        ]
       },
     },
     {
@@ -2851,8 +3206,28 @@ export const products: Product[] = [
       details: {
         formula: 'Na2CO3',
         casNumber: '497-19-8',
-        alternativeNames: ['Sodium carbonate light', 'Soda ash light'],
-        seoKeywords: ['soda ash light Oman', 'sodium carbonate light Muscat', 'Na2CO3 Oman'],
+        alternativeNames: ['Sodium carbonate light', 'Soda ash light', 'Light ash', 'Na2CO3 light grade'],
+        seoKeywords: ['soda ash light Oman', 'sodium carbonate light Muscat', 'Na2CO3 Oman', 'soda ash drilling Sohar', 'light sodium carbonate Oman'],
+        longDescription: 'Soda Ash Light supplier in Oman - Global Chemicals LLC provides light-grade sodium carbonate for detergent manufacturing, chemical processing, and industrial applications in Muscat, Sohar, Duqm, Salalah. Our soda ash light (Na2CO3) features low bulk density and excellent dissolution properties, making it ideal for applications requiring rapid mixing and high surface area. The light grade provides superior performance in detergent formulations, glass manufacturing, and chemical synthesis. Essential for soap and detergent production, water treatment chemicals, and as a pH buffer in various industrial processes. The fine particle size ensures quick dissolution and even distribution. Widely used by chemical manufacturers, detergent producers, and industrial facilities across Oman.',
+        applications: [
+          'Detergent and soap manufacturing',
+          'Chemical synthesis and processing',
+          'Glass manufacturing',
+          'Textile processing and dyeing',
+          'Water treatment chemical production',
+          'pH buffering in industrial processes',
+          'Paper and pulp processing',
+          'Sodium compound production'
+        ],
+        technicalSpecs: [
+          'Purity: 99.2% minimum Na2CO3',
+          'Appearance: White fine powder',
+          'Bulk density: 0.5-0.6 kg/L (light grade)',
+          'pH (1% solution): 11.5-12.0',
+          'Particle size: Fine - rapid dissolution',
+          'High surface area for fast mixing',
+          'Packaging: 25kg, 50kg bags, bulk bags'
+        ]
       },
     },
     {
@@ -2864,8 +3239,27 @@ export const products: Product[] = [
       details: {
         formula: 'NaNO3',
         casNumber: '7631-99-4',
-        alternativeNames: ['Chile saltpeter', 'Sodium nitrate', 'NaNO3'],
-        seoKeywords: ['sodium nitrate Oman', 'NaNO3 Muscat', 'oxidizing agent Oman'],
+        alternativeNames: ['Chile saltpeter', 'Sodium nitrate', 'NaNO3', 'Nitrate of soda', 'Soda niter'],
+        seoKeywords: ['sodium nitrate Oman', 'NaNO3 Muscat', 'oxidizing agent Oman', 'chile saltpeter Sohar', 'sodium nitrate industrial Oman'],
+        longDescription: 'Sodium Nitrate supplier in Oman - Global Chemicals LLC provides industrial-grade sodium nitrate for oilfield, explosives, and chemical applications in Muscat, Sohar, Duqm, Salalah. Our sodium nitrate (NaNO3) serves as a powerful oxidizing agent in various industrial processes including drilling fluid additives, explosives manufacturing, and chemical synthesis. Essential for oil & gas operations as a corrosion inhibitor additive, cement accelerator, and nitrate source for specialty formulations. Sodium nitrate also finds use in glass manufacturing, heat transfer salts, and fertilizer production. The compound provides reliable oxidizing properties for industrial applications. Widely used across Oman\'s oil & gas, chemical, and manufacturing industries.',
+        applications: [
+          'Drilling fluid corrosion inhibitor component',
+          'Explosives and pyrotechnics manufacturing',
+          'Cement set accelerator',
+          'Chemical synthesis oxidizing agent',
+          'Glass manufacturing flux',
+          'Heat transfer salt formulations',
+          'Metal treatment processes',
+          'Fertilizer production'
+        ],
+        technicalSpecs: [
+          'Purity: 99% minimum',
+          'Appearance: White crystalline powder',
+          'Solubility: 91g/100ml water at 25°C',
+          'Melting point: 308°C',
+          'Strong oxidizer - handle with care',
+          'Packaging: 25kg, 50kg bags, bulk'
+        ]
       },
     },
     {
@@ -2877,8 +3271,28 @@ export const products: Product[] = [
       details: {
         formula: 'NaNO2',
         casNumber: '7632-00-0',
-        alternativeNames: ['Sodium nitrite', 'NaNO2'],
-        seoKeywords: ['sodium nitrite Oman', 'corrosion inhibitor Muscat', 'NaNO2 Oman'],
+        alternativeNames: ['Sodium nitrite', 'NaNO2', 'Nitrite of soda', 'Diazotizing salt'],
+        seoKeywords: ['sodium nitrite Oman', 'corrosion inhibitor Muscat', 'NaNO2 Oman', 'sodium nitrite oilfield Sohar', 'corrosion prevention Oman'],
+        longDescription: 'Sodium Nitrite supplier in Oman - Global Chemicals LLC provides high-quality sodium nitrite for corrosion inhibition, drilling fluids, and industrial applications in Muscat, Sohar, Duqm, Salalah. Our sodium nitrite (NaNO2) is a highly effective corrosion inhibitor for closed-loop systems, completion fluids, and oilfield applications. The compound forms a protective passive film on metal surfaces, preventing oxygen corrosion in pipelines, well systems, and equipment. Essential for corrosion control in drilling fluids, completion brines, packer fluids, and workover operations. Sodium nitrite also serves in heat transfer systems, as a chemical intermediate, and in dye manufacturing. Widely used across Oman\'s oil & gas industry for protecting valuable assets from corrosion damage.',
+        applications: [
+          'Corrosion inhibitor in drilling and completion fluids',
+          'Packer fluid corrosion protection',
+          'Closed-loop system corrosion control',
+          'Pipeline and equipment protection',
+          'Workover fluid additive',
+          'Heat transfer fluid inhibitor',
+          'Chemical intermediate production',
+          'Dye and pharmaceutical synthesis'
+        ],
+        technicalSpecs: [
+          'Purity: 98% minimum',
+          'Appearance: White to slightly yellow powder',
+          'Solubility: 82g/100ml water at 25°C',
+          'Typical dosage: 500-2000 ppm for corrosion inhibition',
+          'Forms protective passive film on metals',
+          'Effective in pH 7-10 range',
+          'Packaging: 25kg bags, drums, bulk'
+        ]
       },
     },
     {
@@ -2890,8 +3304,28 @@ export const products: Product[] = [
       details: {
         formula: 'Na2S2O3',
         casNumber: '7772-98-7',
-        alternativeNames: ['Sodium thiosulfate liquid', 'Hypo solution'],
-        seoKeywords: ['sodium thiosulfate liquid Oman', 'dechlorination Muscat', 'neutralizer Oman'],
+        alternativeNames: ['Sodium thiosulfate liquid', 'Hypo solution', 'Thiosulfate liquid', 'Na2S2O3 solution'],
+        seoKeywords: ['sodium thiosulfate liquid Oman', 'dechlorination Muscat', 'neutralizer Oman', 'chlorine remover Sohar', 'hypo solution Oman'],
+        longDescription: 'Sodium Thiosulfate Liquid supplier in Oman - Global Chemicals LLC provides liquid sodium thiosulfate for dechlorination, neutralization, and oilfield applications in Muscat, Sohar, Duqm, Salalah. Our sodium thiosulfate solution (Na2S2O3) effectively neutralizes chlorine, chlorine dioxide, and oxidizing biocides in water systems and industrial processes. Essential for treating produced water, neutralizing well treatment chemicals, and dechlorinating process streams. The liquid format allows precise dosing and rapid reaction for fast neutralization. Widely used in oilfield operations to remove residual oxidizers before re-injection, protect reservoirs from oxidizing damage, and in completion fluid treatments. Also serves in analytical chemistry and gold recovery operations across Oman.',
+        applications: [
+          'Chlorine and oxidizer neutralization in oilfields',
+          'Produced water treatment before re-injection',
+          'Well treatment chemical neutralization',
+          'Biocide residual removal',
+          'Analytical reagent in laboratories',
+          'Gold and silver recovery processes',
+          'Wastewater dechlorination',
+          'Photographic fixing agent'
+        ],
+        technicalSpecs: [
+          'Concentration: 25-50% Na2S2O3',
+          'Appearance: Clear colorless to pale yellow liquid',
+          'pH: 8-10',
+          'Rapid reaction with chlorine and oxidizers',
+          'Dosage: 2-3 parts per 1 part chlorine',
+          'Complete neutralization in minutes',
+          'Available in 25L, 60L, 200L drums, IBCs'
+        ]
       },
     },
     {
@@ -2903,8 +3337,28 @@ export const products: Product[] = [
       details: {
         formula: 'Na2S2O3',
         casNumber: '7772-98-7',
-        alternativeNames: ['Sodium thiosulfate powder', 'Hypo powder'],
-        seoKeywords: ['sodium thiosulfate powder Oman', 'dechlorinator Muscat', 'Na2S2O3 Oman'],
+        alternativeNames: ['Sodium thiosulfate powder', 'Hypo powder', 'Sodium thiosulfate pentahydrate', 'Na2S2O3·5H2O'],
+        seoKeywords: ['sodium thiosulfate powder Oman', 'dechlorinator Muscat', 'Na2S2O3 Oman', 'hypo powder Sohar', 'chlorine neutralizer Oman'],
+        longDescription: 'Sodium Thiosulfate Powder supplier in Oman - Global Chemicals LLC provides crystalline sodium thiosulfate for dechlorination, neutralization, and analytical applications in Muscat, Sohar, Duqm, Salalah. Our sodium thiosulfate pentahydrate powder (Na2S2O3·5H2O) offers convenient storage, precise measurement, and long shelf life for neutralizing chlorine and oxidizing biocides. Essential for oilfield operations requiring chlorine removal from produced water, well treatment chemical neutralization, and laboratory analysis. The powder form provides economical handling for large-scale applications and field operations. Dissolves rapidly in water to create neutralizing solutions on demand. Widely used by oilfield service companies, water treatment operations, and analytical laboratories across Oman.',
+        applications: [
+          'Field preparation of dechlorination solutions',
+          'Chlorine neutralization in oilfield operations',
+          'Produced water treatment',
+          'Laboratory analytical reagent',
+          'Gold leaching and recovery',
+          'Iodometric titrations',
+          'Photographic fixing',
+          'Wastewater dechlorination'
+        ],
+        technicalSpecs: [
+          'Form: Sodium thiosulfate pentahydrate (Na2S2O3·5H2O)',
+          'Purity: 99% minimum',
+          'Appearance: White crystalline powder',
+          'Solubility: 70g/100ml water at 25°C',
+          'Dissolves rapidly - ready to use',
+          'Long shelf life when stored properly',
+          'Packaging: 1kg, 5kg, 25kg bags'
+        ]
       },
     },
     {
@@ -2915,8 +3369,28 @@ export const products: Product[] = [
       icon: Factory,
       details: {
         casNumber: '64742-89-8',
-        alternativeNames: ['Petroleum naphtha', 'Solvent naphtha', 'VM&P naphtha'],
-        seoKeywords: ['solvent naphtha Oman', 'petroleum naphtha Muscat', 'industrial solvent Oman'],
+        alternativeNames: ['Petroleum naphtha', 'Solvent naphtha', 'VM&P naphtha', 'Light aromatic naphtha', 'Industrial naphtha'],
+        seoKeywords: ['solvent naphtha Oman', 'petroleum naphtha Muscat', 'industrial solvent Oman', 'aromatic naphtha Sohar', 'naphtha oilfield Oman'],
+        longDescription: 'Solvent Naphtha supplier in Oman - Global Chemicals LLC provides petroleum naphtha for industrial cleaning, degreasing, and oilfield applications in Muscat, Sohar, Duqm, Salalah. Our solvent naphtha is a refined petroleum distillate with excellent solvency for oils, greases, and organic contaminants. Essential for equipment cleaning, parts degreasing, paint thinning, and as a base for specialty formulations. Widely used in oilfield operations for wellhead cleaning, equipment maintenance, and as a solvent carrier for treating chemicals. The fast-evaporating characteristics ensure quick drying with minimal residue. Available in various grades to meet specific application requirements across Oman\'s industrial and petroleum sectors.',
+        applications: [
+          'Industrial equipment degreasing and cleaning',
+          'Oilfield equipment maintenance',
+          'Paint thinner and dilution',
+          'Specialty formulation solvent carrier',
+          'Parts washing and cleaning',
+          'Adhesive and coating removal',
+          'Printing ink manufacturing',
+          'Chemical intermediate and extraction solvent'
+        ],
+        technicalSpecs: [
+          'Flash point: 38-45°C (varies by grade)',
+          'Appearance: Clear colorless to pale yellow liquid',
+          'Aromatic content: 15-20% typical',
+          'Evaporation rate: Fast',
+          'Excellent solvency for oils and greases',
+          'Available grades: Light, medium, heavy',
+          'Packaging: 20L, 200L drums, IBCs, bulk'
+        ]
       },
     },
     {
@@ -2927,8 +3401,27 @@ export const products: Product[] = [
       icon: Factory,
       details: {
         casNumber: '1344-09-8',
-        alternativeNames: ['Sodium silicate', 'Water glass', 'Liquid glass'],
-        seoKeywords: ['surfactant Oman', 'sodium silicate Muscat', 'drilling chemical Oman'],
+        alternativeNames: ['Sodium silicate', 'Water glass', 'Liquid glass', 'Soluble silicate', 'Alkaline sodium silicate'],
+        seoKeywords: ['surfactant Oman', 'sodium silicate Muscat', 'drilling chemical Oman', 'water glass Sohar', 'silicate drilling Oman'],
+        longDescription: 'Sodium Silicate & Surfactants supplier in Oman - Global Chemicals LLC provides sodium silicate solutions and specialty surfactants for drilling, cementing, and industrial applications in Muscat, Sohar, Duqm, Salalah. Our sodium silicate (water glass) serves as a cement accelerator, shale stabilizer, and lost circulation material in drilling operations. Available in alkaline and neutral grades to meet specific pH requirements. Surfactants enhance drilling fluid performance by reducing surface tension, improving wetting properties, and stabilizing foam systems. Essential for water-based drilling muds, cement slurries, and wellbore stabilization. The versatile chemicals also find use in soil stabilization, grouting, and industrial applications across Oman\'s oil & gas and construction sectors.',
+        applications: [
+          'Cement accelerator in oil well cementing',
+          'Shale stabilization in drilling fluids',
+          'Lost circulation material for severe losses',
+          'Drilling fluid surfactant and wetting agent',
+          'Soil grouting and stabilization',
+          'Wellbore strengthening applications',
+          'Foam drilling fluid stabilization',
+          'Industrial cleaning formulations'
+        ],
+        technicalSpecs: [
+          'Sodium silicate grades: Alkaline (pH 11-13), Neutral (pH 7-9)',
+          'SiO2/Na2O ratio: 2.0-3.3 typical',
+          'Appearance: Clear to cloudy liquid',
+          'Surfactant types: Anionic, nonionic, cationic',
+          'Compatible with most drilling fluid systems',
+          'Available in drums, IBCs, bulk'
+        ]
       },
     },
 
