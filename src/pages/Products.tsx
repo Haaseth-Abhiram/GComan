@@ -4563,8 +4563,29 @@ export const products: Product[] = [
       category: 'construction',
       icon: Building2,
       details: {
-        alternativeNames: ['Epoxy resin coating', 'Concrete epoxy', 'Floor epoxy coating'],
-        seoKeywords: ['epoxy coating Oman', 'concrete coating Muscat', 'floor coating Oman'],
+        alternativeNames: ['Epoxy resin coating', 'Concrete epoxy', 'Floor epoxy coating', 'Two-component epoxy', 'Industrial epoxy'],
+        seoKeywords: ['epoxy coating Oman', 'concrete coating Muscat', 'floor coating Sohar', 'epoxy flooring Oman', 'industrial coating Muscat', 'protective epoxy Oman'],
+        longDescription: 'Epoxy Coating supplier in Oman - Global Chemicals LLC provides high-performance epoxy coatings for concrete protection, floor systems, and structural applications in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our two-component epoxy systems offer exceptional chemical resistance, mechanical strength, and durability for industrial floors, warehouses, and production facilities. Essential for protecting concrete against chemical spills, abrasion, and moisture penetration. The seamless coating provides easy-to-clean surfaces ideal for food processing, pharmaceutical, and manufacturing facilities. Widely used in industrial flooring, parking garages, warehouse floors, and chemical storage areas across Oman\'s construction and industrial sectors. Available in various formulations for specific applications including self-leveling, anti-slip, and decorative finishes.',
+        applications: [
+          'Industrial floor coating and protection',
+          'Warehouse and storage facility flooring',
+          'Food processing and pharmaceutical facilities',
+          'Parking garage floor systems',
+          'Chemical storage area protection',
+          'Concrete repair and rehabilitation',
+          'Anti-slip and decorative finishes',
+          'Tank and containment area lining'
+        ],
+        technicalSpecs: [
+          'System: Two-component epoxy resin',
+          'Film thickness: 300-500 microns per coat',
+          'Compressive strength: >80 MPa',
+          'Chemical resistance: Excellent to acids, alkalis',
+          'Adhesion to concrete: >2 MPa',
+          'Pot life: 30-60 minutes at 25°C',
+          'Full cure: 5-7 days',
+          'Available in various colors and finishes'
+        ]
       },
     },
     {
@@ -4575,8 +4596,29 @@ export const products: Product[] = [
       icon: Building2,
       details: {
         casNumber: '8012-95-1',
-        alternativeNames: ['Paraffin oil', 'Liquid paraffin', 'Mineral oil'],
-        seoKeywords: ['paraffin oil Oman', 'liquid paraffin Muscat', 'mineral oil construction Oman'],
+        alternativeNames: ['Paraffin oil', 'Liquid paraffin', 'Mineral oil', 'White oil construction', 'Curing compound oil'],
+        seoKeywords: ['paraffin oil construction Oman', 'liquid paraffin Muscat', 'mineral oil construction Sohar', 'concrete curing oil Oman', 'mold oil Muscat'],
+        longDescription: 'Paraffin Oil supplier in Oman - Global Chemicals LLC provides industrial-grade paraffin oil for construction applications in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our paraffin oil serves as a key ingredient in concrete curing compounds, formwork release agents, and dust control formulations. Essential for protecting freshly placed concrete from premature moisture loss and ensuring proper curing. The light mineral oil also acts as a mold release agent for precast concrete products. Widely used in ready-mix concrete plants, precast factories, construction sites, and industrial flooring projects across Oman. The non-staining formulation ensures clean concrete finishes without discoloration. Available in various viscosity grades for different construction applications.',
+        applications: [
+          'Concrete curing compound formulation',
+          'Formwork and mold release agent',
+          'Dust control and suppression',
+          'Asphalt emulsion stabilizer',
+          'Precast concrete production',
+          'Road construction dust control',
+          'Timber treatment and preservation',
+          'Industrial lubricant base'
+        ],
+        technicalSpecs: [
+          'Appearance: Clear, colorless oil',
+          'Viscosity: 10-30 cSt at 40°C',
+          'Flash point: 150°C minimum',
+          'Specific gravity: 0.82-0.88',
+          'Non-staining to concrete',
+          'Water-repellent properties',
+          'Food-grade options available',
+          'Available in 200L drums, bulk'
+        ]
       },
     },
     {
@@ -4586,8 +4628,29 @@ export const products: Product[] = [
       category: 'construction',
       icon: Building2,
       details: {
-        alternativeNames: ['Bonding agent', 'Concrete bonding agent', 'Polymer adhesive'],
-        seoKeywords: ['bonding agent Oman', 'concrete bonding Muscat', 'polymer adhesive Oman'],
+        alternativeNames: ['Bonding agent', 'Concrete bonding agent', 'Polymer adhesive', 'SBR bonding agent', 'Acrylic bonding'],
+        seoKeywords: ['bonding agent Oman', 'concrete bonding Muscat', 'polymer adhesive Sohar', 'SBR bonding Oman', 'concrete repair adhesive Muscat'],
+        longDescription: 'Polymer Bonding Agent supplier in Oman - Global Chemicals LLC provides advanced polymer bonding agents for concrete repair and construction in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our styrene-butadiene rubber (SBR) and acrylic-based bonding agents create strong mechanical and chemical bonds between old and new concrete surfaces. Essential for concrete repairs, overlays, and screeds requiring reliable adhesion. The polymer emulsion improves bond strength, flexibility, and reduces shrinkage cracking. Widely used in concrete repair projects, floor toppings, patch repairs, and structural strengthening across Oman\'s construction industry. The ready-to-use formulation ensures consistent application and optimal bonding performance. Compatible with cement-based mortars, renders, and repair materials.',
+        applications: [
+          'Concrete repair and patching',
+          'Bonding new concrete to old',
+          'Floor screeds and toppings',
+          'Render and plaster bonding',
+          'Structural repair bonding',
+          'Tile adhesive additive',
+          'Waterproofing slurry bonding',
+          'Precast element connections'
+        ],
+        technicalSpecs: [
+          'Base: SBR or acrylic polymer emulsion',
+          'Appearance: White milky liquid',
+          'Solids content: 40-50%',
+          'Bond strength: >2 MPa',
+          'Dilution: Use neat or dilute 1:3 with water',
+          'Application: Brush, spray, or mix with cement',
+          'Drying time: 1-2 hours (touch dry)',
+          'Available in 5L, 20L, 200L containers'
+        ]
       },
     },
     {
@@ -4597,8 +4660,29 @@ export const products: Product[] = [
       category: 'construction',
       icon: Building2,
       details: {
-        alternativeNames: ['Modified mortar', 'Polymer mortar', 'Flexible mortar'],
-        seoKeywords: ['polymer mortar Oman', 'modified mortar Muscat', 'flexible mortar Oman'],
+        alternativeNames: ['Modified mortar', 'Polymer mortar', 'Flexible mortar', 'Repair mortar', 'SBR modified mortar'],
+        seoKeywords: ['polymer mortar Oman', 'modified mortar Muscat', 'flexible mortar Sohar', 'repair mortar Oman', 'polymer concrete Muscat'],
+        longDescription: 'Polymer Modified Mortar supplier in Oman - Global Chemicals LLC provides high-performance polymer-modified repair mortars for construction and rehabilitation in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our polymer-enhanced mortars combine cement, aggregates, and polymer additives for superior adhesion, flexibility, and durability. Essential for concrete repairs, patch repairs, and protective coatings requiring crack-bridging capability. The polymer modification reduces shrinkage, improves workability, and enhances resistance to chemicals and weathering. Widely used in structural repairs, façade restoration, marine structures, and industrial floor repairs across Oman. The ready-to-use formulations ensure consistent quality and eliminate on-site mixing errors. Available in various strengths and setting times for different repair requirements.',
+        applications: [
+          'Concrete structure repair and restoration',
+          'Crack filling and spall repair',
+          'Façade and cladding repairs',
+          'Marine structure rehabilitation',
+          'Industrial floor repairs',
+          'Balcony and terrace repairs',
+          'Bridge deck repairs',
+          'Protective coatings for concrete'
+        ],
+        technicalSpecs: [
+          'Compressive strength: 40-60 MPa',
+          'Flexural strength: 8-12 MPa',
+          'Bond strength: >2.5 MPa',
+          'Setting time: 2-4 hours (initial)',
+          'Application thickness: 5-50mm per layer',
+          'Low shrinkage formulation',
+          'Excellent adhesion to concrete',
+          'Available in 25kg bags'
+        ]
       },
     },
     {
@@ -4608,8 +4692,29 @@ export const products: Product[] = [
       category: 'construction',
       icon: Building2,
       details: {
-        alternativeNames: ['Release agent', 'Formwork release', 'Concrete release agent'],
-        seoKeywords: ['mold release agent Oman', 'formwork release Muscat', 'concrete release Oman'],
+        alternativeNames: ['Release agent', 'Formwork release', 'Concrete release agent', 'Form oil', 'Demolding agent'],
+        seoKeywords: ['mold release agent Oman', 'formwork release Muscat', 'concrete release Sohar', 'form oil Oman', 'demolding agent Muscat'],
+        longDescription: 'Mould Releasing Agents supplier in Oman - Global Chemicals LLC provides high-performance formwork release agents for concrete construction in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our release agents create a thin barrier between formwork and concrete, ensuring easy demolding and excellent surface finishes. Essential for achieving smooth, defect-free concrete surfaces while protecting formwork for multiple reuses. Available in oil-based, water-based, and chemical reactive formulations for different applications. The products prevent concrete adhesion, reduce cleaning time, and extend formwork life. Widely used in ready-mix concrete, precast manufacturing, building construction, and infrastructure projects across Oman. Suitable for steel, timber, and plastic formwork systems with minimal environmental impact.',
+        applications: [
+          'Concrete formwork treatment',
+          'Precast concrete production',
+          'Steel and timber form treatment',
+          'Architectural concrete finishes',
+          'High-rise building construction',
+          'Bridge and infrastructure projects',
+          'Industrial and commercial buildings',
+          'Tunnel lining forms'
+        ],
+        technicalSpecs: [
+          'Types: Oil-based, water-based, chemical reactive',
+          'Application: Spray, brush, or roller',
+          'Coverage: 15-30 m²/liter',
+          'Drying time: 15-30 minutes',
+          'No staining on concrete surface',
+          'Extends formwork life up to 100 uses',
+          'Easy concrete demolding',
+          'Available in 20L, 200L drums'
+        ]
       },
     },
 
@@ -4623,8 +4728,29 @@ export const products: Product[] = [
       details: {
         formula: 'C6H8O6',
         casNumber: '50-81-7',
-        alternativeNames: ['Vitamin C', 'L-Ascorbic acid', 'Ascorbate'],
-        seoKeywords: ['ascorbic acid Oman', 'vitamin C Muscat', 'food preservative Oman'],
+        alternativeNames: ['Vitamin C', 'L-Ascorbic acid', 'Ascorbate', 'E300', 'Ascorbic acid food grade'],
+        seoKeywords: ['ascorbic acid food grade Oman', 'vitamin C Muscat', 'food preservative Oman', 'E300 additive Sohar', 'antioxidant food Muscat'],
+        longDescription: 'Food Grade Ascorbic Acid supplier in Oman - Global Chemicals LLC provides high-purity vitamin C for food and beverage industries in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our ascorbic acid (E300) serves as a powerful antioxidant preventing oxidation, browning, and rancidity in food products. Essential for fortifying juices, soft drinks, baked goods, and processed foods with vitamin C. The white crystalline powder also acts as a dough conditioner in bread making and prevents discoloration in fruits and vegetables. Widely used in beverage manufacturing, bakeries, food processing plants, and fruit preservation facilities across Oman. Meets strict food safety standards including FDA and EFSA regulations. Available in fine powder and granular forms for various food applications.',
+        applications: [
+          'Juice and beverage fortification',
+          'Antioxidant in processed foods',
+          'Bread and bakery dough conditioner',
+          'Fruit and vegetable preservation',
+          'Meat curing and color retention',
+          'Wine and beer antioxidant',
+          'Nutritional supplements',
+          'Food color stabilization'
+        ],
+        technicalSpecs: [
+          'Purity: 99% minimum (food grade)',
+          'Form: White crystalline powder',
+          'pH: 2-3 (0.1M solution)',
+          'Meets E300 specifications',
+          'Complies with FDA, EFSA standards',
+          'Typical dosage: 0.01-0.5% in foods',
+          'Soluble in water and ethanol',
+          'Available in 25kg bags/cartons'
+        ]
       },
     },
     {
