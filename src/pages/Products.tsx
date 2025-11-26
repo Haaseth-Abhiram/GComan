@@ -3731,8 +3731,28 @@ export const products: Product[] = [
       category: 'corrosion-inhibitor',
       icon: Shield,
       details: {
-        alternativeNames: ['Multi-metal inhibitor', 'Mixed metal inhibitor', 'Universal corrosion inhibitor'],
-        seoKeywords: ['multi-metal corrosion inhibitor Oman', 'mixed metal protection Muscat', 'cooling water inhibitor Oman'],
+        alternativeNames: ['Multi-metal inhibitor', 'Mixed metal inhibitor', 'Universal corrosion inhibitor', 'Multi-metal protection', 'Mixed metallurgy inhibitor'],
+        seoKeywords: ['multi-metal corrosion inhibitor Oman', 'mixed metal protection Muscat', 'cooling water inhibitor Oman', 'universal inhibitor Sohar', 'multi-metal treatment Oman'],
+        longDescription: 'Multi-Metal Corrosion Inhibitor supplier in Oman - Global Chemicals LLC provides specialized protection for cooling water systems with mixed metallurgy in Muscat, Sohar, Duqm, Salalah. Our multi-metal inhibitor is specifically formulated to protect systems containing carbon steel, stainless steel, copper alloys (brass, bronze), aluminum, and galvanized steel simultaneously. The balanced formulation prevents galvanic corrosion between dissimilar metals while protecting each metal type. Essential for modern cooling systems with heat exchangers, piping, and equipment made from various metals. The inhibitor forms compatible protective films on all metal surfaces, eliminating selective corrosion. Widely used in power plants, refineries, HVAC systems, and industrial facilities with mixed-metal cooling equipment across Oman. Reduces corrosion-related failures and extends equipment life.',
+        applications: [
+          'Mixed-metal cooling tower treatment',
+          'Heat exchangers with multiple metals',
+          'HVAC systems with various metallurgy',
+          'Galvanic corrosion prevention',
+          'Copper and steel system protection',
+          'Aluminum cooling system treatment',
+          'Industrial multi-metal equipment',
+          'Commercial building cooling systems'
+        ],
+        technicalSpecs: [
+          'Balanced multi-metal formulation',
+          'Protects: Carbon steel, copper, aluminum, SS',
+          'Dosage: 50-150 ppm',
+          'pH range: 7.5-9.5',
+          'Prevents galvanic corrosion',
+          'Forms compatible films on all metals',
+          'Available in 25kg, 200kg drums, IBCs'
+        ]
       },
     },
     {
@@ -3742,8 +3762,28 @@ export const products: Product[] = [
       category: 'corrosion-inhibitor',
       icon: Shield,
       details: {
-        alternativeNames: ['CI 2000', 'Advanced corrosion inhibitor', 'Industrial inhibitor'],
-        seoKeywords: ['corrosion inhibitor 2000 Oman', 'CI 2000 Muscat', 'industrial protection Oman'],
+        alternativeNames: ['CI 2000', 'Advanced corrosion inhibitor', 'Industrial inhibitor', 'High-performance inhibitor', 'Premium corrosion control'],
+        seoKeywords: ['corrosion inhibitor 2000 Oman', 'CI 2000 Muscat', 'industrial protection Oman', 'advanced inhibitor Sohar', 'premium corrosion control Oman'],
+        longDescription: 'Corrosion Inhibitor 2000 supplier in Oman - Global Chemicals LLC provides advanced corrosion protection formulations for demanding industrial applications in Muscat, Sohar, Duqm, Salalah. Our CI 2000 represents next-generation corrosion inhibitor technology, combining multiple inhibitor mechanisms for superior metal protection. The synergistic blend provides anodic, cathodic, and filming corrosion inhibition for comprehensive asset protection. Essential for harsh operating conditions, high-temperature applications, and systems requiring maximum corrosion control. The formulation offers improved performance in challenging water chemistries with high chlorides, sulfates, or dissolved solids. Reduces corrosion rates to minimal levels, extends equipment life, and minimizes maintenance costs. Compatible with scale inhibitors and biocides for complete water treatment programs. Widely used in industrial cooling, process water, and critical equipment protection across Oman.',
+        applications: [
+          'High-temperature cooling systems',
+          'Harsh water chemistry applications',
+          'Critical equipment corrosion protection',
+          'Industrial process cooling water',
+          'High-chloride water systems',
+          'Demanding operating conditions',
+          'Maximum corrosion control requirements',
+          'Long equipment life programs'
+        ],
+        technicalSpecs: [
+          'Advanced multi-mechanism inhibitor blend',
+          'Dosage: 25-100 ppm',
+          'Temperature range: Up to 70°C',
+          'High-performance formulation',
+          'Effective in aggressive water chemistry',
+          'Corrosion rate reduction: >95%',
+          'Available in 25kg, 200kg drums, IBCs'
+        ]
       },
     },
     {
@@ -3753,8 +3793,28 @@ export const products: Product[] = [
       category: 'corrosion-inhibitor',
       icon: Shield,
       details: {
-        alternativeNames: ['Rust preventive', 'Rust inhibitor', 'Metal protection'],
-        seoKeywords: ['rust preventive Oman', 'rust inhibitor Muscat', 'metal protection Oman'],
+        alternativeNames: ['Rust preventive', 'Rust inhibitor', 'Metal protection', 'Rust prevention coating', 'Corrosion preventive oil'],
+        seoKeywords: ['rust preventive Oman', 'rust inhibitor Muscat', 'metal protection Oman', 'rust prevention Sohar', 'corrosion preventive Oman'],
+        longDescription: 'Rust Preventive Corrosion Inhibitor supplier in Oman - Global Chemicals LLC provides protective coatings and rust prevention solutions for metal surfaces and equipment in Muscat, Sohar, Duqm, Salalah. Our rust preventive formulation forms a protective barrier on metal surfaces, preventing atmospheric corrosion, moisture attack, and oxidation. The hydrophobic film repels water and excludes oxygen, stopping the rust formation process. Essential for protecting stored equipment, spare parts, machinery during shutdown periods, and metal products during transportation or storage. Available in solvent-based and water-based formulations for different applications. Provides short-term (indoor storage) to long-term (outdoor) protection. The film is easily removable when equipment returns to service. Widely used in marine, industrial, oilfield, and manufacturing sectors across Oman for protecting valuable assets.',
+        applications: [
+          'Equipment storage rust prevention',
+          'Spare parts protection during storage',
+          'Machinery protection during shutdowns',
+          'Metal product shipping protection',
+          'Outdoor equipment rust prevention',
+          'Pipeline and valve protection',
+          'Marine equipment corrosion prevention',
+          'Manufacturing inventory protection'
+        ],
+        technicalSpecs: [
+          'Types: Solvent-based, water-based formulations',
+          'Protection duration: 3-24 months depending on type',
+          'Application: Spray, dip, or brush',
+          'Forms hydrophobic protective film',
+          'Easily removable with solvent or detergent',
+          'Indoor and outdoor protection grades',
+          'Available in 20L, 200L drums, IBCs'
+        ]
       },
     },
     {
@@ -3765,8 +3825,29 @@ export const products: Product[] = [
       icon: Shield,
       details: {
         casNumber: '7631-95-0',
-        alternativeNames: ['Molybdate inhibitor', 'Sodium molybdate based', 'Closed system inhibitor'],
-        seoKeywords: ['molybdate inhibitor Oman', 'closed system protection Muscat', 'molybdate corrosion Oman'],
+        alternativeNames: ['Molybdate inhibitor', 'Sodium molybdate based', 'Closed system inhibitor', 'Molybdate treatment', 'Molybdate corrosion control'],
+        seoKeywords: ['molybdate inhibitor Oman', 'closed system protection Muscat', 'molybdate corrosion Oman', 'sodium molybdate inhibitor Sohar', 'closed cooling treatment Oman'],
+        longDescription: 'Molybdate-Based Corrosion Inhibitor supplier in Oman - Global Chemicals LLC provides sodium molybdate corrosion inhibitors for closed cooling systems and chillers in Muscat, Sohar, Duqm, Salalah. Our molybdate formulation offers environmentally-friendly, non-toxic corrosion protection for closed-loop systems. Molybdate is an anodic inhibitor that forms protective films on metal surfaces, providing excellent corrosion control for steel, copper, and aluminum. Essential for closed chilled water systems, district cooling, HVAC applications, and process cooling circuits. The nitrite-free formulation eliminates health and environmental concerns associated with traditional nitrite-based inhibitors. Provides long-term protection with minimal maintenance requirements. Compatible with glycol-based systems. Widely used in hospitals, commercial buildings, food facilities, and environmentally-conscious operations across Oman.',
+        applications: [
+          'Closed chilled water system protection',
+          'District cooling corrosion control',
+          'HVAC closed-loop treatment',
+          'Food-grade system protection',
+          'Hospital and healthcare cooling',
+          'Environmentally-sensitive applications',
+          'Nitrite-free corrosion protection',
+          'Glycol system compatible treatment'
+        ],
+        technicalSpecs: [
+          'Active: Sodium molybdate (Na2MoO4)',
+          'Dosage: 300-1000 ppm',
+          'pH range: 8.5-10.5',
+          'Non-toxic, environmentally-friendly',
+          'Anodic corrosion inhibitor',
+          'Long-term protection (multi-year)',
+          'Compatible with glycols',
+          'Available in 25kg drums, IBCs'
+        ]
       },
     },
     {
@@ -3776,8 +3857,28 @@ export const products: Product[] = [
       category: 'corrosion-inhibitor',
       icon: Shield,
       details: {
-        alternativeNames: ['General inhibitor', 'Corrosion preventive', 'Metal protector'],
-        seoKeywords: ['corrosion inhibitor Oman', 'corrosion prevention Muscat', 'metal protector Oman'],
+        alternativeNames: ['General inhibitor', 'Corrosion preventive', 'Metal protector', 'Universal inhibitor', 'All-purpose corrosion control'],
+        seoKeywords: ['corrosion inhibitor Oman', 'corrosion prevention Muscat', 'metal protector Oman', 'general inhibitor Sohar', 'industrial corrosion control Oman'],
+        longDescription: 'General Purpose Corrosion Inhibitor supplier in Oman - Global Chemicals LLC provides versatile corrosion protection chemicals for various industrial water systems in Muscat, Sohar, Duqm, Salalah. Our general corrosion inhibitor offers effective protection for carbon steel and common metals in cooling towers, boilers, and process water applications. The formulation provides reliable corrosion control through film-forming and passivation mechanisms. Essential for standard industrial water treatment programs requiring economical, dependable corrosion protection. The product maintains system integrity, prevents leaks, and extends equipment operational life. Compatible with scale inhibitors, dispersants, and biocides in comprehensive water treatment programs. Suitable for a wide range of water qualities and operating conditions. Widely used across manufacturing, process industries, and facility operations throughout Oman.',
+        applications: [
+          'General cooling water corrosion protection',
+          'Industrial water system treatment',
+          'Boiler corrosion prevention',
+          'Process water corrosion control',
+          'Carbon steel protection',
+          'Standard water treatment programs',
+          'Equipment life extension',
+          'Cost-effective corrosion prevention'
+        ],
+        technicalSpecs: [
+          'General purpose inhibitor formulation',
+          'Dosage: 20-80 ppm',
+          'Effective pH: 7.0-9.5',
+          'Carbon steel primary protection',
+          'Compatible with treatment chemicals',
+          'Economical corrosion control',
+          'Available in 25kg, 200kg drums, IBCs, bulk'
+        ]
       },
     },
     {
@@ -3787,8 +3888,28 @@ export const products: Product[] = [
       category: 'corrosion-inhibitor',
       icon: Shield,
       details: {
-        alternativeNames: ['Compressor inhibitor', 'Gas system inhibitor', 'Compressor protection'],
-        seoKeywords: ['gas compressor inhibitor Oman', 'compressor protection Muscat', 'gas system Oman'],
+        alternativeNames: ['Compressor inhibitor', 'Gas system inhibitor', 'Compressor protection', 'Gas compressor treatment', 'Compressor corrosion control'],
+        seoKeywords: ['gas compressor inhibitor Oman', 'compressor protection Muscat', 'gas system Oman', 'compressor corrosion Sohar', 'gas compressor treatment Oman'],
+        longDescription: 'Gas Compressor Corrosion Inhibitor supplier in Oman - Global Chemicals LLC provides specialized corrosion protection for gas compressor systems, cooling water, and associated equipment in Muscat, Sohar, Duqm, Salalah. Our compressor inhibitor is formulated to protect compressor cooling jackets, intercoolers, aftercoolers, and associated piping from corrosion. The product prevents corrosive attack from condensed moisture, acid gases, and aggressive conditions in gas compression systems. Essential for natural gas compressors, air compressors, refrigeration compressors, and process gas compression equipment. The inhibitor maintains heat transfer efficiency, prevents leaks, and extends compressor operational life. Compatible with high-temperature operation and minimal impact on lubrication systems. Reduces maintenance costs and unplanned shutdowns. Widely used in gas processing plants, LNG facilities, refineries, and industrial compression operations across Oman.',
+        applications: [
+          'Gas compressor cooling water treatment',
+          'Compressor jacket water protection',
+          'Intercooler corrosion prevention',
+          'Aftercooler protection',
+          'Natural gas compressor treatment',
+          'Air compressor systems',
+          'Refrigeration compressor cooling',
+          'Process gas compression equipment'
+        ],
+        technicalSpecs: [
+          'Specialized compressor formulation',
+          'Dosage: 100-300 ppm',
+          'High-temperature stable',
+          'pH range: 8.0-9.5',
+          'Low foam - compatible with compressors',
+          'Protects jackets, coolers, piping',
+          'Available in 25kg, 200kg drums, IBCs'
+        ]
       },
     },
     {
@@ -3800,8 +3921,29 @@ export const products: Product[] = [
       details: {
         formula: 'Na2MoO4',
         casNumber: '7631-95-0',
-        alternativeNames: ['Sodium molybdate dihydrate', 'Molybdate', 'Na2MoO4'],
-        seoKeywords: ['sodium molybdate Oman', 'molybdate inhibitor Muscat', 'anodic inhibitor Oman'],
+        alternativeNames: ['Sodium molybdate dihydrate', 'Molybdate', 'Na2MoO4', 'Molybdenum corrosion inhibitor', 'Molybdate salt'],
+        seoKeywords: ['sodium molybdate Oman', 'molybdate inhibitor Muscat', 'anodic inhibitor Oman', 'Na2MoO4 Sohar', 'molybdate corrosion control Oman'],
+        longDescription: 'Sodium Molybdate supplier in Oman - Global Chemicals LLC provides anodic corrosion inhibitors for environmentally-friendly cooling water treatment in Muscat, Sohar, Duqm, Salalah. Our sodium molybdate (Na2MoO4) is a non-toxic, non-hazardous corrosion inhibitor that forms protective oxide films on metal surfaces. Essential for applications requiring safe, environmentally-acceptable corrosion control without chromates, nitrites, or phosphates. The molybdate inhibitor provides excellent protection for steel and copper in closed and open cooling systems. Particularly valuable in food processing, pharmaceutical, and potable water applications where toxicity is a concern. The compound offers anodic inhibition, requiring sufficient dosage to prevent pitting. Compatible with other treatment chemicals and provides long-term corrosion control. Widely used in environmentally-conscious facilities across Oman.',
+        applications: [
+          'Environmentally-friendly corrosion inhibition',
+          'Food-grade cooling water treatment',
+          'Pharmaceutical water system protection',
+          'Potable water system corrosion control',
+          'Chromate-free cooling water programs',
+          'Closed-loop chiller treatment',
+          'Non-toxic corrosion prevention',
+          'Green chemistry water treatment'
+        ],
+        technicalSpecs: [
+          'Purity: 99% sodium molybdate dihydrate',
+          'Dosage: 100-500 ppm in closed systems',
+          'Anodic corrosion inhibitor',
+          'pH range: 8.0-10.0',
+          'Non-toxic, non-hazardous',
+          'Environmentally acceptable',
+          'Appearance: White crystalline powder',
+          'Available in 25kg bags, drums'
+        ]
       },
     },
     {
@@ -3811,8 +3953,28 @@ export const products: Product[] = [
       category: 'corrosion-inhibitor',
       icon: Shield,
       details: {
-        alternativeNames: ['Oxygen remover', 'Oxygen scavenger', 'Deoxidizer'],
-        seoKeywords: ['oxygen scavenger Oman', 'deoxidizer Muscat', 'oxygen remover Oman'],
+        alternativeNames: ['Oxygen remover', 'Oxygen scavenger', 'Deoxidizer', 'Oxygen scavenging chemical', 'DO remover'],
+        seoKeywords: ['oxygen scavenger Oman', 'deoxidizer Muscat', 'oxygen remover Oman', 'oxygen scavenging Sohar', 'DO remover Oman'],
+        longDescription: 'Oxygen Scavenger supplier in Oman - Global Chemicals LLC provides chemical oxygen removal solutions for boiler water, closed systems, and corrosion prevention in Muscat, Sohar, Duqm, Salalah. Our oxygen scavengers rapidly react with dissolved oxygen, eliminating it from water systems before it can cause corrosion. Available in catalyzed sodium sulfite, DEHA, and hydrazine-alternative formulations for different applications. Essential for boiler feedwater treatment, closed-loop systems, and any application where dissolved oxygen causes corrosion problems. Oxygen scavenging prevents pitting corrosion, extends equipment life, and protects boiler tubes and piping. The chemical reaction produces non-corrosive byproducts. Provides supplementary protection to mechanical deaeration. Widely used in power plants, industrial boilers, and process water systems across Oman.',
+        applications: [
+          'Boiler feedwater oxygen removal',
+          'Closed cooling system oxygen scavenging',
+          'Steam system corrosion prevention',
+          'Condensate system protection',
+          'High-pressure boiler treatment',
+          'Supplementary to mechanical deaeration',
+          'Pitting corrosion prevention',
+          'Process water oxygen removal'
+        ],
+        technicalSpecs: [
+          'Types: Catalyzed sulfite, DEHA, organic scavengers',
+          'Dosage: 10 ppm per 1 ppm dissolved oxygen',
+          'Reaction speed: Rapid (seconds to minutes)',
+          'No corrosive residues',
+          'Effective in boiler and closed systems',
+          'Temperature range: Up to 250°C',
+          'Available in 25kg, 200kg drums, IBCs'
+        ]
       },
     },
     {
@@ -3822,8 +3984,28 @@ export const products: Product[] = [
       category: 'corrosion-inhibitor',
       icon: Shield,
       details: {
-        alternativeNames: ['pH booster inhibitor', 'Dual action inhibitor', 'pH control inhibitor'],
-        seoKeywords: ['pH booster Oman', 'dual action inhibitor Muscat', 'pH control Oman'],
+        alternativeNames: ['pH booster inhibitor', 'Dual action inhibitor', 'pH control inhibitor', 'Alkalinity booster with inhibitor', 'Combined pH-corrosion control'],
+        seoKeywords: ['pH booster Oman', 'dual action inhibitor Muscat', 'pH control Oman', 'alkalinity booster Sohar', 'pH corrosion control Oman'],
+        longDescription: 'pH Booster Cum Corrosion Inhibitor supplier in Oman - Global Chemicals LLC provides dual-action chemicals for simultaneous pH control and corrosion protection in Muscat, Sohar, Duqm, Salalah. Our pH booster inhibitor combines alkalinity adjustment with corrosion inhibition in a single product. The formulation raises pH to optimal corrosion control range (8-9) while providing protective filming and passivation. Essential for systems with acidic makeup water or acid-generating processes requiring pH elevation. The dual-action approach simplifies chemical feed, reduces inventory, and ensures balanced treatment. Prevents low-pH corrosion while establishing protective conditions. Particularly useful for systems using softened water or condensate with low alkalinity. Widely used in industrial cooling, boiler makeup, and process water treatment across Oman where pH control and corrosion prevention are both needed.',
+        applications: [
+          'Low-alkalinity water pH adjustment',
+          'Simultaneous pH control and corrosion protection',
+          'Softened water treatment',
+          'Condensate system pH boosting',
+          'Acidic water neutralization',
+          'Boiler feedwater conditioning',
+          'Simplified dual-action treatment',
+          'Industrial water pH and corrosion control'
+        ],
+        technicalSpecs: [
+          'Dual function: pH boost + corrosion inhibition',
+          'Dosage: 50-200 ppm',
+          'Target pH: 8.0-9.5',
+          'Raises alkalinity',
+          'Forms corrosion protective films',
+          'Simplifies chemical feed',
+          'Available in 25kg, 200kg drums, IBCs'
+        ]
       },
     },
     {
@@ -3833,8 +4015,29 @@ export const products: Product[] = [
       category: 'corrosion-inhibitor',
       icon: Shield,
       details: {
-        alternativeNames: ['Closed system inhibitor', 'Closed loop protection', 'Chiller inhibitor'],
-        seoKeywords: ['closed system inhibitor Oman', 'closed loop protection Muscat', 'chiller inhibitor Oman'],
+        alternativeNames: ['Closed system inhibitor', 'Closed loop protection', 'Chiller inhibitor', 'Closed circuit corrosion control', 'HVAC system inhibitor'],
+        seoKeywords: ['closed system inhibitor Oman', 'closed loop protection Muscat', 'chiller inhibitor Oman', 'HVAC corrosion control Sohar', 'closed cooling treatment Oman'],
+        longDescription: 'Closed Cooling System Corrosion Inhibitor supplier in Oman - Global Chemicals LLC provides long-term corrosion protection for closed-loop cooling and chiller systems in Muscat, Sohar, Duqm, Salalah. Our closed system inhibitor is specifically formulated for recirculating systems with minimal makeup water, providing multi-year protection with single treatment. The product protects steel, copper, aluminum, and stainless steel in mixed-metal systems. Essential for chilled water systems, district cooling networks, HVAC closed loops, and process cooling circuits. The inhibitor maintains stable alkalinity, prevents scale formation, and eliminates oxygen corrosion. One-time charge provides comprehensive protection for 1-3 years. Reduces water consumption, eliminates continuous chemical feed, and simplifies system maintenance. Widely used in commercial buildings, data centers, hospitals, and industrial facilities across Oman.',
+        applications: [
+          'Chilled water closed-loop systems',
+          'District cooling network protection',
+          'HVAC closed circuit treatment',
+          'Process cooling loop corrosion control',
+          'Data center cooling protection',
+          'Hospital and healthcare cooling',
+          'Commercial building chillers',
+          'Long-term closed system protection'
+        ],
+        technicalSpecs: [
+          'Multi-metal closed system formulation',
+          'Initial dosage: 2-5% system volume',
+          'Protection duration: 1-3 years',
+          'pH maintenance: 9.0-10.5',
+          'Includes scale inhibitor and pH buffer',
+          'Minimal makeup requirements',
+          'Compatible with glycols',
+          'Available in 25kg, 200kg drums, IBCs'
+        ]
       },
     },
 
@@ -4524,8 +4727,28 @@ export const products: Product[] = [
       category: 'ro-chemicals',
       icon: Droplets,
       details: {
-        alternativeNames: ['Membrane passivation', 'RO membrane preservative', 'Membrane storage solution'],
-        seoKeywords: ['RO passivation Oman', 'membrane protection Muscat', 'RO preservation Oman'],
+        alternativeNames: ['Membrane passivation', 'RO membrane preservative', 'Membrane storage solution', 'RO preservation chemical', 'Membrane protection treatment'],
+        seoKeywords: ['RO passivation Oman', 'membrane protection Muscat', 'RO preservation Oman', 'membrane passivation Sohar', 'RO storage solution Oman'],
+        longDescription: 'RO Passivation solution supplier in Oman - Global Chemicals LLC provides membrane passivation and preservation chemicals for reverse osmosis systems in Muscat, Sohar, Duqm, Salalah. Our RO passivation treatment protects membranes during short-term shutdown periods, preventing biological growth, scaling, and fouling. The specialized formulation creates a protective barrier on membrane surfaces, maintaining wet storage conditions and preventing oxidation. Essential for extended plant shutdowns, seasonal operations, and membrane preservation during transportation or storage. Prevents membrane drying, bacterial colonization, and irreversible damage that reduces performance. The passivation solution is easy to apply and drain, ensuring membranes restart quickly with full capacity. Widely used in desalination plants, industrial RO systems, and water treatment facilities across Oman.',
+        applications: [
+          'RO membrane shutdown protection',
+          'Short-term membrane storage (up to 30 days)',
+          'Seasonal plant shutdown preservation',
+          'Prevention of biological growth during idle periods',
+          'Membrane transportation protection',
+          'Emergency shutdown membrane protection',
+          'Desalination plant standby mode',
+          'Industrial RO system preservation'
+        ],
+        technicalSpecs: [
+          'Preservative concentration: 1-2% solution',
+          'Protection duration: Up to 30 days',
+          'Prevents biological growth and scaling',
+          'pH: 3-5 (slightly acidic)',
+          'Food-grade formulation available',
+          'Easy drain and restart procedure',
+          'Available in 25kg, 200kg drums, IBCs'
+        ]
       },
     },
     {
@@ -4537,8 +4760,28 @@ export const products: Product[] = [
       details: {
         formula: 'C6H8O7',
         casNumber: '77-92-9',
-        alternativeNames: ['Citric acid solution', 'Membrane descaler', 'RO cleaner'],
-        seoKeywords: ['citric acid RO Oman', 'membrane descaler Muscat', 'RO cleaning Oman'],
+        alternativeNames: ['Citric acid solution', 'Membrane descaler', 'RO cleaner', 'Organic acid RO cleaner', 'Citric acid membrane cleaner'],
+        seoKeywords: ['citric acid RO Oman', 'membrane descaler Muscat', 'RO cleaning Oman', 'citric acid membrane cleaner Sohar', 'RO descaling Oman'],
+        longDescription: 'Citric Acid Liquid for RO Membranes supplier in Oman - Global Chemicals LLC provides organic acid cleaning solutions for reverse osmosis membrane descaling in Muscat, Sohar, Duqm, Salalah. Our citric acid formulation effectively removes carbonate scale, calcium deposits, iron fouling, and mineral buildup from RO and NF membranes. The biodegradable organic acid provides safer, environmentally-friendly cleaning compared to mineral acids. Essential for maintaining membrane performance, restoring flux rates, and extending membrane life. Citric acid offers excellent chelating properties for iron and calcium removal without aggressive corrosion. The pH-buffered formulation ensures gentle yet effective cleaning. Ideal for food & beverage, pharmaceutical, and environmentally-sensitive applications. Widely used in desalination plants, industrial water treatment, and RO facilities across Oman.',
+        applications: [
+          'RO membrane carbonate scale removal',
+          'Calcium and magnesium deposit cleaning',
+          'Iron fouling removal from membranes',
+          'NF membrane descaling',
+          'Food-grade RO system cleaning',
+          'Pharmaceutical water system maintenance',
+          'Environmentally-friendly membrane cleaning',
+          'Flux restoration treatments'
+        ],
+        technicalSpecs: [
+          'Citric acid concentration: 2-3%',
+          'pH: 3-4 (buffered formulation)',
+          'Biodegradable organic acid',
+          'Cleaning cycle: 1-4 hours circulation',
+          'Temperature: 35-40°C for best results',
+          'Food-grade formulation available',
+          'Available in 25kg, 200kg drums, IBCs'
+        ]
       },
     },
     {
@@ -4548,8 +4791,28 @@ export const products: Product[] = [
       category: 'ro-chemicals',
       icon: Droplets,
       details: {
-        alternativeNames: ['RO descaler', 'Membrane descaling solution', 'Scale remover RO'],
-        seoKeywords: ['RO 222 descaler Oman', 'RO membrane cleaner Muscat', 'scale remover Oman'],
+        alternativeNames: ['RO descaler', 'Membrane descaling solution', 'Scale remover RO', 'RO 222 cleaner', 'Membrane scale remover'],
+        seoKeywords: ['RO 222 descaler Oman', 'RO membrane cleaner Muscat', 'scale remover Oman', 'membrane descaling Sohar', 'RO 222 Oman'],
+        longDescription: 'RO 222 Descaler supplier in Oman - Global Chemicals LLC provides specialized RO membrane descaling solutions for reverse osmosis and nanofiltration systems in Muscat, Sohar, Duqm, Salalah. Our RO 222 formulation is specifically designed to remove stubborn scale deposits including calcium carbonate, calcium sulfate, barium sulfate, and silica from membrane surfaces. The balanced acid formulation provides effective cleaning without damaging membrane integrity. Essential for restoring flux rates, improving salt rejection, and extending membrane operational life. The descaler penetrates scale layers, dissolving deposits and restoring membrane permeability. Suitable for all polyamide and composite membranes. Regular descaling maintenance prevents permanent fouling and ensures optimal RO system performance. Widely used across Oman\'s desalination, industrial water treatment, and beverage production facilities.',
+        applications: [
+          'Heavy scale removal from RO membranes',
+          'Calcium carbonate and sulfate scale dissolution',
+          'Barium sulfate and silica scale removal',
+          'Membrane flux restoration',
+          'Salt rejection improvement',
+          'Preventive descaling maintenance',
+          'Desalination plant membrane cleaning',
+          'Industrial RO system maintenance'
+        ],
+        technicalSpecs: [
+          'Formulation: Balanced acid blend with inhibitors',
+          'Typical dosage: 2-5% solution',
+          'pH: 2-3 (acidic formulation)',
+          'Cleaning time: 2-6 hours circulation',
+          'Temperature: Ambient to 40°C',
+          'Safe for polyamide membranes',
+          'Available in 25kg, 200kg drums, IBCs'
+        ]
       },
     },
     {
@@ -4561,8 +4824,28 @@ export const products: Product[] = [
       details: {
         formula: 'NaOH',
         casNumber: '1310-73-2',
-        alternativeNames: ['Alkaline RO cleaner', 'Caustic membrane cleaner', 'Sodium hydroxide cleaner'],
-        seoKeywords: ['alkaline RO cleaner Oman', 'membrane cleaner Muscat', 'caustic cleaner Oman'],
+        alternativeNames: ['Alkaline RO cleaner', 'Caustic membrane cleaner', 'Sodium hydroxide cleaner', 'Alkaline membrane wash', 'High pH RO cleaner'],
+        seoKeywords: ['alkaline RO cleaner Oman', 'membrane cleaner Muscat', 'caustic cleaner Oman', 'sodium hydroxide RO Sohar', 'alkaline membrane cleaner Oman'],
+        longDescription: 'Alkaline RO Membrane Cleaner supplier in Oman - Global Chemicals LLC provides sodium hydroxide-based cleaning solutions for removing organic fouling and biological growth from RO membranes in Muscat, Sohar, Duqm, Salalah. Our alkaline cleaner effectively removes oils, greases, biological slimes, organic matter, and silica deposits from membrane surfaces. The high pH formulation saponifies fats and oils, disperses biofilms, and solubilizes organic foulants that acid cleaners cannot remove. Essential for comprehensive two-stage cleaning (alkaline followed by acid) to restore membrane performance. The formulation includes surfactants and dispersants to enhance cleaning efficiency. Safe for polyamide membranes when used according to specifications. Widely used in desalination plants, wastewater RO, and industrial membrane systems across Oman.',
+        applications: [
+          'Organic fouling removal from RO membranes',
+          'Biological slime and biofilm cleaning',
+          'Oil and grease deposit removal',
+          'Silica fouling treatment',
+          'Two-stage membrane cleaning programs',
+          'Wastewater RO membrane maintenance',
+          'Industrial RO organic fouling control',
+          'Desalination membrane cleaning'
+        ],
+        technicalSpecs: [
+          'Active ingredient: Sodium hydroxide 0.1-0.5%',
+          'pH: 11-12 (highly alkaline)',
+          'Cleaning cycle: 1-2 hours',
+          'Temperature: 30-35°C maximum',
+          'Compatible with polyamide membranes',
+          'Includes surfactants and dispersants',
+          'Available in 25kg, 200kg drums, IBCs'
+        ]
       },
     },
     {
@@ -4572,8 +4855,28 @@ export const products: Product[] = [
       category: 'ro-chemicals',
       icon: Droplets,
       details: {
-        alternativeNames: ['RO membrane cleaner', 'Membrane cleaning solution', 'RO maintenance chemical'],
-        seoKeywords: ['membrane cleaner Oman', 'RO cleaning Muscat', 'membrane maintenance Oman'],
+        alternativeNames: ['RO membrane cleaner', 'Membrane cleaning solution', 'RO maintenance chemical', 'All-purpose membrane cleaner', 'Universal RO cleaner'],
+        seoKeywords: ['membrane cleaner Oman', 'RO cleaning Muscat', 'membrane maintenance Oman', 'RO cleaner Sohar', 'membrane restoration Oman'],
+        longDescription: 'Universal Membrane Cleaner supplier in Oman - Global Chemicals LLC provides comprehensive RO membrane cleaning solutions for reverse osmosis and ultrafiltration systems in Muscat, Sohar, Duqm, Salalah. Our all-purpose membrane cleaner effectively removes mixed fouling including scale, organics, biofilms, and particulate matter in a single cleaning step. The balanced formulation combines chelating agents, surfactants, and pH buffers for versatile cleaning performance. Essential for routine preventive maintenance, emergency flux restoration, and general membrane care. The cleaner penetrates fouling layers, lifts deposits, and disperses contaminants for easy removal. Reduces downtime by eliminating multi-step cleaning procedures. Safe for all thin-film composite membranes. Widely used in municipal water treatment, industrial RO, and desalination facilities across Oman for maintaining optimal membrane performance.',
+        applications: [
+          'Routine RO membrane cleaning',
+          'Mixed fouling removal',
+          'Preventive maintenance programs',
+          'Flux restoration treatments',
+          'Emergency membrane cleaning',
+          'UF and MF membrane maintenance',
+          'Desalination system cleaning',
+          'Industrial water treatment RO care'
+        ],
+        technicalSpecs: [
+          'All-in-one cleaning formulation',
+          'Typical dosage: 1-3% solution',
+          'pH: 4-10 (neutral to mildly alkaline)',
+          'Cleaning cycle: 1-3 hours',
+          'Temperature: Ambient to 40°C',
+          'Compatible with all composite membranes',
+          'Available in 25kg, 200kg drums, IBCs'
+        ]
       },
     },
     {
@@ -4583,8 +4886,28 @@ export const products: Product[] = [
       category: 'ro-chemicals',
       icon: Droplets,
       details: {
-        alternativeNames: ['RO antiscalant', 'Scale inhibitor', 'Membrane antiscalant'],
-        seoKeywords: ['antiscalant RO Oman', 'scale inhibitor Muscat', 'RO antiscalant Oman'],
+        alternativeNames: ['RO antiscalant', 'Scale inhibitor', 'Membrane antiscalant', 'RO scale preventive', 'Membrane scale inhibitor'],
+        seoKeywords: ['antiscalant RO Oman', 'scale inhibitor Muscat', 'RO antiscalant Oman', 'membrane antiscalant Sohar', 'scale prevention RO Oman'],
+        longDescription: 'RO Antiscalant supplier in Oman - Global Chemicals LLC provides high-performance scale inhibitors for reverse osmosis membrane protection in Muscat, Sohar, Duqm, Salalah. Our RO antiscalant prevents formation of calcium carbonate, calcium sulfate, barium sulfate, strontium sulfate, and silica scales on membrane surfaces. The advanced polymer formulation controls scale formation, extends cleaning intervals, and maintains consistent membrane performance. Essential for high-recovery RO systems, brackish water treatment, and challenging feed water conditions. The antiscalant disperses particles, inhibits crystal growth, and prevents membrane scaling. Reduces chemical cleaning frequency, lowers operating costs, and extends membrane life. Suitable for all standard polyamide membranes. Widely used in desalination, industrial water treatment, and municipal RO facilities across Oman.',
+        applications: [
+          'RO membrane scale prevention',
+          'High-recovery desalination systems',
+          'Brackish water RO treatment',
+          'Sea water RO pretreatment',
+          'Industrial process water RO',
+          'Municipal drinking water RO',
+          'Wastewater RO systems',
+          'Membrane life extension programs'
+        ],
+        technicalSpecs: [
+          'Active ingredients: Phosphonates and polymers',
+          'Dosage: 2-5 ppm in RO feed water',
+          'Effective pH range: 3-10',
+          'Maximum scaling index: LSI +2.8',
+          'Compatible with chlorine and coagulants',
+          'NSF/ANSI 60 certified (drinking water)',
+          'Available in 25kg, 200kg drums, IBCs'
+        ]
       },
     },
     {
@@ -4594,8 +4917,28 @@ export const products: Product[] = [
       category: 'ro-chemicals',
       icon: Droplets,
       details: {
-        alternativeNames: ['Alkaline membrane cleaner', 'Alka cleaner', 'Organic fouling remover'],
-        seoKeywords: ['membrane alka cleaner Oman', 'alkaline cleaner Muscat', 'fouling remover Oman'],
+        alternativeNames: ['Alkaline membrane cleaner', 'Alka cleaner', 'Organic fouling remover', 'High pH membrane cleaner', 'Biological fouling cleaner'],
+        seoKeywords: ['membrane alka cleaner Oman', 'alkaline cleaner Muscat', 'fouling remover Oman', 'alka cleaner RO Sohar', 'organic fouling removal Oman'],
+        longDescription: 'Membrane Alka Cleaner supplier in Oman - Global Chemicals LLC provides alkaline cleaning formulations for RO and UF membrane organic fouling removal in Muscat, Sohar, Duqm, Salalah. Our Alka Cleaner targets stubborn organic deposits, biofilms, natural organic matter (NOM), humic substances, and proteinaceous fouling on membrane surfaces. The optimized alkaline blend includes surfactants, chelating agents, and dispersants for maximum cleaning efficiency. Essential for surface water RO systems, wastewater treatment membranes, and applications with high organic loading. The formulation penetrates biofilm matrices, solubilizes organic compounds, and prevents redeposition. Regular alkaline cleaning maintains membrane permeability and prevents irreversible fouling. Safe for thin-film composite membranes when used properly. Widely used in municipal water treatment, industrial process water, and wastewater RO facilities across Oman.',
+        applications: [
+          'Organic fouling removal from RO membranes',
+          'Biofilm and biological slime cleaning',
+          'Natural organic matter (NOM) removal',
+          'Proteinaceous fouling treatment',
+          'Surface water RO membrane maintenance',
+          'Wastewater RO membrane cleaning',
+          'UF and MF membrane organic fouling control',
+          'Two-stage cleaning alkaline phase'
+        ],
+        technicalSpecs: [
+          'pH: 11-12 (alkaline formulation)',
+          'Typical dosage: 0.5-2% solution',
+          'Cleaning time: 30-60 minutes',
+          'Temperature: 25-35°C',
+          'Contains surfactants and chelating agents',
+          'Safe for polyamide membranes',
+          'Available in 25kg, 200kg drums, IBCs'
+        ]
       },
     },
     {
@@ -4605,8 +4948,28 @@ export const products: Product[] = [
       category: 'ro-chemicals',
       icon: Droplets,
       details: {
-        alternativeNames: ['Advanced antiscalant', 'Scale preventive', 'RO scale inhibitor'],
-        seoKeywords: ['membrane antiscalant Oman', 'advanced antiscalant Muscat', 'scale prevention Oman'],
+        alternativeNames: ['Advanced antiscalant', 'Scale preventive', 'RO scale inhibitor', 'Premium antiscalant', 'High-performance scale inhibitor'],
+        seoKeywords: ['membrane antiscalant Oman', 'advanced antiscalant Muscat', 'scale prevention Oman', 'premium antiscalant Sohar', 'RO scale inhibitor Oman'],
+        longDescription: 'Advanced Membrane Antiscalant supplier in Oman - Global Chemicals LLC provides premium scale inhibitors for demanding RO membrane applications in Muscat, Sohar, Duqm, Salalah. Our advanced antiscalant formulation offers superior protection against calcium carbonate, calcium sulfate, barium sulfate, strontium sulfate, silica, and iron deposits. The state-of-the-art polymer technology provides maximum scale inhibition even in high-recovery systems and challenging water chemistry. Essential for sea water desalination, high-hardness brackish water, and extreme operating conditions. The formulation includes dispersants to prevent particle agglomeration and fouling. Enables higher system recovery rates, reduces chemical cleaning frequency, and maximizes membrane life. Compatible with all major membrane brands. Widely used in large-scale desalination, industrial RO, and high-performance water treatment systems across Oman.',
+        applications: [
+          'Sea water reverse osmosis (SWRO)',
+          'High-recovery RO systems (>85%)',
+          'High-hardness brackish water treatment',
+          'Difficult water chemistry applications',
+          'Large-scale desalination plants',
+          'Industrial high-TDS water treatment',
+          'Maximum recovery RO operations',
+          'Challenging scale-forming conditions'
+        ],
+        technicalSpecs: [
+          'Advanced polymer and phosphonate blend',
+          'Dosage: 3-8 ppm depending on water quality',
+          'Effective pH range: 3-11',
+          'Maximum LSI: +3.0',
+          'Silica scale inhibition up to 200 ppm',
+          'NSF/ANSI 60 certified',
+          'Available in 25kg, 200kg drums, IBCs, bulk'
+        ]
       },
     },
 
@@ -4618,8 +4981,28 @@ export const products: Product[] = [
       category: 'cooling-water',
       icon: Droplets,
       details: {
-        alternativeNames: ['Closed loop inhibitor', 'Chiller corrosion inhibitor', 'Closed system treatment'],
-        seoKeywords: ['corrosion inhibitor closed loop Oman', 'chiller treatment Muscat', 'closed system Oman'],
+        alternativeNames: ['Closed loop inhibitor', 'Chiller corrosion inhibitor', 'Closed system treatment', 'Closed circuit inhibitor', 'Chiller protection chemical'],
+        seoKeywords: ['corrosion inhibitor closed loop Oman', 'chiller treatment Muscat', 'closed system Oman', 'closed circuit inhibitor Sohar', 'chiller corrosion Oman'],
+        longDescription: 'Closed Loop Corrosion Inhibitor supplier in Oman - Global Chemicals LLC provides specialized corrosion protection for closed-loop cooling systems, chillers, and HVAC applications in Muscat, Sohar, Duqm, Salalah. Our closed loop inhibitor formulation provides long-term corrosion protection for multi-metal systems including steel, copper, aluminum, and stainless steel. The product forms protective films on metal surfaces, prevents galvanic corrosion, and maintains system efficiency. Essential for chilled water systems, district cooling, process cooling loops, and heat pump applications. The inhibitor maintains stable pH, prevents scale formation, and eliminates the need for frequent makeup water. One-time charge provides season-long or multi-year protection. Widely used in commercial buildings, data centers, manufacturing facilities, and district cooling plants across Oman.',
+        applications: [
+          'Chilled water system protection',
+          'District cooling corrosion control',
+          'HVAC closed-loop treatment',
+          'Process cooling loop protection',
+          'Heat pump systems',
+          'Data center cooling systems',
+          'Multi-metal system protection',
+          'Long-term corrosion prevention'
+        ],
+        technicalSpecs: [
+          'Multi-metal corrosion inhibitor blend',
+          'Dosage: 1-5% initial charge',
+          'pH control: Maintains 8.5-10.0',
+          'Protection duration: 1-3 years',
+          'Prevents galvanic corrosion',
+          'Includes scale inhibitor',
+          'Available in 25kg, 200kg drums, IBCs'
+        ]
       },
     },
     {
@@ -4630,8 +5013,28 @@ export const products: Product[] = [
       icon: Droplets,
       details: {
         casNumber: '7173-51-5',
-        alternativeNames: ['Algaecide', 'Algae inhibitor', 'Cooling tower algaecide'],
-        seoKeywords: ['algae control Oman', 'algaecide cooling tower Muscat', 'algae prevention Oman'],
+        alternativeNames: ['Algaecide', 'Algae inhibitor', 'Cooling tower algaecide', 'Algae prevention chemical', 'Non-oxidizing algaecide'],
+        seoKeywords: ['algae control Oman', 'algaecide cooling tower Muscat', 'algae prevention Oman', 'cooling tower algaecide Sohar', 'algae inhibitor Oman'],
+        longDescription: 'Algae Control solution supplier in Oman - Global Chemicals LLC provides effective algaecides for cooling towers, open recirculating systems, and industrial water systems in Muscat, Sohar, Duqm, Salalah. Our algae control formulation prevents and eliminates green algae, blue-green algae (cyanobacteria), and other photosynthetic organisms that reduce heat transfer efficiency and promote fouling. The non-oxidizing algaecide provides long-lasting protection without contributing to corrosion or scale formation. Essential for maintaining clean heat transfer surfaces, preventing slime formation, and ensuring optimal cooling tower performance. Algae control improves system efficiency, reduces biofouling, and extends equipment life. Particularly important in Oman\'s sunny climate where algae growth is accelerated. Widely used in power plants, refineries, industrial facilities, and commercial cooling systems.',
+        applications: [
+          'Cooling tower algae prevention',
+          'Open recirculating system treatment',
+          'Heat exchanger fouling prevention',
+          'Green algae elimination',
+          'Blue-green algae (cyanobacteria) control',
+          'Fill media algae prevention',
+          'Basin and sump algae treatment',
+          'Slime and biofilm prevention'
+        ],
+        technicalSpecs: [
+          'Type: Non-oxidizing quaternary compound',
+          'Dosage: 10-50 ppm initial, 5-10 ppm maintenance',
+          'Effective against: Green and blue-green algae',
+          'pH range: 6-9',
+          'Compatible with corrosion inhibitors',
+          'Long-lasting residual activity',
+          'Available in 25kg, 200kg drums, IBCs'
+        ]
       },
     },
     {
@@ -4641,8 +5044,28 @@ export const products: Product[] = [
       category: 'cooling-water',
       icon: Droplets,
       details: {
-        alternativeNames: ['Biofouling control', 'Biological inhibitor', 'Antifouling biocide'],
-        seoKeywords: ['biological guard Oman', 'antifouling Muscat', 'biofouling control Oman'],
+        alternativeNames: ['Biofouling control', 'Biological inhibitor', 'Antifouling biocide', 'Biofilm control', 'Microbial fouling prevention'],
+        seoKeywords: ['biological guard Oman', 'antifouling Muscat', 'biofouling control Oman', 'biofilm control Sohar', 'microbial prevention Oman'],
+        longDescription: 'Biological Guard Antifouling supplier in Oman - Global Chemicals LLC provides broad-spectrum biocides for controlling biological fouling in cooling water systems in Muscat, Sohar, Duqm, Salalah. Our Biological Guard formulation prevents and eliminates bacteria, algae, fungi, and biofilm formation in cooling towers, heat exchangers, and recirculating water systems. The powerful biocide maintains clean heat transfer surfaces, prevents microbiologically-influenced corrosion (MIC), and ensures optimal system efficiency. Essential for protecting against Legionella bacteria, controlling slime-forming organisms, and preventing biofouling in warm water conditions. The product provides rapid kill rates and residual protection. Suitable for oxidizing and non-oxidizing biocide programs. Widely used in power plants, refineries, petrochemical facilities, and commercial cooling systems across Oman.',
+        applications: [
+          'Cooling tower biological control',
+          'Biofilm prevention in heat exchangers',
+          'Legionella bacteria control',
+          'Slime-forming organism elimination',
+          'Microbiologically-influenced corrosion (MIC) prevention',
+          'Open recirculating system biocide',
+          'Process cooling water treatment',
+          'Industrial cooling system protection'
+        ],
+        technicalSpecs: [
+          'Broad-spectrum biocide formulation',
+          'Dosage: 25-100 ppm shock, 10-25 ppm continuous',
+          'Rapid kill rate: <30 minutes',
+          'Effective against: Bacteria, algae, fungi',
+          'pH range: 6-9',
+          'Residual activity: 3-7 days',
+          'Available in 25kg, 200kg drums, IBCs'
+        ]
       },
     },
     {
@@ -4652,8 +5075,28 @@ export const products: Product[] = [
       category: 'cooling-water',
       icon: Droplets,
       details: {
-        alternativeNames: ['Microbiocide', 'Microbial control', 'Cooling tower biocide'],
-        seoKeywords: ['microbiocide Oman', 'cooling tower biocide Muscat', 'microbial control Oman'],
+        alternativeNames: ['Microbiocide', 'Microbial control', 'Cooling tower biocide', 'Bacteria killer', 'Microbial inhibitor'],
+        seoKeywords: ['microbiocide Oman', 'cooling tower biocide Muscat', 'microbial control Oman', 'bacteria control cooling tower Sohar', 'micro biocide Oman'],
+        longDescription: 'Micro Biocide for Cooling Water supplier in Oman - Global Chemicals LLC provides powerful microbiocides for microbial control in cooling tower systems in Muscat, Sohar, Duqm, Salalah. Our Micro Biocid formulation delivers rapid kill of bacteria, algae, and fungi in cooling water, preventing biofilm formation and maintaining system cleanliness. The broad-spectrum biocide is effective against aerobic and anaerobic bacteria, controlling microbial growth that causes fouling, corrosion, and efficiency losses. Essential for preventing Legionella proliferation, eliminating slime deposits, and maintaining heat transfer efficiency. The fast-acting formula provides quick microorganism knockdown with residual protection. Compatible with most cooling water treatment programs. Widely used in refineries, power generation, petrochemical plants, and industrial cooling applications across Oman.',
+        applications: [
+          'Cooling tower microbiological control',
+          'Bacteria and algae elimination',
+          'Legionella control and prevention',
+          'Biofilm removal and prevention',
+          'Slime deposit control',
+          'Heat exchanger biofouling prevention',
+          'Recirculating water microbial treatment',
+          'Cooling system efficiency maintenance'
+        ],
+        technicalSpecs: [
+          'Broad-spectrum non-oxidizing biocide',
+          'Dosage: 50-150 ppm shock treatment',
+          'Maintenance: 15-30 ppm',
+          'Kill time: 15-30 minutes',
+          'Effective pH range: 6-9.5',
+          'Compatible with inhibitor programs',
+          'Available in 25kg, 200kg drums, IBCs'
+        ]
       },
     },
     {
@@ -4663,8 +5106,28 @@ export const products: Product[] = [
       category: 'cooling-water',
       icon: Droplets,
       details: {
-        alternativeNames: ['Broad spectrum biocide', 'Cooling water biocide', 'Antimicrobial agent'],
-        seoKeywords: ['biocide cooling water Oman', 'antimicrobial Muscat', 'cooling tower biocide Oman'],
+        alternativeNames: ['Broad spectrum biocide', 'Cooling water biocide', 'Antimicrobial agent', 'Universal biocide', 'Multi-target biocide'],
+        seoKeywords: ['biocide cooling water Oman', 'antimicrobial Muscat', 'cooling tower biocide Oman', 'broad spectrum biocide Sohar', 'water treatment biocide Oman'],
+        longDescription: 'Broad-Spectrum Biocide for Cooling Water supplier in Oman - Global Chemicals LLC provides comprehensive antimicrobial solutions for cooling tower and recirculating water systems in Muscat, Sohar, Duqm, Salalah. Our broad-spectrum biocide effectively controls bacteria, algae, fungi, and slime-forming organisms in cooling water applications. The multi-target formulation provides rapid microorganism kill, prevents biofilm formation, and maintains system cleanliness. Essential for controlling microbial-induced fouling, preventing microbiologically-influenced corrosion (MIC), and ensuring optimal heat transfer. The biocide works synergistically with oxidizing treatments for comprehensive biological control. Suitable for industrial, commercial, and power generation cooling systems. Provides residual antimicrobial protection between treatments. Widely used across all industries in Oman requiring reliable cooling water microbial control.',
+        applications: [
+          'Cooling tower comprehensive microbial control',
+          'Broad-spectrum bacteria elimination',
+          'Algae and fungi control',
+          'Biofilm prevention and removal',
+          'MIC (microbiologically-influenced corrosion) prevention',
+          'Industrial cooling water treatment',
+          'Power plant cooling systems',
+          'Process cooling water biocide programs'
+        ],
+        technicalSpecs: [
+          'Multi-target broad-spectrum activity',
+          'Dosage: 30-100 ppm depending on contamination',
+          'Rapid kill action',
+          'Effective pH: 6-9',
+          'Residual activity: 3-5 days',
+          'Compatible with oxidizing biocides',
+          'Available in 25kg, 200kg drums, IBCs'
+        ]
       },
     },
     {
@@ -4674,8 +5137,28 @@ export const products: Product[] = [
       category: 'cooling-water',
       icon: Droplets,
       details: {
-        alternativeNames: ['Boiler hardness control', 'Scale inhibitor boiler', 'Water hardness treatment'],
-        seoKeywords: ['hardness control Oman', 'boiler treatment Muscat', 'scale control Oman'],
+        alternativeNames: ['Boiler hardness control', 'Scale inhibitor boiler', 'Water hardness treatment', 'Boiler water softener', 'Hardness precipitation chemical'],
+        seoKeywords: ['hardness control Oman', 'boiler treatment Muscat', 'scale control Oman', 'boiler water treatment Sohar', 'hardness inhibitor Oman'],
+        longDescription: 'Hardness Control Boiler Treatment supplier in Oman - Global Chemicals LLC provides water hardness control chemicals for boiler and cooling systems in Muscat, Sohar, Duqm, Salalah. Our hardness control formulation prevents scale formation by sequestering calcium and magnesium ions, preventing their precipitation as hard scale deposits. The chelating and dispersing agents keep hardness minerals suspended in solution, allowing blowdown removal. Essential for boilers, cooling towers, and industrial water systems with high hardness feed water. Prevents scale buildup on heat transfer surfaces, maintains thermal efficiency, and extends equipment life. The treatment reduces energy consumption, prevents tube failures, and minimizes maintenance. Compatible with corrosion inhibitors and biocides. Widely used in power plants, industrial boilers, and process water systems across Oman.',
+        applications: [
+          'Boiler water scale prevention',
+          'Cooling tower hardness control',
+          'Industrial water system treatment',
+          'Calcium and magnesium sequestration',
+          'Heat transfer surface protection',
+          'Energy efficiency maintenance',
+          'Tube and pipe scale prevention',
+          'Process water hardness control'
+        ],
+        technicalSpecs: [
+          'Active ingredients: Phosphonates and polymers',
+          'Dosage: 5-20 ppm depending on hardness',
+          'Effective pH: 7-10',
+          'Prevents CaCO3 and CaSO4 scale',
+          'Disperses calcium and magnesium',
+          'Compatible with boiler treatment programs',
+          'Available in 25kg, 200kg drums, IBCs'
+        ]
       },
     },
     {
@@ -4685,8 +5168,28 @@ export const products: Product[] = [
       category: 'cooling-water',
       icon: Droplets,
       details: {
-        alternativeNames: ['Chiller biocide', 'Closed loop biocide', 'Chiller water treatment'],
-        seoKeywords: ['chiller biocide Oman', 'closed loop treatment Muscat', 'chiller water biocide Oman'],
+        alternativeNames: ['Chiller biocide', 'Closed loop biocide', 'Chiller water treatment', 'Closed system biocide', 'Chiller antimicrobial'],
+        seoKeywords: ['chiller biocide Oman', 'closed loop treatment Muscat', 'chiller water biocide Oman', 'closed system biocide Sohar', 'chiller antimicrobial Oman'],
+        longDescription: 'Closed Loop Chiller Biocide supplier in Oman - Global Chemicals LLC provides specialized biocides for microbiological control in closed-loop chiller systems in Muscat, Sohar, Duqm, Salalah. Our chiller biocide formulation prevents bacterial contamination, biofilm formation, and microbial-induced fouling in closed chilled water circuits. Even in closed systems, bacteria can proliferate from makeup water introduction and create slime, reduce heat transfer, and cause microbiologically-influenced corrosion. Essential for maintaining system efficiency, preventing biological contamination, and ensuring long-term system reliability. The biocide provides season-long protection with minimal dosing requirements. Particularly important for systems with poor makeup water quality or outdoor cooling towers. Widely used in HVAC systems, data centers, process cooling, and district cooling facilities across Oman.',
+        applications: [
+          'Closed chilled water system treatment',
+          'HVAC chiller biological control',
+          'Data center cooling system protection',
+          'Process chiller biocide treatment',
+          'District cooling closed-loop control',
+          'Biofilm prevention in chillers',
+          'MIC prevention in closed circuits',
+          'Long-term microbial control'
+        ],
+        technicalSpecs: [
+          'Non-oxidizing biocide formulation',
+          'Dosage: 50-100 ppm initial, 10-25 ppm maintenance',
+          'Protection duration: 90-180 days',
+          'pH range: 8-10',
+          'Compatible with corrosion inhibitors',
+          'Low toxicity formulation',
+          'Available in 25kg drums, IBCs'
+        ]
       },
     },
     {
@@ -4696,8 +5199,28 @@ export const products: Product[] = [
       category: 'cooling-water',
       icon: Droplets,
       details: {
-        alternativeNames: ['Cooling water inhibitor', 'Corrosion treatment', 'Cooling tower inhibitor'],
-        seoKeywords: ['cooling water corrosion inhibitor Oman', 'corrosion treatment Muscat', 'cooling tower Oman'],
+        alternativeNames: ['Cooling water inhibitor', 'Corrosion treatment', 'Cooling tower inhibitor', 'CWT corrosion inhibitor', 'Open system inhibitor'],
+        seoKeywords: ['cooling water corrosion inhibitor Oman', 'corrosion treatment Muscat', 'cooling tower Oman', 'open system inhibitor Sohar', 'CWT inhibitor Oman'],
+        longDescription: 'Cooling Water Corrosion Inhibitor supplier in Oman - Global Chemicals LLC provides specialized corrosion control chemicals for open recirculating cooling systems in Muscat, Sohar, Duqm, Salalah. Our Cool Water Treat formulation protects multi-metal systems including carbon steel, stainless steel, copper alloys, and aluminum from corrosion in cooling towers and heat exchangers. The balanced inhibitor package forms protective films, passivates metal surfaces, and prevents galvanic corrosion in mixed-metal systems. Essential for maintaining system integrity, preventing leaks, and extending equipment life. The formulation includes scale and deposit control agents for comprehensive water treatment. Reduces corrosion rates by 90%+ when properly applied. Compatible with biocides and dispersants. Widely used in refineries, power plants, petrochemical facilities, and industrial cooling systems across Oman.',
+        applications: [
+          'Cooling tower corrosion protection',
+          'Multi-metal system corrosion control',
+          'Heat exchanger protection',
+          'Open recirculating system treatment',
+          'Carbon steel corrosion prevention',
+          'Copper and brass protection',
+          'Galvanic corrosion prevention',
+          'Industrial cooling water treatment'
+        ],
+        technicalSpecs: [
+          'Multi-metal corrosion inhibitor blend',
+          'Dosage: 20-100 ppm depending on system',
+          'pH control range: 7.5-9.0',
+          'Includes scale and deposit control',
+          'Reduces corrosion rates >90%',
+          'Compatible with oxidizing biocides',
+          'Available in 25kg, 200kg drums, IBCs, bulk'
+        ]
       },
     },
     {
@@ -4707,8 +5230,28 @@ export const products: Product[] = [
       category: 'cooling-water',
       icon: Droplets,
       details: {
-        alternativeNames: ['All-in-one treatment', 'Cooling water treatment', 'Complete water treatment'],
-        seoKeywords: ['Altreat 4000 Oman', 'cooling water treatment Muscat', 'all-in-one treatment Oman'],
+        alternativeNames: ['All-in-one treatment', 'Cooling water treatment', 'Complete water treatment', 'Altreat program', 'Single-product treatment'],
+        seoKeywords: ['Altreat 4000 Oman', 'cooling water treatment Muscat', 'all-in-one treatment Oman', 'complete cooling treatment Sohar', 'single product treatment Oman'],
+        longDescription: 'Altreat 4000 supplier in Oman - Global Chemicals LLC provides all-in-one cooling water treatment programs for comprehensive system protection in Muscat, Sohar, Duqm, Salalah. Our Altreat 4000 combines corrosion inhibition, scale control, and deposit prevention in a single product, simplifying chemical feed and reducing inventory. The advanced formulation protects multi-metal systems, prevents scale formation, disperses suspended solids, and maintains system cleanliness. Essential for small to medium cooling systems requiring simplified treatment without multiple chemical feeds. The all-in-one approach reduces operator complexity, minimizes chemical handling, and ensures balanced treatment. Provides cost-effective protection for cooling towers, closed loops, and once-through systems. Ideal for commercial buildings, manufacturing facilities, and operations preferring simplified chemical programs. Widely used across Oman for efficient, economical cooling water treatment.',
+        applications: [
+          'Simplified cooling tower treatment',
+          'Single-product cooling water programs',
+          'Small to medium cooling system protection',
+          'Commercial building HVAC treatment',
+          'Manufacturing facility cooling',
+          'Reduced inventory operations',
+          'Operator-friendly treatment programs',
+          'Cost-effective comprehensive protection'
+        ],
+        technicalSpecs: [
+          'All-in-one: Corrosion + scale + deposit control',
+          'Dosage: 50-150 ppm',
+          'Multi-metal protection',
+          'pH control: 7.5-9.0',
+          'Single feed point simplicity',
+          'Reduces chemical inventory',
+          'Available in 25kg, 200kg drums, IBCs'
+        ]
       },
     },
     {
@@ -4718,8 +5261,28 @@ export const products: Product[] = [
       category: 'cooling-water',
       icon: Droplets,
       details: {
-        alternativeNames: ['Corrosion guard', 'Dual action inhibitor', 'Antifouling inhibitor'],
-        seoKeywords: ['corro guard Oman', 'antifoulant Muscat', 'corrosion inhibitor Oman'],
+        alternativeNames: ['Corrosion guard', 'Dual action inhibitor', 'Antifouling inhibitor', 'Corro guard treatment', 'Combined inhibitor-dispersant'],
+        seoKeywords: ['corro guard Oman', 'antifoulant Muscat', 'corrosion inhibitor Oman', 'dual action treatment Sohar', 'antifouling cooling water Oman'],
+        longDescription: 'Corro Guard Antifoulant supplier in Oman - Global Chemicals LLC provides dual-action corrosion and fouling control for cooling water systems in Muscat, Sohar, Duqm, Salalah. Our Corro Guard formulation combines corrosion inhibition with antifouling properties, providing comprehensive protection in a single chemical. The product prevents metal corrosion while dispersing suspended solids, preventing scale formation, and controlling deposit buildup. Essential for cooling towers operating with challenging water quality, high particulate loading, or scaling conditions. The dual-action technology reduces chemical feed complexity and ensures balanced system protection. Provides cost-effective treatment by eliminating separate dispersant products. Maintains heat transfer efficiency and protects equipment integrity. Widely used in refineries, petrochemical plants, power generation, and industrial cooling applications across Oman.',
+        applications: [
+          'Cooling tower dual-action protection',
+          'Corrosion and fouling prevention',
+          'High-solids water treatment',
+          'Deposit control in cooling systems',
+          'Scale and silt dispersal',
+          'Multi-metal corrosion protection',
+          'Heat transfer efficiency maintenance',
+          'Simplified treatment programs'
+        ],
+        technicalSpecs: [
+          'Dual-action: Corrosion inhibitor + dispersant',
+          'Dosage: 30-100 ppm',
+          'Multi-metal protection',
+          'Disperses suspended solids',
+          'pH range: 7.0-9.0',
+          'Compatible with biocides',
+          'Available in 25kg, 200kg drums, IBCs'
+        ]
       },
     },
     {
@@ -4729,8 +5292,28 @@ export const products: Product[] = [
       category: 'cooling-water',
       icon: Droplets,
       details: {
-        alternativeNames: ['Antifoulant liquid', 'Fouling inhibitor', 'Scale dispersant'],
-        seoKeywords: ['antifouling liquid Oman', 'fouling control Muscat', 'scale dispersant Oman'],
+        alternativeNames: ['Antifoulant liquid', 'Fouling inhibitor', 'Scale dispersant', 'Deposit control chemical', 'Sludge dispersant'],
+        seoKeywords: ['antifouling liquid Oman', 'fouling control Muscat', 'scale dispersant Oman', 'deposit prevention Sohar', 'cooling tower antifoulant Oman'],
+        longDescription: 'Antifouling Liquid supplier in Oman - Global Chemicals LLC provides deposit control and fouling prevention chemicals for cooling water systems in Muscat, Sohar, Duqm, Salalah. Our antifouling liquid disperses suspended solids, prevents deposition on heat transfer surfaces, and keeps particulates in suspension for blowdown removal. The polymer and surfactant formulation prevents scale formation, controls silt and mud deposition, and maintains system cleanliness. Essential for cooling towers with high makeup water turbidity, industrial process cooling, or systems prone to fouling. The liquid format provides easy feed and consistent dosing. Antifouling treatment maintains heat transfer efficiency, reduces cleaning frequency, and prevents under-deposit corrosion. Widely used in power plants, refineries, and industrial facilities across Oman with challenging water quality.',
+        applications: [
+          'Cooling tower deposit prevention',
+          'Heat exchanger fouling control',
+          'Suspended solids dispersion',
+          'Silt and mud prevention',
+          'Particulate fouling control',
+          'Scale crystal dispersion',
+          'Under-deposit corrosion prevention',
+          'High-turbidity water treatment'
+        ],
+        technicalSpecs: [
+          'Dispersant and antifoulant formulation',
+          'Dosage: 10-50 ppm',
+          'Prevents scale and deposit formation',
+          'Disperses suspended solids',
+          'pH range: 6-9',
+          'Compatible with inhibitors and biocides',
+          'Available in 25kg, 200kg drums, IBCs'
+        ]
       },
     },
 
