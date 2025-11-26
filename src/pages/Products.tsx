@@ -2490,8 +2490,28 @@ export const products: Product[] = [
       category: 'oilfield',
       icon: Factory,
       details: {
-        alternativeNames: ['Corrosion preventive', 'Inhibitor', 'Anti-corrosion chemical'],
-        seoKeywords: ['corrosion inhibitor Oman', 'pipeline protection Muscat', 'corrosion prevention Oman'],
+        alternativeNames: ['Corrosion preventive', 'Inhibitor', 'Anti-corrosion chemical', 'Pipeline corrosion inhibitor', 'Corrosion control agent'],
+        seoKeywords: ['corrosion inhibitor Oman', 'pipeline protection Muscat', 'corrosion prevention Oman', 'anti-corrosion chemical Sohar', 'corrosion control oilfield Oman'],
+        longDescription: 'Corrosion Inhibitor supplier in Oman - Global Chemicals LLC provides advanced corrosion protection chemicals for oilfield pipelines, equipment, and production systems in Muscat, Sohar, Duqm, Salalah. Our corrosion inhibitors form protective films on metal surfaces, preventing corrosive attack from H2S, CO2, oxygen, and organic acids. Essential for protecting production tubing, flowlines, gathering systems, and processing equipment from sweet and sour corrosion. Available in various formulations including filming amines, phosphate esters, and imidazoline-based inhibitors for different operating conditions. The inhibitors provide cost-effective asset protection, reduce maintenance costs, and extend equipment life. Widely used in oil & gas production, water injection systems, and gathering pipelines across Oman for continuous corrosion control.',
+        applications: [
+          'Production tubing and casing protection',
+          'Flowline and gathering system corrosion control',
+          'Sweet and sour corrosion prevention',
+          'Water injection system treatment',
+          'Gas transmission pipeline protection',
+          'Processing equipment corrosion prevention',
+          'Downhole corrosion inhibition',
+          'Storage tank internal coating'
+        ],
+        technicalSpecs: [
+          'Types: Filming amine, phosphate ester, imidazoline',
+          'Typical dosage: 10-100 ppm continuous injection',
+          'Effective in sweet (CO2) and sour (H2S) environments',
+          'Temperature range: -20°C to 150°C',
+          'Compatible with most production chemicals',
+          'Available concentrated or pre-diluted',
+          'Packaging: 20L, 200L drums, IBCs, bulk'
+        ]
       },
     },
     {
@@ -3826,8 +3846,28 @@ export const products: Product[] = [
       category: 'tank-cleaners',
       icon: SprayCan,
       details: {
-        alternativeNames: ['Heavy carbon remover', 'Fouling remover', 'Carbon cleaner'],
-        seoKeywords: ['HCF remover Oman', 'carbon remover Muscat', 'fouling cleaner Oman'],
+        alternativeNames: ['Heavy carbon remover', 'Fouling remover', 'Carbon cleaner', 'HCF cleaner', 'Heavy carbon fouling remover'],
+        seoKeywords: ['HCF remover Oman', 'carbon remover Muscat', 'fouling cleaner Oman', 'heavy carbon cleaner Sohar', 'tank carbon remover Oman'],
+        longDescription: 'HCF (Heavy Carbon Fouling) Remover supplier in Oman - Global Chemicals LLC provides powerful cleaning solutions for removing heavy carbon deposits, coke, and fouling from storage tanks, vessels, and industrial equipment in Muscat, Sohar, Duqm, Salalah. Our HCF remover effectively dissolves stubborn carbon buildup, polymerized residues, and baked-on deposits from crude oil tanks, fuel storage tanks, and process vessels. The specialized formulation penetrates deeply into carbon layers, breaking molecular bonds for complete removal. Essential for tank maintenance, turnaround operations, and restoring equipment efficiency. Reduces manual labor, shortens cleaning time, and eliminates the need for high-pressure jetting in many applications. Widely used in refineries, petrochemical plants, terminals, and marine operations across Oman.',
+        applications: [
+          'Crude oil storage tank carbon removal',
+          'Fuel tank heavy deposit cleaning',
+          'Process vessel fouling removal',
+          'Heat exchanger carbon cleaning',
+          'Refinery turnaround maintenance',
+          'Marine cargo tank cleaning',
+          'Bunker tank carbon removal',
+          'Industrial equipment decontamination'
+        ],
+        technicalSpecs: [
+          'Appearance: Amber to brown liquid',
+          'pH: 11-13 (alkaline formulation)',
+          'Penetration time: 2-24 hours depending on deposit',
+          'Dilution: Use concentrated or dilute 1:3',
+          'Effective temperature: 40-80°C for best results',
+          'Biodegradable components',
+          'Available in 20L, 200L drums, IBCs'
+        ]
       },
     },
     {
@@ -3837,8 +3877,28 @@ export const products: Product[] = [
       category: 'tank-cleaners',
       icon: SprayCan,
       details: {
-        alternativeNames: ['Resin cleaner', 'Polymer remover', 'Resin residue cleaner'],
-        seoKeywords: ['resin cleaner Oman', 'polymer remover Muscat', 'resin clean Oman'],
+        alternativeNames: ['Resin cleaner', 'Polymer remover', 'Resin residue cleaner', 'Resin dissolving agent', 'Polymerization remover'],
+        seoKeywords: ['resin cleaner Oman', 'polymer remover Muscat', 'resin clean Oman', 'resin residue cleaner Sohar', 'polymer tank cleaner Oman'],
+        longDescription: 'Resin Clean supplier in Oman - Global Chemicals LLC provides specialized cleaning solutions for removing resin, polymer residues, and polymerized materials from tanks and equipment in Muscat, Sohar, Duqm, Salalah. Our Resin Clean formulation effectively dissolves cured resins, hardened polymers, epoxy residues, and polymerization deposits from storage vessels, mixing tanks, and process equipment. The powerful solvent blend penetrates and softens polymerized materials, allowing easy removal without damaging tank surfaces. Essential for chemical manufacturing plants, coating facilities, composite production, and polymer storage operations. Reduces downtime during tank changeovers and eliminates costly mechanical cleaning. Widely used in chemical plants, paint manufacturers, and industrial facilities across Oman.',
+        applications: [
+          'Resin storage tank cleaning',
+          'Polymer mixing vessel decontamination',
+          'Epoxy residue removal',
+          'Coating equipment cleaning',
+          'Composite manufacturing tank maintenance',
+          'Polymerization reactor cleaning',
+          'Paint and adhesive tank cleaning',
+          'Chemical storage vessel changeover'
+        ],
+        technicalSpecs: [
+          'Solvent-based formulation',
+          'Effective on: Epoxy, polyester, acrylic, vinyl resins',
+          'Soak time: 4-24 hours for cured resins',
+          'Application: Spray, circulation, or soak method',
+          'Flash point: >60°C',
+          'Low vapor pressure for safety',
+          'Available in 20L, 200L drums'
+        ]
       },
     },
     {
@@ -3848,8 +3908,28 @@ export const products: Product[] = [
       category: 'tank-cleaners',
       icon: SprayCan,
       details: {
-        alternativeNames: ['Universal cleaner', 'Multi-purpose wash', 'Tank wash'],
-        seoKeywords: ['universal wash Oman', 'tank cleaner Muscat', 'multi-purpose cleaner Oman'],
+        alternativeNames: ['Universal cleaner', 'Multi-purpose wash', 'Tank wash', 'All-purpose tank cleaner', 'General purpose wash'],
+        seoKeywords: ['universal wash Oman', 'tank cleaner Muscat', 'multi-purpose cleaner Oman', 'universal tank wash Sohar', 'general purpose cleaner Oman'],
+        longDescription: 'Universal Wash supplier in Oman - Global Chemicals LLC provides versatile all-purpose tank cleaning solutions for various industrial applications in Muscat, Sohar, Duqm, Salalah. Our Universal Wash is a multi-purpose cleaning formulation effective on oils, greases, sludges, scale, and general contaminants in storage tanks, vessels, and equipment. The balanced formulation combines surfactants, solvents, and alkaline builders for comprehensive cleaning power. Essential for tank changeovers, routine maintenance cleaning, and decontamination between different cargo types. Suitable for crude oil tanks, chemical storage, food-grade tanks, and marine applications. The economical concentrate reduces inventory needs by replacing multiple specialized cleaners. Widely used in refineries, terminals, marine operations, and industrial facilities across Oman.',
+        applications: [
+          'Multi-cargo tank cleaning and changeover',
+          'General storage tank maintenance',
+          'Marine cargo hold cleaning',
+          'Chemical tank decontamination',
+          'Oil and grease removal',
+          'Sludge dissolution',
+          'Equipment washing',
+          'Pre-inspection tank cleaning'
+        ],
+        technicalSpecs: [
+          'Versatile formulation - multiple contaminant types',
+          'pH: 10-12 (mildly alkaline)',
+          'Dilution ratio: 1:10 to 1:50 depending on application',
+          'Biodegradable surfactant base',
+          'Safe on most tank coatings',
+          'Hot or cold water application',
+          'Available in 20L, 200L drums, IBCs, bulk'
+        ]
       },
     },
     {
@@ -3861,8 +3941,29 @@ export const products: Product[] = [
       details: {
         formula: 'CH3OH',
         casNumber: '67-56-1',
-        alternativeNames: ['Methyl alcohol', 'Wood alcohol', 'Technical methanol'],
-        seoKeywords: ['methanol tech grade Oman', 'methyl alcohol Muscat', 'industrial methanol Oman'],
+        alternativeNames: ['Methyl alcohol', 'Wood alcohol', 'Technical methanol', 'MeOH cleaner', 'Methanol industrial grade'],
+        seoKeywords: ['methanol tech grade Oman', 'methyl alcohol Muscat', 'industrial methanol Oman', 'technical methanol cleaner Sohar', 'MeOH tank cleaner Oman'],
+        longDescription: 'Technical Grade Methanol supplier in Oman - Global Chemicals LLC provides industrial methanol for tank cleaning, degreasing, and solvent applications in Muscat, Sohar, Duqm, Salalah. Our technical methanol (CH3OH) is an effective solvent for dissolving oils, greases, waxes, and organic residues from storage tanks and equipment. The fast-evaporating properties ensure rapid drying with no residue, making it ideal for tank changeovers and equipment cleaning. Essential for removing paraffinic deposits, cleaning process vessels, and solvent flushing operations. Methanol provides excellent solvency with complete miscibility in water and most organic solvents. Widely used in refineries, chemical plants, terminals, and industrial maintenance operations across Oman. Available in technical grade meeting industrial specifications.',
+        applications: [
+          'Tank cleaning and residue removal',
+          'Paraffin and wax dissolution',
+          'Equipment degreasing and cleaning',
+          'Solvent flushing operations',
+          'Tank pre-entry preparation',
+          'Pipeline cleaning',
+          'Process vessel maintenance',
+          'Parts washing and decontamination'
+        ],
+        technicalSpecs: [
+          'Purity: 99%+ technical grade',
+          'Appearance: Clear colorless liquid',
+          'Boiling point: 64.7°C',
+          'Flash point: 11°C (highly flammable)',
+          'Rapid evaporation rate',
+          'Complete water miscibility',
+          'Excellent solvent properties',
+          'Available in drums, IBCs, ISO tanks, bulk'
+        ]
       },
     },
     {
@@ -3872,8 +3973,29 @@ export const products: Product[] = [
       category: 'tank-cleaners',
       icon: SprayCan,
       details: {
-        alternativeNames: ['Heavy duty degreaser', 'Industrial degreaser', 'Tank degreaser'],
-        seoKeywords: ['tank degreaser Oman', 'heavy duty degreaser Muscat', 'oil remover Oman'],
+        alternativeNames: ['Heavy duty degreaser', 'Industrial degreaser', 'Tank degreaser', 'HD tank degreaser', 'Heavy-duty tank cleaner'],
+        seoKeywords: ['tank degreaser Oman', 'heavy duty degreaser Muscat', 'oil remover Oman', 'industrial tank degreaser Sohar', 'heavy grease remover Oman'],
+        longDescription: 'Heavy-Duty Tank Degreaser supplier in Oman - Global Chemicals LLC provides industrial-strength degreasers for removing heavy oils, greases, and hydrocarbon residues from storage tanks in Muscat, Sohar, Duqm, Salalah. Our HD tank degreaser formulation combines powerful surfactants, emulsifiers, and alkaline builders to break down and emulsify the toughest oil and grease deposits. Essential for cleaning crude oil tanks, fuel storage vessels, lubricant tanks, and heavy residue accumulations. The concentrated formula provides superior cleaning efficiency, reducing chemical consumption and cleaning time. Safe on most tank coatings and materials when used as directed. Eliminates heavy manual scrubbing and reduces worker exposure. Widely used in refineries, terminals, marine operations, and industrial tank farms across Oman.',
+        applications: [
+          'Crude oil storage tank degreasing',
+          'Lubricant and heavy oil tank cleaning',
+          'Fuel tank residue removal',
+          'Bunker tank cleaning',
+          'Grease trap and separator cleaning',
+          'Marine cargo tank degreasing',
+          'Industrial equipment washing',
+          'Refinery maintenance cleaning'
+        ],
+        technicalSpecs: [
+          'Extra-heavy duty alkaline formulation',
+          'pH: 12-14',
+          'Dilution: 1:5 to 1:20 depending on soil level',
+          'Application temperature: 50-80°C for best results',
+          'Low foam for circulation cleaning',
+          'Emulsifies heavy oils and greases',
+          'Biodegradable surfactants',
+          'Available in 20L, 200L drums, IBCs'
+        ]
       },
     },
     {
@@ -3885,8 +4007,29 @@ export const products: Product[] = [
       details: {
         formula: 'NaOH',
         casNumber: '1310-73-2',
-        alternativeNames: ['Lye', 'Caustic soda liquid', 'Sodium hydroxide solution'],
-        seoKeywords: ['lye Oman', 'caustic soda liquid Muscat', 'sodium hydroxide cleaner Oman'],
+        alternativeNames: ['Lye', 'Caustic soda liquid', 'Sodium hydroxide solution', 'Liquid caustic', 'NaOH solution'],
+        seoKeywords: ['lye Oman', 'caustic soda liquid Muscat', 'sodium hydroxide cleaner Oman', 'liquid caustic Sohar', 'NaOH tank cleaner Oman'],
+        longDescription: 'Lye (Sodium Hydroxide Liquid) supplier in Oman - Global Chemicals LLC provides industrial-strength caustic soda liquid for tank cleaning and alkaline treatment in Muscat, Sohar, Duqm, Salalah. Our liquid sodium hydroxide (NaOH) is a powerful alkaline cleaner effective against organic materials, oils, greases, and stubborn tank deposits. The high pH solution saponifies fats and oils, dissolves organic residues, and neutralizes acidic contaminants in storage tanks. Essential for heavy-duty tank cleaning, CIP systems, and preparing tanks for inspection or product changeover. Available in various concentrations (typically 25%, 32%, 50%) to meet specific cleaning requirements. Caustic soda provides cost-effective cleaning power for the toughest industrial applications. Widely used in refineries, chemical plants, food processing, and industrial facilities across Oman.',
+        applications: [
+          'Heavy alkaline tank cleaning',
+          'Organic residue dissolution',
+          'Fat and oil saponification',
+          'Tank degreasing operations',
+          'CIP (Clean-in-Place) systems',
+          'Food processing tank cleaning',
+          'Neutralization of acid residues',
+          'Preparation for tank inspection'
+        ],
+        technicalSpecs: [
+          'Available concentrations: 25%, 32%, 50% NaOH',
+          'pH: 14 (50% solution)',
+          'Appearance: Clear colorless to pale liquid',
+          'Specific gravity: 1.33 (32% solution)',
+          'Highly corrosive - requires PPE',
+          'Dilutable to working strength',
+          'Exothermic when mixed with water',
+          'Available in drums, IBCs, bulk'
+        ]
       },
     },
     {
@@ -3896,8 +4039,29 @@ export const products: Product[] = [
       category: 'tank-cleaners',
       icon: SprayCan,
       details: {
-        alternativeNames: ['General tank cleaner', 'Industrial tank cleaner', 'Tank cleaning solution'],
-        seoKeywords: ['tank cleaner Oman', 'industrial cleaner Muscat', 'tank cleaning Oman'],
+        alternativeNames: ['General tank cleaner', 'Industrial tank cleaner', 'Tank cleaning solution', 'All-purpose tank wash', 'Standard tank cleaner'],
+        seoKeywords: ['tank cleaner Oman', 'industrial cleaner Muscat', 'tank cleaning Oman', 'general purpose tank cleaner Sohar', 'tank wash solution Oman'],
+        longDescription: 'General Purpose Tank Cleaner supplier in Oman - Global Chemicals LLC provides reliable tank cleaning solutions for routine maintenance and standard cleaning applications in Muscat, Sohar, Duqm, Salalah. Our tank cleaner formulation effectively removes light to moderate oils, sludges, scale deposits, and general contaminants from storage tanks and vessels. The balanced surfactant and solvent system provides good cleaning performance across a wide range of soils. Essential for routine tank maintenance, scheduled cleaning programs, and standard decontamination operations. Cost-effective solution for regular tank cleaning without requiring specialized products. Compatible with most tank coatings and materials. Easy to apply via circulation, spraying, or manual washing methods. Widely used across industrial sectors in Oman including petroleum, chemical, marine, and manufacturing facilities.',
+        applications: [
+          'Routine storage tank cleaning',
+          'Light to moderate oil removal',
+          'Sludge and sediment cleaning',
+          'Tank maintenance programs',
+          'Pre-inspection cleaning',
+          'Between-cargo tank washing',
+          'Industrial vessel cleaning',
+          'General equipment decontamination'
+        ],
+        technicalSpecs: [
+          'General purpose formulation',
+          'pH: 9-11 (mildly alkaline)',
+          'Dilution: 1:10 to 1:30 with water',
+          'Application methods: Spray, circulation, manual',
+          'Biodegradable components',
+          'Safe on most tank surfaces',
+          'Effective in hot or cold water',
+          'Available in 20L, 200L drums, IBCs'
+        ]
       },
     },
     {
@@ -3907,8 +4071,29 @@ export const products: Product[] = [
       category: 'tank-cleaners',
       icon: SprayCan,
       details: {
-        alternativeNames: ['Defoamer', 'Foam control', 'Antifoam sewage'],
-        seoKeywords: ['sewage defoamer Oman', 'foam control Muscat', 'wastewater defoamer Oman'],
+        alternativeNames: ['Defoamer', 'Foam control', 'Antifoam sewage', 'Sewage antifoam', 'Wastewater defoamer'],
+        seoKeywords: ['sewage defoamer Oman', 'foam control Muscat', 'wastewater defoamer Oman', 'antifoam sewage Sohar', 'foam breaker Oman'],
+        longDescription: 'Sewage Defoamer supplier in Oman - Global Chemicals LLC provides effective foam control solutions for sewage treatment tanks, wastewater systems, and biological treatment facilities in Muscat, Sohar, Duqm, Salalah. Our sewage defoamer rapidly collapses foam and prevents foam formation in aeration tanks, digesters, holding tanks, and effluent systems. The silicone-based or mineral oil formulations provide instant foam knockdown and long-lasting foam prevention. Essential for maintaining operational efficiency, preventing overflows, and ensuring proper aeration in biological treatment processes. Foam control improves treatment capacity, reduces odors, and prevents equipment contamination. The defoamer is compatible with biological treatment systems and does not inhibit bacterial activity. Widely used in municipal wastewater treatment plants, industrial effluent systems, and sewage facilities across Oman.',
+        applications: [
+          'Sewage treatment plant foam control',
+          'Aeration tank foam suppression',
+          'Anaerobic digester defoaming',
+          'Wastewater holding tank treatment',
+          'Biological treatment foam prevention',
+          'Effluent system foam control',
+          'Industrial wastewater foam breaking',
+          'Municipal sewage treatment'
+        ],
+        technicalSpecs: [
+          'Types: Silicone-based, mineral oil-based',
+          'Instant foam knockdown action',
+          'Long-lasting foam prevention',
+          'Dosage: 10-100 ppm depending on foam severity',
+          'Compatible with biological treatment',
+          'Non-toxic to bacteria',
+          'Continuous or slug dosing',
+          'Available in 20L, 200L drums, IBCs'
+        ]
       },
     },
     {
@@ -3918,8 +4103,29 @@ export const products: Product[] = [
       category: 'tank-cleaners',
       icon: SprayCan,
       details: {
-        alternativeNames: ['Safe alkaline cleaner', 'Alkaline safety cleaner', 'Industrial alkali cleaner'],
-        seoKeywords: ['alkaleen cleaner Oman', 'safe alkaline cleaner Muscat', 'industrial cleaner Oman'],
+        alternativeNames: ['Safe alkaline cleaner', 'Alkaline safety cleaner', 'Industrial alkali cleaner', 'Alkaleen safe cleaner', 'Low-hazard alkaline cleaner'],
+        seoKeywords: ['alkaleen cleaner Oman', 'safe alkaline cleaner Muscat', 'industrial cleaner Oman', 'safety cleaner Sohar', 'low-hazard cleaner Oman'],
+        longDescription: 'Alkaleen Safety Cleaner supplier in Oman - Global Chemicals LLC provides safer alkaline cleaning solutions for tank cleaning and industrial maintenance in Muscat, Sohar, Duqm, Salalah. Our Alkaleen Safety Liquid offers effective alkaline cleaning power with reduced hazards compared to traditional caustic cleaners. The formulation provides good degreasing and cleaning performance while minimizing worker exposure risks and equipment corrosion concerns. Essential for operations requiring alkaline cleaning but with enhanced safety profiles for workers. Ideal for confined space tank cleaning, manual washing operations, and facilities prioritizing worker safety. The safer formulation reduces PPE requirements while maintaining cleaning effectiveness. Widely used in food processing, pharmaceutical facilities, and industries with strict safety requirements across Oman.',
+        applications: [
+          'Safe tank cleaning operations',
+          'Confined space cleaning with reduced hazards',
+          'Manual cleaning operations',
+          'Food processing equipment cleaning',
+          'Pharmaceutical facility cleaning',
+          'General degreasing with safety focus',
+          'Industrial equipment washing',
+          'Routine maintenance cleaning'
+        ],
+        technicalSpecs: [
+          'Safer alkaline formulation',
+          'pH: 10-12 (moderate alkaline)',
+          'Reduced skin and eye irritation vs caustic',
+          'Effective degreasing power',
+          'Dilution: 1:10 to 1:20 with water',
+          'Biodegradable surfactant system',
+          'Lower corrosion on metals vs high pH cleaners',
+          'Available in 20L, 200L drums'
+        ]
       },
     },
     {
@@ -3929,8 +4135,29 @@ export const products: Product[] = [
       category: 'tank-cleaners',
       icon: SprayCan,
       details: {
-        alternativeNames: ['Sludge breaker', 'Emulsion breaker', 'Demulsifier'],
-        seoKeywords: ['emulsion breaker Oman', 'sludge breaker Muscat', 'demulsifier Oman'],
+        alternativeNames: ['Sludge breaker', 'Emulsion breaker', 'Demulsifier', 'Sludge conditioner', 'Emulsion separator'],
+        seoKeywords: ['emulsion breaker Oman', 'sludge breaker Muscat', 'demulsifier Oman', 'tank sludge treatment Sohar', 'emulsion separator Oman'],
+        longDescription: 'Emulsion Sludge Breaker supplier in Oman - Global Chemicals LLC provides specialized demulsifiers for breaking oil-water emulsions and conditioning tank sludges in Muscat, Sohar, Duqm, Salalah. Our emulsion breaker formulation destabilizes stable emulsions, allowing oil and water phases to separate for easier removal. The product conditions bottom sludges, making them pumpable and reducing the volume requiring disposal. Essential for crude oil tank bottoms cleaning, slop oil recovery, and reducing waste volumes during tank cleaning operations. The demulsifier accelerates phase separation, improves oil recovery, and minimizes disposal costs. Works effectively on aged emulsions and heavy sludges. Widely used in refineries, terminals, production facilities, and oil storage operations across Oman for economical tank cleaning.',
+        applications: [
+          'Crude oil tank bottom sludge treatment',
+          'Slop oil emulsion breaking',
+          'Tank cleaning waste volume reduction',
+          'Oil recovery from tank bottoms',
+          'Refinery slop system treatment',
+          'Terminal tank sludge conditioning',
+          'Production separator sludge treatment',
+          'Waste oil reclamation'
+        ],
+        technicalSpecs: [
+          'Powerful demulsification action',
+          'Dosage: 100-1000 ppm on sludge volume',
+          'Separation time: 2-24 hours',
+          'Works on aged and stable emulsions',
+          'Reduces sludge viscosity',
+          'Improves oil recovery',
+          'Application: Mix into sludge or inject',
+          'Available in 20L, 200L drums, IBCs'
+        ]
       },
     },
     {
@@ -3940,8 +4167,29 @@ export const products: Product[] = [
       category: 'tank-cleaners',
       icon: SprayCan,
       details: {
-        alternativeNames: ['Oil dispersant', 'Spill dispersant type 3', 'Oil spill cleaner'],
-        seoKeywords: ['oil spill dispersant Oman', 'dispersant type 3 Muscat', 'oil spill cleaner Oman'],
+        alternativeNames: ['Oil dispersant', 'Spill dispersant type 3', 'Oil spill cleaner', 'Marine oil dispersant', 'Type III dispersant'],
+        seoKeywords: ['oil spill dispersant Oman', 'dispersant type 3 Muscat', 'oil spill cleaner Oman', 'marine dispersant Sohar', 'oil spill response Oman'],
+        longDescription: 'Oil Spill Dispersant Type 3 supplier in Oman - Global Chemicals LLC provides approved oil spill dispersants for emergency response and tank cleaning in Muscat, Sohar, Duqm, Salalah. Our Type 3 dispersant effectively breaks down and disperses oil slicks, facilitating natural biodegradation and reducing environmental impact. The surfactant-based formulation emulsifies oil into fine droplets that disperse throughout the water column where bacteria can degrade them. Essential for marine oil spill response, harbor cleanup, and tank cleaning operations where oil residues must be dispersed. Meets international specifications for oil spill dispersants. Also used in tank cleaning to emulsify and remove stubborn oil films and residues. Widely used by marine operators, port authorities, and emergency response teams across Oman\'s coastal areas.',
+        applications: [
+          'Marine oil spill emergency response',
+          'Harbor and coastal oil slick treatment',
+          'Tank cleaning oil emulsification',
+          'Bilge oil dispersal',
+          'Oily wastewater treatment',
+          'Beach cleanup operations',
+          'Vessel tank washing',
+          'Oil residue removal from surfaces'
+        ],
+        technicalSpecs: [
+          'Type III dispersant classification',
+          'Meets IMO/MEPC standards',
+          'Application ratio: 1:10 to 1:25 (dispersant:oil)',
+          'Effective on: Crude oil, fuel oils, refined products',
+          'Biodegradable formulation',
+          'Application: Spray or circulation',
+          'Approved for marine use',
+          'Available in 20L, 200L drums'
+        ]
       },
     },
     {
@@ -3951,8 +4199,29 @@ export const products: Product[] = [
       category: 'tank-cleaners',
       icon: SprayCan,
       details: {
-        alternativeNames: ['Aqueous cleaner', 'Heavy duty aqua cleaner', 'Water-based cleaner HD'],
-        seoKeywords: ['aqua clean HD Oman', 'aqueous cleaner Muscat', 'tank cleaning solution Oman'],
+        alternativeNames: ['Aqueous cleaner', 'Heavy duty aqua cleaner', 'Water-based cleaner HD', 'Aqua wash HD', 'Water-based degreaser'],
+        seoKeywords: ['aqua clean HD Oman', 'aqueous cleaner Muscat', 'tank cleaning solution Oman', 'water-based cleaner Sohar', 'HD aqueous cleaner Oman'],
+        longDescription: 'Aqua Clean HD supplier in Oman - Global Chemicals LLC provides heavy-duty water-based cleaning solutions for industrial tank and equipment cleaning in Muscat, Sohar, Duqm, Salalah. Our Aqua Clean HD is an environmentally-preferred aqueous cleaner that effectively removes oils, greases, carbon deposits, and industrial soils without harsh solvents. The water-based formulation provides powerful cleaning while eliminating solvent-related hazards and environmental concerns. Essential for tank cleaning operations in food processing, pharmaceuticals, and facilities requiring solvent-free cleaning. The concentrated formula provides economical dilution ratios and excellent performance in spray, circulation, or manual applications. Low VOC content complies with environmental regulations. Widely used across industries in Oman requiring effective, environmentally-responsible tank cleaning solutions.',
+        applications: [
+          'Water-based tank cleaning',
+          'Food processing equipment cleaning',
+          'Pharmaceutical tank decontamination',
+          'Solvent-free degreasing',
+          'Environmental compliance cleaning',
+          'Low-VOC cleaning applications',
+          'Industrial equipment washing',
+          'Heavy soil removal without solvents'
+        ],
+        technicalSpecs: [
+          'Aqueous (water-based) formulation',
+          'pH: 11-13 (alkaline)',
+          'Low VOC - environmental compliance',
+          'Dilution: 1:10 to 1:30 with water',
+          'Effective hot or cold',
+          'Heavy-duty cleaning power',
+          'Biodegradable surfactants',
+          'Available in 20L, 200L drums, IBCs'
+        ]
       },
     },
     {
@@ -3962,8 +4231,29 @@ export const products: Product[] = [
       category: 'tank-cleaners',
       icon: SprayCan,
       details: {
-        alternativeNames: ['Cold water cleaner', 'HD cold wash', 'Cold cleaning solution'],
-        seoKeywords: ['cold washer HD Oman', 'cold water cleaner Muscat', 'tank wash Oman'],
+        alternativeNames: ['Cold water cleaner', 'HD cold wash', 'Cold cleaning solution', 'Ambient temperature cleaner', 'Cold-water degreaser'],
+        seoKeywords: ['cold washer HD Oman', 'cold water cleaner Muscat', 'tank wash Oman', 'ambient cleaner Sohar', 'cold cleaning solution Oman'],
+        longDescription: 'Cold Washer HD supplier in Oman - Global Chemicals LLC provides heavy-duty cold-water tank cleaning solutions for operations without heating capabilities in Muscat, Sohar, Duqm, Salalah. Our Cold Washer HD formulation delivers powerful cleaning performance at ambient temperatures, eliminating energy costs for water heating. The specialized surfactant system activates effectively in cold water, providing excellent degreasing and emulsification. Essential for field operations, mobile tank cleaning, and facilities without hot water systems. The cold-active formula saves energy costs while maintaining cleaning efficiency. Particularly valuable for tropical climates like Oman where ambient water temperatures support effective cleaning. Reduces operational costs and simplifies cleaning logistics. Widely used in marine operations, field services, and remote locations across Oman.',
+        applications: [
+          'Cold-water tank cleaning operations',
+          'Mobile tank cleaning services',
+          'Field cleaning without heating',
+          'Energy-saving cleaning programs',
+          'Marine tank washing at ambient temp',
+          'Remote location tank cleaning',
+          'Tropical climate applications',
+          'Cost-effective cleaning operations'
+        ],
+        technicalSpecs: [
+          'Effective at ambient/cold water temperatures',
+          'pH: 11-13 (alkaline)',
+          'No heating required - energy savings',
+          'Dilution: 1:10 to 1:20 with water',
+          'Rapid penetration and emulsification',
+          'Heavy-duty cleaning power',
+          'Suitable for spray or circulation',
+          'Available in 20L, 200L drums, IBCs'
+        ]
       },
     },
     {
@@ -3974,8 +4264,29 @@ export const products: Product[] = [
       icon: SprayCan,
       details: {
         casNumber: '7697-37-2',
-        alternativeNames: ['Passivation solution', 'Stainless steel passivation', 'Metal passivation'],
-        seoKeywords: ['passivation liquid Oman', 'stainless steel treatment Muscat', 'tank passivation Oman'],
+        alternativeNames: ['Passivation solution', 'Stainless steel passivation', 'Metal passivation', 'Nitric acid passivation', 'SS passivation treatment'],
+        seoKeywords: ['passivation liquid Oman', 'stainless steel treatment Muscat', 'tank passivation Oman', 'SS passivation Sohar', 'metal passivation Oman'],
+        longDescription: 'Passivation Liquid supplier in Oman - Global Chemicals LLC provides nitric acid-based passivation solutions for stainless steel tank treatment in Muscat, Sohar, Duqm, Salalah. Our passivation liquid removes free iron contamination from stainless steel surfaces and restores the protective chromium oxide passive layer. Essential for new tank commissioning, post-fabrication treatment, and restoring corrosion resistance after cleaning or repairs. The passivation process prevents flash rusting, improves corrosion resistance, and ensures optimal performance of stainless steel tanks. Critical for pharmaceutical, food processing, and high-purity applications requiring maximum corrosion protection. The treatment also validates cleanliness and prepares tanks for product contact. Widely used in pharmaceutical, food & beverage, and high-purity chemical facilities across Oman.',
+        applications: [
+          'New stainless steel tank passivation',
+          'Post-fabrication surface treatment',
+          'Restoration after cleaning or repairs',
+          'Pharmaceutical tank commissioning',
+          'Food-grade tank preparation',
+          'High-purity system passivation',
+          'Free iron removal from SS',
+          'Corrosion resistance enhancement'
+        ],
+        technicalSpecs: [
+          'Base: Nitric acid (HNO3) 20-25% typical',
+          'Treatment time: 30 minutes to 2 hours',
+          'Temperature: Ambient to 50°C',
+          'Removes free iron contamination',
+          'Restores chromium oxide passive layer',
+          'Meets ASTM A380/A967 standards',
+          'pH test kit verification available',
+          'Available in 20L, 200L drums'
+        ]
       },
     },
     {
@@ -3985,8 +4296,29 @@ export const products: Product[] = [
       category: 'tank-cleaners',
       icon: SprayCan,
       details: {
-        alternativeNames: ['Solvent cleaner', 'Edge cleaner', 'Seam cleaning solution'],
-        seoKeywords: ['edge sol cleaner Oman', 'solvent cleaner Muscat', 'seam cleaner Oman'],
+        alternativeNames: ['Solvent cleaner', 'Edge cleaner', 'Seam cleaning solution', 'Weld seam cleaner', 'Edge and corner cleaner'],
+        seoKeywords: ['edge sol cleaner Oman', 'solvent cleaner Muscat', 'seam cleaner Oman', 'weld cleaner Sohar', 'edge cleaning solution Oman'],
+        longDescription: 'Edge Sol Cleaner supplier in Oman - Global Chemicals LLC provides specialized solvent-based cleaners for tank edges, seams, welds, and hard-to-reach areas in Muscat, Sohar, Duqm, Salalah. Our Edge Sol formulation effectively penetrates and dissolves residues in crevices, weld seams, corners, and edge areas where general cleaners struggle. The low-viscosity solvent system reaches tight spaces, dissolving oils, tars, and accumulated deposits. Essential for thorough tank cleaning before inspection, ensuring all areas including challenging seams and edges are properly decontaminated. The fast-evaporating formula leaves no residue and allows quick drying. Critical for meeting inspection standards and ensuring complete tank cleanliness. Widely used in refineries, chemical plants, and terminals across Oman for detailed tank cleaning operations.',
+        applications: [
+          'Tank edge and seam cleaning',
+          'Weld seam residue removal',
+          'Corner and crevice decontamination',
+          'Pre-inspection thorough cleaning',
+          'Hard-to-reach area treatment',
+          'Detailed tank cleaning',
+          'Flange and gasket area cleaning',
+          'Complete decontamination programs'
+        ],
+        technicalSpecs: [
+          'Low-viscosity solvent formulation',
+          'Penetrates tight spaces and crevices',
+          'Dissolves oils, tars, and residues',
+          'Fast evaporation - quick drying',
+          'No residue after evaporation',
+          'Flash point: >40°C',
+          'Application: Spray or brush',
+          'Available in 20L drums'
+        ]
       },
     },
     {
@@ -3996,8 +4328,29 @@ export const products: Product[] = [
       category: 'tank-cleaners',
       icon: SprayCan,
       details: {
-        alternativeNames: ['Eco-friendly cleaner', 'Soft cleaner 2000', 'Environmental cleaner'],
-        seoKeywords: ['enviro soft 2000 Oman', 'eco-friendly cleaner Muscat', 'green cleaner Oman'],
+        alternativeNames: ['Eco-friendly cleaner', 'Soft cleaner 2000', 'Environmental cleaner', 'Green tank cleaner', 'Biodegradable cleaner'],
+        seoKeywords: ['enviro soft 2000 Oman', 'eco-friendly cleaner Muscat', 'green cleaner Oman', 'biodegradable tank cleaner Sohar', 'environmental cleaner Oman'],
+        longDescription: 'Enviro Soft 2000 supplier in Oman - Global Chemicals LLC provides environmentally-responsible cleaning solutions for tank and equipment cleaning in Muscat, Sohar, Duqm, Salalah. Our Enviro Soft 2000 is a biodegradable, low-toxicity cleaner designed for operations prioritizing environmental protection. The formulation softens and removes deposits while minimizing environmental impact through biodegradable surfactants and eco-friendly solvents. Essential for operations in environmentally-sensitive areas, marine protected zones, and facilities with strict environmental compliance requirements. The green chemistry approach provides effective cleaning without harsh chemicals or persistent environmental residues. Reduces disposal concerns and supports sustainability goals. Widely used in marine operations, coastal facilities, and environmentally-conscious industrial operations across Oman.',
+        applications: [
+          'Environmentally-sensitive area cleaning',
+          'Marine protected zone operations',
+          'Green chemistry compliance programs',
+          'Sustainable tank cleaning operations',
+          'Low-impact degreasing',
+          'Eco-certified facility cleaning',
+          'Biodegradable residue removal',
+          'Environmental compliance cleaning'
+        ],
+        technicalSpecs: [
+          'Biodegradable formulation',
+          'Low aquatic toxicity',
+          'Non-bioaccumulative',
+          'pH: 9-11 (mildly alkaline)',
+          'Dilution: 1:10 to 1:30 with water',
+          'Effective cleaning with lower environmental impact',
+          'Meets green chemistry standards',
+          'Available in 20L, 200L drums'
+        ]
       },
     },
     {
@@ -4007,8 +4360,29 @@ export const products: Product[] = [
       category: 'tank-cleaners',
       icon: SprayCan,
       details: {
-        alternativeNames: ['Dual action cleaner', 'Heavy duty dual cleaner', 'Versatile tank cleaner'],
-        seoKeywords: ['dual HD cleaner Oman', 'dual action cleaner Muscat', 'versatile cleaner Oman'],
+        alternativeNames: ['Dual action cleaner', 'Heavy duty dual cleaner', 'Versatile tank cleaner', '2-in-1 cleaner', 'Multipurpose HD cleaner'],
+        seoKeywords: ['dual HD cleaner Oman', 'dual action cleaner Muscat', 'versatile cleaner Oman', '2-in-1 tank cleaner Sohar', 'multipurpose cleaner Oman'],
+        longDescription: 'Dual HD Cleaner supplier in Oman - Global Chemicals LLC provides dual-action heavy-duty cleaning solutions for versatile tank applications in Muscat, Sohar, Duqm, Salalah. Our Dual HD Cleaner combines powerful alkaline cleaning with solvent action in a single formulation, effectively tackling both water-soluble and oil-soluble contaminants. The dual-action chemistry provides comprehensive cleaning without requiring multiple products or treatment stages. Essential for complex contamination scenarios involving mixed soils, reducing chemical inventory and simplifying cleaning procedures. The versatile formulation handles oils, greases, scale, carbon deposits, and organic materials. One-step cleaning saves time and labor costs while delivering thorough results. Widely used across refineries, chemical plants, and multi-product terminals in Oman requiring versatile tank cleaning capability.',
+        applications: [
+          'Mixed contamination tank cleaning',
+          'One-step comprehensive cleaning',
+          'Oil and water-soluble soil removal',
+          'Multi-product tank facilities',
+          'Complex residue cleaning',
+          'Simplified cleaning programs',
+          'Heavy-duty versatile applications',
+          'Inventory reduction initiatives'
+        ],
+        technicalSpecs: [
+          'Dual-action: Alkaline + solvent combination',
+          'Handles oil and water-soluble contaminants',
+          'pH: 12-13 (strongly alkaline)',
+          'Dilution: 1:5 to 1:20 depending on application',
+          'One-step cleaning reduces labor',
+          'Hot or cold water compatible',
+          'Concentrated formula',
+          'Available in 20L, 200L drums, IBCs'
+        ]
       },
     },
     {
@@ -4018,8 +4392,29 @@ export const products: Product[] = [
       category: 'tank-cleaners',
       icon: SprayCan,
       details: {
-        alternativeNames: ['Metal brightener', 'Metal polish cleaner', 'Brightening solution'],
-        seoKeywords: ['metal bright Oman', 'metal brightener Muscat', 'metal polish Oman'],
+        alternativeNames: ['Metal brightener', 'Metal polish cleaner', 'Brightening solution', 'Stainless steel brightener', 'Metal shine cleaner'],
+        seoKeywords: ['metal bright Oman', 'metal brightener Muscat', 'metal polish Oman', 'stainless steel brightener Sohar', 'metal shine Oman'],
+        longDescription: 'Metal Bright supplier in Oman - Global Chemicals LLC provides metal brightening and polishing solutions for tank and equipment surfaces in Muscat, Sohar, Duqm, Salalah. Our Metal Bright formulation removes oxidation, staining, discoloration, and light rust from metal surfaces while restoring shine and luster. The acid-based cleaner is particularly effective on stainless steel, aluminum, and other metals requiring bright, clean finishes. Essential for food-grade tanks, pharmaceutical vessels, and applications requiring visually clean, bright metal surfaces. The product removes water spots, heat tint, weld discoloration, and surface oxidation. Prepares metal surfaces for inspection and validates cleanliness. Widely used in food processing, pharmaceutical, beverage, and high-purity chemical facilities across Oman requiring pristine metal surfaces.',
+        applications: [
+          'Stainless steel tank brightening',
+          'Oxidation and stain removal',
+          'Heat tint and weld discoloration removal',
+          'Food-grade tank surface preparation',
+          'Pharmaceutical vessel cleaning',
+          'Metal surface restoration',
+          'Pre-inspection brightening',
+          'Aluminum and metal polishing'
+        ],
+        technicalSpecs: [
+          'Acid-based brightening formulation',
+          'Effective on: Stainless steel, aluminum, metals',
+          'Removes: Oxidation, stains, heat tint, light rust',
+          'Application time: 5-30 minutes',
+          'pH: 1-3 (acidic)',
+          'Dilution: Use concentrated or dilute 1:5',
+          'Rinse thoroughly after treatment',
+          'Available in 20L, 200L drums'
+        ]
       },
     },
     {
@@ -4031,8 +4426,29 @@ export const products: Product[] = [
       details: {
         formula: 'C8H10',
         casNumber: '106-42-3',
-        alternativeNames: ['Para-xylene', 'p-Xylene', '1,4-Dimethylbenzene'],
-        seoKeywords: ['p-xylene Oman', 'para-xylene Muscat', 'industrial solvent Oman'],
+        alternativeNames: ['Para-xylene', 'p-Xylene', '1,4-Dimethylbenzene', 'PX solvent', 'Paraxylene'],
+        seoKeywords: ['p-xylene Oman', 'para-xylene Muscat', 'industrial solvent Oman', 'PX solvent Sohar', 'xylene tank cleaner Oman'],
+        longDescription: 'Pure P-Xylene supplier in Oman - Global Chemicals LLC provides high-purity para-xylene solvent for industrial tank cleaning and degreasing in Muscat, Sohar, Duqm, Salalah. Our p-xylene (1,4-dimethylbenzene) offers excellent solvency for oils, greases, tars, and hydrocarbon residues in storage tanks and equipment. The aromatic hydrocarbon solvent effectively dissolves stubborn deposits that water-based cleaners cannot remove. Essential for heavy residue removal, tar and bitumen dissolution, and degreasing operations in refineries and petrochemical facilities. P-xylene provides superior cleaning power for the most challenging tank cleaning applications. The pure grade ensures consistent performance and minimal impurities. Widely used in refineries, chemical plants, and industrial maintenance operations across Oman.',
+        applications: [
+          'Heavy residue tank cleaning',
+          'Tar and bitumen dissolution',
+          'Aromatic solvent degreasing',
+          'Petrochemical tank cleaning',
+          'Resin and polymer removal',
+          'Industrial equipment degreasing',
+          'Paint and coating removal',
+          'Heavy oil residue dissolution'
+        ],
+        technicalSpecs: [
+          'Purity: 99% minimum p-xylene',
+          'Molecular weight: 106.17 g/mol',
+          'Boiling point: 138°C',
+          'Flash point: 27°C (flammable)',
+          'Appearance: Clear colorless liquid',
+          'Excellent aromatic solvency',
+          'Lower toxicity vs mixed xylenes',
+          'Available in drums, IBCs'
+        ]
       },
     },
     {
@@ -4042,8 +4458,29 @@ export const products: Product[] = [
       category: 'tank-cleaners',
       icon: SprayCan,
       details: {
-        alternativeNames: ['Carbon cleaner', 'Volcanic ash remover', 'CTC cleaner'],
-        seoKeywords: ['CTC volc cleaner Oman', 'carbon cleaner Muscat', 'volcanic ash remover Oman'],
+        alternativeNames: ['Carbon cleaner', 'Volcanic ash remover', 'CTC cleaner', 'Carbon tetrachloride alternative', 'Heavy carbon cleaner'],
+        seoKeywords: ['CTC volc cleaner Oman', 'carbon cleaner Muscat', 'volcanic ash remover Oman', 'heavy carbon remover Sohar', 'specialized tank cleaner Oman'],
+        longDescription: 'CTC Volc Cleaner supplier in Oman - Global Chemicals LLC provides specialized cleaning solutions for removing volcanic ash, heavy carbon deposits, and mineral-based contaminants from tanks in Muscat, Sohar, Duqm, Salalah. Our CTC Volc Cleaner formulation is specifically designed for challenging mineral and carbon deposits that standard cleaners cannot handle. The powerful solvent and dispersant system breaks down baked-on carbon, volcanic ash residues, and similar mineral-based contaminants. Essential for tanks exposed to combustion products, furnace operations, or specialized industrial processes creating mineral deposits. The cleaner penetrates deeply into porous carbon and ash layers, facilitating complete removal. Provides a safer alternative to traditional carbon tetrachloride-based cleaners. Widely used in power plants, industrial furnace operations, and specialized tank cleaning across Oman.',
+        applications: [
+          'Volcanic ash deposit removal',
+          'Heavy carbon deposit cleaning',
+          'Combustion residue removal',
+          'Furnace tank cleaning',
+          'Mineral-based contamination',
+          'Baked-on carbon dissolution',
+          'Specialized industrial tank cleaning',
+          'Power plant tank maintenance'
+        ],
+        technicalSpecs: [
+          'Specialized formulation for mineral/carbon deposits',
+          'Solvent and dispersant system',
+          'Penetrates porous deposits',
+          'Application: Soak, spray, or circulation',
+          'Contact time: 4-24 hours for heavy deposits',
+          'Temperature: Warm application improves performance',
+          'Safer alternative to carbon tetrachloride',
+          'Available in 20L, 200L drums'
+        ]
       },
     },
     {
@@ -4053,8 +4490,29 @@ export const products: Product[] = [
       category: 'tank-cleaners',
       icon: SprayCan,
       details: {
-        alternativeNames: ['Ship hold cleaner', 'Marine tank cleaner', 'Cargo hold cleaner'],
-        seoKeywords: ['ship hold cleaner Oman', 'marine cleaner Muscat', 'cargo tank cleaner Oman'],
+        alternativeNames: ['Ship hold cleaner', 'Marine tank cleaner', 'Cargo hold cleaner', 'Vessel tank wash', 'Marine cargo cleaner'],
+        seoKeywords: ['ship hold cleaner Oman', 'marine cleaner Muscat', 'cargo tank cleaner Oman', 'vessel cleaner Sohar', 'marine tank wash Oman'],
+        longDescription: 'Aquatuff Ship Hold Cleaner supplier in Oman - Global Chemicals LLC provides marine-grade cleaning solutions for ship holds, cargo tanks, and vessel spaces in Muscat, Sohar, Duqm, Salalah. Our Aquatuff formulation is specifically designed for maritime applications, effectively removing cargo residues, oils, animal fats, vegetable oils, and general marine soils. The powerful yet biodegradable cleaner meets marine environmental standards while delivering exceptional cleaning performance. Essential for cargo changeovers, hold cleaning between different cargoes, and vessel tank maintenance. The product prevents cargo contamination, ensures clean holds for inspection, and supports vessel operational efficiency. Safe for use in confined spaces with proper ventilation. Widely used by shipping companies, port services, and marine tank cleaning contractors across Oman\'s major ports.',
+        applications: [
+          'Ship cargo hold cleaning',
+          'Marine cargo tank washing',
+          'Vessel tank changeover cleaning',
+          'Dry bulk hold cleaning',
+          'Liquid cargo tank decontamination',
+          'Marine oil and grease removal',
+          'Port tank cleaning services',
+          'Pre-inspection hold cleaning'
+        ],
+        technicalSpecs: [
+          'Marine-grade formulation',
+          'pH: 10-12 (alkaline)',
+          'Biodegradable - marine environment safe',
+          'Effective on: Oils, fats, cargo residues',
+          'Dilution: 1:20 to 1:50 with seawater or freshwater',
+          'Low foam for circulation systems',
+          'Meets IMO environmental standards',
+          'Available in 20L, 200L drums, IBCs'
+        ]
       },
     },
 
