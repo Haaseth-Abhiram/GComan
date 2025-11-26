@@ -6699,79 +6699,857 @@ export const products: Product[] = [
 
     // Solvents
     {
-      id: 'industrial-solvents',
-      title: 'Industrial Solvents',
-      description: 'High-quality solvents for industrial cleaning, processing, and manufacturing.',
+      id: 'mineral-spirits',
+      title: 'Mineral Spirits',
+      description: 'High-quality petroleum distillate solvent for cleaning, degreasing, and thinning.',
       category: 'solvents',
       icon: FlaskRound,
       details: {
-        fullDescription: 'Comprehensive range of solvents for various industrial applications including cleaning, extraction, and processing.',
-        applications: ['Industrial cleaning', 'Chemical processing', 'Extraction', 'Manufacturing'],
+        casNumber: '64742-88-7',
+        alternativeNames: ['White spirit', 'Mineral turpentine', 'Stoddard solvent', 'Paint thinner'],
+        seoKeywords: ['mineral spirits Oman', 'white spirit Muscat', 'paint thinner Oman', 'degreasing solvent Sohar', 'mineral spirits supplier Muscat'],
+        longDescription: 'Mineral Spirits supplier in Oman - Global Chemicals LLC provides high-quality mineral spirits for industrial cleaning, paint thinning, and degreasing in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our petroleum distillate solvent offers excellent dissolving power for oils, greases, and paints with low odor and toxicity. Essential for paint and coating industries, manufacturing facilities, and maintenance operations. The clear, water-white liquid provides consistent performance for thinning oil-based paints, cleaning spray equipment, and general degreasing applications. Widely used in construction, automotive workshops, industrial maintenance, and manufacturing facilities across Oman. Available in low-odor and standard grades to meet specific application requirements.',
+        applications: [
+          'Oil-based paint and varnish thinning',
+          'Paint spraying equipment cleaning',
+          'Industrial degreasing and cleaning',
+          'Parts washing and metal cleaning',
+          'Adhesive residue removal',
+          'Equipment maintenance cleaning',
+          'Wood stain application',
+          'General purpose industrial solvent'
+        ],
+        technicalSpecs: [
+          'Appearance: Clear, water-white liquid',
+          'Boiling range: 150-200°C',
+          'Flash point: 38-43°C',
+          'Aromatic content: <1% (low odor grade)',
+          'KB value: 30-33',
+          'Evaporation rate: Medium',
+          'Available in 20L, 200L drums, bulk',
+          'Meets ASTM D235 specifications'
+        ]
+      },
+    },
+    {
+      id: 'kerosene-industrial',
+      title: 'Kerosene (Industrial Grade)',
+      description: 'Industrial-grade kerosene for cleaning, fuel applications, and manufacturing.',
+      category: 'solvents',
+      icon: FlaskRound,
+      details: {
+        casNumber: '8008-20-6',
+        alternativeNames: ['Paraffin oil', 'Lamp oil', 'Coal oil', 'Kerosine'],
+        seoKeywords: ['kerosene industrial Oman', 'paraffin oil Muscat', 'industrial kerosene Sohar', 'kerosene supplier Oman', 'industrial fuel Muscat'],
+        longDescription: 'Industrial Grade Kerosene supplier in Oman - Global Chemicals LLC provides quality kerosene for industrial applications in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our industrial-grade kerosene serves as an excellent solvent for cleaning, degreasing, and as a fuel source for heaters and industrial burners. The refined petroleum fraction offers good solvency with moderate evaporation rate. Essential for construction sites, industrial cleaning operations, heating applications, and manufacturing processes. Widely used in concrete curing compound formulation, insecticide carrier solvent, and as a cutting fluid base. Available in various grades to meet specific industrial requirements across Oman\'s oil & gas, construction, and manufacturing sectors.',
+        applications: [
+          'Industrial cleaning and degreasing',
+          'Space heater and burner fuel',
+          'Concrete curing compound carrier',
+          'Insecticide and pesticide solvent',
+          'Cutting fluid formulation',
+          'Metal processing and machining',
+          'Asphalt production and processing',
+          'Industrial parts washing'
+        ],
+        technicalSpecs: [
+          'Appearance: Clear to pale yellow liquid',
+          'Boiling range: 150-300°C',
+          'Flash point: 38°C minimum',
+          'Specific gravity: 0.78-0.82',
+          'Viscosity: 1.2-2.0 cSt at 40°C',
+          'Sulfur content: <0.25%',
+          'Available in 200L drums, IBCs, bulk',
+          'Meets industrial grade specifications'
+        ]
+      },
+    },
+    {
+      id: 'turpentine-industrial',
+      title: 'Turpentine (Industrial Grade)',
+      description: 'Industrial turpentine solvent for paint thinning and industrial applications.',
+      category: 'solvents',
+      icon: FlaskRound,
+      details: {
+        casNumber: '8006-64-2',
+        alternativeNames: ['Gum turpentine', 'Turps', 'Oil of turpentine', 'Turpentine oil'],
+        seoKeywords: ['turpentine Oman', 'turpentine industrial Muscat', 'paint thinner turpentine Oman', 'turps Sohar', 'turpentine supplier Muscat'],
+        longDescription: 'Industrial Grade Turpentine supplier in Oman - Global Chemicals LLC provides quality turpentine for paint industries and industrial applications in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our turpentine is a traditional solvent derived from pine resin, offering excellent dissolving power for oil-based paints, varnishes, and waxes. Essential for paint manufacturing, furniture finishing, and restoration work. The aromatic solvent provides superior performance in thinning oil-based coatings and cleaning painting equipment. Widely used in construction, furniture manufacturing, paint industries, and art restoration across Oman. The natural solvent offers strong solvency with characteristic pine aroma.',
+        applications: [
+          'Oil-based paint and varnish thinning',
+          'Furniture finishing and restoration',
+          'Paint brush and equipment cleaning',
+          'Wax polish formulation',
+          'Printing ink manufacture',
+          'Fragrance and essential oil extraction',
+          'Artist paints and mediums',
+          'Wood treatment and preservation'
+        ],
+        technicalSpecs: [
+          'Appearance: Clear, colorless to pale yellow',
+          'Main component: Alpha-pinene, beta-pinene',
+          'Boiling range: 150-180°C',
+          'Flash point: 35°C',
+          'Specific gravity: 0.86-0.87',
+          'Purity: Technical grade',
+          'Characteristic pine odor',
+          'Available in 20L, 200L drums'
+        ]
+      },
+    },
+    {
+      id: 'naphtha-industrial',
+      title: 'Naphtha (Industrial Grade)',
+      description: 'Industrial naphtha solvent for cleaning, dilution, and chemical processing.',
+      category: 'solvents',
+      icon: FlaskRound,
+      details: {
+        casNumber: '64742-89-8',
+        alternativeNames: ['Petroleum naphtha', 'VM&P naphtha', 'Light naphtha', 'Solvent naphtha'],
+        seoKeywords: ['naphtha industrial Oman', 'petroleum naphtha Muscat', 'solvent naphtha Sohar', 'VM&P naphtha Oman', 'naphtha supplier Muscat'],
+        longDescription: 'Industrial Grade Naphtha supplier in Oman - Global Chemicals LLC provides high-quality petroleum naphtha for industrial cleaning, chemical processing, and manufacturing in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our naphtha fractions (light, medium, heavy) offer excellent solvency for resins, rubbers, and asphalts. Essential for rubber and tire manufacturing, paint formulation, and petrochemical feedstock. The fast-evaporating solvent is ideal for applications requiring quick drying and minimal residue. Widely used in adhesive production, printing inks, rubber compounding, and chemical synthesis across Oman\'s manufacturing and petrochemical industries. Available in various boiling ranges to meet specific process requirements.',
+        applications: [
+          'Rubber and tire manufacturing',
+          'Adhesive and sealant formulation',
+          'Printing ink production',
+          'Paint and coating manufacture',
+          'Petrochemical feedstock',
+          'Asphalt dilution and processing',
+          'Industrial cleaning and degreasing',
+          'Chemical synthesis intermediates'
+        ],
+        technicalSpecs: [
+          'Grades: Light, medium, heavy naphtha',
+          'Boiling range: 30-200°C (grade dependent)',
+          'Flash point: -4°C to 38°C (grade dependent)',
+          'Aromatic content: 10-25%',
+          'Appearance: Clear, colorless liquid',
+          'Fast evaporation rate',
+          'Available in drums, IBCs, ISO tanks, bulk',
+          'Meets ASTM specifications'
+        ]
+      },
+    },
+    {
+      id: 'thinner-402',
+      title: 'Thinner 402',
+      description: 'Premium paint thinner for epoxy, polyurethane, and industrial coatings.',
+      category: 'solvents',
+      icon: FlaskRound,
+      details: {
+        alternativeNames: ['Paint thinner 402', 'Industrial thinner', 'Epoxy thinner', 'Coating thinner'],
+        seoKeywords: ['thinner 402 Oman', 'paint thinner Muscat', 'epoxy thinner Oman', 'industrial thinner Sohar', 'coating thinner Muscat'],
+        longDescription: 'Thinner 402 supplier in Oman - Global Chemicals LLC provides premium-grade Thinner 402 for industrial coating applications in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our specially formulated thinner is designed for epoxy, polyurethane, and high-performance industrial coatings. The balanced solvent blend ensures optimal viscosity reduction without compromising coating properties. Essential for achieving proper spray viscosity, flow, and leveling in professional coating applications. Widely used in oil & gas facilities, marine coatings, industrial maintenance, steel structure painting, and tank coating operations across Oman. The formulation provides controlled evaporation rate for professional finishing in hot climates.',
+        applications: [
+          'Epoxy coating thinning and application',
+          'Polyurethane paint viscosity adjustment',
+          'Industrial maintenance coatings',
+          'Marine and protective coatings',
+          'Tank and pipeline coating',
+          'Steel structure painting',
+          'Spray equipment cleaning',
+          'Professional painting operations'
+        ],
+        technicalSpecs: [
+          'Formulation: Balanced aromatic/aliphatic blend',
+          'Appearance: Clear liquid',
+          'Flash point: 25-30°C',
+          'Evaporation rate: Medium (controlled)',
+          'Compatible with: Epoxy, PU, alkyd systems',
+          'Typical addition: 5-15% by volume',
+          'Suitable for hot climate application',
+          'Available in 20L, 200L drums'
+        ]
+      },
+    },
+    {
+      id: 'mek-solvent',
+      title: 'MEK (Methyl Ethyl Ketone)',
+      description: 'High-purity MEK solvent for coatings, adhesives, and industrial cleaning.',
+      category: 'solvents',
+      icon: FlaskRound,
+      details: {
+        formula: 'C4H8O',
+        casNumber: '78-93-3',
+        alternativeNames: ['Methyl ethyl ketone', 'Butanone', '2-Butanone', 'MEK solvent'],
+        seoKeywords: ['MEK Oman', 'methyl ethyl ketone Muscat', 'MEK solvent Sohar', 'butanone Oman', 'MEK industrial Muscat'],
+        longDescription: 'MEK (Methyl Ethyl Ketone) supplier in Oman - Global Chemicals LLC provides high-purity MEK for coatings, adhesives, and industrial applications in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our MEK offers excellent solvency for resins, inks, and adhesives with fast evaporation rate. Essential for paint stripping, dewaxing processes, and industrial cleaning operations. The powerful ketone solvent is widely used in printing ink manufacturing, adhesive formulation, and as a reaction medium in chemical synthesis. Critical for automotive refinishing, industrial coatings, and manufacturing processes across Oman. The high-purity grade ensures consistent performance in demanding applications.',
+        applications: [
+          'Paint and coating formulation',
+          'Printing ink manufacture',
+          'Adhesive and sealant production',
+          'Paint stripping and removal',
+          'Dewaxing processes',
+          'Magnetic tape manufacture',
+          'Industrial cleaning and degreasing',
+          'Chemical synthesis intermediate'
+        ],
+        technicalSpecs: [
+          'Purity: 99.5% minimum',
+          'Appearance: Clear, colorless liquid',
+          'Boiling point: 80°C',
+          'Flash point: -9°C',
+          'Fast evaporation rate',
+          'Strong solvency for resins',
+          'Miscible with most organic solvents',
+          'Available in 200L drums, IBCs'
+        ]
       },
     },
 
     // Inorganic Chemicals
     {
-      id: 'inorganic-chemicals',
-      title: 'Inorganic Chemicals',
-      description: 'Wide range of inorganic compounds for industrial processes.',
+      id: 'aluminum-sulfate',
+      title: 'Aluminum Sulfate (Alum)',
+      description: 'Industrial aluminum sulfate for water treatment and paper manufacturing.',
       category: 'inorganic',
       icon: Microscope,
       details: {
-        fullDescription: 'Diverse portfolio of inorganic chemicals supporting various industrial manufacturing and processing needs.',
-        applications: ['Chemical manufacturing', 'Industrial processes', 'Water treatment', 'Metal processing'],
+        formula: 'Al2(SO4)3',
+        casNumber: '10043-01-3',
+        alternativeNames: ['Alum', 'Aluminum sulphate', 'Filter alum', 'Papermaker\'s alum'],
+        seoKeywords: ['aluminum sulfate Oman', 'alum Muscat', 'water treatment alum Oman', 'paper alum Sohar', 'aluminum sulfate supplier Muscat'],
+        longDescription: 'Aluminum Sulfate (Alum) supplier in Oman - Global Chemicals LLC provides industrial-grade aluminum sulfate for water treatment, paper manufacturing, and industrial processes in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our alum is a highly effective coagulant for clarifying drinking water, wastewater treatment, and industrial process water. Essential for removing suspended solids, color, and turbidity from water systems. Widely used in municipal water treatment plants, sewage treatment facilities, paper mills, and textile industries across Oman. The versatile inorganic chemical also serves in pH adjustment, phosphorus removal, and sludge conditioning applications. Available in liquid (8%) and solid forms (ferric, non-ferric grades).',
+        applications: [
+          'Drinking water coagulation and clarification',
+          'Municipal and industrial wastewater treatment',
+          'Paper manufacturing (sizing agent)',
+          'Textile dyeing and printing',
+          'Phosphorus removal from wastewater',
+          'Turbidity and color removal',
+          'pH adjustment in water treatment',
+          'Concrete acceleration'
+        ],
+        technicalSpecs: [
+          'Forms: Liquid 8%, solid lumps/powder',
+          'Al2O3 content: 17% minimum',
+          'Iron content: Ferric or non-ferric grades',
+          'pH: 3-4 (10% solution)',
+          'Appearance: White to gray crystalline',
+          'Dosage: 10-200 ppm (water treatment)',
+          'Meets AWWA B403 standards',
+          'Available in 25kg bags, 1000L IBCs, bulk'
+        ]
+      },
+    },
+    {
+      id: 'ferric-chloride',
+      title: 'Ferric Chloride',
+      description: 'Industrial ferric chloride for wastewater treatment and etching.',
+      category: 'inorganic',
+      icon: Microscope,
+      details: {
+        formula: 'FeCl3',
+        casNumber: '7705-08-0',
+        alternativeNames: ['Iron(III) chloride', 'Ferric chloride solution', 'Iron trichloride'],
+        seoKeywords: ['ferric chloride Oman', 'iron chloride Muscat', 'wastewater coagulant Oman', 'ferric chloride solution Sohar', 'FeCl3 Muscat'],
+        longDescription: 'Ferric Chloride supplier in Oman - Global Chemicals LLC provides industrial ferric chloride for wastewater treatment, metal etching, and industrial applications in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our ferric chloride solution (40%) is a powerful coagulant for treating industrial wastewater, municipal sewage, and water clarification. Essential for removing phosphorus, heavy metals, and suspended solids from wastewater. The acidic coagulant works effectively across wide pH ranges. Widely used in sewage treatment plants, industrial effluent treatment, PCB manufacturing, and metal surface treatment across Oman. Also serves in pigment production, textile printing, and as a catalyst in organic synthesis.',
+        applications: [
+          'Municipal sewage treatment',
+          'Industrial wastewater coagulation',
+          'Phosphorus and heavy metal removal',
+          'PCB etching and electronics manufacturing',
+          'Metal surface treatment',
+          'Drinking water purification',
+          'Sludge conditioning',
+          'Pigment and dye manufacture'
+        ],
+        technicalSpecs: [
+          'Concentration: 38-42% FeCl3',
+          'Appearance: Dark brown liquid',
+          'Specific gravity: 1.4-1.5',
+          'pH: <2 (highly acidic)',
+          'Iron content: 12-14%',
+          'Dosage: 20-300 ppm (water treatment)',
+          'Meets AWWA specifications',
+          'Available in 30L, 200L drums, IBCs, bulk'
+        ]
+      },
+    },
+    {
+      id: 'lime-quicklime',
+      title: 'Quicklime (Calcium Oxide)',
+      description: 'Industrial quicklime for pH adjustment, water treatment, and manufacturing.',
+      category: 'inorganic',
+      icon: Microscope,
+      details: {
+        formula: 'CaO',
+        casNumber: '1305-78-8',
+        alternativeNames: ['Calcium oxide', 'Burnt lime', 'Unslaked lime', 'Quicklime'],
+        seoKeywords: ['quicklime Oman', 'calcium oxide Muscat', 'lime industrial Oman', 'burnt lime Sohar', 'quicklime supplier Muscat'],
+        longDescription: 'Quicklime (Calcium Oxide) supplier in Oman - Global Chemicals LLC provides industrial quicklime for water treatment, pH adjustment, and manufacturing processes in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our high-calcium quicklime is produced by calcining limestone and offers powerful alkalinity for neutralization applications. Essential for pH adjustment in wastewater treatment, water softening, and industrial neutralization processes. The highly reactive material generates heat upon contact with water (exothermic slaking). Widely used in steel production, construction, soil stabilization, and chemical manufacturing across Oman. Available in lump and powder forms to meet various industrial requirements.',
+        applications: [
+          'Wastewater pH adjustment and neutralization',
+          'Water softening and treatment',
+          'Steel and metallurgical processes',
+          'Soil stabilization in construction',
+          'Flue gas desulfurization',
+          'Sugar refining and food processing',
+          'Paper and pulp manufacturing',
+          'Chemical manufacturing intermediate'
+        ],
+        technicalSpecs: [
+          'CaO content: 90-95%',
+          'Forms: Lump, pebble, powder',
+          'Appearance: White to off-white',
+          'Reactivity: High (exothermic with water)',
+          'Available calcium: >90%',
+          'Typical sizing: 10-50mm lumps',
+          'Store in dry conditions',
+          'Available in 25kg bags, bulk bags, bulk'
+        ]
+      },
+    },
+    {
+      id: 'poly-aluminum-chloride',
+      title: 'Poly Aluminum Chloride (PAC)',
+      description: 'High-efficiency polyaluminum chloride coagulant for water treatment.',
+      category: 'inorganic',
+      icon: Microscope,
+      details: {
+        formula: '[Al2(OH)nCl6-n]m',
+        casNumber: '1327-41-9',
+        alternativeNames: ['PAC', 'Polyaluminum chloride', 'Aluminum chlorohydrate', 'PACl'],
+        seoKeywords: ['PAC Oman', 'poly aluminum chloride Muscat', 'water coagulant Oman', 'PAC water treatment Sohar', 'polyaluminum chloride Muscat'],
+        longDescription: 'Poly Aluminum Chloride (PAC) supplier in Oman - Global Chemicals LLC provides high-efficiency PAC coagulant for water and wastewater treatment in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our PAC offers superior performance compared to traditional aluminum sulfate with wider pH operating range, faster floc formation, and lower sludge production. Essential for drinking water clarification, industrial wastewater treatment, and process water purification. The pre-polymerized coagulant reduces alkalinity consumption and chemical dosing requirements. Widely used in municipal water treatment plants, industrial effluent systems, paper mills, and textile facilities across Oman. Available in liquid (10%) and powder (30% Al2O3) forms for various applications.',
+        applications: [
+          'Drinking water purification',
+          'Municipal wastewater treatment',
+          'Industrial effluent clarification',
+          'Paper mill wastewater treatment',
+          'Textile dyeing wastewater',
+          'Oil refinery wastewater',
+          'Swimming pool water treatment',
+          'Turbidity and color removal'
+        ],
+        technicalSpecs: [
+          'Al2O3 content: 10% (liquid), 28-30% (powder)',
+          'Basicity: 40-90%',
+          'pH: 3.5-5.0',
+          'Appearance: Yellow to brown liquid/powder',
+          'Effective pH range: 5-9',
+          'Dosage: 5-50 ppm (water treatment)',
+          'Lower sludge production than alum',
+          'Available in 25kg bags, 1000L IBCs, bulk'
+        ]
+      },
+    },
+    {
+      id: 'sodium-silicate-solution',
+      title: 'Sodium Silicate Solution (Water Glass)',
+      description: 'Industrial sodium silicate for detergents, adhesives, and manufacturing.',
+      category: 'inorganic',
+      icon: Microscope,
+      details: {
+        formula: 'Na2SiO3',
+        casNumber: '1344-09-8',
+        alternativeNames: ['Water glass', 'Liquid glass', 'Sodium metasilicate solution'],
+        seoKeywords: ['sodium silicate Oman', 'water glass Muscat', 'liquid glass Oman', 'sodium silicate solution Sohar', 'water glass supplier Muscat'],
+        longDescription: 'Sodium Silicate Solution supplier in Oman - Global Chemicals LLC provides industrial water glass for detergents, adhesives, and manufacturing applications in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our sodium silicate solution (various ratios) offers excellent binding, adhesive, and detergency properties. Essential for detergent formulation, cement and concrete additives, adhesives, and refractory applications. The alkaline solution also serves as a deflocculant, binder, and corrosion inhibitor. Widely used in soap and detergent manufacturing, foundry operations, construction, and industrial cleaning across Oman. Available in various SiO2:Na2O ratios (2.0, 2.4, 3.22, 3.75) and concentrations to meet specific application requirements.',
+        applications: [
+          'Detergent and soap formulation',
+          'Adhesives and binders',
+          'Concrete and cement additives',
+          'Foundry core and mold making',
+          'Deflocculant in drilling fluids',
+          'Refractory binders',
+          'Paper deinking and bleaching',
+          'Water treatment and sealing'
+        ],
+        technicalSpecs: [
+          'Ratios: 2.0R, 2.4R, 3.22R, 3.75R',
+          'Solids: 35-50%',
+          'Appearance: Clear to slightly turbid',
+          'pH: 11-13 (highly alkaline)',
+          'Specific gravity: 1.35-1.55',
+          'Viscosity: Varies by ratio and concentration',
+          'Available in 250kg drums, IBCs, bulk',
+          'Meets industrial grade specifications'
+        ]
+      },
+    },
+    {
+      id: 'zinc-sulfate',
+      title: 'Zinc Sulfate',
+      description: 'Industrial zinc sulfate for agriculture, water treatment, and manufacturing.',
+      category: 'inorganic',
+      icon: Microscope,
+      details: {
+        formula: 'ZnSO4',
+        casNumber: '7446-19-7',
+        alternativeNames: ['Zinc sulphate heptahydrate', 'White vitriol', 'Zinc vitriol'],
+        seoKeywords: ['zinc sulfate Oman', 'zinc sulphate Muscat', 'agricultural zinc Oman', 'zinc sulfate fertilizer Sohar', 'ZnSO4 Muscat'],
+        longDescription: 'Zinc Sulfate supplier in Oman - Global Chemicals LLC provides industrial and agricultural-grade zinc sulfate for fertilizers, animal nutrition, and industrial applications in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our zinc sulfate heptahydrate (21% Zn) is an essential micronutrient for crop production and animal feed supplement. Critical for preventing zinc deficiency in crops, improving yield, and quality. Also used in industrial applications including rayon manufacture, wood preservation, and as a mordant in dyeing. Widely used in agriculture, animal feed production, textile industries, and chemical manufacturing across Oman. Available in granular and powder forms for various applications.',
+        applications: [
+          'Agricultural fertilizer (zinc deficiency correction)',
+          'Animal feed supplement',
+          'Rayon and fiber production',
+          'Wood preservative treatment',
+          'Textile dyeing mordant',
+          'Electroplating zinc coatings',
+          'Pharmaceutical preparations',
+          'Water treatment additive'
+        ],
+        technicalSpecs: [
+          'Form: Heptahydrate (ZnSO4·7H2O)',
+          'Zinc content: 21-23%',
+          'Appearance: White crystalline powder/granules',
+          'Purity: 98% minimum',
+          'Solubility: Highly soluble in water',
+          'pH: 4-6 (5% solution)',
+          'Available in 25kg bags, 50kg bags, bulk bags',
+          'Meets agricultural and industrial grades'
+        ]
       },
     },
 
     // Chlorinated Solvents
     {
-      id: 'chlorinated-solvents',
-      title: 'Chlorinated Solvents',
-      description: 'Specialized chlorinated solvents for degreasing and industrial cleaning.',
+      id: 'trichloroethylene',
+      title: 'Trichloroethylene (TCE)',
+      description: 'High-purity trichloroethylene for metal degreasing and industrial cleaning.',
       category: 'chlorinated',
       icon: Flame,
       details: {
-        fullDescription: 'Range of chlorinated solvents designed for demanding industrial cleaning and degreasing applications.',
-        applications: ['Metal degreasing', 'Industrial cleaning', 'Dry cleaning', 'Chemical intermediates'],
+        formula: 'C2HCl3',
+        casNumber: '79-01-6',
+        alternativeNames: ['TCE', 'Trichloroethene', 'Tri', 'Trilene'],
+        seoKeywords: ['trichloroethylene Oman', 'TCE Muscat', 'metal degreaser Oman', 'TCE industrial Sohar', 'trichloroethylene supplier Muscat'],
+        longDescription: 'Trichloroethylene (TCE) supplier in Oman - Global Chemicals LLC provides high-purity TCE for metal degreasing, vapor degreasing, and industrial cleaning in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our stabilized trichloroethylene offers excellent solvency for oils, greases, waxes, and tars with non-flammability advantage. Essential for precision cleaning of metal parts, electronics components, and machinery in manufacturing facilities. The chlorinated solvent provides superior degreasing power for heavy oil and grease removal. Widely used in automotive manufacturing, aerospace component cleaning, metal fabrication, and electronics industries across Oman. Available with inhibitors to prevent metal corrosion during vapor degreasing operations.',
+        applications: [
+          'Vapor degreasing of metal parts',
+          'Precision cleaning of machinery',
+          'Electronics and aerospace component cleaning',
+          'Metal fabrication degreasing',
+          'Automotive parts cleaning',
+          'Removal of cutting oils and greases',
+          'Heat exchanger tube cleaning',
+          'Specialized industrial cleaning'
+        ],
+        technicalSpecs: [
+          'Purity: 99.5% minimum (stabilized)',
+          'Appearance: Clear, colorless liquid',
+          'Boiling point: 87°C',
+          'Specific gravity: 1.46',
+          'Non-flammable',
+          'Contains stabilizers to prevent decomposition',
+          'Excellent solvency for oils and greases',
+          'Available in 200L drums, IBCs'
+        ]
+      },
+    },
+    {
+      id: 'perchloroethylene',
+      title: 'Perchloroethylene (PCE)',
+      description: 'Industrial perchloroethylene for dry cleaning and metal degreasing.',
+      category: 'chlorinated',
+      icon: Flame,
+      details: {
+        formula: 'C2Cl4',
+        casNumber: '127-18-4',
+        alternativeNames: ['Tetrachloroethylene', 'PCE', 'Perc', 'Tetrachloroethene'],
+        seoKeywords: ['perchloroethylene Oman', 'PCE Muscat', 'dry cleaning solvent Oman', 'tetrachloroethylene Sohar', 'perc Muscat'],
+        longDescription: 'Perchloroethylene (PCE) supplier in Oman - Global Chemicals LLC provides high-purity perchloroethylene for dry cleaning and industrial applications in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our stabilized PCE is the industry standard solvent for professional dry cleaning operations and metal degreasing. The non-flammable chlorinated solvent offers excellent fabric cleaning with minimal shrinkage and color fading. Essential for dry cleaning facilities, textile care, and precision metal cleaning operations. The powerful solvent effectively removes oils, greases, and organic stains. Widely used in laundries, dry cleaning shops, textile industries, and metal processing facilities across Oman. Available with stabilizers for extended service life.',
+        applications: [
+          'Professional dry cleaning operations',
+          'Textile and garment cleaning',
+          'Metal degreasing and cleaning',
+          'Automotive parts cleaning',
+          'Spot removal and stain treatment',
+          'Vapor degreasing systems',
+          'Chemical intermediate production',
+          'Industrial cleaning applications'
+        ],
+        technicalSpecs: [
+          'Purity: 99.9% minimum (stabilized)',
+          'Appearance: Clear, colorless liquid',
+          'Boiling point: 121°C',
+          'Specific gravity: 1.62',
+          'Non-flammable',
+          'Excellent degreasing properties',
+          'Contains stabilizers for aluminum, iron',
+          'Available in 200L drums, IBCs'
+        ]
+      },
+    },
+    {
+      id: 'methylene-chloride-industrial',
+      title: 'Methylene Chloride (Industrial Grade)',
+      description: 'Industrial methylene chloride for paint stripping and industrial cleaning.',
+      category: 'chlorinated',
+      icon: Flame,
+      details: {
+        formula: 'CH2Cl2',
+        casNumber: '75-09-2',
+        alternativeNames: ['Dichloromethane industrial', 'DCM industrial', 'Methylene dichloride'],
+        seoKeywords: ['methylene chloride industrial Oman', 'DCM industrial Muscat', 'paint stripper Oman', 'methylene chloride Sohar', 'DCM degreaser Muscat'],
+        longDescription: 'Industrial Grade Methylene Chloride supplier in Oman - Global Chemicals LLC provides methylene chloride for paint stripping, industrial cleaning, and manufacturing in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our industrial-grade DCM offers powerful paint and coating removal with fast evaporation. Essential for removing multiple paint layers, epoxy coatings, and adhesives from metal, wood, and concrete surfaces. The volatile solvent penetrates coatings quickly and lifts them without damaging substrates. Widely used in maintenance operations, surface preparation, furniture refinishing, and coating removal across Oman\'s industrial and construction sectors. The low boiling point ensures fast evaporation with minimal residue.',
+        applications: [
+          'Paint and coating stripping',
+          'Epoxy and polyurethane removal',
+          'Adhesive removal from surfaces',
+          'Metal surface preparation',
+          'Furniture refinishing',
+          'Graffiti removal',
+          'Industrial equipment cleaning',
+          'Degreasing operations'
+        ],
+        technicalSpecs: [
+          'Purity: 99% (industrial grade)',
+          'Appearance: Clear, colorless liquid',
+          'Boiling point: 40°C (low)',
+          'Flash point: None (non-flammable)',
+          'Specific gravity: 1.33',
+          'Fast evaporation rate',
+          'Strong solvency for coatings',
+          'Available in 200L drums, IBCs'
+        ]
       },
     },
 
     // Ethanolamines
     {
-      id: 'ethanolamines',
-      title: 'Ethanolamines',
-      description: 'Versatile ethanolamines for gas treatment, detergents, and chemical synthesis.',
+      id: 'mea-monoethanolamine',
+      title: 'MEA (Monoethanolamine)',
+      description: 'High-purity monoethanolamine for gas sweetening and chemical manufacturing.',
       category: 'ethanolamines',
       icon: Beaker,
       details: {
-        fullDescription: 'Family of organic compounds used in various industrial applications from gas sweetening to surfactant production.',
-        applications: ['Gas treatment', 'Surfactant production', 'Chemical synthesis', 'Metalworking fluids'],
+        formula: 'C2H7NO',
+        casNumber: '141-43-5',
+        alternativeNames: ['Monoethanolamine', 'MEA', 'Ethanolamine', '2-Aminoethanol'],
+        seoKeywords: ['MEA Oman', 'monoethanolamine Muscat', 'gas sweetening MEA Oman', 'ethanolamine Sohar', 'MEA gas treatment Muscat'],
+        longDescription: 'Monoethanolamine (MEA) supplier in Oman - Global Chemicals LLC provides high-purity MEA for gas treating, chemical manufacturing, and industrial applications in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our MEA is the most common amine for removing H2S and CO2 from natural gas, refinery gases, and synthesis gas. Essential for gas processing plants requiring high removal efficiency and clean gas specifications. The primary amine offers the highest absorption capacity per unit volume. Widely used in LNG plants, refineries, ammonia production, and gas processing facilities across Oman. Also serves as a chemical intermediate for surfactants, textiles, and pharmaceutical production. Available in various grades for gas treating and chemical synthesis.',
+        applications: [
+          'Natural gas sweetening (H2S, CO2 removal)',
+          'Refinery sour gas treatment',
+          'LNG plant gas processing',
+          'Ammonia plant CO2 capture',
+          'Surfactant and detergent production',
+          'Textile chemical manufacture',
+          'Metalworking fluid formulation',
+          'Pharmaceutical intermediate'
+        ],
+        technicalSpecs: [
+          'Purity: 99% minimum',
+          'Appearance: Clear, colorless viscous liquid',
+          'Molecular weight: 61.08 g/mol',
+          'Boiling point: 170°C',
+          'Specific gravity: 1.012',
+          'Typical solution strength: 15-20% MEA',
+          'High absorption capacity',
+          'Available in drums, IBCs, ISO tanks, bulk'
+        ]
+      },
+    },
+    {
+      id: 'tea-triethanolamine',
+      title: 'TEA (Triethanolamine)',
+      description: 'Industrial triethanolamine for metalworking, cement grinding, and cosmetics.',
+      category: 'ethanolamines',
+      icon: Beaker,
+      details: {
+        formula: 'C6H15NO3',
+        casNumber: '102-71-6',
+        alternativeNames: ['Triethanolamine', 'TEA', 'Trolamine', '2,2\',2\'\'-Nitrilotriethanol'],
+        seoKeywords: ['TEA Oman', 'triethanolamine Muscat', 'TEA industrial Oman', 'metalworking TEA Sohar', 'triethanolamine supplier Muscat'],
+        longDescription: 'Triethanolamine (TEA) supplier in Oman - Global Chemicals LLC provides industrial-grade TEA for metalworking fluids, cement grinding aids, and manufacturing in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our triethanolamine is a versatile tertiary amine used as an alkalizing agent, emulsifier, and corrosion inhibitor. Essential for formulating metalworking fluids, cement grinding aids, and as a surfactant in industrial cleaners. The viscous liquid neutralizes acids and provides excellent corrosion protection for ferrous metals. Widely used in metalworking industries, cement plants, cosmetic manufacturing, and industrial chemical production across Oman. Also serves in gas treating, textile processing, and as a curing accelerator for epoxy resins.',
+        applications: [
+          'Metalworking fluid formulation',
+          'Cement grinding aid production',
+          'Industrial cleaner and detergent',
+          'Cosmetic and personal care products',
+          'Gas sweetening applications',
+          'Textile processing chemicals',
+          'Epoxy resin curing agent',
+          'Corrosion inhibitor formulations'
+        ],
+        technicalSpecs: [
+          'Purity: 99% minimum',
+          'Appearance: Clear, colorless to pale yellow viscous liquid',
+          'Molecular weight: 149.19 g/mol',
+          'Boiling point: 335°C',
+          'Specific gravity: 1.124',
+          'Viscosity: High (hygroscopic)',
+          'pH: 10-11 (neutralizer)',
+          'Available in 215kg drums, IBCs, bulk'
+        ]
+      },
+    },
+    {
+      id: 'mdea-methyldiethanolamine',
+      title: 'MDEA (Methyldiethanolamine)',
+      description: 'Premium MDEA for selective H2S removal and gas sweetening.',
+      category: 'ethanolamines',
+      icon: Beaker,
+      details: {
+        formula: 'C5H13NO2',
+        casNumber: '105-59-9',
+        alternativeNames: ['Methyldiethanolamine', 'MDEA', 'N-Methyldiethanolamine'],
+        seoKeywords: ['MDEA Oman', 'methyldiethanolamine Muscat', 'selective gas treating Oman', 'MDEA gas sweetening Sohar', 'MDEA Muscat'],
+        longDescription: 'Methyldiethanolamine (MDEA) supplier in Oman - Global Chemicals LLC provides high-purity MDEA for selective gas treating and processing in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our MDEA offers selective removal of H2S over CO2, making it ideal for applications requiring high H2S removal with partial CO2 slip. Essential for sour gas processing, LNG plants, and gas processing facilities requiring selective treating. The tertiary amine offers low corrosion rates, reduced energy consumption for regeneration, and minimal hydrocarbon co-absorption. Widely used in large-scale gas processing plants, LNG facilities, and refineries across Oman requiring selective gas treatment. The preferred choice for treating gases with high CO2/H2S ratios.',
+        applications: [
+          'Selective H2S removal from natural gas',
+          'LNG plant gas sweetening',
+          'Sour gas processing',
+          'Bulk CO2 removal with H2S selectivity',
+          'Tail gas treating units',
+          'High-pressure gas treating',
+          'Refinery gas processing',
+          'Mixed amine systems (MDEA + activators)'
+        ],
+        technicalSpecs: [
+          'Purity: 99% minimum',
+          'Appearance: Clear, colorless liquid',
+          'Molecular weight: 119.16 g/mol',
+          'Boiling point: 247°C',
+          'Specific gravity: 1.038',
+          'Selective for H2S over CO2',
+          'Low corrosion rates',
+          'Available in drums, IBCs, ISO tanks'
+        ]
       },
     },
 
     // Glycols
     {
-      id: 'glycols',
-      title: 'Glycols',
-      description: 'Industrial glycols for antifreeze, coolants, and chemical manufacturing.',
+      id: 'meg-ethylene-glycol',
+      title: 'MEG (Monoethylene Glycol)',
+      description: 'Industrial monoethylene glycol for antifreeze, coolants, and polyester production.',
       category: 'glycols',
       icon: Wind,
       details: {
-        fullDescription: 'Range of glycols including ethylene glycol and propylene glycol for diverse industrial applications.',
-        applications: ['Antifreeze', 'Coolants', 'Chemical intermediates', 'De-icing', 'Heat transfer'],
+        formula: 'C2H6O2',
+        casNumber: '107-21-1',
+        alternativeNames: ['Ethylene glycol', 'MEG', '1,2-Ethanediol', 'Glycol'],
+        seoKeywords: ['MEG Oman', 'ethylene glycol Muscat', 'antifreeze Oman', 'coolant MEG Sohar', 'monoethylene glycol Muscat'],
+        longDescription: 'Monoethylene Glycol (MEG) supplier in Oman - Global Chemicals LLC provides industrial-grade MEG for antifreeze, coolants, and chemical manufacturing in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our MEG is essential for formulating automotive antifreeze, HVAC coolants, and as a raw material for polyester fiber and PET production. The colorless liquid provides excellent freezing point depression and boiling point elevation. Critical for gas dehydration, hydrate inhibition in pipelines, and as a heat transfer fluid. Widely used in automotive industries, textile manufacturing, oilfield operations, and industrial cooling systems across Oman. Also serves as a chemical intermediate for resins, solvents, and explosives production.',
+        applications: [
+          'Automotive antifreeze and coolant formulation',
+          'HVAC system coolants',
+          'Polyester fiber (PET) production',
+          'Gas dehydration and hydrate inhibition',
+          'Heat transfer fluid systems',
+          'Chemical intermediate for resins',
+          'Deicing fluid formulation',
+          'Industrial process cooling'
+        ],
+        technicalSpecs: [
+          'Purity: 99.8% minimum',
+          'Appearance: Clear, colorless, viscous liquid',
+          'Boiling point: 197°C',
+          'Freezing point: -13°C',
+          'Specific gravity: 1.113 at 20°C',
+          'Completely miscible with water',
+          'Flash point: 111°C',
+          'Available in 200L drums, IBCs, ISO tanks, bulk'
+        ]
+      },
+    },
+    {
+      id: 'teg-triethylene-glycol',
+      title: 'TEG (Triethylene Glycol)',
+      description: 'High-purity triethylene glycol for natural gas dehydration.',
+      category: 'glycols',
+      icon: Wind,
+      details: {
+        formula: 'C6H14O4',
+        casNumber: '112-27-6',
+        alternativeNames: ['Triethylene glycol', 'TEG', 'Triglycol', '2,2\'-[Ethylenebis(oxy)]diethanol'],
+        seoKeywords: ['TEG Oman', 'triethylene glycol Muscat', 'gas dehydration Oman', 'TEG dehydration Sohar', 'triethylene glycol Muscat'],
+        longDescription: 'Triethylene Glycol (TEG) supplier in Oman - Global Chemicals LLC provides high-purity TEG for natural gas dehydration and industrial applications in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our TEG is the industry standard for removing water vapor from natural gas streams to meet pipeline specifications and prevent hydrate formation. Essential for gas processing plants, glycol dehydration units, and natural gas conditioning. The hygroscopic liquid absorbs water effectively with low vaporization losses. Widely used in gas processing facilities, LNG plants, and oilfield operations across Oman. Also serves as a solvent for resins, inks, and as a plasticizer for vinyl and polyurethane. The preferred glycol for gas dehydration due to optimal balance of performance and economics.',
+        applications: [
+          'Natural gas dehydration units',
+          'Pipeline gas conditioning',
+          'Hydrate prevention in gas systems',
+          'Solvent for resins and inks',
+          'Air disinfection and sanitization',
+          'Plasticizer for polymers',
+          'Humectant in industrial applications',
+          'Heat transfer and hydraulic fluids'
+        ],
+        technicalSpecs: [
+          'Purity: 99% minimum',
+          'Appearance: Clear, colorless, viscous liquid',
+          'Boiling point: 285°C',
+          'Specific gravity: 1.125 at 20°C',
+          'Low vapor pressure (minimal losses)',
+          'Hygroscopic - absorbs water effectively',
+          'Regenerable in glycol contactors',
+          'Available in drums, IBCs, ISO tanks, bulk'
+        ]
+      },
+    },
+    {
+      id: 'propylene-glycol',
+      title: 'Propylene Glycol (USP/Industrial)',
+      description: 'Food-grade and industrial propylene glycol for various applications.',
+      category: 'glycols',
+      icon: Wind,
+      details: {
+        formula: 'C3H8O2',
+        casNumber: '57-55-6',
+        alternativeNames: ['PG', '1,2-Propanediol', 'Propane-1,2-diol', 'MPG'],
+        seoKeywords: ['propylene glycol Oman', 'PG Muscat', 'food grade propylene glycol Oman', 'USP propylene glycol Sohar', 'propylene glycol Muscat'],
+        longDescription: 'Propylene Glycol supplier in Oman - Global Chemicals LLC provides USP and industrial-grade propylene glycol for food, pharmaceutical, and industrial applications in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our PG is a versatile, non-toxic glycol suitable for food-grade antifreeze, pharmaceuticals, cosmetics, and industrial processes. Essential for formulating food-safe heat transfer fluids, pharmaceutical solvents, and personal care products. The GRAS-status chemical offers similar properties to MEG but with food-safe certification. Widely used in food processing, pharmaceutical manufacturing, cosmetic production, and beverage industries across Oman. Also serves in de-icing fluids, electronic cigarettes, and theatrical fog production. Available in USP (pharmaceutical) and technical grades.',
+        applications: [
+          'Food-grade antifreeze and coolants',
+          'Pharmaceutical solvent and carrier',
+          'Cosmetic and personal care formulation',
+          'Food processing equipment coolants',
+          'De-icing fluid (aircraft, runways)',
+          'Electronic cigarette base liquid',
+          'Theatrical fog and smoke machines',
+          'Animal feed additive'
+        ],
+        technicalSpecs: [
+          'Grades: USP (pharmaceutical), Technical/Industrial',
+          'Purity: 99.5% minimum (USP)',
+          'Appearance: Clear, colorless, viscous liquid',
+          'Boiling point: 188°C',
+          'Specific gravity: 1.036 at 20°C',
+          'GRAS status (Generally Recognized As Safe)',
+          'Non-toxic alternative to ethylene glycol',
+          'Available in 200L drums, IBCs, bulk'
+        ]
       },
     },
 
     // Alcohols
     {
-      id: 'industrial-alcohols',
-      title: 'Industrial Alcohols',
-      description: 'High-purity alcohols for solvents, sanitizers, and chemical processing.',
+      id: 'methanol-industrial',
+      title: 'Methanol (Industrial Grade)',
+      description: 'Industrial methanol for solvents, fuel, and chemical manufacturing.',
       category: 'alcohols',
       icon: FlaskRound,
       details: {
-        fullDescription: 'Comprehensive range of industrial-grade alcohols for various manufacturing and processing applications.',
-        applications: ['Solvents', 'Sanitizers', 'Chemical synthesis', 'Fuel additives', 'Cleaning agents'],
+        formula: 'CH3OH',
+        casNumber: '67-56-1',
+        alternativeNames: ['Methyl alcohol', 'Wood alcohol', 'Carbinol', 'MeOH industrial'],
+        seoKeywords: ['methanol industrial Oman', 'methyl alcohol Muscat', 'industrial methanol Sohar', 'methanol fuel Oman', 'methanol supplier Muscat'],
+        longDescription: 'Industrial Grade Methanol supplier in Oman - Global Chemicals LLC provides bulk methanol for industrial solvents, fuel blending, and chemical manufacturing in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our industrial methanol serves as a key feedstock for formaldehyde production, MTBE synthesis, and biodiesel manufacturing. Essential for solvent applications, antifreeze formulation, and windshield washer fluid production. The volatile alcohol is also used as a denaturant for ethanol and in paint stripping formulations. Widely used in chemical plants, biodiesel facilities, automotive industries, and manufacturing operations across Oman. Available in bulk quantities for large-scale industrial consumption.',
+        applications: [
+          'Formaldehyde production',
+          'Biodiesel manufacturing',
+          'MTBE and TAME synthesis',
+          'Solvent for coatings and inks',
+          'Windshield washer fluid',
+          'Antifreeze formulation',
+          'Ethanol denaturant',
+          'Fuel blending and additive'
+        ],
+        technicalSpecs: [
+          'Purity: 99.85% minimum (industrial grade)',
+          'Appearance: Clear, colorless liquid',
+          'Boiling point: 65°C',
+          'Flash point: 11°C (highly flammable)',
+          'Specific gravity: 0.792',
+          'Water content: <0.1%',
+          'Toxic - handle with care',
+          'Available in IBCs, ISO tanks, bulk'
+        ]
+      },
+    },
+    {
+      id: 'ethanol-industrial',
+      title: 'Ethanol (Industrial/Denatured)',
+      description: 'Industrial and denatured ethanol for solvents, fuel, and manufacturing.',
+      category: 'alcohols',
+      icon: FlaskRound,
+      details: {
+        formula: 'C2H5OH',
+        casNumber: '64-17-5',
+        alternativeNames: ['Ethyl alcohol industrial', 'Industrial ethanol', 'Denatured alcohol', 'IMS industrial'],
+        seoKeywords: ['industrial ethanol Oman', 'denatured alcohol Muscat', 'ethanol fuel Oman', 'industrial alcohol Sohar', 'ethyl alcohol Muscat'],
+        longDescription: 'Industrial Grade Ethanol supplier in Oman - Global Chemicals LLC provides bulk ethanol for fuel blending, solvents, and manufacturing in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our industrial ethanol (denatured with methanol or IPA) is essential for E10/E85 fuel blending, solvent formulations, and chemical synthesis. The renewable alcohol serves as a gasoline octane enhancer, reducing emissions and petroleum dependence. Widely used in fuel distribution, paint and coating industries, pharmaceutical manufacturing, and industrial cleaning across Oman. Also serves in hand sanitizer production, perfume formulation, and as a general-purpose industrial solvent. Available in various concentrations (95%, 99.5%) and denatured grades.',
+        applications: [
+          'Gasoline blending (E10, E85 fuel)',
+          'Solvent for paints and coatings',
+          'Pharmaceutical extraction and synthesis',
+          'Hand sanitizer and disinfectant production',
+          'Perfume and cosmetic manufacture',
+          'Industrial cleaning formulations',
+          'Ink and adhesive production',
+          'Chemical synthesis intermediate'
+        ],
+        technicalSpecs: [
+          'Concentration: 95% or 99.5% (industrial)',
+          'Denatured with: Methanol, IPA (excise compliance)',
+          'Appearance: Clear, colorless liquid',
+          'Boiling point: 78°C',
+          'Flash point: 13°C (flammable)',
+          'Specific gravity: 0.789',
+          'Renewable, bio-based alcohol',
+          'Available in IBCs, ISO tanks, bulk'
+        ]
+      },
+    },
+    {
+      id: 'isopropanol-industrial',
+      title: 'Isopropanol (Industrial Grade)',
+      description: 'Industrial isopropyl alcohol for cleaning, solvents, and manufacturing.',
+      category: 'alcohols',
+      icon: FlaskRound,
+      details: {
+        formula: 'C3H7OH',
+        casNumber: '67-63-0',
+        alternativeNames: ['Isopropyl alcohol industrial', 'IPA industrial', '2-Propanol', 'Rubbing alcohol industrial'],
+        seoKeywords: ['isopropanol industrial Oman', 'IPA Muscat', 'isopropyl alcohol Oman', 'industrial IPA Sohar', 'isopropanol supplier Muscat'],
+        longDescription: 'Industrial Grade Isopropanol supplier in Oman - Global Chemicals LLC provides bulk IPA for industrial cleaning, solvents, and manufacturing in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our industrial isopropyl alcohol (99% or 70%) is essential for electronics cleaning, disinfection, and as a solvent in coating industries. The fast-evaporating alcohol leaves no residue, making it ideal for precision cleaning applications. Widely used in electronics manufacturing, pharmaceutical production, printing industries, and industrial maintenance across Oman. Also serves in hand sanitizer production, windshield washer fluid, and as a drying agent. Available in various grades (99%, 70% aqueous solution) for different industrial applications.',
+        applications: [
+          'Electronics and PCB cleaning',
+          'Industrial disinfection and sanitization',
+          'Solvent for coatings and inks',
+          'Hand sanitizer production (70%)',
+          'Windshield washer fluid',
+          'Pharmaceutical extraction',
+          'Printing press cleaning',
+          'General industrial cleaning'
+        ],
+        technicalSpecs: [
+          'Concentration: 99% or 70% (aqueous)',
+          'Appearance: Clear, colorless liquid',
+          'Boiling point: 82°C',
+          'Flash point: 12°C (flammable)',
+          'Specific gravity: 0.786',
+          'Fast evaporation, no residue',
+          'Effective disinfectant (70% solution)',
+          'Available in 200L drums, IBCs, bulk'
+        ]
+      },
+    },
+    {
+      id: 'butanol-industrial',
+      title: 'N-Butanol (Industrial Grade)',
+      description: 'Industrial n-butanol for coatings, plastics, and chemical synthesis.',
+      category: 'alcohols',
+      icon: FlaskRound,
+      details: {
+        formula: 'C4H9OH',
+        casNumber: '71-36-3',
+        alternativeNames: ['N-Butyl alcohol', 'Butanol', '1-Butanol', 'Butyl alcohol'],
+        seoKeywords: ['butanol Oman', 'n-butanol Muscat', 'butyl alcohol industrial Oman', 'butanol solvent Sohar', 'n-butanol supplier Muscat'],
+        longDescription: 'Industrial Grade N-Butanol supplier in Oman - Global Chemicals LLC provides n-butanol for coatings, plastics, and chemical manufacturing in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our n-butyl alcohol is a primary alcohol essential for producing butyl acetate (lacquer solvent), butyl acrylate, and glycol ethers. The versatile solvent offers excellent dissolving power for resins, oils, and dyes with moderate evaporation rate. Widely used in paint and coating industries, plastics manufacturing, textile processing, and chemical synthesis across Oman. Also serves in brake fluid formulation, hydraulic fluids, and as an extractant in pharmaceutical production. The four-carbon alcohol provides optimal balance of solvency and evaporation rate.',
+        applications: [
+          'Paint and coating solvent',
+          'Butyl acetate production (lacquer solvent)',
+          'Butyl acrylate monomer synthesis',
+          'Glycol ether manufacture',
+          'Plasticizer intermediate',
+          'Textile processing chemical',
+          'Brake fluid formulation',
+          'Pharmaceutical extraction'
+        ],
+        technicalSpecs: [
+          'Purity: 99.5% minimum (industrial grade)',
+          'Appearance: Clear, colorless liquid',
+          'Boiling point: 118°C',
+          'Flash point: 29°C',
+          'Specific gravity: 0.810',
+          'Moderate evaporation rate',
+          'Excellent solvency for resins',
+          'Available in 200L drums, IBCs, bulk'
+        ]
       },
     },
   ];
