@@ -1519,6 +1519,11 @@ export const products: Product[] = [
       description: 'Effective liquid algaecide for preventing and treating algae growth in swimming pools.',
       category: 'swimming-pool',
       icon: Droplets,
+      details: {
+        casNumber: '7173-51-5',
+        alternativeNames: ['Quaternary ammonium algaecide', 'Pool algaecide', 'Algae killer'],
+        seoKeywords: ['algaecide Oman', 'pool algaecide Muscat', 'algae control Oman', 'swimming pool algaecide'],
+      },
     },
     {
       id: 'chlorine-tablet-pool',
@@ -1526,6 +1531,11 @@ export const products: Product[] = [
       description: 'Standard chlorine tablets for continuous pool water disinfection and sanitation.',
       category: 'swimming-pool',
       icon: Droplets,
+      details: {
+        casNumber: '87-90-1',
+        alternativeNames: ['TCCA tablets', 'Trichlor tablets', 'Chlorine tabs'],
+        seoKeywords: ['chlorine tablets Oman', 'pool chlorine Muscat', 'TCCA tablets Oman'],
+      },
     },
     {
       id: 'swimming-pool-chemical',
@@ -1533,6 +1543,10 @@ export const products: Product[] = [
       description: 'Complete range of specialized chemicals for comprehensive pool maintenance.',
       category: 'swimming-pool',
       icon: Droplets,
+      details: {
+        alternativeNames: ['Pool chemicals', 'Swimming pool maintenance', 'Pool treatment chemicals'],
+        seoKeywords: ['swimming pool chemicals Oman', 'pool chemicals Muscat', 'pool maintenance Oman'],
+      },
     },
     {
       id: 'sodium-hypochlorite-pool',
@@ -1540,6 +1554,11 @@ export const products: Product[] = [
       description: 'Liquid chlorine solution for pool sanitization and shock treatment.',
       category: 'swimming-pool',
       icon: Droplets,
+      details: {
+        casNumber: '7681-52-9',
+        alternativeNames: ['Liquid chlorine', 'Bleach', 'Pool bleach'],
+        seoKeywords: ['sodium hypochlorite Oman', 'liquid chlorine pool Muscat', 'pool bleach Oman'],
+      },
     },
     {
       id: 'chlorine-tablet-jumbo',
@@ -1547,6 +1566,11 @@ export const products: Product[] = [
       description: 'Large 3-inch slow-dissolving chlorine tablets for extended pool protection.',
       category: 'swimming-pool',
       icon: Droplets,
+      details: {
+        casNumber: '87-90-1',
+        alternativeNames: ['3 inch chlorine tablets', 'Jumbo trichlor', 'Large chlorine tablets'],
+        seoKeywords: ['jumbo chlorine tablets Oman', '3 inch chlorine Muscat', 'large pool tablets Oman'],
+      },
     },
     {
       id: 'calcium-hypochlorite-granules',
@@ -1554,6 +1578,11 @@ export const products: Product[] = [
       description: 'Fast-dissolving granular chlorine for quick pool sanitization and shock treatment.',
       category: 'swimming-pool',
       icon: Droplets,
+      details: {
+        casNumber: '7778-54-3',
+        alternativeNames: ['Cal-hypo granules', 'Pool shock', 'Calcium chlorine'],
+        seoKeywords: ['calcium hypochlorite Oman', 'pool shock granules Muscat', 'cal-hypo Oman'],
+      },
     },
     {
       id: 'sodium-hypo-chlorite-12-15',
@@ -1561,6 +1590,11 @@ export const products: Product[] = [
       description: 'Concentrated liquid chlorine solution for effective pool water treatment.',
       category: 'swimming-pool',
       icon: Droplets,
+      details: {
+        casNumber: '7681-52-9',
+        alternativeNames: ['Liquid chlorine 12%', 'Sodium hypochlorite solution', 'Pool bleach 15%'],
+        seoKeywords: ['sodium hypochlorite 12% Oman', 'liquid chlorine 15% Muscat', 'pool bleach solution Oman'],
+      },
     },
     {
       id: 'chlorine-liquid-pool',
@@ -1568,6 +1602,11 @@ export const products: Product[] = [
       description: 'Ready-to-use liquid chlorine for immediate pool disinfection.',
       category: 'swimming-pool',
       icon: Droplets,
+      details: {
+        casNumber: '7681-52-9',
+        alternativeNames: ['Liquid chlorine', 'Pool chlorine solution', 'Sodium hypochlorite liquid'],
+        seoKeywords: ['liquid chlorine Oman', 'pool chlorine liquid Muscat', 'swimming pool disinfectant Oman'],
+      },
     },
     {
       id: 'sodium-bi-sulphite-liquid-pool',
@@ -1575,6 +1614,11 @@ export const products: Product[] = [
       description: 'Liquid dechlorination agent for reducing excess chlorine levels in pools.',
       category: 'swimming-pool',
       icon: Droplets,
+      details: {
+        casNumber: '7631-90-5',
+        alternativeNames: ['Sodium bisulfite', 'Dechlorinator liquid', 'Chlorine reducer'],
+        seoKeywords: ['sodium bisulfite Oman', 'dechlorinator Muscat', 'chlorine reducer pool Oman'],
+      },
     },
     {
       id: 'sodium-bi-sulphite-monohydrate',
@@ -1582,6 +1626,11 @@ export const products: Product[] = [
       description: 'Powder form for neutralizing chlorine and adjusting pool chemistry.',
       category: 'swimming-pool',
       icon: Droplets,
+      details: {
+        casNumber: '7631-90-5',
+        alternativeNames: ['Sodium bisulfite powder', 'Dechlorinator powder', 'Chlorine neutralizer'],
+        seoKeywords: ['sodium bisulfite powder Oman', 'dechlorinator powder Muscat', 'chlorine neutralizer Oman'],
+      },
     },
     {
       id: 'tcca-tablet-pool',
@@ -1589,6 +1638,11 @@ export const products: Product[] = [
       description: 'Stabilized chlorine tablets with built-in cyanuric acid for UV protection.',
       category: 'swimming-pool',
       icon: Droplets,
+      details: {
+        casNumber: '87-90-1',
+        alternativeNames: ['TCCA tablets', 'Trichlor', 'Stabilized chlorine tablets'],
+        seoKeywords: ['TCCA tablets Oman', 'trichloroisocyanuric acid Muscat', 'stabilized chlorine Oman'],
+      },
     },
     {
       id: 'chlorine-powder-pool',
@@ -1596,6 +1650,11 @@ export const products: Product[] = [
       description: 'Powdered chlorine for rapid pool treatment and shock applications.',
       category: 'swimming-pool',
       icon: Droplets,
+      details: {
+        casNumber: '7778-54-3',
+        alternativeNames: ['Chlorine shock powder', 'Pool shock', 'Cal-hypo powder'],
+        seoKeywords: ['chlorine powder Oman', 'pool shock powder Muscat', 'chlorine shock Oman'],
+      },
     },
 
     // Oilfield & Refinery
@@ -1605,6 +1664,12 @@ export const products: Product[] = [
       description: 'Organic acid used in chemical synthesis and industrial processes.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        formula: 'CH3COOH',
+        casNumber: '64-19-7',
+        alternativeNames: ['Ethanoic acid', 'Glacial acetic acid', 'Vinegar acid'],
+        seoKeywords: ['acetic acid Oman', 'ethanoic acid Muscat', 'glacial acetic acid Oman'],
+      },
     },
     {
       id: 'activated-alumina-desiccant',
@@ -1612,6 +1677,11 @@ export const products: Product[] = [
       description: 'High-capacity desiccant for moisture removal and gas drying.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        casNumber: '1344-28-1',
+        alternativeNames: ['Alumina desiccant', 'Activated aluminum oxide', 'Gas drying agent'],
+        seoKeywords: ['activated alumina Oman', 'desiccant Oman', 'gas drying Muscat', 'moisture remover Oman'],
+      },
     },
     {
       id: 'activated-carbon',
@@ -1619,6 +1689,11 @@ export const products: Product[] = [
       description: 'Highly porous carbon for adsorption and purification applications.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        casNumber: '7440-44-0',
+        alternativeNames: ['Activated charcoal', 'Active carbon', 'Carbon adsorbent'],
+        seoKeywords: ['activated carbon Oman', 'activated charcoal Muscat', 'carbon adsorbent Oman'],
+      },
     },
     {
       id: 'ammonium-bifluoride',
@@ -1626,6 +1701,12 @@ export const products: Product[] = [
       description: 'Etching and cleaning agent for industrial applications.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        formula: 'NH4HF2',
+        casNumber: '1341-49-7',
+        alternativeNames: ['Ammonium hydrogen fluoride', 'ABF', 'Ammonium acid fluoride'],
+        seoKeywords: ['ammonium bifluoride Oman', 'ABF Muscat', 'cleaning agent Oman'],
+      },
     },
     {
       id: 'ammonium-bisulphite',
@@ -1633,6 +1714,12 @@ export const products: Product[] = [
       description: 'Reducing agent and oxygen scavenger for industrial processes.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        formula: 'NH4HSO3',
+        casNumber: '10192-30-0',
+        alternativeNames: ['Ammonium bisulfite', 'Ammonium hydrogen sulfite'],
+        seoKeywords: ['ammonium bisulfite Oman', 'oxygen scavenger Muscat', 'reducing agent Oman'],
+      },
     },
     {
       id: 'ammonium-chloride',
@@ -1640,6 +1727,12 @@ export const products: Product[] = [
       description: 'Inorganic compound used in drilling fluids and metal treatment.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        formula: 'NH4Cl',
+        casNumber: '12125-02-9',
+        alternativeNames: ['Sal ammoniac', 'Ammonium muriate'],
+        seoKeywords: ['ammonium chloride Oman', 'sal ammoniac Muscat', 'drilling fluid Oman'],
+      },
     },
     {
       id: 'barium-chloride',
@@ -1647,6 +1740,12 @@ export const products: Product[] = [
       description: 'Heavy metal salt for brine formulation and drilling applications.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        formula: 'BaCl2',
+        casNumber: '10361-37-2',
+        alternativeNames: ['Barium dichloride', 'Barium chloride dihydrate'],
+        seoKeywords: ['barium chloride Oman', 'brine formulation Muscat', 'drilling chemical Oman'],
+      },
     },
     {
       id: 'bentonite-powder',
@@ -1654,6 +1753,11 @@ export const products: Product[] = [
       description: 'Clay-based drilling mud additive for viscosity control.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        casNumber: '1302-78-9',
+        alternativeNames: ['Bentonite clay', 'Drilling clay', 'Montmorillonite'],
+        seoKeywords: ['bentonite Oman', 'drilling mud Muscat', 'bentonite clay Oman', 'viscosity control Oman'],
+      },
     },
     {
       id: 'borax-powder',
@@ -1661,6 +1765,12 @@ export const products: Product[] = [
       description: 'Multipurpose boron compound for industrial applications.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        formula: 'Na2B4O7·10H2O',
+        casNumber: '1303-96-4',
+        alternativeNames: ['Sodium borate', 'Sodium tetraborate decahydrate', 'Borax decahydrate'],
+        seoKeywords: ['borax Oman', 'sodium borate Muscat', 'borax powder Oman'],
+      },
     },
     {
       id: 'boric-acid',
@@ -1668,6 +1778,12 @@ export const products: Product[] = [
       description: 'Weak acid used in chemical synthesis and industrial processes.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        formula: 'H3BO3',
+        casNumber: '10043-35-3',
+        alternativeNames: ['Boracic acid', 'Hydrogen borate', 'Orthoboric acid'],
+        seoKeywords: ['boric acid Oman', 'boracic acid Muscat', 'boric acid powder Oman'],
+      },
     },
     {
       id: 'butyl-glycol',
@@ -1675,6 +1791,12 @@ export const products: Product[] = [
       description: 'Solvent for paints, coatings, and cleaning formulations.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        formula: 'C6H14O2',
+        casNumber: '111-76-2',
+        alternativeNames: ['2-Butoxyethanol', 'Butyl cellosolve', 'Ethylene glycol monobutyl ether'],
+        seoKeywords: ['butyl glycol Oman', 'butyl cellosolve Muscat', 'solvent Oman'],
+      },
     },
     {
       id: 'calcium-bromide',
@@ -1682,6 +1804,12 @@ export const products: Product[] = [
       description: 'High-density brine for drilling and completion fluids.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        formula: 'CaBr2',
+        casNumber: '7789-41-5',
+        alternativeNames: ['Calcium dibromide', 'CaBr2 brine'],
+        seoKeywords: ['calcium bromide Oman', 'completion fluid Muscat', 'drilling brine Oman'],
+      },
     },
     {
       id: 'citric-acid-food',
@@ -1689,6 +1817,12 @@ export const products: Product[] = [
       description: 'Food-grade organic acid for cleaning and pH control.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        formula: 'C6H8O7',
+        casNumber: '77-92-9',
+        alternativeNames: ['Citric acid monohydrate', 'Food grade citric acid'],
+        seoKeywords: ['citric acid food grade Oman', 'citric acid Muscat', 'acidizing agent Oman'],
+      },
     },
     {
       id: 'calcium-chloride-oil',
@@ -1696,6 +1830,12 @@ export const products: Product[] = [
       description: 'Dense brine solution for well completion and workover operations.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        formula: 'CaCl2',
+        casNumber: '10043-52-4',
+        alternativeNames: ['Calcium dichloride', 'CaCl2 brine'],
+        seoKeywords: ['calcium chloride Oman', 'completion brine Muscat', 'CaCl2 Oman'],
+      },
     },
     {
       id: 'citric-acid-liquid',
@@ -1703,6 +1843,12 @@ export const products: Product[] = [
       description: 'Liquid acidizing agent for well stimulation and scale removal.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        formula: 'C6H8O7',
+        casNumber: '77-92-9',
+        alternativeNames: ['Citric acid solution', 'Liquid citric acid'],
+        seoKeywords: ['citric acid liquid Oman', 'acidizing agent Muscat', 'well stimulation Oman'],
+      },
     },
     {
       id: 'citric-acid-powder',
@@ -1710,6 +1856,12 @@ export const products: Product[] = [
       description: 'Powder form for scale removal and well acidizing.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        formula: 'C6H8O7',
+        casNumber: '77-92-9',
+        alternativeNames: ['Citric acid anhydrous', 'Citric acid crystals'],
+        seoKeywords: ['citric acid powder Oman', 'scale remover Muscat', 'acidizing powder Oman'],
+      },
     },
     {
       id: 'cmc',
@@ -1717,6 +1869,11 @@ export const products: Product[] = [
       description: 'Fluid loss control agent and viscosifier for drilling fluids.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        casNumber: '9000-11-7',
+        alternativeNames: ['Carboxymethyl cellulose', 'CMC', 'Sodium CMC'],
+        seoKeywords: ['CMC Oman', 'carboxymethylcellulose Muscat', 'drilling fluid additive Oman'],
+      },
     },
     {
       id: 'diesel-exhaust-fluid',
@@ -1724,6 +1881,11 @@ export const products: Product[] = [
       description: 'Emission control solution for diesel engines.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        casNumber: '57-13-6',
+        alternativeNames: ['DEF', 'AdBlue', 'Urea solution 32.5%'],
+        seoKeywords: ['DEF Oman', 'diesel exhaust fluid Muscat', 'AdBlue Oman'],
+      },
     },
     {
       id: 'corrosion-inhibitor',
@@ -1731,6 +1893,10 @@ export const products: Product[] = [
       description: 'Protective chemicals for pipelines and equipment.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        alternativeNames: ['Corrosion preventive', 'Inhibitor', 'Anti-corrosion chemical'],
+        seoKeywords: ['corrosion inhibitor Oman', 'pipeline protection Muscat', 'corrosion prevention Oman'],
+      },
     },
     {
       id: 'dea',
@@ -1738,6 +1904,12 @@ export const products: Product[] = [
       description: 'Gas sweetening agent for acid gas removal.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        formula: 'C4H11NO2',
+        casNumber: '111-42-2',
+        alternativeNames: ['Diethanolamine', 'DEA', '2,2-Iminodiethanol'],
+        seoKeywords: ['DEA Oman', 'diethanolamine Muscat', 'gas sweetening Oman', 'acid gas removal Oman'],
+      },
     },
     {
       id: 'deg',
@@ -1745,6 +1917,12 @@ export const products: Product[] = [
       description: 'Dehydration agent and inhibitor for gas processing.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        formula: 'C4H10O3',
+        casNumber: '111-46-6',
+        alternativeNames: ['Diethylene glycol', 'DEG', '2,2-Oxydiethanol'],
+        seoKeywords: ['DEG Oman', 'diethylene glycol Muscat', 'dehydration agent Oman', 'gas dehydration Oman'],
+      },
     },
     {
       id: 'degreaser-hd',
@@ -1752,6 +1930,10 @@ export const products: Product[] = [
       description: 'Heavy-duty industrial degreaser for equipment cleaning.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        alternativeNames: ['Heavy duty degreaser', 'Industrial degreaser', 'HD degreaser'],
+        seoKeywords: ['degreaser Oman', 'heavy duty degreaser Muscat', 'industrial degreaser Oman'],
+      },
     },
     {
       id: 'descalant',
@@ -1759,6 +1941,10 @@ export const products: Product[] = [
       description: 'Chemical for removing mineral scale deposits.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        alternativeNames: ['Descaling agent', 'Scale remover', 'Mineral scale cleaner'],
+        seoKeywords: ['descalant Oman', 'scale remover Muscat', 'descaling agent Oman'],
+      },
     },
     {
       id: 'edta-liquid',
@@ -1766,6 +1952,12 @@ export const products: Product[] = [
       description: 'Chelating agent for scale removal and metal control.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        formula: 'C10H16N2O8',
+        casNumber: '60-00-4',
+        alternativeNames: ['EDTA solution', 'Ethylenediaminetetraacetic acid liquid'],
+        seoKeywords: ['EDTA liquid Oman', 'chelating agent Muscat', 'scale remover Oman'],
+      },
     },
     {
       id: 'edta-powder',
@@ -1773,6 +1965,12 @@ export const products: Product[] = [
       description: 'Powder chelating agent for industrial applications.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        formula: 'C10H16N2O8',
+        casNumber: '60-00-4',
+        alternativeNames: ['EDTA powder', 'Ethylenediaminetetraacetic acid'],
+        seoKeywords: ['EDTA powder Oman', 'chelating agent powder Muscat', 'EDTA Oman'],
+      },
     },
     {
       id: 'formic-acid',
@@ -1780,6 +1978,12 @@ export const products: Product[] = [
       description: 'Organic acid for drilling fluids and acidizing.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        formula: 'HCOOH',
+        casNumber: '64-18-6',
+        alternativeNames: ['Methanoic acid', 'Formic acid 85%'],
+        seoKeywords: ['formic acid Oman', 'methanoic acid Muscat', 'acidizing agent Oman'],
+      },
     },
     {
       id: 'hydrazine-hydrate',
@@ -1787,6 +1991,12 @@ export const products: Product[] = [
       description: 'Oxygen scavenger for boiler water treatment.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        formula: 'N2H4·H2O',
+        casNumber: '7803-57-8',
+        alternativeNames: ['Hydrazine monohydrate', 'Hydrazine solution'],
+        seoKeywords: ['hydrazine hydrate Oman', 'oxygen scavenger Muscat', 'hydrazine Oman'],
+      },
     },
     {
       id: 'magnesium-oxide',
@@ -1794,6 +2004,12 @@ export const products: Product[] = [
       description: 'Refractory material and chemical intermediate.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        formula: 'MgO',
+        casNumber: '1309-48-4',
+        alternativeNames: ['Magnesia', 'Calcined magnesite', 'MgO'],
+        seoKeywords: ['magnesium oxide Oman', 'magnesia Muscat', 'MgO Oman'],
+      },
     },
     {
       id: 'mdea',
@@ -1801,6 +2017,12 @@ export const products: Product[] = [
       description: 'Selective gas treating solvent for acid gas removal.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        formula: 'C5H13NO2',
+        casNumber: '105-59-9',
+        alternativeNames: ['Methyldiethanolamine', 'MDEA', 'N-Methyldiethanolamine'],
+        seoKeywords: ['MDEA Oman', 'methyldiethanolamine Muscat', 'gas treating Oman', 'acid gas removal Oman'],
+      },
     },
     {
       id: 'mea',
@@ -1808,6 +2030,12 @@ export const products: Product[] = [
       description: 'Amine for CO2 and H2S removal from gas streams.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        formula: 'C2H7NO',
+        casNumber: '141-43-5',
+        alternativeNames: ['Monoethanolamine', 'MEA', 'Ethanolamine'],
+        seoKeywords: ['MEA Oman', 'monoethanolamine Muscat', 'CO2 removal Oman', 'gas sweetening Oman'],
+      },
     },
     {
       id: 'meg',
@@ -1815,6 +2043,12 @@ export const products: Product[] = [
       description: 'Hydrate inhibitor and dehydration agent.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        formula: 'C2H6O2',
+        casNumber: '107-21-1',
+        alternativeNames: ['Monoethylene glycol', 'Ethylene glycol', 'MEG'],
+        seoKeywords: ['MEG Oman', 'monoethylene glycol Muscat', 'hydrate inhibitor Oman', 'gas dehydration Oman'],
+      },
     },
     {
       id: 'methanol-tech',
@@ -1822,6 +2056,12 @@ export const products: Product[] = [
       description: 'Hydrate inhibitor and antifreeze for gas systems.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        formula: 'CH3OH',
+        casNumber: '67-56-1',
+        alternativeNames: ['Methyl alcohol', 'Wood alcohol', 'Methanol'],
+        seoKeywords: ['methanol Oman', 'methyl alcohol Muscat', 'hydrate inhibitor Oman'],
+      },
     },
     {
       id: 'potassium-carbonate',
@@ -1829,6 +2069,12 @@ export const products: Product[] = [
       description: 'Alkaline salt for gas treating and chemical processes.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        formula: 'K2CO3',
+        casNumber: '584-08-7',
+        alternativeNames: ['Potash carbonate', 'Pearl ash', 'K2CO3'],
+        seoKeywords: ['potassium carbonate Oman', 'potash carbonate Muscat', 'K2CO3 Oman'],
+      },
     },
     {
       id: 'potassium-chloride',
@@ -1836,6 +2082,12 @@ export const products: Product[] = [
       description: 'Shale inhibitor for water-based drilling fluids.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        formula: 'KCl',
+        casNumber: '7447-40-7',
+        alternativeNames: ['Potassium chloride', 'KCl', 'Muriate of potash'],
+        seoKeywords: ['potassium chloride Oman', 'KCl drilling Muscat', 'shale inhibitor Oman'],
+      },
     },
     {
       id: 'potassium-hydroxide',
@@ -1843,6 +2095,12 @@ export const products: Product[] = [
       description: 'Strong base for pH control and chemical synthesis.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        formula: 'KOH',
+        casNumber: '1310-58-3',
+        alternativeNames: ['Caustic potash', 'KOH', 'Potassium hydrate'],
+        seoKeywords: ['potassium hydroxide Oman', 'caustic potash Muscat', 'KOH Oman'],
+      },
     },
     {
       id: 'potassium-iodide',
@@ -1850,6 +2108,12 @@ export const products: Product[] = [
       description: 'Chemical intermediate and analytical reagent.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        formula: 'KI',
+        casNumber: '7681-11-0',
+        alternativeNames: ['Potassium iodide', 'KI'],
+        seoKeywords: ['potassium iodide Oman', 'KI Muscat', 'reagent Oman'],
+      },
     },
     {
       id: 'silica-gel-blue',
@@ -1857,6 +2121,11 @@ export const products: Product[] = [
       description: 'Indicating desiccant for moisture control.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        casNumber: '112926-00-8',
+        alternativeNames: ['Blue silica gel', 'Indicating silica gel', 'Cobalt silica gel'],
+        seoKeywords: ['silica gel blue Oman', 'indicating desiccant Muscat', 'moisture control Oman'],
+      },
     },
     {
       id: 'silica-gel-orange',
@@ -1864,6 +2133,11 @@ export const products: Product[] = [
       description: 'Color-changing desiccant for humidity monitoring.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        casNumber: '112926-00-8',
+        alternativeNames: ['Orange silica gel', 'Indicating silica gel'],
+        seoKeywords: ['silica gel orange Oman', 'desiccant Muscat', 'humidity control Oman'],
+      },
     },
     {
       id: 'silica-gel-white',
@@ -1871,6 +2145,11 @@ export const products: Product[] = [
       description: 'Non-indicating desiccant for moisture absorption.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        casNumber: '112926-00-8',
+        alternativeNames: ['White silica gel', 'Silica gel desiccant'],
+        seoKeywords: ['silica gel white Oman', 'desiccant white Muscat', 'moisture absorber Oman'],
+      },
     },
     {
       id: 'soda-ash-dense',
@@ -1878,6 +2157,12 @@ export const products: Product[] = [
       description: 'Sodium carbonate for pH control and water treatment.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        formula: 'Na2CO3',
+        casNumber: '497-19-8',
+        alternativeNames: ['Sodium carbonate dense', 'Soda ash heavy', 'Na2CO3'],
+        seoKeywords: ['soda ash dense Oman', 'sodium carbonate Muscat', 'soda ash Oman'],
+      },
     },
     {
       id: 'soda-ash-light',
@@ -1885,6 +2170,12 @@ export const products: Product[] = [
       description: 'Light density sodium carbonate for various applications.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        formula: 'Na2CO3',
+        casNumber: '497-19-8',
+        alternativeNames: ['Sodium carbonate light', 'Soda ash light'],
+        seoKeywords: ['soda ash light Oman', 'sodium carbonate light Muscat', 'Na2CO3 Oman'],
+      },
     },
     {
       id: 'sodium-nitrate',
@@ -1892,6 +2183,12 @@ export const products: Product[] = [
       description: 'Oxidizing agent for industrial processes.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        formula: 'NaNO3',
+        casNumber: '7631-99-4',
+        alternativeNames: ['Chile saltpeter', 'Sodium nitrate', 'NaNO3'],
+        seoKeywords: ['sodium nitrate Oman', 'NaNO3 Muscat', 'oxidizing agent Oman'],
+      },
     },
     {
       id: 'sodium-nitrite',
@@ -1899,6 +2196,12 @@ export const products: Product[] = [
       description: 'Corrosion inhibitor and oxidizing agent.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        formula: 'NaNO2',
+        casNumber: '7632-00-0',
+        alternativeNames: ['Sodium nitrite', 'NaNO2'],
+        seoKeywords: ['sodium nitrite Oman', 'corrosion inhibitor Muscat', 'NaNO2 Oman'],
+      },
     },
     {
       id: 'sodium-thiosulphate-liquid',
@@ -1906,6 +2209,12 @@ export const products: Product[] = [
       description: 'Dechlorination agent and neutralizer.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        formula: 'Na2S2O3',
+        casNumber: '7772-98-7',
+        alternativeNames: ['Sodium thiosulfate liquid', 'Hypo solution'],
+        seoKeywords: ['sodium thiosulfate liquid Oman', 'dechlorination Muscat', 'neutralizer Oman'],
+      },
     },
     {
       id: 'sodium-thiosulphate-powder',
@@ -1913,6 +2222,12 @@ export const products: Product[] = [
       description: 'Powder form for neutralization and treatment.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        formula: 'Na2S2O3',
+        casNumber: '7772-98-7',
+        alternativeNames: ['Sodium thiosulfate powder', 'Hypo powder'],
+        seoKeywords: ['sodium thiosulfate powder Oman', 'dechlorinator Muscat', 'Na2S2O3 Oman'],
+      },
     },
     {
       id: 'solvent-naphtha',
@@ -1920,6 +2235,11 @@ export const products: Product[] = [
       description: 'Petroleum solvent for industrial cleaning and processing.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        casNumber: '64742-89-8',
+        alternativeNames: ['Petroleum naphtha', 'Solvent naphtha', 'VM&P naphtha'],
+        seoKeywords: ['solvent naphtha Oman', 'petroleum naphtha Muscat', 'industrial solvent Oman'],
+      },
     },
     {
       id: 'surfactant-sodium-silicate',
@@ -1927,6 +2247,11 @@ export const products: Product[] = [
       description: 'Surface active agents and silicates for drilling applications.',
       category: 'oilfield',
       icon: Factory,
+      details: {
+        casNumber: '1344-09-8',
+        alternativeNames: ['Sodium silicate', 'Water glass', 'Liquid glass'],
+        seoKeywords: ['surfactant Oman', 'sodium silicate Muscat', 'drilling chemical Oman'],
+      },
     },
 
     // Construction
@@ -1973,6 +2298,12 @@ export const products: Product[] = [
       description: 'Vitamin C antioxidant and preservative for food and beverage applications.',
       category: 'food-beverage',
       icon: Wine,
+      details: {
+        formula: 'C6H8O6',
+        casNumber: '50-81-7',
+        alternativeNames: ['Vitamin C', 'L-Ascorbic acid', 'Ascorbate'],
+        seoKeywords: ['ascorbic acid Oman', 'vitamin C Muscat', 'food preservative Oman'],
+      },
     },
     {
       id: 'calcium-carbonate-food',
@@ -1980,6 +2311,12 @@ export const products: Product[] = [
       description: 'Food-grade calcium supplement and pH regulator for food products.',
       category: 'food-beverage',
       icon: Wine,
+      details: {
+        formula: 'CaCO3',
+        casNumber: '471-34-1',
+        alternativeNames: ['Calcium carbonate food grade', 'Limestone powder', 'Chalk'],
+        seoKeywords: ['calcium carbonate food grade Oman', 'food additive Muscat', 'CaCO3 Oman'],
+      },
     },
     {
       id: 'calcium-lactate',
@@ -1987,6 +2324,12 @@ export const products: Product[] = [
       description: 'Calcium fortification agent and firming agent for food processing.',
       category: 'food-beverage',
       icon: Wine,
+      details: {
+        formula: 'C6H10CaO6',
+        casNumber: '814-80-2',
+        alternativeNames: ['Calcium lactate pentahydrate', 'Calcium dilactate'],
+        seoKeywords: ['calcium lactate Oman', 'calcium fortification Muscat', 'food additive Oman'],
+      },
     },
     {
       id: 'citric-acid-anhydrous-food',
@@ -1994,6 +2337,12 @@ export const products: Product[] = [
       description: 'Food-grade acidulant and preservative for flavoring and pH control.',
       category: 'food-beverage',
       icon: Wine,
+      details: {
+        formula: 'C6H8O7',
+        casNumber: '77-92-9',
+        alternativeNames: ['Citric acid anhydrous', 'Food grade citric acid'],
+        seoKeywords: ['citric acid food grade Oman', 'acidulant Muscat', 'food preservative Oman'],
+      },
     },
     {
       id: 'ethanol-70',
@@ -2001,6 +2350,12 @@ export const products: Product[] = [
       description: 'Food-grade ethanol for sanitization and extraction processes.',
       category: 'food-beverage',
       icon: Wine,
+      details: {
+        formula: 'C2H5OH',
+        casNumber: '64-17-5',
+        alternativeNames: ['Ethyl alcohol 70%', 'Ethanol 70%', 'Food grade alcohol'],
+        seoKeywords: ['ethanol 70% Oman', 'food grade alcohol Muscat', 'ethyl alcohol Oman'],
+      },
     },
     {
       id: 'formaldehyde-40',
@@ -2008,6 +2363,12 @@ export const products: Product[] = [
       description: 'Industrial preservative and disinfectant for food processing equipment.',
       category: 'food-beverage',
       icon: Wine,
+      details: {
+        formula: 'CH2O',
+        casNumber: '50-00-0',
+        alternativeNames: ['Formalin 40%', 'Methanal', 'Formaldehyde solution'],
+        seoKeywords: ['formaldehyde 40% Oman', 'formalin Muscat', 'disinfectant Oman'],
+      },
     },
     {
       id: 'hand-sanitizer',
@@ -2015,6 +2376,10 @@ export const products: Product[] = [
       description: 'Alcohol-based hand sanitizer for food handling and hygiene compliance.',
       category: 'food-beverage',
       icon: Wine,
+      details: {
+        alternativeNames: ['Hand sanitizer gel', 'Alcohol sanitizer', 'Hand disinfectant'],
+        seoKeywords: ['hand sanitizer Oman', 'alcohol sanitizer Muscat', 'hand hygiene Oman'],
+      },
     },
     {
       id: 'lime-stone',
@@ -2022,6 +2387,12 @@ export const products: Product[] = [
       description: 'Calcium source and pH adjuster for food and beverage processing.',
       category: 'food-beverage',
       icon: Wine,
+      details: {
+        formula: 'CaCO3',
+        casNumber: '471-34-1',
+        alternativeNames: ['Limestone', 'Calcium carbonate', 'Calcite'],
+        seoKeywords: ['limestone Oman', 'calcium source Muscat', 'food grade limestone Oman'],
+      },
     },
     {
       id: 'caustic-soda-liquid-food',
@@ -2029,6 +2400,12 @@ export const products: Product[] = [
       description: 'Food-grade alkali for cleaning and pH adjustment in food processing.',
       category: 'food-beverage',
       icon: Wine,
+      details: {
+        formula: 'NaOH',
+        casNumber: '1310-73-2',
+        alternativeNames: ['Sodium hydroxide liquid', 'Food grade caustic', 'Lye'],
+        seoKeywords: ['caustic soda food grade Oman', 'sodium hydroxide Muscat', 'food processing chemical Oman'],
+      },
     },
     {
       id: 'nitric-acid-68',
@@ -2036,6 +2413,12 @@ export const products: Product[] = [
       description: 'Industrial acid for equipment cleaning and CIP systems in food facilities.',
       category: 'food-beverage',
       icon: Wine,
+      details: {
+        formula: 'HNO3',
+        casNumber: '7697-37-2',
+        alternativeNames: ['Nitric acid 68%', 'HNO3', 'Aqua fortis'],
+        seoKeywords: ['nitric acid 68% Oman', 'CIP cleaning Muscat', 'HNO3 Oman'],
+      },
     },
     {
       id: 'potassium-sorbate',
@@ -2043,6 +2426,12 @@ export const products: Product[] = [
       description: 'Preservative for preventing mold and yeast growth in food and beverages.',
       category: 'food-beverage',
       icon: Wine,
+      details: {
+        formula: 'C6H7KO2',
+        casNumber: '24634-61-5',
+        alternativeNames: ['Potassium sorbate', 'E202', 'Sorbic acid potassium salt'],
+        seoKeywords: ['potassium sorbate Oman', 'food preservative Muscat', 'E202 Oman'],
+      },
     },
     {
       id: 'propylene-glycol-food',
@@ -2050,6 +2439,12 @@ export const products: Product[] = [
       description: 'Food-grade humectant and solvent for flavors and food processing.',
       category: 'food-beverage',
       icon: Wine,
+      details: {
+        formula: 'C3H8O2',
+        casNumber: '57-55-6',
+        alternativeNames: ['Propylene glycol USP', 'MPG food grade', '1,2-Propanediol'],
+        seoKeywords: ['propylene glycol food grade Oman', 'MPG Muscat', 'food additive Oman'],
+      },
     },
     {
       id: 'sodium-bicarbonate-food',
@@ -2057,6 +2452,12 @@ export const products: Product[] = [
       description: 'Baking soda for leavening, pH control, and food processing applications.',
       category: 'food-beverage',
       icon: Wine,
+      details: {
+        formula: 'NaHCO3',
+        casNumber: '144-55-8',
+        alternativeNames: ['Baking soda', 'Sodium hydrogen carbonate', 'Bicarbonate of soda'],
+        seoKeywords: ['sodium bicarbonate food grade Oman', 'baking soda Muscat', 'NaHCO3 Oman'],
+      },
     },
     {
       id: 'sodium-hypochlorite-food',
@@ -2064,6 +2465,12 @@ export const products: Product[] = [
       description: 'Sanitizing agent for food contact surfaces and equipment disinfection.',
       category: 'food-beverage',
       icon: Wine,
+      details: {
+        formula: 'NaOCl',
+        casNumber: '7681-52-9',
+        alternativeNames: ['Food grade bleach', 'Sodium hypochlorite solution', 'Chlorine solution'],
+        seoKeywords: ['sodium hypochlorite food grade Oman', 'food sanitizer Muscat', 'disinfectant Oman'],
+      },
     },
     {
       id: 'urea-food',
@@ -2071,6 +2478,12 @@ export const products: Product[] = [
       description: 'Nitrogen source and processing aid for certain food applications.',
       category: 'food-beverage',
       icon: Wine,
+      details: {
+        formula: 'CH4N2O',
+        casNumber: '57-13-6',
+        alternativeNames: ['Carbamide', 'Urea food grade'],
+        seoKeywords: ['urea food grade Oman', 'carbamide Muscat', 'food additive Oman'],
+      },
     },
     {
       id: 'white-salt',
@@ -2078,6 +2491,12 @@ export const products: Product[] = [
       description: 'Food-grade sodium chloride for seasoning and preservation.',
       category: 'food-beverage',
       icon: Wine,
+      details: {
+        formula: 'NaCl',
+        casNumber: '7647-14-5',
+        alternativeNames: ['Table salt', 'Sodium chloride', 'Refined salt'],
+        seoKeywords: ['white salt Oman', 'food grade salt Muscat', 'sodium chloride food Oman'],
+      },
     },
     {
       id: 'xanthan-gum',
@@ -2085,6 +2504,11 @@ export const products: Product[] = [
       description: 'Thickening and stabilizing agent for food and beverage formulations.',
       category: 'food-beverage',
       icon: Wine,
+      details: {
+        casNumber: '11138-66-2',
+        alternativeNames: ['Xanthan gum', 'E415', 'Xanthomonas gum'],
+        seoKeywords: ['xanthan gum Oman', 'food thickener Muscat', 'E415 Oman'],
+      },
     },
 
     // Corrosion Inhibitor
@@ -2465,6 +2889,12 @@ export const products: Product[] = [
       description: 'Sodium hydroxide flakes for saponification in soap and detergent manufacturing.',
       category: 'soap-detergent',
       icon: Sparkles,
+      details: {
+        formula: 'NaOH',
+        casNumber: '1310-73-2',
+        alternativeNames: ['Sodium hydroxide flakes', 'NaOH flakes', 'Caustic soda'],
+        seoKeywords: ['caustic soda flakes Oman', 'sodium hydroxide Muscat', 'NaOH Oman'],
+      },
     },
     {
       id: 'caustic-soda-liquid-soap',
@@ -2472,6 +2902,12 @@ export const products: Product[] = [
       description: 'Liquid sodium hydroxide for industrial cleaning and detergent formulations.',
       category: 'soap-detergent',
       icon: Sparkles,
+      details: {
+        formula: 'NaOH',
+        casNumber: '1310-73-2',
+        alternativeNames: ['Sodium hydroxide liquid', 'Caustic soda solution', 'Lye'],
+        seoKeywords: ['caustic soda liquid Oman', 'sodium hydroxide solution Muscat', 'lye Oman'],
+      },
     },
     {
       id: 'caustic-soda-prills-soap',
@@ -2479,6 +2915,12 @@ export const products: Product[] = [
       description: 'High-purity sodium hydroxide beads for precise detergent formulation.',
       category: 'soap-detergent',
       icon: Sparkles,
+      details: {
+        formula: 'NaOH',
+        casNumber: '1310-73-2',
+        alternativeNames: ['Sodium hydroxide prills', 'NaOH beads', 'Caustic soda pearls'],
+        seoKeywords: ['caustic soda prills Oman', 'NaOH prills Muscat', 'sodium hydroxide beads Oman'],
+      },
     },
     {
       id: 'edta-powder-soap',
@@ -2486,6 +2928,12 @@ export const products: Product[] = [
       description: 'Chelating agent for water hardness control in detergent products.',
       category: 'soap-detergent',
       icon: Sparkles,
+      details: {
+        formula: 'C10H16N2O8',
+        casNumber: '60-00-4',
+        alternativeNames: ['Ethylenediaminetetraacetic acid', 'EDTA', 'Chelating agent'],
+        seoKeywords: ['EDTA powder Oman', 'chelating agent Muscat', 'water softener Oman'],
+      },
     },
     {
       id: 'glycerine-soap',
@@ -2493,6 +2941,12 @@ export const products: Product[] = [
       description: 'Humectant and moisturizer for soap and personal care formulations.',
       category: 'soap-detergent',
       icon: Sparkles,
+      details: {
+        formula: 'C3H8O3',
+        casNumber: '56-81-5',
+        alternativeNames: ['Glycerol', 'Glycerin', 'Propane-1,2,3-triol'],
+        seoKeywords: ['glycerine soap Oman', 'glycerol Muscat', 'humectant Oman'],
+      },
     },
     {
       id: 'hydrogen-peroxide-3',
@@ -2500,6 +2954,12 @@ export const products: Product[] = [
       description: 'Low concentration bleaching agent for mild cleaning applications.',
       category: 'soap-detergent',
       icon: Sparkles,
+      details: {
+        formula: 'H2O2',
+        casNumber: '7722-84-1',
+        alternativeNames: ['Hydrogen peroxide 3%', 'H2O2 3%'],
+        seoKeywords: ['hydrogen peroxide 3% Oman', 'H2O2 Muscat', 'bleaching agent Oman'],
+      },
     },
     {
       id: 'hydrogen-peroxide-35',
@@ -2507,6 +2967,12 @@ export const products: Product[] = [
       description: 'Medium strength oxidizing agent for industrial detergent formulations.',
       category: 'soap-detergent',
       icon: Sparkles,
+      details: {
+        formula: 'H2O2',
+        casNumber: '7722-84-1',
+        alternativeNames: ['Hydrogen peroxide 35%', 'H2O2 35%'],
+        seoKeywords: ['hydrogen peroxide 35% Oman', 'H2O2 35% Muscat', 'oxidizing agent Oman'],
+      },
     },
     {
       id: 'hydrogen-peroxide-50',
@@ -2514,6 +2980,12 @@ export const products: Product[] = [
       description: 'High concentration bleaching agent for heavy-duty cleaning products.',
       category: 'soap-detergent',
       icon: Sparkles,
+      details: {
+        formula: 'H2O2',
+        casNumber: '7722-84-1',
+        alternativeNames: ['Hydrogen peroxide 50%', 'H2O2 50%'],
+        seoKeywords: ['hydrogen peroxide 50% Oman', 'H2O2 50% Muscat', 'bleach Oman'],
+      },
     },
     {
       id: 'hydrogen-peroxide-6',
@@ -2521,6 +2993,12 @@ export const products: Product[] = [
       description: 'Moderate concentration for bleaching and sanitizing applications.',
       category: 'soap-detergent',
       icon: Sparkles,
+      details: {
+        formula: 'H2O2',
+        casNumber: '7722-84-1',
+        alternativeNames: ['Hydrogen peroxide 6%', 'H2O2 6%'],
+        seoKeywords: ['hydrogen peroxide 6% Oman', 'H2O2 6% Muscat', 'sanitizer Oman'],
+      },
     },
     {
       id: 'labsa',
@@ -2528,6 +3006,11 @@ export const products: Product[] = [
       description: 'Linear Alkylbenzene Sulphonic Acid - primary surfactant for detergent production.',
       category: 'soap-detergent',
       icon: Sparkles,
+      details: {
+        casNumber: '27176-87-0',
+        alternativeNames: ['Linear alkylbenzene sulfonic acid', 'LABSA', 'Dodecylbenzenesulfonic acid'],
+        seoKeywords: ['LABSA Oman', 'surfactant Muscat', 'detergent raw material Oman'],
+      },
     },
     {
       id: 'nonyl-phenol-ethoxylate',
@@ -2535,6 +3018,11 @@ export const products: Product[] = [
       description: 'Non-ionic surfactant for industrial and household cleaning products.',
       category: 'soap-detergent',
       icon: Sparkles,
+      details: {
+        casNumber: '9016-45-9',
+        alternativeNames: ['NPE', 'Nonyl phenol ethoxylate', 'NP ethoxylate'],
+        seoKeywords: ['nonyl phenol ethoxylate Oman', 'NPE Muscat', 'surfactant Oman'],
+      },
     },
     {
       id: 'perchloroethylene',
@@ -2542,6 +3030,12 @@ export const products: Product[] = [
       description: 'Solvent for dry cleaning and degreasing applications.',
       category: 'soap-detergent',
       icon: Sparkles,
+      details: {
+        formula: 'C2Cl4',
+        casNumber: '127-18-4',
+        alternativeNames: ['Tetrachloroethylene', 'PERC', 'PCE'],
+        seoKeywords: ['perchloroethylene Oman', 'dry cleaning solvent Muscat', 'PERC Oman'],
+      },
     },
     {
       id: 'sles-70',
@@ -2549,6 +3043,11 @@ export const products: Product[] = [
       description: 'Sodium Lauryl Ether Sulfate - foaming agent and surfactant for detergents.',
       category: 'soap-detergent',
       icon: Sparkles,
+      details: {
+        casNumber: '68585-34-2',
+        alternativeNames: ['Sodium laureth sulfate', 'SLES', 'Sodium lauryl ether sulfate'],
+        seoKeywords: ['SLES 70% Oman', 'sodium laureth sulfate Muscat', 'foaming agent Oman'],
+      },
     },
     {
       id: 'soda-ash-dense-soap',
@@ -2556,6 +3055,12 @@ export const products: Product[] = [
       description: 'Sodium carbonate for pH adjustment and water softening in detergents.',
       category: 'soap-detergent',
       icon: Sparkles,
+      details: {
+        formula: 'Na2CO3',
+        casNumber: '497-19-8',
+        alternativeNames: ['Sodium carbonate dense', 'Washing soda dense'],
+        seoKeywords: ['soda ash dense Oman', 'sodium carbonate Muscat', 'washing soda Oman'],
+      },
     },
     {
       id: 'soda-ash-light-soap',
@@ -2563,6 +3068,12 @@ export const products: Product[] = [
       description: 'Light density sodium carbonate for soap and detergent formulations.',
       category: 'soap-detergent',
       icon: Sparkles,
+      details: {
+        formula: 'Na2CO3',
+        casNumber: '497-19-8',
+        alternativeNames: ['Sodium carbonate light', 'Washing soda light'],
+        seoKeywords: ['soda ash light Oman', 'sodium carbonate light Muscat', 'detergent raw material Oman'],
+      },
     },
     {
       id: 'sodium-hypochlorite-12-15-soap',
@@ -2570,6 +3081,12 @@ export const products: Product[] = [
       description: 'Bleaching and disinfecting agent for cleaning product formulations.',
       category: 'soap-detergent',
       icon: Sparkles,
+      details: {
+        formula: 'NaOCl',
+        casNumber: '7681-52-9',
+        alternativeNames: ['Liquid chlorine', 'Bleach', 'Sodium hypochlorite solution'],
+        seoKeywords: ['sodium hypochlorite Oman', 'bleach Muscat', 'disinfectant Oman'],
+      },
     },
     {
       id: 'sodium-meta-silicate-pentahydrate',
@@ -2577,6 +3094,12 @@ export const products: Product[] = [
       description: 'Alkaline builder and corrosion inhibitor for heavy-duty detergents.',
       category: 'soap-detergent',
       icon: Sparkles,
+      details: {
+        formula: 'Na2SiO3·5H2O',
+        casNumber: '6834-92-0',
+        alternativeNames: ['Sodium metasilicate pentahydrate', 'SMS pentahydrate'],
+        seoKeywords: ['sodium metasilicate Oman', 'detergent builder Muscat', 'SMS Oman'],
+      },
     },
     {
       id: 'sodium-tripolyphosphate',
@@ -2584,6 +3107,12 @@ export const products: Product[] = [
       description: 'Sequestering agent and detergency builder for laundry detergents.',
       category: 'soap-detergent',
       icon: Sparkles,
+      details: {
+        formula: 'Na5P3O10',
+        casNumber: '7758-29-4',
+        alternativeNames: ['STPP', 'Sodium triphosphate', 'Pentasodium triphosphate'],
+        seoKeywords: ['STPP Oman', 'sodium tripolyphosphate Muscat', 'detergent builder Oman'],
+      },
     },
     {
       id: 'surfactants-soap',
@@ -2591,6 +3120,10 @@ export const products: Product[] = [
       description: 'Range of surface active agents for cleaning and emulsifying applications.',
       category: 'soap-detergent',
       icon: Sparkles,
+      details: {
+        alternativeNames: ['Surface active agents', 'Surfactants', 'Wetting agents'],
+        seoKeywords: ['surfactants Oman', 'surface active agents Muscat', 'emulsifiers Oman'],
+      },
     },
     {
       id: 'trisodium-phosphate-soap',
@@ -2598,6 +3131,12 @@ export const products: Product[] = [
       description: 'Heavy-duty cleaning agent and degreaser for industrial applications.',
       category: 'soap-detergent',
       icon: Sparkles,
+      details: {
+        formula: 'Na3PO4',
+        casNumber: '7601-54-9',
+        alternativeNames: ['TSP', 'Trisodium orthophosphate', 'Na3PO4'],
+        seoKeywords: ['trisodium phosphate Oman', 'TSP Muscat', 'heavy duty cleaner Oman'],
+      },
     },
 
     // Solvents
