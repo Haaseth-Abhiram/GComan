@@ -1906,8 +1906,26 @@ export const products: Product[] = [
       details: {
         formula: 'CH3COOH',
         casNumber: '64-19-7',
-        alternativeNames: ['Ethanoic acid', 'Glacial acetic acid', 'Vinegar acid'],
-        seoKeywords: ['acetic acid Oman', 'ethanoic acid Muscat', 'glacial acetic acid Oman'],
+        alternativeNames: ['Ethanoic acid', 'Glacial acetic acid', 'Vinegar acid', 'Acetic acid glacial'],
+        seoKeywords: ['acetic acid Oman', 'ethanoic acid Muscat', 'glacial acetic acid Oman', 'acetic acid oilfield Sohar', 'acidizing agent Oman'],
+        longDescription: 'Premium Acetic Acid supplier in Oman - Global Chemicals LLC provides high-purity glacial acetic acid for oilfield, refinery, and industrial applications in Muscat, Sohar, Duqm, Salalah. Our acetic acid (CH3COOH) is widely used in well stimulation, acidizing operations, scale removal, and chemical synthesis. The glacial grade offers 99%+ purity for demanding applications. Essential for petroleum production enhancement, pipeline cleaning, and drilling fluid additives. Acetic acid effectively dissolves carbonate scales and enhances well productivity. Serving major oil & gas companies, refineries, and industrial facilities across Oman with reliable supply and technical support.',
+        applications: [
+          'Well acidizing and stimulation treatments',
+          'Carbonate scale removal in oilfield operations',
+          'Drilling fluid pH control and additives',
+          'Pipeline and equipment cleaning',
+          'Chemical synthesis and intermediate production',
+          'Refinery process applications',
+          'Industrial solvent and reagent',
+          'Production enhancement in oil wells'
+        ],
+        technicalSpecs: [
+          'Purity: 99-100% (glacial grade)',
+          'Appearance: Clear colorless liquid',
+          'Specific gravity: 1.049 at 20°C',
+          'Freezing point: 16-17°C',
+          'Available in drums, IBCs, and bulk tankers'
+        ]
       },
     },
     {
@@ -1918,8 +1936,27 @@ export const products: Product[] = [
       icon: Factory,
       details: {
         casNumber: '1344-28-1',
-        alternativeNames: ['Alumina desiccant', 'Activated aluminum oxide', 'Gas drying agent'],
-        seoKeywords: ['activated alumina Oman', 'desiccant Oman', 'gas drying Muscat', 'moisture remover Oman'],
+        alternativeNames: ['Alumina desiccant', 'Activated aluminum oxide', 'Gas drying agent', 'Al2O3 desiccant', 'Activated alumina balls'],
+        seoKeywords: ['activated alumina Oman', 'desiccant Oman', 'gas drying Muscat', 'moisture remover Oman', 'gas dehydration Sohar', 'alumina desiccant oilfield Oman'],
+        longDescription: 'Activated Alumina Desiccant supplier in Oman - Global Chemicals LLC provides high-performance activated alumina for gas dehydration, moisture removal, and drying applications in Muscat, Sohar, Duqm. Our activated alumina offers superior moisture adsorption capacity for natural gas processing, compressed air drying, and instrument air systems. The porous structure provides excellent water vapor adsorption at high temperatures and can be regenerated multiple times. Essential for protecting equipment and processes from moisture damage in oil & gas facilities, refineries, and petrochemical plants. Available in various bead sizes (3-5mm, 4-6mm) for different applications across Oman.',
+        applications: [
+          'Natural gas dehydration and processing',
+          'Compressed air and instrument air drying',
+          'Hydrocarbon stream drying in refineries',
+          'Process gas moisture removal',
+          'Catalyst support and protection',
+          'Hydrogen peroxide stabilization',
+          'Transformer oil drying',
+          'Refrigerant and solvent drying'
+        ],
+        technicalSpecs: [
+          'Surface area: 300-400 m²/g',
+          'Bulk density: 0.70-0.85 kg/L',
+          'Water adsorption capacity: 17-20% at 60% RH',
+          'Bead sizes: 3-5mm, 4-6mm, 5-8mm',
+          'Regeneration temperature: 150-300°C',
+          'Crush strength: >50N'
+        ]
       },
     },
     {
@@ -1930,8 +1967,27 @@ export const products: Product[] = [
       icon: Factory,
       details: {
         casNumber: '7440-44-0',
-        alternativeNames: ['Activated charcoal', 'Active carbon', 'Carbon adsorbent'],
-        seoKeywords: ['activated carbon Oman', 'activated charcoal Muscat', 'carbon adsorbent Oman'],
+        alternativeNames: ['Activated charcoal', 'Active carbon', 'Carbon adsorbent', 'Activated carbon granular', 'AC media'],
+        seoKeywords: ['activated carbon Oman', 'activated charcoal Muscat', 'carbon adsorbent Oman', 'activated carbon oilfield Sohar', 'granular carbon Oman'],
+        longDescription: 'Industrial Activated Carbon supplier in Oman - Global Chemicals LLC provides high-quality activated carbon for oil & gas, refinery, and industrial applications in Muscat, Sohar, Duqm, Salalah. Our activated carbon offers exceptional adsorption capacity for removing organic contaminants, H2S, mercaptans, and impurities from hydrocarbon streams. Available in granular, pellet, and powder forms to suit different applications. Essential for gas purification, solvent recovery, produced water treatment, and emissions control. The high surface area (900-1200 m²/g) ensures maximum contaminant removal efficiency. Widely used in refineries, petrochemical plants, and oilfield operations across Oman.',
+        applications: [
+          'Gas purification and H2S removal',
+          'Solvent recovery in refineries',
+          'Produced water treatment',
+          'Mercury removal from natural gas',
+          'VOC emissions control',
+          'Condensate polishing',
+          'Odor control in facilities',
+          'Catalyst support applications'
+        ],
+        technicalSpecs: [
+          'Surface area: 900-1200 m²/g',
+          'Iodine number: >900 mg/g',
+          'Available forms: Granular (8x30 mesh), pellets, powder',
+          'Bulk density: 0.40-0.55 g/cm³',
+          'Moisture content: <5%',
+          'Hardness: >95%'
+        ]
       },
     },
     {
@@ -1943,8 +1999,27 @@ export const products: Product[] = [
       details: {
         formula: 'NH4HF2',
         casNumber: '1341-49-7',
-        alternativeNames: ['Ammonium hydrogen fluoride', 'ABF', 'Ammonium acid fluoride'],
-        seoKeywords: ['ammonium bifluoride Oman', 'ABF Muscat', 'cleaning agent Oman'],
+        alternativeNames: ['Ammonium hydrogen fluoride', 'ABF', 'Ammonium acid fluoride', 'Ammonium bifluoride powder'],
+        seoKeywords: ['ammonium bifluoride Oman', 'ABF Muscat', 'cleaning agent Oman', 'ammonium hydrogen fluoride Sohar', 'acidizing agent Oman'],
+        longDescription: 'Ammonium Bifluoride (ABF) supplier in Oman - Global Chemicals LLC provides industrial-grade ammonium hydrogen fluoride for oilfield acidizing, metal treatment, and surface cleaning in Muscat, Sohar, Duqm. Our ABF is highly effective for dissolving siliceous scales, cleaning metal surfaces, and well stimulation treatments. Safer to handle than hydrofluoric acid while providing similar fluoride reactivity. Widely used in sandstone acidizing, scale removal from heat exchangers and vessels, and surface preparation. Essential for maintaining equipment efficiency in refineries, oilfields, and industrial facilities across Oman. Available in powder and solution forms with technical support.',
+        applications: [
+          'Sandstone matrix acidizing treatments',
+          'Silica and silicate scale removal',
+          'Heat exchanger and vessel cleaning',
+          'Well stimulation in oilfields',
+          'Metal surface etching and cleaning',
+          'Glass frosting and etching',
+          'Aluminum and stainless steel brightening',
+          'Rust and scale removal'
+        ],
+        technicalSpecs: [
+          'Chemical formula: NH4HF2',
+          'Purity: 95-98%',
+          'Appearance: White crystalline powder',
+          'pH (1% solution): 3.5-4.5',
+          'Solubility: Highly soluble in water',
+          'Available in 25kg bags, drums'
+        ]
       },
     },
     {
@@ -1956,8 +2031,27 @@ export const products: Product[] = [
       details: {
         formula: 'NH4HSO3',
         casNumber: '10192-30-0',
-        alternativeNames: ['Ammonium bisulfite', 'Ammonium hydrogen sulfite'],
-        seoKeywords: ['ammonium bisulfite Oman', 'oxygen scavenger Muscat', 'reducing agent Oman'],
+        alternativeNames: ['Ammonium bisulfite', 'Ammonium hydrogen sulfite', 'ABS solution', 'Ammonium bisulfite liquid'],
+        seoKeywords: ['ammonium bisulfite Oman', 'oxygen scavenger Muscat', 'reducing agent Oman', 'ammonium bisulphite oilfield Sohar', 'deoxygenation chemical Oman'],
+        longDescription: 'Ammonium Bisulfite supplier in Oman - Global Chemicals LLC provides high-quality ammonium bisulfite solution for oxygen scavenging, chlorine neutralization, and reducing applications in Muscat, Sohar, Duqm. Our ammonium bisulfite (NH4HSO3) effectively removes dissolved oxygen from water systems, preventing corrosion in boilers, pipelines, and oilfield operations. The solution acts as a powerful reducing agent and dechlorination chemical. Essential for protecting equipment and enhancing operational efficiency in refineries, power plants, and industrial facilities. Available in various concentrations (40%, 60%) for different applications across Oman with technical dosing support.',
+        applications: [
+          'Oxygen scavenging in boiler water',
+          'Corrosion prevention in oilfield water systems',
+          'Chlorine neutralization and dechlorination',
+          'Reducing agent in chemical processes',
+          'Pipeline corrosion control',
+          'Water treatment applications',
+          'Flue gas desulfurization',
+          'Photography and textile processing'
+        ],
+        technicalSpecs: [
+          'Concentration: 40-60% NH4HSO3',
+          'Appearance: Clear to pale yellow liquid',
+          'pH: 3.5-5.0',
+          'Specific gravity: 1.12-1.18',
+          'Dosage: 10-50 ppm for oxygen scavenging',
+          'Available in drums, IBCs, and bulk'
+        ]
       },
     },
     {
@@ -1969,8 +2063,27 @@ export const products: Product[] = [
       details: {
         formula: 'NH4Cl',
         casNumber: '12125-02-9',
-        alternativeNames: ['Sal ammoniac', 'Ammonium muriate'],
-        seoKeywords: ['ammonium chloride Oman', 'sal ammoniac Muscat', 'drilling fluid Oman'],
+        alternativeNames: ['Sal ammoniac', 'Ammonium muriate', 'Ammonium chloride powder', 'NH4Cl'],
+        seoKeywords: ['ammonium chloride Oman', 'sal ammoniac Muscat', 'drilling fluid Oman', 'ammonium chloride oilfield Sohar', 'NH4Cl Oman'],
+        longDescription: 'Ammonium Chloride supplier in Oman - Global Chemicals LLC provides industrial-grade ammonium chloride for drilling fluids, completion fluids, and industrial applications in Muscat, Sohar, Duqm, Salalah. Our ammonium chloride (NH4Cl) is widely used as a shale stabilizer in water-based drilling muds, preventing clay swelling and wellbore instability. The compound also serves as a source of nitrogen in fertilizers and as a flux in metal soldering and galvanizing operations. Essential for oil & gas drilling operations, metal treatment, and chemical synthesis. Available in powder and granular forms with consistent quality for demanding applications across Oman.',
+        applications: [
+          'Shale stabilizer in drilling fluids',
+          'Completion and workover fluids',
+          'Clay swelling inhibitor',
+          'Wellbore stabilization',
+          'Flux for metal soldering and galvanizing',
+          'Nitrogen source in fertilizers',
+          'Textile printing and dyeing',
+          'Battery electrolyte additive'
+        ],
+        technicalSpecs: [
+          'Purity: 99.5% minimum',
+          'Appearance: White crystalline powder',
+          'Solubility: 37g/100ml water at 20°C',
+          'pH (10% solution): 4.5-6.0',
+          'Moisture content: <0.5%',
+          'Packaging: 25kg, 50kg bags'
+        ]
       },
     },
     {
@@ -1982,8 +2095,27 @@ export const products: Product[] = [
       details: {
         formula: 'BaCl2',
         casNumber: '10361-37-2',
-        alternativeNames: ['Barium dichloride', 'Barium chloride dihydrate'],
-        seoKeywords: ['barium chloride Oman', 'brine formulation Muscat', 'drilling chemical Oman'],
+        alternativeNames: ['Barium dichloride', 'Barium chloride dihydrate', 'BaCl2 brine', 'Barium chloride solution'],
+        seoKeywords: ['barium chloride Oman', 'brine formulation Muscat', 'drilling chemical Oman', 'completion fluid Sohar', 'BaCl2 Oman'],
+        longDescription: 'Barium Chloride supplier in Oman - Global Chemicals LLC provides high-purity barium chloride for high-density brine formulations and drilling applications in Muscat, Sohar, Duqm. Our barium chloride (BaCl2) is essential for creating clear,  high-density completion and workover fluids in oil & gas wells. The compound provides excellent density control (up to 1.70 sg) while maintaining low solids content. Widely used in well control operations, pressure control, and as a component in specialized drilling fluids. Barium chloride also serves in wastewater treatment for sulfate removal. Available in dihydrate form with consistent quality for demanding oilfield applications across Oman.',
+        applications: [
+          'High-density completion and workover fluids',
+          'Well control and pressure management',
+          'Clear brine formulations for drilling',
+          'Packer fluids in oil & gas wells',
+          'Sulfate removal in produced water',
+          'Wastewater treatment',
+          'Chemical synthesis and laboratory reagent',
+          'Heat treatment salt baths'
+        ],
+        technicalSpecs: [
+          'Purity: 99% minimum (dihydrate)',
+          'Specific gravity: Up to 1.70 with concentrated solutions',
+          'Appearance: White crystalline solid',
+          'Solubility: 37g/100ml water at 25°C',
+          'Available in powder and solution forms',
+          'Packaging: 25kg bags, drums, bulk'
+        ]
       },
     },
     {
@@ -1994,8 +2126,28 @@ export const products: Product[] = [
       icon: Factory,
       details: {
         casNumber: '1302-78-9',
-        alternativeNames: ['Bentonite clay', 'Drilling clay', 'Montmorillonite'],
-        seoKeywords: ['bentonite Oman', 'drilling mud Muscat', 'bentonite clay Oman', 'viscosity control Oman'],
+        alternativeNames: ['Bentonite clay', 'Drilling clay', 'Montmorillonite', 'Sodium bentonite', 'Drilling grade bentonite'],
+        seoKeywords: ['bentonite Oman', 'drilling mud Muscat', 'bentonite clay Oman', 'viscosity control Oman', 'drilling grade bentonite Sohar', 'API bentonite Oman'],
+        longDescription: 'Premium Bentonite Powder supplier in Oman - Global Chemicals LLC provides API-grade bentonite for drilling mud formulations and industrial applications in Muscat, Sohar, Duqm, Salalah. Our sodium bentonite offers excellent viscosity building, fluid loss control, and wellbore stability in water-based drilling fluids. The swelling clay properties create effective filter cakes that prevent fluid invasion into formations. Essential for all rotary drilling operations, geotechnical applications, and civil engineering projects. API 13A specification bentonite ensures consistent performance in demanding oilfield conditions. Widely used by drilling contractors, oilfield service companies, and construction firms across Oman.',
+        applications: [
+          'Water-based drilling mud formulations',
+          'Viscosity and gel strength control',
+          'Fluid loss control in drilling',
+          'Wellbore stabilization and support',
+          'Filter cake formation',
+          'Geotechnical drilling and grouting',
+          'Civil engineering applications',
+          'Pond and lagoon sealing'
+        ],
+        technicalSpecs: [
+          'API 13A specification grade',
+          'Yield: 15-17 bbl/ton (API standard)',
+          'Viscosity: 30-35 cP at 600 RPM',
+          'Fluid loss: <15 ml/30min',
+          'Moisture content: <12%',
+          'Mesh size: 200 mesh minimum',
+          'Packaging: 25kg bags, bulk bags'
+        ]
       },
     },
     {
@@ -2259,8 +2411,29 @@ export const products: Product[] = [
       details: {
         formula: 'C5H13NO2',
         casNumber: '105-59-9',
-        alternativeNames: ['Methyldiethanolamine', 'MDEA', 'N-Methyldiethanolamine'],
-        seoKeywords: ['MDEA Oman', 'methyldiethanolamine Muscat', 'gas treating Oman', 'acid gas removal Oman'],
+        alternativeNames: ['Methyldiethanolamine', 'MDEA', 'N-Methyldiethanolamine', 'MDEA solution', 'Methyl DEA'],
+        seoKeywords: ['MDEA Oman', 'methyldiethanolamine Muscat', 'gas treating Oman', 'acid gas removal Oman', 'selective amine Sohar', 'MDEA sweetening Oman'],
+        longDescription: 'Premium MDEA (Methyldiethanolamine) supplier in Oman - Global Chemicals LLC provides high-purity MDEA for selective gas treating in Muscat, Sohar, Duqm, Salalah. Our methyldiethanolamine offers superior selectivity for H2S over CO2, making it the preferred choice for selective acid gas removal. MDEA requires significantly less regeneration energy compared to MEA and DEA, reducing operating costs by 30-40%. The tertiary amine structure provides excellent thermal stability and resistance to degradation. Essential for modern gas processing plants, LNG facilities, and refineries requiring efficient acid gas removal. Widely used across Oman\'s oil & gas industry for meeting strict gas specifications.',
+        applications: [
+          'Highly selective H2S removal',
+          'Bulk CO2 removal from natural gas',
+          'LNG plant gas sweetening',
+          'Syngas and hydrogen purification',
+          'Tail gas treating in Claus units',
+          'Selective gas treating in refineries',
+          'CO2 capture for EOR applications',
+          'Natural gas deacidification'
+        ],
+        technicalSpecs: [
+          'Purity: 99.5% minimum',
+          'Appearance: Clear colorless to pale yellow liquid',
+          'Molecular weight: 119.16 g/mol',
+          'Boiling point: 247°C',
+          'Specific gravity: 1.042 at 20°C',
+          'Typical solution strength: 40-50% MDEA',
+          'Low heat of regeneration',
+          'Available in drums, IBCs, ISO tanks, bulk'
+        ]
       },
     },
     {
@@ -2272,8 +2445,28 @@ export const products: Product[] = [
       details: {
         formula: 'C2H7NO',
         casNumber: '141-43-5',
-        alternativeNames: ['Monoethanolamine', 'MEA', 'Ethanolamine'],
-        seoKeywords: ['MEA Oman', 'monoethanolamine Muscat', 'CO2 removal Oman', 'gas sweetening Oman'],
+        alternativeNames: ['Monoethanolamine', 'MEA', 'Ethanolamine', 'MEA solution', '2-Aminoethanol'],
+        seoKeywords: ['MEA Oman', 'monoethanolamine Muscat', 'CO2 removal Oman', 'gas sweetening Oman', 'acid gas removal Sohar', 'MEA gas treatment Oman'],
+        longDescription: 'Monoethanolamine (MEA) supplier in Oman - Global Chemicals LLC provides high-purity MEA for gas treating and acid gas removal in Muscat, Sohar, Duqm. Our monoethanolamine is the most widely used amine for CO2 and H2S removal from natural gas, refinery gases, and synthesis gas streams. MEA offers excellent absorption capacity and fast reaction kinetics for effective gas sweetening. Essential for meeting natural gas specifications, reducing emissions, and protecting downstream equipment from corrosion. Widely used in gas processing plants, LNG facilities, refineries, and petrochemical complexes across Oman. Available in 99%+ purity with technical support for system optimization.',
+        applications: [
+          'Natural gas sweetening and CO2 removal',
+          'H2S removal from gas streams',
+          'LNG plant gas treating',
+          'Refinery sour gas treatment',
+          'Synthesis gas purification',
+          'Biogas upgrading',
+          'Ammonia plant CO2 capture',
+          'Flue gas CO2 absorption'
+        ],
+        technicalSpecs: [
+          'Purity: 99% minimum',
+          'Appearance: Clear colorless liquid',
+          'Molecular weight: 61.08 g/mol',
+          'Boiling point: 170°C',
+          'Specific gravity: 1.018 at 20°C',
+          'Typical solution strength: 15-20% MEA',
+          'Available in drums, IBCs, bulk'
+        ]
       },
     },
     {
@@ -2285,8 +2478,29 @@ export const products: Product[] = [
       details: {
         formula: 'C2H6O2',
         casNumber: '107-21-1',
-        alternativeNames: ['Monoethylene glycol', 'Ethylene glycol', 'MEG'],
-        seoKeywords: ['MEG Oman', 'monoethylene glycol Muscat', 'hydrate inhibitor Oman', 'gas dehydration Oman'],
+        alternativeNames: ['Monoethylene glycol', 'Ethylene glycol', 'MEG', 'Mono ethylene glycol', 'EG'],
+        seoKeywords: ['MEG Oman', 'monoethylene glycol Muscat', 'hydrate inhibitor Oman', 'gas dehydration Oman', 'ethylene glycol Sohar', 'MEG oilfield Oman'],
+        longDescription: 'Monoethylene Glycol (MEG) supplier in Oman - Global Chemicals LLC provides high-purity MEG for gas dehydration, hydrate inhibition, and industrial applications in Muscat, Sohar, Duqm, Salalah. Our MEG is the industry-standard thermodynamic hydrate inhibitor used to prevent gas hydrate formation in pipelines, wellheads, and processing equipment. The regenerable glycol system allows for cost-effective long-term hydrate control. MEG also serves as a desiccant for natural gas dehydration, antifreeze, and heat transfer fluid. Essential for offshore platforms, subsea pipelines, gas processing facilities, and cold climate operations across Oman. Available in technical and high-purity grades with complete regeneration support.',
+        applications: [
+          'Gas hydrate inhibition in pipelines',
+          'Subsea pipeline hydrate control',
+          'Natural gas dehydration systems',
+          'Wellhead hydrate prevention',
+          'Antifreeze and coolant formulations',
+          'Heat transfer fluid applications',
+          'De-icing fluids',
+          'Polyester and plastic production'
+        ],
+        technicalSpecs: [
+          'Purity: 99% minimum (technical grade)',
+          'Appearance: Clear colorless liquid',
+          'Freezing point: -13°C',
+          'Boiling point: 197°C',
+          'Specific gravity: 1.113 at 20°C',
+          'Typical injection rate: 0.5-2 gal/MMSCF',
+          'Regenerable in glycol regeneration units',
+          'Available in drums, IBCs, ISO tanks, bulk'
+        ]
       },
     },
     {
@@ -2298,8 +2512,29 @@ export const products: Product[] = [
       details: {
         formula: 'CH3OH',
         casNumber: '67-56-1',
-        alternativeNames: ['Methyl alcohol', 'Wood alcohol', 'Methanol'],
-        seoKeywords: ['methanol Oman', 'methyl alcohol Muscat', 'hydrate inhibitor Oman'],
+        alternativeNames: ['Methyl alcohol', 'Wood alcohol', 'Methanol', 'Technical methanol', 'MeOH'],
+        seoKeywords: ['methanol Oman', 'methyl alcohol Muscat', 'hydrate inhibitor Oman', 'methanol oilfield Sohar', 'technical methanol Oman', 'MeOH Oman'],
+        longDescription: 'Technical Grade Methanol supplier in Oman - Global Chemicals LLC provides high-quality methanol for hydrate inhibition, gas dehydration, and industrial applications in Muscat, Sohar, Duqm, Salalah. Our technical methanol (CH3OH) is widely used as a thermodynamic hydrate inhibitor in gas pipelines, wellheads, and offshore platforms. Methanol provides rapid hydrate inhibition and is particularly effective in emergency situations and short-term applications. The compound also serves as a solvent, antifreeze, and fuel additive. Essential for winter operations, cold climate facilities, and emergency hydrate prevention across Oman\'s oil & gas industry. Available in technical grade (99%+) with bulk supply capabilities.',
+        applications: [
+          'Gas hydrate inhibition in pipelines',
+          'Emergency hydrate prevention',
+          'Gas dehydration applications',
+          'Wellhead antifreeze injection',
+          'Solvent for industrial cleaning',
+          'Fuel additive and blending',
+          'Chemical synthesis intermediate',
+          'Denaturant for ethanol'
+        ],
+        technicalSpecs: [
+          'Purity: 99% minimum (technical grade)',
+          'Appearance: Clear colorless liquid',
+          'Boiling point: 64.7°C',
+          'Freezing point: -97.6°C',
+          'Specific gravity: 0.792 at 20°C',
+          'Typical injection rate: 1-3 gal/MMSCF',
+          'Non-regenerable (single-use inhibitor)',
+          'Available in drums, IBCs, ISO tanks, bulk'
+        ]
       },
     },
     {
