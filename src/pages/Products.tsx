@@ -2198,8 +2198,28 @@ export const products: Product[] = [
       details: {
         formula: 'CaBr2',
         casNumber: '7789-41-5',
-        alternativeNames: ['Calcium dibromide', 'CaBr2 brine'],
-        seoKeywords: ['calcium bromide Oman', 'completion fluid Muscat', 'drilling brine Oman'],
+        alternativeNames: ['Calcium dibromide', 'CaBr2 brine', 'Calcium bromide solution', 'CaBr2 completion fluid'],
+        seoKeywords: ['calcium bromide Oman', 'completion fluid Muscat', 'drilling brine Oman', 'CaBr2 Sohar', 'high density brine Oman', 'workover fluid Oman'],
+        longDescription: 'Calcium Bromide supplier in Oman - Global Chemicals LLC provides premium calcium bromide in powder and liquid forms for high-density clear brine fluids in Muscat, Sohar, Duqm. Our CaBr2 creates solids-free, high-density (up to 1.84 sg) completion and workover fluids that minimize formation damage. Calcium bromide brines provide excellent wellbore stability, pressure control, and formation compatibility. The clear fluid allows better visibility during operations and reduces solids-related problems. Essential for completion, workover, packer fluids, and well control operations in oil & gas wells. Compatible with formate brines for ultra-high density applications. Widely used across Oman\'s oilfields for maintaining well integrity and maximizing production.',
+        applications: [
+          'High-density completion fluids (up to 1.84 sg)',
+          'Clear workover and kill fluids',
+          'Packer fluids in production wells',
+          'Well control and pressure management',
+          'Solids-free reservoir drilling',
+          'Horizontal well completions',
+          'Underbalanced drilling fluids',
+          'Formation-friendly well interventions'
+        ],
+        technicalSpecs: [
+          'Density range: 1.20-1.84 sg (powder dissolved)',
+          'Available forms: Powder (anhydrous) and liquid (52%)',
+          'Appearance: White powder or clear liquid',
+          'Solubility: Highly soluble in water',
+          'Low corrosion with proper inhibitors',
+          'Temperature stable up to 200°C',
+          'Available in bags, drums, IBCs, bulk'
+        ]
       },
     },
     {
@@ -2224,8 +2244,28 @@ export const products: Product[] = [
       details: {
         formula: 'CaCl2',
         casNumber: '10043-52-4',
-        alternativeNames: ['Calcium dichloride', 'CaCl2 brine'],
-        seoKeywords: ['calcium chloride Oman', 'completion brine Muscat', 'CaCl2 Oman'],
+        alternativeNames: ['Calcium dichloride', 'CaCl2 brine', 'Calcium chloride solution', 'Completion brine CaCl2'],
+        seoKeywords: ['calcium chloride Oman', 'completion brine Muscat', 'CaCl2 Oman', 'calcium chloride oilfield Sohar', 'completion fluid Oman', 'CaCl2 workover Oman'],
+        longDescription: 'Calcium Chloride brine supplier in Oman - Global Chemicals LLC provides high-quality CaCl2 for completion, workover, and drilling fluids in Muscat, Sohar, Duqm, Salalah. Our calcium chloride creates economical, high-density clear brines (up to 1.39 sg) for well control and completion operations. CaCl2 brines are cost-effective, readily available, and compatible with most downhole tools and formations. The clear fluid minimizes formation damage while providing excellent pressure control. Essential for completion, workover, packer fluids, and well servicing operations across Oman\'s oil & gas fields. Available in multiple concentrations to meet specific density requirements with corrosion inhibitor packages.',
+        applications: [
+          'Well completion and workover fluids',
+          'Clear brine packer fluids',
+          'Drilling and completion fluid weighting',
+          'Well control and kill operations',
+          'Horizontal well completions',
+          'Coiled tubing operations',
+          'Snubbing and well intervention',
+          'Formation-compatible completion fluids'
+        ],
+        technicalSpecs: [
+          'Density range: 1.08-1.39 sg',
+          'Available concentrations: 30%, 38%, 42%',
+          'Appearance: Clear colorless liquid',
+          'Freezing point: -55°C (42% solution)',
+          'pH: 8-10',
+          'Compatible with corrosion inhibitors',
+          'Available in drums, IBCs, bulk tankers'
+        ]
       },
     },
     {
@@ -2311,8 +2351,29 @@ export const products: Product[] = [
       details: {
         formula: 'C4H10O3',
         casNumber: '111-46-6',
-        alternativeNames: ['Diethylene glycol', 'DEG', '2,2-Oxydiethanol'],
-        seoKeywords: ['DEG Oman', 'diethylene glycol Muscat', 'dehydration agent Oman', 'gas dehydration Oman'],
+        alternativeNames: ['Diethylene glycol', 'DEG', '2,2-Oxydiethanol', 'Diglycol'],
+        seoKeywords: ['DEG Oman', 'diethylene glycol Muscat', 'dehydration agent Oman', 'gas dehydration Oman', 'DEG oilfield Sohar', 'diglycol Oman'],
+        longDescription: 'Diethylene Glycol (DEG) supplier in Oman - Global Chemicals LLC provides high-purity DEG for gas dehydration, hydrate inhibition, and industrial applications in Muscat, Sohar, Duqm, Salalah. Our diethylene glycol serves as a desiccant in natural gas dehydration systems and as a thermodynamic hydrate inhibitor. DEG offers lower volatility than MEG, reducing losses in high-temperature applications. The compound is also used as a solvent, antifreeze, and chemical intermediate. Essential for gas processing facilities, dehydration units, and industrial operations requiring moisture control. DEG provides cost-effective performance in glycol dehydration systems across Oman\'s oil & gas industry with regeneration capabilities.',
+        applications: [
+          'Natural gas dehydration systems',
+          'Hydrate inhibition in gas pipelines',
+          'Triethylene glycol (TEG) production',
+          'Solvent for industrial applications',
+          'Antifreeze and coolant formulations',
+          'Chemical intermediate production',
+          'Humectant and moisture control',
+          'Heat transfer fluid applications'
+        ],
+        technicalSpecs: [
+          'Purity: 99% minimum',
+          'Appearance: Clear colorless liquid',
+          'Boiling point: 245°C',
+          'Freezing point: -10°C',
+          'Specific gravity: 1.118 at 20°C',
+          'Lower volatility than MEG',
+          'Regenerable in glycol units',
+          'Available in drums, IBCs, bulk'
+        ]
       },
     },
     {
@@ -2385,8 +2446,29 @@ export const products: Product[] = [
       details: {
         formula: 'N2H4·H2O',
         casNumber: '7803-57-8',
-        alternativeNames: ['Hydrazine monohydrate', 'Hydrazine solution'],
-        seoKeywords: ['hydrazine hydrate Oman', 'oxygen scavenger Muscat', 'hydrazine Oman'],
+        alternativeNames: ['Hydrazine monohydrate', 'Hydrazine solution', 'Hydrazine hydrate 80%', 'Oxygen scavenger'],
+        seoKeywords: ['hydrazine hydrate Oman', 'oxygen scavenger Muscat', 'hydrazine Oman', 'boiler treatment Sohar', 'corrosion control Oman', 'oxygen remover Oman'],
+        longDescription: 'Hydrazine Hydrate supplier in Oman - Global Chemicals LLC provides high-purity hydrazine hydrate for oxygen scavenging and corrosion control in Muscat, Sohar, Duqm. Our hydrazine hydrate (N2H4·H2O) is the most effective chemical oxygen scavenger for boiler water, steam systems, and high-pressure applications. Hydrazine reacts rapidly with dissolved oxygen, forming nitrogen and water with no solid byproducts. Essential for preventing corrosion in boilers, steam generators, and closed-loop systems. The compound also serves as a reducing agent and chemical intermediate. Widely used in power plants, refineries, and industrial facilities across Oman requiring ultra-low oxygen levels. Available in 35%, 55%, and 80% concentrations.',
+        applications: [
+          'Boiler water oxygen scavenging',
+          'High-pressure steam system treatment',
+          'Closed-loop cooling water protection',
+          'Condensate system corrosion control',
+          'Heat recovery steam generator (HRSG) treatment',
+          'Reducing agent in chemical processes',
+          'Pharmaceutical intermediate production',
+          'Rocket fuel component'
+        ],
+        technicalSpecs: [
+          'Available concentrations: 35%, 55%, 80%',
+          'Appearance: Clear colorless liquid',
+          'Boiling point: 118°C (monohydrate)',
+          'Specific gravity: 1.03 at 20°C',
+          'Dosage: 1-2 ppm per 1 ppm oxygen',
+          'Complete reaction to N2 and H2O',
+          'No solid residue formation',
+          'Available in drums, IBCs with safety packaging'
+        ]
       },
     },
     {
