@@ -2261,6 +2261,10 @@ export const products: Product[] = [
       description: 'High-performance protective coating for concrete surfaces and structural elements.',
       category: 'construction',
       icon: Building2,
+      details: {
+        alternativeNames: ['Epoxy resin coating', 'Concrete epoxy', 'Floor epoxy coating'],
+        seoKeywords: ['epoxy coating Oman', 'concrete coating Muscat', 'floor coating Oman'],
+      },
     },
     {
       id: 'paraffin-oil-construction',
@@ -2268,6 +2272,11 @@ export const products: Product[] = [
       description: 'Industrial grade paraffin oil for construction applications and formulations.',
       category: 'construction',
       icon: Building2,
+      details: {
+        casNumber: '8012-95-1',
+        alternativeNames: ['Paraffin oil', 'Liquid paraffin', 'Mineral oil'],
+        seoKeywords: ['paraffin oil Oman', 'liquid paraffin Muscat', 'mineral oil construction Oman'],
+      },
     },
     {
       id: 'polymer-bonding-agent',
@@ -2275,6 +2284,10 @@ export const products: Product[] = [
       description: 'Advanced bonding agent for enhanced adhesion between concrete layers.',
       category: 'construction',
       icon: Building2,
+      details: {
+        alternativeNames: ['Bonding agent', 'Concrete bonding agent', 'Polymer adhesive'],
+        seoKeywords: ['bonding agent Oman', 'concrete bonding Muscat', 'polymer adhesive Oman'],
+      },
     },
     {
       id: 'polymer-modified-mortar',
@@ -2282,6 +2295,10 @@ export const products: Product[] = [
       description: 'High-strength mortar with polymer additives for superior bonding and flexibility.',
       category: 'construction',
       icon: Building2,
+      details: {
+        alternativeNames: ['Modified mortar', 'Polymer mortar', 'Flexible mortar'],
+        seoKeywords: ['polymer mortar Oman', 'modified mortar Muscat', 'flexible mortar Oman'],
+      },
     },
     {
       id: 'mould-releasing-agents',
@@ -2289,6 +2306,10 @@ export const products: Product[] = [
       description: 'Formwork release agents for easy concrete demolding and smooth finishes.',
       category: 'construction',
       icon: Building2,
+      details: {
+        alternativeNames: ['Release agent', 'Formwork release', 'Concrete release agent'],
+        seoKeywords: ['mold release agent Oman', 'formwork release Muscat', 'concrete release Oman'],
+      },
     },
 
     // Food & Beverage
@@ -2518,6 +2539,10 @@ export const products: Product[] = [
       description: 'Specialized corrosion protection for multi-metal cooling water systems.',
       category: 'corrosion-inhibitor',
       icon: Shield,
+      details: {
+        alternativeNames: ['Multi-metal inhibitor', 'Mixed metal inhibitor', 'Universal corrosion inhibitor'],
+        seoKeywords: ['multi-metal corrosion inhibitor Oman', 'mixed metal protection Muscat', 'cooling water inhibitor Oman'],
+      },
     },
     {
       id: 'corrosion-inhibitor-2000',
@@ -2525,6 +2550,10 @@ export const products: Product[] = [
       description: 'Advanced formula for comprehensive metal protection in industrial systems.',
       category: 'corrosion-inhibitor',
       icon: Shield,
+      details: {
+        alternativeNames: ['CI 2000', 'Advanced corrosion inhibitor', 'Industrial inhibitor'],
+        seoKeywords: ['corrosion inhibitor 2000 Oman', 'CI 2000 Muscat', 'industrial protection Oman'],
+      },
     },
     {
       id: 'corrosion-inhibitor-rust-preventive',
@@ -2532,6 +2561,10 @@ export const products: Product[] = [
       description: 'Rust prevention solution for metal surfaces and equipment.',
       category: 'corrosion-inhibitor',
       icon: Shield,
+      details: {
+        alternativeNames: ['Rust preventive', 'Rust inhibitor', 'Metal protection'],
+        seoKeywords: ['rust preventive Oman', 'rust inhibitor Muscat', 'metal protection Oman'],
+      },
     },
     {
       id: 'corrosion-inhibitor-molybdate',
@@ -2539,6 +2572,11 @@ export const products: Product[] = [
       description: 'Molybdate-based corrosion protection for closed cooling systems.',
       category: 'corrosion-inhibitor',
       icon: Shield,
+      details: {
+        casNumber: '7631-95-0',
+        alternativeNames: ['Molybdate inhibitor', 'Sodium molybdate based', 'Closed system inhibitor'],
+        seoKeywords: ['molybdate inhibitor Oman', 'closed system protection Muscat', 'molybdate corrosion Oman'],
+      },
     },
     {
       id: 'corrosion-inhibitor-general',
@@ -2546,6 +2584,10 @@ export const products: Product[] = [
       description: 'General-purpose corrosion prevention chemical for industrial applications.',
       category: 'corrosion-inhibitor',
       icon: Shield,
+      details: {
+        alternativeNames: ['General inhibitor', 'Corrosion preventive', 'Metal protector'],
+        seoKeywords: ['corrosion inhibitor Oman', 'corrosion prevention Muscat', 'metal protector Oman'],
+      },
     },
     {
       id: 'corrosion-inhibitor-gas-compressor',
@@ -2553,6 +2595,10 @@ export const products: Product[] = [
       description: 'Specialized protection for gas compressor systems and components.',
       category: 'corrosion-inhibitor',
       icon: Shield,
+      details: {
+        alternativeNames: ['Compressor inhibitor', 'Gas system inhibitor', 'Compressor protection'],
+        seoKeywords: ['gas compressor inhibitor Oman', 'compressor protection Muscat', 'gas system Oman'],
+      },
     },
     {
       id: 'sodium-molybdate',
@@ -2560,6 +2606,12 @@ export const products: Product[] = [
       description: 'Anodic corrosion inhibitor for cooling water treatment systems.',
       category: 'corrosion-inhibitor',
       icon: Shield,
+      details: {
+        formula: 'Na2MoO4',
+        casNumber: '7631-95-0',
+        alternativeNames: ['Sodium molybdate dihydrate', 'Molybdate', 'Na2MoO4'],
+        seoKeywords: ['sodium molybdate Oman', 'molybdate inhibitor Muscat', 'anodic inhibitor Oman'],
+      },
     },
     {
       id: 'oxygen-scavenger',
@@ -2567,6 +2619,10 @@ export const products: Product[] = [
       description: 'Removes dissolved oxygen to prevent corrosion in water systems.',
       category: 'corrosion-inhibitor',
       icon: Shield,
+      details: {
+        alternativeNames: ['Oxygen remover', 'Oxygen scavenger', 'Deoxidizer'],
+        seoKeywords: ['oxygen scavenger Oman', 'deoxidizer Muscat', 'oxygen remover Oman'],
+      },
     },
     {
       id: 'ph-booster-corrosion-inhibitor',
@@ -2574,6 +2630,10 @@ export const products: Product[] = [
       description: 'Dual-action formula for pH control and corrosion prevention.',
       category: 'corrosion-inhibitor',
       icon: Shield,
+      details: {
+        alternativeNames: ['pH booster inhibitor', 'Dual action inhibitor', 'pH control inhibitor'],
+        seoKeywords: ['pH booster Oman', 'dual action inhibitor Muscat', 'pH control Oman'],
+      },
     },
     {
       id: 'corrosion-inhibitor-closed-system',
@@ -2581,6 +2641,10 @@ export const products: Product[] = [
       description: 'Comprehensive protection for closed-loop cooling systems.',
       category: 'corrosion-inhibitor',
       icon: Shield,
+      details: {
+        alternativeNames: ['Closed system inhibitor', 'Closed loop protection', 'Chiller inhibitor'],
+        seoKeywords: ['closed system inhibitor Oman', 'closed loop protection Muscat', 'chiller inhibitor Oman'],
+      },
     },
 
     // Tank Cleaners
@@ -2590,6 +2654,10 @@ export const products: Product[] = [
       description: 'Heavy carbon and fouling remover for industrial tank cleaning.',
       category: 'tank-cleaners',
       icon: SprayCan,
+      details: {
+        alternativeNames: ['Heavy carbon remover', 'Fouling remover', 'Carbon cleaner'],
+        seoKeywords: ['HCF remover Oman', 'carbon remover Muscat', 'fouling cleaner Oman'],
+      },
     },
     {
       id: 'resin-clean',
@@ -2597,6 +2665,10 @@ export const products: Product[] = [
       description: 'Specialized cleaner for resin and polymer residue removal.',
       category: 'tank-cleaners',
       icon: SprayCan,
+      details: {
+        alternativeNames: ['Resin cleaner', 'Polymer remover', 'Resin residue cleaner'],
+        seoKeywords: ['resin cleaner Oman', 'polymer remover Muscat', 'resin clean Oman'],
+      },
     },
     {
       id: 'universal-wash',
@@ -2604,6 +2676,10 @@ export const products: Product[] = [
       description: 'Multi-purpose cleaning solution for various tank applications.',
       category: 'tank-cleaners',
       icon: SprayCan,
+      details: {
+        alternativeNames: ['Universal cleaner', 'Multi-purpose wash', 'Tank wash'],
+        seoKeywords: ['universal wash Oman', 'tank cleaner Muscat', 'multi-purpose cleaner Oman'],
+      },
     },
     {
       id: 'methanol-tech-grade-cleaner',
@@ -2611,6 +2687,12 @@ export const products: Product[] = [
       description: 'Technical grade methanol for industrial cleaning and degreasing.',
       category: 'tank-cleaners',
       icon: SprayCan,
+      details: {
+        formula: 'CH3OH',
+        casNumber: '67-56-1',
+        alternativeNames: ['Methyl alcohol', 'Wood alcohol', 'Technical methanol'],
+        seoKeywords: ['methanol tech grade Oman', 'methyl alcohol Muscat', 'industrial methanol Oman'],
+      },
     },
     {
       id: 'tank-degreaser-heavy-duty',
@@ -2618,6 +2700,10 @@ export const products: Product[] = [
       description: 'Industrial-strength degreaser for heavy oil and grease removal.',
       category: 'tank-cleaners',
       icon: SprayCan,
+      details: {
+        alternativeNames: ['Heavy duty degreaser', 'Industrial degreaser', 'Tank degreaser'],
+        seoKeywords: ['tank degreaser Oman', 'heavy duty degreaser Muscat', 'oil remover Oman'],
+      },
     },
     {
       id: 'lye-sodium-hydroxide-liquid',
@@ -2625,6 +2711,12 @@ export const products: Product[] = [
       description: 'Alkaline cleaning solution for industrial tank maintenance.',
       category: 'tank-cleaners',
       icon: SprayCan,
+      details: {
+        formula: 'NaOH',
+        casNumber: '1310-73-2',
+        alternativeNames: ['Lye', 'Caustic soda liquid', 'Sodium hydroxide solution'],
+        seoKeywords: ['lye Oman', 'caustic soda liquid Muscat', 'sodium hydroxide cleaner Oman'],
+      },
     },
     {
       id: 'tank-cleaner-general',
@@ -2632,6 +2724,10 @@ export const products: Product[] = [
       description: 'General-purpose tank cleaning formulation for industrial use.',
       category: 'tank-cleaners',
       icon: SprayCan,
+      details: {
+        alternativeNames: ['General tank cleaner', 'Industrial tank cleaner', 'Tank cleaning solution'],
+        seoKeywords: ['tank cleaner Oman', 'industrial cleaner Muscat', 'tank cleaning Oman'],
+      },
     },
     {
       id: 'sewage-deformer',
@@ -2639,6 +2735,10 @@ export const products: Product[] = [
       description: 'Foam control agent for sewage and wastewater tank systems.',
       category: 'tank-cleaners',
       icon: SprayCan,
+      details: {
+        alternativeNames: ['Defoamer', 'Foam control', 'Antifoam sewage'],
+        seoKeywords: ['sewage defoamer Oman', 'foam control Muscat', 'wastewater defoamer Oman'],
+      },
     },
     {
       id: 'alkaleen-cleaner-safety',
@@ -2646,6 +2746,10 @@ export const products: Product[] = [
       description: 'Safe alkaline cleaner for various industrial cleaning applications.',
       category: 'tank-cleaners',
       icon: SprayCan,
+      details: {
+        alternativeNames: ['Safe alkaline cleaner', 'Alkaline safety cleaner', 'Industrial alkali cleaner'],
+        seoKeywords: ['alkaleen cleaner Oman', 'safe alkaline cleaner Muscat', 'industrial cleaner Oman'],
+      },
     },
     {
       id: 'emulsion-sludge-breaker',
@@ -2653,6 +2757,10 @@ export const products: Product[] = [
       description: 'Breaks down emulsions and sludge in storage tanks.',
       category: 'tank-cleaners',
       icon: SprayCan,
+      details: {
+        alternativeNames: ['Sludge breaker', 'Emulsion breaker', 'Demulsifier'],
+        seoKeywords: ['emulsion breaker Oman', 'sludge breaker Muscat', 'demulsifier Oman'],
+      },
     },
     {
       id: 'oil-spill-dispersent-type-3',
@@ -2660,6 +2768,10 @@ export const products: Product[] = [
       description: 'Type 3 dispersant for oil spill response and tank cleaning.',
       category: 'tank-cleaners',
       icon: SprayCan,
+      details: {
+        alternativeNames: ['Oil dispersant', 'Spill dispersant type 3', 'Oil spill cleaner'],
+        seoKeywords: ['oil spill dispersant Oman', 'dispersant type 3 Muscat', 'oil spill cleaner Oman'],
+      },
     },
     {
       id: 'aqua-clean-hd',
@@ -2667,6 +2779,10 @@ export const products: Product[] = [
       description: 'Heavy-duty aqueous cleaning solution for industrial tanks.',
       category: 'tank-cleaners',
       icon: SprayCan,
+      details: {
+        alternativeNames: ['Aqueous cleaner', 'Heavy duty aqua cleaner', 'Water-based cleaner HD'],
+        seoKeywords: ['aqua clean HD Oman', 'aqueous cleaner Muscat', 'tank cleaning solution Oman'],
+      },
     },
     {
       id: 'cold-washer-hd',
@@ -2674,6 +2790,10 @@ export const products: Product[] = [
       description: 'Cold-water heavy-duty cleaner for efficient tank washing.',
       category: 'tank-cleaners',
       icon: SprayCan,
+      details: {
+        alternativeNames: ['Cold water cleaner', 'HD cold wash', 'Cold cleaning solution'],
+        seoKeywords: ['cold washer HD Oman', 'cold water cleaner Muscat', 'tank wash Oman'],
+      },
     },
     {
       id: 'passivation-liquid',
@@ -2681,6 +2801,11 @@ export const products: Product[] = [
       description: 'Chemical passivation treatment for stainless steel tanks.',
       category: 'tank-cleaners',
       icon: SprayCan,
+      details: {
+        casNumber: '7697-37-2',
+        alternativeNames: ['Passivation solution', 'Stainless steel passivation', 'Metal passivation'],
+        seoKeywords: ['passivation liquid Oman', 'stainless steel treatment Muscat', 'tank passivation Oman'],
+      },
     },
     {
       id: 'edge-sol-cleaner',
@@ -2688,6 +2813,10 @@ export const products: Product[] = [
       description: 'Solvent-based edge and seam cleaning solution.',
       category: 'tank-cleaners',
       icon: SprayCan,
+      details: {
+        alternativeNames: ['Solvent cleaner', 'Edge cleaner', 'Seam cleaning solution'],
+        seoKeywords: ['edge sol cleaner Oman', 'solvent cleaner Muscat', 'seam cleaner Oman'],
+      },
     },
     {
       id: 'enviro-soft-2000',
@@ -2695,6 +2824,10 @@ export const products: Product[] = [
       description: 'Environmentally friendly softening and cleaning agent.',
       category: 'tank-cleaners',
       icon: SprayCan,
+      details: {
+        alternativeNames: ['Eco-friendly cleaner', 'Soft cleaner 2000', 'Environmental cleaner'],
+        seoKeywords: ['enviro soft 2000 Oman', 'eco-friendly cleaner Muscat', 'green cleaner Oman'],
+      },
     },
     {
       id: 'dual-hd-cleaner',
@@ -2702,6 +2835,10 @@ export const products: Product[] = [
       description: 'Dual-action heavy-duty cleaner for versatile tank applications.',
       category: 'tank-cleaners',
       icon: SprayCan,
+      details: {
+        alternativeNames: ['Dual action cleaner', 'Heavy duty dual cleaner', 'Versatile tank cleaner'],
+        seoKeywords: ['dual HD cleaner Oman', 'dual action cleaner Muscat', 'versatile cleaner Oman'],
+      },
     },
     {
       id: 'metal-bright',
@@ -2709,6 +2846,10 @@ export const products: Product[] = [
       description: 'Metal brightening and cleaning solution for tank surfaces.',
       category: 'tank-cleaners',
       icon: SprayCan,
+      details: {
+        alternativeNames: ['Metal brightener', 'Metal polish cleaner', 'Brightening solution'],
+        seoKeywords: ['metal bright Oman', 'metal brightener Muscat', 'metal polish Oman'],
+      },
     },
     {
       id: 'p-xylene-pure',
@@ -2716,6 +2857,12 @@ export const products: Product[] = [
       description: 'Pure p-xylene solvent for industrial cleaning applications.',
       category: 'tank-cleaners',
       icon: SprayCan,
+      details: {
+        formula: 'C8H10',
+        casNumber: '106-42-3',
+        alternativeNames: ['Para-xylene', 'p-Xylene', '1,4-Dimethylbenzene'],
+        seoKeywords: ['p-xylene Oman', 'para-xylene Muscat', 'industrial solvent Oman'],
+      },
     },
     {
       id: 'ctc-volc-cleaner',
@@ -2723,6 +2870,10 @@ export const products: Product[] = [
       description: 'Volcanic ash and carbon cleaner for specialized tank cleaning.',
       category: 'tank-cleaners',
       icon: SprayCan,
+      details: {
+        alternativeNames: ['Carbon cleaner', 'Volcanic ash remover', 'CTC cleaner'],
+        seoKeywords: ['CTC volc cleaner Oman', 'carbon cleaner Muscat', 'volcanic ash remover Oman'],
+      },
     },
     {
       id: 'aquatuff-ship-hold-cleaner',
@@ -2730,6 +2881,10 @@ export const products: Product[] = [
       description: 'Marine-grade cleaner for ship holds and cargo tanks.',
       category: 'tank-cleaners',
       icon: SprayCan,
+      details: {
+        alternativeNames: ['Ship hold cleaner', 'Marine tank cleaner', 'Cargo hold cleaner'],
+        seoKeywords: ['ship hold cleaner Oman', 'marine cleaner Muscat', 'cargo tank cleaner Oman'],
+      },
     },
 
     // RO Chemicals
@@ -2739,6 +2894,10 @@ export const products: Product[] = [
       description: 'Passivation treatment for reverse osmosis membrane protection and preservation.',
       category: 'ro-chemicals',
       icon: Droplets,
+      details: {
+        alternativeNames: ['Membrane passivation', 'RO membrane preservative', 'Membrane storage solution'],
+        seoKeywords: ['RO passivation Oman', 'membrane protection Muscat', 'RO preservation Oman'],
+      },
     },
     {
       id: 'citric-acid-liquid-ro',
@@ -2746,6 +2905,12 @@ export const products: Product[] = [
       description: 'Organic acid cleaner for RO membrane descaling and fouling removal.',
       category: 'ro-chemicals',
       icon: Droplets,
+      details: {
+        formula: 'C6H8O7',
+        casNumber: '77-92-9',
+        alternativeNames: ['Citric acid solution', 'Membrane descaler', 'RO cleaner'],
+        seoKeywords: ['citric acid RO Oman', 'membrane descaler Muscat', 'RO cleaning Oman'],
+      },
     },
     {
       id: 'ro-222-descaler',
@@ -2753,6 +2918,10 @@ export const products: Product[] = [
       description: 'Specialized descaling solution for reverse osmosis membrane systems.',
       category: 'ro-chemicals',
       icon: Droplets,
+      details: {
+        alternativeNames: ['RO descaler', 'Membrane descaling solution', 'Scale remover RO'],
+        seoKeywords: ['RO 222 descaler Oman', 'RO membrane cleaner Muscat', 'scale remover Oman'],
+      },
     },
     {
       id: 'sodium-hydroxide-alkaleen',
@@ -2760,6 +2929,12 @@ export const products: Product[] = [
       description: 'Alkaline cleaner for organic fouling and biological growth removal from RO membranes.',
       category: 'ro-chemicals',
       icon: Droplets,
+      details: {
+        formula: 'NaOH',
+        casNumber: '1310-73-2',
+        alternativeNames: ['Alkaline RO cleaner', 'Caustic membrane cleaner', 'Sodium hydroxide cleaner'],
+        seoKeywords: ['alkaline RO cleaner Oman', 'membrane cleaner Muscat', 'caustic cleaner Oman'],
+      },
     },
     {
       id: 'membrane-cleaner-ro',
@@ -2767,6 +2942,10 @@ export const products: Product[] = [
       description: 'Comprehensive cleaning solution for RO membrane maintenance and restoration.',
       category: 'ro-chemicals',
       icon: Droplets,
+      details: {
+        alternativeNames: ['RO membrane cleaner', 'Membrane cleaning solution', 'RO maintenance chemical'],
+        seoKeywords: ['membrane cleaner Oman', 'RO cleaning Muscat', 'membrane maintenance Oman'],
+      },
     },
     {
       id: 'antiscalant-ro',
@@ -2774,6 +2953,10 @@ export const products: Product[] = [
       description: 'Scale inhibitor for preventing mineral deposits on reverse osmosis membranes.',
       category: 'ro-chemicals',
       icon: Droplets,
+      details: {
+        alternativeNames: ['RO antiscalant', 'Scale inhibitor', 'Membrane antiscalant'],
+        seoKeywords: ['antiscalant RO Oman', 'scale inhibitor Muscat', 'RO antiscalant Oman'],
+      },
     },
     {
       id: 'membrane-alka-cleaner',
@@ -2781,6 +2964,10 @@ export const products: Product[] = [
       description: 'Alkaline formulation for removing organic and biological fouling from membranes.',
       category: 'ro-chemicals',
       icon: Droplets,
+      details: {
+        alternativeNames: ['Alkaline membrane cleaner', 'Alka cleaner', 'Organic fouling remover'],
+        seoKeywords: ['membrane alka cleaner Oman', 'alkaline cleaner Muscat', 'fouling remover Oman'],
+      },
     },
     {
       id: 'membrane-antiscalant-ro',
@@ -2788,6 +2975,10 @@ export const products: Product[] = [
       description: 'Advanced antiscalant for comprehensive membrane scale prevention.',
       category: 'ro-chemicals',
       icon: Droplets,
+      details: {
+        alternativeNames: ['Advanced antiscalant', 'Scale preventive', 'RO scale inhibitor'],
+        seoKeywords: ['membrane antiscalant Oman', 'advanced antiscalant Muscat', 'scale prevention Oman'],
+      },
     },
 
     // Cooling Water Chemicals
@@ -2797,6 +2988,10 @@ export const products: Product[] = [
       description: 'Corrosion protection for closed-loop cooling water systems.',
       category: 'cooling-water',
       icon: Droplets,
+      details: {
+        alternativeNames: ['Closed loop inhibitor', 'Chiller corrosion inhibitor', 'Closed system treatment'],
+        seoKeywords: ['corrosion inhibitor closed loop Oman', 'chiller treatment Muscat', 'closed system Oman'],
+      },
     },
     {
       id: 'algae-control',
@@ -2804,6 +2999,11 @@ export const products: Product[] = [
       description: 'Algaecide for preventing algae growth in cooling towers and water systems.',
       category: 'cooling-water',
       icon: Droplets,
+      details: {
+        casNumber: '7173-51-5',
+        alternativeNames: ['Algaecide', 'Algae inhibitor', 'Cooling tower algaecide'],
+        seoKeywords: ['algae control Oman', 'algaecide cooling tower Muscat', 'algae prevention Oman'],
+      },
     },
     {
       id: 'biological-guard-antifouling',
@@ -2811,6 +3011,10 @@ export const products: Product[] = [
       description: 'Biocide for controlling biological fouling in cooling water systems.',
       category: 'cooling-water',
       icon: Droplets,
+      details: {
+        alternativeNames: ['Biofouling control', 'Biological inhibitor', 'Antifouling biocide'],
+        seoKeywords: ['biological guard Oman', 'antifouling Muscat', 'biofouling control Oman'],
+      },
     },
     {
       id: 'micro-biocid-cooling-water',
@@ -2818,6 +3022,10 @@ export const products: Product[] = [
       description: 'Microbiocide for microbial control in cooling tower applications.',
       category: 'cooling-water',
       icon: Droplets,
+      details: {
+        alternativeNames: ['Microbiocide', 'Microbial control', 'Cooling tower biocide'],
+        seoKeywords: ['microbiocide Oman', 'cooling tower biocide Muscat', 'microbial control Oman'],
+      },
     },
     {
       id: 'biocide-cooling',
@@ -2825,6 +3033,10 @@ export const products: Product[] = [
       description: 'Broad-spectrum biocide for cooling water treatment and microbial control.',
       category: 'cooling-water',
       icon: Droplets,
+      details: {
+        alternativeNames: ['Broad spectrum biocide', 'Cooling water biocide', 'Antimicrobial agent'],
+        seoKeywords: ['biocide cooling water Oman', 'antimicrobial Muscat', 'cooling tower biocide Oman'],
+      },
     },
     {
       id: 'hardness-control-boiler',
@@ -2832,6 +3044,10 @@ export const products: Product[] = [
       description: 'Chemical treatment for controlling water hardness in boiler systems.',
       category: 'cooling-water',
       icon: Droplets,
+      details: {
+        alternativeNames: ['Boiler hardness control', 'Scale inhibitor boiler', 'Water hardness treatment'],
+        seoKeywords: ['hardness control Oman', 'boiler treatment Muscat', 'scale control Oman'],
+      },
     },
     {
       id: 'biocide-closed-loop-chiller',
@@ -2839,6 +3055,10 @@ export const products: Product[] = [
       description: 'Specialized biocide for closed-loop chiller water systems.',
       category: 'cooling-water',
       icon: Droplets,
+      details: {
+        alternativeNames: ['Chiller biocide', 'Closed loop biocide', 'Chiller water treatment'],
+        seoKeywords: ['chiller biocide Oman', 'closed loop treatment Muscat', 'chiller water biocide Oman'],
+      },
     },
     {
       id: 'cool-water-treat-corrosion',
@@ -2846,6 +3066,10 @@ export const products: Product[] = [
       description: 'Corrosion inhibitor formulated for cooling water treatment applications.',
       category: 'cooling-water',
       icon: Droplets,
+      details: {
+        alternativeNames: ['Cooling water inhibitor', 'Corrosion treatment', 'Cooling tower inhibitor'],
+        seoKeywords: ['cooling water corrosion inhibitor Oman', 'corrosion treatment Muscat', 'cooling tower Oman'],
+      },
     },
     {
       id: 'altreat-4000',
@@ -2853,6 +3077,10 @@ export const products: Product[] = [
       description: 'All-in-one cooling water treatment chemical for comprehensive system protection.',
       category: 'cooling-water',
       icon: Droplets,
+      details: {
+        alternativeNames: ['All-in-one treatment', 'Cooling water treatment', 'Complete water treatment'],
+        seoKeywords: ['Altreat 4000 Oman', 'cooling water treatment Muscat', 'all-in-one treatment Oman'],
+      },
     },
     {
       id: 'corro-guard-antifoulant',
@@ -2860,6 +3088,10 @@ export const products: Product[] = [
       description: 'Dual-action corrosion inhibitor and antifoulant for cooling water systems.',
       category: 'cooling-water',
       icon: Droplets,
+      details: {
+        alternativeNames: ['Corrosion guard', 'Dual action inhibitor', 'Antifouling inhibitor'],
+        seoKeywords: ['corro guard Oman', 'antifoulant Muscat', 'corrosion inhibitor Oman'],
+      },
     },
     {
       id: 'antifouling-liquid',
@@ -2867,6 +3099,10 @@ export const products: Product[] = [
       description: 'Liquid antifoulant for preventing deposits and fouling in cooling systems.',
       category: 'cooling-water',
       icon: Droplets,
+      details: {
+        alternativeNames: ['Antifoulant liquid', 'Fouling inhibitor', 'Scale dispersant'],
+        seoKeywords: ['antifouling liquid Oman', 'fouling control Muscat', 'scale dispersant Oman'],
+      },
     },
 
     // Agro Products
