@@ -17,24 +17,26 @@ Deno.serve(async (req) => {
 
     console.log("Sending download notification email for:", resourceTitle);
 
-    // Send email notification
-    const client = new SMTPClient({
-      connection: {
-        hostname: Deno.env.get("ZOHO_SMTP_HOST") || "smtppro.zoho.com",
-        port: parseInt(Deno.env.get("ZOHO_SMTP_PORT") || "465"),
-        tls: true,
-        auth: {
-          username: Deno.env.get("ZOHO_SMTP_USER") || "",
-          password: Deno.env.get("ZOHO_SMTP_PASSWORD") || "",
-        },
-      },
-    });
+    // Send email notification asynchronously (fire and forget, don't block response)
+    (async () => {
+      try {
+        const client = new SMTPClient({
+          connection: {
+            hostname: Deno.env.get("ZOHO_SMTP_HOST") || "smtppro.zoho.com",
+            port: parseInt(Deno.env.get("ZOHO_SMTP_PORT") || "465"),
+            tls: true,
+            auth: {
+              username: Deno.env.get("ZOHO_SMTP_USER") || "",
+              password: Deno.env.get("ZOHO_SMTP_PASSWORD") || "",
+            },
+          },
+        });
 
-    await client.send({
-      from: Deno.env.get("ZOHO_SMTP_USER") || "sales@gcoman.com",
-      to: "sales@gcoman.com",
-      subject: `New Brochure Download: ${resourceTitle}`,
-      content: `
+        await client.send({
+          from: Deno.env.get("ZOHO_SMTP_USER") || "sales@gcoman.com",
+          to: "sales@gcoman.com",
+          subject: `New Brochure Download: ${resourceTitle}`,
+          content: `
 New brochure/resource download:
 
 Resource: ${resourceTitle}
@@ -48,11 +50,15 @@ Marketing Consent: ${marketingConsent ? "Yes" : "No"}
 
 ---
 Downloaded at: ${new Date().toLocaleString()}
-      `,
-    });
+        `,
+        });
 
-    await client.close();
-    console.log("Download notification email sent successfully to sales@gcoman.com");
+        await client.close();
+        console.log("Download notification email sent successfully to sales@gcoman.com");
+      } catch (emailError) {
+        console.error("Failed to send email notification:", emailError);
+      }
+    })();
 
     return new Response(
       JSON.stringify({ success: true, message: "Notification sent successfully" }),

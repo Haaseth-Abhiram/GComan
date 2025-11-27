@@ -237,25 +237,26 @@ Deno.serve(async (req) => {
 
     console.log(`Application submitted successfully for ${applicationData.email}`);
 
-    // Send email notification to sales team
-    try {
-      const client = new SMTPClient({
-        connection: {
-          hostname: Deno.env.get("ZOHO_SMTP_HOST") || "smtppro.zoho.com",
-          port: parseInt(Deno.env.get("ZOHO_SMTP_PORT") || "465"),
-          tls: true,
-          auth: {
-            username: Deno.env.get("ZOHO_SMTP_USER") || "",
-            password: Deno.env.get("ZOHO_SMTP_PASSWORD") || "",
+    // Send email notification asynchronously (fire and forget, don't block response)
+    (async () => {
+      try {
+        const client = new SMTPClient({
+          connection: {
+            hostname: Deno.env.get("ZOHO_SMTP_HOST") || "smtppro.zoho.com",
+            port: parseInt(Deno.env.get("ZOHO_SMTP_PORT") || "465"),
+            tls: true,
+            auth: {
+              username: Deno.env.get("ZOHO_SMTP_USER") || "",
+              password: Deno.env.get("ZOHO_SMTP_PASSWORD") || "",
+            },
           },
-        },
-      });
+        });
 
-      await client.send({
-        from: Deno.env.get("ZOHO_SMTP_USER") || "sales@gcoman.com",
-        to: "sales@gcoman.com",
-        subject: `New Job Application: ${applicationData.position} - ${applicationData.name}`,
-        content: `
+        await client.send({
+          from: Deno.env.get("ZOHO_SMTP_USER") || "sales@gcoman.com",
+          to: "sales@gcoman.com",
+          subject: `New Job Application: ${applicationData.position} - ${applicationData.name}`,
+          content: `
 New job application received:
 
 Position: ${applicationData.position}
@@ -272,15 +273,15 @@ Resume: Uploaded to storage at ${filePath}
 
 ---
 Submitted at: ${new Date().toLocaleString()}
-        `,
-      });
+          `,
+        });
 
-      await client.close();
-      console.log("Email notification sent successfully to sales@gcoman.com");
-    } catch (emailError) {
-      console.error("Failed to send email notification:", emailError);
-      // Don't fail the request if email fails
-    }
+        await client.close();
+        console.log("Email notification sent successfully to sales@gcoman.com");
+      } catch (emailError) {
+        console.error("Failed to send email notification:", emailError);
+      }
+    })();
 
     return new Response(
       JSON.stringify({ 
