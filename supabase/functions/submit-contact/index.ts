@@ -1,6 +1,7 @@
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+import { SmtpClient } from "https://deno.land/x/smtp@v0.7.0/mod.ts";
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -173,6 +174,45 @@ serve(async (req) => {
     }
 
     console.log('Contact submission successful:', data.id);
+
+    // Send email notification to sales team
+    try {
+      const client = new SmtpClient();
+      await client.connectTLS({
+        hostname: Deno.env.get("ZOHO_SMTP_HOST") || "smtppro.zoho.com",
+        port: parseInt(Deno.env.get("ZOHO_SMTP_PORT") || "465"),
+        username: Deno.env.get("ZOHO_SMTP_USER") || "",
+        password: Deno.env.get("ZOHO_SMTP_PASSWORD") || "",
+      });
+
+      await client.send({
+        from: Deno.env.get("ZOHO_SMTP_USER") || "sales@gcoman.com",
+        to: "sales@gcoman.com",
+        subject: `New Contact Form Submission: ${sanitizedData.subject}`,
+        content: `
+New contact form submission received:
+
+Name: ${sanitizedData.name}
+Email: ${sanitizedData.email}
+Phone: ${sanitizedData.phone || "Not provided"}
+Company: ${sanitizedData.company || "Not provided"}
+Subject: ${sanitizedData.subject}
+
+Message:
+${sanitizedData.message}
+
+---
+Submitted at: ${new Date().toLocaleString()}
+IP Address: ${ipAddress}
+        `,
+      });
+
+      await client.close();
+      console.log("Email notification sent successfully to sales@gcoman.com");
+    } catch (emailError) {
+      console.error("Failed to send email notification:", emailError);
+      // Don't fail the request if email fails
+    }
 
     return new Response(
       JSON.stringify({ 
