@@ -1,4 +1,4 @@
-import { FileText, Briefcase, Download, LayoutDashboard } from 'lucide-react';
+import { FileText, Briefcase, Download, LayoutDashboard, TrendingUp } from 'lucide-react';
 import { useLocation, Link } from 'react-router-dom';
 import {
   Sidebar,
