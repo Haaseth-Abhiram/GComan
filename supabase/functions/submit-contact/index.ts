@@ -1,7 +1,7 @@
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
-import { SmtpClient } from "https://deno.land/x/smtp@v0.7.0/mod.ts";
+import { SMTPClient } from "https://deno.land/x/denomailer@1.6.0/mod.ts";
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -177,12 +177,16 @@ serve(async (req) => {
 
     // Send email notification to sales team
     try {
-      const client = new SmtpClient();
-      await client.connectTLS({
-        hostname: Deno.env.get("ZOHO_SMTP_HOST") || "smtppro.zoho.com",
-        port: parseInt(Deno.env.get("ZOHO_SMTP_PORT") || "465"),
-        username: Deno.env.get("ZOHO_SMTP_USER") || "",
-        password: Deno.env.get("ZOHO_SMTP_PASSWORD") || "",
+      const client = new SMTPClient({
+        connection: {
+          hostname: Deno.env.get("ZOHO_SMTP_HOST") || "smtppro.zoho.com",
+          port: parseInt(Deno.env.get("ZOHO_SMTP_PORT") || "465"),
+          tls: true,
+          auth: {
+            username: Deno.env.get("ZOHO_SMTP_USER") || "",
+            password: Deno.env.get("ZOHO_SMTP_PASSWORD") || "",
+          },
+        },
       });
 
       await client.send({
