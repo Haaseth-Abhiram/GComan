@@ -143,6 +143,25 @@ export const DownloadGateDialog = ({
 
       if (error) throw error;
 
+      // Send email notification
+      try {
+        await supabase.functions.invoke("notify-download", {
+          body: {
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            company: formData.company,
+            country: formData.country,
+            industry: formData.industry,
+            resourceTitle: resourceTitle,
+            marketingConsent: formData.marketingConsent,
+          },
+        });
+      } catch (emailError) {
+        console.error("Failed to send email notification:", emailError);
+        // Don't block download if email fails
+      }
+
       // Trigger download
       const link = document.createElement('a');
       link.href = downloadUrl;
