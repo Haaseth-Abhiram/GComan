@@ -175,25 +175,26 @@ serve(async (req) => {
 
     console.log('Contact submission successful:', data.id);
 
-    // Send email notification to sales team
-    try {
-      const client = new SMTPClient({
-        connection: {
-          hostname: Deno.env.get("ZOHO_SMTP_HOST") || "smtppro.zoho.com",
-          port: parseInt(Deno.env.get("ZOHO_SMTP_PORT") || "465"),
-          tls: true,
-          auth: {
-            username: Deno.env.get("ZOHO_SMTP_USER") || "",
-            password: Deno.env.get("ZOHO_SMTP_PASSWORD") || "",
+    // Send email notification asynchronously (fire and forget, don't block response)
+    (async () => {
+      try {
+        const client = new SMTPClient({
+          connection: {
+            hostname: Deno.env.get("ZOHO_SMTP_HOST") || "smtppro.zoho.com",
+            port: parseInt(Deno.env.get("ZOHO_SMTP_PORT") || "465"),
+            tls: true,
+            auth: {
+              username: Deno.env.get("ZOHO_SMTP_USER") || "",
+              password: Deno.env.get("ZOHO_SMTP_PASSWORD") || "",
+            },
           },
-        },
-      });
+        });
 
-      await client.send({
-        from: Deno.env.get("ZOHO_SMTP_USER") || "sales@gcoman.com",
-        to: "sales@gcoman.com",
-        subject: `New Contact Form Submission: ${sanitizedData.subject}`,
-        content: `
+        await client.send({
+          from: Deno.env.get("ZOHO_SMTP_USER") || "sales@gcoman.com",
+          to: "sales@gcoman.com",
+          subject: `New Contact Form Submission: ${sanitizedData.subject}`,
+          content: `
 New contact form submission received:
 
 Name: ${sanitizedData.name}
@@ -208,15 +209,15 @@ ${sanitizedData.message}
 ---
 Submitted at: ${new Date().toLocaleString()}
 IP Address: ${ipAddress}
-        `,
-      });
+          `,
+        });
 
-      await client.close();
-      console.log("Email notification sent successfully to sales@gcoman.com");
-    } catch (emailError) {
-      console.error("Failed to send email notification:", emailError);
-      // Don't fail the request if email fails
-    }
+        await client.close();
+        console.log("Email notification sent successfully to sales@gcoman.com");
+      } catch (emailError) {
+        console.error("Failed to send email notification:", emailError);
+      }
+    })();
 
     return new Response(
       JSON.stringify({ 
