@@ -84,18 +84,22 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 pt-32 pb-20">
         <div className="max-w-5xl mx-auto space-y-8">
           {/* Trust Indicators */}
-          <div className="flex flex-wrap items-center justify-center gap-4 animate-fade-in">
+          <div className="flex flex-wrap items-center justify-center gap-3 animate-fade-in">
+            <Badge variant="outline" className="bg-emerald-500/20 backdrop-blur-sm border-emerald-400/50 text-white px-4 py-2">
+              <Shield className="w-4 h-4 mr-2 text-emerald-400" />
+              JSRS Certified
+            </Badge>
+            <Badge variant="outline" className="bg-blue-500/20 backdrop-blur-sm border-blue-400/50 text-white px-4 py-2">
+              <Award className="w-4 h-4 mr-2 text-blue-400" />
+              ICV Compliant
+            </Badge>
             <Badge variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white px-4 py-2">
               <Shield className="w-4 h-4 mr-2" />
-              ISO 9001 Certified
+              ISO 9001
             </Badge>
-            <Badge variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white px-4 py-2">
-              <Award className="w-4 h-4 mr-2" />
-              10+ Years Excellence
-            </Badge>
-            <Badge variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white px-4 py-2">
-              <Sparkles className="w-4 h-4 mr-2" />
-              Based in Oman
+            <Badge variant="outline" className="bg-primary/20 backdrop-blur-sm border-primary/50 text-white px-4 py-2">
+              <Sparkles className="w-4 h-4 mr-2 text-primary" />
+              Local Stock in Ghala
             </Badge>
           </div>
 
