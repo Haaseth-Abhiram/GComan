@@ -149,9 +149,38 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Local SEO Section */}
-        <div className="text-center mb-8 pb-8 border-b border-white/10">
-          <p className="text-white/70 text-sm">
+        {/* Certifications & Trust Badges */}
+        <div className="mb-8 pb-8 border-b border-white/10">
+          <div className="flex flex-wrap items-center justify-center gap-6 mb-6">
+            <div className="flex items-center gap-2 bg-emerald-500/10 px-4 py-2 rounded-lg border border-emerald-500/30">
+              <div className="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center">
+                <span className="text-emerald-400 font-bold text-xs">JSRS</span>
+              </div>
+              <div className="text-left">
+                <p className="text-white text-sm font-semibold">JSRS Certified</p>
+                <p className="text-white/60 text-xs">Joint Supplier Registration System</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-2 bg-blue-500/10 px-4 py-2 rounded-lg border border-blue-500/30">
+              <div className="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center">
+                <span className="text-blue-400 font-bold text-xs">ICV</span>
+              </div>
+              <div className="text-left">
+                <p className="text-white text-sm font-semibold">ICV Compliant</p>
+                <p className="text-white/60 text-xs">In-Country Value Program</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg border border-white/20">
+              <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
+                <span className="text-white font-bold text-xs">ISO</span>
+              </div>
+              <div className="text-left">
+                <p className="text-white text-sm font-semibold">ISO 9001:2015</p>
+                <p className="text-white/60 text-xs">Quality Management</p>
+              </div>
+            </div>
+          </div>
+          <p className="text-white/70 text-sm text-center">
             Leading Chemical Supplier serving Muscat, Sohar, Duqm, Salalah, and the Rusayl Industrial Area.
           </p>
         </div>
