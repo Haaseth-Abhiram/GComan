@@ -27,6 +27,7 @@ const Blog = lazy(() => import("./pages/Blog"));
 const Privacy = lazy(() => import("./pages/Privacy"));
 const Terms = lazy(() => import("./pages/Terms"));
 const Sitemap = lazy(() => import("./pages/Sitemap"));
+const WaterTreatmentHub = lazy(() => import("./pages/WaterTreatmentHub"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -68,6 +69,7 @@ const App = () => (
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/terms" element={<Terms />} />
                 <Route path="/sitemap" element={<Sitemap />} />
+                <Route path="/water-treatment" element={<WaterTreatmentHub />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
