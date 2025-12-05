@@ -41,7 +41,7 @@ function sanitizeString(input: unknown, maxLength: number = 200): string {
 
 function validateEmail(email: unknown): string | null {
   if (typeof email !== 'string') return null;
-  const sanitized = email.trim().slice(0, 255);
+  const sanitized = email.trim().toLowerCase().slice(0, 255);
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(sanitized) ? sanitized : null;
 }
@@ -81,6 +81,21 @@ function validateInput(data: unknown): { valid: true; data: DownloadNotification
     return { valid: false, error: 'Name is required (min 2 characters)' };
   }
 
+  const phone = validatePhone(input.phone);
+  if (!phone || phone.length < 8) {
+    return { valid: false, error: 'Valid phone number is required' };
+  }
+
+  const company = sanitizeString(input.company, 150);
+  if (!company || company.length < 2) {
+    return { valid: false, error: 'Company name is required' };
+  }
+
+  const country = sanitizeString(input.country, 100);
+  if (!country || country.length < 2) {
+    return { valid: false, error: 'Country is required' };
+  }
+
   const resourceTitle = sanitizeString(input.resourceTitle, 200);
   if (!resourceTitle) {
     return { valid: false, error: 'Resource title is required' };
@@ -91,9 +106,9 @@ function validateInput(data: unknown): { valid: true; data: DownloadNotification
     data: {
       name,
       email,
-      phone: validatePhone(input.phone),
-      company: sanitizeString(input.company, 100),
-      country: sanitizeString(input.country, 100),
+      phone,
+      company,
+      country,
       industry: sanitizeString(input.industry, 100),
       resourceTitle,
       marketingConsent: input.marketingConsent === true,
@@ -153,7 +168,41 @@ Deno.serve(async (req) => {
 
     const { name, email, phone, company, country, industry, resourceTitle, marketingConsent } = validation.data;
 
-    console.log("Sending download notification email for:", resourceTitle);
+    console.log("Processing download lead for:", resourceTitle);
+
+    // Initialize Supabase client with service role key
+    const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
+    const supabaseKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
+    const supabase = createClient(supabaseUrl, supabaseKey);
+
+    // Insert lead into database
+    const { data: leadData, error: dbError } = await supabase
+      .from('download_leads')
+      .insert({
+        name,
+        email,
+        phone,
+        company,
+        country,
+        industry: industry || null,
+        marketing_consent: marketingConsent,
+        resource_title: resourceTitle
+      })
+      .select()
+      .single();
+
+    if (dbError) {
+      console.error('Database error:', dbError);
+      return new Response(
+        JSON.stringify({ error: 'Failed to save your information. Please try again.' }),
+        { 
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+          status: 500 
+        }
+      );
+    }
+
+    console.log("Download lead saved successfully:", leadData.id);
 
     // Send email notification asynchronously (fire and forget, don't block response)
     (async () => {
@@ -199,14 +248,14 @@ Downloaded at: ${new Date().toLocaleString()}
     })();
 
     return new Response(
-      JSON.stringify({ success: true, message: "Notification sent successfully" }),
+      JSON.stringify({ success: true, message: "Lead saved successfully", id: leadData.id }),
       { 
         headers: { ...corsHeaders, "Content-Type": "application/json" },
         status: 200 
       }
     );
   } catch (error) {
-    console.error("Error sending download notification:", error);
+    console.error("Error processing download lead:", error);
     return new Response(
       JSON.stringify({ error: "An unexpected error occurred" }),
       { 
