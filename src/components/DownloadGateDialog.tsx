@@ -127,39 +127,25 @@ export const DownloadGateDialog = ({
     setIsSubmitting(true);
 
     try {
-      // Save lead to database
-      const { error } = await supabase
-        .from('download_leads')
-        .insert({
+      // Submit lead through secured edge function (handles validation, rate limiting, and DB insert)
+      const { data, error } = await supabase.functions.invoke("notify-download", {
+        body: {
           name: formData.name,
           email: formData.email,
           phone: formData.phone,
           company: formData.company,
           country: formData.country,
-          industry: formData.industry || null,
-          marketing_consent: formData.marketingConsent,
-          resource_title: resourceTitle
-        });
+          industry: formData.industry,
+          resourceTitle: resourceTitle,
+          marketingConsent: formData.marketingConsent,
+        },
+      });
 
       if (error) throw error;
-
-      // Send email notification
-      try {
-        await supabase.functions.invoke("notify-download", {
-          body: {
-            name: formData.name,
-            email: formData.email,
-            phone: formData.phone,
-            company: formData.company,
-            country: formData.country,
-            industry: formData.industry,
-            resourceTitle: resourceTitle,
-            marketingConsent: formData.marketingConsent,
-          },
-        });
-      } catch (emailError) {
-        console.error("Failed to send email notification:", emailError);
-        // Don't block download if email fails
+      
+      // Check for error response from the function
+      if (data?.error) {
+        throw new Error(data.error);
       }
 
       // Trigger download
