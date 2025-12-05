@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -9,12 +8,12 @@ import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useToast } from '@/hooks/use-toast';
-import { 
-  Download, 
-  FileText, 
-  ShieldCheck, 
-  BookOpen, 
-  Award, 
+import {
+  Download,
+  FileText,
+  ShieldCheck,
+  BookOpen,
+  Award,
   Beaker,
   Search,
   Calendar,
@@ -28,6 +27,38 @@ import BrochureCDC from '@/assets/brochures/CDC-Anti-Clog-Brochure.pdf';
 import BrochureProducts from '@/assets/brochures/Global-Chemicals-Products-Brochure.pdf';
 import BrochureProductsList from '@/assets/brochures/Global-Chemicals-Products-List.pdf';
 import { DownloadGateDialog } from '@/components/DownloadGateDialog';
+import { SEO } from '@/components/SEO';
+import { HowToStructuredData, BreadcrumbStructuredData } from '@/components/StructuredData';
+
+// Breadcrumb items
+const breadcrumbItems = [
+  { name: 'Home', url: 'https://www.gcoman.com/' },
+  { name: 'Resources', url: 'https://www.gcoman.com/resources' }
+];
+
+// HowTo steps for downloading resources
+const downloadHowToSteps = [
+  {
+    name: 'Browse Resources',
+    text: 'Navigate to the Resources page and browse through available product catalogs, safety data sheets, and technical documentation.'
+  },
+  {
+    name: 'Select Resource Category',
+    text: 'Filter resources by category: Product Catalogs, Safety Data Sheets, Technical Documents, Certifications, or Industry Guides.'
+  },
+  {
+    name: 'Click Download',
+    text: 'Click the Download button on your desired resource to open the download dialog.'
+  },
+  {
+    name: 'Fill Contact Information',
+    text: 'Enter your name, email, and company details in the download form. This helps us provide better support.'
+  },
+  {
+    name: 'Download File',
+    text: 'After submitting the form, your download will begin automatically. The file will be saved to your default downloads folder.'
+  }
+];
 
 interface Resource {
   id: string;
@@ -220,16 +251,22 @@ const Resources = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Chemical Resources & SDS | Global Chemicals LLC</title>
-        <meta name="description" content="Download Safety Data Sheets (SDS), product catalogs, technical documentation & chemical handling guides from Global Chemicals LLC Oman. Free resources." />
-        <meta name="keywords" content="chemical SDS download, product catalogs, safety data sheets, ISO certificates, technical guides, chemical documentation, brochures download" />
-        <meta property="og:title" content="Chemical Resources & Downloads | SDS, Catalogs, Guides | Global Chemicals LLC" />
-        <meta property="og:description" content="Access comprehensive chemical resources: product catalogs, safety data sheets, technical documentation, and certifications. Download now." />
-        <meta property="og:url" content="https://www.gcoman.com/resources" />
-        <meta property="og:image" content="https://www.gcoman.com/og-image.jpg" />
-        <link rel="canonical" href="https://www.gcoman.com/resources" />
-      </Helmet>
+      <SEO
+        title="Chemical Resources & SDS | Global Chemicals LLC"
+        description="Download Safety Data Sheets (SDS), product catalogs, technical documentation & chemical handling guides from Global Chemicals LLC Oman. Free resources."
+        keywords="chemical SDS download, product catalogs, safety data sheets, ISO certificates, technical guides, chemical documentation, brochures download, MSDS Oman"
+        ogTitle="Chemical Resources & Downloads | SDS, Catalogs, Guides | Global Chemicals LLC"
+        ogDescription="Access comprehensive chemical resources: product catalogs, safety data sheets, technical documentation, and certifications. Download now."
+        ogUrl="https://www.gcoman.com/resources"
+        canonical="https://www.gcoman.com/resources"
+      />
+      <HowToStructuredData
+        name="How to Download Chemical Resources from Global Chemicals LLC"
+        description="Step-by-step guide to downloading product catalogs, safety data sheets, and technical documentation from Global Chemicals LLC."
+        steps={downloadHowToSteps}
+        totalTime="PT5M"
+      />
+      <BreadcrumbStructuredData items={breadcrumbItems} />
       <Navigation />
       <WhatsAppButton />
 

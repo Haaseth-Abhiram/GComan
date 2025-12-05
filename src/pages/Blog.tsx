@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -8,6 +7,8 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { SEO } from '@/components/SEO';
+import { BlogListingStructuredData, BreadcrumbStructuredData } from '@/components/StructuredData';
 
 // Sample blog data - replace with real data from CMS/API
 const blogPosts = [
@@ -103,18 +104,25 @@ const Blog = () => {
   const featuredPost = blogPosts.find((post) => post.featured);
   const regularPosts = filteredPosts.filter((post) => !post.featured);
 
+  // Breadcrumb items for structured data
+  const breadcrumbItems = [
+    { name: 'Home', url: 'https://www.gcoman.com/' },
+    { name: 'Blog', url: 'https://www.gcoman.com/blog' }
+  ];
+
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Chemical Blog & News | Global Chemicals LLC</title>
-        <meta name="description" content="Chemical industry news, water treatment tips, laboratory best practices & product updates from Global Chemicals LLC Oman experts. Read the latest insights." />
-        <meta name="keywords" content="chemical industry blog, chemical news Oman, technical guides chemicals, safety best practices, chemical innovations, industry insights" />
-        <meta property="og:title" content="Chemical Industry Blog & News | Global Chemicals LLC" />
-        <meta property="og:description" content="Expert insights, industry news, and technical guidance for chemical applications across Oman's key sectors." />
-        <meta property="og:url" content="https://www.gcoman.com/blog" />
-        <meta property="og:image" content="https://www.gcoman.com/og-image.jpg" />
-        <link rel="canonical" href="https://www.gcoman.com/blog" />
-      </Helmet>
+      <SEO
+        title="Chemical Blog & News | Global Chemicals LLC"
+        description="Chemical industry news, water treatment tips, laboratory best practices & product updates from Global Chemicals LLC Oman experts. Read the latest insights."
+        keywords="chemical industry blog, chemical news Oman, technical guides chemicals, safety best practices, chemical innovations, industry insights, water treatment blog, oil gas chemicals news"
+        ogTitle="Chemical Industry Blog & News | Global Chemicals LLC"
+        ogDescription="Expert insights, industry news, and technical guidance for chemical applications across Oman's key sectors."
+        ogUrl="https://www.gcoman.com/blog"
+        canonical="https://www.gcoman.com/blog"
+      />
+      <BlogListingStructuredData posts={blogPosts} />
+      <BreadcrumbStructuredData items={breadcrumbItems} />
       <Navigation />
       <WhatsAppButton />
 

@@ -1,11 +1,15 @@
 import { Helmet } from 'react-helmet-async';
 
+// =====================================================
+// PRODUCT STRUCTURED DATA
+// =====================================================
 interface ProductStructuredDataProps {
   product: {
     id: string;
     title: string;
     description: string;
     category: string;
+    image?: string;
     details?: {
       formula?: string;
       fullDescription?: string;
@@ -14,15 +18,22 @@ interface ProductStructuredDataProps {
       alternativeNames?: string[];
     };
   };
+  url?: string;
 }
 
-export const ProductStructuredData = ({ product }: ProductStructuredDataProps) => {
+export const ProductStructuredData = ({ product, url }: ProductStructuredDataProps) => {
   const productSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": product.title,
     "description": product.description,
     "category": product.category,
+    ...(product.image && { "image": product.image }),
+    ...(url && { "url": url }),
+    "brand": {
+      "@type": "Brand",
+      "name": "Global Chemicals LLC"
+    },
     "manufacturer": {
       "@type": "Organization",
       "name": "Global Chemicals LLC",
@@ -45,16 +56,40 @@ export const ProductStructuredData = ({ product }: ProductStructuredDataProps) =
       "@type": "Offer",
       "availability": "https://schema.org/InStock",
       "priceCurrency": "OMR",
+      "priceValidUntil": new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
       "seller": {
         "@type": "Organization",
         "name": "Global Chemicals LLC"
+      },
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingDestination": {
+          "@type": "DefinedRegion",
+          "addressCountry": "OM"
+        },
+        "deliveryTime": {
+          "@type": "ShippingDeliveryTime",
+          "handlingTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 1,
+            "maxValue": 2,
+            "unitCode": "DAY"
+          },
+          "transitTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 1,
+            "maxValue": 3,
+            "unitCode": "DAY"
+          }
+        }
       }
     },
     ...(product.details?.alternativeNames && {
       "alternateName": product.details.alternativeNames
     }),
     ...(product.details?.casNumber && {
-      "productID": product.details.casNumber
+      "productID": product.details.casNumber,
+      "identifier": product.details.casNumber
     })
   };
 
@@ -62,6 +97,348 @@ export const ProductStructuredData = ({ product }: ProductStructuredDataProps) =
     <Helmet>
       <script type="application/ld+json">
         {JSON.stringify(productSchema)}
+      </script>
+    </Helmet>
+  );
+};
+
+// =====================================================
+// ARTICLE STRUCTURED DATA (for Blog posts)
+// =====================================================
+interface ArticleStructuredDataProps {
+  title: string;
+  description: string;
+  url: string;
+  image?: string;
+  author: string;
+  publishedDate: string;
+  modifiedDate?: string;
+  category?: string;
+}
+
+export const ArticleStructuredData = ({
+  title,
+  description,
+  url,
+  image,
+  author,
+  publishedDate,
+  modifiedDate,
+  category
+}: ArticleStructuredDataProps) => {
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": title,
+    "description": description,
+    "url": url,
+    "image": image || "https://www.gcoman.com/og-image.jpg",
+    "author": {
+      "@type": "Person",
+      "name": author
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Global Chemicals LLC",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.gcoman.com/logo.png"
+      }
+    },
+    "datePublished": publishedDate,
+    ...(modifiedDate && { "dateModified": modifiedDate }),
+    ...(category && { "articleSection": category }),
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": url
+    }
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify(articleSchema)}
+      </script>
+    </Helmet>
+  );
+};
+
+// =====================================================
+// BLOG LISTING STRUCTURED DATA
+// =====================================================
+interface BlogPost {
+  id: number;
+  title: string;
+  excerpt: string;
+  date: string;
+  author: string;
+  category: string;
+}
+
+interface BlogListingStructuredDataProps {
+  posts: BlogPost[];
+  baseUrl?: string;
+}
+
+export const BlogListingStructuredData = ({
+  posts,
+  baseUrl = "https://www.gcoman.com/blog"
+}: BlogListingStructuredDataProps) => {
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Global Chemicals LLC Blog",
+    "description": "Expert insights, industry news, and technical guidance for chemical applications across Oman's key sectors",
+    "url": baseUrl,
+    "publisher": {
+      "@type": "Organization",
+      "name": "Global Chemicals LLC",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.gcoman.com/logo.png"
+      }
+    },
+    "blogPost": posts.map(post => ({
+      "@type": "BlogPosting",
+      "headline": post.title,
+      "description": post.excerpt,
+      "datePublished": post.date,
+      "author": {
+        "@type": "Person",
+        "name": post.author
+      },
+      "articleSection": post.category
+    }))
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify(blogSchema)}
+      </script>
+    </Helmet>
+  );
+};
+
+// =====================================================
+// REVIEW/TESTIMONIAL STRUCTURED DATA
+// =====================================================
+interface Review {
+  author: string;
+  rating: number;
+  reviewBody: string;
+  datePublished?: string;
+  company?: string;
+}
+
+interface ReviewStructuredDataProps {
+  reviews: Review[];
+  itemReviewed?: {
+    name: string;
+    type: 'Organization' | 'Product' | 'Service';
+  };
+}
+
+export const ReviewStructuredData = ({
+  reviews,
+  itemReviewed = { name: "Global Chemicals LLC", type: "Organization" }
+}: ReviewStructuredDataProps) => {
+  const avgRating = reviews.reduce((acc, r) => acc + r.rating, 0) / reviews.length;
+
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": itemReviewed.type,
+    "name": itemReviewed.name,
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": avgRating.toFixed(1),
+      "bestRating": "5",
+      "worstRating": "1",
+      "reviewCount": reviews.length
+    },
+    "review": reviews.map(review => ({
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": review.author
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": review.rating,
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "reviewBody": review.reviewBody,
+      ...(review.datePublished && { "datePublished": review.datePublished }),
+      ...(review.company && {
+        "publisher": {
+          "@type": "Organization",
+          "name": review.company
+        }
+      })
+    }))
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify(reviewSchema)}
+      </script>
+    </Helmet>
+  );
+};
+
+// =====================================================
+// FAQ STRUCTURED DATA
+// =====================================================
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+interface FAQStructuredDataProps {
+  faqs: FAQItem[];
+}
+
+export const FAQStructuredData = ({ faqs }: FAQStructuredDataProps) => {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify(faqSchema)}
+      </script>
+    </Helmet>
+  );
+};
+
+// =====================================================
+// HOWTO STRUCTURED DATA (for guides/resources)
+// =====================================================
+interface HowToStep {
+  name: string;
+  text: string;
+  image?: string;
+}
+
+interface HowToStructuredDataProps {
+  name: string;
+  description: string;
+  steps: HowToStep[];
+  totalTime?: string; // ISO 8601 duration format, e.g., "PT30M"
+  image?: string;
+}
+
+export const HowToStructuredData = ({
+  name,
+  description,
+  steps,
+  totalTime,
+  image
+}: HowToStructuredDataProps) => {
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": name,
+    "description": description,
+    ...(totalTime && { "totalTime": totalTime }),
+    ...(image && { "image": image }),
+    "step": steps.map((step, index) => ({
+      "@type": "HowToStep",
+      "position": index + 1,
+      "name": step.name,
+      "text": step.text,
+      ...(step.image && { "image": step.image })
+    }))
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify(howToSchema)}
+      </script>
+    </Helmet>
+  );
+};
+
+// =====================================================
+// JOB POSTING STRUCTURED DATA (for Careers page)
+// =====================================================
+interface JobPostingProps {
+  title: string;
+  description: string;
+  datePosted: string;
+  validThrough?: string;
+  employmentType: 'FULL_TIME' | 'PART_TIME' | 'CONTRACT' | 'TEMPORARY' | 'INTERN';
+  salary?: {
+    value: number;
+    currency: string;
+    unitText: 'MONTH' | 'YEAR' | 'HOUR';
+  };
+  location?: string;
+}
+
+export const JobPostingStructuredData = ({
+  title,
+  description,
+  datePosted,
+  validThrough,
+  employmentType,
+  salary,
+  location = "Muscat, Oman"
+}: JobPostingProps) => {
+  const jobSchema = {
+    "@context": "https://schema.org",
+    "@type": "JobPosting",
+    "title": title,
+    "description": description,
+    "datePosted": datePosted,
+    ...(validThrough && { "validThrough": validThrough }),
+    "employmentType": employmentType,
+    "hiringOrganization": {
+      "@type": "Organization",
+      "name": "Global Chemicals LLC",
+      "sameAs": "https://www.gcoman.com",
+      "logo": "https://www.gcoman.com/logo.png"
+    },
+    "jobLocation": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Office-3, Building Number 1737, Near Oman LNG",
+        "addressLocality": location.split(',')[0]?.trim() || "Muscat",
+        "addressRegion": "Muscat Governorate",
+        "addressCountry": "OM"
+      }
+    },
+    ...(salary && {
+      "baseSalary": {
+        "@type": "MonetaryAmount",
+        "currency": salary.currency,
+        "value": {
+          "@type": "QuantitativeValue",
+          "value": salary.value,
+          "unitText": salary.unitText
+        }
+      }
+    })
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify(jobSchema)}
       </script>
     </Helmet>
   );

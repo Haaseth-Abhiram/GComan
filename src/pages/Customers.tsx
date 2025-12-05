@@ -1,4 +1,3 @@
-import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -17,6 +16,32 @@ import oswsLogo from '@/assets/customers/osws-logo.jpg';
 import soharAluminiumLogo from '@/assets/customers/sohar-aluminium-logo.png';
 import omanLngLogo from '@/assets/customers/oman-lng-logo.png';
 import omifcoLogo from '@/assets/customers/omifco-logo.png';
+import { SEO } from '@/components/SEO';
+import { ReviewStructuredData, BreadcrumbStructuredData } from '@/components/StructuredData';
+
+// Breadcrumb items
+const breadcrumbItems = [
+  { name: 'Home', url: 'https://www.gcoman.com/' },
+  { name: 'Customers', url: 'https://www.gcoman.com/customers' }
+];
+
+// Reviews for structured data
+const customerReviews = [
+  {
+    author: 'Procurement Director',
+    rating: 5,
+    reviewBody: 'Global Chemicals LLC has been instrumental in providing high-quality chemical solutions that meet our stringent requirements for oil and gas operations.',
+    company: 'OQ',
+    datePublished: '2024-01-15'
+  },
+  {
+    author: 'Supply Chain Manager',
+    rating: 5,
+    reviewBody: 'Their commitment to quality, safety standards, and timely delivery has made them our trusted partner for critical chemical supplies.',
+    company: 'Petroleum Development Oman (PDO)',
+    datePublished: '2024-02-20'
+  }
+];
 
 interface Customer {
   name: string;
@@ -124,16 +149,17 @@ const Customers = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Our Customers | Trusted by 200+ | Global Chemicals</title>
-        <meta name="description" content="Trusted chemical supplier for 200+ clients in Oman including oil & gas, water treatment, manufacturing & construction. ISO 9001 certified. 10+ years." />
-        <meta name="keywords" content="chemical customers Oman, OQ supplier, PDO supplier, oil gas chemical supplier, industrial clients Oman, chemical testimonials" />
-        <meta property="og:title" content="Our Valued Customers | Leading Organizations Trust Us | Global Chemicals" />
-        <meta property="og:description" content="200+ active clients, 98% retention rate, 10+ years serving Oman's key industries. Join our growing family of satisfied customers." />
-        <meta property="og:url" content="https://www.gcoman.com/customers" />
-        <meta property="og:image" content="https://www.gcoman.com/og-image.jpg" />
-        <link rel="canonical" href="https://www.gcoman.com/customers" />
-      </Helmet>
+      <SEO
+        title="Our Customers | Trusted by 200+ | Global Chemicals"
+        description="Trusted chemical supplier for 200+ clients in Oman including oil & gas, water treatment, manufacturing & construction. ISO 9001 certified. 10+ years."
+        keywords="chemical customers Oman, OQ supplier, PDO supplier, oil gas chemical supplier, industrial clients Oman, chemical testimonials, Oman LNG supplier"
+        ogTitle="Our Valued Customers | Leading Organizations Trust Us | Global Chemicals"
+        ogDescription="200+ active clients, 98% retention rate, 10+ years serving Oman's key industries. Join our growing family of satisfied customers."
+        ogUrl="https://www.gcoman.com/customers"
+        canonical="https://www.gcoman.com/customers"
+      />
+      <ReviewStructuredData reviews={customerReviews} />
+      <BreadcrumbStructuredData items={breadcrumbItems} />
       <Navigation />
       <WhatsAppButton />
 

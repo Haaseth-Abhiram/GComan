@@ -1,4 +1,3 @@
-import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -8,6 +7,14 @@ import { CheckCircle2, Target, Eye, Shield, Award, Users, TrendingUp, Globe2, Le
 import heroImage from '@/assets/about-hero.jpg';
 import facilityImage from '@/assets/about-facility.jpg';
 import teamImage from '@/assets/about-team.jpg';
+import { SEO } from '@/components/SEO';
+import { BreadcrumbStructuredData } from '@/components/StructuredData';
+
+// Breadcrumb items for About page
+const breadcrumbItems = [
+  { name: 'Home', url: 'https://www.gcoman.com/' },
+  { name: 'About Us', url: 'https://www.gcoman.com/about' }
+];
 
 const About = () => {
   const stats = [
@@ -42,16 +49,16 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>About Us | Global Chemicals LLC Oman</title>
-        <meta name="description" content="ISO 9001 certified chemical supplier in Oman. 10+ years excellence serving 200+ clients. Quality chemicals, expert service, sustainable practices." />
-        <meta name="keywords" content="about global chemicals, chemical supplier Oman, ISO 9001 certified, chemical company Muscat, specialty chemicals Oman, industrial chemicals supplier" />
-        <meta property="og:title" content="About Global Chemicals LLC - Leading Chemical Supplier in Oman" />
-        <meta property="og:description" content="ISO 9001 certified with 10+ years of excellence. Trusted by 200+ clients. Quality chemicals, expert service, sustainable practices." />
-        <meta property="og:url" content="https://www.gcoman.com/about" />
-        <meta property="og:image" content="https://www.gcoman.com/og-image.jpg" />
-        <link rel="canonical" href="https://www.gcoman.com/about" />
-      </Helmet>
+      <SEO
+        title="About Us | Global Chemicals LLC Oman"
+        description="ISO 9001 certified chemical supplier in Oman. 10+ years excellence serving 200+ clients. Quality chemicals, expert service, sustainable practices."
+        keywords="about global chemicals, chemical supplier Oman, ISO 9001 certified, chemical company Muscat, specialty chemicals Oman, industrial chemicals supplier, JSRS certified"
+        ogTitle="About Global Chemicals LLC - Leading Chemical Supplier in Oman"
+        ogDescription="ISO 9001 certified with 10+ years of excellence. Trusted by 200+ clients. Quality chemicals, expert service, sustainable practices."
+        ogUrl="https://www.gcoman.com/about"
+        canonical="https://www.gcoman.com/about"
+      />
+      <BreadcrumbStructuredData items={breadcrumbItems} />
       <Navigation />
       <WhatsAppButton />
 

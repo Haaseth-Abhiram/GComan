@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -11,6 +10,38 @@ import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useToast } from '@/hooks/use-toast';
 import { z } from 'zod';
+import { SEO } from '@/components/SEO';
+import { FAQStructuredData, BreadcrumbStructuredData } from '@/components/StructuredData';
+
+// Contact page FAQs for rich snippets
+const contactFAQs = [
+  {
+    question: "What are Global Chemicals LLC's business hours?",
+    answer: "Our office is open Sunday through Thursday from 8:00 AM to 6:00 PM (Gulf Standard Time). We are closed on Friday and Saturday. For urgent inquiries, you can reach us via WhatsApp at +968-93754388."
+  },
+  {
+    question: "How quickly do you respond to inquiries?",
+    answer: "We typically respond to all inquiries within 24 hours during business days. For urgent requests, we recommend calling our sales team directly at +968-93754388 or using our WhatsApp chat for immediate assistance."
+  },
+  {
+    question: "Where is Global Chemicals LLC located?",
+    answer: "Our office is located at Office-3, Building Number 1737, Near Oman LNG, Ghala, Muscat, Sultanate of Oman. Our warehouse is strategically located to serve all major cities in Oman."
+  },
+  {
+    question: "How can I request a product quotation?",
+    answer: "You can request a quotation by filling out our contact form, calling +968-93754388, emailing sales@gcoman.com, or messaging us on WhatsApp. Please include product names, quantities, and delivery location for accurate pricing."
+  },
+  {
+    question: "Do you offer technical consultation?",
+    answer: "Yes, our technical team provides free consultation for product selection, application recommendations, and chemical compatibility. Contact our technical support at support@gcoman.com or call us to schedule a consultation."
+  }
+];
+
+// Breadcrumb items
+const breadcrumbItems = [
+  { name: 'Home', url: 'https://www.gcoman.com/' },
+  { name: 'Contact', url: 'https://www.gcoman.com/contact' }
+];
 
 const contactSchema = z.object({
   name: z.string().trim().min(2, "Name must be at least 2 characters").max(100, "Name must be less than 100 characters"),
@@ -130,16 +161,17 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Contact Us | Get Quote | Global Chemicals LLC</title>
-        <meta name="description" content="Contact Global Chemicals LLC in Muscat, Oman. Get quotes & product info. Call +968-93754388 or email info@gcoman.com. 24-hour response." />
-        <meta name="keywords" content="contact global chemicals, chemical supplier Muscat, request quote chemicals, technical support chemicals Oman, chemical inquiry" />
-        <meta property="og:title" content="Contact Global Chemicals LLC | Request Quote | Muscat Oman" />
-        <meta property="og:description" content="Get in touch with Oman's leading chemical supplier. Phone, email, or visit our Muscat office. Expert support ready to assist." />
-        <meta property="og:url" content="https://www.gcoman.com/contact" />
-        <meta property="og:image" content="https://www.gcoman.com/og-image.jpg" />
-        <link rel="canonical" href="https://www.gcoman.com/contact" />
-      </Helmet>
+      <SEO
+        title="Contact Us | Get Quote | Global Chemicals LLC"
+        description="Contact Global Chemicals LLC in Muscat, Oman. Get quotes & product info. Call +968-93754388 or email info@gcoman.com. 24-hour response."
+        keywords="contact global chemicals, chemical supplier Muscat, request quote chemicals, technical support chemicals Oman, chemical inquiry, chemical distributor contact"
+        ogTitle="Contact Global Chemicals LLC | Request Quote | Muscat Oman"
+        ogDescription="Get in touch with Oman's leading chemical supplier. Phone, email, or visit our Muscat office. Expert support ready to assist."
+        ogUrl="https://www.gcoman.com/contact"
+        canonical="https://www.gcoman.com/contact"
+      />
+      <FAQStructuredData faqs={contactFAQs} />
+      <BreadcrumbStructuredData items={breadcrumbItems} />
       <Navigation />
       <WhatsAppButton />
 
