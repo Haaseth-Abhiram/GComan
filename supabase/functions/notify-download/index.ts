@@ -6,6 +6,101 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
+// Simple in-memory rate limiting (resets on function cold start)
+const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
+const RATE_LIMIT_MAX = 5; // Max requests per window
+const RATE_LIMIT_WINDOW_MS = 60000; // 1 minute window
+
+function isRateLimited(identifier: string): boolean {
+  const now = Date.now();
+  const record = rateLimitMap.get(identifier);
+  
+  if (!record || now > record.resetTime) {
+    rateLimitMap.set(identifier, { count: 1, resetTime: now + RATE_LIMIT_WINDOW_MS });
+    return false;
+  }
+  
+  if (record.count >= RATE_LIMIT_MAX) {
+    return true;
+  }
+  
+  record.count++;
+  return false;
+}
+
+// Input validation helpers
+function sanitizeString(input: unknown, maxLength: number = 200): string {
+  if (typeof input !== 'string') return '';
+  // Remove potential HTML/script injection and trim
+  return input
+    .replace(/<[^>]*>/g, '') // Remove HTML tags
+    .replace(/[<>"'&]/g, '') // Remove special chars that could be used for injection
+    .trim()
+    .slice(0, maxLength);
+}
+
+function validateEmail(email: unknown): string | null {
+  if (typeof email !== 'string') return null;
+  const sanitized = email.trim().slice(0, 255);
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(sanitized) ? sanitized : null;
+}
+
+function validatePhone(phone: unknown): string {
+  if (typeof phone !== 'string') return '';
+  // Allow only digits, spaces, plus, hyphens, parentheses
+  return phone.replace(/[^\d\s+\-()]/g, '').trim().slice(0, 20);
+}
+
+interface DownloadNotificationInput {
+  name: string;
+  email: string;
+  phone: string;
+  company: string;
+  country: string;
+  industry: string;
+  resourceTitle: string;
+  marketingConsent: boolean;
+}
+
+function validateInput(data: unknown): { valid: true; data: DownloadNotificationInput } | { valid: false; error: string } {
+  if (!data || typeof data !== 'object') {
+    return { valid: false, error: 'Invalid request body' };
+  }
+
+  const input = data as Record<string, unknown>;
+
+  // Validate required fields
+  const email = validateEmail(input.email);
+  if (!email) {
+    return { valid: false, error: 'Invalid email address' };
+  }
+
+  const name = sanitizeString(input.name, 100);
+  if (!name || name.length < 2) {
+    return { valid: false, error: 'Name is required (min 2 characters)' };
+  }
+
+  const resourceTitle = sanitizeString(input.resourceTitle, 200);
+  if (!resourceTitle) {
+    return { valid: false, error: 'Resource title is required' };
+  }
+
+  return {
+    valid: true,
+    data: {
+      name,
+      email,
+      phone: validatePhone(input.phone),
+      company: sanitizeString(input.company, 100),
+      country: sanitizeString(input.country, 100),
+      industry: sanitizeString(input.industry, 100),
+      resourceTitle,
+      marketingConsent: input.marketingConsent === true,
+    }
+  };
+}
+
 Deno.serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
@@ -13,7 +108,50 @@ Deno.serve(async (req) => {
   }
 
   try {
-    const { name, email, phone, company, country, industry, resourceTitle, marketingConsent } = await req.json();
+    // Get client IP for rate limiting
+    const clientIP = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || 
+                     req.headers.get("x-real-ip") || 
+                     "unknown";
+
+    // Check rate limit
+    if (isRateLimited(clientIP)) {
+      console.warn(`Rate limit exceeded for IP: ${clientIP}`);
+      return new Response(
+        JSON.stringify({ error: "Too many requests. Please try again later." }),
+        { 
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+          status: 429 
+        }
+      );
+    }
+
+    // Parse and validate input
+    let rawData: unknown;
+    try {
+      rawData = await req.json();
+    } catch {
+      return new Response(
+        JSON.stringify({ error: "Invalid JSON in request body" }),
+        { 
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+          status: 400 
+        }
+      );
+    }
+
+    const validation = validateInput(rawData);
+    if (!validation.valid) {
+      console.warn(`Validation failed: ${validation.error}`);
+      return new Response(
+        JSON.stringify({ error: validation.error }),
+        { 
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+          status: 400 
+        }
+      );
+    }
+
+    const { name, email, phone, company, country, industry, resourceTitle, marketingConsent } = validation.data;
 
     console.log("Sending download notification email for:", resourceTitle);
 
@@ -42,9 +180,9 @@ New brochure/resource download:
 Resource: ${resourceTitle}
 Name: ${name}
 Email: ${email}
-Phone: ${phone}
-Company: ${company}
-Country: ${country}
+Phone: ${phone || "Not provided"}
+Company: ${company || "Not provided"}
+Country: ${country || "Not provided"}
 Industry: ${industry || "Not provided"}
 Marketing Consent: ${marketingConsent ? "Yes" : "No"}
 
@@ -70,7 +208,7 @@ Downloaded at: ${new Date().toLocaleString()}
   } catch (error) {
     console.error("Error sending download notification:", error);
     return new Response(
-      JSON.stringify({ error: error instanceof Error ? error.message : "Unknown error" }),
+      JSON.stringify({ error: "An unexpected error occurred" }),
       { 
         headers: { ...corsHeaders, "Content-Type": "application/json" },
         status: 500 
