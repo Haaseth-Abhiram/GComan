@@ -24,7 +24,6 @@ const Navigation = () => {
   const utilityLinks = [
     { label: 'Customers', path: '/customers' },
     { label: 'Career', path: '/career' },
-    { label: 'Water Treatment Hub', path: '/water-treatment', highlight: true },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -39,11 +38,7 @@ const Navigation = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm transition-colors ${
-                  link.highlight 
-                    ? 'text-primary font-medium hover:text-primary/80' 
-                    : 'text-muted-foreground hover:text-primary'
-                }`}
+                className="text-sm transition-colors text-muted-foreground hover:text-primary"
               >
                 {link.label}
               </Link>

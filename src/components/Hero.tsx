@@ -99,7 +99,7 @@ const Hero = () => {
             </Badge>
             <Badge variant="outline" className="bg-primary/20 backdrop-blur-sm border-primary/50 text-white px-4 py-2">
               <Sparkles className="w-4 h-4 mr-2 text-primary" />
-              Local Stock in Ghala
+              Local Stock in Muscat
             </Badge>
           </div>
 
