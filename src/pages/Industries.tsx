@@ -1,10 +1,14 @@
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Card } from '@/components/ui/card';
-import { CheckCircle2 } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { CheckCircle2, Shield, Award, MapPin, Droplets, Filter, Beaker, Thermometer, Sparkles, Factory, Building2, Waves, Clock, Users, Phone, ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 // Import images
 import oilGasImg from '@/assets/products/oil-gas.jpg';
@@ -15,6 +19,114 @@ import pharmaceuticalImg from '@/assets/industries/pharmaceutical.jpg';
 import constructionImg from '@/assets/industries/construction.jpg';
 import swimmingPoolImg from '@/assets/industries/swimming-pool.jpg';
 import laboratoryImg from '@/assets/industries/laboratory.jpg';
+
+// Water Treatment Product Categories
+const waterTreatmentCategories = [
+  {
+    title: 'Coagulants & Flocculants',
+    description: 'Essential chemicals for removing suspended particles and turbidity from water',
+    icon: Filter,
+    products: ['Poly Aluminium Chloride (PAC 18%, 30%)', 'Aluminum Sulfate', 'Ferric Chloride', 'Polyacrylamide (Anionic/Cationic)']
+  },
+  {
+    title: 'Disinfectants & Sanitizers',
+    description: 'Powerful antimicrobial agents for water purification and sanitation',
+    icon: Shield,
+    products: ['Calcium Hypochlorite (65-70%)', 'TCCA (90%)', 'Sodium Hypochlorite (12%)', 'Chlorine Dioxide']
+  },
+  {
+    title: 'pH Adjusters & Neutralizers',
+    description: 'Chemicals for precise pH control in water treatment processes',
+    icon: Beaker,
+    products: ['Caustic Soda', 'Sulfuric Acid', 'Hydrochloric Acid', 'Sodium Carbonate']
+  },
+  {
+    title: 'Scale & Corrosion Inhibitors',
+    description: 'Protection chemicals for membranes, pipes, and equipment',
+    icon: Thermometer,
+    products: ['Antiscalants (Phosphonate/Polymer)', 'Corrosion Inhibitors', 'Oxygen Scavengers']
+  },
+  {
+    title: 'Specialty Water Treatment',
+    description: 'Specialized chemicals for specific water treatment challenges',
+    icon: Sparkles,
+    products: ['Activated Carbon', 'Ion Exchange Resins', 'Defoamers', 'Chelating Agents']
+  }
+];
+
+// Water Treatment Service Areas
+const serviceAreas = [
+  { name: 'Muscat', description: 'Municipal water treatment, industrial facilities, hotels' },
+  { name: 'Sohar Industrial Zone', description: 'Petrochemical plants, refineries, heavy industry' },
+  { name: 'Rusayl Industrial Estate', description: 'Manufacturing plants, food processing, pharmaceuticals' },
+  { name: 'Duqm SEZ', description: 'Desalination plants, port facilities, industrial complex' },
+  { name: 'Salalah', description: 'Port operations, cement industry, agricultural applications' },
+  { name: 'Sur', description: 'LNG facilities, marine applications, municipal treatment' }
+];
+
+// Water Treatment FAQs
+const waterTreatmentFaqs = [
+  {
+    question: 'What are the best water treatment chemicals for desalination plants in Oman?',
+    answer: 'For desalination plants in Oman, we recommend a combination of antiscalants (to prevent membrane scaling), biocides (for microbiological control), and pH adjustment chemicals like caustic soda and sulphuric acid. Our technical team can design a customized chemical program for your specific desalination system, whether RO, MSF, or MED technology.'
+  },
+  {
+    question: 'How do I choose the right coagulant for water treatment?',
+    answer: 'The choice of coagulant depends on your water source characteristics, turbidity levels, and treatment objectives. Poly Aluminium Chloride (PAC) is effective for a wide pH range and produces less sludge. Aluminium Sulphate is cost-effective for general municipal applications. Ferric Chloride works well for high organic content water. Contact our technical team for jar testing and optimal coagulant selection.'
+  },
+  {
+    question: 'What chemicals are needed for cooling tower water treatment in Oman?',
+    answer: "Cooling tower treatment in Oman's hot climate requires: scale inhibitors (to prevent calcium carbonate scaling), corrosion inhibitors (to protect metal components), biocides (to control Legionella and biofilm), and pH adjusters. Our cooling water treatment program includes regular monitoring and chemical optimization for maximum efficiency."
+  },
+  {
+    question: 'Are your water treatment chemicals approved for use in Oman?',
+    answer: "Yes, all our water treatment chemicals comply with Oman's regulatory requirements. We hold JSRS certification (Joint Supplier Registration System) for oil & gas applications and are ICV compliant. Our products meet international standards including NSF/ANSI certifications for drinking water applications."
+  },
+  {
+    question: 'Do you supply water treatment chemicals in bulk to industrial zones?',
+    answer: 'Yes, we maintain local stock in our Ghala (Muscat) warehouse and provide bulk supply to all industrial zones including Sohar Industrial Zone, Rusayl Industrial Estate, Duqm SEZ, and Salalah. We offer flexible packaging from 25kg bags to IBC tanks and bulk tanker delivery.'
+  }
+];
+
+// Water Treatment Applications
+const waterTreatmentApplications = [
+  {
+    title: 'Desalination Plants',
+    icon: Waves,
+    description: 'Antiscalants, biocides, and pH adjusters for RO, MSF, and MED desalination systems across Oman.',
+    chemicals: ['Antiscalant', 'Biocide', 'Sulphuric Acid', 'Caustic Soda']
+  },
+  {
+    title: 'Municipal Water Treatment',
+    icon: Building2,
+    description: 'Coagulants, flocculants, and disinfectants for municipal water treatment plants.',
+    chemicals: ['PAC', 'Aluminium Sulphate', 'Calcium Hypochlorite', 'Chlorine']
+  },
+  {
+    title: 'Industrial Wastewater',
+    icon: Factory,
+    description: 'Complete chemical programs for industrial effluent treatment and compliance.',
+    chemicals: ['Ferric Chloride', 'Polyelectrolyte', 'pH Adjusters', 'Defoamers']
+  },
+  {
+    title: 'Cooling Towers',
+    icon: Thermometer,
+    description: 'Scale inhibitors, corrosion inhibitors, and biocides for cooling water systems.',
+    chemicals: ['Scale Inhibitor', 'Corrosion Inhibitor', 'Biocide', 'Dispersant']
+  },
+  {
+    title: 'Boiler Water Treatment',
+    icon: Beaker,
+    description: 'Oxygen scavengers, phosphates, and polymers for boiler water conditioning.',
+    chemicals: ['Oxygen Scavenger', 'Phosphate', 'Polymer', 'Caustic Soda']
+  },
+  {
+    title: 'Swimming Pools',
+    icon: Droplets,
+    description: 'Sanitizers, pH adjusters, and algaecides for commercial swimming pools.',
+    chemicals: ['Calcium Hypochlorite', 'Hydrochloric Acid', 'Algaecide', 'Clarifier']
+  }
+];
 
 const Industries = () => {
   const industries = [
@@ -44,8 +156,8 @@ const Industries = () => {
       id: 'water-treatment',
       title: 'Water Treatment',
       image: waterTreatmentImg,
-      intro: 'Comprehensive chemical solutions for municipal water treatment, industrial wastewater, and desalination plants.',
-      content: 'Water is our most precious resource, and its treatment requires precision, reliability, and expertise. Global Chemicals LLC offers a complete portfolio of water treatment chemicals that ensure clean, safe water for communities and industries while meeting stringent environmental regulations.',
+      intro: 'Oman\'s leading water treatment chemicals supplier. JSRS certified, ICV compliant. Serving desalination, municipal & industrial water treatment.',
+      content: 'Global Chemicals LLC is Oman\'s premier supplier of water treatment chemicals, serving municipal water treatment plants, industrial facilities, desalination plants, and commercial establishments across the Sultanate. With our JSRS certification and ICV compliance, we are the trusted partner for critical water treatment applications in the oil & gas sector and beyond.',
       products: [
         { category: 'Coagulants & Flocculants', items: 'Poly Aluminium Chloride (PAC 18%, 30%), Aluminum Sulfate, Ferric Chloride, Polyacrylamide (Anionic/Cationic)' },
         { category: 'Disinfection', items: 'Calcium Hypochlorite (65-70%), TCCA (90%), Sodium Hypochlorite (12%), Chlorine Dioxide' },
@@ -62,6 +174,7 @@ const Industries = () => {
         'Boiler water treatment',
         'Industrial process water',
       ],
+      isHub: true,
     },
     {
       id: 'manufacturing',
@@ -203,17 +316,32 @@ const Industries = () => {
     },
   ];
 
+  // FAQPage Schema for Water Treatment
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": waterTreatmentFaqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Industry Chemicals Oman | Global Chemicals LLC</title>
-        <meta name="description" content="Chemical solutions for water treatment, oil & gas, manufacturing, food, pharma & construction in Oman. ISO certified supplier trusted by 200+ companies." />
-        <meta name="keywords" content="oil gas chemicals Oman, water treatment Oman, industrial chemicals Muscat, food grade chemicals Oman, pharmaceutical chemicals Oman, construction chemicals Oman, pool chemicals Oman, laboratory chemicals Oman, chemical solutions Oman, Sohar industrial chemicals, PDO chemical supplier, Oman LNG chemicals" />
+        <title>Industry Chemicals Oman | Water Treatment & Oil Gas Chemicals | Global Chemicals LLC</title>
+        <meta name="description" content="Chemical solutions for water treatment, oil & gas, manufacturing, food, pharma & construction in Oman. JSRS certified, ICV compliant. Trusted by 200+ companies." />
+        <meta name="keywords" content="water treatment chemicals Oman, water treatment chemicals Muscat, oil gas chemicals Oman, industrial chemicals Muscat, food grade chemicals Oman, pharmaceutical chemicals Oman, construction chemicals Oman, pool chemicals Oman, chemical solutions Oman, Sohar industrial chemicals, PDO chemical supplier, Oman LNG chemicals, PAC Oman, caustic soda Oman, calcium hypochlorite Oman, antiscalant Oman, desalination chemicals Oman, JSRS certified chemical supplier" />
         <meta property="og:title" content="Chemical Solutions for Oman Industries | Global Chemicals LLC" />
-        <meta property="og:description" content="Specialized chemicals for Oman's Oil & Gas, Water Treatment, Manufacturing, and more. ISO certified. Serving major industries across Oman." />
+        <meta property="og:description" content="JSRS certified supplier of water treatment, oil & gas, and industrial chemicals in Oman. Serving Muscat, Sohar, Duqm, Salalah." />
         <meta property="og:url" content="https://www.gcoman.com/industries" />
         <meta property="og:image" content="https://www.gcoman.com/og-image.jpg" />
         <link rel="canonical" href="https://www.gcoman.com/industries" />
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <Navigation />
       <WhatsAppButton />
@@ -228,7 +356,7 @@ const Industries = () => {
               Industries We Serve
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Specialized chemical solutions for Oil & Gas, Water Treatment, Manufacturing, Food & Beverage, Pharmaceuticals, Construction, Pools, and Laboratories. 500+ products. ISO certified.
+              Specialized chemical solutions for Oil & Gas, Water Treatment, Manufacturing, Food & Beverage, Pharmaceuticals, Construction, Pools, and Laboratories. 500+ products. JSRS certified. ICV compliant.
             </p>
           </div>
         </div>
@@ -252,6 +380,7 @@ const Industries = () => {
 
             {industries.map((industry) => (
               <TabsContent key={industry.id} value={industry.id} className="animate-fade-in">
+                {/* Standard Industry Content */}
                 <div className="grid lg:grid-cols-2 gap-8 mb-12">
                   {/* Image */}
                   <div className="relative rounded-xl overflow-hidden shadow-2xl group">
@@ -270,6 +399,23 @@ const Industries = () => {
 
                   {/* Content */}
                   <div className="space-y-6">
+                    {/* Trust Badges for Water Treatment */}
+                    {industry.id === 'water-treatment' && (
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        <Badge className="bg-emerald-500/10 border-emerald-500/30 text-emerald-700 dark:text-emerald-400 px-3 py-1.5">
+                          <Shield className="w-3.5 h-3.5 mr-1.5" />
+                          JSRS Certified
+                        </Badge>
+                        <Badge className="bg-primary/10 border-primary/30 text-primary px-3 py-1.5">
+                          <Award className="w-3.5 h-3.5 mr-1.5" />
+                          ICV Compliant
+                        </Badge>
+                        <Badge className="bg-secondary/10 border-secondary/30 text-secondary-foreground px-3 py-1.5">
+                          <MapPin className="w-3.5 h-3.5 mr-1.5" />
+                          Local Stock in Muscat
+                        </Badge>
+                      </div>
+                    )}
                     <Card className="p-6 border-l-4 border-l-primary">
                       <p className="text-muted-foreground leading-relaxed">{industry.content}</p>
                     </Card>
@@ -290,7 +436,7 @@ const Industries = () => {
                 </div>
 
                 {/* Applications */}
-                <div>
+                <div className="mb-12">
                   <h3 className="text-2xl font-bold text-foreground mb-6">Applications</h3>
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {industry.applications.map((app, idx) => (
@@ -301,6 +447,182 @@ const Industries = () => {
                     ))}
                   </div>
                 </div>
+
+                {/* Water Treatment Hub Content */}
+                {industry.id === 'water-treatment' && (
+                  <>
+                    {/* Product Categories */}
+                    <div className="mb-16">
+                      <h3 className="text-2xl font-bold text-foreground mb-4">Water Treatment Chemical Categories</h3>
+                      <p className="text-muted-foreground mb-8">Comprehensive range of water treatment solutions for every application</p>
+                      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {waterTreatmentCategories.map((category, index) => {
+                          const Icon = category.icon;
+                          return (
+                            <Card key={index} className="hover:shadow-lg transition-shadow">
+                              <CardHeader>
+                                <div className="flex items-center gap-3">
+                                  <div className="p-3 rounded-lg bg-primary/10">
+                                    <Icon className="w-6 h-6 text-primary" />
+                                  </div>
+                                  <CardTitle className="text-xl">{category.title}</CardTitle>
+                                </div>
+                              </CardHeader>
+                              <CardContent>
+                                <p className="text-muted-foreground mb-4">{category.description}</p>
+                                <ul className="space-y-2">
+                                  {category.products.map((product, i) => (
+                                    <li key={i} className="flex items-center gap-2 text-sm">
+                                      <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+                                      {product}
+                                    </li>
+                                  ))}
+                                </ul>
+                              </CardContent>
+                            </Card>
+                          );
+                        })}
+                      </div>
+                    </div>
+
+                    {/* Water Treatment Applications */}
+                    <div className="mb-16 py-12 bg-muted/30 -mx-4 px-4 rounded-xl">
+                      <h3 className="text-2xl font-bold text-foreground mb-4 text-center">Water Treatment Applications in Oman</h3>
+                      <p className="text-muted-foreground mb-8 text-center">Tailored chemical solutions for every water treatment challenge</p>
+                      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {waterTreatmentApplications.map((app, index) => {
+                          const Icon = app.icon;
+                          return (
+                            <Card key={index}>
+                              <CardHeader>
+                                <div className="flex items-center gap-3">
+                                  <div className="p-2 rounded-lg bg-primary/10">
+                                    <Icon className="w-5 h-5 text-primary" />
+                                  </div>
+                                  <CardTitle className="text-lg">{app.title}</CardTitle>
+                                </div>
+                              </CardHeader>
+                              <CardContent>
+                                <p className="text-muted-foreground text-sm mb-4">{app.description}</p>
+                                <div className="flex flex-wrap gap-2">
+                                  {app.chemicals.map((chem, i) => (
+                                    <Badge key={i} variant="secondary" className="text-xs">
+                                      {chem}
+                                    </Badge>
+                                  ))}
+                                </div>
+                              </CardContent>
+                            </Card>
+                          );
+                        })}
+                      </div>
+                    </div>
+
+                    {/* Service Areas */}
+                    <div className="mb-16">
+                      <h3 className="text-2xl font-bold text-foreground mb-4">Service Areas Across Oman</h3>
+                      <p className="text-muted-foreground mb-8">Rapid delivery from our Muscat warehouse to all industrial zones</p>
+                      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {serviceAreas.map((area, index) => (
+                          <div 
+                            key={index}
+                            className="flex items-start gap-4 p-4 rounded-lg border border-border hover:border-primary/50 transition-colors"
+                          >
+                            <div className="p-2 rounded-full bg-primary/10">
+                              <MapPin className="w-5 h-5 text-primary" />
+                            </div>
+                            <div>
+                              <h4 className="font-semibold text-foreground">{area.name}</h4>
+                              <p className="text-sm text-muted-foreground">{area.description}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Why Choose Us */}
+                    <div className="mb-16 py-12 bg-gradient-to-br from-primary/5 to-secondary/5 -mx-4 px-4 rounded-xl">
+                      <h3 className="text-2xl font-bold text-foreground mb-8 text-center">Why Choose Global Chemicals for Water Treatment?</h3>
+                      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {[
+                          {
+                            icon: Shield,
+                            title: 'JSRS Certified',
+                            description: 'Approved supplier for Oman oil & gas sector with full regulatory compliance'
+                          },
+                          {
+                            icon: MapPin,
+                            title: 'Local Stock',
+                            description: 'Warehouse in Muscat for immediate availability and rapid delivery'
+                          },
+                          {
+                            icon: Users,
+                            title: 'Technical Support',
+                            description: 'Expert consultation, jar testing, and dosing optimization services'
+                          },
+                          {
+                            icon: Clock,
+                            title: 'Reliable Supply',
+                            description: '10+ years experience ensuring consistent quality and availability'
+                          }
+                        ].map((item, index) => {
+                          const Icon = item.icon;
+                          return (
+                            <div key={index} className="text-center">
+                              <div className="inline-flex p-4 rounded-full bg-primary/10 mb-4">
+                                <Icon className="w-8 h-8 text-primary" />
+                              </div>
+                              <h4 className="text-xl font-semibold mb-2 text-foreground">{item.title}</h4>
+                              <p className="text-muted-foreground">{item.description}</p>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+
+                    {/* FAQs */}
+                    <div className="mb-16">
+                      <h3 className="text-2xl font-bold text-foreground mb-4 text-center">Frequently Asked Questions</h3>
+                      <p className="text-muted-foreground mb-8 text-center">Common questions about water treatment chemicals in Oman</p>
+                      <div className="max-w-3xl mx-auto">
+                        <Accordion type="single" collapsible className="space-y-4">
+                          {waterTreatmentFaqs.map((faq, index) => (
+                            <AccordionItem key={index} value={`faq-${index}`} className="border rounded-lg px-4">
+                              <AccordionTrigger className="text-left hover:no-underline">
+                                <span className="font-medium">{faq.question}</span>
+                              </AccordionTrigger>
+                              <AccordionContent className="text-muted-foreground">
+                                {faq.answer}
+                              </AccordionContent>
+                            </AccordionItem>
+                          ))}
+                        </Accordion>
+                      </div>
+                    </div>
+
+                    {/* CTA */}
+                    <div className="text-center py-8 bg-muted/30 rounded-xl">
+                      <h3 className="text-2xl font-bold text-foreground mb-4">Ready to Optimize Your Water Treatment?</h3>
+                      <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+                        Contact our technical team for expert consultation, product recommendations, and competitive pricing for your water treatment chemical requirements.
+                      </p>
+                      <div className="flex flex-wrap justify-center gap-4">
+                        <Link to="/contact">
+                          <Button size="lg">
+                            <Phone className="w-5 h-5 mr-2" />
+                            Request a Quote
+                          </Button>
+                        </Link>
+                        <Link to="/products?category=water-treatment">
+                          <Button size="lg" variant="outline">
+                            View All Products
+                            <ArrowRight className="w-5 h-5 ml-2" />
+                          </Button>
+                        </Link>
+                      </div>
+                    </div>
+                  </>
+                )}
               </TabsContent>
             ))}
           </Tabs>

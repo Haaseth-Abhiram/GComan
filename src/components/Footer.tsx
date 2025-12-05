@@ -83,21 +83,16 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">Our Services</h3>
             <ul className="space-y-2">
-              <li>
-                <Link to="/water-treatment" className="text-primary hover:text-primary/80 transition-colors text-sm inline-flex items-center gap-1 font-medium">
-                  Water Treatment Hub
-                  <span className="text-xs bg-primary/20 px-1.5 py-0.5 rounded">NEW</span>
-                </Link>
-              </li>
               {[
-                'Oil & Gas Chemicals',
-                'Lubricants & Greases',
-                'Construction Chemicals',
-                'Specialty Chemicals',
+                { label: 'Water Treatment', path: '/industries#water-treatment' },
+                { label: 'Oil & Gas Chemicals', path: '/products' },
+                { label: 'Lubricants & Greases', path: '/products' },
+                { label: 'Construction Chemicals', path: '/products' },
+                { label: 'Specialty Chemicals', path: '/products' },
               ].map((item) => (
-                <li key={item}>
-                  <Link to="/products" className="text-white/80 hover:text-primary transition-colors text-sm inline-block hover:translate-x-1 transition-all">
-                    {item}
+                <li key={item.label}>
+                  <Link to={item.path} className="text-white/80 hover:text-primary transition-colors text-sm inline-block hover:translate-x-1 transition-all">
+                    {item.label}
                   </Link>
                 </li>
               ))}
