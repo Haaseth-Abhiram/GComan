@@ -97,6 +97,24 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
+
+            {/* Locations for SEO */}
+            <h4 className="text-sm font-semibold mt-6 mb-3 text-white/90">We Deliver To</h4>
+            <ul className="space-y-1">
+              {[
+                { label: 'Muscat', path: '/chemicals-muscat' },
+                { label: 'Sohar', path: '/chemicals-sohar' },
+                { label: 'Salalah', path: '/chemicals-salalah' },
+                { label: 'Duqm', path: '/chemicals-duqm' },
+                { label: 'Rusayl', path: '/chemicals-rusayl' },
+              ].map((item) => (
+                <li key={item.label}>
+                  <Link to={item.path} className="text-white/70 hover:text-primary transition-colors text-xs inline-block">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Contact Info */}
