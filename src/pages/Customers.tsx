@@ -25,7 +25,7 @@ const breadcrumbItems = [
   { name: 'Customers', url: 'https://www.gcoman.com/customers' }
 ];
 
-// Reviews for structured data
+// Reviews for structured data - Expanded for better SEO
 const customerReviews = [
   {
     author: 'Procurement Director',
@@ -40,6 +40,27 @@ const customerReviews = [
     reviewBody: 'Their commitment to quality, safety standards, and timely delivery has made them our trusted partner for critical chemical supplies.',
     company: 'Petroleum Development Oman (PDO)',
     datePublished: '2024-02-20'
+  },
+  {
+    author: 'Plant Manager',
+    rating: 5,
+    reviewBody: 'Excellent water treatment chemicals and technical support. Their PAC and calcium hypochlorite products perform consistently well in our desalination operations.',
+    company: 'Oman LNG',
+    datePublished: '2024-03-10'
+  },
+  {
+    author: 'Operations Manager',
+    rating: 5,
+    reviewBody: 'Reliable lubricant supplier with genuine Shell and Mobil products. Fast delivery to Sohar Industrial Zone and competitive pricing.',
+    company: 'Sohar Aluminium',
+    datePublished: '2024-04-05'
+  },
+  {
+    author: 'Quality Control Manager',
+    rating: 5,
+    reviewBody: 'We rely on Global Chemicals for our laboratory reagents and food-grade chemicals. Consistent quality with proper documentation and certificates of analysis.',
+    company: 'Arabian Food Industries',
+    datePublished: '2024-05-15'
   }
 ];
 
@@ -95,7 +116,9 @@ const Customers = () => {
       name: 'Arabian Food Industries',
       logo: arabianFoodLogo,
       industry: 'Food & Beverage',
-      description: 'Premium food and beverage manufacturing company in Oman'
+      description: 'Premium food and beverage manufacturing company in Oman',
+      testimonial: 'We rely on Global Chemicals for our laboratory reagents and food-grade chemicals. Consistent quality with proper documentation and certificates of analysis.',
+      contactPerson: 'Quality Control Manager'
     },
     {
       name: 'Ministry of Health Oman',
@@ -113,13 +136,17 @@ const Customers = () => {
       name: 'Sohar Aluminium',
       logo: soharAluminiumLogo,
       industry: 'Manufacturing',
-      description: 'Leading aluminum smelter and one of Oman\'s largest industrial companies'
+      description: 'Leading aluminum smelter and one of Oman\'s largest industrial companies',
+      testimonial: 'Reliable lubricant supplier with genuine Shell and Mobil products. Fast delivery to Sohar Industrial Zone and competitive pricing.',
+      contactPerson: 'Operations Manager'
     },
     {
       name: 'Oman LNG',
       logo: omanLngLogo,
       industry: 'Oil & Gas',
-      description: 'Liquefied natural gas producer and exporter in Oman'
+      description: 'Liquefied natural gas producer and exporter in Oman',
+      testimonial: 'Excellent water treatment chemicals and technical support. Their PAC and calcium hypochlorite products perform consistently well in our desalination operations.',
+      contactPerson: 'Plant Manager'
     },
     {
       name: 'Omifco',

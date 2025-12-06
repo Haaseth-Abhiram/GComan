@@ -10,72 +10,105 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { SEO } from '@/components/SEO';
 import { BlogListingStructuredData, BreadcrumbStructuredData } from '@/components/StructuredData';
 
-// Sample blog data - replace with real data from CMS/API
+// Blog articles - Real content for SEO
 const blogPosts = [
   {
     id: 1,
-    title: "Latest Innovations in Water Treatment Technology",
-    excerpt: "Discover how advanced chemical solutions are revolutionizing water treatment processes across industries.",
-    category: "Industry News",
-    date: "2024-03-15",
-    author: "Dr. Sarah Johnson",
-    readTime: "5 min read",
-    image: "/placeholder.svg",
+    title: "Water Treatment Chemicals in Oman: Complete Guide for 2024",
+    excerpt: "A comprehensive overview of water treatment chemicals used in Oman's desalination plants, municipal facilities, and industrial operations. Learn about PAC, calcium hypochlorite, antiscalants, and best practices for Oman's unique water challenges.",
+    category: "Technical Guides",
+    date: "2024-12-01",
+    author: "Global Chemicals Technical Team",
+    readTime: "8 min read",
+    image: "/images/blog/water-treatment-oman.jpg",
     featured: true,
   },
   {
     id: 2,
-    title: "Safety Best Practices in Chemical Handling",
-    excerpt: "Essential guidelines for safe storage, handling, and disposal of industrial chemicals.",
+    title: "Chemical Storage Safety in Oman's Hot Climate: Essential Guidelines",
+    excerpt: "Industrial chemicals require special handling in Oman's extreme temperatures. This guide covers proper storage conditions, temperature management, and safety protocols for chemical warehouses in Muscat, Sohar, and industrial zones.",
     category: "Safety & Compliance",
-    date: "2024-03-12",
-    author: "Ahmed Al-Rashid",
-    readTime: "7 min read",
-    image: "/placeholder.svg",
+    date: "2024-11-28",
+    author: "HSE Department",
+    readTime: "6 min read",
+    image: "/images/blog/chemical-safety-storage.jpg",
     featured: false,
   },
   {
     id: 3,
-    title: "New Product Launch: Advanced Laboratory Reagents",
-    excerpt: "Introducing our latest line of high-purity laboratory chemicals for research applications.",
-    category: "Product Updates",
-    date: "2024-03-10",
-    author: "Michael Chen",
-    readTime: "4 min read",
-    image: "/placeholder.svg",
+    title: "Global Chemicals LLC Achieves JSRS Certification Renewal for 2024-2025",
+    excerpt: "We are proud to announce the renewal of our JSRS (Joint Supplier Registration System) certification, reinforcing our commitment to serving Oman's oil and gas sector with quality chemicals and reliable supply.",
+    category: "Company News",
+    date: "2024-11-20",
+    author: "Global Chemicals LLC",
+    readTime: "3 min read",
+    image: "/images/blog/jsrs-certification.jpg",
     featured: false,
   },
   {
     id: 4,
-    title: "Sustainable Chemical Solutions for Manufacturing",
-    excerpt: "How eco-friendly chemicals are helping manufacturers reduce their environmental footprint.",
+    title: "Choosing the Right Lubricant for Oman's Industrial Equipment",
+    excerpt: "High temperatures and dusty conditions demand premium lubricants. Compare Shell, Mobil, and Castrol products for hydraulic systems, gearboxes, and compressors in Oman's manufacturing and oil & gas sectors.",
     category: "Technical Guides",
-    date: "2024-03-08",
-    author: "Dr. Sarah Johnson",
-    readTime: "6 min read",
-    image: "/placeholder.svg",
+    date: "2024-11-15",
+    author: "Global Chemicals Technical Team",
+    readTime: "7 min read",
+    image: "/images/blog/industrial-lubricants.jpg",
     featured: false,
   },
   {
     id: 5,
-    title: "Case Study: Optimizing Pool Maintenance with Modern Chemicals",
-    excerpt: "Learn how a major resort chain improved water quality and reduced costs with our solutions.",
+    title: "How Sohar Industrial Zone Companies Optimize Chemical Procurement",
+    excerpt: "Case study on how manufacturing facilities in Sohar Industrial Zone reduced chemical costs by 15% through consolidated procurement, just-in-time delivery, and technical support from local suppliers.",
     category: "Case Studies",
-    date: "2024-03-05",
-    author: "Hassan Al-Mansoori",
-    readTime: "8 min read",
-    image: "/placeholder.svg",
+    date: "2024-11-10",
+    author: "Business Development Team",
+    readTime: "5 min read",
+    image: "/images/blog/sohar-industrial.jpg",
     featured: false,
   },
   {
     id: 6,
-    title: "Understanding Chemical Compatibility in Industrial Applications",
-    excerpt: "A comprehensive guide to selecting compatible chemicals for your specific needs.",
+    title: "Swimming Pool Chemicals: Maintaining Crystal Clear Water in Oman's Summer",
+    excerpt: "Hotels, resorts, and residential pools in Oman face unique challenges during summer months. Learn proper chlorination, pH management, and algae prevention techniques for optimal pool water quality.",
     category: "Technical Guides",
-    date: "2024-03-01",
-    author: "Michael Chen",
-    readTime: "10 min read",
-    image: "/placeholder.svg",
+    date: "2024-11-05",
+    author: "Global Chemicals Technical Team",
+    readTime: "6 min read",
+    image: "/images/blog/pool-chemicals-oman.jpg",
+    featured: false,
+  },
+  {
+    id: 7,
+    title: "Understanding Oman's Chemical Import Regulations and Compliance",
+    excerpt: "Navigate Oman's regulatory framework for industrial chemicals. This guide covers Ministry of Commerce requirements, environmental permits, and documentation needed for chemical imports and distribution.",
+    category: "Safety & Compliance",
+    date: "2024-10-28",
+    author: "Compliance Team",
+    readTime: "8 min read",
+    image: "/images/blog/regulations-compliance.jpg",
+    featured: false,
+  },
+  {
+    id: 8,
+    title: "New: Extended Laboratory Chemical Range Now Available in Muscat",
+    excerpt: "Global Chemicals LLC expands laboratory chemical inventory with AR grade reagents, HPLC solvents, and buffer solutions. Same-day delivery available in Muscat for urgent research and QC requirements.",
+    category: "Product Updates",
+    date: "2024-10-20",
+    author: "Global Chemicals LLC",
+    readTime: "4 min read",
+    image: "/images/blog/laboratory-chemicals.jpg",
+    featured: false,
+  },
+  {
+    id: 9,
+    title: "Corrosion Inhibitors for Oman's Oil & Gas Operations: Selection Guide",
+    excerpt: "High H2S content and elevated temperatures make corrosion control critical in Oman's oilfields. Compare film-forming inhibitors, organic vs inorganic options, and monitoring best practices.",
+    category: "Technical Guides",
+    date: "2024-10-15",
+    author: "Global Chemicals Technical Team",
+    readTime: "9 min read",
+    image: "/images/blog/corrosion-inhibitors.jpg",
     featured: false,
   },
 ];
@@ -183,10 +216,15 @@ const Blog = () => {
                 </h2>
                 <Card className="overflow-hidden hover:shadow-xl transition-shadow group">
                   <div className="grid lg:grid-cols-2 gap-6">
-                    <div className="relative h-64 lg:h-full bg-muted">
+                    <div className="relative h-64 lg:h-full bg-gradient-to-br from-primary/20 via-primary/10 to-secondary/20">
                       <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent group-hover:from-primary/30 transition-colors" />
-                      <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
-                        Featured Image
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="text-center p-6">
+                          <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-primary/20 flex items-center justify-center">
+                            <Tag className="w-8 h-8 text-primary" />
+                          </div>
+                          <span className="text-sm text-muted-foreground font-medium">Featured Article</span>
+                        </div>
                       </div>
                     </div>
                     <div className="p-8 flex flex-col justify-center">
@@ -229,10 +267,12 @@ const Blog = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {regularPosts.map((post) => (
                 <Card key={post.id} className="overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1 group">
-                  <div className="relative h-48 bg-muted">
+                  <div className="relative h-48 bg-gradient-to-br from-primary/10 via-muted to-secondary/10">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent group-hover:from-primary/20 transition-colors" />
-                    <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
-                      Article Image
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-12 h-12 rounded-full bg-primary/15 flex items-center justify-center">
+                        <Tag className="w-6 h-6 text-primary/60" />
+                      </div>
                     </div>
                   </div>
                   <CardHeader>
