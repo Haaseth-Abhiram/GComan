@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -54,6 +55,7 @@ const contactSchema = z.object({
 
 const Contact = () => {
   const { toast } = useToast();
+  const { t } = useTranslation();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -181,10 +183,10 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center animate-fade-in">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 sm:mb-6">
-              Contact & Support
+              {t('contact.title')}
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
-              Expert assistance for all your chemical solution needs. Our dedicated team is ready to help you succeed.
+              {t('contact.description')}
             </p>
           </div>
         </div>
@@ -194,35 +196,35 @@ const Contact = () => {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12">Get In Touch</h2>
+            <h2 className="text-3xl font-bold text-center mb-12">{t('contact.getInTouch')}</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
               {[
                 {
                   icon: Phone,
-                  title: 'Call Us',
+                  title: t('contact.callUs'),
                   content: '+968 93754388',
-                  description: 'Sun-Thu: 8AM - 6PM',
+                  description: t('contact.info.hours'),
                   link: 'tel:+96893754388',
                 },
                 {
                   icon: Mail,
-                  title: 'Email Us',
+                  title: t('contact.emailUs'),
                   content: 'info@gcoman.com',
-                  description: 'Response within 24hrs',
+                  description: t('contact.responseTime'),
                   link: 'mailto:info@gcoman.com',
                 },
                 {
                   icon: MessageSquare,
-                  title: 'Live Chat',
-                  content: 'WhatsApp Support',
-                  description: 'Instant assistance',
+                  title: t('contact.liveChat'),
+                  content: t('contact.whatsappSupport'),
+                  description: t('contact.instantAssistance'),
                   link: 'https://wa.me/96893754388',
                 },
                 {
                   icon: MapPin,
-                  title: 'Visit Us',
+                  title: t('contact.visitUs'),
                   content: 'Office-3, Building Number 1737',
-                  description: 'Near Oman LNG, Ghala, Muscat, Sultanate of Oman',
+                  description: t('contact.info.address'),
                   link: null,
                 },
               ].map((item, index) => {
@@ -254,11 +256,11 @@ const Contact = () => {
               {/* Contact Form */}
               <div className="lg:col-span-3">
                 <div className="bg-card p-8 rounded-xl border border-border">
-                  <h2 className="text-2xl font-bold text-foreground mb-6">Send Us a Message</h2>
+                  <h2 className="text-2xl font-bold text-foreground mb-6">{t('contact.form.submit')}</h2>
                   <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                       <div className="space-y-2">
-                        <Label htmlFor="name">Full Name *</Label>
+                        <Label htmlFor="name">{t('contact.form.name')} *</Label>
                         <Input
                           id="name"
                           name="name"
@@ -269,7 +271,7 @@ const Contact = () => {
                         />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="email">Email Address *</Label>
+                        <Label htmlFor="email">{t('contact.form.email')} *</Label>
                         <Input
                           id="email"
                           name="email"
@@ -284,18 +286,18 @@ const Contact = () => {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                       <div className="space-y-2">
-                        <Label htmlFor="phone">Phone Number</Label>
+                        <Label htmlFor="phone">{t('contact.form.phone')}</Label>
                         <Input
                           id="phone"
                           name="phone"
                           type="tel"
                           value={formData.phone}
                           onChange={handleChange}
-                          placeholder="+1 (234) 567-890"
+                          placeholder="+968 XXXX XXXX"
                         />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="company">Company Name</Label>
+                        <Label htmlFor="company">{t('contact.form.company')}</Label>
                         <Input
                           id="company"
                           name="company"
@@ -307,46 +309,46 @@ const Contact = () => {
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="subject">Subject *</Label>
+                      <Label htmlFor="subject">{t('contact.form.subject')} *</Label>
                       <Select name="subject" value={formData.subject} onValueChange={handleSubjectChange} required>
                         <SelectTrigger>
-                          <SelectValue placeholder="Select a subject" />
+                          <SelectValue placeholder={t('contact.form.selectSubject')} />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="product-inquiry">Product Inquiry</SelectItem>
-                          <SelectItem value="technical-support">Technical Support</SelectItem>
-                          <SelectItem value="quotation">Request Quotation</SelectItem>
-                          <SelectItem value="partnership">Partnership Opportunity</SelectItem>
-                          <SelectItem value="complaint">Complaint/Feedback</SelectItem>
-                          <SelectItem value="other">Other</SelectItem>
+                          <SelectItem value="product-inquiry">{t('contact.form.subjects.productInquiry')}</SelectItem>
+                          <SelectItem value="technical-support">{t('contact.form.subjects.technicalSupport')}</SelectItem>
+                          <SelectItem value="quotation">{t('contact.form.subjects.quotation')}</SelectItem>
+                          <SelectItem value="partnership">{t('contact.form.subjects.partnership')}</SelectItem>
+                          <SelectItem value="complaint">{t('contact.form.subjects.complaint')}</SelectItem>
+                          <SelectItem value="other">{t('contact.form.subjects.other')}</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="message">Message *</Label>
+                      <Label htmlFor="message">{t('contact.form.message')} *</Label>
                       <Textarea
                         id="message"
                         name="message"
                         value={formData.message}
                         onChange={handleChange}
-                        placeholder="Please describe your inquiry in detail..."
+                        placeholder={t('contact.form.messagePlaceholder')}
                         rows={6}
                         required
                       />
                     </div>
 
-                    <Button 
-                      type="submit" 
+                    <Button
+                      type="submit"
                       className="w-full md:w-auto px-8"
                       disabled={isSubmitting}
                     >
                       {isSubmitting ? (
-                        <>Sending...</>
+                        <>{t('common.loading')}</>
                       ) : (
                         <>
-                          <Send className="w-4 h-4 mr-2" />
-                          Send Message
+                          <Send className="w-4 h-4 ltr:mr-2 rtl:ml-2" />
+                          {t('contact.form.submit')}
                         </>
                       )}
                     </Button>
@@ -363,15 +365,15 @@ const Contact = () => {
                       <Clock className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground mb-3">Business Hours</h3>
+                      <h3 className="font-semibold text-foreground mb-3">{t('contact.businessHours')}</h3>
                       <div className="space-y-2 text-sm">
-                        <div className="flex justify-between">
-                          <span className="text-muted-foreground">Sunday - Thursday:</span>
-                          <span className="font-medium">8:00 AM - 6:00 PM</span>
+                        <div className="flex justify-between gap-4">
+                          <span className="text-muted-foreground">{t('contact.sundayThursday')}:</span>
+                          <span className="font-medium ltr-preserve">8:00 AM - 6:00 PM</span>
                         </div>
-                        <div className="flex justify-between">
-                          <span className="text-muted-foreground">Friday - Saturday:</span>
-                          <span className="font-medium">Closed</span>
+                        <div className="flex justify-between gap-4">
+                          <span className="text-muted-foreground">{t('contact.fridaySaturday')}:</span>
+                          <span className="font-medium">{t('contact.closed')}</span>
                         </div>
                       </div>
                     </div>
@@ -385,11 +387,11 @@ const Contact = () => {
                       <Headphones className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground mb-2">Technical Support</h3>
+                      <h3 className="font-semibold text-foreground mb-2">{t('contact.technicalSupport')}</h3>
                       <p className="text-sm text-muted-foreground mb-3">
-                        Expert guidance for product selection and application
+                        {t('contact.technicalSupportDesc')}
                       </p>
-                      <a href="mailto:support@gcoman.com" className="text-sm text-primary hover:text-primary/80 font-medium">
+                      <a href="mailto:support@gcoman.com" className="text-sm text-primary hover:text-primary/80 font-medium ltr-preserve">
                         support@gcoman.com
                       </a>
                     </div>
@@ -403,11 +405,11 @@ const Contact = () => {
                       <FileText className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground mb-2">Sales Inquiry</h3>
+                      <h3 className="font-semibold text-foreground mb-2">{t('contact.salesInquiry')}</h3>
                       <p className="text-sm text-muted-foreground mb-3">
-                        Get quotes and pricing information
+                        {t('contact.salesInquiryDesc')}
                       </p>
-                      <a href="mailto:sales@gcoman.com" className="text-sm text-primary hover:text-primary/80 font-medium">
+                      <a href="mailto:sales@gcoman.com" className="text-sm text-primary hover:text-primary/80 font-medium ltr-preserve">
                         sales@gcoman.com
                       </a>
                     </div>
@@ -423,21 +425,21 @@ const Contact = () => {
       <section className="py-16 bg-gradient-to-br from-primary/5 to-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Need Immediate Assistance?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">{t('contact.needAssistance')}</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Our customer support team is available to answer your questions and provide expert guidance on our chemical solutions.
+              {t('contact.needAssistanceDesc')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
                 <a href="tel:+96893754388">
-                  <Phone className="w-5 h-5 mr-2" />
-                  Call Now
+                  <Phone className="w-5 h-5 ltr:mr-2 rtl:ml-2" />
+                  {t('contact.callNow')}
                 </a>
               </Button>
               <Button size="lg" variant="outline" asChild>
                 <a href="https://wa.me/96893754388" target="_blank" rel="noopener noreferrer">
-                  <MessageSquare className="w-5 h-5 mr-2" />
-                  WhatsApp Chat
+                  <MessageSquare className="w-5 h-5 ltr:mr-2 rtl:ml-2" />
+                  {t('contact.whatsappChat')}
                 </a>
               </Button>
             </div>

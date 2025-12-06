@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import heroLab from '@/assets/hero-lab-optimized.webp';
 import waterTreatment from '@/assets/hero-water-treatment-optimized.webp';
 import oilGas from '@/assets/products/oil-gas.jpg';
@@ -43,6 +44,7 @@ const slides = [
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -90,20 +92,20 @@ const Hero = () => {
           {/* Trust Indicators */}
           <div className="flex flex-wrap items-center justify-center gap-3 animate-fade-in">
             <Badge variant="outline" className="bg-emerald-500/20 backdrop-blur-sm border-emerald-400/50 text-white px-4 py-2">
-              <Shield className="w-4 h-4 mr-2 text-emerald-400" />
-              JSRS Certified
+              <Shield className="w-4 h-4 ltr:mr-2 rtl:ml-2 text-emerald-400" />
+              {t('certifications.jsrs')}
             </Badge>
             <Badge variant="outline" className="bg-blue-500/20 backdrop-blur-sm border-blue-400/50 text-white px-4 py-2">
-              <Award className="w-4 h-4 mr-2 text-blue-400" />
-              ICV Compliant
+              <Award className="w-4 h-4 ltr:mr-2 rtl:ml-2 text-blue-400" />
+              {t('certifications.icv')}
             </Badge>
             <Badge variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white px-4 py-2">
-              <Shield className="w-4 h-4 mr-2" />
-              ISO 9001
+              <Shield className="w-4 h-4 ltr:mr-2 rtl:ml-2" />
+              {t('certifications.iso')}
             </Badge>
             <Badge variant="outline" className="bg-primary/20 backdrop-blur-sm border-primary/50 text-white px-4 py-2">
-              <Sparkles className="w-4 h-4 mr-2 text-primary" />
-              Local Stock in Muscat
+              <Sparkles className="w-4 h-4 ltr:mr-2 rtl:ml-2 text-primary" />
+              {t('locations.muscat')}
             </Badge>
           </div>
 
@@ -148,14 +150,14 @@ const Hero = () => {
                 href="/products"
                 className="group inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 text-center"
               >
-                Explore Our Products
-                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
+                {t('hero.ctaSecondary')}
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform rtl:rotate-180" />
               </a>
               <a
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white hover:bg-white/90 text-secondary font-semibold rounded-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 text-center"
               >
-                Request a Quote
+                {t('hero.cta')}
               </a>
             </div>
 
