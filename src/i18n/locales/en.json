@@ -15,7 +15,10 @@
     "address": "Address",
     "loading": "Loading...",
     "error": "Error",
-    "success": "Success"
+    "success": "Success",
+    "followUs": "Follow Us",
+    "stayUpdated": "Stay Updated",
+    "newsletterDesc": "Subscribe to our newsletter for the latest products, industry insights, and special offers"
   },
   "nav": {
     "home": "Home",
@@ -26,14 +29,38 @@
     "contact": "Contact",
     "customers": "Customers",
     "careers": "Careers",
-    "blog": "Blog"
+    "blog": "Blog",
+    "login": "Login",
+    "logout": "Logout",
+    "admin": "Admin"
   },
   "hero": {
     "title": "Your Trusted Chemical Partner in Oman",
     "subtitle": "Leading B2B Supplier of Specialty & Industrial Chemicals",
     "description": "ISO 9001 certified chemical supplier serving Oman's industries with quality products, technical expertise, and reliable delivery.",
     "cta": "Request a Quote",
-    "ctaSecondary": "Explore Products"
+    "ctaSecondary": "Explore Products",
+    "trustedBy": "Trusted by Leading Companies"
+  },
+  "home": {
+    "whyChooseUs": "Why Choose Us",
+    "whyChooseUsDesc": "Discover what makes Global Chemicals LLC the preferred chemical supplier in Oman",
+    "feature1Title": "ISO 9001 Certified",
+    "feature1Desc": "Quality management system ensuring consistent product quality and service excellence",
+    "feature2Title": "Technical Expertise",
+    "feature2Desc": "Our team of experts provides technical consultation and product recommendations",
+    "feature3Title": "Fast Delivery",
+    "feature3Desc": "Same-day delivery in Muscat, next-day to other regions across Oman",
+    "feature4Title": "Competitive Pricing",
+    "feature4Desc": "Best prices for bulk orders with flexible payment terms for enterprises",
+    "productsTitle": "Our Product Categories",
+    "productsDesc": "Comprehensive range of industrial and specialty chemicals for every industry",
+    "industriesTitle": "Industries We Serve",
+    "industriesDesc": "Tailored chemical solutions for diverse industrial sectors across Oman",
+    "statsYears": "Years Experience",
+    "statsProducts": "Products",
+    "statsClients": "Happy Clients",
+    "statsDelivery": "On-Time Delivery"
   },
   "about": {
     "title": "About Global Chemicals LLC",
@@ -43,10 +70,16 @@
     "missionText": "To be the most reliable and trusted chemical supplier in Oman, delivering quality products with exceptional service.",
     "vision": "Our Vision",
     "visionText": "To lead the chemical distribution industry in the GCC region through innovation, sustainability, and customer excellence.",
+    "values": "Our Values",
+    "valuesText": "Quality, Integrity, Customer Focus, Innovation, and Sustainability guide everything we do.",
     "experience": "Years of Experience",
     "clients": "Satisfied Clients",
     "products": "Products Available",
-    "delivery": "On-Time Delivery"
+    "delivery": "On-Time Delivery",
+    "whoWeAre": "Who We Are",
+    "whoWeAreText": "Global Chemicals LLC is a premier B2B chemical supplier based in Muscat, Oman. Since our establishment, we have been dedicated to providing high-quality specialty and industrial chemicals to businesses across the Sultanate.",
+    "certifications": "Our Certifications",
+    "certificationsText": "We maintain the highest standards with ISO 9001:2015 certification, JSRS registration, and ICV compliance."
   },
   "products": {
     "title": "Our Products",
@@ -64,19 +97,34 @@
     "viewDetails": "View Details",
     "requestQuote": "Request Quote",
     "inStock": "In Stock",
-    "outOfStock": "Out of Stock"
+    "outOfStock": "Out of Stock",
+    "searchPlaceholder": "Search products...",
+    "filterByCategory": "Filter by Category",
+    "allCategories": "All Categories",
+    "sortBy": "Sort By",
+    "featured": "Featured",
+    "priceAsc": "Price: Low to High",
+    "priceDesc": "Price: High to Low"
   },
   "industries": {
     "title": "Industries We Serve",
     "subtitle": "Tailored Chemical Solutions for Every Sector",
     "oilGas": "Oil & Gas",
+    "oilGasDesc": "Drilling fluids, production chemicals, corrosion inhibitors for Oman's energy sector",
     "waterTreatment": "Water Treatment",
+    "waterTreatmentDesc": "Complete solutions for municipal, industrial, and desalination water treatment",
     "manufacturing": "Manufacturing",
+    "manufacturingDesc": "Process chemicals, lubricants, and specialty products for manufacturing industries",
     "construction": "Construction",
+    "constructionDesc": "Concrete additives, waterproofing chemicals, and construction materials",
     "hospitality": "Hospitality",
+    "hospitalityDesc": "Pool chemicals, cleaning products, and hygiene solutions for hotels",
     "foodBeverage": "Food & Beverage",
+    "foodBeverageDesc": "Food-grade chemicals, sanitizers, and processing aids",
     "pharmaceutical": "Pharmaceutical",
-    "agriculture": "Agriculture"
+    "pharmaceuticalDesc": "High-purity chemicals and reagents for pharmaceutical manufacturing",
+    "agriculture": "Agriculture",
+    "agricultureDesc": "Fertilizers, soil treatments, and agricultural chemicals"
   },
   "contact": {
     "title": "Contact Us",
@@ -87,37 +135,58 @@
       "email": "Email Address",
       "phone": "Phone Number",
       "company": "Company Name",
+      "subject": "Subject",
       "message": "Message",
       "submit": "Send Message",
       "success": "Thank you! We'll get back to you soon.",
-      "error": "Something went wrong. Please try again."
+      "error": "Something went wrong. Please try again.",
+      "required": "This field is required",
+      "invalidEmail": "Please enter a valid email address"
     },
     "info": {
-      "address": "Office-3, Building Number 1737, Near Oman LNG, Ghala, Muscat",
+      "title": "Contact Information",
+      "address": "Office-3, Building Number 1737, Near Oman LNG, Ghala, Muscat, Oman",
       "phone": "+968-93754388",
       "email": "info@gcoman.com",
-      "hours": "Sun - Thu: 8:00 AM - 6:00 PM"
-    }
+      "hours": "Sun - Thu: 8:00 AM - 6:00 PM",
+      "workingHours": "Working Hours"
+    },
+    "mapTitle": "Our Location"
   },
   "footer": {
     "companyName": "Global Chemicals LLC",
-    "description": "Your trusted B2B chemical supplier in Oman. ISO 9001 certified. Serving enterprises with specialty and industrial chemicals.",
+    "description": "Leading provider of specialty chemicals, delivering high-quality products and innovative solutions across Oman.",
     "quickLinks": "Quick Links",
     "ourServices": "Our Services",
     "weDeliverTo": "We Deliver To",
     "contactInfo": "Contact Info",
-    "newsletter": "Newsletter",
+    "newsletter": "Stay Updated",
+    "newsletterDesc": "Subscribe to our newsletter for the latest products, industry insights, and special offers",
     "newsletterPlaceholder": "Enter your email",
     "subscribe": "Subscribe",
     "copyright": "All rights reserved.",
     "privacyPolicy": "Privacy Policy",
     "terms": "Terms & Conditions",
-    "whatsappCta": "Chat on WhatsApp"
+    "sitemap": "Sitemap",
+    "whatsappCta": "WhatsApp Us",
+    "followUs": "Follow Us",
+    "services": {
+      "waterTreatment": "Water Treatment",
+      "oilGasChemicals": "Oil & Gas Chemicals",
+      "lubricants": "Lubricants & Greases",
+      "laboratoryChemicals": "Laboratory Chemicals",
+      "poolChemicals": "Swimming Pool Chemicals",
+      "constructionChemicals": "Construction Chemicals"
+    },
+    "tagline": "Leading Chemical Supplier serving Muscat, Sohar, Duqm, Salalah, and the Rusayl Industrial Area."
   },
   "certifications": {
     "iso": "ISO 9001 Certified",
-    "jsrs": "JSRS Registered",
-    "icv": "ICV Compliant"
+    "isoDesc": "Quality Management",
+    "jsrs": "JSRS Certified",
+    "jsrsDesc": "Joint Supplier Registration System",
+    "icv": "ICV Compliant",
+    "icvDesc": "In-Country Value Program"
   },
   "locations": {
     "muscat": "Muscat",
@@ -130,5 +199,18 @@
     "title": "Ready to Get Started?",
     "subtitle": "Contact us today for competitive pricing and reliable delivery",
     "button": "Get a Quote"
+  },
+  "customers": {
+    "title": "Our Customers",
+    "subtitle": "Trusted by Leading Companies Across Oman",
+    "testimonials": "What Our Clients Say"
+  },
+  "resources": {
+    "title": "Resources",
+    "subtitle": "Technical Documents, Safety Data Sheets & More",
+    "downloads": "Downloads",
+    "brochures": "Brochures",
+    "sds": "Safety Data Sheets",
+    "technicalGuides": "Technical Guides"
   }
 }

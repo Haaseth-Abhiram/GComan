@@ -17,6 +17,25 @@ const Footer = () => {
     { icon: Youtube, href: 'https://www.youtube.com/@GlobalChemicalsLLC', label: 'YouTube' },
   ];
 
+  const quickLinks = [
+    { labelKey: 'nav.about', path: '/about' },
+    { labelKey: 'nav.products', path: '/products' },
+    { labelKey: 'nav.industries', path: '/industries' },
+    { labelKey: 'nav.resources', path: '/resources' },
+    { labelKey: 'nav.blog', path: '/blog' },
+    { labelKey: 'nav.contact', path: '/contact' },
+    { labelKey: 'nav.careers', path: '/career' },
+  ];
+
+  const services = [
+    { labelKey: 'footer.services.waterTreatment', path: '/industries#water-treatment' },
+    { labelKey: 'footer.services.oilGasChemicals', path: '/industries#oil-gas' },
+    { labelKey: 'footer.services.lubricants', path: '/products?category=lubricants' },
+    { labelKey: 'footer.services.laboratoryChemicals', path: '/industries#laboratory' },
+    { labelKey: 'footer.services.poolChemicals', path: '/industries#swimming-pool' },
+    { labelKey: 'footer.services.constructionChemicals', path: '/industries#construction' },
+  ];
+
   return (
     <footer className="bg-[#3a4453] text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
@@ -31,12 +50,12 @@ const Footer = () => {
               />
             </Link>
             <p className="text-white/80 text-sm leading-relaxed">
-              Leading provider of specialty chemicals, delivering high-quality products and innovative solutions across Oman.
+              {t('footer.description')}
             </p>
 
             {/* Social Media Links */}
             <div className="space-y-3">
-              <h4 className="text-sm font-semibold text-white">Follow Us</h4>
+              <h4 className="text-sm font-semibold text-white">{t('footer.followUs')}</h4>
               <div className="flex gap-3">
                 {socialLinks.map((social) => {
                   const Icon = social.icon;
@@ -61,21 +80,13 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">{t('footer.quickLinks')}</h3>
             <ul className="space-y-2">
-              {[
-                { label: 'About', path: '/about' },
-                { label: 'Products', path: '/products' },
-                { label: 'Industries', path: '/industries' },
-                { label: 'Resources', path: '/resources' },
-                { label: 'Blog', path: '/blog' },
-                { label: 'Contact', path: '/contact' },
-                { label: 'Careers', path: '/career' },
-              ].map((item) => (
+              {quickLinks.map((item) => (
                 <li key={item.path}>
                   <Link
                     to={item.path}
-                    className="text-white/80 hover:text-primary transition-colors text-sm inline-block hover:translate-x-1 transition-all"
+                    className="text-white/80 hover:text-primary transition-colors text-sm inline-block hover:translate-x-1 rtl:hover:-translate-x-1 transition-all"
                   >
-                    {item.label}
+                    {t(item.labelKey)}
                   </Link>
                 </li>
               ))}
@@ -87,15 +98,15 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4 text-white">{t('footer.weDeliverTo')}</h3>
             <ul className="space-y-2">
               {[
-                { label: t('locations.muscat'), path: '/chemicals/muscat' },
-                { label: t('locations.sohar'), path: '/chemicals/sohar' },
-                { label: t('locations.salalah'), path: '/chemicals/salalah' },
-                { label: t('locations.duqm'), path: '/chemicals/duqm' },
-                { label: t('locations.rusayl'), path: '/chemicals/rusayl' },
+                { labelKey: 'locations.muscat', path: '/chemicals/muscat' },
+                { labelKey: 'locations.sohar', path: '/chemicals/sohar' },
+                { labelKey: 'locations.salalah', path: '/chemicals/salalah' },
+                { labelKey: 'locations.duqm', path: '/chemicals/duqm' },
+                { labelKey: 'locations.rusayl', path: '/chemicals/rusayl' },
               ].map((item) => (
-                <li key={item.label}>
-                  <Link to={item.path} className="text-white/80 hover:text-primary transition-colors text-sm inline-block hover:translate-x-1 transition-all">
-                    {item.label}
+                <li key={item.path}>
+                  <Link to={item.path} className="text-white/80 hover:text-primary transition-colors text-sm inline-block hover:translate-x-1 rtl:hover:-translate-x-1 transition-all">
+                    {t(item.labelKey)}
                   </Link>
                 </li>
               ))}
@@ -106,17 +117,10 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">{t('footer.ourServices')}</h3>
             <ul className="space-y-2">
-              {[
-                { label: 'Water Treatment', path: '/industries#water-treatment' },
-                { label: 'Oil & Gas Chemicals', path: '/industries#oil-gas' },
-                { label: 'Lubricants & Greases', path: '/products?category=lubricants' },
-                { label: 'Laboratory Chemicals', path: '/industries#laboratory' },
-                { label: 'Swimming Pool Chemicals', path: '/industries#swimming-pool' },
-                { label: 'Construction Chemicals', path: '/industries#construction' },
-              ].map((item) => (
-                <li key={item.label}>
-                  <Link to={item.path} className="text-white/80 hover:text-primary transition-colors text-sm inline-block hover:translate-x-1 transition-all">
-                    {item.label}
+              {services.map((item) => (
+                <li key={item.path}>
+                  <Link to={item.path} className="text-white/80 hover:text-primary transition-colors text-sm inline-block hover:translate-x-1 rtl:hover:-translate-x-1 transition-all">
+                    {t(item.labelKey)}
                   </Link>
                 </li>
               ))}
@@ -127,19 +131,19 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">{t('nav.contact')}</h3>
             <ul className="space-y-3">
-              <li className="flex items-start space-x-3">
+              <li className="flex items-start gap-3 rtl:flex-row-reverse">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <span className="text-white/80 text-sm leading-relaxed">
-                  Office-3, Building Number 1737, Near Oman LNG, Ghala, Muscat, Oman
+                  {t('contact.info.address')}
                 </span>
               </li>
-              <li className="flex items-center space-x-3">
+              <li className="flex items-center gap-3 rtl:flex-row-reverse">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                <a href="tel:+96893754388" className="text-white/80 hover:text-primary transition-colors text-sm">
+                <a href="tel:+96893754388" className="text-white/80 hover:text-primary transition-colors text-sm ltr-preserve">
                   +968 93754388
                 </a>
               </li>
-              <li className="flex items-center space-x-3">
+              <li className="flex items-center gap-3 rtl:flex-row-reverse">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0" />
                 <a
                   href="mailto:info@gcoman.com"
@@ -170,7 +174,7 @@ const Footer = () => {
           <div className="max-w-xl mx-auto text-center">
             <h3 className="text-xl font-bold mb-3">{t('footer.newsletter')}</h3>
             <p className="text-white/70 text-sm mb-6">
-              Subscribe to our newsletter for the latest products, industry insights, and special offers
+              {t('footer.newsletterDesc')}
             </p>
             <div className="flex gap-3 max-w-md mx-auto">
               <Input
@@ -193,32 +197,32 @@ const Footer = () => {
               <div className="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center">
                 <span className="text-emerald-400 font-bold text-xs">JSRS</span>
               </div>
-              <div className="text-left">
-                <p className="text-white text-sm font-semibold">JSRS Certified</p>
-                <p className="text-white/60 text-xs">Joint Supplier Registration System</p>
+              <div className="text-start">
+                <p className="text-white text-sm font-semibold">{t('certifications.jsrs')}</p>
+                <p className="text-white/60 text-xs">{t('certifications.jsrsDesc')}</p>
               </div>
             </div>
             <div className="flex items-center gap-2 bg-blue-500/10 px-4 py-2 rounded-lg border border-blue-500/30">
               <div className="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center">
                 <span className="text-blue-400 font-bold text-xs">ICV</span>
               </div>
-              <div className="text-left">
-                <p className="text-white text-sm font-semibold">ICV Compliant</p>
-                <p className="text-white/60 text-xs">In-Country Value Program</p>
+              <div className="text-start">
+                <p className="text-white text-sm font-semibold">{t('certifications.icv')}</p>
+                <p className="text-white/60 text-xs">{t('certifications.icvDesc')}</p>
               </div>
             </div>
             <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg border border-white/20">
               <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
                 <span className="text-white font-bold text-xs">ISO</span>
               </div>
-              <div className="text-left">
-                <p className="text-white text-sm font-semibold">ISO 9001:2015</p>
-                <p className="text-white/60 text-xs">Quality Management</p>
+              <div className="text-start">
+                <p className="text-white text-sm font-semibold">{t('certifications.iso')}</p>
+                <p className="text-white/60 text-xs">{t('certifications.isoDesc')}</p>
               </div>
             </div>
           </div>
           <p className="text-white/70 text-sm text-center">
-            Leading Chemical Supplier serving Muscat, Sohar, Duqm, Salalah, and the Rusayl Industrial Area.
+            {t('footer.tagline')}
           </p>
         </div>
 
@@ -235,7 +239,7 @@ const Footer = () => {
               {t('footer.privacyPolicy')}
             </Link>
             <Link to="/sitemap" className="hover:text-primary transition-colors">
-              Sitemap
+              {t('footer.sitemap')}
             </Link>
           </div>
         </div>
