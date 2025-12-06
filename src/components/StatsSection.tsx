@@ -1,15 +1,17 @@
 import { useEffect, useState, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Users, Award, Globe2, Package } from 'lucide-react';
 
 const StatsSection = () => {
+  const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
   const stats = [
-    { icon: Award, value: 10, suffix: '+', label: 'Years of Excellence', color: 'text-primary' },
-    { icon: Package, value: 1000, suffix: '+', label: 'Quality Products', color: 'text-secondary' },
-    { icon: Users, value: 200, suffix: '+', label: 'Trusted Clients', color: 'text-primary' },
-    { icon: Globe2, value: 98, suffix: '%', label: 'Customer Satisfaction', color: 'text-secondary' },
+    { icon: Award, value: 10, suffix: '+', label: t('home.statsYears'), color: 'text-primary' },
+    { icon: Package, value: 1000, suffix: '+', label: t('home.statsProducts'), color: 'text-secondary' },
+    { icon: Users, value: 200, suffix: '+', label: t('home.statsClients'), color: 'text-primary' },
+    { icon: Globe2, value: 98, suffix: '%', label: t('home.statsSatisfaction'), color: 'text-secondary' },
   ];
 
   useEffect(() => {

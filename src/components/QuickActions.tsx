@@ -1,34 +1,37 @@
+import { useTranslation } from 'react-i18next';
 import { Card } from '@/components/ui/card';
 import { FileText, MessageSquare, Search, Download } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const QuickActions = () => {
+  const { t } = useTranslation();
+
   const actions = [
     {
       icon: Search,
-      title: 'Product Finder',
-      description: 'Find the perfect chemical solution for your needs',
+      title: t('quickActions.productFinder'),
+      description: t('quickActions.productFinderDesc'),
       link: '/products',
       color: 'from-secondary to-secondary/80',
     },
     {
       icon: MessageSquare,
-      title: 'Request Quote',
-      description: 'Get a custom quote for bulk orders',
+      title: t('quickActions.requestQuote'),
+      description: t('quickActions.requestQuoteDesc'),
       link: '/contact',
       color: 'from-primary to-accent',
     },
     {
       icon: Download,
-      title: 'Technical Resources',
-      description: 'Download SDS, specs, and technical guides',
+      title: t('quickActions.technicalResources'),
+      description: t('quickActions.technicalResourcesDesc'),
       link: '/resources',
       color: 'from-tertiary to-tertiary/80',
     },
     {
       icon: FileText,
-      title: 'Sample Request',
-      description: 'Order product samples for testing',
+      title: t('quickActions.sampleRequest'),
+      description: t('quickActions.sampleRequestDesc'),
       link: '/contact',
       color: 'from-accent to-primary',
     },
@@ -38,15 +41,15 @@ const QuickActions = () => {
     <section className="py-20 bg-gradient-to-br from-foreground to-foreground/95 text-white relative overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl" />
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-primary rounded-full blur-3xl" />
+        <div className="absolute top-10 ltr:left-10 rtl:right-10 w-72 h-72 bg-white rounded-full blur-3xl" />
+        <div className="absolute bottom-10 ltr:right-10 rtl:left-10 w-96 h-96 bg-primary rounded-full blur-3xl" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Get Started?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('cta.title')}</h2>
           <p className="text-lg text-white/80 max-w-2xl mx-auto">
-            Access our tools and resources designed to make your procurement process seamless
+            {t('cta.subtitle')}
           </p>
         </div>
 
