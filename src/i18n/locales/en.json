@@ -205,6 +205,13 @@
   "industries": {
     "title": "Industries We Serve",
     "subtitle": "Tailored Chemical Solutions for Every Sector",
+    "heroDesc": "Specialized chemical solutions for Oil & Gas, Water Treatment, Manufacturing, Food & Beverage, Pharmaceuticals, Construction, Pools, and Laboratories. 500+ products. JSRS certified. ICV compliant.",
+    "keyProducts": "Key Products We Supply",
+    "applications": "Applications",
+    "needCustomSolution": "Need a Custom Solution?",
+    "customSolutionDesc": "Our technical team is ready to help you find the perfect chemical solution for your specific industry needs.",
+    "contactExperts": "Contact Our Experts",
+    "browseProducts": "Browse Products",
     "oilGas": "Oil & Gas",
     "oilGasDesc": "Drilling fluids, production chemicals, corrosion inhibitors for Oman's energy sector",
     "waterTreatment": "Water Treatment",
