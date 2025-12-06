@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import { BreadcrumbStructuredData, JobPostingStructuredData } from '@/components/StructuredData';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -322,6 +323,12 @@ const Career = () => {
     }
   };
 
+  // Breadcrumb for SEO
+  const breadcrumbItems = [
+    { name: 'Home', url: 'https://www.gcoman.com/' },
+    { name: 'Careers', url: 'https://www.gcoman.com/career' }
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
@@ -334,6 +341,22 @@ const Career = () => {
         <meta property="og:image" content="https://www.gcoman.com/og-image.jpg" />
         <link rel="canonical" href="https://www.gcoman.com/career" />
       </Helmet>
+
+      {/* Structured Data for SEO */}
+      <BreadcrumbStructuredData items={breadcrumbItems} />
+      {/* Add JobPosting schema for each open position */}
+      {jobOpenings.map((job) => (
+        <JobPostingStructuredData
+          key={job.id}
+          title={job.title}
+          description={`${job.description} Requirements: ${job.requirements.join(', ')}`}
+          datePosted="2024-12-01"
+          validThrough="2025-06-30"
+          employmentType={job.type === 'Full-time' ? 'FULL_TIME' : 'PART_TIME'}
+          location={job.location}
+        />
+      ))}
+
       <Navigation />
       <WhatsAppButton />
 

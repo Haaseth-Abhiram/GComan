@@ -56,6 +56,10 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* SEO-optimized hidden H1 for consistent keyword targeting */}
+      <h1 className="sr-only">
+        Chemical Supplier Oman - Global Chemicals LLC | Industrial & Specialty Chemicals in Muscat, Sohar, Salalah
+      </h1>
       {/* Background with Parallax Effect */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 mix-blend-multiply z-10" />
@@ -117,17 +121,18 @@ const Hero = () => {
               <div className="h-px w-12 bg-primary" />
             </div>
 
-            {/* Main Heading */}
-            <h1 
+            {/* Main Visual Heading (H2 since H1 is for SEO) */}
+            <h2
               key={`title-${currentSlide}`}
               className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight px-4 animate-fade-in"
+              aria-label={`${slide.title} ${slide.highlight}`}
             >
               {slide.title}
               <br />
               <span className="text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]">
                 {slide.highlight}
               </span>
-            </h1>
+            </h2>
 
             {/* Value Proposition */}
             <p 
