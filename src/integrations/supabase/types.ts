@@ -19,6 +19,9 @@ export type Database = {
           company: string | null
           created_at: string
           email: string
+          email_error: string | null
+          email_sent: boolean | null
+          email_sent_at: string | null
           id: string
           ip_address: string | null
           message: string
@@ -33,6 +36,9 @@ export type Database = {
           company?: string | null
           created_at?: string
           email: string
+          email_error?: string | null
+          email_sent?: boolean | null
+          email_sent_at?: string | null
           id?: string
           ip_address?: string | null
           message: string
@@ -47,6 +53,9 @@ export type Database = {
           company?: string | null
           created_at?: string
           email?: string
+          email_error?: string | null
+          email_sent?: boolean | null
+          email_sent_at?: string | null
           id?: string
           ip_address?: string | null
           message?: string

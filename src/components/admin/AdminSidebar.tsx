@@ -1,4 +1,4 @@
-import { FileText, Briefcase, Download, LayoutDashboard, ExternalLink, Home } from 'lucide-react';
+import { FileText, Briefcase, Download, LayoutDashboard, Home, BarChart3, Settings, HelpCircle, Mail } from 'lucide-react';
 import { useLocation, Link } from 'react-router-dom';
 import {
   Sidebar,
@@ -10,15 +10,26 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarFooter,
+  SidebarSeparator,
 } from '@/components/ui/sidebar';
 import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 import gcLogo from '@/assets/gc-icon.png';
 
-const items = [
+const mainItems = [
   { title: 'Dashboard', url: '/admin', icon: LayoutDashboard },
-  { title: 'Contact Forms', url: '/admin/contacts', icon: FileText },
+  { title: 'Contact Forms', url: '/admin/contacts', icon: FileText, badge: 'Email Status' },
   { title: 'Job Applications', url: '/admin/jobs', icon: Briefcase },
   { title: 'Download Leads', url: '/admin/downloads', icon: Download },
+];
+
+const analyticsItems = [
+  { title: 'Website Analytics', url: '/admin', icon: BarChart3, hint: 'View on Dashboard' },
+];
+
+const quickLinks = [
+  { title: 'View Website', url: '/', icon: Home, external: false },
+  { title: 'Zoho Mail', url: 'https://mail.zoho.com', icon: Mail, external: true },
 ];
 
 export function AdminSidebar() {
@@ -46,15 +57,46 @@ export function AdminSidebar() {
       <SidebarContent className="px-2 py-4">
         <SidebarGroup>
           <SidebarGroupLabel className="text-xs uppercase tracking-wider text-muted-foreground mb-2">
-            Navigation
+            Lead Management
           </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu className="space-y-1">
-              {items.map((item) => (
+              {mainItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton 
                     asChild 
                     isActive={isActive(item.url)}
+                    className="h-10 rounded-lg transition-all duration-200"
+                  >
+                    <Link to={item.url} className="flex items-center gap-3">
+                      <item.icon className="h-4 w-4" />
+                      <span className="font-medium flex-1">{item.title}</span>
+                      {item.badge && (
+                        <Badge variant="outline" className="text-[10px] px-1.5 py-0 h-4 group-data-[collapsible=icon]:hidden">
+                          {item.badge}
+                        </Badge>
+                      )}
+                    </Link>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+
+        <SidebarSeparator className="my-4" />
+
+        <SidebarGroup>
+          <SidebarGroupLabel className="text-xs uppercase tracking-wider text-muted-foreground mb-2">
+            Analytics
+          </SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu className="space-y-1">
+              {analyticsItems.map((item) => (
+                <SidebarMenuItem key={item.title}>
+                  <SidebarMenuButton 
+                    asChild 
+                    isActive={false}
                     className="h-10 rounded-lg transition-all duration-200"
                   >
                     <Link to={item.url} className="flex items-center gap-3">
@@ -67,11 +109,43 @@ export function AdminSidebar() {
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
+
+        <SidebarSeparator className="my-4" />
+
+        <SidebarGroup>
+          <SidebarGroupLabel className="text-xs uppercase tracking-wider text-muted-foreground mb-2">
+            Quick Links
+          </SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu className="space-y-1">
+              {quickLinks.map((item) => (
+                <SidebarMenuItem key={item.title}>
+                  <SidebarMenuButton 
+                    asChild 
+                    className="h-10 rounded-lg transition-all duration-200"
+                  >
+                    {item.external ? (
+                      <a href={item.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
+                        <item.icon className="h-4 w-4" />
+                        <span className="font-medium">{item.title}</span>
+                      </a>
+                    ) : (
+                      <Link to={item.url} className="flex items-center gap-3">
+                        <item.icon className="h-4 w-4" />
+                        <span className="font-medium">{item.title}</span>
+                      </Link>
+                    )}
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
       </SidebarContent>
 
       <SidebarFooter className="p-4 border-t border-border/50">
         <Button 
-          variant="outline" 
+          variant="default" 
           className="w-full justify-start gap-2 group-data-[collapsible=icon]:justify-center group-data-[collapsible=icon]:px-2" 
           asChild
         >
