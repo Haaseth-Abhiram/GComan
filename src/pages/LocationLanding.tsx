@@ -254,7 +254,7 @@ const LocationLanding = () => {
       <WhatsAppButton />
 
       {/* Hero Section */}
-      <section className="pt-28 pb-16 bg-gradient-to-br from-primary/10 via-background to-background">
+      <section className="pt-32 pb-16 bg-gradient-to-br from-primary/10 via-background to-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-2 mb-4">
