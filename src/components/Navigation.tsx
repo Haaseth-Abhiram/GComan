@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, LogOut, User, Shield } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/contexts/AuthContext';
 import { useUserRole } from '@/hooks/useUserRole';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 import logo from '@/assets/global-chemicals-logo-optimized.png';
 
 const Navigation = () => {
@@ -11,19 +13,20 @@ const Navigation = () => {
   const location = useLocation();
   const { user, signOut } = useAuth();
   const { isAdmin } = useUserRole();
+  const { t } = useTranslation();
 
   const navItems = [
-    { label: 'HOME', path: '/' },
-    { label: 'ABOUT', path: '/about' },
-    { label: 'PRODUCTS', path: '/products' },
-    { label: 'INDUSTRIES', path: '/industries' },
-    { label: 'RESOURCES', path: '/resources' },
-    { label: 'CONTACT', path: '/contact' },
+    { label: t('nav.home'), path: '/' },
+    { label: t('nav.about'), path: '/about' },
+    { label: t('nav.products'), path: '/products' },
+    { label: t('nav.industries'), path: '/industries' },
+    { label: t('nav.resources'), path: '/resources' },
+    { label: t('nav.contact'), path: '/contact' },
   ];
 
   const utilityLinks = [
-    { label: 'Customers', path: '/customers' },
-    { label: 'Career', path: '/career' },
+    { label: t('nav.customers'), path: '/customers' },
+    { label: t('nav.careers'), path: '/career' },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -34,6 +37,7 @@ const Navigation = () => {
       <div className="hidden lg:block border-b border-border/50">
         <div className="container mx-auto px-4">
           <div className="flex justify-end items-center h-10 gap-6">
+            <LanguageSwitcher variant="compact" />
             {utilityLinks.map((link) => (
               <Link
                 key={link.path}
@@ -143,6 +147,9 @@ const Navigation = () => {
               </Link>
             ))}
             <div className="pt-4 border-t border-border/50 space-y-2">
+              <div className="py-2">
+                <LanguageSwitcher />
+              </div>
               {utilityLinks.map((link) => (
                 <Link
                   key={link.path}

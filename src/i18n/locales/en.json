@@ -1,0 +1,134 @@
+{
+  "common": {
+    "learnMore": "Learn More",
+    "contactUs": "Contact Us",
+    "getQuote": "Get Quote",
+    "requestQuote": "Request Quote",
+    "viewProducts": "View Products",
+    "viewAll": "View All",
+    "readMore": "Read More",
+    "submit": "Submit",
+    "send": "Send",
+    "call": "Call",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "industries": "Industries",
+    "resources": "Resources",
+    "contact": "Contact",
+    "customers": "Customers",
+    "careers": "Careers",
+    "blog": "Blog"
+  },
+  "hero": {
+    "title": "Your Trusted Chemical Partner in Oman",
+    "subtitle": "Leading B2B Supplier of Specialty & Industrial Chemicals",
+    "description": "ISO 9001 certified chemical supplier serving Oman's industries with quality products, technical expertise, and reliable delivery.",
+    "cta": "Request a Quote",
+    "ctaSecondary": "Explore Products"
+  },
+  "about": {
+    "title": "About Global Chemicals LLC",
+    "subtitle": "Your Trusted Chemical Partner Since 2014",
+    "description": "We are a leading B2B chemical supplier in Oman, providing specialty and industrial chemicals to enterprises across the Sultanate.",
+    "mission": "Our Mission",
+    "missionText": "To be the most reliable and trusted chemical supplier in Oman, delivering quality products with exceptional service.",
+    "vision": "Our Vision",
+    "visionText": "To lead the chemical distribution industry in the GCC region through innovation, sustainability, and customer excellence.",
+    "experience": "Years of Experience",
+    "clients": "Satisfied Clients",
+    "products": "Products Available",
+    "delivery": "On-Time Delivery"
+  },
+  "products": {
+    "title": "Our Products",
+    "subtitle": "Comprehensive Range of Industrial & Specialty Chemicals",
+    "categories": {
+      "waterTreatment": "Water Treatment Chemicals",
+      "oilGas": "Oil & Gas Chemicals",
+      "laboratory": "Laboratory Chemicals",
+      "lubricants": "Industrial Lubricants",
+      "poolChemicals": "Pool & Spa Chemicals",
+      "foodGrade": "Food Grade Chemicals",
+      "construction": "Construction Chemicals",
+      "cleaning": "Cleaning Chemicals"
+    },
+    "viewDetails": "View Details",
+    "requestQuote": "Request Quote",
+    "inStock": "In Stock",
+    "outOfStock": "Out of Stock"
+  },
+  "industries": {
+    "title": "Industries We Serve",
+    "subtitle": "Tailored Chemical Solutions for Every Sector",
+    "oilGas": "Oil & Gas",
+    "waterTreatment": "Water Treatment",
+    "manufacturing": "Manufacturing",
+    "construction": "Construction",
+    "hospitality": "Hospitality",
+    "foodBeverage": "Food & Beverage",
+    "pharmaceutical": "Pharmaceutical",
+    "agriculture": "Agriculture"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in Touch with Our Team",
+    "description": "Have questions or need a quote? Our team is here to help.",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "company": "Company Name",
+      "message": "Message",
+      "submit": "Send Message",
+      "success": "Thank you! We'll get back to you soon.",
+      "error": "Something went wrong. Please try again."
+    },
+    "info": {
+      "address": "Office-3, Building Number 1737, Near Oman LNG, Ghala, Muscat",
+      "phone": "+968-93754388",
+      "email": "info@gcoman.com",
+      "hours": "Sun - Thu: 8:00 AM - 6:00 PM"
+    }
+  },
+  "footer": {
+    "companyName": "Global Chemicals LLC",
+    "description": "Your trusted B2B chemical supplier in Oman. ISO 9001 certified. Serving enterprises with specialty and industrial chemicals.",
+    "quickLinks": "Quick Links",
+    "ourServices": "Our Services",
+    "weDeliverTo": "We Deliver To",
+    "contactInfo": "Contact Info",
+    "newsletter": "Newsletter",
+    "newsletterPlaceholder": "Enter your email",
+    "subscribe": "Subscribe",
+    "copyright": "All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "whatsappCta": "Chat on WhatsApp"
+  },
+  "certifications": {
+    "iso": "ISO 9001 Certified",
+    "jsrs": "JSRS Registered",
+    "icv": "ICV Compliant"
+  },
+  "locations": {
+    "muscat": "Muscat",
+    "sohar": "Sohar",
+    "salalah": "Salalah",
+    "duqm": "Duqm",
+    "rusayl": "Rusayl"
+  },
+  "cta": {
+    "title": "Ready to Get Started?",
+    "subtitle": "Contact us today for competitive pricing and reliable delivery",
+    "button": "Get a Quote"
+  }
+}
