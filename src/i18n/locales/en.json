@@ -159,6 +159,21 @@
   "products": {
     "title": "Our Products",
     "subtitle": "Comprehensive Range of Industrial & Specialty Chemicals",
+    "heroTitle": "Premium Chemical Products for Oman",
+    "heroDesc": "Comprehensive range of water treatment chemicals, industrial lubricants, laboratory chemicals, and specialty products. Serving industries across Muscat, Sohar, Duqm, Salalah, and Rusayl Industrial Area with ISO-certified quality and technical excellence.",
+    "browseDesc": "Global Chemicals LLC specializes in supplying a wide range of high-quality chemicals for various industries. Browse our comprehensive product portfolio by category.",
+    "productCategories": "Product Categories",
+    "allProducts": "All Products",
+    "productsAvailable": "products available",
+    "tapToViewDetails": "Tap any product to view details",
+    "noProductsAvailable": "No products available in this category at the moment.",
+    "cantFind": "Can't find what you're looking for?",
+    "contactForCustom": "Contact us for custom solutions.",
+    "chemicalFormula": "Chemical Formula",
+    "description": "Description",
+    "applications": "Applications",
+    "technicalSpecs": "Technical Specifications",
+    "moreInfoContact": "For more information about this product, pricing, or technical specifications, please",
     "categories": {
       "waterTreatment": "Water Treatment Chemicals",
       "oilGas": "Oil & Gas Chemicals",
@@ -168,6 +183,12 @@
       "foodGrade": "Food Grade Chemicals",
       "construction": "Construction Chemicals",
       "cleaning": "Cleaning Chemicals"
+    },
+    "badges": {
+      "isoCertified": "ISO 9001 Certified",
+      "yearsExperience": "10+ Years Experience",
+      "productsCount": "1000+ Products",
+      "technicalSupport": "Technical Support"
     },
     "viewDetails": "View Details",
     "requestQuote": "Request Quote",
