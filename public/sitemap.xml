@@ -63,6 +63,38 @@
     <priority>0.3</priority>
   </url>
 
+  <!-- Industry Guides -->
+  <url>
+    <loc>https://www.gcoman.com/resources#water-treatment-guide-oman</loc>
+    <lastmod>2024-12-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.gcoman.com/resources#industrial-lubricants-guide-oman</loc>
+    <lastmod>2024-12-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.gcoman.com/resources#swimming-pool-chemicals-guide-oman</loc>
+    <lastmod>2024-12-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.gcoman.com/resources#laboratory-chemicals-guide-oman</loc>
+    <lastmod>2024-12-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.gcoman.com/resources#oil-gas-chemicals-guide-oman</loc>
+    <lastmod>2024-12-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Legal Pages -->
   <url>
     <loc>https://www.gcoman.com/privacy</loc>
