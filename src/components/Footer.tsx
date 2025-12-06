@@ -85,11 +85,11 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4 text-white">We Deliver To</h3>
             <ul className="space-y-2">
               {[
-                { label: 'Muscat', path: '/chemicals-muscat' },
-                { label: 'Sohar', path: '/chemicals-sohar' },
-                { label: 'Salalah', path: '/chemicals-salalah' },
-                { label: 'Duqm', path: '/chemicals-duqm' },
-                { label: 'Rusayl', path: '/chemicals-rusayl' },
+                { label: 'Muscat', path: '/chemicals/muscat' },
+                { label: 'Sohar', path: '/chemicals/sohar' },
+                { label: 'Salalah', path: '/chemicals/salalah' },
+                { label: 'Duqm', path: '/chemicals/duqm' },
+                { label: 'Rusayl', path: '/chemicals/rusayl' },
               ].map((item) => (
                 <li key={item.label}>
                   <Link to={item.path} className="text-white/80 hover:text-primary transition-colors text-sm inline-block hover:translate-x-1 transition-all">

@@ -70,7 +70,7 @@ const App = () => (
                 <Route path="/terms" element={<Terms />} />
                 <Route path="/sitemap" element={<Sitemap />} />
                 {/* Location-specific landing pages for SEO */}
-                <Route path="/chemicals-:location" element={<LocationLanding />} />
+                <Route path="/chemicals/:location" element={<LocationLanding />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
