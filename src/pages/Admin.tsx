@@ -6,13 +6,14 @@ import { AdminSidebar } from '@/components/admin/AdminSidebar';
 import { ContactSubmissionsTable } from '@/components/admin/ContactSubmissionsTable';
 import { JobApplicationsTable } from '@/components/admin/JobApplicationsTable';
 import { DownloadLeadsTable } from '@/components/admin/DownloadLeadsTable';
+import { AnalyticsDialog } from '@/components/admin/AnalyticsDialog';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { 
   Loader2, FileText, Briefcase, Download, TrendingUp, Users, Eye, 
   ArrowUpRight, ArrowDownRight, RefreshCw, Calendar, Clock, Globe,
-  BarChart3, Activity, MousePointerClick, Timer
+  BarChart3, Activity, MousePointerClick, Timer, ExternalLink
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { supabase } from '@/integrations/supabase/client';
@@ -68,6 +69,13 @@ const AdminOverview = () => {
   
   const [isLoading, setIsLoading] = useState(true);
   const [lastUpdated, setLastUpdated] = useState<Date>(new Date());
+  const [analyticsDialogOpen, setAnalyticsDialogOpen] = useState(false);
+  const [analyticsDialogType, setAnalyticsDialogType] = useState<'visitors' | 'pageviews' | 'bounce' | 'conversion'>('visitors');
+
+  const openAnalyticsDialog = (type: 'visitors' | 'pageviews' | 'bounce' | 'conversion') => {
+    setAnalyticsDialogType(type);
+    setAnalyticsDialogOpen(true);
+  };
 
   const fetchStats = async () => {
     setIsLoading(true);
@@ -179,17 +187,21 @@ const AdminOverview = () => {
         </Button>
       </div>
 
-      {/* Primary Stats - Website Analytics */}
+      {/* Primary Stats - Website Analytics (Clickable) */}
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-        <Card className="relative overflow-hidden">
+        <Card 
+          className="relative overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-200 hover:scale-[1.02]"
+          onClick={() => openAnalyticsDialog('visitors')}
+        >
           <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent" />
           <CardContent className="p-6 relative">
             <div className="flex items-center justify-between mb-3">
               <div className="p-2.5 bg-blue-500/10 rounded-lg">
                 <Users className="h-5 w-5 text-blue-600" />
               </div>
-              <Badge variant="secondary" className="bg-blue-100 text-blue-700 text-xs">
+              <Badge variant="secondary" className="bg-blue-100 text-blue-700 text-xs flex items-center gap-1">
                 Last 30 days
+                <ExternalLink className="h-2.5 w-2.5" />
               </Badge>
             </div>
             <p className="text-sm font-medium text-muted-foreground">Total Visitors</p>
@@ -201,15 +213,19 @@ const AdminOverview = () => {
           </CardContent>
         </Card>
 
-        <Card className="relative overflow-hidden">
+        <Card 
+          className="relative overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-200 hover:scale-[1.02]"
+          onClick={() => openAnalyticsDialog('pageviews')}
+        >
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent" />
           <CardContent className="p-6 relative">
             <div className="flex items-center justify-between mb-3">
               <div className="p-2.5 bg-purple-500/10 rounded-lg">
                 <Eye className="h-5 w-5 text-purple-600" />
               </div>
-              <Badge variant="secondary" className="bg-purple-100 text-purple-700 text-xs">
+              <Badge variant="secondary" className="bg-purple-100 text-purple-700 text-xs flex items-center gap-1">
                 Last 30 days
+                <ExternalLink className="h-2.5 w-2.5" />
               </Badge>
             </div>
             <p className="text-sm font-medium text-muted-foreground">Page Views</p>
@@ -221,15 +237,19 @@ const AdminOverview = () => {
           </CardContent>
         </Card>
 
-        <Card className="relative overflow-hidden">
+        <Card 
+          className="relative overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-200 hover:scale-[1.02]"
+          onClick={() => openAnalyticsDialog('bounce')}
+        >
           <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 to-transparent" />
           <CardContent className="p-6 relative">
             <div className="flex items-center justify-between mb-3">
               <div className="p-2.5 bg-amber-500/10 rounded-lg">
                 <MousePointerClick className="h-5 w-5 text-amber-600" />
               </div>
-              <Badge variant="secondary" className="bg-amber-100 text-amber-700 text-xs">
+              <Badge variant="secondary" className="bg-amber-100 text-amber-700 text-xs flex items-center gap-1">
                 Avg Rate
+                <ExternalLink className="h-2.5 w-2.5" />
               </Badge>
             </div>
             <p className="text-sm font-medium text-muted-foreground">Bounce Rate</p>
@@ -241,15 +261,19 @@ const AdminOverview = () => {
           </CardContent>
         </Card>
 
-        <Card className="relative overflow-hidden">
+        <Card 
+          className="relative overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-200 hover:scale-[1.02]"
+          onClick={() => openAnalyticsDialog('conversion')}
+        >
           <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-transparent" />
           <CardContent className="p-6 relative">
             <div className="flex items-center justify-between mb-3">
               <div className="p-2.5 bg-green-500/10 rounded-lg">
                 <TrendingUp className="h-5 w-5 text-green-600" />
               </div>
-              <Badge variant="secondary" className="bg-green-100 text-green-700 text-xs">
+              <Badge variant="secondary" className="bg-green-100 text-green-700 text-xs flex items-center gap-1">
                 All Time
+                <ExternalLink className="h-2.5 w-2.5" />
               </Badge>
             </div>
             <p className="text-sm font-medium text-muted-foreground">Conversion Rate</p>
@@ -260,6 +284,15 @@ const AdminOverview = () => {
           </CardContent>
         </Card>
       </div>
+
+      {/* Analytics Deep Dive Dialog */}
+      <AnalyticsDialog 
+        open={analyticsDialogOpen}
+        onOpenChange={setAnalyticsDialogOpen}
+        type={analyticsDialogType}
+        analyticsData={analytics}
+        totalLeads={totalLeads}
+      />
 
       {/* Lead Stats Cards */}
       <div className="grid gap-4 md:grid-cols-3">

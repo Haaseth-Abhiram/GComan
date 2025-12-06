@@ -41,6 +41,85 @@ async function checkRateLimit(supabase: any, ipAddress: string): Promise<boolean
   return (data?.length || 0) < 5;
 }
 
+// Send email notification and update database
+async function sendEmailNotification(
+  supabase: any,
+  submissionId: string,
+  sanitizedData: any,
+  ipAddress: string
+): Promise<void> {
+  try {
+    const client = new SMTPClient({
+      connection: {
+        hostname: Deno.env.get("ZOHO_SMTP_HOST") || "smtppro.zoho.com",
+        port: parseInt(Deno.env.get("ZOHO_SMTP_PORT") || "465"),
+        tls: true,
+        auth: {
+          username: Deno.env.get("ZOHO_SMTP_USER") || "",
+          password: Deno.env.get("ZOHO_SMTP_PASSWORD") || "",
+        },
+      },
+    });
+
+    await client.send({
+      from: Deno.env.get("ZOHO_SMTP_USER") || "sales@gcoman.com",
+      to: "sales@gcoman.com",
+      subject: `New Contact Form Submission: ${sanitizedData.subject}`,
+      content: `
+New contact form submission received:
+
+Name: ${sanitizedData.name}
+Email: ${sanitizedData.email}
+Phone: ${sanitizedData.phone || "Not provided"}
+Company: ${sanitizedData.company || "Not provided"}
+Subject: ${sanitizedData.subject}
+
+Message:
+${sanitizedData.message}
+
+---
+Submitted at: ${new Date().toLocaleString()}
+IP Address: ${ipAddress}
+      `,
+    });
+
+    await client.close();
+    console.log("Email notification sent successfully to sales@gcoman.com");
+
+    // Update database to mark email as sent
+    const { error: updateError } = await supabase
+      .from('contact_submissions')
+      .update({ 
+        email_sent: true, 
+        email_sent_at: new Date().toISOString(),
+        email_error: null 
+      })
+      .eq('id', submissionId);
+
+    if (updateError) {
+      console.error("Failed to update email status:", updateError);
+    } else {
+      console.log("Email status updated successfully for submission:", submissionId);
+    }
+  } catch (emailError: unknown) {
+    console.error("Failed to send email notification:", emailError);
+    
+    // Update database with error
+    const errorMessage = emailError instanceof Error ? emailError.message : 'Unknown email error';
+    const { error: updateError } = await supabase
+      .from('contact_submissions')
+      .update({ 
+        email_sent: false, 
+        email_error: errorMessage
+      })
+      .eq('id', submissionId);
+
+    if (updateError) {
+      console.error("Failed to update email error status:", updateError);
+    }
+  }
+}
+
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
@@ -148,6 +227,7 @@ serve(async (req) => {
       subject: sanitizeInput(subject),
       message: sanitizeInput(message),
       ip_address: ipAddress,
+      email_sent: false,
     };
 
     console.log('Inserting contact submission:', { ...sanitizedData, ip_address: '[REDACTED]' });
@@ -175,49 +255,9 @@ serve(async (req) => {
 
     console.log('Contact submission successful:', data.id);
 
-    // Send email notification asynchronously (fire and forget, don't block response)
-    (async () => {
-      try {
-        const client = new SMTPClient({
-          connection: {
-            hostname: Deno.env.get("ZOHO_SMTP_HOST") || "smtppro.zoho.com",
-            port: parseInt(Deno.env.get("ZOHO_SMTP_PORT") || "465"),
-            tls: true,
-            auth: {
-              username: Deno.env.get("ZOHO_SMTP_USER") || "",
-              password: Deno.env.get("ZOHO_SMTP_PASSWORD") || "",
-            },
-          },
-        });
-
-        await client.send({
-          from: Deno.env.get("ZOHO_SMTP_USER") || "sales@gcoman.com",
-          to: "sales@gcoman.com",
-          subject: `New Contact Form Submission: ${sanitizedData.subject}`,
-          content: `
-New contact form submission received:
-
-Name: ${sanitizedData.name}
-Email: ${sanitizedData.email}
-Phone: ${sanitizedData.phone || "Not provided"}
-Company: ${sanitizedData.company || "Not provided"}
-Subject: ${sanitizedData.subject}
-
-Message:
-${sanitizedData.message}
-
----
-Submitted at: ${new Date().toLocaleString()}
-IP Address: ${ipAddress}
-          `,
-        });
-
-        await client.close();
-        console.log("Email notification sent successfully to sales@gcoman.com");
-      } catch (emailError) {
-        console.error("Failed to send email notification:", emailError);
-      }
-    })();
+    // Send email notification asynchronously (fire and forget)
+    sendEmailNotification(supabase, data.id, sanitizedData, ipAddress)
+      .catch((err) => console.error('Background email task failed:', err));
 
     return new Response(
       JSON.stringify({ 

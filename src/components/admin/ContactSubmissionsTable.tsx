@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
-import { Tables } from '@/integrations/supabase/types';
 import {
   Table,
   TableBody,
@@ -13,10 +12,24 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { format } from 'date-fns';
-import { Loader2, Eye } from 'lucide-react';
+import { Loader2, Eye, Mail, MailCheck, MailX, AlertCircle } from 'lucide-react';
 
-type ContactSubmission = Tables<'contact_submissions'>;
+interface ContactSubmission {
+  id: string;
+  name: string;
+  email: string;
+  phone: string | null;
+  company: string | null;
+  subject: string;
+  message: string;
+  created_at: string;
+  synced_to_zoho: boolean | null;
+  email_sent: boolean | null;
+  email_sent_at: string | null;
+  email_error: string | null;
+}
 
 export const ContactSubmissionsTable = () => {
   const [submissions, setSubmissions] = useState<ContactSubmission[]>([]);
@@ -35,11 +48,54 @@ export const ContactSubmissionsTable = () => {
         .order('created_at', { ascending: false });
 
       if (error) throw error;
-      setSubmissions(data || []);
+      setSubmissions((data as ContactSubmission[]) || []);
     } catch (error) {
       console.error('Error fetching contact submissions:', error);
     } finally {
       setIsLoading(false);
+    }
+  };
+
+  const getEmailStatusBadge = (submission: ContactSubmission) => {
+    if (submission.email_sent === true) {
+      return (
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Badge variant="default" className="bg-green-100 text-green-700 border-green-200 gap-1">
+                <MailCheck className="h-3 w-3" />
+                Sent
+              </Badge>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Email sent at {submission.email_sent_at ? format(new Date(submission.email_sent_at), 'MMM d, yyyy h:mm a') : 'Unknown'}</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+      );
+    } else if (submission.email_sent === false && submission.email_error) {
+      return (
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Badge variant="destructive" className="gap-1">
+                <MailX className="h-3 w-3" />
+                Failed
+              </Badge>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p className="max-w-xs">{submission.email_error}</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+      );
+    } else {
+      return (
+        <Badge variant="secondary" className="gap-1">
+          <Mail className="h-3 w-3" />
+          Pending
+        </Badge>
+      );
     }
   };
 
@@ -55,11 +111,29 @@ export const ContactSubmissionsTable = () => {
     <>
       <Card>
         <CardHeader>
-          <CardTitle>Contact Submissions</CardTitle>
-          <CardDescription>All contact form submissions from your website</CardDescription>
+          <div className="flex items-center justify-between">
+            <div>
+              <CardTitle>Contact Submissions</CardTitle>
+              <CardDescription>All contact form submissions from your website with email notification status</CardDescription>
+            </div>
+            <div className="flex items-center gap-2 text-xs text-muted-foreground">
+              <div className="flex items-center gap-1">
+                <MailCheck className="h-3 w-3 text-green-600" />
+                <span>Email Sent</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <MailX className="h-3 w-3 text-destructive" />
+                <span>Failed</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <Mail className="h-3 w-3 text-muted-foreground" />
+                <span>Pending</span>
+              </div>
+            </div>
+          </div>
         </CardHeader>
         <CardContent>
-          <div className="rounded-md border">
+          <div className="rounded-md border overflow-x-auto">
             <Table>
               <TableHeader>
                 <TableRow>
@@ -69,8 +143,8 @@ export const ContactSubmissionsTable = () => {
                   <TableHead>Phone</TableHead>
                   <TableHead>Company</TableHead>
                   <TableHead>Subject</TableHead>
-                  <TableHead>Message</TableHead>
-                  <TableHead>Zoho</TableHead>
+                  <TableHead>Email Status</TableHead>
+                  <TableHead>Action</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -86,11 +160,14 @@ export const ContactSubmissionsTable = () => {
                       <TableCell className="whitespace-nowrap">
                         {format(new Date(submission.created_at), 'MMM d, yyyy')}
                       </TableCell>
-                      <TableCell>{submission.name}</TableCell>
+                      <TableCell className="font-medium">{submission.name}</TableCell>
                       <TableCell>{submission.email}</TableCell>
                       <TableCell>{submission.phone || '-'}</TableCell>
                       <TableCell>{submission.company || '-'}</TableCell>
-                      <TableCell className="max-w-xs truncate">{submission.subject}</TableCell>
+                      <TableCell className="max-w-[150px] truncate">{submission.subject}</TableCell>
+                      <TableCell>
+                        {getEmailStatusBadge(submission)}
+                      </TableCell>
                       <TableCell>
                         <Button
                           variant="outline"
@@ -100,11 +177,6 @@ export const ContactSubmissionsTable = () => {
                           <Eye className="h-4 w-4 mr-1" />
                           View
                         </Button>
-                      </TableCell>
-                      <TableCell>
-                        <Badge variant={submission.synced_to_zoho ? 'default' : 'secondary'}>
-                          {submission.synced_to_zoho ? 'Synced' : 'Pending'}
-                        </Badge>
                       </TableCell>
                     </TableRow>
                   ))
@@ -120,7 +192,7 @@ export const ContactSubmissionsTable = () => {
           <DialogHeader>
             <DialogTitle>Contact Submission Details</DialogTitle>
             <DialogDescription>
-              From {selectedSubmission?.name} on {selectedSubmission && format(new Date(selectedSubmission.created_at), 'MMMM d, yyyy')}
+              From {selectedSubmission?.name} on {selectedSubmission && format(new Date(selectedSubmission.created_at), 'MMMM d, yyyy h:mm a')}
             </DialogDescription>
           </DialogHeader>
           {selectedSubmission && (
@@ -152,6 +224,25 @@ export const ContactSubmissionsTable = () => {
                 <div className="bg-muted/50 rounded-md p-4">
                   <p className="text-sm whitespace-pre-wrap">{selectedSubmission.message}</p>
                 </div>
+              </div>
+              
+              {/* Email Status Section */}
+              <div className="border-t pt-4">
+                <p className="text-sm font-medium text-muted-foreground mb-2">Email Notification Status</p>
+                <div className="flex items-center gap-3">
+                  {getEmailStatusBadge(selectedSubmission)}
+                  {selectedSubmission.email_sent_at && (
+                    <span className="text-xs text-muted-foreground">
+                      Sent at {format(new Date(selectedSubmission.email_sent_at), 'MMM d, yyyy h:mm a')}
+                    </span>
+                  )}
+                </div>
+                {selectedSubmission.email_error && (
+                  <div className="mt-2 p-2 bg-destructive/10 rounded-md flex items-start gap-2">
+                    <AlertCircle className="h-4 w-4 text-destructive mt-0.5" />
+                    <p className="text-xs text-destructive">{selectedSubmission.email_error}</p>
+                  </div>
+                )}
               </div>
             </div>
           )}
