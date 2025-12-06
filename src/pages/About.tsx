@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -17,33 +18,35 @@ const breadcrumbItems = [
 ];
 
 const About = () => {
+  const { t } = useTranslation();
+
   const stats = [
-    { icon: Award, value: '10+', label: 'Years of Excellence', color: 'text-primary' },
-    { icon: Factory, value: '1000+', label: 'Quality Products', color: 'text-secondary' },
-    { icon: Users, value: '200+', label: 'Trusted Clients', color: 'text-primary' },
-    { icon: Globe2, value: '98%', label: 'Customer Satisfaction', color: 'text-secondary' },
+    { icon: Award, value: '10+', label: t('home.statsYears'), color: 'text-primary' },
+    { icon: Factory, value: '1000+', label: t('home.statsProducts'), color: 'text-secondary' },
+    { icon: Users, value: '200+', label: t('home.statsClients'), color: 'text-primary' },
+    { icon: Globe2, value: '98%', label: t('home.statsSatisfaction'), color: 'text-secondary' },
   ];
 
   const values = [
     {
       icon: Shield,
-      title: 'Quality Assurance',
-      description: 'ISO 9001 certified with rigorous testing and quality control ensuring reliability and excellence in every product.',
+      title: t('about.qualityAssurance'),
+      description: t('about.qualityAssuranceDesc'),
     },
     {
       icon: Lightbulb,
-      title: 'Innovation',
-      description: 'Cutting-edge research and development delivering innovative chemical solutions for evolving industry needs.',
+      title: t('about.innovation'),
+      description: t('about.innovationDesc'),
     },
     {
       icon: Leaf,
-      title: 'Sustainability',
-      description: 'Committed to eco-friendly practices and products that protect our environment for future generations.',
+      title: t('about.sustainability'),
+      description: t('about.sustainabilityDesc'),
     },
     {
       icon: Heart,
-      title: 'Customer Focus',
-      description: 'Personalized service and tailored solutions that exceed expectations and drive your success.',
+      title: t('about.customerFocus'),
+      description: t('about.customerFocusDesc'),
     },
   ];
 
@@ -77,12 +80,12 @@ const About = () => {
 
         <div className="relative z-10 container mx-auto px-4 pt-32 pb-20">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
-            <Badge className="mb-4 sm:mb-6 text-sm sm:text-base px-4 sm:px-6 py-1.5 sm:py-2">About Global Chemicals LLC</Badge>
+            <Badge className="mb-4 sm:mb-6 text-sm sm:text-base px-4 sm:px-6 py-1.5 sm:py-2">{t('about.title')}</Badge>
             <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight px-4">
-              Leading the Chemical Industry with Excellence
+              {t('about.heroTitle')}
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed px-4">
-              10+ years of delivering high-quality specialty chemicals and innovative solutions to industries across Oman
+              {t('about.heroSubtitle')}
             </p>
           </div>
         </div>
@@ -90,7 +93,7 @@ const About = () => {
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
           <div className="flex flex-col items-center gap-2 text-white/60">
-            <span className="text-xs uppercase tracking-wider">Discover Our Story</span>
+            <span className="text-xs uppercase tracking-wider">{t('about.discoverStory')}</span>
             <div className="w-6 h-10 border-2 border-white/40 rounded-full flex items-start justify-center p-2">
               <div className="w-1 h-3 bg-white/60 rounded-full animate-pulse" />
             </div>
@@ -132,23 +135,21 @@ const About = () => {
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6 animate-fade-in">
-                <Badge variant="outline" className="text-primary border-primary/30">Who We Are</Badge>
+                <Badge variant="outline" className="text-primary border-primary/30">{t('about.whoWeAre')}</Badge>
                 <h2 className="text-4xl md:text-5xl font-bold text-foreground leading-tight">
-                  Your Trusted Partner in Chemical Solutions
+                  {t('about.trustedPartner')}
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Global Chemicals LLC is a leading provider of specialty chemicals in Oman, delivering high-quality products 
-                  and innovative solutions across diverse industries. With ISO 9001 certification and 10+ years of expertise, 
-                  we combine technical excellence with personalized service to be your trusted chemical supply partner.
+                  {t('about.whoWeAreText')}
                 </p>
-                <div className="flex gap-4 pt-4">
+                <div className="flex flex-wrap gap-4 pt-4">
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-5 h-5 text-primary" />
-                    <span className="text-foreground font-medium">ISO 9001 Certified</span>
+                    <span className="text-foreground font-medium">{t('about.isoCertified')}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-5 h-5 text-primary" />
-                    <span className="text-foreground font-medium">10+ Years Experience</span>
+                    <span className="text-foreground font-medium">{t('about.yearsExperience')}</span>
                   </div>
                 </div>
               </div>
@@ -173,12 +174,12 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16 animate-fade-in">
-              <Badge variant="outline" className="text-primary border-primary/30 mb-4">Our Purpose</Badge>
+              <Badge variant="outline" className="text-primary border-primary/30 mb-4">{t('about.ourPurpose')}</Badge>
               <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-                Mission & Vision
+                {t('about.missionVision')}
               </h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Driving excellence and innovation in the chemical industry
+                {t('about.drivingExcellence')}
               </p>
             </div>
 
@@ -188,11 +189,10 @@ const About = () => {
                   <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
                     <Target className="w-8 h-8 text-primary" />
                   </div>
-                  <h3 className="text-3xl font-bold text-foreground">Our Mission</h3>
+                  <h3 className="text-3xl font-bold text-foreground">{t('about.mission')}</h3>
                 </div>
                 <p className="text-muted-foreground leading-relaxed text-lg">
-                  To deliver exceptional chemical solutions through high-quality products, personalized service, and 
-                  innovative practices while fostering sustainable partnerships that drive customer success.
+                  {t('about.missionText')}
                 </p>
               </Card>
 
@@ -201,11 +201,10 @@ const About = () => {
                   <div className="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center">
                     <Eye className="w-8 h-8 text-secondary" />
                   </div>
-                  <h3 className="text-3xl font-bold text-foreground">Our Vision</h3>
+                  <h3 className="text-3xl font-bold text-foreground">{t('about.vision')}</h3>
                 </div>
                 <p className="text-muted-foreground leading-relaxed text-lg">
-                  To be recognized as the leading chemical supplier in the region, setting industry standards for 
-                  excellence, innovation, and environmental responsibility.
+                  {t('about.visionText')}
                 </p>
               </Card>
             </div>
@@ -218,10 +217,10 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16 animate-fade-in">
-              <Badge variant="outline" className="text-primary border-primary/30 mb-4">What Drives Us</Badge>
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Our Core Values</h2>
+              <Badge variant="outline" className="text-primary border-primary/30 mb-4">{t('about.whatDrivesUs')}</Badge>
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">{t('about.coreValues')}</h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Our commitment to excellence, sustainability, and customer satisfaction drives everything we do
+                {t('about.coreValuesDesc')}
               </p>
             </div>
 
@@ -263,22 +262,20 @@ const About = () => {
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                  <div className="absolute bottom-6 left-6 right-6">
-                    <p className="text-white font-semibold text-lg">Expert Team</p>
-                    <p className="text-white/80 text-sm">Dedicated professionals committed to your success</p>
+                  <div className="absolute bottom-6 ltr:left-6 ltr:right-6 rtl:right-6 rtl:left-6">
+                    <p className="text-white font-semibold text-lg">{t('about.expertTeam')}</p>
+                    <p className="text-white/80 text-sm">{t('about.dedicatedProfessionals')}</p>
                   </div>
                 </div>
               </div>
 
               <div className="space-y-6 animate-fade-in order-1 lg:order-2" style={{ animationDelay: '0.2s' }}>
-                <Badge variant="outline" className="text-primary border-primary/30">Our People</Badge>
+                <Badge variant="outline" className="text-primary border-primary/30">{t('about.ourPeople')}</Badge>
                 <h2 className="text-4xl md:text-5xl font-bold text-foreground leading-tight">
-                  Meet the Team Behind Our Success
+                  {t('about.meetTeam')}
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Our team of chemical engineers, technical experts, and customer service professionals combines 
-                  decades of industry knowledge with a commitment to excellence. We provide expert technical guidance, 
-                  24/7 support, and deep understanding of industry-specific requirements to ensure your success.
+                  {t('about.teamDesc')}
                 </p>
               </div>
             </div>
@@ -291,23 +288,23 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Ready to Partner With Us?
+              {t('about.readyToPartner')}
             </h2>
             <p className="text-lg text-muted-foreground mb-6">
-              Join 200+ satisfied clients in Oman and the region
+              {t('about.joinClients')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-105"
               >
-                Get in Touch
+                {t('about.getInTouch')}
               </a>
               <a
                 href="/products"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white hover:bg-white/90 text-secondary font-semibold rounded-lg border-2 border-secondary shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
               >
-                Explore Our Products
+                {t('about.exploreProducts')}
               </a>
             </div>
           </div>
