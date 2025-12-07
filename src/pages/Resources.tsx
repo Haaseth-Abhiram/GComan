@@ -30,7 +30,9 @@ import {
   AlertTriangle,
   Lightbulb,
   ThermometerSun,
-  Shield
+  Shield,
+  Phone,
+  MessageSquare
 } from 'lucide-react';
 import BrochureGlobal from '@/assets/brochures/Global-Chemicals-LLC-Brochure.pdf';
 import BrochureCDC from '@/assets/brochures/CDC-Anti-Clog-Brochure.pdf';
@@ -763,6 +765,66 @@ const Resources = () => {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="pl-12 h-14 text-lg"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Links Section - Visible immediately */}
+      <section className="py-6 bg-muted/30 border-y border-border">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <Link
+                to="/products"
+                className="flex items-center gap-3 p-4 bg-background rounded-lg border border-border hover:border-primary hover:shadow-md transition-all group"
+              >
+                <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
+                  <Beaker className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <span className="font-semibold text-sm">Products</span>
+                  <p className="text-xs text-muted-foreground">Browse catalog</p>
+                </div>
+              </Link>
+              <Link
+                to="/blog"
+                className="flex items-center gap-3 p-4 bg-background rounded-lg border border-border hover:border-primary hover:shadow-md transition-all group"
+              >
+                <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
+                  <Tag className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <span className="font-semibold text-sm">Blog</span>
+                  <p className="text-xs text-muted-foreground">News & updates</p>
+                </div>
+              </Link>
+              <Link
+                to="/contact"
+                className="flex items-center gap-3 p-4 bg-background rounded-lg border border-border hover:border-primary hover:shadow-md transition-all group"
+              >
+                <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
+                  <Phone className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <span className="font-semibold text-sm">Contact</span>
+                  <p className="text-xs text-muted-foreground">Get in touch</p>
+                </div>
+              </Link>
+              <a
+                href="https://wa.me/96893754388"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 p-4 bg-background rounded-lg border border-border hover:border-green-500 hover:shadow-md transition-all group"
+              >
+                <div className="p-2 bg-green-500/10 rounded-lg group-hover:bg-green-500/20 transition-colors">
+                  <MessageSquare className="h-5 w-5 text-green-600" />
+                </div>
+                <div>
+                  <span className="font-semibold text-sm">WhatsApp</span>
+                  <p className="text-xs text-muted-foreground">Quick support</p>
+                </div>
+              </a>
             </div>
           </div>
         </div>
