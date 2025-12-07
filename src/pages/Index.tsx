@@ -9,7 +9,7 @@ import IndustrySelector from '@/components/IndustrySelector';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import QuickActions from '@/components/QuickActions';
 import { SEO } from '@/components/SEO';
-import { OrganizationStructuredData, FAQStructuredData } from '@/components/StructuredData';
+import { OrganizationStructuredData, FAQStructuredData, LocalBusinessStructuredData } from '@/components/StructuredData';
 
 // Homepage FAQs for rich snippets
 const homepageFAQs = [
@@ -48,6 +48,7 @@ const Index = () => {
         canonical="https://www.gcoman.com/"
       />
       <OrganizationStructuredData includeService={true} />
+      <LocalBusinessStructuredData />
       <FAQStructuredData faqs={homepageFAQs} />
       <Navigation />
       <WhatsAppButton />

@@ -38,7 +38,8 @@ import BrochureProducts from '@/assets/brochures/Global-Chemicals-Products-Broch
 import BrochureProductsList from '@/assets/brochures/Global-Chemicals-Products-List.pdf';
 import { DownloadGateDialog } from '@/components/DownloadGateDialog';
 import { SEO } from '@/components/SEO';
-import { HowToStructuredData, BreadcrumbStructuredData, ArticleStructuredData, FAQStructuredData } from '@/components/StructuredData';
+import { HowToStructuredData, BreadcrumbStructuredData, ArticleStructuredData, FAQStructuredData, LocalBusinessStructuredData } from '@/components/StructuredData';
+import { Link } from 'react-router-dom';
 
 // Breadcrumb items
 const breadcrumbItems = [
@@ -737,6 +738,7 @@ const Resources = () => {
         totalTime="PT5M"
       />
       <BreadcrumbStructuredData items={breadcrumbItems} />
+      <LocalBusinessStructuredData />
       <Navigation />
       <WhatsAppButton />
 
@@ -880,6 +882,20 @@ const Resources = () => {
                       </div>
                     </div>
                   </div>
+
+                  {/* Cross-Link to Blog */}
+                  <div className="mt-8 bg-primary/5 rounded-lg p-6 sm:p-8 text-center">
+                    <h3 className="text-xl font-bold mb-3">Latest Industry News & Updates</h3>
+                    <p className="text-muted-foreground mb-4 max-w-2xl mx-auto">
+                      Stay informed with the latest chemical industry news, product updates, and technical insights for Oman's industries.
+                    </p>
+                    <Button asChild>
+                      <Link to="/blog">
+                        Visit Our Blog
+                        <ChevronRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                  </div>
                 </>
               ) : (
                 /* Selected Guide Full View */
@@ -985,16 +1001,31 @@ const Resources = () => {
                   {selectedGuide.keyProducts && selectedGuide.keyProducts.length > 0 && (
                     <section className="mt-10 p-6 bg-muted/50 rounded-lg">
                       <h2 className="text-xl font-bold mb-4">Related Products from Global Chemicals LLC</h2>
+                      <p className="text-sm text-muted-foreground mb-4">Click on any product to explore our catalog:</p>
                       <div className="flex flex-wrap gap-2">
                         {selectedGuide.keyProducts.map((product, index) => (
-                          <Badge key={index} variant="outline" className="text-sm py-1.5 px-3">
-                            {product}
-                          </Badge>
+                          <Link
+                            key={index}
+                            to={`/products?search=${encodeURIComponent(product)}`}
+                            className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-full"
+                          >
+                            <Badge
+                              variant="outline"
+                              className="text-sm py-1.5 px-3 cursor-pointer hover:bg-primary hover:text-primary-foreground transition-colors"
+                            >
+                              {product}
+                            </Badge>
+                          </Link>
                         ))}
                       </div>
-                      <Button className="mt-4" asChild>
-                        <a href="/products">View All Products</a>
-                      </Button>
+                      <div className="mt-4 flex gap-3">
+                        <Button asChild>
+                          <Link to="/products">View All Products</Link>
+                        </Button>
+                        <Button variant="outline" asChild>
+                          <Link to="/contact">Request Quote</Link>
+                        </Button>
+                      </div>
                     </section>
                   )}
 

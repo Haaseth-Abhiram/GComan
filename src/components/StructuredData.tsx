@@ -472,6 +472,111 @@ export const BreadcrumbStructuredData = ({ items }: BreadcrumbStructuredDataProp
   );
 };
 
+// =====================================================
+// LOCAL BUSINESS STRUCTURED DATA (Critical for Oman SEO)
+// =====================================================
+export const LocalBusinessStructuredData = () => {
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "ChemicalSupplier",
+    "@id": "https://www.gcoman.com/#organization",
+    "name": "Global Chemicals LLC",
+    "alternateName": ["Global Chemicals Oman", "GCOMAN", "Global Chemicals Muscat"],
+    "description": "Leading industrial and specialty chemical supplier in Oman. Providing water treatment chemicals, industrial lubricants, laboratory chemicals, and oilfield chemicals to industries across Muscat, Sohar, Duqm, and Salalah.",
+    "url": "https://www.gcoman.com",
+    "telephone": "+968-93754388",
+    "email": "sales@gcoman.com",
+    "logo": "https://www.gcoman.com/logo.png",
+    "image": "https://www.gcoman.com/og-image.jpg",
+    "priceRange": "$$",
+    "currenciesAccepted": "OMR",
+    "paymentAccepted": ["Cash", "Bank Transfer", "Credit Card"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Office-3, Building Number 1737, Near Oman LNG",
+      "addressLocality": "Muscat",
+      "addressRegion": "Muscat Governorate",
+      "postalCode": "100",
+      "addressCountry": "OM"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "23.5880",
+      "longitude": "58.3829"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
+        "opens": "08:00",
+        "closes": "17:00"
+      }
+    ],
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Muscat",
+        "sameAs": "https://en.wikipedia.org/wiki/Muscat,_Oman"
+      },
+      {
+        "@type": "City",
+        "name": "Sohar",
+        "sameAs": "https://en.wikipedia.org/wiki/Sohar"
+      },
+      {
+        "@type": "City",
+        "name": "Duqm",
+        "sameAs": "https://en.wikipedia.org/wiki/Duqm"
+      },
+      {
+        "@type": "City",
+        "name": "Salalah",
+        "sameAs": "https://en.wikipedia.org/wiki/Salalah"
+      },
+      {
+        "@type": "Place",
+        "name": "Rusayl Industrial Area"
+      },
+      {
+        "@type": "Place",
+        "name": "Sohar Industrial Estate"
+      }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Chemical Products Catalog",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Water Treatment Chemicals" }},
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Industrial Lubricants" }},
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Laboratory Chemicals" }},
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Oilfield Chemicals" }},
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Swimming Pool Chemicals" }}
+      ]
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/global-chemicals-llc",
+      "https://www.facebook.com/globalchemicalsoman"
+    ],
+    "knowsAbout": [
+      "Water Treatment",
+      "Industrial Chemicals",
+      "Laboratory Reagents",
+      "Oilfield Chemicals",
+      "Desalination Chemicals",
+      "Swimming Pool Chemicals"
+    ],
+    "slogan": "Your Trusted Chemical Partner in Oman"
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify(localBusinessSchema)}
+      </script>
+    </Helmet>
+  );
+};
+
 interface OrganizationStructuredDataProps {
   includeService?: boolean;
 }

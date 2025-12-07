@@ -2,13 +2,14 @@ import { useState } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
-import { Calendar, Clock, User, Search, ChevronRight, Tag } from 'lucide-react';
+import { Calendar, Clock, User, Search, ChevronRight, Tag, BookOpen, Download } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { SEO } from '@/components/SEO';
-import { BlogListingStructuredData, BreadcrumbStructuredData } from '@/components/StructuredData';
+import { BlogListingStructuredData, BreadcrumbStructuredData, LocalBusinessStructuredData } from '@/components/StructuredData';
 
 // Blog articles - Real content for SEO
 const blogPosts = [
@@ -146,14 +147,15 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Chemical Blog & News | Global Chemicals LLC"
-        description="Chemical industry news, water treatment tips, laboratory best practices & product updates from Global Chemicals LLC Oman experts. Read the latest insights."
-        keywords="chemical industry blog, chemical news Oman, technical guides chemicals, safety best practices, chemical innovations, industry insights, water treatment blog, oil gas chemicals news"
-        ogTitle="Chemical Industry Blog & News | Global Chemicals LLC"
-        ogDescription="Expert insights, industry news, and technical guidance for chemical applications across Oman's key sectors."
+        title="Chemical Industry Blog Oman | News & Guides | Global Chemicals LLC"
+        description="Expert chemical industry insights for Oman: water treatment guides for Muscat desalination plants, industrial lubricant selection for Sohar factories, oil & gas chemical solutions for PDO operations. Trusted technical advice from Oman's leading chemical supplier."
+        keywords="chemical industry blog Oman, water treatment chemicals Muscat, desalination chemicals Oman, industrial lubricants Sohar, oilfield chemicals PDO, chemical safety Oman, laboratory chemicals Muscat, swimming pool chemicals Oman, chemical supplier news Oman, industrial chemicals Salalah, Duqm chemicals, Rusayl industrial chemicals"
+        ogTitle="Chemical Industry Blog & Technical Guides | Global Chemicals LLC Oman"
+        ogDescription="Expert insights on water treatment, lubricants, laboratory chemicals & oilfield solutions for Oman industries. Trusted guidance from Muscat's leading chemical supplier."
         ogUrl="https://www.gcoman.com/blog"
         canonical="https://www.gcoman.com/blog"
       />
+      <LocalBusinessStructuredData />
       <BlogListingStructuredData posts={blogPosts} />
       <BreadcrumbStructuredData items={breadcrumbItems} />
       <Navigation />
@@ -324,6 +326,61 @@ const Blog = () => {
                 </p>
               </div>
             )}
+          </div>
+        </div>
+      </section>
+
+      {/* Cross-Links to Resources */}
+      <section className="py-12 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
+              Explore More Resources
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="p-2 bg-primary/10 rounded-lg">
+                      <BookOpen className="h-6 w-6 text-primary" />
+                    </div>
+                    <CardTitle>Industry Guides</CardTitle>
+                  </div>
+                  <CardDescription>
+                    In-depth technical guides on water treatment, lubricants, laboratory chemicals, and oil & gas production chemicals for Oman industries.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <Button asChild className="w-full">
+                    <Link to="/resources">
+                      Browse Industry Guides
+                      <ChevronRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="p-2 bg-primary/10 rounded-lg">
+                      <Download className="h-6 w-6 text-primary" />
+                    </div>
+                    <CardTitle>Downloads Center</CardTitle>
+                  </div>
+                  <CardDescription>
+                    Download product catalogs, safety data sheets, technical documents, and brochures for Global Chemicals LLC products.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <Button variant="outline" asChild className="w-full">
+                    <Link to="/resources">
+                      Access Downloads
+                      <ChevronRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
