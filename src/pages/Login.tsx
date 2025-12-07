@@ -10,7 +10,7 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } f
 import { useToast } from '@/hooks/use-toast';
 import { Eye, EyeOff, Mail, Lock, ArrowLeft } from 'lucide-react';
 import { z } from 'zod';
-import logo from '@/assets/global-chemicals-logo.png';
+import logo from '@/assets/global-chemicals-logo.svg';
 import { supabase } from '@/integrations/supabase/client';
 
 // Validation schemas
@@ -264,7 +264,6 @@ const Login = () => {
               width={200}
               height={64}
               className="h-16 w-auto"
-              loading="lazy"
             />
             <div>
               <h1 className="text-4xl font-bold text-foreground mb-4">

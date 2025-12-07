@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Youtube, S
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import logo from '@/assets/global-chemicals-logo-optimized.png';
+import logo from '@/assets/global-chemicals-logo.svg';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
