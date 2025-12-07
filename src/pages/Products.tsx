@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
@@ -8049,7 +8049,15 @@ const Products = () => {
     { id: 'alcohols', name: 'Alcohols', icon: FlaskRound },
   ];
 
+  // Memoize filtered products to prevent recalculating on every render
+  const filteredProducts = useMemo(() => {
+    if (activeCategory === 'all') return products;
+    return products.filter((product) => product.category === activeCategory);
+  }, [activeCategory]);
+
+  // Keep getFilteredProducts for backward compatibility with existing code
   const getFilteredProducts = (categoryId: string) => {
+    if (categoryId === activeCategory) return filteredProducts;
     if (categoryId === 'all') return products;
     return products.filter((product) => product.category === categoryId);
   };

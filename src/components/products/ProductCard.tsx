@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { Card } from '@/components/ui/card';
 import { ChevronRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -22,7 +23,7 @@ interface ProductCardProps {
   onClick?: (product: Product) => void;
 }
 
-export const ProductCard = ({ product, onClick }: ProductCardProps) => {
+const ProductCardComponent = ({ product, onClick }: ProductCardProps) => {
   const Icon = product.icon;
   const productUrl = `/products/${product.category}/${product.id}`;
   
@@ -56,3 +57,8 @@ export const ProductCard = ({ product, onClick }: ProductCardProps) => {
     </Link>
   );
 };
+
+// Memoize to prevent unnecessary re-renders when parent components update
+export const ProductCard = memo(ProductCardComponent, (prevProps, nextProps) => {
+  return prevProps.product.id === nextProps.product.id;
+});

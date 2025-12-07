@@ -1,4 +1,8 @@
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
+
+const BASE_URL = 'https://www.gcoman.com';
 
 interface SEOProps {
   title: string;
@@ -39,9 +43,18 @@ export const SEO = ({
   articleSection,
   articleTags,
 }: SEOProps) => {
+  const { i18n } = useTranslation();
+  const location = useLocation();
+
   const finalOgImage = ogImage || DEFAULT_IMAGE;
   const finalTitle = ogTitle || title;
   const finalDescription = ogDescription || description;
+
+  // Generate hreflang URLs
+  const currentPath = location.pathname.replace(/^\/ar/, '') || '/';
+  const enUrl = `${BASE_URL}${currentPath}`;
+  const arUrl = `${BASE_URL}/ar${currentPath}`;
+  const currentLocale = i18n.language === 'ar' ? 'ar_SA' : 'en_US';
 
   return (
     <Helmet>
@@ -56,6 +69,11 @@ export const SEO = ({
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
       )}
 
+      {/* Hreflang for internationalization */}
+      <link rel="alternate" hrefLang="en" href={enUrl} />
+      <link rel="alternate" hrefLang="ar" href={arUrl} />
+      <link rel="alternate" hrefLang="x-default" href={enUrl} />
+
       {/* Open Graph */}
       <meta property="og:type" content={ogType} />
       <meta property="og:site_name" content={SITE_NAME} />
@@ -66,7 +84,8 @@ export const SEO = ({
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:image:alt" content={`${finalTitle} - Global Chemicals LLC`} />
-      <meta property="og:locale" content="en_US" />
+      <meta property="og:locale" content={currentLocale} />
+      <meta property="og:locale:alternate" content={currentLocale === 'en_US' ? 'ar_SA' : 'en_US'} />
 
       {/* Article-specific Open Graph tags */}
       {ogType === 'article' && (
