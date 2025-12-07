@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { useAuth } from '@/contexts/AuthContext';
 import { useUserRole } from '@/hooks/useUserRole';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
-import logo from '@/assets/global-chemicals-logo-optimized.png';
+import logo from '@/assets/global-chemicals-logo.svg';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
