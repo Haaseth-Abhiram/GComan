@@ -76,25 +76,14 @@ const Login = () => {
       });
 
       if (error) {
-        if (error.message.includes('Invalid login credentials')) {
-          toast({
-            title: "Login failed",
-            description: "Invalid email or password. Please try again.",
-            variant: "destructive"
-          });
-        } else if (error.message.includes('Email not confirmed')) {
-          toast({
-            title: "Email not confirmed",
-            description: "Please confirm your email before logging in.",
-            variant: "destructive"
-          });
-        } else {
-          toast({
-            title: "Login failed",
-            description: error.message,
-            variant: "destructive"
-          });
-        }
+        // Use generic error message to prevent user enumeration attacks
+        toast({
+          title: "Login failed",
+          description: "Invalid email or password. Please check your credentials and try again.",
+          variant: "destructive"
+        });
+        // Log actual error for debugging (server-side only in production)
+        console.error('Auth error:', error.message);
         return;
       }
 

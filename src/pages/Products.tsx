@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
@@ -8420,10 +8420,11 @@ const Products = () => {
     { id: 'alcohols', name: 'Alcohols', icon: FlaskRound },
   ];
 
-  const getFilteredProducts = (categoryId: string) => {
-    if (categoryId === 'all') return products;
-    return products.filter((product) => product.category === categoryId);
-  };
+  // Memoize filtered products to prevent recalculation on every render
+  const filteredProducts = useMemo(() => {
+    if (activeCategory === 'all') return products;
+    return products.filter((product) => product.category === activeCategory);
+  }, [activeCategory]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -8520,20 +8521,20 @@ const Products = () => {
                     {categories.find((c) => c.id === activeCategory)?.name || t('products.allProducts')}
                   </h2>
                   <p className="text-xs sm:text-sm text-muted-foreground mt-1">
-                    {getFilteredProducts(activeCategory).length} {t('products.productsAvailable')} · {t('products.tapToViewDetails')}
+                    {filteredProducts.length} {t('products.productsAvailable')} · {t('products.tapToViewDetails')}
                   </p>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6">
-                  {getFilteredProducts(activeCategory).map((product) => (
-                    <ProductCard 
-                      key={product.id} 
+                  {filteredProducts.map((product) => (
+                    <ProductCard
+                      key={product.id}
                       product={product}
                     />
                   ))}
                 </div>
 
-                {getFilteredProducts(activeCategory).length === 0 && (
+                {filteredProducts.length === 0 && (
                   <div className="text-center py-16">
                     <p className="text-muted-foreground text-lg">
                       {t('products.noProductsAvailable')}

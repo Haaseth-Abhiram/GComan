@@ -1,4 +1,6 @@
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
 
 interface SEOProps {
   title: string;
@@ -21,6 +23,7 @@ interface SEOProps {
 const DEFAULT_IMAGE = "https://storage.googleapis.com/gpt-engineer-file-uploads/KCdCgzQqlrUlZx0GJf8ZTPlKH1p2/social-images/social-1761453031792-resize-17607541312075170240GlobalChemicalsLLCLogoPNG.png";
 const SITE_NAME = "Global Chemicals LLC";
 const TWITTER_HANDLE = "@globalchemicals";
+const BASE_URL = "https://www.gcoman.com";
 
 export const SEO = ({
   title,
@@ -39,9 +42,19 @@ export const SEO = ({
   articleSection,
   articleTags,
 }: SEOProps) => {
+  const { i18n } = useTranslation();
+  const location = useLocation();
+  const currentLang = i18n.language;
+  const currentPath = location.pathname;
+
   const finalOgImage = ogImage || DEFAULT_IMAGE;
   const finalTitle = ogTitle || title;
   const finalDescription = ogDescription || description;
+
+  // Generate hreflang URLs for each language
+  const enUrl = `${BASE_URL}${currentPath}`;
+  const arUrl = `${BASE_URL}/ar${currentPath}`;
+  const ogLocale = currentLang === 'ar' ? 'ar_SA' : 'en_US';
 
   return (
     <Helmet>
@@ -66,7 +79,8 @@ export const SEO = ({
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:image:alt" content={`${finalTitle} - Global Chemicals LLC`} />
-      <meta property="og:locale" content="en_US" />
+      <meta property="og:locale" content={ogLocale} />
+      <meta property="og:locale:alternate" content={currentLang === 'ar' ? 'en_US' : 'ar_SA'} />
 
       {/* Article-specific Open Graph tags */}
       {ogType === 'article' && (
@@ -92,6 +106,11 @@ export const SEO = ({
 
       {/* Canonical */}
       {canonical && <link rel="canonical" href={canonical} />}
+
+      {/* Hreflang for internationalization */}
+      <link rel="alternate" hrefLang="en" href={enUrl} />
+      <link rel="alternate" hrefLang="ar" href={arUrl} />
+      <link rel="alternate" hrefLang="x-default" href={enUrl} />
     </Helmet>
   );
 };

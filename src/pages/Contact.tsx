@@ -310,7 +310,7 @@ const Contact = () => {
 
                     <div className="space-y-2">
                       <Label htmlFor="subject">{t('contact.form.subject')} *</Label>
-                      <Select name="subject" value={formData.subject} onValueChange={handleSubjectChange} required>
+                      <Select name="subject" value={formData.subject} onValueChange={handleSubjectChange} required aria-label="Select inquiry subject">
                         <SelectTrigger>
                           <SelectValue placeholder={t('contact.form.selectSubject')} />
                         </SelectTrigger>

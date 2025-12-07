@@ -922,9 +922,9 @@ const Resources = () => {
                         Updated {selectedGuide.lastUpdated}
                       </span>
                     </div>
-                    <h1 className="text-3xl sm:text-4xl font-bold mb-4">
+                    <h2 className="text-3xl sm:text-4xl font-bold mb-4">
                       {selectedGuide.title}
-                    </h1>
+                    </h2>
                     <p className="text-lg text-muted-foreground">
                       {selectedGuide.excerpt}
                     </p>
