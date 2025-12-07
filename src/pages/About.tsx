@@ -72,12 +72,8 @@ const About = () => {
           <img
             src={heroImage}
             alt="Global Chemicals Laboratory"
-            width={1920}
-            height={1080}
             className="w-full h-full object-cover"
             loading="eager"
-            decoding="sync"
-            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-background" />
         </div>

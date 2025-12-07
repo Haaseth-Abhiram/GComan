@@ -70,11 +70,7 @@ const Hero = () => {
             key={index}
             src={s.image}
             alt={s.alt}
-            width={1920}
-            height={1080}
             loading={index === 0 ? "eager" : "lazy"}
-            decoding={index === 0 ? "sync" : "async"}
-            fetchPriority={index === 0 ? "high" : "low"}
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
               index === currentSlide ? 'opacity-100' : 'opacity-0'
             }`}
