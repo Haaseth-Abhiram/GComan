@@ -122,6 +122,9 @@ const Navigation = () => {
             size="icon"
             className="lg:hidden"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={isOpen}
+            aria-controls="mobile-menu"
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
@@ -130,7 +133,11 @@ const Navigation = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden border-t border-border bg-background animate-fade-in">
+        <div
+          id="mobile-menu"
+          className="lg:hidden border-t border-border bg-background animate-fade-in"
+          onKeyDown={(e) => e.key === 'Escape' && setIsOpen(false)}
+        >
           <div className="container mx-auto px-4 py-6 space-y-4">
             {navItems.map((item) => (
               <Link

@@ -281,11 +281,14 @@ const Customers = () => {
                     <div className="flex items-start justify-between gap-4">
                       <div className="flex-1">
                         <div className="h-24 bg-background rounded-lg border-2 border-border flex items-center justify-center p-4 mb-4 group-hover:border-primary/50 transition-colors">
-                          <img 
-                            src={customer.logo} 
+                          <img
+                            src={customer.logo}
                             alt={`${customer.name} logo`}
+                            width={200}
+                            height={80}
                             className="max-h-full max-w-full object-contain opacity-80 group-hover:opacity-100 transition-opacity"
                             loading="lazy"
+                            decoding="async"
                           />
                         </div>
                         <Badge variant="secondary" className="mb-2">{customer.industry}</Badge>
