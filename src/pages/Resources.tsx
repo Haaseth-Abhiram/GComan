@@ -42,6 +42,7 @@ import { DownloadGateDialog } from '@/components/DownloadGateDialog';
 import { SEO } from '@/components/SEO';
 import { HowToStructuredData, BreadcrumbStructuredData, ArticleStructuredData, FAQStructuredData, LocalBusinessStructuredData } from '@/components/StructuredData';
 import { Link } from 'react-router-dom';
+import { blogArticles, articleCategories as blogCategories, BlogArticle } from '@/data/blogArticles';
 
 // Breadcrumb items
 const breadcrumbItems = [
@@ -562,6 +563,7 @@ const Resources = () => {
   const [downloadDialogOpen, setDownloadDialogOpen] = useState(false);
   const [selectedResource, setSelectedResource] = useState<Resource | null>(null);
   const [selectedGuide, setSelectedGuide] = useState<IndustryGuide | null>(null);
+  const [selectedArticle, setSelectedArticle] = useState<BlogArticle | null>(null);
 
   const downloadCategories = [
     { id: 'all', label: 'All Resources' },
@@ -572,15 +574,24 @@ const Resources = () => {
     { id: 'guides', label: 'Industry Guides' },
   ];
 
-  const articleCategories = [
-    "All",
-    "Industry News",
-    "Product Updates",
-    "Technical Guides",
-    "Case Studies",
-    "Safety & Compliance",
-    "Company News",
-  ];
+  // Filter articles based on category
+  const filteredArticles = blogArticles.filter((article) => {
+    const matchesCategory = selectedArticleCategory === 'All' || article.category === selectedArticleCategory;
+    return matchesCategory;
+  });
+
+  const featuredArticle = blogArticles.find((article) => article.featured);
+
+  // Render markdown-like content with bold text
+  const renderContent = (text: string) => {
+    const parts = text.split(/(\*\*.*?\*\*)/g);
+    return parts.map((part, index) => {
+      if (part.startsWith('**') && part.endsWith('**')) {
+        return <strong key={index}>{part.slice(2, -2)}</strong>;
+      }
+      return part;
+    });
+  };
 
   const resources: Resource[] = [
     {
@@ -625,69 +636,6 @@ const Resources = () => {
     }
   ];
 
-  const articles: Article[] = [
-    {
-      id: 1,
-      title: "Latest Innovations in Water Treatment Technology",
-      excerpt: "Discover how advanced chemical solutions are revolutionizing water treatment processes across industries.",
-      category: "Industry News",
-      date: "2024-03-15",
-      author: "Dr. Sarah Johnson",
-      readTime: "5 min read",
-      featured: true,
-    },
-    {
-      id: 2,
-      title: "Safety Best Practices in Chemical Handling",
-      excerpt: "Essential guidelines for safe storage, handling, and disposal of industrial chemicals.",
-      category: "Safety & Compliance",
-      date: "2024-03-12",
-      author: "Ahmed Al-Rashid",
-      readTime: "7 min read",
-      featured: false,
-    },
-    {
-      id: 3,
-      title: "New Product Launch: Advanced Laboratory Reagents",
-      excerpt: "Introducing our latest line of high-purity laboratory chemicals for research applications.",
-      category: "Product Updates",
-      date: "2024-03-10",
-      author: "Michael Chen",
-      readTime: "4 min read",
-      featured: false,
-    },
-    {
-      id: 4,
-      title: "Sustainable Chemical Solutions for Manufacturing",
-      excerpt: "How eco-friendly chemicals are helping manufacturers reduce their environmental footprint.",
-      category: "Technical Guides",
-      date: "2024-03-08",
-      author: "Dr. Sarah Johnson",
-      readTime: "6 min read",
-      featured: false,
-    },
-    {
-      id: 5,
-      title: "Case Study: Optimizing Pool Maintenance with Modern Chemicals",
-      excerpt: "Learn how a major resort chain improved water quality and reduced costs with our solutions.",
-      category: "Case Studies",
-      date: "2024-03-05",
-      author: "Hassan Al-Mansoori",
-      readTime: "8 min read",
-      featured: false,
-    },
-    {
-      id: 6,
-      title: "Understanding Chemical Compatibility in Industrial Applications",
-      excerpt: "A comprehensive guide to selecting compatible chemicals for your specific needs.",
-      category: "Technical Guides",
-      date: "2024-03-01",
-      author: "Michael Chen",
-      readTime: "10 min read",
-      featured: false,
-    },
-  ];
-
   const filteredResources = resources.filter(resource => {
     const matchesSearch = resource.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          resource.description.toLowerCase().includes(searchQuery.toLowerCase());
@@ -695,14 +643,6 @@ const Resources = () => {
     return matchesSearch && matchesCategory;
   });
 
-  const filteredArticles = articles.filter((article) => {
-    const matchesCategory = selectedArticleCategory === "All" || article.category === selectedArticleCategory;
-    const matchesSearch = article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         article.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
-
-  const featuredArticle = articles.find((article) => article.featured);
   const regularArticles = filteredArticles.filter((article) => !article.featured);
 
   const handleDownload = (resource: Resource) => {
@@ -788,15 +728,15 @@ const Resources = () => {
                 </div>
               </Link>
               <Link
-                to="/blog"
+                to="/industries"
                 className="flex items-center gap-3 p-4 bg-background rounded-lg border border-border hover:border-primary hover:shadow-md transition-all group"
               >
                 <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-                  <Tag className="h-5 w-5 text-primary" />
+                  <Factory className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <span className="font-semibold text-sm">Blog</span>
-                  <p className="text-xs text-muted-foreground">News & updates</p>
+                  <span className="font-semibold text-sm">Industries</span>
+                  <p className="text-xs text-muted-foreground">Sectors we serve</p>
                 </div>
               </Link>
               <Link
@@ -1138,38 +1078,95 @@ const Resources = () => {
             </TabsContent>
 
             {/* Articles Tab */}
-            <TabsContent value="articles" className="space-y-12">
-              {/* Stay Updated Message */}
-              <div className="max-w-2xl mx-auto text-center py-16 px-4">
-                <div className="mb-8">
-                  <Tag className="w-16 h-16 text-primary mx-auto mb-6 animate-fade-in" />
-                  <h2 className="text-3xl sm:text-4xl font-bold mb-4 animate-fade-in">Stay Updated</h2>
-                  <p className="text-lg text-muted-foreground animate-fade-in">
-                    Our articles and industry news section is coming soon. Subscribe to our newsletter to receive the latest updates, product announcements, and technical insights directly to your inbox.
-                  </p>
-                </div>
-                
-                <Card className="max-w-xl mx-auto animate-fade-in">
-                  <CardHeader>
-                    <CardTitle>Subscribe to Our Newsletter</CardTitle>
-                    <CardDescription>
-                      Get the latest chemical industry insights and product updates
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex flex-col sm:flex-row gap-3">
-                      <Input
-                        type="email"
-                        placeholder="Enter your email address"
-                        className="flex-1"
-                      />
-                      <Button className="w-full sm:w-auto">
-                        Subscribe Now
+            <TabsContent value="articles" className="space-y-8">
+              {!selectedArticle ? (
+                <>
+                  {/* Category Filter */}
+                  <div className="flex items-center gap-2 overflow-x-auto pb-2 justify-center flex-wrap px-2">
+                    {blogCategories.map((category) => (
+                      <Button
+                        key={category}
+                        variant={selectedArticleCategory === category ? 'default' : 'outline'}
+                        onClick={() => setSelectedArticleCategory(category)}
+                        className="whitespace-nowrap text-xs sm:text-sm"
+                        size="sm"
+                      >
+                        {category}
                       </Button>
+                    ))}
+                  </div>
+
+                  {/* Featured Article */}
+                  {featuredArticle && selectedArticleCategory === 'All' && (
+                    <Card className="overflow-hidden cursor-pointer hover:shadow-lg transition-shadow" onClick={() => setSelectedArticle(featuredArticle)}>
+                      <CardHeader>
+                        <div className="flex items-center gap-2 mb-2">
+                          <Badge className="bg-primary">Featured</Badge>
+                          <Badge variant="secondary">{featuredArticle.category}</Badge>
+                        </div>
+                        <CardTitle className="text-2xl hover:text-primary transition-colors">{featuredArticle.title}</CardTitle>
+                        <CardDescription className="text-base">{featuredArticle.excerpt}</CardDescription>
+                      </CardHeader>
+                      <CardFooter className="text-sm text-muted-foreground">
+                        <div className="flex items-center gap-4">
+                          <span className="flex items-center gap-1"><User className="h-4 w-4" />{featuredArticle.author}</span>
+                          <span className="flex items-center gap-1"><Calendar className="h-4 w-4" />{featuredArticle.date}</span>
+                          <span className="flex items-center gap-1"><Clock className="h-4 w-4" />{featuredArticle.readTime}</span>
+                        </div>
+                      </CardFooter>
+                    </Card>
+                  )}
+
+                  {/* Articles Grid */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {regularArticles.map((article) => (
+                      <Card key={article.id} className="cursor-pointer hover:shadow-lg transition-shadow" onClick={() => setSelectedArticle(article)}>
+                        <CardHeader>
+                          <Badge variant="secondary" className="w-fit mb-2">{article.category}</Badge>
+                          <CardTitle className="text-lg hover:text-primary transition-colors">{article.title}</CardTitle>
+                          <CardDescription className="line-clamp-2">{article.excerpt}</CardDescription>
+                        </CardHeader>
+                        <CardFooter className="text-xs text-muted-foreground">
+                          <div className="flex items-center gap-3">
+                            <span className="flex items-center gap-1"><Calendar className="h-3 w-3" />{article.date}</span>
+                            <span className="flex items-center gap-1"><Clock className="h-3 w-3" />{article.readTime}</span>
+                          </div>
+                        </CardFooter>
+                      </Card>
+                    ))}
+                  </div>
+                </>
+              ) : (
+                <article className="max-w-4xl mx-auto">
+                  <Button variant="ghost" onClick={() => setSelectedArticle(null)} className="mb-6">
+                    <ChevronRight className="h-4 w-4 rotate-180 mr-2" />Back to Articles
+                  </Button>
+                  <Badge variant="secondary" className="mb-4">{selectedArticle.category}</Badge>
+                  <h1 className="text-3xl sm:text-4xl font-bold mb-4">{selectedArticle.title}</h1>
+                  <div className="flex items-center gap-4 text-sm text-muted-foreground mb-8">
+                    <span className="flex items-center gap-1"><User className="h-4 w-4" />{selectedArticle.author}</span>
+                    <span className="flex items-center gap-1"><Calendar className="h-4 w-4" />{selectedArticle.date}</span>
+                    <span className="flex items-center gap-1"><Clock className="h-4 w-4" />{selectedArticle.readTime}</span>
+                  </div>
+                  <div className="prose prose-lg max-w-none">
+                    {selectedArticle.content.map((paragraph, index) => (
+                      <p key={index} className="mb-4 text-muted-foreground whitespace-pre-line">{renderContent(paragraph)}</p>
+                    ))}
+                  </div>
+                  {selectedArticle.relatedProducts && selectedArticle.relatedProducts.length > 0 && (
+                    <div className="mt-8 p-6 bg-muted/50 rounded-lg">
+                      <h3 className="font-semibold mb-3">Related Products</h3>
+                      <div className="flex flex-wrap gap-2">
+                        {selectedArticle.relatedProducts.map((product, i) => (
+                          <Link key={i} to={`/products?search=${encodeURIComponent(product)}`}>
+                            <Badge variant="outline" className="cursor-pointer hover:bg-primary hover:text-primary-foreground">{product}</Badge>
+                          </Link>
+                        ))}
+                      </div>
                     </div>
-                  </CardContent>
-                </Card>
-              </div>
+                  )}
+                </article>
+              )}
             </TabsContent>
 
             {/* Downloads Tab */}

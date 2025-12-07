@@ -22,7 +22,6 @@ const Footer = () => {
     { labelKey: 'nav.products', path: '/products' },
     { labelKey: 'nav.industries', path: '/industries' },
     { labelKey: 'nav.resources', path: '/resources' },
-    { labelKey: 'nav.blog', path: '/blog' },
     { labelKey: 'nav.contact', path: '/contact' },
     { labelKey: 'nav.careers', path: '/career' },
   ];
