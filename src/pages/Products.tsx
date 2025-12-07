@@ -270,13 +270,6 @@ export const products: Product[] = [
       }
     },
     {
-      id: 'calcium-hypochlorite-water',
-      title: 'Calcium Hypochlorite 65–75%',
-      description: 'Powerful oxidizing agent and disinfectant for water sanitization and bleaching.',
-      category: 'water-treatment',
-      icon: Droplets,
-    },
-    {
       id: 'caustic-soda-flakes',
       title: 'Caustic Soda Flakes',
       description: 'Sodium hydroxide in flake form for pH adjustment and neutralization.',
@@ -6907,256 +6900,634 @@ export const products: Product[] = [
     {
       id: 'caustic-soda-flakes-soap',
       title: 'Caustic Soda Flakes',
-      description: 'Sodium hydroxide flakes for saponification in soap and detergent manufacturing.',
+      description: 'High-purity sodium hydroxide flakes for saponification in soap and detergent manufacturing. Essential for cold and hot process soap making.',
       category: 'soap-detergent',
       icon: Sparkles,
       details: {
         formula: 'NaOH',
         casNumber: '1310-73-2',
-        alternativeNames: ['Sodium hydroxide flakes', 'NaOH flakes', 'Caustic soda'],
-        seoKeywords: ['caustic soda flakes Oman', 'sodium hydroxide Muscat', 'NaOH Oman'],
+        alternativeNames: ['Sodium hydroxide flakes', 'NaOH flakes', 'Caustic soda', 'Lye flakes'],
+        seoKeywords: ['caustic soda flakes Oman', 'sodium hydroxide Muscat', 'NaOH Oman', 'soap making chemicals'],
+        longDescription: 'Premium Caustic Soda Flakes for soap and detergent manufacturing in Oman. Global Chemicals LLC supplies high-purity NaOH flakes essential for saponification reactions in soap production. Used by soap manufacturers, detergent producers, and cleaning product companies across Muscat, Sohar, and Salalah.',
+        applications: [
+          'Cold process soap manufacturing',
+          'Hot process soap production',
+          'Liquid detergent formulation',
+          'Industrial cleaner production',
+          'Laundry detergent manufacturing',
+          'Dishwashing liquid production',
+          'Surface cleaner formulation'
+        ],
+        technicalSpecs: [
+          'NaOH purity: 98-99%',
+          'Appearance: White flakes',
+          'Moisture content: <1%',
+          'Na2CO3 content: <0.8%',
+          'Iron (Fe): <15 ppm',
+          'Packaging: 25kg bags, 50kg drums'
+        ]
       },
     },
     {
       id: 'caustic-soda-liquid-soap',
       title: 'Caustic Soda Liquid',
-      description: 'Liquid sodium hydroxide for industrial cleaning and detergent formulations.',
+      description: 'Ready-to-use liquid sodium hydroxide for industrial cleaning formulations and detergent production. Easy handling and precise dosing.',
       category: 'soap-detergent',
       icon: Sparkles,
       details: {
         formula: 'NaOH',
         casNumber: '1310-73-2',
-        alternativeNames: ['Sodium hydroxide liquid', 'Caustic soda solution', 'Lye'],
-        seoKeywords: ['caustic soda liquid Oman', 'sodium hydroxide solution Muscat', 'lye Oman'],
+        alternativeNames: ['Sodium hydroxide liquid', 'Caustic soda solution', 'Lye solution', 'NaOH solution'],
+        seoKeywords: ['caustic soda liquid Oman', 'sodium hydroxide solution Muscat', 'lye Oman', 'liquid caustic'],
+        longDescription: 'Liquid Caustic Soda supplier in Oman. Global Chemicals LLC provides 30-50% NaOH solution for detergent manufacturing, CIP cleaning systems, and industrial cleaning formulations. Ideal for soap factories and cleaning product manufacturers in Muscat and across the Sultanate.',
+        applications: [
+          'CIP (Clean-In-Place) systems',
+          'Liquid soap manufacturing',
+          'Industrial degreasing formulations',
+          'Drain cleaning products',
+          'Oven cleaner production',
+          'Heavy-duty cleaner manufacturing',
+          'Metal cleaning solutions'
+        ],
+        technicalSpecs: [
+          'NaOH concentration: 30-50%',
+          'Appearance: Clear colorless liquid',
+          'Specific gravity: 1.33-1.53',
+          'pH (1% solution): 13-14',
+          'Free from chlorides',
+          'Packaging: IBC tanks, drums, bulk tankers'
+        ]
       },
     },
     {
       id: 'caustic-soda-prills-soap',
       title: 'Caustic Soda Prills',
-      description: 'High-purity sodium hydroxide beads for precise detergent formulation.',
+      description: 'Spherical sodium hydroxide beads for precise detergent formulation. Low dust, excellent flowability for automated manufacturing.',
       category: 'soap-detergent',
       icon: Sparkles,
       details: {
         formula: 'NaOH',
         casNumber: '1310-73-2',
-        alternativeNames: ['Sodium hydroxide prills', 'NaOH beads', 'Caustic soda pearls'],
+        alternativeNames: ['Sodium hydroxide prills', 'NaOH beads', 'Caustic soda pearls', 'Micropearls'],
         seoKeywords: ['caustic soda prills Oman', 'NaOH prills Muscat', 'sodium hydroxide beads Oman'],
+        longDescription: 'Caustic Soda Prills for detergent and chemical manufacturing in Oman. Spherical NaOH beads offer superior handling, low dust generation, and consistent dissolution rates. Preferred by automated manufacturing facilities for precise dosing.',
+        applications: [
+          'Powder detergent manufacturing',
+          'Automatic soap production lines',
+          'Pharmaceutical grade formulations',
+          'Chemical synthesis',
+          'Industrial cleaning compounds',
+          'Textile processing chemicals',
+          'Water treatment chemicals'
+        ],
+        technicalSpecs: [
+          'NaOH purity: 99% min',
+          'Appearance: White spherical beads',
+          'Bead size: 0.5-2.0 mm',
+          'Dust content: <0.1%',
+          'Bulk density: 1.2-1.3 g/cm³',
+          'Packaging: 25kg bags, 1000kg big bags'
+        ]
       },
     },
     {
       id: 'edta-powder-soap',
       title: 'EDTA Powder',
-      description: 'Chelating agent for water hardness control in detergent products.',
+      description: 'Powerful chelating agent for water hardness control in detergent products. Enhances cleaning performance by sequestering calcium and magnesium ions.',
       category: 'soap-detergent',
       icon: Sparkles,
       details: {
         formula: 'C10H16N2O8',
         casNumber: '60-00-4',
-        alternativeNames: ['Ethylenediaminetetraacetic acid', 'EDTA', 'Chelating agent'],
-        seoKeywords: ['EDTA powder Oman', 'chelating agent Muscat', 'water softener Oman'],
+        alternativeNames: ['Ethylenediaminetetraacetic acid', 'EDTA', 'Chelating agent', 'Sequestering agent'],
+        seoKeywords: ['EDTA powder Oman', 'chelating agent Muscat', 'water softener Oman', 'detergent additive'],
+        longDescription: 'EDTA Powder supplier in Oman. Essential chelating agent for detergent formulations that improves cleaning performance in hard water. Used in laundry detergents, dishwashing liquids, and industrial cleaners to prevent scale and soap scum formation.',
+        applications: [
+          'Laundry detergent formulation',
+          'Dishwashing liquid production',
+          'Industrial cleaner manufacturing',
+          'Personal care products',
+          'Textile processing',
+          'Metal cleaning formulations',
+          'Water treatment'
+        ],
+        technicalSpecs: [
+          'EDTA content: 99% min',
+          'Appearance: White crystalline powder',
+          'pH (1% solution): 4.0-5.0',
+          'Solubility: Slightly soluble in water',
+          'Chelating capacity: 258 mg CaCO3/g',
+          'Packaging: 25kg bags'
+        ]
       },
     },
     {
       id: 'glycerine-soap',
       title: 'Glycerine',
-      description: 'Humectant and moisturizer for soap and personal care formulations.',
+      description: 'USP-grade humectant and moisturizer for soap and personal care formulations. Natural byproduct of soap manufacturing with excellent skin conditioning properties.',
       category: 'soap-detergent',
       icon: Sparkles,
       details: {
         formula: 'C3H8O3',
         casNumber: '56-81-5',
-        alternativeNames: ['Glycerol', 'Glycerin', 'Propane-1,2,3-triol'],
-        seoKeywords: ['glycerine soap Oman', 'glycerol Muscat', 'humectant Oman'],
+        alternativeNames: ['Glycerol', 'Glycerin', 'Propane-1,2,3-triol', 'Vegetable glycerine'],
+        seoKeywords: ['glycerine soap Oman', 'glycerol Muscat', 'humectant Oman', 'cosmetic glycerine'],
+        longDescription: 'High-purity Glycerine supplier in Oman. USP/EP grade glycerol for soap making, cosmetics, and personal care products. Provides moisturizing properties and improves skin feel in handmade and commercial soap formulations.',
+        applications: [
+          'Transparent soap manufacturing',
+          'Moisturizing soap formulation',
+          'Cosmetic product manufacturing',
+          'Personal care formulations',
+          'Pharmaceutical preparations',
+          'Food additive (E422)',
+          'Humectant in skincare products'
+        ],
+        technicalSpecs: [
+          'Glycerol content: 99.5% min',
+          'Appearance: Clear colorless liquid',
+          'Specific gravity: 1.26',
+          'Moisture content: <0.5%',
+          'Color (APHA): <10',
+          'USP/EP grade available',
+          'Packaging: 25kg drums, IBC tanks'
+        ]
       },
     },
     {
       id: 'hydrogen-peroxide-3',
       title: 'Hydrogen Peroxide 3%',
-      description: 'Low concentration bleaching agent for mild cleaning applications.',
+      description: 'Mild oxidizing and bleaching agent for household cleaning products and personal care formulations. Safe for sensitive cleaning applications.',
       category: 'soap-detergent',
       icon: Sparkles,
       details: {
         formula: 'H2O2',
         casNumber: '7722-84-1',
-        alternativeNames: ['Hydrogen peroxide 3%', 'H2O2 3%'],
-        seoKeywords: ['hydrogen peroxide 3% Oman', 'H2O2 Muscat', 'bleaching agent Oman'],
+        alternativeNames: ['Hydrogen peroxide 3%', 'H2O2 3%', 'Dilute peroxide', 'Household peroxide'],
+        seoKeywords: ['hydrogen peroxide 3% Oman', 'H2O2 Muscat', 'bleaching agent Oman', 'mild oxidizer'],
+        longDescription: 'Low concentration Hydrogen Peroxide 3% solution ideal for gentle cleaning and personal care applications. This stabilized formulation provides effective oxidation for household cleaners, mouthwash formulations, and mild bleaching applications. Safe handling characteristics make it suitable for consumer product manufacturing.',
+        applications: [
+          'Household surface cleaners',
+          'Mouthwash and oral care products',
+          'Hair care formulations',
+          'Mild stain removal products',
+          'Wound care preparations',
+          'Contact lens cleaning solutions',
+          'Fabric brighteners'
+        ],
+        technicalSpecs: [
+          'H2O2 concentration: 3.0-3.5%',
+          'Appearance: Clear colorless liquid',
+          'pH: 2.5-4.5',
+          'Specific gravity: 1.01',
+          'Stabilized formula',
+          'Packaging: 1L, 5L, 25L containers'
+        ]
       },
     },
     {
       id: 'hydrogen-peroxide-35',
       title: 'Hydrogen Peroxide 35%',
-      description: 'Medium strength oxidizing agent for industrial detergent formulations.',
+      description: 'Industrial-grade oxidizing agent for commercial cleaning formulations and bleaching applications. Food-grade option available for food processing.',
       category: 'soap-detergent',
       icon: Sparkles,
       details: {
         formula: 'H2O2',
         casNumber: '7722-84-1',
-        alternativeNames: ['Hydrogen peroxide 35%', 'H2O2 35%'],
-        seoKeywords: ['hydrogen peroxide 35% Oman', 'H2O2 35% Muscat', 'oxidizing agent Oman'],
+        alternativeNames: ['Hydrogen peroxide 35%', 'H2O2 35%', 'Industrial peroxide', 'Technical grade peroxide'],
+        seoKeywords: ['hydrogen peroxide 35% Oman', 'H2O2 35% Muscat', 'oxidizing agent Oman', 'industrial bleach'],
+        longDescription: 'Industrial-strength Hydrogen Peroxide 35% for professional cleaning product manufacturing and commercial applications. This concentration offers excellent oxidizing power for heavy-duty cleaners, laundry bleach formulations, and industrial disinfectants. Food-grade option certified for food processing and packaging sanitation.',
+        applications: [
+          'Industrial laundry bleaching',
+          'Commercial cleaning products',
+          'Food processing sanitation',
+          'Textile bleaching formulations',
+          'Pulp and paper bleaching',
+          'CIP cleaning solutions',
+          'Environmental remediation'
+        ],
+        technicalSpecs: [
+          'H2O2 concentration: 35±0.5%',
+          'Appearance: Clear colorless liquid',
+          'pH: 1.5-3.0',
+          'Specific gravity: 1.13',
+          'Acidity (as H2SO4): <0.05%',
+          'Food grade available',
+          'Packaging: 30kg carboys, 220kg drums, IBC'
+        ]
       },
     },
     {
       id: 'hydrogen-peroxide-50',
       title: 'Hydrogen Peroxide 50%',
-      description: 'High concentration bleaching agent for heavy-duty cleaning products.',
+      description: 'High-strength oxidizer for industrial bleaching, pulp processing, and heavy-duty cleaning formulations. Maximum oxidizing power for demanding applications.',
       category: 'soap-detergent',
       icon: Sparkles,
       details: {
         formula: 'H2O2',
         casNumber: '7722-84-1',
-        alternativeNames: ['Hydrogen peroxide 50%', 'H2O2 50%'],
-        seoKeywords: ['hydrogen peroxide 50% Oman', 'H2O2 50% Muscat', 'bleach Oman'],
+        alternativeNames: ['Hydrogen peroxide 50%', 'H2O2 50%', 'High-strength peroxide', 'Concentrated peroxide'],
+        seoKeywords: ['hydrogen peroxide 50% Oman', 'H2O2 50% Muscat', 'industrial bleach Oman', 'concentrated peroxide'],
+        longDescription: 'High-concentration Hydrogen Peroxide 50% for demanding industrial applications requiring maximum oxidizing power. This technical grade solution is ideal for pulp and paper bleaching, textile processing, and formulating powerful industrial cleaners. Stabilized formula ensures consistent performance and extended shelf life.',
+        applications: [
+          'Pulp and paper bleaching',
+          'Textile and fabric whitening',
+          'Chemical synthesis oxidation',
+          'Heavy-duty industrial cleaners',
+          'Environmental treatment',
+          'Mining ore processing',
+          'Semiconductor manufacturing'
+        ],
+        technicalSpecs: [
+          'H2O2 concentration: 50±0.5%',
+          'Appearance: Clear colorless liquid',
+          'pH: 1.0-2.5',
+          'Specific gravity: 1.19',
+          'Stability: Stabilized formula',
+          'Total organic carbon: <50 ppm',
+          'Packaging: 30kg carboys, 220kg drums, IBC'
+        ]
       },
     },
     {
       id: 'hydrogen-peroxide-6',
       title: 'Hydrogen Peroxide 6%',
-      description: 'Moderate concentration for bleaching and sanitizing applications.',
+      description: 'Moderate-strength oxidizer for professional cleaning, hair care products, and surface disinfection. Ideal balance of effectiveness and safety.',
       category: 'soap-detergent',
       icon: Sparkles,
       details: {
         formula: 'H2O2',
         casNumber: '7722-84-1',
-        alternativeNames: ['Hydrogen peroxide 6%', 'H2O2 6%'],
-        seoKeywords: ['hydrogen peroxide 6% Oman', 'H2O2 6% Muscat', 'sanitizer Oman'],
+        alternativeNames: ['Hydrogen peroxide 6%', 'H2O2 6%', 'Professional peroxide', '20 volume peroxide'],
+        seoKeywords: ['hydrogen peroxide 6% Oman', 'H2O2 6% Muscat', 'sanitizer Oman', 'hair developer'],
+        longDescription: 'Moderate-concentration Hydrogen Peroxide 6% offering the ideal balance between effectiveness and safe handling. Popular choice for salon-grade hair care products, professional cleaning solutions, and surface disinfectants. This stabilized solution provides reliable oxidizing power for demanding consumer and professional applications.',
+        applications: [
+          'Hair coloring and bleaching',
+          'Professional cleaning products',
+          'Surface disinfection formulas',
+          'Salon and spa products',
+          'Laundry stain removers',
+          'Sanitizing solutions',
+          'Wound care products'
+        ],
+        technicalSpecs: [
+          'H2O2 concentration: 6.0±0.3%',
+          'Appearance: Clear colorless liquid',
+          'pH: 2.0-4.0',
+          'Specific gravity: 1.02',
+          'Equivalent to 20 volume',
+          'Stabilized formula',
+          'Packaging: 5L, 25L, 200L containers'
+        ]
       },
     },
     {
       id: 'labsa',
       title: 'LABSA',
-      description: 'Linear Alkylbenzene Sulphonic Acid - primary surfactant for detergent production.',
+      description: 'Linear Alkylbenzene Sulphonic Acid - the primary anionic surfactant for liquid and powder detergent manufacturing. Excellent foaming and cleaning properties.',
       category: 'soap-detergent',
       icon: Sparkles,
       details: {
+        formula: 'C18H30O3S',
         casNumber: '27176-87-0',
-        alternativeNames: ['Linear alkylbenzene sulfonic acid', 'LABSA', 'Dodecylbenzenesulfonic acid'],
-        seoKeywords: ['LABSA Oman', 'surfactant Muscat', 'detergent raw material Oman'],
+        alternativeNames: ['Linear alkylbenzene sulfonic acid', 'LABSA', 'Dodecylbenzenesulfonic acid', 'LAS acid'],
+        seoKeywords: ['LABSA Oman', 'surfactant Muscat', 'detergent raw material Oman', 'anionic surfactant'],
+        longDescription: 'Premium quality Linear Alkylbenzene Sulphonic Acid (LABSA) - the most widely used anionic surfactant in detergent manufacturing. Our LABSA provides excellent foaming, emulsifying, and cleaning properties essential for producing high-performance liquid detergents, powder detergents, and industrial cleaners. Biodegradable and compliant with international environmental standards.',
+        applications: [
+          'Liquid dish washing detergents',
+          'Laundry powder detergents',
+          'Liquid laundry detergents',
+          'Industrial cleaning compounds',
+          'Car wash formulations',
+          'Household all-purpose cleaners',
+          'Emulsifier in various applications'
+        ],
+        technicalSpecs: [
+          'Active matter: 96% min',
+          'Appearance: Brown viscous liquid',
+          'Free oil: 1.5% max',
+          'Color (Klett): 50 max',
+          'Sulfuric acid: 1.5% max',
+          'Average molecular weight: 320-340',
+          'Packaging: 210kg drums, IBC tanks, flexi tanks'
+        ]
       },
     },
     {
       id: 'nonyl-phenol-ethoxylate',
       title: 'Nonyl Phenol Ethoxylate',
-      description: 'Non-ionic surfactant for industrial and household cleaning products.',
+      description: 'Versatile non-ionic surfactant with excellent wetting, emulsifying, and dispersing properties. Ideal for industrial cleaners and emulsion formulations.',
       category: 'soap-detergent',
       icon: Sparkles,
       details: {
+        formula: 'C15H24O(C2H4O)n',
         casNumber: '9016-45-9',
-        alternativeNames: ['NPE', 'Nonyl phenol ethoxylate', 'NP ethoxylate'],
-        seoKeywords: ['nonyl phenol ethoxylate Oman', 'NPE Muscat', 'surfactant Oman'],
+        alternativeNames: ['NPE', 'Nonyl phenol ethoxylate', 'NP ethoxylate', 'NP-9', 'NP-10'],
+        seoKeywords: ['nonyl phenol ethoxylate Oman', 'NPE Muscat', 'surfactant Oman', 'non-ionic surfactant'],
+        longDescription: 'High-performance Nonyl Phenol Ethoxylate non-ionic surfactant available in various EO mole ranges. Excellent wetting agent and emulsifier for industrial cleaning formulations, textile processing, and agricultural applications. Compatible with anionic, cationic, and other non-ionic surfactants for synergistic formulations.',
+        applications: [
+          'Industrial degreasing formulations',
+          'Textile scouring and processing',
+          'Agricultural spray adjuvants',
+          'Emulsion polymerization',
+          'Metal cleaning solutions',
+          'Hard surface cleaners',
+          'Paint and coating formulations'
+        ],
+        technicalSpecs: [
+          'EO moles: 4, 6, 9, 10, 12 available',
+          'Appearance: Clear to pale yellow liquid',
+          'HLB value: 12-14 (varies by grade)',
+          'Cloud point: 52-56°C (for NP-9)',
+          'pH (1% solution): 6-8',
+          'Active matter: 99% min',
+          'Packaging: 200L drums, IBC tanks'
+        ]
       },
     },
     {
       id: 'perchloroethylene',
       title: 'Perchloroethylene',
-      description: 'Solvent for dry cleaning and degreasing applications.',
+      description: 'Premium dry cleaning solvent and industrial degreaser. Non-flammable with excellent solvency for oils, greases, and waxes.',
       category: 'soap-detergent',
       icon: Sparkles,
       details: {
         formula: 'C2Cl4',
         casNumber: '127-18-4',
-        alternativeNames: ['Tetrachloroethylene', 'PERC', 'PCE'],
-        seoKeywords: ['perchloroethylene Oman', 'dry cleaning solvent Muscat', 'PERC Oman'],
+        alternativeNames: ['Tetrachloroethylene', 'PERC', 'PCE', 'Perclene', 'Tetrachloroethene'],
+        seoKeywords: ['perchloroethylene Oman', 'dry cleaning solvent Muscat', 'PERC Oman', 'degreasing solvent'],
+        longDescription: 'High-purity Perchloroethylene (PERC) - the industry standard solvent for professional dry cleaning and precision degreasing. This non-flammable chlorinated solvent offers exceptional solvency for removing oils, greases, and waxes from textiles and metal parts. Stabilized formula ensures consistent performance and material compatibility.',
+        applications: [
+          'Professional dry cleaning',
+          'Metal parts degreasing',
+          'Vapor degreasing operations',
+          'Textile spot cleaning',
+          'Precision cleaning applications',
+          'Chemical intermediate',
+          'Aerosol formulations'
+        ],
+        technicalSpecs: [
+          'Purity: 99.9% min',
+          'Appearance: Clear colorless liquid',
+          'Boiling point: 121°C',
+          'Specific gravity: 1.62',
+          'Non-flammable',
+          'Stabilized grade available',
+          'Packaging: 280kg drums, IBC tanks'
+        ]
       },
     },
     {
       id: 'sles-70',
       title: 'SLES 70%',
-      description: 'Sodium Lauryl Ether Sulfate - foaming agent and surfactant for detergents.',
+      description: 'Premium Sodium Lauryl Ether Sulfate with excellent foaming and mild cleansing properties. The gold standard surfactant for shampoos, body washes, and liquid detergents.',
       category: 'soap-detergent',
       icon: Sparkles,
       details: {
+        formula: 'CH3(CH2)10CH2(OCH2CH2)nOSO3Na',
         casNumber: '68585-34-2',
-        alternativeNames: ['Sodium laureth sulfate', 'SLES', 'Sodium lauryl ether sulfate'],
-        seoKeywords: ['SLES 70% Oman', 'sodium laureth sulfate Muscat', 'foaming agent Oman'],
+        alternativeNames: ['Sodium laureth sulfate', 'SLES', 'Sodium lauryl ether sulfate', 'SLES 2EO', 'SLES 3EO'],
+        seoKeywords: ['SLES 70% Oman', 'sodium laureth sulfate Muscat', 'foaming agent Oman', 'shampoo surfactant'],
+        longDescription: 'High-quality Sodium Lauryl Ether Sulfate (SLES) 70% concentration - the preferred anionic surfactant for personal care and household cleaning products. Milder than SLS with excellent foaming, cleansing, and thickening properties. Low irritation potential makes it ideal for shampoos, shower gels, and baby care products.',
+        applications: [
+          'Shampoo formulations',
+          'Liquid bath and shower gels',
+          'Bubble bath products',
+          'Dishwashing liquids',
+          'Hand wash formulations',
+          'Baby care products',
+          'Car wash shampoos'
+        ],
+        technicalSpecs: [
+          'Active matter: 70±2%',
+          'Appearance: Clear to slightly hazy viscous liquid',
+          'Color (Klett): 20 max',
+          'pH (10% solution): 7.0-8.5',
+          'Sodium chloride: 0.5% max',
+          'Unsulfated alcohol: 1.5% max',
+          'Packaging: 170kg drums, IBC tanks, flexi tanks'
+        ]
       },
     },
     {
       id: 'soda-ash-dense-soap',
       title: 'Soda Ash Dense',
-      description: 'Sodium carbonate for pH adjustment and water softening in detergents.',
+      description: 'High-density sodium carbonate for detergent powder manufacturing. Superior water softening and alkalinity building properties.',
       category: 'soap-detergent',
       icon: Sparkles,
       details: {
         formula: 'Na2CO3',
         casNumber: '497-19-8',
-        alternativeNames: ['Sodium carbonate dense', 'Washing soda dense'],
-        seoKeywords: ['soda ash dense Oman', 'sodium carbonate Muscat', 'washing soda Oman'],
+        alternativeNames: ['Sodium carbonate dense', 'Washing soda dense', 'Dense soda ash', 'Heavy soda ash'],
+        seoKeywords: ['soda ash dense Oman', 'sodium carbonate Muscat', 'washing soda Oman', 'detergent builder'],
+        longDescription: 'Premium Dense Soda Ash for detergent manufacturing and industrial applications. High bulk density grade ideal for powder detergent formulations, providing effective water softening, pH buffering, and soil suspension properties. Essential builder for creating high-performance laundry and cleaning products.',
+        applications: [
+          'Powder laundry detergent production',
+          'Industrial cleaning compounds',
+          'Automatic dishwasher detergents',
+          'Water softening formulations',
+          'Glass manufacturing',
+          'Textile processing',
+          'pH adjustment in cleaning products'
+        ],
+        technicalSpecs: [
+          'Na2CO3 content: 99.2% min',
+          'Appearance: White granular powder',
+          'Bulk density: 950-1100 kg/m³',
+          'Particle size: 150-500 microns',
+          'Moisture: 0.3% max',
+          'Iron content: <10 ppm',
+          'Packaging: 25kg bags, 50kg bags, bulk'
+        ]
       },
     },
     {
       id: 'soda-ash-light-soap',
       title: 'Soda Ash Light',
-      description: 'Light density sodium carbonate for soap and detergent formulations.',
+      description: 'Fine particle sodium carbonate with excellent solubility for liquid detergent and chemical processing. Fast-dissolving grade for immediate activation.',
       category: 'soap-detergent',
       icon: Sparkles,
       details: {
         formula: 'Na2CO3',
         casNumber: '497-19-8',
-        alternativeNames: ['Sodium carbonate light', 'Washing soda light'],
-        seoKeywords: ['soda ash light Oman', 'sodium carbonate light Muscat', 'detergent raw material Oman'],
+        alternativeNames: ['Sodium carbonate light', 'Washing soda light', 'Light soda ash', 'Fine soda ash'],
+        seoKeywords: ['soda ash light Oman', 'sodium carbonate light Muscat', 'detergent raw material Oman', 'fast dissolving soda ash'],
+        longDescription: 'High-purity Light Soda Ash with fine particle size and low bulk density for applications requiring rapid dissolution. Ideal for liquid detergent manufacturing, chemical synthesis, and processes where quick dispersion is essential. Superior solubility compared to dense grade makes it preferred for slurry preparations.',
+        applications: [
+          'Liquid detergent manufacturing',
+          'Chemical synthesis processes',
+          'pH adjustment solutions',
+          'Water treatment applications',
+          'Textile dyeing auxiliaries',
+          'Food processing (food grade)',
+          'Pharmaceutical intermediates'
+        ],
+        technicalSpecs: [
+          'Na2CO3 content: 99.2% min',
+          'Appearance: White fine powder',
+          'Bulk density: 500-600 kg/m³',
+          'Particle size: 90% <150 microns',
+          'Moisture: 0.5% max',
+          'Iron content: <10 ppm',
+          'Packaging: 25kg bags, 50kg bags'
+        ]
       },
     },
     {
       id: 'sodium-hypochlorite-12-15-soap',
       title: 'Sodium Hypochlorite 12-15%',
-      description: 'Bleaching and disinfecting agent for cleaning product formulations.',
+      description: 'Industrial-strength liquid bleach for cleaning product manufacturing and water disinfection. Powerful oxidizing and sanitizing agent.',
       category: 'soap-detergent',
       icon: Sparkles,
       details: {
         formula: 'NaOCl',
         casNumber: '7681-52-9',
-        alternativeNames: ['Liquid chlorine', 'Bleach', 'Sodium hypochlorite solution'],
-        seoKeywords: ['sodium hypochlorite Oman', 'bleach Muscat', 'disinfectant Oman'],
+        alternativeNames: ['Liquid chlorine', 'Bleach', 'Sodium hypochlorite solution', 'Liquid bleach', 'Hypo'],
+        seoKeywords: ['sodium hypochlorite Oman', 'bleach Muscat', 'disinfectant Oman', 'liquid chlorine'],
+        longDescription: 'High-concentration Sodium Hypochlorite 12-15% for industrial bleaching, disinfection, and cleaning product manufacturing. This stabilized solution provides powerful oxidizing action for textile bleaching, water treatment, and formulating household and industrial bleach products. Effective against bacteria, viruses, and fungi.',
+        applications: [
+          'Household bleach manufacturing',
+          'Industrial laundry bleaching',
+          'Water and wastewater disinfection',
+          'Swimming pool treatment',
+          'Food processing sanitation',
+          'Hospital and healthcare disinfection',
+          'Mold and mildew removal products'
+        ],
+        technicalSpecs: [
+          'Available chlorine: 12-15%',
+          'Appearance: Pale yellow-green liquid',
+          'pH: 11-13',
+          'Specific gravity: 1.20-1.25',
+          'Excess alkali (as NaOH): 0.5-1.5%',
+          'Stabilized formula',
+          'Packaging: 30L carboys, 200L drums, IBC'
+        ]
       },
     },
     {
       id: 'sodium-meta-silicate-pentahydrate',
       title: 'Sodium Meta Silicate Pentahydrate',
-      description: 'Alkaline builder and corrosion inhibitor for heavy-duty detergents.',
+      description: 'Powerful alkaline builder with excellent cleaning, emulsifying, and corrosion inhibition properties. Essential for heavy-duty industrial detergents.',
       category: 'soap-detergent',
       icon: Sparkles,
       details: {
         formula: 'Na2SiO3·5H2O',
         casNumber: '6834-92-0',
-        alternativeNames: ['Sodium metasilicate pentahydrate', 'SMS pentahydrate'],
-        seoKeywords: ['sodium metasilicate Oman', 'detergent builder Muscat', 'SMS Oman'],
+        alternativeNames: ['Sodium metasilicate pentahydrate', 'SMS pentahydrate', 'Sodium silicate pentahydrate', 'Metso pentabead'],
+        seoKeywords: ['sodium metasilicate Oman', 'detergent builder Muscat', 'SMS Oman', 'alkaline cleaner'],
+        longDescription: 'Premium Sodium Meta Silicate Pentahydrate for formulating heavy-duty industrial and institutional cleaners. This versatile alkaline builder provides excellent grease cutting, soil suspension, and metal corrosion protection. Essential ingredient for automatic dishwasher detergents, industrial degreasers, and CIP cleaning compounds.',
+        applications: [
+          'Automatic dishwasher detergents',
+          'Industrial degreasing compounds',
+          'CIP and dairy cleaning systems',
+          'Metal cleaning formulations',
+          'Heavy-duty laundry detergents',
+          'Concrete and masonry cleaners',
+          'Bottle washing compounds'
+        ],
+        technicalSpecs: [
+          'Na2O:SiO2 ratio: 1:1',
+          'Appearance: White crystalline granules',
+          'Bulk density: 900-1000 kg/m³',
+          'pH (1% solution): 12.5-13.0',
+          'Solubility: Readily soluble in water',
+          'Active matter: 57-59%',
+          'Packaging: 25kg bags, 1000kg bags'
+        ]
       },
     },
     {
       id: 'sodium-tripolyphosphate',
       title: 'Sodium Tripolyphosphate',
-      description: 'Sequestering agent and detergency builder for laundry detergents.',
+      description: 'Premier water softening and detergency builder with excellent sequestering properties. Industry standard for high-performance laundry and dishwasher detergents.',
       category: 'soap-detergent',
       icon: Sparkles,
       details: {
         formula: 'Na5P3O10',
         casNumber: '7758-29-4',
-        alternativeNames: ['STPP', 'Sodium triphosphate', 'Pentasodium triphosphate'],
-        seoKeywords: ['STPP Oman', 'sodium tripolyphosphate Muscat', 'detergent builder Oman'],
+        alternativeNames: ['STPP', 'Sodium triphosphate', 'Pentasodium triphosphate', 'Tripolyphosphate'],
+        seoKeywords: ['STPP Oman', 'sodium tripolyphosphate Muscat', 'detergent builder Oman', 'water softener'],
+        longDescription: 'High-purity Sodium Tripolyphosphate (STPP) - the most effective detergent builder for water softening and enhanced cleaning performance. This phosphate compound sequesters calcium and magnesium ions, prevents soil redeposition, and improves surfactant efficiency. Essential for formulating premium laundry powders, automatic dishwasher detergents, and industrial cleaners.',
+        applications: [
+          'Powder laundry detergent formulation',
+          'Automatic dishwasher detergents',
+          'Industrial and institutional cleaners',
+          'Water softening applications',
+          'Ceramic and tile industry',
+          'Food processing (food grade)',
+          'Metal surface treatment'
+        ],
+        technicalSpecs: [
+          'P2O5 content: 57% min',
+          'Appearance: White powder/granules',
+          'pH (1% solution): 9.5-10.0',
+          'Bulk density: 0.8-1.0 g/ml',
+          'Phase I content: 85-95%',
+          'Iron content: <30 ppm',
+          'Packaging: 25kg bags, 50kg bags, bulk'
+        ]
       },
     },
     {
       id: 'surfactants-soap',
       title: 'Surfactants',
-      description: 'Range of surface active agents for cleaning and emulsifying applications.',
+      description: 'Comprehensive range of anionic, cationic, non-ionic, and amphoteric surfactants for cleaning, emulsifying, and wetting applications across all industries.',
       category: 'soap-detergent',
       icon: Sparkles,
       details: {
-        alternativeNames: ['Surface active agents', 'Surfactants', 'Wetting agents'],
-        seoKeywords: ['surfactants Oman', 'surface active agents Muscat', 'emulsifiers Oman'],
+        alternativeNames: ['Surface active agents', 'Surfactants', 'Wetting agents', 'Emulsifiers', 'Detergent actives'],
+        seoKeywords: ['surfactants Oman', 'surface active agents Muscat', 'emulsifiers Oman', 'cleaning chemicals'],
+        longDescription: 'Complete range of industrial surfactants for detergent, personal care, and industrial applications. We supply anionic surfactants (LABSA, SLES, SLS), non-ionic surfactants (NPE, fatty alcohol ethoxylates), cationic surfactants (quaternary ammonium compounds), and amphoteric surfactants (betaines, amphoterics). Custom blends available to meet specific formulation requirements.',
+        applications: [
+          'Liquid and powder detergent manufacturing',
+          'Personal care and cosmetic formulations',
+          'Industrial and institutional cleaners',
+          'Agricultural spray adjuvants',
+          'Textile processing auxiliaries',
+          'Oilfield chemical formulations',
+          'Paint and coating emulsification'
+        ],
+        technicalSpecs: [
+          'Types: Anionic, non-ionic, cationic, amphoteric',
+          'Active matter: Various grades available',
+          'HLB values: Range from 1-20',
+          'Biodegradable options available',
+          'Custom blends on request',
+          'Technical support provided',
+          'Packaging: Drums, IBC, bulk tankers'
+        ]
       },
     },
     {
       id: 'trisodium-phosphate-soap',
       title: 'Trisodium Phosphate',
-      description: 'Heavy-duty cleaning agent and degreaser for industrial applications.',
+      description: 'Powerful alkaline cleaner and degreaser for heavy-duty industrial cleaning. Excellent paint preparation and surface conditioning agent.',
       category: 'soap-detergent',
       icon: Sparkles,
       details: {
         formula: 'Na3PO4',
         casNumber: '7601-54-9',
-        alternativeNames: ['TSP', 'Trisodium orthophosphate', 'Na3PO4'],
-        seoKeywords: ['trisodium phosphate Oman', 'TSP Muscat', 'heavy duty cleaner Oman'],
+        alternativeNames: ['TSP', 'Trisodium orthophosphate', 'Na3PO4', 'Sodium phosphate tribasic'],
+        seoKeywords: ['trisodium phosphate Oman', 'TSP Muscat', 'heavy duty cleaner Oman', 'degreaser'],
+        longDescription: 'Industrial-grade Trisodium Phosphate (TSP) for heavy-duty cleaning, degreasing, and surface preparation. This highly alkaline compound provides exceptional grease cutting and stain removal power. Widely used in construction for paint preparation, in manufacturing for metal cleaning, and in food processing for sanitization. Effective for removing grease, soot, and tough stains from surfaces.',
+        applications: [
+          'Pre-paint surface preparation',
+          'Heavy-duty degreasing',
+          'Wall and surface cleaning',
+          'Concrete and masonry cleaning',
+          'Boiler and heat exchanger cleaning',
+          'Food processing equipment sanitation',
+          'Metal cleaning and preparation'
+        ],
+        technicalSpecs: [
+          'Na3PO4·12H2O content: 98% min',
+          'Appearance: White crystalline powder',
+          'pH (1% solution): 11.5-12.5',
+          'Solubility: 140 g/L at 20°C',
+          'Bulk density: 0.9-1.0 g/ml',
+          'P2O5 content: 18-19%',
+          'Packaging: 25kg bags, 50kg bags'
+        ]
       },
     },
 
