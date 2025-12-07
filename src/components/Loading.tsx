@@ -3,9 +3,11 @@ import gcIcon from "@/assets/gc-icon.png";
 export const Loading = () => (
   <div className="flex items-center justify-center min-h-screen bg-background">
     <div className="flex flex-col items-center gap-4">
-      <img 
-        src={gcIcon} 
-        alt="Loading..." 
+      <img
+        src={gcIcon}
+        alt="Loading Global Chemicals website"
+        width={64}
+        height={64}
         className="h-16 w-16 animate-pulse"
       />
       <div className="flex gap-1">

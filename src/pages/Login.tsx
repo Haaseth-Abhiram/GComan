@@ -258,9 +258,11 @@ const Login = () => {
           </Link>
           
           <div className="space-y-6">
-            <img 
-              src={logo} 
-              alt="Global Chemicals LLC" 
+            <img
+              src={logo}
+              alt="Global Chemicals LLC"
+              width={200}
+              height={64}
               className="h-16 w-auto"
               loading="lazy"
             />
@@ -305,9 +307,11 @@ const Login = () => {
           <Card className="border-2 shadow-xl">
             <CardHeader className="space-y-4">
               <div className="lg:hidden flex justify-center mb-4">
-                <img 
-                  src={logo} 
-                  alt="Global Chemicals LLC" 
+                <img
+                  src={logo}
+                  alt="Global Chemicals LLC"
+                  width={150}
+                  height={48}
                   className="h-12 w-auto"
                 />
               </div>

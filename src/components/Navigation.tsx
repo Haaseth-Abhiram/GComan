@@ -87,9 +87,11 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center group">
-            <img 
-              src={logo} 
-              alt="Global Chemicals LLC Logo" 
+            <img
+              src={logo}
+              alt="Global Chemicals LLC Logo"
+              width={180}
+              height={56}
               className="h-12 md:h-14 w-auto transition-transform group-hover:scale-105"
             />
           </Link>

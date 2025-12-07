@@ -163,8 +163,11 @@ const About = () => {
                   <img
                     src={facilityImage}
                     alt="Fine Chemical Synthesis Laboratory"
+                    width={800}
+                    height={500}
                     className="w-full h-[500px] object-cover"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </div>

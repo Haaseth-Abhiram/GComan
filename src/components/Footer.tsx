@@ -46,6 +46,8 @@ const Footer = () => {
               <img
                 src={logo}
                 alt="Global Chemicals LLC Logo"
+                width={180}
+                height={48}
                 className="h-12 w-auto"
               />
             </Link>

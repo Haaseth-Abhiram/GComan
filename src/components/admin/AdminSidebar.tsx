@@ -46,7 +46,7 @@ export function AdminSidebar() {
     <Sidebar collapsible="icon" className="border-r border-border/50">
       <div className="p-4 border-b border-border/50">
         <Link to="/admin" className="flex items-center gap-3">
-          <img src={gcLogo} alt="GC" className="h-8 w-8" />
+          <img src={gcLogo} alt="Global Chemicals Admin" width={32} height={32} className="h-8 w-8" />
           <div className="group-data-[collapsible=icon]:hidden">
             <p className="font-bold text-sm">Global Chemicals</p>
             <p className="text-xs text-muted-foreground">Admin Panel</p>

@@ -28,7 +28,10 @@ const ProductCardComponent = ({ product, onClick }: ProductCardProps) => {
   const productUrl = `/products/${product.category}/${product.id}`;
   
   return (
-    <Link to={productUrl}>
+    <Link
+      to={productUrl}
+      className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-lg"
+    >
       <Card
         className="group relative overflow-hidden border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg cursor-pointer bg-card hover:-translate-y-1"
       >

@@ -60,7 +60,11 @@ const IndustrySelector = () => {
           {industries.map((industry, index) => {
             const Icon = industry.icon;
             return (
-              <Link key={index} to="/industries">
+              <Link
+                  key={index}
+                  to="/industries"
+                  className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-lg"
+                >
                 <Card
                   className="group p-6 text-center hover:shadow-xl transition-all duration-300 cursor-pointer border-border hover:border-primary/50 animate-scale-in h-full"
                   style={{ animationDelay: `${index * 0.05}s` }}

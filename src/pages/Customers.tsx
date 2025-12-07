@@ -328,11 +328,14 @@ const Customers = () => {
                 >
                   <CardContent className="p-6">
                     <div className="aspect-square bg-background border-2 border-border rounded-lg flex items-center justify-center p-4 mb-4 group-hover:border-primary/50 transition-colors">
-                      <img 
-                        src={customer.logo} 
+                      <img
+                        src={customer.logo}
                         alt={`${customer.name} logo`}
+                        width={120}
+                        height={120}
                         className="max-h-full max-w-full object-contain opacity-70 group-hover:opacity-100 transition-opacity"
                         loading="lazy"
+                        decoding="async"
                       />
                     </div>
                     <h3 className="font-semibold text-center text-sm line-clamp-2 group-hover:text-primary transition-colors">
