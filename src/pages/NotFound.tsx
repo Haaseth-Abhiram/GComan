@@ -14,6 +14,7 @@ const NotFound = () => {
       <Helmet>
         <title>Page Not Found | Global Chemicals LLC</title>
         <meta name="description" content="Page not found - The page you're looking for doesn't exist. Return to Global Chemicals LLC homepage to browse products, services & contact information." />
+        <meta name="robots" content="noindex, nofollow" />
         <meta property="og:title" content="Page Not Found | Global Chemicals LLC" />
         <meta property="og:description" content="The page you are looking for could not be found." />
         <meta property="og:image" content="https://www.gcoman.com/og-image.jpg" />
