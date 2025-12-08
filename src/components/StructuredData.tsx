@@ -28,7 +28,7 @@ export const ProductStructuredData = ({ product, url }: ProductStructuredDataPro
     "name": product.title,
     "description": product.description,
     "category": product.category,
-    ...(product.image && { "image": product.image }),
+    "image": product.image || "https://www.gcoman.com/og-image.jpg",
     ...(url && { "url": url }),
     "brand": {
       "@type": "Brand",
@@ -55,8 +55,10 @@ export const ProductStructuredData = ({ product, url }: ProductStructuredDataPro
     "offers": {
       "@type": "Offer",
       "availability": "https://schema.org/InStock",
+      "price": "0",
       "priceCurrency": "OMR",
       "priceValidUntil": new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+      "url": url || "https://www.gcoman.com/contact",
       "seller": {
         "@type": "Organization",
         "name": "Global Chemicals LLC"
@@ -546,11 +548,11 @@ export const LocalBusinessStructuredData = () => {
       "@type": "OfferCatalog",
       "name": "Chemical Products Catalog",
       "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Water Treatment Chemicals" }},
-        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Industrial Lubricants" }},
-        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Laboratory Chemicals" }},
-        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Oilfield Chemicals" }},
-        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Swimming Pool Chemicals" }}
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Water Treatment Chemicals Supply" }},
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Industrial Lubricants Supply" }},
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Laboratory Chemicals Supply" }},
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Oilfield Chemicals Supply" }},
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Swimming Pool Chemicals Supply" }}
       ]
     },
     "sameAs": [
@@ -654,22 +656,22 @@ export const OrganizationStructuredData = ({ includeService = false }: Organizat
             {
               "@type": "Offer",
               "itemOffered": {
-                "@type": "Product",
-                "name": "Poly Aluminium Chloride (PAC)"
+                "@type": "Service",
+                "name": "Poly Aluminium Chloride (PAC) Supply"
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
-                "@type": "Product",
-                "name": "Caustic Soda"
+                "@type": "Service",
+                "name": "Caustic Soda Supply"
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
-                "@type": "Product",
-                "name": "Calcium Hypochlorite"
+                "@type": "Service",
+                "name": "Calcium Hypochlorite Supply"
               }
             }
           ]
