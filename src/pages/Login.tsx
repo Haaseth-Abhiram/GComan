@@ -76,13 +76,22 @@ const Login = () => {
       });
 
       if (error) {
-        if (error.message.includes('Invalid login credentials')) {
+        console.error('Supabase login error', error);
+
+        const rawMessage = error.message || '';
+        const lowerMessage = rawMessage.toLowerCase();
+        const isNetworkError =
+          lowerMessage.includes('load failed') ||
+          lowerMessage.includes('failed to fetch') ||
+          lowerMessage.includes('network error');
+
+        if (rawMessage.includes('Invalid login credentials')) {
           toast({
             title: "Login failed",
             description: "Invalid email or password. Please try again.",
             variant: "destructive"
           });
-        } else if (error.message.includes('Email not confirmed')) {
+        } else if (rawMessage.includes('Email not confirmed')) {
           toast({
             title: "Email not confirmed",
             description: "Please confirm your email before logging in.",
@@ -91,7 +100,9 @@ const Login = () => {
         } else {
           toast({
             title: "Login failed",
-            description: error.message,
+            description: isNetworkError
+              ? "Unable to reach the login server. Please check your connection and try again shortly."
+              : (rawMessage || "An unexpected error occurred. Please try again."),
             variant: "destructive"
           });
         }
@@ -107,6 +118,8 @@ const Login = () => {
       }
 
     } catch (error) {
+      console.error('Unexpected login error', error);
+
       if (error instanceof z.ZodError) {
         toast({
           title: "Validation error",
