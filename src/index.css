@@ -116,4 +116,50 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
   }
+
+  /* RTL Support for Arabic */
+  html[dir="rtl"] {
+    font-family: 'Noto Sans Arabic', 'Segoe UI', Tahoma, sans-serif;
+  }
+
+  html[dir="rtl"] body {
+    text-align: right;
+  }
+
+  /* Flip icons and directional elements in RTL */
+  html[dir="rtl"] .rtl-flip {
+    transform: scaleX(-1);
+  }
+
+  /* Adjust spacing for RTL */
+  html[dir="rtl"] .ml-auto {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  html[dir="rtl"] .mr-auto {
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  /* Fix flex direction for RTL navigation */
+  html[dir="rtl"] .flex-row {
+    flex-direction: row-reverse;
+  }
+
+  /* Preserve LTR for specific elements like phone numbers */
+  .ltr-preserve {
+    direction: ltr;
+    unicode-bidi: embed;
+  }
+
+  /* Arabic font improvements */
+  html[dir="rtl"] h1,
+  html[dir="rtl"] h2,
+  html[dir="rtl"] h3,
+  html[dir="rtl"] h4,
+  html[dir="rtl"] h5,
+  html[dir="rtl"] h6 {
+    font-weight: 600;
+  }
 }

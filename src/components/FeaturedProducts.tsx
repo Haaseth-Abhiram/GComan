@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, Beaker, Droplets, Wrench } from 'lucide-react';
@@ -7,29 +8,31 @@ import oilGasImg from '@/assets/products/oil-gas.jpg';
 import industrialLubricantsImg from '@/assets/products/industrial-lubricants.jpg';
 
 const FeaturedProducts = () => {
+  const { t } = useTranslation();
+
   const products = [
     {
       icon: Droplets,
-      name: 'Water Treatment Solutions',
-      category: 'Treatment',
-      description: 'Advanced formulations for industrial water purification and wastewater management.',
-      features: ['High Efficiency', 'Cost-Effective', 'Eco-Friendly'],
+      name: t('home.featuredProducts.waterTreatment'),
+      category: t('home.featuredProducts.treatment'),
+      description: t('home.featuredProducts.waterTreatmentDesc'),
+      features: [t('home.featuredProducts.highEfficiency'), t('home.featuredProducts.costEffective'), t('home.featuredProducts.ecoFriendly')],
       image: waterTreatmentImg,
     },
     {
       icon: Droplets,
-      name: 'Oil & Gas Solutions',
-      category: 'Energy',
-      description: 'Specialized chemicals for drilling, production, and refining operations in the oil and gas industry.',
-      features: ['Performance Proven', 'Industry Standard', 'Technical Support'],
+      name: t('home.featuredProducts.oilGas'),
+      category: t('home.featuredProducts.energy'),
+      description: t('home.featuredProducts.oilGasDesc'),
+      features: [t('home.featuredProducts.performanceProven'), t('home.featuredProducts.industryStandard'), t('home.featuredProducts.technicalSupport')],
       image: oilGasImg,
     },
     {
       icon: Wrench,
-      name: 'Industrial Lubricants',
-      category: 'Industrial',
-      description: 'Premium lubricants engineered for maximum performance and equipment longevity.',
-      features: ['Long-Lasting', 'Temperature Stable', 'Reduced Friction'],
+      name: t('home.featuredProducts.lubricants'),
+      category: t('home.featuredProducts.industrial'),
+      description: t('home.featuredProducts.lubricantsDesc'),
+      features: [t('home.featuredProducts.longLasting'), t('home.featuredProducts.temperatureStable'), t('home.featuredProducts.reducedFriction')],
       image: industrialLubricantsImg,
     },
   ];
@@ -39,13 +42,13 @@ const FeaturedProducts = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 animate-fade-in">
           <Badge variant="outline" className="mb-4 text-primary border-primary/30">
-            Featured Solutions
+            {t('home.featuredSolutions')}
           </Badge>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4 px-4">
-            Our Most Popular Products
+            {t('home.popularProducts')}
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
-            Discover our best-selling chemical solutions trusted by industries worldwide
+            {t('home.popularProductsDesc')}
           </p>
         </div>
 
@@ -62,7 +65,10 @@ const FeaturedProducts = () => {
                   <img
                     src={product.image}
                     alt={product.name}
+                    width={400}
+                    height={192}
                     loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -98,10 +104,10 @@ const FeaturedProducts = () => {
                   <Link
                     to="/products"
                     className="flex items-center gap-2 text-primary font-semibold text-sm group/link hover:gap-3 transition-all"
-                    aria-label={`Learn more about ${product.name}`}
+                    aria-label={`${t('home.learnMoreAbout')} ${product.name}`}
                   >
-                    Learn More About {product.name}
-                    <ArrowRight className="w-4 h-4" />
+                    {t('home.learnMoreAbout')} {product.name}
+                    <ArrowRight className="w-4 h-4 rtl:rotate-180" />
                   </Link>
                 </div>
               </Card>
@@ -114,8 +120,8 @@ const FeaturedProducts = () => {
             to="/products"
             className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:scale-105 w-full sm:w-auto"
           >
-            View All Products
-            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+            {t('home.viewAllProducts')}
+            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 rtl:rotate-180" />
           </Link>
         </div>
       </div>

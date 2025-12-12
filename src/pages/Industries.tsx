@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
@@ -129,6 +130,8 @@ const waterTreatmentApplications = [
 ];
 
 const Industries = () => {
+  const { t } = useTranslation();
+
   const industries = [
     {
       id: 'oil-gas',
@@ -353,10 +356,10 @@ const Industries = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Industries We Serve
+              {t('industries.title')}
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Specialized chemical solutions for Oil & Gas, Water Treatment, Manufacturing, Food & Beverage, Pharmaceuticals, Construction, Pools, and Laboratories. 500+ products. JSRS certified. ICV compliant.
+              {t('industries.heroDesc')}
             </p>
           </div>
         </div>
@@ -387,8 +390,11 @@ const Industries = () => {
                     <img
                       src={industry.image}
                       alt={industry.title}
+                      width={800}
+                      height={400}
                       className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
+                      decoding="async"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                     <div className="absolute bottom-6 left-6 right-6">
@@ -424,7 +430,7 @@ const Industries = () => {
 
                 {/* Key Products */}
                 <div className="mb-12">
-                  <h3 className="text-2xl font-bold text-foreground mb-6">Key Products We Supply</h3>
+                  <h3 className="text-2xl font-bold text-foreground mb-6">{t('industries.keyProducts')}</h3>
                   <div className="grid md:grid-cols-2 gap-4">
                     {industry.products.map((product, idx) => (
                       <Card key={idx} className="p-6 hover:shadow-lg transition-shadow border-border">
@@ -437,7 +443,7 @@ const Industries = () => {
 
                 {/* Applications */}
                 <div className="mb-12">
-                  <h3 className="text-2xl font-bold text-foreground mb-6">Applications</h3>
+                  <h3 className="text-2xl font-bold text-foreground mb-6">{t('industries.applications')}</h3>
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {industry.applications.map((app, idx) => (
                       <div key={idx} className="flex items-start gap-3 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors">
@@ -633,22 +639,22 @@ const Industries = () => {
       <section className="py-16 bg-gradient-to-br from-primary/10 to-secondary/10">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Need a Custom Solution?</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-4">{t('industries.needCustomSolution')}</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Our technical team is ready to help you find the perfect chemical solution for your specific industry needs.
+              {t('industries.customSolutionDesc')}
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
                 href="/contact"
                 className="px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl"
               >
-                Contact Our Experts
+                {t('industries.contactExperts')}
               </a>
               <a
                 href="/products"
                 className="px-8 py-4 bg-card text-foreground border border-border rounded-lg font-semibold hover:bg-muted transition-colors"
               >
-                Browse Products
+                {t('industries.browseProducts')}
               </a>
             </div>
           </div>

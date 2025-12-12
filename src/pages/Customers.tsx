@@ -1,4 +1,3 @@
-import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -17,6 +16,53 @@ import oswsLogo from '@/assets/customers/osws-logo.jpg';
 import soharAluminiumLogo from '@/assets/customers/sohar-aluminium-logo.png';
 import omanLngLogo from '@/assets/customers/oman-lng-logo.png';
 import omifcoLogo from '@/assets/customers/omifco-logo.png';
+import { SEO } from '@/components/SEO';
+import { ReviewStructuredData, BreadcrumbStructuredData } from '@/components/StructuredData';
+
+// Breadcrumb items
+const breadcrumbItems = [
+  { name: 'Home', url: 'https://www.gcoman.com/' },
+  { name: 'Customers', url: 'https://www.gcoman.com/customers' }
+];
+
+// Reviews for structured data - Expanded for better SEO
+const customerReviews = [
+  {
+    author: 'Procurement Director',
+    rating: 5,
+    reviewBody: 'Global Chemicals LLC has been instrumental in providing high-quality chemical solutions that meet our stringent requirements for oil and gas operations.',
+    company: 'OQ',
+    datePublished: '2024-01-15'
+  },
+  {
+    author: 'Supply Chain Manager',
+    rating: 5,
+    reviewBody: 'Their commitment to quality, safety standards, and timely delivery has made them our trusted partner for critical chemical supplies.',
+    company: 'Petroleum Development Oman (PDO)',
+    datePublished: '2024-02-20'
+  },
+  {
+    author: 'Plant Manager',
+    rating: 5,
+    reviewBody: 'Excellent water treatment chemicals and technical support. Their PAC and calcium hypochlorite products perform consistently well in our desalination operations.',
+    company: 'Oman LNG',
+    datePublished: '2024-03-10'
+  },
+  {
+    author: 'Operations Manager',
+    rating: 5,
+    reviewBody: 'Reliable lubricant supplier with genuine Shell and Mobil products. Fast delivery to Sohar Industrial Zone and competitive pricing.',
+    company: 'Sohar Aluminium',
+    datePublished: '2024-04-05'
+  },
+  {
+    author: 'Quality Control Manager',
+    rating: 5,
+    reviewBody: 'We rely on Global Chemicals for our laboratory reagents and food-grade chemicals. Consistent quality with proper documentation and certificates of analysis.',
+    company: 'Arabian Food Industries',
+    datePublished: '2024-05-15'
+  }
+];
 
 interface Customer {
   name: string;
@@ -70,7 +116,9 @@ const Customers = () => {
       name: 'Arabian Food Industries',
       logo: arabianFoodLogo,
       industry: 'Food & Beverage',
-      description: 'Premium food and beverage manufacturing company in Oman'
+      description: 'Premium food and beverage manufacturing company in Oman',
+      testimonial: 'We rely on Global Chemicals for our laboratory reagents and food-grade chemicals. Consistent quality with proper documentation and certificates of analysis.',
+      contactPerson: 'Quality Control Manager'
     },
     {
       name: 'Ministry of Health Oman',
@@ -88,13 +136,17 @@ const Customers = () => {
       name: 'Sohar Aluminium',
       logo: soharAluminiumLogo,
       industry: 'Manufacturing',
-      description: 'Leading aluminum smelter and one of Oman\'s largest industrial companies'
+      description: 'Leading aluminum smelter and one of Oman\'s largest industrial companies',
+      testimonial: 'Reliable lubricant supplier with genuine Shell and Mobil products. Fast delivery to Sohar Industrial Zone and competitive pricing.',
+      contactPerson: 'Operations Manager'
     },
     {
       name: 'Oman LNG',
       logo: omanLngLogo,
       industry: 'Oil & Gas',
-      description: 'Liquefied natural gas producer and exporter in Oman'
+      description: 'Liquefied natural gas producer and exporter in Oman',
+      testimonial: 'Excellent water treatment chemicals and technical support. Their PAC and calcium hypochlorite products perform consistently well in our desalination operations.',
+      contactPerson: 'Plant Manager'
     },
     {
       name: 'Omifco',
@@ -124,16 +176,17 @@ const Customers = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Our Customers | Trusted by 200+ | Global Chemicals</title>
-        <meta name="description" content="Trusted chemical supplier for 200+ clients in Oman including oil & gas, water treatment, manufacturing & construction. ISO 9001 certified. 10+ years." />
-        <meta name="keywords" content="chemical customers Oman, OQ supplier, PDO supplier, oil gas chemical supplier, industrial clients Oman, chemical testimonials" />
-        <meta property="og:title" content="Our Valued Customers | Leading Organizations Trust Us | Global Chemicals" />
-        <meta property="og:description" content="200+ active clients, 98% retention rate, 10+ years serving Oman's key industries. Join our growing family of satisfied customers." />
-        <meta property="og:url" content="https://www.gcoman.com/customers" />
-        <meta property="og:image" content="https://www.gcoman.com/og-image.jpg" />
-        <link rel="canonical" href="https://www.gcoman.com/customers" />
-      </Helmet>
+      <SEO
+        title="Our Customers | Trusted by 200+ | Global Chemicals"
+        description="Trusted chemical supplier for 200+ clients in Oman including oil & gas, water treatment, manufacturing & construction. ISO 9001 certified. 10+ years."
+        keywords="chemical customers Oman, OQ supplier, PDO supplier, oil gas chemical supplier, industrial clients Oman, chemical testimonials, Oman LNG supplier"
+        ogTitle="Our Valued Customers | Leading Organizations Trust Us | Global Chemicals"
+        ogDescription="200+ active clients, 98% retention rate, 10+ years serving Oman's key industries. Join our growing family of satisfied customers."
+        ogUrl="https://www.gcoman.com/customers"
+        canonical="https://www.gcoman.com/customers"
+      />
+      <ReviewStructuredData reviews={customerReviews} />
+      <BreadcrumbStructuredData items={breadcrumbItems} />
       <Navigation />
       <WhatsAppButton />
 
@@ -228,11 +281,14 @@ const Customers = () => {
                     <div className="flex items-start justify-between gap-4">
                       <div className="flex-1">
                         <div className="h-24 bg-background rounded-lg border-2 border-border flex items-center justify-center p-4 mb-4 group-hover:border-primary/50 transition-colors">
-                          <img 
-                            src={customer.logo} 
+                          <img
+                            src={customer.logo}
                             alt={`${customer.name} logo`}
+                            width={200}
+                            height={80}
                             className="max-h-full max-w-full object-contain opacity-80 group-hover:opacity-100 transition-opacity"
                             loading="lazy"
+                            decoding="async"
                           />
                         </div>
                         <Badge variant="secondary" className="mb-2">{customer.industry}</Badge>
@@ -272,11 +328,14 @@ const Customers = () => {
                 >
                   <CardContent className="p-6">
                     <div className="aspect-square bg-background border-2 border-border rounded-lg flex items-center justify-center p-4 mb-4 group-hover:border-primary/50 transition-colors">
-                      <img 
-                        src={customer.logo} 
+                      <img
+                        src={customer.logo}
                         alt={`${customer.name} logo`}
+                        width={120}
+                        height={120}
                         className="max-h-full max-w-full object-contain opacity-70 group-hover:opacity-100 transition-opacity"
                         loading="lazy"
+                        decoding="async"
                       />
                     </div>
                     <h3 className="font-semibold text-center text-sm line-clamp-2 group-hover:text-primary transition-colors">

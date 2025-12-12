@@ -10,7 +10,7 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } f
 import { useToast } from '@/hooks/use-toast';
 import { Eye, EyeOff, Mail, Lock, ArrowLeft } from 'lucide-react';
 import { z } from 'zod';
-import logo from '@/assets/global-chemicals-logo.png';
+import logo from '@/assets/global-chemicals-logo.svg';
 import { supabase } from '@/integrations/supabase/client';
 
 // Validation schemas
@@ -76,13 +76,22 @@ const Login = () => {
       });
 
       if (error) {
-        if (error.message.includes('Invalid login credentials')) {
+        console.error('Supabase login error', error);
+
+        const rawMessage = error.message || '';
+        const lowerMessage = rawMessage.toLowerCase();
+        const isNetworkError =
+          lowerMessage.includes('load failed') ||
+          lowerMessage.includes('failed to fetch') ||
+          lowerMessage.includes('network error');
+
+        if (rawMessage.includes('Invalid login credentials')) {
           toast({
             title: "Login failed",
             description: "Invalid email or password. Please try again.",
             variant: "destructive"
           });
-        } else if (error.message.includes('Email not confirmed')) {
+        } else if (rawMessage.includes('Email not confirmed')) {
           toast({
             title: "Email not confirmed",
             description: "Please confirm your email before logging in.",
@@ -91,7 +100,9 @@ const Login = () => {
         } else {
           toast({
             title: "Login failed",
-            description: error.message,
+            description: isNetworkError
+              ? "Unable to reach the login server. Please check your connection and try again shortly."
+              : (rawMessage || "An unexpected error occurred. Please try again."),
             variant: "destructive"
           });
         }
@@ -107,6 +118,8 @@ const Login = () => {
       }
 
     } catch (error) {
+      console.error('Unexpected login error', error);
+
       if (error instanceof z.ZodError) {
         toast({
           title: "Validation error",
@@ -258,11 +271,12 @@ const Login = () => {
           </Link>
           
           <div className="space-y-6">
-            <img 
-              src={logo} 
-              alt="Global Chemicals LLC" 
+            <img
+              src={logo}
+              alt="Global Chemicals LLC"
+              width={200}
+              height={64}
               className="h-16 w-auto"
-              loading="lazy"
             />
             <div>
               <h1 className="text-4xl font-bold text-foreground mb-4">
@@ -305,9 +319,11 @@ const Login = () => {
           <Card className="border-2 shadow-xl">
             <CardHeader className="space-y-4">
               <div className="lg:hidden flex justify-center mb-4">
-                <img 
-                  src={logo} 
-                  alt="Global Chemicals LLC" 
+                <img
+                  src={logo}
+                  alt="Global Chemicals LLC"
+                  width={150}
+                  height={48}
                   className="h-12 w-auto"
                 />
               </div>

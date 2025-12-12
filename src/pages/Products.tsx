@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -8017,12 +8018,13 @@ export const products: Product[] = [
   ];
 
 const Products = () => {
+  const { t } = useTranslation();
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [activeCategory, setActiveCategory] = useState('all');
   const isMobile = useIsMobile();
 
   const categories = [
-    { id: 'all', name: 'All Products', icon: FlaskConical },
+    { id: 'all', name: t('products.allProducts'), icon: FlaskConical },
     { id: 'oilfield', name: 'Oilfield & Refinery', icon: Factory },
     { id: 'water-treatment', name: 'Water Treatment Chemicals', icon: Droplets },
     { id: 'lubricants', name: 'Lubricants & Greases', icon: Wrench },
@@ -8047,7 +8049,15 @@ const Products = () => {
     { id: 'alcohols', name: 'Alcohols', icon: FlaskRound },
   ];
 
+  // Memoize filtered products to prevent recalculating on every render
+  const filteredProducts = useMemo(() => {
+    if (activeCategory === 'all') return products;
+    return products.filter((product) => product.category === activeCategory);
+  }, [activeCategory]);
+
+  // Keep getFilteredProducts for backward compatibility with existing code
   const getFilteredProducts = (categoryId: string) => {
+    if (categoryId === activeCategory) return filteredProducts;
     if (categoryId === 'all') return products;
     return products.filter((product) => product.category === categoryId);
   };
@@ -8074,17 +8084,16 @@ const Products = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-              Premium Chemical Products for Oman
+              {t('products.heroTitle')}
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-              Comprehensive range of water treatment chemicals, industrial lubricants, laboratory chemicals, and specialty products. 
-              Serving industries across Muscat, Sohar, Duqm, Salalah, and Rusayl Industrial Area with ISO-certified quality and technical excellence.
+              {t('products.heroDesc')}
             </p>
             <div className="flex flex-wrap gap-3 justify-center text-sm">
-              <span className="px-4 py-2 bg-primary/10 text-primary rounded-full font-medium">ISO 9001 Certified</span>
-              <span className="px-4 py-2 bg-secondary/10 text-secondary rounded-full font-medium">10+ Years Experience</span>
-              <span className="px-4 py-2 bg-accent/10 text-accent rounded-full font-medium">1000+ Products</span>
-              <span className="px-4 py-2 bg-tertiary/10 text-tertiary rounded-full font-medium">Technical Support</span>
+              <span className="px-4 py-2 bg-primary/10 text-primary rounded-full font-medium">{t('products.badges.isoCertified')}</span>
+              <span className="px-4 py-2 bg-secondary/10 text-secondary rounded-full font-medium">{t('products.badges.yearsExperience')}</span>
+              <span className="px-4 py-2 bg-accent/10 text-accent rounded-full font-medium">{t('products.badges.productsCount')}</span>
+              <span className="px-4 py-2 bg-tertiary/10 text-tertiary rounded-full font-medium">{t('products.badges.technicalSupport')}</span>
             </div>
           </div>
         </div>
@@ -8095,8 +8104,7 @@ const Products = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto text-center mb-12 animate-fade-in-up">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Global Chemicals LLC specializes in supplying a wide range of high-quality chemicals for various
-              industries. Browse our comprehensive product portfolio by category.
+              {t('products.browseDesc')}
             </p>
           </div>
 
@@ -8106,7 +8114,7 @@ const Products = () => {
               <aside className="lg:w-72 flex-shrink-0">
                 <div className="lg:sticky lg:top-24 space-y-2">
                   <h3 className="font-semibold text-foreground mb-3 sm:mb-4 text-xs sm:text-sm uppercase tracking-wide px-2 sm:px-3">
-                    Product Categories
+                    {t('products.productCategories')}
                   </h3>
                   <nav className="space-y-1 max-h-[60vh] lg:max-h-none overflow-y-auto">
                     {categories.map((category) => {
@@ -8132,11 +8140,11 @@ const Products = () => {
                   </nav>
                   <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-muted/50 rounded-lg border border-border">
                     <p className="text-xs text-muted-foreground">
-                      Can't find what you're looking for?{' '}
+                      {t('products.cantFind')}{' '}
                       <a href="/contact" className="text-primary hover:underline font-semibold">
-                        Contact us
+                        {t('common.contactUs')}
                       </a>{' '}
-                      for custom solutions.
+                      {t('products.contactForCustom')}
                     </p>
                   </div>
                 </div>
@@ -8146,10 +8154,10 @@ const Products = () => {
               <main className="flex-1 min-w-0">
                 <div className="mb-4 sm:mb-6">
                   <h2 className="text-xl sm:text-2xl font-bold text-foreground">
-                    {categories.find((c) => c.id === activeCategory)?.name || 'All Products'}
+                    {categories.find((c) => c.id === activeCategory)?.name || t('products.allProducts')}
                   </h2>
                   <p className="text-xs sm:text-sm text-muted-foreground mt-1">
-                    {getFilteredProducts(activeCategory).length} products available · Tap any product to view details
+                    {getFilteredProducts(activeCategory).length} {t('products.productsAvailable')} · {t('products.tapToViewDetails')}
                   </p>
                 </div>
 
@@ -8165,7 +8173,7 @@ const Products = () => {
                 {getFilteredProducts(activeCategory).length === 0 && (
                   <div className="text-center py-16">
                     <p className="text-muted-foreground text-lg">
-                      No products available in this category at the moment.
+                      {t('products.noProductsAvailable')}
                     </p>
                   </div>
                 )}
@@ -8203,14 +8211,14 @@ const Products = () => {
                 <div className="px-4 pb-4 space-y-4">
                   {selectedProduct.details?.formula && (
                     <div>
-                      <h4 className="font-semibold text-foreground mb-2 text-sm">Chemical Formula</h4>
+                      <h4 className="font-semibold text-foreground mb-2 text-sm">{t('products.chemicalFormula')}</h4>
                       <p className="text-muted-foreground font-mono text-base">{selectedProduct.details.formula}</p>
                     </div>
                   )}
 
                   {selectedProduct.details?.fullDescription && (
                     <div>
-                      <h4 className="font-semibold text-foreground mb-2 text-sm">Description</h4>
+                      <h4 className="font-semibold text-foreground mb-2 text-sm">{t('products.description')}</h4>
                       <p className="text-muted-foreground leading-relaxed text-sm">
                         {selectedProduct.details.fullDescription}
                       </p>
@@ -8219,7 +8227,7 @@ const Products = () => {
 
                   {selectedProduct.details?.applications && selectedProduct.details.applications.length > 0 && (
                     <div>
-                      <h4 className="font-semibold text-foreground mb-3 text-sm">Applications</h4>
+                      <h4 className="font-semibold text-foreground mb-3 text-sm">{t('products.applications')}</h4>
                       <ul className="grid grid-cols-1 gap-2">
                         {selectedProduct.details.applications.map((app, index) => (
                           <li key={index} className="flex items-start gap-2">
@@ -8233,9 +8241,9 @@ const Products = () => {
 
                   <div className="pt-3 border-t border-border">
                     <p className="text-xs text-muted-foreground">
-                      For more information about this product, pricing, or technical specifications, please{' '}
+                      {t('products.moreInfoContact')}{' '}
                       <a href="/contact" className="text-primary hover:underline font-semibold">
-                        contact us
+                        {t('common.contactUs').toLowerCase()}
                       </a>
                       .
                     </p>

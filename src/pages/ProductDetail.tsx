@@ -25,7 +25,7 @@ const ProductDetail = () => {
       <div className="min-h-screen bg-background">
         <Navigation />
         <div className="container mx-auto px-4 py-32 text-center">
-          <h1 className="text-4xl font-bold mb-4">Product Not Found</h1>
+          <h2 className="text-4xl font-bold mb-4">Product Not Found</h2>
           <p className="text-muted-foreground mb-8">The product you're looking for doesn't exist.</p>
           <Button onClick={() => navigate('/products')}>
             <ArrowLeft className="w-4 h-4 mr-2" />

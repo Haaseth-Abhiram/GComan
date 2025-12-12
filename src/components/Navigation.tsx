@@ -1,29 +1,32 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, LogOut, User, Shield } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/contexts/AuthContext';
 import { useUserRole } from '@/hooks/useUserRole';
-import logo from '@/assets/global-chemicals-logo-optimized.png';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
+import logo from '@/assets/global-chemicals-logo.svg';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const { user, signOut } = useAuth();
   const { isAdmin } = useUserRole();
+  const { t } = useTranslation();
 
   const navItems = [
-    { label: 'HOME', path: '/' },
-    { label: 'ABOUT', path: '/about' },
-    { label: 'PRODUCTS', path: '/products' },
-    { label: 'INDUSTRIES', path: '/industries' },
-    { label: 'RESOURCES', path: '/resources' },
-    { label: 'CONTACT', path: '/contact' },
+    { label: t('nav.home'), path: '/' },
+    { label: t('nav.about'), path: '/about' },
+    { label: t('nav.products'), path: '/products' },
+    { label: t('nav.industries'), path: '/industries' },
+    { label: t('nav.resources'), path: '/resources' },
+    { label: t('nav.contact'), path: '/contact' },
   ];
 
   const utilityLinks = [
-    { label: 'Customers', path: '/customers' },
-    { label: 'Career', path: '/career' },
+    { label: t('nav.customers'), path: '/customers' },
+    { label: t('nav.careers'), path: '/career' },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -34,6 +37,7 @@ const Navigation = () => {
       <div className="hidden lg:block border-b border-border/50">
         <div className="container mx-auto px-4">
           <div className="flex justify-end items-center h-10 gap-6">
+            <LanguageSwitcher variant="compact" />
             {utilityLinks.map((link) => (
               <Link
                 key={link.path}
@@ -83,9 +87,11 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center group">
-            <img 
-              src={logo} 
-              alt="Global Chemicals LLC Logo" 
+            <img
+              src={logo}
+              alt="Global Chemicals LLC Logo"
+              width={180}
+              height={56}
               className="h-12 md:h-14 w-auto transition-transform group-hover:scale-105"
             />
           </Link>
@@ -118,6 +124,9 @@ const Navigation = () => {
             size="icon"
             className="lg:hidden"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={isOpen}
+            aria-controls="mobile-menu"
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
@@ -126,7 +135,11 @@ const Navigation = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden border-t border-border bg-background animate-fade-in">
+        <div
+          id="mobile-menu"
+          className="lg:hidden border-t border-border bg-background animate-fade-in"
+          onKeyDown={(e) => e.key === 'Escape' && setIsOpen(false)}
+        >
           <div className="container mx-auto px-4 py-6 space-y-4">
             {navItems.map((item) => (
               <Link
@@ -143,6 +156,9 @@ const Navigation = () => {
               </Link>
             ))}
             <div className="pt-4 border-t border-border/50 space-y-2">
+              <div className="py-2">
+                <LanguageSwitcher />
+              </div>
               {utilityLinks.map((link) => (
                 <Link
                   key={link.path}

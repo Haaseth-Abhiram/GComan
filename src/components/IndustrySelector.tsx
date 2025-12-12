@@ -1,41 +1,44 @@
+import { useTranslation } from 'react-i18next';
 import { Card } from '@/components/ui/card';
 import { Apple, Pill, Factory, Fuel, Waves, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const IndustrySelector = () => {
+  const { t } = useTranslation();
+
   const industries = [
     {
       icon: Fuel,
-      name: 'Oil & Gas',
-      description: 'Specialized solutions for energy sector',
+      name: t('industries.oilGas'),
+      description: t('home.industrySelector.oilGasDesc'),
       color: 'from-accent/10 to-accent/20',
       iconColor: 'text-accent',
     },
     {
       icon: Waves,
-      name: 'Water Treatment',
-      description: 'Advanced water purification solutions',
+      name: t('industries.waterTreatment'),
+      description: t('home.industrySelector.waterTreatmentDesc'),
       color: 'from-tertiary/10 to-tertiary/20',
       iconColor: 'text-tertiary',
     },
     {
       icon: Factory,
-      name: 'Manufacturing',
-      description: 'Industrial chemicals for peak performance',
+      name: t('industries.manufacturing'),
+      description: t('home.industrySelector.manufacturingDesc'),
       color: 'from-secondary/10 to-secondary/20',
       iconColor: 'text-secondary',
     },
     {
       icon: Apple,
-      name: 'Food & Beverage',
-      description: 'Food-grade chemicals meeting the highest safety standards',
+      name: t('industries.foodBeverage'),
+      description: t('home.industrySelector.foodBeverageDesc'),
       color: 'from-tertiary/10 to-tertiary/20',
       iconColor: 'text-tertiary',
     },
     {
       icon: Pill,
-      name: 'Pharmaceutical',
-      description: 'Precision solutions for pharmaceutical applications',
+      name: t('industries.pharmaceutical'),
+      description: t('home.industrySelector.pharmaceuticalDesc'),
       color: 'from-secondary/10 to-secondary/20',
       iconColor: 'text-secondary',
     },
@@ -46,10 +49,10 @@ const IndustrySelector = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Solutions for Every Industry
+            {t('home.industriesTitle')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Select your industry to discover tailored chemical solutions
+            {t('home.industriesDesc')}
           </p>
         </div>
 
@@ -57,7 +60,11 @@ const IndustrySelector = () => {
           {industries.map((industry, index) => {
             const Icon = industry.icon;
             return (
-              <Link key={index} to="/industries">
+              <Link
+                  key={index}
+                  to="/industries"
+                  className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-lg"
+                >
                 <Card
                   className="group p-6 text-center hover:shadow-xl transition-all duration-300 cursor-pointer border-border hover:border-primary/50 animate-scale-in h-full"
                   style={{ animationDelay: `${index * 0.05}s` }}

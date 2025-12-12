@@ -1,37 +1,40 @@
+import { useTranslation } from 'react-i18next';
 import { Card } from '@/components/ui/card';
 import { Shield, Zap, Headphones, TrendingUp, Award, Leaf } from 'lucide-react';
 
 const WhyChooseUs = () => {
+  const { t } = useTranslation();
+
   const reasons = [
     {
       icon: Shield,
-      title: 'Quality Assurance',
-      description: 'Every product undergoes rigorous testing and meets international quality standards.',
+      title: t('home.whyChoose.qualityAssurance'),
+      description: t('home.whyChoose.qualityAssuranceDesc'),
     },
     {
       icon: Zap,
-      title: 'Fast Delivery',
-      description: 'Efficient logistics network ensures timely delivery across Oman and the region.',
+      title: t('home.whyChoose.fastDelivery'),
+      description: t('home.whyChoose.fastDeliveryDesc'),
     },
     {
       icon: Headphones,
-      title: 'Expert Support',
-      description: '24/7 technical support from our team of experienced chemical engineers.',
+      title: t('home.whyChoose.expertSupport'),
+      description: t('home.whyChoose.expertSupportDesc'),
     },
     {
       icon: TrendingUp,
-      title: 'Innovation Driven',
-      description: 'Continuous R&D investment to bring cutting-edge solutions to market.',
+      title: t('home.whyChoose.innovationDriven'),
+      description: t('home.whyChoose.innovationDrivenDesc'),
     },
     {
       icon: Award,
-      title: 'Industry Leader',
-      description: '10+ years of excellence with numerous industry awards and recognitions.',
+      title: t('home.whyChoose.industryLeader'),
+      description: t('home.whyChoose.industryLeaderDesc'),
     },
     {
       icon: Leaf,
-      title: 'Sustainability',
-      description: 'Committed to eco-friendly practices and sustainable chemical manufacturing.',
+      title: t('home.whyChoose.sustainability'),
+      description: t('home.whyChoose.sustainabilityDesc'),
     },
   ];
 
@@ -40,10 +43,10 @@ const WhyChooseUs = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Why Industry Leaders Choose Us
+            {t('home.whyChooseUs')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Experience the difference that comes from partnering with a trusted chemical solutions provider
+            {t('home.whyChooseUsDesc')}
           </p>
         </div>
 

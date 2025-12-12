@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import heroLab from '@/assets/hero-lab-optimized.webp';
 import waterTreatment from '@/assets/hero-water-treatment-optimized.webp';
 import oilGas from '@/assets/products/oil-gas.jpg';
@@ -43,6 +44,7 @@ const slides = [
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -56,6 +58,10 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* SEO-optimized hidden H1 for consistent keyword targeting */}
+      <h1 className="sr-only">
+        Chemical Supplier Oman - Global Chemicals LLC | Industrial & Specialty Chemicals in Muscat, Sohar, Salalah
+      </h1>
       {/* Background with Parallax Effect */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 mix-blend-multiply z-10" />
@@ -64,7 +70,11 @@ const Hero = () => {
             key={index}
             src={s.image}
             alt={s.alt}
+            width={1920}
+            height={1080}
             loading={index === 0 ? "eager" : "lazy"}
+            decoding={index === 0 ? "sync" : "async"}
+            fetchPriority={index === 0 ? "high" : "low"}
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
               index === currentSlide ? 'opacity-100' : 'opacity-0'
             }`}
@@ -86,20 +96,20 @@ const Hero = () => {
           {/* Trust Indicators */}
           <div className="flex flex-wrap items-center justify-center gap-3 animate-fade-in">
             <Badge variant="outline" className="bg-emerald-500/20 backdrop-blur-sm border-emerald-400/50 text-white px-4 py-2">
-              <Shield className="w-4 h-4 mr-2 text-emerald-400" />
-              JSRS Certified
+              <Shield className="w-4 h-4 ltr:mr-2 rtl:ml-2 text-emerald-400" />
+              {t('certifications.jsrs')}
             </Badge>
             <Badge variant="outline" className="bg-blue-500/20 backdrop-blur-sm border-blue-400/50 text-white px-4 py-2">
-              <Award className="w-4 h-4 mr-2 text-blue-400" />
-              ICV Compliant
+              <Award className="w-4 h-4 ltr:mr-2 rtl:ml-2 text-blue-400" />
+              {t('certifications.icv')}
             </Badge>
             <Badge variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white px-4 py-2">
-              <Shield className="w-4 h-4 mr-2" />
-              ISO 9001
+              <Shield className="w-4 h-4 ltr:mr-2 rtl:ml-2" />
+              {t('certifications.iso')}
             </Badge>
             <Badge variant="outline" className="bg-primary/20 backdrop-blur-sm border-primary/50 text-white px-4 py-2">
-              <Sparkles className="w-4 h-4 mr-2 text-primary" />
-              Local Stock in Muscat
+              <Sparkles className="w-4 h-4 ltr:mr-2 rtl:ml-2 text-primary" />
+              {t('locations.muscat')}
             </Badge>
           </div>
 
@@ -117,17 +127,18 @@ const Hero = () => {
               <div className="h-px w-12 bg-primary" />
             </div>
 
-            {/* Main Heading */}
-            <h1 
+            {/* Main Visual Heading (H2 since H1 is for SEO) */}
+            <h2
               key={`title-${currentSlide}`}
               className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight px-4 animate-fade-in"
+              aria-label={`${slide.title} ${slide.highlight}`}
             >
               {slide.title}
               <br />
               <span className="text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]">
                 {slide.highlight}
               </span>
-            </h1>
+            </h2>
 
             {/* Value Proposition */}
             <p 
@@ -143,14 +154,14 @@ const Hero = () => {
                 href="/products"
                 className="group inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 text-center"
               >
-                Explore Our Products
-                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
+                {t('hero.ctaSecondary')}
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform rtl:rotate-180" />
               </a>
               <a
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white hover:bg-white/90 text-secondary font-semibold rounded-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 text-center"
               >
-                Request a Quote
+                {t('hero.cta')}
               </a>
             </div>
 
