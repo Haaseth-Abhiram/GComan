@@ -12,6 +12,7 @@ import { Eye, EyeOff, Mail, Lock, ArrowLeft } from 'lucide-react';
 import { z } from 'zod';
 import logo from '@/assets/global-chemicals-logo.svg';
 import { supabase } from '@/integrations/supabase/client';
+import { ConnectionStatus } from '@/components/ConnectionStatus';
 
 // Validation schemas
 const loginSchema = z.object({
@@ -76,7 +77,14 @@ const Login = () => {
       });
 
       if (error) {
-        console.error('Supabase login error', error);
+        console.group('❌ Login Error Details');
+        console.error('Error object:', error);
+        console.error('Error message:', error.message);
+        console.error('Error status:', (error as any).status);
+        console.error('Current URL:', window.location.href);
+        console.error('Supabase URL:', import.meta.env.VITE_SUPABASE_URL);
+        console.error('Timestamp:', new Date().toISOString());
+        console.groupEnd();
 
         const rawMessage = error.message || '';
         const lowerMessage = rawMessage.toLowerCase();
@@ -159,7 +167,14 @@ const Login = () => {
       });
 
       if (error) {
-        console.error('Supabase signup error', error);
+        console.group('❌ Signup Error Details');
+        console.error('Error object:', error);
+        console.error('Error message:', error.message);
+        console.error('Error status:', (error as any).status);
+        console.error('Current URL:', window.location.href);
+        console.error('Supabase URL:', import.meta.env.VITE_SUPABASE_URL);
+        console.error('Timestamp:', new Date().toISOString());
+        console.groupEnd();
 
         const rawMessage = error.message || '';
         const lowerMessage = rawMessage.toLowerCase();
@@ -327,6 +342,11 @@ const Login = () => {
 
         {/* Right Side - Auth Forms */}
         <div className="w-full max-w-md mx-auto animate-fade-in" style={{ animationDelay: '100ms' }}>
+          {/* Connection Status Indicator */}
+          <div className="mb-4">
+            <ConnectionStatus />
+          </div>
+
           <Card className="border-2 shadow-xl">
             <CardHeader className="space-y-4">
               <div className="lg:hidden flex justify-center mb-4">
