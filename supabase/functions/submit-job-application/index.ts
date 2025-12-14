@@ -1,13 +1,27 @@
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.76.1';
 import { SMTPClient } from "https://deno.land/x/denomailer@1.6.0/mod.ts";
 
-const corsHeaders = {
-  'Access-Control-Allow-Origin': Deno.env.get('ALLOWED_ORIGIN') || 'https://www.gcoman.com',
-  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
-  'Access-Control-Allow-Methods': 'POST, OPTIONS',
-  'X-Content-Type-Options': 'nosniff',
-  'X-Frame-Options': 'DENY',
-};
+// Allowed origins whitelist - prevents wildcard CORS misconfiguration
+const ALLOWED_ORIGINS = [
+  'https://www.gcoman.com',
+  'https://gcoman.com',
+  'https://gcoman.lovable.app',
+];
+
+function getCorsOrigin(req: Request): string {
+  const origin = req.headers.get('Origin') || '';
+  return ALLOWED_ORIGINS.includes(origin) ? origin : 'https://www.gcoman.com';
+}
+
+function getCorsHeaders(req: Request) {
+  return {
+    'Access-Control-Allow-Origin': getCorsOrigin(req),
+    'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
+    'Access-Control-Allow-Methods': 'POST, OPTIONS',
+    'X-Content-Type-Options': 'nosniff',
+    'X-Frame-Options': 'DENY',
+  };
+}
 
 interface ApplicationData {
   name: string;
@@ -30,10 +44,23 @@ function isValidPhone(phone: string): boolean {
   return phoneRegex.test(phone) && phone.length >= 7 && phone.length <= 20;
 }
 
-function isValidUrl(url: string): boolean {
+// LinkedIn URL validation - only allow actual LinkedIn domains
+function isValidLinkedInUrl(url: string): boolean {
   try {
     const urlObj = new URL(url);
-    return (urlObj.protocol === 'http:' || urlObj.protocol === 'https:') && url.length <= 255;
+    const allowedDomains = [
+      'linkedin.com',
+      'www.linkedin.com',
+      'om.linkedin.com', // Oman regional
+      'ae.linkedin.com', // UAE regional
+      'in.linkedin.com', // India regional
+    ];
+    return urlObj.protocol === 'https:' &&
+           allowedDomains.some(domain => 
+             urlObj.hostname === domain || 
+             urlObj.hostname.endsWith('.' + domain)
+           ) &&
+           url.length <= 255;
   } catch {
     return false;
   }
@@ -74,9 +101,9 @@ function validateApplicationData(data: ApplicationData): { valid: boolean; error
     return { valid: false, error: 'Cover letter must be between 10 and 2000 characters' };
   }
 
-  // LinkedIn URL validation (optional)
-  if (data.linkedinUrl && data.linkedinUrl.trim() !== '' && !isValidUrl(data.linkedinUrl)) {
-    return { valid: false, error: 'Invalid LinkedIn URL format' };
+  // LinkedIn URL validation (optional but must be valid LinkedIn domain if provided)
+  if (data.linkedinUrl && data.linkedinUrl.trim() !== '' && !isValidLinkedInUrl(data.linkedinUrl)) {
+    return { valid: false, error: 'LinkedIn URL must be a valid linkedin.com URL' };
   }
 
   return { valid: true };
@@ -123,6 +150,8 @@ async function checkRateLimit(supabase: any, email: string): Promise<{ allowed: 
 }
 
 Deno.serve(async (req) => {
+  const corsHeaders = getCorsHeaders(req);
+  
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders });
@@ -298,7 +327,7 @@ Submitted at: ${new Date().toLocaleString()}
     console.error('Error processing application:', error);
     return new Response(
       JSON.stringify({ error: 'Internal server error' }),
-      { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      { status: 500, headers: { ...getCorsHeaders(req), 'Content-Type': 'application/json' } }
     );
   }
 });

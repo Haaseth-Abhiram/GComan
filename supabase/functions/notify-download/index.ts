@@ -1,13 +1,27 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.3";
 import { SMTPClient } from "https://deno.land/x/denomailer@1.6.0/mod.ts";
 
-const corsHeaders = {
-  "Access-Control-Allow-Origin": Deno.env.get('ALLOWED_ORIGIN') || 'https://www.gcoman.com',
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
-  "Access-Control-Allow-Methods": "POST, OPTIONS",
-  "X-Content-Type-Options": "nosniff",
-  "X-Frame-Options": "DENY",
-};
+// Allowed origins whitelist - prevents wildcard CORS misconfiguration
+const ALLOWED_ORIGINS = [
+  'https://www.gcoman.com',
+  'https://gcoman.com',
+  'https://gcoman.lovable.app',
+];
+
+function getCorsOrigin(req: Request): string {
+  const origin = req.headers.get('Origin') || '';
+  return ALLOWED_ORIGINS.includes(origin) ? origin : 'https://www.gcoman.com';
+}
+
+function getCorsHeaders(req: Request) {
+  return {
+    'Access-Control-Allow-Origin': getCorsOrigin(req),
+    'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
+    'Access-Control-Allow-Methods': 'POST, OPTIONS',
+    'X-Content-Type-Options': 'nosniff',
+    'X-Frame-Options': 'DENY',
+  };
+}
 
 // Simple in-memory rate limiting (resets on function cold start)
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
@@ -120,6 +134,8 @@ function validateInput(data: unknown): { valid: true; data: DownloadNotification
 }
 
 Deno.serve(async (req) => {
+  const corsHeaders = getCorsHeaders(req);
+  
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
@@ -262,7 +278,7 @@ Downloaded at: ${new Date().toLocaleString()}
     return new Response(
       JSON.stringify({ error: "An unexpected error occurred" }),
       { 
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
+        headers: { ...getCorsHeaders(req), "Content-Type": "application/json" },
         status: 500 
       }
     );
