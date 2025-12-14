@@ -159,7 +159,16 @@ const Login = () => {
       });
 
       if (error) {
-        if (error.message.includes('User already registered')) {
+        console.error('Supabase signup error', error);
+
+        const rawMessage = error.message || '';
+        const lowerMessage = rawMessage.toLowerCase();
+        const isNetworkError =
+          lowerMessage.includes('load failed') ||
+          lowerMessage.includes('failed to fetch') ||
+          lowerMessage.includes('network error');
+
+        if (rawMessage.includes('User already registered')) {
           toast({
             title: "Account exists",
             description: "An account with this email already exists. Please login instead.",
@@ -168,7 +177,9 @@ const Login = () => {
         } else {
           toast({
             title: "Signup failed",
-            description: error.message,
+            description: isNetworkError
+              ? "Unable to reach the signup server. Please check your connection and try again shortly."
+              : (rawMessage || "An unexpected error occurred. Please try again."),
             variant: "destructive"
           });
         }
