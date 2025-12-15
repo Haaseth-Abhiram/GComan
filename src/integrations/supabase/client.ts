@@ -5,10 +5,40 @@ import type { Database } from './types';
 const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
 const SUPABASE_PUBLISHABLE_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
 
+// Enhanced diagnostics for connection issues
+console.group('🔍 Supabase Connection Diagnostics');
+console.log('VITE_SUPABASE_URL:', SUPABASE_URL || '❌ NOT SET');
+console.log('VITE_SUPABASE_PUBLISHABLE_KEY:', SUPABASE_PUBLISHABLE_KEY ? '✅ SET (hidden for security)' : '❌ NOT SET');
+console.log('Current origin:', window.location.origin);
+console.log('User agent:', navigator.userAgent);
+
 // Validate environment variables
 if (!SUPABASE_URL || !SUPABASE_PUBLISHABLE_KEY) {
-  console.warn('Supabase environment variables are not configured. Some features may not work.');
+  console.error('❌ Supabase environment variables are not configured.');
+  console.error('Expected format:');
+  console.error('  VITE_SUPABASE_URL=https://xxxxx.supabase.co');
+  console.error('  VITE_SUPABASE_PUBLISHABLE_KEY=eyJhbGci...');
+} else {
+  console.log('✅ Environment variables configured');
+
+  // Test basic connectivity
+  fetch(SUPABASE_URL + '/rest/v1/', {
+    method: 'HEAD',
+    headers: {
+      'apikey': SUPABASE_PUBLISHABLE_KEY,
+    }
+  })
+    .then(response => {
+      console.log('✅ Backend connectivity test:', response.status, response.statusText);
+    })
+    .catch(error => {
+      console.error('❌ Backend connectivity test FAILED:');
+      console.error('Error type:', error.name);
+      console.error('Error message:', error.message);
+      console.error('This suggests a network/firewall/CORS issue preventing browser from reaching:', SUPABASE_URL);
+    });
 }
+console.groupEnd();
 
 // Import the supabase client like this:
 // import { supabase } from "@/integrations/supabase/client";

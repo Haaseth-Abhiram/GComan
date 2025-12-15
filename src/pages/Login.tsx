@@ -12,6 +12,7 @@ import { Eye, EyeOff, Mail, Lock, ArrowLeft } from 'lucide-react';
 import { z } from 'zod';
 import logo from '@/assets/global-chemicals-logo.svg';
 import { supabase } from '@/integrations/supabase/client';
+import { ConnectionStatus } from '@/components/ConnectionStatus';
 
 // Validation schemas
 const loginSchema = z.object({
@@ -76,7 +77,14 @@ const Login = () => {
       });
 
       if (error) {
-        console.error('Supabase login error', error);
+        console.group('❌ Login Error Details');
+        console.error('Error object:', error);
+        console.error('Error message:', error.message);
+        console.error('Error status:', (error as any).status);
+        console.error('Current URL:', window.location.href);
+        console.error('Supabase URL:', import.meta.env.VITE_SUPABASE_URL);
+        console.error('Timestamp:', new Date().toISOString());
+        console.groupEnd();
 
         const rawMessage = error.message || '';
         const lowerMessage = rawMessage.toLowerCase();
@@ -159,7 +167,23 @@ const Login = () => {
       });
 
       if (error) {
-        if (error.message.includes('User already registered')) {
+        console.group('❌ Signup Error Details');
+        console.error('Error object:', error);
+        console.error('Error message:', error.message);
+        console.error('Error status:', (error as any).status);
+        console.error('Current URL:', window.location.href);
+        console.error('Supabase URL:', import.meta.env.VITE_SUPABASE_URL);
+        console.error('Timestamp:', new Date().toISOString());
+        console.groupEnd();
+
+        const rawMessage = error.message || '';
+        const lowerMessage = rawMessage.toLowerCase();
+        const isNetworkError =
+          lowerMessage.includes('load failed') ||
+          lowerMessage.includes('failed to fetch') ||
+          lowerMessage.includes('network error');
+
+        if (rawMessage.includes('User already registered')) {
           toast({
             title: "Account exists",
             description: "An account with this email already exists. Please login instead.",
@@ -168,7 +192,9 @@ const Login = () => {
         } else {
           toast({
             title: "Signup failed",
-            description: error.message,
+            description: isNetworkError
+              ? "Unable to reach the signup server. Please check your connection and try again shortly."
+              : (rawMessage || "An unexpected error occurred. Please try again."),
             variant: "destructive"
           });
         }
@@ -316,6 +342,11 @@ const Login = () => {
 
         {/* Right Side - Auth Forms */}
         <div className="w-full max-w-md mx-auto animate-fade-in" style={{ animationDelay: '100ms' }}>
+          {/* Connection Status Indicator */}
+          <div className="mb-4">
+            <ConnectionStatus />
+          </div>
+
           <Card className="border-2 shadow-xl">
             <CardHeader className="space-y-4">
               <div className="lg:hidden flex justify-center mb-4">
