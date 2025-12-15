@@ -1,4 +1,5 @@
 import { memo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Card } from '@/components/ui/card';
 import { ChevronRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -24,8 +25,18 @@ interface ProductCardProps {
 }
 
 const ProductCardComponent = ({ product, onClick }: ProductCardProps) => {
+  const { t, i18n } = useTranslation();
   const Icon = product.icon;
   const productUrl = `/products/${product.category}/${product.id}`;
+  
+  // Get translated product data if available (for Arabic)
+  const translatedTitle = i18n.language === 'ar' 
+    ? t(`products.${product.id}.title`, { defaultValue: product.title })
+    : product.title;
+  
+  const translatedDescription = i18n.language === 'ar'
+    ? t(`products.${product.id}.description`, { defaultValue: product.description })
+    : product.description;
   
   return (
     <Link
@@ -42,17 +53,17 @@ const ProductCardComponent = ({ product, onClick }: ProductCardProps) => {
             </div>
             <div className="flex-1 min-w-0">
               <h3 className="text-base sm:text-lg font-bold text-foreground group-hover:text-primary transition-colors leading-tight mb-1 sm:mb-2 line-clamp-2">
-                {product.title}
+                {translatedTitle}
               </h3>
             </div>
           </div>
           
           <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-4 flex-grow line-clamp-3">
-            {product.description}
+            {translatedDescription}
           </p>
           
           <div className="flex items-center gap-2 text-primary text-xs sm:text-sm font-semibold group-hover:gap-3 transition-all pt-3 border-t border-border">
-            <span>View Details</span>
+            <span>{t('products.viewDetails', { defaultValue: 'View Details' })}</span>
             <ChevronRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
           </div>
         </div>
@@ -61,7 +72,5 @@ const ProductCardComponent = ({ product, onClick }: ProductCardProps) => {
   );
 };
 
-// Memoize to prevent unnecessary re-renders when parent components update
-export const ProductCard = memo(ProductCardComponent, (prevProps, nextProps) => {
-  return prevProps.product.id === nextProps.product.id;
-});
+// Memoize but allow re-render when language changes (i18n handles this internally)
+export const ProductCard = memo(ProductCardComponent);
