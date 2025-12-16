@@ -942,7 +942,7 @@ const industryGuides: IndustryGuide[] = [
       },
       {
         title: 'Types of Tanks and Cleaning Requirements in Oman',
-        content: '**Crude Oil Storage Tanks (Upstream & Downstream):** Common at PDO, OQ, ORPIC facilities. Challenges: Heavy hydrocarbon sludge accumulation (10-30 cm thick), paraffin wax buildup, sulfur deposits, H2S gas hazards, flammable atmosphere. Cleaning frequency: Every 3-5 years or when capacity loss exceeds 5%. Typical volume: 10,000-100,000 barrels. **Water Storage Tanks (Municipal & Industrial):** Found at all desalination plants, hotels, hospitals, schools, industrial facilities. Challenges: Biofilm and algae growth (accelerated by Oman heat), sediment accumulation, scale deposits from high-TDS water, potential Legionella contamination. Cleaning frequency: Annually or when water quality degrades. Capacity: 100-10,000 m³ typical. **Chemical Storage Tanks (Process Industries):** Petrochemical plants (OQ, ORPIC), specialty chemical manufacturers, chlorine storage at water treatment plants. Challenges: Product-specific residues, cross-contamination risks, corrosion from aggressive chemicals, specialized disposal requirements. Frequency: Before product changeover or every 2-3 years. **Marine Fuel Storage Tanks (Ports):** Sohar Port, Salalah Port, Duqm Port fuel terminals. Challenges: Heavy fuel oil sludge, salt water contamination, microbial growth in diesel tanks, IMO compliance requirements. Cleaning: Before fuel grade changes or when contamination detected. **Food-Grade Storage Tanks:** Dairy plants, juice manufacturers, edible oil storage, beverage facilities. Requirements: Sanitary cleaning, no toxic chemical residues, validated cleaning procedures, Halal compliance. Frequency: Between batches or product changes. **LPG and Ammonia Tanks:** Refrigerated storage, pressurized vessels. Require specialized procedures, inert gas purging, cryogenic considerations. Less frequent but highly specialized cleaning. **Underground Storage Tanks (USTs):** Fuel stations, emergency generators. Environmental concerns, leak detection, soil contamination prevention.',
+        content: '**Crude Oil Storage Tanks (Upstream & Downstream):** Common at PDO, OQ, ORPIC facilities. Challenges include heavy hydrocarbon sludge accumulation (10-30 cm thick), paraffin wax buildup, sulfur deposits, H2S gas hazards, and flammable atmosphere. Cleaning frequency: Every 3-5 years or when capacity loss exceeds 5%. Typical volume: 10,000-100,000 barrels.\n\n**Water Storage Tanks (Municipal & Industrial):** Found at all desalination plants, hotels, hospitals, schools, and industrial facilities. Challenges include biofilm and algae growth (accelerated by Oman heat), sediment accumulation, scale deposits from high-TDS water, and potential Legionella contamination. Cleaning frequency: Annually or when water quality degrades. Capacity: 100-10,000 m³ typical.\n\n**Chemical Storage Tanks (Process Industries):** Petrochemical plants (OQ, ORPIC), specialty chemical manufacturers, and chlorine storage at water treatment plants. Challenges include product-specific residues, cross-contamination risks, corrosion from aggressive chemicals, and specialized disposal requirements. Frequency: Before product changeover or every 2-3 years.\n\n**Marine Fuel Storage Tanks (Ports):** Sohar Port, Salalah Port, and Duqm Port fuel terminals. Challenges include heavy fuel oil sludge, salt water contamination, microbial growth in diesel tanks, and IMO compliance requirements. Cleaning: Before fuel grade changes or when contamination detected.\n\n**Food-Grade Storage Tanks:** Dairy plants, juice manufacturers, edible oil storage, and beverage facilities. Requirements include sanitary cleaning, no toxic chemical residues, validated cleaning procedures, and Halal compliance. Frequency: Between batches or product changes.\n\n**LPG and Ammonia Tanks:** Refrigerated storage and pressurized vessels. Require specialized procedures, inert gas purging, and cryogenic considerations. Less frequent but highly specialized cleaning.\n\n**Underground Storage Tanks (USTs):** Fuel stations and emergency generators. Environmental concerns include leak detection and soil contamination prevention.',
         tips: [
           'Each tank type requires specific chemical formulations—never use crude oil cleaners on food tanks',
           'Cleaning frequency depends on product stored, operating conditions, and regulatory requirements',
@@ -1105,14 +1105,26 @@ const Resources = () => {
 
   const featuredArticle = blogArticles.find((article) => article.featured);
 
-  // Render markdown-like content with bold text
+  // Render markdown-like content with bold text and paragraphs
   const renderContent = (text: string) => {
-    const parts = text.split(/(\*\*.*?\*\*)/g);
-    return parts.map((part, index) => {
-      if (part.startsWith('**') && part.endsWith('**')) {
-        return <strong key={index}>{part.slice(2, -2)}</strong>;
-      }
-      return part;
+    // Split by double line breaks to create paragraphs
+    const paragraphs = text.split('\n\n');
+
+    return paragraphs.map((paragraph, pIndex) => {
+      // Split each paragraph by bold markers
+      const parts = paragraph.split(/(\*\*.*?\*\*)/g);
+      const content = parts.map((part, index) => {
+        if (part.startsWith('**') && part.endsWith('**')) {
+          return <strong key={index} className="font-semibold text-foreground">{part.slice(2, -2)}</strong>;
+        }
+        return part;
+      });
+
+      return (
+        <p key={pIndex} className="mb-3 last:mb-0">
+          {content}
+        </p>
+      );
     });
   };
 
@@ -1499,9 +1511,9 @@ const Resources = () => {
                           </span>
                           {section.title}
                         </h2>
-                        <p className="text-muted-foreground leading-relaxed mb-4">
-                          {section.content}
-                        </p>
+                        <div className="text-muted-foreground leading-relaxed mb-4">
+                          {renderContent(section.content)}
+                        </div>
                         {section.tips && section.tips.length > 0 && (
                           <div className="bg-primary/5 border-l-4 border-primary rounded-r-lg p-4 mt-4">
                             <h4 className="font-semibold flex items-center gap-2 mb-3">
