@@ -43,6 +43,7 @@ import { SEO } from '@/components/SEO';
 import { HowToStructuredData, BreadcrumbStructuredData, ArticleStructuredData, FAQStructuredData, LocalBusinessStructuredData } from '@/components/StructuredData';
 import { Link } from 'react-router-dom';
 import { blogArticles, articleCategories as blogCategories, BlogArticle } from '@/data/blogArticles';
+import { trackDownload } from '@/components/GoogleAnalytics';
 
 // Breadcrumb items
 const breadcrumbItems = [
@@ -1176,7 +1177,10 @@ const Resources = () => {
   };
 
   const handleDownloadSuccess = () => {
-    // Additional actions after successful download can be added here
+    // Track download event
+    if (selectedResource) {
+      trackDownload(selectedResource.title);
+    }
   };
 
   return (

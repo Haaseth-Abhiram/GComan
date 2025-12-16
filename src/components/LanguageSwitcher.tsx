@@ -7,6 +7,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Globe } from 'lucide-react';
+import { trackLanguageChange } from '@/components/GoogleAnalytics';
 
 const languages = [
   { code: 'en', name: 'English', nativeName: 'English', flag: '🇬🇧' },
@@ -27,6 +28,9 @@ const LanguageSwitcher = ({ variant = 'default', className = '' }: LanguageSwitc
     try {
       // Explicitly save to localStorage before changing
       localStorage.setItem('i18nextLng', langCode);
+
+      // Track language change
+      trackLanguageChange(langCode);
 
       // Change the language
       await i18n.changeLanguage(langCode);

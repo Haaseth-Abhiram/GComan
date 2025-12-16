@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
@@ -11,6 +12,7 @@ import { ArrowLeft, CheckCircle2, Phone, Mail, Beaker, Info } from 'lucide-react
 import { products } from '@/data/products';
 import { ProductStructuredData, BreadcrumbStructuredData } from '@/components/StructuredData';
 import { SEO } from '@/components/SEO';
+import { trackProductView } from '@/components/GoogleAnalytics';
 
 const ProductDetail = () => {
   const { category, productSlug } = useParams();
@@ -18,9 +20,16 @@ const ProductDetail = () => {
   const { t, i18n } = useTranslation();
 
   // Find product by slug
-  const product = products.find(p => 
+  const product = products.find(p =>
     p.id === productSlug && p.category === category
   );
+
+  // Track product view
+  useEffect(() => {
+    if (product) {
+      trackProductView(product.id, product.title, product.category);
+    }
+  }, [product]);
 
   if (!product) {
     return (

@@ -6,13 +6,16 @@ import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import { Card } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { Beaker, Droplets, Wrench, Zap, FlaskConical, TestTube, Factory, Building2, Wheat, Microscope, Sparkles, FlaskRound, Flame, Wind, Wine, ChevronRight, Shield, SprayCan } from 'lucide-react';
+import { Beaker, Droplets, Wrench, Zap, FlaskConical, TestTube, Factory, Building2, Wheat, Microscope, Sparkles, FlaskRound, Flame, Wind, Wine, ChevronRight, Shield, SprayCan, Search, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Drawer, DrawerContent, DrawerHeader, DrawerTitle, DrawerDescription } from '@/components/ui/drawer';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { ProductCard } from '@/components/products/ProductCard';
 import { SEO } from '@/components/SEO';
 import { OrganizationStructuredData } from '@/components/StructuredData';
+import { trackSearch } from '@/components/GoogleAnalytics';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
 
 interface Product {
   id: string;
@@ -8014,7 +8017,19 @@ const Products = () => {
   const { t } = useTranslation();
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [activeCategory, setActiveCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
   const isMobile = useIsMobile();
+
+  const handleSearch = (value: string) => {
+    setSearchQuery(value);
+    if (value.length >= 3) {
+      trackSearch(value);
+    }
+  };
+
+  const clearSearch = () => {
+    setSearchQuery('');
+  };
 
   const categories = [
     { id: 'all', name: t('products.allProducts'), icon: FlaskConical },
@@ -8044,9 +8059,53 @@ const Products = () => {
 
   // Memoize filtered products to prevent recalculating on every render
   const filteredProducts = useMemo(() => {
-    if (activeCategory === 'all') return products;
-    return products.filter((product) => product.category === activeCategory);
-  }, [activeCategory]);
+    let filtered = products;
+
+    // Filter by category
+    if (activeCategory !== 'all') {
+      filtered = filtered.filter((product) => product.category === activeCategory);
+    }
+
+    // Filter by search query
+    if (searchQuery.trim()) {
+      const query = searchQuery.toLowerCase();
+      filtered = filtered.filter((product) => {
+        // Search in title
+        if (product.title.toLowerCase().includes(query)) return true;
+
+        // Search in description
+        if (product.description.toLowerCase().includes(query)) return true;
+
+        // Search in details
+        if (product.details) {
+          // Search in formula
+          if (product.details.formula?.toLowerCase().includes(query)) return true;
+
+          // Search in CAS number
+          if (product.details.casNumber?.toLowerCase().includes(query)) return true;
+
+          // Search in alternative names
+          if (product.details.alternativeNames?.some(name =>
+            name.toLowerCase().includes(query)
+          )) return true;
+
+          // Search in SEO keywords
+          if (product.details.seoKeywords?.some(keyword =>
+            keyword.toLowerCase().includes(query)
+          )) return true;
+
+          // Search in applications
+          if (product.details.applications?.some(app =>
+            app.toLowerCase().includes(query)
+          )) return true;
+        }
+
+        return false;
+      });
+    }
+
+    return filtered;
+  }, [activeCategory, searchQuery]);
 
   // Keep getFilteredProducts for backward compatibility with existing code
   const getFilteredProducts = (categoryId: string) => {
@@ -8099,6 +8158,36 @@ const Products = () => {
             <p className="text-lg text-muted-foreground leading-relaxed">
               {t('products.browseDesc')}
             </p>
+          </div>
+
+          {/* Search Bar */}
+          <div className="max-w-2xl mx-auto mb-12">
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+              <Input
+                type="text"
+                placeholder="Search by product name, CAS number, formula, or category..."
+                value={searchQuery}
+                onChange={(e) => handleSearch(e.target.value)}
+                className="pl-12 pr-12 h-14 text-base shadow-lg border-2 focus:border-primary"
+              />
+              {searchQuery && (
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={clearSearch}
+                  className="absolute right-2 top-1/2 -translate-y-1/2"
+                >
+                  <X className="h-4 w-4" />
+                </Button>
+              )}
+            </div>
+            {searchQuery && (
+              <p className="text-sm text-muted-foreground mt-2 text-center">
+                Found {filteredProducts.length} product{filteredProducts.length !== 1 ? 's' : ''}
+                {searchQuery.trim() && ` matching "${searchQuery}"`}
+              </p>
+            )}
           </div>
 
           <div className="max-w-7xl mx-auto">

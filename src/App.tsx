@@ -10,6 +10,7 @@ import { ProtectedRoute } from "./components/ProtectedRoute";
 import CookieConsent from "./components/CookieConsent";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { Loading } from "./components/Loading";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 
 // Lazy load all page components
 const Index = lazy(() => import("./pages/Index"));
@@ -41,8 +42,9 @@ const App = () => (
         <BrowserRouter>
         <AuthProvider>
           <ErrorBoundary>
-            <a 
-              href="#main-content" 
+            <GoogleAnalytics />
+            <a
+              href="#main-content"
               className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-primary-foreground px-4 py-2 rounded z-50 focus:outline-none focus:ring-2 focus:ring-ring"
             >
               Skip to main content
