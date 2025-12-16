@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-// Google Analytics Tracking ID - Replace with your actual GA4 Measurement ID
-const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX'; // TODO: Replace with actual ID
+// Google Analytics Tracking ID
+const GA_MEASUREMENT_ID = 'G-6VX4FTG809';
 
 // Declare gtag function type
 declare global {
@@ -21,8 +21,8 @@ const GoogleAnalytics = () => {
 
   useEffect(() => {
     // Only load in production
-    if (process.env.NODE_ENV !== 'production' || !GA_MEASUREMENT_ID || GA_MEASUREMENT_ID === 'G-XXXXXXXXXX') {
-      console.log('Google Analytics disabled in development or not configured');
+    if (process.env.NODE_ENV !== 'production' || !GA_MEASUREMENT_ID) {
+      console.log('Google Analytics disabled in development');
       return;
     }
 
