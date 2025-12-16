@@ -23,8 +23,14 @@ const LanguageSwitcher = ({ variant = 'default', className = '' }: LanguageSwitc
 
   const currentLanguage = languages.find((lang) => lang.code === i18n.language) || languages[0];
 
-  const handleLanguageChange = (langCode: string) => {
-    i18n.changeLanguage(langCode);
+  const handleLanguageChange = async (langCode: string) => {
+    try {
+      await i18n.changeLanguage(langCode);
+      // Force reload to ensure all components update with new language
+      window.location.reload();
+    } catch (error) {
+      console.error('Failed to change language:', error);
+    }
   };
 
   if (variant === 'compact') {
