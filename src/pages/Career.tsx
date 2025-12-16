@@ -4,6 +4,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { BreadcrumbStructuredData, JobPostingStructuredData } from '@/components/StructuredData';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import { trackFormSubmission } from '@/components/GoogleAnalytics';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -285,6 +286,9 @@ const Career = () => {
       if (!response.ok) {
         throw new Error(result.error || 'Submission failed');
       }
+
+      // Track successful form submission
+      trackFormSubmission('career');
 
       toast({
         title: "Application submitted successfully!",

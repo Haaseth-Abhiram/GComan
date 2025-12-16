@@ -13,6 +13,7 @@ import { useToast } from '@/hooks/use-toast';
 import { z } from 'zod';
 import { SEO } from '@/components/SEO';
 import { FAQStructuredData, BreadcrumbStructuredData } from '@/components/StructuredData';
+import { trackFormSubmission } from '@/components/GoogleAnalytics';
 
 // Contact page FAQs for rich snippets
 const contactFAQs = [
@@ -110,6 +111,9 @@ const Contact = () => {
         setIsSubmitting(false);
         return;
       }
+
+      // Track successful form submission
+      trackFormSubmission('contact');
 
       // Success
       toast({
