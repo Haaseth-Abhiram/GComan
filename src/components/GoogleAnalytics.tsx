@@ -44,9 +44,17 @@ const GoogleAnalytics = () => {
     document.head.appendChild(script2);
 
     return () => {
-      // Cleanup on unmount
-      document.head.removeChild(script1);
-      document.head.removeChild(script2);
+      // Cleanup on unmount - safely remove scripts
+      try {
+        if (script1.parentNode) {
+          document.head.removeChild(script1);
+        }
+        if (script2.parentNode) {
+          document.head.removeChild(script2);
+        }
+      } catch (error) {
+        console.error('Error cleaning up GA scripts:', error);
+      }
     };
   }, []);
 
