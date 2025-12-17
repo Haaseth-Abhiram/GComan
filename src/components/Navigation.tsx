@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, LogOut, User, Shield } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
@@ -7,6 +7,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import { useUserRole } from '@/hooks/useUserRole';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import logo from '@/assets/global-chemicals-logo.svg';
+import { getLangPrefixFromPath, withLangPrefix } from '@/lib/langRouting';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,19 +16,27 @@ const Navigation = () => {
   const { isAdmin } = useUserRole();
   const { t } = useTranslation();
 
-  const navItems = [
-    { label: t('nav.home'), path: '/' },
-    { label: t('nav.about'), path: '/about' },
-    { label: t('nav.products'), path: '/products' },
-    { label: t('nav.industries'), path: '/industries' },
-    { label: t('nav.resources'), path: '/resources' },
-    { label: t('nav.contact'), path: '/contact' },
-  ];
+  const prefix = useMemo(() => getLangPrefixFromPath(location.pathname), [location.pathname]);
 
-  const utilityLinks = [
-    { label: t('nav.customers'), path: '/customers' },
-    { label: t('nav.careers'), path: '/career' },
-  ];
+  const navItems = useMemo(
+    () => [
+      { label: t('nav.home'), path: withLangPrefix(prefix, '/') },
+      { label: t('nav.about'), path: withLangPrefix(prefix, '/about') },
+      { label: t('nav.products'), path: withLangPrefix(prefix, '/products') },
+      { label: t('nav.industries'), path: withLangPrefix(prefix, '/industries') },
+      { label: t('nav.resources'), path: withLangPrefix(prefix, '/resources') },
+      { label: t('nav.contact'), path: withLangPrefix(prefix, '/contact') },
+    ],
+    [t, prefix]
+  );
+
+  const utilityLinks = useMemo(
+    () => [
+      { label: t('nav.customers'), path: withLangPrefix(prefix, '/customers') },
+      { label: t('nav.careers'), path: withLangPrefix(prefix, '/career') },
+    ],
+    [t, prefix]
+  );
 
   const isActive = (path: string) => location.pathname === path;
 
@@ -51,7 +60,7 @@ const Navigation = () => {
               <div className="flex items-center gap-4">
                 {isAdmin && (
                   <Link
-                    to="/admin"
+                    to={withLangPrefix(prefix, '/admin')}
                     className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-1"
                   >
                     <Shield className="w-4 h-4" />
@@ -72,7 +81,7 @@ const Navigation = () => {
               </div>
             ) : (
               <Link
-                to="/login"
+                to={withLangPrefix(prefix, '/login')}
                 className="text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 Login
@@ -86,7 +95,7 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center group">
+          <Link to={withLangPrefix(prefix, '/')} className="flex items-center group">
             <img
               src={logo}
               alt="Global Chemicals LLC Logo"
@@ -173,7 +182,7 @@ const Navigation = () => {
                 <>
                   {isAdmin && (
                     <Link
-                      to="/admin"
+                      to={withLangPrefix(prefix, '/admin')}
                       onClick={() => setIsOpen(false)}
                       className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1 flex items-center gap-2"
                     >
@@ -198,7 +207,7 @@ const Navigation = () => {
                 </>
               ) : (
                 <Link
-                  to="/login"
+                  to={withLangPrefix(prefix, '/login')}
                   onClick={() => setIsOpen(false)}
                   className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1"
                 >
