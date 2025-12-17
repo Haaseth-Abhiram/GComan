@@ -27,7 +27,6 @@ const Admin = lazy(() => import("./pages/Admin"));
 const Blog = lazy(() => import("./pages/Blog"));
 const Privacy = lazy(() => import("./pages/Privacy"));
 const Terms = lazy(() => import("./pages/Terms"));
-const Sitemap = lazy(() => import("./pages/Sitemap"));
 const LocationLanding = lazy(() => import("./pages/LocationLanding"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
@@ -70,7 +69,6 @@ const App = () => (
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/terms" element={<Terms />} />
-                <Route path="/sitemap" element={<Sitemap />} />
                 {/* Location-specific landing pages for SEO */}
                 <Route path="/chemicals/:location" element={<LocationLanding />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
