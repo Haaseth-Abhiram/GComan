@@ -14,6 +14,8 @@ import { z } from 'zod';
 import { SEO } from '@/components/SEO';
 import { FAQStructuredData, BreadcrumbStructuredData } from '@/components/StructuredData';
 import { trackFormSubmission } from '@/components/GoogleAnalytics';
+import { PhoneInput } from 'react-international-phone';
+import 'react-international-phone/style.css';
 
 // Contact page FAQs for rich snippets
 const contactFAQs = [
@@ -158,6 +160,13 @@ const Contact = () => {
     }));
   };
 
+  const handlePhoneChange = (value: string) => {
+    setFormData(prev => ({
+      ...prev,
+      phone: value
+    }));
+  };
+
   const handleSubjectChange = (value: string) => {
     setFormData(prev => ({
       ...prev,
@@ -291,13 +300,13 @@ const Contact = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                       <div className="space-y-2">
                         <Label htmlFor="phone">{t('contact.form.phone')}</Label>
-                        <Input
-                          id="phone"
-                          name="phone"
-                          type="tel"
+                        <PhoneInput
+                          defaultCountry="om"
                           value={formData.phone}
-                          onChange={handleChange}
-                          placeholder="+968 XXXX XXXX"
+                          onChange={handlePhoneChange}
+                          placeholder="XXXX XXXX"
+                          className="w-full"
+                          inputClassName="w-full"
                         />
                       </div>
                       <div className="space-y-2">
