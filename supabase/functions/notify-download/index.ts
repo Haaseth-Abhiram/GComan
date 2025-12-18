@@ -6,6 +6,7 @@ const ALLOWED_ORIGINS = [
   'https://www.gcoman.com',
   'https://gcoman.com',
   'https://gcoman.lovable.app',
+  'https://88275aec-3e28-4007-bd65-43d79fa41e87.lovableproject.com',
 ];
 
 function getCorsOrigin(req: Request): string {
