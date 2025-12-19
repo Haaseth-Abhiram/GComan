@@ -53,15 +53,19 @@ export const ProductStructuredData = ({ product, url }: ProductStructuredDataPro
       }
     },
     "offers": {
-      "@type": "Offer",
+      "@type": "AggregateOffer",
       "availability": "https://schema.org/InStock",
-      "price": "0",
       "priceCurrency": "OMR",
-      "priceValidUntil": new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
       "url": url || "https://www.gcoman.com/contact",
       "seller": {
         "@type": "Organization",
-        "name": "Global Chemicals LLC"
+        "name": "Global Chemicals LLC",
+        "url": "https://www.gcoman.com"
+      },
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "priceCurrency": "OMR",
+        "price": "Contact for Quote"
       },
       "shippingDetails": {
         "@type": "OfferShippingDetails",
