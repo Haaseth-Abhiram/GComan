@@ -1,9 +1,11 @@
-import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useLocation, Link } from "react-router-dom";
+import { useEffect, useMemo } from "react";
 import { Helmet } from 'react-helmet-async';
+import { getLangPrefixFromPath, withLangPrefix } from '@/lib/langRouting';
 
 const NotFound = () => {
   const location = useLocation();
+  const prefix = useMemo(() => getLangPrefixFromPath(location.pathname), [location.pathname]);
 
   useEffect(() => {
     console.error("404 Error: User attempted to access non-existent route:", location.pathname);
@@ -13,7 +15,10 @@ const NotFound = () => {
     <div className="flex min-h-screen items-center justify-center bg-muted">
       <Helmet>
         <title>Page Not Found | Global Chemicals LLC</title>
-        <meta name="description" content="Page not found - The page you're looking for doesn't exist. Return to Global Chemicals LLC homepage to browse products, services & contact information." />
+        <meta
+          name="description"
+          content="Page not found - The page you're looking for doesn't exist. Return to Global Chemicals LLC homepage to browse products, services & contact information."
+        />
         <meta name="robots" content="noindex, nofollow" />
         <meta property="og:title" content="Page Not Found | Global Chemicals LLC" />
         <meta property="og:description" content="The page you are looking for could not be found." />
@@ -22,9 +27,12 @@ const NotFound = () => {
       <div className="text-center">
         <h1 className="mb-4 text-4xl font-bold text-foreground">404</h1>
         <p className="mb-4 text-xl text-muted-foreground">Oops! Page not found</p>
-        <a href="/" className="text-primary underline hover:text-accent font-semibold">
+        <Link
+          to={withLangPrefix(prefix, '/')}
+          className="text-primary underline hover:text-accent font-semibold"
+        >
           Return to Home
-        </a>
+        </Link>
       </div>
     </div>
   );

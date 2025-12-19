@@ -77,14 +77,10 @@ const Login = () => {
       });
 
       if (error) {
-        console.group('❌ Login Error Details');
-        console.error('Error object:', error);
-        console.error('Error message:', error.message);
-        console.error('Error status:', (error as any).status);
-        console.error('Current URL:', window.location.href);
-        console.error('Supabase URL:', import.meta.env.VITE_SUPABASE_URL);
-        console.error('Timestamp:', new Date().toISOString());
-        console.groupEnd();
+        // Only log detailed errors in development
+        if (import.meta.env.DEV) {
+          console.error('Login error:', error.message);
+        }
 
         const rawMessage = error.message || '';
         const lowerMessage = rawMessage.toLowerCase();
@@ -167,14 +163,10 @@ const Login = () => {
       });
 
       if (error) {
-        console.group('❌ Signup Error Details');
-        console.error('Error object:', error);
-        console.error('Error message:', error.message);
-        console.error('Error status:', (error as any).status);
-        console.error('Current URL:', window.location.href);
-        console.error('Supabase URL:', import.meta.env.VITE_SUPABASE_URL);
-        console.error('Timestamp:', new Date().toISOString());
-        console.groupEnd();
+        // Only log detailed errors in development
+        if (import.meta.env.DEV) {
+          console.error('Signup error:', error.message);
+        }
 
         const rawMessage = error.message || '';
         const lowerMessage = rawMessage.toLowerCase();

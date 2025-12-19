@@ -4,10 +4,17 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 
 import en from './locales/en.json';
 import ar from './locales/ar.json';
+import productsAr from './locales/products-ar.json';
+
+// Merge Arabic product translations into main Arabic translations
+const mergedAr = {
+  ...ar,
+  ...productsAr
+};
 
 const resources = {
   en: { translation: en },
-  ar: { translation: ar },
+  ar: { translation: mergedAr },
 };
 
 i18n

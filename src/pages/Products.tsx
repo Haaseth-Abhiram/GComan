@@ -273,13 +273,6 @@ export const products: Product[] = [
       }
     },
     {
-      id: 'calcium-hypochlorite-water',
-      title: 'Calcium Hypochlorite 65–75%',
-      description: 'Powerful oxidizing agent and disinfectant for water sanitization and bleaching.',
-      category: 'water-treatment',
-      icon: Droplets,
-    },
-    {
       id: 'caustic-soda-flakes',
       title: 'Caustic Soda Flakes',
       description: 'Sodium hydroxide in flake form for pH adjustment and neutralization.',

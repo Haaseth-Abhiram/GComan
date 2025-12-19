@@ -77,8 +77,9 @@ const Contact = () => {
       // Client-side validation for better UX
       contactSchema.parse(formData);
 
-      // Call the Edge Function
-      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+      // Call the Edge Function - use hardcoded URL as fallback (publishable URL is safe)
+      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://yawbaqdywfrmuajaiptw.supabase.co';
+      
       const response = await fetch(`${supabaseUrl}/functions/v1/submit-contact`, {
         method: 'POST',
         headers: {

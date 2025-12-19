@@ -44,7 +44,7 @@ interface JobOpening {
   featured?: boolean;
 }
 
-// Validation schema
+// Validation schema - linkedIn is optional and only validated if provided
 const applicationSchema = z.object({
   fullName: z.string().trim().min(2, "Name must be at least 2 characters").max(100, "Name must be less than 100 characters"),
   email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters"),
@@ -52,7 +52,10 @@ const applicationSchema = z.object({
   position: z.string().trim().min(1, "Please select a position"),
   experience: z.string().trim().min(1, "Please specify your years of experience"),
   coverLetter: z.string().trim().min(50, "Cover letter must be at least 50 characters").max(2000, "Cover letter must be less than 2000 characters"),
-  linkedIn: z.string().trim().url("Invalid LinkedIn URL").optional().or(z.literal('')),
+  linkedIn: z.string().optional().refine(
+    (val) => !val || val.trim() === '' || /^https?:\/\/(www\.)?linkedin\.com\//.test(val),
+    { message: "Please enter a valid LinkedIn URL" }
+  ),
 });
 
 const Career = () => {
@@ -269,13 +272,16 @@ const Career = () => {
       }
       formDataToSend.append('resume', selectedFile);
 
-      // Submit to edge function
+      // Submit to edge function - use hardcoded URL as fallback (publishable URL is safe)
+      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://yawbaqdywfrmuajaiptw.supabase.co';
+      const supabaseKey = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inlhd2JhcWR5d2ZybXVhamFpcHR3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjEyMjY4MDksImV4cCI6MjA3NjgwMjgwOX0.jyujxGftg1hjI00bNDm_Oc0b6BuScduslylVgqgad9c';
+      
       const response = await fetch(
-        `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/submit-job-application`,
+        `${supabaseUrl}/functions/v1/submit-job-application`,
         {
           method: 'POST',
           headers: {
-            'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+            'Authorization': `Bearer ${supabaseKey}`,
           },
           body: formDataToSend,
         }
