@@ -228,18 +228,18 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-white/60 text-sm">
-          <p>
+        <div className="flex flex-col md:flex-row justify-center md:justify-between items-center gap-4 text-white/60 text-sm pb-16 md:pb-0 relative z-50">
+          <p className="text-center md:text-left">
             © {currentYear} {t('footer.companyName')}. {t('footer.copyright')}
           </p>
           <div className="flex flex-wrap justify-center gap-6">
-            <Link to="/terms" className="hover:text-primary transition-colors">
+            <Link to="/terms" className="hover:text-primary transition-colors relative z-50">
               {t('footer.terms')}
             </Link>
-            <Link to="/privacy" className="hover:text-primary transition-colors">
+            <Link to="/privacy" className="hover:text-primary transition-colors relative z-50">
               {t('footer.privacyPolicy')}
             </Link>
-            <Link to="/sitemap" className="hover:text-primary transition-colors">
+            <Link to="/sitemap" className="hover:text-primary transition-colors relative z-50">
               {t('footer.sitemap')}
             </Link>
           </div>
