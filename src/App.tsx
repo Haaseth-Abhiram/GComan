@@ -55,64 +55,10 @@ const LangLayout = () => {
   return <Outlet />;
 };
 
-const AppRoutes = () => (
-  <Routes>
-    <Route path="/" element={<Index />} />
-    <Route path="/about" element={<About />} />
-    <Route path="/products" element={<Products />} />
-    <Route path="/products/:category/:productSlug" element={<ProductDetail />} />
-    <Route path="/industries" element={<Industries />} />
-    <Route path="/resources" element={<Resources />} />
-    <Route path="/contact" element={<Contact />} />
-    <Route path="/customers" element={<Customers />} />
-    <Route path="/career" element={<Career />} />
-    <Route path="/login" element={<Login />} />
-    <Route
-      path="/admin/*"
-      element={
-        <ProtectedRoute>
-          <Admin />
-        </ProtectedRoute>
-      }
-    />
-    <Route path="/blog" element={<Blog />} />
-    <Route path="/privacy" element={<Privacy />} />
-    <Route path="/terms" element={<Terms />} />
-    <Route path="/sitemap" element={<Sitemap />} />
-    {/* Location-specific landing pages for SEO */}
-    <Route path="/chemicals/:location" element={<LocationLanding />} />
-
-    {/* Language-prefixed routes (supports /ar/... and /en/...) */}
-    <Route path="/:lng(ar|en)" element={<LangLayout />}>
-      <Route index element={<Index />} />
-      <Route path="about" element={<About />} />
-      <Route path="products" element={<Products />} />
-      <Route path="products/:category/:productSlug" element={<ProductDetail />} />
-      <Route path="industries" element={<Industries />} />
-      <Route path="resources" element={<Resources />} />
-      <Route path="contact" element={<Contact />} />
-      <Route path="customers" element={<Customers />} />
-      <Route path="career" element={<Career />} />
-      <Route path="login" element={<Login />} />
-      <Route
-        path="admin/*"
-        element={
-          <ProtectedRoute>
-            <Admin />
-          </ProtectedRoute>
-        }
-      />
-      <Route path="blog" element={<Blog />} />
-      <Route path="privacy" element={<Privacy />} />
-      <Route path="terms" element={<Terms />} />
-      <Route path="sitemap" element={<Sitemap />} />
-      <Route path="chemicals/:location" element={<LocationLanding />} />
-    </Route>
-
-    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-    <Route path="*" element={<NotFound />} />
-  </Routes>
-);
+// Redirect component for /en/* routes to avoid duplicate content
+const RedirectToNonLang = ({ to }: { to: string }) => {
+  return <Navigate to={to} replace />;
+};
 
 const App = () => (
   <HelmetProvider>
@@ -134,6 +80,7 @@ const App = () => (
             <CookieConsent />
             <Suspense fallback={<Loading />}>
               <Routes>
+                {/* Main routes (English default) */}
                 <Route path="/" element={<Index />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/products" element={<Products />} />
@@ -154,9 +101,40 @@ const App = () => (
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/terms" element={<Terms />} />
                 <Route path="/sitemap" element={<Sitemap />} />
+
                 {/* Location-specific landing pages for SEO */}
                 <Route path="/chemicals/:location" element={<LocationLanding />} />
-                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+
+                {/* 301 Redirects: /en/* to /* (avoid duplicate content) */}
+                <Route path="/en" element={<RedirectToNonLang to="/" />} />
+                <Route path="/en/*" element={<RedirectToNonLang to={window.location.pathname.replace('/en', '')} />} />
+
+                {/* Arabic language routes */}
+                <Route path="/ar" element={<LangLayout />}>
+                  <Route index element={<Index />} />
+                  <Route path="about" element={<About />} />
+                  <Route path="products" element={<Products />} />
+                  <Route path="products/:category/:productSlug" element={<ProductDetail />} />
+                  <Route path="industries" element={<Industries />} />
+                  <Route path="resources" element={<Resources />} />
+                  <Route path="contact" element={<Contact />} />
+                  <Route path="customers" element={<Customers />} />
+                  <Route path="career" element={<Career />} />
+                  <Route path="certifications" element={<Certifications />} />
+                  <Route path="login" element={<Login />} />
+                  <Route path="admin/*" element={
+                    <ProtectedRoute>
+                      <Admin />
+                    </ProtectedRoute>
+                  } />
+                  <Route path="blog" element={<Blog />} />
+                  <Route path="privacy" element={<Privacy />} />
+                  <Route path="terms" element={<Terms />} />
+                  <Route path="sitemap" element={<Sitemap />} />
+                  <Route path="chemicals/:location" element={<LocationLanding />} />
+                </Route>
+
+                {/* 404 catch-all - MUST BE LAST */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>
