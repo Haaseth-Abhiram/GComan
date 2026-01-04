@@ -65,6 +65,60 @@
 /gcoman.com/blog/  /blog  301
 
 # =====================================
+# ADDITIONAL LEGACY WORDPRESS URLS (45+ URLs)
+# Discovered from Google Search Console indexed pages
+# =====================================
+
+# Additional Service Pages (18 URLs)
+/service/swimming/  /products/swimming-pool  301
+/service/laboratories/  /products/lab-chemicals  301
+/service/construction/  /products  301
+/service/inorganic-chemicals/  /products  301
+/service/container/  /products  301
+/service/food-beverage/  /industries  301
+/service/personal-care/  /industries  301
+/service/water-treatment-2/  /products/water-treatment  301
+/service/automotive-2/  /industries  301
+/service/lubricants-greases-1/  /products/lubricants  301
+/service/air-chemical/  /products  301
+/service/services/oxide/  /products  301
+/service/ethanolamines/  /products  301
+/service/pharmaceutical/  /industries  301
+/service/agriculture/  /industries  301
+/service/construction-1/  /products  301
+/service/oil-gas-1/  /products/oilfield  301
+/service/water-treatment/  /products/water-treatment  301
+
+# Service Categories (4 URLs)
+/service-category/chlorinated-solvents/  /products  301
+/service-category/oilgas/  /products/oilfield  301
+/service-category/lab-equipment/  /products/lab-chemicals  301
+/service-category/soap-detergent-chemicals/  /products  301
+
+# Product/Industry Pages (6 URLs)
+/alcohols/  /products  301
+/pharmaceutical/  /industries  301
+/manufacturing/  /industries  301
+/refinery/  /products/oilfield  301
+/category/uncategorized/  /blog  301
+/category/lab-equipment/  /products/lab-chemicals  301
+
+# Company/Info Pages (7 URLs)
+/service-openings/  /career  301
+/what-we-supply-2/  /products  301
+/terms-conditions/  /terms  301
+/our-values/  /about  301
+/why-choose-us/  /about  301
+/blog-news/  /blog  301
+
+# Blog Tags (2 URLs)
+/tag/silk/  /blog  301
+/tag/cotton/  /blog  301
+
+# Recent Blog Post (1 URL)
+/2025/10/15/nonwovens-industry-magazine/  /blog  301
+
+# =====================================
 # CURRENT SEO REDIRECTS
 # =====================================
 
