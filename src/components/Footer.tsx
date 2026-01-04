@@ -228,11 +228,8 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col md:flex-row justify-center md:justify-between items-center gap-4 text-white/60 text-sm pb-16 md:pb-0 relative z-50">
-          <p className="text-center md:text-left">
-            © {currentYear} {t('footer.companyName')}. {t('footer.copyright')}
-          </p>
-          <div className="flex flex-wrap justify-center gap-6">
+        <div className="flex flex-col items-center gap-4 text-white/60 text-sm pb-20 md:pb-4 relative z-50">
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6">
             <Link to="/terms" className="hover:text-primary transition-colors relative z-50">
               {t('footer.terms')}
             </Link>
@@ -243,6 +240,9 @@ const Footer = () => {
               {t('footer.sitemap')}
             </Link>
           </div>
+          <p className="text-center">
+            © {currentYear} {t('footer.companyName')}. {t('footer.copyright')}
+          </p>
         </div>
       </div>
     </footer>
