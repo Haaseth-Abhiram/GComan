@@ -242,3 +242,17 @@ All colors MUST be HSL.
     background-color: hsl(var(--muted));
   }
 }
+
+/* Zoho SalesIQ Chat Widget Positioning - Move above footer on mobile */
+@media (max-width: 768px) {
+  .zsiq_floatmain,
+  .zsiq_flt_rel {
+    bottom: 80px !important;
+    right: 16px !important;
+  }
+  
+  .siqembed,
+  .zsiq_cnt {
+    bottom: 80px !important;
+  }
+}
