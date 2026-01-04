@@ -11,6 +11,8 @@ const Terms = () => {
         <title>Terms of Service | Global Chemicals LLC</title>
         <meta name="description" content="Terms and conditions for Global Chemicals LLC. Review our service terms, user responsibilities, and legal agreements for using our website and services." />
         <meta name="keywords" content="terms of service, terms and conditions, Global Chemicals LLC, legal, Oman" />
+        {/* Noindex terms page - thin legal content, not valuable for search */}
+        <meta name="robots" content="noindex, follow" />
         <meta property="og:title" content="Terms of Service | Global Chemicals LLC" />
         <meta property="og:description" content="Terms and conditions for Global Chemicals LLC. Review our service terms and legal agreements." />
         <meta property="og:url" content="https://www.gcoman.com/terms" />

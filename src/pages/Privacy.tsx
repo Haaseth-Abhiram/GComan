@@ -11,6 +11,8 @@ const Privacy = () => {
         <title>Privacy Policy | Global Chemicals LLC</title>
         <meta name="description" content="Privacy policy for Global Chemicals LLC. Learn how we collect, use, and protect your personal information when you visit our website or use our services." />
         <meta name="keywords" content="privacy policy, data protection, Global Chemicals LLC, Oman" />
+        {/* Noindex privacy page - thin legal content, not valuable for search */}
+        <meta name="robots" content="noindex, follow" />
         <meta property="og:title" content="Privacy Policy | Global Chemicals LLC" />
         <meta property="og:description" content="Privacy policy for Global Chemicals LLC. Learn how we collect, use, and protect your personal information." />
         <meta property="og:url" content="https://www.gcoman.com/privacy" />
