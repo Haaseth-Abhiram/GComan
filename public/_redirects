@@ -1,14 +1,78 @@
 # Netlify Redirects Configuration
 # 301 redirects to consolidate duplicate content and improve SEO
 
+# =====================================
+# LEGACY WORDPRESS URL REDIRECTS (39 URLs)
+# Migration from old WordPress site to React SPA
+# =====================================
+
+# Product/Service Pages (14 URLs)
+/service/calcium-carbonate/  /products/water-treatment/calcium-carbonate-water  301
+/service/soap-detergent-chemicals/  /products  301
+/service/solvents/  /products  301
+/service/chlorinated-solvents/  /products  301
+/service/construction-chemicals/  /products  301
+/service/swimming-1/  /products/swimming-pool  301
+/service/lubricants-greases/  /products/lubricants  301
+/water-waste-water-treatment-chemicals/  /products/water-treatment  301
+/swimming-pool-chemicals/  /products/swimming-pool  301
+/lubricants-greases/  /products/lubricants  301
+/oilfield-refinery/  /products/oilfield  301
+/glycols/  /products  301
+/product/food-beverages/  /products  301
+/products-services/  /products  301
+
+# Support & Contact Pages (3 URLs)
+/sales-and-comprehensive-support/  /contact  301
+/service/general-inquiry/  /contact  301
+/technical-support/  /contact  301
+
+# Company & Team Pages (7 URLs)
+/company/  /about  301
+/our-team/  /about  301
+/partners/  /about  301
+/team-member/james-logan/  /about  301
+/team-member/michal-wincent/  /about  301
+/team-member/john-tyler/  /about  301
+
+# Blog Posts - Date-based URLs (5 URLs)
+/2021/03/09/the-story-of-a-silk-lends-cotton-like-comfort/  /blog  301
+/2021/02/28/laundry-chemical/  /blog  301
+/2021/02/15/textilegence-magazine-digital-platform/  /blog  301
+/2021/02/11/contactless-payments-time-has-come/  /blog  301
+/whats-new/  /blog  301
+
+# WordPress Categories (3 URLs)
+/category/fashion-retail/  /industries  301
+/category/news-analysis/  /blog  301
+/category/industry-insight/  /blog  301
+
+# WordPress Authors (1 URL)
+/author/samplework1/  /blog  301
+
+# Industry Pages (2 URLs)
+/food-beverages/  /industries  301
+/industries-2/  /industries  301
+
+# Careers (1 URL)
+/jobs/sales-manager/  /career  301
+
+# Simple Page Slug Changes (2 URLs)
+/privacy-policy/  /privacy  301
+
+# Malformed URLs - Domain in path (2 URLs)
+/gcoman.com/ethanolamines/  /products  301
+/gcoman.com/blog/  /blog  301
+
+# =====================================
+# CURRENT SEO REDIRECTS
+# =====================================
+
 # Redirect /en/* to /* (English is default, no need for /en prefix)
 /en/*  /:splat  301
 
-# Redirect www to non-www (if needed)
+# Redirect www to non-www
 https://www.gcoman.com/*  https://gcoman.com/:splat  301!
-
-# Redirect old URLs (if you had any legacy URLs)
-# /old-page  /new-page  301
 
 # Force HTTPS
 http://gcoman.com/*  https://gcoman.com/:splat  301!
