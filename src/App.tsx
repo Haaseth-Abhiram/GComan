@@ -13,6 +13,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { Loading } from "./components/Loading";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 import { ZohoSalesIQ } from "./components/ZohoSalesIQ";
+import BackToTopButton from "./components/BackToTopButton";
 
 // Lazy load all page components
 const Index = lazy(() => import("./pages/Index"));
@@ -78,6 +79,7 @@ const App = () => (
               Skip to main content
             </a>
             <CookieConsent />
+            <BackToTopButton />
             <Suspense fallback={<Loading />}>
               <Routes>
                 {/* Main routes (English default) */}
