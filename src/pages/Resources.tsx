@@ -8,6 +8,7 @@ import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useToast } from '@/hooks/use-toast';
+import { Eye } from 'lucide-react';
 import {
   Download,
   FileText,
@@ -39,6 +40,7 @@ import BrochureCDC from '@/assets/brochures/CDC-Anti-Clog-Brochure.pdf';
 import BrochureProducts from '@/assets/brochures/Global-Chemicals-Products-Brochure.pdf';
 import BrochureProductsList from '@/assets/brochures/Global-Chemicals-Products-List.pdf';
 import { DownloadGateDialog } from '@/components/DownloadGateDialog';
+import { PDFViewerDialog } from '@/components/PDFViewerDialog';
 import { SEO } from '@/components/SEO';
 import { HowToStructuredData, BreadcrumbStructuredData, ArticleStructuredData, FAQStructuredData, LocalBusinessStructuredData } from '@/components/StructuredData';
 import { Link } from 'react-router-dom';
@@ -1067,6 +1069,7 @@ const Resources = () => {
   const [selectedDownloadCategory, setSelectedDownloadCategory] = useState('all');
   const [selectedArticleCategory, setSelectedArticleCategory] = useState('All');
   const [downloadDialogOpen, setDownloadDialogOpen] = useState(false);
+  const [pdfViewerOpen, setPdfViewerOpen] = useState(false);
   const [selectedResource, setSelectedResource] = useState<Resource | null>(null);
   const [selectedGuide, setSelectedGuide] = useState<IndustryGuide | null>(null);
   const [selectedArticle, setSelectedArticle] = useState<BlogArticle | null>(null);
@@ -1171,6 +1174,19 @@ const Resources = () => {
       toast({
         title: "Coming Soon",
         description: "This resource will be available for download soon. Please contact us for immediate access.",
+        variant: "destructive",
+      });
+    }
+  };
+
+  const handleView = (resource: Resource) => {
+    if (resource.downloadUrl) {
+      setSelectedResource(resource);
+      setPdfViewerOpen(true);
+    } else {
+      toast({
+        title: "Coming Soon",
+        description: "This resource will be available for viewing soon. Please contact us for immediate access.",
         variant: "destructive",
       });
     }
@@ -1733,18 +1749,29 @@ const Resources = () => {
                           </CardDescription>
                         </CardHeader>
                         <CardContent>
-                          <div className="flex items-center justify-between">
+                          <div className="flex items-center justify-between gap-2">
                             <span className="text-sm text-muted-foreground">
                               {resource.fileSize}
                             </span>
-                            <Button 
-                              onClick={() => handleDownload(resource)}
-                              size="sm"
-                              className="gap-2"
-                            >
-                              <Download className="h-4 w-4" />
-                              Download
-                            </Button>
+                            <div className="flex gap-2">
+                              <Button 
+                                onClick={() => handleView(resource)}
+                                size="sm"
+                                variant="outline"
+                                className="gap-2"
+                              >
+                                <Eye className="h-4 w-4" />
+                                <span className="hidden sm:inline">View</span>
+                              </Button>
+                              <Button 
+                                onClick={() => handleDownload(resource)}
+                                size="sm"
+                                className="gap-2"
+                              >
+                                <Download className="h-4 w-4" />
+                                <span className="hidden sm:inline">Download</span>
+                              </Button>
+                            </div>
                           </div>
                         </CardContent>
                       </Card>
@@ -1781,6 +1808,20 @@ const Resources = () => {
       </section>
 
       <Footer />
+      
+      {/* PDF Viewer Dialog */}
+      {selectedResource && (
+        <PDFViewerDialog
+          open={pdfViewerOpen}
+          onOpenChange={setPdfViewerOpen}
+          pdfUrl={selectedResource.downloadUrl || ''}
+          title={selectedResource.title}
+          onDownloadClick={() => {
+            setPdfViewerOpen(false);
+            setDownloadDialogOpen(true);
+          }}
+        />
+      )}
       
       {/* Download Gate Dialog */}
       {selectedResource && (
