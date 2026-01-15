@@ -37,14 +37,14 @@ export const PDFViewerDialog = ({
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-[95vw] w-full max-h-[95vh] h-[90vh] p-0 gap-0">
-        {/* Header */}
-        <DialogHeader className="p-4 border-b bg-muted/50 flex-shrink-0">
+        {/* Header - Compact */}
+        <DialogHeader className="px-4 py-2 border-b bg-muted/50 flex-shrink-0">
           <div className="flex items-center justify-between gap-4">
             <div className="min-w-0 flex-1">
-              <DialogTitle className="text-base sm:text-lg truncate pr-4">
+              <DialogTitle className="text-sm sm:text-base truncate pr-4">
                 {title}
               </DialogTitle>
-              <DialogDescription className="text-xs sm:text-sm mt-1">
+              <DialogDescription className="text-xs mt-0.5 hidden sm:block">
                 Preview the document below. Click Download to save a copy.
               </DialogDescription>
             </div>
@@ -53,9 +53,9 @@ export const PDFViewerDialog = ({
                 variant="outline"
                 size="sm"
                 onClick={handleOpenInNewTab}
-                className="gap-2 hidden sm:flex"
+                className="gap-2 hidden sm:flex h-8"
               >
-                <ExternalLink className="h-4 w-4" />
+                <ExternalLink className="h-3.5 w-3.5" />
                 Open in New Tab
               </Button>
               <Button
@@ -64,9 +64,9 @@ export const PDFViewerDialog = ({
                   onOpenChange(false);
                   onDownloadClick();
                 }}
-                className="gap-2"
+                className="gap-2 h-8"
               >
-                <Download className="h-4 w-4" />
+                <Download className="h-3.5 w-3.5" />
                 <span className="hidden sm:inline">Download</span>
               </Button>
             </div>
