@@ -1,13 +1,18 @@
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Youtube, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Youtube, Send, Loader2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { toast } from '@/components/ui/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 import logo from '@/assets/global-chemicals-logo.svg';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const { t } = useTranslation();
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const socialLinks = [
     { icon: Facebook, href: 'https://www.facebook.com/people/Global-Chemicals-LLC/61552652407210/', label: 'Facebook' },
@@ -34,6 +39,50 @@ const Footer = () => {
     { labelKey: 'footer.services.poolChemicals', path: '/industries#swimming-pool' },
     { labelKey: 'footer.services.constructionChemicals', path: '/industries#construction' },
   ];
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!email.trim()) {
+      toast({
+        title: t('footer.newsletterError', 'Error'),
+        description: t('footer.newsletterEmailRequired', 'Please enter your email address'),
+        variant: 'destructive',
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    
+    try {
+      const { data, error } = await supabase.functions.invoke('subscribe-newsletter', {
+        body: { email: email.trim() },
+      });
+
+      if (error) {
+        throw error;
+      }
+
+      if (data?.success) {
+        toast({
+          title: t('footer.newsletterSuccess', 'Success!'),
+          description: data.message || t('footer.newsletterSuccessMessage', 'Thank you for subscribing!'),
+        });
+        setEmail('');
+      } else {
+        throw new Error(data?.error || 'Failed to subscribe');
+      }
+    } catch (error) {
+      console.error('Newsletter subscription error:', error);
+      toast({
+        title: t('footer.newsletterError', 'Error'),
+        description: error instanceof Error ? error.message : t('footer.newsletterErrorMessage', 'Failed to subscribe. Please try again.'),
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <footer className="bg-[#3a4453] text-white pt-16 pb-8">
@@ -177,17 +226,29 @@ const Footer = () => {
             <p className="text-white/70 text-sm mb-6">
               {t('footer.newsletterDesc')}
             </p>
-            <div className="flex gap-3 max-w-md mx-auto">
+            <form onSubmit={handleSubscribe} className="flex gap-3 max-w-md mx-auto">
               <Input
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder={t('footer.newsletterPlaceholder')}
                 className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-primary"
+                disabled={isSubmitting}
+                required
               />
-              <Button className="bg-primary hover:bg-primary/90 text-white flex-shrink-0">
-                <Send className="w-4 h-4 ltr:mr-2 rtl:ml-2" />
+              <Button 
+                type="submit"
+                className="bg-primary hover:bg-primary/90 text-white flex-shrink-0"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? (
+                  <Loader2 className="w-4 h-4 animate-spin ltr:mr-2 rtl:ml-2" />
+                ) : (
+                  <Send className="w-4 h-4 ltr:mr-2 rtl:ml-2" />
+                )}
                 {t('footer.subscribe')}
               </Button>
-            </div>
+            </form>
           </div>
         </div>
 
