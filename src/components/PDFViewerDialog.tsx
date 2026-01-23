@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
-import { Download, X, ExternalLink, ZoomIn, ZoomOut, Loader2 } from 'lucide-react';
+import { Download, Loader2 } from 'lucide-react';
 
 interface PDFViewerDialogProps {
   open: boolean;
@@ -30,10 +30,6 @@ export const PDFViewerDialog = ({
     setError(true);
   };
 
-  const handleOpenInNewTab = () => {
-    window.open(pdfUrl, '_blank', 'noopener,noreferrer');
-  };
-
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-[95vw] w-full max-h-[95vh] h-[92vh] p-0 gap-0 border-t-4 border-t-primary overflow-hidden">
@@ -44,15 +40,6 @@ export const PDFViewerDialog = ({
             <span className="text-sm font-medium truncate">{title}</span>
           </div>
           <div className="flex items-center gap-1.5 flex-shrink-0">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={handleOpenInNewTab}
-              className="h-7 px-2 text-xs gap-1.5 text-muted-foreground hover:text-foreground"
-            >
-              <ExternalLink className="h-3.5 w-3.5" />
-              <span className="hidden sm:inline">New Tab</span>
-            </Button>
             <Button
               size="sm"
               onClick={() => {
@@ -85,10 +72,6 @@ export const PDFViewerDialog = ({
                   Unable to preview this document.
                 </p>
                 <div className="flex gap-2 justify-center">
-                  <Button onClick={handleOpenInNewTab} variant="outline" size="sm" className="gap-1.5 h-8">
-                    <ExternalLink className="h-3.5 w-3.5" />
-                    Open in New Tab
-                  </Button>
                   <Button onClick={() => {
                     onOpenChange(false);
                     onDownloadClick();
@@ -101,7 +84,7 @@ export const PDFViewerDialog = ({
             </div>
           ) : (
             <iframe
-              src={`${pdfUrl}#toolbar=1&navpanes=0&scrollbar=1`}
+              src={`${pdfUrl}#toolbar=0&navpanes=0&scrollbar=1`}
               className="w-full h-full border-0"
               title={title}
               onLoad={handleIframeLoad}
@@ -113,15 +96,6 @@ export const PDFViewerDialog = ({
         {/* Mobile Footer - Minimal */}
         <div className="px-3 py-1.5 border-t bg-muted/30 flex-shrink-0 sm:hidden">
           <div className="flex gap-2">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={handleOpenInNewTab}
-              className="flex-1 h-7 text-xs gap-1.5"
-            >
-              <ExternalLink className="h-3.5 w-3.5" />
-              New Tab
-            </Button>
             <Button
               size="sm"
               onClick={() => {
