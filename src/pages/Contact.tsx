@@ -13,7 +13,7 @@ import { useToast } from '@/hooks/use-toast';
 import { z } from 'zod';
 import { SEO } from '@/components/SEO';
 import { FAQStructuredData, BreadcrumbStructuredData } from '@/components/StructuredData';
-import { trackFormSubmission } from '@/components/GoogleAnalytics';
+import { trackFormSubmission, trackContactClick } from '@/components/GoogleAnalytics';
 import { PhoneInput } from 'react-international-phone';
 import 'react-international-phone/style.css';
 
@@ -435,6 +435,56 @@ const Contact = () => {
         </div>
       </section>
 
+      {/* Trust Signals */}
+      <section className="py-12 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div className="p-6 bg-card rounded-xl border">
+              <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-primary/10 flex items-center justify-center">
+                <Clock className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="font-semibold mb-1">We Respond Within 24 Hours</h3>
+              <p className="text-sm text-muted-foreground">Fast, reliable communication for all inquiries</p>
+            </div>
+            <div className="p-6 bg-card rounded-xl border">
+              <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-primary/10 flex items-center justify-center">
+                <span className="text-primary font-bold text-xs">ISO</span>
+              </div>
+              <h3 className="font-semibold mb-1">ISO 9001:2015 Certified</h3>
+              <p className="text-sm text-muted-foreground">Quality management you can trust</p>
+            </div>
+            <div className="p-6 bg-card rounded-xl border">
+              <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-primary/10 flex items-center justify-center">
+                <span className="text-primary font-bold text-xs">10+</span>
+              </div>
+              <h3 className="font-semibold mb-1">10+ Years in Business</h3>
+              <p className="text-sm text-muted-foreground">Trusted by 200+ clients across Oman</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Google Maps */}
+      <section className="py-12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold text-center mb-6">Our Location</h2>
+            <div className="rounded-xl overflow-hidden border shadow-lg" style={{ height: '400px' }}>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.5!2d58.4!3d23.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sGlobal+Chemicals+LLC!5e0!3m2!1sen!2som!4v1709000000000!5m2!1sen!2som"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Global Chemicals LLC Office Location - Ghala, Muscat, Oman"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-br from-primary/5 to-background">
         <div className="container mx-auto px-4">
@@ -444,13 +494,13 @@ const Contact = () => {
               {t('contact.needAssistanceDesc')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild>
+              <Button size="lg" asChild onClick={() => trackContactClick('phone')}>
                 <a href="tel:+96893754388">
                   <Phone className="w-5 h-5 ltr:mr-2 rtl:ml-2" />
                   {t('contact.callNow')}
                 </a>
               </Button>
-              <Button size="lg" variant="outline" asChild>
+              <Button size="lg" variant="outline" asChild onClick={() => trackContactClick('whatsapp')}>
                 <a href="https://wa.me/96893754388" target="_blank" rel="noopener noreferrer">
                   <MessageSquare className="w-5 h-5 ltr:mr-2 rtl:ml-2" />
                   {t('contact.whatsappChat')}

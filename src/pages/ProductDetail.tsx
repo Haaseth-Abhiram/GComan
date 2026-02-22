@@ -12,7 +12,8 @@ import { ArrowLeft, CheckCircle2, Phone, Mail, Beaker, Info } from 'lucide-react
 import { products } from '@/data/products';
 import { ProductStructuredData, BreadcrumbStructuredData } from '@/components/StructuredData';
 import { SEO } from '@/components/SEO';
-import { trackProductView } from '@/components/GoogleAnalytics';
+import { trackProductView, trackSelectContent, trackContactClick } from '@/components/GoogleAnalytics';
+import { ProductCard } from '@/components/products/ProductCard';
 
 const ProductDetail = () => {
   const { category, productSlug } = useParams();
@@ -229,13 +230,13 @@ const ProductDetail = () => {
                     {t('products.needMoreInfoDesc', { defaultValue: 'Our team is ready to help you with technical specifications, pricing, and delivery options.' })}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button asChild size="lg" className="gap-2">
-                      <Link to="/contact">
+                    <Button asChild size="lg" className="gap-2" onClick={() => trackSelectContent('cta_button', 'get_quote')}>
+                      <Link to={`/contact?product=${encodeURIComponent(product.title)}`}>
                         <Mail className="w-4 h-4" />
                         {t('common.contactUs')}
                       </Link>
                     </Button>
-                    <Button asChild variant="outline" size="lg" className="gap-2">
+                    <Button asChild variant="outline" size="lg" className="gap-2" onClick={() => trackContactClick('phone')}>
                       <a href="tel:+96893754388">
                         <Phone className="w-4 h-4" />
                         {t('products.callPhone', { defaultValue: 'Call +968 93754388' })}
@@ -244,6 +245,24 @@ const ProductDetail = () => {
                   </div>
                 </div>
               </Card>
+
+              {/* Related Products */}
+              {(() => {
+                const relatedProducts = products
+                  .filter(p => p.category === product.category && p.id !== product.id)
+                  .slice(0, 3);
+                if (relatedProducts.length === 0) return null;
+                return (
+                  <div className="mt-12">
+                    <h2 className="text-2xl font-bold mb-6">{t('products.relatedProducts', { defaultValue: 'Related Products' })}</h2>
+                    <div className="grid md:grid-cols-3 gap-6">
+                      {relatedProducts.map(p => (
+                        <ProductCard key={p.id} product={p} />
+                      ))}
+                    </div>
+                  </div>
+                );
+              })()}
             </div>
           </div>
         </section>

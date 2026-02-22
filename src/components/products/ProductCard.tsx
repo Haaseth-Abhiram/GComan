@@ -1,9 +1,10 @@
 import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Card } from '@/components/ui/card';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, MessageSquare } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { getLangPrefixFromPath, withLangPrefix } from '@/lib/langRouting';
+import { trackSelectContent } from '@/components/GoogleAnalytics';
 
 interface Product {
   id: string;
@@ -65,9 +66,21 @@ const ProductCardComponent = ({ product }: ProductCardProps) => {
             {translatedDescription}
           </p>
 
-          <div className="flex items-center gap-2 text-primary text-xs sm:text-sm font-semibold group-hover:gap-3 transition-all pt-3 border-t border-border">
-            <span>{t('products.viewDetails', { defaultValue: 'View Details' })}</span>
-            <ChevronRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
+          <div className="flex items-center justify-between gap-2 pt-3 border-t border-border">
+            <div className="flex items-center gap-2 text-primary text-xs sm:text-sm font-semibold group-hover:gap-3 transition-all">
+              <span>{t('products.viewDetails', { defaultValue: 'View Details' })}</span>
+              <ChevronRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
+            </div>
+            <Link
+              to={withLangPrefix(prefix, '/contact') + `?product=${encodeURIComponent(product.title)}`}
+              onClick={(e) => {
+                e.stopPropagation();
+                trackSelectContent('cta_button', 'get_quote');
+              }}
+              className="text-xs font-semibold px-3 py-1.5 rounded-md bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+            >
+              Get Quote
+            </Link>
           </div>
         </div>
       </Card>

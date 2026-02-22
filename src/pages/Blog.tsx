@@ -26,6 +26,42 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 'top-chemical-suppliers-oman-2026',
+    title: 'Top Chemical Suppliers in Oman 2026: Industry Guide',
+    excerpt: 'A comprehensive guide to the leading chemical suppliers serving Oman\'s industrial sectors in 2026. Compare capabilities, certifications, product ranges, and service quality to find the right chemical partner for your business.',
+    content: 'Oman\'s chemical supply industry continues to grow in 2026, driven by expansion in oil & gas, construction, and manufacturing sectors...',
+    author: 'Global Chemicals Editorial Team',
+    date: '2026-02-15',
+    readTime: '10 min read',
+    category: 'Industry Guide',
+    tags: ['Chemical Suppliers', 'Oman', 'Industry Guide'],
+    icon: TrendingUp,
+  },
+  {
+    id: 'water-treatment-chemicals-muscat-oman',
+    title: 'Water Treatment Chemicals for Industrial Use in Muscat, Oman',
+    excerpt: 'Essential guide to selecting and using water treatment chemicals for industrial applications in Muscat. Covers PAC, calcium hypochlorite, antiscalants, and dosing best practices for Oman\'s unique water conditions.',
+    content: 'Industrial water treatment in Muscat requires specialized chemical solutions due to high salinity, elevated temperatures, and stringent environmental regulations...',
+    author: 'Global Chemicals Technical Team',
+    date: '2026-02-10',
+    readTime: '8 min read',
+    category: 'Water Treatment',
+    tags: ['Water Treatment', 'Muscat', 'Industrial'],
+    icon: Droplets,
+  },
+  {
+    id: 'agricultural-chemicals-oman-buyers-guide',
+    title: 'Agricultural Chemicals in Oman: A Complete Buyer\'s Guide',
+    excerpt: 'Everything you need to know about sourcing agricultural chemicals in Oman. From fertilizers and soil conditioners to crop protection products, this guide helps farmers and agricultural businesses make informed purchasing decisions.',
+    content: 'Oman\'s agricultural sector is transforming under the nation\'s food security strategy, creating growing demand for quality agricultural chemicals...',
+    author: 'Business Development Team',
+    date: '2026-02-05',
+    readTime: '9 min read',
+    category: 'Industry Guide',
+    tags: ['Agricultural Chemicals', 'Oman', 'Buyer Guide'],
+    icon: Leaf,
+  },
+  {
     id: 'water-treatment-trends-2025',
     title: 'Water Treatment Trends in Oman: What to Expect in 2025',
     excerpt: 'Explore the latest innovations in water treatment technology and sustainable practices shaping Oman\'s desalination and wastewater sectors.',
@@ -99,7 +135,7 @@ const blogPosts: BlogPost[] = [
   },
 ];
 
-const categories = ['All', 'Water Treatment', 'Industrial Chemicals', 'Sustainability', 'Safety', 'Oil & Gas'];
+const categories = ['All', 'Water Treatment', 'Industrial Chemicals', 'Sustainability', 'Safety', 'Oil & Gas', 'Industry Guide'];
 
 const Blog = () => {
   const { t } = useTranslation();
@@ -222,6 +258,10 @@ const Blog = () => {
                           {post.excerpt}
                         </p>
                         <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
+                          <div className="flex items-center gap-1">
+                            <User className="h-3 w-3" />
+                            {post.author}
+                          </div>
                           <div className="flex items-center gap-1">
                             <Calendar className="h-3 w-3" />
                             {new Date(post.date).toLocaleDateString('en-US', {

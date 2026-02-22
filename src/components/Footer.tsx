@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { toast } from '@/components/ui/use-toast';
 import { supabase } from '@/integrations/supabase/client';
+import { trackContactClick } from '@/components/GoogleAnalytics';
 import logo from '@/assets/global-chemicals-logo.svg';
 
 const Footer = () => {
@@ -29,6 +30,7 @@ const Footer = () => {
     { labelKey: 'nav.resources', path: '/resources' },
     { labelKey: 'nav.contact', path: '/contact' },
     { labelKey: 'nav.careers', path: '/career' },
+    { label: 'Chemical Suppliers Oman', path: '/chemical-suppliers-oman' },
   ];
 
   const services = [
@@ -136,7 +138,7 @@ const Footer = () => {
                     to={item.path}
                     className="text-white/80 hover:text-primary transition-colors text-sm inline-block hover:translate-x-1 rtl:hover:-translate-x-1 transition-all"
                   >
-                    {t(item.labelKey)}
+                    {'labelKey' in item ? t(item.labelKey) : item.label}
                   </Link>
                 </li>
               ))}
@@ -189,7 +191,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3 rtl:flex-row-reverse">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                <a href="tel:+96893754388" className="text-white/80 hover:text-primary transition-colors text-sm ltr-preserve">
+                <a href="tel:+96893754388" onClick={() => trackContactClick('phone')} className="text-white/80 hover:text-primary transition-colors text-sm ltr-preserve">
                   +968 93754388
                 </a>
               </li>
@@ -197,6 +199,7 @@ const Footer = () => {
                 <Mail className="w-5 h-5 text-primary flex-shrink-0" />
                 <a
                   href="mailto:info@gcoman.com"
+                  onClick={() => trackContactClick('email')}
                   className="text-white/80 hover:text-primary transition-colors text-sm"
                 >
                   info@gcoman.com
@@ -209,6 +212,7 @@ const Footer = () => {
               href="https://wa.me/96893754388"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackContactClick('whatsapp')}
               className="inline-flex items-center gap-2 mt-4 px-4 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-lg transition-colors"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
