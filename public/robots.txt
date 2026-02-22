@@ -10,6 +10,21 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
 User-agent: *
 Allow: /
 

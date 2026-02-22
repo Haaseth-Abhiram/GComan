@@ -1,7 +1,9 @@
 import { MessageCircle } from 'lucide-react';
+import { trackContactClick } from '@/components/GoogleAnalytics';
 
 const WhatsAppButton = () => {
   const handleClick = () => {
+    trackContactClick('whatsapp');
     const phoneNumber = '96893754388';
     const message = 'Hello! I would like to inquire about your products.';
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;

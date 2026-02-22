@@ -591,6 +591,7 @@ const Admin = () => {
       <SEO
         title="Admin Dashboard | Global Chemicals LLC"
         description="Admin dashboard for managing Global Chemicals website"
+        noIndex={true}
       />
       <SidebarProvider>
         <div className="min-h-screen flex w-full bg-muted/30">

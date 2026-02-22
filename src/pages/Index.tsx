@@ -39,11 +39,11 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Chemical Supplier Oman | Global Chemicals LLC"
-        description="Leading chemical supplier in Oman. ISO 9001 certified. Serving Muscat, Salalah, Sohar. Water treatment chemicals, industrial lubricants, lab chemicals. 10+ years expertise. Request quote today!"
-        keywords="chemicals Oman, chemical supplier Muscat, industrial chemicals Oman, water treatment Oman, PAC Oman, caustic soda Oman, lubricants Oman, laboratory chemicals Muscat, chemical distributor Oman, Shell lubricants Oman, Mobil oils Oman, calcium hypochlorite Oman, Sohar chemicals, Salalah chemicals, Duqm chemicals, Rusayl chemicals"
-        ogTitle="Chemical Supplier Oman | Global Chemicals LLC"
-        ogDescription="Leading B2B chemical supplier in Oman. ISO certified. Specialty & industrial chemicals for oil & gas, water treatment, manufacturing. Serving Muscat, Sohar, Salalah."
+        title="Chemical Suppliers in Oman | Global Chemicals LLC | gcoman.com"
+        description="Global Chemicals LLC — Oman's trusted chemical supplier. We supply industrial, agricultural, construction & water treatment chemicals across Oman and the GCC. ISO 9001 certified. Get a quote today."
+        keywords="chemical suppliers in oman, chemical company oman, industrial chemicals muscat, chemical distributor oman, chemical supplier GCC, water treatment chemicals oman, PAC Oman, caustic soda Oman, lubricants Oman, laboratory chemicals Muscat, Shell lubricants Oman, calcium hypochlorite Oman, Sohar chemicals, Salalah chemicals, Duqm chemicals, agricultural chemicals oman"
+        ogTitle="Chemical Suppliers in Oman | Global Chemicals LLC | gcoman.com"
+        ogDescription="Global Chemicals LLC — Oman's trusted chemical supplier. Industrial, agricultural, construction & water treatment chemicals. ISO 9001 certified. Serving Muscat, Sohar, Salalah & GCC."
         ogUrl="https://www.gcoman.com/"
         canonical="https://www.gcoman.com/"
       />

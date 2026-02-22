@@ -20,13 +20,11 @@ const GoogleAnalytics = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // Only load in production
     if (process.env.NODE_ENV !== 'production' || !GA_MEASUREMENT_ID) {
       console.log('Google Analytics disabled in development');
       return;
     }
 
-    // Load Google Analytics script
     const script1 = document.createElement('script');
     script1.async = true;
     script1.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
@@ -44,21 +42,15 @@ const GoogleAnalytics = () => {
     document.head.appendChild(script2);
 
     return () => {
-      // Cleanup on unmount - safely remove scripts
       try {
-        if (script1.parentNode) {
-          document.head.removeChild(script1);
-        }
-        if (script2.parentNode) {
-          document.head.removeChild(script2);
-        }
+        if (script1.parentNode) document.head.removeChild(script1);
+        if (script2.parentNode) document.head.removeChild(script2);
       } catch (error) {
         console.error('Error cleaning up GA scripts:', error);
       }
     };
   }, []);
 
-  // Track page views on route change
   useEffect(() => {
     if (typeof window.gtag === 'function') {
       window.gtag('config', GA_MEASUREMENT_ID, {
@@ -70,40 +62,106 @@ const GoogleAnalytics = () => {
   return null;
 };
 
-// Helper functions for tracking events
+// =====================================================
+// Helper function to push events to both gtag and dataLayer
+// =====================================================
+const pushEvent = (eventName: string, params: Record<string, any>) => {
+  // Push to dataLayer for GTM compatibility
+  if (window.dataLayer) {
+    window.dataLayer.push({ event: eventName, ...params });
+  }
+  // Fire via gtag directly
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', eventName, params);
+  }
+};
+
+// =====================================================
+// GA4 CONVERSION TRACKING
+// IMPORTANT: Mark "generate_lead" as a Key Event in the GA4 dashboard
+// (Admin → Events → Mark as Key Event)
+// =====================================================
+
+/**
+ * Track lead generation events (contact form, quote form submissions)
+ * This is the PRIMARY conversion event - mark as Key Event in GA4.
+ */
+export const trackGenerateLead = (formName: string, method: string = 'web') => {
+  pushEvent('generate_lead', {
+    form_name: formName,
+    method: method,
+    currency: 'OMR',
+  });
+};
+
+/**
+ * Track contact clicks (phone, WhatsApp, email)
+ */
+export const trackContactClick = (method: 'phone' | 'whatsapp' | 'email') => {
+  pushEvent('contact_click', {
+    method: method,
+    event_category: 'Contact',
+    event_label: method,
+  });
+};
+
+/**
+ * Track file downloads (brochures, catalogs, SDS)
+ */
+export const trackFileDownload = (fileName: string) => {
+  pushEvent('file_download', {
+    file_name: fileName,
+    event_category: 'Downloads',
+    event_label: fileName,
+  });
+};
+
+/**
+ * Track CTA button clicks (Get Quote, etc.)
+ */
+export const trackSelectContent = (contentType: string, itemId: string) => {
+  pushEvent('select_content', {
+    content_type: contentType,
+    item_id: itemId,
+  });
+};
+
+// Legacy helpers (kept for backward compatibility)
 export const trackEvent = (
   action: string,
   category: string,
   label?: string,
   value?: number
 ) => {
-  if (typeof window.gtag === 'function') {
-    window.gtag('event', action, {
-      event_category: category,
-      event_label: label,
-      value: value,
-    });
-  }
+  pushEvent(action, {
+    event_category: category,
+    event_label: label,
+    value: value,
+  });
 };
 
 export const trackProductView = (productId: string, productName: string, category: string) => {
-  trackEvent('view_item', 'Products', `${productName} (${category})`, 1);
+  pushEvent('view_item', {
+    event_category: 'Products',
+    event_label: `${productName} (${category})`,
+    items: [{ item_id: productId, item_name: productName, item_category: category }],
+  });
 };
 
 export const trackSearch = (searchTerm: string) => {
-  trackEvent('search', 'Products', searchTerm);
+  pushEvent('search', { search_term: searchTerm });
 };
 
 export const trackDownload = (resourceName: string) => {
-  trackEvent('download', 'Resources', resourceName);
+  trackFileDownload(resourceName);
 };
 
 export const trackFormSubmission = (formName: string) => {
-  trackEvent('form_submit', 'Forms', formName);
+  trackGenerateLead(formName, 'web');
 };
 
 export const trackLanguageChange = (language: string) => {
-  trackEvent('language_change', 'Preferences', language);
+  pushEvent('language_change', { language });
 };
 
 export default GoogleAnalytics;

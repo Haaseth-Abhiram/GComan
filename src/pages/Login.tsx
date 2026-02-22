@@ -272,12 +272,8 @@ const Login = () => {
     <div className="min-h-screen bg-gradient-to-br from-primary/5 via-background to-background flex items-center justify-center p-4">
       <Helmet>
         <title>Login | Global Chemicals LLC</title>
-        <meta name="description" content="Login to Global Chemicals LLC customer portal. Access orders, invoices, technical docs & account info securely. Manage your chemical supply needs online." />
-        <meta name="keywords" content="login, customer portal, Global Chemicals LLC, account access" />
-        <meta property="og:title" content="Login | Global Chemicals LLC" />
-        <meta property="og:description" content="Login to Global Chemicals LLC customer portal for secure account access." />
-        <meta property="og:url" content="https://www.gcoman.com/login" />
-        <meta property="og:image" content="https://www.gcoman.com/og-image.jpg" />
+        <meta name="description" content="Login to Global Chemicals LLC customer portal. Access orders, invoices, technical docs & account info securely." />
+        <meta name="robots" content="noindex, nofollow" />
         <link rel="canonical" href="https://www.gcoman.com/login" />
       </Helmet>
       <div className="w-full max-w-6xl grid lg:grid-cols-2 gap-8 items-center">
