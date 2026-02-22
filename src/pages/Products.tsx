@@ -8,6 +8,7 @@ import { Card } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Beaker, Droplets, Wrench, Zap, FlaskConical, TestTube, Factory, Building2, Wheat, Microscope, Sparkles, FlaskRound, Flame, Wind, Wine, ChevronRight, Shield, SprayCan, Search, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { AISearchDialog } from '@/components/AISearchDialog';
 import { Drawer, DrawerContent, DrawerHeader, DrawerTitle, DrawerDescription } from '@/components/ui/drawer';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { ProductCard } from '@/components/products/ProductCard';
@@ -8018,6 +8019,7 @@ const Products = () => {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
+  const [isAISearchOpen, setIsAISearchOpen] = useState(false);
   const isMobile = useIsMobile();
 
   const handleSearch = (value: string) => {
@@ -8181,6 +8183,17 @@ const Products = () => {
                   <X className="h-4 w-4" />
                 </Button>
               )}
+            </div>
+            <div className="flex justify-center mt-3">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => setIsAISearchOpen(true)}
+                className="gap-2 border-primary/20 hover:border-primary/40 hover:bg-primary/5 text-primary"
+              >
+                <Sparkles className="h-4 w-4" />
+                Ask AI about our products
+              </Button>
             </div>
             {searchQuery && (
               <p className="text-sm text-muted-foreground mt-2 text-center">
@@ -8444,6 +8457,7 @@ const Products = () => {
       </main>
 
       <Footer />
+      <AISearchDialog open={isAISearchOpen} onOpenChange={setIsAISearchOpen} />
     </div>
   );
 };
