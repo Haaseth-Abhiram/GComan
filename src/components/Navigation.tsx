@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, LogOut, User, Shield } from 'lucide-react';
+import { Menu, X, LogOut, User, Shield, Search } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/contexts/AuthContext';
@@ -8,9 +8,11 @@ import { useUserRole } from '@/hooks/useUserRole';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import logo from '@/assets/global-chemicals-logo.svg';
 import { getLangPrefixFromPath, withLangPrefix } from '@/lib/langRouting';
+import { AISearchDialog } from '@/components/AISearchDialog';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const location = useLocation();
   const { user, signOut } = useAuth();
   const { isAdmin } = useUserRole();
@@ -125,6 +127,15 @@ const Navigation = () => {
                 />
               </Link>
             ))}
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsSearchOpen(true)}
+              aria-label="AI Search"
+              className="text-foreground/70 hover:text-primary"
+            >
+              <Search className="h-5 w-5" />
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -164,6 +175,13 @@ const Navigation = () => {
                 {item.label}
               </Link>
             ))}
+            <button
+              onClick={() => { setIsOpen(false); setIsSearchOpen(true); }}
+              className="flex items-center gap-2 text-base font-semibold py-2 text-foreground/70 hover:text-primary transition-colors"
+            >
+              <Search className="h-5 w-5" />
+              AI Search
+            </button>
             <div className="pt-4 border-t border-border/50 space-y-2">
               <div className="py-2">
                 <LanguageSwitcher />
@@ -218,6 +236,7 @@ const Navigation = () => {
           </div>
         </div>
       )}
+      <AISearchDialog open={isSearchOpen} onOpenChange={setIsSearchOpen} />
     </nav>
   );
 };

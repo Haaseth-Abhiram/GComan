@@ -275,9 +275,8 @@ serve(async (req) => {
 
     console.log('Contact submission successful:', data.id);
 
-    // Send email notification asynchronously (fire and forget)
-    sendEmailNotification(supabase, data.id, sanitizedData, ipAddress)
-      .catch((err) => console.error('Background email task failed:', err));
+    // Send email notification and wait for completion so DB status gets updated
+    await sendEmailNotification(supabase, data.id, sanitizedData, ipAddress);
 
     return new Response(
       JSON.stringify({ 
