@@ -1,9 +1,27 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
-};
+const ALLOWED_ORIGINS = [
+  'https://www.gcoman.com',
+  'https://gcoman.com',
+  'https://gcoman.lovable.app',
+  'https://global-chemicals-llc.lovable.app',
+  'https://88275aec-3e28-4007-bd65-43d79fa41e87.lovableproject.com',
+];
+
+function getCorsOrigin(req: Request): string {
+  const origin = req.headers.get('Origin') || '';
+  if (origin.includes('lovable.app') || origin.includes('lovableproject.com')) {
+    return origin;
+  }
+  return ALLOWED_ORIGINS.includes(origin) ? origin : 'https://www.gcoman.com';
+}
+
+function getCorsHeaders(req: Request) {
+  return {
+    'Access-Control-Allow-Origin': getCorsOrigin(req),
+    'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version',
+  };
+}
 
 const COMPANY_CONTEXT = `You are an AI search assistant for Global Chemicals LLC (gcoman.com), a leading chemical supplier in Oman (Muscat).
 
@@ -48,6 +66,7 @@ INSTRUCTIONS:
 - If unsure, suggest contacting sales@gcoman.com`;
 
 serve(async (req) => {
+  const corsHeaders = getCorsHeaders(req);
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
