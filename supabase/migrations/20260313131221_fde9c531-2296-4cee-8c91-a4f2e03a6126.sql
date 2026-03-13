@@ -1,0 +1,1 @@
+DROP FUNCTION IF EXISTS public.add_admin_role(TEXT);
