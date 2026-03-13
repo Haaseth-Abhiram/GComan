@@ -20,7 +20,7 @@ const GoogleAnalytics = () => {
   const location = useLocation();
 
   useEffect(() => {
-    if (process.env.NODE_ENV !== 'production' || !GA_MEASUREMENT_ID) {
+    if (import.meta.env.DEV || !GA_MEASUREMENT_ID) {
       console.log('Google Analytics disabled in development');
       return;
     }
