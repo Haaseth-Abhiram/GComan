@@ -10,10 +10,14 @@ const ALLOWED_ORIGINS = [
 
 function getCorsOrigin(req: Request): string {
   const origin = req.headers.get('Origin') || '';
-  if (origin.includes('lovable.app') || origin.includes('lovableproject.com')) {
+  if (ALLOWED_ORIGINS.includes(origin)) {
     return origin;
   }
-  return ALLOWED_ORIGINS.includes(origin) ? origin : 'https://www.gcoman.com';
+  // Allow Lovable preview subdomains for this specific project only
+  if (origin.endsWith('.lovableproject.com') && origin.includes('88275aec-3e28-4007-bd65-43d79fa41e87')) {
+    return origin;
+  }
+  return 'https://www.gcoman.com';
 }
 
 function getCorsHeaders(req: Request) {
@@ -22,6 +26,30 @@ function getCorsHeaders(req: Request) {
     'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version',
   };
 }
+
+// In-memory rate limiter
+const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
+const RATE_LIMIT_MAX = 10; // requests per window
+const RATE_LIMIT_WINDOW_MS = 60_000; // 1 minute
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const entry = rateLimitMap.get(ip);
+  if (!entry || now > entry.resetTime) {
+    rateLimitMap.set(ip, { count: 1, resetTime: now + RATE_LIMIT_WINDOW_MS });
+    return false;
+  }
+  entry.count++;
+  return entry.count > RATE_LIMIT_MAX;
+}
+
+// Cleanup stale entries periodically
+setInterval(() => {
+  const now = Date.now();
+  for (const [key, val] of rateLimitMap) {
+    if (now > val.resetTime) rateLimitMap.delete(key);
+  }
+}, 60_000);
 
 const COMPANY_CONTEXT = `You are an AI search assistant for Global Chemicals LLC (gcoman.com), a leading chemical supplier in Oman (Muscat).
 
@@ -72,6 +100,16 @@ serve(async (req) => {
   }
 
   try {
+    // Rate limiting by IP
+    const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
+               req.headers.get('cf-connecting-ip') || 'unknown';
+    if (isRateLimited(ip)) {
+      return new Response(
+        JSON.stringify({ error: "Too many requests. Please try again in a moment." }),
+        { status: 429, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
     const { query } = await req.json();
     
     if (!query || typeof query !== "string" || query.trim().length === 0) {
@@ -90,7 +128,7 @@ serve(async (req) => {
 
     const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
     if (!LOVABLE_API_KEY) {
-      throw new Error("LOVABLE_API_KEY is not configured");
+      throw new Error("Service configuration error");
     }
 
     const response = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
@@ -121,9 +159,8 @@ serve(async (req) => {
           { status: 402, headers: { ...corsHeaders, "Content-Type": "application/json" } }
         );
       }
-      const text = await response.text();
-      console.error("AI gateway error:", response.status, text);
-      throw new Error("AI search failed");
+      console.error("AI gateway error:", response.status);
+      throw new Error("Search service unavailable");
     }
 
     const data = await response.json();
@@ -136,7 +173,7 @@ serve(async (req) => {
   } catch (error) {
     console.error("ai-search error:", error);
     return new Response(
-      JSON.stringify({ error: error instanceof Error ? error.message : "An error occurred" }),
+      JSON.stringify({ error: "An error occurred. Please try again." }),
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
   }
