@@ -21,8 +21,8 @@ import { ReviewStructuredData, BreadcrumbStructuredData } from '@/components/Str
 
 // Breadcrumb items
 const breadcrumbItems = [
-  { name: 'Home', url: 'https://www.gcoman.com/' },
-  { name: 'Customers', url: 'https://www.gcoman.com/customers' }
+  { name: 'Home', url: 'https://gcoman.com/' },
+  { name: 'Customers', url: 'https://gcoman.com/customers' }
 ];
 
 // Reviews for structured data - Expanded for better SEO
@@ -182,8 +182,8 @@ const Customers = () => {
         keywords="chemical customers Oman, OQ supplier, PDO supplier, oil gas chemical supplier, industrial clients Oman, chemical testimonials, Oman LNG supplier"
         ogTitle="Our Valued Customers | Leading Organizations Trust Us | Global Chemicals"
         ogDescription="200+ active clients, 98% retention rate, 10+ years serving Oman's key industries. Join our growing family of satisfied customers."
-        ogUrl="https://www.gcoman.com/customers"
-        canonical="https://www.gcoman.com/customers"
+        ogUrl="https://gcoman.com/customers"
+        canonical="https://gcoman.com/customers"
       />
       <ReviewStructuredData reviews={customerReviews} />
       <BreadcrumbStructuredData items={breadcrumbItems} />

@@ -13,8 +13,8 @@ import { BreadcrumbStructuredData } from '@/components/StructuredData';
 
 // Breadcrumb items for About page
 const breadcrumbItems = [
-  { name: 'Home', url: 'https://www.gcoman.com/' },
-  { name: 'About Us', url: 'https://www.gcoman.com/about' }
+  { name: 'Home', url: 'https://gcoman.com/' },
+  { name: 'About Us', url: 'https://gcoman.com/about' }
 ];
 
 const About = () => {
@@ -58,8 +58,8 @@ const About = () => {
         keywords="about global chemicals, chemical supplier Oman, ISO 9001 certified, chemical company Muscat, specialty chemicals Oman, industrial chemicals supplier, JSRS certified"
         ogTitle="About Global Chemicals LLC - Leading Chemical Supplier in Oman"
         ogDescription="ISO 9001 certified with 10+ years of excellence. Trusted by 200+ clients. Quality chemicals, expert service, sustainable practices."
-        ogUrl="https://www.gcoman.com/about"
-        canonical="https://www.gcoman.com/about"
+        ogUrl="https://gcoman.com/about"
+        canonical="https://gcoman.com/about"
       />
       <BreadcrumbStructuredData items={breadcrumbItems} />
       <Navigation />

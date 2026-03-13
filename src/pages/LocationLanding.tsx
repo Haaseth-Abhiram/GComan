@@ -231,8 +231,8 @@ const LocationLanding = () => {
   const locationData = locations[location];
 
   const breadcrumbItems = [
-    { name: 'Home', url: 'https://www.gcoman.com/' },
-    { name: `Chemicals ${locationData.city}`, url: `https://www.gcoman.com/chemicals/${locationData.slug}` }
+    { name: 'Home', url: 'https://gcoman.com/' },
+    { name: `Chemicals ${locationData.city}`, url: `https://gcoman.com/chemicals/${locationData.slug}` }
   ];
 
   return (
@@ -243,8 +243,8 @@ const LocationLanding = () => {
         keywords={locationData.metaKeywords}
         ogTitle={`Chemical Supplier in ${locationData.city}, Oman | Global Chemicals LLC`}
         ogDescription={locationData.metaDescription}
-        ogUrl={`https://www.gcoman.com/chemicals/${locationData.slug}`}
-        canonical={`https://www.gcoman.com/chemicals/${locationData.slug}`}
+        ogUrl={`https://gcoman.com/chemicals/${locationData.slug}`}
+        canonical={`https://gcoman.com/chemicals/${locationData.slug}`}
       />
       <BreadcrumbStructuredData items={breadcrumbItems} />
       <FAQStructuredData faqs={locationData.faqs} />

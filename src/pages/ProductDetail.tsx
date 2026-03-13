@@ -101,15 +101,15 @@ const ProductDetail = () => {
         keywords={keywords}
         ogTitle={`${product.title} - Chemical Supplier Oman | Global Chemicals LLC`}
         ogDescription={seoDescription}
-        ogUrl={`https://www.gcoman.com/products/${category}/${productSlug}`}
-        canonical={`https://www.gcoman.com/products/${category}/${productSlug}`}
+        ogUrl={`https://gcoman.com/products/${category}/${productSlug}`}
+        canonical={`https://gcoman.com/products/${category}/${productSlug}`}
       />
       
       <ProductStructuredData product={product} />
       <BreadcrumbStructuredData items={[
-        { name: 'Home', url: 'https://www.gcoman.com' },
-        { name: 'Products', url: 'https://www.gcoman.com/products' },
-        { name: product.title, url: `https://www.gcoman.com/products/${category}/${productSlug}` }
+        { name: 'Home', url: 'https://gcoman.com' },
+        { name: 'Products', url: 'https://gcoman.com/products' },
+        { name: product.title, url: `https://gcoman.com/products/${category}/${productSlug}` }
       ]} />
       
       <Navigation />

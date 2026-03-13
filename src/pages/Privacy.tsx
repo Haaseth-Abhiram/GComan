@@ -15,9 +15,9 @@ const Privacy = () => {
         <meta name="robots" content="noindex, follow" />
         <meta property="og:title" content="Privacy Policy | Global Chemicals LLC" />
         <meta property="og:description" content="Privacy policy for Global Chemicals LLC. Learn how we collect, use, and protect your personal information." />
-        <meta property="og:url" content="https://www.gcoman.com/privacy" />
-        <meta property="og:image" content="https://www.gcoman.com/og-image.jpg" />
-        <link rel="canonical" href="https://www.gcoman.com/privacy" />
+        <meta property="og:url" content="https://gcoman.com/privacy" />
+        <meta property="og:image" content="https://gcoman.com/og-image.jpg" />
+        <link rel="canonical" href="https://gcoman.com/privacy" />
       </Helmet>
       <Navigation />
       <WhatsAppButton />

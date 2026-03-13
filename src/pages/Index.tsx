@@ -44,8 +44,8 @@ const Index = () => {
         keywords="chemical suppliers in oman, chemical company oman, industrial chemicals muscat, chemical distributor oman, chemical supplier GCC, water treatment chemicals oman, PAC Oman, caustic soda Oman, lubricants Oman, laboratory chemicals Muscat, Shell lubricants Oman, calcium hypochlorite Oman, Sohar chemicals, Salalah chemicals, Duqm chemicals, agricultural chemicals oman"
         ogTitle="Chemical Suppliers in Oman | Global Chemicals LLC | gcoman.com"
         ogDescription="Global Chemicals LLC — Oman's trusted chemical supplier. Industrial, agricultural, construction & water treatment chemicals. ISO 9001 certified. Serving Muscat, Sohar, Salalah & GCC."
-        ogUrl="https://www.gcoman.com/"
-        canonical="https://www.gcoman.com/"
+        ogUrl="https://gcoman.com/"
+        canonical="https://gcoman.com/"
       />
       <OrganizationStructuredData includeService={true} />
       <LocalBusinessStructuredData />

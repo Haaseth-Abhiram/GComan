@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 
-const BASE_URL = 'https://www.gcoman.com';
+const BASE_URL = 'https://gcoman.com';
 
 interface SEOProps {
   title: string;

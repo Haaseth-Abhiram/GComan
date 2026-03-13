@@ -87,6 +87,7 @@ const App = () => (
                 <Route path="/" element={<Index />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/products" element={<Products />} />
+                <Route path="/products/:category" element={<Products />} />
                 <Route path="/products/:category/:productSlug" element={<ProductDetail />} />
                 <Route path="/industries" element={<Industries />} />
                 <Route path="/resources" element={<Resources />} />
@@ -118,6 +119,7 @@ const App = () => (
                   <Route index element={<Index />} />
                   <Route path="about" element={<About />} />
                   <Route path="products" element={<Products />} />
+                  <Route path="products/:category" element={<Products />} />
                   <Route path="products/:category/:productSlug" element={<ProductDetail />} />
                   <Route path="industries" element={<Industries />} />
                   <Route path="resources" element={<Resources />} />

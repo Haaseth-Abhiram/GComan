@@ -335,8 +335,8 @@ const Career = () => {
 
   // Breadcrumb for SEO
   const breadcrumbItems = [
-    { name: 'Home', url: 'https://www.gcoman.com/' },
-    { name: 'Careers', url: 'https://www.gcoman.com/career' }
+    { name: 'Home', url: 'https://gcoman.com/' },
+    { name: 'Careers', url: 'https://gcoman.com/career' }
   ];
 
   return (
@@ -347,9 +347,9 @@ const Career = () => {
         <meta name="keywords" content="chemical jobs Oman, careers Muscat, chemical engineer jobs, sales manager jobs Oman, warehouse jobs, laboratory jobs, chemical industry careers" />
         <meta property="og:title" content="Careers at Global Chemicals LLC | Job Opportunities in Oman" />
         <meta property="og:description" content="Build your career with Oman's leading chemical supplier. Competitive benefits, professional development, supportive culture. Apply today!" />
-        <meta property="og:url" content="https://www.gcoman.com/career" />
-        <meta property="og:image" content="https://www.gcoman.com/og-image.jpg" />
-        <link rel="canonical" href="https://www.gcoman.com/career" />
+        <meta property="og:url" content="https://gcoman.com/career" />
+        <meta property="og:image" content="https://gcoman.com/og-image.jpg" />
+        <link rel="canonical" href="https://gcoman.com/career" />
       </Helmet>
 
       {/* Structured Data for SEO */}

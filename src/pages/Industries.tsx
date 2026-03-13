@@ -336,14 +336,14 @@ const Industries = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Industry Chemicals Oman | Water Treatment & Oil Gas Chemicals | Global Chemicals LLC</title>
-        <meta name="description" content="Chemical solutions for water treatment, oil & gas, manufacturing, food, pharma & construction in Oman. JSRS certified, ICV compliant. Trusted by 200+ companies." />
+        <title>Chemical Solutions by Industry Oman | Global Chemicals LLC</title>
+        <meta name="description" content="Water treatment, oilfield, manufacturing, food & lab chemicals in Oman. JSRS certified, ICV compliant. Serving Muscat, Sohar, Duqm, Salalah. Request a quote today." />
         <meta name="keywords" content="water treatment chemicals Oman, water treatment chemicals Muscat, oil gas chemicals Oman, industrial chemicals Muscat, food grade chemicals Oman, pharmaceutical chemicals Oman, construction chemicals Oman, pool chemicals Oman, chemical solutions Oman, Sohar industrial chemicals, PDO chemical supplier, Oman LNG chemicals, PAC Oman, caustic soda Oman, calcium hypochlorite Oman, antiscalant Oman, desalination chemicals Oman, JSRS certified chemical supplier" />
         <meta property="og:title" content="Chemical Solutions for Oman Industries | Global Chemicals LLC" />
         <meta property="og:description" content="JSRS certified supplier of water treatment, oil & gas, and industrial chemicals in Oman. Serving Muscat, Sohar, Duqm, Salalah." />
-        <meta property="og:url" content="https://www.gcoman.com/industries" />
-        <meta property="og:image" content="https://www.gcoman.com/og-image.jpg" />
-        <link rel="canonical" href="https://www.gcoman.com/industries" />
+        <meta property="og:url" content="https://gcoman.com/industries" />
+        <meta property="og:image" content="https://gcoman.com/og-image.jpg" />
+        <link rel="canonical" href="https://gcoman.com/industries" />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <Navigation />

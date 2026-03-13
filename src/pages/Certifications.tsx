@@ -9,8 +9,8 @@ import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
 const breadcrumbItems = [
-  { name: 'Home', url: 'https://www.gcoman.com/' },
-  { name: 'Certifications', url: 'https://www.gcoman.com/certifications' }
+  { name: 'Home', url: 'https://gcoman.com/' },
+  { name: 'Certifications', url: 'https://gcoman.com/certifications' }
 ];
 
 const Certifications = () => {
@@ -196,8 +196,8 @@ const Certifications = () => {
         keywords="JSRS Oman, ISO 9001 chemical supplier, ICV certified Oman, JSRS registered chemicals, oil gas chemicals Oman, certified chemical supplier Muscat, ISO certified distributor Oman, JSRS PDO supplier, environmental compliance chemicals"
         ogTitle="JSRS & ISO Certified Chemical Supplier | Global Chemicals Oman"
         ogDescription="ISO 9001:2015 certified, JSRS registered for oil & gas sector, ICV compliant. Trusted by PDO, Oxy, Shell, BP. Premier chemical supplier in Oman."
-        ogUrl="https://www.gcoman.com/certifications"
-        canonical="https://www.gcoman.com/certifications"
+        ogUrl="https://gcoman.com/certifications"
+        canonical="https://gcoman.com/certifications"
       />
       <BreadcrumbStructuredData items={breadcrumbItems} />
       <Navigation />

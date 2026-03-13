@@ -43,8 +43,8 @@ const contactFAQs = [
 
 // Breadcrumb items
 const breadcrumbItems = [
-  { name: 'Home', url: 'https://www.gcoman.com/' },
-  { name: 'Contact', url: 'https://www.gcoman.com/contact' }
+  { name: 'Home', url: 'https://gcoman.com/' },
+  { name: 'Contact', url: 'https://gcoman.com/contact' }
 ];
 
 const contactSchema = z.object({
@@ -183,8 +183,8 @@ const Contact = () => {
         keywords="contact global chemicals, chemical supplier Muscat, request quote chemicals, technical support chemicals Oman, chemical inquiry, chemical distributor contact"
         ogTitle="Contact Global Chemicals LLC | Request Quote | Muscat Oman"
         ogDescription="Get in touch with Oman's leading chemical supplier. Phone, email, or visit our Muscat office. Expert support ready to assist."
-        ogUrl="https://www.gcoman.com/contact"
-        canonical="https://www.gcoman.com/contact"
+        ogUrl="https://gcoman.com/contact"
+        canonical="https://gcoman.com/contact"
       />
       <FAQStructuredData faqs={contactFAQs} />
       <BreadcrumbStructuredData items={breadcrumbItems} />

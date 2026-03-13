@@ -49,8 +49,8 @@ import { trackDownload } from '@/components/GoogleAnalytics';
 
 // Breadcrumb items
 const breadcrumbItems = [
-  { name: 'Home', url: 'https://www.gcoman.com/' },
-  { name: 'Resources', url: 'https://www.gcoman.com/resources' }
+  { name: 'Home', url: 'https://gcoman.com/' },
+  { name: 'Resources', url: 'https://gcoman.com/resources' }
 ];
 
 // HowTo steps for downloading resources
@@ -1202,13 +1202,13 @@ const Resources = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Industry Guides & Chemical Resources | Global Chemicals LLC Oman"
-        description="Expert chemical industry guides for Oman: water treatment, industrial lubricants, laboratory chemicals, oil & gas production chemicals. Download SDS, catalogs, and technical documentation."
+        title="Chemical Guides & Resources Oman | Global Chemicals LLC"
+        description="Expert chemical guides for Oman: water treatment, lab chemicals, lubricants, oilfield. Download SDS, catalogs & technical docs. Request a quote today."
         keywords="water treatment chemicals Oman, industrial lubricants guide, laboratory chemicals Oman, oil gas production chemicals, swimming pool chemicals, chemical SDS download, product catalogs, safety data sheets, PAC coagulant, Shell Mobil Castrol lubricants, desalination chemicals, corrosion inhibitors"
         ogTitle="Chemical Industry Guides & Resources | Global Chemicals LLC Oman"
         ogDescription="Comprehensive guides on water treatment, lubricants, laboratory chemicals & oil field chemicals for Oman industries. Free technical resources and expert knowledge."
-        ogUrl="https://www.gcoman.com/resources"
-        canonical="https://www.gcoman.com/resources"
+        ogUrl="https://gcoman.com/resources"
+        canonical="https://gcoman.com/resources"
       />
       <HowToStructuredData
         name="How to Download Chemical Resources from Global Chemicals LLC"
@@ -1446,7 +1446,7 @@ const Resources = () => {
                   <ArticleStructuredData
                     title={selectedGuide.title}
                     description={selectedGuide.excerpt}
-                    url={`https://www.gcoman.com/resources#${selectedGuide.slug}`}
+                    url={`https://gcoman.com/resources#${selectedGuide.slug}`}
                     author="Global Chemicals LLC"
                     publishedDate={selectedGuide.lastUpdated}
                     category={selectedGuide.category}

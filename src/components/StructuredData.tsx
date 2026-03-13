@@ -28,7 +28,7 @@ export const ProductStructuredData = ({ product, url }: ProductStructuredDataPro
     "name": product.title,
     "description": product.description,
     "category": product.category,
-    "image": product.image || "https://www.gcoman.com/og-image.jpg",
+    "image": product.image || "https://gcoman.com/og-image.jpg",
     ...(url && { "url": url }),
     "brand": {
       "@type": "Brand",
@@ -37,8 +37,8 @@ export const ProductStructuredData = ({ product, url }: ProductStructuredDataPro
     "manufacturer": {
       "@type": "Organization",
       "name": "Global Chemicals LLC",
-      "url": "https://www.gcoman.com",
-      "logo": "https://www.gcoman.com/logo.png",
+      "url": "https://gcoman.com",
+      "logo": "https://gcoman.com/logo.png",
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "OM",
@@ -56,11 +56,11 @@ export const ProductStructuredData = ({ product, url }: ProductStructuredDataPro
       "@type": "AggregateOffer",
       "availability": "https://schema.org/InStock",
       "priceCurrency": "OMR",
-      "url": url || "https://www.gcoman.com/contact",
+      "url": url || "https://gcoman.com/contact",
       "seller": {
         "@type": "Organization",
         "name": "Global Chemicals LLC",
-        "url": "https://www.gcoman.com"
+        "url": "https://gcoman.com"
       },
       "priceSpecification": {
         "@type": "PriceSpecification",
@@ -138,7 +138,7 @@ export const ArticleStructuredData = ({
     "headline": title,
     "description": description,
     "url": url,
-    "image": image || "https://www.gcoman.com/og-image.jpg",
+    "image": image || "https://gcoman.com/og-image.jpg",
     "author": {
       "@type": "Person",
       "name": author
@@ -148,7 +148,7 @@ export const ArticleStructuredData = ({
       "name": "Global Chemicals LLC",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.gcoman.com/logo.png"
+        "url": "https://gcoman.com/logo.png"
       }
     },
     "datePublished": publishedDate,
@@ -188,7 +188,7 @@ interface BlogListingStructuredDataProps {
 
 export const BlogListingStructuredData = ({
   posts,
-  baseUrl = "https://www.gcoman.com/blog"
+  baseUrl = "https://gcoman.com/blog"
 }: BlogListingStructuredDataProps) => {
   const blogSchema = {
     "@context": "https://schema.org",
@@ -201,7 +201,7 @@ export const BlogListingStructuredData = ({
       "name": "Global Chemicals LLC",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.gcoman.com/logo.png"
+        "url": "https://gcoman.com/logo.png"
       }
     },
     "blogPost": posts.map(post => ({
@@ -415,8 +415,8 @@ export const JobPostingStructuredData = ({
     "hiringOrganization": {
       "@type": "Organization",
       "name": "Global Chemicals LLC",
-      "sameAs": "https://www.gcoman.com",
-      "logo": "https://www.gcoman.com/logo.png"
+      "sameAs": "https://gcoman.com",
+      "logo": "https://gcoman.com/logo.png"
     },
     "jobLocation": {
       "@type": "Place",
@@ -485,15 +485,15 @@ export const LocalBusinessStructuredData = () => {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "ChemicalSupplier",
-    "@id": "https://www.gcoman.com/#organization",
+    "@id": "https://gcoman.com/#organization",
     "name": "Global Chemicals LLC",
     "alternateName": ["Global Chemicals Oman", "GCOMAN", "Global Chemicals Muscat"],
     "description": "Leading industrial and specialty chemical supplier in Oman. Providing water treatment chemicals, industrial lubricants, laboratory chemicals, and oilfield chemicals to industries across Muscat, Sohar, Duqm, and Salalah.",
-    "url": "https://www.gcoman.com",
+    "url": "https://gcoman.com",
     "telephone": "+968-93754388",
     "email": "sales@gcoman.com",
-    "logo": "https://www.gcoman.com/logo.png",
-    "image": "https://www.gcoman.com/og-image.jpg",
+    "logo": "https://gcoman.com/logo.png",
+    "image": "https://gcoman.com/og-image.jpg",
     "priceRange": "$$",
     "currenciesAccepted": "OMR",
     "paymentAccepted": ["Cash", "Bank Transfer", "Credit Card"],
@@ -593,8 +593,8 @@ export const OrganizationStructuredData = ({ includeService = false }: Organizat
     "@type": "Organization",
     "name": "Global Chemicals LLC",
     "alternateName": "Global Chemicals Oman",
-    "url": "https://www.gcoman.com",
-    "logo": "https://www.gcoman.com/logo.png",
+    "url": "https://gcoman.com",
+    "logo": "https://gcoman.com/logo.png",
     "description": "Leading chemical supplier in Oman providing water treatment chemicals, industrial lubricants, laboratory chemicals, and specialty chemicals for oil & gas, manufacturing, and industrial sectors.",
     "address": {
       "@type": "PostalAddress",

@@ -41,8 +41,8 @@ const faqs = [
 ];
 
 const breadcrumbItems = [
-  { name: 'Home', url: 'https://www.gcoman.com/' },
-  { name: 'Chemical Suppliers in Oman', url: 'https://www.gcoman.com/chemical-suppliers-oman' }
+  { name: 'Home', url: 'https://gcoman.com/' },
+  { name: 'Chemical Suppliers in Oman', url: 'https://gcoman.com/chemical-suppliers-oman' }
 ];
 
 const sections = [
@@ -82,8 +82,8 @@ const ChemicalSuppliersOman = () => {
         keywords="chemical suppliers in oman, chemical company oman, industrial chemicals muscat, chemical distributor oman, chemical supplier GCC, oman chemical market, buy chemicals oman, water treatment chemicals oman, construction chemicals oman, oil gas chemicals oman, agricultural chemicals oman"
         ogTitle="Chemical Suppliers in Oman | Global Chemicals LLC"
         ogDescription="Leading chemical suppliers in Oman. ISO 9001 certified. Industrial, agricultural, water treatment & construction chemicals across Oman & GCC."
-        ogUrl="https://www.gcoman.com/chemical-suppliers-oman"
-        canonical="https://www.gcoman.com/chemical-suppliers-oman"
+        ogUrl="https://gcoman.com/chemical-suppliers-oman"
+        canonical="https://gcoman.com/chemical-suppliers-oman"
       />
       <LocalBusinessStructuredData />
       <FAQStructuredData faqs={faqs} />

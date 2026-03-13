@@ -274,7 +274,7 @@ const Login = () => {
         <title>Login | Global Chemicals LLC</title>
         <meta name="description" content="Login to Global Chemicals LLC customer portal. Access orders, invoices, technical docs & account info securely." />
         <meta name="robots" content="noindex, nofollow" />
-        <link rel="canonical" href="https://www.gcoman.com/login" />
+        <link rel="canonical" href="https://gcoman.com/login" />
       </Helmet>
       <div className="w-full max-w-6xl grid lg:grid-cols-2 gap-8 items-center">
         {/* Left Side - Branding */}
