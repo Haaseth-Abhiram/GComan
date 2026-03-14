@@ -54,13 +54,13 @@ const CookieConsent = () => {
 
   return (
     <>
-      {/* Compact pill banner - centered at bottom */}
+      {/* Refined minimal pill banner - centered at bottom */}
       <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 animate-in slide-in-from-bottom duration-500">
-        <div className="flex items-center gap-3 rounded-full bg-gradient-to-r from-secondary via-primary to-accent px-1.5 py-1.5 shadow-xl shadow-primary/20">
+        <div className="flex items-center gap-2.5 rounded-full bg-gradient-to-r from-secondary/10 via-primary/10 to-accent/10 p-0.5 shadow-lg backdrop-blur-sm border border-primary/20">
           {/* Inner pill content */}
-          <div className="flex items-center gap-3 rounded-full bg-card/95 backdrop-blur-sm pl-4 pr-2 py-2">
-            <Cookie className="h-4 w-4 text-primary flex-shrink-0" />
-            <span className="text-sm font-medium text-foreground whitespace-nowrap">
+          <div className="flex items-center gap-3 rounded-full bg-card/98 backdrop-blur-md pl-4 pr-2 py-1.5">
+            <Cookie className="h-3.5 w-3.5 text-primary flex-shrink-0" />
+            <span className="text-xs text-muted-foreground whitespace-nowrap">
               We use cookies
             </span>
             <div className="flex items-center gap-1.5">
@@ -68,23 +68,23 @@ const CookieConsent = () => {
                 onClick={() => setShowSettings(true)}
                 variant="ghost"
                 size="sm"
-                className="h-7 px-2.5 text-xs rounded-full text-muted-foreground hover:text-foreground"
+                className="h-6 px-2 text-[11px] rounded-full text-muted-foreground hover:text-foreground hover:bg-muted/50 font-normal"
               >
-                <Settings2 className="h-3.5 w-3.5 mr-1" />
+                <Settings2 className="h-3 w-3 mr-1" />
                 Settings
               </Button>
               <Button
                 onClick={acceptMinimum}
                 variant="outline"
                 size="sm"
-                className="h-7 px-3 text-xs rounded-full border-border"
+                className="h-6 px-2.5 text-[11px] rounded-full border-border/60 hover:bg-muted/50 font-normal"
               >
                 Decline
               </Button>
               <Button
                 onClick={acceptAll}
                 size="sm"
-                className="h-7 px-3 text-xs rounded-full bg-primary hover:bg-primary/90 text-primary-foreground"
+                className="h-6 px-2.5 text-[11px] rounded-full bg-gradient-to-r from-primary to-accent hover:opacity-90 text-primary-foreground font-normal shadow-sm"
               >
                 Accept All
               </Button>
