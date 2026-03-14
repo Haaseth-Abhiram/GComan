@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ArrowRight, Beaker, Droplets, Wrench } from 'lucide-react';
+import { ArrowRight, Droplets, Wrench } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import waterTreatmentImg from '@/assets/products/water-treatment-optimized.webp';
 import oilGasImg from '@/assets/products/oil-gas.jpg';
@@ -18,6 +18,7 @@ const FeaturedProducts = () => {
       description: t('home.featuredProducts.waterTreatmentDesc'),
       features: [t('home.featuredProducts.highEfficiency'), t('home.featuredProducts.costEffective'), t('home.featuredProducts.ecoFriendly')],
       image: waterTreatmentImg,
+      gradient: 'from-tertiary to-secondary',
     },
     {
       icon: Droplets,
@@ -26,6 +27,7 @@ const FeaturedProducts = () => {
       description: t('home.featuredProducts.oilGasDesc'),
       features: [t('home.featuredProducts.performanceProven'), t('home.featuredProducts.industryStandard'), t('home.featuredProducts.technicalSupport')],
       image: oilGasImg,
+      gradient: 'from-accent to-primary',
     },
     {
       icon: Wrench,
@@ -34,14 +36,15 @@ const FeaturedProducts = () => {
       description: t('home.featuredProducts.lubricantsDesc'),
       features: [t('home.featuredProducts.longLasting'), t('home.featuredProducts.temperatureStable'), t('home.featuredProducts.reducedFriction')],
       image: industrialLubricantsImg,
+      gradient: 'from-primary to-accent',
     },
   ];
 
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12 animate-fade-in">
-          <Badge variant="outline" className="mb-4 text-primary border-primary/30">
+        <div className="text-center mb-14 animate-fade-in">
+          <Badge variant="outline" className="mb-4 text-primary border-primary/30 bg-primary/5">
             {t('home.featuredSolutions')}
           </Badge>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4 px-4">
@@ -52,49 +55,49 @@ const FeaturedProducts = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {products.map((product, index) => {
             const Icon = product.icon;
             return (
               <Card
                 key={index}
-                className="group overflow-hidden hover:shadow-2xl transition-all duration-300 border-border hover:border-primary/50 animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="group overflow-hidden hover:shadow-2xl transition-all duration-500 border-border/50 hover:border-primary/30 animate-fade-in hover:-translate-y-1"
+                style={{ animationDelay: `${index * 0.15}s` }}
               >
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-52 overflow-hidden">
                   <img
                     src={product.image}
                     alt={product.name}
                     width={400}
-                    height={192}
+                    height={208}
                     loading="lazy"
                     decoding="async"
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                   <div className="absolute top-4 left-4">
-                    <div className="w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center">
-                      <Icon className="w-6 h-6 text-primary" />
+                    <div className={`w-11 h-11 rounded-xl bg-gradient-to-br ${product.gradient} flex items-center justify-center shadow-lg`}>
+                      <Icon className="w-5 h-5 text-primary-foreground" />
                     </div>
                   </div>
                   <div className="absolute bottom-4 left-4">
-                    <Badge variant="secondary" className="bg-white/90 text-foreground">
+                    <Badge className="bg-white/90 text-foreground border-0 shadow-sm text-xs">
                       {product.category}
                     </Badge>
                   </div>
                 </div>
 
                 <div className="p-6 space-y-4">
-                  <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+                  <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
                     {product.name}
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{product.description}</p>
 
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-1.5">
                     {product.features.map((feature, idx) => (
                       <span
                         key={idx}
-                        className="text-xs px-3 py-1 bg-muted rounded-full text-muted-foreground"
+                        className="text-[11px] px-2.5 py-1 bg-muted/80 rounded-full text-muted-foreground font-medium"
                       >
                         {feature}
                       </span>
@@ -115,13 +118,13 @@ const FeaturedProducts = () => {
           })}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-14">
           <Link
             to="/products"
-            className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:scale-105 w-full sm:w-auto"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-primary to-accent hover:opacity-90 text-primary-foreground font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105 hover:-translate-y-0.5"
           >
             {t('home.viewAllProducts')}
-            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 rtl:rotate-180" />
+            <ArrowRight className="w-5 h-5 rtl:rotate-180" />
           </Link>
         </div>
       </div>
