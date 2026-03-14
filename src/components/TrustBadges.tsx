@@ -1,33 +1,33 @@
-import { Shield, Award, CheckCircle2, Leaf, FileCheck, Lock } from 'lucide-react';
+import { Shield, Award, CheckCircle2, Leaf, Lock } from 'lucide-react';
 
 const TrustBadges = () => {
   const badges = [
-    { icon: Shield, label: 'ISO 9001 Certified' },
-    { icon: Leaf, label: 'Eco-Friendly' },
-    { icon: CheckCircle2, label: 'Quality Assured' },
-    { icon: Lock, label: 'Safe & Secure' },
-    { icon: Award, label: 'Industry Leader' },
+    { icon: Shield, label: 'ISO 9001 Certified', gradient: 'from-primary/15 to-accent/10' },
+    { icon: Leaf, label: 'Eco-Friendly', gradient: 'from-tertiary/15 to-tertiary/5' },
+    { icon: CheckCircle2, label: 'Quality Assured', gradient: 'from-secondary/15 to-secondary/5' },
+    { icon: Lock, label: 'Safe & Secure', gradient: 'from-accent/15 to-primary/5' },
+    { icon: Award, label: 'Industry Leader', gradient: 'from-primary/15 to-secondary/10' },
   ];
 
   return (
-    <div className="py-12 bg-muted/30 border-y border-border">
+    <div className="py-10 bg-gradient-to-r from-muted/50 via-background to-muted/50 border-y border-border/50">
       <div className="container mx-auto px-4">
-        <p className="text-center text-sm text-muted-foreground mb-6 font-medium">
-          CERTIFIED & TRUSTED BY INDUSTRY STANDARDS
+        <p className="text-center text-xs text-muted-foreground mb-8 font-semibold tracking-[0.2em] uppercase">
+          Certified & Trusted by Industry Standards
         </p>
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+        <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10">
           {badges.map((badge, index) => {
             const Icon = badge.icon;
             return (
               <div
                 key={index}
-                className="flex flex-col items-center gap-2 group cursor-pointer animate-fade-in"
-                style={{ animationDelay: `${index * 0.05}s` }}
+                className="flex flex-col items-center gap-2.5 group cursor-default animate-fade-in"
+                style={{ animationDelay: `${index * 0.08}s` }}
               >
-                <div className="w-12 h-12 rounded-full bg-background border-2 border-primary/20 flex items-center justify-center group-hover:border-primary group-hover:scale-110 transition-all">
+                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${badge.gradient} border border-primary/10 flex items-center justify-center group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-300 shadow-sm`}>
                   <Icon className="w-6 h-6 text-primary" />
                 </div>
-                <span className="text-xs text-muted-foreground group-hover:text-foreground transition-colors text-center max-w-[80px]">
+                <span className="text-[11px] font-medium text-muted-foreground group-hover:text-foreground transition-colors text-center max-w-[90px] leading-tight">
                   {badge.label}
                 </span>
               </div>
