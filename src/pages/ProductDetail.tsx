@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
@@ -9,7 +9,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
 import { ArrowLeft, CheckCircle2, Phone, Mail, Beaker, Info } from 'lucide-react';
-import { products } from '@/data/products';
+import { loadProductsByCategory, hydrateProduct } from '@/data/productLoader';
 import { ProductStructuredData, BreadcrumbStructuredData } from '@/components/StructuredData';
 import { SEO } from '@/components/SEO';
 import { trackProductView, trackSelectContent, trackContactClick } from '@/components/GoogleAnalytics';
@@ -20,8 +20,16 @@ const ProductDetail = () => {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
 
+  const [categoryProducts, setCategoryProducts] = useState<any[]>([]);
+
+  useEffect(() => {
+    if (category) {
+      loadProductsByCategory(category).then(setCategoryProducts);
+    }
+  }, [category]);
+
   // Find product by slug
-  const product = products.find(p =>
+  const product = categoryProducts.find(p =>
     p.id === productSlug && p.category === category
   );
 
@@ -31,6 +39,14 @@ const ProductDetail = () => {
       trackProductView(product.id, product.title, product.category);
     }
   }, [product]);
+
+  if (!product && categoryProducts.length === 0) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <p className="text-muted-foreground">Loading…</p>
+      </div>
+    );
+  }
 
   if (!product) {
     return (
@@ -248,7 +264,7 @@ const ProductDetail = () => {
 
               {/* Related Products */}
               {(() => {
-                const relatedProducts = products
+                const relatedProducts = categoryProducts
                   .filter(p => p.category === product.category && p.id !== product.id)
                   .slice(0, 3);
                 if (relatedProducts.length === 0) return null;

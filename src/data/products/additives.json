@@ -1,0 +1,18 @@
+[
+  {
+    "id": "additives",
+    "title": "Industrial Additives",
+    "description": "Specialized additives to enhance product performance across multiple industries.",
+    "category": "additives",
+    "iconName": "Zap",
+    "details": {
+      "fullDescription": "Comprehensive range of additives designed to improve performance, stability, and quality of industrial products and processes.",
+      "applications": [
+        "Performance enhancement",
+        "Stability improvement",
+        "Process optimization",
+        "Quality control"
+      ]
+    }
+  }
+]

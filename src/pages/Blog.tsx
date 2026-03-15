@@ -10,7 +10,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Calendar, Clock, User, Tag, ArrowRight, TrendingUp, Beaker, Droplets, Factory, Leaf } from 'lucide-react';
 
-interface BlogPost {
+export interface BlogPost {
   id: string;
   title: string;
   excerpt: string;
@@ -24,7 +24,7 @@ interface BlogPost {
   icon: any;
 }
 
-const blogPosts: BlogPost[] = [
+export const blogPosts: BlogPost[] = [
   {
     id: 'top-chemical-suppliers-oman-2026',
     title: 'Top Chemical Suppliers in Oman 2026: Industry Guide',
@@ -222,7 +222,7 @@ const Blog = () => {
                           {blogPosts[0].readTime}
                         </div>
                       </div>
-                      <Link to={`/resources`}>
+                      <Link to={`/blog/${blogPosts[0].id}`}>
                         <Button size="lg" className="w-fit">
                           Read Article <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
@@ -281,7 +281,7 @@ const Blog = () => {
                             </Badge>
                           ))}
                         </div>
-                        <Link to={`/resources`}>
+                        <Link to={`/blog/${post.id}`}>
                           <Button variant="ghost" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                             Read More <ArrowRight className="ml-2 h-4 w-4" />
                           </Button>

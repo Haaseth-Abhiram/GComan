@@ -1,0 +1,137 @@
+[
+  {
+    "id": "meg-ethylene-glycol",
+    "title": "MEG (Monoethylene Glycol)",
+    "description": "Industrial monoethylene glycol for antifreeze, coolants, and polyester production.",
+    "category": "glycols",
+    "iconName": "Wind",
+    "details": {
+      "formula": "C2H6O2",
+      "casNumber": "107-21-1",
+      "alternativeNames": [
+        "Ethylene glycol",
+        "MEG",
+        "1,2-Ethanediol",
+        "Glycol"
+      ],
+      "seoKeywords": [
+        "MEG Oman",
+        "ethylene glycol Muscat",
+        "antifreeze Oman",
+        "coolant MEG Sohar",
+        "monoethylene glycol Muscat"
+      ],
+      "longDescription": "Monoethylene Glycol (MEG) supplier in Oman - Global Chemicals LLC provides industrial-grade MEG for antifreeze, coolants, and chemical manufacturing in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our MEG is essential for formulating automotive antifreeze, HVAC coolants, and as a raw material for polyester fiber and PET production. The colorless liquid provides excellent freezing point depression and boiling point elevation. Critical for gas dehydration, hydrate inhibition in pipelines, and as a heat transfer fluid. Widely used in automotive industries, textile manufacturing, oilfield operations, and industrial cooling systems across Oman. Also serves as a chemical intermediate for resins, solvents, and explosives production.",
+      "applications": [
+        "Automotive antifreeze and coolant formulation",
+        "HVAC system coolants",
+        "Polyester fiber (PET) production",
+        "Gas dehydration and hydrate inhibition",
+        "Heat transfer fluid systems",
+        "Chemical intermediate for resins",
+        "Deicing fluid formulation",
+        "Industrial process cooling"
+      ],
+      "technicalSpecs": [
+        "Purity: 99.8% minimum",
+        "Appearance: Clear, colorless, viscous liquid",
+        "Boiling point: 197°C",
+        "Freezing point: -13°C",
+        "Specific gravity: 1.113 at 20°C",
+        "Completely miscible with water",
+        "Flash point: 111°C",
+        "Available in 200L drums, IBCs, ISO tanks, bulk"
+      ]
+    }
+  },
+  {
+    "id": "teg-triethylene-glycol",
+    "title": "TEG (Triethylene Glycol)",
+    "description": "High-purity triethylene glycol for natural gas dehydration.",
+    "category": "glycols",
+    "iconName": "Wind",
+    "details": {
+      "formula": "C6H14O4",
+      "casNumber": "112-27-6",
+      "alternativeNames": [
+        "Triethylene glycol",
+        "TEG",
+        "Triglycol",
+        "2,2'-[Ethylenebis(oxy)]diethanol"
+      ],
+      "seoKeywords": [
+        "TEG Oman",
+        "triethylene glycol Muscat",
+        "gas dehydration Oman",
+        "TEG dehydration Sohar",
+        "triethylene glycol Muscat"
+      ],
+      "longDescription": "Triethylene Glycol (TEG) supplier in Oman - Global Chemicals LLC provides high-purity TEG for natural gas dehydration and industrial applications in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our TEG is the industry standard for removing water vapor from natural gas streams to meet pipeline specifications and prevent hydrate formation. Essential for gas processing plants, glycol dehydration units, and natural gas conditioning. The hygroscopic liquid absorbs water effectively with low vaporization losses. Widely used in gas processing facilities, LNG plants, and oilfield operations across Oman. Also serves as a solvent for resins, inks, and as a plasticizer for vinyl and polyurethane. The preferred glycol for gas dehydration due to optimal balance of performance and economics.",
+      "applications": [
+        "Natural gas dehydration units",
+        "Pipeline gas conditioning",
+        "Hydrate prevention in gas systems",
+        "Solvent for resins and inks",
+        "Air disinfection and sanitization",
+        "Plasticizer for polymers",
+        "Humectant in industrial applications",
+        "Heat transfer and hydraulic fluids"
+      ],
+      "technicalSpecs": [
+        "Purity: 99% minimum",
+        "Appearance: Clear, colorless, viscous liquid",
+        "Boiling point: 285°C",
+        "Specific gravity: 1.125 at 20°C",
+        "Low vapor pressure (minimal losses)",
+        "Hygroscopic - absorbs water effectively",
+        "Regenerable in glycol contactors",
+        "Available in drums, IBCs, ISO tanks, bulk"
+      ]
+    }
+  },
+  {
+    "id": "propylene-glycol",
+    "title": "Propylene Glycol (USP/Industrial)",
+    "description": "Food-grade and industrial propylene glycol for various applications.",
+    "category": "glycols",
+    "iconName": "Wind",
+    "details": {
+      "formula": "C3H8O2",
+      "casNumber": "57-55-6",
+      "alternativeNames": [
+        "PG",
+        "1,2-Propanediol",
+        "Propane-1,2-diol",
+        "MPG"
+      ],
+      "seoKeywords": [
+        "propylene glycol Oman",
+        "PG Muscat",
+        "food grade propylene glycol Oman",
+        "USP propylene glycol Sohar",
+        "propylene glycol Muscat"
+      ],
+      "longDescription": "Propylene Glycol supplier in Oman - Global Chemicals LLC provides USP and industrial-grade propylene glycol for food, pharmaceutical, and industrial applications in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our PG is a versatile, non-toxic glycol suitable for food-grade antifreeze, pharmaceuticals, cosmetics, and industrial processes. Essential for formulating food-safe heat transfer fluids, pharmaceutical solvents, and personal care products. The GRAS-status chemical offers similar properties to MEG but with food-safe certification. Widely used in food processing, pharmaceutical manufacturing, cosmetic production, and beverage industries across Oman. Also serves in de-icing fluids, electronic cigarettes, and theatrical fog production. Available in USP (pharmaceutical) and technical grades.",
+      "applications": [
+        "Food-grade antifreeze and coolants",
+        "Pharmaceutical solvent and carrier",
+        "Cosmetic and personal care formulation",
+        "Food processing equipment coolants",
+        "De-icing fluid (aircraft, runways)",
+        "Electronic cigarette base liquid",
+        "Theatrical fog and smoke machines",
+        "Animal feed additive"
+      ],
+      "technicalSpecs": [
+        "Grades: USP (pharmaceutical), Technical/Industrial",
+        "Purity: 99.5% minimum (USP)",
+        "Appearance: Clear, colorless, viscous liquid",
+        "Boiling point: 188°C",
+        "Specific gravity: 1.036 at 20°C",
+        "GRAS status (Generally Recognized As Safe)",
+        "Non-toxic alternative to ethylene glycol",
+        "Available in 200L drums, IBCs, bulk"
+      ]
+    }
+  }
+]

@@ -1,0 +1,136 @@
+[
+  {
+    "id": "trichloroethylene",
+    "title": "Trichloroethylene (TCE)",
+    "description": "High-purity trichloroethylene for metal degreasing and industrial cleaning.",
+    "category": "chlorinated",
+    "iconName": "Flame",
+    "details": {
+      "formula": "C2HCl3",
+      "casNumber": "79-01-6",
+      "alternativeNames": [
+        "TCE",
+        "Trichloroethene",
+        "Tri",
+        "Trilene"
+      ],
+      "seoKeywords": [
+        "trichloroethylene Oman",
+        "TCE Muscat",
+        "metal degreaser Oman",
+        "TCE industrial Sohar",
+        "trichloroethylene supplier Muscat"
+      ],
+      "longDescription": "Trichloroethylene (TCE) supplier in Oman - Global Chemicals LLC provides high-purity TCE for metal degreasing, vapor degreasing, and industrial cleaning in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our stabilized trichloroethylene offers excellent solvency for oils, greases, waxes, and tars with non-flammability advantage. Essential for precision cleaning of metal parts, electronics components, and machinery in manufacturing facilities. The chlorinated solvent provides superior degreasing power for heavy oil and grease removal. Widely used in automotive manufacturing, aerospace component cleaning, metal fabrication, and electronics industries across Oman. Available with inhibitors to prevent metal corrosion during vapor degreasing operations.",
+      "applications": [
+        "Vapor degreasing of metal parts",
+        "Precision cleaning of machinery",
+        "Electronics and aerospace component cleaning",
+        "Metal fabrication degreasing",
+        "Automotive parts cleaning",
+        "Removal of cutting oils and greases",
+        "Heat exchanger tube cleaning",
+        "Specialized industrial cleaning"
+      ],
+      "technicalSpecs": [
+        "Purity: 99.5% minimum (stabilized)",
+        "Appearance: Clear, colorless liquid",
+        "Boiling point: 87°C",
+        "Specific gravity: 1.46",
+        "Non-flammable",
+        "Contains stabilizers to prevent decomposition",
+        "Excellent solvency for oils and greases",
+        "Available in 200L drums, IBCs"
+      ]
+    }
+  },
+  {
+    "id": "perchloroethylene",
+    "title": "Perchloroethylene (PCE)",
+    "description": "Industrial perchloroethylene for dry cleaning and metal degreasing.",
+    "category": "chlorinated",
+    "iconName": "Flame",
+    "details": {
+      "formula": "C2Cl4",
+      "casNumber": "127-18-4",
+      "alternativeNames": [
+        "Tetrachloroethylene",
+        "PCE",
+        "Perc",
+        "Tetrachloroethene"
+      ],
+      "seoKeywords": [
+        "perchloroethylene Oman",
+        "PCE Muscat",
+        "dry cleaning solvent Oman",
+        "tetrachloroethylene Sohar",
+        "perc Muscat"
+      ],
+      "longDescription": "Perchloroethylene (PCE) supplier in Oman - Global Chemicals LLC provides high-purity perchloroethylene for dry cleaning and industrial applications in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our stabilized PCE is the industry standard solvent for professional dry cleaning operations and metal degreasing. The non-flammable chlorinated solvent offers excellent fabric cleaning with minimal shrinkage and color fading. Essential for dry cleaning facilities, textile care, and precision metal cleaning operations. The powerful solvent effectively removes oils, greases, and organic stains. Widely used in laundries, dry cleaning shops, textile industries, and metal processing facilities across Oman. Available with stabilizers for extended service life.",
+      "applications": [
+        "Professional dry cleaning operations",
+        "Textile and garment cleaning",
+        "Metal degreasing and cleaning",
+        "Automotive parts cleaning",
+        "Spot removal and stain treatment",
+        "Vapor degreasing systems",
+        "Chemical intermediate production",
+        "Industrial cleaning applications"
+      ],
+      "technicalSpecs": [
+        "Purity: 99.9% minimum (stabilized)",
+        "Appearance: Clear, colorless liquid",
+        "Boiling point: 121°C",
+        "Specific gravity: 1.62",
+        "Non-flammable",
+        "Excellent degreasing properties",
+        "Contains stabilizers for aluminum, iron",
+        "Available in 200L drums, IBCs"
+      ]
+    }
+  },
+  {
+    "id": "methylene-chloride-industrial",
+    "title": "Methylene Chloride (Industrial Grade)",
+    "description": "Industrial methylene chloride for paint stripping and industrial cleaning.",
+    "category": "chlorinated",
+    "iconName": "Flame",
+    "details": {
+      "formula": "CH2Cl2",
+      "casNumber": "75-09-2",
+      "alternativeNames": [
+        "Dichloromethane industrial",
+        "DCM industrial",
+        "Methylene dichloride"
+      ],
+      "seoKeywords": [
+        "methylene chloride industrial Oman",
+        "DCM industrial Muscat",
+        "paint stripper Oman",
+        "methylene chloride Sohar",
+        "DCM degreaser Muscat"
+      ],
+      "longDescription": "Industrial Grade Methylene Chloride supplier in Oman - Global Chemicals LLC provides methylene chloride for paint stripping, industrial cleaning, and manufacturing in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our industrial-grade DCM offers powerful paint and coating removal with fast evaporation. Essential for removing multiple paint layers, epoxy coatings, and adhesives from metal, wood, and concrete surfaces. The volatile solvent penetrates coatings quickly and lifts them without damaging substrates. Widely used in maintenance operations, surface preparation, furniture refinishing, and coating removal across Oman's industrial and construction sectors. The low boiling point ensures fast evaporation with minimal residue.",
+      "applications": [
+        "Paint and coating stripping",
+        "Epoxy and polyurethane removal",
+        "Adhesive removal from surfaces",
+        "Metal surface preparation",
+        "Furniture refinishing",
+        "Graffiti removal",
+        "Industrial equipment cleaning",
+        "Degreasing operations"
+      ],
+      "technicalSpecs": [
+        "Purity: 99% (industrial grade)",
+        "Appearance: Clear, colorless liquid",
+        "Boiling point: 40°C (low)",
+        "Flash point: None (non-flammable)",
+        "Specific gravity: 1.33",
+        "Fast evaporation rate",
+        "Strong solvency for coatings",
+        "Available in 200L drums, IBCs"
+      ]
+    }
+  }
+]

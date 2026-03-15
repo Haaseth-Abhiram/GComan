@@ -1,0 +1,266 @@
+[
+  {
+    "id": "mineral-spirits",
+    "title": "Mineral Spirits",
+    "description": "High-quality petroleum distillate solvent for cleaning, degreasing, and thinning.",
+    "category": "solvents",
+    "iconName": "FlaskRound",
+    "details": {
+      "casNumber": "64742-88-7",
+      "alternativeNames": [
+        "White spirit",
+        "Mineral turpentine",
+        "Stoddard solvent",
+        "Paint thinner"
+      ],
+      "seoKeywords": [
+        "mineral spirits Oman",
+        "white spirit Muscat",
+        "paint thinner Oman",
+        "degreasing solvent Sohar",
+        "mineral spirits supplier Muscat"
+      ],
+      "longDescription": "Mineral Spirits supplier in Oman - Global Chemicals LLC provides high-quality mineral spirits for industrial cleaning, paint thinning, and degreasing in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our petroleum distillate solvent offers excellent dissolving power for oils, greases, and paints with low odor and toxicity. Essential for paint and coating industries, manufacturing facilities, and maintenance operations. The clear, water-white liquid provides consistent performance for thinning oil-based paints, cleaning spray equipment, and general degreasing applications. Widely used in construction, automotive workshops, industrial maintenance, and manufacturing facilities across Oman. Available in low-odor and standard grades to meet specific application requirements.",
+      "applications": [
+        "Oil-based paint and varnish thinning",
+        "Paint spraying equipment cleaning",
+        "Industrial degreasing and cleaning",
+        "Parts washing and metal cleaning",
+        "Adhesive residue removal",
+        "Equipment maintenance cleaning",
+        "Wood stain application",
+        "General purpose industrial solvent"
+      ],
+      "technicalSpecs": [
+        "Appearance: Clear, water-white liquid",
+        "Boiling range: 150-200°C",
+        "Flash point: 38-43°C",
+        "Aromatic content: <1% (low odor grade)",
+        "KB value: 30-33",
+        "Evaporation rate: Medium",
+        "Available in 20L, 200L drums, bulk",
+        "Meets ASTM D235 specifications"
+      ]
+    }
+  },
+  {
+    "id": "kerosene-industrial",
+    "title": "Kerosene (Industrial Grade)",
+    "description": "Industrial-grade kerosene for cleaning, fuel applications, and manufacturing.",
+    "category": "solvents",
+    "iconName": "FlaskRound",
+    "details": {
+      "casNumber": "8008-20-6",
+      "alternativeNames": [
+        "Paraffin oil",
+        "Lamp oil",
+        "Coal oil",
+        "Kerosine"
+      ],
+      "seoKeywords": [
+        "kerosene industrial Oman",
+        "paraffin oil Muscat",
+        "industrial kerosene Sohar",
+        "kerosene supplier Oman",
+        "industrial fuel Muscat"
+      ],
+      "longDescription": "Industrial Grade Kerosene supplier in Oman - Global Chemicals LLC provides quality kerosene for industrial applications in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our industrial-grade kerosene serves as an excellent solvent for cleaning, degreasing, and as a fuel source for heaters and industrial burners. The refined petroleum fraction offers good solvency with moderate evaporation rate. Essential for construction sites, industrial cleaning operations, heating applications, and manufacturing processes. Widely used in concrete curing compound formulation, insecticide carrier solvent, and as a cutting fluid base. Available in various grades to meet specific industrial requirements across Oman's oil & gas, construction, and manufacturing sectors.",
+      "applications": [
+        "Industrial cleaning and degreasing",
+        "Space heater and burner fuel",
+        "Concrete curing compound carrier",
+        "Insecticide and pesticide solvent",
+        "Cutting fluid formulation",
+        "Metal processing and machining",
+        "Asphalt production and processing",
+        "Industrial parts washing"
+      ],
+      "technicalSpecs": [
+        "Appearance: Clear to pale yellow liquid",
+        "Boiling range: 150-300°C",
+        "Flash point: 38°C minimum",
+        "Specific gravity: 0.78-0.82",
+        "Viscosity: 1.2-2.0 cSt at 40°C",
+        "Sulfur content: <0.25%",
+        "Available in 200L drums, IBCs, bulk",
+        "Meets industrial grade specifications"
+      ]
+    }
+  },
+  {
+    "id": "turpentine-industrial",
+    "title": "Turpentine (Industrial Grade)",
+    "description": "Industrial turpentine solvent for paint thinning and industrial applications.",
+    "category": "solvents",
+    "iconName": "FlaskRound",
+    "details": {
+      "casNumber": "8006-64-2",
+      "alternativeNames": [
+        "Gum turpentine",
+        "Turps",
+        "Oil of turpentine",
+        "Turpentine oil"
+      ],
+      "seoKeywords": [
+        "turpentine Oman",
+        "turpentine industrial Muscat",
+        "paint thinner turpentine Oman",
+        "turps Sohar",
+        "turpentine supplier Muscat"
+      ],
+      "longDescription": "Industrial Grade Turpentine supplier in Oman - Global Chemicals LLC provides quality turpentine for paint industries and industrial applications in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our turpentine is a traditional solvent derived from pine resin, offering excellent dissolving power for oil-based paints, varnishes, and waxes. Essential for paint manufacturing, furniture finishing, and restoration work. The aromatic solvent provides superior performance in thinning oil-based coatings and cleaning painting equipment. Widely used in construction, furniture manufacturing, paint industries, and art restoration across Oman. The natural solvent offers strong solvency with characteristic pine aroma.",
+      "applications": [
+        "Oil-based paint and varnish thinning",
+        "Furniture finishing and restoration",
+        "Paint brush and equipment cleaning",
+        "Wax polish formulation",
+        "Printing ink manufacture",
+        "Fragrance and essential oil extraction",
+        "Artist paints and mediums",
+        "Wood treatment and preservation"
+      ],
+      "technicalSpecs": [
+        "Appearance: Clear, colorless to pale yellow",
+        "Main component: Alpha-pinene, beta-pinene",
+        "Boiling range: 150-180°C",
+        "Flash point: 35°C",
+        "Specific gravity: 0.86-0.87",
+        "Purity: Technical grade",
+        "Characteristic pine odor",
+        "Available in 20L, 200L drums"
+      ]
+    }
+  },
+  {
+    "id": "naphtha-industrial",
+    "title": "Naphtha (Industrial Grade)",
+    "description": "Industrial naphtha solvent for cleaning, dilution, and chemical processing.",
+    "category": "solvents",
+    "iconName": "FlaskRound",
+    "details": {
+      "casNumber": "64742-89-8",
+      "alternativeNames": [
+        "Petroleum naphtha",
+        "VM&P naphtha",
+        "Light naphtha",
+        "Solvent naphtha"
+      ],
+      "seoKeywords": [
+        "naphtha industrial Oman",
+        "petroleum naphtha Muscat",
+        "solvent naphtha Sohar",
+        "VM&P naphtha Oman",
+        "naphtha supplier Muscat"
+      ],
+      "longDescription": "Industrial Grade Naphtha supplier in Oman - Global Chemicals LLC provides high-quality petroleum naphtha for industrial cleaning, chemical processing, and manufacturing in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our naphtha fractions (light, medium, heavy) offer excellent solvency for resins, rubbers, and asphalts. Essential for rubber and tire manufacturing, paint formulation, and petrochemical feedstock. The fast-evaporating solvent is ideal for applications requiring quick drying and minimal residue. Widely used in adhesive production, printing inks, rubber compounding, and chemical synthesis across Oman's manufacturing and petrochemical industries. Available in various boiling ranges to meet specific process requirements.",
+      "applications": [
+        "Rubber and tire manufacturing",
+        "Adhesive and sealant formulation",
+        "Printing ink production",
+        "Paint and coating manufacture",
+        "Petrochemical feedstock",
+        "Asphalt dilution and processing",
+        "Industrial cleaning and degreasing",
+        "Chemical synthesis intermediates"
+      ],
+      "technicalSpecs": [
+        "Grades: Light, medium, heavy naphtha",
+        "Boiling range: 30-200°C (grade dependent)",
+        "Flash point: -4°C to 38°C (grade dependent)",
+        "Aromatic content: 10-25%",
+        "Appearance: Clear, colorless liquid",
+        "Fast evaporation rate",
+        "Available in drums, IBCs, ISO tanks, bulk",
+        "Meets ASTM specifications"
+      ]
+    }
+  },
+  {
+    "id": "thinner-402",
+    "title": "Thinner 402",
+    "description": "Premium paint thinner for epoxy, polyurethane, and industrial coatings.",
+    "category": "solvents",
+    "iconName": "FlaskRound",
+    "details": {
+      "alternativeNames": [
+        "Paint thinner 402",
+        "Industrial thinner",
+        "Epoxy thinner",
+        "Coating thinner"
+      ],
+      "seoKeywords": [
+        "thinner 402 Oman",
+        "paint thinner Muscat",
+        "epoxy thinner Oman",
+        "industrial thinner Sohar",
+        "coating thinner Muscat"
+      ],
+      "longDescription": "Thinner 402 supplier in Oman - Global Chemicals LLC provides premium-grade Thinner 402 for industrial coating applications in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our specially formulated thinner is designed for epoxy, polyurethane, and high-performance industrial coatings. The balanced solvent blend ensures optimal viscosity reduction without compromising coating properties. Essential for achieving proper spray viscosity, flow, and leveling in professional coating applications. Widely used in oil & gas facilities, marine coatings, industrial maintenance, steel structure painting, and tank coating operations across Oman. The formulation provides controlled evaporation rate for professional finishing in hot climates.",
+      "applications": [
+        "Epoxy coating thinning and application",
+        "Polyurethane paint viscosity adjustment",
+        "Industrial maintenance coatings",
+        "Marine and protective coatings",
+        "Tank and pipeline coating",
+        "Steel structure painting",
+        "Spray equipment cleaning",
+        "Professional painting operations"
+      ],
+      "technicalSpecs": [
+        "Formulation: Balanced aromatic/aliphatic blend",
+        "Appearance: Clear liquid",
+        "Flash point: 25-30°C",
+        "Evaporation rate: Medium (controlled)",
+        "Compatible with: Epoxy, PU, alkyd systems",
+        "Typical addition: 5-15% by volume",
+        "Suitable for hot climate application",
+        "Available in 20L, 200L drums"
+      ]
+    }
+  },
+  {
+    "id": "mek-solvent",
+    "title": "MEK (Methyl Ethyl Ketone)",
+    "description": "High-purity MEK solvent for coatings, adhesives, and industrial cleaning.",
+    "category": "solvents",
+    "iconName": "FlaskRound",
+    "details": {
+      "formula": "C4H8O",
+      "casNumber": "78-93-3",
+      "alternativeNames": [
+        "Methyl ethyl ketone",
+        "Butanone",
+        "2-Butanone",
+        "MEK solvent"
+      ],
+      "seoKeywords": [
+        "MEK Oman",
+        "methyl ethyl ketone Muscat",
+        "MEK solvent Sohar",
+        "butanone Oman",
+        "MEK industrial Muscat"
+      ],
+      "longDescription": "MEK (Methyl Ethyl Ketone) supplier in Oman - Global Chemicals LLC provides high-purity MEK for coatings, adhesives, and industrial applications in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our MEK offers excellent solvency for resins, inks, and adhesives with fast evaporation rate. Essential for paint stripping, dewaxing processes, and industrial cleaning operations. The powerful ketone solvent is widely used in printing ink manufacturing, adhesive formulation, and as a reaction medium in chemical synthesis. Critical for automotive refinishing, industrial coatings, and manufacturing processes across Oman. The high-purity grade ensures consistent performance in demanding applications.",
+      "applications": [
+        "Paint and coating formulation",
+        "Printing ink manufacture",
+        "Adhesive and sealant production",
+        "Paint stripping and removal",
+        "Dewaxing processes",
+        "Magnetic tape manufacture",
+        "Industrial cleaning and degreasing",
+        "Chemical synthesis intermediate"
+      ],
+      "technicalSpecs": [
+        "Purity: 99.5% minimum",
+        "Appearance: Clear, colorless liquid",
+        "Boiling point: 80°C",
+        "Flash point: -9°C",
+        "Fast evaporation rate",
+        "Strong solvency for resins",
+        "Miscible with most organic solvents",
+        "Available in 200L drums, IBCs"
+      ]
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "id": "lab-equipment",
+    "title": "Laboratory Handling Equipment",
+    "description": "Premium laboratory equipment including beakers, flasks, and specialized vessels.",
+    "category": "lab-equipment",
+    "iconName": "TestTube",
+    "details": {
+      "fullDescription": "Our product range includes borosilicate glass beakers, crucibles, Erlenmeyer flasks, volumetric flasks, and distillation flasks, expertly crafted for specific laboratory processes.",
+      "applications": [
+        "Chemical reactions",
+        "Titrations",
+        "Solution preparation",
+        "Distillation",
+        "Laboratory testing"
+      ]
+    }
+  }
+]

@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import { Helmet } from 'react-helmet-async';
+import { SEO } from '@/components/SEO';
+import { FAQStructuredData } from '@/components/StructuredData';
 import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -319,33 +320,18 @@ const Industries = () => {
     },
   ];
 
-  // FAQPage Schema for Water Treatment
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": waterTreatmentFaqs.map(faq => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
-      }
-    }))
-  };
-
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Chemical Solutions by Industry Oman | Global Chemicals LLC</title>
-        <meta name="description" content="Water treatment, oilfield, manufacturing, food & lab chemicals in Oman. JSRS certified, ICV compliant. Serving Muscat, Sohar, Duqm, Salalah. Request a quote today." />
-        <meta name="keywords" content="water treatment chemicals Oman, water treatment chemicals Muscat, oil gas chemicals Oman, industrial chemicals Muscat, food grade chemicals Oman, pharmaceutical chemicals Oman, construction chemicals Oman, pool chemicals Oman, chemical solutions Oman, Sohar industrial chemicals, PDO chemical supplier, Oman LNG chemicals, PAC Oman, caustic soda Oman, calcium hypochlorite Oman, antiscalant Oman, desalination chemicals Oman, JSRS certified chemical supplier" />
-        <meta property="og:title" content="Chemical Solutions for Oman Industries | Global Chemicals LLC" />
-        <meta property="og:description" content="JSRS certified supplier of water treatment, oil & gas, and industrial chemicals in Oman. Serving Muscat, Sohar, Duqm, Salalah." />
-        <meta property="og:url" content="https://gcoman.com/industries" />
-        <meta property="og:image" content="https://gcoman.com/og-image.jpg" />
-        <link rel="canonical" href="https://gcoman.com/industries" />
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-      </Helmet>
+      <SEO
+        title="Chemical Solutions by Industry Oman | Global Chemicals LLC"
+        description="Water treatment, oilfield, manufacturing, food & lab chemicals in Oman. JSRS certified, ICV compliant. Serving Muscat, Sohar, Duqm, Salalah. Request a quote today."
+        keywords="water treatment chemicals Oman, water treatment chemicals Muscat, oil gas chemicals Oman, industrial chemicals Muscat, food grade chemicals Oman, pharmaceutical chemicals Oman, construction chemicals Oman, pool chemicals Oman, chemical solutions Oman, Sohar industrial chemicals, PDO chemical supplier, Oman LNG chemicals, PAC Oman, caustic soda Oman, calcium hypochlorite Oman, antiscalant Oman, desalination chemicals Oman, JSRS certified chemical supplier"
+        ogTitle="Chemical Solutions for Oman Industries | Global Chemicals LLC"
+        ogDescription="JSRS certified supplier of water treatment, oil & gas, and industrial chemicals in Oman. Serving Muscat, Sohar, Duqm, Salalah."
+        ogUrl="https://gcoman.com/industries"
+        canonical="https://gcoman.com/industries"
+      />
+      <FAQStructuredData faqs={waterTreatmentFaqs} />
       <Navigation />
       <WhatsAppButton />
 

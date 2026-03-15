@@ -1,0 +1,410 @@
+[
+  {
+    "id": "caustic-soda-flakes-soap",
+    "title": "Caustic Soda Flakes",
+    "description": "Sodium hydroxide flakes for saponification in soap and detergent manufacturing.",
+    "category": "soap-detergent",
+    "iconName": "Sparkles",
+    "details": {
+      "formula": "NaOH",
+      "casNumber": "1310-73-2",
+      "alternativeNames": [
+        "Sodium hydroxide flakes",
+        "NaOH flakes",
+        "Caustic soda"
+      ],
+      "seoKeywords": [
+        "caustic soda flakes Oman",
+        "sodium hydroxide Muscat",
+        "NaOH Oman"
+      ]
+    }
+  },
+  {
+    "id": "caustic-soda-liquid-soap",
+    "title": "Caustic Soda Liquid",
+    "description": "Liquid sodium hydroxide for industrial cleaning and detergent formulations.",
+    "category": "soap-detergent",
+    "iconName": "Sparkles",
+    "details": {
+      "formula": "NaOH",
+      "casNumber": "1310-73-2",
+      "alternativeNames": [
+        "Sodium hydroxide liquid",
+        "Caustic soda solution",
+        "Lye"
+      ],
+      "seoKeywords": [
+        "caustic soda liquid Oman",
+        "sodium hydroxide solution Muscat",
+        "lye Oman"
+      ]
+    }
+  },
+  {
+    "id": "caustic-soda-prills-soap",
+    "title": "Caustic Soda Prills",
+    "description": "High-purity sodium hydroxide beads for precise detergent formulation.",
+    "category": "soap-detergent",
+    "iconName": "Sparkles",
+    "details": {
+      "formula": "NaOH",
+      "casNumber": "1310-73-2",
+      "alternativeNames": [
+        "Sodium hydroxide prills",
+        "NaOH beads",
+        "Caustic soda pearls"
+      ],
+      "seoKeywords": [
+        "caustic soda prills Oman",
+        "NaOH prills Muscat",
+        "sodium hydroxide beads Oman"
+      ]
+    }
+  },
+  {
+    "id": "edta-powder-soap",
+    "title": "EDTA Powder",
+    "description": "Chelating agent for water hardness control in detergent products.",
+    "category": "soap-detergent",
+    "iconName": "Sparkles",
+    "details": {
+      "formula": "C10H16N2O8",
+      "casNumber": "60-00-4",
+      "alternativeNames": [
+        "Ethylenediaminetetraacetic acid",
+        "EDTA",
+        "Chelating agent"
+      ],
+      "seoKeywords": [
+        "EDTA powder Oman",
+        "chelating agent Muscat",
+        "water softener Oman"
+      ]
+    }
+  },
+  {
+    "id": "glycerine-soap",
+    "title": "Glycerine",
+    "description": "Humectant and moisturizer for soap and personal care formulations.",
+    "category": "soap-detergent",
+    "iconName": "Sparkles",
+    "details": {
+      "formula": "C3H8O3",
+      "casNumber": "56-81-5",
+      "alternativeNames": [
+        "Glycerol",
+        "Glycerin",
+        "Propane-1,2,3-triol"
+      ],
+      "seoKeywords": [
+        "glycerine soap Oman",
+        "glycerol Muscat",
+        "humectant Oman"
+      ]
+    }
+  },
+  {
+    "id": "hydrogen-peroxide-3",
+    "title": "Hydrogen Peroxide 3%",
+    "description": "Low concentration bleaching agent for mild cleaning applications.",
+    "category": "soap-detergent",
+    "iconName": "Sparkles",
+    "details": {
+      "formula": "H2O2",
+      "casNumber": "7722-84-1",
+      "alternativeNames": [
+        "Hydrogen peroxide 3%",
+        "H2O2 3%"
+      ],
+      "seoKeywords": [
+        "hydrogen peroxide 3% Oman",
+        "H2O2 Muscat",
+        "bleaching agent Oman"
+      ]
+    }
+  },
+  {
+    "id": "hydrogen-peroxide-35",
+    "title": "Hydrogen Peroxide 35%",
+    "description": "Medium strength oxidizing agent for industrial detergent formulations.",
+    "category": "soap-detergent",
+    "iconName": "Sparkles",
+    "details": {
+      "formula": "H2O2",
+      "casNumber": "7722-84-1",
+      "alternativeNames": [
+        "Hydrogen peroxide 35%",
+        "H2O2 35%"
+      ],
+      "seoKeywords": [
+        "hydrogen peroxide 35% Oman",
+        "H2O2 35% Muscat",
+        "oxidizing agent Oman"
+      ]
+    }
+  },
+  {
+    "id": "hydrogen-peroxide-50",
+    "title": "Hydrogen Peroxide 50%",
+    "description": "High concentration bleaching agent for heavy-duty cleaning products.",
+    "category": "soap-detergent",
+    "iconName": "Sparkles",
+    "details": {
+      "formula": "H2O2",
+      "casNumber": "7722-84-1",
+      "alternativeNames": [
+        "Hydrogen peroxide 50%",
+        "H2O2 50%"
+      ],
+      "seoKeywords": [
+        "hydrogen peroxide 50% Oman",
+        "H2O2 50% Muscat",
+        "bleach Oman"
+      ]
+    }
+  },
+  {
+    "id": "hydrogen-peroxide-6",
+    "title": "Hydrogen Peroxide 6%",
+    "description": "Moderate concentration for bleaching and sanitizing applications.",
+    "category": "soap-detergent",
+    "iconName": "Sparkles",
+    "details": {
+      "formula": "H2O2",
+      "casNumber": "7722-84-1",
+      "alternativeNames": [
+        "Hydrogen peroxide 6%",
+        "H2O2 6%"
+      ],
+      "seoKeywords": [
+        "hydrogen peroxide 6% Oman",
+        "H2O2 6% Muscat",
+        "sanitizer Oman"
+      ]
+    }
+  },
+  {
+    "id": "labsa",
+    "title": "LABSA",
+    "description": "Linear Alkylbenzene Sulphonic Acid - primary surfactant for detergent production.",
+    "category": "soap-detergent",
+    "iconName": "Sparkles",
+    "details": {
+      "casNumber": "27176-87-0",
+      "alternativeNames": [
+        "Linear alkylbenzene sulfonic acid",
+        "LABSA",
+        "Dodecylbenzenesulfonic acid"
+      ],
+      "seoKeywords": [
+        "LABSA Oman",
+        "surfactant Muscat",
+        "detergent raw material Oman"
+      ]
+    }
+  },
+  {
+    "id": "nonyl-phenol-ethoxylate",
+    "title": "Nonyl Phenol Ethoxylate",
+    "description": "Non-ionic surfactant for industrial and household cleaning products.",
+    "category": "soap-detergent",
+    "iconName": "Sparkles",
+    "details": {
+      "casNumber": "9016-45-9",
+      "alternativeNames": [
+        "NPE",
+        "Nonyl phenol ethoxylate",
+        "NP ethoxylate"
+      ],
+      "seoKeywords": [
+        "nonyl phenol ethoxylate Oman",
+        "NPE Muscat",
+        "surfactant Oman"
+      ]
+    }
+  },
+  {
+    "id": "perchloroethylene",
+    "title": "Perchloroethylene",
+    "description": "Solvent for dry cleaning and degreasing applications.",
+    "category": "soap-detergent",
+    "iconName": "Sparkles",
+    "details": {
+      "formula": "C2Cl4",
+      "casNumber": "127-18-4",
+      "alternativeNames": [
+        "Tetrachloroethylene",
+        "PERC",
+        "PCE"
+      ],
+      "seoKeywords": [
+        "perchloroethylene Oman",
+        "dry cleaning solvent Muscat",
+        "PERC Oman"
+      ]
+    }
+  },
+  {
+    "id": "sles-70",
+    "title": "SLES 70%",
+    "description": "Sodium Lauryl Ether Sulfate - foaming agent and surfactant for detergents.",
+    "category": "soap-detergent",
+    "iconName": "Sparkles",
+    "details": {
+      "casNumber": "68585-34-2",
+      "alternativeNames": [
+        "Sodium laureth sulfate",
+        "SLES",
+        "Sodium lauryl ether sulfate"
+      ],
+      "seoKeywords": [
+        "SLES 70% Oman",
+        "sodium laureth sulfate Muscat",
+        "foaming agent Oman"
+      ]
+    }
+  },
+  {
+    "id": "soda-ash-dense-soap",
+    "title": "Soda Ash Dense",
+    "description": "Sodium carbonate for pH adjustment and water softening in detergents.",
+    "category": "soap-detergent",
+    "iconName": "Sparkles",
+    "details": {
+      "formula": "Na2CO3",
+      "casNumber": "497-19-8",
+      "alternativeNames": [
+        "Sodium carbonate dense",
+        "Washing soda dense"
+      ],
+      "seoKeywords": [
+        "soda ash dense Oman",
+        "sodium carbonate Muscat",
+        "washing soda Oman"
+      ]
+    }
+  },
+  {
+    "id": "soda-ash-light-soap",
+    "title": "Soda Ash Light",
+    "description": "Light density sodium carbonate for soap and detergent formulations.",
+    "category": "soap-detergent",
+    "iconName": "Sparkles",
+    "details": {
+      "formula": "Na2CO3",
+      "casNumber": "497-19-8",
+      "alternativeNames": [
+        "Sodium carbonate light",
+        "Washing soda light"
+      ],
+      "seoKeywords": [
+        "soda ash light Oman",
+        "sodium carbonate light Muscat",
+        "detergent raw material Oman"
+      ]
+    }
+  },
+  {
+    "id": "sodium-hypochlorite-12-15-soap",
+    "title": "Sodium Hypochlorite 12-15%",
+    "description": "Bleaching and disinfecting agent for cleaning product formulations.",
+    "category": "soap-detergent",
+    "iconName": "Sparkles",
+    "details": {
+      "formula": "NaOCl",
+      "casNumber": "7681-52-9",
+      "alternativeNames": [
+        "Liquid chlorine",
+        "Bleach",
+        "Sodium hypochlorite solution"
+      ],
+      "seoKeywords": [
+        "sodium hypochlorite Oman",
+        "bleach Muscat",
+        "disinfectant Oman"
+      ]
+    }
+  },
+  {
+    "id": "sodium-meta-silicate-pentahydrate",
+    "title": "Sodium Meta Silicate Pentahydrate",
+    "description": "Alkaline builder and corrosion inhibitor for heavy-duty detergents.",
+    "category": "soap-detergent",
+    "iconName": "Sparkles",
+    "details": {
+      "formula": "Na2SiO3·5H2O",
+      "casNumber": "6834-92-0",
+      "alternativeNames": [
+        "Sodium metasilicate pentahydrate",
+        "SMS pentahydrate"
+      ],
+      "seoKeywords": [
+        "sodium metasilicate Oman",
+        "detergent builder Muscat",
+        "SMS Oman"
+      ]
+    }
+  },
+  {
+    "id": "sodium-tripolyphosphate",
+    "title": "Sodium Tripolyphosphate",
+    "description": "Sequestering agent and detergency builder for laundry detergents.",
+    "category": "soap-detergent",
+    "iconName": "Sparkles",
+    "details": {
+      "formula": "Na5P3O10",
+      "casNumber": "7758-29-4",
+      "alternativeNames": [
+        "STPP",
+        "Sodium triphosphate",
+        "Pentasodium triphosphate"
+      ],
+      "seoKeywords": [
+        "STPP Oman",
+        "sodium tripolyphosphate Muscat",
+        "detergent builder Oman"
+      ]
+    }
+  },
+  {
+    "id": "surfactants-soap",
+    "title": "Surfactants",
+    "description": "Range of surface active agents for cleaning and emulsifying applications.",
+    "category": "soap-detergent",
+    "iconName": "Sparkles",
+    "details": {
+      "alternativeNames": [
+        "Surface active agents",
+        "Surfactants",
+        "Wetting agents"
+      ],
+      "seoKeywords": [
+        "surfactants Oman",
+        "surface active agents Muscat",
+        "emulsifiers Oman"
+      ]
+    }
+  },
+  {
+    "id": "trisodium-phosphate-soap",
+    "title": "Trisodium Phosphate",
+    "description": "Heavy-duty cleaning agent and degreaser for industrial applications.",
+    "category": "soap-detergent",
+    "iconName": "Sparkles",
+    "details": {
+      "formula": "Na3PO4",
+      "casNumber": "7601-54-9",
+      "alternativeNames": [
+        "TSP",
+        "Trisodium orthophosphate",
+        "Na3PO4"
+      ],
+      "seoKeywords": [
+        "trisodium phosphate Oman",
+        "TSP Muscat",
+        "heavy duty cleaner Oman"
+      ]
+    }
+  }
+]

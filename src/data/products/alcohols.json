@@ -1,0 +1,182 @@
+[
+  {
+    "id": "methanol-industrial",
+    "title": "Methanol (Industrial Grade)",
+    "description": "Industrial methanol for solvents, fuel, and chemical manufacturing.",
+    "category": "alcohols",
+    "iconName": "FlaskRound",
+    "details": {
+      "formula": "CH3OH",
+      "casNumber": "67-56-1",
+      "alternativeNames": [
+        "Methyl alcohol",
+        "Wood alcohol",
+        "Carbinol",
+        "MeOH industrial"
+      ],
+      "seoKeywords": [
+        "methanol industrial Oman",
+        "methyl alcohol Muscat",
+        "industrial methanol Sohar",
+        "methanol fuel Oman",
+        "methanol supplier Muscat"
+      ],
+      "longDescription": "Industrial Grade Methanol supplier in Oman - Global Chemicals LLC provides bulk methanol for industrial solvents, fuel blending, and chemical manufacturing in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our industrial methanol serves as a key feedstock for formaldehyde production, MTBE synthesis, and biodiesel manufacturing. Essential for solvent applications, antifreeze formulation, and windshield washer fluid production. The volatile alcohol is also used as a denaturant for ethanol and in paint stripping formulations. Widely used in chemical plants, biodiesel facilities, automotive industries, and manufacturing operations across Oman. Available in bulk quantities for large-scale industrial consumption.",
+      "applications": [
+        "Formaldehyde production",
+        "Biodiesel manufacturing",
+        "MTBE and TAME synthesis",
+        "Solvent for coatings and inks",
+        "Windshield washer fluid",
+        "Antifreeze formulation",
+        "Ethanol denaturant",
+        "Fuel blending and additive"
+      ],
+      "technicalSpecs": [
+        "Purity: 99.85% minimum (industrial grade)",
+        "Appearance: Clear, colorless liquid",
+        "Boiling point: 65°C",
+        "Flash point: 11°C (highly flammable)",
+        "Specific gravity: 0.792",
+        "Water content: <0.1%",
+        "Toxic - handle with care",
+        "Available in IBCs, ISO tanks, bulk"
+      ]
+    }
+  },
+  {
+    "id": "ethanol-industrial",
+    "title": "Ethanol (Industrial/Denatured)",
+    "description": "Industrial and denatured ethanol for solvents, fuel, and manufacturing.",
+    "category": "alcohols",
+    "iconName": "FlaskRound",
+    "details": {
+      "formula": "C2H5OH",
+      "casNumber": "64-17-5",
+      "alternativeNames": [
+        "Ethyl alcohol industrial",
+        "Industrial ethanol",
+        "Denatured alcohol",
+        "IMS industrial"
+      ],
+      "seoKeywords": [
+        "industrial ethanol Oman",
+        "denatured alcohol Muscat",
+        "ethanol fuel Oman",
+        "industrial alcohol Sohar",
+        "ethyl alcohol Muscat"
+      ],
+      "longDescription": "Industrial Grade Ethanol supplier in Oman - Global Chemicals LLC provides bulk ethanol for fuel blending, solvents, and manufacturing in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our industrial ethanol (denatured with methanol or IPA) is essential for E10/E85 fuel blending, solvent formulations, and chemical synthesis. The renewable alcohol serves as a gasoline octane enhancer, reducing emissions and petroleum dependence. Widely used in fuel distribution, paint and coating industries, pharmaceutical manufacturing, and industrial cleaning across Oman. Also serves in hand sanitizer production, perfume formulation, and as a general-purpose industrial solvent. Available in various concentrations (95%, 99.5%) and denatured grades.",
+      "applications": [
+        "Gasoline blending (E10, E85 fuel)",
+        "Solvent for paints and coatings",
+        "Pharmaceutical extraction and synthesis",
+        "Hand sanitizer and disinfectant production",
+        "Perfume and cosmetic manufacture",
+        "Industrial cleaning formulations",
+        "Ink and adhesive production",
+        "Chemical synthesis intermediate"
+      ],
+      "technicalSpecs": [
+        "Concentration: 95% or 99.5% (industrial)",
+        "Denatured with: Methanol, IPA (excise compliance)",
+        "Appearance: Clear, colorless liquid",
+        "Boiling point: 78°C",
+        "Flash point: 13°C (flammable)",
+        "Specific gravity: 0.789",
+        "Renewable, bio-based alcohol",
+        "Available in IBCs, ISO tanks, bulk"
+      ]
+    }
+  },
+  {
+    "id": "isopropanol-industrial",
+    "title": "Isopropanol (Industrial Grade)",
+    "description": "Industrial isopropyl alcohol for cleaning, solvents, and manufacturing.",
+    "category": "alcohols",
+    "iconName": "FlaskRound",
+    "details": {
+      "formula": "C3H7OH",
+      "casNumber": "67-63-0",
+      "alternativeNames": [
+        "Isopropyl alcohol industrial",
+        "IPA industrial",
+        "2-Propanol",
+        "Rubbing alcohol industrial"
+      ],
+      "seoKeywords": [
+        "isopropanol industrial Oman",
+        "IPA Muscat",
+        "isopropyl alcohol Oman",
+        "industrial IPA Sohar",
+        "isopropanol supplier Muscat"
+      ],
+      "longDescription": "Industrial Grade Isopropanol supplier in Oman - Global Chemicals LLC provides bulk IPA for industrial cleaning, solvents, and manufacturing in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our industrial isopropyl alcohol (99% or 70%) is essential for electronics cleaning, disinfection, and as a solvent in coating industries. The fast-evaporating alcohol leaves no residue, making it ideal for precision cleaning applications. Widely used in electronics manufacturing, pharmaceutical production, printing industries, and industrial maintenance across Oman. Also serves in hand sanitizer production, windshield washer fluid, and as a drying agent. Available in various grades (99%, 70% aqueous solution) for different industrial applications.",
+      "applications": [
+        "Electronics and PCB cleaning",
+        "Industrial disinfection and sanitization",
+        "Solvent for coatings and inks",
+        "Hand sanitizer production (70%)",
+        "Windshield washer fluid",
+        "Pharmaceutical extraction",
+        "Printing press cleaning",
+        "General industrial cleaning"
+      ],
+      "technicalSpecs": [
+        "Concentration: 99% or 70% (aqueous)",
+        "Appearance: Clear, colorless liquid",
+        "Boiling point: 82°C",
+        "Flash point: 12°C (flammable)",
+        "Specific gravity: 0.786",
+        "Fast evaporation, no residue",
+        "Effective disinfectant (70% solution)",
+        "Available in 200L drums, IBCs, bulk"
+      ]
+    }
+  },
+  {
+    "id": "butanol-industrial",
+    "title": "N-Butanol (Industrial Grade)",
+    "description": "Industrial n-butanol for coatings, plastics, and chemical synthesis.",
+    "category": "alcohols",
+    "iconName": "FlaskRound",
+    "details": {
+      "formula": "C4H9OH",
+      "casNumber": "71-36-3",
+      "alternativeNames": [
+        "N-Butyl alcohol",
+        "Butanol",
+        "1-Butanol",
+        "Butyl alcohol"
+      ],
+      "seoKeywords": [
+        "butanol Oman",
+        "n-butanol Muscat",
+        "butyl alcohol industrial Oman",
+        "butanol solvent Sohar",
+        "n-butanol supplier Muscat"
+      ],
+      "longDescription": "Industrial Grade N-Butanol supplier in Oman - Global Chemicals LLC provides n-butanol for coatings, plastics, and chemical manufacturing in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our n-butyl alcohol is a primary alcohol essential for producing butyl acetate (lacquer solvent), butyl acrylate, and glycol ethers. The versatile solvent offers excellent dissolving power for resins, oils, and dyes with moderate evaporation rate. Widely used in paint and coating industries, plastics manufacturing, textile processing, and chemical synthesis across Oman. Also serves in brake fluid formulation, hydraulic fluids, and as an extractant in pharmaceutical production. The four-carbon alcohol provides optimal balance of solvency and evaporation rate.",
+      "applications": [
+        "Paint and coating solvent",
+        "Butyl acetate production (lacquer solvent)",
+        "Butyl acrylate monomer synthesis",
+        "Glycol ether manufacture",
+        "Plasticizer intermediate",
+        "Textile processing chemical",
+        "Brake fluid formulation",
+        "Pharmaceutical extraction"
+      ],
+      "technicalSpecs": [
+        "Purity: 99.5% minimum (industrial grade)",
+        "Appearance: Clear, colorless liquid",
+        "Boiling point: 118°C",
+        "Flash point: 29°C",
+        "Specific gravity: 0.810",
+        "Moderate evaporation rate",
+        "Excellent solvency for resins",
+        "Available in 200L drums, IBCs, bulk"
+      ]
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "calcium-carbonate",
+    "title": "Calcium Carbonate",
+    "description": "High-purity calcium carbonate for construction, plastics, and industrial applications.",
+    "category": "calcium-carbonate",
+    "iconName": "FlaskConical",
+    "details": {
+      "formula": "CaCO3",
+      "fullDescription": "Calcium carbonate is a common chemical compound that is the main component of substances like chalk, limestone, marble, and shells of marine organisms.",
+      "applications": [
+        "Construction materials",
+        "Plastics filler",
+        "Paper manufacturing",
+        "Paint industry",
+        "Calcium supplements"
+      ]
+    }
+  }
+]

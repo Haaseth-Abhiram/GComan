@@ -484,7 +484,7 @@ export const BreadcrumbStructuredData = ({ items }: BreadcrumbStructuredDataProp
 export const LocalBusinessStructuredData = () => {
   const localBusinessSchema = {
     "@context": "https://schema.org",
-    "@type": "ChemicalSupplier",
+    "@type": "LocalBusiness",
     "@id": "https://gcoman.com/#organization",
     "name": "Global Chemicals LLC",
     "alternateName": ["Global Chemicals Oman", "GCOMAN", "Global Chemicals Muscat"],

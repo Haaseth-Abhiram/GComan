@@ -1,0 +1,18 @@
+[
+  {
+    "id": "agro-products",
+    "title": "Agricultural Products",
+    "description": "Agricultural chemicals and solutions for crop protection and enhancement.",
+    "category": "agro",
+    "iconName": "Wheat",
+    "details": {
+      "fullDescription": "Comprehensive range of agricultural chemicals designed to support modern farming practices and enhance crop yields.",
+      "applications": [
+        "Crop protection",
+        "Soil treatment",
+        "Fertilizers",
+        "Growth enhancers"
+      ]
+    }
+  }
+]

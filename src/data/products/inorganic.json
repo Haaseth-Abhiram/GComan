@@ -1,0 +1,269 @@
+[
+  {
+    "id": "aluminum-sulfate",
+    "title": "Aluminum Sulfate (Alum)",
+    "description": "Industrial aluminum sulfate for water treatment and paper manufacturing.",
+    "category": "inorganic",
+    "iconName": "Microscope",
+    "details": {
+      "formula": "Al2(SO4)3",
+      "casNumber": "10043-01-3",
+      "alternativeNames": [
+        "Alum",
+        "Aluminum sulphate",
+        "Filter alum",
+        "Papermaker's alum"
+      ],
+      "seoKeywords": [
+        "aluminum sulfate Oman",
+        "alum Muscat",
+        "water treatment alum Oman",
+        "paper alum Sohar",
+        "aluminum sulfate supplier Muscat"
+      ],
+      "longDescription": "Aluminum Sulfate (Alum) supplier in Oman - Global Chemicals LLC provides industrial-grade aluminum sulfate for water treatment, paper manufacturing, and industrial processes in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our alum is a highly effective coagulant for clarifying drinking water, wastewater treatment, and industrial process water. Essential for removing suspended solids, color, and turbidity from water systems. Widely used in municipal water treatment plants, sewage treatment facilities, paper mills, and textile industries across Oman. The versatile inorganic chemical also serves in pH adjustment, phosphorus removal, and sludge conditioning applications. Available in liquid (8%) and solid forms (ferric, non-ferric grades).",
+      "applications": [
+        "Drinking water coagulation and clarification",
+        "Municipal and industrial wastewater treatment",
+        "Paper manufacturing (sizing agent)",
+        "Textile dyeing and printing",
+        "Phosphorus removal from wastewater",
+        "Turbidity and color removal",
+        "pH adjustment in water treatment",
+        "Concrete acceleration"
+      ],
+      "technicalSpecs": [
+        "Forms: Liquid 8%, solid lumps/powder",
+        "Al2O3 content: 17% minimum",
+        "Iron content: Ferric or non-ferric grades",
+        "pH: 3-4 (10% solution)",
+        "Appearance: White to gray crystalline",
+        "Dosage: 10-200 ppm (water treatment)",
+        "Meets AWWA B403 standards",
+        "Available in 25kg bags, 1000L IBCs, bulk"
+      ]
+    }
+  },
+  {
+    "id": "ferric-chloride",
+    "title": "Ferric Chloride",
+    "description": "Industrial ferric chloride for wastewater treatment and etching.",
+    "category": "inorganic",
+    "iconName": "Microscope",
+    "details": {
+      "formula": "FeCl3",
+      "casNumber": "7705-08-0",
+      "alternativeNames": [
+        "Iron(III) chloride",
+        "Ferric chloride solution",
+        "Iron trichloride"
+      ],
+      "seoKeywords": [
+        "ferric chloride Oman",
+        "iron chloride Muscat",
+        "wastewater coagulant Oman",
+        "ferric chloride solution Sohar",
+        "FeCl3 Muscat"
+      ],
+      "longDescription": "Ferric Chloride supplier in Oman - Global Chemicals LLC provides industrial ferric chloride for wastewater treatment, metal etching, and industrial applications in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our ferric chloride solution (40%) is a powerful coagulant for treating industrial wastewater, municipal sewage, and water clarification. Essential for removing phosphorus, heavy metals, and suspended solids from wastewater. The acidic coagulant works effectively across wide pH ranges. Widely used in sewage treatment plants, industrial effluent treatment, PCB manufacturing, and metal surface treatment across Oman. Also serves in pigment production, textile printing, and as a catalyst in organic synthesis.",
+      "applications": [
+        "Municipal sewage treatment",
+        "Industrial wastewater coagulation",
+        "Phosphorus and heavy metal removal",
+        "PCB etching and electronics manufacturing",
+        "Metal surface treatment",
+        "Drinking water purification",
+        "Sludge conditioning",
+        "Pigment and dye manufacture"
+      ],
+      "technicalSpecs": [
+        "Concentration: 38-42% FeCl3",
+        "Appearance: Dark brown liquid",
+        "Specific gravity: 1.4-1.5",
+        "pH: <2 (highly acidic)",
+        "Iron content: 12-14%",
+        "Dosage: 20-300 ppm (water treatment)",
+        "Meets AWWA specifications",
+        "Available in 30L, 200L drums, IBCs, bulk"
+      ]
+    }
+  },
+  {
+    "id": "lime-quicklime",
+    "title": "Quicklime (Calcium Oxide)",
+    "description": "Industrial quicklime for pH adjustment, water treatment, and manufacturing.",
+    "category": "inorganic",
+    "iconName": "Microscope",
+    "details": {
+      "formula": "CaO",
+      "casNumber": "1305-78-8",
+      "alternativeNames": [
+        "Calcium oxide",
+        "Burnt lime",
+        "Unslaked lime",
+        "Quicklime"
+      ],
+      "seoKeywords": [
+        "quicklime Oman",
+        "calcium oxide Muscat",
+        "lime industrial Oman",
+        "burnt lime Sohar",
+        "quicklime supplier Muscat"
+      ],
+      "longDescription": "Quicklime (Calcium Oxide) supplier in Oman - Global Chemicals LLC provides industrial quicklime for water treatment, pH adjustment, and manufacturing processes in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our high-calcium quicklime is produced by calcining limestone and offers powerful alkalinity for neutralization applications. Essential for pH adjustment in wastewater treatment, water softening, and industrial neutralization processes. The highly reactive material generates heat upon contact with water (exothermic slaking). Widely used in steel production, construction, soil stabilization, and chemical manufacturing across Oman. Available in lump and powder forms to meet various industrial requirements.",
+      "applications": [
+        "Wastewater pH adjustment and neutralization",
+        "Water softening and treatment",
+        "Steel and metallurgical processes",
+        "Soil stabilization in construction",
+        "Flue gas desulfurization",
+        "Sugar refining and food processing",
+        "Paper and pulp manufacturing",
+        "Chemical manufacturing intermediate"
+      ],
+      "technicalSpecs": [
+        "CaO content: 90-95%",
+        "Forms: Lump, pebble, powder",
+        "Appearance: White to off-white",
+        "Reactivity: High (exothermic with water)",
+        "Available calcium: >90%",
+        "Typical sizing: 10-50mm lumps",
+        "Store in dry conditions",
+        "Available in 25kg bags, bulk bags, bulk"
+      ]
+    }
+  },
+  {
+    "id": "poly-aluminum-chloride",
+    "title": "Poly Aluminum Chloride (PAC)",
+    "description": "High-efficiency polyaluminum chloride coagulant for water treatment.",
+    "category": "inorganic",
+    "iconName": "Microscope",
+    "details": {
+      "formula": "[Al2(OH)nCl6-n]m",
+      "casNumber": "1327-41-9",
+      "alternativeNames": [
+        "PAC",
+        "Polyaluminum chloride",
+        "Aluminum chlorohydrate",
+        "PACl"
+      ],
+      "seoKeywords": [
+        "PAC Oman",
+        "poly aluminum chloride Muscat",
+        "water coagulant Oman",
+        "PAC water treatment Sohar",
+        "polyaluminum chloride Muscat"
+      ],
+      "longDescription": "Poly Aluminum Chloride (PAC) supplier in Oman - Global Chemicals LLC provides high-efficiency PAC coagulant for water and wastewater treatment in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our PAC offers superior performance compared to traditional aluminum sulfate with wider pH operating range, faster floc formation, and lower sludge production. Essential for drinking water clarification, industrial wastewater treatment, and process water purification. The pre-polymerized coagulant reduces alkalinity consumption and chemical dosing requirements. Widely used in municipal water treatment plants, industrial effluent systems, paper mills, and textile facilities across Oman. Available in liquid (10%) and powder (30% Al2O3) forms for various applications.",
+      "applications": [
+        "Drinking water purification",
+        "Municipal wastewater treatment",
+        "Industrial effluent clarification",
+        "Paper mill wastewater treatment",
+        "Textile dyeing wastewater",
+        "Oil refinery wastewater",
+        "Swimming pool water treatment",
+        "Turbidity and color removal"
+      ],
+      "technicalSpecs": [
+        "Al2O3 content: 10% (liquid), 28-30% (powder)",
+        "Basicity: 40-90%",
+        "pH: 3.5-5.0",
+        "Appearance: Yellow to brown liquid/powder",
+        "Effective pH range: 5-9",
+        "Dosage: 5-50 ppm (water treatment)",
+        "Lower sludge production than alum",
+        "Available in 25kg bags, 1000L IBCs, bulk"
+      ]
+    }
+  },
+  {
+    "id": "sodium-silicate-solution",
+    "title": "Sodium Silicate Solution (Water Glass)",
+    "description": "Industrial sodium silicate for detergents, adhesives, and manufacturing.",
+    "category": "inorganic",
+    "iconName": "Microscope",
+    "details": {
+      "formula": "Na2SiO3",
+      "casNumber": "1344-09-8",
+      "alternativeNames": [
+        "Water glass",
+        "Liquid glass",
+        "Sodium metasilicate solution"
+      ],
+      "seoKeywords": [
+        "sodium silicate Oman",
+        "water glass Muscat",
+        "liquid glass Oman",
+        "sodium silicate solution Sohar",
+        "water glass supplier Muscat"
+      ],
+      "longDescription": "Sodium Silicate Solution supplier in Oman - Global Chemicals LLC provides industrial water glass for detergents, adhesives, and manufacturing applications in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our sodium silicate solution (various ratios) offers excellent binding, adhesive, and detergency properties. Essential for detergent formulation, cement and concrete additives, adhesives, and refractory applications. The alkaline solution also serves as a deflocculant, binder, and corrosion inhibitor. Widely used in soap and detergent manufacturing, foundry operations, construction, and industrial cleaning across Oman. Available in various SiO2:Na2O ratios (2.0, 2.4, 3.22, 3.75) and concentrations to meet specific application requirements.",
+      "applications": [
+        "Detergent and soap formulation",
+        "Adhesives and binders",
+        "Concrete and cement additives",
+        "Foundry core and mold making",
+        "Deflocculant in drilling fluids",
+        "Refractory binders",
+        "Paper deinking and bleaching",
+        "Water treatment and sealing"
+      ],
+      "technicalSpecs": [
+        "Ratios: 2.0R, 2.4R, 3.22R, 3.75R",
+        "Solids: 35-50%",
+        "Appearance: Clear to slightly turbid",
+        "pH: 11-13 (highly alkaline)",
+        "Specific gravity: 1.35-1.55",
+        "Viscosity: Varies by ratio and concentration",
+        "Available in 250kg drums, IBCs, bulk",
+        "Meets industrial grade specifications"
+      ]
+    }
+  },
+  {
+    "id": "zinc-sulfate",
+    "title": "Zinc Sulfate",
+    "description": "Industrial zinc sulfate for agriculture, water treatment, and manufacturing.",
+    "category": "inorganic",
+    "iconName": "Microscope",
+    "details": {
+      "formula": "ZnSO4",
+      "casNumber": "7446-19-7",
+      "alternativeNames": [
+        "Zinc sulphate heptahydrate",
+        "White vitriol",
+        "Zinc vitriol"
+      ],
+      "seoKeywords": [
+        "zinc sulfate Oman",
+        "zinc sulphate Muscat",
+        "agricultural zinc Oman",
+        "zinc sulfate fertilizer Sohar",
+        "ZnSO4 Muscat"
+      ],
+      "longDescription": "Zinc Sulfate supplier in Oman - Global Chemicals LLC provides industrial and agricultural-grade zinc sulfate for fertilizers, animal nutrition, and industrial applications in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our zinc sulfate heptahydrate (21% Zn) is an essential micronutrient for crop production and animal feed supplement. Critical for preventing zinc deficiency in crops, improving yield, and quality. Also used in industrial applications including rayon manufacture, wood preservation, and as a mordant in dyeing. Widely used in agriculture, animal feed production, textile industries, and chemical manufacturing across Oman. Available in granular and powder forms for various applications.",
+      "applications": [
+        "Agricultural fertilizer (zinc deficiency correction)",
+        "Animal feed supplement",
+        "Rayon and fiber production",
+        "Wood preservative treatment",
+        "Textile dyeing mordant",
+        "Electroplating zinc coatings",
+        "Pharmaceutical preparations",
+        "Water treatment additive"
+      ],
+      "technicalSpecs": [
+        "Form: Heptahydrate (ZnSO4·7H2O)",
+        "Zinc content: 21-23%",
+        "Appearance: White crystalline powder/granules",
+        "Purity: 98% minimum",
+        "Solubility: Highly soluble in water",
+        "pH: 4-6 (5% solution)",
+        "Available in 25kg bags, 50kg bags, bulk bags",
+        "Meets agricultural and industrial grades"
+      ]
+    }
+  }
+]

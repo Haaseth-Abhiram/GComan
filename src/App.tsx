@@ -29,6 +29,7 @@ const Certifications = lazy(() => import("./pages/Certifications"));
 const Login = lazy(() => import("./pages/Login"));
 const Admin = lazy(() => import("./pages/Admin"));
 const Blog = lazy(() => import("./pages/Blog"));
+const BlogPost = lazy(() => import("./pages/BlogPost"));
 const Privacy = lazy(() => import("./pages/Privacy"));
 const Terms = lazy(() => import("./pages/Terms"));
 const Sitemap = lazy(() => import("./pages/Sitemap"));
@@ -102,6 +103,7 @@ const App = () => (
                   </ProtectedRoute>
                 } />
                 <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/:slug" element={<BlogPost />} />
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/terms" element={<Terms />} />
                 <Route path="/sitemap" element={<Sitemap />} />
@@ -134,6 +136,7 @@ const App = () => (
                     </ProtectedRoute>
                   } />
                   <Route path="blog" element={<Blog />} />
+                  <Route path="blog/:slug" element={<BlogPost />} />
                   <Route path="privacy" element={<Privacy />} />
                   <Route path="terms" element={<Terms />} />
                   <Route path="sitemap" element={<Sitemap />} />

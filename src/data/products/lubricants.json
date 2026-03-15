@@ -1,0 +1,71 @@
+[
+  {
+    "id": "shell-lubricants",
+    "title": "Shell Lubricants",
+    "description": "Comprehensive range of Shell automotive and industrial lubricants for optimal performance.",
+    "category": "lubricants",
+    "iconName": "Wrench",
+    "details": {
+      "fullDescription": "Shell's portfolio includes Shell Helix engine oils, Shell Advance for motorcycles, Shell Rimula for heavy-duty diesel, Shell Gadus greases, Shell Tellus hydraulic fluids, and Shell Omala gear oils.",
+      "applications": [
+        "Engine protection",
+        "Hydraulic systems",
+        "Gear systems",
+        "Compressors",
+        "Turbines",
+        "Machine tools"
+      ]
+    }
+  },
+  {
+    "id": "mobil-lubricants",
+    "title": "Mobil Lubricants",
+    "description": "Advanced synthetic and conventional lubricants including Mobil 1 and Mobil Delvac.",
+    "category": "lubricants",
+    "iconName": "Wrench",
+    "details": {
+      "fullDescription": "Mobil offers Mobil 1 synthetic engine oils, Mobil Super conventional oils, Mobil Delvac for heavy-duty diesel, Mobil DTE hydraulic fluids, Mobilgear, and Mobil SHC synthetic lubricants.",
+      "applications": [
+        "Automotive protection",
+        "Commercial vehicles",
+        "Industrial machinery",
+        "Hydraulic systems",
+        "Extreme conditions"
+      ]
+    }
+  },
+  {
+    "id": "castrol-lubricants",
+    "title": "Castrol Lubricants",
+    "description": "Premium \"Liquid Engineering\" solutions with Castrol EDGE and MAGNATEC technologies.",
+    "category": "lubricants",
+    "iconName": "Wrench",
+    "details": {
+      "fullDescription": "Castrol's range includes Castrol EDGE full-synthetic, Castrol MAGNATEC with intelligent molecules, Castrol GTX, Castrol VECTON for heavy-duty diesel, and industrial fluids.",
+      "applications": [
+        "Maximum engine performance",
+        "Start-up protection",
+        "Sludge prevention",
+        "Heavy-duty vehicles",
+        "Industrial equipment"
+      ]
+    }
+  },
+  {
+    "id": "gp-lubricants",
+    "title": "GP (IPOL) Lubricants",
+    "description": "IPOL brand automotive and industrial lubricants including metal working fluids.",
+    "category": "lubricants",
+    "iconName": "Wrench",
+    "details": {
+      "fullDescription": "GP Petroleums' IPOL range includes automotive engine oils, hydraulic oils, gear oils, spindle oils, turbine oils, metal working fluids, and specialty greases.",
+      "applications": [
+        "Automotive engines",
+        "Industrial machinery",
+        "Metal working",
+        "Rubber processing",
+        "Sugar industry"
+      ]
+    }
+  }
+]
