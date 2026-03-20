@@ -96,9 +96,7 @@ const Customers = () => {
       name: 'Oman LNG',
       logo: omanLngLogo,
       industry: 'Oil & Gas',
-      description: 'Liquefied natural gas producer and exporter in Oman',
-      testimonial: 'Excellent water treatment chemicals and technical support. Their PAC and calcium hypochlorite products perform consistently well in our desalination operations.',
-      contactPerson: 'Plant Manager'
+      description: 'Liquefied natural gas producer and exporter in Oman'
     },
     {
       name: 'Omifco',
