@@ -47,8 +47,7 @@ const Customers = () => {
       logo: pdoLogo,
       industry: 'Oil & Gas',
       description: 'Leading oil and gas exploration and production company in Oman',
-      testimonial: 'Their commitment to quality, safety standards, and timely delivery has made them our trusted partner for critical chemical supplies.',
-      contactPerson: 'Supply Chain Manager',
+      featured: true
       featured: true
     },
     {
