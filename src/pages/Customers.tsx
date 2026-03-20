@@ -146,7 +146,6 @@ const Customers = () => {
         ogUrl="https://gcoman.com/customers"
         canonical="https://gcoman.com/customers"
       />
-      <ReviewStructuredData reviews={customerReviews} />
       <BreadcrumbStructuredData items={breadcrumbItems} />
       <Navigation />
       <WhatsAppButton />
