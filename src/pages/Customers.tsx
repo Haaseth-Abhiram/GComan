@@ -4,7 +4,7 @@ import WhatsAppButton from '@/components/WhatsAppButton';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Building2, Award, Users, TrendingUp, Quote } from 'lucide-react';
+import { Building2, Award, Users, TrendingUp } from 'lucide-react';
 import oqLogo from '@/assets/customers/oq-logo.png';
 import oxyLogo from '@/assets/customers/oxy-logo.png';
 import pdoLogo from '@/assets/customers/pdo-logo.png';
@@ -17,7 +17,7 @@ import soharAluminiumLogo from '@/assets/customers/sohar-aluminium-logo.png';
 import omanLngLogo from '@/assets/customers/oman-lng-logo.png';
 import omifcoLogo from '@/assets/customers/omifco-logo.png';
 import { SEO } from '@/components/SEO';
-import { ReviewStructuredData, BreadcrumbStructuredData } from '@/components/StructuredData';
+import { BreadcrumbStructuredData } from '@/components/StructuredData';
 
 // Breadcrumb items
 const breadcrumbItems = [
@@ -25,52 +25,11 @@ const breadcrumbItems = [
   { name: 'Customers', url: 'https://gcoman.com/customers' }
 ];
 
-// Reviews for structured data - Expanded for better SEO
-const customerReviews = [
-  {
-    author: 'Procurement Director',
-    rating: 5,
-    reviewBody: 'Global Chemicals LLC has been instrumental in providing high-quality chemical solutions that meet our stringent requirements for oil and gas operations.',
-    company: 'OQ',
-    datePublished: '2024-01-15'
-  },
-  {
-    author: 'Supply Chain Manager',
-    rating: 5,
-    reviewBody: 'Their commitment to quality, safety standards, and timely delivery has made them our trusted partner for critical chemical supplies.',
-    company: 'Petroleum Development Oman (PDO)',
-    datePublished: '2024-02-20'
-  },
-  {
-    author: 'Plant Manager',
-    rating: 5,
-    reviewBody: 'Excellent water treatment chemicals and technical support. Their PAC and calcium hypochlorite products perform consistently well in our desalination operations.',
-    company: 'Oman LNG',
-    datePublished: '2024-03-10'
-  },
-  {
-    author: 'Operations Manager',
-    rating: 5,
-    reviewBody: 'Reliable lubricant supplier with genuine Shell and Mobil products. Fast delivery to Sohar Industrial Zone and competitive pricing.',
-    company: 'Sohar Aluminium',
-    datePublished: '2024-04-05'
-  },
-  {
-    author: 'Quality Control Manager',
-    rating: 5,
-    reviewBody: 'We rely on Global Chemicals for our laboratory reagents and food-grade chemicals. Consistent quality with proper documentation and certificates of analysis.',
-    company: 'Arabian Food Industries',
-    datePublished: '2024-05-15'
-  }
-];
-
 interface Customer {
   name: string;
   logo: string;
   industry: string;
   description: string;
-  testimonial?: string;
-  contactPerson?: string;
   featured?: boolean;
 }
 
@@ -81,8 +40,6 @@ const Customers = () => {
       logo: oqLogo,
       industry: 'Oil & Gas',
       description: 'Oman\'s integrated energy company operating across the hydrocarbon value chain',
-      testimonial: 'Global Chemicals LLC has been instrumental in providing high-quality chemical solutions that meet our stringent requirements for oil and gas operations.',
-      contactPerson: 'Procurement Director',
       featured: true
     },
     {
@@ -90,8 +47,6 @@ const Customers = () => {
       logo: pdoLogo,
       industry: 'Oil & Gas',
       description: 'Leading oil and gas exploration and production company in Oman',
-      testimonial: 'Their commitment to quality, safety standards, and timely delivery has made them our trusted partner for critical chemical supplies.',
-      contactPerson: 'Supply Chain Manager',
       featured: true
     },
     {
@@ -116,9 +71,7 @@ const Customers = () => {
       name: 'Arabian Food Industries',
       logo: arabianFoodLogo,
       industry: 'Food & Beverage',
-      description: 'Premium food and beverage manufacturing company in Oman',
-      testimonial: 'We rely on Global Chemicals for our laboratory reagents and food-grade chemicals. Consistent quality with proper documentation and certificates of analysis.',
-      contactPerson: 'Quality Control Manager'
+      description: 'Premium food and beverage manufacturing company in Oman'
     },
     {
       name: 'Ministry of Health Oman',
@@ -136,17 +89,13 @@ const Customers = () => {
       name: 'Sohar Aluminium',
       logo: soharAluminiumLogo,
       industry: 'Manufacturing',
-      description: 'Leading aluminum smelter and one of Oman\'s largest industrial companies',
-      testimonial: 'Reliable lubricant supplier with genuine Shell and Mobil products. Fast delivery to Sohar Industrial Zone and competitive pricing.',
-      contactPerson: 'Operations Manager'
+      description: 'Leading aluminum smelter and one of Oman\'s largest industrial companies'
     },
     {
       name: 'Oman LNG',
       logo: omanLngLogo,
       industry: 'Oil & Gas',
-      description: 'Liquefied natural gas producer and exporter in Oman',
-      testimonial: 'Excellent water treatment chemicals and technical support. Their PAC and calcium hypochlorite products perform consistently well in our desalination operations.',
-      contactPerson: 'Plant Manager'
+      description: 'Liquefied natural gas producer and exporter in Oman'
     },
     {
       name: 'Omifco',
@@ -185,7 +134,6 @@ const Customers = () => {
         ogUrl="https://gcoman.com/customers"
         canonical="https://gcoman.com/customers"
       />
-      <ReviewStructuredData reviews={customerReviews} />
       <BreadcrumbStructuredData items={breadcrumbItems} />
       <Navigation />
       <WhatsAppButton />
@@ -221,40 +169,6 @@ const Customers = () => {
                 </div>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Testimonials */}
-      <section className="py-16 bg-primary/5">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-              What Our Customers Say
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              {customers
-                .filter(customer => customer.testimonial)
-                .map((customer, index) => (
-                  <Card key={index} className="hover:shadow-xl transition-all hover:-translate-y-1 animate-fade-in">
-                    <CardHeader>
-                      <div className="flex items-start justify-between mb-4">
-                        <Quote className="h-10 w-10 text-primary/20" />
-                        <Badge variant="outline">{customer.industry}</Badge>
-                      </div>
-                      <CardDescription className="text-base leading-relaxed text-foreground/80">
-                        "{customer.testimonial}"
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="border-t pt-4">
-                        <p className="font-semibold text-foreground">{customer.name}</p>
-                        <p className="text-sm text-muted-foreground">{customer.contactPerson}</p>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-            </div>
           </div>
         </div>
       </section>
