@@ -30,8 +30,6 @@ interface Customer {
   logo: string;
   industry: string;
   description: string;
-  testimonial?: string;
-  contactPerson?: string;
   featured?: boolean;
 }
 
