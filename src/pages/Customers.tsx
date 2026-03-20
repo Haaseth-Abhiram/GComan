@@ -4,7 +4,7 @@ import WhatsAppButton from '@/components/WhatsAppButton';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Building2, Award, Users, TrendingUp, Quote } from 'lucide-react';
+import { Building2, Award, Users, TrendingUp } from 'lucide-react';
 import oqLogo from '@/assets/customers/oq-logo.png';
 import oxyLogo from '@/assets/customers/oxy-logo.png';
 import pdoLogo from '@/assets/customers/pdo-logo.png';
