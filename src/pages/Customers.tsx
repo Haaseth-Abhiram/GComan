@@ -17,7 +17,7 @@ import soharAluminiumLogo from '@/assets/customers/sohar-aluminium-logo.png';
 import omanLngLogo from '@/assets/customers/oman-lng-logo.png';
 import omifcoLogo from '@/assets/customers/omifco-logo.png';
 import { SEO } from '@/components/SEO';
-import { ReviewStructuredData, BreadcrumbStructuredData } from '@/components/StructuredData';
+import { BreadcrumbStructuredData } from '@/components/StructuredData';
 
 // Breadcrumb items
 const breadcrumbItems = [
