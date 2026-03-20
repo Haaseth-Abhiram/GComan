@@ -40,8 +40,6 @@ const Customers = () => {
       logo: oqLogo,
       industry: 'Oil & Gas',
       description: 'Oman\'s integrated energy company operating across the hydrocarbon value chain',
-      testimonial: 'Global Chemicals LLC has been instrumental in providing high-quality chemical solutions that meet our stringent requirements for oil and gas operations.',
-      contactPerson: 'Procurement Director',
       featured: true
     },
     {
