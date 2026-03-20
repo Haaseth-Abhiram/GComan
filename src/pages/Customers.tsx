@@ -72,9 +72,7 @@ const Customers = () => {
       name: 'Arabian Food Industries',
       logo: arabianFoodLogo,
       industry: 'Food & Beverage',
-      description: 'Premium food and beverage manufacturing company in Oman',
-      testimonial: 'We rely on Global Chemicals for our laboratory reagents and food-grade chemicals. Consistent quality with proper documentation and certificates of analysis.',
-      contactPerson: 'Quality Control Manager'
+      description: 'Premium food and beverage manufacturing company in Oman'
     },
     {
       name: 'Ministry of Health Oman',
