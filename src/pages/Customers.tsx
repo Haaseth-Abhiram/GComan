@@ -48,7 +48,6 @@ const Customers = () => {
       industry: 'Oil & Gas',
       description: 'Leading oil and gas exploration and production company in Oman',
       featured: true
-      featured: true
     },
     {
       name: 'Occidental Petroleum (Oxy)',
