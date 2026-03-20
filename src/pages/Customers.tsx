@@ -185,40 +185,6 @@ const Customers = () => {
         </div>
       </section>
 
-      {/* Featured Testimonials */}
-      <section className="py-16 bg-primary/5">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-              What Our Customers Say
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              {customers
-                .filter(customer => customer.testimonial)
-                .map((customer, index) => (
-                  <Card key={index} className="hover:shadow-xl transition-all hover:-translate-y-1 animate-fade-in">
-                    <CardHeader>
-                      <div className="flex items-start justify-between mb-4">
-                        <Quote className="h-10 w-10 text-primary/20" />
-                        <Badge variant="outline">{customer.industry}</Badge>
-                      </div>
-                      <CardDescription className="text-base leading-relaxed text-foreground/80">
-                        "{customer.testimonial}"
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="border-t pt-4">
-                        <p className="font-semibold text-foreground">{customer.name}</p>
-                        <p className="text-sm text-muted-foreground">{customer.contactPerson}</p>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Featured Customer Logos */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
