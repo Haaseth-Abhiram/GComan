@@ -25,45 +25,6 @@ const breadcrumbItems = [
   { name: 'Customers', url: 'https://gcoman.com/customers' }
 ];
 
-// Reviews for structured data - Expanded for better SEO
-const customerReviews = [
-  {
-    author: 'Procurement Director',
-    rating: 5,
-    reviewBody: 'Global Chemicals LLC has been instrumental in providing high-quality chemical solutions that meet our stringent requirements for oil and gas operations.',
-    company: 'OQ',
-    datePublished: '2024-01-15'
-  },
-  {
-    author: 'Supply Chain Manager',
-    rating: 5,
-    reviewBody: 'Their commitment to quality, safety standards, and timely delivery has made them our trusted partner for critical chemical supplies.',
-    company: 'Petroleum Development Oman (PDO)',
-    datePublished: '2024-02-20'
-  },
-  {
-    author: 'Plant Manager',
-    rating: 5,
-    reviewBody: 'Excellent water treatment chemicals and technical support. Their PAC and calcium hypochlorite products perform consistently well in our desalination operations.',
-    company: 'Oman LNG',
-    datePublished: '2024-03-10'
-  },
-  {
-    author: 'Operations Manager',
-    rating: 5,
-    reviewBody: 'Reliable lubricant supplier with genuine Shell and Mobil products. Fast delivery to Sohar Industrial Zone and competitive pricing.',
-    company: 'Sohar Aluminium',
-    datePublished: '2024-04-05'
-  },
-  {
-    author: 'Quality Control Manager',
-    rating: 5,
-    reviewBody: 'We rely on Global Chemicals for our laboratory reagents and food-grade chemicals. Consistent quality with proper documentation and certificates of analysis.',
-    company: 'Arabian Food Industries',
-    datePublished: '2024-05-15'
-  }
-];
-
 interface Customer {
   name: string;
   logo: string;
