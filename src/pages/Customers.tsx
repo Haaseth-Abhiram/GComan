@@ -90,9 +90,7 @@ const Customers = () => {
       name: 'Sohar Aluminium',
       logo: soharAluminiumLogo,
       industry: 'Manufacturing',
-      description: 'Leading aluminum smelter and one of Oman\'s largest industrial companies',
-      testimonial: 'Reliable lubricant supplier with genuine Shell and Mobil products. Fast delivery to Sohar Industrial Zone and competitive pricing.',
-      contactPerson: 'Operations Manager'
+      description: 'Leading aluminum smelter and one of Oman\'s largest industrial companies'
     },
     {
       name: 'Oman LNG',
