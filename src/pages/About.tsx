@@ -79,7 +79,7 @@ const About = () => {
             decoding="sync"
             fetchPriority="high"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/25 to-background/80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/35 to-background/90" />
         </div>
 
         <div className="relative z-10 container mx-auto px-4 pt-32 pb-20">
