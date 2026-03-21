@@ -74,21 +74,21 @@ const About = () => {
             alt="Global Chemicals Laboratory"
             width={1920}
             height={1080}
-            className="w-full h-full object-cover brightness-105 contrast-105 saturate-110"
+            className="w-full h-full object-cover brightness-110 contrast-110 saturate-120"
             loading="eager"
             decoding="sync"
             fetchPriority="high"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/35 to-background/90" />
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/50 to-background/95" />
         </div>
 
         <div className="relative z-10 container mx-auto px-4 pt-32 pb-20">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
-            <Badge className="mb-4 sm:mb-6 text-sm sm:text-base px-5 sm:px-7 py-2 sm:py-2.5 bg-primary text-primary-foreground shadow-lg border-0 font-semibold tracking-wide">{t('about.title')}</Badge>
-            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight px-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">
+            <Badge className="mb-4 sm:mb-6 text-sm sm:text-base px-5 sm:px-7 py-2 sm:py-2.5 bg-secondary text-secondary-foreground shadow-lg border-0 font-semibold tracking-wide">{t('about.title')}</Badge>
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-4 sm:mb-6 leading-tight px-4">
               {t('about.heroTitle')}
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-white/95 max-w-3xl mx-auto leading-relaxed px-4 drop-shadow-[0_1px_2px_rgba(0,0,0,0.2)]">
+            <p className="text-lg sm:text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed px-4">
               {t('about.heroSubtitle')}
             </p>
           </div>
@@ -96,10 +96,10 @@ const About = () => {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
-          <div className="flex flex-col items-center gap-2 text-white/80">
+          <div className="flex flex-col items-center gap-2 text-primary-foreground/80">
             <span className="text-xs uppercase tracking-widest font-medium">{t('about.discoverStory')}</span>
-            <div className="w-6 h-10 border-2 border-white/50 rounded-full flex items-start justify-center p-2">
-              <div className="w-1 h-3 bg-white/70 rounded-full animate-pulse" />
+            <div className="w-6 h-10 border-2 border-primary-foreground/50 rounded-full flex items-start justify-center p-2">
+              <div className="w-1 h-3 bg-primary-foreground/70 rounded-full animate-pulse" />
             </div>
           </div>
         </div>
