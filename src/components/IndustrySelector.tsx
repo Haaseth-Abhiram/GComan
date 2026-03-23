@@ -37,7 +37,7 @@ const IndustrySelector = () => {
                 className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-xl"
               >
                 <Card
-                  className={`group relative p-6 text-center hover:shadow-xl transition-all duration-300 cursor-pointer border-border/50 hover:border-primary/30 animate-scale-in h-full overflow-hidden bg-gradient-to-b ${industry.bg}`}
+                  className={`group relative p-6 text-center hover:shadow-xl transition-all duration-300 cursor-pointer animate-scale-in h-full overflow-hidden bg-gradient-to-b ${industry.bg} logo-gradient-border`}
                   style={{ animationDelay: `${index * 0.08}s` }}
                 >
                   {/* Hover gradient overlay */}
