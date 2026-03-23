@@ -342,7 +342,7 @@ const LocationLanding = () => {
               {productCategories.map((category, index) => {
                 const IconComponent = category.icon;
                 return (
-                  <Card key={index} className="hover:shadow-lg transition-shadow">
+                  <Card key={index} className="hover:shadow-lg transition-shadow logo-gradient-border relative">
                     <CardHeader>
                       <div className="p-3 bg-primary/10 rounded-lg w-fit mb-4">
                         <IconComponent className="h-6 w-6 text-primary" />
@@ -383,7 +383,7 @@ const LocationLanding = () => {
                 </ul>
               </div>
 
-              <Card className="bg-primary/5 border-primary/20">
+              <Card className="bg-primary/5 logo-gradient-border relative">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Truck className="h-5 w-5 text-primary" />
@@ -417,7 +417,7 @@ const LocationLanding = () => {
 
             <div className="space-y-4">
               {locationData.faqs.map((faq, index) => (
-                <Card key={index}>
+                <Card key={index} className="logo-gradient-border relative">
                   <CardHeader>
                     <CardTitle className="text-lg">{faq.question}</CardTitle>
                   </CardHeader>

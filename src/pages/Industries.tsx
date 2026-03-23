@@ -419,7 +419,7 @@ const Industries = () => {
                   <h3 className="text-2xl font-bold text-foreground mb-6">{t('industries.keyProducts')}</h3>
                   <div className="grid md:grid-cols-2 gap-4">
                     {industry.products.map((product, idx) => (
-                      <Card key={idx} className="p-6 hover:shadow-lg transition-shadow border-border">
+                      <Card key={idx} className="p-6 hover:shadow-lg transition-shadow logo-gradient-border relative">
                         <h4 className="font-bold text-primary mb-3 text-lg">{product.category}</h4>
                         <p className="text-sm text-muted-foreground leading-relaxed">{product.items}</p>
                       </Card>
@@ -451,7 +451,7 @@ const Industries = () => {
                         {waterTreatmentCategories.map((category, index) => {
                           const Icon = category.icon;
                           return (
-                            <Card key={index} className="hover:shadow-lg transition-shadow">
+                            <Card key={index} className="hover:shadow-lg transition-shadow logo-gradient-border relative">
                               <CardHeader>
                                 <div className="flex items-center gap-3">
                                   <div className="p-3 rounded-lg bg-primary/10">
@@ -485,7 +485,7 @@ const Industries = () => {
                         {waterTreatmentApplications.map((app, index) => {
                           const Icon = app.icon;
                           return (
-                            <Card key={index}>
+                            <Card key={index} className="logo-gradient-border relative">
                               <CardHeader>
                                 <div className="flex items-center gap-3">
                                   <div className="p-2 rounded-lg bg-primary/10">

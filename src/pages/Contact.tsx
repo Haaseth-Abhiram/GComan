@@ -246,7 +246,7 @@ const Contact = () => {
                 return (
                   <div
                     key={index}
-                    className="bg-card p-6 rounded-xl border border-border hover:border-primary/50 hover:shadow-lg transition-all group"
+                    className="bg-card p-6 rounded-xl hover:shadow-lg transition-all group logo-gradient-border relative"
                   >
                     <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                       <Icon className="w-7 h-7 text-primary" />
@@ -269,7 +269,7 @@ const Contact = () => {
             <div className="grid lg:grid-cols-5 gap-12">
               {/* Contact Form */}
               <div className="lg:col-span-3">
-                <div className="bg-card p-8 rounded-xl border border-border">
+                <div className="bg-card p-8 rounded-xl logo-gradient-border logo-gradient-top relative">
                   <h2 className="text-2xl font-bold text-foreground mb-6">{t('contact.form.submit')}</h2>
                   <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
@@ -373,7 +373,7 @@ const Contact = () => {
               {/* Support Information */}
               <div className="lg:col-span-2 space-y-6">
                 {/* Business Hours */}
-                <div className="bg-card p-6 rounded-xl border border-border">
+                <div className="bg-card p-6 rounded-xl logo-gradient-border relative">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                       <Clock className="w-6 h-6 text-primary" />
@@ -395,7 +395,7 @@ const Contact = () => {
                 </div>
 
                 {/* Technical Support */}
-                <div className="bg-card p-6 rounded-xl border border-border">
+                <div className="bg-card p-6 rounded-xl logo-gradient-border relative">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                       <Headphones className="w-6 h-6 text-primary" />

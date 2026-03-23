@@ -1357,7 +1357,7 @@ const Resources = () => {
                       return (
                         <Card
                           key={guide.id}
-                          className="hover:shadow-lg transition-all cursor-pointer group"
+                          className="hover:shadow-lg transition-all cursor-pointer group logo-gradient-border relative"
                           onClick={() => setSelectedGuide(guide)}
                         >
                           <CardHeader>
@@ -1635,7 +1635,7 @@ const Resources = () => {
 
                   {/* Featured Article */}
                   {featuredArticle && selectedArticleCategory === 'All' && (
-                    <Card className="overflow-hidden cursor-pointer hover:shadow-lg transition-shadow" onClick={() => setSelectedArticle(featuredArticle)}>
+                    <Card className="overflow-hidden cursor-pointer hover:shadow-lg transition-shadow logo-gradient-border logo-gradient-top relative" onClick={() => setSelectedArticle(featuredArticle)}>
                       <CardHeader>
                         <div className="flex items-center gap-2 mb-2">
                           <Badge className="bg-primary">Featured</Badge>
@@ -1657,7 +1657,7 @@ const Resources = () => {
                   {/* Articles Grid */}
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {regularArticles.map((article) => (
-                      <Card key={article.id} className="cursor-pointer hover:shadow-lg transition-shadow" onClick={() => setSelectedArticle(article)}>
+                      <Card key={article.id} className="cursor-pointer hover:shadow-lg transition-shadow logo-gradient-border relative" onClick={() => setSelectedArticle(article)}>
                         <CardHeader>
                           <Badge variant="secondary" className="w-fit mb-2">{article.category}</Badge>
                           <CardTitle className="text-lg hover:text-primary transition-colors">{article.title}</CardTitle>
@@ -1733,7 +1733,7 @@ const Resources = () => {
                   {filteredResources.map((resource) => {
                     const IconComponent = resource.icon;
                     return (
-                      <Card key={resource.id} className="hover:shadow-lg transition-shadow">
+                      <Card key={resource.id} className="hover:shadow-lg transition-shadow logo-gradient-border relative">
                         <CardHeader>
                           <div className="flex items-start justify-between mb-2">
                             <div className="p-2 bg-primary/10 rounded-lg">

@@ -198,7 +198,7 @@ const Blog = () => {
             <div className="max-w-7xl mx-auto">
               {/* Featured Post */}
               {selectedCategory === 'All' && (
-                <Card className="mb-12 overflow-hidden hover:shadow-xl transition-shadow">
+                <Card className="mb-12 overflow-hidden hover:shadow-xl transition-shadow logo-gradient-border logo-gradient-top relative">
                   <div className="grid md:grid-cols-2 gap-8 p-8">
                     <div className="flex flex-col justify-center">
                       <Badge className="w-fit mb-4">{blogPosts[0].category}</Badge>
@@ -243,7 +243,7 @@ const Blog = () => {
                 {filteredPosts.slice(selectedCategory === 'All' ? 1 : 0).map((post) => {
                   const IconComponent = post.icon;
                   return (
-                    <Card key={post.id} className="overflow-hidden hover:shadow-xl transition-all group">
+                    <Card key={post.id} className="overflow-hidden hover:shadow-xl transition-all group logo-gradient-border relative">
                       <div className="bg-gradient-to-br from-primary/10 to-secondary/10 p-12 flex items-center justify-center">
                         <IconComponent className="h-20 w-20 text-primary group-hover:scale-110 transition-transform" />
                       </div>

@@ -239,7 +239,7 @@ const Certifications = () => {
                 {certifications.map((cert, index) => {
                   const Icon = cert.icon;
                   return (
-                    <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
+                    <Card key={index} className="p-6 hover:shadow-lg transition-shadow logo-gradient-border logo-gradient-top relative">
                       <div className="flex items-start gap-4 mb-4">
                         <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                           <Icon className="w-7 h-7 text-primary" />
@@ -299,7 +299,7 @@ const Certifications = () => {
                 {whyItMatters.map((item, index) => {
                   const Icon = item.icon;
                   return (
-                    <Card key={index} className="p-6 text-center hover:shadow-lg transition-shadow">
+                    <Card key={index} className="p-6 text-center hover:shadow-lg transition-shadow logo-gradient-border relative">
                       <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
                         <Icon className="w-6 h-6 text-primary" />
                       </div>
@@ -317,7 +317,7 @@ const Certifications = () => {
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <Card className="p-8 border-2 border-primary/20">
+              <Card className="p-8 logo-gradient-border logo-gradient-top relative">
                 <div className="flex items-start gap-4 mb-6">
                   <div className="w-16 h-16 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <FileCheck className="w-8 h-8 text-primary" />
