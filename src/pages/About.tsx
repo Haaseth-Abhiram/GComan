@@ -191,7 +191,7 @@ const About = () => {
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
-              <Card className="p-8 border-2 hover:shadow-2xl transition-all hover:-translate-y-1 animate-fade-in">
+              <Card className="p-8 hover:shadow-2xl transition-all hover:-translate-y-1 animate-fade-in logo-gradient-border logo-gradient-top relative overflow-hidden">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
                     <Target className="w-8 h-8 text-primary" />
@@ -203,7 +203,7 @@ const About = () => {
                 </p>
               </Card>
 
-              <Card className="p-8 border-2 hover:shadow-2xl transition-all hover:-translate-y-1 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              <Card className="p-8 hover:shadow-2xl transition-all hover:-translate-y-1 animate-fade-in logo-gradient-border logo-gradient-top relative overflow-hidden" style={{ animationDelay: '0.1s' }}>
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center">
                     <Eye className="w-8 h-8 text-secondary" />
@@ -237,7 +237,7 @@ const About = () => {
                 return (
                   <Card
                     key={index}
-                    className="p-6 hover:shadow-xl transition-all hover:-translate-y-1 group animate-fade-in"
+                    className="p-6 hover:shadow-xl transition-all hover:-translate-y-1 group animate-fade-in logo-gradient-border relative overflow-hidden"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-all">

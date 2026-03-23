@@ -33,7 +33,7 @@ const WhyChooseUs = () => {
             return (
               <Card
                 key={index}
-                className="relative p-8 hover:shadow-xl transition-all duration-300 border-border/50 hover:border-primary/30 group animate-fade-in overflow-hidden"
+                className="relative p-8 hover:shadow-xl transition-all duration-300 group animate-fade-in overflow-hidden logo-gradient-border"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Top gradient accent line */}

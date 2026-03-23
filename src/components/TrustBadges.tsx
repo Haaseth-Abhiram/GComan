@@ -24,7 +24,7 @@ const TrustBadges = () => {
                 className="flex flex-col items-center gap-2.5 group cursor-default animate-fade-in"
                 style={{ animationDelay: `${index * 0.08}s` }}
               >
-                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${badge.gradient} border border-primary/10 flex items-center justify-center group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-300 shadow-sm`}>
+                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${badge.gradient} flex items-center justify-center group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-300 shadow-sm logo-gradient-border`}>
                   <Icon className="w-6 h-6 text-primary" />
                 </div>
                 <span className="text-[11px] font-medium text-muted-foreground group-hover:text-foreground transition-colors text-center max-w-[90px] leading-tight">
