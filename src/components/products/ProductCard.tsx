@@ -49,7 +49,7 @@ const ProductCardComponent = ({ product }: ProductCardProps) => {
       to={productUrl}
       className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-lg"
     >
-      <Card className="group relative overflow-hidden border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg cursor-pointer bg-card hover:-translate-y-1">
+      <Card className="group relative overflow-hidden transition-all duration-300 hover:shadow-lg cursor-pointer bg-card hover:-translate-y-1 logo-gradient-border">
         <div className="p-5 sm:p-6 flex flex-col h-full">
           <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
             <div className="flex-shrink-0 p-2.5 sm:p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
