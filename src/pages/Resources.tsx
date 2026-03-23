@@ -1357,7 +1357,7 @@ const Resources = () => {
                       return (
                         <Card
                           key={guide.id}
-                          className="hover:shadow-lg transition-all cursor-pointer group"
+                          className="hover:shadow-lg transition-all cursor-pointer group logo-gradient-border relative"
                           onClick={() => setSelectedGuide(guide)}
                         >
                           <CardHeader>

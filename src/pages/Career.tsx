@@ -399,7 +399,7 @@ const Career = () => {
               {benefits.map((benefit, index) => {
                 const IconComponent = benefit.icon;
                 return (
-                  <Card key={index} className="hover:shadow-lg transition-all hover:-translate-y-1 animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
+                  <Card key={index} className="hover:shadow-lg transition-all hover:-translate-y-1 animate-fade-in logo-gradient-border relative" style={{ animationDelay: `${index * 100}ms` }}>
                     <CardHeader>
                       <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                         <IconComponent className="h-6 w-6 text-primary" />
@@ -430,7 +430,7 @@ const Career = () => {
               {jobOpenings.map((job, index) => (
                 <Card 
                   key={job.id} 
-                  className={`hover:shadow-xl transition-all hover:-translate-y-1 animate-fade-in ${job.featured ? 'border-primary/50' : ''}`}
+                  className={`hover:shadow-xl transition-all hover:-translate-y-1 animate-fade-in logo-gradient-border relative ${job.featured ? 'logo-gradient-top' : ''}`}
                   style={{ animationDelay: `${index * 50}ms` }}
                 >
                   <CardHeader>
