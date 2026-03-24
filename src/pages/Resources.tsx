@@ -1342,11 +1342,11 @@ const Resources = () => {
                   {/* Guides Introduction */}
                   <div className="text-center max-w-3xl mx-auto mb-8">
                     <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-                      Expert Chemical Industry Guides for Oman
+                      Expert Chemical Industry Guides for Oman &amp; GCC
                     </h2>
                     <p className="text-muted-foreground">
                       Comprehensive technical guides covering water treatment, industrial lubricants, laboratory chemicals, and more.
-                      Written by industry experts for professionals in Oman.
+                      Written by industry experts for professionals in Oman, UAE, Saudi Arabia, Qatar, Kuwait &amp; Bahrain.
                     </p>
                   </div>
 
@@ -1403,7 +1403,7 @@ const Resources = () => {
                     <div className="grid md:grid-cols-2 gap-6 text-muted-foreground">
                       <div>
                         <p className="mb-4">
-                          Global Chemicals LLC is Oman's trusted partner for industrial chemicals, serving industries across Muscat, Sohar, Duqm, Salalah, and the Rusayl Industrial Area.
+                         Global Chemicals LLC is Oman's trusted partner for industrial chemicals — exporting to UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain. Serving industries across Muscat, Sohar, Duqm, Salalah, Dubai, Abu Dhabi, Riyadh, Doha, and Kuwait City.
                           With over 10 years of experience and ISO 9001 certification, we provide quality chemicals backed by technical expertise.
                         </p>
                         <p>
@@ -1416,7 +1416,7 @@ const Resources = () => {
                           Our technical team provides guidance on product selection, dosing optimization, and troubleshooting.
                         </p>
                         <p>
-                          Contact us for competitive pricing, bulk orders, and customized chemical solutions. We deliver across Oman with reliable logistics and emergency supply capabilities.
+                         Contact us for competitive pricing, bulk orders, and customized chemical solutions. We deliver across Oman with same-day delivery in Muscat, and export to UAE, Saudi Arabia, Qatar, Kuwait & Bahrain with 3-7 day lead times.
                         </p>
                       </div>
                     </div>

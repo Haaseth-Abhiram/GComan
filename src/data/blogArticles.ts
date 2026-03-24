@@ -17,8 +17,8 @@ export interface BlogArticle {
 export const blogArticles: BlogArticle[] = [
   {
     id: 1,
-    title: "Water Treatment Chemicals in Oman: Complete Guide for 2024",
-    excerpt: "A comprehensive overview of water treatment chemicals used in Oman's desalination plants, municipal facilities, and industrial operations. Learn about PAC, calcium hypochlorite, antiscalants, and best practices for Oman's unique water challenges.",
+    title: "Water Treatment Chemicals in Oman & GCC: Complete Guide for 2025",
+    excerpt: "A comprehensive overview of water treatment chemicals used in Oman, UAE, Saudi Arabia, Qatar, Kuwait & Bahrain desalination plants and industrial operations. Learn about PAC, calcium hypochlorite, antiscalants, and best practices for GCC water challenges.",
     content: [
       "Oman faces unique water treatment challenges due to its arid climate and reliance on desalination. With over 500 million cubic meters of desalinated water produced annually, understanding the right chemicals for water treatment is essential for industries across Muscat, Sohar, Duqm, and Salalah.",
       "**Key Water Treatment Chemicals for Oman:**\n\n• **Poly Aluminium Chloride (PAC)** - The preferred coagulant for Oman's high-turbidity water conditions. PAC works effectively across a wide pH range (6.5-9.0) and performs well in the high temperatures common in the Gulf region.\n\n• **Calcium Hypochlorite** - Essential for disinfection in municipal water systems. With 65-70% available chlorine, it's stable and easy to store in Oman's climate.\n\n• **Sodium Hypochlorite** - Used in automated dosing systems at treatment plants. Degrades faster in heat, so use within 60 days.\n\n• **Antiscalants** - Critical for protecting RO membranes in desalination plants. Prevents calcium and magnesium scale formation.",
@@ -36,8 +36,8 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     id: 2,
-    title: "Chemical Storage Safety in Oman's Hot Climate: Essential Guidelines",
-    excerpt: "Industrial chemicals require special handling in Oman's extreme temperatures. This guide covers proper storage conditions, temperature management, and safety protocols for chemical warehouses in Muscat, Sohar, and industrial zones.",
+    title: "Chemical Storage Safety in Oman & GCC Hot Climate: Essential Guidelines",
+    excerpt: "Industrial chemicals require special handling in Oman, UAE & Saudi Arabia's extreme temperatures. This guide covers proper storage conditions, temperature management, and safety protocols for chemical warehouses across the GCC.",
     content: [
       "Oman's extreme temperatures, regularly exceeding 45°C in summer, pose significant challenges for chemical storage. Proper storage practices are essential to maintain product quality, ensure worker safety, and comply with regulations.",
       "**Temperature Management:**\n\n• Never store chemicals above 30°C - this significantly reduces shelf life\n• Install temperature monitoring systems in all storage areas\n• Use air-conditioned storage rooms maintaining 20-25°C for sensitive chemicals\n• Flammable solvents require explosion-proof refrigerators\n• Drum temperatures can exceed 70°C when exposed to sun - causing seal failures",
@@ -55,8 +55,8 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     id: 3,
-    title: "Global Chemicals LLC Achieves JSRS Certification Renewal for 2024-2025",
-    excerpt: "We are proud to announce the renewal of our JSRS (Joint Supplier Registration System) certification, reinforcing our commitment to serving Oman's oil and gas sector with quality chemicals and reliable supply.",
+    title: "Global Chemicals LLC Achieves JSRS Certification Renewal for 2025-2026",
+    excerpt: "We are proud to announce the renewal of our JSRS certification, reinforcing our commitment to serving Oman's oil and gas sector and the GCC region with quality chemicals and reliable GCC-wide supply.",
     content: [
       "Global Chemicals LLC is pleased to announce the successful renewal of our JSRS (Joint Supplier Registration System) certification for 2024-2025. This certification is a testament to our commitment to meeting the highest standards required by Oman's oil and gas industry.",
       "**What JSRS Certification Means:**\n\nThe Joint Supplier Registration System is a unified vendor qualification system used by major oil and gas operators in Oman, including PDO, OQ, and international contractors. JSRS certification demonstrates that a supplier meets stringent requirements for:\n\n• Quality management systems\n• Health, Safety, and Environment (HSE) compliance\n• Financial stability\n• Technical capability\n• Supply chain reliability",
@@ -74,8 +74,8 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     id: 4,
-    title: "Choosing the Right Lubricant for Oman's Industrial Equipment",
-    excerpt: "High temperatures and dusty conditions demand premium lubricants. Compare Shell, Mobil, and Castrol products for hydraulic systems, gearboxes, and compressors in Oman's manufacturing and oil & gas sectors.",
+    title: "Choosing the Right Lubricant for GCC Industrial Equipment (Oman, UAE, Saudi Arabia)",
+    excerpt: "High temperatures and dusty conditions demand premium lubricants across the GCC. Compare Shell, Mobil, and Castrol products for hydraulic systems, gearboxes, and compressors in Oman, UAE & Saudi Arabia manufacturing and oil & gas sectors.",
     content: [
       "Industrial equipment in Oman faces extreme operating conditions - temperatures regularly exceeding 45°C, dust exposure, and demanding production schedules. Selecting the right lubricant is critical for equipment longevity and operational efficiency.",
       "**Key Selection Criteria for Oman:**\n\n• **High Viscosity Index (VI > 150)** - Maintains consistent performance across temperature ranges\n• **Oxidation Stability** - Resists breakdown in high-temperature environments\n• **Dust/Contamination Resistance** - Protects in sandy, dusty conditions\n• **Extended Drain Intervals** - Reduces maintenance frequency and downtime",
@@ -93,8 +93,8 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     id: 5,
-    title: "How Sohar Industrial Zone Companies Optimize Chemical Procurement",
-    excerpt: "Case study on how manufacturing facilities in Sohar Industrial Zone reduced chemical costs by 15% through consolidated procurement, just-in-time delivery, and technical support from local suppliers.",
+    title: "How GCC Industrial Zone Companies Optimize Chemical Procurement (Sohar, Dubai, Riyadh)",
+    excerpt: "Case study on how manufacturing facilities in Sohar Industrial Zone, JAFZA Dubai, and Jubail Saudi Arabia reduced chemical costs by 15% through consolidated procurement, just-in-time delivery, and technical support.",
     content: [
       "Sohar Industrial Estate and SOHAR Port & Freezone host some of Oman's most significant manufacturing operations. This case study explores how companies in the zone have optimized their chemical procurement to reduce costs while improving operational efficiency.",
       "**The Challenge:**\n\nManufacturing facilities in Sohar faced several procurement challenges:\n\n• Multiple suppliers with inconsistent delivery schedules\n• High inventory carrying costs for chemicals\n• Limited technical support for chemical applications\n• Difficulty managing chemical specifications across operations\n• Long lead times affecting production planning",
@@ -112,8 +112,8 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     id: 6,
-    title: "Swimming Pool Chemicals: Maintaining Crystal Clear Water in Oman's Summer",
-    excerpt: "Hotels, resorts, and residential pools in Oman face unique challenges during summer months. Learn proper chlorination, pH management, and algae prevention techniques for optimal pool water quality.",
+    title: "Swimming Pool Chemicals: Maintaining Crystal Clear Water in GCC Summer (Oman, UAE, Qatar)",
+    excerpt: "Hotels, resorts, and residential pools across the GCC — Oman, UAE, Qatar, Saudi Arabia — face unique challenges during summer. Learn proper chlorination, pH management, and algae prevention for optimal pool water quality.",
     content: [
       "Maintaining pool water quality in Oman's hot, sunny climate is challenging. High temperatures accelerate chlorine consumption, while intense UV radiation degrades sanitizers rapidly. This guide covers essential maintenance practices for hotels, resorts, and residential pools.",
       "**Essential Water Chemistry Parameters:**\n\n• **Free Chlorine**: 1-3 ppm (test twice daily in summer)\n• **pH**: 7.2-7.6 (critical for chlorine effectiveness)\n• **Total Alkalinity**: 80-120 ppm\n• **Calcium Hardness**: 200-400 ppm\n• **Cyanuric Acid**: 30-50 ppm (for outdoor pools)",
@@ -131,8 +131,8 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     id: 7,
-    title: "Understanding Oman's Chemical Import Regulations and Compliance",
-    excerpt: "Navigate Oman's regulatory framework for industrial chemicals. This guide covers Ministry of Commerce requirements, environmental permits, and documentation needed for chemical imports and distribution.",
+    title: "GCC Chemical Import Regulations: Oman, UAE, Saudi Arabia, Qatar Compliance Guide",
+    excerpt: "Navigate the regulatory framework for industrial chemicals across the GCC. This guide covers Ministry of Commerce requirements in Oman, UAE MOEI, Saudi SFDA, and GCC documentation needed for chemical imports and distribution.",
     content: [
       "Importing and distributing industrial chemicals in Oman requires compliance with various regulatory frameworks. Understanding these requirements ensures smooth operations and avoids costly delays or penalties.",
       "**Key Regulatory Bodies:**\n\n• **Ministry of Commerce, Industry and Investment Promotion** - Import licensing\n• **Environment Authority** - Environmental permits for hazardous chemicals\n• **Royal Oman Police** - Controlled substances permits\n• **Ministry of Health** - Food-grade and pharmaceutical chemicals\n• **Civil Defence** - Fire safety and storage approvals",
@@ -150,8 +150,8 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     id: 8,
-    title: "New: Extended Laboratory Chemical Range Now Available in Muscat",
-    excerpt: "Global Chemicals LLC expands laboratory chemical inventory with AR grade reagents, HPLC solvents, and buffer solutions. Same-day delivery available in Muscat for urgent research and QC requirements.",
+    title: "Extended Laboratory Chemical Range Now Available in Muscat, Oman & GCC Export",
+    excerpt: "Global Chemicals LLC expands laboratory chemical inventory with AR grade reagents, HPLC solvents, and buffer solutions. Same-day delivery in Muscat. Export available to UAE, Saudi Arabia, Qatar, Kuwait and Bahrain.",
     content: [
       "Global Chemicals LLC is pleased to announce a significant expansion of our laboratory chemical inventory in Muscat. This expansion ensures faster delivery and better availability for research laboratories, quality control departments, and educational institutions across Oman.",
       "**New Product Categories Available:**\n\n**AR Grade Reagents:**\n• Hydrochloric Acid AR\n• Sulfuric Acid AR\n• Nitric Acid AR\n• Sodium Hydroxide AR\n• Potassium Hydroxide AR\n• Ammonia Solution AR\n\n**HPLC Solvents:**\n• Acetonitrile HPLC Grade\n• Methanol HPLC Grade\n• Water HPLC Grade\n• Hexane HPLC Grade\n• LC-MS Grade Solvents",
@@ -169,8 +169,8 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     id: 9,
-    title: "Corrosion Inhibitors for Oman's Oil & Gas Operations: Selection Guide",
-    excerpt: "High H2S content and elevated temperatures make corrosion control critical in Oman's oilfields. Compare film-forming inhibitors, organic vs inorganic options, and monitoring best practices.",
+    title: "Corrosion Inhibitors for GCC Oil & Gas Operations (Oman, Saudi Arabia, UAE): Selection Guide",
+    excerpt: "High H2S content and elevated temperatures make corrosion control critical in GCC oilfields. Compare film-forming inhibitors for Oman PDO/OQ, Saudi Aramco, ADNOC UAE operations and monitoring best practices.",
     content: [
       "Corrosion is the leading cause of pipeline failures and equipment degradation in Oman's oil and gas operations. Many fields produce sour gas with high H2S content, combined with elevated temperatures and challenging water chemistry, making effective corrosion control essential.",
       "**Understanding Corrosion in Oman Operations:**\n\n• **CO2 Corrosion** - Forms carbonic acid in presence of water\n• **H2S Corrosion** - Creates sulfide stress cracking and pitting\n• **Organic Acid Corrosion** - From formation fluids\n• **Microbiologically Influenced Corrosion (MIC)** - In stagnant systems\n\nOman's high H2S fields require specialized treatment programs combining corrosion inhibitors with H2S scavenging.",
