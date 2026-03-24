@@ -31,6 +31,7 @@ const Footer = () => {
     { labelKey: 'nav.contact', path: '/contact' },
     { labelKey: 'nav.careers', path: '/career' },
     { label: 'Chemical Suppliers Oman', path: '/chemical-suppliers-oman' },
+    { label: 'Chemical Suppliers Middle East', path: '/chemical-suppliers-middle-east' },
   ];
 
   const services = [
@@ -148,7 +149,8 @@ const Footer = () => {
           {/* Locations - We Deliver To */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">{t('footer.weDeliverTo')}</h3>
-            <ul className="space-y-2">
+            <p className="text-white/50 text-xs uppercase tracking-wider mb-2">Oman</p>
+            <ul className="space-y-2 mb-4">
               {[
                 { labelKey: 'locations.muscat', path: '/chemicals/muscat' },
                 { labelKey: 'locations.sohar', path: '/chemicals/sohar' },
@@ -159,6 +161,23 @@ const Footer = () => {
                 <li key={item.path}>
                   <Link to={item.path} className="text-white/80 hover:text-primary transition-colors text-sm inline-block hover:translate-x-1 rtl:hover:-translate-x-1 transition-all">
                     {t(item.labelKey)}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <p className="text-white/50 text-xs uppercase tracking-wider mb-2">GCC Export</p>
+            <ul className="space-y-2">
+              {[
+                { label: 'Dubai, UAE', path: '/chemicals/dubai' },
+                { label: 'Abu Dhabi, UAE', path: '/chemicals/abu-dhabi' },
+                { label: 'Riyadh, Saudi Arabia', path: '/chemicals/riyadh' },
+                { label: 'Doha, Qatar', path: '/chemicals/doha' },
+                { label: 'Kuwait City', path: '/chemicals/kuwait-city' },
+                { label: 'Bahrain', path: '/chemicals/bahrain' },
+              ].map((item) => (
+                <li key={item.path}>
+                  <Link to={item.path} className="text-white/80 hover:text-primary transition-colors text-sm inline-block hover:translate-x-1 rtl:hover:-translate-x-1 transition-all">
+                    {item.label}
                   </Link>
                 </li>
               ))}

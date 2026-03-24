@@ -148,12 +148,13 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Chemical Industry Blog Oman | Global Chemicals LLC"
-        description="Expert water treatment, oilfield & industrial chemical guides for Oman. Technical articles for Muscat industries. Browse our resources or request a quote today."
-        keywords="chemical industry blog Oman, water treatment articles, industrial chemicals guide, laboratory safety Oman, oil gas chemicals, chemical news Muscat, technical articles Oman"
-        ogTitle="Chemical Industry Blog & Technical Articles | Global Chemicals Oman"
-        ogDescription="Expert chemical industry insights, technical guides, and innovations. Stay updated with the latest trends in water treatment, industrial chemicals, and safety practices in Oman."
+        title="Chemical Industry Blog | Oman & GCC | Global Chemicals LLC"
+        description="Expert water treatment, oilfield & industrial chemical guides for Oman and the GCC. Technical articles for UAE, Saudi Arabia, Qatar, Kuwait & Bahrain industries. Browse resources or request a quote."
+        keywords="chemical industry blog GCC, water treatment articles Middle East, industrial chemicals guide UAE, laboratory safety Oman, oil gas chemicals Saudi Arabia, chemical news GCC, technical articles UAE Qatar, chemical industry insights Middle East"
+        ogTitle="Chemical Industry Blog & Technical Articles | Global Chemicals Oman & GCC"
+        ogDescription="Expert chemical industry insights, technical guides, and innovations for the GCC region. Water treatment, industrial chemicals, and safety practices across Oman, UAE & Saudi Arabia."
         canonical="https://gcoman.com/blog"
+        ogUrl="https://gcoman.com/blog"
       />
 
       <Navigation />

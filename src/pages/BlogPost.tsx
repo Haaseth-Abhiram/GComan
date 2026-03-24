@@ -50,6 +50,7 @@ const BlogPost = () => {
         canonical={canonicalUrl}
         author={post.author}
         publishedTime={post.date}
+        modifiedTime={post.date}
         articleSection={post.category}
         articleTags={post.tags}
       />
@@ -134,7 +135,7 @@ const BlogPost = () => {
             <div className="mt-10 p-6 bg-primary/5 rounded-xl border border-primary/20">
               <h3 className="text-lg font-semibold mb-2">Need Chemical Solutions for Your Business?</h3>
               <p className="text-muted-foreground text-sm mb-4">
-                Global Chemicals LLC supplies industrial, laboratory, and specialty chemicals across Oman.
+                Global Chemicals LLC supplies industrial, laboratory, and specialty chemicals across Oman and the GCC region — UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain.
                 Contact us for pricing, technical specifications, and fast delivery.
               </p>
               <div className="flex flex-wrap gap-3">

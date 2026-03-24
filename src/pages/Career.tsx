@@ -343,10 +343,10 @@ const Career = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="Careers & Jobs | Join Our Team | Global Chemicals LLC"
-        description="Join Global Chemicals LLC team in Oman. View open positions, submit applications, grow your career in the chemical industry. ISO 9001 certified employer."
-        keywords="chemical jobs Oman, careers Muscat, chemical engineer jobs, sales manager jobs Oman, warehouse jobs, laboratory jobs, chemical industry careers"
-        ogTitle="Careers at Global Chemicals LLC | Job Opportunities in Oman"
-        ogDescription="Build your career with Oman's leading chemical supplier. Competitive benefits, professional development, supportive culture. Apply today!"
+        description="Join Global Chemicals LLC team in Oman. View open positions in our growing GCC export operations. ISO 9001 certified employer with opportunities in chemical sales, engineering & business development."
+        keywords="chemical jobs Oman, careers Muscat, chemical engineer jobs, sales manager jobs Oman GCC, warehouse jobs, laboratory jobs, chemical industry careers Middle East"
+        ogTitle="Careers at Global Chemicals LLC | Job Opportunities in Oman & GCC"
+        ogDescription="Build your career with Oman's leading chemical supplier serving the GCC region. Competitive benefits, professional development, supportive culture. Apply today!"
         ogUrl="https://gcoman.com/career"
         canonical="https://gcoman.com/career"
       />
@@ -359,8 +359,8 @@ const Career = () => {
           key={job.id}
           title={job.title}
           description={`${job.description} Requirements: ${job.requirements.join(', ')}`}
-          datePosted="2024-12-01"
-          validThrough="2025-06-30"
+          datePosted="2025-01-01"
+          validThrough="2026-12-31"
           employmentType={job.type === 'Full-time' ? 'FULL_TIME' : 'PART_TIME'}
           location={job.location}
         />

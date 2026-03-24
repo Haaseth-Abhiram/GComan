@@ -126,11 +126,11 @@ const Customers = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Our Customers | Trusted by 200+ | Global Chemicals"
-        description="Trusted chemical supplier for 200+ clients in Oman including oil & gas, water treatment, manufacturing & construction. ISO 9001 certified. 10+ years."
-        keywords="chemical customers Oman, OQ supplier, PDO supplier, oil gas chemical supplier, industrial clients Oman, chemical testimonials, Oman LNG supplier"
-        ogTitle="Our Valued Customers | Leading Organizations Trust Us | Global Chemicals"
-        ogDescription="200+ active clients, 98% retention rate, 10+ years serving Oman's key industries. Join our growing family of satisfied customers."
+        title="Our Customers | Trusted by 200+ | Global Chemicals LLC Oman & GCC"
+        description="Trusted chemical supplier for 200+ clients in Oman & GCC including oil & gas, water treatment, manufacturing & construction. Serving UAE, Saudi Arabia, Qatar, Kuwait, Bahrain. ISO 9001 certified."
+        keywords="chemical customers GCC, OQ supplier, PDO supplier Oman, oil gas chemical supplier Middle East, industrial clients UAE, chemical testimonials, Oman LNG supplier, ADNOC chemical supplier, QatarEnergy chemical, Saudi Aramco chemical supplier"
+        ogTitle="Our Valued Customers | 200+ Clients in Oman & GCC | Global Chemicals"
+        ogDescription="200+ active clients, 98% retention rate, 10+ years serving Oman & GCC industries. Trusted by PDO, OQ, Oman LNG and leading organizations across the Middle East."
         ogUrl="https://gcoman.com/customers"
         canonical="https://gcoman.com/customers"
       />
@@ -147,7 +147,7 @@ const Customers = () => {
               Our Valued Customers
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8">
-              Proud to serve leading organizations across Oman with premium chemical solutions and exceptional service
+              Proud to serve leading organizations across Oman and the GCC region with premium chemical solutions and exceptional service
             </p>
           </div>
         </div>
@@ -181,7 +181,7 @@ const Customers = () => {
               Featured Clients
             </h2>
             <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-              Proud partners with leading organizations in Oman's key industries
+              Proud partners with leading organizations across Oman and the GCC region
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
@@ -230,7 +230,7 @@ const Customers = () => {
               Our Valued Customers
             </h2>
             <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-              Serving excellence across multiple industries throughout Oman
+              Excellence across multiple industries in Oman and the GCC export market
             </p>
             
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -274,7 +274,7 @@ const Customers = () => {
               Serving Multiple Industries
             </h2>
             <p className="text-muted-foreground mb-8">
-              Our diverse customer base spans across key sectors of Oman's economy
+              Our diverse customer base spans key sectors of Oman's economy and the broader GCC region
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               {industries.filter(i => i !== 'All Industries').map((industry, index) => (
@@ -296,7 +296,7 @@ const Customers = () => {
                 Join Our Growing Family of Satisfied Customers
               </CardTitle>
               <CardDescription className="text-base md:text-lg">
-                Experience the difference that quality products, expert service, and reliable partnerships can make for your business. 
+                Experience the difference that quality products, expert service, and reliable partnerships can make for your business across Oman and the GCC. 
                 Let's discuss how we can support your chemical supply needs.
               </CardDescription>
             </CardHeader>

@@ -192,10 +192,10 @@ const Certifications = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="Certifications | JSRS, ISO 9001:2015, ICV | Global Chemicals LLC"
-        description="Global Chemicals LLC is ISO 9001:2015 certified, JSRS registered for Oman oil & gas sector, and ICV compliant. Trusted chemical supplier with full regulatory compliance in Muscat, Oman."
-        keywords="JSRS Oman, ISO 9001 chemical supplier, ICV certified Oman, JSRS registered chemicals, oil gas chemicals Oman, certified chemical supplier Muscat, ISO certified distributor Oman, JSRS PDO supplier, environmental compliance chemicals"
-        ogTitle="JSRS & ISO Certified Chemical Supplier | Global Chemicals Oman"
-        ogDescription="ISO 9001:2015 certified, JSRS registered for oil & gas sector, ICV compliant. Trusted by PDO, Oxy, Shell, BP. Premier chemical supplier in Oman."
+        description="Global Chemicals LLC is ISO 9001:2015 certified, JSRS registered for Oman oil & gas sector, and ICV compliant. Trusted chemical supplier serving Oman & GCC countries — UAE, Saudi Arabia, Qatar, Kuwait, Bahrain."
+        keywords="JSRS Oman, ISO 9001 chemical supplier GCC, ICV certified Oman, JSRS registered chemicals, oil gas chemicals Middle East, certified chemical supplier Muscat Dubai, ISO certified distributor Oman UAE, JSRS PDO supplier, environmental compliance chemicals GCC"
+        ogTitle="JSRS & ISO Certified Chemical Supplier | Oman & GCC | Global Chemicals"
+        ogDescription="ISO 9001:2015 certified, JSRS registered for oil & gas sector, ICV compliant. Trusted by PDO, Oxy, Shell, BP. Exporting chemicals to UAE, Saudi Arabia, Qatar, Kuwait & Bahrain."
         ogUrl="https://gcoman.com/certifications"
         canonical="https://gcoman.com/certifications"
       />
@@ -218,7 +218,7 @@ const Certifications = () => {
                 ISO 9001:2015 | JSRS Registered | ICV Compliant
               </p>
               <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
-                Global Chemicals LLC holds the most respected certifications in Oman's chemical industry. Our commitment to quality, safety, and compliance makes us the trusted partner for oil & gas, manufacturing, and industrial sectors across the Sultanate.
+                Global Chemicals LLC holds the most respected certifications in the chemical industry. Our commitment to quality, safety, and compliance makes us the trusted partner for oil &amp; gas, manufacturing, and industrial sectors across Oman and the GCC region — UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain.
               </p>
             </div>
           </div>

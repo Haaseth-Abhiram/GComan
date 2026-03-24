@@ -138,4 +138,13 @@ export const companyLinks: RelatedLink[] = [
   { title: 'Contact Us', href: '/contact', description: 'Get in touch' },
 ];
 
+export const gccLocationLinks: RelatedLink[] = [
+  { title: 'Chemical Suppliers Middle East', href: '/chemical-suppliers-middle-east', description: 'Regional GCC chemical export hub' },
+  { title: 'Chemicals Dubai & UAE', href: '/chemicals/dubai', description: 'Supply to Dubai and UAE' },
+  { title: 'Chemicals Abu Dhabi', href: '/chemicals/abu-dhabi', description: 'Industrial chemicals for Abu Dhabi' },
+  { title: 'Chemicals Riyadh, Saudi Arabia', href: '/chemicals/riyadh', description: 'Chemical supply to Saudi Arabia' },
+  { title: 'Chemicals Doha, Qatar', href: '/chemicals/doha', description: 'Chemical supply to Qatar' },
+  { title: 'Chemicals Kuwait & Bahrain', href: '/chemicals/kuwait-city', description: 'Supply to Kuwait and Bahrain' },
+];
+
 export default RelatedLinks;

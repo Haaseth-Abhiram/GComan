@@ -11,27 +11,27 @@ import QuickActions from '@/components/QuickActions';
 import { SEO } from '@/components/SEO';
 import { OrganizationStructuredData, FAQStructuredData, LocalBusinessStructuredData } from '@/components/StructuredData';
 
-// Homepage FAQs for rich snippets
+// Homepage FAQs for rich snippets — GCC-wide coverage
 const homepageFAQs = [
   {
-    question: "What chemicals does Global Chemicals LLC supply in Oman?",
-    answer: "Global Chemicals LLC supplies a comprehensive range of industrial and specialty chemicals including water treatment chemicals (PAC, caustic soda, calcium hypochlorite), industrial lubricants (Shell, Mobil, Castrol), laboratory chemicals (AR grade, HPLC solvents), oil & gas chemicals, food grade chemicals, and swimming pool chemicals. We serve all major industries in Oman."
+    question: "What chemicals does Global Chemicals LLC supply across Oman and the GCC?",
+    answer: "Global Chemicals LLC supplies a comprehensive range of industrial and specialty chemicals including water treatment chemicals (PAC, caustic soda, calcium hypochlorite, antiscalants), industrial lubricants (Shell, Mobil, Castrol), laboratory chemicals (AR grade, HPLC solvents), oil & gas chemicals, food grade chemicals, and swimming pool chemicals. We serve all major industries in Oman (Muscat, Sohar, Salalah, Duqm) and export to UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain."
   },
   {
-    question: "Which areas in Oman does Global Chemicals LLC deliver to?",
-    answer: "We deliver chemicals across all major cities and industrial areas in Oman including Muscat, Salalah, Sohar (SOHAR Port & Freezone), Sur, Duqm, Nizwa, Rusayl Industrial Area, Barka, and surrounding regions. Most deliveries are completed within 1-3 business days."
+    question: "Does Global Chemicals LLC supply chemicals to the UAE, Saudi Arabia, Qatar, Kuwait and Bahrain?",
+    answer: "Yes. Global Chemicals LLC exports chemicals to all GCC countries including UAE (Dubai, Abu Dhabi, Sharjah), Saudi Arabia (Riyadh, Jeddah, Dammam), Qatar (Doha, Ras Laffan), Kuwait (Kuwait City, Shuaiba), and Bahrain (Manama). Standard GCC delivery lead times are 3-7 business days. Contact our export team at sales@gcoman.com for pricing and availability."
   },
   {
-    question: "Is Global Chemicals LLC ISO certified?",
-    answer: "Yes, Global Chemicals LLC is ISO 9001:2015 certified, ensuring the highest quality standards in chemical supply, storage, and distribution. We are also JSRS Certified (Joint Supplier Registration System) for Oman's oil & gas sector and ICV compliant."
+    question: "Is Global Chemicals LLC ISO certified and qualified for GCC supply?",
+    answer: "Yes, Global Chemicals LLC is ISO 9001:2015 certified, JSRS (Joint Supplier Registration System) certified for Oman's oil & gas sector, and ICV compliant. We provide full export documentation including Safety Data Sheets (SDS/MSDS), Certificates of Analysis (CoA), Technical Data Sheets (TDS), and Certificate of Origin — all required for GCC import clearance and customs."
   },
   {
-    question: "How can I request a quote for chemicals?",
-    answer: "You can request a quote by calling us at +968-93754388, emailing info@gcoman.com, using our WhatsApp chat, or filling out the contact form on our website. Our team typically responds within 24 hours with competitive pricing."
+    question: "How can I request a quote for chemical supply to Oman or GCC countries?",
+    answer: "You can request a quote by calling us at +968-93754388, emailing info@gcoman.com (or sales@gcoman.com for export), using our WhatsApp chat, or filling out the contact form on our website. Include the chemical name, quantity, and destination country. Our team typically responds within 24 hours with competitive pricing for both domestic Oman supply and GCC export orders."
   },
   {
-    question: "Does Global Chemicals provide technical support?",
-    answer: "Yes, we provide comprehensive technical support including product selection guidance, application recommendations, Safety Data Sheets (SDS), and on-site technical consultation for complex chemical requirements. Our experienced team has 10+ years of expertise in the chemical industry."
+    question: "Does Global Chemicals provide technical support for chemical applications?",
+    answer: "Yes, we provide comprehensive technical support including product selection guidance for water treatment, oilfield, and industrial applications, Safety Data Sheets (SDS), Certificates of Analysis (CoA), and on-site technical consultation. Our experienced team has 10+ years of expertise serving industries across Oman and the Middle East."
   }
 ];
 
@@ -39,11 +39,11 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Chemical Suppliers in Oman | Global Chemicals LLC | gcoman.com"
-        description="Global Chemicals LLC — Oman's trusted chemical supplier. We supply industrial, agricultural, construction & water treatment chemicals across Oman and the GCC. ISO 9001 certified. Get a quote today."
-        keywords="chemical suppliers in oman, chemical company oman, industrial chemicals muscat, chemical distributor oman, chemical supplier GCC, water treatment chemicals oman, PAC Oman, caustic soda Oman, lubricants Oman, laboratory chemicals Muscat, Shell lubricants Oman, calcium hypochlorite Oman, Sohar chemicals, Salalah chemicals, Duqm chemicals, agricultural chemicals oman"
-        ogTitle="Chemical Suppliers in Oman | Global Chemicals LLC | gcoman.com"
-        ogDescription="Global Chemicals LLC — Oman's trusted chemical supplier. Industrial, agricultural, construction & water treatment chemicals. ISO 9001 certified. Serving Muscat, Sohar, Salalah & GCC."
+        title="Chemical Suppliers in Oman & GCC | Global Chemicals LLC | gcoman.com"
+        description="Global Chemicals LLC — Leading chemical supplier in Oman exporting to UAE, Saudi Arabia, Qatar, Kuwait & Bahrain. Industrial, water treatment & oilfield chemicals. ISO 9001 certified. Get a quote."
+        keywords="chemical suppliers Oman GCC, chemical company oman UAE, industrial chemicals muscat dubai, chemical distributor GCC, chemical supplier UAE Saudi Arabia Qatar, water treatment chemicals GCC, PAC Oman UAE, caustic soda GCC, lubricants Middle East, laboratory chemicals GCC, Shell lubricants UAE, calcium hypochlorite GCC, agricultural chemicals oman, chemical exporter Oman"
+        ogTitle="Chemical Suppliers in Oman & GCC | Global Chemicals LLC"
+        ogDescription="Global Chemicals LLC — Oman-based chemical supplier exporting to UAE, Saudi Arabia, Qatar, Kuwait & Bahrain. Industrial, water treatment & oilfield chemicals. ISO 9001 certified."
         ogUrl="https://gcoman.com/"
         canonical="https://gcoman.com/"
       />

@@ -167,61 +167,61 @@ const Products = () => {
       <SEO
         title={(() => {
           const categoryTitles: Record<string, string> = {
-            'water-treatment': 'Water Treatment Chemicals in Oman | Global Chemicals LLC',
-            'lubricants': 'Industrial Lubricants Supplier in Oman | Global Chemicals LLC',
-            'swimming-pool': 'Swimming Pool Chemicals in Oman | Global Chemicals LLC',
-            'lab-chemicals': 'Laboratory Chemicals Supplier in Oman | Global Chemicals LLC',
-            'oilfield': 'Oilfield & Refinery Chemicals in Oman | Global Chemicals LLC',
-            'tank-cleaners': 'Marine & Industrial Tank Cleaners in Oman | Global Chemicals',
-            'soap-detergent': 'Soap & Detergent Chemicals in Oman | Global Chemicals LLC',
-            'food-beverage': 'Food & Beverage Grade Chemicals Oman | Global Chemicals LLC',
-            'cooling-water': 'Cooling Water Treatment Chemicals Oman | Global Chemicals LLC',
-            'corrosion-inhibitor': 'Corrosion Inhibitors Supplier in Oman | Global Chemicals LLC',
-            'ro-chemicals': 'RO Plant Chemicals Supplier in Oman | Global Chemicals LLC',
-            'solvents': 'Industrial Solvents Supplier in Oman | Global Chemicals LLC',
-            'inorganic': 'Inorganic Chemicals Supplier in Oman | Global Chemicals LLC',
-            'construction': 'Construction Chemicals in Oman | Global Chemicals LLC',
-            'alcohols': 'Industrial Alcohols Supplier in Oman | Global Chemicals LLC',
-            'glycols': 'Glycols Manufacturer & Supplier in Oman | Global Chemicals LLC',
-            'ethanolamines': 'Ethanolamines Supplier in Oman | Global Chemicals LLC',
-            'chlorinated': 'Chlorinated Solvents in Oman | Global Chemicals LLC',
-            'lab-equipment': 'Laboratory Equipment Supplier in Oman | Global Chemicals LLC',
-            'calcium-carbonate': 'Calcium Carbonate Supplier in Oman | Global Chemicals LLC',
-            'agro': 'Agricultural Chemicals in Oman | Global Chemicals LLC',
-            'additives': 'Chemical Additives Supplier in Oman | Global Chemicals LLC'
+            'water-treatment': 'Water Treatment Chemicals Supplier | Oman & GCC | Global Chemicals LLC',
+            'lubricants': 'Industrial Lubricants Supplier in Oman & Middle East | Global Chemicals LLC',
+            'swimming-pool': 'Swimming Pool Chemicals | Oman & GCC | Global Chemicals LLC',
+            'lab-chemicals': 'Laboratory Chemicals Supplier | Oman & Middle East | Global Chemicals LLC',
+            'oilfield': 'Oilfield & Refinery Chemicals | Oman & GCC | Global Chemicals LLC',
+            'tank-cleaners': 'Marine & Industrial Tank Cleaners | Oman & Middle East | Global Chemicals',
+            'soap-detergent': 'Soap & Detergent Chemicals | Oman & GCC | Global Chemicals LLC',
+            'food-beverage': 'Food & Beverage Grade Chemicals | Oman & GCC | Global Chemicals LLC',
+            'cooling-water': 'Cooling Water Treatment Chemicals | Oman & GCC | Global Chemicals LLC',
+            'corrosion-inhibitor': 'Corrosion Inhibitors Supplier | Oman & Middle East | Global Chemicals LLC',
+            'ro-chemicals': 'RO Plant Chemicals Supplier | Oman & GCC | Global Chemicals LLC',
+            'solvents': 'Industrial Solvents Supplier | Oman & Middle East | Global Chemicals LLC',
+            'inorganic': 'Inorganic Chemicals Supplier | Oman & GCC | Global Chemicals LLC',
+            'construction': 'Construction Chemicals | Oman & GCC | Global Chemicals LLC',
+            'alcohols': 'Industrial Alcohols Supplier | Oman & GCC | Global Chemicals LLC',
+            'glycols': 'Glycols Supplier | Oman & GCC | Global Chemicals LLC',
+            'ethanolamines': 'Ethanolamines Supplier | Oman & GCC | Global Chemicals LLC',
+            'chlorinated': 'Chlorinated Solvents | Oman & GCC | Global Chemicals LLC',
+            'lab-equipment': 'Laboratory Equipment Supplier | Oman & GCC | Global Chemicals LLC',
+            'calcium-carbonate': 'Calcium Carbonate Supplier | Oman & GCC | Global Chemicals LLC',
+            'agro': 'Agricultural Chemicals | Oman & GCC | Global Chemicals LLC',
+            'additives': 'Chemical Additives Supplier | Oman & GCC | Global Chemicals LLC'
           };
-          return categoryTitles[activeCategory] || 'Industrial Chemicals Supplier in Oman | Global Chemicals LLC';
+          return categoryTitles[activeCategory] || 'Industrial Chemicals Supplier Oman & Middle East | Global Chemicals LLC';
         })()}
         description={(() => {
           const categoryDescs: Record<string, string> = {
-            'water-treatment': 'Buy water treatment chemicals in Oman — PAC, caustic soda, calcium hypochlorite, antiscalants & more. Serving Muscat, Sohar, Salalah. Request a quote today.',
-            'lubricants': 'Shell, Mobil, Castrol & GP lubricants supplier in Oman. Industrial and automotive lubricants for all applications. Fast delivery across Muscat, Sohar, Salalah.',
-            'swimming-pool': 'Swimming pool chemicals in Oman — chlorine tablets, algaecides, TCCA, sodium hypochlorite & more. Quality products for pools across Muscat. Request a quote today.',
-            'lab-chemicals': 'Laboratory chemicals and reagents supplier in Oman. AR grade acids, solvents, and analytical reagents for research labs in Muscat. Request a quote today.',
-            'oilfield': 'Oilfield and refinery chemicals in Oman — drilling fluids, production chemicals, corrosion inhibitors. Trusted by oil & gas companies across Oman.',
-            'tank-cleaners': 'Heavy duty alkaline, acidic and neutral tank cleaners for marine and industrial applications in Oman. Environmentally friendly sludge breakers.',
-            'soap-detergent': 'Raw materials for soap and detergent manufacturing in Oman including LABSA, SLES, Caustic Soda, Soda Ash & more. Request a quote today.',
-            'food-beverage': 'Food-grade chemicals in Oman — Citric Acid, Ascorbic Acid, Calcium Carbonate, Sodium Bicarbonate. Certified high-purity ingredients for F&B industry.',
-            'cooling-water': 'Microbiocides, corrosion inhibitors & scale inhibitors for cooling towers and chilled water systems in Oman. Increase HVAC efficiency.',
-            'corrosion-inhibitor': 'Protect metals with our premium corrosion inhibitors in Oman. Suitable for closed loop systems, boilers, cooling towers, and oilfield applications.',
-            'ro-chemicals': 'Reverse osmosis chemicals in Oman — antiscalants, membrane cleaners, and biocides for water desalination plants. Ensure optimal RO performance.',
-            'solvents': 'Premium industrial solvents provider in Oman. High purity Toluene, Xylene, Acetone, Hexane, MEK, and other chemical solvents.',
-            'inorganic': 'Wholesale supplier of inorganic chemicals in Oman including Sodium Nitrite, Potassium Chloride, Borax, and Silica Gel.',
-            'construction': 'Construction chemicals, concrete additives, and epoxy solutions in Oman for civil engineering and infrastructure projects.',
-            'alcohols': 'Industrial grade alcohols in Oman — Methanol, Ethanol, Isopropanol (IPA), Butanol. Available in bulk & drums for immediate delivery.',
-            'glycols': 'Supplier of Monoethylene Glycol (MEG), Diethylene Glycol (DEG) and Propylene Glycol in Oman. Available in industrial and food grades.',
-            'ethanolamines': 'Monoethanolamine (MEA), Diethanolamine (DEA), and Triethanolamine (TEA) supplier in Oman for gas sweetening and industrial uses.',
-            'chlorinated': 'Methylene Chloride, Perchloroethylene, Trichloroethylene supplier in Oman. High grade chlorinated solvents for industrial degreasing.',
-            'lab-equipment': 'High precision laboratory equipment and apparatus for analytical and research laboratories across Oman.',
-            'calcium-carbonate': 'High purity Calcium Carbonate for industrial, food, and pharmaceutical applications in Oman.',
-            'agro': 'Specialty agricultural chemicals and fertilizers for farming and greenhouse applications in Oman.',
-            'additives': 'Performance-enhancing chemical additives for coatings, plastics, and industrial manufacturing in Oman.'
+            'water-treatment': 'Buy water treatment chemicals in Oman & GCC — PAC, caustic soda, calcium hypochlorite, antiscalants & more. Serving Muscat, Dubai, Riyadh, Doha. Request a quote today.',
+            'lubricants': 'Shell, Mobil, Castrol & GP lubricants supplier in Oman & Middle East. Industrial and automotive lubricants for all applications. Fast delivery across Muscat, Dubai, Riyadh, Doha.',
+            'swimming-pool': 'Swimming pool chemicals in Oman & GCC — chlorine tablets, algaecides, TCCA, sodium hypochlorite & more. Serving Muscat, Dubai, Riyadh, Doha. Request a quote today.',
+            'lab-chemicals': 'Laboratory chemicals and reagents supplier in Oman & Middle East. AR grade acids, solvents, and analytical reagents for research labs. Request a quote today.',
+            'oilfield': 'Oilfield and refinery chemicals in Oman & GCC — drilling fluids, production chemicals, corrosion inhibitors. Trusted by oil & gas companies across the Middle East.',
+            'tank-cleaners': 'Heavy duty alkaline, acidic and neutral tank cleaners for marine and industrial applications in Oman & GCC. Environmentally friendly sludge breakers.',
+            'soap-detergent': 'Raw materials for soap and detergent manufacturing in Oman & GCC including LABSA, SLES, Caustic Soda, Soda Ash & more. Request a quote today.',
+            'food-beverage': 'Food-grade chemicals in Oman & GCC — Citric Acid, Ascorbic Acid, Calcium Carbonate, Sodium Bicarbonate. Certified high-purity ingredients for F&B industry.',
+            'cooling-water': 'Microbiocides, corrosion inhibitors & scale inhibitors for cooling towers and chilled water systems in Oman & GCC. Increase HVAC efficiency.',
+            'corrosion-inhibitor': 'Protect metals with our premium corrosion inhibitors in Oman & GCC. Suitable for closed loop systems, boilers, cooling towers, and oilfield applications.',
+            'ro-chemicals': 'Reverse osmosis chemicals in Oman & GCC — antiscalants, membrane cleaners, and biocides for water desalination plants. Ensure optimal RO performance.',
+            'solvents': 'Premium industrial solvents provider in Oman & Middle East. High purity Toluene, Xylene, Acetone, Hexane, MEK, and other chemical solvents.',
+            'inorganic': 'Wholesale supplier of inorganic chemicals in Oman & GCC including Sodium Nitrite, Potassium Chloride, Borax, and Silica Gel.',
+            'construction': 'Construction chemicals, concrete additives, and epoxy solutions in Oman & GCC for civil engineering and infrastructure projects.',
+            'alcohols': 'Industrial grade alcohols in Oman & GCC — Methanol, Ethanol, Isopropanol (IPA), Butanol. Available in bulk & drums for immediate delivery.',
+            'glycols': 'Supplier of Monoethylene Glycol (MEG), Diethylene Glycol (DEG) and Propylene Glycol in Oman & GCC. Available in industrial and food grades.',
+            'ethanolamines': 'Monoethanolamine (MEA), Diethanolamine (DEA), and Triethanolamine (TEA) supplier in Oman & GCC for gas sweetening and industrial uses.',
+            'chlorinated': 'Methylene Chloride, Perchloroethylene, Trichloroethylene supplier in Oman & GCC. High grade chlorinated solvents for industrial degreasing.',
+            'lab-equipment': 'High precision laboratory equipment and apparatus for analytical and research laboratories across Oman & Middle East.',
+            'calcium-carbonate': 'High purity Calcium Carbonate for industrial, food, and pharmaceutical applications in Oman & GCC.',
+            'agro': 'Specialty agricultural chemicals and fertilizers for farming and greenhouse applications in Oman & GCC.',
+            'additives': 'Performance-enhancing chemical additives for coatings, plastics, and industrial manufacturing in Oman & GCC.'
           };
-          return categoryDescs[activeCategory] || 'Comprehensive catalog of industrial chemicals in Oman — water treatment, lubricants, lab chemicals, oilfield & swimming pool products. ISO certified. Serving Muscat, Sohar, Salalah.';
+          return categoryDescs[activeCategory] || 'Comprehensive catalog of industrial chemicals in Oman & GCC — water treatment, lubricants, lab chemicals, oilfield & swimming pool products. ISO certified. Exporting to UAE, Saudi Arabia, Qatar, Kuwait, Bahrain.';
         })()}
-        keywords="water treatment chemicals Oman, PAC Oman, caustic soda Oman, calcium hypochlorite Oman, industrial chemicals Muscat, laboratory chemicals Oman, Shell lubricants Oman, Mobil oils Oman, chemical supplier Muscat, chemicals Sohar, Salalah chemicals, industrial lubricants Oman, RO chemicals Oman, cooling tower chemicals, swimming pool chemicals Oman"
-        ogTitle={activeCategory !== 'all' ? `${activeCategory.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} | Global Chemicals LLC Oman` : 'Chemical Products | Industrial Chemicals Oman | Global Chemicals LLC'}
-        ogDescription="Leading chemical supplier in Oman. Browse our complete catalog of water treatment chemicals, industrial lubricants, and specialty chemicals. Serving Muscat, Sohar, Salalah."
+        keywords="water treatment chemicals Oman UAE, PAC Oman, caustic soda GCC, calcium hypochlorite Middle East, industrial chemicals Muscat Dubai Riyadh, laboratory chemicals Oman, Shell lubricants UAE, Mobil oils Saudi Arabia, chemical supplier GCC, chemicals Dubai, Riyadh chemicals, industrial lubricants Oman, RO chemicals UAE, cooling tower chemicals Middle East, swimming pool chemicals GCC, chemical exporter Oman"
+        ogTitle={activeCategory !== 'all' ? `${activeCategory.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} | Global Chemicals LLC Oman & GCC` : 'Chemical Products | Industrial Chemicals Oman & Middle East | Global Chemicals LLC'}
+        ogDescription="Leading chemical supplier in Oman exporting to UAE, Saudi Arabia, Qatar, Kuwait & Bahrain. Browse our complete catalog of water treatment chemicals, industrial lubricants, and specialty chemicals."
         ogUrl={categoryParam ? `https://gcoman.com/products/${categoryParam}` : 'https://gcoman.com/products'}
         canonical={categoryParam ? `https://gcoman.com/products/${categoryParam}` : 'https://gcoman.com/products'}
       />
@@ -528,7 +528,7 @@ const Products = () => {
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-center text-foreground mb-4">Why Choose Our Chemical Products</h2>
             <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-              Leading chemical supplier in Oman with proven track record serving oil & gas, manufacturing, water treatment, and industrial sectors across Muscat, Sohar, Salalah, and Duqm.
+              Leading chemical supplier in Oman & Middle East with proven track record serving oil &amp; gas, manufacturing, water treatment, and industrial sectors across Muscat, Dubai, Riyadh, Doha, and the wider GCC region.
             </p>
             <div className="grid md:grid-cols-3 gap-8">
               {[

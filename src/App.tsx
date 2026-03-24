@@ -35,6 +35,7 @@ const Terms = lazy(() => import("./pages/Terms"));
 const Sitemap = lazy(() => import("./pages/Sitemap"));
 const LocationLanding = lazy(() => import("./pages/LocationLanding"));
 const ChemicalSuppliersOman = lazy(() => import("./pages/ChemicalSuppliersOman"));
+const ChemicalSuppliersMiddleEast = lazy(() => import("./pages/ChemicalSuppliersMiddleEast"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -108,6 +109,7 @@ const App = () => (
                 <Route path="/terms" element={<Terms />} />
                 <Route path="/sitemap" element={<Sitemap />} />
                 <Route path="/chemical-suppliers-oman" element={<ChemicalSuppliersOman />} />
+                <Route path="/chemical-suppliers-middle-east" element={<ChemicalSuppliersMiddleEast />} />
 
                 {/* Location-specific landing pages for SEO */}
                 <Route path="/chemicals/:location" element={<LocationLanding />} />
@@ -141,6 +143,7 @@ const App = () => (
                   <Route path="terms" element={<Terms />} />
                   <Route path="sitemap" element={<Sitemap />} />
                   <Route path="chemical-suppliers-oman" element={<ChemicalSuppliersOman />} />
+                  <Route path="chemical-suppliers-middle-east" element={<ChemicalSuppliersMiddleEast />} />
                   <Route path="chemicals/:location" element={<LocationLanding />} />
                 </Route>
 

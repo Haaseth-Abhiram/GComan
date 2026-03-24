@@ -178,11 +178,11 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Contact Us | Get Quote | Global Chemicals LLC"
-        description="Contact Global Chemicals LLC in Muscat, Oman. Get quotes & product info. Call +968-93754388 or email info@gcoman.com. 24-hour response."
-        keywords="contact global chemicals, chemical supplier Muscat, request quote chemicals, technical support chemicals Oman, chemical inquiry, chemical distributor contact"
-        ogTitle="Contact Global Chemicals LLC | Request Quote | Muscat Oman"
-        ogDescription="Get in touch with Oman's leading chemical supplier. Phone, email, or visit our Muscat office. Expert support ready to assist."
+        title="Contact Us | Get Quote | Global Chemicals LLC Oman & GCC"
+        description="Contact Global Chemicals LLC — Oman's leading chemical exporter to UAE, Saudi Arabia, Qatar, Kuwait & Bahrain. Call +968-93754388 or email info@gcoman.com. 24-hour response."
+        keywords="contact global chemicals, chemical supplier GCC, request quote chemicals Middle East, chemical inquiry Oman UAE, chemical distributor contact GCC, chemical exporter Oman contact, chemical supplier Dubai, chemical company Saudi Arabia, chemical quote Qatar Kuwait"
+        ogTitle="Contact Global Chemicals LLC | Request Quote | Oman & GCC Export"
+        ogDescription="Get in touch with a leading GCC chemical exporter based in Muscat, Oman. Phone, email, or WhatsApp. 24-hour response for UAE, Saudi Arabia, Qatar, Kuwait & Bahrain orders."
         ogUrl="https://gcoman.com/contact"
         canonical="https://gcoman.com/contact"
       />

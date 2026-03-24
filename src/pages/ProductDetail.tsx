@@ -8,7 +8,7 @@ import WhatsAppButton from '@/components/WhatsAppButton';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
-import { ArrowLeft, CheckCircle2, Phone, Mail, Beaker, Info } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, Phone, Mail, Beaker, Info, MessageCircle, Truck, Shield, Globe } from 'lucide-react';
 import { loadProductsByCategory, hydrateProduct } from '@/data/productLoader';
 import { ProductStructuredData, BreadcrumbStructuredData } from '@/components/StructuredData';
 import { SEO } from '@/components/SEO';
@@ -92,30 +92,44 @@ const ProductDetail = () => {
 
   const Icon = product.icon;
 
-  // Generate SEO-optimized description
-  const seoDescription = product.details?.longDescription || 
-    `${product.title} supplier in Oman. ${product.description} High-quality ${product.title.toLowerCase()} for water treatment, industrial, and commercial applications. Serving Muscat, Sohar, Salalah, Duqm. Contact Global Chemicals LLC for pricing and technical specifications.`;
+  // Generate SEO-optimized description — includes GCC cities
+  const seoDescription = product.details?.longDescription ||
+    `${product.title} supplier in Oman & GCC. ${product.description} High-quality ${product.title.toLowerCase()} for water treatment, industrial, and commercial applications. Exporting to Dubai, Riyadh, Doha, Kuwait, Bahrain. Serving Muscat, Sohar, Salalah. Contact Global Chemicals LLC for pricing and technical specifications.`;
 
-  // Generate keywords
+  // Generate keywords — auto-adds UAE/Saudi/Qatar variants for every product
   const keywords = [
     product.title,
     `${product.title} Oman`,
-    `${product.title} Muscat`,
+    `${product.title} UAE`,
+    `${product.title} Dubai`,
+    `${product.title} Saudi Arabia`,
+    `${product.title} Qatar`,
+    `${product.title} GCC`,
+    `${product.title} Middle East`,
     `${product.title} supplier`,
     `buy ${product.title} Oman`,
+    `buy ${product.title} UAE`,
     ...(product.details?.alternativeNames || []),
     ...(product.details?.seoKeywords || []),
     'chemical supplier Oman',
-    category === 'water-treatment' ? 'water treatment chemicals Oman' : '',
+    'chemical supplier UAE',
+    'chemical exporter Oman GCC',
+    category === 'water-treatment' ? 'water treatment chemicals Oman UAE' : '',
+    category === 'oilfield' ? 'oilfield chemicals Oman GCC' : '',
+    category === 'lab-chemicals' ? 'laboratory chemicals Oman Middle East' : '',
   ].filter(Boolean).join(', ');
+
+  // WhatsApp message pre-filled with product name
+  const whatsappMessage = encodeURIComponent(`Hi, I'm interested in ${product.title}. Please send me pricing and availability.`);
+  const whatsappUrl = `https://wa.me/96893754388?text=${whatsappMessage}`;
 
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title={`${product.title} Supplier Oman | Buy ${product.title} | Global Chemicals`}
+        title={`${product.title} Supplier | Oman & GCC | Global Chemicals LLC`}
         description={seoDescription}
         keywords={keywords}
-        ogTitle={`${product.title} - Chemical Supplier Oman | Global Chemicals LLC`}
+        ogTitle={`${product.title} - Chemical Supplier Oman & GCC | Global Chemicals LLC`}
         ogDescription={seoDescription}
         ogUrl={`https://gcoman.com/products/${category}/${productSlug}`}
         canonical={`https://gcoman.com/products/${category}/${productSlug}`}
@@ -125,6 +139,7 @@ const ProductDetail = () => {
       <BreadcrumbStructuredData items={[
         { name: 'Home', url: 'https://gcoman.com' },
         { name: 'Products', url: 'https://gcoman.com/products' },
+        { name: category ? category.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) : 'Category', url: `https://gcoman.com/products/${category}` },
         { name: product.title, url: `https://gcoman.com/products/${category}/${productSlug}` }
       ]} />
       
@@ -132,15 +147,18 @@ const ProductDetail = () => {
       <WhatsAppButton />
 
       <main id="main-content">
-        {/* Breadcrumb */}
         <section className="pt-32 pb-8 bg-muted/30">
           <div className="container mx-auto px-4">
-            <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
+            <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-4" aria-label="Breadcrumb">
               <Link to="/" className="hover:text-primary transition-colors">{t('nav.home')}</Link>
               <span>/</span>
               <Link to="/products" className="hover:text-primary transition-colors">{t('nav.products')}</Link>
               <span>/</span>
-              <span className="text-foreground font-medium">{translatedTitle}</span>
+              <Link to={`/products/${category}`} className="hover:text-primary transition-colors capitalize">
+                {category?.replace(/-/g, ' ')}
+              </Link>
+              <span>/</span>
+              <span className="text-foreground font-medium line-clamp-1">{translatedTitle}</span>
             </nav>
           </div>
         </section>
@@ -238,24 +256,43 @@ const ProductDetail = () => {
                 </Card>
               )}
 
+              {/* Trust Badges */}
+              <div className="flex flex-wrap gap-3 mb-6 justify-center">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-green-500/10 text-green-700 dark:text-green-400 text-sm font-medium border border-green-500/20">
+                  <Shield className="w-4 h-4" /> ISO 9001 Certified
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-blue-500/10 text-blue-700 dark:text-blue-400 text-sm font-medium border border-blue-500/20">
+                  <Truck className="w-4 h-4" /> Fast Delivery
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium border border-primary/20">
+                  <Globe className="w-4 h-4" /> Oman & GCC Export
+                </span>
+              </div>
+
               {/* CTA Section */}
               <Card className="p-8 bg-gradient-to-br from-primary/5 to-secondary/5 border-primary/20">
                 <div className="text-center">
-                  <h2 className="text-2xl font-bold mb-4">{t('products.needMoreInfo', { defaultValue: 'Need More Information?' })}</h2>
+                  <h2 className="text-2xl font-bold mb-2">{t('products.needMoreInfo', { defaultValue: 'Request a Quote' })}</h2>
                   <p className="text-muted-foreground mb-6">
-                    {t('products.needMoreInfoDesc', { defaultValue: 'Our team is ready to help you with technical specifications, pricing, and delivery options.' })}
+                    Get pricing, availability, and technical specifications for <strong>{translatedTitle}</strong>. Our team responds within 24 hours.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Button asChild size="lg" className="gap-2" onClick={() => trackSelectContent('cta_button', 'get_quote')}>
                       <Link to={`/contact?product=${encodeURIComponent(product.title)}`}>
                         <Mail className="w-4 h-4" />
-                        {t('common.contactUs')}
+                        Request a Quote
                       </Link>
                     </Button>
-                    <Button asChild variant="outline" size="lg" className="gap-2" onClick={() => trackContactClick('phone')}>
+                    <Button asChild size="lg" variant="outline" className="gap-2 border-green-500/50 text-green-700 dark:text-green-400 hover:bg-green-500/10" onClick={() => trackContactClick('whatsapp')}>
+                      <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                        <MessageCircle className="w-4 h-4" />
+                        WhatsApp Inquiry
+                      </a>
+                    </Button>
+                    <Button asChild variant="ghost" size="lg" className="gap-2" onClick={() => trackContactClick('phone')}>
                       <a href="tel:+96893754388">
                         <Phone className="w-4 h-4" />
-                        {t('products.callPhone', { defaultValue: 'Call +968 93754388' })}
+                        Call +968 93754388
                       </a>
                     </Button>
                   </div>

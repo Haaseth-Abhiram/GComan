@@ -69,9 +69,21 @@ export const SEO = ({
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
       )}
 
-      {/* Hreflang for internationalization */}
+      {/* Hreflang for internationalization — en + ar for all GCC countries */}
       <link rel="alternate" hrefLang="en" href={enUrl} />
+      <link rel="alternate" hrefLang="en-OM" href={enUrl} />
+      <link rel="alternate" hrefLang="en-AE" href={enUrl} />
+      <link rel="alternate" hrefLang="en-SA" href={enUrl} />
+      <link rel="alternate" hrefLang="en-QA" href={enUrl} />
+      <link rel="alternate" hrefLang="en-KW" href={enUrl} />
+      <link rel="alternate" hrefLang="en-BH" href={enUrl} />
       <link rel="alternate" hrefLang="ar" href={arUrl} />
+      <link rel="alternate" hrefLang="ar-OM" href={arUrl} />
+      <link rel="alternate" hrefLang="ar-AE" href={arUrl} />
+      <link rel="alternate" hrefLang="ar-SA" href={arUrl} />
+      <link rel="alternate" hrefLang="ar-QA" href={arUrl} />
+      <link rel="alternate" hrefLang="ar-KW" href={arUrl} />
+      <link rel="alternate" hrefLang="ar-BH" href={arUrl} />
       <link rel="alternate" hrefLang="x-default" href={enUrl} />
 
       {/* Open Graph */}

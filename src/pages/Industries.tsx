@@ -323,11 +323,11 @@ const Industries = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Chemical Solutions by Industry Oman | Global Chemicals LLC"
-        description="Water treatment, oilfield, manufacturing, food & lab chemicals in Oman. JSRS certified, ICV compliant. Serving Muscat, Sohar, Duqm, Salalah. Request a quote today."
-        keywords="water treatment chemicals Oman, water treatment chemicals Muscat, oil gas chemicals Oman, industrial chemicals Muscat, food grade chemicals Oman, pharmaceutical chemicals Oman, construction chemicals Oman, pool chemicals Oman, chemical solutions Oman, Sohar industrial chemicals, PDO chemical supplier, Oman LNG chemicals, PAC Oman, caustic soda Oman, calcium hypochlorite Oman, antiscalant Oman, desalination chemicals Oman, JSRS certified chemical supplier"
-        ogTitle="Chemical Solutions for Oman Industries | Global Chemicals LLC"
-        ogDescription="JSRS certified supplier of water treatment, oil & gas, and industrial chemicals in Oman. Serving Muscat, Sohar, Duqm, Salalah."
+        title="Chemical Solutions by Industry | Oman & GCC | Global Chemicals LLC"
+        description="Water treatment, oilfield, manufacturing, food & lab chemicals in Oman & GCC — UAE, Saudi Arabia, Qatar, Kuwait, Bahrain. JSRS certified, ISO 9001. Request a quote today."
+        keywords="water treatment chemicals Oman UAE, water treatment chemicals GCC, oil gas chemicals Middle East, industrial chemicals Dubai Riyadh, food grade chemicals GCC, pharmaceutical chemicals Oman, construction chemicals Middle East, pool chemicals UAE, chemical solutions GCC, oilfield chemicals Saudi Arabia, PDO chemical supplier, caustic soda UAE, calcium hypochlorite GCC, antiscalant Middle East, desalination chemicals GCC, JSRS certified chemical supplier"
+        ogTitle="Chemical Solutions for GCC Industries | Oman, UAE, Saudi Arabia | Global Chemicals"
+        ogDescription="JSRS & ISO certified supplier of water treatment, oil & gas, and industrial chemicals serving Oman, UAE, Saudi Arabia, Qatar, Kuwait & Bahrain."
         ogUrl="https://gcoman.com/industries"
         canonical="https://gcoman.com/industries"
       />

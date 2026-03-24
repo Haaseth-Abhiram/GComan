@@ -1202,11 +1202,11 @@ const Resources = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Chemical Guides & Resources Oman | Global Chemicals LLC"
-        description="Expert chemical guides for Oman: water treatment, lab chemicals, lubricants, oilfield. Download SDS, catalogs & technical docs. Request a quote today."
-        keywords="water treatment chemicals Oman, industrial lubricants guide, laboratory chemicals Oman, oil gas production chemicals, swimming pool chemicals, chemical SDS download, product catalogs, safety data sheets, PAC coagulant, Shell Mobil Castrol lubricants, desalination chemicals, corrosion inhibitors"
-        ogTitle="Chemical Industry Guides & Resources | Global Chemicals LLC Oman"
-        ogDescription="Comprehensive guides on water treatment, lubricants, laboratory chemicals & oil field chemicals for Oman industries. Free technical resources and expert knowledge."
+        title="Chemical Guides & Resources | Oman & GCC | Global Chemicals LLC"
+        description="Expert chemical guides for Oman & GCC: water treatment, lab chemicals, lubricants, oilfield. Download SDS, catalogs & technical docs. Serving UAE, Saudi Arabia, Qatar, Kuwait, Bahrain."
+        keywords="water treatment chemicals GCC, industrial lubricants guide Middle East, laboratory chemicals UAE, oil gas production chemicals Saudi Arabia, swimming pool chemicals GCC, chemical SDS download, product catalogs, safety data sheets, PAC coagulant Oman, Shell Mobil Castrol lubricants GCC, desalination chemicals Middle East, corrosion inhibitors GCC"
+        ogTitle="Chemical Industry Guides & Resources | Global Chemicals LLC Oman & GCC"
+        ogDescription="Comprehensive guides on water treatment, lubricants, laboratory chemicals & oilfield chemicals for Oman & GCC industries. Free technical resources and expert knowledge."
         ogUrl="https://gcoman.com/resources"
         canonical="https://gcoman.com/resources"
       />

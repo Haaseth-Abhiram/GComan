@@ -39,6 +39,24 @@ const Sitemap = () => {
         { label: 'Privacy Policy', path: '/privacy' },
       ],
     },
+    {
+      title: 'SEO Landing Pages',
+      links: [
+        { label: 'Chemical Suppliers Oman', path: '/chemical-suppliers-oman' },
+        { label: 'Chemical Suppliers Middle East', path: '/chemical-suppliers-middle-east' },
+        { label: 'Chemicals Muscat', path: '/chemicals/muscat' },
+        { label: 'Chemicals Sohar', path: '/chemicals/sohar' },
+        { label: 'Chemicals Salalah', path: '/chemicals/salalah' },
+        { label: 'Chemicals Duqm', path: '/chemicals/duqm' },
+        { label: 'Chemicals Rusayl', path: '/chemicals/rusayl' },
+        { label: 'Chemicals Dubai (Export)', path: '/chemicals/dubai' },
+        { label: 'Chemicals Abu Dhabi (Export)', path: '/chemicals/abu-dhabi' },
+        { label: 'Chemicals Riyadh / Saudi Arabia (Export)', path: '/chemicals/riyadh' },
+        { label: 'Chemicals Doha / Qatar (Export)', path: '/chemicals/doha' },
+        { label: 'Chemicals Kuwait City (Export)', path: '/chemicals/kuwait-city' },
+        { label: 'Chemicals Bahrain (Export)', path: '/chemicals/bahrain' },
+      ],
+    },
   ];
 
   return (

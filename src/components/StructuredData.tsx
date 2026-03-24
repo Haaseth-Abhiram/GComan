@@ -48,14 +48,14 @@ export const ProductStructuredData = ({ product, url }: ProductStructuredDataPro
         "@type": "ContactPoint",
         "telephone": "+968-93754388",
         "contactType": "sales",
-        "areaServed": "OM",
+        "areaServed": ["OM", "AE", "SA", "QA", "KW", "BH"],
         "availableLanguage": ["en", "ar"]
       }
     },
     "offers": {
       "@type": "AggregateOffer",
       "availability": "https://schema.org/InStock",
-      "priceCurrency": "OMR",
+      "priceCurrency": "USD",
       "url": url || "https://gcoman.com/contact",
       "seller": {
         "@type": "Organization",
@@ -64,15 +64,19 @@ export const ProductStructuredData = ({ product, url }: ProductStructuredDataPro
       },
       "priceSpecification": {
         "@type": "PriceSpecification",
-        "priceCurrency": "OMR",
+        "priceCurrency": "USD",
         "price": "Contact for Quote"
       },
       "shippingDetails": {
         "@type": "OfferShippingDetails",
-        "shippingDestination": {
-          "@type": "DefinedRegion",
-          "addressCountry": "OM"
-        },
+        "shippingDestination": [
+          { "@type": "DefinedRegion", "addressCountry": "OM" },
+          { "@type": "DefinedRegion", "addressCountry": "AE" },
+          { "@type": "DefinedRegion", "addressCountry": "SA" },
+          { "@type": "DefinedRegion", "addressCountry": "QA" },
+          { "@type": "DefinedRegion", "addressCountry": "KW" },
+          { "@type": "DefinedRegion", "addressCountry": "BH" }
+        ],
         "deliveryTime": {
           "@type": "ShippingDeliveryTime",
           "handlingTime": {
@@ -194,7 +198,7 @@ export const BlogListingStructuredData = ({
     "@context": "https://schema.org",
     "@type": "Blog",
     "name": "Global Chemicals LLC Blog",
-    "description": "Expert insights, industry news, and technical guidance for chemical applications across Oman's key sectors",
+    "description": "Expert insights, industry news, and technical guidance for chemical applications across Oman and the Middle East",
     "url": baseUrl,
     "publisher": {
       "@type": "Organization",
@@ -487,15 +491,15 @@ export const LocalBusinessStructuredData = () => {
     "@type": "LocalBusiness",
     "@id": "https://gcoman.com/#organization",
     "name": "Global Chemicals LLC",
-    "alternateName": ["Global Chemicals Oman", "GCOMAN", "Global Chemicals Muscat"],
-    "description": "Leading industrial and specialty chemical supplier in Oman. Providing water treatment chemicals, industrial lubricants, laboratory chemicals, and oilfield chemicals to industries across Muscat, Sohar, Duqm, and Salalah.",
+    "alternateName": ["Global Chemicals Oman", "GCOMAN", "Global Chemicals Middle East", "Global Chemicals Muscat"],
+    "description": "Leading industrial and specialty chemical supplier in Oman and the Middle East. Providing water treatment chemicals, industrial lubricants, laboratory chemicals, and oilfield chemicals to industries across Muscat, Sohar, Duqm, Salalah and exporting to UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain.",
     "url": "https://gcoman.com",
     "telephone": "+968-93754388",
     "email": "sales@gcoman.com",
     "logo": "https://gcoman.com/logo.png",
     "image": "https://gcoman.com/og-image.jpg",
     "priceRange": "$$",
-    "currenciesAccepted": "OMR",
+    "currenciesAccepted": "OMR, USD, AED, SAR, QAR, KWD, BHD",
     "paymentAccepted": ["Cash", "Bank Transfer", "Credit Card"],
     "address": {
       "@type": "PostalAddress",
@@ -519,34 +523,19 @@ export const LocalBusinessStructuredData = () => {
       }
     ],
     "areaServed": [
-      {
-        "@type": "City",
-        "name": "Muscat",
-        "sameAs": "https://en.wikipedia.org/wiki/Muscat,_Oman"
-      },
-      {
-        "@type": "City",
-        "name": "Sohar",
-        "sameAs": "https://en.wikipedia.org/wiki/Sohar"
-      },
-      {
-        "@type": "City",
-        "name": "Duqm",
-        "sameAs": "https://en.wikipedia.org/wiki/Duqm"
-      },
-      {
-        "@type": "City",
-        "name": "Salalah",
-        "sameAs": "https://en.wikipedia.org/wiki/Salalah"
-      },
-      {
-        "@type": "Place",
-        "name": "Rusayl Industrial Area"
-      },
-      {
-        "@type": "Place",
-        "name": "Sohar Industrial Estate"
-      }
+      { "@type": "City", "name": "Muscat", "sameAs": "https://en.wikipedia.org/wiki/Muscat,_Oman" },
+      { "@type": "City", "name": "Sohar", "sameAs": "https://en.wikipedia.org/wiki/Sohar" },
+      { "@type": "City", "name": "Duqm", "sameAs": "https://en.wikipedia.org/wiki/Duqm" },
+      { "@type": "City", "name": "Salalah", "sameAs": "https://en.wikipedia.org/wiki/Salalah" },
+      { "@type": "Place", "name": "Rusayl Industrial Area" },
+      { "@type": "Place", "name": "Sohar Industrial Estate" },
+      { "@type": "City", "name": "Dubai", "sameAs": "https://en.wikipedia.org/wiki/Dubai" },
+      { "@type": "City", "name": "Abu Dhabi", "sameAs": "https://en.wikipedia.org/wiki/Abu_Dhabi" },
+      { "@type": "City", "name": "Riyadh", "sameAs": "https://en.wikipedia.org/wiki/Riyadh" },
+      { "@type": "City", "name": "Jeddah", "sameAs": "https://en.wikipedia.org/wiki/Jeddah" },
+      { "@type": "City", "name": "Doha", "sameAs": "https://en.wikipedia.org/wiki/Doha" },
+      { "@type": "City", "name": "Kuwait City", "sameAs": "https://en.wikipedia.org/wiki/Kuwait_City" },
+      { "@type": "City", "name": "Manama", "sameAs": "https://en.wikipedia.org/wiki/Manama" }
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
@@ -571,7 +560,7 @@ export const LocalBusinessStructuredData = () => {
       "Desalination Chemicals",
       "Swimming Pool Chemicals"
     ],
-    "slogan": "Your Trusted Chemical Partner in Oman"
+    "slogan": "Your Trusted Chemical Partner in Oman & the Middle East"
   };
 
   return (
@@ -592,10 +581,10 @@ export const OrganizationStructuredData = ({ includeService = false }: Organizat
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Global Chemicals LLC",
-    "alternateName": "Global Chemicals Oman",
+    "alternateName": ["Global Chemicals Oman", "GCOMAN", "Global Chemicals Middle East"],
     "url": "https://gcoman.com",
     "logo": "https://gcoman.com/logo.png",
-    "description": "Leading chemical supplier in Oman providing water treatment chemicals, industrial lubricants, laboratory chemicals, and specialty chemicals for oil & gas, manufacturing, and industrial sectors.",
+    "description": "Leading chemical supplier in Oman and the Middle East providing water treatment chemicals, industrial lubricants, laboratory chemicals, and specialty chemicals for oil & gas, manufacturing, and industrial sectors across Oman, UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain.",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "OM",
@@ -603,32 +592,23 @@ export const OrganizationStructuredData = ({ includeService = false }: Organizat
       "addressLocality": "Muscat"
     },
     "areaServed": [
-      {
-        "@type": "City",
-        "name": "Muscat"
-      },
-      {
-        "@type": "City",
-        "name": "Sohar"
-      },
-      {
-        "@type": "City",
-        "name": "Duqm"
-      },
-      {
-        "@type": "City",
-        "name": "Salalah"
-      },
-      {
-        "@type": "Place",
-        "name": "Rusayl Industrial Area"
-      }
+      { "@type": "City", "name": "Muscat" },
+      { "@type": "City", "name": "Sohar" },
+      { "@type": "City", "name": "Duqm" },
+      { "@type": "City", "name": "Salalah" },
+      { "@type": "Place", "name": "Rusayl Industrial Area" },
+      { "@type": "City", "name": "Dubai" },
+      { "@type": "City", "name": "Abu Dhabi" },
+      { "@type": "City", "name": "Riyadh" },
+      { "@type": "City", "name": "Doha" },
+      { "@type": "City", "name": "Kuwait City" },
+      { "@type": "City", "name": "Manama" }
     ],
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+968-93754388",
       "contactType": "sales",
-      "areaServed": "OM",
+      "areaServed": ["OM", "AE", "SA", "QA", "KW", "BH"],
       "availableLanguage": ["en", "ar"]
     },
     "sameAs": [
@@ -646,8 +626,16 @@ export const OrganizationStructuredData = ({ includeService = false }: Organizat
       "name": "Global Chemicals LLC"
     },
     "areaServed": {
-      "@type": "Country",
-      "name": "Oman"
+      "@type": "ItemList",
+      "name": "GCC & Middle East",
+      "itemListElement": [
+        { "@type": "Country", "name": "Oman" },
+        { "@type": "Country", "name": "United Arab Emirates" },
+        { "@type": "Country", "name": "Saudi Arabia" },
+        { "@type": "Country", "name": "Qatar" },
+        { "@type": "Country", "name": "Kuwait" },
+        { "@type": "Country", "name": "Bahrain" }
+      ]
     },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
