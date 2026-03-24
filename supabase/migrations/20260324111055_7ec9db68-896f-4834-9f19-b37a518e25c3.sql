@@ -1,0 +1,1 @@
+UPDATE contact_submissions SET email_sent = true, email_sent_at = created_at WHERE email_sent = false AND email_error IS NULL; DELETE FROM contact_submissions WHERE email LIKE 'test%@example.com';
