@@ -59,7 +59,7 @@ async function checkRateLimit(supabase: any, ipAddress: string): Promise<boolean
   return (data?.length || 0) < 5;
 }
 
-// Send email notification and update database
+// Send email notification (DB already has email_sent=true optimistically)
 async function sendEmailNotification(
   supabase: any,
   submissionId: string,
@@ -103,44 +103,21 @@ IP Address: ${ipAddress}
 
     console.log("Email notification sent successfully to sales@gcoman.com");
 
-    // Update database IMMEDIATELY after successful send, before closing client
-    const { error: updateError } = await supabase
-      .from('contact_submissions')
-      .update({ 
-        email_sent: true, 
-        email_sent_at: new Date().toISOString(),
-        email_error: null 
-      })
-      .eq('id', submissionId);
-
-    if (updateError) {
-      console.error("Failed to update email status:", updateError);
-    } else {
-      console.log("Email status updated successfully for submission:", submissionId);
-    }
-
-    // Close SMTP client after DB update (non-blocking, don't let it block response)
-    try {
-      await client.close();
-    } catch (closeErr) {
-      console.warn("SMTP client close warning (email already sent):", closeErr);
-    }
+    // Don't await close - it can hang and cause CPU timeout
+    client.close().catch((e: unknown) => console.warn("SMTP close warning:", e));
   } catch (emailError: unknown) {
     console.error("Failed to send email notification:", emailError);
     
-    // Update database with error
+    // Revert optimistic status on failure
     const errorMessage = emailError instanceof Error ? emailError.message : 'Unknown email error';
-    const { error: updateError } = await supabase
+    await supabase
       .from('contact_submissions')
       .update({ 
         email_sent: false, 
+        email_sent_at: null,
         email_error: errorMessage
       })
       .eq('id', submissionId);
-
-    if (updateError) {
-      console.error("Failed to update email error status:", updateError);
-    }
   }
 }
 
