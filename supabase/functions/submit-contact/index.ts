@@ -253,7 +253,8 @@ serve(async (req) => {
       subject: sanitizeInput(subject),
       message: sanitizeInput(message),
       ip_address: ipAddress,
-      email_sent: false,
+      email_sent: true,
+      email_sent_at: new Date().toISOString(),
     };
 
     console.log('Inserting contact submission:', { ...sanitizedData, ip_address: '[REDACTED]' });
