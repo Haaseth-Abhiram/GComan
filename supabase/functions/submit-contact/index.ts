@@ -101,10 +101,9 @@ IP Address: ${ipAddress}
       `,
     });
 
-    await client.close();
     console.log("Email notification sent successfully to sales@gcoman.com");
 
-    // Update database to mark email as sent
+    // Update database IMMEDIATELY after successful send, before closing client
     const { error: updateError } = await supabase
       .from('contact_submissions')
       .update({ 
@@ -118,6 +117,13 @@ IP Address: ${ipAddress}
       console.error("Failed to update email status:", updateError);
     } else {
       console.log("Email status updated successfully for submission:", submissionId);
+    }
+
+    // Close SMTP client after DB update (non-blocking, don't let it block response)
+    try {
+      await client.close();
+    } catch (closeErr) {
+      console.warn("SMTP client close warning (email already sent):", closeErr);
     }
   } catch (emailError: unknown) {
     console.error("Failed to send email notification:", emailError);
