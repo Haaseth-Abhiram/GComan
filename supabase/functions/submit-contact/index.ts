@@ -8,12 +8,16 @@ const ALLOWED_ORIGINS = [
   'https://www.gcoman.com',
   'https://gcoman.com',
   'https://gcoman.lovable.app',
+  'https://global-chemicals-llc.lovable.app',
   'https://88275aec-3e28-4007-bd65-43d79fa41e87.lovableproject.com',
 ];
 
 function getCorsOrigin(req: Request): string {
   const origin = req.headers.get('Origin') || '';
-  return ALLOWED_ORIGINS.includes(origin) ? origin : 'https://www.gcoman.com';
+  if (ALLOWED_ORIGINS.includes(origin)) return origin;
+  // Allow all lovable.app subdomains (preview URLs)
+  if (origin.endsWith('.lovable.app')) return origin;
+  return 'https://www.gcoman.com';
 }
 
 function getCorsHeaders(req: Request) {
@@ -259,8 +263,11 @@ serve(async (req) => {
 
     console.log('Contact submission successful:', data.id);
 
-    // Send email notification and wait for completion so DB status gets updated
-    await sendEmailNotification(supabase, data.id, sanitizedData, ipAddress);
+    // Fire-and-forget: send email in background so the response returns immediately
+    // This prevents SMTP TLS handshake from causing CPU timeout before the client gets a response
+    sendEmailNotification(supabase, data.id, sanitizedData, ipAddress).catch(
+      (e) => console.error('Background email error:', e)
+    );
 
     return new Response(
       JSON.stringify({ 
