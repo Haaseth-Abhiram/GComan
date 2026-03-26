@@ -263,8 +263,11 @@ serve(async (req) => {
 
     console.log('Contact submission successful:', data.id);
 
-    // Send email notification and wait for completion so DB status gets updated
-    await sendEmailNotification(supabase, data.id, sanitizedData, ipAddress);
+    // Fire-and-forget: send email in background so the response returns immediately
+    // This prevents SMTP TLS handshake from causing CPU timeout before the client gets a response
+    sendEmailNotification(supabase, data.id, sanitizedData, ipAddress).catch(
+      (e) => console.error('Background email error:', e)
+    );
 
     return new Response(
       JSON.stringify({ 
