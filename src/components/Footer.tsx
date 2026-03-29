@@ -18,7 +18,7 @@ const Footer = () => {
   const socialLinks = [
     { icon: Facebook, href: 'https://www.facebook.com/people/Global-Chemicals-LLC/61552652407210/', label: 'Facebook' },
     { icon: Twitter, href: 'https://x.com/LlcChemica92705', label: 'Twitter' },
-    { icon: Linkedin, href: 'https://www.linkedin.com/company/global-chemicals-llc/', label: 'LinkedIn' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/global-chemicalls-llc/', label: 'LinkedIn' },
     { icon: Instagram, href: 'https://www.instagram.com/globalchemicalsllc/?next=%2F', label: 'Instagram' },
     { icon: Youtube, href: 'https://www.youtube.com/@GlobalChemicalsLLC', label: 'YouTube' },
   ];
