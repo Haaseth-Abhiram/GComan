@@ -239,6 +239,17 @@ const Footer = () => {
               </svg>
               {t('footer.whatsappCta')}
             </a>
+
+            {/* Google Reviews CTA */}
+            <a
+              href="https://g.page/r/CWLBtrrkhuOqEBM/review"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 mt-3 px-4 py-2 bg-white/10 hover:bg-white/20 text-white text-sm font-medium rounded-lg transition-colors border border-white/20"
+            >
+              <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
+              Leave us a Google Review
+            </a>
           </div>
         </div>
 
