@@ -471,7 +471,7 @@ const Contact = () => {
             <h2 className="text-2xl font-bold text-center mb-6">Our Location</h2>
             <div className="rounded-xl overflow-hidden border shadow-lg" style={{ height: '400px' }}>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.5!2d58.4!3d23.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sGlobal+Chemicals+LLC!5e0!3m2!1sen!2som!4v1709000000000!5m2!1sen!2som"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.5!2d58.4!3d23.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa53a86e4e9b6c162%3A0xa53a86e4e9b6c162!2sGlobal%20Chemicals%20LLC!5e0!3m2!1sen!2som!4v1709000000000!5m2!1sen!2som"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -480,6 +480,17 @@ const Contact = () => {
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Global Chemicals LLC Office Location - Ghala, Muscat, Oman"
               />
+              <div className="mt-4 text-center">
+                <a
+                  href="https://www.google.com/maps/place/Global+Chemicals+LLC/data=!4m2!3m1!1s0x0:0xa53a86e4e9b6c162"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors"
+                >
+                  <MapPin className="w-4 h-4" />
+                  Get Directions on Google Maps
+                </a>
+              </div>
             </div>
           </div>
         </div>
