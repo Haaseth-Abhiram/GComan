@@ -482,7 +482,7 @@ const Contact = () => {
               />
               <div className="mt-4 text-center">
                 <a
-                  href="https://www.google.com/maps/place/Global+Chemicals+LLC/data=!4m2!3m1!1s0x0:0xa53a86e4e9b6c162"
+                  href="https://www.google.com/maps/search/?api=1&query=Global+Chemicals+LLC+Ghala+Muscat+Oman"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors"
