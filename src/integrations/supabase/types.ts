@@ -206,6 +206,54 @@ export type Database = {
         }
         Relationships: []
       }
+      site_analytics_snapshots: {
+        Row: {
+          avg_bounce_rate: number
+          avg_pages_per_visit: number
+          country_breakdown: Json
+          created_at: string
+          daily_data: Json
+          device_breakdown: Json
+          id: string
+          period_end: string
+          period_start: string
+          top_pages: Json
+          total_pageviews: number
+          total_visitors: number
+          traffic_sources: Json
+        }
+        Insert: {
+          avg_bounce_rate?: number
+          avg_pages_per_visit?: number
+          country_breakdown?: Json
+          created_at?: string
+          daily_data?: Json
+          device_breakdown?: Json
+          id?: string
+          period_end: string
+          period_start: string
+          top_pages?: Json
+          total_pageviews?: number
+          total_visitors?: number
+          traffic_sources?: Json
+        }
+        Update: {
+          avg_bounce_rate?: number
+          avg_pages_per_visit?: number
+          country_breakdown?: Json
+          created_at?: string
+          daily_data?: Json
+          device_breakdown?: Json
+          id?: string
+          period_end?: string
+          period_start?: string
+          top_pages?: Json
+          total_pageviews?: number
+          total_visitors?: number
+          traffic_sources?: Json
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           created_at: string | null
