@@ -396,7 +396,7 @@ const AdminOverview = () => {
                   <Activity className="h-5 w-5 text-primary" />
                   Website Traffic
                 </CardTitle>
-                <CardDescription>Daily visitors and pageviews (Last 12 days)</CardDescription>
+                <CardDescription>Daily visitors and pageviews (Last 30 days)</CardDescription>
               </div>
             </div>
           </CardHeader>
