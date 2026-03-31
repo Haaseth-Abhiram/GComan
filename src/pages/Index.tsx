@@ -39,7 +39,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Chemical Suppliers in Oman & GCC | Global Chemicals LLC | gcoman.com"
+        title="Chemical Suppliers in Oman & GCC | Global Chemicals LLC"
         description="Global Chemicals LLC — Leading chemical supplier in Oman exporting to UAE, Saudi Arabia, Qatar, Kuwait & Bahrain. Industrial, water treatment & oilfield chemicals. ISO 9001 certified. Get a quote."
         keywords="chemical suppliers Oman GCC, chemical company oman UAE, industrial chemicals muscat dubai, chemical distributor GCC, chemical supplier UAE Saudi Arabia Qatar, water treatment chemicals GCC, PAC Oman UAE, caustic soda GCC, lubricants Middle East, laboratory chemicals GCC, Shell lubricants UAE, calcium hypochlorite GCC, agricultural chemicals oman, chemical exporter Oman"
         ogTitle="Chemical Suppliers in Oman & GCC | Global Chemicals LLC"

@@ -188,6 +188,48 @@ export const blogArticles: BlogArticle[] = [
   }
 ];
 
+  {
+    id: 10,
+    title: "Caustic Soda (Sodium Hydroxide) Supplier in Oman: Grades, Handling & Pricing Guide",
+    excerpt: "Complete guide to sourcing caustic soda (NaOH) in Oman — flakes, pearls, and liquid grades, storage safety in hot climates, applications in water treatment and oil & gas, and how to get competitive bulk pricing from a Muscat-based supplier.",
+    content: [
+      "Caustic soda — sodium hydroxide (NaOH) — is one of the highest-volume industrial chemicals in Oman, used across water treatment, oil & gas, chemical manufacturing, food processing, and soap production. Understanding the available grades and specifications is essential for procurement teams across Muscat, Sohar, Salalah, and Duqm.",
+      "**Caustic Soda Grades in Oman:**\n\n• **Caustic Soda Flakes (98–99% NaOH)** — White solid, dissolves readily, suitable for batch operations and smaller facilities. Most common grade for industrial users.\n• **Caustic Soda Pearls (98–99% NaOH)** — Lower dust generation than flakes, preferred where dust inhalation is a concern (food processing, pharmaceuticals).\n• **Caustic Soda Liquid (45–50% NaOH)** — Most convenient for continuous dosing systems. Pumped directly via chemical dosing equipment. Standard for water treatment plants.\n• **Food-Grade NaOH (E524)** — Tighter heavy metal limits (Pb, Hg, As). Required for food, beverage, and pharmaceutical applications.",
+      "**Main Applications in Oman:**\n\n• **Water Treatment:** pH correction of RO permeate (desalinated water is typically pH 6.5–7.0; caustic raises it to 7.5–8.0 for corrosion protection in distribution networks). Also used for membrane cleaning in RO plants.\n• **Oil & Gas:** Produced water pH adjustment, desalting at refinery crude units, scale and corrosion control.\n• **Chemical Manufacturing:** Feedstock for sodium hypochlorite production, sodium phosphates, and various cleaning products.\n• **Sohar Aluminium:** Large-scale Bayer Process use for bauxite refining to alumina.",
+      "**Storage Requirements in Oman's Climate:**\n\n• Store liquid caustic (50%) above 12°C — it freezes below this temperature, requiring insulated or heated storage in cooler interior locations.\n• Store in HDPE or mild steel tanks only — never aluminium, zinc, or tin (NaOH dissolves these metals, generating hydrogen gas).\n• Protect from CO2 absorption by keeping containers sealed — forms sodium carbonate if exposed to air.\n• In summer, shade liquid storage tanks to prevent thermal expansion and pressure buildup.\n• Flakes and pearls are hygroscopic — store in sealed bags in a dry area and use within 12 months.",
+      "**Safety Handling (Corrosive — GHS Category 1):**\n\nMandatory PPE: neoprene or butyl rubber gloves (nitrile is insufficient for concentrated NaOH), full-face shield, chemical-resistant apron, and safety boots. Emergency eyewash and safety shower must be within 10 seconds of work area. SDS must be accessible within 30 seconds.",
+      "Global Chemicals LLC supplies caustic soda flakes, pearls, and liquid solution (45–50%) to industrial customers across Oman with same-day or next-day delivery in Muscat. We also export to UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain with full documentation (CoA, SDS, Certificate of Origin). Contact us at info@gcoman.com or +968-93754388 for pricing and availability."
+    ],
+    category: "Technical Guides",
+    date: "2026-03-15",
+    author: "Global Chemicals Technical Team",
+    readTime: "8 min read",
+    image: "/images/blog/caustic-soda-oman.jpg",
+    featured: false,
+    relatedProducts: ["Caustic Soda Flakes", "Caustic Soda Liquid", "Sodium Hydroxide", "NaOH"]
+  },
+  {
+    id: 11,
+    title: "PAC (Poly Aluminium Chloride) in Oman: Liquid vs Powder, Dosing & Supplier Guide",
+    excerpt: "Everything you need to know about sourcing PAC in Oman — basicity specifications, liquid vs powder grades, optimal dosing rates for Muscat water conditions, and why PAC outperforms alum for Oman's water treatment applications.",
+    content: [
+      "Poly Aluminium Chloride (PAC, CAS 1327-41-9) is the dominant coagulant used in water treatment across Oman — from municipal treatment plants and desalination facilities to industrial effluent systems, swimming pools, and hotel water treatment. If you are procuring PAC for a facility in Muscat, Sohar, Salalah, or Duqm, this guide covers everything you need to specify the right product and get optimal treatment performance.",
+      "**Understanding PAC Grades:**\n\n• **Liquid PAC (10–12% Al2O3)** — Standard for dosing pump systems. Supplied in 25L jerricans, 200L drums, or 1,000L IBCs. Most cost-effective for high-volume continuous dosing.\n• **Powder PAC (28–31% Al2O3)** — Used where liquid delivery is impractical or storage space is limited. Requires dissolution before dosing.\n• **High Basicity PAC (70–83%)** — Forms floc faster and works better at lower turbidity. Optimal for Oman's desalinated water supply (low turbidity, near-neutral pH 7.5–8.5).\n• **Low Basicity PAC (10–40%)** — More acidic; better for high-organic-content water (coloured surface water).",
+      "**PAC vs Alum for Oman Water Conditions:**\n\nFor most Oman applications, PAC outperforms traditional aluminium sulphate (alum):\n\n| Factor | PAC | Alum |\n|--------|-----|------|\n| Effective pH range | 5.5–9.0 | 6.5–7.5 |\n| Sludge volume | 20–40% less | Higher |\n| Performance at high pH | Excellent | Poor above 7.5 |\n| Temperature sensitivity | Low | High |\n| Reaction speed | Fast | Slower |\n\nOman's desalinated supply (pH 7.5–8.5) is outside alum's effective range — PAC is the correct choice.",
+      "**Typical Dosing Rates for Oman:**\n\n• Muscat desalinated supply (low turbidity): **5–15 mg/L** liquid PAC as product\n• Groundwater sources (up to 200 NTU turbidity): **20–50 mg/L**\n• Swimming pool water polishing: **5–10 mg/L**\n• Industrial effluent (SS > 500 mg/L): **50–200 mg/L** plus polymer flocculant\n\nAlways confirm dose rates with a jar test using your actual source water. Target residual aluminium < 0.2 mg/L (WHO drinking water guideline).",
+      "**Storage in Oman's Climate:**\n\nLiquid PAC (pH 3.5–5.0, corrosive) must be stored in HDPE or FRP tanks — never plain mild steel or concrete. Storage above 40°C is acceptable short-term, but avoid prolonged exposure above 50°C. Keep containers sealed to prevent CO2 absorption. Powder PAC is hygroscopic — store in sealed bags in a cool, dry warehouse and use within 12 months of manufacture date.",
+      "Global Chemicals LLC is a major PAC supplier in Oman, stocking both liquid PAC (10–12% Al2O3) and powder PAC (28–31% Al2O3) at our Muscat warehouse for same-day or next-day delivery. We supply to all Oman regions and export to all GCC countries with full documentation. Contact us at info@gcoman.com or +968-93754388 for competitive bulk pricing."
+    ],
+    category: "Technical Guides",
+    date: "2026-03-20",
+    author: "Global Chemicals Technical Team",
+    readTime: "9 min read",
+    image: "/images/blog/pac-oman.jpg",
+    featured: false,
+    relatedProducts: ["Poly Aluminium Chloride (PAC)", "PAC Liquid", "PAC Powder", "Coagulants"]
+  }
+];
+
 export const articleCategories = [
   "All",
   "Industry News",

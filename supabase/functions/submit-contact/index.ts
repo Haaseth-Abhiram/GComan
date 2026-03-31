@@ -263,10 +263,11 @@ serve(async (req) => {
 
     console.log('Contact submission successful:', data.id);
 
-    // Fire-and-forget: send email in background so the response returns immediately
-    // This prevents SMTP TLS handshake from causing CPU timeout before the client gets a response
+    // Fire email notification in the background — do NOT await it.
+    // Awaiting it caused SMTP timeouts to propagate as a failed response even
+    // though the DB insert had already succeeded and the email was delivered.
     sendEmailNotification(supabase, data.id, sanitizedData, ipAddress).catch(
-      (e) => console.error('Background email error:', e)
+      (err) => console.error('Background email notification error:', err)
     );
 
     return new Response(

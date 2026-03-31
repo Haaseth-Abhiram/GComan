@@ -77,11 +77,11 @@ const ChemicalSuppliersOman = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Chemical Suppliers in Oman | Global Chemicals LLC"
-        description="Global Chemicals LLC — Leading chemical suppliers in Oman. ISO 9001 certified. Industrial, agricultural, water treatment & construction chemicals. Serving Muscat, Sohar, Salalah, Duqm & GCC. Get a free quote."
-        keywords="chemical suppliers in oman, chemical company oman, industrial chemicals muscat, chemical distributor oman, chemical supplier GCC, oman chemical market, buy chemicals oman, water treatment chemicals oman, construction chemicals oman, oil gas chemicals oman, agricultural chemicals oman"
-        ogTitle="Chemical Suppliers in Oman | Global Chemicals LLC"
-        ogDescription="Leading chemical suppliers in Oman. ISO 9001 certified. Industrial, agricultural, water treatment & construction chemicals across Oman & GCC."
+        title="Chemical Supplier in Muscat, Oman | Global Chemicals LLC"
+        description="Global Chemicals LLC — Leading chemical supplier in Muscat, Oman. ISO 9001 & JSRS certified. Water treatment, industrial, oilfield & laboratory chemicals. Same-day delivery in Muscat. Get a free quote."
+        keywords="chemical supplier muscat oman, chemical suppliers in oman, chemical company muscat oman, industrial chemicals muscat, chemical distributor oman, water treatment chemicals muscat oman, caustic soda oman, PAC supplier muscat, oil gas chemicals oman, laboratory chemicals muscat, chemical supplier GCC"
+        ogTitle="Chemical Supplier in Muscat, Oman | Global Chemicals LLC"
+        ogDescription="Leading chemical supplier in Muscat, Oman. ISO 9001 & JSRS certified. Water treatment, industrial, oilfield & laboratory chemicals. Same-day delivery in Muscat."
         ogUrl="https://gcoman.com/chemical-suppliers-oman"
         canonical="https://gcoman.com/chemical-suppliers-oman"
       />
@@ -98,10 +98,10 @@ const ChemicalSuppliersOman = () => {
             <div className="max-w-4xl mx-auto text-center">
               <Badge className="mb-4 text-sm px-4 py-1.5">ISO 9001:2015 Certified • JSRS Registered • ICV Compliant</Badge>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-                Leading Chemical Suppliers in Oman
+                Chemical Supplier in Muscat, Oman
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-                Global Chemicals LLC is Oman's trusted chemical supplier, providing industrial, agricultural, water treatment, construction, and oil & gas chemicals across Muscat, Sohar, Salalah, Duqm, and the GCC region. With 10+ years of expertise and 1,000+ products, we are your single-source chemical partner.
+                Global Chemicals LLC is Muscat's trusted chemical supplier, providing water treatment chemicals, industrial lubricants, oilfield chemicals, laboratory reagents, and specialty chemicals across Muscat, Sohar, Salalah, Duqm, and the wider GCC region. ISO 9001:2015 certified, JSRS registered, and ICV compliant — with same-day delivery in Muscat and 1,000+ products in stock.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="gap-2 text-lg px-8" onClick={() => trackSelectContent('cta_button', 'get_quote_landing')}>
@@ -187,6 +187,29 @@ const ChemicalSuppliersOman = () => {
                     <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                     <span className="text-foreground">{item}</span>
                   </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Delivery Locations */}
+        <section className="py-12 border-t">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 text-center">Chemical Delivery Across Oman</h2>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                {[
+                  { city: 'Muscat', path: '/chemicals/muscat', note: 'Same-day delivery' },
+                  { city: 'Sohar', path: '/chemicals/sohar', note: '1-2 day delivery' },
+                  { city: 'Salalah', path: '/chemicals/salalah', note: '2-3 day delivery' },
+                  { city: 'Duqm', path: '/chemicals/duqm', note: '2-3 day delivery' },
+                  { city: 'Rusayl', path: '/chemicals/rusayl', note: 'Same-day delivery' },
+                ].map((loc) => (
+                  <Link key={loc.city} to={loc.path} className="p-4 border rounded-lg text-center hover:border-primary hover:shadow-sm transition-all group">
+                    <p className="font-semibold text-foreground group-hover:text-primary">{loc.city}</p>
+                    <p className="text-xs text-muted-foreground mt-1">{loc.note}</p>
+                  </Link>
                 ))}
               </div>
             </div>

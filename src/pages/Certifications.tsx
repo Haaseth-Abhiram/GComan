@@ -4,13 +4,40 @@ import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import { Shield, Award, CheckCircle2, FileCheck, Globe, Users, Leaf, TrendingUp } from 'lucide-react';
 import { SEO } from '@/components/SEO';
-import { BreadcrumbStructuredData } from '@/components/StructuredData';
+import { BreadcrumbStructuredData, FAQStructuredData } from '@/components/StructuredData';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
 const breadcrumbItems = [
   { name: 'Home', url: 'https://gcoman.com/' },
   { name: 'Certifications', url: 'https://gcoman.com/certifications' }
+];
+
+const certificationFAQs = [
+  {
+    question: "Is Global Chemicals LLC JSRS registered for Oman oil & gas supply?",
+    answer: "Yes. Global Chemicals LLC is a registered supplier in the Joint Supplier Registration System (JSRS), Oman's mandatory pre-qualification system for oil and gas sector procurement. Our JSRS registration qualifies us to supply chemicals directly to PDO, OQ, Oxy, Shell, BP, and their approved contractors operating in Oman."
+  },
+  {
+    question: "What ISO certification does Global Chemicals LLC hold?",
+    answer: "Global Chemicals LLC holds ISO 9001:2015 certification for Quality Management Systems, certified since 2020. This international standard confirms that our chemical supply processes, documentation, and customer service meet globally recognised quality benchmarks. Copies of our ISO certificate are available on request."
+  },
+  {
+    question: "What is ICV certification and does Global Chemicals LLC have it?",
+    answer: "ICV (In-Country Value) is Oman's national economic policy requiring oil & gas suppliers to demonstrate contribution to the local economy through employment, training, and local procurement. Global Chemicals LLC is ICV certified (since 2021), certified by the Ministry of Commerce & Industry. Our ICV score confirms compliance with Omanization targets and local spending commitments required for government and energy sector contracts."
+  },
+  {
+    question: "Can Global Chemicals LLC supply chemicals to PDO-approved projects?",
+    answer: "Yes. As a JSRS-registered, ISO 9001:2015 certified, and ICV-compliant supplier, Global Chemicals LLC is pre-qualified to supply chemicals to PDO (Petroleum Development Oman) and its approved contractors. We regularly supply oilfield chemicals, water treatment chemicals, and specialty products to PDO project sites across South Oman, including Marmul, Nimr, and Qarn Alam."
+  },
+  {
+    question: "Does Global Chemicals LLC provide Safety Data Sheets (SDS) with all products?",
+    answer: "Yes. All products supplied by Global Chemicals LLC are accompanied by current Safety Data Sheets (SDS/MSDS) compliant with the GHS (Globally Harmonised System) format. SDS documents are available in English and, where available, Arabic. We also provide Certificates of Analysis (CoA) and Technical Data Sheets (TDS) on request for all products."
+  },
+  {
+    question: "Is Global Chemicals LLC compliant with Oman environmental regulations?",
+    answer: "Yes. Global Chemicals LLC operates in full compliance with Oman's Environmental Protection Law (Royal Decree 114/2001 and subsequent amendments) and follows international environmental standards for chemical storage, handling, transportation, and waste disposal. We hold environmental compliance certification from the Environment Authority of the Sultanate of Oman."
+  }
 ];
 
 const Certifications = () => {
@@ -200,6 +227,7 @@ const Certifications = () => {
         canonical="https://gcoman.com/certifications"
       />
       <BreadcrumbStructuredData items={breadcrumbItems} />
+      <FAQStructuredData faqs={certificationFAQs} />
       <Navigation />
       <WhatsAppButton />
 

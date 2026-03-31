@@ -3,6 +3,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import { SEO } from '@/components/SEO';
+import { ArticleStructuredData, BreadcrumbStructuredData } from '@/components/StructuredData';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Calendar, Clock, User, ArrowLeft, Tag } from 'lucide-react';
@@ -54,6 +55,20 @@ const BlogPost = () => {
         articleSection={post.category}
         articleTags={post.tags}
       />
+      <ArticleStructuredData
+        title={post.title}
+        description={post.excerpt}
+        url={canonicalUrl}
+        author={post.author}
+        publishedDate={post.date}
+        modifiedDate={post.date}
+        category={post.category}
+      />
+      <BreadcrumbStructuredData items={[
+        { name: 'Home', url: 'https://gcoman.com/' },
+        { name: 'Blog', url: 'https://gcoman.com/blog' },
+        { name: post.title, url: canonicalUrl },
+      ]} />
       <Navigation />
       <WhatsAppButton />
 

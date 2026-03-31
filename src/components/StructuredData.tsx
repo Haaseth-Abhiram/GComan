@@ -28,7 +28,7 @@ export const ProductStructuredData = ({ product, url }: ProductStructuredDataPro
     "name": product.title,
     "description": product.description,
     "category": product.category,
-    "image": product.image || "https://gcoman.com/og-image.jpg",
+    "image": product.image || "https://storage.googleapis.com/gpt-engineer-file-uploads/KCdCgzQqlrUlZx0GJf8ZTPlKH1p2/social-images/social-1761453031792-resize-17607541312075170240GlobalChemicalsLLCLogoPNG.png",
     ...(url && { "url": url }),
     "brand": {
       "@type": "Brand",
@@ -142,7 +142,7 @@ export const ArticleStructuredData = ({
     "headline": title,
     "description": description,
     "url": url,
-    "image": image || "https://gcoman.com/og-image.jpg",
+    "image": image || "https://storage.googleapis.com/gpt-engineer-file-uploads/KCdCgzQqlrUlZx0GJf8ZTPlKH1p2/social-images/social-1761453031792-resize-17607541312075170240GlobalChemicalsLLCLogoPNG.png",
     "author": {
       "@type": "Person",
       "name": author
@@ -497,7 +497,7 @@ export const LocalBusinessStructuredData = () => {
     "telephone": "+968-93754388",
     "email": "sales@gcoman.com",
     "logo": "https://gcoman.com/logo.png",
-    "image": "https://gcoman.com/og-image.jpg",
+    "image": "https://storage.googleapis.com/gpt-engineer-file-uploads/KCdCgzQqlrUlZx0GJf8ZTPlKH1p2/social-images/social-1761453031792-resize-17607541312075170240GlobalChemicalsLLCLogoPNG.png",
     "priceRange": "$$",
     "currenciesAccepted": "OMR, USD, AED, SAR, QAR, KWD, BHD",
     "paymentAccepted": ["Cash", "Bank Transfer", "Credit Card"],
