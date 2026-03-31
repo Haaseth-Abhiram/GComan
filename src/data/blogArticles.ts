@@ -185,9 +185,7 @@ export const blogArticles: BlogArticle[] = [
     image: "/images/blog/corrosion-inhibitors.jpg",
     featured: false,
     relatedProducts: ["Corrosion Inhibitors", "H2S Scavengers", "Scale Inhibitors", "Biocides"]
-  }
-];
-
+  },
   {
     id: 10,
     title: "Caustic Soda (Sodium Hydroxide) Supplier in Oman: Grades, Handling & Pricing Guide",
