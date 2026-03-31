@@ -121,29 +121,30 @@ const AdminOverview = () => {
         categoryData,
       });
 
-      // Real analytics data from Lovable (Nov 1 - Dec 6, 2025)
-      const dailyData: DailyData[] = [
-        { date: '2025-11-25', visitors: 27, pageviews: 78, bounceRate: 67 },
-        { date: '2025-11-26', visitors: 26, pageviews: 70, bounceRate: 58 },
-        { date: '2025-11-27', visitors: 17, pageviews: 93, bounceRate: 65 },
-        { date: '2025-11-28', visitors: 32, pageviews: 58, bounceRate: 81 },
-        { date: '2025-11-29', visitors: 19, pageviews: 40, bounceRate: 68 },
-        { date: '2025-11-30', visitors: 22, pageviews: 51, bounceRate: 86 },
-        { date: '2025-12-01', visitors: 31, pageviews: 62, bounceRate: 58 },
-        { date: '2025-12-02', visitors: 40, pageviews: 93, bounceRate: 55 },
-        { date: '2025-12-03', visitors: 52, pageviews: 131, bounceRate: 37 },
-        { date: '2025-12-04', visitors: 35, pageviews: 58, bounceRate: 63 },
-        { date: '2025-12-05', visitors: 36, pageviews: 103, bounceRate: 50 },
-        { date: '2025-12-06', visitors: 10, pageviews: 44, bounceRate: 50 },
-      ];
+      // Fetch live analytics from database
+      const { data: analyticsSnapshot } = await supabase
+        .from('site_analytics_snapshots')
+        .select('*')
+        .order('created_at', { ascending: false })
+        .limit(1)
+        .single();
 
-      setAnalytics({
-        totalVisitors: 1113,
-        totalPageviews: 2517,
-        avgBounceRate: 61,
-        avgPagesPerVisit: 2.26,
-        dailyData,
-      });
+      if (analyticsSnapshot) {
+        const dailyData: DailyData[] = (analyticsSnapshot.daily_data as any[]).map((d: any) => ({
+          date: d.date,
+          visitors: d.visitors,
+          pageviews: d.pageviews,
+          bounceRate: d.bounceRate,
+        }));
+
+        setAnalytics({
+          totalVisitors: analyticsSnapshot.total_visitors,
+          totalPageviews: analyticsSnapshot.total_pageviews,
+          avgBounceRate: Number(analyticsSnapshot.avg_bounce_rate),
+          avgPagesPerVisit: Number(analyticsSnapshot.avg_pages_per_visit),
+          dailyData,
+        });
+      }
 
       setLastUpdated(new Date());
     } catch (error) {
