@@ -60,10 +60,10 @@ const AdminOverview = () => {
   });
   
   const [analytics, setAnalytics] = useState<AnalyticsData>({
-    totalVisitors: 1113,
-    totalPageviews: 2517,
-    avgBounceRate: 61,
-    avgPagesPerVisit: 2.26,
+    totalVisitors: 0,
+    totalPageviews: 0,
+    avgBounceRate: 0,
+    avgPagesPerVisit: 0,
     dailyData: [],
   });
   
