@@ -108,7 +108,7 @@ IP Address: ${ipAddress}
     console.log("Email notification sent successfully to sales@gcoman.com");
 
     // Don't await close - it can hang and cause CPU timeout
-    client.close().catch((e: unknown) => console.warn("SMTP close warning:", e));
+    try { await client.close(); } catch (e) { console.warn("SMTP close warning:", e); }
   } catch (emailError: unknown) {
     console.error("Failed to send email notification:", emailError);
     
