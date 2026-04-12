@@ -131,6 +131,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://gcoman.com/blog/chemical-exporter-oman-uae-dubai</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gcoman.com/blog/chemical-exporter-oman-saudi-arabia-qatar-kuwait</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://gcoman.com/certifications</loc>
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
@@ -176,7 +188,7 @@
   <!-- GCC Export / Middle East Landing Pages -->
   <url>
     <loc>https://gcoman.com/chemical-suppliers-middle-east</loc>
-    <lastmod>2026-03-24</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>

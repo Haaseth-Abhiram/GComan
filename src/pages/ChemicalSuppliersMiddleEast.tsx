@@ -10,7 +10,7 @@ import { Badge } from '@/components/ui/badge';
 import { trackSelectContent } from '@/components/GoogleAnalytics';
 import {
   Droplets, Factory, Leaf, HardHat, Fuel, CheckCircle2, Phone, Mail,
-  ArrowRight, Shield, Award, Globe2, Users, ChevronDown, MapPin
+  ArrowRight, Award, Globe2, Users, ChevronDown, MapPin
 } from 'lucide-react';
 
 const faqs = [
@@ -122,11 +122,11 @@ const ChemicalSuppliersMiddleEast = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Chemical Suppliers in Middle East | Global Chemicals LLC"
-        description="Global Chemicals LLC — Leading chemical suppliers serving Oman, UAE, Saudi Arabia, Qatar, Kuwait & Bahrain. ISO 9001 certified. Water treatment, industrial, oilfield & lab chemicals. Get a free GCC export quote."
-        keywords="chemical suppliers Middle East, chemical supplier UAE, chemical supplier Saudi Arabia, chemical supplier Qatar, chemical supplier Kuwait, chemical supplier Bahrain, GCC chemical distributor, chemical export Oman, industrial chemicals Middle East, water treatment chemicals GCC, oilfield chemicals Middle East, laboratory chemicals GCC, chemical company Oman GCC"
-        ogTitle="Chemical Suppliers in Middle East | Global Chemicals LLC"
-        ogDescription="Leading chemical suppliers serving Oman, UAE, Saudi Arabia, Qatar, Kuwait & Bahrain. ISO 9001 certified. Industrial, water treatment & oilfield chemicals across the GCC."
+        title="Chemical Exporter from Oman to UAE, Saudi Arabia & GCC | Global Chemicals LLC"
+        description="Global Chemicals LLC — ISO 9001 certified chemical exporter from Oman supplying UAE (Dubai, Abu Dhabi), Saudi Arabia, Qatar, Kuwait & Bahrain. Water treatment, industrial, oilfield & lab chemicals. Get a free GCC export quote."
+        keywords="chemical exporter Oman UAE, chemical supplier Oman to Dubai, chemical supplier Oman to Abu Dhabi, chemical exporter Oman Saudi Arabia, chemical supplier Oman Qatar, chemical supplier Oman Kuwait, chemical export from Oman GCC, Oman chemical company UAE, industrial chemicals export Oman, water treatment chemicals UAE from Oman, oilfield chemicals GCC export, chemical distributor Oman Middle East, chemical supplier Dubai from Oman, caustic soda exporter Oman UAE"
+        ogTitle="Chemical Exporter from Oman to UAE, Saudi Arabia & GCC | Global Chemicals LLC"
+        ogDescription="ISO 9001 certified chemical exporter from Oman supplying UAE (Dubai, Abu Dhabi), Saudi Arabia, Qatar, Kuwait & Bahrain. Industrial, water treatment & oilfield chemicals across the GCC."
         ogUrl="https://gcoman.com/chemical-suppliers-middle-east"
         canonical="https://gcoman.com/chemical-suppliers-middle-east"
       />
@@ -145,10 +145,10 @@ const ChemicalSuppliersMiddleEast = () => {
                 ISO 9001:2015 Certified • JSRS Registered • GCC Export Ready
               </Badge>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-                Chemical Suppliers in the Middle East
+                Chemical Exporter from Oman to UAE, Saudi Arabia & GCC
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-                Global Chemicals LLC is a trusted chemical supplier headquartered in Muscat, Oman, serving industries across the entire Middle East — UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, and beyond. With 10+ years of expertise, 1,000+ products, and ISO 9001 certification, we are your GCC chemical supply partner.
+                Global Chemicals LLC is a leading chemical exporter headquartered in Muscat, Oman, supplying industries across the entire GCC — UAE (Dubai, Abu Dhabi, Sharjah), Saudi Arabia, Qatar, Kuwait, and Bahrain. ISO 9001:2015 certified, JSRS registered, with 1,000+ products and full export documentation (CoA, SDS, Certificate of Origin) ready.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="gap-2 text-lg px-8" onClick={() => trackSelectContent('cta_button', 'get_quote_me_landing')}>

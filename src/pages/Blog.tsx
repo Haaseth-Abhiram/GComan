@@ -8,7 +8,7 @@ import { SEO } from '@/components/SEO';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Calendar, Clock, User, Tag, ArrowRight, TrendingUp, Beaker, Droplets, Factory, Leaf } from 'lucide-react';
+import { Calendar, Clock, User, ArrowRight, TrendingUp, Beaker, Droplets, Factory, Leaf, Globe2 } from 'lucide-react';
 
 export interface BlogPost {
   id: string;
@@ -446,6 +446,130 @@ Global Chemicals LLC is a major PAC supplier in Oman, stocking both liquid PAC (
     category: 'Water Treatment',
     tags: ['PAC', 'Poly Aluminium Chloride', 'Water Treatment', 'Coagulant', 'Oman', 'Muscat'],
     icon: Droplets,
+  },
+  {
+    id: 'chemical-exporter-oman-uae-dubai',
+    title: 'Exporting Chemicals from Oman to UAE (Dubai & Abu Dhabi): 2026 Supplier Guide',
+    excerpt: 'How Oman-based chemical exporters supply UAE industries in Dubai, Abu Dhabi, and Sharjah. Covers logistics, documentation, lead times, and why Oman is a trusted chemical source for UAE procurement teams.',
+    content: `The United Arab Emirates is one of the largest chemical import markets in the Middle East, with industrial demand driven by construction, oil & gas, water treatment, manufacturing, and hospitality sectors spread across Dubai, Abu Dhabi, Sharjah, and the other Emirates. Oman, sharing a border and a deeply integrated trade history with the UAE, is a natural and frequently used chemical supply source for UAE procurement teams — and yet many buyers in the UAE are unaware of the breadth of product and service capability available from established Omani chemical exporters.
+
+Why UAE Companies Source Chemicals from Oman
+
+There are several strong commercial reasons why UAE businesses — particularly in Abu Dhabi, Dubai, and Sharjah — prefer to source chemicals from Oman rather than importing directly from Europe, India, or China. First, the logistics are significantly faster. Road freight from Muscat to Dubai typically takes 4–6 hours for urgent loads, and regular scheduled trucking services make 1–3 business day delivery standard for most product categories. Second, the cost basis is often more competitive. Oman-based distributors buy in large regional volumes and can offer pricing that matches or beats importers shipping smaller quantities from origin. Third, documentation is aligned: Oman and UAE customs share GCC harmonised tariff codes, Certificate of Origin is straightforward under the GCC trade agreement, and MSDS/SDS documentation in English is standard.
+
+Key Chemicals Exported from Oman to UAE
+
+Global Chemicals LLC's most active UAE export product categories include:
+
+**Water Treatment Chemicals**: PAC (Poly Aluminium Chloride), caustic soda (sodium hydroxide), sodium hypochlorite, calcium hypochlorite, antiscalants, corrosion inhibitors, biocides, and coagulant aids. UAE desalination plants, cooling towers, and industrial water systems use the same chemicals as Oman — making Muscat-stocked products immediately deployable.
+
+**Industrial Lubricants**: Shell Rimula, Mobil Delvac, Castrol Optigear, and other branded lubricants are widely requested from UAE maintenance teams seeking competitive pricing for bulk quantities.
+
+**Oilfield and Process Chemicals**: Demulsifiers, H2S scavengers, scale inhibitors, wax inhibitors, and drilling chemicals for ADNOC contractors and other upstream operators in Abu Dhabi. Being JSRS-certified and ISO 9001 accredited means Global Chemicals LLC meets the supplier qualification requirements accepted across GCC national energy companies.
+
+**Laboratory Chemicals**: AR grade solvents, HPLC-grade reagents, buffer solutions, indicators, and specialty analytical chemicals for QC labs, research institutions, and universities in Dubai and Abu Dhabi.
+
+**Specialty Chemicals**: Swimming pool chemicals, food-grade chemicals, and cleaning compounds for the UAE's enormous hospitality sector.
+
+Logistics: Oman to UAE
+
+The primary route for chemical exports from Muscat to Dubai and Abu Dhabi is via the Al Hili / Hatta road crossing, one of the most active commercial freight routes in the GCC. This route is straightforward for non-hazardous and many classified hazardous chemicals, provided proper UN dangerous goods documentation, ADR labelling, and driver training certificates are in order.
+
+Typical lead times from Muscat warehouse dispatch to UAE customer delivery:
+- Dubai / Sharjah: 1–2 business days (road freight, standard)
+- Abu Dhabi: 1–2 business days
+- Al Ain: 1 business day (via Hatta crossing)
+- Fujairah / Ras Al Khaimah: 2–3 business days
+
+For time-critical requirements, air freight from Muscat International Airport to Dubai International Airport (DXB) or Dubai South (DWC) is available for smaller, high-value shipments.
+
+Documentation Required for UAE Import
+
+UAE customs require the following documentation for chemical imports from Oman:
+- Commercial invoice (in AED or USD)
+- Packing list
+- Certificate of Origin (Oman Chamber of Commerce certified, preferably UAE Embassy attested for first-time shipments)
+- Safety Data Sheet (SDS/MSDS) — English and Arabic preferred
+- Certificate of Analysis (CoA) for the specific batch
+- For restricted chemicals: UAE Ministry of Economy import permit
+
+Global Chemicals LLC prepares all standard export documentation as part of every shipment — no additional administrative burden on the UAE buyer.
+
+How to Get a Quote for UAE Supply
+
+UAE procurement teams can request a quote by emailing sales@gcoman.com with the chemical name (or CAS number), required quantity, delivery address in the UAE, and preferred payment terms. WhatsApp is also available for faster communication on +968-93754388. Our export team typically responds within 4–6 working hours with competitive pricing, lead times, and availability confirmation. Incoterms available: FOB (Muscat), DAP (your UAE premises), or CIF (UAE port).`,
+    author: 'Global Chemicals Export Team',
+    date: '2026-04-01',
+    readTime: '11 min read',
+    category: 'Industry Guide',
+    tags: ['Chemical Exporter', 'Oman to UAE', 'Dubai', 'Abu Dhabi', 'GCC Export', 'Chemical Supplier'],
+    icon: Globe2,
+  },
+  {
+    id: 'chemical-exporter-oman-saudi-arabia-qatar-kuwait',
+    title: 'Chemical Supply from Oman to Saudi Arabia, Qatar & Kuwait: Export Guide 2026',
+    excerpt: 'How Global Chemicals LLC exports chemicals from Muscat, Oman to Saudi Arabia (Riyadh, Dammam), Qatar (Doha, Ras Laffan), and Kuwait. Lead times, documentation, product availability and getting a quote.',
+    content: `Oman's strategic location at the southeastern tip of the Arabian Peninsula, combined with its deep integration into GCC trade frameworks, makes it an efficient and well-positioned source for chemical supply across the broader Gulf region. While UAE supply from Oman is the most common GCC export route, Global Chemicals LLC regularly exports chemicals to Saudi Arabia, Qatar, and Kuwait — serving procurement teams who value competitive Omani pricing, reliable supply chains, and the ability to consolidate multi-country GCC orders through a single supplier.
+
+Exporting Chemicals from Oman to Saudi Arabia
+
+Saudi Arabia is the largest chemical market in the Middle East, driven by the world's largest oil & gas infrastructure (Saudi Aramco), massive water desalination capacity, Vision 2030 industrial diversification initiatives, and one of the region's fastest-growing construction sectors. From our Muscat base, Global Chemicals LLC exports chemicals to Riyadh (central distribution), Jeddah (western region), Dammam and Al Khobar (Eastern Province, closest to Oman via GCC road network), Jubail Industrial City, and Yanbu Industrial City.
+
+Key products exported to Saudi Arabia include: water treatment chemicals (PAC, antiscalants, biocides) for Saudi Aramco facility contractors, industrial lubricants for maintenance operations, laboratory chemicals for QA/QC departments, and specialty oilfield chemicals for upstream operations and midstream processing.
+
+Logistics and lead times for Saudi Arabia:
+- Dammam / Al Khobar (Eastern Province): 2–3 business days via GCC road freight
+- Riyadh: 3–4 business days
+- Jeddah: 4–5 business days (or air freight for urgent requirements)
+
+Saudi customs require: commercial invoice, packing list, CoO (Saudi Chamber attestation for first shipment), SASO/SFDA compliance (for regulated chemical categories), SDS in Arabic, and MSDS. Global Chemicals LLC prepares all documentation and can advise on Saudi import permit requirements for specific product categories.
+
+Exporting Chemicals from Oman to Qatar
+
+Qatar's chemical demand is heavily concentrated around QatarEnergy (formerly Qatar Petroleum) operations in Ras Laffan Industrial City, the world's largest single LNG processing complex, plus growing construction and infrastructure demand in Doha driven by post-World Cup development. Oman and Qatar do not share a land border — GCC exports from Oman to Qatar move via road through Saudi Arabia, or by sea freight from Port of Sohar or Muscat (Port Sultan Qaboos) to Doha's Hamad Port.
+
+Products commonly exported to Qatar: oilfield production chemicals (for QatarEnergy contractors), water treatment chemicals for industrial cooling and process water systems, laboratory analytical chemicals for QatarEnergy QC labs, and industrial lubricants for maintenance and operational teams.
+
+Lead times for Qatar from Muscat:
+- Sea freight (Muscat / Sohar to Hamad Port, Doha): 3–5 business days
+- Road freight via Saudi Arabia: 4–6 business days
+- Air freight (urgent): 1–2 business days
+
+Exporting Chemicals from Oman to Kuwait
+
+Kuwait's chemical market is driven by Kuwait Oil Company (KOC) and Kuwait National Petroleum Company (KNPC) operations, extensive desalination infrastructure operated by the Ministry of Electricity and Water, and growing manufacturing and construction sectors. Supply from Oman to Kuwait moves by road through Saudi Arabia or by sea from Omani ports.
+
+Lead times for Kuwait from Muscat:
+- Sea freight (Muscat to Kuwait Shuaiba Port): 4–6 business days
+- Road freight via Saudi Arabia: 5–7 business days
+
+Key products for Kuwait: corrosion inhibitors and scale inhibitors for KOC facility contractors, water treatment chemicals for KNPC desalination operations, and laboratory chemicals for refinery QC laboratories.
+
+GCC Export Documentation — Single-Window Overview
+
+For all three markets (Saudi Arabia, Qatar, Kuwait), the core documentation package from Global Chemicals LLC includes:
+
+1. Commercial invoice with HS code classification
+2. Packing list with UN dangerous goods numbers (where applicable)
+3. Certificate of Origin — issued by Oman Chamber of Commerce and Industry, attested by destination country embassy as required
+4. Safety Data Sheet (SDS/MSDS) — English and Arabic
+5. Certificate of Analysis (CoA) — batch-specific from manufacturer
+6. Technical Data Sheet (TDS)
+7. Dangerous Goods Declaration (for classified chemicals shipped by road or sea)
+
+For regulated product categories (certain acids, biocides, agricultural chemicals), our export team guides customers through the destination country import permit process.
+
+Getting a Quote for GCC Export
+
+To request a chemical export quote for Saudi Arabia, Qatar, or Kuwait, email our export desk at sales@gcoman.com. Include: chemical name or CAS number, quantity (kg or litres), delivery city, and preferred incoterms. We respond within 24 hours with pricing, lead time, and documentation checklist. WhatsApp quotes are also available on +968-93754388 for faster communication.
+
+Global Chemicals LLC ships to all 6 GCC countries from our Muscat warehouse. We are ISO 9001:2015 certified, JSRS registered, and ICV compliant — giving our GCC customers confidence in quality, traceability, and supply continuity.`,
+    author: 'Global Chemicals Export Team',
+    date: '2026-04-05',
+    readTime: '12 min read',
+    category: 'Industry Guide',
+    tags: ['Chemical Exporter', 'Saudi Arabia', 'Qatar', 'Kuwait', 'GCC Export', 'Oman Chemical Supplier'],
+    icon: Globe2,
   },
 ];
 
