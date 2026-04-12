@@ -236,6 +236,30 @@ const ChemicalSuppliersOman = () => {
           </div>
         </section>
 
+        {/* Product-Specific Landing Pages */}
+        <section className="py-12 border-t">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-xl font-bold text-foreground mb-4">Product-Specific Chemical Guides in Oman</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                {[
+                  { label: 'Caustic Soda Supplier Oman', path: '/chemical-supplier/caustic-soda-oman', note: 'Flakes, Prills & Liquid NaOH' },
+                  { label: 'Chemical Suppliers Middle East', path: '/chemical-suppliers-middle-east', note: 'Export to UAE, KSA, Qatar & GCC' },
+                  { label: 'Water Treatment Chemicals', path: '/products/water-treatment', note: 'PAC, Hypochlorite, Antiscalants' },
+                  { label: 'Shell / Mobil / Castrol Lubricants', path: '/products/lubricants', note: 'Authorised Oman Distributor' },
+                  { label: 'Oilfield Chemicals — JSRS Certified', path: '/products/oilfield', note: 'PDO, OQ, OPAL Approved' },
+                  { label: 'Swimming Pool Chemicals Oman', path: '/products/swimming-pool', note: 'Muscat Hotel & Villa Pools' },
+                ].map((item) => (
+                  <Link key={item.path} to={item.path} className="p-4 border rounded-lg hover:border-primary hover:shadow-sm transition-all group">
+                    <p className="font-semibold text-foreground group-hover:text-primary text-sm">{item.label}</p>
+                    <p className="text-xs text-muted-foreground mt-1">{item.note}</p>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-16 md:py-20 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
           <div className="container mx-auto px-4">

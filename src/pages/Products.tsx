@@ -282,6 +282,68 @@ const Products = () => {
         </div>
       </section>
 
+      {/* Category Intro Block — unique content per category for SEO */}
+      {activeCategory !== 'all' && (() => {
+        const categoryIntros: Record<string, { heading: string; body: string }> = {
+          'water-treatment': {
+            heading: 'Water Treatment Chemicals Supplier in Oman & GCC',
+            body: 'Global Chemicals LLC supplies a comprehensive range of water treatment chemicals to municipal water utilities, industrial plants, hotels, and desalination facilities across Oman and the GCC. Our water treatment portfolio covers coagulants (PAC — Poly Aluminium Chloride, aluminium sulphate), disinfectants (calcium hypochlorite, sodium hypochlorite, chlorine tablets), pH adjustment chemicals (caustic soda flakes, soda ash, sulphuric acid), antiscalants for RO and desalination systems, corrosion inhibitors, biocides, antifoams, and flocculants. All products are supplied with GHS-compliant SDS and CoA. Same-day delivery in Muscat; next-day delivery to Sohar and Salalah. JSRS certified for supply to PDO and OQ water treatment operations.'
+          },
+          'lubricants': {
+            heading: 'Shell, Mobil, Castrol & GP Lubricants Supplier in Oman',
+            body: "Global Chemicals LLC is an authorised distributor of Shell, Mobil, Castrol, and GP (IPOL) lubricants in Muscat, Oman — stocking engine oils, hydraulic oils, gear oils, greases, compressor oils, and transmission fluids for automotive, industrial, and heavy-duty applications. All branded lubricants are 100% genuine, supplied with original Certificate of Analysis and GHS Safety Data Sheet. We serve oil & gas operators (PDO, OQ, Oman LNG), construction fleets, manufacturing plants, and logistics companies across Oman. Available in 1L, 20L, 208L drums, and IBC containers. Same-day delivery in Muscat."
+          },
+          'oilfield': {
+            heading: 'Oilfield & Refinery Chemicals Supplier — JSRS Certified Oman',
+            body: "Global Chemicals LLC is JSRS (Joint Supplier Registration System) certified, qualifying us to supply chemicals directly to Petroleum Development Oman (PDO), OQ, OPAL, Occidental (Oxy), and their approved contractors. Our oilfield chemicals range includes corrosion inhibitors, scale inhibitors, H2S scavengers, demulsifiers, wax inhibitors, biocides, drilling fluid additives (bentonite, CMC, barite), well stimulation chemicals, and production chemicals for Oman's upstream and midstream oil & gas sector. We supply field operations across South Oman (Marmul, Nimr, Qarn Alam), the Duqm Refinery zone, and Sohar Refinery. Rapid supply chain with emergency delivery capability."
+          },
+          'swimming-pool': {
+            heading: 'Swimming Pool Chemicals Supplier in Oman — Muscat & Nationwide',
+            body: "Global Chemicals LLC supplies swimming pool treatment chemicals across Oman, serving hotel pools, residential developments, water parks, school facilities, and public pools in Muscat, Sohar, Salalah, and Nizwa. Our pool chemicals range covers chlorine tablets (TCCA 90% — 200g and 500g), calcium hypochlorite granules, sodium hypochlorite 12–15%, algaecides (liquid and tablet), pH reducers (sodium bisulphate), pH raisers (soda ash), stabilisers (cyanuric acid), and complete pool starter kits. Oman's high UV and temperatures require frequent chemical dosing — our team provides free dosing guidance and technical support for all pool types."
+          },
+          'lab-chemicals': {
+            heading: 'Laboratory Chemicals & Reagents Supplier in Oman',
+            body: "Global Chemicals LLC supplies laboratory-grade chemicals, analytical reagents, and HPLC solvents to quality control laboratories, research facilities, university laboratories, and testing centres across Oman. Our lab chemicals range covers analytical reagent (AR) grade acids (sulphuric, hydrochloric, nitric, acetic, phosphoric), AR grade bases (sodium hydroxide, potassium hydroxide), organic solvents (acetone, methanol, ethanol absolute, IPA, hexane, toluene, dichloromethane, chloroform), inorganic salts and standards, indicators, buffers, culture media (agar, glucose, peptone), and microbiological reagents. SDS and CoA supplied with every batch. Minimum order from 500ml/100g."
+          },
+          'soap-detergent': {
+            heading: 'Soap & Detergent Raw Materials Supplier in Oman & GCC',
+            body: "Global Chemicals LLC supplies soap and detergent manufacturing raw materials to producers across Oman, UAE, and the wider GCC region. Our soap and detergent chemicals portfolio includes caustic soda (NaOH) in flakes, prills, and liquid forms — the primary raw material for saponification; LABSA (Linear Alkylbenzene Sulphonic Acid) and SLES 70% (Sodium Laureth Sulphate) for surfactant-based formulations; soda ash dense and light (sodium carbonate) for detergency building; glycerine, EDTA, STPP (sodium tripolyphosphate), sodium metasilicate, and hydrogen peroxide in various concentrations. Bulk pricing available for regular manufacturers. Technical formulation support available on request."
+          },
+          'food-beverage': {
+            heading: 'Food-Grade Chemicals Supplier in Oman — HACCP & Halal Compatible',
+            body: "Global Chemicals LLC supplies food-grade (food contact quality) chemicals to food manufacturers, beverage producers, bakeries, dairy facilities, and food processing plants across Oman. Our food-grade chemicals meet international food safety standards including HACCP, EU/FCC food chemical standards, and are Halal-compatible. Products include food-grade caustic soda (E524), citric acid anhydrous and monohydrate (E330), ascorbic acid (E300 Vitamin C), sodium bicarbonate (E500), propylene glycol food grade (E1520), xanthan gum (E415), potassium sorbate (E202), sodium hypochlorite food grade for CIP cleaning, and ethanol 70% (food equipment sanitiser). CoA, food safety datasheet, and HACCP compliance documentation available."
+          },
+          'ro-chemicals': {
+            heading: 'RO Membrane Chemicals & Antiscalant Supplier in Oman',
+            body: "Global Chemicals LLC supplies reverse osmosis (RO) membrane chemicals to desalination plants, industrial RO systems, and commercial water treatment facilities across Oman. Oman has one of the highest per-capita RO infrastructure densities in the world — and the country's specific water chemistry (high TDS brackish groundwater, high-TDS seawater) creates significant membrane fouling and scaling challenges. Our RO chemical range includes antiscalants (specifically formulated for Oman's high-sulphate brackish water), membrane cleaners (alkaline and acidic grades for biofouling, carbonate, and silica removal), passivation agents (for new membrane commissioning), and descalants. Technical dosing programmes and RO system optimisation support available."
+          },
+          'corrosion-inhibitor': {
+            heading: 'Corrosion Inhibitors Supplier — Oman, UAE & GCC',
+            body: "Global Chemicals LLC supplies a comprehensive range of corrosion inhibitors for closed-loop cooling systems, boilers, chilled water systems, oilfield pipelines, and industrial process equipment across Oman and the GCC. Oman's high-temperature environment and often aggressive water chemistry (high chlorides, high TDS) accelerate metal corrosion in plant and infrastructure — making effective corrosion inhibitor programmes critical for asset protection and operational efficiency. Our range includes molybdate-based, phosphonate-based, and azole-based inhibitors for ferrous and non-ferrous metals, oxygen scavengers for boiler systems, pH boosters, and multi-metal corrosion inhibitors for mixed-metallurgy systems."
+          },
+          'tank-cleaners': {
+            heading: 'Marine & Industrial Tank Cleaners Supplier in Oman',
+            body: "Global Chemicals LLC supplies heavy-duty tank cleaning chemicals for vessel cargo holds, marine fuel tanks, industrial storage tanks, and process vessels across Oman's ports (Muscat, Sohar, Duqm, Salalah). Our tank cleaner range covers alkaline degreasers for petroleum and hydrocarbon residues, acid descalants for scale and rust removal, neutral cleaners for food-grade tanks and sensitive linings, sludge emulsifiers for crude oil tank bottoms, passivation liquids for stainless steel and carbon steel tanks, and environmental discharge-safe formulations meeting MARPOL requirements. Technical data sheets and application guidance available for all products."
+          },
+          'cooling-water': {
+            heading: 'Cooling Tower & Chilled Water Treatment Chemicals in Oman',
+            body: "Cooling towers and chilled water systems operating in Oman's extreme climate — ambient temperatures above 45°C, high evaporation rates, and varying water quality — require robust chemical treatment programmes to prevent scale, corrosion, and biological fouling (including Legionella). Global Chemicals LLC supplies a complete range of cooling water treatment chemicals: broad-spectrum biocides and algaecides, corrosion and scale inhibitors, antifouling agents, drift eliminators, and pH control chemicals. We serve district cooling plants, HVAC systems in hotels and malls, process cooling in manufacturing, and power plant cooling water systems across Oman."
+          },
+        };
+        const intro = categoryIntros[activeCategory];
+        if (!intro) return null;
+        return (
+          <section className="py-10 border-b bg-muted/20">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">{intro.heading}</h2>
+                <p className="text-muted-foreground leading-relaxed">{intro.body}</p>
+              </div>
+            </div>
+          </section>
+        );
+      })()}
+
       {/* Products Section with Sidebar */}
       <section className="py-16">
         <div className="container mx-auto px-4">

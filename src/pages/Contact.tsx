@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -59,6 +60,7 @@ const contactSchema = z.object({
 const Contact = () => {
   const { toast } = useToast();
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -118,21 +120,8 @@ const Contact = () => {
       // Track successful form submission
       trackFormSubmission('contact');
 
-      // Success
-      toast({
-        title: "Message sent successfully!",
-        description: result.message || "Our team will get back to you within 24 hours.",
-      });
-      
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        subject: '',
-        message: '',
-      });
+      // Success — redirect to /thank-you for conversion tracking
+      navigate('/thank-you');
       setIsSubmitting(false);
 
     } catch (error) {
