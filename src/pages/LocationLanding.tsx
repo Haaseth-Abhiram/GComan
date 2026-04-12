@@ -434,6 +434,190 @@ const locations: Record<string, LocationData> = {
     metaTitle: 'Chemical Supplier Bahrain | Industrial Chemicals Manama | Global Chemicals LLC',
     metaDescription: 'Chemical supplier exporting to Bahrain. Aluminium, refinery, water treatment chemicals to Manama & Hidd. ISO 9001 certified. ALBA & BAPCO contractor support. Get a quote.',
     metaKeywords: 'chemical supplier Bahrain, chemicals Manama, industrial chemicals Bahrain, water treatment chemicals Bahrain, ALBA chemical supplier, BAPCO chemicals, chemical exporter Oman Bahrain, Hidd industrial chemicals, Sitra chemicals'
+  },
+
+  // ── Additional UAE Cities ──────────────────────────────────────────────────
+
+  'fujairah': {
+    slug: 'fujairah',
+    city: 'Fujairah',
+    cityArabic: 'الفجيرة',
+    country: 'UAE',
+    region: 'Fujairah, United Arab Emirates',
+    description: 'Global Chemicals LLC is ideally positioned to supply Fujairah\'s oil bunkering, maritime, and industrial sectors. Fujairah is the UAE emirate that shares a direct land border with Oman — making Muscat-to-Fujairah road freight the shortest and fastest of all GCC export routes, with same-day delivery possible. We supply water treatment chemicals, maritime chemicals, industrial lubricants, and specialty chemicals to Port of Fujairah operators, oil storage terminals, FFZA companies, and construction projects throughout the emirate.',
+    industries: ['Oil Bunkering & Maritime', 'Oil Storage Terminals', 'Construction & Infrastructure', 'Fishing & Aquaculture', 'Manufacturing', 'Fujairah Free Zone (FFZA)', 'Agriculture'],
+    deliveryTime: '2–4 hours by road from Muscat — fastest of all GCC destinations',
+    keyClients: ['Port of Fujairah operators', 'ENOC oil storage terminals', 'FFZA (Fujairah Free Zone) companies', 'Construction project sites', 'Maritime service companies'],
+    highlights: [
+      'Fastest GCC delivery — Oman shares border with Fujairah',
+      'Same-day delivery possible for orders placed before noon',
+      'Oil bunkering & maritime chemical expertise',
+      'Full export documentation for UAE customs',
+      'Competitive pricing for Fujairah industry'
+    ],
+    faqs: [
+      {
+        question: 'How fast can Global Chemicals LLC deliver chemicals to Fujairah?',
+        answer: 'Fujairah shares a land border with Oman via the Dibba/Khatmat Malaha crossing. Road freight from our Muscat warehouse to Fujairah typically takes 2–4 hours — making same-day delivery possible for orders placed before midday. This is the fastest GCC export route we operate, shorter than any other UAE, Saudi, Qatar, Kuwait, or Bahrain delivery.'
+      },
+      {
+        question: 'Do you supply chemicals for oil bunkering operations at Port of Fujairah?',
+        answer: 'Yes. The Port of Fujairah is the world\'s 3rd largest bunkering hub after Rotterdam and Singapore. We supply chemicals for maritime and bunkering operations including water treatment chemicals, corrosion inhibitors, cleaning chemicals, and specialty marine chemicals. Contact our team at sales@gcoman.com for bunkering sector product availability and pricing.'
+      },
+      {
+        question: 'Can you supply chemicals to Fujairah Free Zone (FFZA) companies?',
+        answer: 'Yes, we export chemicals to FFZA-registered companies and the broader Fujairah industrial area. We provide complete UAE customs documentation: Certificate of Origin, Certificate of Analysis, SDS/MSDS, and commercial invoices. Our proximity means we can fulfil urgent orders the same day.'
+      }
+    ],
+    metaTitle: 'Chemical Supplier Fujairah UAE | Same-Day Delivery from Oman | Global Chemicals LLC',
+    metaDescription: 'Chemical supplier to Fujairah, UAE. Same-day delivery possible — Oman shares border with Fujairah. Oil bunkering, maritime & industrial chemicals. ISO 9001 certified. Get a quote.',
+    metaKeywords: 'chemical supplier Fujairah, chemicals Fujairah UAE, chemical exporter Oman Fujairah, oil bunkering chemicals Fujairah, maritime chemicals Fujairah, Fujairah Free Zone chemicals FFZA, industrial chemicals Fujairah, water treatment chemicals Fujairah, same day chemical delivery Fujairah from Oman'
+  },
+
+  'sharjah': {
+    slug: 'sharjah',
+    city: 'Sharjah',
+    cityArabic: 'الشارقة',
+    country: 'UAE',
+    region: 'Sharjah, United Arab Emirates',
+    description: 'Global Chemicals LLC exports industrial and specialty chemicals to Sharjah, UAE\'s third-largest emirate and one of the GCC\'s most significant industrial and free zone hubs. We serve Hamriyah Free Zone (HFZA), SAIF Zone (Sharjah Airport International Free Zone), Sharjah Industrial Area, and the emirate\'s diverse manufacturing and education sectors with water treatment chemicals, industrial lubricants, laboratory reagents, and specialty chemicals.',
+    industries: ['Manufacturing & Industry', 'Chemicals Trading (Hamriyah FZ)', 'Construction Materials', 'Food Processing', 'Logistics & Warehousing', 'Education & Research', 'Pharmaceuticals'],
+    deliveryTime: '3–5 business days to Sharjah (road freight)',
+    keyClients: ['Hamriyah Free Zone (HFZA) companies', 'SAIF Zone businesses', 'Sharjah Industrial Area manufacturers', 'University & research labs', 'Food processing facilities'],
+    highlights: [
+      'Hamriyah Free Zone & SAIF Zone supply expertise',
+      'Full UAE free zone import documentation provided',
+      '1,000+ chemicals in stock for immediate export',
+      'ISO 9001 certified quality assurance',
+      'Competitive export pricing in AED/USD'
+    ],
+    faqs: [
+      {
+        question: 'Does Global Chemicals LLC supply chemicals to Sharjah and its free zones?',
+        answer: 'Yes, we export chemicals to Sharjah including companies in Hamriyah Free Zone (HFZA), SAIF Zone, Sharjah Industrial Area, and surrounding business districts. Our range covers water treatment chemicals, industrial lubricants, laboratory reagents, food-grade chemicals, and oilfield chemicals. Standard delivery from Muscat takes 3–5 business days via road freight.'
+      },
+      {
+        question: 'Can you supply chemicals to Hamriyah Free Zone (HFZA) in Sharjah?',
+        answer: 'Yes, we supply chemicals to HFZA-registered companies. Hamriyah Free Zone is one of the GCC\'s largest chemical trading and storage hubs with over 6,500 registered companies. We provide all required HFZA import documentation: Certificate of Origin, Certificate of Analysis, SDS/MSDS, and commercial invoices in the formats required for free zone customs clearance.'
+      },
+      {
+        question: 'What laboratory chemicals can you supply to Sharjah universities and research institutes?',
+        answer: 'We supply AR grade laboratory chemicals, HPLC-grade solvents, buffer solutions, indicators, and specialty analytical chemicals to universities, research institutions, and QC labs in Sharjah. We stock 50+ standard laboratory chemicals and can source specialty items on request with full CoA and SDS documentation.'
+      }
+    ],
+    metaTitle: 'Chemical Supplier Sharjah | Hamriyah Free Zone HFZA Chemicals | Global Chemicals LLC',
+    metaDescription: 'Chemical supplier exporting to Sharjah, UAE. Hamriyah Free Zone, SAIF Zone & Sharjah Industrial Area supply. Water treatment, lab & industrial chemicals. ISO 9001. Get a quote.',
+    metaKeywords: 'chemical supplier Sharjah, chemicals Sharjah UAE, Hamriyah Free Zone chemicals HFZA, SAIF Zone chemicals Sharjah, industrial chemicals Sharjah, water treatment chemicals Sharjah, laboratory chemicals Sharjah, chemical exporter Oman Sharjah, chemical distributor Sharjah UAE'
+  },
+
+  'ras-al-khaimah': {
+    slug: 'ras-al-khaimah',
+    city: 'Ras Al Khaimah',
+    cityArabic: 'رأس الخيمة',
+    country: 'UAE',
+    region: 'Ras Al Khaimah, United Arab Emirates',
+    description: 'Global Chemicals LLC exports industrial and specialty chemicals to Ras Al Khaimah (RAK), UAE\'s northernmost emirate and a fast-growing manufacturing hub. Home to RAKEZ with 14,000+ registered businesses, RAK Ceramics (one of the world\'s largest ceramics manufacturers), Stevin Rock quarrying operations, and RAK Ports, the emirate has significant and growing industrial chemical demand across construction, ceramics, and manufacturing sectors.',
+    industries: ['Ceramics & Building Materials (RAK Ceramics)', 'Quarrying & Mining (Stevin Rock)', 'Construction & Infrastructure', 'Manufacturing (RAKEZ)', 'Food Processing', 'Pharmaceuticals', 'Free Zone Trading'],
+    deliveryTime: '3–5 business days to Ras Al Khaimah (road freight)',
+    keyClients: ['RAK Ceramics supply chain', 'RAKEZ registered companies', 'Stevin Rock quarrying operations', 'RAK construction projects', 'RAK Ports industrial customers'],
+    highlights: [
+      'RAK Ceramics sector chemical expertise',
+      'RAKEZ free zone import documentation provided',
+      'Construction chemicals for RAK\'s growing sector',
+      'Competitive export pricing for RAK manufacturers',
+      'ISO 9001 certified supply with full documentation'
+    ],
+    faqs: [
+      {
+        question: 'Does Global Chemicals LLC supply chemicals to Ras Al Khaimah (RAK)?',
+        answer: 'Yes, we export industrial and specialty chemicals to Ras Al Khaimah including RAKEZ-registered companies, RAK industrial zone manufacturers, and project sites throughout the emirate. Our range covers construction chemicals, water treatment chemicals, industrial lubricants, and laboratory reagents. Standard delivery from Muscat is 3–5 business days via road freight.'
+      },
+      {
+        question: 'What chemicals do you supply for the ceramics industry in RAK?',
+        answer: 'For RAK\'s ceramics and building materials sector including RAK Ceramics supply chains, we supply process chemicals, industrial cleaning agents, water treatment chemicals, and specialty industrial chemicals. Our technical team can advise on specific requirements for ceramic manufacturing, glazing, and surface treatment applications in RAK.'
+      },
+      {
+        question: 'Can you supply chemicals to RAKEZ (Ras Al Khaimah Economic Zone) companies?',
+        answer: 'Yes, we supply chemicals to businesses in RAKEZ\'s Al Hamra, Al Ghail, and other zones. We provide all required import documentation: Certificate of Origin, Safety Data Sheet, Certificate of Analysis, packing list, and commercial invoice in the format required for RAKEZ customs clearance.'
+      }
+    ],
+    metaTitle: 'Chemical Supplier Ras Al Khaimah | RAKEZ Industrial Chemicals UAE | Global Chemicals LLC',
+    metaDescription: 'Chemical supplier exporting to Ras Al Khaimah (RAK), UAE. RAKEZ, RAK Ceramics, construction & industrial chemicals. ISO 9001 certified. 3-5 day delivery from Muscat. Get a quote.',
+    metaKeywords: 'chemical supplier Ras Al Khaimah, chemicals RAK UAE, RAKEZ chemical supplier, RAK Ceramics chemicals, construction chemicals RAK, industrial chemicals Ras Al Khaimah, water treatment RAK UAE, chemical exporter Oman RAK, manufacturing chemicals Ras Al Khaimah UAE'
+  },
+
+  // ── Additional KSA Cities ──────────────────────────────────────────────────
+
+  'jeddah': {
+    slug: 'jeddah',
+    city: 'Jeddah',
+    cityArabic: 'جدة',
+    country: 'Saudi Arabia',
+    region: 'Makkah Province, Saudi Arabia',
+    description: 'Global Chemicals LLC exports specialty and industrial chemicals to Jeddah, Saudi Arabia\'s second-largest city and gateway to the Red Sea. We serve Jeddah Industrial City, King Abdullah Economic City (KAEC), the pharmaceutical and healthcare sector, food and beverage manufacturers, and construction projects across the Makkah and Madinah regions with a comprehensive portfolio of water treatment, industrial, food-grade, and oilfield chemicals.',
+    industries: ['Construction & Infrastructure', 'Pharmaceuticals & Healthcare', 'Food & Beverage Processing', 'Water Treatment & Desalination', 'Hospitality (Hajj/Umrah)', 'Manufacturing', 'Port Logistics'],
+    deliveryTime: '5–7 business days to Jeddah (road freight) or 4–6 days sea freight via Port of Sohar',
+    keyClients: ['Jeddah Industrial City manufacturers', 'KAEC companies', 'Pharmaceutical labs & hospitals', 'Food processing facilities', 'Hajj/Umrah hospitality groups'],
+    highlights: [
+      'Jeddah Industrial City & KAEC supply expertise',
+      'Pharmaceutical and food-grade chemicals stocked',
+      'Full Saudi customs & SASO documentation support',
+      'Arabic SDS and technical documentation provided',
+      'Sea freight option via Port of Sohar for bulk orders'
+    ],
+    faqs: [
+      {
+        question: 'Does Global Chemicals LLC export chemicals to Jeddah?',
+        answer: 'Yes, we export chemicals to Jeddah including King Abdullah Economic City (KAEC), Jeddah Industrial City, and project sites across Makkah Province. Our range covers water treatment chemicals, food-grade chemicals, pharmaceutical-grade reagents, construction chemicals, and industrial lubricants. Road freight from Muscat takes 5–7 business days; sea freight via Sohar Port takes 4–6 days.'
+      },
+      {
+        question: 'Can you supply food-grade and pharmaceutical chemicals for Jeddah manufacturers?',
+        answer: 'Yes, we supply NSF and food-grade certified chemicals for food and beverage processing and pharmaceutical-grade reagents for healthcare and manufacturing sectors. All food-grade products come with appropriate certifications including Halal certification where required. Safety Data Sheets are provided in both English and Arabic.'
+      },
+      {
+        question: 'What documentation do you provide for chemical imports into Jeddah?',
+        answer: 'We provide complete Saudi customs documentation: Certificate of Origin attested by Oman Chamber of Commerce, Safety Data Sheet in Arabic and English, Certificate of Analysis, Technical Data Sheet, and commercial invoice with HS codes. For products requiring SASO conformity or SFDA approval, our team provides guidance on the Saudi import permit process.'
+      }
+    ],
+    metaTitle: 'Chemical Supplier Jeddah | Industrial Chemicals Saudi Arabia | Global Chemicals LLC',
+    metaDescription: 'Chemical supplier exporting to Jeddah, Saudi Arabia. Jeddah Industrial City, KAEC, pharma & food-grade chemicals. ISO 9001 certified. Full Saudi customs documentation. Get a quote.',
+    metaKeywords: 'chemical supplier Jeddah, chemicals Jeddah Saudi Arabia, industrial chemicals Jeddah, food grade chemicals Jeddah, pharmaceutical chemicals Jeddah, KAEC chemical supplier, Jeddah Industrial City chemicals, water treatment Jeddah, chemical exporter Oman Jeddah KSA'
+  },
+
+  'dammam': {
+    slug: 'dammam',
+    city: 'Dammam',
+    cityArabic: 'الدمام',
+    country: 'Saudi Arabia',
+    region: 'Eastern Province, Saudi Arabia',
+    description: 'Global Chemicals LLC serves Saudi Arabia\'s Eastern Province — the Kingdom\'s oil heartland — with industrial and specialty chemical exports. Dammam, Al Khobar, and nearby Dhahran (home to Saudi Aramco\'s global headquarters) and Jubail Industrial City represent the highest concentration of oil & gas chemical demand in the region. We supply oilfield chemicals, water treatment chemicals, industrial lubricants, and laboratory reagents to Aramco contractors, SABIC suppliers, and industrial operations across the Eastern Province.',
+    industries: ['Oil & Gas (Saudi Aramco)', 'Refining & Petrochemicals (SABIC)', 'Water Treatment & Desalination', 'Manufacturing', 'Steel (Hadeed, SABIC)', 'Utilities & Power', 'Construction'],
+    deliveryTime: '4–6 business days to Dammam / Eastern Province (road freight)',
+    keyClients: ['Saudi Aramco contractors (Dhahran)', 'SABIC industrial facilities', 'Jubail Industrial City suppliers', 'Eastern Province utility companies', 'Al Khobar construction projects'],
+    highlights: [
+      'Saudi Aramco supply chain documentation expertise',
+      'Full oilfield chemical portfolio for upstream & downstream',
+      'Full Arabic technical documentation provided',
+      'Jubail Industrial City supply capability',
+      'ISO 9001 and JSRS certified quality assurance'
+    ],
+    faqs: [
+      {
+        question: 'Do you supply chemicals to Dammam and the Eastern Province?',
+        answer: 'Yes, we export industrial and oilfield chemicals to Saudi Arabia\'s Eastern Province including Dammam, Al Khobar, Dhahran, and nearby Jubail Industrial City. Our oilfield portfolio includes corrosion inhibitors, scale inhibitors, demulsifiers, H2S scavengers, and production chemicals suited for Aramco-operated facilities. Standard delivery time from Muscat is 4–6 business days.'
+      },
+      {
+        question: 'Can your chemicals be used by Saudi Aramco contractors?',
+        answer: 'Yes, we provide chemicals and full documentation packages suitable for Saudi Aramco contractor vendor qualification including ISO 9001:2015 certificates, batch-specific Certificate of Analysis, Safety Data Sheet in English and Arabic, Technical Data Sheets, and Certificate of Origin. We have experience supporting Aramco contractor supply chain requirements.'
+      },
+      {
+        question: 'Do you supply chemicals to Jubail Industrial City?',
+        answer: 'Yes, Jubail Industrial City — one of the world\'s largest industrial zones — is within our Eastern Province supply territory. We export chemicals to SABIC contractors, petrochemical facilities, and other Jubail industrial operators. Water treatment chemicals, industrial lubricants, and specialty oilfield chemicals are among our most requested products for the Jubail sector.'
+      }
+    ],
+    metaTitle: 'Chemical Supplier Dammam | Eastern Province KSA | Aramco Contractors | Global Chemicals LLC',
+    metaDescription: 'Chemical supplier exporting to Dammam & Eastern Province, KSA. Saudi Aramco contractors, SABIC, Jubail Industrial City. Oilfield & water treatment chemicals. ISO 9001. Get a quote.',
+    metaKeywords: 'chemical supplier Dammam, chemicals Eastern Province Saudi Arabia, Saudi Aramco chemical supplier, oilfield chemicals Dammam, industrial chemicals Eastern Province KSA, Jubail Industrial City chemicals, SABIC chemical supplier, chemical exporter Oman Dammam, Al Khobar chemicals Saudi Arabia'
   }
 };
 

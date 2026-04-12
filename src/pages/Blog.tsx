@@ -571,12 +571,261 @@ Global Chemicals LLC ships to all 6 GCC countries from our Muscat warehouse. We 
     tags: ['Chemical Exporter', 'Saudi Arabia', 'Qatar', 'Kuwait', 'GCC Export', 'Oman Chemical Supplier'],
     icon: Globe2,
   },
+  {
+    id: 'jsrs-chemical-supplier-pdo-oman',
+    title: 'JSRS-Certified Chemical Supplier for PDO & Oil and Gas Contractors in Oman',
+    excerpt: 'Everything Oman oil and gas operators and PDO contractors need to know about sourcing chemicals from a JSRS-registered, ISO 9001-certified supplier. Covers JSRS registration, ICV compliance, vendor qualification, and our chemical portfolio for upstream, midstream, and downstream operations.',
+    content: `Oman's oil and gas sector — led by Petroleum Development Oman (PDO), OQ, OPAL, and a network of international operators — requires its chemical suppliers to meet a rigorous pre-qualification standard before any supply agreement can be established. This standard is administered through JSRS: the Joint Supplier Registration System. If your company is an oil and gas operator or contractor in Oman sourcing chemicals for production, maintenance, or water treatment, understanding JSRS and finding a certified supplier is the critical first procurement step.
+
+What is JSRS?
+
+JSRS (Joint Supplier Registration System) is Oman's mandatory supplier pre-qualification database, jointly operated by Petroleum Development Oman (PDO) and the Ministry of Energy and Minerals. It was established to standardise supplier qualification across Oman's energy sector — allowing a single JSRS registration to open doors to multiple buying companies simultaneously.
+
+JSRS registration requires suppliers to demonstrate: financial stability and Oman business registration, ISO 9001:2015 quality management certification, technical capability in their supply category, an audited Health, Safety and Environment (HSE) record, and ICV (In-Country Value) compliance confirming Oman content in the supply.
+
+Once registered, a supplier's profile is visible to all participating buyers: PDO, OQ, OPAL, BP Oman, TotalEnergies Oman, and others. A single JSRS registration covers the entire Oman energy sector procurement network.
+
+Global Chemicals LLC's JSRS Status
+
+Global Chemicals LLC is a JSRS-registered chemical supplier covering industrial chemicals, water treatment chemicals, oilfield chemicals, and laboratory reagents. Our registration demonstrates three things that matter to oil and gas procurement teams:
+
+ISO 9001:2015 Certification: Our quality management system is independently audited and certified, confirming documented processes for chemical procurement, storage, handling, labelling, and supply. We provide batch-specific CoA, SDS, and TDS for every chemical supplied.
+
+ICV Compliance: As an Oman-incorporated company with Oman-based operations, warehousing, and staff, Global Chemicals LLC delivers high In-Country Value. PDO and other buyers who select Oman-registered JSRS suppliers fulfil ICV targets that count toward Oman's Vision 2040 economic diversification goals.
+
+HSE Performance: Our chemical handling procedures, SDS provision, proper chemical classification, and trained staff meet the standards required for oil and gas sector supply in Oman.
+
+How to Add Global Chemicals to Your Approved Vendor List
+
+For PDO contractors, OQ facility operators, and other oil and gas companies wishing to register Global Chemicals LLC as an approved chemical vendor: contact our sales team for our JSRS registration number and certificate copy, ISO 9001:2015 certificate (current, UKAS-accredited), and ICV certificate for the relevant year. For specific PDO product approvals, provide us with the material specification and we will confirm which products meet it with supporting CoA data.
+
+For emergency or spot supply pending formal registration: many PDO contractors source from JSRS-registered suppliers on a project basis. Contact sales@gcoman.com with your company name, chemical requirement, and quantity.
+
+Our Chemical Portfolio for Oil and Gas Operations
+
+Production Chemicals: Corrosion inhibitors (CO2 and H2S environments), scale inhibitors (sulphate and carbonate), demulsifiers (water-in-oil emulsion breakers), H2S scavengers (triazine and aldehyde-based), oxygen scavengers (ammonium bisulphite, hydrazine hydrate), biocides (THPS, glutaraldehyde, DBNPA), wax inhibitors, and pour point depressants.
+
+Water Treatment (Produced Water, Injection Water, Facility Potable): PAC, caustic soda, antiscalants, biocides, coagulants, and pH adjustment chemicals.
+
+Drilling Chemicals: Bentonite powder, CMC (carboxymethylcellulose), potassium chloride, calcium chloride, soda ash, sodium bicarbonate, boric acid, and zinc oxide.
+
+Laboratory Chemicals (PDO / OQ QC Labs): AR grade reagents, titration standards, HPLC-grade solvents, buffer solutions, and specialty analytical chemicals for refinery, oilfield, and environmental testing.
+
+Maintenance Chemicals: Shell, Mobil, and Castrol industrial lubricants, solvents, degreasers, tank cleaning chemicals, and anti-corrosion products.
+
+Contact for Oil and Gas Supply
+
+For PDO, OQ, and oil and gas contractor supply enquiries: email sales@gcoman.com or call +968-93754388. Please include your company name, PDO/OQ contract reference if applicable, chemical name or specification, and required quantity. We prioritise oil and gas sector quotes and respond within 2–4 working hours.`,
+    author: 'Global Chemicals Technical Team',
+    date: '2026-03-25',
+    readTime: '9 min read',
+    category: 'Oil & Gas',
+    tags: ['JSRS', 'PDO', 'OQ', 'Oil Gas Chemicals', 'Oman', 'ICV', 'ISO 9001'],
+    icon: TrendingUp,
+  },
+  {
+    id: 'food-grade-chemicals-supplier-oman',
+    title: 'Food Grade Chemical Supplier in Oman: HACCP-Compliant Chemicals for Food Manufacturing',
+    excerpt: 'Complete guide to food-grade chemicals for Oman\'s food and beverage manufacturing sector. Covers food-grade caustic soda, sodium hypochlorite, citric acid, CIP programs, Halal certification, and how to verify supplier credentials for HACCP-compliant operations.',
+    content: `Oman's food manufacturing and processing sector is expanding rapidly under Vision 2040, which targets food security and reduced dependence on imported food. The number of food and beverage facilities in Rusayl Industrial Estate, Sohar, Barka, and across Oman has grown significantly — and with it the demand for certified food-grade chemicals that meet HACCP, Halal, and international food safety standards. This guide covers what food-grade chemicals mean in practice, which certifications matter, the key chemicals Oman food manufacturers need, and how to source them from a reliable supplier.
+
+What "Food Grade" Actually Means
+
+The term "food grade" indicates that a chemical meets purity and specification standards that make it safe for direct or indirect contact with food or food-contact surfaces. Food grade is not the same as pharmaceutical grade (which is higher purity) and not the same as technical grade (which may contain impurities harmful to humans at food-relevant exposures). For chemical procurement in Oman's food industry, the relevant specifications are:
+
+FCC (Food Chemicals Codex): The primary international standard for food-grade chemical purity, published by the US Pharmacopeial Convention. Oman's food manufacturers should specify FCC grade for all cleaning and processing chemicals.
+
+Halal Certification: Required for all food-contact chemicals used in halal-certified food operations in Oman. Particularly critical for ethanol (must be fermentation-derived, not petroleum-derived), animal-derived fats in lubricants, and certain enzyme preparations.
+
+NSF International H1 / H2: Relevant for food-grade lubricants used in food plant machinery where incidental food contact is possible (H1) or in areas with no food contact (H2).
+
+Key Food Grade Chemicals for Oman Food Manufacturers
+
+Caustic Soda — Food Grade (Sodium Hydroxide, NaOH): The most widely used CIP (Clean-in-Place) chemical in Oman's food, dairy, and beverage processing facilities. Food-grade caustic soda at 99% minimum purity, with certified low heavy metal content, is used for alkaline cleaning of processing equipment, pipelines, tanks, and heat exchangers. It removes fats, proteins, and organic soils effectively at 65–75°C. Technical-grade caustic soda produced by mercury-cell electrolysis contains trace mercury and must NOT be used in food applications — always specify food-grade or membrane-grade NaOH.
+
+Sodium Hypochlorite — Food Grade: Used as a sanitiser and surface disinfectant on food contact surfaces and equipment. Food-grade sodium hypochlorite at 10–12% available chlorine meets FCC purity requirements. Diluted to 50–200 mg/L available chlorine for surface sanitising (with 30-second contact time), or 1–5 mg/L for potable water treatment within the food plant.
+
+Citric Acid — Anhydrous and Monohydrate, Food Grade: Used as an acidulant in food and beverage manufacturing, a natural descaling agent for CIP acid wash cycles, and a pH adjuster for processing water. The dominant acid for dairy and beverage CIP systems. Food-grade citric acid (FCC / E330) is produced by fermentation from sugar substrates and is Halal-certified by default.
+
+Phosphoric Acid — Food Grade: Used as an acidulant in beverage manufacturing, particularly carbonated drinks, and as a dairy equipment acid rinse in CIP systems. Food-grade phosphoric acid at 75–85% concentration is the standard form for beverage applications.
+
+Ethanol — Food Grade (96–99%): Used as a hand sanitiser, surface disinfectant, and extraction solvent in food processing. Must be fermentation-derived (from grain, sugar cane, or molasses) for Halal compliance — synthetic ethanol from petrochemical processes is haram under most halal certification bodies' rulings.
+
+Propylene Glycol — Food Grade (USP/FCC): Used as a humectant, flavour carrier, solvent, and antifreeze in food refrigeration systems (food-grade glycol for glycol chillers). Classified GRAS (Generally Recognised as Safe) by the US FDA.
+
+Hydrogen Peroxide — Food Grade (35%): Used as a sterilant for aseptic packaging, food contact surfaces, and dairy processing equipment. Food-grade H2O2 must be stabiliser-free at the food-grade specification — technical grades contain stabilisers incompatible with food contact.
+
+Standard CIP Program for Oman Food Facilities
+
+A CIP program for Oman food plants operating at up to 40°C ambient temperature:
+1. Pre-rinse with potable water (ambient) — 3–5 minutes
+2. Alkaline wash with 1.5–2% NaOH solution at 65–75°C — 15–20 minutes
+3. Intermediate rinse with potable water — 3–5 minutes
+4. Acid rinse with 0.5–1% phosphoric or citric acid — 5–10 minutes
+5. Final potable water rinse until drain conductivity equals incoming water
+6. Sanitise with 100–200 mg/L sodium hypochlorite or 100–200 mg/L food-grade peracetic acid
+7. Final flush before production restart
+
+Global Chemicals LLC supplies a comprehensive range of food-grade chemicals to Oman's food and beverage manufacturers in Rusayl, Sohar, Barka, and across the Sultanate. All food-grade products are supplied with FCC/USP certificates, Halal certificates where applicable, Safety Data Sheets in English and Arabic, and batch-specific Certificates of Analysis. Contact us at info@gcoman.com or +968-93754388 for pricing, availability, and technical consultation.`,
+    author: 'Global Chemicals Technical Team',
+    date: '2026-03-28',
+    readTime: '10 min read',
+    category: 'Industrial Chemicals',
+    tags: ['Food Grade Chemicals', 'HACCP', 'Halal', 'CIP', 'Oman', 'Food Manufacturing', 'Caustic Soda'],
+    icon: Leaf,
+  },
+  {
+    id: 'ro-membrane-chemicals-antiscalant-oman',
+    title: 'RO Membrane Chemicals for Oman: Antiscalants, Cleaners & Passivation Guide',
+    excerpt: 'Essential guide to reverse osmosis membrane chemicals for Oman\'s seawater and brackish water RO systems. Covers antiscalant selection, CIP membrane cleaners (acid and alkaline), passivation, and dosing guidance for Oman\'s specific water chemistry challenges.',
+    content: `Oman has one of the world's highest concentrations of reverse osmosis (RO) water treatment infrastructure per capita. Municipal drinking water is supplied almost entirely by coastal desalination plants at Al Ghubrah, Barka, Sur, Salalah, and others. Industrial facilities across the country — manufacturing, oil and gas, hotels, food processing — run their own RO and nanofiltration systems for process water and potable water. The demand for RO membrane chemicals — antiscalants, membrane cleaners, passivation agents, and descalers — is substantial and growing. This guide covers the essential RO chemicals for Oman's specific water chemistry challenges, how to select them, and how to apply them correctly.
+
+Why RO Membrane Chemistry Is More Demanding in Oman
+
+Oman's water sources present specific scaling challenges that make RO chemical management more critical than in many parts of the world. Coastal seawater RO (SWRO) plants deal with elevated concentrations of calcium, magnesium, sulphate, and bicarbonate — the primary scale-forming ions. Brackish groundwater sources in Oman's interior (used for industrial and agricultural RO systems in the Batinah, Dhofar, and Al Wusta regions) frequently have elevated silica content, and silica scale is among the most difficult to remove once established on a membrane surface. Without effective antiscalant dosing, membrane fouling can cut RO system output by 20–40% within weeks, increase feed pressure and energy costs, and ultimately require expensive membrane replacement.
+
+Antiscalants for Oman RO Systems
+
+Antiscalants (scale inhibitors) are the most important RO chemicals for day-to-day operation. They prevent scale crystal nucleation and growth, keeping scale-forming salts in suspension even above their normal saturation points, allowing higher recovery rates (70–85% for SWRO, up to 80% for BWRO) without scaling.
+
+For Oman SWRO plants (seawater desalination): Phosphonate-based antiscalants effective against CaCO3, CaSO4, and BaSO4 scale. Standard dosing: 3–5 mg/L into the RO feed. These products are compatible with polyamide TFC membranes from all major manufacturers (Dow, Toray, Hydranautics).
+
+For Oman BWRO systems with high silica (common in interior groundwater): Silica-specific antiscalants containing sulphonated or polyacrylate copolymers. Essential for groundwater RO in Oman's interior regions where silica commonly reaches 30–60 mg/L. Standard dosing: 4–8 mg/L depending on silica concentration and system recovery rate. Silica scaling at high pH (above 7.5) is particularly aggressive — maintain feed water pH below 7.5 when silica is a concern.
+
+For industrial cooling tower RO or process water RO: All-phosphonate antiscalants with broad-spectrum scale prevention and biocide compatibility.
+
+Membrane Cleaners: Acid and Alkaline CIP Procedures
+
+Even with effective antiscalant dosing, RO membranes require periodic clean-in-place (CIP) to restore flux and salt rejection. For well-operated Oman SWRO plants, quarterly CIP is typical; for inland BWRO systems with challenging feed water, monthly cleaning may be required.
+
+Acid CIP (for mineral scale — calcium carbonate, iron oxide, metal deposits): Citric acid solution at 2–3% w/w, pH adjusted to 3.0–4.0. This is the safest and most compatible acid for all TFC membranes. It effectively removes CaCO3 and iron oxide scale. Alternative: 0.2% hydrochloric acid with 1% ammonium bifluoride for silica scale — use only with membrane manufacturer approval. CIP temperature: 30–35°C for best results. Soak time: 30–60 minutes. Maximum temperature: 45°C for standard polyamide TFC membranes.
+
+Alkaline CIP (for organic fouling, biofilm, colloidal fouling): Sodium hydroxide solution at 0.1% NaOH (pH 11.5–12.0) with 0.025% sodium dodecyl sulphate (SDS) surfactant. Limit pH to maximum 12.0 to avoid irreversible membrane hydrolysis. For Oman coastal plants where biofouling is a common challenge, this alkaline CIP should precede or alternate with acid CIP.
+
+Sequential protocol for combined scale and biofouling (most Oman BWRO systems): Alkaline CIP first (removes organic/biofilm), water flush, then acid CIP (removes mineral scale), final water flush, and 60-minute soak with 50 mg/L sodium metabisulphite before return to service.
+
+Passivation Chemicals for New Oman RO Installations
+
+New TFC RO membranes are shipped with a glycerol or sodium bisulphite preservation solution. Before commissioning, membranes must be flushed and the new elements passivated with 1% sodium bisulphite (NaHSO3) solution to neutralise residual oxidants and stabilise the membrane surface. This step is critical: exposing a new TFC membrane to free chlorine above 0.1 mg/L even briefly can cause irreversible membrane oxidation and performance loss. Free chlorine in feed water must be removed by activated carbon filtration or sodium metabisulphite dosing (2–4 mg/L per 1 mg/L Cl2) before the RO train.
+
+Descalers for Emergency Scale Removal
+
+For Oman RO systems that have experienced significant scaling due to antiscalant failure or operational upset, a dedicated descaler — typically a blend of citric acid, EDTA, and anionic surfactants — can remove established mineral deposits from the membrane surface and housing. Descaler treatment is more aggressive than routine acid CIP and should be followed by a thorough water flush and performance testing (permeate flow, salt rejection) before resuming normal operation.
+
+Global Chemicals LLC supplies a full range of RO membrane chemicals to municipal, industrial, and commercial RO operators across Oman, including phosphonate and polyacrylate antiscalants, citric acid CIP agents (liquid and powder), alkaline membrane cleaners, sodium bisulphite for passivation and dechlorination, and specialty membrane descalers. We also stock pH adjustment chemicals, sodium metabisulphite (dechlorination), and biocides for RO pre-treatment. Contact us at info@gcoman.com or +968-93754388 for technical advice and competitive pricing.`,
+    author: 'Global Chemicals Technical Team',
+    date: '2026-04-03',
+    readTime: '11 min read',
+    category: 'Water Treatment',
+    tags: ['RO Chemicals', 'Antiscalant', 'Membrane Cleaner', 'Reverse Osmosis', 'Oman', 'Desalination', 'Water Treatment'],
+    icon: Beaker,
+  },
+  {
+    id: 'shell-mobil-castrol-lubricants-oman',
+    title: 'Industrial Lubricants in Oman: Shell, Mobil & Castrol Products Guide',
+    excerpt: 'How to select the right Shell, Mobil, or Castrol lubricant for Oman\'s extreme climate. Covers engine oils, hydraulic fluids, gear oils, and greases for Oman\'s industrial, oil and gas, construction, and transport sectors — with viscosity grade guidance for temperatures up to 50°C.',
+    content: `Industrial lubricants are among the most critical consumable chemicals in Oman's manufacturing, oil and gas, construction, and transport sectors. Selecting the wrong lubricant — the wrong viscosity grade, the wrong base oil type, or a product not rated for Oman's extreme temperatures — leads to premature equipment failure, increased maintenance costs, and unplanned downtime. This guide covers how to select the right lubricant from the major global brands we stock, with specific guidance for Oman's unique operating conditions.
+
+Why Lubricant Selection Is Different in Oman
+
+Oman's climate creates two critical lubricant challenges that rarely exist together elsewhere in the world. First, extreme heat: ambient temperatures in Muscat regularly reach 43–46°C in summer, with industrial environments (engine compartments, gearboxes, bearing housings) frequently operating above 90–120°C. Lubricants must maintain viscosity and film strength at these temperatures — a product with a low viscosity index (VI) will thin excessively and fail to prevent metal-to-metal contact. Second, dust and sand contamination: Oman's frequent sandstorm events and dusty industrial environments accelerate lubricant contamination. Practical guidance: halve the European OEM-recommended oil change interval for Oman heavy-industry conditions, and use higher-quality synthetic lubricants where the budget allows, as they resist oxidation and thermal degradation significantly better than mineral grades.
+
+Shell Lubricants in Oman
+
+Shell is the most widely specified brand in Oman's oil and gas sector, primarily because PDO (Petroleum Development Oman) and OQ have historically preferred Shell products in their maintenance specifications.
+
+Shell Rimula R4 X 15W-40: The most popular heavy-duty diesel engine oil in Oman. Suitable for most Euro 3 and older commercial diesel engines in trucks, buses, and construction equipment. Provides robust protection at the high sump temperatures typical of Oman's summer conditions.
+
+Shell Rimula R6 M 10W-40: Fully synthetic diesel engine oil for modern engines requiring low-SAPS (sulphated ash, phosphorus, sulphur) specification, including Euro 5/6 engines with DPF systems.
+
+Shell Tellus S2 M and S3 M (Hydraulic Oils): For construction equipment, cranes, excavators, and industrial hydraulic systems. Available in ISO VG 32, 46, and 68 viscosity grades. The S3 M series uses zinc-free anti-wear technology compatible with modern hydraulic pump seal materials.
+
+Shell Gadus S2 and S5 Greases: For heavy machinery bearings, vehicle wheel bearings, and high-temperature industrial applications. Gadus S5 T460 1.5 is specified for high-temperature industrial bearing applications common in Oman's manufacturing and petrochemical sectors.
+
+Shell Omala Gear Oils: For enclosed industrial gearboxes. Shell Omala S2 G (mineral base, ISO VG 150–680) and Omala S4 GX (fully synthetic) — the synthetic grade is strongly recommended for Oman gearboxes operating above 70°C ambient temperature.
+
+Mobil Lubricants in Oman
+
+Mobil Delvac MX 15W-40: The most widely used heavy-duty diesel engine oil for trucks, buses, and construction machinery in Oman's transport sector. API CI-4/SL specification.
+
+Mobil DTE Series (Hydraulic Oils): DTE 25 (ISO VG 46), DTE 26 (ISO VG 68), DTE 27 (ISO VG 100) — the standard hydraulic oil grades for industrial applications in Oman.
+
+Mobil Grease XHP 222: The most popular NLGI Grade 2 EP (extreme pressure) grease for Oman's heavy transport and mining equipment. Lithium complex soap base with excellent heat resistance up to 180°C.
+
+Mobil SHC Synthetic Series: For critical high-temperature applications. SHC 624, 626, 630 gear oils and SHC 524, 526, 532 hydraulic fluids — recommended for Oman's most demanding industrial applications where conventional mineral lubricants have failed.
+
+Castrol Lubricants in Oman
+
+Castrol RX Super 15W-40: High-performance mineral diesel engine oil for heavy commercial vehicles and off-highway machinery. Widely used in Oman's construction and transport sectors.
+
+Castrol Hyspin AWS Series (Hydraulic Oils): ISO VG 32, 46, and 68 mineral hydraulic oils for general industrial and mobile hydraulic systems. Castrol Hyspin is the most specified hydraulic oil in Oman's construction equipment rental fleet.
+
+Castrol Optigear Series: Industrial gear oils for enclosed gearboxes in manufacturing and water treatment applications across Oman.
+
+How to Order Lubricants in Oman
+
+Global Chemicals LLC is an authorised distributor of Shell, Mobil, and Castrol lubricants in Oman. We maintain stock of all major grades at our Muscat warehouse with same-day delivery in Muscat and next-day delivery to Sohar, Rusayl, and other major industrial zones. We supply in packaging from 1-litre bottles and 4-litre packs to 20-litre pails, 208-litre drums, and 1,000-litre IBCs for bulk requirements. For OEM-specified products not listed above, contact our team — we confirm availability within 24 hours. Email info@gcoman.com or call +968-93754388.`,
+    author: 'Global Chemicals Technical Team',
+    date: '2026-04-08',
+    readTime: '10 min read',
+    category: 'Industrial Chemicals',
+    tags: ['Shell Lubricants', 'Mobil Lubricants', 'Castrol', 'Industrial Lubricants', 'Oman', 'Engine Oil', 'Hydraulic Oil'],
+    icon: Factory,
+  },
+  {
+    id: 'swimming-pool-chemicals-oman-muscat',
+    title: 'Swimming Pool Chemicals in Oman: Complete Guide for Hotels, Villas & Facilities',
+    excerpt: 'Everything you need to know about pool chemicals for Oman\'s extreme climate. Covers calcium hypochlorite, TCCA tablets, sodium hypochlorite, algaecide, pH management, and dosing schedules for Muscat, Sohar, Salalah, and across the GCC — where 45°C summer heat and UV intensity demand a different approach to pool maintenance.',
+    content: `Swimming pool maintenance in Oman presents unique challenges that differ considerably from pool management in temperate climates. Muscat's summer ambient temperatures exceed 45°C, UV radiation is intense year-round, and dust and sand contamination are constant — all of which accelerate chlorine degradation, encourage algae growth, and increase the frequency of chemical dosing required to keep pools safe and clear. Whether you manage a hotel pool in Muscat's Shati al-Qurm, a villa pool in Madinat Qaboos or Al Mouj, a school facility, or an industrial facility, this guide covers the essential pool chemicals, dosing principles, and Oman-specific best practices.
+
+Why Oman Pools Need More Chemical Attention
+
+The fundamental reason pool chemistry demands more attention in Oman than in Europe or East Asia is temperature. At 35–45°C water temperature (common in outdoor Muscat pools from May to October), chlorine dissipates from pool water 2–3 times faster than at 25°C. Free chlorine residuals that would last 8–12 hours in a European pool may drop to unsafe levels within 3–4 hours in a Muscat summer afternoon. Combined with high bather loads in hotel pools and constant dust contamination from Oman's shamal wind events, pool operators must test more frequently, dose more consistently, and use stabilised or slow-release chlorine products to extend chlorine life.
+
+Calcium Hypochlorite: The Standard Pool Disinfectant in Oman
+
+Calcium hypochlorite (Ca(ClO)2, 65–70% available chlorine, commonly called Cal-Hypo or HTH) is the most widely used disinfectant for pools in Oman. Available as granules or powder, it dissolves readily and provides a strong dose of available chlorine. For regular daily maintenance dosing in Oman's climate, 20–30 grams per 10,000 litres per day is a starting point — actual dose rates must be confirmed by pool testing (target: 1–3 mg/L free available chlorine).
+
+Cal-Hypo is the best option for shock treatment: when a pool has turned green or after a heavy bather event, dose 80–100 grams per 10,000 litres, run the pump continuously, and retest after 4 hours. Important: calcium hypochlorite raises pool water calcium hardness over time. Monitor total calcium hardness (target: 200–400 mg/L CaCO3) and treat scaling with a pH reducer if calcium exceeds 500 mg/L.
+
+TCCA Chlorine Tablets: Stabilised Chlorine for Oman's High-UV Climate
+
+Trichloroisocyanuric acid (TCCA) tablets at 90% available chlorine are increasingly popular for Oman pools because they contain cyanuric acid (CYA) as a built-in UV stabiliser. CYA acts as a sunscreen for chlorine — it dramatically slows chlorine degradation from UV light, which is particularly intense in Oman's low-latitude, clear-sky conditions. TCCA tablets in floating dispensers or automatic erosion feeders are ideal for consistent background dosing between shock treatments.
+
+Cyanuric acid (CYA) must be monitored carefully: if CYA exceeds 80–100 mg/L (common in pools relying solely on TCCA for several seasons), chlorine effectiveness drops significantly even at adequate free chlorine readings — a condition known as chlorine lock. Target CYA at 30–50 mg/L. TCCA tablets are available in standard 200g tablets and jumbo 400g tablets for larger commercial pools and hotels.
+
+Sodium Hypochlorite: Liquid Chlorine for Automated Dosing Systems
+
+Sodium hypochlorite solution (NaOCl, 10–12% available chlorine) is the preferred disinfectant for pools with automated dosing pumps. It is immediately soluble, easy to handle through dosing systems, and does not raise calcium hardness. For large hotel pools and commercial facilities with automated controllers (ORP-based or amperometric), liquid sodium hypochlorite in bulk supply is the most cost-effective option.
+
+Important for Oman storage: sodium hypochlorite degrades faster than solid chlorine and accelerates in heat. Store in cool, shaded conditions and rotate stock within 30–45 days of delivery. Above 40°C, chlorine loss from sodium hypochlorite reaches 10–15% per month — order quantities your facility will consume within one month.
+
+pH Management: The Most Critical Variable for Chlorine Performance
+
+Pool water pH must be maintained between 7.2 and 7.6 for chlorine to function effectively. At pH 8.0, only about 22% of available chlorine exists as hypochlorous acid (the active disinfecting form), compared to 66% at pH 7.4. Oman's municipal water supply in Muscat (pH typically 7.8–8.2) means that most pools require regular pH reduction.
+
+pH Reducer (pH-): Sodium bisulphate (dry acid, NaHSO4) — the safest form for manual addition. Typically 200–500g per 10,000 litres to reduce pH by 0.2 units. For automated systems, diluted sulphuric acid is used via dosing pumps.
+
+pH Increaser (pH+): Soda ash (sodium carbonate, Na2CO3) — for pools running below pH 7.2 (less common in Oman but occurs with heavy acid rain or heavy bather loads). Sodium bicarbonate simultaneously raises pH and total alkalinity.
+
+Algaecide: Essential for Oman Pools in Summer
+
+Algae growth is a major challenge in Oman pools exposed to high temperatures and year-round intense sunlight. Even well-chlorinated pools can develop algae on shaded wall sections if algaecide is not applied as a preventive measure. A weekly preventive dose of copper-based or quat algaecide at 10–15 mL per 10,000 litres prevents algae from establishing. For green pool recovery (active algae bloom): shock dose with calcium hypochlorite (100g/10,000L), apply algaecide, brush pool walls and floor, and backwash filter after 24 hours.
+
+Global Chemicals LLC supplies a complete range of swimming pool chemicals to hotels, resorts, villa complexes, schools, and commercial facilities across Muscat, Sohar, Salalah, Duqm, and the wider GCC. Our pool chemical range includes: calcium hypochlorite granules (65–70%), TCCA tablets (standard 200g and jumbo 400g), sodium hypochlorite solution (10–12%), liquid algaecide, pH reducer (sodium bisulphate), pH increaser (soda ash), pool flocculant, and chlorine test kits. We offer same-day delivery in Muscat and next-day delivery to Sohar and Rusayl. Contact us at info@gcoman.com or +968-93754388 for competitive pricing and technical advice.`,
+    author: 'Global Chemicals Technical Team',
+    date: '2026-04-10',
+    readTime: '11 min read',
+    category: 'Water Treatment',
+    tags: ['Swimming Pool Chemicals', 'Calcium Hypochlorite', 'TCCA', 'Pool Maintenance', 'Oman', 'Muscat', 'Hotels'],
+    icon: Droplets,
+  },
 ];
 
 const categories = ['All', 'Water Treatment', 'Industrial Chemicals', 'Sustainability', 'Safety', 'Oil & Gas', 'Industry Guide'];
 
 const Blog = () => {
-  const { t } = useTranslation();
+  useTranslation();
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   const filteredPosts = selectedCategory === 'All'

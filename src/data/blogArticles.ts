@@ -225,6 +225,58 @@ export const blogArticles: BlogArticle[] = [
     image: "/images/blog/pac-oman.jpg",
     featured: false,
     relatedProducts: ["Poly Aluminium Chloride (PAC)", "PAC Liquid", "PAC Powder", "Coagulants"]
+  },
+  {
+    id: 12,
+    title: "JSRS-Certified Chemical Supplier for PDO & Oil and Gas Contractors in Oman",
+    excerpt: "Everything PDO contractors, OQ operators, and oil and gas companies in Oman need to know about sourcing chemicals from a JSRS-registered, ISO 9001-certified supplier. Covers JSRS registration, ICV compliance, vendor qualification, and our oilfield chemical portfolio.",
+    content: [
+      "Oman's oil and gas sector requires chemical suppliers to meet JSRS (Joint Supplier Registration System) pre-qualification before any supply agreement can be established. Global Chemicals LLC is a JSRS-registered, ISO 9001:2015 certified, and ICV-compliant chemical supplier covering industrial chemicals, water treatment chemicals, oilfield chemicals, and laboratory reagents.",
+      "**What Is JSRS?**\n\nJSRS is Oman's mandatory supplier pre-qualification database jointly operated by PDO and the Ministry of Energy and Minerals. A single JSRS registration opens doors to PDO, OQ, OPAL, BP Oman, TotalEnergies Oman, and other buying companies simultaneously. It requires: ISO 9001:2015 certification, financial stability, technical capability, HSE track record, and ICV compliance.",
+      "**Our Oil and Gas Chemical Portfolio:**\n\n• Production chemicals: corrosion inhibitors, scale inhibitors, demulsifiers, H2S scavengers, oxygen scavengers, biocides\n• Drilling chemicals: bentonite, CMC, potassium chloride, calcium chloride, boric acid\n• Water treatment: PAC, antiscalants, biocides, caustic soda\n• Lubricants: Shell, Mobil, Castrol industrial grades\n• Lab chemicals: AR grade reagents for refinery QC labs",
+      "Contact sales@gcoman.com with your company name, PDO/OQ contract reference, chemical name, and quantity. We respond within 2–4 working hours for oil and gas sector enquiries."
+    ],
+    category: "Technical Guides",
+    date: "2026-03-25",
+    author: "Global Chemicals Technical Team",
+    readTime: "9 min read",
+    image: "/images/blog/jsrs-pdo-oman.jpg",
+    featured: true,
+    relatedProducts: ["Corrosion Inhibitors", "Scale Inhibitors", "Demulsifiers", "H2S Scavengers", "Drilling Chemicals"]
+  },
+  {
+    id: 13,
+    title: "Swimming Pool Chemicals in Oman: Complete Guide for Hotels, Villas & Facilities",
+    excerpt: "How to manage pool chemistry in Oman's extreme climate (45°C summer, intense UV). Covers calcium hypochlorite, TCCA tablets, sodium hypochlorite, algaecide, and pH management for hotels, villas, and facilities in Muscat, Sohar, Salalah, and GCC.",
+    content: [
+      "Pool maintenance in Oman requires significantly higher chemical attention than in temperate climates. At 35–45°C water temperature, chlorine dissipates 2–3 times faster. High UV intensity and dust contamination from shamal winds further accelerate chemical consumption. This guide covers the essential pool chemicals for Oman's conditions.",
+      "**Key Pool Chemicals:**\n\n• **Calcium Hypochlorite (65–70% available Cl)** — Standard granular disinfectant. 20–30g per 10,000L per day for maintenance; 80–100g per 10,000L for shock treatment.\n• **TCCA Tablets (90% available Cl)** — Stabilised chlorine for Oman's high-UV climate. Contains cyanuric acid (CYA) that dramatically slows UV-related chlorine degradation. Monitor CYA — target 30–50 mg/L.\n• **Sodium Hypochlorite (10–12%)** — For automated dosing systems. Store in shade and use within 30–45 days in Oman's heat.\n• **Algaecide** — Weekly preventive dose of 10–15 mL per 10,000L essential in summer.\n• **pH Reducer (sodium bisulphate)** — Oman municipal water pH 7.8–8.2 means most pools need regular pH reduction to target 7.2–7.6.",
+      "Global Chemicals LLC supplies the complete pool chemical range to hotels, villa complexes, schools, and facilities across Oman with same-day delivery in Muscat. Contact info@gcoman.com for pricing."
+    ],
+    category: "Technical Guides",
+    date: "2026-04-10",
+    author: "Global Chemicals Technical Team",
+    readTime: "11 min read",
+    image: "/images/blog/pool-chemicals-oman.jpg",
+    featured: false,
+    relatedProducts: ["Calcium Hypochlorite", "TCCA Tablets", "Sodium Hypochlorite", "Algaecide", "pH Reducer"]
+  },
+  {
+    id: 14,
+    title: "RO Membrane Chemicals for Oman: Antiscalants, Cleaners & Passivation Guide",
+    excerpt: "Essential guide to reverse osmosis membrane chemicals for Oman's SWRO and BWRO systems. Covers antiscalant selection for silica-rich groundwater, CIP cleaners, passivation agents, and dosing for Oman's specific water chemistry.",
+    content: [
+      "Oman has one of the world's highest concentrations of RO infrastructure per capita — coastal SWRO plants supply most municipal water, while industrial BWRO systems serve manufacturing, oil and gas, hotels, and food processing. The right membrane chemicals are critical for protecting this investment.",
+      "**Key RO Chemicals:**\n\n• **Antiscalants** — For SWRO: phosphonate-based at 3–5 mg/L. For BWRO with high silica (common in Oman interior groundwater at 30–60 mg/L): silica-specific polyacrylate antiscalants at 4–8 mg/L. Monitor silica saturation index carefully.\n• **Acid CIP cleaner** — Citric acid 2–3% w/w at pH 3.0–4.0. Removes CaCO3 and iron oxide scale. Maximum 45°C for polyamide TFC membranes.\n• **Alkaline CIP cleaner** — 0.1% NaOH + 0.025% SDS surfactant at pH 11.5–12.0. Removes organic fouling and biofilm.\n• **Sodium bisulphite** — For membrane passivation on new installations and dechlorination of RO feed water.\n• **Descalers** — EDTA-citric blends for emergency scale removal after antiscalant upset.",
+      "Global Chemicals LLC stocks all RO membrane chemicals for same-day delivery in Muscat. Full technical support for dosing optimisation available. Contact info@gcoman.com."
+    ],
+    category: "Technical Guides",
+    date: "2026-04-03",
+    author: "Global Chemicals Technical Team",
+    readTime: "11 min read",
+    image: "/images/blog/ro-chemicals-oman.jpg",
+    featured: false,
+    relatedProducts: ["Antiscalant", "Membrane Cleaner", "Sodium Bisulphite", "Citric Acid", "RO Chemicals"]
   }
 ];
 
