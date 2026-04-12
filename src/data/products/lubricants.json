@@ -2,69 +2,230 @@
   {
     "id": "shell-lubricants",
     "title": "Shell Lubricants",
-    "description": "Comprehensive range of Shell automotive and industrial lubricants for optimal performance.",
+    "description": "Authorised Shell lubricants distributor in Oman — Shell Rimula, Shell Tellus, Shell Gadus, Shell Omala, Shell Helix stocked in Muscat for same-day delivery.",
     "category": "lubricants",
     "iconName": "Wrench",
     "details": {
-      "fullDescription": "Shell's portfolio includes Shell Helix engine oils, Shell Advance for motorcycles, Shell Rimula for heavy-duty diesel, Shell Gadus greases, Shell Tellus hydraulic fluids, and Shell Omala gear oils.",
+      "alternativeNames": [
+        "Shell Rimula",
+        "Shell Tellus",
+        "Shell Gadus",
+        "Shell Omala",
+        "Shell Helix",
+        "Shell Corena",
+        "Shell Advance",
+        "Shell Darina",
+        "Shell Morlina",
+        "Shell Spirax"
+      ],
+      "seoKeywords": [
+        "Shell lubricants Oman",
+        "Shell Rimula Oman",
+        "Shell Rimula R4 Muscat",
+        "Shell Tellus hydraulic oil Oman",
+        "Shell Gadus grease Oman",
+        "Shell Omala gear oil Oman",
+        "Shell Helix engine oil Oman",
+        "Shell authorized distributor Oman",
+        "Shell motor oil Muscat",
+        "Shell industrial lubricants Oman",
+        "Shell Corena compressor oil Oman",
+        "Shell lubricant supplier Sohar",
+        "Shell Delvac Muscat",
+        "buy Shell lubricants Oman"
+      ],
+      "longDescription": "Shell Lubricants supplier and authorised distributor in Oman — Global Chemicals LLC stocks the full Shell lubricants portfolio in Muscat, Oman for same-day delivery across Muscat, Sohar, Salalah, and Rusayl Industrial Area. Our Shell product range includes Shell Rimula (heavy-duty diesel engine oils for trucks, buses, and off-road equipment — R4, R5, R6 grades), Shell Tellus (hydraulic oils for industrial and mobile hydraulic systems), Shell Gadus (high-performance greases for bearings, couplings, and chassis), Shell Omala (gear oils for enclosed gearboxes and bearings), Shell Helix (passenger car engine oils), Shell Corena (compressor oils for rotary screw and reciprocating compressors), Shell Morlina (circulating and bearing oils), Shell Spirax (transmission and axle fluids for commercial vehicles), and Shell Darina (specialty greases). All Shell lubricants supplied by Global Chemicals LLC are 100% genuine, supplied with original Shell Certificate of Analysis (CoA) and Safety Data Sheet (SDS). Serving oil & gas operators (PDO, OQ, Oman LNG), construction contractors, manufacturing facilities, and transport fleets across Oman. Bulk supply in 20L, 200L drums and IBC containers. Export to UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain.",
       "applications": [
-        "Engine protection",
-        "Hydraulic systems",
-        "Gear systems",
-        "Compressors",
-        "Turbines",
-        "Machine tools"
+        "Heavy-duty diesel engines (trucks, buses, off-road equipment)",
+        "Industrial hydraulic systems",
+        "Enclosed gearboxes and gear drives",
+        "Bearings, couplings, and chassis lubrication",
+        "Rotary screw and reciprocating compressors",
+        "Passenger car and light commercial engines",
+        "Circulating and bearing oil systems",
+        "Commercial vehicle transmissions and axles",
+        "Oil & gas field equipment (PDO, OQ, Oman LNG)",
+        "Marine applications"
+      ],
+      "technicalSpecs": [
+        "Shell Rimula R4 X: SAE 15W-40, API CI-4/SL, ACEA E7",
+        "Shell Rimula R5 E: SAE 10W-40, API CI-4 Plus, ACEA E7",
+        "Shell Rimula R6 M: SAE 10W-40, API CJ-4/SM, ACEA E9",
+        "Shell Tellus S2 M: ISO VG 32/46/68/100, DIN 51524 HLP",
+        "Shell Gadus S2 V220: NLGI 2, Lithium Complex thickener",
+        "Shell Omala S2 G: ISO VG 150/220/320/460, API GL-4",
+        "All products: Original Shell Certificate of Analysis supplied",
+        "Available: 1L, 4L, 5L, 20L, 208L drums, 1000L IBC"
       ]
     }
   },
   {
     "id": "mobil-lubricants",
     "title": "Mobil Lubricants",
-    "description": "Advanced synthetic and conventional lubricants including Mobil 1 and Mobil Delvac.",
+    "description": "Authorised Mobil lubricants distributor in Oman — Mobil Delvac, Mobil DTE, Mobil 1 synthetic, Mobilgear stocked in Muscat with same-day delivery.",
     "category": "lubricants",
     "iconName": "Wrench",
     "details": {
-      "fullDescription": "Mobil offers Mobil 1 synthetic engine oils, Mobil Super conventional oils, Mobil Delvac for heavy-duty diesel, Mobil DTE hydraulic fluids, Mobilgear, and Mobil SHC synthetic lubricants.",
+      "alternativeNames": [
+        "Mobil 1",
+        "Mobil Delvac",
+        "Mobil DTE",
+        "Mobilgear",
+        "Mobil SHC",
+        "ExxonMobil lubricants",
+        "Mobil Super",
+        "Mobil Pegasus",
+        "Mobil Rarus",
+        "Mobilith"
+      ],
+      "seoKeywords": [
+        "Mobil lubricants Oman",
+        "Mobil Delvac Oman",
+        "Mobil Delvac Muscat",
+        "Mobil DTE hydraulic oil Oman",
+        "Mobil 1 synthetic oil Oman",
+        "Mobilgear Oman",
+        "Mobil SHC Oman",
+        "ExxonMobil lubricants Oman",
+        "Mobil authorized distributor Oman",
+        "Mobil industrial lubricants Muscat",
+        "Mobil Rarus compressor oil Oman",
+        "Mobil grease Muscat",
+        "Mobilith grease Oman",
+        "buy Mobil lubricants Oman"
+      ],
+      "longDescription": "Mobil Lubricants supplier and authorised distributor in Oman — Global Chemicals LLC stocks the complete ExxonMobil lubricants portfolio in Muscat for same-day delivery across Oman. Our Mobil product range covers Mobil Delvac (heavy-duty diesel engine oils — Delvac 1 5W-40 full synthetic, Delvac MX 15W-40, Delvac XHP Extra for Euro V/VI engines), Mobil DTE (premium hydraulic oils — DTE 24, 25, 26 for industrial and mobile hydraulic systems), Mobil 1 (full synthetic engine oils — Mobil 1 5W-30, 5W-40, 0W-40 for passenger cars and performance vehicles), Mobilgear (enclosed gear oils — Mobilgear 600 XP series ISO VG 68 to 460), Mobil SHC (synthetic lubricants for extreme conditions — SHC 626, SHC 630, SHC Gear 220/320), Mobil Pegasus (natural gas engine oils for gas compression and power generation), Mobil Rarus (rotary and reciprocating compressor oils), and Mobilith (high-performance greases — Mobilith SHC 220, Mobilith AW 0/2). All products are 100% genuine ExxonMobil products supplied with original Certificate of Analysis. Serving oil & gas operators, power plants, manufacturing facilities, and fleet operators across Oman, UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain.",
       "applications": [
-        "Automotive protection",
-        "Commercial vehicles",
-        "Industrial machinery",
-        "Hydraulic systems",
-        "Extreme conditions"
+        "Heavy-duty diesel engines (trucks, mining, construction)",
+        "Industrial hydraulic systems and mobile hydraulics",
+        "Passenger car and light commercial engines",
+        "Enclosed gearboxes and gear drives",
+        "Extreme-condition synthetic lubrication",
+        "Natural gas engines and compression equipment",
+        "Rotary screw and reciprocating compressors",
+        "High-temperature and high-load bearing lubrication",
+        "Wind turbine and renewable energy equipment",
+        "Petrochemical and refinery machinery"
+      ],
+      "technicalSpecs": [
+        "Mobil Delvac MX 15W-40: API CI-4 Plus/CH-4/SL, ACEA E7/A3/B3",
+        "Mobil Delvac 1 5W-40: API CJ-4/SM, ACEA E4/E9 — Full Synthetic",
+        "Mobil DTE 25: ISO VG 46, DIN 51524-2 HLP, Denison HF-0",
+        "Mobilgear 600 XP 220: ISO VG 220, API GL-4/5",
+        "Mobil 1 5W-40: API SP/SN Plus, ACEA A3/B4, Mercedes 229.5",
+        "Mobil Rarus 827: ISO VG 100, DIN 51506 VDL",
+        "Mobilith SHC 220: NLGI 2, Lithium Complex, Synthetic Base",
+        "Available: 1L, 4L, 20L, 208L drums and IBC containers"
       ]
     }
   },
   {
     "id": "castrol-lubricants",
     "title": "Castrol Lubricants",
-    "description": "Premium \"Liquid Engineering\" solutions with Castrol EDGE and MAGNATEC technologies.",
+    "description": "Authorised Castrol lubricants distributor in Oman — Castrol EDGE, Castrol VECTON, Castrol GTX, Castrol Hyspin stocked in Muscat for same-day delivery.",
     "category": "lubricants",
     "iconName": "Wrench",
     "details": {
-      "fullDescription": "Castrol's range includes Castrol EDGE full-synthetic, Castrol MAGNATEC with intelligent molecules, Castrol GTX, Castrol VECTON for heavy-duty diesel, and industrial fluids.",
+      "alternativeNames": [
+        "Castrol EDGE",
+        "Castrol MAGNATEC",
+        "Castrol GTX",
+        "Castrol VECTON",
+        "Castrol Hyspin",
+        "Castrol Optigear",
+        "Castrol Alphasyn",
+        "Castrol CRB",
+        "BP Castrol",
+        "Castrol RX Super"
+      ],
+      "seoKeywords": [
+        "Castrol lubricants Oman",
+        "Castrol EDGE Oman",
+        "Castrol VECTON Muscat",
+        "Castrol GTX Oman",
+        "Castrol hydraulic oil Oman",
+        "Castrol Hyspin Muscat",
+        "Castrol authorized distributor Oman",
+        "Castrol industrial lubricants Oman",
+        "Castrol MAGNATEC Oman",
+        "Castrol CRB Turbomax Oman",
+        "Castrol Optigear Oman",
+        "Castrol grease Muscat",
+        "BP Castrol Oman",
+        "buy Castrol lubricants Oman"
+      ],
+      "longDescription": "Castrol Lubricants supplier and authorised distributor in Oman — Global Chemicals LLC is a stocking distributor of the full Castrol lubricants range in Muscat, Oman with same-day delivery across Muscat, Sohar, Salalah, and Rusayl Industrial Area. Our Castrol range includes Castrol EDGE (full-synthetic engine oils with Fluid TITANIUM Technology — EDGE 5W-30, 5W-40, 0W-30, 0W-40), Castrol MAGNATEC (intelligent engine oils that bond to critical engine parts on start-up), Castrol GTX (proven conventional and semi-synthetic engine oils), Castrol VECTON (long-drain heavy-duty diesel engine oils — VECTON 15W-40, VECTON Long Drain 10W-40 for Euro V/VI engines), Castrol CRB Turbomax (mining and construction diesel engine oils), Castrol Hyspin (hydraulic oils — Hyspin AWH-M, Hyspin HVI for industrial and mobile systems), Castrol Optigear (high-performance gear oils — Optigear BM 220/320 and Synthetic A for extreme conditions), Castrol Alphasyn (synthetic gear oils), and Castrol specialty greases. All Castrol products supplied by Global Chemicals LLC are 100% genuine, supplied with original Castrol Certificate of Analysis (CoA) and Safety Data Sheets (SDS). Suitable for oil & gas, construction, mining, manufacturing, and transport applications across Oman, UAE, Saudi Arabia, and GCC.",
       "applications": [
-        "Maximum engine performance",
-        "Start-up protection",
-        "Sludge prevention",
-        "Heavy-duty vehicles",
-        "Industrial equipment"
+        "High-performance passenger car and SUV engines",
+        "Heavy-duty diesel engines (trucks, construction, mining)",
+        "Long-drain commercial vehicle applications",
+        "Industrial hydraulic systems",
+        "Enclosed gearboxes and worm gears",
+        "Industrial gear drives in extreme conditions",
+        "Marine and offshore equipment",
+        "General industrial lubrication",
+        "Food-grade lubrication (Castrol Foodsafe series)",
+        "Metalworking and cutting fluids"
+      ],
+      "technicalSpecs": [
+        "Castrol EDGE 5W-40: API SN/CF, ACEA A3/B4, BMW LL-01, MB 229.5",
+        "Castrol VECTON 15W-40: API CJ-4/SL, ACEA E6/E9, MB 228.31",
+        "Castrol Hyspin AWH-M 46: ISO VG 46, DIN 51524-3 HVLP, Denison HF-0",
+        "Castrol Optigear BM 220: ISO VG 220, API GL-4, DIN 51517-3 CLP",
+        "Castrol CRB Turbomax 15W-40: API CI-4 Plus, ACEA E7",
+        "Castrol MAGNATEC 10W-40: API SN, ACEA A3/B4",
+        "Available: 1L, 4L, 5L, 20L, 208L drums and 1000L IBC"
       ]
     }
   },
   {
     "id": "gp-lubricants",
     "title": "GP (IPOL) Lubricants",
-    "description": "IPOL brand automotive and industrial lubricants including metal working fluids.",
+    "description": "GP Petroleums IPOL brand lubricants — automotive engine oils, hydraulic oils, gear oils, metal working fluids, and specialty greases in Oman.",
     "category": "lubricants",
     "iconName": "Wrench",
     "details": {
-      "fullDescription": "GP Petroleums' IPOL range includes automotive engine oils, hydraulic oils, gear oils, spindle oils, turbine oils, metal working fluids, and specialty greases.",
+      "alternativeNames": [
+        "IPOL lubricants",
+        "GP Petroleums",
+        "IPOL engine oil",
+        "IPOL hydraulic oil",
+        "IPOL gear oil"
+      ],
+      "seoKeywords": [
+        "GP lubricants Oman",
+        "IPOL lubricants Muscat",
+        "GP Petroleums Oman",
+        "IPOL engine oil Oman",
+        "IPOL hydraulic oil Muscat",
+        "metal working fluid Oman",
+        "industrial lubricants supplier Oman",
+        "IPOL gear oil Oman",
+        "rubber process oil Oman",
+        "turbine oil Oman"
+      ],
+      "longDescription": "GP Petroleums IPOL Lubricants supplier in Oman — Global Chemicals LLC supplies the IPOL brand lubricants from GP Petroleums in Muscat, Oman. The IPOL range covers automotive engine oils (petrol and diesel, multigrade and monograde), hydraulic oils (antiwear and R&O grades), spindle oils for precision machine tools, turbine oils for power generation equipment, gear oils for industrial and automotive gearboxes, metal working fluids and cutting oils for machining operations, rubber process oils for rubber compounding and tyre manufacturing, white mineral oils for food-grade and pharmaceutical applications, and specialty transformer oils for electrical equipment. IPOL lubricants meet BIS, ISO, SAE, API, and DIN quality standards. Commonly used in manufacturing plants, plastic and rubber industries, textile machinery, sugar mills, and general industrial applications across Oman. Competitive pricing with prompt delivery to Muscat, Sohar Industrial Estate, Rusayl, Salalah, and Duqm. Export to UAE, Saudi Arabia, and other GCC countries available.",
       "applications": [
-        "Automotive engines",
-        "Industrial machinery",
-        "Metal working",
-        "Rubber processing",
-        "Sugar industry"
+        "Automotive petrol and diesel engines",
+        "Industrial hydraulic systems",
+        "High-speed spindles and precision machine tools",
+        "Power generation turbines",
+        "Industrial and automotive gearboxes",
+        "Metal cutting, drilling, and grinding",
+        "Rubber compounding and processing",
+        "Textile machinery and looms",
+        "Electrical transformers",
+        "Food processing (white mineral oil grades)"
+      ],
+      "technicalSpecs": [
+        "Engine oils: SAE 20W-50, 15W-40, 10W-30 API SN/CH-4/CI-4",
+        "Hydraulic oil: ISO VG 32/46/68 to DIN 51524 HLP/HM",
+        "Spindle oil: ISO VG 2/5/10/15 for precision applications",
+        "Turbine oil: ISO VG 32/46/68 to DIN 51515-1 L-TD",
+        "Gear oil: ISO VG 68–460, API GL-3/GL-4/GL-5",
+        "Metal working: Water soluble, neat cutting oil, and semi-synthetic grades",
+        "White mineral oil: IP 346 compliant, food-grade available",
+        "Available: 1L, 5L, 20L, 200L drums"
       ]
     }
   }

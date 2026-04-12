@@ -2,7 +2,7 @@
   {
     "id": "caustic-soda-flakes-soap",
     "title": "Caustic Soda Flakes",
-    "description": "Sodium hydroxide flakes for saponification in soap and detergent manufacturing.",
+    "description": "Sodium hydroxide flakes (98–99% NaOH) for saponification, soap manufacturing, water treatment, and industrial pH adjustment in Oman.",
     "category": "soap-detergent",
     "iconName": "Sparkles",
     "details": {
@@ -11,19 +11,52 @@
       "alternativeNames": [
         "Sodium hydroxide flakes",
         "NaOH flakes",
-        "Caustic soda"
+        "Caustic soda",
+        "Lye flakes",
+        "Alkali flakes",
+        "Sodium hydrate"
       ],
       "seoKeywords": [
         "caustic soda flakes Oman",
-        "sodium hydroxide Muscat",
-        "NaOH Oman"
+        "caustic soda supplier Oman",
+        "sodium hydroxide flakes Muscat",
+        "NaOH flakes Oman",
+        "caustic soda Muscat",
+        "sodium hydroxide supplier Oman",
+        "caustic soda 98% Oman",
+        "caustic soda flakes price Oman",
+        "buy caustic soda Oman",
+        "caustic soda Sohar",
+        "caustic soda Salalah"
+      ],
+      "longDescription": "Caustic Soda Flakes (Sodium Hydroxide Flakes) supplier in Oman — Global Chemicals LLC is a leading caustic soda supplier in Muscat, Oman, supplying high-purity sodium hydroxide flakes (98–99% NaOH) to soap manufacturers, water treatment plants, food processors, textile industries, and oil & gas operators across Oman. Caustic soda flakes are the most widely used form of sodium hydroxide for saponification (soap making), as the flake form is easy to handle, weigh, dissolve, and store. The flakes dissolve rapidly in water to produce concentrated caustic solution. Key applications include soap and detergent manufacturing (saponification of fats and oils), water treatment pH adjustment (raising alkalinity in drinking water and wastewater), aluminium processing (bauxite digestion), textile scouring, paper and pulp bleaching, food processing (olive curing, pretzels), and chemical synthesis. Global Chemicals LLC supplies caustic soda flakes in 25kg bags and 1,000kg super sacks. Technical grade (98% purity) and food-grade (suitable for food contact applications) available. SDS, CoA, and TDS supplied with every batch. Delivery to Muscat (same day for orders before 12 PM), Sohar, Salalah, Duqm, Nizwa, and Sur within 2–3 business days. Export to UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain.",
+      "applications": [
+        "Soap and detergent manufacturing (saponification)",
+        "Water treatment pH adjustment and alkalinity control",
+        "Food processing (olive curing, pretzel glazing, noodle production)",
+        "Textile scouring and mercerization",
+        "Paper and pulp bleaching",
+        "Aluminium etching and surface treatment",
+        "Chemical synthesis and pH regulation",
+        "Oil & gas production (H2S neutralization, pH control)",
+        "Cleaning and degreasing formulations"
+      ],
+      "technicalSpecs": [
+        "NaOH content: 98–99% minimum",
+        "Na2CO3: 0.5% maximum",
+        "NaCl: 0.03% maximum",
+        "Fe2O3: 10 ppm maximum",
+        "Appearance: White flakes",
+        "Moisture: <0.5%",
+        "Packaging: 25kg PP bags, 1000kg super sack",
+        "Food-grade (E524) available on request"
       ]
     }
   },
   {
     "id": "caustic-soda-liquid-soap",
     "title": "Caustic Soda Liquid",
-    "description": "Liquid sodium hydroxide for industrial cleaning and detergent formulations.",
+    "description": "Liquid sodium hydroxide solution (30–50% NaOH) for industrial cleaning, water treatment, and continuous-process manufacturing in Oman.",
     "category": "soap-detergent",
     "iconName": "Sparkles",
     "details": {
@@ -32,19 +65,49 @@
       "alternativeNames": [
         "Sodium hydroxide liquid",
         "Caustic soda solution",
-        "Lye"
+        "Lye",
+        "Liquid caustic",
+        "Caustic liquor",
+        "Sodium hydroxide solution"
       ],
       "seoKeywords": [
         "caustic soda liquid Oman",
-        "sodium hydroxide solution Muscat",
-        "lye Oman"
+        "liquid caustic soda Muscat",
+        "sodium hydroxide solution Oman",
+        "caustic soda 50% Oman",
+        "caustic soda 30% Oman",
+        "liquid NaOH Oman",
+        "caustic soda solution supplier Muscat",
+        "caustic liquor Oman",
+        "caustic soda bulk Oman"
+      ],
+      "longDescription": "Caustic Soda Liquid (Sodium Hydroxide Solution) supplier in Oman — Global Chemicals LLC supplies liquid caustic soda in 30%, 48%, and 50% concentration grades to water treatment plants, chemical manufacturers, food processors, and industrial facilities across Muscat and Oman. Liquid caustic soda is preferred over flakes or prills for continuous dosing applications, automated chemical feed systems, and large-volume consumption where manual dissolving would be impractical. In water treatment, liquid caustic is widely used for pH correction in municipal drinking water plants, swimming pool pH raising, and industrial effluent neutralization. In food processing, food-grade liquid caustic soda (30% solution) is used for olive curing, pretzel baking, and CIP (Clean-in-Place) cleaning of food processing equipment. Industrial applications include pulp and paper cooking, textile processing, aluminium surface treatment, and petroleum refining (acid neutralization). Global Chemicals LLC stocks liquid caustic soda in 25L jerricans, 200L HDPE drums, and 1,000L IBC containers, with bulk tanker delivery available to major industrial customers. Technical and food-grade certificates available. Same-day delivery in Muscat, next-day to Sohar and Salalah.",
+      "applications": [
+        "Municipal water treatment pH adjustment",
+        "Swimming pool pH raising and alkalinity control",
+        "Food processing CIP (Clean-in-Place) cleaning",
+        "Industrial effluent neutralization",
+        "Pulp and paper cooking (Kraft process)",
+        "Textile scouring and bleaching",
+        "Aluminium etching and anodizing pre-treatment",
+        "Petroleum refining acid neutralization",
+        "Soap and detergent manufacturing"
+      ],
+      "technicalSpecs": [
+        "NaOH content: 30%, 48%, or 50% w/w",
+        "Appearance: Clear, colorless liquid",
+        "Specific gravity (50%): 1.52 g/cm³",
+        "Specific gravity (30%): 1.33 g/cm³",
+        "Packaging: 25L jerrican, 200L drum, 1000L IBC, bulk tanker",
+        "Food-grade (E524) available on request",
+        "GHS-compliant SDS supplied with every batch"
       ]
     }
   },
   {
     "id": "caustic-soda-prills-soap",
     "title": "Caustic Soda Prills",
-    "description": "High-purity sodium hydroxide beads for precise detergent formulation.",
+    "description": "High-purity sodium hydroxide prills (99% NaOH) — low-dust, free-flowing beads for precise dosing in detergent formulation and industrial processes in Oman.",
     "category": "soap-detergent",
     "iconName": "Sparkles",
     "details": {
@@ -53,12 +116,40 @@
       "alternativeNames": [
         "Sodium hydroxide prills",
         "NaOH beads",
-        "Caustic soda pearls"
+        "Caustic soda pearls",
+        "NaOH prills",
+        "Caustic beads",
+        "Sodium hydroxide granules"
       ],
       "seoKeywords": [
         "caustic soda prills Oman",
         "NaOH prills Muscat",
-        "sodium hydroxide beads Oman"
+        "sodium hydroxide beads Oman",
+        "caustic soda prills 99% Oman",
+        "NaOH 99% Oman",
+        "caustic soda granules Oman",
+        "caustic soda pearls Muscat",
+        "caustic soda prills supplier Oman"
+      ],
+      "longDescription": "Caustic Soda Prills (Sodium Hydroxide Prills/Beads) supplier in Oman — Global Chemicals LLC supplies high-purity caustic soda prills (99% NaOH) in Muscat, Oman. Caustic soda prills are spherical beads of sodium hydroxide produced by a prilling process, offering lower dust generation compared to flakes, improved flow properties for automated dispensing systems, and marginally higher purity (99% vs 98% for flakes). The prills form is preferred by industrial chemical formulators, pharmaceutical-grade operations, and manufacturers requiring precise automated weighing and dosing. Applications include industrial detergent and cleaning product formulation, chemical synthesis requiring precise NaOH quantities, laboratory applications, food-grade pH adjustment, and niche applications where low dust and free-flowing characteristics are required. Like caustic soda flakes, the prills dissolve readily in water to form sodium hydroxide solution at any required concentration. Global Chemicals LLC supplies caustic soda prills in 25kg bags and 500kg big bags. Purity certificate, CoA, SDS, and TDS provided. Same-day delivery in Muscat, next-day delivery to Sohar, Salalah, and other Oman locations.",
+      "applications": [
+        "Industrial detergent and cleaning product formulation",
+        "Precise chemical synthesis and pH adjustment",
+        "Pharmaceutical grade applications",
+        "Food processing (food-grade E524)",
+        "Automated chemical dispensing systems",
+        "Water treatment (where low-dust handling is required)",
+        "Laboratory preparation of standard NaOH solutions"
+      ],
+      "technicalSpecs": [
+        "NaOH content: 99% minimum",
+        "Na2CO3: 0.4% maximum",
+        "NaCl: 0.02% maximum",
+        "Fe2O3: 8 ppm maximum",
+        "Appearance: White spherical beads (2–4mm diameter)",
+        "Moisture: <0.5%",
+        "Packaging: 25kg PP bags, 500kg big bag",
+        "Low dust, free-flowing characteristics"
       ]
     }
   },
