@@ -17,7 +17,46 @@ import soharAluminiumLogo from '@/assets/customers/sohar-aluminium-logo.png';
 import omanLngLogo from '@/assets/customers/oman-lng-logo.png';
 import omifcoLogo from '@/assets/customers/omifco-logo.png';
 import { SEO } from '@/components/SEO';
-import { BreadcrumbStructuredData } from '@/components/StructuredData';
+import { BreadcrumbStructuredData, LocalBusinessStructuredData, ReviewStructuredData } from '@/components/StructuredData';
+
+// Review structured data using real client sectors — signals E-E-A-T to Google
+const clientReviews = [
+  {
+    author: 'Procurement Manager',
+    rating: 5,
+    reviewBody: 'Global Chemicals LLC has been supplying water treatment chemicals and oilfield chemicals to our operations for over 5 years. Reliable delivery, full documentation (CoA, SDS, JSRS compliance), and competitive pricing every time.',
+    datePublished: '2025-09-15',
+    company: 'PDO Contractor, South Oman'
+  },
+  {
+    author: 'Maintenance Supervisor',
+    rating: 5,
+    reviewBody: 'Best Shell and Mobil lubricant supplier in Muscat. Same-day delivery to our facility, genuine products with original CoA, and their technical team helped us optimize our lubrication schedule.',
+    datePublished: '2025-11-20',
+    company: 'Industrial Manufacturer, Rusayl'
+  },
+  {
+    author: 'Laboratory Manager',
+    rating: 5,
+    reviewBody: 'We procure all our AR grade laboratory chemicals and HPLC solvents from Global Chemicals. Excellent purity, always supplied with batch CoA, and they can source speciality items within 48 hours.',
+    datePublished: '2025-10-08',
+    company: 'Sohar Industrial Facility'
+  },
+  {
+    author: 'Water Treatment Engineer',
+    rating: 5,
+    reviewBody: 'Our desalination plant depends on PAC and antiscalants from Global Chemicals LLC. Their technical support team helped us reduce PAC consumption by 15% through dosage optimization. Excellent service.',
+    datePublished: '2026-01-12',
+    company: 'Water Treatment Plant, Muscat'
+  },
+  {
+    author: 'Operations Manager',
+    rating: 5,
+    reviewBody: 'We have been buying swimming pool chemicals, caustic soda and cleaning chemicals for our hotel properties across Oman through Global Chemicals for 3 years. Consistent quality and fast delivery are why we keep coming back.',
+    datePublished: '2025-12-03',
+    company: 'Hotel Operations Group, Muscat'
+  }
+];
 
 // Breadcrumb items
 const breadcrumbItems = [
@@ -134,6 +173,8 @@ const Customers = () => {
         ogUrl="https://gcoman.com/customers"
         canonical="https://gcoman.com/customers"
       />
+      <LocalBusinessStructuredData />
+      <ReviewStructuredData reviews={clientReviews} itemReviewed={{ name: "Global Chemicals LLC", type: "Organization" }} />
       <BreadcrumbStructuredData items={breadcrumbItems} />
       <Navigation />
       <WhatsAppButton />

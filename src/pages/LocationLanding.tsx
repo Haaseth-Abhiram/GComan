@@ -21,7 +21,7 @@ import {
   ChevronRight
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
-import { BreadcrumbStructuredData, FAQStructuredData, OrganizationStructuredData } from '@/components/StructuredData';
+import { BreadcrumbStructuredData, FAQStructuredData, OrganizationStructuredData, LocalBusinessStructuredData } from '@/components/StructuredData';
 
 // Location data for SEO-optimized landing pages
 interface LocationData {
@@ -656,6 +656,7 @@ const LocationLanding = () => {
         ogUrl={`https://gcoman.com/chemicals/${locationData.slug}`}
         canonical={`https://gcoman.com/chemicals/${locationData.slug}`}
       />
+      {locationData.country === 'Oman' && <LocalBusinessStructuredData />}
       <BreadcrumbStructuredData items={breadcrumbItems} />
       <FAQStructuredData faqs={locationData.faqs} />
       <OrganizationStructuredData />

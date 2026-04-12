@@ -14,7 +14,31 @@ import { Drawer, DrawerContent, DrawerHeader, DrawerTitle, DrawerDescription } f
 import { useIsMobile } from '@/hooks/use-mobile';
 import { ProductCard } from '@/components/products/ProductCard';
 import { SEO } from '@/components/SEO';
-import { OrganizationStructuredData } from '@/components/StructuredData';
+import { OrganizationStructuredData, LocalBusinessStructuredData, BreadcrumbStructuredData, FAQStructuredData } from '@/components/StructuredData';
+
+// FAQ structured data for products page — targets high-intent procurement queries
+const productsFAQs = [
+  {
+    question: "What chemical products does Global Chemicals LLC supply in Oman?",
+    answer: "Global Chemicals LLC supplies 1,000+ industrial and specialty chemicals in Oman including water treatment chemicals (PAC, caustic soda, calcium hypochlorite, antiscalants), industrial lubricants (Shell, Mobil, Castrol), laboratory chemicals (AR grade, HPLC solvents), oilfield chemicals (corrosion inhibitors, demulsifiers, H2S scavengers), swimming pool chemicals, food-grade chemicals, RO chemicals, and construction chemicals."
+  },
+  {
+    question: "Can I buy chemicals in bulk from Global Chemicals LLC in Muscat?",
+    answer: "Yes, Global Chemicals LLC offers bulk chemical supply in Muscat and across Oman. We supply in packaging from 1-litre bottles to 25-litre jerricans, 200-litre drums, and 1,000-litre IBC containers. Volume pricing is available for regular bulk buyers. Contact our sales team at info@gcoman.com or +968-93754388 for bulk quotations."
+  },
+  {
+    question: "Are Global Chemicals LLC products supplied with Safety Data Sheets (SDS)?",
+    answer: "Yes. All chemical products supplied by Global Chemicals LLC come with current GHS-compliant Safety Data Sheets (SDS/MSDS) in English. Arabic SDS is available for most products. We also provide Certificates of Analysis (CoA) and Technical Data Sheets (TDS) on request for every batch supplied."
+  },
+  {
+    question: "Does Global Chemicals LLC supply Shell, Mobil, and Castrol lubricants in Oman?",
+    answer: "Yes, Global Chemicals LLC is an authorised distributor of Shell, Mobil, and Castrol lubricants in Oman. We stock Shell Rimula, Shell Tellus, Shell Gadus, Mobil Delvac, Mobil DTE, Castrol RX Super, and many other grades in Muscat with same-day delivery. All lubricants are genuine branded products supplied with original CoA."
+  },
+  {
+    question: "What is the delivery time for chemical orders in Oman?",
+    answer: "For Muscat and Rusayl Industrial Area: same-day delivery for orders before 12:00 PM. For Sohar and surrounding areas: next-day delivery. For Salalah, Duqm, Nizwa, Sur: 2–3 business days. Emergency and weekend deliveries can be arranged. Contact us at +968-93754388 for urgent requirements."
+  }
+];
 import { trackSearch } from '@/components/GoogleAnalytics';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -226,7 +250,14 @@ const Products = () => {
         canonical={categoryParam ? `https://gcoman.com/products/${categoryParam}` : 'https://gcoman.com/products'}
       />
       <OrganizationStructuredData includeService={true} />
-      
+      <LocalBusinessStructuredData />
+      <BreadcrumbStructuredData items={[
+        { name: 'Home', url: 'https://gcoman.com/' },
+        { name: 'Products', url: 'https://gcoman.com/products' },
+        ...(categoryParam ? [{ name: categoryParam.replace(/-/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()), url: `https://gcoman.com/products/${categoryParam}` }] : [])
+      ]} />
+      <FAQStructuredData faqs={productsFAQs} />
+
       <Navigation />
       <WhatsAppButton />
 

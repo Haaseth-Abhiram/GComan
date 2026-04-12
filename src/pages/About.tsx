@@ -9,7 +9,7 @@ import heroImage from '@/assets/about-hero.jpg';
 import facilityImage from '@/assets/about-facility.jpg';
 import teamImage from '@/assets/about-team.jpg';
 import { SEO } from '@/components/SEO';
-import { BreadcrumbStructuredData } from '@/components/StructuredData';
+import { BreadcrumbStructuredData, LocalBusinessStructuredData, OrganizationStructuredData } from '@/components/StructuredData';
 
 // Breadcrumb items for About page
 const breadcrumbItems = [
@@ -61,6 +61,8 @@ const About = () => {
         ogUrl="https://gcoman.com/about"
         canonical="https://gcoman.com/about"
       />
+      <LocalBusinessStructuredData />
+      <OrganizationStructuredData />
       <BreadcrumbStructuredData items={breadcrumbItems} />
       <Navigation />
       <WhatsAppButton />

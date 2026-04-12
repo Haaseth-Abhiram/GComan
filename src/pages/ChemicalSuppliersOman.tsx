@@ -37,6 +37,26 @@ const faqs = [
   {
     question: "Can Global Chemicals provide technical support for chemical applications?",
     answer: "Absolutely. Our experienced technical team provides free consultation including product selection guidance, dosing optimization, application recommendations, Safety Data Sheets (SDS), and on-site technical support. We have 10+ years of expertise serving Oman's diverse industrial sectors."
+  },
+  {
+    question: "Where is Global Chemicals LLC located in Muscat?",
+    answer: "Our head office and main warehouse is located at Office-3, Building Number 1737, Near Oman LNG, Ghala, Muscat, Sultanate of Oman. We offer same-day delivery throughout Muscat including Rusayl Industrial Area, Wadi Kabir, Azaiba, Madinat Sultan Qaboos, and Seeb. Our office is open Sunday–Thursday, 8:00 AM – 6:00 PM."
+  },
+  {
+    question: "Do you supply caustic soda (sodium hydroxide) in Oman?",
+    answer: "Yes, Global Chemicals LLC is a leading caustic soda supplier in Oman. We supply caustic soda in all forms — flakes (98–99% NaOH), prills (99% NaOH), and liquid caustic (30–50%) — in packaging from 25 kg bags to 200-litre drums and bulk quantities. We stock both food-grade and technical-grade caustic soda with CoA and SDS documentation. Same-day delivery in Muscat."
+  },
+  {
+    question: "Do you supply Shell, Mobil, and Castrol lubricants in Oman?",
+    answer: "Yes, Global Chemicals LLC is an authorised lubricants distributor in Oman stocking Shell Rimula, Shell Tellus hydraulic oils, Shell Gadus greases, Mobil Delvac, Mobil DTE, Castrol RX Super, and Castrol Hyspin. All branded lubricants are genuine products supplied with original CoA. Same-day delivery in Muscat; next-day delivery to Sohar, Rusayl, and Salalah."
+  },
+  {
+    question: "Can Global Chemicals supply chemicals to PDO and OQ oil field operations in Oman?",
+    answer: "Yes. Global Chemicals LLC is JSRS (Joint Supplier Registration System) registered, which is the mandatory pre-qualification for chemical supply to PDO, OQ, OPAL, Occidental Petroleum (Oxy), and their approved contractors in Oman. We supply oilfield production chemicals (corrosion inhibitors, scale inhibitors, demulsifiers, H2S scavengers), drilling chemicals, water treatment chemicals, and lubricants to oil & gas operations across South Oman, including Marmul, Nimr, and Qarn Alam field areas."
+  },
+  {
+    question: "What is the minimum order quantity for chemicals from Global Chemicals LLC in Oman?",
+    answer: "There is no minimum order quantity for most products — we supply from single units (1-litre bottles, 25 kg bags) up to full truck loads. We serve both SMEs needing small quantities and large industrial clients requiring bulk supply. For specialty chemicals, minimum order may apply depending on the supplier — contact our team for specific product minimums at info@gcoman.com or +968-93754388."
   }
 ];
 
@@ -79,7 +99,7 @@ const ChemicalSuppliersOman = () => {
       <SEO
         title="Chemical Supplier in Muscat, Oman | Global Chemicals LLC"
         description="Global Chemicals LLC — Leading chemical supplier in Muscat, Oman. ISO 9001 & JSRS certified. Water treatment, industrial, oilfield & laboratory chemicals. Same-day delivery in Muscat. Get a free quote."
-        keywords="chemical supplier muscat oman, chemical suppliers in oman, chemical company muscat oman, industrial chemicals muscat, chemical distributor oman, water treatment chemicals muscat oman, caustic soda oman, PAC supplier muscat, oil gas chemicals oman, laboratory chemicals muscat, chemical supplier GCC"
+        keywords="chemical supplier muscat oman, chemical suppliers in oman, chemical company muscat, industrial chemicals muscat, chemical distributor oman, water treatment chemicals muscat oman, caustic soda oman, caustic soda supplier muscat, PAC supplier muscat oman, poly aluminium chloride oman, oil gas chemicals oman, JSRS chemical supplier oman, PDO chemical supplier oman, Shell lubricants oman, Mobil lubricants muscat, Castrol oman, laboratory chemicals muscat oman, chemical supplier GCC, calcium hypochlorite oman, antiscalant supplier oman, swimming pool chemicals muscat, food grade chemicals oman, RO chemicals oman, chemical supplier sohar, chemical supplier salalah, chemical supplier duqm"
         ogTitle="Chemical Supplier in Muscat, Oman | Global Chemicals LLC"
         ogDescription="Leading chemical supplier in Muscat, Oman. ISO 9001 & JSRS certified. Water treatment, industrial, oilfield & laboratory chemicals. Same-day delivery in Muscat."
         ogUrl="https://gcoman.com/chemical-suppliers-oman"

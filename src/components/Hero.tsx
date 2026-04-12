@@ -60,7 +60,7 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* SEO-optimized hidden H1 for consistent keyword targeting */}
       <h1 className="sr-only">
-        Chemical Supplier Oman & GCC - Global Chemicals LLC | Water Treatment, Industrial & Specialty Chemicals in Muscat, Sohar, Salalah, Dubai UAE, Saudi Arabia, Qatar
+        Chemical Supplier Muscat Oman | Caustic Soda, PAC, JSRS Registered | Global Chemicals LLC — Industrial, Water Treatment & Oil Gas Chemicals in Oman, UAE, Saudi Arabia, Qatar, GCC
       </h1>
       {/* Background with Parallax Effect */}
       <div className="absolute inset-0 z-0">

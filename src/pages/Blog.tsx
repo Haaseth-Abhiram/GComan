@@ -5,6 +5,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import { SEO } from '@/components/SEO';
+import { BlogListingStructuredData, BreadcrumbStructuredData } from '@/components/StructuredData';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -843,6 +844,11 @@ const Blog = () => {
         canonical="https://gcoman.com/blog"
         ogUrl="https://gcoman.com/blog"
       />
+      <BlogListingStructuredData posts={blogPosts.map(p => ({ id: p.id as unknown as number, title: p.title, excerpt: p.excerpt, date: p.date, author: p.author, category: p.category }))} />
+      <BreadcrumbStructuredData items={[
+        { name: 'Home', url: 'https://gcoman.com/' },
+        { name: 'Blog', url: 'https://gcoman.com/blog' },
+      ]} />
 
       <Navigation />
       <WhatsAppButton />
