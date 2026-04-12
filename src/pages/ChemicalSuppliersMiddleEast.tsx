@@ -16,23 +16,27 @@ import {
 const faqs = [
   {
     question: "Does Global Chemicals LLC supply chemicals to the UAE?",
-    answer: "Yes, Global Chemicals LLC exports chemicals to the UAE including Dubai, Abu Dhabi, Sharjah, and other Emirates. We supply water treatment chemicals, industrial lubricants, laboratory reagents, and oilfield chemicals. Orders are typically fulfilled within 3-5 business days via road freight or air freight for urgent requirements. Contact our sales team at sales@gcoman.com for UAE pricing and availability."
+    answer: "Yes, Global Chemicals LLC exports chemicals to all UAE Emirates — Dubai, Abu Dhabi, Sharjah, Fujairah, Ras Al Khaimah, and Ajman. We supply water treatment chemicals, industrial lubricants, laboratory reagents, and oilfield chemicals. Orders are typically fulfilled within 3-5 business days via road freight or air freight for urgent requirements. Fujairah is our fastest UAE delivery — same-day possible given the shared Oman-UAE border."
   },
   {
     question: "Can Global Chemicals supply chemicals to Saudi Arabia?",
-    answer: "Absolutely. We supply chemicals to Saudi Arabia including Riyadh, Jeddah, Dammam, and the Eastern Province industrial zones. Our portfolio covers water treatment chemicals, oil & gas production chemicals, industrial lubricants, and laboratory reagents suited for Saudi Arabia's petrochemical and manufacturing sectors. Standard lead time is 5-7 business days."
+    answer: "Absolutely. We supply chemicals to Saudi Arabia including Riyadh, Jeddah, Dammam, Al Khobar, Jubail Industrial City, and KAEC. Our portfolio covers water treatment chemicals, oil & gas production chemicals, industrial lubricants, and laboratory reagents suited for Saudi Arabia's petrochemical and manufacturing sectors. Standard lead time is 5-7 business days. Full SASO and Saudi customs documentation provided."
   },
   {
     question: "Do you export chemicals to Qatar, Kuwait, and Bahrain?",
-    answer: "Yes, we serve the entire GCC region. We supply chemicals to Doha (Qatar), Kuwait City (Kuwait), and Manama (Bahrain) with lead times of 4-7 business days depending on product availability and shipping mode. We can quote in USD and handle all required export documentation including MSDS, Certificate of Origin, and commercial invoices."
+    answer: "Yes, we serve the entire GCC region. We supply chemicals to Doha (Qatar), Kuwait City (Kuwait), and Manama (Bahrain) with lead times of 4-7 business days. We quote in USD, handle all export documentation including MSDS, Certificate of Origin, and commercial invoices, and can arrange both road freight and sea freight depending on order size and urgency."
   },
   {
-    question: "What certifications make Global Chemicals LLC qualified for GCC supply?",
-    answer: "Global Chemicals LLC holds ISO 9001:2015 certification, JSRS (Joint Supplier Registration System) certification for oil & gas supply, and ICV compliance. We provide full documentation including Safety Data Sheets (SDS/MSDS), Certificates of Analysis (CoA), Technical Data Sheets (TDS), and Certificate of Origin — all required for GCC import clearance."
+    question: "Do you export chemicals to Iraq, Jordan, and Egypt?",
+    answer: "Yes. Beyond the GCC, we export chemicals to Iraq (Baghdad, Basra — particularly oilfield chemicals for Iraq's upstream sector), Jordan (Amman, Zarqa, Aqaba — pharmaceutical and water treatment chemicals), and Egypt (Cairo, Alexandria — industrial, food-grade, and agricultural chemicals). Air freight is available for urgent requirements. Arabic SDS and documentation are provided for all non-GCC destinations."
+  },
+  {
+    question: "What certifications make Global Chemicals LLC qualified for Middle East supply?",
+    answer: "Global Chemicals LLC holds ISO 9001:2015 certification, JSRS (Joint Supplier Registration System) certification for oil & gas supply, and ICV compliance. We provide full documentation including Safety Data Sheets in Arabic and English, Certificates of Analysis, Technical Data Sheets, Halal certificates (where applicable), and Certificate of Origin attested by Oman Chamber of Commerce — all required for GCC and wider Middle East import clearance."
   },
   {
     question: "What chemicals does Global Chemicals supply across the Middle East?",
-    answer: "Our Middle East export portfolio includes: water treatment chemicals (PAC, caustic soda, antiscalants, biocides), industrial lubricants (Shell, Mobil, Castrol), laboratory chemicals (AR grade reagents, HPLC solvents), oilfield chemicals (corrosion inhibitors, demulsifiers, H2S scavengers), swimming pool chemicals, construction chemicals, and agricultural chemicals."
+    answer: "Our Middle East export portfolio includes: water treatment chemicals (PAC, caustic soda, antiscalants, biocides, chlorine), industrial lubricants (Shell, Mobil, Castrol), laboratory chemicals (AR grade reagents, HPLC solvents), oilfield chemicals (corrosion inhibitors, demulsifiers, H2S scavengers, scale inhibitors), swimming pool chemicals, construction chemicals, agricultural fertilizers and crop protection chemicals, food-grade chemicals, and pharmaceutical reagents."
   },
   {
     question: "How do I get a quote for chemical export to the Middle East?",
@@ -47,16 +51,23 @@ const breadcrumbItems = [
 
 const gccCountries = [
   {
+    flag: '🇴🇲',
+    country: 'Oman (HQ)',
+    cities: 'Muscat, Sohar, Salalah, Duqm',
+    highlight: 'Head Office — Same-day delivery available',
+    slug: 'muscat'
+  },
+  {
     flag: '🇦🇪',
     country: 'UAE',
-    cities: 'Dubai, Abu Dhabi, Sharjah',
+    cities: 'Dubai, Abu Dhabi, Sharjah, Fujairah, RAK',
     highlight: 'Petrochemicals, Construction, Manufacturing',
     slug: 'dubai'
   },
   {
     flag: '🇸🇦',
     country: 'Saudi Arabia',
-    cities: 'Riyadh, Jeddah, Dammam',
+    cities: 'Riyadh, Jeddah, Dammam, Jubail',
     highlight: 'Oil & Gas, Refining, Petrochemicals',
     slug: 'riyadh'
   },
@@ -82,11 +93,25 @@ const gccCountries = [
     slug: 'bahrain'
   },
   {
-    flag: '🇴🇲',
-    country: 'Oman (HQ)',
-    cities: 'Muscat, Sohar, Salalah, Duqm',
-    highlight: 'Head Office — Same-day delivery available',
-    slug: 'muscat'
+    flag: '🇮🇶',
+    country: 'Iraq',
+    cities: 'Baghdad, Basra, Kirkuk, Erbil',
+    highlight: 'Oil & Gas Upstream, Infrastructure, Industry',
+    slug: 'baghdad'
+  },
+  {
+    flag: '🇯🇴',
+    country: 'Jordan',
+    cities: 'Amman, Zarqa, Aqaba',
+    highlight: 'Pharma, Water Treatment, Mining, Agriculture',
+    slug: 'amman'
+  },
+  {
+    flag: '🇪🇬',
+    country: 'Egypt',
+    cities: 'Cairo, Alexandria, Suez, Port Said',
+    highlight: 'Pharma, Food Industry, Petrochemicals, Agriculture',
+    slug: 'cairo'
   }
 ];
 
@@ -122,11 +147,11 @@ const ChemicalSuppliersMiddleEast = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Chemical Exporter from Oman to UAE, Saudi Arabia & GCC | Global Chemicals LLC"
-        description="Global Chemicals LLC — ISO 9001 certified chemical exporter from Oman supplying UAE (Dubai, Abu Dhabi), Saudi Arabia, Qatar, Kuwait & Bahrain. Water treatment, industrial, oilfield & lab chemicals. Get a free GCC export quote."
-        keywords="chemical exporter Oman UAE, chemical supplier Oman to Dubai, chemical supplier Oman to Abu Dhabi, chemical exporter Oman Saudi Arabia, chemical supplier Oman Qatar, chemical supplier Oman Kuwait, chemical export from Oman GCC, Oman chemical company UAE, industrial chemicals export Oman, water treatment chemicals UAE from Oman, oilfield chemicals GCC export, chemical distributor Oman Middle East, chemical supplier Dubai from Oman, caustic soda exporter Oman UAE"
-        ogTitle="Chemical Exporter from Oman to UAE, Saudi Arabia & GCC | Global Chemicals LLC"
-        ogDescription="ISO 9001 certified chemical exporter from Oman supplying UAE (Dubai, Abu Dhabi), Saudi Arabia, Qatar, Kuwait & Bahrain. Industrial, water treatment & oilfield chemicals across the GCC."
+        title="Chemical Supplier Middle East | Oman UAE Saudi Arabia Iraq Jordan Egypt | Global Chemicals LLC"
+        description="Global Chemicals LLC — ISO 9001 certified chemical exporter from Oman supplying UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, Iraq, Jordan & Egypt. Water treatment, industrial, oilfield & lab chemicals. Full Arabic documentation. Get a free export quote."
+        keywords="chemical exporter Oman UAE, chemical supplier Middle East, chemical supplier Oman to Dubai, chemical exporter Oman Saudi Arabia, chemical supplier Oman Qatar Kuwait Bahrain, chemical supplier Iraq Baghdad Basra, chemical supplier Jordan Amman, chemical supplier Egypt Cairo Alexandria, chemical export from Oman GCC, water treatment chemicals Middle East, oilfield chemicals Middle East, industrial chemicals export Oman, caustic soda exporter Oman UAE"
+        ogTitle="Chemical Supplier Middle East | UAE, Saudi Arabia, Iraq, Jordan, Egypt | Global Chemicals LLC"
+        ogDescription="ISO 9001 certified chemical exporter from Oman supplying all Middle East markets — UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, Iraq, Jordan & Egypt. Industrial, water treatment & oilfield chemicals with full Arabic documentation."
         ogUrl="https://gcoman.com/chemical-suppliers-middle-east"
         canonical="https://gcoman.com/chemical-suppliers-middle-east"
       />
@@ -145,10 +170,10 @@ const ChemicalSuppliersMiddleEast = () => {
                 ISO 9001:2015 Certified • JSRS Registered • GCC Export Ready
               </Badge>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-                Chemical Exporter from Oman to UAE, Saudi Arabia & GCC
+                Chemical Exporter from Oman to the Middle East & GCC
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-                Global Chemicals LLC is a leading chemical exporter headquartered in Muscat, Oman, supplying industries across the entire GCC — UAE (Dubai, Abu Dhabi, Sharjah), Saudi Arabia, Qatar, Kuwait, and Bahrain. ISO 9001:2015 certified, JSRS registered, with 1,000+ products and full export documentation (CoA, SDS, Certificate of Origin) ready.
+                Global Chemicals LLC is a leading chemical exporter headquartered in Muscat, Oman, supplying industries across the entire Middle East — UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, Iraq, Jordan, and Egypt. ISO 9001:2015 certified, JSRS registered, with 1,000+ products and full export documentation (CoA, SDS in Arabic & English, Certificate of Origin) ready.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="gap-2 text-lg px-8" onClick={() => trackSelectContent('cta_button', 'get_quote_me_landing')}>
@@ -174,7 +199,7 @@ const ChemicalSuppliersMiddleEast = () => {
                 { icon: Award, label: '10+ Years Experience', value: 'Established' },
                 { icon: Factory, label: 'Products Available', value: '1,000+' },
                 { icon: Users, label: 'GCC Clients Served', value: '200+' },
-                { icon: Globe2, label: 'Countries Served', value: '6 GCC' },
+                { icon: Globe2, label: 'Countries Served', value: '9 ME' },
               ].map((stat, i) => {
                 const Icon = stat.icon;
                 return (
@@ -197,7 +222,7 @@ const ChemicalSuppliersMiddleEast = () => {
                 Countries We Serve
               </h2>
               <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-                We supply chemicals to all GCC countries with competitive pricing, full documentation, and reliable logistics
+                We supply chemicals to all GCC countries and key wider Middle East markets — with competitive pricing, full Arabic documentation, and reliable logistics
               </p>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {gccCountries.map((country, i) => (

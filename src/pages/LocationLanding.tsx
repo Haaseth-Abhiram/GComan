@@ -584,6 +584,120 @@ const locations: Record<string, LocationData> = {
     metaKeywords: 'chemical supplier Jeddah, chemicals Jeddah Saudi Arabia, industrial chemicals Jeddah, food grade chemicals Jeddah, pharmaceutical chemicals Jeddah, KAEC chemical supplier, Jeddah Industrial City chemicals, water treatment Jeddah, chemical exporter Oman Jeddah KSA'
   },
 
+  // ── Iraq ──────────────────────────────────────────────────────────────────
+
+  'baghdad': {
+    slug: 'baghdad',
+    city: 'Baghdad',
+    cityArabic: 'بغداد',
+    country: 'Iraq',
+    region: 'Baghdad & Southern Iraq',
+    description: 'Global Chemicals LLC exports industrial and specialty chemicals to Iraq — one of the Middle East\'s largest emerging chemical markets driven by oil sector rehabilitation, infrastructure rebuilding, and growing manufacturing activity. We supply oilfield chemicals, water treatment chemicals, industrial lubricants, and construction chemicals to Baghdad, Basra, Kirkuk, and other major Iraqi cities. Iraq\'s oil production exceeds 4 million barrels per day, generating significant demand for production chemicals, corrosion inhibitors, demulsifiers, H2S scavengers, and drilling fluids across fields operated by BP, Shell, Lukoil, CNPC, and national oil companies.',
+    industries: ['Oil & Gas (MoO, BP, Shell, Lukoil, CNPC)', 'Water Treatment & Infrastructure', 'Construction & Reconstruction', 'Manufacturing', 'Agriculture', 'Pharmaceutical & Healthcare', 'Power Generation'],
+    deliveryTime: '7–10 business days to Baghdad / Basra (air freight 3–5 days for urgent)',
+    keyClients: ['Iraq national oil company contractors', 'Basra Oil Company supply chains', 'Water infrastructure project contractors', 'Baghdad construction projects', 'Industrial facilities across Iraq'],
+    highlights: [
+      'Full oilfield chemical portfolio for Iraq upstream operations',
+      'Arabic SDS and documentation provided',
+      'Experience with Iraq customs and import regulations',
+      'Both road freight and air freight options available',
+      'ISO 9001 certified quality with full CoA documentation'
+    ],
+    faqs: [
+      {
+        question: 'Does Global Chemicals LLC export chemicals to Iraq?',
+        answer: 'Yes, we export industrial and specialty chemicals to Iraq including Baghdad, Basra, Kirkuk, Erbil, and Mosul. Our portfolio covers oilfield chemicals (corrosion inhibitors, scale inhibitors, demulsifiers, H2S scavengers), water treatment chemicals, industrial lubricants, and construction chemicals. Standard delivery is 7–10 business days; air freight is available for urgent requirements in 3–5 days.'
+      },
+      {
+        question: 'What oilfield chemicals can you supply for Iraq operations?',
+        answer: 'Iraq\'s oil fields are among the most active in the world, with production from Basra, Kirkuk, West Qurna, Rumaila, and Majnoon fields. We supply corrosion inhibitors, scale inhibitors, demulsifiers, H2S scavengers, biocides, drilling fluid additives, completion fluids, and production chemicals compatible with Iraq\'s high-temperature, high-salinity reservoir conditions. Full Technical Data Sheets and Safety Data Sheets in Arabic and English are provided.'
+      },
+      {
+        question: 'What documentation do you provide for chemical exports to Iraq?',
+        answer: 'We provide all required export documentation for Iraqi customs: Certificate of Origin attested by Oman Chamber of Commerce, Certificate of Analysis, Safety Data Sheet in Arabic and English, Technical Data Sheet, commercial invoice, packing list, and Bill of Lading. Our team has experience navigating Iraqi import requirements and can advise on specific documentation needs for your sector.'
+      }
+    ],
+    metaTitle: 'Chemical Supplier Iraq | Baghdad Basra Oil & Industrial Chemicals | Global Chemicals LLC',
+    metaDescription: 'Chemical supplier exporting to Iraq — Baghdad, Basra, Kirkuk. Oilfield chemicals, water treatment, industrial chemicals for Iraq oil sector. ISO 9001. Arabic documentation. Get a quote.',
+    metaKeywords: 'chemical supplier Iraq, chemicals Baghdad, chemicals Basra Iraq, oilfield chemicals Iraq, industrial chemicals Iraq, water treatment chemicals Iraq, chemical exporter Oman Iraq, Iraq oil sector chemicals, corrosion inhibitor Iraq, chemical supplier Baghdad'
+  },
+
+  // ── Jordan ─────────────────────────────────────────────────────────────────
+
+  'amman': {
+    slug: 'amman',
+    city: 'Amman',
+    cityArabic: 'عمّان',
+    country: 'Jordan',
+    region: 'Amman & Northern Jordan',
+    description: 'Global Chemicals LLC exports specialty and industrial chemicals to Jordan, a key chemical distribution and manufacturing hub for the broader Levant region. We supply water treatment chemicals, pharmaceutical-grade chemicals, agricultural chemicals, food-grade chemicals, and industrial chemicals to Amman, Zarqa Industrial City, Aqaba (Jordan\'s only seaport and free zone), and the Dead Sea industrial area. Jordan hosts a significant phosphate and potash mining industry (Jordan\'s natural resources), a growing pharmaceutical sector, and a large water treatment network — all sectors with sustained chemical demand.',
+    industries: ['Phosphate & Potash Mining', 'Pharmaceuticals & Healthcare', 'Water Treatment', 'Food & Beverage', 'Construction', 'Agriculture', 'Aqaba Free Zone (ASEZA)'],
+    deliveryTime: '5–8 business days to Amman / Zarqa (road freight via Saudi Arabia)',
+    keyClients: ['Jordan phosphate sector suppliers', 'Zarqa Industrial City manufacturers', 'Pharmaceutical companies in Amman', 'Water Authority of Jordan contractors', 'Aqaba Special Economic Zone companies'],
+    highlights: [
+      'Pharmaceutical & food-grade chemical expertise',
+      'Phosphate and potash industry chemical supply',
+      'Full Arabic documentation and SDS provided',
+      'Aqaba Free Zone and direct import support',
+      'ISO 9001 certified quality assurance'
+    ],
+    faqs: [
+      {
+        question: 'Does Global Chemicals LLC export chemicals to Jordan?',
+        answer: 'Yes, we export specialty and industrial chemicals to Jordan including Amman, Zarqa, Aqaba, and the Dead Sea industrial area. Our portfolio covers water treatment chemicals, pharmaceutical-grade reagents, agricultural chemicals, food-grade chemicals, and industrial chemicals. Standard delivery via road freight through Saudi Arabia takes 5–8 business days.'
+      },
+      {
+        question: 'Can you supply chemicals for Jordan\'s pharmaceutical sector?',
+        answer: 'Yes. Jordan is one of the largest pharmaceutical exporters in the Arab world, with over 100 pharmaceutical manufacturers based primarily in Amman and Zarqa. We supply pharmaceutical-grade reagents, HPLC solvents, AR grade chemicals, and specialty analytical chemicals with full Certificate of Analysis, GMP-compatible documentation, and Safety Data Sheets in Arabic and English.'
+      },
+      {
+        question: 'Do you supply water treatment chemicals to Jordan?',
+        answer: 'Yes. Jordan faces acute water scarcity — it is among the world\'s most water-stressed countries — making water treatment chemicals essential infrastructure inputs. We supply PAC, chlorine, antiscalants, biocides, corrosion inhibitors, and specialty water treatment chemicals to support Jordan\'s water treatment plants and distribution networks. All products come with full technical documentation.'
+      }
+    ],
+    metaTitle: 'Chemical Supplier Jordan | Amman Pharma Water Treatment Chemicals | Global Chemicals LLC',
+    metaDescription: 'Chemical supplier exporting to Jordan — Amman, Zarqa, Aqaba. Pharmaceutical, water treatment, agricultural & industrial chemicals. ISO 9001 certified. Arabic documentation. Get a quote.',
+    metaKeywords: 'chemical supplier Jordan, chemicals Amman Jordan, pharmaceutical chemicals Jordan, water treatment chemicals Jordan, industrial chemicals Amman, agricultural chemicals Jordan, chemical exporter Oman Jordan, Aqaba chemicals, Zarqa Industrial City chemicals, chemical supplier Middle East Jordan'
+  },
+
+  // ── Egypt ──────────────────────────────────────────────────────────────────
+
+  'cairo': {
+    slug: 'cairo',
+    city: 'Cairo',
+    cityArabic: 'القاهرة',
+    country: 'Egypt',
+    region: 'Cairo, Alexandria & Greater Egypt',
+    description: 'Global Chemicals LLC exports specialty and industrial chemicals to Egypt — the Arab world\'s most populous country and largest non-GCC chemical market. Egypt\'s rapidly expanding industrial base includes petrochemicals, textiles, food processing, pharmaceuticals, and construction — all sectors with significant chemical demand. We supply water treatment chemicals, industrial lubricants, pharmaceutical-grade reagents, food-grade chemicals, agricultural chemicals, and construction chemicals to Cairo, Alexandria (Egypt\'s chemical and industrial hub), Suez Canal Economic Zone, and across Egypt\'s major industrial and agricultural regions.',
+    industries: ['Oil & Gas (EGPC, ENI, BP Egypt)', 'Petrochemicals', 'Textiles & Dyeing', 'Food & Beverage Processing', 'Pharmaceuticals', 'Construction & Cement', 'Agriculture (Nile Delta, Sinai)'],
+    deliveryTime: '7–12 business days to Cairo / Alexandria (sea freight via Alexandria Port)',
+    keyClients: ['Egyptian pharmaceutical manufacturers', 'Alexandria industrial zone companies', 'Suez Canal Economic Zone businesses', 'Egyptian food processing industry', 'Cairo construction project operators'],
+    highlights: [
+      'Largest non-GCC Middle East market coverage',
+      'Sea freight via Alexandria and Damietta ports',
+      'Full Arabic SDS and technical documentation',
+      'Pharmaceutical & food-grade chemical portfolio',
+      'ISO 9001 certified quality with CoA and SDS'
+    ],
+    faqs: [
+      {
+        question: 'Does Global Chemicals LLC export chemicals to Egypt?',
+        answer: 'Yes, we export industrial and specialty chemicals to Egypt including Cairo, Alexandria, Port Said, Suez, and industrial zones across the Nile Delta and Upper Egypt. Our portfolio covers water treatment chemicals, pharmaceutical-grade reagents, food-grade chemicals, agricultural chemicals, industrial lubricants, and construction chemicals. Standard sea freight delivery via Alexandria Port takes 7–12 business days from Muscat.'
+      },
+      {
+        question: 'What chemicals can you supply for Egypt\'s pharmaceutical and food industry?',
+        answer: 'Egypt has over 150 pharmaceutical manufacturers and a large food processing sector. We supply pharmaceutical-grade solvents, AR grade analytical chemicals, HPLC-grade reagents, food-grade additives, and processing chemicals with full GMP-compatible documentation. All food-grade products are supplied with Halal certificates where applicable, and Safety Data Sheets are provided in Arabic and English.'
+      },
+      {
+        question: 'How do you ship chemicals to Egypt from Oman?',
+        answer: 'We ship chemicals to Egypt primarily via sea freight from Port of Sohar or Muscat Port to Alexandria Port or Damietta Port, taking 7–12 business days. For urgent requirements, air freight via Cairo International Airport is available with 3–5 day delivery. We handle all required export documentation including Certificate of Origin attested by Oman Chamber of Commerce, Arabic SDS, Certificate of Analysis, and Egypt Customs-compliant invoicing.'
+      }
+    ],
+    metaTitle: 'Chemical Supplier Egypt | Cairo Alexandria Industrial Chemicals | Global Chemicals LLC',
+    metaDescription: 'Chemical supplier exporting to Egypt — Cairo, Alexandria, Suez. Pharma, food-grade, water treatment & industrial chemicals. ISO 9001 certified. Arabic documentation. Get a quote.',
+    metaKeywords: 'chemical supplier Egypt, chemicals Cairo Egypt, chemicals Alexandria Egypt, pharmaceutical chemicals Egypt, water treatment chemicals Egypt, industrial chemicals Egypt, chemical exporter Oman Egypt, food grade chemicals Egypt, agricultural chemicals Egypt, chemical supplier Middle East Egypt'
+  },
+
   'dammam': {
     slug: 'dammam',
     city: 'Dammam',
