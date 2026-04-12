@@ -2,17 +2,52 @@
   {
     "id": "lab-equipment",
     "title": "Laboratory Handling Equipment",
-    "description": "Premium laboratory equipment including beakers, flasks, and specialized vessels.",
+    "description": "Premium borosilicate glass laboratory glassware — beakers, flasks, volumetric glassware, crucibles, and distillation apparatus for analytical and research laboratories in Oman.",
     "category": "lab-equipment",
     "iconName": "TestTube",
     "details": {
-      "fullDescription": "Our product range includes borosilicate glass beakers, crucibles, Erlenmeyer flasks, volumetric flasks, and distillation flasks, expertly crafted for specific laboratory processes.",
+      "alternativeNames": [
+        "Laboratory glassware",
+        "Lab glassware",
+        "Borosilicate glass",
+        "Laboratory apparatus",
+        "Lab equipment",
+        "Scientific glassware"
+      ],
+      "seoKeywords": [
+        "laboratory equipment Oman",
+        "lab glassware Oman",
+        "laboratory glassware Muscat",
+        "borosilicate glass Oman",
+        "laboratory apparatus Oman",
+        "lab equipment supplier Muscat",
+        "scientific glassware Oman",
+        "beakers flasks Oman",
+        "volumetric glassware Oman",
+        "laboratory supplies Muscat",
+        "lab equipment supplier GCC"
+      ],
+      "longDescription": "Laboratory Equipment and Glassware supplier in Oman — Global Chemicals LLC supplies a comprehensive range of laboratory handling equipment and borosilicate glass apparatus to quality control laboratories, research facilities, university laboratories, food testing labs, water analysis laboratories, and industrial QC departments across Muscat and Oman. Our laboratory glassware portfolio includes beakers (Griffin, Berzelius patterns — 50ml to 5,000ml), Erlenmeyer (conical) flasks (25ml to 5,000ml), volumetric flasks (Class A and Class B — 25ml to 2,000ml), graduated cylinders (10ml to 2,000ml), burettes (25ml and 50ml, Class A), pipettes (graduated and volumetric, various sizes), separating funnels (pear-shaped and cylindrical), round-bottom and flat-bottom flasks (100ml to 20L), distillation apparatus and reflux condensers, Kjeldahl flasks for nitrogen analysis, crucibles and evaporating dishes, watch glasses, petri dishes, and sample containers. All glassware is manufactured from Type I borosilicate glass 3.3 (high chemical resistance, low thermal expansion). ISO and ASTM volumetric standards available. Also supplying laboratory consumables including filter papers, tubing, stoppers, clamps, and stands. Delivery across Oman; supply to UAE, Saudi Arabia, and GCC on request.",
       "applications": [
-        "Chemical reactions",
-        "Titrations",
-        "Solution preparation",
-        "Distillation",
-        "Laboratory testing"
+        "Analytical chemistry titrations and volumetric analysis",
+        "Solution preparation and storage",
+        "Chemical reactions and synthesis",
+        "Distillation and reflux operations",
+        "Gravimetric analysis (crucibles, evaporating dishes)",
+        "Microbiology and cell culture (petri dishes)",
+        "Food and water quality testing",
+        "Oil & gas laboratory QC testing",
+        "Environmental sample collection and analysis"
+      ],
+      "technicalSpecs": [
+        "Glass type: Borosilicate 3.3 (ISO 3585, DIN 12217)",
+        "Thermal expansion coefficient: 3.3 × 10⁻⁶ K⁻¹",
+        "Temperature resistance: -50°C to +500°C (short term to 550°C)",
+        "Volumetric Class A: ±0.05–0.25ml tolerance (ISO 4788)",
+        "Volumetric Class B: ±0.1–0.5ml tolerance",
+        "Autoclavable: Yes (121°C, 1 bar)",
+        "Chemical resistance: Excellent (all common lab reagents)",
+        "Certifications: ISO, ASTM E438, DIN standards available"
       ]
     }
   }

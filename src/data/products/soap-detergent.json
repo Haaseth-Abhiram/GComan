@@ -156,7 +156,7 @@
   {
     "id": "edta-powder-soap",
     "title": "EDTA Powder",
-    "description": "Chelating agent for water hardness control in detergent products.",
+    "description": "Ethylenediaminetetraacetic acid (EDTA) — chelating agent for water hardness control, metal sequestration, and stability enhancement in detergent, cleaning, and industrial formulations.",
     "category": "soap-detergent",
     "iconName": "Sparkles",
     "details": {
@@ -164,20 +164,44 @@
       "casNumber": "60-00-4",
       "alternativeNames": [
         "Ethylenediaminetetraacetic acid",
-        "EDTA",
-        "Chelating agent"
+        "EDTA tetrasodium",
+        "EDTA disodium",
+        "Chelating agent",
+        "Sequestering agent",
+        "Versene"
       ],
       "seoKeywords": [
         "EDTA powder Oman",
         "chelating agent Muscat",
-        "water softener Oman"
+        "EDTA disodium Oman",
+        "EDTA tetrasodium Oman",
+        "sequestering agent Oman",
+        "metal chelating agent Muscat",
+        "EDTA supplier Oman"
+      ],
+      "longDescription": "EDTA (Ethylenediaminetetraacetic acid) supplier in Oman — Global Chemicals LLC supplies EDTA powder in disodium (EDTA-2Na) and tetrasodium (EDTA-4Na) salt forms to detergent formulators, water treatment plants, cosmetic manufacturers, and industrial users across Muscat and Oman. EDTA is one of the most widely used chelating (sequestering) agents in industrial chemistry. It works by binding to metal ions — calcium, magnesium, iron, copper, manganese — and preventing them from interfering with surfactant performance in hard water, causing discolouration, or catalysing unwanted oxidation reactions. In detergent formulations, EDTA prevents soap scum formation in hard water, stabilises bleach (hydrogen peroxide and hypochlorite) formulations, and enhances surfactant cleaning efficiency. In water treatment, EDTA is used for metal ion control, boiler deposit removal, and as a complexing agent for iron and manganese. In cosmetics and personal care, EDTA acts as a preservative booster and stability enhancer. Available in food-grade (E385 — Calcium Disodium EDTA) for food and beverage applications. Global Chemicals LLC supplies EDTA powder in 25kg bags. SDS and CoA available.",
+      "applications": [
+        "Detergent formulation — water hardness sequestration and surfactant boosting",
+        "Hydrogen peroxide and hypochlorite bleach stabilisation",
+        "Water treatment — iron and manganese control",
+        "Cosmetics and personal care — preservative booster",
+        "Industrial cleaning — metal ion control",
+        "Food-grade applications (E385 — Calcium Disodium EDTA)",
+        "Boiler and heat exchanger deposit removal"
+      ],
+      "technicalSpecs": [
+        "EDTA Disodium (EDTA-2Na): 99% min, white crystalline powder, pH 4–5 (1% solution)",
+        "EDTA Tetrasodium (EDTA-4Na): 99% min, white powder, pH 10.5–11.5 (1% solution)",
+        "CAS (EDTA acid): 60-00-4 | CAS (EDTA-2Na): 6381-92-6 | CAS (EDTA-4Na): 64-02-8",
+        "Packaging: 25kg bag",
+        "Food-grade (E385) available on request"
       ]
     }
   },
   {
     "id": "glycerine-soap",
     "title": "Glycerine",
-    "description": "Humectant and moisturizer for soap and personal care formulations.",
+    "description": "Pharmaceutical/technical grade glycerine (glycerol) — humectant, solvent, and plasticiser for soap, cosmetics, food, pharmaceutical, and industrial applications in Oman.",
     "category": "soap-detergent",
     "iconName": "Sparkles",
     "details": {
@@ -186,19 +210,47 @@
       "alternativeNames": [
         "Glycerol",
         "Glycerin",
-        "Propane-1,2,3-triol"
+        "Propane-1,2,3-triol",
+        "1,2,3-propanetriol",
+        "Glycerin USP"
       ],
       "seoKeywords": [
-        "glycerine soap Oman",
+        "glycerine Oman",
         "glycerol Muscat",
-        "humectant Oman"
+        "glycerin supplier Oman",
+        "glycerine 99.5% Oman",
+        "pharmaceutical glycerine Oman",
+        "food grade glycerol Oman",
+        "technical glycerine Oman",
+        "glycerine price Oman"
+      ],
+      "longDescription": "Glycerine (Glycerol) supplier in Oman — Global Chemicals LLC supplies pharmaceutical grade glycerine (99.5% pure, USP/BP standard) and technical grade glycerine to soap manufacturers, cosmetic producers, food processors, pharmaceutical companies, and industrial users across Muscat and Oman. Glycerine is produced as a co-product of biodiesel production and fatty acid/soap manufacturing and is one of the most versatile industrial chemicals. In soap and personal care, glycerine functions as a humectant (drawing moisture to the skin), plasticiser in soap bars (preventing cracking), and transparent soap solvent. In food and beverage, food-grade glycerine (E422) is used as a sweetener/humectant in confectionery, as a preservative in baked goods, and as a solvent for flavours and colours. In pharmaceuticals, glycerine is an excipient in tablets, cough syrups, topical creams, suppositories, and ear drops (BP/USP grade). Industrial applications include anti-freeze formulations, textile sizing, and chemical synthesis. Global Chemicals LLC supplies glycerine in 250kg drums and 1,250kg IBC containers. Pharmaceutical grade (USP/BP) with certificate of analysis; food grade (E422) with food safety documentation. SDS available.",
+      "applications": [
+        "Soap manufacturing — humectant, plasticiser, transparent soap solvent",
+        "Cosmetics and personal care — skin moisturiser, lotion, cream base",
+        "Food and beverage — E422 humectant, sweetener, flavour solvent",
+        "Pharmaceutical — tablet binder, syrup solvent, topical formulations",
+        "Anti-freeze and coolant formulations",
+        "Tobacco humectant",
+        "Alkyd resin synthesis",
+        "Industrial lubricant component"
+      ],
+      "technicalSpecs": [
+        "Purity: 99.5% minimum (Pharmaceutical/USP grade)",
+        "Specific gravity: 1.261 g/cm³ at 25°C",
+        "Appearance: Clear, colourless, viscous liquid",
+        "Odour: Slightly sweet, characteristic",
+        "Water content: 0.5% maximum",
+        "Ash content: 10 ppm maximum (pharma grade)",
+        "Packaging: 250kg drum, 1,250kg IBC",
+        "Grade: Pharmaceutical (USP/BP), Food-grade (E422), Technical"
       ]
     }
   },
   {
     "id": "hydrogen-peroxide-3",
     "title": "Hydrogen Peroxide 3%",
-    "description": "Low concentration bleaching agent for mild cleaning applications.",
+    "description": "Hydrogen peroxide 3% solution — mild antiseptic and bleaching agent for first-aid, hair care, surface disinfection, and light cleaning applications in Oman.",
     "category": "soap-detergent",
     "iconName": "Sparkles",
     "details": {
@@ -206,19 +258,45 @@
       "casNumber": "7722-84-1",
       "alternativeNames": [
         "Hydrogen peroxide 3%",
-        "H2O2 3%"
+        "H2O2 3%",
+        "Dilute hydrogen peroxide",
+        "Antiseptic peroxide",
+        "Oxygenated water"
       ],
       "seoKeywords": [
         "hydrogen peroxide 3% Oman",
-        "H2O2 Muscat",
-        "bleaching agent Oman"
+        "H2O2 3% Muscat",
+        "antiseptic peroxide Oman",
+        "mild bleaching agent Oman",
+        "hydrogen peroxide supplier Oman",
+        "disinfectant Muscat",
+        "H2O2 supplier Oman"
+      ],
+      "longDescription": "Hydrogen Peroxide 3% supplier in Oman — Global Chemicals LLC supplies hydrogen peroxide 3% solution to pharmacies, hospitals, cleaning product manufacturers, and personal care formulators across Muscat and Oman. Hydrogen peroxide 3% is the standard pharmaceutical and consumer-grade concentration of H2O2 — recognised for its safety profile for antiseptic and mild bleaching applications at this concentration. It acts as an oxidising agent and disinfectant by releasing nascent oxygen on contact with organic material, destroying bacteria, viruses, and fungi. In the personal care and cosmetic industry, 3% H2O2 is the base for hair lightening and bleaching formulations. For household cleaning and sanitation, 3% hydrogen peroxide is an effective, chlorine-free disinfectant for surfaces, medical equipment, and wound cleansing. In cleaning product manufacturing, it is used as the active ingredient in mild oxygen bleach cleaners, fabric stain removers, and dental hygiene products. Global Chemicals LLC supplies hydrogen peroxide 3% in 1L, 5L, and 25L containers. Pharmaceutical grade (BP/USP) available. SDS and CoA provided.",
+      "applications": [
+        "Wound antiseptic and first-aid disinfection",
+        "Hair bleaching and lightening formulations",
+        "Household surface disinfection (chlorine-free)",
+        "Dental hygiene products (mouthwash, tooth whitening)",
+        "Mild fabric stain removal and oxygen bleach",
+        "Medical instrument and equipment sterilisation",
+        "Laboratory disinfection and cleaning"
+      ],
+      "technicalSpecs": [
+        "H2O2 concentration: 3.0% w/v",
+        "Appearance: Clear, colourless liquid",
+        "Specific gravity: 1.010 g/cm³",
+        "pH: 3–5 (acidic — stabilised)",
+        "Stabiliser: Phosphate or acetanilide-free grade available",
+        "Packaging: 1L bottle, 5L jerrican, 25L drum",
+        "Grade: Pharmaceutical (BP/USP), Technical"
       ]
     }
   },
   {
     "id": "hydrogen-peroxide-35",
     "title": "Hydrogen Peroxide 35%",
-    "description": "Medium strength oxidizing agent for industrial detergent formulations.",
+    "description": "Hydrogen peroxide 35% — industrial-strength oxidising and bleaching agent for textile bleaching, pulp bleaching, water treatment, and detergent formulation in Oman.",
     "category": "soap-detergent",
     "iconName": "Sparkles",
     "details": {
@@ -226,19 +304,47 @@
       "casNumber": "7722-84-1",
       "alternativeNames": [
         "Hydrogen peroxide 35%",
-        "H2O2 35%"
+        "H2O2 35%",
+        "Industrial hydrogen peroxide",
+        "Technical peroxide 35%",
+        "Peroxide 35"
       ],
       "seoKeywords": [
         "hydrogen peroxide 35% Oman",
         "H2O2 35% Muscat",
-        "oxidizing agent Oman"
+        "industrial hydrogen peroxide Oman",
+        "oxidising agent Oman",
+        "bleaching agent Oman",
+        "hydrogen peroxide supplier Oman",
+        "peroxide 35% industrial Muscat"
+      ],
+      "longDescription": "Hydrogen Peroxide 35% supplier in Oman — Global Chemicals LLC supplies industrial-grade hydrogen peroxide 35% (H2O2) to textile mills, food processors, water treatment operations, detergent manufacturers, and chemical formulators across Muscat, Sohar Industrial Area, and Oman. Hydrogen peroxide 35% is one of the most widely used industrial concentrations — offering significant oxidising power while being more manageable than higher-concentration grades (50%, 60%, 70%). It is a clear, colourless liquid that decomposes to water and oxygen, leaving no halogen residues — making it a preferred bleaching and oxidising agent where chlorine-free processes are required. In the textile industry, H2O2 35% is the standard bleaching agent for cotton, synthetic fibres, and blended fabrics, producing bright whites without fibre degradation. In food processing, food-grade 35% H2O2 is used for aseptic packaging sterilisation (Tetra Pak and similar systems), surface disinfection, and bleaching of flours, oils, and starches. In water treatment, it is applied for odour control (H2S removal), BOD/COD reduction, and advanced oxidation (AOP) combined with UV or ozone. In detergent formulation, it is the raw material for oxygen-based fabric cleaners and automatic dishwash boosters. Global Chemicals LLC supplies H2O2 35% in 35kg carboys, 60kg drums, and 1,000kg IBC containers. Food-grade (FCC) and technical grade available.",
+      "applications": [
+        "Textile bleaching — cotton, synthetic, and blended fabrics",
+        "Food-grade aseptic packaging sterilisation (Tetra Pak systems)",
+        "Water treatment — H2S removal and odour control",
+        "Advanced oxidation processes (AOP) — UV/ozone combination",
+        "Pulp and paper bleaching (ECF — Elemental Chlorine Free)",
+        "Detergent and cleaning product oxygen bleach formulation",
+        "Electronic and semiconductor component cleaning",
+        "Chemical synthesis — epoxidation and oxidation reactions"
+      ],
+      "technicalSpecs": [
+        "H2O2 concentration: 35% w/w (±0.5%)",
+        "Appearance: Clear, colourless liquid",
+        "Specific gravity: 1.130 g/cm³ at 20°C",
+        "Stabiliser: Phosphonate or nitrate-free grade available",
+        "Free acid (as H2SO4): 0.05% maximum",
+        "Non-volatile residue: 50 ppm maximum",
+        "Packaging: 35kg carboy, 60kg drum, 1,000kg IBC",
+        "Grade: Technical, Food-grade (FCC) on request"
       ]
     }
   },
   {
     "id": "hydrogen-peroxide-50",
     "title": "Hydrogen Peroxide 50%",
-    "description": "High concentration bleaching agent for heavy-duty cleaning products.",
+    "description": "High-concentration hydrogen peroxide 50% — powerful oxidising agent for industrial bleaching, chemical synthesis, wastewater treatment, and advanced oxidation in Oman.",
     "category": "soap-detergent",
     "iconName": "Sparkles",
     "details": {
@@ -246,19 +352,47 @@
       "casNumber": "7722-84-1",
       "alternativeNames": [
         "Hydrogen peroxide 50%",
-        "H2O2 50%"
+        "H2O2 50%",
+        "High concentration peroxide",
+        "Industrial peroxide 50%",
+        "Concentrated hydrogen peroxide"
       ],
       "seoKeywords": [
         "hydrogen peroxide 50% Oman",
         "H2O2 50% Muscat",
-        "bleach Oman"
+        "concentrated hydrogen peroxide Oman",
+        "industrial peroxide Oman",
+        "oxidising agent Oman",
+        "wastewater treatment Oman",
+        "H2O2 50% supplier Muscat"
+      ],
+      "longDescription": "Hydrogen Peroxide 50% supplier in Oman — Global Chemicals LLC supplies high-concentration hydrogen peroxide 50% (H2O2) to industrial, chemical, and water treatment customers across Muscat, Sohar Industrial Area, Duqm, and Oman. At 50% concentration, hydrogen peroxide is a powerful industrial oxidising and bleaching agent that provides greater efficiency per unit volume compared to 35% grade — reducing transport, storage, and dosing volumes for large-scale industrial consumers. H2O2 50% is the grade of choice for heavy-duty industrial bleaching (paper pulp, high-brightness textile), high-throughput wastewater treatment, chemical synthesis requiring strong oxidation, and large industrial cleaning operations. It decomposes cleanly to water and oxygen, making it environmentally superior to chlorine-based bleaching agents and eliminating concerns about halogenated disinfection by-products in treated water. Key applications in Oman include industrial pulp and paper bleaching, high-output textile and nonwoven bleaching, chemical manufacturing (epoxidation, hydroxylation), wastewater COD/BOD reduction, and oil & gas produced water treatment. Global Chemicals LLC supplies H2O2 50% in 60kg drums and 1,000kg IBC containers, with strict handling guidelines and GHS-compliant SDS. Contact our technical team for safety data and handling requirements.",
+      "applications": [
+        "Industrial pulp and paper high-brightness bleaching",
+        "Textile and nonwoven fabric bleaching",
+        "Chemical synthesis — epoxidation, hydroxylation, oxidation reactions",
+        "Large-scale wastewater COD/BOD reduction",
+        "Oil & gas produced water treatment",
+        "Soil and groundwater remediation (in-situ chemical oxidation)",
+        "Electronics and semiconductor cleaning",
+        "Mining and mineral processing (oxidation leaching)"
+      ],
+      "technicalSpecs": [
+        "H2O2 concentration: 50% w/w (±0.5%)",
+        "Appearance: Clear, colourless liquid",
+        "Specific gravity: 1.196 g/cm³ at 20°C",
+        "pH: 1–4 (stabilised with phosphonate or similar)",
+        "Non-volatile residue: 60 ppm maximum",
+        "Packaging: 60kg HDPE drum, 1,000kg IBC",
+        "Hazard: Oxidiser — Class 5.1 (ADR/IMDG)",
+        "GHS-compliant SDS and handling guide supplied"
       ]
     }
   },
   {
     "id": "hydrogen-peroxide-6",
     "title": "Hydrogen Peroxide 6%",
-    "description": "Moderate concentration for bleaching and sanitizing applications.",
+    "description": "Hydrogen peroxide 6% — moderate-strength disinfectant and bleaching agent for salon-grade hair bleaching, surface sanitisation, and cleaning product formulation in Oman.",
     "category": "soap-detergent",
     "iconName": "Sparkles",
     "details": {
@@ -266,59 +400,143 @@
       "casNumber": "7722-84-1",
       "alternativeNames": [
         "Hydrogen peroxide 6%",
-        "H2O2 6%"
+        "H2O2 6%",
+        "20 Volume peroxide",
+        "Salon grade peroxide",
+        "Hair bleach 20 vol"
       ],
       "seoKeywords": [
         "hydrogen peroxide 6% Oman",
         "H2O2 6% Muscat",
-        "sanitizer Oman"
+        "20 volume peroxide Oman",
+        "salon hydrogen peroxide Oman",
+        "hair bleaching agent Oman",
+        "sanitizer Oman",
+        "disinfectant Muscat"
+      ],
+      "longDescription": "Hydrogen Peroxide 6% (20 Volume) supplier in Oman — Global Chemicals LLC supplies hydrogen peroxide 6% solution to beauty salons, hair product manufacturers, cleaning product formulators, and healthcare facilities across Muscat and Oman. Hydrogen peroxide 6% — commonly referred to as '20 Volume' in the professional salon industry — is the standard concentration for professional hair lightening, bleaching, and colour processing. It provides effective lift while maintaining a manageable safety profile compared to higher-concentration industrial grades. In the disinfection and sanitation sector, H2O2 6% is used as a sporicidal disinfectant for hard surfaces in healthcare environments, food processing plants, and pharmaceutical cleanrooms — effective against bacteria, fungi, viruses, and spores. In cleaning product formulation, 6% hydrogen peroxide is used as the active oxidising agent in bathroom and tile cleaners, mould and mildew removers, and stain remover formulations. It is also applied in the sterilisation of food contact equipment and packaging surfaces. Global Chemicals LLC supplies hydrogen peroxide 6% in 5L, 25L, and 60L containers. Technical grade standard; pharmaceutical grade available on request. SDS and CoA provided with each batch.",
+      "applications": [
+        "Professional hair bleaching and lightening (20 Volume)",
+        "Hair colouring developer (bleach powder activation)",
+        "Healthcare surface and equipment disinfection",
+        "Food processing plant sanitisation",
+        "Pharmaceutical cleanroom disinfection",
+        "Mould and mildew removal cleaners",
+        "Fabric stain removal and oxygen bleaching"
+      ],
+      "technicalSpecs": [
+        "H2O2 concentration: 6.0% w/v (20 Volume)",
+        "Appearance: Clear, colourless liquid",
+        "Specific gravity: 1.020 g/cm³",
+        "pH: 3–5 (stabilised)",
+        "Packaging: 5L jerrican, 25L drum, 60L drum",
+        "Grade: Technical, Cosmetic/Salon, Pharmaceutical (BP) on request"
       ]
     }
   },
   {
     "id": "labsa",
     "title": "LABSA",
-    "description": "Linear Alkylbenzene Sulphonic Acid - primary surfactant for detergent production.",
+    "description": "Linear Alkylbenzene Sulphonic Acid (LABSA 96%) — the primary anionic surfactant raw material for liquid detergent, dish wash, laundry, and industrial cleaner production in Oman and GCC.",
     "category": "soap-detergent",
     "iconName": "Sparkles",
     "details": {
       "casNumber": "27176-87-0",
       "alternativeNames": [
         "Linear alkylbenzene sulfonic acid",
-        "LABSA",
-        "Dodecylbenzenesulfonic acid"
+        "LABSA 96%",
+        "LAS acid",
+        "Sulphonic acid",
+        "Dodecylbenzenesulfonic acid",
+        "Alkylbenzene sulfonic acid"
       ],
       "seoKeywords": [
         "LABSA Oman",
-        "surfactant Muscat",
-        "detergent raw material Oman"
+        "LABSA 96% Oman",
+        "linear alkylbenzene sulphonic acid Oman",
+        "sulphonic acid Muscat",
+        "detergent raw material Oman",
+        "surfactant raw material Oman",
+        "LABSA price Oman",
+        "liquid detergent raw material Oman",
+        "anionic surfactant Oman",
+        "LAS acid Oman"
+      ],
+      "longDescription": "LABSA (Linear Alkylbenzene Sulphonic Acid) supplier in Oman — Global Chemicals LLC supplies LABSA 96% — the world's most widely used anionic surfactant raw material — to detergent manufacturers, cleaning product formulators, and industrial chemical blenders across Muscat, Oman, and the GCC. LABSA is the key active ingredient in virtually all liquid dish wash products, liquid laundry detergents, all-purpose cleaners, car shampoos, floor cleaners, and industrial cleaning formulations. It is neutralised with caustic soda (NaOH) or soda ash to produce sodium LAS (SLAS), the final anionic surfactant that provides the cleaning and foaming action in finished products. LABSA 96% contains 96% active matter (alkylbenzene sulphonic acid) and 4% non-sulphonated material. It is a dark brown, viscous liquid with a strong characteristic odour. When neutralised with caustic soda, it forms a clear to slightly hazy sodium salt solution ready for blending. Global Chemicals LLC supplies LABSA in 200kg drums and 1,000kg IBC containers. Technical data sheets, process formulation guidance for detergent manufacturers, and competitive volume pricing available. Export to UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain.",
+      "applications": [
+        "Liquid dish wash and manual washing-up liquid production",
+        "Liquid laundry detergent formulation",
+        "All-purpose and multi-surface liquid cleaners",
+        "Industrial and institutional cleaning product manufacturing",
+        "Car shampoo and vehicle wash products",
+        "Floor cleaners and toilet bowl cleaners",
+        "Textile and leather processing auxiliaries",
+        "Emulsifier in agrochemical formulations"
+      ],
+      "technicalSpecs": [
+        "Active matter: 96% minimum",
+        "Sulphuric acid: 0.5–2.0%",
+        "Non-sulphonated: 2.0–4.0%",
+        "Colour (Klett): 40–60",
+        "Appearance: Dark brown viscous liquid",
+        "Specific gravity: 1.05–1.06 g/cm³ at 20°C",
+        "Flash point: >100°C",
+        "Packaging: 200kg HDPE drum, 1,000kg IBC"
       ]
     }
   },
   {
     "id": "nonyl-phenol-ethoxylate",
     "title": "Nonyl Phenol Ethoxylate",
-    "description": "Non-ionic surfactant for industrial and household cleaning products.",
+    "description": "Nonyl phenol ethoxylate (NPE) — non-ionic surfactant and emulsifier for industrial cleaning, textile processing, agrochemical emulsification, and metalworking formulations in Oman.",
     "category": "soap-detergent",
     "iconName": "Sparkles",
     "details": {
       "casNumber": "9016-45-9",
       "alternativeNames": [
         "NPE",
-        "Nonyl phenol ethoxylate",
-        "NP ethoxylate"
+        "Nonylphenol ethoxylate",
+        "NP ethoxylate",
+        "Alkylphenol ethoxylate",
+        "APEO",
+        "Nonoxynol"
       ],
       "seoKeywords": [
         "nonyl phenol ethoxylate Oman",
-        "NPE Muscat",
-        "surfactant Oman"
+        "NPE surfactant Muscat",
+        "non-ionic surfactant Oman",
+        "industrial emulsifier Oman",
+        "agrochemical surfactant Oman",
+        "textile surfactant Oman",
+        "APEO supplier Muscat"
+      ],
+      "longDescription": "Nonyl Phenol Ethoxylate (NPE) supplier in Oman — Global Chemicals LLC supplies NPE non-ionic surfactants in various ethoxylation grades (NPE-4, NPE-9, NPE-10, NPE-15, NPE-20, NPE-40) to industrial cleaning product formulators, textile processors, agrochemical manufacturers, and metalworking fluid producers across Muscat and Oman. Nonyl phenol ethoxylates are produced by ethoxylation of nonylphenol with ethylene oxide. The HLB (hydrophilic-lipophilic balance) value and water solubility are controlled by the number of ethylene oxide (EO) units — low EO grades (4–6 EO) are oil-soluble emulsifiers; high EO grades (9–15 EO) are water-soluble detergents and wetting agents. NPE is valued for excellent wetting, emulsification, and detergency across a wide temperature and pH range. Industrial applications include metal parts cleaning and degreasing, textile scouring and wetting, emulsification in agrochemical concentrate formulation (emulsifiable concentrates, suspension concentrates), oilfield chemical formulation, and leather processing. Note: NPE is restricted in household detergent applications in the EU under REACH regulation 648/2004 due to environmental persistence concerns — for consumer products, alcohol ethoxylate (AEO) alternatives are recommended. Global Chemicals LLC supplies NPE in 200kg drums. TDS and SDS provided.",
+      "applications": [
+        "Industrial hard surface cleaning and degreasing formulations",
+        "Textile scouring, wetting, and dyeing auxiliaries",
+        "Agrochemical emulsifiable concentrate (EC) formulation",
+        "Metalworking coolant and cutting fluid emulsification",
+        "Oilfield demulsifier and wetting agent blends",
+        "Leather processing (fatliquoring, degreasing)",
+        "Paints and coatings — wetting and dispersing agent",
+        "Industrial laundry formulations (institutional use)"
+      ],
+      "technicalSpecs": [
+        "Grades available: NPE-4, NPE-9, NPE-10, NPE-15, NPE-20, NPE-40",
+        "Active content: 99–100%",
+        "Appearance: Colourless to pale yellow liquid (low EO) / solid/paste (high EO)",
+        "HLB range: 8.9 (NPE-4) to 17.8 (NPE-40)",
+        "Cloud point (NPE-9, 1% solution): 54–58°C",
+        "Viscosity (NPE-9, 25°C): 200–300 mPa·s",
+        "Packaging: 200kg HDPE drum",
+        "Note: REACH restricted for consumer household applications in EU"
       ]
     }
   },
   {
     "id": "perchloroethylene",
     "title": "Perchloroethylene",
-    "description": "Solvent for dry cleaning and degreasing applications.",
+    "description": "Perchloroethylene (PERC / tetrachloroethylene) — industrial solvent for dry cleaning, metal degreasing, and chemical processing in Oman.",
     "category": "soap-detergent",
     "iconName": "Sparkles",
     "details": {
@@ -327,39 +545,95 @@
       "alternativeNames": [
         "Tetrachloroethylene",
         "PERC",
-        "PCE"
+        "PCE",
+        "Tetrachloroethene",
+        "Ethylene tetrachloride",
+        "Perchloroethene"
       ],
       "seoKeywords": [
         "perchloroethylene Oman",
-        "dry cleaning solvent Muscat",
-        "PERC Oman"
+        "PERC solvent Muscat",
+        "tetrachloroethylene Oman",
+        "dry cleaning solvent Oman",
+        "metal degreasing solvent Oman",
+        "chlorinated solvent Muscat",
+        "PCE supplier Oman"
+      ],
+      "longDescription": "Perchloroethylene (Tetrachloroethylene, PERC, PCE) supplier in Oman — Global Chemicals LLC supplies perchloroethylene to dry cleaning operations, metal fabrication and precision engineering companies, and industrial processors across Muscat, Sohar Industrial Area, and Oman. Perchloroethylene (C2Cl4) is a chlorinated solvent with excellent solvency for greases, oils, waxes, and fats, combined with low flammability (non-flammable), high chemical stability, and easy recoverability by distillation. In Oman, the primary applications are professional dry cleaning (PERC is the industry-standard dry cleaning solvent globally — effective, fast-drying, and non-damaging to delicate fabrics) and industrial metal degreasing (cleaning precision components in oil & gas equipment manufacturing, aerospace, and electronics). PERC is also used as an intermediate in the production of HFCs and other fluorochemicals, and as a chemical processing solvent. Due to its environmental and health profile, modern dry cleaning machines are closed-loop systems that recover and recycle PERC — reducing emissions and solvent loss. Global Chemicals LLC supplies perchloroethylene in 270kg drums. GHS-compliant SDS, handling guidelines, and waste disposal guidance provided. Customers should comply with Oman MECA environmental regulations for chlorinated solvent use and disposal.",
+      "applications": [
+        "Professional dry cleaning (garments and textile cleaning)",
+        "Precision metal parts degreasing (oil & gas components, engineering)",
+        "Vapour degreasing of electronic and aerospace components",
+        "Chemical intermediate for fluorocarbon production",
+        "Automotive parts and brake component cleaning",
+        "Industrial cleaning of hydraulic and mechanical equipment",
+        "Extraction solvent in chemical processing"
+      ],
+      "technicalSpecs": [
+        "Purity: 99.9% minimum (by GC)",
+        "Appearance: Clear, colourless liquid",
+        "Boiling point: 121.1°C at 1 atm",
+        "Specific gravity: 1.623 g/cm³ at 20°C",
+        "Vapour pressure: 18.9 mmHg at 20°C",
+        "Flash point: Non-flammable",
+        "Water content: 50 ppm maximum",
+        "Packaging: 270kg steel drum"
       ]
     }
   },
   {
     "id": "sles-70",
     "title": "SLES 70%",
-    "description": "Sodium Lauryl Ether Sulfate - foaming agent and surfactant for detergents.",
+    "description": "Sodium Lauryl Ether Sulfate 70% (SLES 70%) — high-active anionic surfactant paste for shampoo, body wash, liquid soap, and personal care formulation in Oman.",
     "category": "soap-detergent",
     "iconName": "Sparkles",
     "details": {
       "casNumber": "68585-34-2",
       "alternativeNames": [
-        "Sodium laureth sulfate",
-        "SLES",
-        "Sodium lauryl ether sulfate"
+        "Sodium laureth sulfate 70%",
+        "SLES 70%",
+        "Sodium lauryl ether sulfate",
+        "SLES paste",
+        "Sodium polyoxyethylene lauryl sulphate",
+        "AES 70%"
       ],
       "seoKeywords": [
         "SLES 70% Oman",
         "sodium laureth sulfate Muscat",
-        "foaming agent Oman"
+        "SLES supplier Oman",
+        "shampoo raw material Oman",
+        "anionic surfactant Oman",
+        "personal care surfactant Oman",
+        "SLES paste Muscat",
+        "liquid soap raw material Oman"
+      ],
+      "longDescription": "SLES 70% (Sodium Lauryl Ether Sulfate 70%) supplier in Oman — Global Chemicals LLC supplies SLES 70% high-active paste to shampoo manufacturers, liquid soap producers, body wash formulators, and personal care product companies across Muscat and Oman. SLES (Sodium Laureth Sulfate, or Sodium Polyoxyethylene Lauryl Sulphate) is an anionic surfactant produced by ethoxylation of lauryl alcohol followed by sulphation and neutralisation. It is one of the most important surfactant raw materials in personal care and household cleaning formulations globally. The 70% active paste grade is the standard trade form — offering a concentrated, easy-to-handle product that is diluted with water at the formulation stage. SLES produces a rich, stable foam at low usage levels (5–15% actives in finished products), is highly biodegradable, and is mild on skin compared to SLS (Sodium Lauryl Sulphate — non-ethoxylated). In Oman's growing cosmetics and personal care manufacturing sector, SLES 70% is the primary surfactant for shampoos, body washes, liquid hand soaps, bubble baths, facial cleansers, and dishwashing liquids. It is also a key component in household liquid detergent formulation. Global Chemicals LLC supplies SLES 70% in 200kg drums. Technical grade standard; cosmetic grade (low 1,4-dioxane, EU Cosmetics Regulation compliant) available on request. TDS and SDS provided.",
+      "applications": [
+        "Shampoo and hair conditioner formulation",
+        "Body wash and shower gel production",
+        "Liquid hand soap and foam soap",
+        "Bubble bath and bath foam products",
+        "Facial cleanser and mild cleansing formulations",
+        "Dishwashing liquid (household and institutional)",
+        "Liquid laundry detergent (high-active base)",
+        "Car wash shampoo and vehicle cleaning products"
+      ],
+      "technicalSpecs": [
+        "Active matter (SLES): 70% ± 1.5%",
+        "Ethylene oxide (EO) units: 2–3 (standard grade)",
+        "Appearance: White to pale yellow viscous paste",
+        "pH (10% solution): 7.5–8.5",
+        "Sodium sulphate: 1.5% maximum",
+        "Colour (Hazen): 50 maximum",
+        "Packaging: 200kg HDPE drum (heated transfer required)",
+        "Grade: Technical, Cosmetic (low 1,4-dioxane) on request"
       ]
     }
   },
   {
     "id": "soda-ash-dense-soap",
     "title": "Soda Ash Dense",
-    "description": "Sodium carbonate for pH adjustment and water softening in detergents.",
+    "description": "Dense grade sodium carbonate (Na2CO3) — alkaline builder, pH regulator, and water softener for detergent powder formulation, glass production, and industrial processing in Oman.",
     "category": "soap-detergent",
     "iconName": "Sparkles",
     "details": {
@@ -367,19 +641,49 @@
       "casNumber": "497-19-8",
       "alternativeNames": [
         "Sodium carbonate dense",
-        "Washing soda dense"
+        "Soda ash dense",
+        "Dense soda ash",
+        "Washing soda",
+        "Sodium carbonate anhydrous",
+        "Calcined soda"
       ],
       "seoKeywords": [
         "soda ash dense Oman",
         "sodium carbonate Muscat",
-        "washing soda Oman"
+        "washing soda Oman",
+        "detergent builder Oman",
+        "soda ash supplier Oman",
+        "Na2CO3 Oman",
+        "alkaline builder Muscat",
+        "soda ash price Oman"
+      ],
+      "longDescription": "Soda Ash Dense (Dense Grade Sodium Carbonate) supplier in Oman — Global Chemicals LLC supplies soda ash dense (Na2CO3) to detergent powder manufacturers, glass producers, water treatment operators, and industrial chemical users across Muscat, Sohar, and Oman. Soda ash is one of the highest-volume inorganic chemicals produced globally, and is a critical raw material in the detergent, glass, and chemical industries. Dense grade soda ash has a higher bulk density (approximately 1,000–1,100 kg/m³) compared to light grade, making it more suitable for applications where volume efficiency, reduced dusting, and free-flowing properties in powder formulations are important. In detergent powder manufacturing, soda ash dense acts as an alkaline builder — raising the wash liquor pH, enhancing surfactant performance, softening hard water by precipitating calcium and magnesium carbonate, and saponifying greasy soils. It is the standard alkaline base in powder laundry detergents, dishwasher powder, and scouring powders. In glass production (one of the major applications in the GCC), soda ash is a key flux used to lower the melting temperature of silica. In water treatment, soda ash is used for pH correction and softening. Global Chemicals LLC supplies soda ash dense in 25kg bags and 1,000kg big bags. SDS and CoA available.",
+      "applications": [
+        "Detergent powder formulation — alkaline builder and water softener",
+        "Glass manufacturing — flux agent to reduce silica melting point",
+        "Water treatment — pH adjustment and lime softening",
+        "Textile processing — scouring and mercerisation bath alkali",
+        "Chemical manufacturing — sodium carbonate source for synthesis",
+        "Pulp and paper — kraft pulping cooking liquor",
+        "Food grade — pH regulator and leavening agent (E500)",
+        "Effluent neutralisation — acidic wastewater treatment"
+      ],
+      "technicalSpecs": [
+        "Na2CO3 content: 99.2% minimum",
+        "Bulk density: 1,000–1,100 kg/m³",
+        "Particle size: Coarse, free-flowing granules (0.2–1.0mm typical)",
+        "NaCl: 0.15% maximum",
+        "Na2SO4: 0.04% maximum",
+        "Fe2O3: 0.003% maximum",
+        "Loss on ignition: 0.5% maximum",
+        "Packaging: 25kg PP bag, 1,000kg big bag"
       ]
     }
   },
   {
     "id": "soda-ash-light-soap",
     "title": "Soda Ash Light",
-    "description": "Light density sodium carbonate for soap and detergent formulations.",
+    "description": "Light grade sodium carbonate (Na2CO3) — fine powder alkaline builder for liquid detergent, soap manufacturing, and chemical production in Oman.",
     "category": "soap-detergent",
     "iconName": "Sparkles",
     "details": {
@@ -387,40 +691,97 @@
       "casNumber": "497-19-8",
       "alternativeNames": [
         "Sodium carbonate light",
+        "Soda ash light",
+        "Light soda ash",
+        "Sodium carbonate powder",
         "Washing soda light"
       ],
       "seoKeywords": [
         "soda ash light Oman",
         "sodium carbonate light Muscat",
-        "detergent raw material Oman"
+        "soda ash light supplier Oman",
+        "detergent raw material Oman",
+        "Na2CO3 light Oman",
+        "alkaline raw material Muscat",
+        "soda ash Oman"
+      ],
+      "longDescription": "Soda Ash Light (Light Grade Sodium Carbonate) supplier in Oman — Global Chemicals LLC supplies soda ash light (Na2CO3) to liquid detergent manufacturers, soap makers, chemical producers, and industrial users across Muscat and Oman. Soda ash light has a lower bulk density (approximately 500–600 kg/m³) and finer particle size compared to dense grade, giving it faster dissolution characteristics and more uniform mixing in liquid formulations and chemical reactions. In soap manufacturing, soda ash light is used to neutralise LABSA (producing sodium LAS detergent) and as an alternative alkali to caustic soda for milder saponification processes. In liquid detergent formulation, it acts as a pH builder and water softener. The fine particle size also makes light soda ash the preferred grade for certain chemical synthesis processes where rapid dissolution and high reactivity are required. In water treatment, soda ash light dissolves faster than dense grade, making it preferable for dosing systems and automated feeders. In the Oman construction sector, soda ash is used in glass production and ceramics. Global Chemicals LLC supplies soda ash light in 25kg bags and 1,000kg big bags. TDS, SDS, and CoA available.",
+      "applications": [
+        "Liquid detergent formulation — pH builder and alkaline base",
+        "Soap manufacturing — LABSA neutralisation and saponification",
+        "Water treatment dosing systems — rapid dissolution pH adjustment",
+        "Chemical synthesis requiring fast-dissolving sodium carbonate",
+        "Glass and ceramic manufacturing (finer grain for blending)",
+        "Textile processing bath alkali",
+        "Food grade applications — E500 leavening agent, pH regulator",
+        "Flue gas desulphurisation (FGD) in power plants"
+      ],
+      "technicalSpecs": [
+        "Na2CO3 content: 99.2% minimum",
+        "Bulk density: 500–600 kg/m³",
+        "Particle size: Fine powder (<150 micron, D50 ~50 micron typical)",
+        "NaCl: 0.15% maximum",
+        "Na2SO4: 0.04% maximum",
+        "Fe2O3: 0.003% maximum",
+        "Loss on ignition: 0.5% maximum",
+        "Packaging: 25kg PP bag, 1,000kg big bag"
       ]
     }
   },
   {
     "id": "sodium-hypochlorite-12-15-soap",
     "title": "Sodium Hypochlorite 12-15%",
-    "description": "Bleaching and disinfecting agent for cleaning product formulations.",
+    "description": "High-strength sodium hypochlorite solution (12–15% available chlorine) — industrial bleaching, disinfection, and cleaning agent for detergent manufacturing and sanitation in Oman.",
     "category": "soap-detergent",
     "iconName": "Sparkles",
     "details": {
       "formula": "NaOCl",
       "casNumber": "7681-52-9",
       "alternativeNames": [
-        "Liquid chlorine",
-        "Bleach",
-        "Sodium hypochlorite solution"
+        "Liquid chlorine bleach",
+        "Industrial bleach",
+        "Sodium hypochlorite solution",
+        "Hypochlorite 15%",
+        "Chlorine bleach concentrate",
+        "Antiformin"
       ],
       "seoKeywords": [
         "sodium hypochlorite Oman",
         "bleach Muscat",
-        "disinfectant Oman"
+        "sodium hypochlorite 12% Oman",
+        "sodium hypochlorite 15% Oman",
+        "industrial bleach Oman",
+        "disinfectant Oman",
+        "liquid chlorine Muscat",
+        "NaOCl supplier Oman"
+      ],
+      "longDescription": "Sodium Hypochlorite 12–15% supplier in Oman — Global Chemicals LLC supplies high-strength sodium hypochlorite solution (12–15% available chlorine) to cleaning product manufacturers, water treatment plants, food processing facilities, hospitals, and laundry operations across Muscat, Sohar, and Oman. Sodium hypochlorite is the most widely used industrial bleaching and disinfecting agent globally — produced by reacting chlorine gas with sodium hydroxide solution. At 12–15% available chlorine concentration, it is the industrial trade grade used as a base for producing household bleach (diluted to 3–5%), hard surface disinfectants, toilet bowl cleaners, and laundry bleach formulations. In water treatment, sodium hypochlorite is the preferred chlorination agent for municipal drinking water disinfection, swimming pool sanitisation, and wastewater treatment in Oman — chosen over gaseous chlorine for safety and ease of handling. In food and beverage processing, diluted sodium hypochlorite solutions are used for CIP (Clean-in-Place) sanitisation of process equipment, food contact surface disinfection, and produce washing. Global Chemicals LLC supplies sodium hypochlorite 12–15% in 25L jerricans, 200L HDPE drums, and 1,000L IBC containers. Note: hypochlorite degrades over time — fresh production batches are supplied with assay certificates.",
+      "applications": [
+        "Bleach and cleaning product manufacturing (household and institutional)",
+        "Water treatment — drinking water and wastewater chlorination",
+        "Swimming pool sanitation (alternative to chlorine gas)",
+        "Food processing CIP sanitisation and surface disinfection",
+        "Hospital and healthcare facility disinfection",
+        "Laundry bleaching (industrial and institutional laundry)",
+        "Oil & gas facility sanitation and biocide application",
+        "Algae and biofilm control in cooling towers"
+      ],
+      "technicalSpecs": [
+        "Available chlorine: 12–15% w/v (120–150 g/L as Cl2)",
+        "NaOH (free alkali): 0.5–1.5% (stabiliser)",
+        "Appearance: Clear, pale yellow-green liquid",
+        "Specific gravity: 1.18–1.22 g/cm³",
+        "pH: 11–13 (strongly alkaline)",
+        "Iron content: 0.5 ppm maximum",
+        "Packaging: 25L jerrican, 200L HDPE drum, 1,000L IBC",
+        "Stability: 3–6 months at 15–20°C away from heat and light"
       ]
     }
   },
   {
     "id": "sodium-meta-silicate-pentahydrate",
     "title": "Sodium Meta Silicate Pentahydrate",
-    "description": "Alkaline builder and corrosion inhibitor for heavy-duty detergents.",
+    "description": "Sodium metasilicate pentahydrate (Na2SiO3·5H2O) — alkaline builder, corrosion inhibitor, and cleaning agent for heavy-duty industrial and institutional detergents in Oman.",
     "category": "soap-detergent",
     "iconName": "Sparkles",
     "details": {
@@ -428,19 +789,47 @@
       "casNumber": "6834-92-0",
       "alternativeNames": [
         "Sodium metasilicate pentahydrate",
-        "SMS pentahydrate"
+        "SMS pentahydrate",
+        "Sodium silicate pentahydrate",
+        "Waterglass pentahydrate",
+        "Silicate builder"
       ],
       "seoKeywords": [
         "sodium metasilicate Oman",
-        "detergent builder Muscat",
-        "SMS Oman"
+        "SMS pentahydrate Muscat",
+        "detergent builder Oman",
+        "sodium silicate Oman",
+        "industrial detergent raw material Oman",
+        "alkaline cleaner Oman",
+        "corrosion inhibitor detergent Muscat"
+      ],
+      "longDescription": "Sodium Metasilicate Pentahydrate (Na2SiO3·5H2O) supplier in Oman — Global Chemicals LLC supplies sodium metasilicate pentahydrate to industrial cleaning product manufacturers, institutional cleaning formulators, and chemical blenders across Muscat, Sohar Industrial Area, and Oman. Sodium metasilicate pentahydrate is a powerful alkaline builder and multi-functional detergent ingredient combining strong alkalinity (pH 12–13 in solution), emulsification of oils and greases, peptisation of soil, corrosion inhibition of metal surfaces, and buffering capacity in a single ingredient. It is produced by reacting sodium hydroxide with silicon dioxide (sand), then crystallising with five molecules of water of hydration. The pentahydrate form is safer and easier to handle than anhydrous sodium metasilicate due to its lower alkalinity release rate and reduced dust generation. In industrial cleaning formulations, SMS pentahydrate is the key alkaline builder in automatic dishwasher compounds, CIP (Clean-in-Place) cleaners for food and beverage plants, oven and grill cleaners, vehicle wash compounds, bottle washing detergents, and metal cleaning baths. It also provides corrosion protection for aluminium, zinc, and other metals when used in cleaning applications. Global Chemicals LLC supplies SMS pentahydrate in 25kg bags. SDS and TDS provided.",
+      "applications": [
+        "Automatic dishwasher detergent and rinse aid formulation",
+        "CIP (Clean-in-Place) cleaners for food and beverage processing",
+        "Institutional and industrial heavy-duty cleaning powders",
+        "Bottle washing and glass container detergent",
+        "Vehicle, truck, and car wash compounds",
+        "Metal surface cleaning and degreasing (corrosion-inhibited)",
+        "Oven, grill, and kitchen equipment cleaners",
+        "Alkaline battery electrolyte and technical ceramics"
+      ],
+      "technicalSpecs": [
+        "Na2SiO3·5H2O purity: 98% minimum",
+        "SiO2:Na2O molar ratio: 1:1 (metasilicate)",
+        "Na2O content: 23% minimum",
+        "SiO2 content: 28% minimum",
+        "pH (1% solution): 12–12.5",
+        "Appearance: White to off-white granular powder",
+        "Bulk density: 800–950 kg/m³",
+        "Packaging: 25kg PP bag"
       ]
     }
   },
   {
     "id": "sodium-tripolyphosphate",
     "title": "Sodium Tripolyphosphate",
-    "description": "Sequestering agent and detergency builder for laundry detergents.",
+    "description": "Sodium tripolyphosphate (STPP) — sequestering agent and detergency builder for laundry detergent powder, dishwasher compounds, and industrial cleaning in Oman.",
     "category": "soap-detergent",
     "iconName": "Sparkles",
     "details": {
@@ -449,38 +838,95 @@
       "alternativeNames": [
         "STPP",
         "Sodium triphosphate",
-        "Pentasodium triphosphate"
+        "Pentasodium triphosphate",
+        "Pentasodium tripolyphosphate",
+        "Tripolyphosphate",
+        "TPP"
       ],
       "seoKeywords": [
         "STPP Oman",
         "sodium tripolyphosphate Muscat",
-        "detergent builder Oman"
+        "detergent builder Oman",
+        "STPP supplier Oman",
+        "sequestering agent Oman",
+        "water softener detergent Oman",
+        "phosphate builder Muscat",
+        "laundry detergent raw material Oman"
+      ],
+      "longDescription": "Sodium Tripolyphosphate (STPP) supplier in Oman — Global Chemicals LLC supplies STPP (Na5P3O10) to detergent powder manufacturers, dishwasher compound producers, and industrial cleaning product formulators across Muscat, Sohar, and Oman. Sodium tripolyphosphate is a condensed phosphate salt that is one of the most effective and widely used detergency builders in the global cleaning products industry. As a builder, STPP performs multiple functions simultaneously: it sequesters (chelates) hardness ions (calcium, magnesium, iron) in water — preventing soap scum and improving surfactant effectiveness; it acts as an alkaline pH buffer (maintaining pH 9–10 in wash liquor for optimal cleaning); it peptises and deflocculates soil particles, preventing re-deposition on fabric; and it improves powder flowability when used in spray-drying detergent formulation. In Oman, STPP is used by detergent powder producers, automatic dishwasher detergent manufacturers, and industrial cleaning product blenders for heavy-duty cleaning compounds used in hotels, hospitals, food processing plants, and industrial facilities. STPP also has food-grade applications (E451) as a moisture retention agent in seafood processing, meat products, and processed foods — a relevant application given Oman's significant seafood processing industry (fresh fish and frozen shrimp export). Global Chemicals LLC supplies STPP in 25kg bags. Technical and food-grade available.",
+      "applications": [
+        "Laundry detergent powder — builder and water softener",
+        "Automatic dishwasher compound formulation",
+        "Industrial and institutional heavy-duty cleaners",
+        "Food-grade moisture retention (E451) — seafood, meat processing",
+        "Ceramic tile manufacturing (deflocculant in slip preparation)",
+        "Water treatment (corrosion inhibition and scale prevention)",
+        "Oil drilling mud treatment (dispersant)",
+        "Paper production (wet strength enhancement)"
+      ],
+      "technicalSpecs": [
+        "Na5P3O10 purity: 94% minimum (technical grade)",
+        "P2O5 content: 57% minimum",
+        "Phase I (high temperature form): typically 10–15% blend",
+        "Water insoluble: 0.1% maximum",
+        "Iron (as Fe2O3): 0.01% maximum",
+        "pH (1% solution): 9.5–10.2",
+        "Appearance: White granular powder",
+        "Packaging: 25kg PP bag | Food-grade (E451) available"
       ]
     }
   },
   {
     "id": "surfactants-soap",
     "title": "Surfactants",
-    "description": "Range of surface active agents for cleaning and emulsifying applications.",
+    "description": "Comprehensive range of anionic, non-ionic, cationic, and amphoteric surfactants for detergent, personal care, industrial cleaning, and oilfield formulation in Oman.",
     "category": "soap-detergent",
     "iconName": "Sparkles",
     "details": {
       "alternativeNames": [
         "Surface active agents",
         "Surfactants",
-        "Wetting agents"
+        "Wetting agents",
+        "Emulsifiers",
+        "Foaming agents",
+        "Detergent actives"
       ],
       "seoKeywords": [
         "surfactants Oman",
         "surface active agents Muscat",
-        "emulsifiers Oman"
+        "emulsifiers Oman",
+        "wetting agents Oman",
+        "detergent actives Oman",
+        "anionic surfactant Oman",
+        "non-ionic surfactant Muscat",
+        "surfactant supplier Oman"
+      ],
+      "longDescription": "Surfactants (Surface Active Agents) supplier in Oman — Global Chemicals LLC supplies a comprehensive portfolio of anionic, non-ionic, cationic, and amphoteric surfactants to detergent manufacturers, personal care formulators, industrial cleaning companies, and oilfield chemical producers across Muscat, Sohar, and Oman. Surfactants are molecules containing both a hydrophilic (water-loving) head and a hydrophobic (oil-loving) tail — allowing them to reduce surface tension, emulsify oils and greases in water, and provide the wetting, foaming, and cleaning action in all cleaning and personal care products. Global Chemicals LLC's surfactant portfolio includes anionic surfactants (LABSA / Sodium LAS, SLES 70%, SLS, AOS — Alpha Olefin Sulphonate), which provide the primary detergency and foaming action in most household and industrial cleaning products; non-ionic surfactants (alcohol ethoxylates — AEO, NPE, fatty alcohol polyglycol ethers), which enhance cleaning performance and are low-foaming alternatives suitable for machine washing; cationic surfactants (quaternary ammonium compounds — quats, such as DTDMAC, DHTDMAC, ATMAC), which provide softening action in fabric conditioners and are the active biocidal agents in disinfectants; and amphoteric/zwitterionic surfactants (cocamidopropyl betaine — CAPB, cocoamphodiacetate), which are mild skin-compatible surfactants for shampoos, baby products, and sensitive skin formulations. Contact our technical team for specific surfactant grades, HLB recommendations, and formulation guidance for your application.",
+      "applications": [
+        "Household and institutional liquid and powder detergent formulation",
+        "Personal care — shampoo, body wash, facial cleanser, bubble bath",
+        "Industrial and institutional cleaning products",
+        "Fabric softener and textile conditioning",
+        "Oilfield chemicals — demulsifiers, wetting agents, corrosion inhibitors",
+        "Agricultural emulsifiable concentrate (EC) formulation",
+        "Construction chemicals — concrete admixtures and foam agents",
+        "Food processing — food-grade emulsifiers and cleaning compounds"
+      ],
+      "technicalSpecs": [
+        "Anionic: LABSA 96%, SLES 70%, SLS, AOS 35%, MES",
+        "Non-ionic: AEO (3–9 EO), NPE (4–20 EO), Tween/Span series",
+        "Cationic: DTDMAC 75%, DHTDMAC 90%, ATMAC 50%, BAC 50%/80%",
+        "Amphoteric: Cocamidopropyl Betaine (CAPB) 30–35%, Cocoamphodiacetate",
+        "Available from sample quantities to bulk IBC and drum supply",
+        "TDS, SDS, CoA, and formulation guidance provided",
+        "Contact Global Chemicals LLC for specific grade availability and pricing"
       ]
     }
   },
   {
     "id": "trisodium-phosphate-soap",
     "title": "Trisodium Phosphate",
-    "description": "Heavy-duty cleaning agent and degreaser for industrial applications.",
+    "description": "Trisodium phosphate (TSP) — heavy-duty alkaline cleaner, degreaser, and surface preparation agent for industrial, institutional, and household cleaning in Oman.",
     "category": "soap-detergent",
     "iconName": "Sparkles",
     "details": {
@@ -489,12 +935,40 @@
       "alternativeNames": [
         "TSP",
         "Trisodium orthophosphate",
-        "Na3PO4"
+        "Na3PO4",
+        "Sodium phosphate tribasic",
+        "Tribasic sodium phosphate"
       ],
       "seoKeywords": [
         "trisodium phosphate Oman",
         "TSP Muscat",
-        "heavy duty cleaner Oman"
+        "heavy duty cleaner Oman",
+        "industrial degreaser Oman",
+        "alkaline cleaner Oman",
+        "TSP supplier Oman",
+        "sodium phosphate tribasic Muscat",
+        "surface preparation cleaner Oman"
+      ],
+      "longDescription": "Trisodium Phosphate (TSP, Na3PO4) supplier in Oman — Global Chemicals LLC supplies trisodium phosphate to industrial facilities, institutional cleaning contractors, construction companies, and cleaning product formulators across Muscat, Sohar Industrial Area, and Oman. Trisodium phosphate is a strong, fast-acting alkaline cleaner and degreaser that combines high alkalinity (pH 12–13 in solution), phosphate sequestration of hardness ions, and excellent grease-emulsifying power in a single ingredient. TSP has been used for over a century as one of the most effective heavy-duty cleaning agents for removing grease, wax, oil, soot, smoke residue, paint residue, mildew stains, and general grime from surfaces. In the construction industry, TSP is the standard surface preparation cleaner used before painting or applying coatings — removing all surface contamination and providing a clean, deglossed surface for maximum paint adhesion. In industrial cleaning, TSP solutions are used for degreasing metal parts, cleaning engines, boiler cleaning, and removing carbonised deposits from kitchen equipment. In the food processing and institutional kitchen sector, TSP is used for oven and grill cleaning, floor degreasing, and heavy-duty surface cleaning. Global Chemicals LLC supplies trisodium phosphate in 25kg bags. SDS and TDS provided. Note: use with adequate ventilation and appropriate PPE (alkaline burns risk).",
+      "applications": [
+        "Surface preparation and deglossing before painting (construction)",
+        "Heavy-duty industrial degreasing and parts cleaning",
+        "Kitchen and institutional oven, grill, and surface cleaning",
+        "Concrete floor degreasing and surface preparation",
+        "Boiler and heat exchanger cleaning",
+        "Smoke, soot, and fire damage residue removal",
+        "Metal surface alkaline cleaning before coating or plating",
+        "Mildew stain removal from masonry and tile"
+      ],
+      "technicalSpecs": [
+        "Na3PO4 purity: 98% minimum (anhydrous basis)",
+        "Available form: Anhydrous or dodecahydrate (Na3PO4·12H2O)",
+        "pH (1% solution): 12.0–12.5",
+        "Appearance: White crystalline powder or granules",
+        "Phosphorus content (as P): 18.5% minimum (anhydrous)",
+        "Chloride: 0.1% maximum",
+        "Solubility in water (20°C): 12 g/100mL (anhydrous)",
+        "Packaging: 25kg PP bag"
       ]
     }
   }

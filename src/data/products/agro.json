@@ -1,17 +1,52 @@
 [
   {
     "id": "agro-products",
-    "title": "Agricultural Products",
-    "description": "Agricultural chemicals and solutions for crop protection and enhancement.",
+    "title": "Agricultural Chemicals & Fertilizers",
+    "description": "Fertilizers, soil conditioners, crop protection chemicals, and irrigation water treatment products for Oman's farming and greenhouse sectors.",
     "category": "agro",
     "iconName": "Wheat",
     "details": {
-      "fullDescription": "Comprehensive range of agricultural chemicals designed to support modern farming practices and enhance crop yields.",
+      "alternativeNames": [
+        "Agricultural chemicals",
+        "Agrochemicals",
+        "Crop protection chemicals",
+        "Fertilizers Oman",
+        "Farm chemicals"
+      ],
+      "seoKeywords": [
+        "agricultural chemicals Oman",
+        "fertilizers Oman",
+        "agrochemicals Muscat",
+        "crop protection chemicals Oman",
+        "soil conditioner Oman",
+        "irrigation water treatment Oman",
+        "farming chemicals Oman",
+        "greenhouse chemicals Oman",
+        "agricultural chemicals Dhofar",
+        "Al Batinah farm chemicals Oman",
+        "plant nutrients Oman",
+        "urea fertilizer Oman"
+      ],
+      "longDescription": "Agricultural Chemicals and Fertilizers supplier in Oman — Global Chemicals LLC supplies specialty agrochemicals, fertilizers, and crop protection chemicals to farms, greenhouses, and agricultural operations across Oman. Under Vision 2040, Oman has significantly increased investment in domestic food production, expanding cultivated areas in Al Batinah, Al Dakhiliyah, Al Sharqiyah, and Dhofar regions. Global Chemicals LLC supports this agricultural expansion by supplying the critical inputs farmers need. Our agricultural chemical range includes straight and compound fertilizers (urea 46% N, diammonium phosphate — DAP, potassium chloride/sulphate, NPK compound fertilizers, calcium nitrate), micronutrient fertilizers (zinc sulphate, manganese sulphate, boron, iron chelates, copper sulphate — for micronutrient correction in Oman's soils), soil conditioners (gypsum, lime, humic acid, sulphur), irrigation water treatment chemicals (acid for drip irrigation pH correction, antiscalants for emitter protection, algaecides for open channel irrigation), and crop protection products. We supply to farms in Nizwa, Barka, Sohar, Al Batinah coast, and greenhouses across the interior. Delivery to all Oman agricultural regions. Technical advice on fertilizer programmes and soil chemistry available from our team.",
       "applications": [
-        "Crop protection",
-        "Soil treatment",
-        "Fertilizers",
-        "Growth enhancers"
+        "Crop fertilization (nitrogen, phosphorus, potassium, micronutrients)",
+        "Soil pH correction and conditioning",
+        "Drip irrigation system maintenance and water treatment",
+        "Greenhouse and hydroponic nutrient supply",
+        "Soil micronutrient correction (zinc, iron, boron, manganese deficiency)",
+        "Irrigation water pH adjustment and scaling prevention",
+        "Organic matter and humic acid soil improvement",
+        "Date palm and fruit tree fertilization programs"
+      ],
+      "technicalSpecs": [
+        "Urea: 46% N, prilled and granular, IFDC standard",
+        "DAP: 18% N, 46% P2O5, granular",
+        "Potassium Chloride: 60% K2O, standard and granular grade",
+        "Zinc Sulphate Monohydrate: 33% Zn, technical grade",
+        "Calcium Nitrate: 15.5% N (nitrate), 26.5% CaO",
+        "Packaging: 25kg bag to 1,000kg big bag",
+        "Custom NPK blend services available",
+        "Soil and water analysis service available on request"
       ]
     }
   }

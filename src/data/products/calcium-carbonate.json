@@ -2,18 +2,56 @@
   {
     "id": "calcium-carbonate",
     "title": "Calcium Carbonate",
-    "description": "High-purity calcium carbonate for construction, plastics, and industrial applications.",
+    "description": "High-purity calcium carbonate (CaCO3) — ground calcium carbonate (GCC) and precipitated calcium carbonate (PCC) for construction, plastics, paints, food, and industrial applications in Oman.",
     "category": "calcium-carbonate",
     "iconName": "FlaskConical",
     "details": {
       "formula": "CaCO3",
-      "fullDescription": "Calcium carbonate is a common chemical compound that is the main component of substances like chalk, limestone, marble, and shells of marine organisms.",
+      "casNumber": "471-34-1",
+      "alternativeNames": [
+        "Ground calcium carbonate",
+        "Precipitated calcium carbonate",
+        "GCC",
+        "PCC",
+        "Limestone powder",
+        "Calcite powder",
+        "Chalk",
+        "Whiting",
+        "Marble powder"
+      ],
+      "seoKeywords": [
+        "calcium carbonate Oman",
+        "calcium carbonate Muscat",
+        "CaCO3 supplier Oman",
+        "limestone powder Oman",
+        "ground calcium carbonate Oman",
+        "precipitated calcium carbonate Oman",
+        "calcite powder Oman",
+        "calcium carbonate food grade Oman",
+        "calcium carbonate construction Oman",
+        "calcium carbonate plastics filler Oman",
+        "calcium carbonate paint Oman",
+        "marble powder Muscat"
+      ],
+      "longDescription": "Calcium Carbonate (CaCO3) supplier in Oman — Global Chemicals LLC supplies high-purity calcium carbonate to construction, plastics, paint, food processing, and industrial customers across Muscat and Oman. Calcium carbonate is one of the most widely used industrial minerals globally, and demand in Oman is driven by the construction boom, expanding food processing sector, and growing plastics and rubber manufacturing. We supply two primary forms: Ground Calcium Carbonate (GCC), produced by mechanical grinding of limestone or marble, available in multiple particle sizes from coarse powder to ultrafine (<2 micron) grades for different applications; and Precipitated Calcium Carbonate (PCC), chemically produced for higher purity and more controlled particle morphology, used in high-specification applications such as food, pharmaceuticals, and specialty coatings. Applications in Oman include construction and building materials (mortar filler, concrete aggregate, road base), plastics compounding (filler and functional additive in PVC, polyolefins, and rubber — up to 60% loading), paint and coatings (extender pigment — reduces TiO2 requirement), food-grade (E170 — calcium supplement, food fortification, anti-caking), water treatment (pH neutralisation, lime softening), paper manufacturing, and animal feed calcium supplementation. Global Chemicals LLC supplies calcium carbonate in 25kg bags, 500kg and 1,000kg super sacks, and bulk quantities. Technical grades from 98% CaCO3 content; food-grade (E170) available with food safety documentation.",
       "applications": [
-        "Construction materials",
-        "Plastics filler",
-        "Paper manufacturing",
-        "Paint industry",
-        "Calcium supplements"
+        "Construction fillers, mortar, and concrete (aggregate and admixture)",
+        "Plastics compounding — PVC, polyolefin, and rubber filler",
+        "Paints and coatings — extender pigment, TiO2 replacement",
+        "Food fortification and calcium supplementation (E170)",
+        "Water treatment — pH neutralisation and lime softening",
+        "Paper and paperboard (filler and coating pigment)",
+        "Adhesives and sealants",
+        "Animal feed calcium supplementation"
+      ],
+      "technicalSpecs": [
+        "CaCO3 content: 97–99.5% (depending on grade)",
+        "Particle size: D50 5–50 micron (GCC grades)",
+        "Brightness: 92–96% ISO (coated and uncoated grades)",
+        "Moisture: <0.5%",
+        "Food-grade (E170) available with EU food compliance certificate",
+        "Packaging: 25kg bag, 500kg, 1,000kg super sack, bulk tanker",
+        "Oil absorption: 18–22 g/100g (typical GCC)"
       ]
     }
   }

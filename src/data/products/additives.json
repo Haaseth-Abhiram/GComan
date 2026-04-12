@@ -2,16 +2,44 @@
   {
     "id": "additives",
     "title": "Industrial Additives",
-    "description": "Specialized additives to enhance product performance across multiple industries.",
+    "description": "Specialty industrial additives to enhance performance, stability, and quality of coatings, plastics, lubricants, and process chemicals across Oman and the GCC.",
     "category": "additives",
     "iconName": "Zap",
     "details": {
-      "fullDescription": "Comprehensive range of additives designed to improve performance, stability, and quality of industrial products and processes.",
+      "alternativeNames": [
+        "Chemical additives",
+        "Performance additives",
+        "Process additives",
+        "Functional additives",
+        "Specialty additives"
+      ],
+      "seoKeywords": [
+        "industrial additives Oman",
+        "chemical additives Muscat",
+        "performance additives Oman",
+        "specialty additives GCC",
+        "process additives Oman",
+        "coating additives Oman",
+        "plastic additives Muscat",
+        "lubricant additives Oman"
+      ],
+      "longDescription": "Industrial Additives supplier in Oman — Global Chemicals LLC supplies a wide range of specialty chemical additives for industrial and manufacturing applications across Oman and the GCC region. Chemical additives are substances added in small quantities to a base material to improve or impart specific properties such as UV stability, antioxidant protection, anti-foaming, viscosity modification, corrosion inhibition, or anti-static behaviour. Our industrial additives portfolio serves coatings and paint manufacturers (defoamers, wetting agents, dispersants, rheology modifiers), plastics compounders (UV stabilisers, antioxidants, processing aids, flame retardants), lubricant formulators (VI improvers, pour point depressants, antiwear additives, extreme pressure agents), water treatment operations (antifoams, oxygen scavengers, pH buffers), and general industrial processes requiring performance-enhancing chemicals. Global Chemicals LLC sources additives from leading global specialty chemical manufacturers and supplies to Muscat, Sohar, Rusayl Industrial Area, Duqm, Salalah, and exports to UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain. Contact our technical team for specific additive requirements and recommendations.",
       "applications": [
-        "Performance enhancement",
-        "Stability improvement",
-        "Process optimization",
-        "Quality control"
+        "Coatings and paint formulation (defoamers, dispersants, wetting agents)",
+        "Plastics compounding (UV stabilisers, antioxidants, flame retardants)",
+        "Lubricant additive packages (VI improvers, antiwear, EP agents)",
+        "Water treatment processes (antifoams, scale inhibitors)",
+        "Industrial process optimisation",
+        "Rubber and polymer processing",
+        "Textile and leather finishing",
+        "Adhesive and sealant formulation"
+      ],
+      "technicalSpecs": [
+        "Wide range of chemical families: silicone-based, polyacrylate, polyurethane, amine-based",
+        "Available from laboratory sample quantities to bulk industrial supply",
+        "TDS, SDS, and CoA provided with all products",
+        "Custom additive packages available on request",
+        "Contact Global Chemicals LLC for specific product availability"
       ]
     }
   }

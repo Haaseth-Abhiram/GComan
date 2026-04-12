@@ -43,6 +43,7 @@ const Sitemap = () => {
       title: 'SEO Landing Pages',
       links: [
         { label: 'Chemical Suppliers Oman', path: '/chemical-suppliers-oman' },
+        { label: 'Caustic Soda Supplier Oman', path: '/chemical-supplier/caustic-soda-oman' },
         { label: 'Chemical Suppliers Middle East', path: '/chemical-suppliers-middle-east' },
         { label: 'Chemicals Muscat', path: '/chemicals/muscat' },
         { label: 'Chemicals Sohar', path: '/chemicals/sohar' },
