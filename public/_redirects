@@ -119,6 +119,43 @@
 /2025/10/15/nonwovens-industry-magazine/  /blog  301
 
 # =====================================
+# TRAILING SLASH CANONICALISATION
+# Prevent duplicate content from /path/ vs /path
+# =====================================
+/products/                              /products                               301!
+/chemical-suppliers-oman/               /chemical-suppliers-oman                301!
+/chemical-suppliers-middle-east/        /chemical-suppliers-middle-east         301!
+/chemical-supplier/caustic-soda-oman/   /chemical-supplier/caustic-soda-oman    301!
+/chemicals/muscat/                      /chemicals/muscat                       301!
+/chemicals/sohar/                       /chemicals/sohar                        301!
+/chemicals/salalah/                     /chemicals/salalah                      301!
+/chemicals/duqm/                        /chemicals/duqm                         301!
+/chemicals/rusayl/                      /chemicals/rusayl                       301!
+/chemicals/dubai/                       /chemicals/dubai                        301!
+/chemicals/abu-dhabi/                   /chemicals/abu-dhabi                    301!
+/chemicals/sharjah/                     /chemicals/sharjah                      301!
+/chemicals/fujairah/                    /chemicals/fujairah                     301!
+/chemicals/ras-al-khaimah/              /chemicals/ras-al-khaimah               301!
+/chemicals/riyadh/                      /chemicals/riyadh                       301!
+/chemicals/jeddah/                      /chemicals/jeddah                       301!
+/chemicals/dammam/                      /chemicals/dammam                       301!
+/chemicals/doha/                        /chemicals/doha                         301!
+/chemicals/kuwait-city/                 /chemicals/kuwait-city                  301!
+/chemicals/bahrain/                     /chemicals/bahrain                      301!
+/chemicals/baghdad/                     /chemicals/baghdad                      301!
+/chemicals/amman/                       /chemicals/amman                        301!
+/chemicals/cairo/                       /chemicals/cairo                        301!
+/about/                                 /about                                  301!
+/products/                              /products                               301!
+/contact/                               /contact                                301!
+/blog/                                  /blog                                   301!
+/industries/                            /industries                             301!
+/resources/                             /resources                              301!
+/certifications/                        /certifications                         301!
+/customers/                             /customers                              301!
+/career/                                /career                                 301!
+
+# =====================================
 # CURRENT SEO REDIRECTS
 # =====================================
 
