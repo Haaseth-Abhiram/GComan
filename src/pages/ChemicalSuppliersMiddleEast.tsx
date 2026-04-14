@@ -250,6 +250,154 @@ const ChemicalSuppliersMiddleEast = () => {
           </div>
         </section>
 
+        {/* Country-Specific Supply Sections */}
+        <section className="py-16 md:py-24">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto space-y-16">
+              <div className="text-center">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">Chemical Supply by Country</h2>
+                <p className="text-muted-foreground max-w-2xl mx-auto">Dedicated chemical supply to each GCC market — with country-specific documentation, logistics, and technical support</p>
+              </div>
+
+              {/* UAE */}
+              <div className="grid md:grid-cols-12 gap-8 items-start border-t pt-12">
+                <div className="md:col-span-1 text-4xl">🇦🇪</div>
+                <div className="md:col-span-11">
+                  <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Chemical Supplier in Dubai &amp; Abu Dhabi, UAE</h2>
+                  <p className="text-muted-foreground leading-relaxed text-lg mb-4">
+                    Global Chemicals LLC is a trusted chemical supplier exporting to Dubai, Abu Dhabi, Sharjah, Fujairah, and all UAE Emirates. Our Muscat-to-UAE supply chain delivers water treatment chemicals, industrial lubricants (Shell, Mobil, Castrol), laboratory reagents, oilfield chemicals, and construction chemicals within 3–5 business days via road freight. For urgent requirements, air freight from Muscat delivers to Dubai or Abu Dhabi within 24 hours.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed text-lg mb-4">
+                    We regularly supply to clients in Jebel Ali Free Zone (JAFZA), Dubai Industrial City, KIZAD (Khalifa Industrial Zone Abu Dhabi), Abu Dhabi Industrial City, and Sharjah industrial areas. Products are exported with full UAE customs documentation: Certificate of Analysis (CoA), Safety Data Sheet (SDS/MSDS), Certificate of Origin, commercial invoice, and packing list. FOB Muscat and CIF Dubai/Abu Dhabi pricing available.
+                  </p>
+                  <Link to="/chemicals/dubai" className="inline-flex items-center gap-1 text-primary font-medium hover:underline">
+                    Chemical supplier details for UAE <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+
+              {/* Saudi Arabia */}
+              <div className="grid md:grid-cols-12 gap-8 items-start border-t pt-12">
+                <div className="md:col-span-1 text-4xl">🇸🇦</div>
+                <div className="md:col-span-11">
+                  <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Chemical Supplier in Saudi Arabia — Riyadh, Jeddah, Dammam</h2>
+                  <p className="text-muted-foreground leading-relaxed text-lg mb-4">
+                    We export industrial and specialty chemicals to all regions of Saudi Arabia, including Riyadh, Jeddah, Dammam, Al Khobar, Jubail Industrial City, and KAEC. Our chemical portfolio serves Saudi Aramco-approved contractors, SABIC facilities, National Water Company (NWC) water treatment plants, pharmaceutical manufacturers, and general industry across the Kingdom. Saudi Arabia delivery typically takes 5–7 business days by road freight.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed text-lg mb-4">
+                    We provide full Saudi import documentation: Certificate of Origin (attested by Oman Chamber of Commerce), Safety Data Sheet in Arabic and English, Certificate of Analysis, SASO compliance where applicable, commercial invoice, and packing list. Products include PAC, caustic soda, antiscalants, corrosion inhibitors, demulsifiers, H2S scavengers, and 1,000+ other chemicals.
+                  </p>
+                  <Link to="/chemicals/riyadh" className="inline-flex items-center gap-1 text-primary font-medium hover:underline">
+                    Chemical supplier details for Saudi Arabia <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+
+              {/* Qatar */}
+              <div className="grid md:grid-cols-12 gap-8 items-start border-t pt-12">
+                <div className="md:col-span-1 text-4xl">🇶🇦</div>
+                <div className="md:col-span-11">
+                  <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Chemical Supplier in Qatar — Doha &amp; Ras Laffan</h2>
+                  <p className="text-muted-foreground leading-relaxed text-lg mb-4">
+                    Qatar's LNG and petrochemical sector is among the world's largest, and Global Chemicals LLC is positioned to serve QatarEnergy contractors and industrial operators in Ras Laffan Industrial City, Doha, and across Qatar. We supply oilfield chemicals (corrosion inhibitors, hydrate inhibitors, scale inhibitors, demulsifiers), water treatment chemicals, industrial lubricants, and laboratory reagents. Road freight from Muscat to Doha takes 3–5 business days.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed text-lg mb-4">
+                    Our team has experience navigating Ras Laffan Security Clearance (RLSC) requirements and QatarEnergy vendor qualification documentation. We provide full CoA, SDS, TDS, and Certificate of Origin documentation for Qatar customs. Competitive QAR and USD pricing available with FOB, CIF, and DAP incoterms.
+                  </p>
+                  <Link to="/chemicals/doha" className="inline-flex items-center gap-1 text-primary font-medium hover:underline">
+                    Chemical supplier details for Qatar <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+
+              {/* Kuwait */}
+              <div className="grid md:grid-cols-12 gap-8 items-start border-t pt-12">
+                <div className="md:col-span-1 text-4xl">🇰🇼</div>
+                <div className="md:col-span-11">
+                  <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Chemical Supplier in Kuwait — Kuwait City &amp; Shuaiba</h2>
+                  <p className="text-muted-foreground leading-relaxed text-lg mb-4">
+                    Kuwait's oil refining (KNPC), desalination, and manufacturing sectors require a reliable chemical supply chain. Global Chemicals LLC exports water treatment chemicals, refinery production chemicals, industrial lubricants, and laboratory reagents to Kuwait City, Shuaiba Industrial Area, and Ahmadi. We have experience with Kuwait Oil Company (KOC) contractor documentation requirements and KNPC supply qualification processes. Road freight delivery is 4–6 business days.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed text-lg mb-4">
+                    Products available include Poly Aluminium Chloride (PAC), caustic soda, sodium hypochlorite, antiscalants for Kuwait's desalination plants, corrosion inhibitors for refinery operations, and Shell/Mobil lubricants. We offer FOB Muscat and CIF Shuwaikh Port pricing in KWD and USD. Full Arabic and English documentation provided for Kuwait customs clearance.
+                  </p>
+                  <Link to="/chemicals/kuwait-city" className="inline-flex items-center gap-1 text-primary font-medium hover:underline">
+                    Chemical supplier details for Kuwait <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+
+              {/* Bahrain */}
+              <div className="grid md:grid-cols-12 gap-8 items-start border-t pt-12">
+                <div className="md:col-span-1 text-4xl">🇧🇭</div>
+                <div className="md:col-span-11">
+                  <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Chemical Supplier in Bahrain — Manama, Hidd &amp; Sitra</h2>
+                  <p className="text-muted-foreground leading-relaxed text-lg mb-4">
+                    Bahrain's industrial sectors — led by ALBA (Aluminium Bahrain), BAPCO refinery, and Hidd/Sitra industrial areas — require high-quality specialty chemicals. Global Chemicals LLC exports aluminum processing chemicals, refinery chemicals, water treatment solutions, industrial lubricants, and laboratory reagents to Bahrain. Road freight via Saudi Arabia delivers within 3–5 business days to Manama and surrounding industrial zones.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed text-lg mb-4">
+                    We support ALBA and BAPCO contractor qualification with full documentation: Certificate of Analysis, Safety Data Sheet (Arabic and English), Certificate of Origin, Halal certificates where applicable, and commercial documentation for Bahrain customs. GCC preferential origin applies where eligible, reducing import duties for Bahrain customers.
+                  </p>
+                  <Link to="/chemicals/bahrain" className="inline-flex items-center gap-1 text-primary font-medium hover:underline">
+                    Chemical supplier details for Bahrain <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+
+              {/* Iraq */}
+              <div className="grid md:grid-cols-12 gap-8 items-start border-t pt-12">
+                <div className="md:col-span-1 text-4xl">🇮🇶</div>
+                <div className="md:col-span-11">
+                  <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Chemical Supplier in Iraq — Baghdad, Basra &amp; Kirkuk</h2>
+                  <p className="text-muted-foreground leading-relaxed text-lg mb-4">
+                    Iraq is one of the world's largest oil producers, and its upstream sector — centred around Basra, Kirkuk, and the southern oil fields — demands a reliable supply of oilfield chemicals. Global Chemicals LLC exports corrosion inhibitors, scale inhibitors, H2S scavengers, demulsifiers, and drilling chemicals to Iraq, alongside water treatment chemicals and industrial process chemicals for Baghdad and other urban centres. Air freight from Muscat or road freight via Kuwait provides flexible logistics options with lead times of 5–8 business days.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed text-lg mb-4">
+                    We provide full Arabic-language documentation for Iraqi customs compliance: Safety Data Sheet in Arabic, Certificate of Origin attested by Oman Chamber of Commerce, Certificate of Analysis, and commercial invoice. USD pricing is standard; we can accommodate letters of credit (LC) for Iraqi importers. Our team is experienced in navigating Iraqi import procedures for hazardous and non-hazardous chemicals.
+                  </p>
+                  <Link to="/chemicals/baghdad" className="inline-flex items-center gap-1 text-primary font-medium hover:underline">
+                    Chemical supplier details for Iraq <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+
+              {/* Jordan */}
+              <div className="grid md:grid-cols-12 gap-8 items-start border-t pt-12">
+                <div className="md:col-span-1 text-4xl">🇯🇴</div>
+                <div className="md:col-span-11">
+                  <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Chemical Supplier in Jordan — Amman, Zarqa &amp; Aqaba</h2>
+                  <p className="text-muted-foreground leading-relaxed text-lg mb-4">
+                    Jordan's diverse industrial base — pharmaceutical manufacturing in Amman, heavy industry in Zarqa, and port-linked trade through Aqaba — creates demand for a broad range of specialty chemicals. Global Chemicals LLC exports pharmaceutical-grade reagents, water treatment chemicals (PAC, antiscalants, biocides), laboratory chemicals, agricultural chemicals, and mining process chemicals to Jordan. Aqaba's free zone offers efficient import processing, and road freight from Oman via Saudi Arabia delivers within 5–7 business days.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed text-lg mb-4">
+                    We provide full documentation for Jordanian customs: Certificate of Origin, Safety Data Sheet in Arabic, Certificate of Analysis, and commercial invoice. Jordan has a Free Trade Agreement with several GCC states that may reduce duties for eligible Omani-origin goods. Our team can advise on applicable tariff codes and duty exemptions for your specific chemicals.
+                  </p>
+                  <Link to="/chemicals/amman" className="inline-flex items-center gap-1 text-primary font-medium hover:underline">
+                    Chemical supplier details for Jordan <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+
+              {/* Egypt */}
+              <div className="grid md:grid-cols-12 gap-8 items-start border-t pt-12">
+                <div className="md:col-span-1 text-4xl">🇪🇬</div>
+                <div className="md:col-span-11">
+                  <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Chemical Supplier in Egypt — Cairo, Alexandria &amp; Suez</h2>
+                  <p className="text-muted-foreground leading-relaxed text-lg mb-4">
+                    Egypt is the largest non-GCC chemical market in the Middle East, with strong demand from food and beverage manufacturing, pharmaceuticals, textiles, petrochemicals, and agriculture. Global Chemicals LLC exports food-grade chemicals, pharmaceutical API intermediates and excipients, water treatment chemicals, agricultural inputs (fertilizers and crop protection), and industrial process chemicals to Egypt. Sea freight from Salalah or air freight from Muscat to Cairo or Alexandria provides flexible delivery options, with typical lead times of 7–12 business days.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed text-lg mb-4">
+                    We provide full Arabic documentation for Egyptian customs and GOEIC (General Organization for Export and Import Control) clearance: Certificate of Analysis, Safety Data Sheet, Certificate of Origin attested by the Oman Chamber of Commerce, Halal certificates for food-grade products, and commercial invoice. We can arrange CIF Alexandria, CIF Port Said, or FOB Salalah/Muscat pricing in USD or EGP-equivalent quotes.
+                  </p>
+                  <Link to="/chemicals/cairo" className="inline-flex items-center gap-1 text-primary font-medium hover:underline">
+                    Chemical supplier details for Egypt <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Industry Sections */}
         <section className="py-16 md:py-24 bg-muted/30">
           <div className="container mx-auto px-4">
