@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import heroLab from '@/assets/hero-lab-optimized.webp';
-import waterTreatment from '@/assets/hero-water-treatment-optimized.webp';
+import heroLab from '@/assets/hero-lab.jpg';
+import waterTreatment from '@/assets/hero-water-treatment.webp';
 import oilGas from '@/assets/products/oil-gas.jpg';
 import industrialLubricants from '@/assets/products/industrial-lubricants.jpg';
 import { Badge } from '@/components/ui/badge';
@@ -65,21 +65,26 @@ const Hero = () => {
       {/* Background with Parallax Effect */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 mix-blend-multiply z-10" />
-        {slides.map((s, index) => (
-          <img
-            key={index}
-            src={s.image}
-            alt={s.alt}
-            width={1920}
-            height={1080}
-            loading={index === 0 ? "eager" : "lazy"}
-            decoding={index === 0 ? "sync" : "async"}
-            fetchPriority={index === 0 ? "high" : "low"}
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-              index === currentSlide ? 'opacity-100' : 'opacity-0'
-            }`}
-          />
-        ))}
+        {slides.map((s, index) => {
+          // Only render slides that have been viewed (or are next), keep first eager for LCP
+          const shouldRender = index === 0 || index <= currentSlide + 1;
+          if (!shouldRender) return null;
+          return (
+            <img
+              key={index}
+              src={s.image}
+              alt={s.alt}
+              width={1920}
+              height={1080}
+              loading={index === 0 ? "eager" : "lazy"}
+              decoding={index === 0 ? "sync" : "async"}
+              fetchPriority={index === 0 ? "high" : "low"}
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+                index === currentSlide ? 'opacity-100' : 'opacity-0'
+              }`}
+            />
+          );
+        })}
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/75 z-10" />
         
         {/* Animated particles */}

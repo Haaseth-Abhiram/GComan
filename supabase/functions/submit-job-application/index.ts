@@ -285,6 +285,18 @@ Deno.serve(async (req) => {
           },
         });
 
+        // Convert resume to base64 for email attachment
+        const resumeBytes = new Uint8Array(fileBuffer);
+        let binary = "";
+        const chunkSize = 0x8000;
+        for (let i = 0; i < resumeBytes.length; i += chunkSize) {
+          binary += String.fromCharCode.apply(
+            null,
+            Array.from(resumeBytes.subarray(i, i + chunkSize)) as any
+          );
+        }
+        const resumeBase64 = btoa(binary);
+
         await client.send({
           from: Deno.env.get("ZOHO_SMTP_USER") || "sales@gcoman.com",
           to: "sales@gcoman.com",
@@ -302,11 +314,19 @@ LinkedIn: ${applicationData.linkedinUrl || "Not provided"}
 Cover Letter:
 ${applicationData.coverLetter}
 
-Resume: Uploaded to storage at ${filePath}
+Resume: Attached (also stored at ${filePath})
 
 ---
 Submitted at: ${new Date().toLocaleString()}
           `,
+          attachments: [
+            {
+              filename: sanitizedFileName,
+              content: resumeBase64,
+              encoding: "base64",
+              contentType: resumeFile.type,
+            },
+          ],
         });
 
         await client.close();
