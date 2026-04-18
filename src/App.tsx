@@ -8,6 +8,7 @@ import { HelmetProvider } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import { AuthProvider } from "./contexts/AuthContext";
 import { ProtectedRoute } from "./components/ProtectedRoute";
+import { AdminRoute } from "./components/AdminRoute";
 import CookieConsent from "./components/CookieConsent";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { Loading } from "./components/Loading";
@@ -101,9 +102,9 @@ const App = () => (
                 <Route path="/certifications" element={<Certifications />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/admin/*" element={
-                  <ProtectedRoute>
+                  <AdminRoute>
                     <Admin />
-                  </ProtectedRoute>
+                  </AdminRoute>
                 } />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/blog/:slug" element={<BlogPost />} />
@@ -137,9 +138,9 @@ const App = () => (
                   <Route path="certifications" element={<Certifications />} />
                   <Route path="login" element={<Login />} />
                   <Route path="admin/*" element={
-                    <ProtectedRoute>
+                    <AdminRoute>
                       <Admin />
-                    </ProtectedRoute>
+                    </AdminRoute>
                   } />
                   <Route path="blog" element={<Blog />} />
                   <Route path="blog/:slug" element={<BlogPost />} />
