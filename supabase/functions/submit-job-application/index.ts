@@ -222,10 +222,22 @@ Deno.serve(async (req) => {
       );
     }
 
-    // Sanitize filename to prevent path traversal
+    // Organize resumes by position and month for HR: {position-slug}/{YYYY-MM}/{timestamp}-{applicant}-{filename}
     const sanitizedFileName = resumeFile.name.replace(/[^a-zA-Z0-9._-]/g, '_');
-    const timestamp = Date.now();
-    const filePath = `${timestamp}-${sanitizedFileName}`;
+    const positionSlug = (applicationData.position || 'general')
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '')
+      .substring(0, 60) || 'general';
+    const applicantSlug = applicationData.name
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '')
+      .substring(0, 40);
+    const now = new Date();
+    const yearMonth = `${now.getUTCFullYear()}-${String(now.getUTCMonth() + 1).padStart(2, '0')}`;
+    const timestamp = now.getTime();
+    const filePath = `${positionSlug}/${yearMonth}/${timestamp}-${applicantSlug}-${sanitizedFileName}`;
 
     // Upload resume to storage
     const fileBuffer = await resumeFile.arrayBuffer();
