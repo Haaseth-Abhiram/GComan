@@ -154,25 +154,37 @@ export const ContactSubmissionsTable = () => {
     <>
       <Card>
         <CardHeader>
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
             <div>
               <CardTitle>Contact Submissions</CardTitle>
-              <CardDescription>All contact form submissions from your website with email notification status</CardDescription>
+              <CardDescription>All contact form submissions with email notification status</CardDescription>
             </div>
-            <div className="flex items-center gap-2 text-xs text-muted-foreground">
-              <div className="flex items-center gap-1">
-                <MailCheck className="h-3 w-3 text-green-600" />
-                <span>Email Sent</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <MailX className="h-3 w-3 text-destructive" />
-                <span>Failed</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <Mail className="h-3 w-3 text-muted-foreground" />
-                <span>Pending</span>
-              </div>
+            <Button variant="outline" size="sm" onClick={handleExport} disabled={!filtered.length}>
+              <FileSpreadsheet className="h-4 w-4 mr-2" />
+              Export Excel ({filtered.length})
+            </Button>
+          </div>
+          <div className="flex flex-col md:flex-row gap-3 mt-4">
+            <div className="relative flex-1">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+              <Input
+                placeholder="Search name, email, company, subject, message..."
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                className="pl-9"
+              />
             </div>
+            <Select value={statusFilter} onValueChange={(v) => setStatusFilter(v as typeof statusFilter)}>
+              <SelectTrigger className="w-full md:w-[200px]">
+                <SelectValue placeholder="Email status" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">All statuses</SelectItem>
+                <SelectItem value="sent">Sent</SelectItem>
+                <SelectItem value="failed">Failed</SelectItem>
+                <SelectItem value="pending">Pending</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
         </CardHeader>
         <CardContent>
@@ -191,14 +203,14 @@ export const ContactSubmissionsTable = () => {
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {submissions.length === 0 ? (
+                {filtered.length === 0 ? (
                   <TableRow>
                     <TableCell colSpan={8} className="text-center text-muted-foreground">
-                      No contact submissions yet
+                      No submissions match your filters
                     </TableCell>
                   </TableRow>
                 ) : (
-                  submissions.map((submission) => (
+                  filtered.map((submission) => (
                     <TableRow key={submission.id}>
                       <TableCell className="whitespace-nowrap">
                         {format(new Date(submission.created_at), 'MMM d, yyyy')}
