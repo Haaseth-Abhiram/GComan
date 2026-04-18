@@ -102,9 +102,9 @@ const App = () => (
                 <Route path="/certifications" element={<Certifications />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/admin/*" element={
-                  <ProtectedRoute>
+                  <AdminRoute>
                     <Admin />
-                  </ProtectedRoute>
+                  </AdminRoute>
                 } />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/blog/:slug" element={<BlogPost />} />
@@ -138,9 +138,9 @@ const App = () => (
                   <Route path="certifications" element={<Certifications />} />
                   <Route path="login" element={<Login />} />
                   <Route path="admin/*" element={
-                    <ProtectedRoute>
+                    <AdminRoute>
                       <Admin />
-                    </ProtectedRoute>
+                    </AdminRoute>
                   } />
                   <Route path="blog" element={<Blog />} />
                   <Route path="blog/:slug" element={<BlogPost />} />
