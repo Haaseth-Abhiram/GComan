@@ -6,6 +6,7 @@ import { AdminSidebar } from '@/components/admin/AdminSidebar';
 import { ContactSubmissionsTable } from '@/components/admin/ContactSubmissionsTable';
 import { JobApplicationsTable } from '@/components/admin/JobApplicationsTable';
 import { DownloadLeadsTable } from '@/components/admin/DownloadLeadsTable';
+import { ResumesFolderBrowser } from '@/components/admin/ResumesFolderBrowser';
 import { AnalyticsDialog } from '@/components/admin/AnalyticsDialog';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -613,6 +614,7 @@ const Admin = () => {
                 <Route path="/" element={<AdminOverview />} />
                 <Route path="/contacts" element={<ContactSubmissionsTable />} />
                 <Route path="/jobs" element={<JobApplicationsTable />} />
+                <Route path="/resumes" element={<ResumesFolderBrowser />} />
                 <Route path="/downloads" element={<DownloadLeadsTable />} />
               </Routes>
             </main>

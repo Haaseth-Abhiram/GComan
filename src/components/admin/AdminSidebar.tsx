@@ -1,4 +1,4 @@
-import { FileText, Briefcase, Download, LayoutDashboard, Home, BarChart3, Settings, HelpCircle, Mail } from 'lucide-react';
+import { FileText, Briefcase, Download, LayoutDashboard, Home, BarChart3, Settings, HelpCircle, Mail, FolderOpen } from 'lucide-react';
 import { useLocation, Link } from 'react-router-dom';
 import {
   Sidebar,
@@ -20,6 +20,7 @@ const mainItems = [
   { title: 'Dashboard', url: '/admin', icon: LayoutDashboard },
   { title: 'Contact Forms', url: '/admin/contacts', icon: FileText, badge: 'Email Status' },
   { title: 'Job Applications', url: '/admin/jobs', icon: Briefcase },
+  { title: 'Resume Folders', url: '/admin/resumes', icon: FolderOpen, badge: 'HR' },
   { title: 'Download Leads', url: '/admin/downloads', icon: Download },
 ];
 
