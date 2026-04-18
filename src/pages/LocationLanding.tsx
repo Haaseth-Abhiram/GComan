@@ -218,6 +218,42 @@ const locations: Record<string, LocationData> = {
     metaKeywords: 'chemical supplier Rusayl, Rusayl Industrial Estate chemicals, food grade chemicals Rusayl, pharmaceutical chemicals Rusayl, industrial chemicals Rusayl, manufacturing chemicals Oman'
   },
 
+  'rustaq': {
+    slug: 'rustaq',
+    city: 'Rustaq',
+    cityArabic: 'الرستاق',
+    country: 'Oman',
+    region: 'South Al Batinah Governorate',
+    description: 'Global Chemicals LLC supplies industrial and specialty chemicals to Rustaq and the South Al Batinah Governorate. Rustaq is home to growing agricultural, food processing, and construction sectors, alongside the historic city\'s expanding light industrial activity. We deliver water treatment chemicals, agricultural inputs, food-grade chemicals, and industrial process chemicals to clients across Rustaq, Nakhal, and surrounding areas within 24–48 hours from our Muscat warehouse.',
+    industries: ['Agriculture & Irrigation', 'Food Processing', 'Construction', 'Water Treatment', 'General Manufacturing', 'Hotels & Hospitality'],
+    deliveryTime: '24–48 hour delivery to Rustaq from Muscat',
+    keyClients: ['Farms and agricultural operations', 'Food processing companies', 'Construction contractors', 'Hotels and resorts', 'Municipal water authorities'],
+    highlights: [
+      '24–48 hour delivery to Rustaq',
+      'Agricultural and food-grade chemicals available',
+      'Water treatment chemicals for rural networks',
+      'Flexible minimum order quantities',
+      'Technical support in Arabic and English'
+    ],
+    faqs: [
+      {
+        question: 'Does Global Chemicals LLC deliver chemicals to Rustaq?',
+        answer: 'Yes. We deliver industrial and specialty chemicals to Rustaq and surrounding South Al Batinah areas including Nakhal, Wadi Bani Awf, and Awabi. Standard delivery from our Muscat warehouse is 24–48 hours. For urgent requirements, same-day dispatch is available for orders placed before 9 AM.'
+      },
+      {
+        question: 'What chemicals do you supply to Rustaq farms and agricultural operations?',
+        answer: 'We supply a range of agricultural chemicals to Rustaq farms including water treatment chemicals for irrigation systems (antiscalants, biocides, algaecides), fertilizer-grade inputs, pH adjustment chemicals (caustic soda, hydrochloric acid), and pool/water sanitisers for farm facilities. All chemicals come with full SDS documentation.'
+      },
+      {
+        question: 'Can you supply water treatment chemicals for Rustaq municipal systems?',
+        answer: 'Yes. We supply Poly Aluminium Chloride (PAC), sodium hypochlorite, chlorine tablets, antiscalants, and coagulants used in municipal water treatment and distribution across Oman\'s governorates including South Al Batinah. Contact us for bulk pricing and delivery schedules.'
+      }
+    ],
+    metaTitle: 'Chemical Supplier Rustaq | Industrial Chemicals South Al Batinah | Global Chemicals LLC',
+    metaDescription: 'Chemical supplier for Rustaq, Oman. Agricultural chemicals, water treatment, food-grade & industrial chemicals. 24–48 hour delivery from Muscat. Call +968-93754388.',
+    metaKeywords: 'chemical supplier Rustaq, chemicals Rustaq Oman, agricultural chemicals Rustaq, water treatment Rustaq, industrial chemicals South Al Batinah, chemical supplier Nakhal Oman'
+  },
+
   // ── GCC / Middle East Location Pages ──────────────────────────────────────
 
   'dubai': {

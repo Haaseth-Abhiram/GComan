@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import Footer from '@/components/Footer';
@@ -60,6 +61,116 @@ const Index = () => {
         <IndustrySelector />
         <WhyChooseUs />
         <QuickActions />
+
+        {/* Internal Links Hub — location pages + product categories */}
+        <section className="py-16 bg-muted/30 border-t">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-2xl font-bold text-center mb-10 text-foreground">
+                Chemical Supply Across Oman &amp; the Middle East
+              </h2>
+              <div className="grid md:grid-cols-2 gap-10">
+
+                {/* Oman Locations */}
+                <div>
+                  <h3 className="text-base font-semibold text-primary uppercase tracking-wide mb-4">Oman — Chemical Supplier by City</h3>
+                  <ul className="grid grid-cols-2 gap-2">
+                    {[
+                      { label: 'Muscat', path: '/chemicals/muscat' },
+                      { label: 'Sohar', path: '/chemicals/sohar' },
+                      { label: 'Salalah', path: '/chemicals/salalah' },
+                      { label: 'Duqm', path: '/chemicals/duqm' },
+                      { label: 'Rusayl Industrial Estate', path: '/chemicals/rusayl' },
+                      { label: 'Rustaq', path: '/chemicals/rustaq' },
+                    ].map((loc) => (
+                      <li key={loc.path}>
+                        <Link to={loc.path} className="text-sm text-muted-foreground hover:text-primary hover:underline transition-colors">
+                          {loc.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <h3 className="text-base font-semibold text-primary uppercase tracking-wide mb-4 mt-8">GCC &amp; Middle East Export</h3>
+                  <ul className="grid grid-cols-2 gap-2">
+                    {[
+                      { label: 'Dubai, UAE', path: '/chemicals/dubai' },
+                      { label: 'Abu Dhabi, UAE', path: '/chemicals/abu-dhabi' },
+                      { label: 'Sharjah, UAE', path: '/chemicals/sharjah' },
+                      { label: 'Fujairah, UAE', path: '/chemicals/fujairah' },
+                      { label: 'Ras Al Khaimah, UAE', path: '/chemicals/ras-al-khaimah' },
+                      { label: 'Riyadh, Saudi Arabia', path: '/chemicals/riyadh' },
+                      { label: 'Jeddah, Saudi Arabia', path: '/chemicals/jeddah' },
+                      { label: 'Dammam, Saudi Arabia', path: '/chemicals/dammam' },
+                      { label: 'Doha, Qatar', path: '/chemicals/doha' },
+                      { label: 'Kuwait City, Kuwait', path: '/chemicals/kuwait-city' },
+                      { label: 'Manama, Bahrain', path: '/chemicals/bahrain' },
+                      { label: 'Baghdad, Iraq', path: '/chemicals/baghdad' },
+                      { label: 'Amman, Jordan', path: '/chemicals/amman' },
+                      { label: 'Cairo, Egypt', path: '/chemicals/cairo' },
+                    ].map((loc) => (
+                      <li key={loc.path}>
+                        <Link to={loc.path} className="text-sm text-muted-foreground hover:text-primary hover:underline transition-colors">
+                          {loc.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Product Categories */}
+                <div>
+                  <h3 className="text-base font-semibold text-primary uppercase tracking-wide mb-4">Chemical Products by Category</h3>
+                  <ul className="grid grid-cols-2 gap-2">
+                    {[
+                      { label: 'Water Treatment Chemicals', path: '/products/water-treatment' },
+                      { label: 'Industrial Lubricants', path: '/products/lubricants' },
+                      { label: 'Laboratory Chemicals', path: '/products/lab-chemicals' },
+                      { label: 'Oilfield Chemicals', path: '/products/oilfield' },
+                      { label: 'Swimming Pool Chemicals', path: '/products/swimming-pool' },
+                      { label: 'RO Membrane Chemicals', path: '/products/ro-chemicals' },
+                      { label: 'Food & Beverage Chemicals', path: '/products/food-beverage' },
+                      { label: 'Cooling Water Chemicals', path: '/products/cooling-water' },
+                      { label: 'Corrosion Inhibitors', path: '/products/corrosion-inhibitor' },
+                      { label: 'Soap & Detergent Raw Materials', path: '/products/soap-detergent' },
+                      { label: 'Solvents', path: '/products/solvents' },
+                      { label: 'Construction Chemicals', path: '/products/construction' },
+                      { label: 'Tank Cleaners', path: '/products/tank-cleaners' },
+                      { label: 'Inorganic Chemicals', path: '/products/inorganic' },
+                      { label: 'Alcohols', path: '/products/alcohols' },
+                      { label: 'Glycols', path: '/products/glycols' },
+                      { label: 'Ethanolamines', path: '/products/ethanolamines' },
+                      { label: 'Chlorinated Solvents', path: '/products/chlorinated' },
+                      { label: 'Agricultural Chemicals', path: '/products/agro' },
+                      { label: 'Lab Equipment', path: '/products/lab-equipment' },
+                    ].map((cat) => (
+                      <li key={cat.path}>
+                        <Link to={cat.path} className="text-sm text-muted-foreground hover:text-primary hover:underline transition-colors">
+                          {cat.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <h3 className="text-base font-semibold text-primary uppercase tracking-wide mb-4 mt-8">SEO Landing Pages</h3>
+                  <ul className="space-y-2">
+                    {[
+                      { label: 'Chemical Suppliers in Oman', path: '/chemical-suppliers-oman' },
+                      { label: 'Chemical Suppliers in Middle East', path: '/chemical-suppliers-middle-east' },
+                      { label: 'Caustic Soda Supplier Oman', path: '/chemical-supplier/caustic-soda-oman' },
+                    ].map((lp) => (
+                      <li key={lp.path}>
+                        <Link to={lp.path} className="text-sm text-muted-foreground hover:text-primary hover:underline transition-colors">
+                          {lp.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>

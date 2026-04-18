@@ -50,6 +50,7 @@ const Sitemap = () => {
         { label: 'Chemicals Salalah', path: '/chemicals/salalah' },
         { label: 'Chemicals Duqm', path: '/chemicals/duqm' },
         { label: 'Chemicals Rusayl', path: '/chemicals/rusayl' },
+        { label: 'Chemicals Rustaq', path: '/chemicals/rustaq' },
         { label: 'Chemicals Dubai (Export)', path: '/chemicals/dubai' },
         { label: 'Chemicals Abu Dhabi (Export)', path: '/chemicals/abu-dhabi' },
         { label: 'Chemicals Sharjah (Export)', path: '/chemicals/sharjah' },
