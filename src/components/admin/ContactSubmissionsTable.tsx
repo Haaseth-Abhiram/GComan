@@ -38,6 +38,8 @@ export const ContactSubmissionsTable = () => {
   const [submissions, setSubmissions] = useState<ContactSubmission[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [selectedSubmission, setSelectedSubmission] = useState<ContactSubmission | null>(null);
+  const [search, setSearch] = useState('');
+  const [statusFilter, setStatusFilter] = useState<'all' | 'sent' | 'failed' | 'pending'>('all');
 
   useEffect(() => {
     fetchSubmissions();
@@ -57,6 +59,44 @@ export const ContactSubmissionsTable = () => {
     } finally {
       setIsLoading(false);
     }
+  };
+
+  const filtered = useMemo(() => {
+    const q = search.trim().toLowerCase();
+    return submissions.filter((s) => {
+      if (statusFilter === 'sent' && s.email_sent !== true) return false;
+      if (statusFilter === 'failed' && !(s.email_sent === false && s.email_error)) return false;
+      if (statusFilter === 'pending' && (s.email_sent === true || s.email_error)) return false;
+      if (!q) return true;
+      return (
+        s.name.toLowerCase().includes(q) ||
+        s.email.toLowerCase().includes(q) ||
+        (s.phone || '').toLowerCase().includes(q) ||
+        (s.company || '').toLowerCase().includes(q) ||
+        s.subject.toLowerCase().includes(q) ||
+        s.message.toLowerCase().includes(q)
+      );
+    });
+  }, [submissions, search, statusFilter]);
+
+  const handleExport = () => {
+    if (!filtered.length) return;
+    exportToExcel(
+      filtered.map((s) => ({
+        Date: format(new Date(s.created_at), 'yyyy-MM-dd HH:mm'),
+        Name: s.name,
+        Email: s.email,
+        Phone: s.phone || '',
+        Company: s.company || '',
+        Subject: s.subject,
+        Message: s.message,
+        'Email Status': s.email_sent === true ? 'Sent' : s.email_error ? 'Failed' : 'Pending',
+        'Email Sent At': s.email_sent_at ? format(new Date(s.email_sent_at), 'yyyy-MM-dd HH:mm') : '',
+        'Email Error': s.email_error || '',
+      })),
+      'contact_submissions',
+      'Contacts'
+    );
   };
 
   const getEmailStatusBadge = (submission: ContactSubmission) => {
