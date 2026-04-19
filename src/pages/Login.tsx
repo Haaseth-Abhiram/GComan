@@ -12,7 +12,7 @@ import { Eye, EyeOff, Mail, Lock, ArrowLeft } from 'lucide-react';
 import { z } from 'zod';
 import logo from '@/assets/global-chemicals-logo.svg';
 import { supabase } from '@/integrations/supabase/client';
-import { ConnectionStatus } from '@/components/ConnectionStatus';
+
 
 // Validation schemas
 const loginSchema = z.object({
@@ -330,11 +330,6 @@ const Login = () => {
 
         {/* Right Side - Auth Forms */}
         <div className="w-full max-w-md mx-auto animate-fade-in" style={{ animationDelay: '100ms' }}>
-          {/* Connection Status Indicator */}
-          <div className="mb-4">
-            <ConnectionStatus />
-          </div>
-
           <Card className="border-2 shadow-xl">
             <CardHeader className="space-y-4">
               <div className="lg:hidden flex justify-center mb-4">
