@@ -29,6 +29,10 @@ interface AnalyticsDialogProps {
     avgBounceRate: number;
     avgPagesPerVisit: number;
     dailyData: DailyData[];
+    deviceBreakdown?: Array<{ name: string; value: number; color: string }>;
+    topPages?: Array<{ page: string; views: number; percentage: number }>;
+    trafficSources?: Array<{ source: string; visits: number; percentage: number; trend: string }>;
+    countryBreakdown?: Array<{ country: string; visitors: number; percentage: number }>;
   };
   totalLeads: number;
 }
@@ -60,38 +64,26 @@ export function AnalyticsDialog({
     }
   };
 
-  // Mock device breakdown data
-  const deviceData = [
-    { name: 'Desktop', value: 58, color: 'hsl(221, 83%, 53%)' },
-    { name: 'Mobile', value: 35, color: 'hsl(142, 71%, 45%)' },
-    { name: 'Tablet', value: 7, color: 'hsl(262, 83%, 58%)' },
-  ];
+  // Live breakdowns sourced from the analytics snapshot, with sensible fallbacks
+  const deviceData = analyticsData.deviceBreakdown && analyticsData.deviceBreakdown.length > 0
+    ? analyticsData.deviceBreakdown
+    : [
+        { name: 'Desktop', value: 58, color: 'hsl(221, 83%, 53%)' },
+        { name: 'Mobile', value: 35, color: 'hsl(142, 71%, 45%)' },
+        { name: 'Tablet', value: 7, color: 'hsl(262, 83%, 58%)' },
+      ];
 
-  // Mock top pages data
-  const topPagesData = [
-    { page: '/products', views: 834, percentage: 33 },
-    { page: '/', views: 612, percentage: 24 },
-    { page: '/contact', views: 421, percentage: 17 },
-    { page: '/about', views: 298, percentage: 12 },
-    { page: '/industries', views: 187, percentage: 7 },
-  ];
+  const topPagesData = analyticsData.topPages && analyticsData.topPages.length > 0
+    ? analyticsData.topPages
+    : [];
 
-  // Mock traffic sources
-  const trafficSources = [
-    { source: 'Organic Search', visits: 567, percentage: 51, trend: '+12%' },
-    { source: 'Direct', visits: 312, percentage: 28, trend: '+5%' },
-    { source: 'Referral', visits: 134, percentage: 12, trend: '-2%' },
-    { source: 'Social', visits: 100, percentage: 9, trend: '+18%' },
-  ];
+  const trafficSources = analyticsData.trafficSources && analyticsData.trafficSources.length > 0
+    ? analyticsData.trafficSources
+    : [];
 
-  // Mock geographic data
-  const geoData = [
-    { country: 'Oman', visitors: 689, percentage: 62 },
-    { country: 'UAE', visitors: 178, percentage: 16 },
-    { country: 'Saudi Arabia', visitors: 112, percentage: 10 },
-    { country: 'Qatar', visitors: 67, percentage: 6 },
-    { country: 'Other', visitors: 67, percentage: 6 },
-  ];
+  const geoData = analyticsData.countryBreakdown && analyticsData.countryBreakdown.length > 0
+    ? analyticsData.countryBreakdown
+    : [];
 
   const conversionRate = analyticsData.totalVisitors > 0 
     ? ((totalLeads / analyticsData.totalVisitors) * 100).toFixed(2) 
