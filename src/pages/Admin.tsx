@@ -47,6 +47,10 @@ interface AnalyticsData {
   avgBounceRate: number;
   avgPagesPerVisit: number;
   dailyData: DailyData[];
+  deviceBreakdown: Array<{ name: string; value: number; color: string }>;
+  topPages: Array<{ page: string; views: number; percentage: number }>;
+  trafficSources: Array<{ source: string; visits: number; percentage: number; trend: string }>;
+  countryBreakdown: Array<{ country: string; visitors: number; percentage: number }>;
 }
 
 const AdminOverview = () => {
@@ -66,6 +70,10 @@ const AdminOverview = () => {
     avgBounceRate: 0,
     avgPagesPerVisit: 0,
     dailyData: [],
+    deviceBreakdown: [],
+    topPages: [],
+    trafficSources: [],
+    countryBreakdown: [],
   });
   
   const [isLoading, setIsLoading] = useState(true);
@@ -122,16 +130,23 @@ const AdminOverview = () => {
         categoryData,
       });
 
-      // Fetch live analytics from database
+      // Refresh: compute a brand-new snapshot from live submissions data,
+      // then read the latest snapshot back.
+      try {
+        await supabase.functions.invoke('refresh-analytics');
+      } catch (e) {
+        console.warn('refresh-analytics invoke failed, using last snapshot', e);
+      }
+
       const { data: analyticsSnapshot } = await supabase
         .from('site_analytics_snapshots')
         .select('*')
         .order('created_at', { ascending: false })
         .limit(1)
-        .single();
+        .maybeSingle();
 
       if (analyticsSnapshot) {
-        const dailyData: DailyData[] = (analyticsSnapshot.daily_data as any[]).map((d: any) => ({
+        const dailyData: DailyData[] = ((analyticsSnapshot.daily_data as any[]) ?? []).map((d: any) => ({
           date: d.date,
           visitors: d.visitors,
           pageviews: d.pageviews,
@@ -144,6 +159,10 @@ const AdminOverview = () => {
           avgBounceRate: Number(analyticsSnapshot.avg_bounce_rate),
           avgPagesPerVisit: Number(analyticsSnapshot.avg_pages_per_visit),
           dailyData,
+          deviceBreakdown: (analyticsSnapshot.device_breakdown as any[]) ?? [],
+          topPages: (analyticsSnapshot.top_pages as any[]) ?? [],
+          trafficSources: (analyticsSnapshot.traffic_sources as any[]) ?? [],
+          countryBreakdown: (analyticsSnapshot.country_breakdown as any[]) ?? [],
         });
       }
 
