@@ -405,26 +405,36 @@ export function AnalyticsDialog({
               </CardHeader>
               <CardContent>
                 <div className="space-y-3">
-                  {geoData.map((item, index) => (
-                    <div key={index} className="flex items-center gap-4">
-                      <span className="text-lg w-8">{index === 0 ? '🇴🇲' : index === 1 ? '🇦🇪' : index === 2 ? '🇸🇦' : index === 3 ? '🇶🇦' : '🌍'}</span>
-                      <div className="flex-1">
-                        <div className="flex items-center justify-between mb-1">
-                          <span className="text-sm font-medium">{item.country}</span>
-                          <span className="text-sm text-muted-foreground">{item.visitors.toLocaleString()} visitors ({item.percentage}%)</span>
-                        </div>
-                        <div className="h-2 bg-muted rounded-full overflow-hidden">
-                          <div 
-                            className="h-full rounded-full transition-all duration-500"
-                            style={{ 
-                              width: `${item.percentage}%`,
-                              backgroundColor: index === 0 ? 'hsl(142, 71%, 45%)' : 'hsl(221, 83%, 53%)'
-                            }}
-                          />
+                  {geoData.map((item, index) => {
+                    const flag =
+                      item.country === 'Oman' ? '🇴🇲' :
+                      item.country === 'UAE' ? '🇦🇪' :
+                      item.country === 'Saudi Arabia' ? '🇸🇦' :
+                      item.country === 'Qatar' ? '🇶🇦' :
+                      item.country === 'Bahrain' ? '🇧🇭' :
+                      item.country === 'Kuwait' ? '🇰🇼' :
+                      '🌍';
+                    return (
+                      <div key={index} className="flex items-center gap-4">
+                        <span className="text-lg w-8">{flag}</span>
+                        <div className="flex-1">
+                          <div className="flex items-center justify-between mb-1">
+                            <span className="text-sm font-medium">{item.country}</span>
+                            <span className="text-sm text-muted-foreground">{item.visitors.toLocaleString()} visitors ({item.percentage}%)</span>
+                          </div>
+                          <div className="h-2 bg-muted rounded-full overflow-hidden">
+                            <div 
+                              className="h-full rounded-full transition-all duration-500"
+                              style={{ 
+                                width: `${item.percentage}%`,
+                                backgroundColor: item.country === 'Oman' ? 'hsl(142, 71%, 45%)' : 'hsl(221, 83%, 53%)'
+                              }}
+                            />
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </CardContent>
             </Card>
