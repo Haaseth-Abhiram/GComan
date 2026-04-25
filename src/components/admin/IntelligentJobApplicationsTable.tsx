@@ -165,7 +165,7 @@ export const IntelligentJobApplicationsTable = () => {
       setApps(prev => prev.map(a => a.id === selected.id
         ? { ...a, status: draftStatus, prospect: draftProspect, hr_notes: draftNotes } as any
         : a));
-      setSelected(null);
+      closeCandidate();
     }
   };
 
