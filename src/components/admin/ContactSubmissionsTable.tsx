@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import {
   Table,
@@ -11,10 +11,13 @@ import {
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { format } from 'date-fns';
-import { Loader2, Eye, Mail, MailCheck, MailX, AlertCircle } from 'lucide-react';
+import { Loader2, Eye, Mail, MailCheck, MailX, AlertCircle, FileSpreadsheet, Search } from 'lucide-react';
+import { exportToExcel } from '@/lib/exportToExcel';
 
 interface ContactSubmission {
   id: string;
@@ -35,6 +38,8 @@ export const ContactSubmissionsTable = () => {
   const [submissions, setSubmissions] = useState<ContactSubmission[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [selectedSubmission, setSelectedSubmission] = useState<ContactSubmission | null>(null);
+  const [search, setSearch] = useState('');
+  const [statusFilter, setStatusFilter] = useState<'all' | 'sent' | 'failed' | 'pending'>('all');
 
   useEffect(() => {
     fetchSubmissions();
@@ -54,6 +59,44 @@ export const ContactSubmissionsTable = () => {
     } finally {
       setIsLoading(false);
     }
+  };
+
+  const filtered = useMemo(() => {
+    const q = search.trim().toLowerCase();
+    return submissions.filter((s) => {
+      if (statusFilter === 'sent' && s.email_sent !== true) return false;
+      if (statusFilter === 'failed' && !(s.email_sent === false && s.email_error)) return false;
+      if (statusFilter === 'pending' && (s.email_sent === true || s.email_error)) return false;
+      if (!q) return true;
+      return (
+        s.name.toLowerCase().includes(q) ||
+        s.email.toLowerCase().includes(q) ||
+        (s.phone || '').toLowerCase().includes(q) ||
+        (s.company || '').toLowerCase().includes(q) ||
+        s.subject.toLowerCase().includes(q) ||
+        s.message.toLowerCase().includes(q)
+      );
+    });
+  }, [submissions, search, statusFilter]);
+
+  const handleExport = () => {
+    if (!filtered.length) return;
+    exportToExcel(
+      filtered.map((s) => ({
+        Date: format(new Date(s.created_at), 'yyyy-MM-dd HH:mm'),
+        Name: s.name,
+        Email: s.email,
+        Phone: s.phone || '',
+        Company: s.company || '',
+        Subject: s.subject,
+        Message: s.message,
+        'Email Status': s.email_sent === true ? 'Sent' : s.email_error ? 'Failed' : 'Pending',
+        'Email Sent At': s.email_sent_at ? format(new Date(s.email_sent_at), 'yyyy-MM-dd HH:mm') : '',
+        'Email Error': s.email_error || '',
+      })),
+      'contact_submissions',
+      'Contacts'
+    );
   };
 
   const getEmailStatusBadge = (submission: ContactSubmission) => {
@@ -111,25 +154,37 @@ export const ContactSubmissionsTable = () => {
     <>
       <Card>
         <CardHeader>
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
             <div>
               <CardTitle>Contact Submissions</CardTitle>
-              <CardDescription>All contact form submissions from your website with email notification status</CardDescription>
+              <CardDescription>All contact form submissions with email notification status</CardDescription>
             </div>
-            <div className="flex items-center gap-2 text-xs text-muted-foreground">
-              <div className="flex items-center gap-1">
-                <MailCheck className="h-3 w-3 text-green-600" />
-                <span>Email Sent</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <MailX className="h-3 w-3 text-destructive" />
-                <span>Failed</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <Mail className="h-3 w-3 text-muted-foreground" />
-                <span>Pending</span>
-              </div>
+            <Button variant="outline" size="sm" onClick={handleExport} disabled={!filtered.length}>
+              <FileSpreadsheet className="h-4 w-4 mr-2" />
+              Export Excel ({filtered.length})
+            </Button>
+          </div>
+          <div className="flex flex-col md:flex-row gap-3 mt-4">
+            <div className="relative flex-1">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+              <Input
+                placeholder="Search name, email, company, subject, message..."
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                className="pl-9"
+              />
             </div>
+            <Select value={statusFilter} onValueChange={(v) => setStatusFilter(v as typeof statusFilter)}>
+              <SelectTrigger className="w-full md:w-[200px]">
+                <SelectValue placeholder="Email status" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">All statuses</SelectItem>
+                <SelectItem value="sent">Sent</SelectItem>
+                <SelectItem value="failed">Failed</SelectItem>
+                <SelectItem value="pending">Pending</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
         </CardHeader>
         <CardContent>
@@ -148,14 +203,14 @@ export const ContactSubmissionsTable = () => {
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {submissions.length === 0 ? (
+                {filtered.length === 0 ? (
                   <TableRow>
                     <TableCell colSpan={8} className="text-center text-muted-foreground">
-                      No contact submissions yet
+                      No submissions match your filters
                     </TableCell>
                   </TableRow>
                 ) : (
-                  submissions.map((submission) => (
+                  filtered.map((submission) => (
                     <TableRow key={submission.id}>
                       <TableCell className="whitespace-nowrap">
                         {format(new Date(submission.created_at), 'MMM d, yyyy')}

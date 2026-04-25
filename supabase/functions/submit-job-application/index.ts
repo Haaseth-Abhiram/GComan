@@ -222,10 +222,22 @@ Deno.serve(async (req) => {
       );
     }
 
-    // Sanitize filename to prevent path traversal
+    // Organize resumes by position and month for HR: {position-slug}/{YYYY-MM}/{timestamp}-{applicant}-{filename}
     const sanitizedFileName = resumeFile.name.replace(/[^a-zA-Z0-9._-]/g, '_');
-    const timestamp = Date.now();
-    const filePath = `${timestamp}-${sanitizedFileName}`;
+    const positionSlug = (applicationData.position || 'general')
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '')
+      .substring(0, 60) || 'general';
+    const applicantSlug = applicationData.name
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '')
+      .substring(0, 40);
+    const now = new Date();
+    const yearMonth = `${now.getUTCFullYear()}-${String(now.getUTCMonth() + 1).padStart(2, '0')}`;
+    const timestamp = now.getTime();
+    const filePath = `${positionSlug}/${yearMonth}/${timestamp}-${applicantSlug}-${sanitizedFileName}`;
 
     // Upload resume to storage
     const fileBuffer = await resumeFile.arrayBuffer();
@@ -285,6 +297,18 @@ Deno.serve(async (req) => {
           },
         });
 
+        // Convert resume to base64 for email attachment
+        const resumeBytes = new Uint8Array(fileBuffer);
+        let binary = "";
+        const chunkSize = 0x8000;
+        for (let i = 0; i < resumeBytes.length; i += chunkSize) {
+          binary += String.fromCharCode.apply(
+            null,
+            Array.from(resumeBytes.subarray(i, i + chunkSize)) as any
+          );
+        }
+        const resumeBase64 = btoa(binary);
+
         await client.send({
           from: Deno.env.get("ZOHO_SMTP_USER") || "sales@gcoman.com",
           to: "sales@gcoman.com",
@@ -302,11 +326,19 @@ LinkedIn: ${applicationData.linkedinUrl || "Not provided"}
 Cover Letter:
 ${applicationData.coverLetter}
 
-Resume: Uploaded to storage at ${filePath}
+Resume: Attached (also stored at ${filePath})
 
 ---
 Submitted at: ${new Date().toLocaleString()}
           `,
+          attachments: [
+            {
+              filename: sanitizedFileName,
+              content: resumeBase64,
+              encoding: "base64",
+              contentType: resumeFile.type,
+            },
+          ],
         });
 
         await client.close();

@@ -113,36 +113,51 @@ export type Database = {
           created_at: string
           email: string
           experience: string
+          hr_notes: string | null
           id: string
           linkedin_url: string | null
           name: string
           phone: string
           position: string
+          prospect: Database["public"]["Enums"]["application_prospect"]
           resume_path: string
+          reviewed_at: string | null
+          reviewed_by: string | null
+          status: Database["public"]["Enums"]["application_status"]
         }
         Insert: {
           cover_letter: string
           created_at?: string
           email: string
           experience: string
+          hr_notes?: string | null
           id?: string
           linkedin_url?: string | null
           name: string
           phone: string
           position: string
+          prospect?: Database["public"]["Enums"]["application_prospect"]
           resume_path: string
+          reviewed_at?: string | null
+          reviewed_by?: string | null
+          status?: Database["public"]["Enums"]["application_status"]
         }
         Update: {
           cover_letter?: string
           created_at?: string
           email?: string
           experience?: string
+          hr_notes?: string | null
           id?: string
           linkedin_url?: string | null
           name?: string
           phone?: string
           position?: string
+          prospect?: Database["public"]["Enums"]["application_prospect"]
           resume_path?: string
+          reviewed_at?: string | null
+          reviewed_by?: string | null
+          status?: Database["public"]["Enums"]["application_status"]
         }
         Relationships: []
       }
@@ -280,6 +295,7 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      add_admin_role: { Args: { user_email: string }; Returns: string }
       has_role: {
         Args: {
           _role: Database["public"]["Enums"]["app_role"]
@@ -290,6 +306,15 @@ export type Database = {
     }
     Enums: {
       app_role: "admin" | "moderator" | "user"
+      application_prospect: "low" | "medium" | "high" | "top"
+      application_status:
+        | "new"
+        | "reviewed"
+        | "shortlisted"
+        | "interview"
+        | "offer"
+        | "hired"
+        | "rejected"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -418,6 +443,16 @@ export const Constants = {
   public: {
     Enums: {
       app_role: ["admin", "moderator", "user"],
+      application_prospect: ["low", "medium", "high", "top"],
+      application_status: [
+        "new",
+        "reviewed",
+        "shortlisted",
+        "interview",
+        "offer",
+        "hired",
+        "rejected",
+      ],
     },
   },
 } as const
