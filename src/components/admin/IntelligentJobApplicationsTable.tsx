@@ -17,7 +17,7 @@ import {
 } from '@/components/ui/dialog';
 import { format } from 'date-fns';
 import {
-  Loader2, FileSpreadsheet, Search, Eye, Download, Star, Mail, Phone, Linkedin,
+  Loader2, FileSpreadsheet, Search, Eye, Download, Star, Mail, Phone, Linkedin, ExternalLink, AlertCircle,
 } from 'lucide-react';
 import { exportToExcel } from '@/lib/exportToExcel';
 
@@ -49,6 +49,8 @@ export const IntelligentJobApplicationsTable = () => {
 
   const [selected, setSelected] = useState<JobApplication | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
+  const [previewBlobUrl, setPreviewBlobUrl] = useState<string | null>(null);
+  const [previewError, setPreviewError] = useState<string | null>(null);
   const [previewLoading, setPreviewLoading] = useState(false);
   const [draftStatus, setDraftStatus] = useState<string>('new');
   const [draftProspect, setDraftProspect] = useState<string>('medium');
@@ -108,15 +110,40 @@ export const IntelligentJobApplicationsTable = () => {
     setDraftProspect((a as any).prospect || 'medium');
     setDraftNotes((a as any).hr_notes || '');
     setPreviewUrl(null);
+    setPreviewError(null);
+    if (previewBlobUrl) {
+      URL.revokeObjectURL(previewBlobUrl);
+      setPreviewBlobUrl(null);
+    }
     setPreviewLoading(true);
     try {
-      const { data, error } = await supabase.storage
+      // Download as blob so we can render inline regardless of Content-Disposition
+      const { data: blob, error: dlErr } = await supabase.storage
+        .from('resumes')
+        .download(a.resume_path);
+      if (dlErr || !blob) throw dlErr || new Error('Download failed');
+      const localUrl = URL.createObjectURL(blob);
+      setPreviewBlobUrl(localUrl);
+      setPreviewUrl(localUrl);
+
+      // Also keep a signed URL as a fallback "open in new tab"
+      const { data: signed } = await supabase.storage
         .from('resumes')
         .createSignedUrl(a.resume_path, 60 * 60);
-      if (!error && data?.signedUrl) setPreviewUrl(data.signedUrl);
+      if (signed?.signedUrl) (a as any)._signedUrl = signed.signedUrl;
+    } catch (e: any) {
+      setPreviewError(e?.message || 'Unable to load resume preview');
     } finally {
       setPreviewLoading(false);
     }
+  };
+
+  const closeCandidate = () => {
+    if (previewBlobUrl) URL.revokeObjectURL(previewBlobUrl);
+    setPreviewBlobUrl(null);
+    setPreviewUrl(null);
+    setPreviewError(null);
+    setSelected(null);
   };
 
   const saveDecision = async () => {
@@ -138,7 +165,7 @@ export const IntelligentJobApplicationsTable = () => {
       setApps(prev => prev.map(a => a.id === selected.id
         ? { ...a, status: draftStatus, prospect: draftProspect, hr_notes: draftNotes } as any
         : a));
-      setSelected(null);
+      closeCandidate();
     }
   };
 
@@ -338,7 +365,7 @@ export const IntelligentJobApplicationsTable = () => {
       </Card>
 
       {/* Candidate Review Dialog */}
-      <Dialog open={!!selected} onOpenChange={open => !open && setSelected(null)}>
+      <Dialog open={!!selected} onOpenChange={open => !open && closeCandidate()}>
         <DialogContent className="max-w-6xl max-h-[92vh] overflow-hidden flex flex-col">
           {selected && (
             <>
@@ -360,22 +387,48 @@ export const IntelligentJobApplicationsTable = () => {
               <div className="grid md:grid-cols-2 gap-4 flex-1 overflow-hidden min-h-0">
                 {/* PDF Preview */}
                 <div className="border rounded-md overflow-hidden bg-muted/30 flex flex-col min-h-[400px]">
-                  <div className="px-3 py-2 border-b bg-background text-xs font-medium flex items-center justify-between">
+                  <div className="px-3 py-2 border-b bg-background text-xs font-medium flex items-center justify-between gap-2">
                     <span>Resume Preview</span>
-                    <Button variant="ghost" size="sm" onClick={() => downloadResume(selected)}>
-                      <Download className="h-3 w-3 mr-1" /> Download
-                    </Button>
+                    <div className="flex items-center gap-1">
+                      {previewBlobUrl && (
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={() => window.open(previewBlobUrl, '_blank', 'noopener,noreferrer')}
+                        >
+                          <ExternalLink className="h-3 w-3 mr-1" /> Open
+                        </Button>
+                      )}
+                      <Button variant="ghost" size="sm" onClick={() => downloadResume(selected)}>
+                        <Download className="h-3 w-3 mr-1" /> Download
+                      </Button>
+                    </div>
                   </div>
                   {previewLoading ? (
                     <div className="flex-1 flex items-center justify-center">
                       <Loader2 className="h-6 w-6 animate-spin text-primary" />
                     </div>
+                  ) : previewError ? (
+                    <div className="flex-1 flex flex-col items-center justify-center gap-2 text-sm text-muted-foreground p-4 text-center">
+                      <AlertCircle className="h-6 w-6 text-destructive" />
+                      <p>{previewError}</p>
+                      <Button variant="outline" size="sm" onClick={() => downloadResume(selected)}>
+                        <Download className="h-3 w-3 mr-1" /> Download instead
+                      </Button>
+                    </div>
                   ) : previewUrl ? (
-                    <iframe
-                      src={previewUrl}
+                    <object
+                      data={previewUrl}
+                      type="application/pdf"
                       className="flex-1 w-full"
-                      title="Resume PDF"
-                    />
+                      aria-label="Resume PDF"
+                    >
+                      <iframe
+                        src={previewUrl}
+                        className="flex-1 w-full h-full"
+                        title="Resume PDF"
+                      />
+                    </object>
                   ) : (
                     <div className="flex-1 flex items-center justify-center text-sm text-muted-foreground">
                       Preview unavailable
@@ -431,7 +484,7 @@ export const IntelligentJobApplicationsTable = () => {
               </div>
 
               <DialogFooter>
-                <Button variant="outline" onClick={() => setSelected(null)}>Cancel</Button>
+                <Button variant="outline" onClick={closeCandidate}>Cancel</Button>
                 <Button onClick={saveDecision} disabled={saving}>
                   {saving && <Loader2 className="h-4 w-4 mr-2 animate-spin" />}
                   Save Decision
