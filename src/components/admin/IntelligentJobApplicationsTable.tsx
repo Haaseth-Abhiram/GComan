@@ -20,6 +20,7 @@ import {
   Loader2, FileSpreadsheet, Search, Eye, Download, Star, Mail, Phone, Linkedin, ExternalLink, AlertCircle,
 } from 'lucide-react';
 import { exportToExcel } from '@/lib/exportToExcel';
+import { ResumePdfPreview } from './ResumePdfPreview';
 
 type JobApplication = Tables<'job_applications'>;
 
@@ -48,7 +49,6 @@ export const IntelligentJobApplicationsTable = () => {
   const [experienceFilter, setExperienceFilter] = useState('all');
 
   const [selected, setSelected] = useState<JobApplication | null>(null);
-  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const [previewBlobUrl, setPreviewBlobUrl] = useState<string | null>(null);
   const [previewError, setPreviewError] = useState<string | null>(null);
   const [previewLoading, setPreviewLoading] = useState(false);
@@ -109,7 +109,6 @@ export const IntelligentJobApplicationsTable = () => {
     setDraftStatus((a as any).status || 'new');
     setDraftProspect((a as any).prospect || 'medium');
     setDraftNotes((a as any).hr_notes || '');
-    setPreviewUrl(null);
     setPreviewError(null);
     if (previewBlobUrl) {
       URL.revokeObjectURL(previewBlobUrl);
@@ -124,7 +123,6 @@ export const IntelligentJobApplicationsTable = () => {
       if (dlErr || !blob) throw dlErr || new Error('Download failed');
       const localUrl = URL.createObjectURL(blob);
       setPreviewBlobUrl(localUrl);
-      setPreviewUrl(localUrl);
 
       // Also keep a signed URL as a fallback "open in new tab"
       const { data: signed } = await supabase.storage
@@ -141,7 +139,6 @@ export const IntelligentJobApplicationsTable = () => {
   const closeCandidate = () => {
     if (previewBlobUrl) URL.revokeObjectURL(previewBlobUrl);
     setPreviewBlobUrl(null);
-    setPreviewUrl(null);
     setPreviewError(null);
     setSelected(null);
   };
