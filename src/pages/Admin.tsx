@@ -631,8 +631,8 @@ const Admin = () => {
               <Routes>
                 <Route path="/" element={<AdminOverview />} />
                 <Route path="/contacts" element={<ContactSubmissionsTable />} />
-                <Route path="/jobs" element={<JobApplicationsTable />} />
-                <Route path="/resumes" element={<ResumesFolderBrowser />} />
+                <Route path="/jobs" element={<ResumesWorkspace />} />
+                <Route path="/resumes" element={<ResumesWorkspace />} />
                 <Route path="/downloads" element={<DownloadLeadsTable />} />
               </Routes>
             </main>
