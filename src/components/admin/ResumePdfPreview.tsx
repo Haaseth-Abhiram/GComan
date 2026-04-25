@@ -56,6 +56,7 @@ export const ResumePdfPreview = ({ url }: ResumePdfPreviewProps) => {
           if (!context) throw new Error('PDF canvas is unavailable');
 
           await page.render({
+            canvas,
             canvasContext: context,
             viewport,
             transform: outputScale !== 1 ? [outputScale, 0, 0, outputScale, 0, 0] : undefined,
