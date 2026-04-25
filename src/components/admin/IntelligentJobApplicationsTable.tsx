@@ -49,6 +49,8 @@ export const IntelligentJobApplicationsTable = () => {
 
   const [selected, setSelected] = useState<JobApplication | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
+  const [previewBlobUrl, setPreviewBlobUrl] = useState<string | null>(null);
+  const [previewError, setPreviewError] = useState<string | null>(null);
   const [previewLoading, setPreviewLoading] = useState(false);
   const [draftStatus, setDraftStatus] = useState<string>('new');
   const [draftProspect, setDraftProspect] = useState<string>('medium');
