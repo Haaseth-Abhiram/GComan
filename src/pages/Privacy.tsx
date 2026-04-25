@@ -7,7 +7,7 @@ import { Shield } from 'lucide-react';
 const Privacy = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
+      <Helmet defer={false}>
         <title>Privacy Policy | Global Chemicals LLC</title>
         <meta name="description" content="Privacy policy for Global Chemicals LLC. Learn how we collect, use, and protect your personal information when you visit our website or use our services." />
         <meta name="keywords" content="privacy policy, data protection, Global Chemicals LLC, Oman" />

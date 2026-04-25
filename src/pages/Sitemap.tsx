@@ -71,7 +71,7 @@ const Sitemap = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
+      <Helmet defer={false}>
         <title>Sitemap | Global Chemicals LLC</title>
         <meta name="description" content="Complete sitemap for Global Chemicals LLC website. Navigate all pages including products, industries, resources, company info & contact details." />
         <meta name="keywords" content="sitemap, site navigation, Global Chemicals LLC, website map" />

@@ -57,7 +57,12 @@ export const SEO = ({
   const currentLocale = i18n.language === 'ar' ? 'ar_SA' : 'en_US';
 
   return (
-    <Helmet>
+    // defer={false} forces react-helmet-async to commit head changes
+    // synchronously instead of waiting for requestAnimationFrame. rAF is
+    // unreliable inside the headless puppeteer prerender (vite.config.ts) and
+    // produced HTML where the <title>/og:* never updated past the index.html
+    // defaults — Google then saw most routes as duplicates of /.
+    <Helmet defer={false}>
       <title>{title}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}

@@ -7,7 +7,7 @@ import { FileText } from 'lucide-react';
 const Terms = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
+      <Helmet defer={false}>
         <title>Terms of Service | Global Chemicals LLC</title>
         <meta name="description" content="Terms and conditions for Global Chemicals LLC. Review our service terms, user responsibilities, and legal agreements for using our website and services." />
         <meta name="keywords" content="terms of service, terms and conditions, Global Chemicals LLC, legal, Oman" />

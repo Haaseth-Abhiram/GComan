@@ -1,10 +1,22 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
+import fs from "fs";
 import { componentTagger } from "lovable-tagger";
 import viteCompression from "vite-plugin-compression";
 import { imagetools } from "vite-imagetools";
 import { ViteWebfontDownload } from "vite-plugin-webfont-dl";
+import prerender from "@prerenderer/rollup-plugin";
+
+const routesFromSitemap = (): string[] => {
+  const xml = fs.readFileSync(
+    path.resolve(__dirname, "public/sitemap.xml"),
+    "utf-8"
+  );
+  return Array.from(xml.matchAll(/<loc>https:\/\/gcoman\.com([^<]*)<\/loc>/g))
+    .map((m) => m[1] || "/")
+    .filter((p) => !p.startsWith("/admin") && !p.startsWith("/login"));
+};
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -44,6 +56,25 @@ export default defineConfig(({ mode }) => ({
     ViteWebfontDownload([
       'https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;700&display=swap',
     ]),
+    // Static prerendering for SEO — runs only on production builds.
+    // Why: site is a pure SPA, so without this every URL ships an empty
+    // <div id="root"></div> shell. Googlebot then classifies most pages as
+    // Soft 404 / "Crawled — currently not indexed" before JS finishes.
+    // Prerender resolves Helmet head tags + JSON-LD + body content into
+    // each route's static HTML.
+    mode === "production" && prerender({
+      routes: routesFromSitemap(),
+      renderer: "@prerenderer/renderer-puppeteer",
+      rendererOptions: {
+        // 2.5s gives the lazy chunk time to load + Helmet to commit. The
+        // Helmet commits are now synchronous (we set defer={false} on every
+        // <Helmet> in the codebase) — without that, puppeteer snapshotted
+        // before requestAnimationFrame fired and most routes shipped the
+        // homepage <title> baked in.
+        renderAfterTime: 2500,
+        maxConcurrentRoutes: 4,
+      },
+    }),
   ].filter(Boolean),
   resolve: {
     alias: {

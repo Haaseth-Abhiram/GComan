@@ -1,0 +1,215 @@
+# gcoman.com — Apache (Hostinger) configuration
+# Translates the Netlify-format public/_redirects + public/_headers into Apache
+# rules. Without this file Hostinger's default SPA fallback rewrites every URL
+# to /index.html, which prevents Google from ever seeing the per-route HTML
+# produced by @prerenderer/rollup-plugin (vite.config.ts).
+#
+# This file supersedes public/_redirects and public/_headers on Hostinger; those
+# files remain in the repo as the source of truth.
+
+Options -Indexes
+
+<IfModule mod_dir.c>
+  DirectoryIndex index.html
+  # DirectorySlash Off prevents Apache from 301-redirecting /career → /career/.
+  # Combined with the prerender rewrite below, /career is served directly from
+  # /career/index.html with no URL change.
+  DirectorySlash Off
+</IfModule>
+
+# ============================================================
+# A. URL REWRITES + REDIRECTS
+# ============================================================
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # --- A1. Force HTTPS (Cloudflare usually already does this; safety net) ---
+  RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+  # --- A2. Strip www ---
+  RewriteCond %{HTTP_HOST} ^www\.gcoman\.com$ [NC]
+  RewriteRule ^ https://gcoman.com%{REQUEST_URI} [R=301,L]
+
+  # --- A3. /en/* → /* (English is the default; no /en prefix) ---
+  RewriteRule ^en/?$ / [R=301,L]
+  RewriteRule ^en/(.*)$ /$1 [R=301,L]
+
+  # --- A4. Legacy WordPress 301 redirects (from public/_redirects) ---
+  # Product / service pages
+  RewriteRule ^service/calcium-carbonate/?$       /products/water-treatment/calcium-carbonate-water [R=301,L]
+  RewriteRule ^service/soap-detergent-chemicals/?$ /products [R=301,L]
+  RewriteRule ^service/solvents/?$                /products [R=301,L]
+  RewriteRule ^service/chlorinated-solvents/?$    /products [R=301,L]
+  RewriteRule ^service/construction-chemicals/?$  /products [R=301,L]
+  RewriteRule ^service/swimming-1/?$              /products/swimming-pool [R=301,L]
+  RewriteRule ^service/lubricants-greases/?$      /products/lubricants [R=301,L]
+  RewriteRule ^water-waste-water-treatment-chemicals/?$ /products/water-treatment [R=301,L]
+  RewriteRule ^swimming-pool-chemicals/?$         /products/swimming-pool [R=301,L]
+  RewriteRule ^lubricants-greases/?$              /products/lubricants [R=301,L]
+  RewriteRule ^oilfield-refinery/?$               /products/oilfield [R=301,L]
+  RewriteRule ^glycols/?$                         /products [R=301,L]
+  RewriteRule ^product/food-beverages/?$          /products [R=301,L]
+  RewriteRule ^products-services/?$               /products [R=301,L]
+
+  # Support & contact
+  RewriteRule ^sales-and-comprehensive-support/?$ /contact [R=301,L]
+  RewriteRule ^service/general-inquiry/?$         /contact [R=301,L]
+  RewriteRule ^technical-support/?$               /contact [R=301,L]
+
+  # Company & team
+  RewriteRule ^company/?$                         /about [R=301,L]
+  RewriteRule ^our-team/?$                        /about [R=301,L]
+  RewriteRule ^partners/?$                        /about [R=301,L]
+  RewriteRule ^team-member/james-logan/?$         /about [R=301,L]
+  RewriteRule ^team-member/michal-wincent/?$      /about [R=301,L]
+  RewriteRule ^team-member/john-tyler/?$          /about [R=301,L]
+
+  # Date-based blog URLs
+  RewriteRule ^2021/03/09/the-story-of-a-silk-lends-cotton-like-comfort/?$ /blog [R=301,L]
+  RewriteRule ^2021/02/28/laundry-chemical/?$                              /blog [R=301,L]
+  RewriteRule ^2021/02/15/textilegence-magazine-digital-platform/?$        /blog [R=301,L]
+  RewriteRule ^2021/02/11/contactless-payments-time-has-come/?$            /blog [R=301,L]
+  RewriteRule ^whats-new/?$                                                /blog [R=301,L]
+  RewriteRule ^2025/10/15/nonwovens-industry-magazine/?$                   /blog [R=301,L]
+
+  # WordPress categories
+  RewriteRule ^category/fashion-retail/?$         /industries [R=301,L]
+  RewriteRule ^category/news-analysis/?$          /blog [R=301,L]
+  RewriteRule ^category/industry-insight/?$       /blog [R=301,L]
+  RewriteRule ^category/uncategorized/?$          /blog [R=301,L]
+  RewriteRule ^category/lab-equipment/?$          /products/lab-chemicals [R=301,L]
+
+  # WordPress authors / tags
+  RewriteRule ^author/samplework1/?$              /blog [R=301,L]
+  RewriteRule ^tag/silk/?$                        /blog [R=301,L]
+  RewriteRule ^tag/cotton/?$                      /blog [R=301,L]
+
+  # Industries
+  RewriteRule ^food-beverages/?$                  /industries [R=301,L]
+  RewriteRule ^industries-2/?$                    /industries [R=301,L]
+  RewriteRule ^pharmaceutical/?$                  /industries [R=301,L]
+  RewriteRule ^manufacturing/?$                   /industries [R=301,L]
+
+  # Careers
+  RewriteRule ^jobs/sales-manager/?$              /career [R=301,L]
+  RewriteRule ^service-openings/?$                /career [R=301,L]
+
+  # Page slug renames
+  RewriteRule ^privacy-policy/?$                  /privacy [R=301,L]
+  RewriteRule ^terms-conditions/?$                /terms [R=301,L]
+  RewriteRule ^our-values/?$                      /about [R=301,L]
+  RewriteRule ^why-choose-us/?$                   /about [R=301,L]
+  RewriteRule ^blog-news/?$                       /blog [R=301,L]
+  RewriteRule ^what-we-supply-2/?$                /products [R=301,L]
+
+  # Malformed URLs (domain in path)
+  RewriteRule ^gcoman\.com/ethanolamines/?$       /products [R=301,L]
+  RewriteRule ^gcoman\.com/blog/?$                /blog [R=301,L]
+
+  # Additional service pages
+  RewriteRule ^service/swimming/?$                /products/swimming-pool [R=301,L]
+  RewriteRule ^service/laboratories/?$            /products/lab-chemicals [R=301,L]
+  RewriteRule ^service/construction/?$            /products [R=301,L]
+  RewriteRule ^service/inorganic-chemicals/?$     /products [R=301,L]
+  RewriteRule ^service/container/?$               /products [R=301,L]
+  RewriteRule ^service/food-beverage/?$           /industries [R=301,L]
+  RewriteRule ^service/personal-care/?$           /industries [R=301,L]
+  RewriteRule ^service/water-treatment-2/?$       /products/water-treatment [R=301,L]
+  RewriteRule ^service/automotive-2/?$            /industries [R=301,L]
+  RewriteRule ^service/lubricants-greases-1/?$    /products/lubricants [R=301,L]
+  RewriteRule ^service/air-chemical/?$            /products [R=301,L]
+  RewriteRule ^service/services/oxide/?$          /products [R=301,L]
+  RewriteRule ^service/ethanolamines/?$           /products [R=301,L]
+  RewriteRule ^service/pharmaceutical/?$          /industries [R=301,L]
+  RewriteRule ^service/agriculture/?$             /industries [R=301,L]
+  RewriteRule ^service/construction-1/?$          /products [R=301,L]
+  RewriteRule ^service/oil-gas-1/?$               /products/oilfield [R=301,L]
+  RewriteRule ^service/water-treatment/?$         /products/water-treatment [R=301,L]
+
+  # Service categories
+  RewriteRule ^service-category/chlorinated-solvents/?$   /products [R=301,L]
+  RewriteRule ^service-category/oilgas/?$                 /products/oilfield [R=301,L]
+  RewriteRule ^service-category/lab-equipment/?$          /products/lab-chemicals [R=301,L]
+  RewriteRule ^service-category/soap-detergent-chemicals/?$ /products [R=301,L]
+
+  # Misc product/industry slugs
+  RewriteRule ^alcohols/?$                        /products [R=301,L]
+  RewriteRule ^refinery/?$                        /products/oilfield [R=301,L]
+
+  # --- A5. Trailing-slash normalisation (no slash is canonical) ---
+  # Skip if the path is the root or maps to an existing directory we want to
+  # serve (handled by A6 below).
+  RewriteCond %{REQUEST_URI} !^/$
+  RewriteCond %{REQUEST_URI} (.+)/$
+  RewriteRule ^ %1 [R=301,L]
+
+  # --- A6. Serve prerendered HTML, fall back to SPA shell ---
+  # 1. Pass through real files unchanged (sitemap.xml, robots.txt, /assets/*)
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule ^ - [L]
+
+  # 2. If <path>/index.html exists (prerendered route), serve it without
+  #    changing the URL.
+  RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+  RewriteRule ^(.+)$ /$1/index.html [L]
+
+  # 3. SPA fallback for genuinely unknown routes — React Router handles 404 UI.
+  RewriteRule ^ /index.html [L]
+</IfModule>
+
+# ============================================================
+# B. RESPONSE HEADERS (replaces public/_headers)
+# ============================================================
+<IfModule mod_headers.c>
+  # Long-lived static assets (Vite outputs hashed filenames under /assets/*)
+  <FilesMatch "\.(woff2|woff|ttf|otf|eot)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(jpg|jpeg|png|webp|gif|svg|ico|avif)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(js|mjs|css)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+  <FilesMatch "sitemap\.xml$">
+    Header set Cache-Control "public, max-age=86400"
+    Header set Content-Type "application/xml; charset=utf-8"
+  </FilesMatch>
+  # HTML — short cache, must revalidate so deploys propagate fast
+  <FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=300, must-revalidate"
+  </FilesMatch>
+
+  # Security headers — applied to all responses
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set X-XSS-Protection "1; mode=block"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://salesiq.zohopublic.com https://js.zohocdn.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://*.supabase.co https://www.google-analytics.com https://salesiq.zohopublic.com https://*.zoho.com https://wa.me; frame-src 'self' https://www.google.com https://maps.google.com https://wa.me;"
+</IfModule>
+
+# ============================================================
+# C. MIME TYPES
+# ============================================================
+<IfModule mod_mime.c>
+  AddType application/xml          .xml
+  AddType image/svg+xml            .svg
+  AddType image/webp               .webp
+  AddType image/avif               .avif
+  AddType font/woff2               .woff2
+  AddType application/manifest+json .webmanifest
+</IfModule>
+
+# ============================================================
+# D. COMPRESSION (Hostinger usually has this on; safety net)
+# ============================================================
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml text/javascript
+  AddOutputFilterByType DEFLATE application/javascript application/json application/xml application/rss+xml
+  AddOutputFilterByType DEFLATE image/svg+xml font/ttf font/otf application/x-font-ttf
+</IfModule>

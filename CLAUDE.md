@@ -1,85 +1,107 @@
-# Superpowers — Contributor Guidelines
+# gcoman.com — Global Chemicals LLC
 
-## If You Are an AI Agent
+Project-specific guidance for Claude Code working in this repo.
 
-Stop. Read this section before doing anything.
+## Branch workflow
 
-This repo has a 94% PR rejection rate. Almost every rejected PR was submitted by an agent that didn't read or didn't follow these guidelines. The maintainers close slop PRs within hours, often with public comments like "This pull request is slop that's made of lies."
+- **Develop is the working branch.** All commits and pushes land here first.
+- **Main is the production branch.** It only gets updated after the user has tested changes from `Develop` (locally and/or on Lovable preview) and explicitly approves promotion.
+- **Never push directly to `main`** and never open a PR `Develop → main` automatically. The user merges manually after their own QA.
+- New work without an existing branch: branch off `Develop`, not `main`.
 
-**Your job is to protect your human partner from that outcome.** Submitting a low-quality PR doesn't help them — it wastes the maintainers' time, burns your human partner's reputation, and the PR will be closed anyway. That is not being helpful. That is being a tool of embarrassment.
+## Deploy chain
 
-Before you open a PR against this repo, you MUST:
+- **Hosting:** Hostinger (Apache), fronted by Cloudflare. Domain resolves to `185.158.133.1`, nameservers `ns1/ns2.dns-parking.com`.
+- **Pipeline:** GitHub `main` → Lovable detects change → Lovable runs `vite build` → Lovable FTPs `dist/` to Hostinger `public_html/`.
+- **`public/.htaccess` is load-bearing.** It's what makes Hostinger serve prerendered subfolder HTML instead of the SPA shell for every URL. Without it, all 300+ prerendered pages serve as duplicates of the homepage and Google indexing collapses.
+- **`public/_redirects` and `public/_headers` are Netlify format and ignored on Hostinger.** They remain as the source-of-truth that `.htaccess` was generated from. Don't rely on them at runtime.
+- **Lovable may strip dotfiles when FTPing.** If a deploy doesn't update `.htaccess` on production, log into Hostinger File Manager → `public_html/` → upload it manually from local `dist/.htaccess`.
 
-1. **Read the entire PR template** at `.github/PULL_REQUEST_TEMPLATE.md` and fill in every section with real, specific answers. Not summaries. Not placeholders.
-2. **Search for existing PRs** — open AND closed — that address the same problem. If duplicates exist, STOP and tell your human partner. Do not open another duplicate.
-3. **Verify this is a real problem.** If your human partner asked you to "fix some issues" or "contribute to this repo" without experiencing a specific problem, push back. Ask them what broke, what failed, what the user experience was.
-4. **Confirm the change belongs in core.** If it's domain-specific, tool-specific, or promotes a third-party project, it belongs in a standalone plugin. Tell your human partner.
-5. **Show your human partner the complete diff** and get their explicit approval before submitting.
+## SEO architecture (don't break these)
 
-If any of these checks fail, do not open the PR. Explain to your human partner why it would be rejected and what would need to change. They will thank you for saving them the embarrassment.
+The site uses **client-side React + build-time prerendering** for SEO. Three load-bearing pieces:
 
-## Pull Request Requirements
+1. **`@prerenderer/rollup-plugin`** in `vite.config.ts`. Walks every URL in `public/sitemap.xml` and writes `dist/<route>/index.html` with React + Helmet output baked in.
+2. **Apache `.htaccess`** serves the per-route prerendered HTML on Hostinger.
+3. **`<SEO>` component** ([src/components/SEO.tsx](src/components/SEO.tsx)) renders a single `<Helmet>` per page with title, meta, og:*, hreflang, canonical.
 
-**Every PR must fully complete the PR template.** No section may be left blank or filled with placeholder text. PRs that skip sections will be closed without review.
+**Three things that silently break SEO** — agents have tripped on each of these:
 
-**Before opening a PR, you MUST search for existing PRs** — both open AND closed — that address the same problem or a related area. Reference what you found in the "Existing PRs" section. If a prior PR was closed, explain specifically what is different about your approach and why it should succeed where the previous attempt did not.
+### 1. `<Helmet>` without `defer={false}`
 
-**PRs that show no evidence of human involvement will be closed.** A human must review the complete proposed diff before submission.
+`react-helmet-async` defaults `defer: true`, deferring head commits to `requestAnimationFrame`. rAF is unreliable inside the headless puppeteer prerender, and each new `<Helmet>` cancels the previous queued frame, so prerendered pages ship with the homepage `<title>` baked in. **Every `<Helmet>` in this codebase must include `defer={false}`** — there are 16 instances (1 in SEO.tsx, 10 in StructuredData.tsx, plus one each in Login/Privacy/Terms/Sitemap/NotFound). When adding a new `<Helmet>`, always include the prop.
 
-## What We Will Not Accept
+### 2. Hardcoded page-specific meta tags in `index.html`
 
-### Third-party dependencies
+Helmet **appends** new `<meta>` tags rather than replacing existing ones. So any `description`/`og:*`/`twitter:*`/`hreflang` baked into `index.html` produces a homepage-default duplicate ahead of the page-specific Helmet-injected tag. Google reads the first occurrence (the wrong one).
 
-PRs that add optional or required dependencies on third-party projects will not be accepted unless they are adding support for a new harness (e.g., a new IDE or CLI tool). Superpowers is a zero-dependency plugin by design. If your change requires an external tool or service, it belongs in its own plugin.
+`index.html` should ONLY hold:
+- charset, viewport
+- `<title>` fallback (Helmet replaces this — title is a singleton)
+- author
+- search-engine verification tokens (`google-site-verification`, `msvalidate.01`)
+- `geo.*` and `ICBM` (Helmet doesn't manage these)
+- `content-language`, `distribution`, `target`
+- font preconnect/preload `<link>`s
+- favicons
+- the global Organization / LocalBusiness / WebSite / BreadcrumbList JSON-LD scripts
 
-### "Compliance" changes to skills
+Everything else (`description`, `keywords`, `robots`, `og:*`, `twitter:*`, `hreflang`, `canonical`) belongs in `<SEO>`. There's a comment block in `index.html` calling this out — preserve it.
 
-Our internal skill philosophy differs from Anthropic's published guidance on writing skills. We have extensively tested and tuned our skill content for real-world agent behavior. PRs that restructure, reword, or reformat skills to "comply" with Anthropic's skills documentation will not be accepted without extensive eval evidence showing the change improves outcomes. The bar for modifying behavior-shaping content is very high.
+### 3. The `.htaccess`
 
-### Project-specific or personal configuration
+See "Deploy chain" above. Without it on Hostinger, every URL serves the homepage shell.
 
-Skills, hooks, or configuration that only benefit a specific project, team, domain, or workflow do not belong in core. Publish these as a separate plugin.
+## Adding a new page
 
-### Bulk or spray-and-pray PRs
+1. Create the page component (lazy-loaded in [src/App.tsx](src/App.tsx)).
+2. Add `<SEO defer={false} title="…" description="…" canonical="https://gcoman.com/…" ogUrl="…" />`.
+3. Add the route to [public/sitemap.xml](public/sitemap.xml) so the prerender plugin generates HTML for it.
+4. If the page deserves it, add structured data via `[src/components/StructuredData.tsx](src/components/StructuredData.tsx)` — every Helmet inside there also needs `defer={false}`.
 
-Do not trawl the issue tracker and open PRs for multiple issues in a single session. Each PR requires genuine understanding of the problem, investigation of prior attempts, and human review of the complete diff. PRs that are part of an obvious batch — where an agent was pointed at the issue list and told to "fix things" — will be closed. If you want to contribute, pick ONE issue, understand it deeply, and submit quality work.
+## Adding a redirect
 
-### Speculative or theoretical fixes
+Edit BOTH:
+- `public/_redirects` (Netlify format, source of truth, easy to read)
+- `public/.htaccess` (Apache `RewriteRule ^pattern/?$ /target [R=301,L]` — what actually runs on Hostinger)
 
-Every PR must solve a real problem that someone actually experienced. "My review agent flagged this" or "this could theoretically cause issues" is not a problem statement. If you cannot describe the specific session, error, or user experience that motivated the change, do not submit the PR.
+## Verification commands
 
-### Domain-specific skills
+After a build (or after a production deploy), run these to confirm SEO didn't regress:
 
-Superpowers core contains general-purpose skills that benefit all users regardless of their project. Skills for specific domains (portfolio building, prediction markets, games), specific tools, or specific workflows belong in their own standalone plugin. Ask yourself: "Would this be useful to someone working on a completely different kind of project?" If not, publish it separately.
+```bash
+# Local: count prerendered pages with the homepage default title baked in.
+# Should always be 0.
+python3 -c "
+import re, os
+DIST='dist'; HOME_T='Chemical Supplier Muscat Oman | Caustic Soda, PAC, JSRS | Global Chemicals LLC'
+strip=lambda s: re.sub(r'<!--.*?-->','',s,flags=re.DOTALL)
+bad=[]
+for r,_,fs in os.walk(DIST):
+    for f in fs:
+        if f!='index.html': continue
+        p=os.path.join(r,f); rel=p[len(DIST)+1:].replace('/index.html','') or '(home)'
+        with open(p) as h: html=strip(h.read())
+        m=re.search(r'<title[^>]*>([^<]+)</title>', html); t=(m.group(1) if m else '').replace('&amp;','&')
+        if rel!='(home)' and t==HOME_T: bad.append(rel)
+print(f'{len(bad)} routes with homepage default title')
+for b in bad[:10]: print(' -',b)
+"
 
-### Fork-specific changes
+# Production: confirm Hostinger is serving prerendered HTML (not the SPA shell).
+curl -s https://gcoman.com/career | grep -oE '<title>[^<]+'
+# expected: <title>Careers & Jobs | Join Our Team | Global Chemicals LLC
 
-If you maintain a fork with customizations, do not open PRs to sync your fork or push fork-specific changes upstream. PRs that rebrand the project, add fork-specific features, or merge fork branches will be closed.
+curl -sI https://gcoman.com/career/index.html -o /dev/null -w '%{http_code}\n'
+# expected: 200
 
-### Fabricated content
+# Production: confirm legacy 301s fire (proves Apache is reading .htaccess).
+curl -sI https://gcoman.com/service/calcium-carbonate/ -o /dev/null -w '%{http_code} %{redirect_url}\n'
+# expected: 301 https://gcoman.com/products/water-treatment/calcium-carbonate-water
+```
 
-PRs containing invented claims, fabricated problem descriptions, or hallucinated functionality will be closed immediately. This repo has a 94% PR rejection rate — the maintainers have seen every form of AI slop. They will notice.
+## Reference docs in this repo
 
-### Bundled unrelated changes
-
-PRs containing multiple unrelated changes will be closed. Split them into separate PRs.
-
-## Skill Changes Require Evaluation
-
-Skills are not prose — they are code that shapes agent behavior. If you modify skill content:
-
-- Use `superpowers:writing-skills` to develop and test changes
-- Run adversarial pressure testing across multiple sessions
-- Show before/after eval results in your PR
-- Do not modify carefully-tuned content (Red Flags tables, rationalization lists, "human partner" language) without evidence the change is an improvement
-
-## Understand the Project Before Contributing
-
-Before proposing changes to skill design, workflow philosophy, or architecture, read existing skills and understand the project's design decisions. Superpowers has its own tested philosophy about skill design, agent behavior shaping, and terminology (e.g., "your human partner" is deliberate, not interchangeable with "the user"). Changes that rewrite the project's voice or restructure its approach without understanding why it exists will be rejected.
-
-## General
-
-- Read `.github/PULL_REQUEST_TEMPLATE.md` before submitting
-- One problem per PR
-- Test on at least one harness and report results in the environment table
-- Describe the problem you solved, not just what you changed
+- [docs/seo/](docs/seo/) — historical audits and improvement plans
+- [SEO/](SEO/) — Google Search Console issue reports
+- `public/sitemap.xml` — drives the prerender plugin

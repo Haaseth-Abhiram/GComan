@@ -13,7 +13,7 @@ const NotFound = () => {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-muted">
-      <Helmet>
+      <Helmet defer={false}>
         <title>Page Not Found | Global Chemicals LLC</title>
         <meta
           name="description"

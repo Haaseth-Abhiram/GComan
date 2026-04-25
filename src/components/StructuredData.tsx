@@ -104,7 +104,7 @@ export const ProductStructuredData = ({ product, url }: ProductStructuredDataPro
   };
 
   return (
-    <Helmet>
+    <Helmet defer={false}>
       <script type="application/ld+json">
         {JSON.stringify(productSchema)}
       </script>
@@ -165,7 +165,7 @@ export const ArticleStructuredData = ({
   };
 
   return (
-    <Helmet>
+    <Helmet defer={false}>
       <script type="application/ld+json">
         {JSON.stringify(articleSchema)}
       </script>
@@ -222,7 +222,7 @@ export const BlogListingStructuredData = ({
   };
 
   return (
-    <Helmet>
+    <Helmet defer={false}>
       <script type="application/ld+json">
         {JSON.stringify(blogSchema)}
       </script>
@@ -290,7 +290,7 @@ export const ReviewStructuredData = ({
   };
 
   return (
-    <Helmet>
+    <Helmet defer={false}>
       <script type="application/ld+json">
         {JSON.stringify(reviewSchema)}
       </script>
@@ -325,7 +325,7 @@ export const FAQStructuredData = ({ faqs }: FAQStructuredDataProps) => {
   };
 
   return (
-    <Helmet>
+    <Helmet defer={false}>
       <script type="application/ld+json">
         {JSON.stringify(faqSchema)}
       </script>
@@ -374,7 +374,7 @@ export const HowToStructuredData = ({
   };
 
   return (
-    <Helmet>
+    <Helmet defer={false}>
       <script type="application/ld+json">
         {JSON.stringify(howToSchema)}
       </script>
@@ -446,7 +446,7 @@ export const JobPostingStructuredData = ({
   };
 
   return (
-    <Helmet>
+    <Helmet defer={false}>
       <script type="application/ld+json">
         {JSON.stringify(jobSchema)}
       </script>
@@ -474,7 +474,7 @@ export const BreadcrumbStructuredData = ({ items }: BreadcrumbStructuredDataProp
   };
 
   return (
-    <Helmet>
+    <Helmet defer={false}>
       <script type="application/ld+json">
         {JSON.stringify(breadcrumbSchema)}
       </script>
@@ -564,7 +564,7 @@ export const LocalBusinessStructuredData = () => {
   };
 
   return (
-    <Helmet>
+    <Helmet defer={false}>
       <script type="application/ld+json">
         {JSON.stringify(localBusinessSchema)}
       </script>
@@ -673,7 +673,7 @@ export const OrganizationStructuredData = ({ includeService = false }: Organizat
   } : null;
 
   return (
-    <Helmet>
+    <Helmet defer={false}>
       <script type="application/ld+json">
         {JSON.stringify(organizationSchema)}
       </script>
