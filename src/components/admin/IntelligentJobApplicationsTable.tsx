@@ -110,15 +110,40 @@ export const IntelligentJobApplicationsTable = () => {
     setDraftProspect((a as any).prospect || 'medium');
     setDraftNotes((a as any).hr_notes || '');
     setPreviewUrl(null);
+    setPreviewError(null);
+    if (previewBlobUrl) {
+      URL.revokeObjectURL(previewBlobUrl);
+      setPreviewBlobUrl(null);
+    }
     setPreviewLoading(true);
     try {
-      const { data, error } = await supabase.storage
+      // Download as blob so we can render inline regardless of Content-Disposition
+      const { data: blob, error: dlErr } = await supabase.storage
+        .from('resumes')
+        .download(a.resume_path);
+      if (dlErr || !blob) throw dlErr || new Error('Download failed');
+      const localUrl = URL.createObjectURL(blob);
+      setPreviewBlobUrl(localUrl);
+      setPreviewUrl(localUrl);
+
+      // Also keep a signed URL as a fallback "open in new tab"
+      const { data: signed } = await supabase.storage
         .from('resumes')
         .createSignedUrl(a.resume_path, 60 * 60);
-      if (!error && data?.signedUrl) setPreviewUrl(data.signedUrl);
+      if (signed?.signedUrl) (a as any)._signedUrl = signed.signedUrl;
+    } catch (e: any) {
+      setPreviewError(e?.message || 'Unable to load resume preview');
     } finally {
       setPreviewLoading(false);
     }
+  };
+
+  const closeCandidate = () => {
+    if (previewBlobUrl) URL.revokeObjectURL(previewBlobUrl);
+    setPreviewBlobUrl(null);
+    setPreviewUrl(null);
+    setPreviewError(null);
+    setSelected(null);
   };
 
   const saveDecision = async () => {
