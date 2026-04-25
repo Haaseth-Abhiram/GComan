@@ -365,7 +365,7 @@ export const IntelligentJobApplicationsTable = () => {
       </Card>
 
       {/* Candidate Review Dialog */}
-      <Dialog open={!!selected} onOpenChange={open => !open && setSelected(null)}>
+      <Dialog open={!!selected} onOpenChange={open => !open && closeCandidate()}>
         <DialogContent className="max-w-6xl max-h-[92vh] overflow-hidden flex flex-col">
           {selected && (
             <>
@@ -387,22 +387,48 @@ export const IntelligentJobApplicationsTable = () => {
               <div className="grid md:grid-cols-2 gap-4 flex-1 overflow-hidden min-h-0">
                 {/* PDF Preview */}
                 <div className="border rounded-md overflow-hidden bg-muted/30 flex flex-col min-h-[400px]">
-                  <div className="px-3 py-2 border-b bg-background text-xs font-medium flex items-center justify-between">
+                  <div className="px-3 py-2 border-b bg-background text-xs font-medium flex items-center justify-between gap-2">
                     <span>Resume Preview</span>
-                    <Button variant="ghost" size="sm" onClick={() => downloadResume(selected)}>
-                      <Download className="h-3 w-3 mr-1" /> Download
-                    </Button>
+                    <div className="flex items-center gap-1">
+                      {previewBlobUrl && (
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={() => window.open(previewBlobUrl, '_blank', 'noopener,noreferrer')}
+                        >
+                          <ExternalLink className="h-3 w-3 mr-1" /> Open
+                        </Button>
+                      )}
+                      <Button variant="ghost" size="sm" onClick={() => downloadResume(selected)}>
+                        <Download className="h-3 w-3 mr-1" /> Download
+                      </Button>
+                    </div>
                   </div>
                   {previewLoading ? (
                     <div className="flex-1 flex items-center justify-center">
                       <Loader2 className="h-6 w-6 animate-spin text-primary" />
                     </div>
+                  ) : previewError ? (
+                    <div className="flex-1 flex flex-col items-center justify-center gap-2 text-sm text-muted-foreground p-4 text-center">
+                      <AlertCircle className="h-6 w-6 text-destructive" />
+                      <p>{previewError}</p>
+                      <Button variant="outline" size="sm" onClick={() => downloadResume(selected)}>
+                        <Download className="h-3 w-3 mr-1" /> Download instead
+                      </Button>
+                    </div>
                   ) : previewUrl ? (
-                    <iframe
-                      src={previewUrl}
+                    <object
+                      data={previewUrl}
+                      type="application/pdf"
                       className="flex-1 w-full"
-                      title="Resume PDF"
-                    />
+                      aria-label="Resume PDF"
+                    >
+                      <iframe
+                        src={previewUrl}
+                        className="flex-1 w-full h-full"
+                        title="Resume PDF"
+                      />
+                    </object>
                   ) : (
                     <div className="flex-1 flex items-center justify-center text-sm text-muted-foreground">
                       Preview unavailable
