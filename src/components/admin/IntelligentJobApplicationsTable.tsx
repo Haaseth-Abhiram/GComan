@@ -17,7 +17,7 @@ import {
 } from '@/components/ui/dialog';
 import { format } from 'date-fns';
 import {
-  Loader2, FileSpreadsheet, Search, Eye, Download, Star, Mail, Phone, Linkedin,
+  Loader2, FileSpreadsheet, Search, Eye, Download, Star, Mail, Phone, Linkedin, ExternalLink, AlertCircle,
 } from 'lucide-react';
 import { exportToExcel } from '@/lib/exportToExcel';
 
