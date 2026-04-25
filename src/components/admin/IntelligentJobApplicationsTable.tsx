@@ -413,19 +413,8 @@ export const IntelligentJobApplicationsTable = () => {
                         <Download className="h-3 w-3 mr-1" /> Download instead
                       </Button>
                     </div>
-                  ) : previewUrl ? (
-                    <object
-                      data={previewUrl}
-                      type="application/pdf"
-                      className="flex-1 w-full"
-                      aria-label="Resume PDF"
-                    >
-                      <iframe
-                        src={previewUrl}
-                        className="flex-1 w-full h-full"
-                        title="Resume PDF"
-                      />
-                    </object>
+                  ) : previewBlobUrl ? (
+                    <ResumePdfPreview url={previewBlobUrl} />
                   ) : (
                     <div className="flex-1 flex items-center justify-center text-sm text-muted-foreground">
                       Preview unavailable
