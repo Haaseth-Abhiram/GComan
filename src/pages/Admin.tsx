@@ -191,6 +191,38 @@ const AdminOverview = () => {
           trafficSources: (analyticsSnapshot.traffic_sources as any[]) ?? [],
           countryBreakdown: (analyticsSnapshot.country_breakdown as any[]) ?? [],
         });
+
+        // Period-over-period from daily_data: split into two halves
+        if (dailyData.length >= 2) {
+          const mid = Math.floor(dailyData.length / 2);
+          const prior = dailyData.slice(0, mid);
+          const current = dailyData.slice(mid);
+          const sum = (arr: DailyData[], k: keyof DailyData) =>
+            arr.reduce((a, d) => a + (Number(d[k]) || 0), 0);
+          const avg = (arr: DailyData[], k: keyof DailyData) =>
+            arr.length ? sum(arr, k) / arr.length : 0;
+
+          const curVisitors = sum(current, 'visitors');
+          const prevVisitors = sum(prior, 'visitors');
+          const curPageviews = sum(current, 'pageviews');
+          const prevPageviews = sum(prior, 'pageviews');
+          const curBounce = avg(current, 'bounceRate');
+          const prevBounce = avg(prior, 'bounceRate');
+
+          const curLeads = (last30Contacts.count || 0) + (last30Jobs.count || 0) + (last30Downloads.count || 0);
+          const prevLeads = (prev30Contacts.count || 0) + (prev30Jobs.count || 0) + (prev30Downloads.count || 0);
+          const curConv = curVisitors > 0 ? (curLeads / curVisitors) * 100 : 0;
+          const prevConv = prevVisitors > 0 ? (prevLeads / prevVisitors) * 100 : 0;
+
+          setDeltas({
+            visitorsPct: pctChange(curVisitors, prevVisitors),
+            pageviewsPct: pctChange(curPageviews, prevPageviews),
+            bouncePct: pctChange(curBounce, prevBounce),
+            conversionPct: pctChange(curConv, prevConv),
+          });
+        } else {
+          setDeltas({ visitorsPct: null, pageviewsPct: null, bouncePct: null, conversionPct: null });
+        }
       }
 
       setLastUpdated(new Date());
