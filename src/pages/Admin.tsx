@@ -6,6 +6,8 @@ import { AdminSidebar } from '@/components/admin/AdminSidebar';
 import { ContactSubmissionsTable } from '@/components/admin/ContactSubmissionsTable';
 import { DownloadLeadsTable } from '@/components/admin/DownloadLeadsTable';
 import { ResumesWorkspace } from '@/components/admin/ResumesWorkspace';
+import { NewsletterSubscribersTable } from '@/components/admin/NewsletterSubscribersTable';
+import { ActivityFeed } from '@/components/admin/ActivityFeed';
 import { AnalyticsDialog } from '@/components/admin/AnalyticsDialog';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -39,6 +41,25 @@ interface Stats {
   recentDownloads: number;
   categoryData: Array<{ name: string; value: number; color: string }>;
 }
+
+interface Deltas {
+  visitorsPct: number | null;
+  pageviewsPct: number | null;
+  bouncePct: number | null;
+  conversionPct: number | null;
+}
+
+const pctChange = (current: number, previous: number): number | null => {
+  if (!previous || previous === 0) return null;
+  return ((current - previous) / previous) * 100;
+};
+
+const formatDelta = (pct: number | null, invertColor = false) => {
+  if (pct === null || !isFinite(pct)) return { text: 'No prior data', positive: true };
+  const positive = invertColor ? pct < 0 : pct > 0;
+  const sign = pct > 0 ? '+' : '';
+  return { text: `${sign}${pct.toFixed(1)}% vs prior period`, positive };
+};
 
 interface AnalyticsData {
   totalVisitors: number;
@@ -79,6 +100,7 @@ const AdminOverview = () => {
   const [lastUpdated, setLastUpdated] = useState<Date>(new Date());
   const [analyticsDialogOpen, setAnalyticsDialogOpen] = useState(false);
   const [analyticsDialogType, setAnalyticsDialogType] = useState<'visitors' | 'pageviews' | 'bounce' | 'conversion'>('visitors');
+  const [deltas, setDeltas] = useState<Deltas>({ visitorsPct: null, pageviewsPct: null, bouncePct: null, conversionPct: null });
 
   const openAnalyticsDialog = (type: 'visitors' | 'pageviews' | 'bounce' | 'conversion') => {
     setAnalyticsDialogType(type);
@@ -88,8 +110,10 @@ const AdminOverview = () => {
   const fetchStats = async () => {
     setIsLoading(true);
     try {
-      const sevenDaysAgo = new Date();
-      sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+      const now = new Date();
+      const sevenDaysAgo = new Date(now); sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+      const thirtyDaysAgo = new Date(now); thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+      const sixtyDaysAgo = new Date(now); sixtyDaysAgo.setDate(sixtyDaysAgo.getDate() - 60);
 
       const [
         contactsTotal,
@@ -97,20 +121,26 @@ const AdminOverview = () => {
         downloadsTotal,
         recentContactsData,
         recentJobsData,
-        recentDownloadsData
+        recentDownloadsData,
+        last30Contacts,
+        last30Jobs,
+        last30Downloads,
+        prev30Contacts,
+        prev30Jobs,
+        prev30Downloads,
       ] = await Promise.all([
         supabase.from('contact_submissions').select('*', { count: 'exact', head: true }),
         supabase.from('job_applications').select('*', { count: 'exact', head: true }),
         supabase.from('download_leads').select('*', { count: 'exact', head: true }),
-        supabase.from('contact_submissions')
-          .select('*', { count: 'exact', head: true })
-          .gte('created_at', sevenDaysAgo.toISOString()),
-        supabase.from('job_applications')
-          .select('*', { count: 'exact', head: true })
-          .gte('created_at', sevenDaysAgo.toISOString()),
-        supabase.from('download_leads')
-          .select('*', { count: 'exact', head: true })
-          .gte('created_at', sevenDaysAgo.toISOString()),
+        supabase.from('contact_submissions').select('*', { count: 'exact', head: true }).gte('created_at', sevenDaysAgo.toISOString()),
+        supabase.from('job_applications').select('*', { count: 'exact', head: true }).gte('created_at', sevenDaysAgo.toISOString()),
+        supabase.from('download_leads').select('*', { count: 'exact', head: true }).gte('created_at', sevenDaysAgo.toISOString()),
+        supabase.from('contact_submissions').select('*', { count: 'exact', head: true }).gte('created_at', thirtyDaysAgo.toISOString()),
+        supabase.from('job_applications').select('*', { count: 'exact', head: true }).gte('created_at', thirtyDaysAgo.toISOString()),
+        supabase.from('download_leads').select('*', { count: 'exact', head: true }).gte('created_at', thirtyDaysAgo.toISOString()),
+        supabase.from('contact_submissions').select('*', { count: 'exact', head: true }).gte('created_at', sixtyDaysAgo.toISOString()).lt('created_at', thirtyDaysAgo.toISOString()),
+        supabase.from('job_applications').select('*', { count: 'exact', head: true }).gte('created_at', sixtyDaysAgo.toISOString()).lt('created_at', thirtyDaysAgo.toISOString()),
+        supabase.from('download_leads').select('*', { count: 'exact', head: true }).gte('created_at', sixtyDaysAgo.toISOString()).lt('created_at', thirtyDaysAgo.toISOString()),
       ]);
 
       const categoryData = [
@@ -163,6 +193,38 @@ const AdminOverview = () => {
           trafficSources: (analyticsSnapshot.traffic_sources as any[]) ?? [],
           countryBreakdown: (analyticsSnapshot.country_breakdown as any[]) ?? [],
         });
+
+        // Period-over-period from daily_data: split into two halves
+        if (dailyData.length >= 2) {
+          const mid = Math.floor(dailyData.length / 2);
+          const prior = dailyData.slice(0, mid);
+          const current = dailyData.slice(mid);
+          const sum = (arr: DailyData[], k: keyof DailyData) =>
+            arr.reduce((a, d) => a + (Number(d[k]) || 0), 0);
+          const avg = (arr: DailyData[], k: keyof DailyData) =>
+            arr.length ? sum(arr, k) / arr.length : 0;
+
+          const curVisitors = sum(current, 'visitors');
+          const prevVisitors = sum(prior, 'visitors');
+          const curPageviews = sum(current, 'pageviews');
+          const prevPageviews = sum(prior, 'pageviews');
+          const curBounce = avg(current, 'bounceRate');
+          const prevBounce = avg(prior, 'bounceRate');
+
+          const curLeads = (last30Contacts.count || 0) + (last30Jobs.count || 0) + (last30Downloads.count || 0);
+          const prevLeads = (prev30Contacts.count || 0) + (prev30Jobs.count || 0) + (prev30Downloads.count || 0);
+          const curConv = curVisitors > 0 ? (curLeads / curVisitors) * 100 : 0;
+          const prevConv = prevVisitors > 0 ? (prevLeads / prevVisitors) * 100 : 0;
+
+          setDeltas({
+            visitorsPct: pctChange(curVisitors, prevVisitors),
+            pageviewsPct: pctChange(curPageviews, prevPageviews),
+            bouncePct: pctChange(curBounce, prevBounce),
+            conversionPct: pctChange(curConv, prevConv),
+          });
+        } else {
+          setDeltas({ visitorsPct: null, pageviewsPct: null, bouncePct: null, conversionPct: null });
+        }
       }
 
       setLastUpdated(new Date());
@@ -226,10 +288,12 @@ const AdminOverview = () => {
             </div>
             <p className="text-sm font-medium text-muted-foreground">Total Visitors</p>
             <p className="text-3xl font-bold mt-1">{analytics.totalVisitors.toLocaleString()}</p>
-            <div className="flex items-center gap-1 mt-2 text-xs text-green-600">
-              <ArrowUpRight className="h-3 w-3" />
-              <span>+12.5% from last period</span>
-            </div>
+            {(() => { const d = formatDelta(deltas.visitorsPct); const Up = d.positive ? ArrowUpRight : ArrowDownRight; return (
+              <div className={`flex items-center gap-1 mt-2 text-xs ${d.positive ? 'text-green-600' : 'text-red-600'}`}>
+                <Up className="h-3 w-3" />
+                <span>{d.text}</span>
+              </div>
+            ); })()}
           </CardContent>
         </Card>
 
@@ -250,10 +314,12 @@ const AdminOverview = () => {
             </div>
             <p className="text-sm font-medium text-muted-foreground">Page Views</p>
             <p className="text-3xl font-bold mt-1">{analytics.totalPageviews.toLocaleString()}</p>
-            <div className="flex items-center gap-1 mt-2 text-xs text-green-600">
-              <ArrowUpRight className="h-3 w-3" />
-              <span>{analytics.avgPagesPerVisit} pages/visit</span>
-            </div>
+            {(() => { const d = formatDelta(deltas.pageviewsPct); const Up = d.positive ? ArrowUpRight : ArrowDownRight; return (
+              <div className={`flex items-center gap-1 mt-2 text-xs ${d.positive ? 'text-green-600' : 'text-red-600'}`}>
+                <Up className="h-3 w-3" />
+                <span>{d.text} · {analytics.avgPagesPerVisit} pages/visit</span>
+              </div>
+            ); })()}
           </CardContent>
         </Card>
 
@@ -274,10 +340,12 @@ const AdminOverview = () => {
             </div>
             <p className="text-sm font-medium text-muted-foreground">Bounce Rate</p>
             <p className="text-3xl font-bold mt-1">{analytics.avgBounceRate}%</p>
-            <div className="flex items-center gap-1 mt-2 text-xs text-amber-600">
-              <ArrowDownRight className="h-3 w-3" />
-              <span>-5% improvement</span>
-            </div>
+            {(() => { const d = formatDelta(deltas.bouncePct, true); const Up = d.positive ? ArrowDownRight : ArrowUpRight; return (
+              <div className={`flex items-center gap-1 mt-2 text-xs ${d.positive ? 'text-green-600' : 'text-red-600'}`}>
+                <Up className="h-3 w-3" />
+                <span>{d.text}</span>
+              </div>
+            ); })()}
           </CardContent>
         </Card>
 
@@ -298,9 +366,12 @@ const AdminOverview = () => {
             </div>
             <p className="text-sm font-medium text-muted-foreground">Conversion Rate</p>
             <p className="text-3xl font-bold mt-1">{conversionRate}%</p>
-            <div className="flex items-center gap-1 mt-2 text-xs text-muted-foreground">
-              <span>{totalLeads} leads from {analytics.totalVisitors} visitors</span>
-            </div>
+            {(() => { const d = formatDelta(deltas.conversionPct); const Up = d.positive ? ArrowUpRight : ArrowDownRight; return (
+              <div className={`flex items-center gap-1 mt-2 text-xs ${d.positive ? 'text-green-600' : 'text-red-600'}`}>
+                <Up className="h-3 w-3" />
+                <span>{d.text} · {totalLeads} leads</span>
+              </div>
+            ); })()}
           </CardContent>
         </Card>
       </div>
@@ -527,6 +598,9 @@ const AdminOverview = () => {
         </Card>
       </div>
 
+      {/* Recent Activity */}
+      <ActivityFeed />
+
       {/* Quick Actions */}
       <Card>
         <CardHeader>
@@ -634,6 +708,7 @@ const Admin = () => {
                 <Route path="/jobs" element={<ResumesWorkspace />} />
                 <Route path="/resumes" element={<ResumesWorkspace />} />
                 <Route path="/downloads" element={<DownloadLeadsTable />} />
+                <Route path="/newsletter" element={<NewsletterSubscribersTable />} />
               </Routes>
             </main>
           </div>
