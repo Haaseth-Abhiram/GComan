@@ -98,6 +98,7 @@ const AdminOverview = () => {
   const [lastUpdated, setLastUpdated] = useState<Date>(new Date());
   const [analyticsDialogOpen, setAnalyticsDialogOpen] = useState(false);
   const [analyticsDialogType, setAnalyticsDialogType] = useState<'visitors' | 'pageviews' | 'bounce' | 'conversion'>('visitors');
+  const [deltas, setDeltas] = useState<Deltas>({ visitorsPct: null, pageviewsPct: null, bouncePct: null, conversionPct: null });
 
   const openAnalyticsDialog = (type: 'visitors' | 'pageviews' | 'bounce' | 'conversion') => {
     setAnalyticsDialogType(type);
@@ -107,8 +108,10 @@ const AdminOverview = () => {
   const fetchStats = async () => {
     setIsLoading(true);
     try {
-      const sevenDaysAgo = new Date();
-      sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+      const now = new Date();
+      const sevenDaysAgo = new Date(now); sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+      const thirtyDaysAgo = new Date(now); thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+      const sixtyDaysAgo = new Date(now); sixtyDaysAgo.setDate(sixtyDaysAgo.getDate() - 60);
 
       const [
         contactsTotal,
