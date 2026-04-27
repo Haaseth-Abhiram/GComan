@@ -598,6 +598,9 @@ const AdminOverview = () => {
         </Card>
       </div>
 
+      {/* Recent Activity */}
+      <ActivityFeed />
+
       {/* Quick Actions */}
       <Card>
         <CardHeader>
