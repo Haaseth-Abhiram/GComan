@@ -119,20 +119,26 @@ const AdminOverview = () => {
         downloadsTotal,
         recentContactsData,
         recentJobsData,
-        recentDownloadsData
+        recentDownloadsData,
+        last30Contacts,
+        last30Jobs,
+        last30Downloads,
+        prev30Contacts,
+        prev30Jobs,
+        prev30Downloads,
       ] = await Promise.all([
         supabase.from('contact_submissions').select('*', { count: 'exact', head: true }),
         supabase.from('job_applications').select('*', { count: 'exact', head: true }),
         supabase.from('download_leads').select('*', { count: 'exact', head: true }),
-        supabase.from('contact_submissions')
-          .select('*', { count: 'exact', head: true })
-          .gte('created_at', sevenDaysAgo.toISOString()),
-        supabase.from('job_applications')
-          .select('*', { count: 'exact', head: true })
-          .gte('created_at', sevenDaysAgo.toISOString()),
-        supabase.from('download_leads')
-          .select('*', { count: 'exact', head: true })
-          .gte('created_at', sevenDaysAgo.toISOString()),
+        supabase.from('contact_submissions').select('*', { count: 'exact', head: true }).gte('created_at', sevenDaysAgo.toISOString()),
+        supabase.from('job_applications').select('*', { count: 'exact', head: true }).gte('created_at', sevenDaysAgo.toISOString()),
+        supabase.from('download_leads').select('*', { count: 'exact', head: true }).gte('created_at', sevenDaysAgo.toISOString()),
+        supabase.from('contact_submissions').select('*', { count: 'exact', head: true }).gte('created_at', thirtyDaysAgo.toISOString()),
+        supabase.from('job_applications').select('*', { count: 'exact', head: true }).gte('created_at', thirtyDaysAgo.toISOString()),
+        supabase.from('download_leads').select('*', { count: 'exact', head: true }).gte('created_at', thirtyDaysAgo.toISOString()),
+        supabase.from('contact_submissions').select('*', { count: 'exact', head: true }).gte('created_at', sixtyDaysAgo.toISOString()).lt('created_at', thirtyDaysAgo.toISOString()),
+        supabase.from('job_applications').select('*', { count: 'exact', head: true }).gte('created_at', sixtyDaysAgo.toISOString()).lt('created_at', thirtyDaysAgo.toISOString()),
+        supabase.from('download_leads').select('*', { count: 'exact', head: true }).gte('created_at', sixtyDaysAgo.toISOString()).lt('created_at', thirtyDaysAgo.toISOString()),
       ]);
 
       const categoryData = [
