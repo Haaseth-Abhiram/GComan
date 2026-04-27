@@ -17,6 +17,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { format } from 'date-fns';
 import { Loader2, FileSpreadsheet, Search } from 'lucide-react';
 import { exportToExcel } from '@/lib/exportToExcel';
+import { DateRangeFilter, inDateRange, loadDateRange, DateRange } from './DateRangeFilter';
 
 type DownloadLead = Tables<'download_leads'>;
 
@@ -26,6 +27,7 @@ export const DownloadLeadsTable = () => {
   const [search, setSearch] = useState('');
   const [resourceFilter, setResourceFilter] = useState('all');
   const [consentFilter, setConsentFilter] = useState('all');
+  const [dateRange, setDateRange] = useState<DateRange>(loadDateRange('downloads'));
 
   useEffect(() => {
     fetchLeads();
@@ -58,6 +60,7 @@ export const DownloadLeadsTable = () => {
       if (resourceFilter !== 'all' && l.resource_title !== resourceFilter) return false;
       if (consentFilter === 'yes' && !l.marketing_consent) return false;
       if (consentFilter === 'no' && l.marketing_consent) return false;
+      if (!inDateRange(l.created_at, dateRange)) return false;
       if (!q) return true;
       return (
         l.name.toLowerCase().includes(q) ||
@@ -67,7 +70,7 @@ export const DownloadLeadsTable = () => {
         (l.country || '').toLowerCase().includes(q)
       );
     });
-  }, [leads, search, resourceFilter, consentFilter]);
+  }, [leads, search, resourceFilter, consentFilter, dateRange]);
 
   const handleExport = () => {
     if (!filtered.length) return;
@@ -109,7 +112,7 @@ export const DownloadLeadsTable = () => {
             Export Excel ({filtered.length})
           </Button>
         </div>
-        <div className="flex flex-col md:flex-row gap-3 mt-4">
+        <div className="flex flex-col md:flex-row gap-3 mt-4 md:items-end">
           <div className="relative flex-1">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input
@@ -140,6 +143,7 @@ export const DownloadLeadsTable = () => {
               <SelectItem value="no">Consent: No</SelectItem>
             </SelectContent>
           </Select>
+          <DateRangeFilter storageKey="downloads" value={dateRange} onChange={setDateRange} />
         </div>
       </CardHeader>
       <CardContent>
