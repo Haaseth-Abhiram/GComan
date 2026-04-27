@@ -6,6 +6,8 @@ import { AdminSidebar } from '@/components/admin/AdminSidebar';
 import { ContactSubmissionsTable } from '@/components/admin/ContactSubmissionsTable';
 import { DownloadLeadsTable } from '@/components/admin/DownloadLeadsTable';
 import { ResumesWorkspace } from '@/components/admin/ResumesWorkspace';
+import { NewsletterSubscribersTable } from '@/components/admin/NewsletterSubscribersTable';
+import { ActivityFeed } from '@/components/admin/ActivityFeed';
 import { AnalyticsDialog } from '@/components/admin/AnalyticsDialog';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
