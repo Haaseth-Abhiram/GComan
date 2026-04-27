@@ -286,10 +286,12 @@ const AdminOverview = () => {
             </div>
             <p className="text-sm font-medium text-muted-foreground">Total Visitors</p>
             <p className="text-3xl font-bold mt-1">{analytics.totalVisitors.toLocaleString()}</p>
-            <div className="flex items-center gap-1 mt-2 text-xs text-green-600">
-              <ArrowUpRight className="h-3 w-3" />
-              <span>+12.5% from last period</span>
-            </div>
+            {(() => { const d = formatDelta(deltas.visitorsPct); const Up = d.positive ? ArrowUpRight : ArrowDownRight; return (
+              <div className={`flex items-center gap-1 mt-2 text-xs ${d.positive ? 'text-green-600' : 'text-red-600'}`}>
+                <Up className="h-3 w-3" />
+                <span>{d.text}</span>
+              </div>
+            ); })()}
           </CardContent>
         </Card>
 
@@ -310,10 +312,12 @@ const AdminOverview = () => {
             </div>
             <p className="text-sm font-medium text-muted-foreground">Page Views</p>
             <p className="text-3xl font-bold mt-1">{analytics.totalPageviews.toLocaleString()}</p>
-            <div className="flex items-center gap-1 mt-2 text-xs text-green-600">
-              <ArrowUpRight className="h-3 w-3" />
-              <span>{analytics.avgPagesPerVisit} pages/visit</span>
-            </div>
+            {(() => { const d = formatDelta(deltas.pageviewsPct); const Up = d.positive ? ArrowUpRight : ArrowDownRight; return (
+              <div className={`flex items-center gap-1 mt-2 text-xs ${d.positive ? 'text-green-600' : 'text-red-600'}`}>
+                <Up className="h-3 w-3" />
+                <span>{d.text} · {analytics.avgPagesPerVisit} pages/visit</span>
+              </div>
+            ); })()}
           </CardContent>
         </Card>
 
@@ -334,10 +338,12 @@ const AdminOverview = () => {
             </div>
             <p className="text-sm font-medium text-muted-foreground">Bounce Rate</p>
             <p className="text-3xl font-bold mt-1">{analytics.avgBounceRate}%</p>
-            <div className="flex items-center gap-1 mt-2 text-xs text-amber-600">
-              <ArrowDownRight className="h-3 w-3" />
-              <span>-5% improvement</span>
-            </div>
+            {(() => { const d = formatDelta(deltas.bouncePct, true); const Up = d.positive ? ArrowDownRight : ArrowUpRight; return (
+              <div className={`flex items-center gap-1 mt-2 text-xs ${d.positive ? 'text-green-600' : 'text-red-600'}`}>
+                <Up className="h-3 w-3" />
+                <span>{d.text}</span>
+              </div>
+            ); })()}
           </CardContent>
         </Card>
 
@@ -358,9 +364,12 @@ const AdminOverview = () => {
             </div>
             <p className="text-sm font-medium text-muted-foreground">Conversion Rate</p>
             <p className="text-3xl font-bold mt-1">{conversionRate}%</p>
-            <div className="flex items-center gap-1 mt-2 text-xs text-muted-foreground">
-              <span>{totalLeads} leads from {analytics.totalVisitors} visitors</span>
-            </div>
+            {(() => { const d = formatDelta(deltas.conversionPct); const Up = d.positive ? ArrowUpRight : ArrowDownRight; return (
+              <div className={`flex items-center gap-1 mt-2 text-xs ${d.positive ? 'text-green-600' : 'text-red-600'}`}>
+                <Up className="h-3 w-3" />
+                <span>{d.text} · {totalLeads} leads</span>
+              </div>
+            ); })()}
           </CardContent>
         </Card>
       </div>
