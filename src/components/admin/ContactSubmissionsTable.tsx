@@ -167,7 +167,7 @@ export const ContactSubmissionsTable = () => {
               Export Excel ({filtered.length})
             </Button>
           </div>
-          <div className="flex flex-col md:flex-row gap-3 mt-4">
+          <div className="flex flex-col md:flex-row gap-3 mt-4 md:items-end">
             <div className="relative flex-1">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
               <Input
@@ -188,6 +188,7 @@ export const ContactSubmissionsTable = () => {
                 <SelectItem value="pending">Pending</SelectItem>
               </SelectContent>
             </Select>
+            <DateRangeFilter storageKey="contacts" value={dateRange} onChange={setDateRange} />
           </div>
         </CardHeader>
         <CardContent>
