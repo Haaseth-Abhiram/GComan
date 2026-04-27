@@ -705,6 +705,7 @@ const Admin = () => {
                 <Route path="/jobs" element={<ResumesWorkspace />} />
                 <Route path="/resumes" element={<ResumesWorkspace />} />
                 <Route path="/downloads" element={<DownloadLeadsTable />} />
+                <Route path="/newsletter" element={<NewsletterSubscribersTable />} />
               </Routes>
             </main>
           </div>
