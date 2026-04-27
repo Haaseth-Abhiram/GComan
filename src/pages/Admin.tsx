@@ -40,6 +40,25 @@ interface Stats {
   categoryData: Array<{ name: string; value: number; color: string }>;
 }
 
+interface Deltas {
+  visitorsPct: number | null;
+  pageviewsPct: number | null;
+  bouncePct: number | null;
+  conversionPct: number | null;
+}
+
+const pctChange = (current: number, previous: number): number | null => {
+  if (!previous || previous === 0) return null;
+  return ((current - previous) / previous) * 100;
+};
+
+const formatDelta = (pct: number | null, invertColor = false) => {
+  if (pct === null || !isFinite(pct)) return { text: 'No prior data', positive: true };
+  const positive = invertColor ? pct < 0 : pct > 0;
+  const sign = pct > 0 ? '+' : '';
+  return { text: `${sign}${pct.toFixed(1)}% vs prior period`, positive };
+};
+
 interface AnalyticsData {
   totalVisitors: number;
   totalPageviews: number;
