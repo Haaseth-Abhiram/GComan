@@ -18,6 +18,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import { format } from 'date-fns';
 import { Loader2, Eye, Mail, MailCheck, MailX, AlertCircle, FileSpreadsheet, Search } from 'lucide-react';
 import { exportToExcel } from '@/lib/exportToExcel';
+import { DateRangeFilter, inDateRange, loadDateRange, DateRange } from './DateRangeFilter';
 
 interface ContactSubmission {
   id: string;
@@ -40,6 +41,7 @@ export const ContactSubmissionsTable = () => {
   const [selectedSubmission, setSelectedSubmission] = useState<ContactSubmission | null>(null);
   const [search, setSearch] = useState('');
   const [statusFilter, setStatusFilter] = useState<'all' | 'sent' | 'failed' | 'pending'>('all');
+  const [dateRange, setDateRange] = useState<DateRange>(loadDateRange('contacts'));
 
   useEffect(() => {
     fetchSubmissions();
@@ -67,6 +69,7 @@ export const ContactSubmissionsTable = () => {
       if (statusFilter === 'sent' && s.email_sent !== true) return false;
       if (statusFilter === 'failed' && !(s.email_sent === false && s.email_error)) return false;
       if (statusFilter === 'pending' && (s.email_sent === true || s.email_error)) return false;
+      if (!inDateRange(s.created_at, dateRange)) return false;
       if (!q) return true;
       return (
         s.name.toLowerCase().includes(q) ||
@@ -77,7 +80,7 @@ export const ContactSubmissionsTable = () => {
         s.message.toLowerCase().includes(q)
       );
     });
-  }, [submissions, search, statusFilter]);
+  }, [submissions, search, statusFilter, dateRange]);
 
   const handleExport = () => {
     if (!filtered.length) return;
