@@ -268,6 +268,28 @@ Downloaded at: ${new Date().toLocaleString()}
       }
     })();
 
+    // Push to Zoho CRM in background (fire-and-forget)
+    (async () => {
+      const { first, last } = splitName(name);
+      const result = await createZohoLead({
+        Last_Name: last,
+        First_Name: first,
+        Email: email,
+        Phone: phone,
+        Company: company,
+        Country: country,
+        Industry: industry || undefined,
+        Lead_Source: 'Website - Resource Download',
+        Description: `Downloaded: ${resourceTitle}\nMarketing consent: ${marketingConsent ? 'Yes' : 'No'}`,
+      });
+      if (result.success && result.leadId) {
+        await supabase
+          .from('download_leads')
+          .update({ zoho_lead_id: result.leadId, synced_to_zoho: true })
+          .eq('id', leadData.id);
+      }
+    })().catch((err) => console.error('Zoho push error:', err));
+
     return new Response(
       JSON.stringify({ success: true, message: "Lead saved successfully", id: leadData.id }),
       { 
