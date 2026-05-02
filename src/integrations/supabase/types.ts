@@ -30,7 +30,9 @@ export type Database = {
           subject: string
           synced_to_zoho: boolean | null
           updated_at: string
+          zoho_error: string | null
           zoho_lead_id: string | null
+          zoho_synced_at: string | null
         }
         Insert: {
           company?: string | null
@@ -47,7 +49,9 @@ export type Database = {
           subject: string
           synced_to_zoho?: boolean | null
           updated_at?: string
+          zoho_error?: string | null
           zoho_lead_id?: string | null
+          zoho_synced_at?: string | null
         }
         Update: {
           company?: string | null
@@ -64,7 +68,9 @@ export type Database = {
           subject?: string
           synced_to_zoho?: boolean | null
           updated_at?: string
+          zoho_error?: string | null
           zoho_lead_id?: string | null
+          zoho_synced_at?: string | null
         }
         Relationships: []
       }

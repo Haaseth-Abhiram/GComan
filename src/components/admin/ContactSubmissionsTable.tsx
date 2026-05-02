@@ -16,7 +16,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { format } from 'date-fns';
-import { Loader2, Eye, Mail, MailCheck, MailX, AlertCircle, FileSpreadsheet, Search } from 'lucide-react';
+import { Loader2, Eye, Mail, MailCheck, MailX, AlertCircle, FileSpreadsheet, Search, ExternalLink, CheckCircle2, XCircle, CircleDashed } from 'lucide-react';
 import { exportToExcel } from '@/lib/exportToExcel';
 
 interface ContactSubmission {
@@ -29,10 +29,15 @@ interface ContactSubmission {
   message: string;
   created_at: string;
   synced_to_zoho: boolean | null;
+  zoho_lead_id: string | null;
+  zoho_synced_at: string | null;
+  zoho_error: string | null;
   email_sent: boolean | null;
   email_sent_at: string | null;
   email_error: string | null;
 }
+
+const ZOHO_LEAD_URL = (id: string) => `https://crm.zoho.com/crm/EntityInfo.do?module=Leads&id=${id}`;
 
 export const ContactSubmissionsTable = () => {
   const [submissions, setSubmissions] = useState<ContactSubmission[]>([]);
@@ -93,10 +98,65 @@ export const ContactSubmissionsTable = () => {
         'Email Status': s.email_sent === true ? 'Sent' : s.email_error ? 'Failed' : 'Pending',
         'Email Sent At': s.email_sent_at ? format(new Date(s.email_sent_at), 'yyyy-MM-dd HH:mm') : '',
         'Email Error': s.email_error || '',
+        'CRM Status': s.synced_to_zoho === true ? 'Synced' : s.zoho_error ? 'Failed' : 'Pending',
+        'CRM Lead ID': s.zoho_lead_id || '',
+        'CRM Synced At': s.zoho_synced_at ? format(new Date(s.zoho_synced_at), 'yyyy-MM-dd HH:mm') : '',
+        'CRM Error': s.zoho_error || '',
       })),
       'contact_submissions',
       'Contacts'
     );
+  };
+
+  const getCrmStatusBadge = (submission: ContactSubmission) => {
+    if (submission.synced_to_zoho === true && submission.zoho_lead_id) {
+      return (
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <a
+                href={ZOHO_LEAD_URL(submission.zoho_lead_id)}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Badge variant="default" className="bg-blue-100 text-blue-700 border-blue-200 gap-1 hover:bg-blue-200 transition-colors">
+                  <CheckCircle2 className="h-3 w-3" />
+                  Synced
+                  <ExternalLink className="h-3 w-3" />
+                </Badge>
+              </a>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Lead {submission.zoho_lead_id} — open in Zoho CRM</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+      );
+    } else if (submission.zoho_error) {
+      return (
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Badge variant="destructive" className="gap-1">
+                <XCircle className="h-3 w-3" />
+                Failed
+              </Badge>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p className="max-w-xs break-words">{submission.zoho_error}</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+      );
+    } else {
+      return (
+        <Badge variant="secondary" className="gap-1">
+          <CircleDashed className="h-3 w-3" />
+          Pending
+        </Badge>
+      );
+    }
   };
 
   const getEmailStatusBadge = (submission: ContactSubmission) => {
@@ -199,13 +259,14 @@ export const ContactSubmissionsTable = () => {
                   <TableHead>Company</TableHead>
                   <TableHead>Subject</TableHead>
                   <TableHead>Email Status</TableHead>
+                  <TableHead>CRM Status</TableHead>
                   <TableHead>Action</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
                 {filtered.length === 0 ? (
                   <TableRow>
-                    <TableCell colSpan={8} className="text-center text-muted-foreground">
+                    <TableCell colSpan={9} className="text-center text-muted-foreground">
                       No submissions match your filters
                     </TableCell>
                   </TableRow>
@@ -222,6 +283,9 @@ export const ContactSubmissionsTable = () => {
                       <TableCell className="max-w-[150px] truncate">{submission.subject}</TableCell>
                       <TableCell>
                         {getEmailStatusBadge(submission)}
+                      </TableCell>
+                      <TableCell>
+                        {getCrmStatusBadge(submission)}
                       </TableCell>
                       <TableCell>
                         <Button
@@ -296,6 +360,36 @@ export const ContactSubmissionsTable = () => {
                   <div className="mt-2 p-2 bg-destructive/10 rounded-md flex items-start gap-2">
                     <AlertCircle className="h-4 w-4 text-destructive mt-0.5" />
                     <p className="text-xs text-destructive">{selectedSubmission.email_error}</p>
+                  </div>
+                )}
+              </div>
+
+              {/* CRM Sync Status Section */}
+              <div className="border-t pt-4">
+                <p className="text-sm font-medium text-muted-foreground mb-2">Zoho CRM Sync Status</p>
+                <div className="flex items-center gap-3 flex-wrap">
+                  {getCrmStatusBadge(selectedSubmission)}
+                  {selectedSubmission.zoho_synced_at && (
+                    <span className="text-xs text-muted-foreground">
+                      Synced at {format(new Date(selectedSubmission.zoho_synced_at), 'MMM d, yyyy h:mm a')}
+                    </span>
+                  )}
+                  {selectedSubmission.zoho_lead_id && (
+                    <a
+                      href={ZOHO_LEAD_URL(selectedSubmission.zoho_lead_id)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs text-primary hover:underline inline-flex items-center gap-1"
+                    >
+                      Open Lead {selectedSubmission.zoho_lead_id}
+                      <ExternalLink className="h-3 w-3" />
+                    </a>
+                  )}
+                </div>
+                {selectedSubmission.zoho_error && (
+                  <div className="mt-2 p-2 bg-destructive/10 rounded-md flex items-start gap-2">
+                    <AlertCircle className="h-4 w-4 text-destructive mt-0.5" />
+                    <p className="text-xs text-destructive break-words">{selectedSubmission.zoho_error}</p>
                   </div>
                 )}
               </div>
