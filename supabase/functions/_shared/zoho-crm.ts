@@ -38,6 +38,7 @@ async function getAccessToken(): Promise<string> {
     throw new Error("Zoho CRM credentials not configured");
   }
 
+  // Zoho's token endpoint requires params in the URL query string, not body
   const params = new URLSearchParams({
     refresh_token: refreshToken,
     client_id: clientId,
@@ -45,13 +46,18 @@ async function getAccessToken(): Promise<string> {
     grant_type: "refresh_token",
   });
 
-  const response = await fetch(`${ZOHO_ACCOUNTS_URL}/oauth/v2/token`, {
+  const response = await fetch(`${ZOHO_ACCOUNTS_URL}/oauth/v2/token?${params.toString()}`, {
     method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: params.toString(),
+    headers: { "Accept": "application/json" },
   });
 
-  const data = await response.json();
+  const responseText = await response.text();
+  let data: any;
+  try {
+    data = JSON.parse(responseText);
+  } catch {
+    throw new Error(`Zoho token refresh returned non-JSON (status ${response.status}): ${responseText.slice(0, 200)}`);
+  }
 
   if (!response.ok || !data.access_token) {
     throw new Error(`Zoho token refresh failed: ${JSON.stringify(data)}`);
