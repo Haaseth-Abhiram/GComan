@@ -46,15 +46,18 @@ async function getAccessToken(): Promise<string> {
     `grant_type=refresh_token`,
   ].join("&");
 
+  console.log("Zoho: requesting access token, body length:", body.length);
   const response = await fetch(`${ZOHO_ACCOUNTS_URL}/oauth/v2/token`, {
     method: "POST",
     headers: {
       "Content-Type": "application/x-www-form-urlencoded",
-      "Accept": "application/json",
-      "User-Agent": "GCOMAN-EdgeFunction/1.0",
+      "Accept": "*/*",
+      "User-Agent": "curl/8.0.0",
     },
     body,
+    redirect: "manual",
   });
+  console.log("Zoho token response status:", response.status, "content-type:", response.headers.get("content-type"));
 
   const responseText = await response.text();
   let data: any;
