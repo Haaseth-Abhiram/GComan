@@ -1,5 +1,6 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.3";
 import { SMTPClient } from "https://deno.land/x/denomailer@1.6.0/mod.ts";
+import { createZohoLead, splitName } from "../_shared/zoho-crm.ts";
 
 // Allowed origins whitelist - prevents wildcard CORS misconfiguration
 const ALLOWED_ORIGINS = [
