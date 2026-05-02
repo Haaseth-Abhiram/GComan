@@ -80,6 +80,8 @@ export type Database = {
           name: string
           phone: string
           resource_title: string
+          synced_to_zoho: boolean | null
+          zoho_lead_id: string | null
         }
         Insert: {
           company: string
@@ -92,6 +94,8 @@ export type Database = {
           name: string
           phone: string
           resource_title: string
+          synced_to_zoho?: boolean | null
+          zoho_lead_id?: string | null
         }
         Update: {
           company?: string
@@ -104,6 +108,8 @@ export type Database = {
           name?: string
           phone?: string
           resource_title?: string
+          synced_to_zoho?: boolean | null
+          zoho_lead_id?: string | null
         }
         Relationships: []
       }
@@ -170,8 +176,10 @@ export type Database = {
           is_active: boolean
           source: string | null
           subscribed_at: string
+          synced_to_zoho: boolean | null
           unsubscribed_at: string | null
           updated_at: string
+          zoho_lead_id: string | null
         }
         Insert: {
           created_at?: string
@@ -181,8 +189,10 @@ export type Database = {
           is_active?: boolean
           source?: string | null
           subscribed_at?: string
+          synced_to_zoho?: boolean | null
           unsubscribed_at?: string | null
           updated_at?: string
+          zoho_lead_id?: string | null
         }
         Update: {
           created_at?: string
@@ -192,8 +202,10 @@ export type Database = {
           is_active?: boolean
           source?: string | null
           subscribed_at?: string
+          synced_to_zoho?: boolean | null
           unsubscribed_at?: string | null
           updated_at?: string
+          zoho_lead_id?: string | null
         }
         Relationships: []
       }
