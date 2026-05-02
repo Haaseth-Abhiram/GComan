@@ -1,4 +1,5 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.3";
+import { createZohoLead } from "../_shared/zoho-crm.ts";
 
 // Allowed origins whitelist
 const ALLOWED_ORIGINS = [
