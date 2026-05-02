@@ -2,6 +2,7 @@ import "https://deno.land/x/xhr@0.1.0/mod.ts";
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 import { SMTPClient } from "https://deno.land/x/denomailer@1.6.0/mod.ts";
+import { createZohoLead, splitName } from "../_shared/zoho-crm.ts";
 
 // Allowed origins whitelist - prevents wildcard CORS misconfiguration
 const ALLOWED_ORIGINS = [
@@ -269,6 +270,27 @@ serve(async (req) => {
     sendEmailNotification(supabase, data.id, sanitizedData, ipAddress).catch(
       (err) => console.error('Background email notification error:', err)
     );
+
+    // Push to Zoho CRM in background (fire-and-forget)
+    (async () => {
+      const { first, last } = splitName(sanitizedData.name);
+      const result = await createZohoLead({
+        Last_Name: last,
+        First_Name: first,
+        Email: sanitizedData.email,
+        Phone: sanitizedData.phone || undefined,
+        Company: sanitizedData.company || 'Website Contact',
+        Lead_Source: 'Website - Contact Form',
+        Title: sanitizedData.subject,
+        Description: sanitizedData.message,
+      });
+      if (result.success && result.leadId) {
+        await supabase
+          .from('contact_submissions')
+          .update({ zoho_lead_id: result.leadId, synced_to_zoho: true })
+          .eq('id', data.id);
+      }
+    })().catch((err) => console.error('Zoho push error:', err));
 
     return new Response(
       JSON.stringify({ 
