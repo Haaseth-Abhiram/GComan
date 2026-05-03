@@ -6,6 +6,15 @@ import { useEffect } from 'react';
  */
 export const ZohoSalesIQ = () => {
   useEffect(() => {
+    // Skip during prerender. The puppeteer renderer used by
+    // @prerenderer/rollup-plugin reports a HeadlessChrome user agent. If we
+    // let the embed run, the SalesIQ widget DOM gets frozen into the static
+    // HTML; the loader <script> then re-initialises in the real browser and
+    // a second launcher renders next to the prerendered one.
+    if (typeof navigator !== 'undefined' && /HeadlessChrome/i.test(navigator.userAgent)) {
+      return;
+    }
+
     // Initialize Zoho SalesIQ
     const initZohoSalesIQ = () => {
       // Add the widget configuration
