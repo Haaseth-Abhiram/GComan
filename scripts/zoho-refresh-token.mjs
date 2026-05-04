@@ -1,15 +1,25 @@
 #!/usr/bin/env node
 // One-time helper: swap a Zoho OAuth grant code for a refresh token.
 //
-// Prereq: in https://api-console.zoho.com/, open your Self Client app,
-// click "Generate Code" with scope:
-//   ZohoCRM.modules.leads.CREATE,ZohoCRM.modules.leads.READ
-// and a 10-minute duration. Copy the grant code, then run:
+// Prereq: in https://api-console.zoho.com/, open your Server-based app and
+// note the Client ID, Client Secret, and Authorized Redirect URI. Visit:
 //
+//   https://accounts.zoho.com/oauth/v2/auth?
+//     scope=ZohoCRM.modules.leads.ALL,ZohoCRM.modules.ALL
+//     &client_id=<CLIENT_ID>
+//     &response_type=code
+//     &access_type=offline
+//     &prompt=consent
+//     &redirect_uri=<REDIRECT_URI>
+//
+// approve, copy the `code` query param from the redirect URL, then:
+//
+//   export ZOHO_CLIENT_ID=...
+//   export ZOHO_CLIENT_SECRET=...
+//   export ZOHO_REDIRECT_URI=...
 //   node scripts/zoho-refresh-token.mjs
 //
-// You'll be prompted for client id, client secret, and the grant code.
-// Output: the refresh_token. Paste it into Supabase secrets as
+// Output: the refresh_token. Paste into Supabase secrets as
 // ZOHO_CRM_REFRESH_TOKEN. Refresh tokens don't expire unless revoked.
 
 import { createInterface } from 'node:readline/promises';
@@ -18,15 +28,19 @@ import { stdin as input, stdout as output } from 'node:process';
 const ACCOUNTS_HOST = 'https://accounts.zoho.com'; // US data center
 
 const rl = createInterface({ input, output });
-const prompt = (q) => rl.question(q);
+const ask = async (label, fallback) => {
+  if (fallback) return fallback;
+  return (await rl.question(`${label}: `)).trim();
+};
 
-const clientId = (await prompt('Client ID: ')).trim();
-const clientSecret = (await prompt('Client Secret: ')).trim();
-const grantCode = (await prompt('Grant Code (from API Console "Generate Code"): ')).trim();
+const clientId = await ask('Client ID', process.env.ZOHO_CLIENT_ID);
+const clientSecret = await ask('Client Secret', process.env.ZOHO_CLIENT_SECRET);
+const redirectUri = await ask('Redirect URI', process.env.ZOHO_REDIRECT_URI);
+const grantCode = (await rl.question('Grant Code (from redirect URL ?code=...): ')).trim();
 rl.close();
 
-if (!clientId || !clientSecret || !grantCode) {
-  console.error('\nError: all three values are required.');
+if (!clientId || !clientSecret || !redirectUri || !grantCode) {
+  console.error('\nError: client id, client secret, redirect uri, and grant code are all required.');
   process.exit(1);
 }
 
@@ -34,6 +48,7 @@ const body = new URLSearchParams({
   grant_type: 'authorization_code',
   client_id: clientId,
   client_secret: clientSecret,
+  redirect_uri: redirectUri,
   code: grantCode,
 });
 
@@ -49,7 +64,8 @@ if (!res.ok || !json.refresh_token) {
   console.error('\nFailed. Zoho response:');
   console.error(JSON.stringify(json, null, 2));
   console.error('\nCommon causes:');
-  console.error('  - Grant code expired (re-generate; valid for 10 min only)');
+  console.error('  - Grant code expired (re-generate; valid ~10 min only, single-use)');
+  console.error('  - redirect_uri does not match the one registered on the OAuth client');
   console.error('  - Wrong data center (this script targets accounts.zoho.com)');
   console.error('  - Client secret was rotated after the grant code was generated');
   process.exit(1);
