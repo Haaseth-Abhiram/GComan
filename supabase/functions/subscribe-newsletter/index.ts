@@ -1,4 +1,5 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.3";
+import { createZohoLead } from "../_shared/zoho-crm.ts";
 
 // Allowed origins whitelist
 const ALLOWED_ORIGINS = [
@@ -184,13 +185,15 @@ Deno.serve(async (req) => {
     }
 
     // Insert new subscriber
-    const { error: insertError } = await supabase
+    const { data: newSub, error: insertError } = await supabase
       .from('newsletter_subscribers')
       .insert({
         email,
         ip_address: clientIP,
         source: 'website_footer',
-      });
+      })
+      .select('id')
+      .single();
 
     if (insertError) {
       console.error('[Newsletter] Error inserting subscriber:', insertError);
@@ -201,6 +204,24 @@ Deno.serve(async (req) => {
     }
 
     console.log(`[Newsletter] Successfully subscribed: ${email}`);
+
+    // Push to Zoho CRM in background (fire-and-forget)
+    (async () => {
+      const result = await createZohoLead({
+        Last_Name: email.split('@')[0],
+        Email: email,
+        Company: 'Newsletter Subscriber',
+        Lead_Source: 'Website - Newsletter',
+        Description: 'Subscribed to newsletter via website footer',
+      });
+      if (result.success && result.leadId && newSub?.id) {
+        await supabase
+          .from('newsletter_subscribers')
+          .update({ zoho_lead_id: result.leadId, synced_to_zoho: true })
+          .eq('id', newSub.id);
+      }
+    })().catch((err) => console.error('[Newsletter] Zoho push error:', err));
+
     return new Response(
       JSON.stringify({ success: true, message: "Thank you for subscribing to our newsletter!" }),
       { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }

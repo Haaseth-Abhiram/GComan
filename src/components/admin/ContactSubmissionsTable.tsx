@@ -18,6 +18,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import { format } from 'date-fns';
 import { Loader2, Eye, Mail, MailCheck, MailX, AlertCircle, FileSpreadsheet, Search, ExternalLink, CheckCircle2, XCircle, CircleDashed } from 'lucide-react';
 import { exportToExcel } from '@/lib/exportToExcel';
+import { DateRangeFilter, inDateRange, loadDateRange, DateRange } from './DateRangeFilter';
 
 interface ContactSubmission {
   id: string;
@@ -45,6 +46,7 @@ export const ContactSubmissionsTable = () => {
   const [selectedSubmission, setSelectedSubmission] = useState<ContactSubmission | null>(null);
   const [search, setSearch] = useState('');
   const [statusFilter, setStatusFilter] = useState<'all' | 'sent' | 'failed' | 'pending'>('all');
+  const [dateRange, setDateRange] = useState<DateRange>(loadDateRange('contacts'));
 
   useEffect(() => {
     fetchSubmissions();
@@ -72,6 +74,7 @@ export const ContactSubmissionsTable = () => {
       if (statusFilter === 'sent' && s.email_sent !== true) return false;
       if (statusFilter === 'failed' && !(s.email_sent === false && s.email_error)) return false;
       if (statusFilter === 'pending' && (s.email_sent === true || s.email_error)) return false;
+      if (!inDateRange(s.created_at, dateRange)) return false;
       if (!q) return true;
       return (
         s.name.toLowerCase().includes(q) ||
@@ -82,7 +85,7 @@ export const ContactSubmissionsTable = () => {
         s.message.toLowerCase().includes(q)
       );
     });
-  }, [submissions, search, statusFilter]);
+  }, [submissions, search, statusFilter, dateRange]);
 
   const handleExport = () => {
     if (!filtered.length) return;
@@ -224,7 +227,7 @@ export const ContactSubmissionsTable = () => {
               Export Excel ({filtered.length})
             </Button>
           </div>
-          <div className="flex flex-col md:flex-row gap-3 mt-4">
+          <div className="flex flex-col md:flex-row gap-3 mt-4 md:items-end">
             <div className="relative flex-1">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
               <Input
@@ -245,6 +248,7 @@ export const ContactSubmissionsTable = () => {
                 <SelectItem value="pending">Pending</SelectItem>
               </SelectContent>
             </Select>
+            <DateRangeFilter storageKey="contacts" value={dateRange} onChange={setDateRange} />
           </div>
         </CardHeader>
         <CardContent>

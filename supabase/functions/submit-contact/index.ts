@@ -2,6 +2,7 @@ import "https://deno.land/x/xhr@0.1.0/mod.ts";
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 import { SMTPClient } from "https://deno.land/x/denomailer@1.6.0/mod.ts";
+import { createZohoLead, splitName } from "../_shared/zoho-crm.ts";
 
 // Allowed origins whitelist - prevents wildcard CORS misconfiguration
 const ALLOWED_ORIGINS = [
@@ -61,105 +62,6 @@ async function checkRateLimit(supabase: any, ipAddress: string): Promise<boolean
 
   // Max 5 submissions per IP per hour
   return (data?.length || 0) < 5;
-}
-
-// Push the submission into Zoho CRM as a Lead.
-// Fire-and-forget: never throws — failures land in zoho_error so the user
-// response and the SMTP path are never affected.
-async function pushToZohoCRM(
-  supabase: any,
-  submissionId: string,
-  sanitizedData: any,
-): Promise<void> {
-  const clientId = Deno.env.get('ZOHO_CRM_CLIENT_ID');
-  const clientSecret = Deno.env.get('ZOHO_CRM_CLIENT_SECRET');
-  const refreshToken = Deno.env.get('ZOHO_CRM_REFRESH_TOKEN');
-
-  if (!clientId || !clientSecret || !refreshToken) {
-    console.warn('Zoho CRM secrets missing; skipping CRM push for', submissionId);
-    return;
-  }
-
-  try {
-    const tokenRes = await fetch('https://accounts.zoho.com/oauth/v2/token', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams({
-        grant_type: 'refresh_token',
-        client_id: clientId,
-        client_secret: clientSecret,
-        refresh_token: refreshToken,
-      }),
-    });
-    const tokenJson = await tokenRes.json();
-    if (!tokenRes.ok || !tokenJson.access_token) {
-      throw new Error(`OAuth refresh failed: ${JSON.stringify(tokenJson)}`);
-    }
-    const accessToken: string = tokenJson.access_token;
-
-    // Split full name into first/last; single-token names go to Last_Name only
-    // (Last_Name is the only required name field on Zoho Leads).
-    const trimmedName = (sanitizedData.name as string).trim();
-    const firstSpace = trimmedName.indexOf(' ');
-    const firstName = firstSpace > 0 ? trimmedName.slice(0, firstSpace) : '';
-    const lastName = firstSpace > 0 ? trimmedName.slice(firstSpace + 1) : trimmedName;
-
-    const lead: Record<string, unknown> = {
-      Last_Name: lastName,
-      Email: sanitizedData.email,
-      Company: sanitizedData.company || '(Not provided)', // Zoho requires Company
-      Lead_Source: 'Website Contact Form',
-      Description: `[Subject: ${sanitizedData.subject}]\n\n${sanitizedData.message}`,
-    };
-    if (firstName) lead.First_Name = firstName;
-    if (sanitizedData.phone) lead.Phone = sanitizedData.phone;
-
-    // Use /upsert (not /Leads) with duplicate_check_fields so we update an
-    // existing Lead with the same Email or Phone instead of creating a second
-    // one. This keeps us safe alongside SalesIQ, SalesInbox, or any other
-    // channel that may have already created a Lead for this person.
-    const leadRes = await fetch('https://www.zohoapis.com/crm/v6/Leads/upsert', {
-      method: 'POST',
-      headers: {
-        Authorization: `Zoho-oauthtoken ${accessToken}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        data: [lead],
-        duplicate_check_fields: sanitizedData.phone ? ['Email', 'Phone'] : ['Email'],
-        trigger: ['workflow'],
-      }),
-    });
-    const leadJson = await leadRes.json();
-    const record = leadJson?.data?.[0];
-    if (!leadRes.ok || record?.status !== 'success' || !record?.details?.id) {
-      throw new Error(`Lead upsert failed: ${JSON.stringify(leadJson)}`);
-    }
-
-    const zohoLeadId: string = record.details.id;
-    const action: string = record.action || 'unknown'; // "insert" or "update"
-    console.log(`Zoho Lead ${action}:`, zohoLeadId, 'for submission', submissionId);
-
-    await supabase
-      .from('contact_submissions')
-      .update({
-        synced_to_zoho: true,
-        zoho_lead_id: zohoLeadId,
-        zoho_synced_at: new Date().toISOString(),
-        zoho_error: null,
-      })
-      .eq('id', submissionId);
-  } catch (crmError: unknown) {
-    const errorMessage = crmError instanceof Error ? crmError.message : 'Unknown CRM error';
-    console.error('Zoho CRM push failed for', submissionId, ':', errorMessage);
-    await supabase
-      .from('contact_submissions')
-      .update({
-        synced_to_zoho: false,
-        zoho_error: errorMessage.slice(0, 1000),
-      })
-      .eq('id', submissionId);
-  }
 }
 
 // Send email notification (DB already has email_sent=true optimistically)
@@ -369,10 +271,26 @@ serve(async (req) => {
       (err) => console.error('Background email notification error:', err)
     );
 
-    // Push to Zoho CRM as a Lead in the background — independent of email path.
-    pushToZohoCRM(supabase, data.id, sanitizedData).catch(
-      (err) => console.error('Background CRM push error:', err)
-    );
+    // Push to Zoho CRM in background (fire-and-forget)
+    (async () => {
+      const { first, last } = splitName(sanitizedData.name);
+      const result = await createZohoLead({
+        Last_Name: last,
+        First_Name: first,
+        Email: sanitizedData.email,
+        Phone: sanitizedData.phone || undefined,
+        Company: sanitizedData.company || 'Website Contact',
+        Lead_Source: 'Website - Contact Form',
+        Title: sanitizedData.subject,
+        Description: sanitizedData.message,
+      });
+      if (result.success && result.leadId) {
+        await supabase
+          .from('contact_submissions')
+          .update({ zoho_lead_id: result.leadId, synced_to_zoho: true })
+          .eq('id', data.id);
+      }
+    })().catch((err) => console.error('Zoho push error:', err));
 
     return new Response(
       JSON.stringify({ 
