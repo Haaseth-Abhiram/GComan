@@ -29,7 +29,7 @@ The site uses **client-side React + build-time prerendering** for SEO. Three loa
 
 ### 1. `<Helmet>` without `defer={false}`
 
-`react-helmet-async` defaults `defer: true`, deferring head commits to `requestAnimationFrame`. rAF is unreliable inside the headless puppeteer prerender, and each new `<Helmet>` cancels the previous queued frame, so prerendered pages ship with the homepage `<title>` baked in. **Every `<Helmet>` in this codebase must include `defer={false}`** — there are 16 instances (1 in SEO.tsx, 10 in StructuredData.tsx, plus one each in Login/Privacy/Terms/Sitemap/NotFound). When adding a new `<Helmet>`, always include the prop.
+`react-helmet-async` defaults `defer: true`, deferring head commits to `requestAnimationFrame`. rAF is unreliable inside the headless puppeteer prerender, and each new `<Helmet>` cancels the previous queued frame, so prerendered pages ship with the homepage `<title>` baked in. **Every `<Helmet>` in this codebase must include `defer={false}`** — there are 17 instances (1 in SEO.tsx, 11 in StructuredData.tsx, plus one each in Login/Privacy/Terms/Sitemap/NotFound). When adding a new `<Helmet>`, always include the prop.
 
 ### 2. Hardcoded page-specific meta tags in `index.html`
 
@@ -44,7 +44,7 @@ Helmet **appends** new `<meta>` tags rather than replacing existing ones. So any
 - `content-language`, `distribution`, `target`
 - font preconnect/preload `<link>`s
 - favicons
-- the global Organization / LocalBusiness / WebSite / BreadcrumbList JSON-LD scripts
+- the global Organization / LocalBusiness / WebSite / BreadcrumbList JSON-LD scripts (these are the single source of truth for site-wide entity schema; do not also mount `<LocalBusinessStructuredData />` from page components — it produces same-`@id` duplicates)
 
 Everything else (`description`, `keywords`, `robots`, `og:*`, `twitter:*`, `hreflang`, `canonical`) belongs in `<SEO>`. There's a comment block in `index.html` calling this out — preserve it.
 

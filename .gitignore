@@ -17,6 +17,12 @@ dist
 dist-ssr
 *.local
 
+# Playwright audit run artifacts (raw.json + pages.csv per run)
+audits/
+
+# Claude/agent runtime state
+.claude/scheduled_tasks.lock
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
