@@ -65,6 +65,17 @@ Edit BOTH:
 - `public/_redirects` (Netlify format, source of truth, easy to read)
 - `public/.htaccess` (Apache `RewriteRule ^pattern/?$ /target [R=301,L]` — what actually runs on Hostinger)
 
+## Bot protection (Cloudflare Turnstile)
+
+The contact form is wired for Turnstile but ships with the captcha **disabled** until both env vars are set:
+
+- **`VITE_TURNSTILE_SITE_KEY`** — public key in the bundle. Set in your Vercel/Hostinger frontend env, redeploy.
+- **`TURNSTILE_SECRET_KEY`** — server secret for the Supabase edge function. Set with `supabase secrets set TURNSTILE_SECRET_KEY=...`, then `supabase functions deploy submit-contact`.
+
+If only one is set, both halves degrade to "captcha disabled" and the form still works. Get free keys at <https://dash.cloudflare.com/?to=/:account/turnstile>.
+
+Component: [src/components/Turnstile.tsx](src/components/Turnstile.tsx). Server check: [supabase/functions/submit-contact/index.ts](supabase/functions/submit-contact/index.ts) (`verifyTurnstile`).
+
 ## Verification commands
 
 After a build (or after a production deploy), run these to confirm SEO didn't regress:

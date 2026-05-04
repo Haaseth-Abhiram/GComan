@@ -17,6 +17,7 @@ import { FAQStructuredData, BreadcrumbStructuredData } from '@/components/Struct
 import { trackFormSubmission, trackContactClick } from '@/components/GoogleAnalytics';
 import { PhoneInput } from 'react-international-phone';
 import 'react-international-phone/style.css';
+import { Turnstile, isTurnstileEnabled } from '@/components/Turnstile';
 
 // Contact page FAQs for rich snippets
 const contactFAQs = [
@@ -62,6 +63,7 @@ const Contact = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState('');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -79,15 +81,26 @@ const Contact = () => {
       // Client-side validation for better UX
       contactSchema.parse(formData);
 
+      // Block submit if Turnstile is enabled but the user hasn't solved it yet.
+      if (isTurnstileEnabled() && !turnstileToken) {
+        toast({
+          title: 'Please complete the verification',
+          description: 'Solve the captcha below before submitting.',
+          variant: 'destructive',
+        });
+        setIsSubmitting(false);
+        return;
+      }
+
       // Call the Edge Function - use hardcoded URL as fallback (publishable URL is safe)
       const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://yawbaqdywfrmuajaiptw.supabase.co';
-      
+
       const response = await fetch(`${supabaseUrl}/functions/v1/submit-contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, turnstileToken: turnstileToken || undefined }),
       });
 
       const result = await response.json();
@@ -341,10 +354,12 @@ const Contact = () => {
                       />
                     </div>
 
+                    <Turnstile onToken={setTurnstileToken} />
+
                     <Button
                       type="submit"
                       className="w-full md:w-auto px-8"
-                      disabled={isSubmitting}
+                      disabled={isSubmitting || (isTurnstileEnabled() && !turnstileToken)}
                     >
                       {isSubmitting ? (
                         <>{t('common.loading')}</>

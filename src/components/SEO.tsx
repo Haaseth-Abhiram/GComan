@@ -6,6 +6,8 @@ const BASE_URL = 'https://gcoman.com';
 
 interface SEOProps {
   title: string;
+  /** Optional override for the <title> tag only (og:title still uses `title`). Use when fitForSerp's automatic shortening is too aggressive. */
+  seoTitle?: string;
   description: string;
   keywords?: string;
   ogTitle?: string;
@@ -25,9 +27,29 @@ interface SEOProps {
 const DEFAULT_IMAGE = "https://storage.googleapis.com/gpt-engineer-file-uploads/KCdCgzQqlrUlZx0GJf8ZTPlKH1p2/social-images/social-1761453031792-resize-17607541312075170240GlobalChemicalsLLCLogoPNG.png";
 const SITE_NAME = "Global Chemicals LLC";
 const TWITTER_HANDLE = "@globalchemicals";
+const BRAND_SUFFIX = ' | Global Chemicals LLC';
+const SERP_TITLE_LIMIT = 60;
+const SERP_TITLE_SOFT_LIMIT = 65;
+
+// Smart fit for the <title> tag. Google truncates around ~580 px (≈60 chars).
+// 1. Short enough → untouched.
+// 2. Otherwise, drop the brand suffix (brand is also conveyed via og:site_name,
+//    LocalBusiness/Organization JSON-LD, and the H1).
+// 3. Still too long → word-truncate to 60 chars (no ellipsis — Google's UI handles it).
+// Override per-page by passing `seoTitle` to <SEO>.
+function fitForSerp(title: string): string {
+  if (title.length <= SERP_TITLE_LIMIT) return title;
+  const stripped = title.endsWith(BRAND_SUFFIX) ? title.slice(0, -BRAND_SUFFIX.length) : title;
+  if (stripped.length <= SERP_TITLE_SOFT_LIMIT) return stripped;
+  return stripped
+    .slice(0, SERP_TITLE_LIMIT)
+    .replace(/\s+\S*$/, '')        // drop the partial trailing word
+    .replace(/[\s:;,.\-—–|]+$/, ''); // and trailing punctuation/separators
+}
 
 export const SEO = ({
   title,
+  seoTitle,
   description,
   keywords,
   ogTitle,
@@ -43,6 +65,7 @@ export const SEO = ({
   articleSection,
   articleTags,
 }: SEOProps) => {
+  const titleForSerp = seoTitle ?? fitForSerp(title);
   const { i18n } = useTranslation();
   const location = useLocation();
 
@@ -63,7 +86,7 @@ export const SEO = ({
     // produced HTML where the <title>/og:* never updated past the index.html
     // defaults — Google then saw most routes as duplicates of /.
     <Helmet defer={false}>
-      <title>{title}</title>
+      <title>{titleForSerp}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
 

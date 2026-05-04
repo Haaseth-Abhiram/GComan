@@ -45,6 +45,33 @@ function isValidEmail(email: string): boolean {
   return emailRegex.test(email);
 }
 
+// Cloudflare Turnstile verification.
+// Returns true if no secret is configured (graceful no-op while wiring is shipped
+// before a key is provisioned), else verifies the token against Cloudflare's API.
+async function verifyTurnstile(token: string | undefined, ip: string): Promise<boolean> {
+  const secret = Deno.env.get('TURNSTILE_SECRET_KEY');
+  if (!secret) return true;
+  if (!token) return false;
+  try {
+    const form = new FormData();
+    form.append('secret', secret);
+    form.append('response', token);
+    if (ip && ip !== 'unknown') form.append('remoteip', ip);
+    const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+      method: 'POST',
+      body: form,
+    });
+    const json = await res.json();
+    if (!json.success) {
+      console.warn('Turnstile verify failed:', json['error-codes']);
+    }
+    return Boolean(json.success);
+  } catch (err) {
+    console.error('Turnstile verify error:', err);
+    return false;
+  }
+}
+
 // Rate limiting check
 async function checkRateLimit(supabase: any, ipAddress: string): Promise<boolean> {
   const oneHourAgo = new Date(Date.now() - 60 * 60 * 1000).toISOString();
@@ -165,7 +192,23 @@ serve(async (req) => {
 
     // Parse request body
     const body = await req.json();
-    const { name, email, phone, company, subject, message } = body;
+    const { name, email, phone, company, subject, message, turnstileToken } = body;
+
+    // Verify Turnstile (early reject before doing any work)
+    const captchaOk = await verifyTurnstile(turnstileToken, ipAddress);
+    if (!captchaOk) {
+      console.log('Turnstile verification failed for IP:', ipAddress);
+      return new Response(
+        JSON.stringify({
+          error: 'Captcha verification failed. Please refresh and try again.',
+          code: 'CAPTCHA_FAILED',
+        }),
+        {
+          status: 403,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        }
+      );
+    }
 
     // Server-side validation
     const errors: string[] = [];
