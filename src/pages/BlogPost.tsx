@@ -18,6 +18,12 @@ const BlogPost = () => {
   if (!post) {
     return (
       <div className="min-h-screen bg-background">
+        <SEO
+          title="Article Not Found | Global Chemicals LLC"
+          description="The blog article you're looking for doesn't exist or has been moved."
+          noIndex
+          canonical="https://gcoman.com/blog"
+        />
         <Navigation />
         <div className="container mx-auto px-4 py-32 text-center">
           <h1 className="text-4xl font-bold mb-4">Article Not Found</h1>

@@ -17,7 +17,7 @@ import soharAluminiumLogo from '@/assets/customers/sohar-aluminium-logo.png';
 import omanLngLogo from '@/assets/customers/oman-lng-logo.png';
 import omifcoLogo from '@/assets/customers/omifco-logo.png';
 import { SEO } from '@/components/SEO';
-import { BreadcrumbStructuredData, LocalBusinessStructuredData, ReviewStructuredData } from '@/components/StructuredData';
+import { BreadcrumbStructuredData, ReviewStructuredData } from '@/components/StructuredData';
 
 // Review structured data using real client sectors — signals E-E-A-T to Google
 const clientReviews = [
@@ -173,7 +173,6 @@ const Customers = () => {
         ogUrl="https://gcoman.com/customers"
         canonical="https://gcoman.com/customers"
       />
-      <LocalBusinessStructuredData />
       <ReviewStructuredData reviews={clientReviews} itemReviewed={{ name: "Global Chemicals LLC", type: "Organization" }} />
       <BreadcrumbStructuredData items={breadcrumbItems} />
       <Navigation />

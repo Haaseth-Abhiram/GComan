@@ -13,7 +13,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { useToast } from '@/hooks/use-toast';
 import { z } from 'zod';
 import { SEO } from '@/components/SEO';
-import { FAQStructuredData, BreadcrumbStructuredData, LocalBusinessStructuredData } from '@/components/StructuredData';
+import { FAQStructuredData, BreadcrumbStructuredData } from '@/components/StructuredData';
 import { trackFormSubmission, trackContactClick } from '@/components/GoogleAnalytics';
 import { PhoneInput } from 'react-international-phone';
 import 'react-international-phone/style.css';
@@ -175,7 +175,6 @@ const Contact = () => {
         ogUrl="https://gcoman.com/contact"
         canonical="https://gcoman.com/contact"
       />
-      <LocalBusinessStructuredData />
       <FAQStructuredData faqs={contactFAQs} />
       <BreadcrumbStructuredData items={breadcrumbItems} />
       <Navigation />

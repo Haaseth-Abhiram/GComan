@@ -14,7 +14,7 @@ import { Drawer, DrawerContent, DrawerHeader, DrawerTitle, DrawerDescription } f
 import { useIsMobile } from '@/hooks/use-mobile';
 import { ProductCard } from '@/components/products/ProductCard';
 import { SEO } from '@/components/SEO';
-import { OrganizationStructuredData, LocalBusinessStructuredData, BreadcrumbStructuredData, FAQStructuredData } from '@/components/StructuredData';
+import { OrganizationStructuredData, BreadcrumbStructuredData, FAQStructuredData } from '@/components/StructuredData';
 
 // FAQ structured data for products page — targets high-intent procurement queries
 const productsFAQs = [
@@ -250,7 +250,6 @@ const Products = () => {
         canonical={categoryParam ? `https://gcoman.com/products/${categoryParam}` : 'https://gcoman.com/products'}
       />
       <OrganizationStructuredData includeService={true} />
-      <LocalBusinessStructuredData />
       <BreadcrumbStructuredData items={[
         { name: 'Home', url: 'https://gcoman.com/' },
         { name: 'Products', url: 'https://gcoman.com/products' },

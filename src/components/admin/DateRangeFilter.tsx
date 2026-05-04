@@ -29,13 +29,13 @@ export const useDateRange = (storageKey: string): [DateRange, (r: DateRange) => 
 
   // Hook returns a stateful tuple; consumer wraps with React state
   return [initial, (r) => {
-    try { localStorage.setItem(`admin.dateRange.${storageKey}`, JSON.stringify(r)); } catch {}
+    try { localStorage.setItem(`admin.dateRange.${storageKey}`, JSON.stringify(r)); } catch { /* localStorage unavailable */ }
   }];
 };
 
 export const DateRangeFilter = ({ storageKey, value, onChange }: Props) => {
   useEffect(() => {
-    try { localStorage.setItem(`admin.dateRange.${storageKey}`, JSON.stringify(value)); } catch {}
+    try { localStorage.setItem(`admin.dateRange.${storageKey}`, JSON.stringify(value)); } catch { /* localStorage unavailable */ }
   }, [storageKey, value]);
 
   return (

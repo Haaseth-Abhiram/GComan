@@ -42,7 +42,7 @@ import BrochureProductsList from '@/assets/brochures/Global-Chemicals-Products-L
 import { DownloadGateDialog } from '@/components/DownloadGateDialog';
 import { PDFViewerDialog } from '@/components/PDFViewerDialog';
 import { SEO } from '@/components/SEO';
-import { HowToStructuredData, BreadcrumbStructuredData, ArticleStructuredData, FAQStructuredData, LocalBusinessStructuredData } from '@/components/StructuredData';
+import { HowToStructuredData, BreadcrumbStructuredData, ArticleStructuredData, FAQStructuredData } from '@/components/StructuredData';
 import { Link } from 'react-router-dom';
 import { blogArticles, articleCategories as blogCategories, BlogArticle } from '@/data/blogArticles';
 import { trackDownload } from '@/components/GoogleAnalytics';
@@ -1217,7 +1217,6 @@ const Resources = () => {
         totalTime="PT5M"
       />
       <BreadcrumbStructuredData items={breadcrumbItems} />
-      <LocalBusinessStructuredData />
       <Navigation />
       <WhatsAppButton />
 

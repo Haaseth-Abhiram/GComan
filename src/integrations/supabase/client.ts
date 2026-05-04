@@ -5,40 +5,36 @@ import type { Database } from './types';
 const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL || 'https://yawbaqdywfrmuajaiptw.supabase.co';
 const SUPABASE_PUBLISHABLE_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inlhd2JhcWR5d2ZybXVhamFpcHR3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjEyMjY4MDksImV4cCI6MjA3NjgwMjgwOX0.jyujxGftg1hjI00bNDm_Oc0b6BuScduslylVgqgad9c';
 
-// Enhanced diagnostics for connection issues
-console.group('🔍 Supabase Connection Diagnostics');
-console.log('VITE_SUPABASE_URL:', SUPABASE_URL || '❌ NOT SET');
-console.log('VITE_SUPABASE_PUBLISHABLE_KEY:', SUPABASE_PUBLISHABLE_KEY ? '✅ SET (hidden for security)' : '❌ NOT SET');
-console.log('Current origin:', window.location.origin);
-console.log('User agent:', navigator.userAgent);
+// Dev-only diagnostics. In prod the HEAD probe was logging a 401 on every page load
+// (RLS rejects unauthenticated probes), polluting console + error monitors.
+if (import.meta.env.DEV) {
+  console.group('🔍 Supabase Connection Diagnostics');
+  console.log('VITE_SUPABASE_URL:', SUPABASE_URL || '❌ NOT SET');
+  console.log('VITE_SUPABASE_PUBLISHABLE_KEY:', SUPABASE_PUBLISHABLE_KEY ? '✅ SET (hidden for security)' : '❌ NOT SET');
+  console.log('Current origin:', window.location.origin);
+  console.log('User agent:', navigator.userAgent);
 
-// Validate environment variables
-if (!SUPABASE_URL || !SUPABASE_PUBLISHABLE_KEY) {
-  console.error('❌ Supabase environment variables are not configured.');
-  console.error('Expected format:');
-  console.error('  VITE_SUPABASE_URL=https://xxxxx.supabase.co');
-  console.error('  VITE_SUPABASE_PUBLISHABLE_KEY=eyJhbGci...');
-} else {
-  console.log('✅ Environment variables configured');
-
-  // Test basic connectivity
-  fetch(SUPABASE_URL + '/rest/v1/', {
-    method: 'HEAD',
-    headers: {
-      'apikey': SUPABASE_PUBLISHABLE_KEY,
-    }
-  })
-    .then(response => {
-      console.log('✅ Backend connectivity test:', response.status, response.statusText);
+  if (!SUPABASE_URL || !SUPABASE_PUBLISHABLE_KEY) {
+    console.error('❌ Supabase environment variables are not configured.');
+    console.error('Expected format:');
+    console.error('  VITE_SUPABASE_URL=https://xxxxx.supabase.co');
+    console.error('  VITE_SUPABASE_PUBLISHABLE_KEY=eyJhbGci...');
+  } else {
+    console.log('✅ Environment variables configured');
+    fetch(SUPABASE_URL + '/rest/v1/', {
+      method: 'HEAD',
+      headers: { apikey: SUPABASE_PUBLISHABLE_KEY },
     })
-    .catch(error => {
-      console.error('❌ Backend connectivity test FAILED:');
-      console.error('Error type:', error.name);
-      console.error('Error message:', error.message);
-      console.error('This suggests a network/firewall/CORS issue preventing browser from reaching:', SUPABASE_URL);
-    });
+      .then((response) => console.log('✅ Backend connectivity test:', response.status, response.statusText))
+      .catch((error) => {
+        console.error('❌ Backend connectivity test FAILED:');
+        console.error('Error type:', error.name);
+        console.error('Error message:', error.message);
+        console.error('Suggests a network/firewall/CORS issue reaching:', SUPABASE_URL);
+      });
+  }
+  console.groupEnd();
 }
-console.groupEnd();
 
 // Import the supabase client like this:
 // import { supabase } from "@/integrations/supabase/client";

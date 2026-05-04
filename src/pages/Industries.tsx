@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { SEO } from '@/components/SEO';
-import { FAQStructuredData, LocalBusinessStructuredData, BreadcrumbStructuredData } from '@/components/StructuredData';
+import { FAQStructuredData, BreadcrumbStructuredData } from '@/components/StructuredData';
 import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -331,7 +331,6 @@ const Industries = () => {
         ogUrl="https://gcoman.com/industries"
         canonical="https://gcoman.com/industries"
       />
-      <LocalBusinessStructuredData />
       <BreadcrumbStructuredData items={[
         { name: 'Home', url: 'https://gcoman.com/' },
         { name: 'Industries', url: 'https://gcoman.com/industries' },

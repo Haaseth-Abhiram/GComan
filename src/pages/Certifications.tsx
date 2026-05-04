@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import { Shield, Award, CheckCircle2, FileCheck, Globe, Users, Leaf, TrendingUp } from 'lucide-react';
 import { SEO } from '@/components/SEO';
-import { BreadcrumbStructuredData, FAQStructuredData, LocalBusinessStructuredData, OrganizationStructuredData } from '@/components/StructuredData';
+import { BreadcrumbStructuredData, FAQStructuredData, OrganizationStructuredData } from '@/components/StructuredData';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
@@ -226,7 +226,6 @@ const Certifications = () => {
         ogUrl="https://gcoman.com/certifications"
         canonical="https://gcoman.com/certifications"
       />
-      <LocalBusinessStructuredData />
       <OrganizationStructuredData />
       <BreadcrumbStructuredData items={breadcrumbItems} />
       <FAQStructuredData faqs={certificationFAQs} />

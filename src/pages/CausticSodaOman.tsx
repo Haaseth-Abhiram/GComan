@@ -3,7 +3,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import { SEO } from '@/components/SEO';
-import { FAQStructuredData, LocalBusinessStructuredData, BreadcrumbStructuredData } from '@/components/StructuredData';
+import { FAQStructuredData, BreadcrumbStructuredData } from '@/components/StructuredData';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -105,7 +105,6 @@ const CausticSodaOman = () => {
         ogUrl="https://gcoman.com/chemical-supplier/caustic-soda-oman"
         canonical="https://gcoman.com/chemical-supplier/caustic-soda-oman"
       />
-      <LocalBusinessStructuredData />
       <FAQStructuredData faqs={faqs} />
       <BreadcrumbStructuredData items={breadcrumbItems} />
       <Navigation />

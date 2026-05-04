@@ -92,9 +92,14 @@ const ProductDetail = () => {
 
   const Icon = product.icon;
 
-  // Generate SEO-optimized description — includes GCC cities
-  const seoDescription = product.details?.longDescription ||
+  // Generate SEO-optimized description — includes GCC cities.
+  // Truncate at ~155 chars (Google SERP limit) at a word boundary; longDescription
+  // is the full article body and was leaking 1.6KB+ into the meta description.
+  const rawDescription = product.details?.longDescription ||
     `${product.title} supplier in Oman & GCC. ${product.description} High-quality ${product.title.toLowerCase()} for water treatment, industrial, and commercial applications. Exporting to Dubai, Riyadh, Doha, Kuwait, Bahrain. Serving Muscat, Sohar, Salalah. Contact Global Chemicals LLC for pricing and technical specifications.`;
+  const seoDescription = rawDescription.length <= 155
+    ? rawDescription
+    : rawDescription.slice(0, 154).replace(/\s+\S*$/, '') + '…';
 
   // Generate keywords — auto-adds UAE/Saudi/Qatar variants for every product
   const keywords = [
