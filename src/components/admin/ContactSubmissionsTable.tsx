@@ -53,6 +53,8 @@ export const ContactSubmissionsTable = () => {
   const [search, setSearch] = useState('');
   const [statusFilter, setStatusFilter] = useState<'all' | 'sent' | 'failed' | 'pending'>('all');
   const [dateRange, setDateRange] = useState<DateRange>(loadDateRange('contacts'));
+  const [deleteTarget, setDeleteTarget] = useState<ContactSubmission | null>(null);
+  const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
     fetchSubmissions();
