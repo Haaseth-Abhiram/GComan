@@ -349,8 +349,6 @@ export const ContactSubmissionsTable = () => {
               </div>
             </div>
           )}
-            </div>
-          )}
           {selectedSubmission && (
             <div className="flex justify-end pt-2">
               <Button
