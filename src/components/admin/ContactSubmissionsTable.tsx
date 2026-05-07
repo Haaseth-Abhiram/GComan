@@ -14,9 +14,20 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from '@/components/ui/alert-dialog';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { format } from 'date-fns';
-import { Loader2, Eye, Mail, MailCheck, MailX, AlertCircle, FileSpreadsheet, Search } from 'lucide-react';
+import { Loader2, Eye, Mail, MailCheck, MailX, AlertCircle, FileSpreadsheet, Search, Trash2 } from 'lucide-react';
+import { toast } from '@/hooks/use-toast';
 import { exportToExcel } from '@/lib/exportToExcel';
 import { DateRangeFilter, inDateRange, loadDateRange, DateRange } from './DateRangeFilter';
 
@@ -42,6 +53,8 @@ export const ContactSubmissionsTable = () => {
   const [search, setSearch] = useState('');
   const [statusFilter, setStatusFilter] = useState<'all' | 'sent' | 'failed' | 'pending'>('all');
   const [dateRange, setDateRange] = useState<DateRange>(loadDateRange('contacts'));
+  const [deleteTarget, setDeleteTarget] = useState<ContactSubmission | null>(null);
+  const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
     fetchSubmissions();
@@ -60,6 +73,27 @@ export const ContactSubmissionsTable = () => {
       console.error('Error fetching contact submissions:', error);
     } finally {
       setIsLoading(false);
+    }
+  };
+
+  const handleDelete = async () => {
+    if (!deleteTarget) return;
+    setIsDeleting(true);
+    try {
+      const { error } = await supabase
+        .from('contact_submissions')
+        .delete()
+        .eq('id', deleteTarget.id);
+      if (error) throw error;
+      setSubmissions((prev) => prev.filter((s) => s.id !== deleteTarget.id));
+      toast({ title: 'Submission deleted', description: `Removed contact from ${deleteTarget.name}.` });
+      setDeleteTarget(null);
+      if (selectedSubmission?.id === deleteTarget.id) setSelectedSubmission(null);
+    } catch (err: any) {
+      console.error('Delete error:', err);
+      toast({ title: 'Delete failed', description: err.message || 'Could not delete submission.', variant: 'destructive' });
+    } finally {
+      setIsDeleting(false);
     }
   };
 
@@ -228,14 +262,24 @@ export const ContactSubmissionsTable = () => {
                         {getEmailStatusBadge(submission)}
                       </TableCell>
                       <TableCell>
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          onClick={() => setSelectedSubmission(submission)}
-                        >
-                          <Eye className="h-4 w-4 mr-1" />
-                          View
-                        </Button>
+                        <div className="flex gap-2">
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={() => setSelectedSubmission(submission)}
+                          >
+                            <Eye className="h-4 w-4 mr-1" />
+                            View
+                          </Button>
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="text-destructive hover:text-destructive"
+                            onClick={() => setDeleteTarget(submission)}
+                          >
+                            <Trash2 className="h-4 w-4" />
+                          </Button>
+                        </div>
                       </TableCell>
                     </TableRow>
                   ))
@@ -305,8 +349,41 @@ export const ContactSubmissionsTable = () => {
               </div>
             </div>
           )}
+          {selectedSubmission && (
+            <div className="flex justify-end pt-2">
+              <Button
+                variant="destructive"
+                size="sm"
+                onClick={() => setDeleteTarget(selectedSubmission)}
+              >
+                <Trash2 className="h-4 w-4 mr-1" />
+                Delete Submission
+              </Button>
+            </div>
+          )}
         </DialogContent>
       </Dialog>
+
+      <AlertDialog open={!!deleteTarget} onOpenChange={(open) => !open && setDeleteTarget(null)}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Delete contact submission?</AlertDialogTitle>
+            <AlertDialogDescription>
+              This will permanently remove the submission from {deleteTarget?.name} ({deleteTarget?.email}). This action cannot be undone.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel disabled={isDeleting}>Cancel</AlertDialogCancel>
+            <AlertDialogAction
+              onClick={(e) => { e.preventDefault(); handleDelete(); }}
+              disabled={isDeleting}
+              className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+            >
+              {isDeleting ? <Loader2 className="h-4 w-4 animate-spin" /> : 'Delete'}
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </>
   );
 };
