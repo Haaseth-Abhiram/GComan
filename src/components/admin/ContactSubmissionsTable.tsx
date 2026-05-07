@@ -349,8 +349,43 @@ export const ContactSubmissionsTable = () => {
               </div>
             </div>
           )}
+            </div>
+          )}
+          {selectedSubmission && (
+            <div className="flex justify-end pt-2">
+              <Button
+                variant="destructive"
+                size="sm"
+                onClick={() => setDeleteTarget(selectedSubmission)}
+              >
+                <Trash2 className="h-4 w-4 mr-1" />
+                Delete Submission
+              </Button>
+            </div>
+          )}
         </DialogContent>
       </Dialog>
+
+      <AlertDialog open={!!deleteTarget} onOpenChange={(open) => !open && setDeleteTarget(null)}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Delete contact submission?</AlertDialogTitle>
+            <AlertDialogDescription>
+              This will permanently remove the submission from {deleteTarget?.name} ({deleteTarget?.email}). This action cannot be undone.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel disabled={isDeleting}>Cancel</AlertDialogCancel>
+            <AlertDialogAction
+              onClick={(e) => { e.preventDefault(); handleDelete(); }}
+              disabled={isDeleting}
+              className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+            >
+              {isDeleting ? <Loader2 className="h-4 w-4 animate-spin" /> : 'Delete'}
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </>
   );
 };
