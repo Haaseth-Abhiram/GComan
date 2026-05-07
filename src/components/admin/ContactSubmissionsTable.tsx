@@ -76,6 +76,27 @@ export const ContactSubmissionsTable = () => {
     }
   };
 
+  const handleDelete = async () => {
+    if (!deleteTarget) return;
+    setIsDeleting(true);
+    try {
+      const { error } = await supabase
+        .from('contact_submissions')
+        .delete()
+        .eq('id', deleteTarget.id);
+      if (error) throw error;
+      setSubmissions((prev) => prev.filter((s) => s.id !== deleteTarget.id));
+      toast({ title: 'Submission deleted', description: `Removed contact from ${deleteTarget.name}.` });
+      setDeleteTarget(null);
+      if (selectedSubmission?.id === deleteTarget.id) setSelectedSubmission(null);
+    } catch (err: any) {
+      console.error('Delete error:', err);
+      toast({ title: 'Delete failed', description: err.message || 'Could not delete submission.', variant: 'destructive' });
+    } finally {
+      setIsDeleting(false);
+    }
+  };
+
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();
     return submissions.filter((s) => {
