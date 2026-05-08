@@ -208,10 +208,29 @@ Deno.serve(async (req) => {
     const supabaseKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
     const supabase = createClient(supabaseUrl, supabaseKey);
 
+    const ipAddress = getClientIP(req);
+
+    // IP-based rate limiting (defence against rotating-email abuse)
+    if (isIpRateLimited(ipAddress)) {
+      console.log('IP rate limit exceeded:', ipAddress);
+      return new Response(
+        JSON.stringify({ error: 'Too many applications from your network. Please try again later.' }),
+        { status: 429, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
     // Parse multipart form data
     const formData = await req.formData();
-    
-    // Extract and sanitize application data
+
+    // Verify Cloudflare Turnstile (no-op if TURNSTILE_SECRET_KEY not set)
+    const turnstileToken = (formData.get('turnstileToken') as string | null) || undefined;
+    const captchaOk = await verifyTurnstile(turnstileToken, ipAddress);
+    if (!captchaOk) {
+      return new Response(
+        JSON.stringify({ error: 'Captcha verification failed. Please try again.' }),
+        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
     const applicationData: ApplicationData = {
       name: sanitizeString(formData.get('name') as string || ''),
       email: (formData.get('email') as string || '').trim().toLowerCase(),
