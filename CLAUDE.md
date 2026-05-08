@@ -113,6 +113,6 @@ curl -sI https://gcoman.com/service/calcium-carbonate/ -o /dev/null -w '%{http_c
 
 ## Reference docs in this repo
 
-- [docs/seo/](docs/seo/) — historical audits and improvement plans
-- [SEO/](SEO/) — Google Search Console issue reports
+- [docs/seo/](docs/seo/) — historical SEO audits, GSC issue reports, improvement plans
+- [docs/audits/](docs/audits/) — full-site audit reports (security + SEO + bugs combined)
 - `public/sitemap.xml` — drives the prerender plugin
