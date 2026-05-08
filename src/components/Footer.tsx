@@ -100,7 +100,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 lg:gap-10 mb-12">
           {/* Company Info */}
           <div className="space-y-6 md:col-span-2 lg:col-span-1">
-            <Link to="/" className="inline-block bg-white rounded-lg p-4 hover:shadow-lg transition-all">
+            <Link
+              to="/"
+              aria-label="Global Chemicals LLC – Home"
+              className="inline-block bg-white rounded-lg p-4 hover:shadow-lg transition-all"
+            >
               <img
                 src={logo}
                 alt="Global Chemicals LLC Logo"
