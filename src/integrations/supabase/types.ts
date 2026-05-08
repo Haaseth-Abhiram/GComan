@@ -14,6 +14,24 @@ export type Database = {
   }
   public: {
     Tables: {
+      ai_search_rate_limits: {
+        Row: {
+          ip_address: string
+          request_count: number
+          window_start: string
+        }
+        Insert: {
+          ip_address: string
+          request_count?: number
+          window_start?: string
+        }
+        Update: {
+          ip_address?: string
+          request_count?: number
+          window_start?: string
+        }
+        Relationships: []
+      }
       contact_submissions: {
         Row: {
           company: string | null
