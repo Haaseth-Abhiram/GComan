@@ -28,29 +28,45 @@ function getCorsHeaders(req: Request) {
   };
 }
 
-// In-memory rate limiter
-const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
+// Persistent rate limiter (DB-backed) — shared across all edge function instances.
 const RATE_LIMIT_MAX = 10; // requests per window
 const RATE_LIMIT_WINDOW_MS = 60_000; // 1 minute
 
-function isRateLimited(ip: string): boolean {
-  const now = Date.now();
-  const entry = rateLimitMap.get(ip);
-  if (!entry || now > entry.resetTime) {
-    rateLimitMap.set(ip, { count: 1, resetTime: now + RATE_LIMIT_WINDOW_MS });
+const supabaseAdmin = createClient(
+  Deno.env.get("SUPABASE_URL") ?? "",
+  Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
+  { auth: { persistSession: false } }
+);
+
+async function isRateLimited(ip: string): Promise<boolean> {
+  try {
+    const windowStart = new Date(Math.floor(Date.now() / RATE_LIMIT_WINDOW_MS) * RATE_LIMIT_WINDOW_MS).toISOString();
+    // Upsert + increment using two-step (Postgres lacks a single-call atomic increment via PostgREST).
+    const { data: existing } = await supabaseAdmin
+      .from("ai_search_rate_limits")
+      .select("request_count")
+      .eq("ip_address", ip)
+      .eq("window_start", windowStart)
+      .maybeSingle();
+
+    const nextCount = (existing?.request_count ?? 0) + 1;
+    await supabaseAdmin
+      .from("ai_search_rate_limits")
+      .upsert({ ip_address: ip, window_start: windowStart, request_count: nextCount });
+
+    // Best-effort cleanup of old rows (older than 1 hour) — fire and forget.
+    if (Math.random() < 0.05) {
+      const cutoff = new Date(Date.now() - 60 * 60 * 1000).toISOString();
+      supabaseAdmin.from("ai_search_rate_limits").delete().lt("window_start", cutoff).then(() => {});
+    }
+
+    return nextCount > RATE_LIMIT_MAX;
+  } catch (err) {
+    console.error("rate limit check failed:", err);
+    // Fail-open to avoid blocking legitimate traffic on infra hiccups.
     return false;
   }
-  entry.count++;
-  return entry.count > RATE_LIMIT_MAX;
 }
-
-// Cleanup stale entries periodically
-setInterval(() => {
-  const now = Date.now();
-  for (const [key, val] of rateLimitMap) {
-    if (now > val.resetTime) rateLimitMap.delete(key);
-  }
-}, 60_000);
 
 const COMPANY_CONTEXT = `You are an AI search assistant for Global Chemicals LLC (gcoman.com), a leading chemical supplier in Oman (Muscat).
 
