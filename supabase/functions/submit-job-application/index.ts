@@ -110,7 +110,52 @@ function validateApplicationData(data: ApplicationData): { valid: boolean; error
   return { valid: true };
 }
 
-// Rate limiting function
+// Cloudflare Turnstile verification (no-op if secret not configured)
+async function verifyTurnstile(token: string | undefined, ip: string): Promise<boolean> {
+  const secret = Deno.env.get('TURNSTILE_SECRET_KEY');
+  if (!secret) return true;
+  if (!token) return false;
+  try {
+    const form = new FormData();
+    form.append('secret', secret);
+    form.append('response', token);
+    if (ip && ip !== 'unknown') form.append('remoteip', ip);
+    const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+      method: 'POST',
+      body: form,
+    });
+    const json = await res.json();
+    if (!json.success) console.warn('Turnstile verify failed:', json['error-codes']);
+    return Boolean(json.success);
+  } catch (err) {
+    console.error('Turnstile verify error:', err);
+    return false;
+  }
+}
+
+function getClientIP(req: Request): string {
+  return req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
+         req.headers.get('x-real-ip') ||
+         req.headers.get('cf-connecting-ip') ||
+         'unknown';
+}
+
+// In-memory IP rate limiter (per cold-start instance)
+const ipRateLimitMap = new Map<string, { count: number; resetTime: number }>();
+const IP_RATE_LIMIT_MAX = 3;
+const IP_RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000; // 1 hour
+function isIpRateLimited(ip: string): boolean {
+  if (!ip || ip === 'unknown') return false;
+  const now = Date.now();
+  const rec = ipRateLimitMap.get(ip);
+  if (!rec || now > rec.resetTime) {
+    ipRateLimitMap.set(ip, { count: 1, resetTime: now + IP_RATE_LIMIT_WINDOW_MS });
+    return false;
+  }
+  if (rec.count >= IP_RATE_LIMIT_MAX) return true;
+  rec.count++;
+  return false;
+}
 async function checkRateLimit(supabase: any, email: string): Promise<{ allowed: boolean; error?: string }> {
   const oneHourAgo = new Date(Date.now() - 60 * 60 * 1000).toISOString();
   const oneDayAgo = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
@@ -163,10 +208,29 @@ Deno.serve(async (req) => {
     const supabaseKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
     const supabase = createClient(supabaseUrl, supabaseKey);
 
+    const ipAddress = getClientIP(req);
+
+    // IP-based rate limiting (defence against rotating-email abuse)
+    if (isIpRateLimited(ipAddress)) {
+      console.log('IP rate limit exceeded:', ipAddress);
+      return new Response(
+        JSON.stringify({ error: 'Too many applications from your network. Please try again later.' }),
+        { status: 429, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
     // Parse multipart form data
     const formData = await req.formData();
-    
-    // Extract and sanitize application data
+
+    // Verify Cloudflare Turnstile (no-op if TURNSTILE_SECRET_KEY not set)
+    const turnstileToken = (formData.get('turnstileToken') as string | null) || undefined;
+    const captchaOk = await verifyTurnstile(turnstileToken, ipAddress);
+    if (!captchaOk) {
+      return new Response(
+        JSON.stringify({ error: 'Captcha verification failed. Please try again.' }),
+        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
     const applicationData: ApplicationData = {
       name: sanitizeString(formData.get('name') as string || ''),
       email: (formData.get('email') as string || '').trim().toLowerCase(),

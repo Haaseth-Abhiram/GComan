@@ -8,15 +8,18 @@ const ALLOWED_ORIGINS = [
   'https://gcoman.lovable.app',
   'https://global-chemicals-llc.lovable.app',
   'https://88275aec-3e28-4007-bd65-43d79fa41e87.lovableproject.com',
-  'http://localhost:5173',
-  'http://localhost:8080',
 ];
 
 function getCorsOrigin(req: Request): string {
   const origin = req.headers.get('Origin') || '';
-  // Also allow Lovable preview URLs
-  if (origin.includes('lovable.app') || origin.includes('lovableproject.com')) {
-    return origin;
+  // Also allow Lovable preview URLs (strict suffix match to prevent spoofing)
+  try {
+    const host = new URL(origin).hostname;
+    if (host.endsWith('.lovable.app') || host.endsWith('.lovableproject.com')) {
+      return origin;
+    }
+  } catch (_) {
+    // fall through
   }
   return ALLOWED_ORIGINS.includes(origin) ? origin : 'https://www.gcoman.com';
 }

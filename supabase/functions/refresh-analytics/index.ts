@@ -3,12 +3,33 @@
 // reflects live activity.
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";
 
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers":
-    "authorization, x-client-info, apikey, content-type",
-  "Access-Control-Allow-Methods": "POST, OPTIONS",
-};
+const ALLOWED_ORIGINS = [
+  'https://www.gcoman.com',
+  'https://gcoman.com',
+  'https://gcoman.lovable.app',
+  'https://global-chemicals-llc.lovable.app',
+  'https://88275aec-3e28-4007-bd65-43d79fa41e87.lovableproject.com',
+];
+
+function getCorsOrigin(req: Request): string {
+  const origin = req.headers.get('Origin') || '';
+  try {
+    const host = new URL(origin).hostname;
+    if (host.endsWith('.lovable.app') || host.endsWith('.lovableproject.com')) {
+      return origin;
+    }
+  } catch (_) {}
+  return ALLOWED_ORIGINS.includes(origin) ? origin : 'https://www.gcoman.com';
+}
+
+function getCorsHeaders(req: Request) {
+  return {
+    "Access-Control-Allow-Origin": getCorsOrigin(req),
+    "Access-Control-Allow-Headers":
+      "authorization, x-client-info, apikey, content-type",
+    "Access-Control-Allow-Methods": "POST, OPTIONS",
+  };
+}
 
 interface DailyBucket {
   date: string;
@@ -22,6 +43,7 @@ function ymd(d: Date): string {
 }
 
 Deno.serve(async (req) => {
+  const corsHeaders = getCorsHeaders(req);
   if (req.method === "OPTIONS") {
     return new Response("ok", { headers: corsHeaders });
   }
