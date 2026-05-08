@@ -22,13 +22,17 @@ interface ProductStructuredDataProps {
 }
 
 export const ProductStructuredData = ({ product, url }: ProductStructuredDataProps) => {
+  // TODO(images): backfill `image` on every product JSON in src/data/products/*.
+  // Today most products have no image and we fall back to the site logo, which
+  // means Google sees the same image for every product — bad for image search
+  // and for Product rich result eligibility.
   const productSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": product.title,
     "description": product.description,
     "category": product.category,
-    "image": product.image || "https://storage.googleapis.com/gpt-engineer-file-uploads/KCdCgzQqlrUlZx0GJf8ZTPlKH1p2/social-images/social-1761453031792-resize-17607541312075170240GlobalChemicalsLLCLogoPNG.png",
+    "image": product.image || "https://gcoman.com/logo.png",
     ...(url && { "url": url }),
     "brand": {
       "@type": "Brand",
@@ -52,48 +56,11 @@ export const ProductStructuredData = ({ product, url }: ProductStructuredDataPro
         "availableLanguage": ["en", "ar"]
       }
     },
-    "offers": {
-      "@type": "AggregateOffer",
-      "availability": "https://schema.org/InStock",
-      "priceCurrency": "USD",
-      "url": url || "https://gcoman.com/contact",
-      "seller": {
-        "@type": "Organization",
-        "name": "Global Chemicals LLC",
-        "url": "https://gcoman.com"
-      },
-      "priceSpecification": {
-        "@type": "PriceSpecification",
-        "priceCurrency": "USD",
-        "price": "Contact for Quote"
-      },
-      "shippingDetails": {
-        "@type": "OfferShippingDetails",
-        "shippingDestination": [
-          { "@type": "DefinedRegion", "addressCountry": "OM" },
-          { "@type": "DefinedRegion", "addressCountry": "AE" },
-          { "@type": "DefinedRegion", "addressCountry": "SA" },
-          { "@type": "DefinedRegion", "addressCountry": "QA" },
-          { "@type": "DefinedRegion", "addressCountry": "KW" },
-          { "@type": "DefinedRegion", "addressCountry": "BH" }
-        ],
-        "deliveryTime": {
-          "@type": "ShippingDeliveryTime",
-          "handlingTime": {
-            "@type": "QuantitativeValue",
-            "minValue": 1,
-            "maxValue": 2,
-            "unitCode": "DAY"
-          },
-          "transitTime": {
-            "@type": "QuantitativeValue",
-            "minValue": 1,
-            "maxValue": 3,
-            "unitCode": "DAY"
-          }
-        }
-      }
-    },
+    // Price-on-application: pricing is not published, so the Product is emitted
+    // without an `offers` block. An Offer with no price still triggered GSC's
+    // Product Snippets validator with "missing lowPrice"; dropping it removes
+    // the validator error while keeping the page indexed normally (no rich
+    // Product card in SERP, but no error either).
     ...(product.details?.alternativeNames && {
       "alternateName": product.details.alternativeNames
     }),
@@ -429,6 +396,7 @@ export const JobPostingStructuredData = ({
         "streetAddress": "Office-3, Building Number 1737, Near Oman LNG",
         "addressLocality": location.split(',')[0]?.trim() || "Muscat",
         "addressRegion": "Muscat Governorate",
+        "postalCode": "112",
         "addressCountry": "OM"
       }
     },
