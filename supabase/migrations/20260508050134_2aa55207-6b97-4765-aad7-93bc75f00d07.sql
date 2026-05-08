@@ -1,0 +1,1 @@
+DROP POLICY IF EXISTS "Users can upload their own resume" ON storage.objects;
