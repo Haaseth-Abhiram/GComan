@@ -328,6 +328,25 @@
     "iconName": "Droplets",
     "details": {
       "formula": "NaOH",
+      "molecule": {
+        "atoms": [
+          { "el": "Na", "x": 18, "y": 50 },
+          { "el": "O",  "x": 50, "y": 50 },
+          { "el": "H",  "x": 82, "y": 50 }
+        ],
+        "bonds": [
+          { "from": 0, "to": 1, "order": 1, "kind": "ionic" },
+          { "from": 1, "to": 2, "order": 1, "kind": "covalent" }
+        ]
+      },
+      "hazard": {
+        "ghs": ["GHS05"],
+        "unNumber": "1823",
+        "hazardClass": "Class 8 — Corrosive",
+        "signalWord": "Danger",
+        "storage": "Cool, dry, sealed. Keep away from acids, aluminium, zinc and tin. Use PVC, FRP or stainless-steel handling equipment only."
+      },
+      "documents": {},
       "casNumber": "1310-73-2",
       "alternativeNames": [
         "Sodium hydroxide flakes",

@@ -40,6 +40,9 @@ const ChemicalSuppliersMiddleEast = lazy(() => import("./pages/ChemicalSuppliers
 const CausticSodaOman = lazy(() => import("./pages/CausticSodaOman"));
 const ThankYou = lazy(() => import("./pages/ThankYou"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+// Internal design tool. Not in sitemap.xml so it doesn't get prerendered or
+// indexed. Reachable manually at /dev/chemistry-playground in any environment.
+const ChemistryPlayground = lazy(() => import("./pages/ChemistryPlayground"));
 
 const queryClient = new QueryClient();
 
@@ -115,6 +118,10 @@ const App = () => (
                 <Route path="/chemical-suppliers-middle-east" element={<ChemicalSuppliersMiddleEast />} />
                 <Route path="/chemical-supplier/caustic-soda-oman" element={<CausticSodaOman />} />
                 <Route path="/thank-you" element={<ThankYou />} />
+
+                {/* Internal design tool — kept out of sitemap.xml on purpose
+                    so it never enters the prerender or indexing pipeline. */}
+                <Route path="/dev/chemistry-playground" element={<ChemistryPlayground />} />
 
                 {/* Location-specific landing pages for SEO */}
                 <Route path="/chemicals/:location" element={<LocationLanding />} />

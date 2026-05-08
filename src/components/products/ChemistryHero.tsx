@@ -1,0 +1,62 @@
+import { Suspense, lazy, useEffect, useState } from 'react';
+import type { MoleculeSpec } from '@/data/productTypes';
+import type { ChemistryHeroTuning } from './ChemistryHero3D';
+
+// three.js + r3f only loads on demand. Keeps the main bundle slim.
+const ChemistryHero3D = lazy(() => import('./ChemistryHero3D'));
+
+export interface ChemistryHeroProps {
+  formula: string;
+  molecule: MoleculeSpec;
+  productTitle: string;
+  /** Override visual tuning (used by /dev/chemistry-playground). */
+  tuning?: Partial<ChemistryHeroTuning>;
+}
+
+// Detect headless prerender (Puppeteer). The 3D Canvas keeps a permanent
+// requestAnimationFrame loop running, which prevents the prerender's idle
+// detection from firing — every product route then exhausts puppeteer's 30 s
+// navigation budget. Real browsers still get the full 3D scene.
+const isPrerender = (): boolean => {
+  if (typeof navigator === 'undefined') return true;
+  return /HeadlessChrome|Prerender/i.test(navigator.userAgent);
+};
+
+export const ChemistryHero = ({ formula, molecule, productTitle, tuning }: ChemistryHeroProps) => {
+  // Defer mounting until after client hydration so the prerendered HTML is the
+  // static fallback (better SEO, no canvas-related layout shift on slow clients).
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    if (isPrerender()) return; // prerender keeps the static fallback
+    setMounted(true);
+  }, []);
+
+  return (
+    <Suspense fallback={<HeroFallback formula={formula} />}>
+      {mounted ? (
+        <ChemistryHero3D
+          formula={formula}
+          molecule={molecule}
+          productTitle={productTitle}
+          tuning={tuning}
+        />
+      ) : (
+        <HeroFallback formula={formula} />
+      )}
+    </Suspense>
+  );
+};
+
+const HeroFallback = ({ formula }: { formula: string }) => (
+  <div
+    aria-hidden
+    className="relative flex h-[320px] sm:h-[380px] md:h-[420px] w-full items-center justify-center overflow-hidden rounded-xl border border-border bg-gradient-to-br from-primary/5 via-background to-secondary/5"
+  >
+    <div className="text-center">
+      <div className="mb-2 inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-mono">
+        <span className="font-semibold text-primary">{formula}</span>
+      </div>
+      <p className="text-xs text-muted-foreground">Loading interactive molecule…</p>
+    </div>
+  </div>
+);

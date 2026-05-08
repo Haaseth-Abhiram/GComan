@@ -4,17 +4,16 @@ import { loadProductsByCategory, loadAllProducts } from '@/data/productLoader';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
-import { Card } from '@/components/ui/card';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Beaker, Droplets, Wrench, Zap, FlaskConical, TestTube, Factory, Building2, Wheat, Microscope, Sparkles, FlaskRound, Flame, Wind, Wine, ChevronRight, Shield, SprayCan, Search, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useParams } from 'react-router-dom';
 import { AISearchDialog } from '@/components/AISearchDialog';
-import { Drawer, DrawerContent, DrawerHeader, DrawerTitle, DrawerDescription } from '@/components/ui/drawer';
-import { useIsMobile } from '@/hooks/use-mobile';
 import { ProductCard } from '@/components/products/ProductCard';
 import { SEO } from '@/components/SEO';
 import { OrganizationStructuredData, BreadcrumbStructuredData, FAQStructuredData } from '@/components/StructuredData';
+import { trackSearch } from '@/components/GoogleAnalytics';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
 
 // FAQ structured data for products page — targets high-intent procurement queries
 const productsFAQs = [
@@ -39,9 +38,6 @@ const productsFAQs = [
     answer: "For Muscat and Rusayl Industrial Area: same-day delivery for orders before 12:00 PM. For Sohar and surrounding areas: next-day delivery. For Salalah, Duqm, Nizwa, Sur: 2–3 business days. Emergency and weekend deliveries can be arranged. Contact us at +968-93754388 for urgent requirements."
   }
 ];
-import { trackSearch } from '@/components/GoogleAnalytics';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
 
 interface Product {
   id: string;
@@ -67,13 +63,11 @@ const Products = () => {
   const { t } = useTranslation();
   const { category: categoryParam } = useParams<{ category?: string }>();
 
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [activeCategory, setActiveCategory] = useState(categoryParam || 'all');
   const [searchQuery, setSearchQuery] = useState('');
   const [isAISearchOpen, setIsAISearchOpen] = useState(false);
   const [products, setProducts] = useState<Product[]>([]);
   const [productsLoading, setProductsLoading] = useState(true);
-  const isMobile = useIsMobile();
 
   // Sync URL category param → active filter when navigating between category routes
   useEffect(() => {
@@ -131,16 +125,17 @@ const Products = () => {
 
   // Memoize filtered products to prevent recalculating on every render
   const filteredProducts = useMemo(() => {
+    const trimmedQuery = searchQuery.trim();
+    // Search is global: when the user has typed a query, ignore the active
+    // category so they don't get an empty page when their term lives in a
+    // sibling category (e.g. searching "PAC" while on Oilfield).
     let filtered = products;
-
-    // Filter by category
-    if (activeCategory !== 'all') {
+    if (!trimmedQuery && activeCategory !== 'all') {
       filtered = filtered.filter((product) => product.category === activeCategory);
     }
 
-    // Filter by search query
-    if (searchQuery.trim()) {
-      const query = searchQuery.toLowerCase();
+    if (trimmedQuery) {
+      const query = trimmedQuery.toLowerCase();
       filtered = filtered.filter((product) => {
         // Search in title
         if (product.title.toLowerCase().includes(query)) return true;
@@ -177,14 +172,10 @@ const Products = () => {
     }
 
     return filtered;
-  }, [activeCategory, searchQuery]);
-
-  // Keep getFilteredProducts for backward compatibility with existing code
-  const getFilteredProducts = (categoryId: string) => {
-    if (categoryId === activeCategory) return filteredProducts;
-    if (categoryId === 'all') return products;
-    return products.filter((product) => product.category === categoryId);
-  };
+    // `products` MUST be in deps — otherwise the memo returns its initial empty
+    // result after the lazy JSON loader resolves, and prerendered category pages
+    // ship with "No products available" baked in.
+  }, [activeCategory, searchQuery, products]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -328,6 +319,50 @@ const Products = () => {
             heading: 'Cooling Tower & Chilled Water Treatment Chemicals in Oman',
             body: "Cooling towers and chilled water systems operating in Oman's extreme climate — ambient temperatures above 45°C, high evaporation rates, and varying water quality — require robust chemical treatment programmes to prevent scale, corrosion, and biological fouling (including Legionella). Global Chemicals LLC supplies a complete range of cooling water treatment chemicals: broad-spectrum biocides and algaecides, corrosion and scale inhibitors, antifouling agents, drift eliminators, and pH control chemicals. We serve district cooling plants, HVAC systems in hotels and malls, process cooling in manufacturing, and power plant cooling water systems across Oman."
           },
+          'construction': {
+            heading: 'Construction Chemicals & Concrete Admixtures Supplier in Oman',
+            body: "Global Chemicals LLC supplies construction chemicals and concrete admixtures to civil contractors, ready-mix concrete plants, precast yards, and infrastructure projects across Oman and the GCC. Our construction range covers superplasticisers and high-range water reducers for high-strength and self-compacting concrete, retarders and accelerators for hot-weather and cold-joint pours, air-entraining agents, integral waterproofing admixtures, curing compounds, bonding agents and epoxy adhesives, non-shrink grouts, tile adhesives, and concrete repair mortars. Oman's hot, arid climate makes admixture selection critical — our technical team advises on dosing for ambient temperatures above 40°C and aggressive sulphate-bearing groundwater commonly encountered in coastal and Batinah projects."
+          },
+          'solvents': {
+            heading: 'Industrial Solvents Supplier in Oman, UAE & GCC',
+            body: "Global Chemicals LLC is a leading industrial solvents supplier in Oman, stocking high-purity acetone, methanol, ethanol, isopropanol (IPA), toluene, xylene, n-hexane, methyl ethyl ketone (MEK), ethyl acetate, white spirit, and dichloromethane. We serve paints and coatings manufacturers, printing inks producers, pharmaceutical compounders, electronics assembly facilities, adhesive and sealant makers, and oilfield service companies across Oman, UAE, Saudi Arabia, and Qatar. All solvents come with batch-level Certificates of Analysis confirming purity (typically ≥99%), water content, and residue. Available in 20L jerricans, 200L drums, and IBCs; bulk road-tanker delivery available for repeat industrial buyers."
+          },
+          'inorganic': {
+            heading: 'Inorganic Chemicals Supplier in Oman & GCC',
+            body: "Global Chemicals LLC supplies a comprehensive range of inorganic chemicals — sodium nitrite, sodium nitrate, potassium chloride, potassium nitrate, borax (sodium tetraborate), boric acid, silica gel, sodium thiosulphate, ferrous sulphate, ferric chloride, copper sulphate, and zinc sulphate — to manufacturing, water treatment, metallurgy, and laboratory customers in Oman, UAE, and the wider GCC. Our inorganic salts and oxides are sourced from quality-audited producers and supplied with batch-level Certificates of Analysis. Available in 25kg bags, 50kg sacks, and 1-tonne jumbo bags. Technical-grade and AR-grade options stocked; food-grade and pharma-grade variants available on indent."
+          },
+          'chlorinated': {
+            heading: 'Chlorinated Solvents Supplier — Methylene Chloride, Perc, TCE Oman',
+            body: "Global Chemicals LLC supplies high-purity chlorinated solvents — methylene chloride (DCM/dichloromethane), perchloroethylene (PCE/perc/tetrachloroethylene), and trichloroethylene (TCE) — to industrial degreasing, dry cleaning, paint stripping, and pharmaceutical extraction customers in Oman, UAE, and across the GCC. Chlorinated solvents are aggressive cleaners with strict handling and disposal requirements; we supply only with current GHS-compliant SDS, exposure-control guidance, and full Certificate of Analysis confirming purity (≥99.5%) and stabiliser content. Packaging: 250kg drums and 1,100kg IBCs. Stocked in our Muscat warehouse for same-day Oman dispatch; export to GCC on documented end-use."
+          },
+          'ethanolamines': {
+            heading: 'Ethanolamines Supplier — MEA, DEA, TEA Oman & GCC',
+            body: "Global Chemicals LLC supplies the full ethanolamine series — monoethanolamine (MEA), diethanolamine (DEA), and triethanolamine (TEA) — to gas-sweetening operations, soap and personal-care manufacturers, cement grinding aid producers, metalworking fluid blenders, and corrosion-inhibitor formulators across Oman, UAE, Saudi Arabia, and Qatar. MEA and DEA are critical for amine gas treating in Oman's upstream gas plants and refineries (Sohar, Duqm); TEA serves cement industry grinding aids and personal-care formulations. Supplied at ≥99% purity with full CoA in 230kg drums and bulk IBCs. Long-term contract pricing available for industrial buyers."
+          },
+          'glycols': {
+            heading: 'Glycols Supplier — MEG, DEG, MPG Oman & GCC',
+            body: "Global Chemicals LLC supplies industrial and food-grade glycols — monoethylene glycol (MEG), diethylene glycol (DEG), and monopropylene glycol (MPG) — to refrigerant and antifreeze blenders, polyester and PET manufacturers, food and pharmaceutical formulators, and oilfield gas-dehydration operators across Oman and the GCC. MEG is the workhorse for HVAC chiller coolants and gas hydrate inhibition; DEG serves natural gas dehydration in Oman's upstream operations; MPG (USP/EP grade) is supplied for food, beverage, and pharmaceutical applications under HACCP-compatible documentation. Supplied in 230kg drums and 1,000L IBCs; bulk tanker delivery available for established users."
+          },
+          'alcohols': {
+            heading: 'Industrial Alcohols Supplier — Methanol, Ethanol, IPA, Butanol Oman',
+            body: "Global Chemicals LLC supplies industrial-grade alcohols — methanol, ethanol absolute (denatured and undenatured), isopropyl alcohol (IPA), n-butanol, and isobutanol — to oilfield service companies, pharmaceutical compounders, paint and coatings producers, hand sanitiser manufacturers, and laboratory users across Oman, UAE, Saudi Arabia, and Qatar. Methanol is widely used in Oman's gas industry for hydrate inhibition; IPA is critical for electronics cleaning, pharmaceutical formulation, and disinfectant production; n-butanol serves coatings and plasticiser manufacture. All alcohols supplied at ≥99.5% purity with batch CoA confirming water content and residue on evaporation. Available in 200L drums, IBCs, and bulk."
+          },
+          'calcium-carbonate': {
+            heading: 'Calcium Carbonate Supplier — GCC, PCC, Coated Grades Oman',
+            body: "Global Chemicals LLC supplies high-purity calcium carbonate (CaCO₃) — both ground calcium carbonate (GCC) and precipitated calcium carbonate (PCC), in coated and uncoated grades — to plastics compounders, PVC pipe manufacturers, paint and coatings producers, paper mills, rubber masterbatch makers, animal feed formulators, and food and pharmaceutical customers across Oman and the GCC. We stock multiple particle-size grades (from 10μm down to ultrafine sub-micron) with brightness and whiteness specifications suited to filler, extender, and functional uses. Food-grade (E170) and pharma-grade (USP/BP) variants available with full compliance documentation. Supplied in 25kg bags and 1-tonne jumbo bags; bulk silo delivery for high-volume manufacturers."
+          },
+          'additives': {
+            heading: 'Chemical Additives Supplier — Coatings, Plastics, Industrial Oman',
+            body: "Global Chemicals LLC supplies performance-enhancing chemical additives to plastics compounders, paint and coatings manufacturers, lubricant blenders, and adhesive producers across Oman and the GCC. Our additives portfolio covers UV stabilisers and antioxidants for polymer durability, slip and anti-blocking agents, dispersants and wetting agents, defoamers and surface levelling agents, rheology modifiers and thickeners, biocides and preservatives, viscosity index improvers and pour-point depressants for lubricant formulation, and compatibilisers for polymer alloys. Technical formulation support available — our team helps customers select the right additive package for ambient-temperature performance in Oman's hot climate, including elevated thermal-stability and UV-resistance requirements."
+          },
+          'lab-equipment': {
+            heading: 'Laboratory Equipment & Apparatus Supplier in Oman',
+            body: "Global Chemicals LLC supplies laboratory equipment, apparatus, and consumables to quality-control labs, university research labs, hospital pathology labs, water-testing laboratories, and industrial QC departments across Oman. Our lab equipment range covers analytical balances and precision balances, pH meters and conductivity meters, hot plates and magnetic stirrers, water baths and shaking incubators, drying ovens and muffle furnaces, centrifuges, spectrophotometers, glassware (volumetric, borosilicate, Pyrex), pipettes and micropipettes, filtration assemblies, and lab safety equipment (fume hoods, eye-wash stations, lab coats, PPE). Calibration certificates, traceable reference standards, and after-sales technical support available for all instruments."
+          },
+          'agro': {
+            heading: 'Agricultural Chemicals & Fertilisers Supplier in Oman',
+            body: "Global Chemicals LLC supplies agricultural chemicals, fertilisers, and crop-protection raw materials to farming operations, greenhouse growers, landscaping contractors, and date-palm cultivators across Oman. Our agro portfolio covers water-soluble NPK fertilisers (suitable for fertigation and drip-irrigation), urea and ammonium sulphate, potassium nitrate and potassium sulphate, micronutrient chelates (Fe, Zn, Mn, Cu, B, Mo), soil conditioners and humic-acid products, and substrate disinfectants. Oman's saline and calcareous soils require careful nutrient selection — our technical team advises on irrigation-water salinity tolerance, optimum fertigation programmes for tomato, cucumber, and capsicum greenhouse crops, and date-palm fertilisation schedules adapted to Oman's climate."
+          },
         };
         const intro = categoryIntros[activeCategory];
         if (!intro) return null;
@@ -385,10 +420,10 @@ const Products = () => {
                 Ask AI about our products
               </Button>
             </div>
-            {searchQuery && (
+            {searchQuery.trim() && (
               <p className="text-sm text-muted-foreground mt-2 text-center">
                 Found {filteredProducts.length} product{filteredProducts.length !== 1 ? 's' : ''}
-                {searchQuery.trim() && ` matching "${searchQuery}"`}
+                {` matching "${searchQuery}" across all categories`}
               </p>
             )}
           </div>
@@ -439,10 +474,12 @@ const Products = () => {
               <main className="flex-1 min-w-0">
                 <div className="mb-4 sm:mb-6">
                   <h2 className="text-xl sm:text-2xl font-bold text-foreground">
-                    {categories.find((c) => c.id === activeCategory)?.name || t('products.allProducts')}
+                    {searchQuery.trim()
+                      ? `Search results`
+                      : (categories.find((c) => c.id === activeCategory)?.name || t('products.allProducts'))}
                   </h2>
                   <p className="text-xs sm:text-sm text-muted-foreground mt-1">
-                    {getFilteredProducts(activeCategory).length} {t('products.productsAvailable')} · {t('products.tapToViewDetails')}
+                    {filteredProducts.length} {t('products.productsAvailable')} · {t('products.tapToViewDetails')}
                   </p>
                 </div>
 
@@ -453,7 +490,7 @@ const Products = () => {
                 ) : (
                   <>
                     <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6">
-                      {getFilteredProducts(activeCategory).map((product) => (
+                      {filteredProducts.map((product) => (
                         <ProductCard
                           key={product.id}
                           product={product}
@@ -461,7 +498,7 @@ const Products = () => {
                       ))}
                     </div>
 
-                    {getFilteredProducts(activeCategory).length === 0 && (
+                    {filteredProducts.length === 0 && (
                       <div className="text-center py-16">
                         <p className="text-muted-foreground text-lg">
                           {t('products.noProductsAvailable')}
@@ -475,145 +512,6 @@ const Products = () => {
           </div>
         </div>
       </section>
-
-      {/* Product Details - Responsive Drawer/Dialog */}
-      {isMobile ? (
-        <Drawer open={!!selectedProduct} onOpenChange={(open) => !open && setSelectedProduct(null)}>
-          <DrawerContent className="max-h-[85vh] overflow-y-auto">
-            {selectedProduct && (
-              <>
-                <DrawerHeader>
-                  <div className="flex items-start gap-3 mb-2">
-                    <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center flex-shrink-0">
-                      {(() => {
-                        const Icon = selectedProduct.icon;
-                        return <Icon className="w-6 h-6 text-primary" />;
-                      })()}
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <DrawerTitle className="text-lg font-bold text-foreground leading-tight">
-                        {selectedProduct.title}
-                      </DrawerTitle>
-                      <DrawerDescription className="mt-1 text-sm">
-                        {selectedProduct.description}
-                      </DrawerDescription>
-                    </div>
-                  </div>
-                </DrawerHeader>
-
-                <div className="px-4 pb-4 space-y-4">
-                  {selectedProduct.details?.formula && (
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2 text-sm">{t('products.chemicalFormula')}</h4>
-                      <p className="text-muted-foreground font-mono text-base">{selectedProduct.details.formula}</p>
-                    </div>
-                  )}
-
-                  {selectedProduct.details?.fullDescription && (
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2 text-sm">{t('products.description')}</h4>
-                      <p className="text-muted-foreground leading-relaxed text-sm">
-                        {selectedProduct.details.fullDescription}
-                      </p>
-                    </div>
-                  )}
-
-                  {selectedProduct.details?.applications && selectedProduct.details.applications.length > 0 && (
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-3 text-sm">{t('products.applications')}</h4>
-                      <ul className="grid grid-cols-1 gap-2">
-                        {selectedProduct.details.applications.map((app, index) => (
-                          <li key={index} className="flex items-start gap-2">
-                            <span className="text-primary mt-1 flex-shrink-0 text-lg">•</span>
-                            <span className="text-muted-foreground text-xs">{app}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-
-                  <div className="pt-3 border-t border-border">
-                    <p className="text-xs text-muted-foreground">
-                      {t('products.moreInfoContact')}{' '}
-                      <a href="/contact" className="text-primary hover:underline font-semibold">
-                        {t('common.contactUs').toLowerCase()}
-                      </a>
-                      .
-                    </p>
-                  </div>
-                </div>
-              </>
-            )}
-          </DrawerContent>
-        </Drawer>
-      ) : (
-        <Dialog open={!!selectedProduct} onOpenChange={() => setSelectedProduct(null)}>
-          <DialogContent className="max-w-[95vw] sm:max-w-2xl max-h-[85vh] overflow-y-auto">
-            {selectedProduct && (
-              <>
-                <DialogHeader>
-                  <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
-                    <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center flex-shrink-0">
-                      {(() => {
-                        const Icon = selectedProduct.icon;
-                        return <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />;
-                      })()}
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <DialogTitle className="text-xl sm:text-2xl font-bold text-foreground leading-tight">
-                        {selectedProduct.title}
-                      </DialogTitle>
-                      <p className="text-muted-foreground mt-1 sm:mt-2 text-sm sm:text-base">{selectedProduct.description}</p>
-                    </div>
-                  </div>
-                </DialogHeader>
-
-                <div className="space-y-4 sm:space-y-6">
-                  {selectedProduct.details?.formula && (
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2 text-sm sm:text-base">Chemical Formula</h4>
-                      <p className="text-muted-foreground font-mono text-base sm:text-lg">{selectedProduct.details.formula}</p>
-                    </div>
-                  )}
-
-                  {selectedProduct.details?.fullDescription && (
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2 text-sm sm:text-base">Description</h4>
-                      <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
-                        {selectedProduct.details.fullDescription}
-                      </p>
-                    </div>
-                  )}
-
-                  {selectedProduct.details?.applications && selectedProduct.details.applications.length > 0 && (
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-3 text-sm sm:text-base">Applications</h4>
-                      <ul className="grid grid-cols-1 gap-2">
-                        {selectedProduct.details.applications.map((app, index) => (
-                          <li key={index} className="flex items-start gap-2">
-                            <span className="text-primary mt-1 flex-shrink-0 text-lg">•</span>
-                            <span className="text-muted-foreground text-xs sm:text-sm">{app}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-
-                  <div className="pt-3 sm:pt-4 border-t border-border">
-                    <p className="text-xs sm:text-sm text-muted-foreground">
-                      For more information about this product, pricing, or technical specifications, please{' '}
-                      <a href="/contact" className="text-primary hover:underline font-semibold">
-                        contact us
-                      </a>
-                      .
-                    </p>
-                  </div>
-                </div>
-              </>
-            )}
-          </DialogContent>
-        </Dialog>
-      )}
 
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">

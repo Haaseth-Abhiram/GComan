@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -9,11 +8,13 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
 import { ArrowLeft, CheckCircle2, Phone, Mail, Beaker, Info, MessageCircle, Truck, Shield, Globe } from 'lucide-react';
-import { loadProductsByCategory, hydrateProduct } from '@/data/productLoader';
+import { loadProductsByCategory } from '@/data/productLoader';
 import { ProductStructuredData, BreadcrumbStructuredData } from '@/components/StructuredData';
 import { SEO } from '@/components/SEO';
 import { trackProductView, trackSelectContent, trackContactClick } from '@/components/GoogleAnalytics';
 import { ProductCard } from '@/components/products/ProductCard';
+import { ChemistryHero } from '@/components/products/ChemistryHero';
+import { ProductDetailTabs } from '@/components/products/ProductDetailTabs';
 
 const ProductDetail = () => {
   const { category, productSlug } = useParams();
@@ -181,34 +182,67 @@ const ProductDetail = () => {
                 {t('products.backToProducts', { defaultValue: 'Back to Products' })}
               </Button>
 
-              <div className="flex items-start gap-6 mb-8">
-                <div className="flex-shrink-0 p-4 rounded-xl bg-primary/10">
-                  <Icon className="w-12 h-12 text-primary" />
+              {/* Hero: title block + 3D molecule side-by-side on desktop, stacked on mobile.
+                  Products without a curated molecule keep the original icon header. */}
+              {product.details?.molecule && product.details?.formula ? (
+                <div className="grid gap-6 mb-10 md:grid-cols-[1fr_minmax(0,1.05fr)] md:items-center">
+                  <div>
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="flex-shrink-0 p-3 rounded-xl bg-primary/10">
+                        <Icon className="w-8 h-8 text-primary" />
+                      </div>
+                      <Badge variant="outline" className="text-sm font-mono px-3 py-1">
+                        {product.details.formula}
+                      </Badge>
+                    </div>
+                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 leading-tight">
+                      {translatedTitle}
+                    </h1>
+                    <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                      {translatedDescription}
+                    </p>
+                  </div>
+                  <ChemistryHero
+                    formula={product.details.formula}
+                    molecule={product.details.molecule}
+                    productTitle={translatedTitle}
+                  />
                 </div>
-                <div className="flex-1">
-                  <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4 leading-tight">
-                    {translatedTitle}
-                  </h1>
-                  {product.details?.formula && (
-                    <Badge variant="outline" className="text-base px-4 py-1">
-                      {product.details.formula}
-                    </Badge>
-                  )}
+              ) : (
+                <div className="flex items-start gap-6 mb-10">
+                  <div className="flex-shrink-0 p-4 rounded-xl bg-primary/10">
+                    <Icon className="w-12 h-12 text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4 leading-tight">
+                      {translatedTitle}
+                    </h1>
+                    {product.details?.formula && (
+                      <Badge variant="outline" className="text-base px-4 py-1">
+                        {product.details.formula}
+                      </Badge>
+                    )}
+                  </div>
                 </div>
-              </div>
+              )}
 
+              {/* Product Overview — first thing buyers read after the hero. */}
               <Card className="p-8 mb-8">
                 <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
                   <Info className="w-6 h-6 text-primary" />
                   {t('products.productOverview', { defaultValue: 'Product Overview' })}
                 </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  {translatedDescription}
-                </p>
-                
+                {/* When the hero shows the description inline, skip the duplicate;
+                    legacy products still show it here. */}
+                {!product.details?.molecule && (
+                  <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                    {translatedDescription}
+                  </p>
+                )}
+
                 {translatedLongDescription && (
                   <>
-                    <h3 className="text-xl font-semibold mb-3 mt-6">{t('products.detailedDescription', { defaultValue: 'Detailed Description' })}</h3>
+                    <h3 className="text-xl font-semibold mb-3 mt-2">{t('products.detailedDescription', { defaultValue: 'Detailed Description' })}</h3>
                     <p className="text-muted-foreground leading-relaxed">
                       {translatedLongDescription}
                     </p>
@@ -259,6 +293,16 @@ const ProductDetail = () => {
                     ))}
                   </div>
                 </Card>
+              )}
+
+              {/* Compact tabbed strip — Safety · Documents.
+                  Replaces the cards we had before. */}
+              {product.details?.hazard && (
+                <ProductDetailTabs
+                  productTitle={translatedTitle}
+                  hazard={product.details?.hazard}
+                  documents={product.details?.documents}
+                />
               )}
 
               {/* Trust Badges */}
