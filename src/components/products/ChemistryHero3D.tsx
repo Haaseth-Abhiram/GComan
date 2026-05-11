@@ -244,7 +244,7 @@ const Water = ({ animRefs, isMobile }: { animRefs: AnimRefs; isMobile: boolean }
         <meshPhysicalMaterial
           color="#eaf4ff"
           transmission={transmission}
-          transmissionResolution={256}
+          
           ior={1.33}
           thickness={0.3}
           roughness={0.04}
@@ -257,7 +257,7 @@ const Water = ({ animRefs, isMobile }: { animRefs: AnimRefs; isMobile: boolean }
         <meshPhysicalMaterial
           color="#dceefa"
           transmission={transmission}
-          transmissionResolution={256}
+          
           ior={1.33}
           thickness={0.55}
           roughness={0.12}
@@ -800,7 +800,7 @@ export default function ChemistryHero3D({
           dampingFactor={0.08}
         />
 
-        <EffectComposer multisampling={0} disableNormalPass>
+        <EffectComposer multisampling={0} enableNormalPass={false}>
           <Bloom
             intensity={tuning.bloomIntensity}
             luminanceThreshold={tuning.bloomThreshold}

@@ -42,8 +42,8 @@ interface ContactSubmission {
   created_at: string;
   synced_to_zoho: boolean | null;
   zoho_lead_id: string | null;
-  zoho_synced_at: string | null;
-  zoho_error: string | null;
+  zoho_synced_at?: string | null;
+  zoho_error?: string | null;
   email_sent: boolean | null;
   email_sent_at: string | null;
   email_error: string | null;
