@@ -153,7 +153,10 @@ Options -Indexes
 
   # 2. If <path>/index.html exists (prerendered route), serve it without
   #    changing the URL.
-  RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+  # %{REQUEST_FILENAME} is the full filesystem path (e.g. /home/user/public_html/career).
+  # Appending /index.html is more reliable than %{DOCUMENT_ROOT}/$1/index.html on
+  # shared hosting where DOCUMENT_ROOT may not be set in .htaccess context.
+  RewriteCond %{REQUEST_FILENAME}/index.html -f
   RewriteRule ^(.+)$ /$1/index.html [L]
 
   # 3. SPA fallback for genuinely unknown routes — React Router handles 404 UI.
