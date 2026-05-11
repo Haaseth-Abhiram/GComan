@@ -15,6 +15,7 @@ import { Loading } from "./components/Loading";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 import { ZohoSalesIQ } from "./components/ZohoSalesIQ";
 import BackToTopButton from "./components/BackToTopButton";
+import RouteChangeLoader from "./components/RouteChangeLoader";
 
 // Lazy load all page components
 const Index = lazy(() => import("./pages/Index"));
@@ -89,6 +90,7 @@ const App = () => (
             </a>
             <CookieConsent />
             <BackToTopButton />
+            <RouteChangeLoader />
             <Suspense fallback={<Loading />}>
               <Routes>
                 {/* Main routes (English default) */}
