@@ -20,6 +20,12 @@ dist-ssr
 # Playwright audit run artifacts (raw.json + pages.csv per run)
 audits/
 
+# Playwright test runner output
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
 # Claude/agent runtime state
 .claude/scheduled_tasks.lock
 
