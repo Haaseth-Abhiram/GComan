@@ -476,4 +476,32 @@ const SwitchControl = ({
   </div>
 );
 
+const SelectControl = ({
+  label,
+  value,
+  options,
+  onChange,
+}: {
+  label: string;
+  value: string;
+  options: readonly string[] | string[];
+  onChange: (v: string) => void;
+}) => (
+  <div className="space-y-1.5">
+    <Label className="text-xs">{label}</Label>
+    <Select value={value} onValueChange={onChange}>
+      <SelectTrigger className="h-8 text-xs">
+        <SelectValue />
+      </SelectTrigger>
+      <SelectContent>
+        {options.map((opt) => (
+          <SelectItem key={opt} value={opt} className="text-xs">
+            {opt}
+          </SelectItem>
+        ))}
+      </SelectContent>
+    </Select>
+  </div>
+);
+
 export default ChemistryPlayground;
