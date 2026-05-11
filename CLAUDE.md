@@ -85,7 +85,7 @@ After a build (or after a production deploy), run these to confirm SEO didn't re
 # Should always be 0.
 python3 -c "
 import re, os
-DIST='dist'; HOME_T='Chemical Supplier Muscat Oman | Caustic Soda, PAC, JSRS | Global Chemicals LLC'
+DIST='dist'; HOME_T='Chemical Suppliers in Oman & GCC | Global Chemicals LLC'
 strip=lambda s: re.sub(r'<!--.*?-->','',s,flags=re.DOTALL)
 bad=[]
 for r,_,fs in os.walk(DIST):

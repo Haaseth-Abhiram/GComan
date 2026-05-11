@@ -22,11 +22,22 @@ const ProductDetail = () => {
   const { t, i18n } = useTranslation();
 
   const [categoryProducts, setCategoryProducts] = useState<any[]>([]);
+  // Track loader settlement separately from the array — an unknown category
+  // (e.g. /products/acids/...) resolves to [], which is indistinguishable from
+  // "still fetching" without this flag. Without it, ProductDetail would stick on
+  // the "Loading…" branch forever and Google's crawler would see a Soft 404.
+  const [productsLoading, setProductsLoading] = useState(true);
 
   useEffect(() => {
-    if (category) {
-      loadProductsByCategory(category).then(setCategoryProducts);
+    if (!category) {
+      setProductsLoading(false);
+      return;
     }
+    setProductsLoading(true);
+    loadProductsByCategory(category).then((data) => {
+      setCategoryProducts(data);
+      setProductsLoading(false);
+    });
   }, [category]);
 
   // Find product by slug
@@ -41,7 +52,7 @@ const ProductDetail = () => {
     }
   }, [product]);
 
-  if (!product && categoryProducts.length === 0) {
+  if (productsLoading) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
         <p className="text-muted-foreground">Loading…</p>
