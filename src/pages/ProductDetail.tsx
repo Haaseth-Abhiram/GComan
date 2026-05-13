@@ -140,13 +140,43 @@ const ProductDetail = () => {
   const whatsappMessage = encodeURIComponent(`Hi, I'm interested in ${product.title}. Please send me pricing and availability.`);
   const whatsappUrl = `https://wa.me/96893754388?text=${whatsappMessage}`;
 
+  // Short category qualifier appended to the SEO title so that cross-category
+  // products (e.g. EDTA Powder appearing in oilfield, soap-detergent, and
+  // water-treatment) each get a unique <title> tag instead of colliding on
+  // "EDTA Powder Supplier | Oman & GCC | Global Chemicals LLC".
+  const CATEGORY_LABEL: Record<string, string> = {
+    'water-treatment': 'Water Treatment',
+    'oilfield': 'Oilfield',
+    'soap-detergent': 'Soap & Detergent',
+    'ro-chemicals': 'RO Plant',
+    'cooling-water': 'Cooling Tower',
+    'tank-cleaners': 'Tank Cleaning',
+    'glycols': 'Glycol',
+    'ethanolamines': 'Ethanolamine',
+    'corrosion-inhibitor': 'Corrosion Inhibitor',
+    'calcium-carbonate': 'Industrial Filler',
+    'swimming-pool': 'Pool Treatment',
+    'lubricants': 'Lubricant',
+    'lab-chemicals': 'Laboratory',
+    'lab-equipment': 'Lab Equipment',
+    'food-beverage': 'Food Grade',
+    'construction': 'Construction',
+    'inorganic': 'Inorganic',
+    'additives': 'Industrial Additive',
+    'agro': 'Agricultural',
+    'alcohols': 'Industrial Alcohol',
+    'chlorinated': 'Chlorinated',
+    'solvents': 'Industrial Solvent',
+  };
+  const catLabel = CATEGORY_LABEL[category || ''] ?? (category || '').replace(/-/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase());
+
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title={`${product.title} Supplier | Oman & GCC | Global Chemicals LLC`}
+        title={`${product.title} | ${catLabel} Supplier | Oman & GCC | Global Chemicals LLC`}
         description={seoDescription}
         keywords={keywords}
-        ogTitle={`${product.title} - Chemical Supplier Oman & GCC | Global Chemicals LLC`}
+        ogTitle={`${product.title} - ${catLabel} Chemical Supplier | Oman & GCC | Global Chemicals LLC`}
         ogDescription={seoDescription}
         ogUrl={`https://gcoman.com/products/${category}/${productSlug}`}
         canonical={`https://gcoman.com/products/${category}/${productSlug}`}
