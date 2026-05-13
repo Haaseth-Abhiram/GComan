@@ -11,29 +11,62 @@ export const ICON_MAP: Record<string, React.ElementType> = {
   Flame, Wind, Wine, Shield, SprayCan,
 };
 
+/**
+ * Wrap a dynamic import so that stale-chunk failures after a new deploy
+ * (very common on this site — JSON product files are emitted as hashed chunks
+ * that disappear when a new build replaces them) don't leave the UI stuck on
+ * a "Loading…" state. We retry once, then force a single hard reload so the
+ * browser fetches the new index.html with the current chunk filenames.
+ */
+function safeImport<T>(importer: () => Promise<T>): Promise<T> {
+  return importer().catch(async (err) => {
+    const msg = String(err?.message || err);
+    const isChunkError =
+      msg.includes('Failed to fetch dynamically imported module') ||
+      msg.includes('Importing a module script failed') ||
+      msg.includes('error loading dynamically imported module');
+    if (!isChunkError) throw err;
+
+    // One retry — sometimes a transient network blip
+    try {
+      return await importer();
+    } catch {
+      // Persistent failure → stale build. Reload once per session.
+      if (typeof window !== 'undefined') {
+        const KEY = '__gc_chunk_reload__';
+        if (!sessionStorage.getItem(KEY)) {
+          sessionStorage.setItem(KEY, '1');
+          window.location.reload();
+        }
+      }
+      throw err;
+    }
+  });
+}
+
 const categoryLoaders: Record<string, () => Promise<any[]>> = {
-  'water-treatment':     () => import('./products/water-treatment.json').then(m => m.default),
-  'lubricants':          () => import('./products/lubricants.json').then(m => m.default),
-  'oilfield':            () => import('./products/oilfield.json').then(m => m.default),
-  'lab-chemicals':       () => import('./products/lab-chemicals.json').then(m => m.default),
-  'lab-equipment':       () => import('./products/lab-equipment.json').then(m => m.default),
-  'solvents':            () => import('./products/solvents.json').then(m => m.default),
-  'swimming-pool':       () => import('./products/swimming-pool.json').then(m => m.default),
-  'inorganic':           () => import('./products/inorganic.json').then(m => m.default),
-  'alcohols':            () => import('./products/alcohols.json').then(m => m.default),
-  'glycols':             () => import('./products/glycols.json').then(m => m.default),
-  'ethanolamines':       () => import('./products/ethanolamines.json').then(m => m.default),
-  'food-beverage':       () => import('./products/food-beverage.json').then(m => m.default),
-  'construction':        () => import('./products/construction.json').then(m => m.default),
-  'soap-detergent':      () => import('./products/soap-detergent.json').then(m => m.default),
-  'ro-chemicals':        () => import('./products/ro-chemicals.json').then(m => m.default),
-  'cooling-water':       () => import('./products/cooling-water.json').then(m => m.default),
-  'corrosion-inhibitor': () => import('./products/corrosion-inhibitor.json').then(m => m.default),
-  'tank-cleaners':       () => import('./products/tank-cleaners.json').then(m => m.default),
-  'additives':           () => import('./products/additives.json').then(m => m.default),
-  'agro':                () => import('./products/agro.json').then(m => m.default),
-  'chlorinated':         () => import('./products/chlorinated.json').then(m => m.default),
-  'calcium-carbonate':   () => import('./products/calcium-carbonate.json').then(m => m.default),
+  'water-treatment':     () => safeImport(() => import('./products/water-treatment.json')).then((m: any) => m.default),
+  'lubricants':          () => safeImport(() => import('./products/lubricants.json')).then((m: any) => m.default),
+  'oilfield':            () => safeImport(() => import('./products/oilfield.json')).then((m: any) => m.default),
+  'lab-chemicals':       () => safeImport(() => import('./products/lab-chemicals.json')).then((m: any) => m.default),
+  'lab-equipment':       () => safeImport(() => import('./products/lab-equipment.json')).then((m: any) => m.default),
+  'solvents':            () => safeImport(() => import('./products/solvents.json')).then((m: any) => m.default),
+  'swimming-pool':       () => safeImport(() => import('./products/swimming-pool.json')).then((m: any) => m.default),
+  'inorganic':           () => safeImport(() => import('./products/inorganic.json')).then((m: any) => m.default),
+  'alcohols':            () => safeImport(() => import('./products/alcohols.json')).then((m: any) => m.default),
+  'glycols':             () => safeImport(() => import('./products/glycols.json')).then((m: any) => m.default),
+  'ethanolamines':       () => safeImport(() => import('./products/ethanolamines.json')).then((m: any) => m.default),
+  'food-beverage':       () => safeImport(() => import('./products/food-beverage.json')).then((m: any) => m.default),
+  'construction':        () => safeImport(() => import('./products/construction.json')).then((m: any) => m.default),
+  'soap-detergent':      () => safeImport(() => import('./products/soap-detergent.json')).then((m: any) => m.default),
+  'ro-chemicals':        () => safeImport(() => import('./products/ro-chemicals.json')).then((m: any) => m.default),
+  'cooling-water':       () => safeImport(() => import('./products/cooling-water.json')).then((m: any) => m.default),
+  'corrosion-inhibitor': () => safeImport(() => import('./products/corrosion-inhibitor.json')).then((m: any) => m.default),
+  'tank-cleaners':       () => safeImport(() => import('./products/tank-cleaners.json')).then((m: any) => m.default),
+  'additives':           () => safeImport(() => import('./products/additives.json')).then((m: any) => m.default),
+  'agro':                () => safeImport(() => import('./products/agro.json')).then((m: any) => m.default),
+  'chlorinated':         () => safeImport(() => import('./products/chlorinated.json')).then((m: any) => m.default),
+  'calcium-carbonate':   () => safeImport(() => import('./products/calcium-carbonate.json')).then((m: any) => m.default),
 };
 
 export const ALL_CATEGORIES = Object.keys(categoryLoaders);
