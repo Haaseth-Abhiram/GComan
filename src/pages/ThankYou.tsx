@@ -25,6 +25,7 @@ const ThankYou = () => {
         ogUrl="https://gcoman.com/thank-you"
         canonical="https://gcoman.com/thank-you"
         keywords=""
+        noIndex={true}
       />
       <Navigation />
 

@@ -215,6 +215,27 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/career"/>
   </url>
   <url>
+    <loc>https://gcoman.com/sitemap</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/sitemap"/>
+    <xhtml:link rel="alternate" hreflang="en-OM" href="https://gcoman.com/sitemap"/>
+    <xhtml:link rel="alternate" hreflang="en-AE" href="https://gcoman.com/sitemap"/>
+    <xhtml:link rel="alternate" hreflang="en-SA" href="https://gcoman.com/sitemap"/>
+    <xhtml:link rel="alternate" hreflang="en-QA" href="https://gcoman.com/sitemap"/>
+    <xhtml:link rel="alternate" hreflang="en-KW" href="https://gcoman.com/sitemap"/>
+    <xhtml:link rel="alternate" hreflang="en-BH" href="https://gcoman.com/sitemap"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/sitemap"/>
+    <xhtml:link rel="alternate" hreflang="ar-OM" href="https://gcoman.com/ar/sitemap"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://gcoman.com/ar/sitemap"/>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://gcoman.com/ar/sitemap"/>
+    <xhtml:link rel="alternate" hreflang="ar-QA" href="https://gcoman.com/ar/sitemap"/>
+    <xhtml:link rel="alternate" hreflang="ar-KW" href="https://gcoman.com/ar/sitemap"/>
+    <xhtml:link rel="alternate" hreflang="ar-BH" href="https://gcoman.com/ar/sitemap"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/sitemap"/>
+  </url>
+  <url>
     <loc>https://gcoman.com/blog</loc>
     <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
