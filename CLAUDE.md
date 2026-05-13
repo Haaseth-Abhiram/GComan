@@ -91,7 +91,7 @@ bad=[]
 for r,_,fs in os.walk(DIST):
     for f in fs:
         if f!='index.html': continue
-        p=os.path.join(r,f); rel=p[len(DIST)+1:].replace('/index.html','') or '(home)'
+        p=os.path.join(r,f); rel=re.sub(r'/?index\.html$','',p[len(DIST)+1:]) or '(home)'
         with open(p) as h: html=strip(h.read())
         m=re.search(r'<title[^>]*>([^<]+)</title>', html); t=(m.group(1) if m else '').replace('&amp;','&')
         if rel!='(home)' and t==HOME_T: bad.append(rel)
