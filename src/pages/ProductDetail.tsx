@@ -33,11 +33,21 @@ const ProductDetail = () => {
       setProductsLoading(false);
       return;
     }
+    let cancelled = false;
     setProductsLoading(true);
-    loadProductsByCategory(category).then((data) => {
-      setCategoryProducts(data);
-      setProductsLoading(false);
-    });
+    loadProductsByCategory(category)
+      .then((data) => {
+        if (cancelled) return;
+        setCategoryProducts(data);
+        setProductsLoading(false);
+      })
+      .catch((err) => {
+        console.error('[ProductDetail] Failed to load category products:', err);
+        if (cancelled) return;
+        setCategoryProducts([]);
+        setProductsLoading(false);
+      });
+    return () => { cancelled = true; };
   }, [category]);
 
   // Find product by slug

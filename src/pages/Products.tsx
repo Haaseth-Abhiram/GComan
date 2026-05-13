@@ -76,14 +76,26 @@ const Products = () => {
 
   // Lazy-load products: only the active category (or all if no filter)
   useEffect(() => {
+    let cancelled = false;
     setProductsLoading(true);
     const loader = categoryParam
       ? loadProductsByCategory(categoryParam)
       : loadAllProducts();
-    loader.then((data) => {
-      setProducts(data as Product[]);
-      setProductsLoading(false);
-    });
+    loader
+      .then((data) => {
+        if (cancelled) return;
+        setProducts(data as Product[]);
+        setProductsLoading(false);
+      })
+      .catch((err) => {
+        // safeImport already handles stale-chunk reloads; this just ensures we
+        // don't get stuck on a spinner if the import fails for any other reason.
+        console.error('[Products] Failed to load product data:', err);
+        if (cancelled) return;
+        setProducts([]);
+        setProductsLoading(false);
+      });
+    return () => { cancelled = true; };
   }, [categoryParam]);
 
   const handleSearch = (value: string) => {
