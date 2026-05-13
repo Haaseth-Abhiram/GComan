@@ -11,8 +11,41 @@ export const ICON_MAP: Record<string, React.ElementType> = {
   Flame, Wind, Wine, Shield, SprayCan,
 };
 
+/**
+ * Wrap a dynamic import so that stale-chunk failures after a new deploy
+ * (very common on this site — JSON product files are emitted as hashed chunks
+ * that disappear when a new build replaces them) don't leave the UI stuck on
+ * a "Loading…" state. We retry once, then force a single hard reload so the
+ * browser fetches the new index.html with the current chunk filenames.
+ */
+function safeImport<T>(importer: () => Promise<T>): Promise<T> {
+  return importer().catch(async (err) => {
+    const msg = String(err?.message || err);
+    const isChunkError =
+      msg.includes('Failed to fetch dynamically imported module') ||
+      msg.includes('Importing a module script failed') ||
+      msg.includes('error loading dynamically imported module');
+    if (!isChunkError) throw err;
+
+    // One retry — sometimes a transient network blip
+    try {
+      return await importer();
+    } catch {
+      // Persistent failure → stale build. Reload once per session.
+      if (typeof window !== 'undefined') {
+        const KEY = '__gc_chunk_reload__';
+        if (!sessionStorage.getItem(KEY)) {
+          sessionStorage.setItem(KEY, '1');
+          window.location.reload();
+        }
+      }
+      throw err;
+    }
+  });
+}
+
 const categoryLoaders: Record<string, () => Promise<any[]>> = {
-  'water-treatment':     () => import('./products/water-treatment.json').then(m => m.default),
+  'water-treatment':     () => safeImport(() => import('./products/water-treatment.json')).then((m: any) => m.default),
   'lubricants':          () => import('./products/lubricants.json').then(m => m.default),
   'oilfield':            () => import('./products/oilfield.json').then(m => m.default),
   'lab-chemicals':       () => import('./products/lab-chemicals.json').then(m => m.default),
