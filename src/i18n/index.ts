@@ -6,6 +6,8 @@ import en from './locales/en.json';
 import ar from './locales/ar.json';
 import productsAr from './locales/products-ar.json';
 
+const isBrowser = typeof document !== 'undefined';
+
 // Merge Arabic product translations into main Arabic translations
 const mergedAr = {
   ...ar,
@@ -18,7 +20,6 @@ const resources = {
 };
 
 i18n
-  .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources,
@@ -27,22 +28,31 @@ i18n
     interpolation: {
       escapeValue: false,
     },
-    detection: {
-      order: ['localStorage', 'navigator'],
-      caches: ['localStorage'],
-    },
+    ...(isBrowser ? {
+      detection: {
+        order: ['localStorage', 'navigator'],
+        caches: ['localStorage'],
+      },
+    } : {}),
   });
+
+if (isBrowser) {
+  i18n.use(LanguageDetector);
+}
 
 // Update document direction and lang attribute when language changes
 i18n.on('languageChanged', (lng) => {
+  if (!isBrowser) return;
   const dir = lng === 'ar' ? 'rtl' : 'ltr';
   document.documentElement.dir = dir;
   document.documentElement.lang = lng;
 });
 
 // Set initial direction
-const initialDir = i18n.language === 'ar' ? 'rtl' : 'ltr';
-document.documentElement.dir = initialDir;
-document.documentElement.lang = i18n.language || 'en';
+if (isBrowser) {
+  const initialDir = i18n.language === 'ar' ? 'rtl' : 'ltr';
+  document.documentElement.dir = initialDir;
+  document.documentElement.lang = i18n.language || 'en';
+}
 
 export default i18n;
