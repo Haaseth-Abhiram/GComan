@@ -3,6 +3,28 @@ import {
   Factory, Building2, Wheat, Microscope, Sparkles, FlaskRound,
   Flame, Wind, Wine, Shield, SprayCan,
 } from 'lucide-react';
+import additives from './products/additives.json';
+import agro from './products/agro.json';
+import alcohols from './products/alcohols.json';
+import calciumCarbonate from './products/calcium-carbonate.json';
+import chlorinated from './products/chlorinated.json';
+import construction from './products/construction.json';
+import coolingWater from './products/cooling-water.json';
+import corrosionInhibitor from './products/corrosion-inhibitor.json';
+import ethanolamines from './products/ethanolamines.json';
+import foodBeverage from './products/food-beverage.json';
+import glycols from './products/glycols.json';
+import inorganic from './products/inorganic.json';
+import labChemicals from './products/lab-chemicals.json';
+import labEquipment from './products/lab-equipment.json';
+import lubricants from './products/lubricants.json';
+import oilfield from './products/oilfield.json';
+import roChemicals from './products/ro-chemicals.json';
+import soapDetergent from './products/soap-detergent.json';
+import solvents from './products/solvents.json';
+import swimmingPool from './products/swimming-pool.json';
+import tankCleaners from './products/tank-cleaners.json';
+import waterTreatment from './products/water-treatment.json';
 
 // Map icon name strings (stored in JSON) back to Lucide components
 export const ICON_MAP: Record<string, React.ElementType> = {
@@ -69,6 +91,31 @@ const categoryLoaders: Record<string, () => Promise<any[]>> = {
   'calcium-carbonate':   () => safeImport(() => import('./products/calcium-carbonate.json')).then((m: any) => m.default),
 };
 
+const categoryData: Record<string, any[]> = {
+  'water-treatment': waterTreatment,
+  'lubricants': lubricants,
+  'oilfield': oilfield,
+  'lab-chemicals': labChemicals,
+  'lab-equipment': labEquipment,
+  'solvents': solvents,
+  'swimming-pool': swimmingPool,
+  'inorganic': inorganic,
+  'alcohols': alcohols,
+  'glycols': glycols,
+  'ethanolamines': ethanolamines,
+  'food-beverage': foodBeverage,
+  'construction': construction,
+  'soap-detergent': soapDetergent,
+  'ro-chemicals': roChemicals,
+  'cooling-water': coolingWater,
+  'corrosion-inhibitor': corrosionInhibitor,
+  'tank-cleaners': tankCleaners,
+  'additives': additives,
+  'agro': agro,
+  'chlorinated': chlorinated,
+  'calcium-carbonate': calciumCarbonate,
+};
+
 export const ALL_CATEGORIES = Object.keys(categoryLoaders);
 
 /** Attach icon component to a raw product object from JSON */
@@ -88,6 +135,16 @@ export async function loadProductsByCategory(category: string) {
 export async function loadAllProducts() {
   const all = await Promise.all(Object.values(categoryLoaders).map(l => l()));
   return all.flat().map(hydrateProduct);
+}
+
+/** Synchronous product data for SSR so route-specific HTML contains real SEO tags. */
+export function loadProductsByCategorySync(category: string) {
+  return (categoryData[category] || []).map(hydrateProduct);
+}
+
+/** Synchronous all-products loader for SSR. */
+export function loadAllProductsSync() {
+  return Object.values(categoryData).flat().map(hydrateProduct);
 }
 
 /** Synchronous lookup within an already-loaded array */
