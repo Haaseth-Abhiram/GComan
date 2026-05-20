@@ -596,6 +596,17 @@ https://www.gcoman.com/*      https://gcoman.com/:splat  301!
 /blog/chemical-exporter-oman-uae-dubai /blog 301
 /blog/caustic-soda-supplier-oman /blog 301
 /products/lubricants/mobil-lubricants /products/lubricants 301
+/alcohols/ /products 301
+/service/laboratories/ /industries/laboratory 301
+/service/inorganic-chemicals/ /products 301
+/service/glycols/ /products 301
+/service/soap-detergent-chemicals/ /products 301
+/service/agro-products-2/ /products 301
+/service/lab-equipment/ /industries/laboratory 301
+/service/lubricants-greases-1/ /products/lubricants 301
+/service/lab-chemical/ /industries/laboratory 301
+/service/ethanolamines/ /products 301
+/service/water-treatment-2/ /products/water-treatment 301
 
 # SPA fallback (must be last)
 /*  /index.html  200
