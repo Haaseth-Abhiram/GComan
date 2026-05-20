@@ -42,7 +42,7 @@ import BrochureProductsList from '@/assets/brochures/Global-Chemicals-Products-L
 import { DownloadGateDialog } from '@/components/DownloadGateDialog';
 import { PDFViewerDialog } from '@/components/PDFViewerDialog';
 import { SEO } from '@/components/SEO';
-import { HowToStructuredData, BreadcrumbStructuredData, ArticleStructuredData, FAQStructuredData } from '@/components/StructuredData';
+import { BreadcrumbStructuredData, ArticleStructuredData, FAQStructuredData } from '@/components/StructuredData';
 import { Link } from 'react-router-dom';
 import { blogArticles, articleCategories as blogCategories, BlogArticle } from '@/data/blogArticles';
 import { trackDownload } from '@/components/GoogleAnalytics';
@@ -54,29 +54,6 @@ const breadcrumbItems = [
 ];
 
 // HowTo steps for downloading resources
-const downloadHowToSteps = [
-  {
-    name: 'Browse Resources',
-    text: 'Navigate to the Resources page and browse through available product catalogs, safety data sheets, and technical documentation.'
-  },
-  {
-    name: 'Select Resource Category',
-    text: 'Filter resources by category: Product Catalogs, Safety Data Sheets, Technical Documents, Certifications, or Industry Guides.'
-  },
-  {
-    name: 'Click Download',
-    text: 'Click the Download button on your desired resource to open the download dialog.'
-  },
-  {
-    name: 'Fill Contact Information',
-    text: 'Enter your name, email, and company details in the download form. This helps us provide better support.'
-  },
-  {
-    name: 'Download File',
-    text: 'After submitting the form, your download will begin automatically. The file will be saved to your default downloads folder.'
-  }
-];
-
 // Industry Guides Data - Comprehensive SEO-optimized content
 interface IndustryGuide {
   id: string;
@@ -1209,12 +1186,6 @@ const Resources = () => {
         ogDescription="Comprehensive guides on water treatment, lubricants, laboratory chemicals & oilfield chemicals for Oman & GCC industries. Free technical resources and expert knowledge."
         ogUrl="https://gcoman.com/resources"
         canonical="https://gcoman.com/resources"
-      />
-      <HowToStructuredData
-        name="How to Download Chemical Resources from Global Chemicals LLC"
-        description="Step-by-step guide to downloading product catalogs, safety data sheets, and technical documentation from Global Chemicals LLC."
-        steps={downloadHowToSteps}
-        totalTime="PT5M"
       />
       <BreadcrumbStructuredData items={breadcrumbItems} />
       <Navigation />

@@ -139,6 +139,68 @@ Options -Indexes
   RewriteRule ^alcohols/?$                        /products [R=301,L]
   RewriteRule ^refinery/?$                        /products/oilfield [R=301,L]
 
+  # --- A4b. Old product URL redirects ---
+  # Previous site had a different category structure (acids, alkalis, salts, oxidizers).
+  # These 301s fix Soft 404s that Google reports for the old URLs.
+
+  # Old /products/acids/* → new equivalents
+  RewriteRule ^products/acids/citric-acid/?$             /products/water-treatment/citric-acid-anhydrous [R=301,L]
+  RewriteRule ^products/acids/acetic-acid/?$             /products/oilfield/acetic-acid [R=301,L]
+  RewriteRule ^products/acids/nitric-acid/?$             /products/lab-chemicals/nitric-acid-lab [R=301,L]
+  RewriteRule ^products/acids/phosphoric-acid/?$         /products/lab-chemicals/phosphoric-acid-lab [R=301,L]
+  RewriteRule ^products/acids/hydrochloric-acid/?$       /products/lab-chemicals/hydrochloric-acid-lab [R=301,L]
+  RewriteRule ^products/acids/sulfuric-acid/?$           /products/lab-chemicals/sulfuric-acid-lab [R=301,L]
+  RewriteRule ^products/acids/?$                         /products [R=301,L]
+  RewriteRule ^products/acids/(.+)$                      /products [R=301,L]
+
+  # Old /products/alkalis/* → new equivalents
+  RewriteRule ^products/alkalis/caustic-soda/?$          /products/water-treatment/caustic-soda-flakes [R=301,L]
+  RewriteRule ^products/alkalis/caustic-potash/?$        /products/water-treatment/potassium-hydroxide-water [R=301,L]
+  RewriteRule ^products/alkalis/sodium-carbonate/?$      /products/water-treatment/soda-ash-water [R=301,L]
+  RewriteRule ^products/alkalis/ammonia-solution/?$      /products/lab-chemicals/ammonia-solution-lab [R=301,L]
+  RewriteRule ^products/alkalis/?$                       /products [R=301,L]
+  RewriteRule ^products/alkalis/(.+)$                    /products [R=301,L]
+
+  # Old /products/salts/* → new equivalents
+  RewriteRule ^products/salts/calcium-chloride/?$        /products/water-treatment/calcium-chloride-water [R=301,L]
+  RewriteRule ^products/salts/sodium-chloride/?$         /products/lab-chemicals/sodium-chloride-lab [R=301,L]
+  RewriteRule ^products/salts/magnesium-sulphate/?$      /products/lab-chemicals/magnesium-sulfate-lab [R=301,L]
+  RewriteRule ^products/salts/?$                         /products [R=301,L]
+  RewriteRule ^products/salts/(.+)$                      /products [R=301,L]
+
+  # Old /products/oxidizers/* → new equivalents
+  RewriteRule ^products/oxidizers/hydrogen-peroxide/?$   /products/soap-detergent/hydrogen-peroxide-35 [R=301,L]
+  RewriteRule ^products/oxidizers/sodium-hypochlorite/?$ /products/water-treatment/sodium-hypochlorite [R=301,L]
+  RewriteRule ^products/oxidizers/?$                     /products [R=301,L]
+  RewriteRule ^products/oxidizers/(.+)$                  /products [R=301,L]
+
+  # Wrong slug: sitemap previously listed perchloroethylene without -soap-detergent suffix
+  RewriteRule ^products/soap-detergent/perchloroethylene/?$  /products/soap-detergent/perchloroethylene-soap-detergent [R=301,L]
+
+  # Old slugs in solvents that moved or were renamed
+  RewriteRule ^products/solvents/methanol/?$             /products/alcohols/methanol-industrial [R=301,L]
+  RewriteRule ^products/solvents/toluene/?$              /products/lab-chemicals/toluene-lab [R=301,L]
+  RewriteRule ^products/solvents/xylene/?$               /products/lab-chemicals/xylene-lab [R=301,L]
+  RewriteRule ^products/solvents/mek/?$                  /products/solvents/mek-solvent [R=301,L]
+  RewriteRule ^products/solvents/acetone/?$              /products/lab-chemicals/acetone-lab [R=301,L]
+
+  # Old glycol slugs that were renamed
+  RewriteRule ^products/glycols/mono-ethylene-glycol/?$  /products/glycols/meg-ethylene-glycol [R=301,L]
+  RewriteRule ^products/glycols/monoethylene-glycol/?$   /products/glycols/meg-ethylene-glycol [R=301,L]
+  RewriteRule ^products/glycols/diethylene-glycol/?$     /products/water-treatment/deg-water [R=301,L]
+  RewriteRule ^products/glycols/meg/?$                   /products/glycols/meg-ethylene-glycol [R=301,L]
+  RewriteRule ^products/glycols/deg/?$                   /products/water-treatment/deg-water [R=301,L]
+
+  # Old alcohol slugs that were renamed (e.g. ethanol → ethanol-industrial)
+  RewriteRule ^products/alcohols/ethanol/?$              /products/alcohols/ethanol-industrial [R=301,L]
+  RewriteRule ^products/alcohols/isopropanol/?$          /products/alcohols/isopropanol-industrial [R=301,L]
+  RewriteRule ^products/alcohols/methanol/?$             /products/alcohols/methanol-industrial [R=301,L]
+  RewriteRule ^products/alcohols/butanol/?$              /products/alcohols/butanol-industrial [R=301,L]
+
+  # Old top-level category pages that no longer exist
+  RewriteRule ^products/oil-gas/?$                       /products/oilfield [R=301,L]
+  RewriteRule ^products/cleaning-products/?$             /products [R=301,L]
+
   # --- A5. Trailing-slash normalisation (no slash is canonical) ---
   # Skip if the path is the root or maps to an existing directory we want to
   # serve (handled by A6 below).

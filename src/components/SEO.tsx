@@ -2,8 +2,6 @@ import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 
-const BASE_URL = 'https://gcoman.com';
-
 interface SEOProps {
   title: string;
   /** Optional override for the <title> tag only (og:title still uses `title`). Use when fitForSerp's automatic shortening is too aggressive. */
@@ -73,11 +71,13 @@ export const SEO = ({
   const finalTitle = ogTitle || title;
   const finalDescription = ogDescription || description;
 
-  // Generate hreflang URLs
-  const currentPath = location.pathname.replace(/^\/ar/, '') || '/';
-  const enUrl = `${BASE_URL}${currentPath}`;
-  const arUrl = `${BASE_URL}/ar${currentPath}`;
   const currentLocale = i18n.language === 'ar' ? 'ar_SA' : 'en_US';
+
+  // Arabic (/ar/*) pages show translated body content to users, but their SEO
+  // layer (title, description, canonical) is still English — so keep them out of
+  // the index to avoid duplicate-content competition with the English pages.
+  // Remove this once the Arabic SEO layer is fully localized.
+  const isArabic = location.pathname === '/ar' || location.pathname.startsWith('/ar/');
 
   return (
     // defer={false} forces react-helmet-async to commit head changes
@@ -93,26 +93,15 @@ export const SEO = ({
       {/* Robots */}
       {noIndex ? (
         <meta name="robots" content="noindex, nofollow" />
+      ) : isArabic ? (
+        <meta name="robots" content="noindex, follow" />
       ) : (
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
       )}
 
-      {/* Hreflang for internationalization — en + ar for all GCC countries */}
-      <link rel="alternate" hrefLang="en" href={enUrl} />
-      <link rel="alternate" hrefLang="en-OM" href={enUrl} />
-      <link rel="alternate" hrefLang="en-AE" href={enUrl} />
-      <link rel="alternate" hrefLang="en-SA" href={enUrl} />
-      <link rel="alternate" hrefLang="en-QA" href={enUrl} />
-      <link rel="alternate" hrefLang="en-KW" href={enUrl} />
-      <link rel="alternate" hrefLang="en-BH" href={enUrl} />
-      <link rel="alternate" hrefLang="ar" href={arUrl} />
-      <link rel="alternate" hrefLang="ar-OM" href={arUrl} />
-      <link rel="alternate" hrefLang="ar-AE" href={arUrl} />
-      <link rel="alternate" hrefLang="ar-SA" href={arUrl} />
-      <link rel="alternate" hrefLang="ar-QA" href={arUrl} />
-      <link rel="alternate" hrefLang="ar-KW" href={arUrl} />
-      <link rel="alternate" hrefLang="ar-BH" href={arUrl} />
-      <link rel="alternate" hrefLang="x-default" href={enUrl} />
+      {/* No hreflang: the site is indexed as English-only. /ar/* renders
+          translated body content for users but is noindex (its SEO layer is not
+          yet localized), so there are no reciprocal alternates to advertise. */}
 
       {/* Open Graph */}
       <meta property="og:type" content={ogType} />

@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Outlet, useParams, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Outlet, useLocation, Navigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import { AuthProvider } from "./contexts/AuthContext";
@@ -47,24 +47,28 @@ const ChemistryPlayground = lazy(() => import("./pages/ChemistryPlayground"));
 
 const queryClient = new QueryClient();
 
-const LangLayout = () => {
-  const { lng } = useParams();
+// Keeps i18next in sync with the URL: /ar/* renders Arabic, everything else
+// English. Driven by pathname (not a route param) so switching back to an
+// English route also resets the language — the previous version read a :lng
+// param the route never provided, so every /ar route fell through to "/".
+const LanguageSync = () => {
   const { i18n } = useTranslation();
+  const { pathname } = useLocation();
 
   useEffect(() => {
-    const next = lng === 'ar' ? 'ar' : 'en';
+    const next = pathname === '/ar' || pathname.startsWith('/ar/') ? 'ar' : 'en';
     if (i18n.language !== next) {
       i18n.changeLanguage(next);
       localStorage.setItem('i18nextLng', next);
     }
-  }, [lng, i18n]);
+  }, [pathname, i18n]);
 
-  if (lng !== 'ar' && lng !== 'en') {
-    return <Navigate to="/" replace />;
-  }
-
-  return <Outlet />;
+  return null;
 };
+
+// Wrapper element for the /ar route subtree. Language is handled globally by
+// <LanguageSync>; this just renders the matched child route.
+const LangLayout = () => <Outlet />;
 
 // Redirect component for /en/* routes to avoid duplicate content
 const RedirectToNonLang = ({ to }: { to: string }) => {
@@ -90,6 +94,7 @@ const App = () => (
             </a>
             <CookieConsent />
             <BackToTopButton />
+            <LanguageSync />
             <RouteChangeLoader />
             <Suspense fallback={<Loading />}>
               <Routes>

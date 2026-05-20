@@ -46,6 +46,7 @@
     {
       "@context": "https://schema.org",
       "@type": "Organization",
+      "@id": "https://gcoman.com/#organization",
       "additionalType": "http://www.productontology.org/id/Chemical_industry",
       "name": "Global Chemicals LLC",
       "alternateName": ["GC Oman", "Global Chemicals Middle East", "GCOMAN"],
@@ -96,14 +97,7 @@
         { "@type": "Country", "name": "Iraq" },
         { "@type": "Country", "name": "Jordan" },
         { "@type": "Country", "name": "Egypt" }
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "bestRating": "5",
-        "worstRating": "1",
-        "reviewCount": "200"
-      }
+      ]
     }
     </script>
 
@@ -387,9 +381,11 @@
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
+      "@id": "https://gcoman.com/#website",
       "name": "Global Chemicals LLC",
       "alternateName": "GC Oman",
       "url": "https://gcoman.com",
+      "publisher": { "@id": "https://gcoman.com/#organization" },
       "potentialAction": {
         "@type": "SearchAction",
         "target": "https://gcoman.com/products?search={search_term_string}",
@@ -398,50 +394,7 @@
     }
     </script>
 
-    <!-- Structured Data - BreadcrumbList -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://gcoman.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "About",
-          "item": "https://gcoman.com/about"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Products",
-          "item": "https://gcoman.com/products"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "Industries",
-          "item": "https://gcoman.com/industries"
-        },
-        {
-          "@type": "ListItem",
-          "position": 5,
-          "name": "Contact",
-          "item": "https://gcoman.com/contact"
-        }
-      ]
-    }
-    </script>
-    
-  
-  
-  
-  <link rel="icon" href="/favicon.png?v=4" sizes="32x32" type="image/png">
+    <link rel="icon" href="/favicon.png?v=4" sizes="32x32" type="image/png">
   <link rel="icon" href="/favicon.png?v=4" sizes="16x16" type="image/png">
   <link rel="shortcut icon" href="/favicon.png?v=4" type="image/png">
   <link rel="apple-touch-icon" href="/favicon.png?v=4" sizes="180x180">

@@ -73,6 +73,14 @@ const ProductDetail = () => {
   if (!product) {
     return (
       <div className="min-h-screen bg-background">
+        {/* noIndex prevents unknown product URLs from being indexed as Soft 404s.
+            Canonical points to /products so crawlers follow it to a valid page. */}
+        <SEO
+          noIndex={true}
+          title="Product Not Found | Global Chemicals LLC"
+          description="The requested product page could not be found. Browse our full chemical product catalogue."
+          canonical="https://gcoman.com/products"
+        />
         <Navigation />
         <div className="container mx-auto px-4 py-32 text-center">
           <h2 className="text-4xl font-bold mb-4">{t('products.productNotFound', { defaultValue: 'Product Not Found' })}</h2>

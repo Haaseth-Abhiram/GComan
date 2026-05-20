@@ -157,6 +157,71 @@
 /career/                                /career                                 301!
 
 # =====================================
+# OLD PRODUCT URL REDIRECTS
+# These URLs existed in the previous site structure and are indexed by Google.
+# Redirecting to equivalent pages in the new URL structure fixes Soft 404s.
+# =====================================
+
+# Old /products/acids/* category (acids → lab-chemicals / water-treatment / oilfield)
+/products/acids/citric-acid             /products/water-treatment/citric-acid-anhydrous    301
+/products/acids/acetic-acid             /products/oilfield/acetic-acid                     301
+/products/acids/nitric-acid             /products/lab-chemicals/nitric-acid-lab             301
+/products/acids/phosphoric-acid         /products/lab-chemicals/phosphoric-acid-lab         301
+/products/acids/hydrochloric-acid       /products/lab-chemicals/hydrochloric-acid-lab       301
+/products/acids/sulfuric-acid           /products/lab-chemicals/sulfuric-acid-lab           301
+/products/acids/*                       /products                                           301
+
+# Old /products/alkalis/* category (alkalis → water-treatment / lab-chemicals)
+/products/alkalis/caustic-soda          /products/water-treatment/caustic-soda-flakes       301
+/products/alkalis/caustic-potash        /products/water-treatment/potassium-hydroxide-water 301
+/products/alkalis/sodium-carbonate      /products/water-treatment/soda-ash-water            301
+/products/alkalis/ammonia-solution      /products/lab-chemicals/ammonia-solution-lab        301
+/products/alkalis/*                     /products                                           301
+
+# Old /products/salts/* category (salts → water-treatment / lab-chemicals)
+/products/salts/calcium-chloride        /products/water-treatment/calcium-chloride-water    301
+/products/salts/sodium-chloride         /products/lab-chemicals/sodium-chloride-lab         301
+/products/salts/magnesium-sulphate      /products/lab-chemicals/magnesium-sulfate-lab       301
+/products/salts/sodium-sulphate         /products                                           301
+/products/salts/*                       /products                                           301
+
+# Old /products/oxidizers/* category (oxidizers → water-treatment / soap-detergent)
+/products/oxidizers/hydrogen-peroxide   /products/soap-detergent/hydrogen-peroxide-35       301
+/products/oxidizers/sodium-hypochlorite /products/water-treatment/sodium-hypochlorite       301
+/products/oxidizers/*                   /products                                           301
+
+# Wrong slug for perchloroethylene in soap-detergent (sitemap was corrected to -soap-detergent suffix)
+/products/soap-detergent/perchloroethylene  /products/soap-detergent/perchloroethylene-soap-detergent  301
+
+# Old slugs in /products/solvents/* that no longer exist or moved category
+/products/solvents/methanol             /products/alcohols/methanol-industrial              301
+/products/solvents/toluene              /products/lab-chemicals/toluene-lab                 301
+/products/solvents/xylene               /products/lab-chemicals/xylene-lab                  301
+/products/solvents/mek                  /products/solvents/mek-solvent                      301
+/products/solvents/acetone              /products/lab-chemicals/acetone-lab                 301
+
+# Old slugs in /products/glycols/* that were renamed
+/products/glycols/mono-ethylene-glycol  /products/glycols/meg-ethylene-glycol               301
+/products/glycols/monoethylene-glycol   /products/glycols/meg-ethylene-glycol               301
+/products/glycols/diethylene-glycol     /products/water-treatment/deg-water                 301
+/products/glycols/meg                   /products/glycols/meg-ethylene-glycol               301
+/products/glycols/deg                   /products/water-treatment/deg-water                 301
+
+# Old slugs in /products/alcohols/* that were renamed
+/products/alcohols/ethanol              /products/alcohols/ethanol-industrial               301
+/products/alcohols/isopropanol          /products/alcohols/isopropanol-industrial           301
+/products/alcohols/methanol             /products/alcohols/methanol-industrial              301
+/products/alcohols/butanol              /products/alcohols/butanol-industrial               301
+
+# Old top-level category pages that no longer exist
+/products/acids                         /products                                           301
+/products/alkalis                       /products                                           301
+/products/salts                         /products                                           301
+/products/oxidizers                     /products                                           301
+/products/oil-gas                       /products/oilfield                                  301
+/products/cleaning-products             /products                                           301
+
+# =====================================
 # CURRENT SEO REDIRECTS
 # =====================================
 
@@ -420,7 +485,7 @@ https://www.gcoman.com/*      https://gcoman.com/:splat  301!
 /products/soap-detergent/hydrogen-peroxide-6                         /products/soap-detergent/hydrogen-peroxide-6/index.html                         200
 /products/soap-detergent/labsa                                       /products/soap-detergent/labsa/index.html                                       200
 /products/soap-detergent/nonyl-phenol-ethoxylate                     /products/soap-detergent/nonyl-phenol-ethoxylate/index.html                     200
-/products/soap-detergent/perchloroethylene                           /products/soap-detergent/perchloroethylene/index.html                           200
+/products/soap-detergent/perchloroethylene-soap-detergent            /products/soap-detergent/perchloroethylene-soap-detergent/index.html            200
 /products/soap-detergent/sles-70                                     /products/soap-detergent/sles-70/index.html                                     200
 /products/soap-detergent/soda-ash-dense-soap                         /products/soap-detergent/soda-ash-dense-soap/index.html                         200
 /products/soap-detergent/soda-ash-light-soap                         /products/soap-detergent/soda-ash-light-soap/index.html                         200

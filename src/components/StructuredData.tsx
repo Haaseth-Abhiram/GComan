@@ -301,55 +301,6 @@ export const FAQStructuredData = ({ faqs }: FAQStructuredDataProps) => {
 };
 
 // =====================================================
-// HOWTO STRUCTURED DATA (for guides/resources)
-// =====================================================
-interface HowToStep {
-  name: string;
-  text: string;
-  image?: string;
-}
-
-interface HowToStructuredDataProps {
-  name: string;
-  description: string;
-  steps: HowToStep[];
-  totalTime?: string; // ISO 8601 duration format, e.g., "PT30M"
-  image?: string;
-}
-
-export const HowToStructuredData = ({
-  name,
-  description,
-  steps,
-  totalTime,
-  image
-}: HowToStructuredDataProps) => {
-  const howToSchema = {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
-    "name": name,
-    "description": description,
-    ...(totalTime && { "totalTime": totalTime }),
-    ...(image && { "image": image }),
-    "step": steps.map((step, index) => ({
-      "@type": "HowToStep",
-      "position": index + 1,
-      "name": step.name,
-      "text": step.text,
-      ...(step.image && { "image": step.image })
-    }))
-  };
-
-  return (
-    <Helmet defer={false}>
-      <script type="application/ld+json">
-        {JSON.stringify(howToSchema)}
-      </script>
-    </Helmet>
-  );
-};
-
-// =====================================================
 // JOB POSTING STRUCTURED DATA (for Careers page)
 // =====================================================
 interface JobPostingProps {
@@ -548,6 +499,7 @@ export const OrganizationStructuredData = ({ includeService = false }: Organizat
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "https://gcoman.com/#organization",
     "name": "Global Chemicals LLC",
     "alternateName": ["Global Chemicals Oman", "GCOMAN", "Global Chemicals Middle East"],
     "url": "https://gcoman.com",
