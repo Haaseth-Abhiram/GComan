@@ -11,10 +11,11 @@
  *
  * Fix
  * ---
- * Intercept requests at the edge. For any extensionless, non-root path,
- * try fetching `<path>/index.html` from the origin first. If that returns
- * 200, serve it. Otherwise fall through to the original request so the
- * SPA shell / 404 handling still works.
+ * Intercept requests at the edge. First apply the legacy product redirects
+ * that Apache .htaccess used to handle. Then, for any extensionless, non-root
+ * path, try fetching `<path>/index.html` from the origin first. If that returns
+ * 200, serve it. Otherwise fall through to the original request so the SPA
+ * shell / 404 handling still works.
  *
  * Deploy
  * ------
@@ -32,6 +33,48 @@ addEventListener("fetch", (event) => {
   event.respondWith(handle(event.request));
 });
 
+const LEGACY_REDIRECTS = new Map([
+  ["/products/acids/citric-acid", "/products/water-treatment/citric-acid-anhydrous"],
+  ["/products/acids/acetic-acid", "/products/oilfield/acetic-acid"],
+  ["/products/acids/nitric-acid", "/products/lab-chemicals/nitric-acid-lab"],
+  ["/products/acids/phosphoric-acid", "/products/lab-chemicals/phosphoric-acid-lab"],
+  ["/products/acids/hydrochloric-acid", "/products/lab-chemicals/hydrochloric-acid-lab"],
+  ["/products/acids/sulfuric-acid", "/products/lab-chemicals/sulfuric-acid-lab"],
+  ["/products/alkalis/caustic-soda", "/products/water-treatment/caustic-soda-flakes"],
+  ["/products/alkalis/caustic-potash", "/products/water-treatment/potassium-hydroxide-water"],
+  ["/products/alkalis/sodium-carbonate", "/products/water-treatment/soda-ash-water"],
+  ["/products/alkalis/ammonia-solution", "/products/lab-chemicals/ammonia-solution-lab"],
+  ["/products/salts/calcium-chloride", "/products/water-treatment/calcium-chloride-water"],
+  ["/products/salts/sodium-chloride", "/products/lab-chemicals/sodium-chloride-lab"],
+  ["/products/salts/magnesium-sulphate", "/products/lab-chemicals/magnesium-sulfate-lab"],
+  ["/products/oxidizers/hydrogen-peroxide", "/products/soap-detergent/hydrogen-peroxide-35"],
+  ["/products/oxidizers/sodium-hypochlorite", "/products/water-treatment/sodium-hypochlorite"],
+  ["/products/soap-detergent/perchloroethylene", "/products/soap-detergent/perchloroethylene-soap-detergent"],
+  ["/products/solvents/methanol", "/products/alcohols/methanol-industrial"],
+  ["/products/solvents/toluene", "/products/lab-chemicals/toluene-lab"],
+  ["/products/solvents/xylene", "/products/lab-chemicals/xylene-lab"],
+  ["/products/solvents/mek", "/products/solvents/mek-solvent"],
+  ["/products/solvents/acetone", "/products/lab-chemicals/acetone-lab"],
+  ["/products/glycols/mono-ethylene-glycol", "/products/glycols/meg-ethylene-glycol"],
+  ["/products/glycols/monoethylene-glycol", "/products/glycols/meg-ethylene-glycol"],
+  ["/products/glycols/diethylene-glycol", "/products/water-treatment/deg-water"],
+  ["/products/glycols/meg", "/products/glycols/meg-ethylene-glycol"],
+  ["/products/glycols/deg", "/products/water-treatment/deg-water"],
+  ["/products/alcohols/ethanol", "/products/alcohols/ethanol-industrial"],
+  ["/products/alcohols/isopropanol", "/products/alcohols/isopropanol-industrial"],
+  ["/products/alcohols/methanol", "/products/alcohols/methanol-industrial"],
+  ["/products/alcohols/butanol", "/products/alcohols/butanol-industrial"],
+  ["/products/oil-gas", "/products/oilfield"],
+  ["/products/cleaning-products", "/products"],
+]);
+
+const LEGACY_PREFIX_REDIRECTS = new Map([
+  ["/products/acids", "/products"],
+  ["/products/alkalis", "/products"],
+  ["/products/salts", "/products"],
+  ["/products/oxidizers", "/products"],
+]);
+
 async function handle(request) {
   const url = new URL(request.url);
   const { pathname } = url;
@@ -46,6 +89,26 @@ async function handle(request) {
   // Skip the root — origin already serves the correct homepage there.
   if (pathname === "/" || pathname === "") {
     return fetch(request);
+  }
+
+  const normalizedPath = pathname.length > 1 ? pathname.replace(/\/+$/, "") : pathname;
+  const legacyTarget = LEGACY_REDIRECTS.get(normalizedPath);
+  if (legacyTarget) {
+    const redirectUrl = new URL(url.toString());
+    redirectUrl.hostname = "gcoman.com";
+    redirectUrl.pathname = legacyTarget;
+    redirectUrl.search = "";
+    return Response.redirect(redirectUrl.toString(), 301);
+  }
+
+  for (const [prefix, target] of LEGACY_PREFIX_REDIRECTS) {
+    if (normalizedPath === prefix || normalizedPath.startsWith(`${prefix}/`)) {
+      const redirectUrl = new URL(url.toString());
+      redirectUrl.hostname = "gcoman.com";
+      redirectUrl.pathname = target;
+      redirectUrl.search = "";
+      return Response.redirect(redirectUrl.toString(), 301);
+    }
   }
 
   // Skip anything with a file extension (assets, sitemap.xml, robots.txt,
