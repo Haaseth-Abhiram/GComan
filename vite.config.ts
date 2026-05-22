@@ -1,4 +1,4 @@
-import { defineConfig } from "vite";
+import { defineConfig, type PluginOption } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import fs from "fs";
@@ -62,7 +62,7 @@ export default defineConfig(({ mode }) => ({
     // Soft 404 / "Crawled — currently not indexed" before JS finishes.
     // Prerender resolves Helmet head tags + JSON-LD + body content into
     // each route's static HTML.
-    mode === "production" && prerender({
+    mode === "production" && (prerender({
       routes: routesFromSitemap(),
       renderer: "@prerenderer/renderer-puppeteer",
       rendererOptions: {
@@ -74,7 +74,7 @@ export default defineConfig(({ mode }) => ({
         renderAfterTime: 2500,
         maxConcurrentRoutes: 4,
       },
-    }),
+    }) as unknown as PluginOption),
   ].filter(Boolean),
   resolve: {
     alias: {
