@@ -139,7 +139,7 @@ async function handle(request) {
   // .js, .css, images, fonts, etc.).
   const lastSegment = pathname.split("/").pop() || "";
   if (lastSegment.includes(".")) {
-    return fetch(request);
+    return withWorkerHeader(await fetch(request), "asset-passthrough");
   }
 
   // Skip API / edge function paths and admin/login (they're not prerendered).
@@ -149,7 +149,7 @@ async function handle(request) {
     pathname.startsWith("/admin") ||
     pathname.startsWith("/login")
   ) {
-    return fetch(request);
+    return withWorkerHeader(await fetch(request), "app-passthrough");
   }
 
   // Build the rewritten URL: /products/glycols → /products/glycols/index.html
@@ -171,6 +171,8 @@ async function handle(request) {
       // Return a fresh Response so headers are mutable and the body
       // streams correctly back to the client.
       const headers = new Headers(rewrittenResponse.headers);
+      headers.set("x-gcoman-worker", "prerender-rewrite");
+      headers.set("x-gcoman-worker-rewrite", rewrittenPath);
       // Make sure the client treats this as HTML even if origin guessed wrong.
       if (!headers.has("content-type")) {
         headers.set("content-type", "text/html; charset=utf-8");
@@ -186,5 +188,5 @@ async function handle(request) {
   }
 
   // Fallback: original request (SPA shell handles routing / 404).
-  return fetch(request);
+  return withWorkerHeader(await fetch(request), "fallback-origin");
 }
