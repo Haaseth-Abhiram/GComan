@@ -29,9 +29,25 @@
  *    Should return the glycols page title, not the homepage title.
  */
 
-addEventListener("fetch", (event) => {
-  event.respondWith(handle(event.request));
-});
+export default {
+  async fetch(request) {
+    return handle(request);
+  },
+};
+
+function withWorkerHeader(response, mode, extraHeaders = {}) {
+  const headers = new Headers(response.headers);
+  headers.set("x-gcoman-worker", mode);
+  for (const [key, value] of Object.entries(extraHeaders)) {
+    headers.set(key, value);
+  }
+
+  return new Response(response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers,
+  });
+}
 
 const LEGACY_REDIRECTS = new Map([
   ["/products/acids/citric-acid", "/products/water-treatment/citric-acid-anhydrous"],
@@ -86,9 +102,17 @@ async function handle(request) {
     return fetch(request);
   }
 
+  // Keep one canonical host for SEO. This is safe here because the Worker route
+  // is expected to be bound to both gcoman.com/* and www.gcoman.com/*.
+  if (url.hostname === "www.gcoman.com") {
+    const redirectUrl = new URL(url.toString());
+    redirectUrl.hostname = "gcoman.com";
+    return Response.redirect(redirectUrl.toString(), 301);
+  }
+
   // Skip the root — origin already serves the correct homepage there.
   if (pathname === "/" || pathname === "") {
-    return fetch(request);
+    return withWorkerHeader(await fetch(request), "root-passthrough");
   }
 
   const normalizedPath = pathname.length > 1 ? pathname.replace(/\/+$/, "") : pathname;
