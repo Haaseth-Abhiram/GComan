@@ -29,9 +29,25 @@
  *    Should return the glycols page title, not the homepage title.
  */
 
-addEventListener("fetch", (event) => {
-  event.respondWith(handle(event.request));
-});
+export default {
+  async fetch(request) {
+    return handle(request);
+  },
+};
+
+function withWorkerHeader(response, mode, extraHeaders = {}) {
+  const headers = new Headers(response.headers);
+  headers.set("x-gcoman-worker", mode);
+  for (const [key, value] of Object.entries(extraHeaders)) {
+    headers.set(key, value);
+  }
+
+  return new Response(response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers,
+  });
+}
 
 const LEGACY_REDIRECTS = new Map([
   ["/products/acids/citric-acid", "/products/water-treatment/citric-acid-anhydrous"],
@@ -86,9 +102,17 @@ async function handle(request) {
     return fetch(request);
   }
 
+  // Keep one canonical host for SEO. This is safe here because the Worker route
+  // is expected to be bound to both gcoman.com/* and www.gcoman.com/*.
+  if (url.hostname === "www.gcoman.com") {
+    const redirectUrl = new URL(url.toString());
+    redirectUrl.hostname = "gcoman.com";
+    return Response.redirect(redirectUrl.toString(), 301);
+  }
+
   // Skip the root — origin already serves the correct homepage there.
   if (pathname === "/" || pathname === "") {
-    return fetch(request);
+    return withWorkerHeader(await fetch(request), "root-passthrough");
   }
 
   const normalizedPath = pathname.length > 1 ? pathname.replace(/\/+$/, "") : pathname;
@@ -115,7 +139,7 @@ async function handle(request) {
   // .js, .css, images, fonts, etc.).
   const lastSegment = pathname.split("/").pop() || "";
   if (lastSegment.includes(".")) {
-    return fetch(request);
+    return withWorkerHeader(await fetch(request), "asset-passthrough");
   }
 
   // Skip API / edge function paths and admin/login (they're not prerendered).
@@ -125,7 +149,7 @@ async function handle(request) {
     pathname.startsWith("/admin") ||
     pathname.startsWith("/login")
   ) {
-    return fetch(request);
+    return withWorkerHeader(await fetch(request), "app-passthrough");
   }
 
   // Build the rewritten URL: /products/glycols → /products/glycols/index.html
@@ -147,6 +171,8 @@ async function handle(request) {
       // Return a fresh Response so headers are mutable and the body
       // streams correctly back to the client.
       const headers = new Headers(rewrittenResponse.headers);
+      headers.set("x-gcoman-worker", "prerender-rewrite");
+      headers.set("x-gcoman-worker-rewrite", rewrittenPath);
       // Make sure the client treats this as HTML even if origin guessed wrong.
       if (!headers.has("content-type")) {
         headers.set("content-type", "text/html; charset=utf-8");
@@ -162,5 +188,5 @@ async function handle(request) {
   }
 
   // Fallback: original request (SPA shell handles routing / 404).
-  return fetch(request);
+  return withWorkerHeader(await fetch(request), "fallback-origin");
 }
