@@ -1,6 +1,4 @@
 #!/usr/bin/env node
-import { JSDOM } from "jsdom";
-
 const urls = [
   "https://gcoman.com/products/glycols",
   "https://gcoman.com/products/water-treatment/caustic-soda-flakes",
@@ -12,9 +10,9 @@ let failed = false;
 for (const url of urls) {
   const response = await fetch(url, { redirect: "manual" });
   const html = await response.text();
-  const dom = new JSDOM(html);
-  const title = dom.window.document.querySelector("title")?.textContent?.trim() || "NO_TITLE";
-  const canonical = dom.window.document.querySelector('link[rel="canonical"]')?.getAttribute("href") || "NO_CANONICAL";
+  const title = html.match(/<title[^>]*>(.*?)<\/title>/is)?.[1]?.trim() || "NO_TITLE";
+  const canonicalTag = html.match(/<link[^>]+rel=["']canonical["'][^>]*>/i)?.[0] || "";
+  const canonical = canonicalTag.match(/href=["']([^"']+)["']/i)?.[1] || "NO_CANONICAL";
   const worker = response.headers.get("x-gcoman-worker") || "NO_WORKER_HEADER";
   const expectedCanonical = url;
   const ok = response.status === 200 && canonical === expectedCanonical && worker === "prerender-rewrite";
