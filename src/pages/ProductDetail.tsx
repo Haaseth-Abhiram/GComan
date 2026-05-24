@@ -9,7 +9,8 @@ import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
 import { ArrowLeft, CheckCircle2, Phone, Mail, Beaker, Info, MessageCircle, Truck, Shield, Globe } from 'lucide-react';
 import { loadProductsByCategory } from '@/data/productLoader';
-import { ProductStructuredData, BreadcrumbStructuredData } from '@/components/StructuredData';
+import { ProductStructuredData, BreadcrumbStructuredData, FAQStructuredData } from '@/components/StructuredData';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { SEO } from '@/components/SEO';
 import { trackProductView, trackSelectContent, trackContactClick } from '@/components/GoogleAnalytics';
 import { ProductCard } from '@/components/products/ProductCard';
@@ -201,6 +202,9 @@ const ProductDetail = () => {
       />
       
       <ProductStructuredData product={product} />
+      {product.details?.faqs && product.details.faqs.length > 0 && (
+        <FAQStructuredData faqs={product.details.faqs} />
+      )}
       <BreadcrumbStructuredData items={[
         { name: 'Home', url: 'https://gcoman.com' },
         { name: 'Products', url: 'https://gcoman.com/products' },
@@ -351,6 +355,26 @@ const ProductDetail = () => {
                       </div>
                     ))}
                   </div>
+                </Card>
+              )}
+
+              {product.details?.faqs && product.details.faqs.length > 0 && (
+                <Card className="p-8 mb-8">
+                  <h2 className="text-2xl font-bold mb-6">
+                    Frequently Asked Questions — {translatedTitle}
+                  </h2>
+                  <Accordion type="single" collapsible className="w-full">
+                    {product.details.faqs.map((faq, index) => (
+                      <AccordionItem key={index} value={`faq-${index}`}>
+                        <AccordionTrigger className="text-left font-semibold text-base">
+                          {faq.question}
+                        </AccordionTrigger>
+                        <AccordionContent className="text-muted-foreground leading-relaxed">
+                          {faq.answer}
+                        </AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
                 </Card>
               )}
 

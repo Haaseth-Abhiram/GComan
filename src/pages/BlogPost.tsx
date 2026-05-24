@@ -3,7 +3,8 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import { SEO } from '@/components/SEO';
-import { ArticleStructuredData, BreadcrumbStructuredData } from '@/components/StructuredData';
+import { ArticleStructuredData, BreadcrumbStructuredData, FAQStructuredData } from '@/components/StructuredData';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Calendar, Clock, User, ArrowLeft, Tag } from 'lucide-react';
@@ -70,6 +71,9 @@ const BlogPost = () => {
         modifiedDate={post.date}
         category={post.category}
       />
+      {post.faqs && post.faqs.length > 0 && (
+        <FAQStructuredData faqs={post.faqs} />
+      )}
       <BreadcrumbStructuredData items={[
         { name: 'Home', url: 'https://gcoman.com/' },
         { name: 'Blog', url: 'https://gcoman.com/blog' },
@@ -138,6 +142,26 @@ const BlogPost = () => {
                 paragraph.trim() ? <p key={i} className="mb-4 leading-relaxed text-foreground/90">{paragraph}</p> : null
               ))}
             </div>
+
+            {post.faqs && post.faqs.length > 0 && (
+              <div className="mt-10">
+                <h2 className="text-2xl font-bold mb-6">
+                  Frequently Asked Questions
+                </h2>
+                <Accordion type="single" collapsible className="w-full">
+                  {post.faqs.map((faq, index) => (
+                    <AccordionItem key={index} value={`faq-${index}`}>
+                      <AccordionTrigger className="text-left font-semibold text-base">
+                        {faq.question}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-muted-foreground leading-relaxed">
+                        {faq.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </div>
+            )}
 
             {/* Tags */}
             <div className="mt-10 pt-6 border-t border-border">

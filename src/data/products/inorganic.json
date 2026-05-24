@@ -175,6 +175,24 @@
         "Dosage: 5-50 ppm (water treatment)",
         "Lower sludge production than alum",
         "Available in 25kg bags, 1000L IBCs, bulk"
+      ],
+      "faqs": [
+        {
+          "question": "What is Poly Aluminium Chloride (PAC) and how does it work as a coagulant?",
+          "answer": "Poly Aluminium Chloride (PAC) is a pre-polymerised inorganic coagulant formed by partially neutralising aluminium chloride with alkali. The result is a polymeric aluminium species with a high positive charge density that rapidly destabilises negatively charged suspended particles, colloids, and dissolved organic matter in water. Unlike conventional aluminium sulphate (alum), which requires rapid dispersion and pH-specific conditions to hydrolyse and form active coagulant species in situ, PAC's pre-polymerised structure allows it to work immediately across a wider pH range (5.5–9.0). It is used in PAEW-operated municipal water treatment plants across Muscat, Sohar, Salalah, and Barka, as well as in industrial and wastewater treatment systems throughout Oman."
+        },
+        {
+          "question": "What is the PAC dosage for treating turbid water in municipal water plants?",
+          "answer": "For municipal water treatment in Oman, typical PAC dosage ranges from 5–30 mg/L as product (liquid 10% Al₂O₃) for raw water with 10–100 NTU turbidity. Highly turbid raw water (above 100 NTU, such as wadi floodwater events in Oman's interior) may require 40–80 mg/L. The optimum dose is always determined by jar testing on the actual raw water because turbidity, colour, organic loading, temperature, and alkalinity all affect coagulant demand. At PAEW plants, automated dosing systems with turbidity feedback control adjust PAC dose in real time. Global Chemicals LLC provides jar test services and dosage modelling for water treatment operators across Oman and the GCC."
+        },
+        {
+          "question": "How does PAC compare to ferric sulphate and alum for water treatment?",
+          "answer": "PAC outperforms both alum and ferric sulphate in several important parameters. Compared to alum (Al₂(SO₄)₃), PAC requires 30–50% lower dosage by weight, works across a wider pH range (5.5–9.0 vs. 6.0–7.5 for alum), produces 15–30% less sludge, and leaves lower residual aluminium in treated water. Compared to ferric sulphate, PAC produces clearer water at lower doses for colour and turbidity removal, though ferric coagulants can be more effective for phosphorus removal and in very low-pH raw water. PAC is the coagulant of choice for most of Oman's drinking water treatment plants because it balances performance, lower sludge handling costs, and acceptable residual aluminium in finished water."
+        },
+        {
+          "question": "What forms of PAC does Global Chemicals LLC supply in Oman?",
+          "answer": "Global Chemicals LLC supplies PAC in two forms: liquid PAC (10% Al₂O₃, yellow to brown solution) in 1,000L IBC containers and bulk tanker, and PAC powder (28–30% Al₂O₃, white to pale yellow powder) in 25kg bags. Liquid PAC is ready to dose directly via metering pump and is preferred for large continuous-operation plants. PAC powder must be dissolved on-site before dosing but offers a 24-month shelf life and lower transport cost per unit of active chemical — making it suitable for remote plants in Oman's interior, smaller water treatment operations, and construction site water treatment. Both forms are NSF/ANSI 60 certified for use in drinking water treatment. Technical data sheets, jar test guidance, and dosage calculations are provided with supply."
+        }
       ]
     }
   },

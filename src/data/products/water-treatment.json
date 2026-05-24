@@ -195,6 +195,24 @@
         "Non-toxic and biodegradable",
         "Liquid form for easy dosing",
         "Wide operating temperature range"
+      ],
+      "faqs": [
+        {
+          "question": "What is an antiscalant and why is it used in water treatment?",
+          "answer": "An antiscalant (scale inhibitor) is a chemical dosed at low concentrations into water systems to prevent the precipitation and deposition of mineral salts on equipment surfaces. Without antiscalant, calcium carbonate, calcium sulphate, silica, and other dissolved minerals in feed water concentrate during evaporation or filtration until they exceed their solubility limit and crystallise, forming hard scale on heat exchanger tubes, boiler surfaces, cooling tower fill, and RO membranes. In Oman's hard water regions (high calcium, magnesium, and alkalinity) and in cooling towers operating at high cycles of concentration, scale formation is a major operational problem. Antiscalant prevents this by interfering with crystal growth and dispersing nascent crystals before they can adhere to surfaces."
+        },
+        {
+          "question": "What dosage of antiscalant is recommended for industrial cooling systems in Oman?",
+          "answer": "Typical antiscalant dosage for cooling tower systems in Oman is 5–20 mg/L in the circulating water, depending on the make-up water hardness, target cycles of concentration, and the specific antiscalant formulation. Oman's groundwater used as cooling tower make-up water often has high calcium hardness (200–500 mg/L as CaCO₃) and high alkalinity, making scale control essential. At 4–5 cycles of concentration (typical for water-efficient operations in Oman's arid climate), make-up water minerals concentrate to 4–5 times their original level — well beyond calcium carbonate saturation. Global Chemicals LLC provides system-specific dosage recommendations including Langelier Saturation Index (LSI) calculations for each customer's water chemistry."
+        },
+        {
+          "question": "Which scale types does antiscalant prevent in Oman's hard water conditions?",
+          "answer": "In Oman's groundwater and desalinated water systems, the primary scales requiring antiscalant control are calcium carbonate (CaCO₃, the most common scale in cooling towers and distribution piping), calcium sulphate (CaSO₄, common in high-sulphate groundwater from Oman's interior regions), silica (SiO₂, a concern in wells with high dissolved silica and in RO concentrate streams), and barium and strontium sulphate (in oilfield produced water and formation water systems at PDO and OQ facilities). Phosphate and iron scales are also managed with antiscalant products that include dispersants. The antiscalant product is selected based on the dominant scale risk identified by water analysis."
+        },
+        {
+          "question": "How is antiscalant dosed in cooling tower water treatment systems?",
+          "answer": "Antiscalant is dosed continuously into the cooling tower make-up water line using a chemical metering pump — typically a diaphragm dosing pump controlled by a water flow signal (proportional dosing) or a timer. Continuous dosing to make-up water is the most reliable method because it maintains a consistent inhibitor concentration in the circulating water regardless of evaporation rate variations. The dosing system includes a day tank (from which the pump draws), a check valve, and a backflow preventer. Monitoring includes periodic measurement of inhibitor residual (using colorimetric test kits or tracer-based monitoring) and scale deposit inspection on heat exchanger surfaces. Global Chemicals LLC supplies antiscalant with dosing calculation sheets and compatible metering pump recommendations."
+        }
       ]
     }
   },
@@ -378,6 +396,28 @@
         "Na2CO3: <0.8%",
         "Available in 25kg bags",
         "Long shelf life in dry conditions"
+      ],
+      "faqs": [
+        {
+          "question": "What is caustic soda used for in water treatment in Oman?",
+          "answer": "Caustic soda (sodium hydroxide, NaOH) is used in water treatment primarily for pH adjustment and corrosion control. In Oman's desalinated water distribution systems, caustic soda is dosed to raise the pH of RO permeate from its naturally acidic level (pH 5.5–6.5) to the target distribution pH of 7.5–8.5. This prevents pipe corrosion in Muscat and other urban distribution networks. It is also used in industrial wastewater neutralisation, sour gas scrubbing in PDO and OQ refinery operations, and aluminium surface treatment. Caustic soda flakes (98–99%) are dissolved in water to prepare the dosing solution on-site."
+        },
+        {
+          "question": "What is the difference between caustic soda flakes, prills, and liquid NaOH?",
+          "answer": "All three are sodium hydroxide (NaOH) differing only in physical form and concentration. Flakes (98–99% NaOH) are flat, irregularly shaped particles that dissolve quickly but produce dust during handling. Prills (99% NaOH) are spherical beads with better flowability and lower dust generation, preferred for automated dispensing. Liquid caustic soda (32–50% NaOH solution) is ready to dose without dissolution and is used in large plants with automated chemical feed systems. In Oman, flakes are the most widely stocked solid form due to lower cost and wide availability. Prills are preferred in pharmaceutical and precision chemical manufacturing where dust control is required."
+        },
+        {
+          "question": "What pH does caustic soda dosing target in water treatment?",
+          "answer": "In Oman's municipal water treatment, the target distribution pH is 7.5–8.5, as specified by PAEW and consistent with WHO drinking water guidelines. For RO desalinated water (which has naturally low pH and alkalinity), caustic soda dosing raises pH into this range before water enters the distribution pipework. In swimming pools, caustic soda raises pH to the target range of 7.2–7.6. For industrial wastewater discharge to Oman's sewer network or environment, caustic soda neutralises acidic effluent to reach the permissible discharge pH (6.0–9.0 as per Oman's effluent standards under the Environment Law). Overdosing must be avoided as pH above 9.0 can damage downstream infrastructure."
+        },
+        {
+          "question": "How should caustic soda flakes be stored safely in Oman's climate?",
+          "answer": "Caustic soda flakes are highly hygroscopic and will absorb moisture from the air rapidly, forming a saturated solution that causes caking and packaging failure. In Oman's humid coastal climate (relative humidity up to 90% in summer), sealed original bags must be stored in a dry, covered warehouse with good ventilation. Opened bags should be resealed immediately and used within 24 hours. Storage must be away from acids, aluminium, zinc, tin, and any combustible materials. Personnel handling flakes must wear chemical-resistant gloves, eye protection, and dust mask. Caustic soda generates significant heat when dissolved — always add NaOH to water, never water to solid NaOH, to prevent boiling and splashing."
+        },
+        {
+          "question": "What industries use caustic soda in Oman and the GCC?",
+          "answer": "Caustic soda is one of the most widely used industrial chemicals across Oman and the GCC. Major sectors include: water treatment (pH adjustment in municipal and industrial systems), petroleum refining (sour gas scrubbing, crude oil treating at OQ and PDO), soap and detergent manufacturing (saponification of fats and oils), aluminium production (Bayer process — relevant to UAE's ALBA and the wider GCC), textile processing (mercerisation of cotton), pulp and paper (kraft pulping), and food processing (surface treatment for olives, pretzels, pH control). In Oman specifically, demand is driven by water treatment, petrochemical operations at Sohar, and the growing consumer goods manufacturing sector."
+        }
       ]
     }
   },
@@ -420,6 +460,24 @@
         "Specific gravity: 1.33-1.52",
         "Available in IBC tanks and bulk",
         "High purity grade available"
+      ],
+      "faqs": [
+        {
+          "question": "What concentration of caustic soda liquid is used for industrial applications in Oman?",
+          "answer": "The most common industrial concentration of liquid caustic soda in Oman is 32% (specific gravity ~1.33) and 48–50% (specific gravity ~1.50). The 32% grade is widely used for water treatment pH dosing because it is less viscous, easier to pump at ambient temperature, and safer to handle. The 48–50% grade is used in industrial chemical processes, textile scouring, and refinery gas scrubbing where a more concentrated alkali solution reduces transport and storage volume. In Oman's climate, the 50% grade requires heated storage above 12°C to prevent crystallisation in cooler months. PAEW water treatment plants typically use 30–32% liquid caustic for continuous dosing."
+        },
+        {
+          "question": "How is liquid caustic soda dosed in water treatment plants?",
+          "answer": "Liquid caustic soda is dosed using chemical metering pumps — typically diaphragm or peristaltic type — drawing from a bulk storage tank and injecting into the treated water pipeline at a controlled rate. The dosing rate is set based on the inlet pH, target outlet pH, and flow rate, often controlled automatically by an in-line pH analyser with feedback control. For Oman's PAEW desalination plants, caustic dosing targets a distribution pH of 7.5–8.5. Dosing equipment must be constructed of HDPE, PVC, or 316 stainless steel — caustic attacks aluminium, zinc, and mild steel. Secondary containment is required around storage tanks to contain any spills."
+        },
+        {
+          "question": "What are the safety requirements for handling caustic soda liquid?",
+          "answer": "Caustic soda liquid (NaOH solution) is classified as a corrosive (Class 8, UN 1824) and causes severe chemical burns on contact with skin or eyes. Required PPE in Oman includes: chemical-resistant gloves (neoprene or nitrile), full face shield or chemical goggles, chemical-resistant apron, and safety footwear. An eyewash station and safety shower must be within 10 seconds' reach of any handling area. Storage tanks must have secondary containment (bund capacity ≥110% of tank volume) as required under Oman's environmental regulations. In hot weather, caustic solution can generate heat and steam on spillage. SDS must be available at the work site. Global Chemicals LLC provides handling guidance and safety documentation with every delivery."
+        },
+        {
+          "question": "What packaging and delivery options are available for caustic soda liquid in Oman?",
+          "answer": "Global Chemicals LLC supplies liquid caustic soda in 25L HDPE jerricans, 200L HDPE drums, and 1,000L IBC containers for routine industrial and commercial accounts. Bulk tanker delivery (5–20 tonne loads) is available for major water treatment plants, textile facilities, and large industrial accounts in Muscat, Sohar, Salalah, and Duqm. Both 32% and 48–50% concentrations are available. Technical grade (for water treatment and industrial use) and food grade (E524, for food processing applications) are both stocked. Same-day delivery within Muscat for IBC and drum quantities. CoA and SDS provided with each delivery."
+        }
       ]
     }
   },
@@ -463,6 +521,24 @@
         "Available in 25kg, 45kg drums",
         "Stable dry storage",
         "Longer shelf life than liquid chlorine"
+      ],
+      "faqs": [
+        {
+          "question": "What is calcium hypochlorite used for in water treatment?",
+          "answer": "Calcium hypochlorite (65–75% available chlorine) is used as a primary or backup disinfectant in drinking water treatment, swimming pool sanitation, wastewater disinfection, and emergency water purification. In Oman, it is the preferred disinfectant for remote water treatment facilities, offshore platforms, and sites where continuous liquid chlorine supply is impractical — such as industrial camps in Al Wusta, oil field facilities, and water treatment operations in Dhofar. Its high available chlorine content means only small quantities are needed: 1 kg of calcium hypochlorite (70%) provides the same disinfectant power as approximately 5 litres of sodium hypochlorite (12%)."
+        },
+        {
+          "question": "How does calcium hypochlorite compare to sodium hypochlorite for disinfection?",
+          "answer": "Calcium hypochlorite (solid, 65–75% available chlorine) and sodium hypochlorite (liquid, 12–15% available chlorine) both release hypochlorous acid (HOCl) when dissolved — the active disinfectant species. Calcium hypochlorite is more stable in storage (shelf life 12–24 months vs. 1–3 months for NaOCl), requires less storage volume per unit of available chlorine, and is safer to transport to remote locations. The disadvantages are higher cost per unit of chlorine and the need to dissolve granules before dosing. Sodium hypochlorite liquid is simpler to dose but degrades faster, especially in Oman's hot climate. For emergency or remote use, calcium hypochlorite's stability is a decisive advantage."
+        },
+        {
+          "question": "What dosage of calcium hypochlorite is used for drinking water treatment in Oman?",
+          "answer": "For drinking water disinfection, calcium hypochlorite is dosed to achieve 0.5–1.0 mg/L free residual chlorine in the treated water, consistent with PAEW standards and WHO guidelines. The required product dose depends on the available chlorine content: for 70% grade, approximately 1.4 mg of product per litre of water produces 1 mg/L of available chlorine. Contact time (CT) must be sufficient — WHO recommends a minimum CT of 0.2 mg/L × 30 minutes for Giardia inactivation. In emergency water treatment (field or disaster conditions in Oman), sachets of granular calcium hypochlorite can be dissolved to treat tank water in camps or remote settlements without permanent dosing infrastructure."
+        },
+        {
+          "question": "How should calcium hypochlorite be stored in Oman's hot, humid climate?",
+          "answer": "Calcium hypochlorite is a strong oxidiser that requires careful storage in Oman's climate. Store in a cool (below 30°C), dry, well-ventilated location away from direct sunlight, heat sources, flammable materials, acids, and ammonia — all of which can cause dangerous decomposition or fire. Drums must remain sealed until use. In Oman's coastal humidity (up to 90% RH in summer), moisture ingress into opened drums accelerates decomposition and chlorine gas release. Dedicated chemical stores separated from fuel, lubricants, and organic materials are mandatory. UN-certified packaging (UN3485 or UN1748) is required for transport. Global Chemicals LLC supplies calcium hypochlorite in sealed 25kg and 45kg UN-certified drums with full SDS and handling guidance."
+        }
       ]
     }
   },
@@ -507,6 +583,28 @@
         "Specific gravity: 1.20-1.25",
         "Available in drums and bulk",
         "On-site generation available"
+      ],
+      "faqs": [
+        {
+          "question": "What concentration of sodium hypochlorite is used for water treatment in Oman?",
+          "answer": "Municipal water treatment plants in Oman, including PAEW-operated facilities, use sodium hypochlorite at 12–15% available chlorine for bulk dosing. This concentration is dosed at 0.5–2 mg/L residual chlorine in finished water. Swimming pools typically use 5–8% available chlorine. Industrial applications such as cooling tower biocide dosing use 10–12% grade. In Oman's high-temperature climate (up to 45°C ambient), hypochlorite degrades faster than in temperate climates, so storage time should not exceed 30 days after delivery for maximum potency. Global Chemicals LLC supplies the 12–15% grade with a chlorine assay certificate for every batch."
+        },
+        {
+          "question": "How is sodium hypochlorite dosed in municipal water treatment plants?",
+          "answer": "Sodium hypochlorite is dosed using chemical metering pumps (peristaltic or diaphragm type) calibrated to inject the correct volume of solution into the treated water stream. In Oman's PAEW water treatment plants, dosing occurs at the clearwell outlet to achieve a minimum 0.2 mg/L free residual chlorine at the point of entry to the distribution network, in accordance with Oman's potable water standards. Larger plants use automated chlorine analysers with feedback control to maintain target residual levels. The 12–15% grade is preferred over dilute solutions (1–5%) because it reduces storage tank volume and pump running time while minimising the sodium content added to finished water."
+        },
+        {
+          "question": "What is the shelf life of sodium hypochlorite in Oman's hot climate?",
+          "answer": "Sodium hypochlorite (12–15%) degrades at approximately 10–15% per month at 25°C, but degradation accelerates sharply above 30°C — reaching 20–25% per month at Oman's typical summer ambient temperatures of 38–45°C. Best practice in Oman is to use hypochlorite within 21–30 days of manufacture, store in shaded, cool conditions away from direct sunlight, and keep storage tanks topped up to minimise air exposure. Translucent or UV-resistant HDPE storage tanks are preferred. Global Chemicals LLC supplies fresh-assayed hypochlorite produced from recent electrochlorination runs, with the manufacture date and chlorine assay certificate on each delivery note."
+        },
+        {
+          "question": "What packaging options are available for bulk sodium hypochlorite supply in Oman?",
+          "answer": "Global Chemicals LLC supplies sodium hypochlorite in 25L jerricans, 60L HDPE drums, 200L HDPE drums, and 1,000L IBC containers for routine industrial and commercial accounts. Bulk tanker delivery (5–20 tonne loads) is available for major water treatment plants, large industrial facilities, and municipal contractors in Muscat, Sohar, Salalah, and Duqm. All containers are food-contact-grade HDPE compatible with hypochlorite's high pH. Drum exchange programmes are available for regular accounts. Delivery is available to all Oman governorates. Export to UAE and GCC markets on request."
+        },
+        {
+          "question": "Is sodium hypochlorite safe for drinking water treatment?",
+          "answer": "Yes. Sodium hypochlorite at the correct dosage is approved for drinking water disinfection worldwide, including under Oman's national potable water standards and WHO guidelines. The key requirement is maintaining residual chlorine within the range of 0.2–0.5 mg/L in distributed water — sufficient to kill pathogens while remaining below the taste threshold (typically above 0.6 mg/L). The main by-products of concern are trihalomethanes (THMs), formed when chlorine reacts with naturally occurring organic matter. In Oman's desalinated water supply, which has very low organic matter content, THM formation is minimal. The product supplied must be food-grade or potable water grade with NSF or equivalent certification."
+        }
       ]
     }
   },
@@ -1050,6 +1148,24 @@
         "pH (1% suspension): 12.4",
         "Available in 25kg, 50kg bags",
         "Bulk delivery available"
+      ],
+      "faqs": [
+        {
+          "question": "What is hydrated lime used for in water treatment in Oman?",
+          "answer": "Hydrated lime (calcium hydroxide, Ca(OH)₂) is used in water treatment for pH correction of desalinated or acidic water, lime softening (removing hardness by precipitating calcium and magnesium), phosphorus co-precipitation in wastewater treatment, and heavy metal precipitation in industrial effluent. In Oman's municipal water treatment, hydrated lime is one of the primary chemicals for remineralising RO permeate — raising pH from the naturally acidic 5.5–6.5 of desalinated water to the target distribution pH of 7.5–8.0. It is also widely used in Oman's construction sector for soil stabilisation and as an alkaline supplement in concrete and mortar, particularly relevant to Vision 2040 infrastructure projects across the country."
+        },
+        {
+          "question": "How is lime dosed for pH adjustment in municipal water treatment?",
+          "answer": "Hydrated lime is dosed as a slurry (lime milk) prepared by mixing lime powder with water in a slurry tank at 5–15% concentration. The slurry is then dosed into the treated water stream using a peristaltic or progressive cavity pump. Automated pH control systems with inline pH sensors provide feedback to the dosing pump to maintain target pH. Lime slurry systems require agitation to prevent settling and pipe blockage — a consideration in Oman where temperature fluctuations can affect slurry consistency. Typical dosing rates for RO permeate pH correction are 2–8 mg/L as Ca(OH)₂, depending on the initial pH and alkalinity of the desalinated water and the target distribution pH."
+        },
+        {
+          "question": "What is the difference between quicklime and hydrated lime for water treatment?",
+          "answer": "Quicklime (calcium oxide, CaO) is the anhydrous form produced by calcining limestone, while hydrated lime (calcium hydroxide, Ca(OH)₂) is produced by reacting quicklime with water (slaking). Quicklime has a higher available lime content per tonne (90–95% CaO vs. 68–74% CaO equivalent in Ca(OH)₂) and is more economical for large-scale applications. However, quicklime requires on-site slaking equipment, generates significant heat during slaking, and is more hazardous to handle. Hydrated lime is safer to handle, dissolves more easily, and is preferred for smaller to medium water treatment plants in Oman that lack slaking equipment. For large PAEW treatment plants with the necessary infrastructure, quicklime is often used to reduce chemical costs."
+        },
+        {
+          "question": "How should hydrated lime be stored and handled safely?",
+          "answer": "Hydrated lime is a mildly alkaline irritant (pH 12.4 in suspension) that absorbs CO₂ from air, gradually converting to calcium carbonate (carbonation) and losing reactivity. Bags must be stored in a dry, sealed warehouse to prevent moisture absorption and carbonation. In Oman's humid coastal climate, opened bags should be resealed and used promptly. PPE requirements include dust mask (P2 rated), chemical-resistant gloves, and eye protection to avoid dust inhalation and eye irritation. Lime dust can cause respiratory irritation on prolonged exposure. Storage areas must be ventilated. When preparing lime slurry, add lime to water (not water to lime) to control heat generation. Keep away from acids and ammonium compounds."
+        }
       ]
     }
   },
@@ -1297,6 +1413,24 @@
         "pH (1% aqueous solution): 3.5-5.0",
         "Appearance: Clear to light yellow liquid",
         "Effective pH range: 5.0-9.0"
+      ],
+      "faqs": [
+        {
+          "question": "What is PAC liquid and how does it differ from PAC powder?",
+          "answer": "PAC liquid (Poly Aluminium Chloride, 10–11% Al₂O₃) is a pre-dissolved, ready-to-dose coagulant solution, while PAC powder (28–30% Al₂O₃) is a concentrated solid that must be dissolved on-site before dosing. Liquid PAC is preferred for automated dosing systems in large municipal water treatment plants — including PAEW-operated plants in Muscat, Barka, Sohar, and Salalah — because it can be pumped directly from bulk storage tanks via metering pumps without any dissolution step. The liquid form also provides more consistent dosing accuracy. PAC powder is preferred where liquid storage is impractical, such as remote sites or smaller operations with infrequent deliveries."
+        },
+        {
+          "question": "What is the typical dosing rate for PAC liquid in industrial water treatment?",
+          "answer": "Typical PAC liquid dosing rates range from 10–50 mg/L expressed as product (equivalent to 1–5 mg/L as Al₂O₃). For moderate-turbidity raw water (20–100 NTU) in Oman's groundwater and surface water treatment systems, effective doses are usually 15–30 mg/L of product. Industrial wastewater with high suspended solids or emulsified oil may require 50–150 mg/L. The optimum dose is determined by jar testing. Global Chemicals LLC provides jar test support and dosage optimisation as a standard technical service. Dosing is carried out using chemical metering pumps (peristaltic or diaphragm type) sized to the plant flow rate and expected dosage range."
+        },
+        {
+          "question": "Can PAC liquid be used in RO pre-treatment in Oman's desalination plants?",
+          "answer": "Yes. PAC liquid is widely used as a coagulant in the pre-treatment stage of seawater reverse osmosis (SWRO) plants in Oman, including the large plants at Ghubrah, Barka, and Sohar that supply Muscat's municipal water. In SWRO pre-treatment, PAC is dosed into the raw seawater ahead of pressure media filtration (sand/anthracite) or ultrafiltration (UF) membranes to remove suspended solids, algal cells, and colloidal matter that would otherwise foul the RO membranes. PAC doses in SWRO pre-treatment are typically low (2–10 mg/L product) to avoid residual aluminium carry-over to the membranes. NSF/ANSI 60 certified grades are required for drinking water applications."
+        },
+        {
+          "question": "What are the storage requirements for PAC liquid in Oman's climate?",
+          "answer": "PAC liquid should be stored in shaded, covered HDPE or FRP tanks away from direct sunlight to minimise temperature-driven degradation. In Oman's summer conditions (ambient temperatures up to 45°C), exposed tanks can reach 50–55°C, accelerating hydrolysis and basicity shift in the PAC solution, which reduces coagulation performance. Ideal storage temperature is below 35°C. Shelf life is typically 6–12 months from manufacture in correct storage conditions. PAC liquid must not be stored near alkalis (caustic soda, lime) as mixing causes immediate precipitation. Global Chemicals LLC supplies PAC liquid with manufacture date and Al₂O₃ assay certificate, and can advise on tank sizing and storage arrangements."
+        }
       ]
     }
   },
@@ -1336,7 +1470,25 @@
         "Appearance: White to yellow powder",
         "Shelf life: 2 years"
       ],
-      "longDescription": "Poly Aluminium Chloride powder is a concentrated form of PAC offering easy storage, handling, and dosing for water treatment applications. The powder form provides longer shelf life and reduced transportation costs. PAC powder (28–30% Al₂O₃) is the concentrated solid form of Poly Aluminium Chloride — offering significant logistical advantages over the liquid form for remote locations, island facilities, and situations where liquid chemical storage infrastructure is limited. The powder is dissolved on-site in water to prepare a dosing solution, typically at 2–5% concentration. In Oman, PAC powder is widely used at smaller water treatment plants in Oman's interior governorates (Al Dakhiliyah, Al Sharqiyah, Al Wusta), remote industrial facilities, desalination plant pre-treatment, and construction site water treatment. The powder's 2-year shelf life and lower transport cost per unit of active chemical make it economical for lower-volume users. Global Chemicals LLC supplies PAC powder in 25kg bags. Technical data sheets, dosage calculations, and jar test guidance available from our water treatment team."
+      "longDescription": "Poly Aluminium Chloride powder is a concentrated form of PAC offering easy storage, handling, and dosing for water treatment applications. The powder form provides longer shelf life and reduced transportation costs. PAC powder (28–30% Al₂O₃) is the concentrated solid form of Poly Aluminium Chloride — offering significant logistical advantages over the liquid form for remote locations, island facilities, and situations where liquid chemical storage infrastructure is limited. The powder is dissolved on-site in water to prepare a dosing solution, typically at 2–5% concentration. In Oman, PAC powder is widely used at smaller water treatment plants in Oman's interior governorates (Al Dakhiliyah, Al Sharqiyah, Al Wusta), remote industrial facilities, desalination plant pre-treatment, and construction site water treatment. The powder's 2-year shelf life and lower transport cost per unit of active chemical make it economical for lower-volume users. Global Chemicals LLC supplies PAC powder in 25kg bags. Technical data sheets, dosage calculations, and jar test guidance available from our water treatment team.",
+      "faqs": [
+        {
+          "question": "What is Poly Aluminium Chloride (PAC) powder used for in water treatment?",
+          "answer": "PAC powder is a primary coagulant used in water and wastewater treatment to remove suspended solids, turbidity, colour, and colloids. When dissolved and dosed into raw water, PAC releases aluminium hydroxide species that neutralise the negative charge of suspended particles, causing them to aggregate into settleable floc. In Oman, PAC powder is the coagulant of choice for smaller water treatment plants in interior governorates, remote desalination pre-treatment systems, and construction site water treatment where liquid PAC storage is impractical. It is also used in PAEW municipal plants and industrial effluent treatment operations across Muscat, Sohar, and Salalah."
+        },
+        {
+          "question": "What dosage of PAC powder is recommended for turbid water in Oman?",
+          "answer": "Typical PAC powder dosage ranges from 10–50 mg/L of raw water depending on the turbidity, temperature, and source water chemistry. For Oman's groundwater supplies (often moderate turbidity, 10–50 NTU), an effective dose is typically 15–30 mg/L as powder. High-turbidity surface water or seasonal floodwater (which can exceed 500 NTU in Oman's wadi floods) may require 40–80 mg/L. Jar testing is always recommended to establish the optimum dose for specific water conditions. Global Chemicals LLC provides jar test support and dosage calculations as part of our technical service to water treatment customers across Oman."
+        },
+        {
+          "question": "How does PAC powder compare to liquid alum (aluminium sulphate) as a coagulant?",
+          "answer": "PAC powder outperforms liquid alum in three key areas: it requires 30–50% lower dosage by weight of active aluminium oxide, it works effectively across a wider pH range (5.5–8.5 vs. alum's narrower 6.0–7.5), and it produces less sludge volume. PAC also has lower alkalinity consumption, meaning treated water pH drops less with PAC dosing — important in Oman's low-alkalinity desalinated water systems. In cool conditions (Oman's winter months, water at 15–20°C), PAC forms floc faster than alum. The trade-off is that PAC powder costs more per kilogram than alum, but the lower effective dose typically makes it more economical overall."
+        },
+        {
+          "question": "What packaging is available for PAC powder in Oman?",
+          "answer": "Global Chemicals LLC supplies PAC powder (28–30% Al₂O₃) in 25kg polypropylene bags for standard industrial and municipal water treatment customers. Pallet quantities (40 bags per pallet, 1,000 kg) are available for larger accounts with warehousing space. The powder has a shelf life of 24 months in sealed, dry storage conditions — a significant advantage over PAC liquid (6–12 months shelf life) for remote locations and projects with infrequent supply. Custom pack sizes may be available for specific project requirements. Delivery is available to all Oman governorates including interior regions (Al Dakhiliyah, Al Sharqiyah, Al Wusta) and Dhofar."
+        }
+      ]
     }
   },
   {

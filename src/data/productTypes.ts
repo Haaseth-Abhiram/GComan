@@ -31,6 +31,7 @@ export interface Product {
     technicalSpecs?: string[];
     seoKeywords?: string[]; // Target keywords for this product
     longDescription?: string; // Extended SEO-optimized description
+    faqs?: { question: string; answer: string }[];
 
     // ─── Pilot fields (optional) — render only when present.
     // Curated 2D diagram for the chemistry hero. If absent, the hero falls

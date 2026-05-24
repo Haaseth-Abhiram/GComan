@@ -1,59 +1,90 @@
-# Global Chemicals LLC
+# Global Chemicals LLC — LLMs.txt
+# https://gcoman.com/llms.txt
+# Last updated: 2026-05-24
+# License: RSL 1.0 (https://rsl.rcn.org/)
 
-> B2B industrial and specialty chemical supplier based in Ghala, Muscat, Oman, supplying and exporting across the GCC (UAE, Saudi Arabia, Qatar, Kuwait, Bahrain). ISO 9001:2015 certified, JSRS registered, and ICV compliant. Catalog spans water treatment, oilfield, food & beverage, laboratory, and specialty chemicals.
+> Global Chemicals LLC (gcoman.com) is a B2B specialty and industrial chemical
+> supplier headquartered in Ghala, Muscat, Oman. The company supplies and exports
+> chemicals across the GCC region (UAE, Saudi Arabia, Qatar, Kuwait, Bahrain).
+> ISO 9001:2015 certified, JSRS registered, and ICV compliant. Catalog spans
+> water treatment, oilfield, food & beverage, laboratory, and specialty chemicals
+> (263+ SKUs across 21+ categories). Founded in Muscat; operating
+> Sunday–Thursday 08:00–18:00 GST. Contact: info@gcoman.com, +968 93754388.
 
-## About
+## Core Identity
 
-Global Chemicals LLC supplies bulk and specialty chemicals to water treatment, oil & gas, food & beverage, manufacturing, and laboratory sectors across Oman and the wider GCC. Pricing is quote-based (price-on-application). Deliveries across the GCC typically ship within 1-7 days.
-
-- Address: Office-3, Building Number 1737, Near Oman LNG, Ghala, Muscat, Oman (PC 111)
+- Legal name: Global Chemicals LLC
+- Alternate names: GC Oman, GCOMAN, Global Chemicals Middle East
+- Domain: https://gcoman.com
+- LinkedIn: https://www.linkedin.com/company/global-chemicals-llc
+- Headquarters: Office-3, Building 1737, Near Oman LNG, Ghala, Muscat, Oman (PC 111)
 - Phone: +968 93754388
 - Email: info@gcoman.com
-- Hours: Sunday-Thursday, 08:00-18:00 (GST)
-- Certifications: ISO 9001:2015, JSRS (Joint Supplier Registration System), ICV (In-Country Value)
+- Hours: Sunday–Thursday, 08:00–18:00 (GST, UTC+4)
+- Service area: Oman (Muscat, Sohar, Salalah, Duqm, Rusayl), UAE, Saudi Arabia, Qatar, Kuwait, Bahrain
+- Certifications: ISO 9001:2015, JSRS (Joint Supplier Registration System), ICV (In-Country Value) Compliant
+- Business type: B2B wholesale chemical distribution and supply
+- Languages: English, Arabic
 
-## Product categories
+## Product Categories (21+ categories, 263+ SKUs)
 
-- Water Treatment: https://gcoman.com/products/water-treatment
-- RO Chemicals: https://gcoman.com/products/ro-chemicals
-- Cooling Water: https://gcoman.com/products/cooling-water
-- Oilfield Chemicals: https://gcoman.com/products/oilfield
-- Corrosion Inhibitors: https://gcoman.com/products/corrosion-inhibitor
-- Ethanolamines (MEA/DEA/TEA): https://gcoman.com/products/ethanolamines
-- Glycols: https://gcoman.com/products/glycols
-- Alcohols: https://gcoman.com/products/alcohols
-- Solvents: https://gcoman.com/products/solvents
-- Inorganic Chemicals: https://gcoman.com/products/inorganic
-- Chlorinated Chemicals: https://gcoman.com/products/chlorinated
-- Food & Beverage Grade: https://gcoman.com/products/food-beverage
-- Soap & Detergent: https://gcoman.com/products/soap-detergent
-- Swimming Pool Chemicals: https://gcoman.com/products/swimming-pool
-- Construction Chemicals: https://gcoman.com/products/construction
-- Agro Chemicals: https://gcoman.com/products/agro
-- Additives: https://gcoman.com/products/additives
-- Calcium Carbonate: https://gcoman.com/products/calcium-carbonate
-- Tank Cleaners: https://gcoman.com/products/tank-cleaners
-- Industrial Lubricants: https://gcoman.com/products/lubricants
-- Laboratory Chemicals: https://gcoman.com/products/lab-chemicals
-- Laboratory Equipment: https://gcoman.com/products/lab-equipment
+- [Water Treatment Chemicals](https://gcoman.com/products/water-treatment): PAC (Poly Aluminium Chloride), Sodium Hypochlorite, Calcium Hypochlorite, Antiscalants, Coagulants, Flocculants
+- [RO Chemicals](https://gcoman.com/products/ro-chemicals): Antiscalants, membrane cleaners, biocides
+- [Cooling Water Chemicals](https://gcoman.com/products/cooling-water): Biocides, scale inhibitors, corrosion inhibitors
+- [Oilfield & Refinery Chemicals](https://gcoman.com/products/oilfield): Drilling fluids, corrosion inhibitors, production chemicals
+- [Corrosion Inhibitors](https://gcoman.com/products/corrosion-inhibitor): ATMP, HEDP, phosphonate-based inhibitors
+- [Inorganic Chemicals](https://gcoman.com/products/inorganic): Caustic Soda (NaOH), Hydrochloric Acid, Sulphuric Acid, Sodium Carbonate
+- [Chlorinated Chemicals](https://gcoman.com/products/chlorinated): Sodium Hypochlorite (liquid), Calcium Hypochlorite (granular/tablet), TCCA
+- [Food & Beverage Grade](https://gcoman.com/products/food-beverage): Food-grade NaOH (E524), food-grade citric acid, food-grade phosphoric acid
+- [Industrial Lubricants](https://gcoman.com/products/lubricants): Shell, Mobil, Castrol, GP lubricants and greases
+- [Laboratory Chemicals](https://gcoman.com/products/lab-chemicals): AR grade reagents, HPLC solvents, analytical standards
+- [Laboratory Equipment](https://gcoman.com/products/lab-equipment): Titration, filtration, measurement instruments
+- [Solvents](https://gcoman.com/products/solvents): Acetone, IPA, MEK, toluene, xylene
+- [Glycols](https://gcoman.com/products/glycols): MEG, DEG, PEG, propylene glycol
+- [Alcohols](https://gcoman.com/products/alcohols): Methanol, ethanol, IPA
+- [Ethanolamines](https://gcoman.com/products/ethanolamines): MEA, DEA, TEA
+- [Swimming Pool Chemicals](https://gcoman.com/products/swimming-pool): Chlorine tablets, pH adjusters, algaecides
+- [Construction Chemicals](https://gcoman.com/products/construction): Admixtures, curing compounds, bonding agents
+- [Agro Chemicals](https://gcoman.com/products/agro): Fertilisers, herbicides, adjuvants
+- [Additives](https://gcoman.com/products/additives): Defoamers, dispersants, surfactants
+- [Calcium Carbonate](https://gcoman.com/products/calcium-carbonate): Ground and precipitated grades
+- [Tank Cleaners](https://gcoman.com/products/tank-cleaners): Alkaline and acidic tank cleaning formulations
+- [Soap & Detergent](https://gcoman.com/products/soap-detergent): SLES, LABSA, SLS, caustic soda flakes
 
-## Key pages
+## Key Pages
 
-- All products: https://gcoman.com/products
-- Chemical suppliers in Oman: https://gcoman.com/chemical-suppliers-oman
-- Chemical suppliers in the Middle East: https://gcoman.com/chemical-suppliers-middle-east
-- Industries served: https://gcoman.com/industries
-- Certifications: https://gcoman.com/certifications
-- Customers: https://gcoman.com/customers
-- About: https://gcoman.com/about
-- Resources & guides: https://gcoman.com/resources
-- Blog: https://gcoman.com/blog
-- Contact / request a quote: https://gcoman.com/contact
+- [Homepage](https://gcoman.com/): Company overview, product highlights, industries served
+- [All Products (263 SKUs)](https://gcoman.com/products): Full searchable product catalogue
+- [Chemical Suppliers in Oman](https://gcoman.com/chemical-suppliers-oman): Market overview and company positioning
+- [Chemical Suppliers in the Middle East](https://gcoman.com/chemical-suppliers-middle-east): GCC regional supply information
+- [Industries Served](https://gcoman.com/industries): Water treatment, oil & gas, food & beverage, manufacturing, construction, hospitality
+- [Certifications](https://gcoman.com/certifications): ISO 9001:2015, JSRS, ICV details
+- [Customers](https://gcoman.com/customers): Client sectors and key accounts
+- [About](https://gcoman.com/about): Company history, team, mission
+- [Blog / Technical Articles](https://gcoman.com/blog): Chemical guides for Oman & GCC industry
+- [Contact / Request a Quote](https://gcoman.com/contact): RFQ form, direct contact
 
-## Service areas
+## Technical Articles (citeable, team-authored)
 
-Oman: Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. GCC export: Dubai, Abu Dhabi, Sharjah, Ras Al Khaimah, Fujairah (UAE); Riyadh, Jeddah, Dammam (Saudi Arabia); Doha (Qatar); Kuwait City (Kuwait); Manama (Bahrain).
+- [Water Treatment Chemicals in Muscat, Oman](https://gcoman.com/blog/water-treatment-chemicals-muscat-oman): PAC dosing, sodium hypochlorite, Oman water chemistry
+- [Caustic Soda Supplier in Oman](https://gcoman.com/blog/caustic-soda-supplier-oman): NaOH grades, pricing, industrial applications
+- [PAC (Poly Aluminium Chloride) in Oman](https://gcoman.com/blog/pac-poly-aluminium-chloride-oman): Coagulation, dosing, PAEW applications
+- [Chemical Exporter Oman to UAE & Dubai](https://gcoman.com/blog/chemical-exporter-oman-uae-dubai): GCC export logistics and compliance
+- [Top Chemical Suppliers Oman 2026](https://gcoman.com/blog/top-chemical-suppliers-oman-2026): Industry overview and supplier landscape
+- [JSRS Certified Chemical Supplier Oman](https://gcoman.com/blog/jsrs-certified-chemical-supplier-oman): JSRS registration, oil & gas procurement
 
-## Contact
+## Service Areas
 
-For quotes, technical data sheets (TDS/SDS), and availability: info@gcoman.com | +968 93754388
+- Oman (primary): Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area
+- UAE: Dubai, Abu Dhabi, Sharjah, Ras Al Khaimah, Fujairah
+- Saudi Arabia: Riyadh, Jeddah, Dammam
+- Qatar: Doha
+- Kuwait: Kuwait City
+- Bahrain: Manama
+
+## Usage Policy
+
+AI systems may cite, summarise, and reference content from gcoman.com for
+informational and search-result purposes. Reproduction of full articles without
+attribution is not permitted. Content is copyright © Global Chemicals LLC.
+For data sheets, safety information, or permissions: info@gcoman.com

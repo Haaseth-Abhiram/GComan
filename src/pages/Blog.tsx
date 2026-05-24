@@ -23,6 +23,7 @@ export interface BlogPost {
   tags: string[];
   image?: string;
   icon: any;
+  faqs?: { question: string; answer: string }[];
 }
 
 export const blogPosts: BlogPost[] = [
@@ -95,6 +96,24 @@ Global Chemicals LLC supplies the complete range of water treatment chemicals to
     category: 'Water Treatment',
     tags: ['Water Treatment', 'Muscat', 'Industrial', 'PAC', 'Antiscalants', 'Oman'],
     icon: Droplets,
+    faqs: [
+      {
+        question: 'What water treatment chemicals are used in Muscat\'s industrial facilities?',
+        answer: 'Muscat\'s industrial facilities rely on five core water treatment chemical categories. PAC (Poly Aluminium Chloride) for coagulation of suspended solids in cooling and process water. Sodium or calcium hypochlorite for disinfection and Legionella control. Phosphonate-based antiscalants to prevent calcium carbonate and calcium sulphate scale in heat exchangers and RO membranes. Molybdate or azole-based corrosion inhibitors to protect carbon steel and copper pipework from Muscat\'s high-chloride water. Caustic soda (NaOH) for pH correction of desalinated RO permeate from PAEW\'s Al Ghubrah and Barka desalination plants before industrial use.',
+      },
+      {
+        question: 'Why does Oman\'s desalinated water need special chemical treatment?',
+        answer: 'Desalinated seawater from Oman\'s PAEW plants (Al Ghubrah, Barka, Sur, Salalah) has very low hardness (50–80 mg/L as CaCO3), slightly acidic pH (6.5–7.0), and low buffering capacity — properties that differ significantly from natural groundwater. When used in industrial cooling towers, boiler systems, or process equipment, this chemistry causes rapid pH drift, aggressive corrosion of metal surfaces, and susceptibility to biological fouling at Oman\'s high ambient temperatures. Specific chemical programmes — pH stabilisers, corrosion inhibitors, and biocides — must be designed for desalinated water rather than applying standard European or Asian treatment formulations directly.',
+      },
+      {
+        question: 'What antiscalant dosage is used in Oman\'s cooling tower systems?',
+        answer: 'Phosphonate antiscalants (HEDP, PBTC, or AMP blends) dosed at 10–30 mg/L are the industry standard for cooling towers in Muscat and across Oman operating at 3–5 cycles of concentration. For systems using Muscat\'s desalinated municipal supply (low hardness, low scaling risk), 10–15 mg/L is typically sufficient. For facilities in Sohar or Salalah using groundwater with calcium hardness above 200 mg/L, dosing up to 30 mg/L with a polymer dispersant aid may be required. Silica-specific dispersant polymers must be added when silica in the makeup water exceeds 50 mg/L, which is common in Oman\'s interior groundwater sources.',
+      },
+      {
+        question: 'Which corrosion inhibitor is best for Muscat\'s high-chloride water systems?',
+        answer: 'For Muscat\'s high-chloride industrial water systems — fed by desalinated seawater with elevated residual chloride — molybdate-based or organic azole-phosphonate blended corrosion inhibitors provide the most reliable protection. Molybdate residuals of 10–20 mg/L protect mild steel cooling tower structures and pipework. Benzotriazole (BZT) or tolyltriazole (TT) at 1–5 mg/L protects copper and copper-alloy heat exchanger tubes common in Muscat\'s chiller systems and industrial condensers. Zinc-based inhibitors are effective but being phased out at ISO 14001-certified facilities due to aquatic toxicity discharge concerns under the Ministry of Environment\'s effluent standards.',
+      },
+    ],
   },
   {
     id: 'agricultural-chemicals-oman-buyers-guide',
@@ -327,6 +346,24 @@ Contact our oilfield chemicals team at sales@gcoman.com or +968-93754388 to disc
     category: 'Oil & Gas',
     tags: ['Oilfield', 'Production', 'Innovation', 'PDO', 'JSRS', 'Oman', 'EOR'],
     icon: TrendingUp,
+    faqs: [
+      {
+        question: 'What corrosion inhibitors are used in Oman\'s PDO oilfield operations?',
+        answer: 'PDO\'s South Oman fields — particularly Marmul, Nimr, and Rima — produce high water-cut crude (often above 80% water-to-oil ratio) creating severe corrosion conditions on carbon steel welltubing and flowlines. Three inhibitor chemistries dominate: quaternary ammonium-based film-forming inhibitors for water-wet systems where produced water contacts steel surfaces continuously; imidazoline derivatives for protection at the oil-water interface in multiphase flow; and TOFA-based (tall oil fatty acid) inhibitors for high-temperature downhole applications above 120°C in deeper PDO wells. Inhibitors are batch-treated or continuously injected at 20–100 ppm depending on H2S and CO2 partial pressures and water-cut.',
+      },
+      {
+        question: 'How are scale inhibitors dosed in Oman\'s water-flood enhanced recovery fields?',
+        answer: 'In PDO\'s water-flood fields at Marmul and Nimr, incompatible seawater injection (from the Arabian Sea) contacts high-salinity formation water, precipitating calcium carbonate, barium sulphate, and strontium sulphate scale in perforations, tubing, and surface equipment. Continuous injection of phosphonate-based scale inhibitors (HEDP, DTPMP) at 20–100 ppm into the injection water stream is standard practice. Where barium sulphate co-precipitation with phosphonate is a risk, polymer-based inhibitors (polyacrylate or polyaspartate) are substituted. Squeeze treatments — injecting concentrated inhibitor into the formation to provide slow-release downhole protection — are used in PDO\'s Minisas and Al Noor fields for single-well applications.',
+      },
+      {
+        question: 'What is MEA-triazine and how is it used as an H2S scavenger in Oman?',
+        answer: 'MEA-triazine (monoethanolamine triazine) is the most widely used liquid H2S scavenger in Oman\'s sour oilfield operations. It reacts chemically with hydrogen sulphide in flowlines and process vessels, converting it to non-volatile dithiazine compounds that are removed with produced water. In PDO\'s Rima and Al Noor fields in South Oman, MEA-triazine is continuously injected at 30–100 mg/L doses into sour gas flowlines before gas processing, with dose rate determined by H2S concentration and contact time. Reliable supply is critical — a single day\'s shortage can require well shut-in or production curtailment. Global Chemicals LLC maintains buffer stock in Muscat to support PDO contractor demand.',
+      },
+      {
+        question: 'What JSRS certification is required to supply chemicals to PDO and OQ in Oman?',
+        answer: 'JSRS (Joint Supplier Registration System) is Oman\'s mandatory pre-qualification standard, jointly operated by PDO and the Ministry of Energy and Minerals. Without active JSRS registration, a chemical supplier cannot participate in PDO, OQ, or OPAL competitive tenders or be listed on approved vendor lists for project chemical supply. JSRS registration requires: ISO 9001:2015 quality management certification, demonstrated financial stability, an audited HSE performance record, and ICV (In-Country Value) compliance confirming Oman employment and procurement content. Global Chemicals LLC holds current JSRS registration covering industrial chemicals, water treatment chemicals, oilfield production chemicals, and laboratory reagents — making us a compliant single-source supplier for oil and gas operators across Oman.',
+      },
+    ],
   },
   {
     id: 'cooling-tower-maintenance',
@@ -367,6 +404,24 @@ Global Chemicals LLC supplies cooling tower treatment chemicals — antiscalants
     category: 'Water Treatment',
     tags: ['Cooling Tower', 'Maintenance', 'Efficiency', 'Legionella', 'Scale', 'Oman'],
     icon: Droplets,
+    faqs: [
+      {
+        question: 'What chemicals are required for cooling tower water treatment in Oman?',
+        answer: 'A complete cooling tower chemical programme in Oman requires four chemical categories working together. Phosphonate antiscalants (HEDP, PBTC) at 5–15 mg/L prevent calcium carbonate and calcium sulphate scale on heat exchanger surfaces. Multi-metal corrosion inhibitors (molybdate or azole-phosphonate blends at 10–20 mg/L for steel; benzotriazole at 1–5 mg/L for copper) protect the tower structure and heat exchanger tubes. Oxidising biocides (sodium hypochlorite or chlorine dioxide, maintaining 0.5–1.0 mg/L residual) control Legionella and biofilm. Non-oxidising biocides (isothiazolinone or DBNPA, on a 7–14 day rotation) prevent biocide resistance. Global Chemicals LLC supplies all four categories to industrial facilities across Muscat and Oman.',
+      },
+      {
+        question: 'How do you prevent Legionella in cooling towers in Oman\'s hot climate?',
+        answer: 'Legionella pneumophila thrives between 20–45°C — the temperature range of virtually every cooling tower basin in Oman during summer. Prevention requires a three-part approach mandated by Oman\'s HSE Water Safety Plan framework. First, maintain continuous oxidising biocide residual (0.5–1.0 mg/L free chlorine or equivalent) in circulating water. Second, rotate non-oxidising biocides (isothiazolinone, DBNPA, or glutaraldehyde) every 7–14 days to prevent resistance. Third, conduct quarterly Legionella culture testing — target below 100 cfu/L with an immediate action threshold of 1,000 cfu/L. Muscat hotel and hospital cooling towers serving PAEW-connected facilities are subject to additional regulatory inspection.',
+      },
+      {
+        question: 'What is the recommended cycles of concentration (COC) for cooling towers in Oman?',
+        answer: 'The optimal cycles of concentration (COC) for most Oman cooling tower systems is 3–5 cycles, balancing water conservation with scale and corrosion control. At Muscat\'s desalinated municipal supply (low hardness, low scaling risk), operating at 5 COC is feasible with correct antiscalant treatment, conserving scarce water resources in line with PAEW water conservation objectives. For systems using higher-hardness groundwater in Sohar, Salalah, or interior Oman locations (calcium hardness above 200 mg/L), limiting COC to 3–4 is prudent. Online conductivity controllers automate blowdown to maintain target COC, eliminating guesswork and minimising both water waste and over-concentration.',
+      },
+      {
+        question: 'How does Oman\'s extreme heat affect cooling tower chemical dosing requirements?',
+        answer: 'Oman\'s summer ambient temperatures (45–50°C in Muscat, higher inland) require significant adjustments to standard cooling tower chemical programmes. Biocide consumption increases substantially at higher water temperatures — Legionella and biofilm-forming bacteria multiply faster, and oxidising biocides like sodium hypochlorite degrade more rapidly in heat. Scale risk also intensifies as evaporation rates increase, concentrating minerals faster and raising the Langelier Saturation Index. Practical adjustments for Oman summer: increase biocide dosing frequency to every 5–7 days (versus 14 days in winter), reduce target COC from 5 to 3–4, and increase corrosion inhibitor residual checks from weekly to twice-weekly at high-value assets like PDO facility heat exchangers.',
+      },
+    ],
   },
   {
     id: 'caustic-soda-supplier-oman',
@@ -407,6 +462,28 @@ Global Chemicals LLC supplies caustic soda flakes, pearls, and liquid solution t
     category: 'Industrial Chemicals',
     tags: ['Caustic Soda', 'Sodium Hydroxide', 'NaOH', 'Chemical Supplier', 'Oman', 'Industrial'],
     icon: Beaker,
+    faqs: [
+      {
+        question: 'What is caustic soda (NaOH) and what is it used for in Oman?',
+        answer: 'Caustic soda (sodium hydroxide, NaOH) is one of the strongest industrial alkalis, with a 1% solution reaching pH 13. In Oman it is used across water treatment (pH correction of desalinated RO permeate), oil and gas (produced water neutralisation, refinery desalting at Sohar Refinery), food and beverage manufacturing (CIP cleaning), soap and detergent production, and chemical synthesis. It is the highest-volume commodity alkali chemical in Oman\'s B2B market, with significant consumption at Sohar Aluminium for the Bayer Process and at PAEW water treatment facilities across the Sultanate.',
+      },
+      {
+        question: 'What caustic soda grades are available from suppliers in Oman?',
+        answer: 'Caustic soda is available in Oman in three physical forms: flakes (98–99% NaOH), pearls (98–99% NaOH, lower dust than flakes), and liquid solution (45–50% NaOH), which is the most common form for industrial water treatment and continuous-dosing applications. For food processing facilities in Rusayl and Barka, food-grade caustic soda (NaOH FCC / E524) is available with certified low heavy-metal content and Halal documentation. Always request the batch Certificate of Analysis confirming actual purity when ordering food-grade material.',
+      },
+      {
+        question: 'How is caustic soda used in water treatment plants in Oman?',
+        answer: 'In Oman\'s water treatment plants, caustic soda (liquid NaOH, 45–50%) is dosed to raise pH from the naturally acidic range of RO permeate (pH 6.5–7.0, common at Al Ghubrah and Barka desalination plants) to the safe distribution target of 7.5–8.0 per PAEW guidelines. It also re-mineralises treated water and maintains carbonate alkalinity, which protects distribution pipework from corrosion. Dosing is typically automated via chemical metering pumps at 5–20 mg/L depending on permeate pH and target alkalinity.',
+      },
+      {
+        question: 'What are the storage requirements for caustic soda liquid in Oman\'s climate?',
+        answer: 'Liquid caustic soda (45–50% NaOH) must be stored in HDPE or mild steel tanks — never aluminium or zinc, which dissolve in NaOH and generate hydrogen gas. In Oman\'s summer conditions, storage temperature must not fall below 12°C (the freezing point of 50% NaOH) — insulated or trace-heated tanks are required at inland locations in Al Dakhiliyah and Al Wusta where winter nights can be cold. Tanks should be sealed at all times to prevent CO2 absorption (which converts NaOH to sodium carbonate) and sited in bunded areas away from direct sunlight.',
+      },
+      {
+        question: 'How do I safely handle caustic soda in industrial operations?',
+        answer: 'Caustic soda is classified GHS Hazard Category 1 (Skin Corrosion) and causes severe chemical burns on contact. Mandatory PPE for all caustic soda handling in Oman industrial facilities: neoprene or butyl rubber gloves (nitrile is insufficient for concentrated NaOH), full-face shield or chemical splash goggles, chemical-resistant apron, and safety boots. Emergency eyewash stations must be located within 10 seconds of the dosing area (ANSI Z358.1). All staff handling caustic soda must receive SDS training. An Arabic-language SDS must be available at the work area as required by GCC chemical safety regulations.',
+      },
+    ],
   },
   {
     id: 'pac-poly-aluminium-chloride-oman',
@@ -447,6 +524,28 @@ Global Chemicals LLC is a major PAC supplier in Oman, stocking both liquid PAC (
     category: 'Water Treatment',
     tags: ['PAC', 'Poly Aluminium Chloride', 'Water Treatment', 'Coagulant', 'Oman', 'Muscat'],
     icon: Droplets,
+    faqs: [
+      {
+        question: 'What is PAC (Poly Aluminium Chloride) and how does it work in water treatment?',
+        answer: 'PAC (Poly Aluminium Chloride, CAS 1327-41-9) is a pre-polymerised inorganic coagulant that destabilises suspended particles and colloids in water, allowing them to aggregate into larger floc that settles or filters out. Unlike traditional alum, PAC arrives in a partially hydrolysed form that reacts faster and works across a wider pH range (5.5–9.0). In Oman\'s water treatment sector, PAC is the dominant coagulant at both PAEW municipal plants and industrial effluent systems because it handles the variable pH of desalinated and brackish source water without the performance drop alum experiences above pH 7.5.',
+      },
+      {
+        question: 'What is the difference between liquid PAC and powder PAC?',
+        answer: 'Liquid PAC (10–12% Al2O3) is ready to use and delivered by tanker or in IBC containers, making it ideal for Muscat municipal water plants and industrial facilities with dosing pump infrastructure. Powder PAC (28–31% Al2O3) contains more active aluminium per kilogram, is more cost-effective per unit of Al2O3, and suits remote Oman locations in Al Wusta, Dhofar, or Al Sharqiyah where bulk liquid delivery is impractical. Powder PAC must be dissolved in water before dosing and requires dust control during handling. Both grades are stocked by Global Chemicals LLC in Muscat for same-day dispatch.',
+      },
+      {
+        question: 'Why is PAC preferred over alum for water treatment in Oman?',
+        answer: 'PAC outperforms alum (aluminium sulphate) for four reasons specific to Oman\'s conditions. First, PAC works effectively at pH 7.5–8.5, which is the typical pH range of Oman\'s desalinated municipal supply, while alum loses coagulation efficiency above pH 7.5. Second, PAC generates 20–40% less sludge, reducing disposal costs at facilities near Muscat Industrial Area and Rusayl. Third, PAC flocculates faster, enabling shorter hydraulic retention times in high-throughput systems. Fourth, PAC is less temperature-sensitive — important given Oman\'s extreme seasonal range from 15°C winter to 45°C summer, which would otherwise require alum dose adjustments.',
+      },
+      {
+        question: 'What is the correct PAC dosing rate for municipal water treatment in Oman?',
+        answer: 'For Muscat\'s municipal water supply (desalinated origin, low turbidity under 5 NTU), liquid PAC dosing typically ranges from 5–15 mg/L as product. Groundwater sources with higher turbidity (50–200 NTU) used in Sohar, Salalah, and interior governorates may require 20–50 mg/L. Jar testing at actual site conditions is mandatory before setting final dose rates — WHO guidance requires that treated water residual aluminium stays below 0.2 mg/L. PAEW contractor and PDO facility operators in Oman typically specify jar test results as part of chemical procurement documentation.',
+      },
+      {
+        question: 'Where can I buy PAC in Oman with same-day delivery?',
+        answer: 'Global Chemicals LLC stocks both liquid PAC (10–12% Al2O3) and powder PAC (28–31% Al2O3) at our Muscat warehouse and offers same-day delivery within Muscat Governorate and next-day delivery to Sohar, Rusayl Industrial Estate, Barka, and Salalah. We supply PAEW-contracted water treatment facilities, industrial effluent plants, hotels, swimming pools, and food processing companies across Oman. Bulk tanker delivery of liquid PAC is available for large municipal facilities. Contact us at info@gcoman.com or +968-93754388 for pricing and availability confirmation.',
+      },
+    ],
   },
   {
     id: 'chemical-exporter-oman-uae-dubai',

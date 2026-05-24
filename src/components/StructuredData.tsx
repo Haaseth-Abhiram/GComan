@@ -105,7 +105,7 @@ export const ArticleStructuredData = ({
 }: ArticleStructuredDataProps) => {
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     "headline": title,
     "description": description,
     "url": url,
@@ -408,7 +408,7 @@ export const LocalBusinessStructuredData = () => {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://gcoman.com/#organization",
+    "@id": "https://gcoman.com/#local-business",
     "name": "Global Chemicals LLC",
     "alternateName": ["Global Chemicals Oman", "GCOMAN", "Global Chemicals Middle East", "Global Chemicals Muscat"],
     "description": "Leading industrial and specialty chemical supplier in Oman and the Middle East. Providing water treatment chemicals, industrial lubricants, laboratory chemicals, and oilfield chemicals to industries across Muscat, Sohar, Duqm, Salalah and exporting to UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain.",

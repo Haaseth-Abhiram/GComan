@@ -258,6 +258,28 @@
         "Compatible with chlorine and coagulants",
         "NSF/ANSI 60 certified (drinking water)",
         "Available in 25kg, 200kg drums, IBCs"
+      ],
+      "faqs": [
+        {
+          "question": "What is RO antiscalant and why is it critical for reverse osmosis plants in Oman?",
+          "answer": "RO antiscalant is a chemical dosed continuously into the feed water of reverse osmosis systems to prevent mineral scale deposition on membrane surfaces. As RO membranes reject dissolved salts and concentrate them in the reject stream, the concentration of scale-forming minerals (calcium, carbonate, sulphate, silica, barium) rises sharply. Without antiscalant, these minerals crystallise on the membrane surface, permanently reducing water flux and salt rejection. Oman has one of the world's highest per-capita desalination capacities, with major SWRO plants at Ghubrah, Barka, Sohar, Al Qurayyat, and Salalah. In Oman's high-TDS seawater and brackish water sources, RO antiscalant is essential to sustaining membrane performance and plant uptime."
+        },
+        {
+          "question": "What is the correct dosing rate for RO antiscalant in Oman's seawater desalination plants?",
+          "answer": "In seawater RO (SWRO) plants in Oman — operating at recovery rates of 35–45% — RO antiscalant is typically dosed at 2–5 mg/L in the RO feed water. The precise dose depends on the seawater chemistry (TDS, calcium, magnesium, sulphate, silica concentrations in the feed), the system recovery rate, and the concentration factor in the reject stream. At higher recovery rates (above 45%), higher antiscalant doses are needed. For brackish water RO systems operating at 70–85% recovery in Oman's interior, dosing rates of 3–8 mg/L are typical. Global Chemicals LLC provides computer-modelled dosage recommendations using software tools (Genesys or ROSA) matched to the specific feed water analysis of each plant."
+        },
+        {
+          "question": "Which scale compounds does RO antiscalant prevent in high-TDS feed water?",
+          "answer": "RO antiscalant is formulated to inhibit the most common scale types encountered in Oman's seawater and brackish water desalination. These include calcium carbonate (CaCO₃, the most prevalent scale in RO systems), calcium sulphate (CaSO₄·2H₂O, gypsum, common in high-sulphate seawater), barium sulphate (BaSO₄, extremely insoluble, common in oilfield-associated produced water), strontium sulphate (SrSO₄), silica (SiO₂, amorphous, a challenging scale requiring specialist formulations), and iron hydroxide (from pre-treatment system carry-over). Multi-component antiscalant formulations containing phosphonates, polycarboxylates, and co-polymers are designed to address all these scale types simultaneously, which is critical for complex Omani seawater chemistry."
+        },
+        {
+          "question": "How does RO antiscalant extend membrane life in Oman's desalination plants?",
+          "answer": "RO membranes (thin-film composite polyamide) have a design life of 5–7 years under optimal conditions. Scale deposition accelerates membrane degradation by physically compressing membrane fibres, increasing feed-side pressure drop, and creating localised pH extremes that hydrolyse the membrane polymer. Antiscalant extends membrane life by preventing scale nucleation — keeping dissolved minerals in solution rather than allowing them to crystallise on the membrane surface. Well-dosed antiscalant programmes extend cleaning intervals from monthly to quarterly, reducing the chemical and mechanical stress of each clean-in-place (CIP) cycle. In Oman's large desalination plants, extending membrane replacement cycles by even six months represents significant capital cost savings given element costs of USD 200–400 per element."
+        },
+        {
+          "question": "What happens if RO antiscalant is under-dosed or stops being dosed?",
+          "answer": "Under-dosing or cessation of RO antiscalant dosing causes rapid scale formation on membranes, typically within hours to days depending on the water chemistry and recovery rate. Early indicators include rising feed-to-reject differential pressure, declining normalised permeate flow, and increasing salt passage. Severe scaling can cause irreversible compaction of membrane fibres and permanent flux loss that cannot be restored by chemical cleaning. In Oman's SWRO plants treating high-sulphate seawater, calcium sulphate scale is particularly dangerous because it is poorly soluble even in acid cleaning solutions. Antiscalant dosing pump failure alarms and low-level tank alarms are therefore critical safety controls in Oman's desalination plant SCADA systems. Global Chemicals LLC recommends maintaining minimum 30 days' antiscalant stock on-site at all times."
+        }
       ]
     }
   },

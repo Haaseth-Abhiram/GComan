@@ -10,6 +10,26 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
+# AI Search Crawlers — explicitly permitted for search/answer visibility
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# SEO audit bots — blocked (no commercial value, high crawl cost)
 User-agent: AhrefsBot
 Disallow: /
 
@@ -23,6 +43,16 @@ User-agent: DotBot
 Disallow: /
 
 User-agent: BLEXBot
+Disallow: /
+
+# Training-only crawlers — blocked to preserve content for search, not corpus mining
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: cohere-ai
 Disallow: /
 
 User-agent: *
