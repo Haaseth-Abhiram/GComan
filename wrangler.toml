@@ -1,0 +1,11 @@
+name = "gcoman-prerender-router"
+main = "cloudflare-worker.js"
+compatibility_date = "2026-05-24"
+
+# Deploy with:
+#   CLOUDFLARE_ACCOUNT_ID=<account-id> CLOUDFLARE_API_TOKEN=<token> npm run deploy:cloudflare-worker
+# Required token permissions: Account Workers Scripts:Edit, Zone Workers Routes:Edit, Zone:Read.
+routes = [
+  { pattern = "gcoman.com/*", zone_name = "gcoman.com" },
+  { pattern = "www.gcoman.com/*", zone_name = "gcoman.com" }
+]
