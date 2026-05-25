@@ -345,6 +345,24 @@
         "Effective in boiler and closed systems",
         "Temperature range: Up to 250°C",
         "Available in 25kg, 200kg drums, IBCs"
+      ],
+      "faqs": [
+        {
+          "question": "What is an oxygen scavenger and why is it needed in boiler water treatment?",
+          "answer": "An oxygen scavenger is a chemical that reacts with dissolved oxygen in water, converting it to non-corrosive compounds before it can attack metal surfaces. In boiler systems, even trace amounts of dissolved oxygen (0.007 mg/L is the target for high-pressure boilers) cause pitting corrosion — small, deep pits that rapidly penetrate boiler tubes and cause catastrophic failure. Mechanical deaeration (deaerators, vacuum degassers) removes most oxygen, but chemical oxygen scavengers are used as a final polishing step. Common oxygen scavengers used in Oman boiler water treatment include catalysed sodium sulphite (for low-pressure boilers below 40 bar), DEHA (diethylhydroxylamine, for medium and high-pressure boilers), and hydrazine alternatives (carbohydrazide, methylethylketoxime) for power station and high-pressure applications."
+        },
+        {
+          "question": "What is the correct oxygen scavenger dosage for boiler water treatment?",
+          "answer": "Oxygen scavenger dosage depends on the dissolved oxygen (DO) concentration in the boiler feedwater after deaeration and the specific product's stoichiometry. As a general rule: sodium sulphite reacts at approximately 8 mg of sodium sulphite per mg of dissolved oxygen (stoichiometric). To maintain a protective residual of 10–30 mg/L excess sodium sulphite in the feedwater, total dosing must account for both reaction with incoming DO and maintaining this residual. For DEHA and organic scavengers, typical dose rates are 0.2–0.5 mg/L in feedwater. Always test DO and residual scavenger concentration weekly — both the boiler manufacturer's guidelines and BSRIA/BWT treatment programme specifications must be followed for warranty compliance."
+        },
+        {
+          "question": "What type of oxygen scavenger should I use in Oman's industrial boiler systems?",
+          "answer": "The correct oxygen scavenger type depends on boiler operating pressure and temperature. For low-pressure steam boilers (below 40 bar) in Oman's industrial facilities — common in food processing, hospitals, and laundries — catalysed sodium sulphite (e.g., ELIMIN-OX, Avolin-S grades) is the standard choice: low cost, reliable, and compatible with most treatment programmes. For medium-pressure boilers (40–100 bar) in industrial process plants and power generation, DEHA (diethylhydroxylamine) is preferred because it does not add sulphate to the boiler water and decomposes cleanly to CO2 and water. For high-pressure power station boilers (above 100 bar), volatile organic scavengers such as carbohydrazide or erythorbic acid are used to avoid total dissolved solids (TDS) buildup. Global Chemicals LLC supplies all three types for Oman's industrial boiler market."
+        },
+        {
+          "question": "Can oxygen scavengers be used in closed cooling loop systems?",
+          "answer": "Yes. Oxygen scavengers are used in closed cooling water loops to eliminate the oxygen that causes pitting corrosion in pipework, heat exchangers, and chiller circuits. For closed systems — unlike open cooling towers where oxidising biocides are also needed — the primary corrosion mechanism is dissolved oxygen, not scale or biological fouling. After initial system fill and commissioning, a one-time or periodic dose of oxygen scavenger (typically sodium sulphite at 20–50 mg/L residual) along with a film-forming corrosion inhibitor provides effective long-term protection. Closed system oxygen scavenger treatment is particularly important in Oman's chilled water systems where steel pipework is common and the cost of corrosion leak repairs is high."
+        }
       ]
     }
   },

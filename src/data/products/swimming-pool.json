@@ -81,6 +81,28 @@
         "Dosage: 2-3 tablets per 10,000 liters weekly",
         "Ideal for feeders and skimmers",
         "Storage: Keep dry, away from moisture"
+      ],
+      "faqs": [
+        {
+          "question": "What are TCCA chlorine tablets and how do they work in swimming pools?",
+          "answer": "TCCA (Trichloroisocyanuric Acid) chlorine tablets are slow-dissolving, stabilized chlorine sanitisers used to maintain free chlorine residual in swimming pools. Each 200g tablet contains 90% available chlorine and built-in cyanuric acid stabiliser. When placed in an automatic feeder, skimmer basket, or floating dispenser, the tablet slowly dissolves over 3–7 days, releasing hypochlorous acid (the active biocide) that kills bacteria, viruses, and algae. Unlike unstabilised chlorine (sodium hypochlorite, calcium hypochlorite), TCCA's cyanuric acid protects the chlorine from UV degradation — essential in Oman's intense sunlight where unprotected chlorine can be destroyed within 2–4 hours."
+        },
+        {
+          "question": "How many chlorine tablets are needed for a swimming pool in Oman?",
+          "answer": "For a typical residential pool in Oman (40,000–60,000 litres), 2–3 TCCA 200g tablets per week in a floating feeder or automatic feeder is the starting dose. The correct dose depends on pool volume, bather load, temperature, and sunlight exposure. In Oman's summer (ambient temperature 40–48°C), water temperature often reaches 35–40°C, which dramatically increases chlorine demand — you may need to increase to 3–4 tablets per week or add sodium hypochlorite for supplementary shock treatment. Always test free chlorine residual and maintain between 1.0–3.0 mg/L. For hotel or commercial pools with heavy bather loads, automatic dosing systems with online chlorine monitoring are recommended."
+        },
+        {
+          "question": "Why are stabilized chlorine tablets better than liquid bleach for outdoor pools in Oman?",
+          "answer": "Oman's UV index regularly reaches 10–11 during summer months — among the highest in the world. At these UV levels, unstabilised chlorine (sodium hypochlorite or calcium hypochlorite without cyanuric acid) degrades within 2–4 hours of exposure, meaning a morning chlorine dose may be almost completely gone by afternoon. TCCA chlorine tablets contain cyanuric acid (CYA) stabiliser built into the chemical structure, extending effective chlorine residual to 3–7 days even in full sunlight. This makes TCCA tablets far more practical for outdoor pools in Oman — reducing dosing frequency, lowering chemical cost, and maintaining consistent protection between weekly maintenance visits."
+        },
+        {
+          "question": "Where can I buy TCCA chlorine tablets in Muscat with bulk pricing?",
+          "answer": "Global Chemicals LLC supplies TCCA 200g chlorine tablets (90% available chlorine) in 5kg, 10kg, and 25kg buckets from our Muscat warehouse with same-day delivery throughout Muscat Governorate. We supply residential pool owners, hotel pool maintenance departments, facility management (FM) companies, and pool maintenance contractors across Oman. Bulk pricing is available for quantities above 100kg. We also supply calcium hypochlorite (65–70% granules), sodium hypochlorite liquid, and pH adjustment chemicals for a complete pool chemical programme. Contact us at info@gcoman.com or +968-93754388."
+        },
+        {
+          "question": "How should chlorine tablets be stored safely in Oman's hot climate?",
+          "answer": "TCCA chlorine tablets must be stored in a cool, dry, well-ventilated area away from direct sunlight and heat. In Oman's summer, outdoor storage temperatures can exceed 60°C in direct sun, which can cause rapid decomposition, chlorine gas release, and fire risk if TCCA comes into contact with moisture or organic materials. Store TCCA tablets in their original sealed buckets or containers, in a shaded warehouse or store room with ambient temperature below 40°C. Keep away from: lubricants and oils (fire hazard if contaminated), acids (chlorine gas release), reducing agents, and other pool chemicals. Never mix different pool chemicals together. Emergency eyewash and handwashing facilities must be nearby."
+        }
       ]
     }
   },
