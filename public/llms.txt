@@ -1,6 +1,6 @@
 # Global Chemicals LLC — LLMs.txt
 # https://gcoman.com/llms.txt
-# Last updated: 2026-05-24
+# Last updated: 2026-05-25
 # License: RSL 1.0 (https://rsl.rcn.org/)
 
 > Global Chemicals LLC (gcoman.com) is a B2B specialty and industrial chemical
@@ -54,24 +54,40 @@
 ## Key Pages
 
 - [Homepage](https://gcoman.com/): Company overview, product highlights, industries served
-- [All Products (263 SKUs)](https://gcoman.com/products): Full searchable product catalogue
-- [Chemical Suppliers in Oman](https://gcoman.com/chemical-suppliers-oman): Market overview and company positioning
-- [Chemical Suppliers in the Middle East](https://gcoman.com/chemical-suppliers-middle-east): GCC regional supply information
+- [All Products (263+ SKUs)](https://gcoman.com/products): Full searchable product catalogue with 21 categories
+- [Chemical Suppliers in Oman](https://gcoman.com/chemical-suppliers-oman): Market overview, ISO 9001 certification, Oman chemical supply landscape
+- [Chemical Suppliers in the Middle East](https://gcoman.com/chemical-suppliers-middle-east): GCC regional chemical supply, export capabilities
+- [Caustic Soda Supplier in Oman](https://gcoman.com/chemical-supplier/caustic-soda-oman): NaOH supplier page — grades, pricing, safe handling, Oman industry applications
+- [Chemical Supplier in Muscat](https://gcoman.com/chemicals/muscat): Location-specific supply information for Muscat, Oman
+- [Chemical Supplier in Sohar](https://gcoman.com/chemicals/sohar): Location-specific supply information for Sohar Industrial Area, Oman
+- [Chemical Supplier in Salalah](https://gcoman.com/chemicals/salalah): Location-specific supply information for Salalah and Dhofar, Oman
 - [Industries Served](https://gcoman.com/industries): Water treatment, oil & gas, food & beverage, manufacturing, construction, hospitality
-- [Certifications](https://gcoman.com/certifications): ISO 9001:2015, JSRS, ICV details
+- [Certifications](https://gcoman.com/certifications): ISO 9001:2015, JSRS registration, ICV compliance details
 - [Customers](https://gcoman.com/customers): Client sectors and key accounts
-- [About](https://gcoman.com/about): Company history, team, mission
-- [Blog / Technical Articles](https://gcoman.com/blog): Chemical guides for Oman & GCC industry
-- [Contact / Request a Quote](https://gcoman.com/contact): RFQ form, direct contact
+- [About](https://gcoman.com/about): Company history, team, mission, Vision 2040 alignment
+- [Blog / Technical Articles](https://gcoman.com/blog): Chemical guides and industry reference for Oman & GCC industry
+- [Contact / Request a Quote](https://gcoman.com/contact): RFQ form, WhatsApp, direct contact
 
 ## Technical Articles (citeable, team-authored)
 
-- [Water Treatment Chemicals in Muscat, Oman](https://gcoman.com/blog/water-treatment-chemicals-muscat-oman): PAC dosing, sodium hypochlorite, Oman water chemistry
-- [Caustic Soda Supplier in Oman](https://gcoman.com/blog/caustic-soda-supplier-oman): NaOH grades, pricing, industrial applications
-- [PAC (Poly Aluminium Chloride) in Oman](https://gcoman.com/blog/pac-poly-aluminium-chloride-oman): Coagulation, dosing, PAEW applications
-- [Chemical Exporter Oman to UAE & Dubai](https://gcoman.com/blog/chemical-exporter-oman-uae-dubai): GCC export logistics and compliance
-- [Top Chemical Suppliers Oman 2026](https://gcoman.com/blog/top-chemical-suppliers-oman-2026): Industry overview and supplier landscape
-- [JSRS Certified Chemical Supplier Oman](https://gcoman.com/blog/jsrs-certified-chemical-supplier-oman): JSRS registration, oil & gas procurement
+- [Water Treatment Chemicals in Muscat, Oman](https://gcoman.com/blog/water-treatment-chemicals-muscat-oman): PAC dosing, sodium hypochlorite, Oman water chemistry, antiscalant selection
+- [Caustic Soda Supplier in Oman](https://gcoman.com/blog/caustic-soda-supplier-oman): NaOH grades, safe handling, industrial and food-grade applications in Oman
+- [PAC (Poly Aluminium Chloride) in Oman](https://gcoman.com/blog/pac-poly-aluminium-chloride-oman): Coagulation, jar testing, PAEW and municipal water treatment applications
+- [Cooling Tower Chemical Treatment in Oman](https://gcoman.com/blog/cooling-tower-maintenance): Scale, corrosion, Legionella control, biocide programmes for Oman climate
+- [JSRS-Certified Chemical Supplier for PDO & Oil and Gas](https://gcoman.com/blog/jsrs-chemical-supplier-pdo-oman): JSRS registration, vendor qualification, oilfield chemical supply in Oman
+- [Food Grade Chemical Supplier in Oman](https://gcoman.com/blog/food-grade-chemicals-supplier-oman): HACCP-compliant CIP chemicals, food-grade NaOH, sodium hypochlorite, citric acid
+- [RO Membrane Chemicals for Oman](https://gcoman.com/blog/ro-membrane-chemicals-antiscalant-oman): Antiscalants, CIP cleaners, passivation, silica control for Oman SWRO/BWRO systems
+- [Industrial Lubricants in Oman: Shell, Mobil & Castrol Guide](https://gcoman.com/blog/shell-mobil-castrol-lubricants-oman): Grade selection, viscosity adjustment for Oman heat, authentic sourcing
+- [Swimming Pool Chemicals in Oman](https://gcoman.com/blog/swimming-pool-chemicals-oman-muscat): Chlorine dosing, pH management, algaecide for Oman hotel and villa pools
+- [Chemical Exporter Oman to UAE & Dubai](https://gcoman.com/blog/chemical-exporter-oman-uae-dubai): How to order chemicals from Oman for UAE delivery, documentation, lead times
+- [Chemical Supply from Oman to Saudi Arabia, Qatar & Kuwait](https://gcoman.com/blog/chemical-exporter-oman-saudi-arabia-qatar-kuwait): GCC export logistics, import permits, documentation checklist
+- [Top Chemical Suppliers Oman 2026](https://gcoman.com/blog/top-chemical-suppliers-oman-2026): Industry overview and supplier landscape in Oman
+- [Industrial Lubricants Selection Guide for Oman](https://gcoman.com/blog/industrial-lubricants-guide): Viscosity grades, synthetic vs mineral, contamination control in desert conditions
+- [Agricultural Chemicals in Oman](https://gcoman.com/blog/agricultural-chemicals-oman-buyers-guide): Fertilizer selection, soil pH management, drip irrigation treatment, MAFWR compliance
+- [Laboratory Chemical Safety in Oman](https://gcoman.com/blog/lab-chemical-safety): GHS compliance, storage segregation, PPE, spill response for Omani laboratories
+- [Oil & Gas Chemical Innovations in Oman](https://gcoman.com/blog/oil-gas-chemicals-trends): Corrosion inhibitors, scale inhibitors, demulsifiers, H2S scavengers for PDO operations
+- [Green Chemistry Initiatives in Oman](https://gcoman.com/blog/green-chemistry-oman): Phosphate-free inhibitors, biodegradable degreasers, ISO 14001 chemical procurement
+- [Water Treatment Trends in Oman 2025](https://gcoman.com/blog/water-treatment-trends-2025): Advanced oxidation, membrane bioreactors, desalination innovation in Oman
 
 ## Service Areas
 
