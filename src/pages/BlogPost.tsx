@@ -87,7 +87,7 @@ const BlogPost = () => {
       )}
       <SpeakableStructuredData
         url={canonicalUrl}
-        cssSelector={["h1", "h2", ".article-excerpt"]}
+        cssSelector={["h1", "h2", ".article-excerpt", ".prose"]}
       />
       <BreadcrumbStructuredData items={[
         { name: 'Home', url: 'https://gcoman.com/' },
@@ -139,7 +139,7 @@ const BlogPost = () => {
               </span>
             </div>
 
-            <p className="text-lg text-muted-foreground leading-relaxed border-l-4 border-primary pl-4">
+            <p className="article-excerpt text-lg text-muted-foreground leading-relaxed border-l-4 border-primary pl-4">
               {post.excerpt}
             </p>
           </div>
