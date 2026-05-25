@@ -620,9 +620,22 @@ export const OrganizationStructuredData = ({ includeService = false }: Organizat
       "areaServed": ["OM", "AE", "SA", "QA", "KW", "BH"],
       "availableLanguage": ["en", "ar"]
     },
+    "naics": "5169",
     "sameAs": [
       "https://www.linkedin.com/company/global-chemicals-llc",
       "https://www.facebook.com/globalchemicalsoman"
+    ],
+    "knowsAbout": [
+      "Industrial Chemicals",
+      "Water Treatment Chemicals",
+      "Oil and Gas Chemicals",
+      "Laboratory Chemicals",
+      "Specialty Chemicals",
+      "Poly Aluminium Chloride",
+      "Sodium Hypochlorite",
+      "Caustic Soda",
+      "Antiscalants",
+      "Corrosion Inhibitors"
     ]
   };
 

@@ -9,7 +9,7 @@ import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
 import { ArrowLeft, CheckCircle2, Phone, Mail, Beaker, Info, MessageCircle, Truck, Shield, Globe } from 'lucide-react';
 import { loadProductsByCategory } from '@/data/productLoader';
-import { ProductStructuredData, BreadcrumbStructuredData, FAQStructuredData } from '@/components/StructuredData';
+import { ProductStructuredData, BreadcrumbStructuredData, FAQStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { SEO } from '@/components/SEO';
 import { trackProductView, trackSelectContent, trackContactClick } from '@/components/GoogleAnalytics';
@@ -201,10 +201,17 @@ const ProductDetail = () => {
         canonical={`https://gcoman.com/products/${category}/${productSlug}`}
       />
       
-      <ProductStructuredData product={product} />
+      <ProductStructuredData
+        product={product}
+        url={`https://gcoman.com/products/${category}/${productSlug}`}
+      />
       {product.details?.faqs && product.details.faqs.length > 0 && (
         <FAQStructuredData faqs={product.details.faqs} />
       )}
+      <SpeakableStructuredData
+        url={`https://gcoman.com/products/${category}/${productSlug}`}
+        cssSelector={["h1", "h2", ".product-description", ".speakable"]}
+      />
       <BreadcrumbStructuredData items={[
         { name: 'Home', url: 'https://gcoman.com' },
         { name: 'Products', url: 'https://gcoman.com/products' },

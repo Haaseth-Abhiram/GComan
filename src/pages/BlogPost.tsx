@@ -3,7 +3,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import { SEO } from '@/components/SEO';
-import { ArticleStructuredData, BreadcrumbStructuredData, FAQStructuredData, HowToStructuredData } from '@/components/StructuredData';
+import { ArticleStructuredData, BreadcrumbStructuredData, FAQStructuredData, HowToStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -70,6 +70,8 @@ const BlogPost = () => {
         publishedDate={post.date}
         modifiedDate={post.date}
         category={post.category}
+        keywords={post.tags}
+        about={[post.category, 'Oman', 'Chemical Industry', 'GCC']}
       />
       {post.faqs && post.faqs.length > 0 && (
         <FAQStructuredData faqs={post.faqs} />
@@ -83,6 +85,10 @@ const BlogPost = () => {
           steps={post.howTo.steps}
         />
       )}
+      <SpeakableStructuredData
+        url={canonicalUrl}
+        cssSelector={["h1", "h2", ".article-excerpt"]}
+      />
       <BreadcrumbStructuredData items={[
         { name: 'Home', url: 'https://gcoman.com/' },
         { name: 'Blog', url: 'https://gcoman.com/blog' },

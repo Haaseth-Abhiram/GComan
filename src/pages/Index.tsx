@@ -10,7 +10,7 @@ import IndustrySelector from '@/components/IndustrySelector';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import QuickActions from '@/components/QuickActions';
 import { SEO } from '@/components/SEO';
-import { OrganizationStructuredData, FAQStructuredData } from '@/components/StructuredData';
+import { OrganizationStructuredData, FAQStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
 
 // Homepage FAQs for rich snippets — GCC-wide coverage
 const homepageFAQs = [
@@ -50,6 +50,10 @@ const Index = () => {
       />
       <OrganizationStructuredData includeService={true} />
       <FAQStructuredData faqs={homepageFAQs} />
+      <SpeakableStructuredData
+        url="https://gcoman.com/"
+        cssSelector={["h1", "h2", ".company-snapshot"]}
+      />
       <Navigation />
       <WhatsAppButton />
       <main id="main-content">
@@ -57,7 +61,7 @@ const Index = () => {
 
         {/* Company snapshot strip — thin, unobtrusive, fully visible prose for AI citation.
             Must not be hidden or aria-hidden; GEO value requires rendered text. */}
-        <section className="border-y border-border/30 bg-muted/5 py-5">
+        <section className="company-snapshot border-y border-border/30 bg-muted/5 py-5">
           <div className="container mx-auto px-4 max-w-6xl">
             <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-10">
               <p className="flex-1 text-sm text-muted-foreground leading-relaxed">
