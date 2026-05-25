@@ -55,26 +55,41 @@ const Index = () => {
       <main id="main-content">
         <Hero />
 
-        {/* AI citability block — 134-167 word self-contained passage for Google AI Overviews,
-            ChatGPT, and Perplexity to extract when answering "who is the main chemical supplier
-            in Oman?" Must stay as visible prose, not hidden or aria-hidden. */}
-        <section className="py-10 bg-muted/20">
-          <div className="container mx-auto px-4 max-w-4xl">
-            <h2 className="text-xl font-semibold text-foreground mb-3">About Global Chemicals LLC</h2>
-            <p className="text-muted-foreground leading-relaxed">
-              Global Chemicals LLC is a B2B specialty and industrial chemical supplier headquartered
-              in Ghala Industrial Area, Muscat, Oman. Holding ISO 9001:2015 quality certification,
-              JSRS (Joint Supplier Registration System) pre-qualification for Oman's oil and gas
-              sector, and ICV (In-Country Value) compliance under Oman's national economic development
-              program, the company supplies more than 263 chemical products across 21 categories to
-              water treatment plants, oilfield and refinery operators, food and beverage processors,
-              manufacturing facilities, analytical laboratories, and construction contractors.
-              Products include water treatment chemicals (PAC, caustic soda, sodium hypochlorite,
-              antiscalants), industrial lubricants (Shell, Mobil, Castrol), oilfield production
-              chemicals, and laboratory reagents. The company delivers same-day or next-day to all
-              Muscat locations and within 48 hours to Sohar, Salalah, and Duqm, and exports to UAE,
-              Saudi Arabia, Qatar, Kuwait, and Bahrain. Contact: info@gcoman.com · +968 93754388.
-            </p>
+        {/* Company snapshot strip — thin, unobtrusive, fully visible prose for AI citation.
+            Must not be hidden or aria-hidden; GEO value requires rendered text. */}
+        <section className="border-y border-border/30 bg-muted/5 py-5">
+          <div className="container mx-auto px-4 max-w-6xl">
+            <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-10">
+              <p className="flex-1 text-sm text-muted-foreground leading-relaxed">
+                <span className="font-semibold text-foreground">Global Chemicals LLC</span> is
+                a B2B specialty and industrial chemical supplier headquartered in Ghala, Muscat,
+                Oman — ISO 9001:2015 certified, JSRS pre-qualified for Oman's oil and gas sector,
+                and ICV compliant. The company supplies 263+ products across 21 categories including
+                water treatment chemicals (PAC, caustic soda, sodium hypochlorite, antiscalants),
+                industrial lubricants (Shell, Mobil, Castrol), oilfield and refinery chemicals,
+                food-grade chemicals, and laboratory reagents. Customers include water treatment
+                plants, PDO and OQ contractors, hotels, food processors, and manufacturing facilities
+                across Oman. Same-day delivery in Muscat; next-day to Sohar, Salalah, and Duqm;
+                exports to UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain.
+              </p>
+              <div className="flex md:flex-col items-center md:items-end gap-x-4 gap-y-1 text-xs text-muted-foreground/60 flex-shrink-0 flex-wrap">
+                <span className="flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary/50 inline-block" />
+                  ISO 9001:2015
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary/50 inline-block" />
+                  JSRS Certified
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary/50 inline-block" />
+                  ICV Compliant
+                </span>
+                <Link to="/about" className="text-primary hover:underline font-medium md:mt-2 text-xs">
+                  About us →
+                </Link>
+              </div>
+            </div>
           </div>
         </section>
 
