@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import { Shield, Award, CheckCircle2, FileCheck, Globe, Users, Leaf, TrendingUp } from 'lucide-react';
 import { SEO } from '@/components/SEO';
-import { BreadcrumbStructuredData, FAQStructuredData, OrganizationStructuredData } from '@/components/StructuredData';
+import { BreadcrumbStructuredData, FAQStructuredData, OrganizationStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
@@ -229,6 +229,7 @@ const Certifications = () => {
       <OrganizationStructuredData />
       <BreadcrumbStructuredData items={breadcrumbItems} />
       <FAQStructuredData faqs={certificationFAQs} />
+      <SpeakableStructuredData url="https://gcoman.com/certifications" cssSelector={["h1", "h2", ".speakable"]} />
       <Navigation />
       <WhatsAppButton />
 

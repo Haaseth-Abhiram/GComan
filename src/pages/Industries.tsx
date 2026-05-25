@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { SEO } from '@/components/SEO';
-import { FAQStructuredData, BreadcrumbStructuredData } from '@/components/StructuredData';
+import { FAQStructuredData, BreadcrumbStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
 import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -336,6 +336,7 @@ const Industries = () => {
         { name: 'Industries', url: 'https://gcoman.com/industries' },
       ]} />
       <FAQStructuredData faqs={waterTreatmentFaqs} />
+      <SpeakableStructuredData url="https://gcoman.com/industries" cssSelector={["h1", "h2", ".speakable"]} />
       <Navigation />
       <WhatsAppButton />
 

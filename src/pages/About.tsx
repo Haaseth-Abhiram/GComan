@@ -9,7 +9,7 @@ import heroImage from '@/assets/about-hero.jpg';
 import facilityImage from '@/assets/about-facility.jpg';
 import teamImage from '@/assets/about-team.jpg';
 import { SEO } from '@/components/SEO';
-import { BreadcrumbStructuredData, OrganizationStructuredData } from '@/components/StructuredData';
+import { BreadcrumbStructuredData, OrganizationStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
 
 // Breadcrumb items for About page
 const breadcrumbItems = [
@@ -63,6 +63,7 @@ const About = () => {
       />
       <OrganizationStructuredData />
       <BreadcrumbStructuredData items={breadcrumbItems} />
+      <SpeakableStructuredData url="https://gcoman.com/about" cssSelector={["h1", "h2", ".speakable"]} />
       <Navigation />
       <WhatsAppButton />
 

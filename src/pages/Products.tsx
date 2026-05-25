@@ -10,7 +10,7 @@ import { useParams } from 'react-router-dom';
 import { AISearchDialog } from '@/components/AISearchDialog';
 import { ProductCard } from '@/components/products/ProductCard';
 import { SEO } from '@/components/SEO';
-import { OrganizationStructuredData, BreadcrumbStructuredData, FAQStructuredData } from '@/components/StructuredData';
+import { OrganizationStructuredData, BreadcrumbStructuredData, FAQStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
 import { trackSearch } from '@/components/GoogleAnalytics';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -259,6 +259,7 @@ const Products = () => {
         ...(categoryParam ? [{ name: categoryParam.replace(/-/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()), url: `https://gcoman.com/products/${categoryParam}` }] : [])
       ]} />
       <FAQStructuredData faqs={productsFAQs} />
+      <SpeakableStructuredData url="https://gcoman.com/products" cssSelector={["h1", "h2", ".speakable"]} />
 
       <Navigation />
       <WhatsAppButton />
