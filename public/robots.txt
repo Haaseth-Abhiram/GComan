@@ -29,6 +29,18 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
+User-agent: Applebot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: ia_archiver
+Allow: /
+
 # SEO audit bots — blocked (no commercial value, high crawl cost)
 User-agent: AhrefsBot
 Disallow: /

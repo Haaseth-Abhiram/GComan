@@ -11,6 +11,11 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Calendar, Clock, User, ArrowRight, TrendingUp, Beaker, Droplets, Factory, Leaf, Globe2 } from 'lucide-react';
 
+export interface HowToStep {
+  name: string;
+  text: string;
+}
+
 export interface BlogPost {
   id: string;
   title: string;
@@ -24,6 +29,13 @@ export interface BlogPost {
   image?: string;
   icon: any;
   faqs?: { question: string; answer: string }[];
+  howTo?: {
+    name: string;
+    description: string;
+    totalTime?: string;
+    supply?: string[];
+    steps: HowToStep[];
+  };
 }
 
 export const blogPosts: BlogPost[] = [
@@ -114,6 +126,21 @@ Global Chemicals LLC supplies the complete range of water treatment chemicals to
         answer: 'For Muscat\'s high-chloride industrial water systems — fed by desalinated seawater with elevated residual chloride — molybdate-based or organic azole-phosphonate blended corrosion inhibitors provide the most reliable protection. Molybdate residuals of 10–20 mg/L protect mild steel cooling tower structures and pipework. Benzotriazole (BZT) or tolyltriazole (TT) at 1–5 mg/L protects copper and copper-alloy heat exchanger tubes common in Muscat\'s chiller systems and industrial condensers. Zinc-based inhibitors are effective but being phased out at ISO 14001-certified facilities due to aquatic toxicity discharge concerns under the Ministry of Environment\'s effluent standards.',
       },
     ],
+    howTo: {
+      name: 'How to Set Up a Water Treatment Chemical Programme for Industrial Facilities in Oman',
+      description: 'Step-by-step guide to establishing a complete industrial water treatment chemical programme for facilities in Muscat and across Oman, covering coagulation, disinfection, scale control, and corrosion inhibition.',
+      totalTime: 'PT2H',
+      supply: ['PAC (Poly Aluminium Chloride)', 'Sodium hypochlorite or calcium hypochlorite', 'Phosphonate antiscalant', 'Corrosion inhibitor (molybdate or azole-based)', 'pH adjustment chemical (caustic soda or acid)', 'Dosing pump and flow meter', 'Water test kit'],
+      steps: [
+        { name: 'Analyse source water quality', text: 'Collect samples of your makeup water (municipal supply, well water, or desalinated supply) and test for pH, total hardness, calcium hardness, alkalinity, turbidity, chloride, silica, iron, and TDS. Muscat\'s desalinated supply typically shows pH 6.5–7.0, very low hardness, and low TDS. Interior groundwater sources may show hardness above 300 mg/L and high silica.' },
+        { name: 'Select coagulant based on turbidity', text: 'If source water turbidity exceeds 5 NTU, select a PAC grade suited to your water pH. High basicity PAC (70–75% OH) is most effective for Oman\'s near-neutral pH conditions. Conduct a jar test using your actual source water to determine optimal dose rate (typically 5–50 mg/L). Verify that treated water residual aluminium stays below 0.2 mg/L (WHO guideline).' },
+        { name: 'Set up disinfection dosing', text: 'Install a sodium hypochlorite or calcium hypochlorite dosing system. For continuous treatment, target 0.5–1.0 mg/L free residual chlorine in the distribution or process water. In Oman\'s summer heat, expect higher hypochlorite consumption — sodium hypochlorite degrades at 10–15% per month above 25°C, so order in 30–45 day quantities and store in shaded, cool areas.' },
+        { name: 'Design the antiscalant programme', text: 'For cooling towers and heat exchangers, calculate the Langelier Saturation Index (LSI) at your target cycles of concentration. For Muscat desalinated supply at 5 COC, LSI is typically near 0 — low scaling risk. For groundwater sources with calcium hardness >200 mg/L, select a phosphonate antiscalant (HEDP or PBTC) and dose at 5–15 mg/L. If silica exceeds 100 mg/L in makeup water, add a silica dispersant polymer.' },
+        { name: 'Apply corrosion inhibitor programme', text: 'For systems with carbon steel and copper components, use a multi-metal inhibitor programme. Dose molybdate or azole-phosphonate at 10–20 mg/L for steel protection and benzotriazole (BZT) at 1–5 mg/L for copper alloy protection. For closed-loop systems, maintain inhibitor residuals with monthly testing and top-up doses.' },
+        { name: 'Adjust pH to target range', text: 'Muscat\'s desalinated water is naturally acidic (pH 6.5–7.0). Dose caustic soda (NaOH, liquid 45–50%) via a calibrated metering pump to raise pH to 7.5–8.0 for safe distribution and process use. For RO systems, maintain feed water pH 7.0–7.5 to prevent membrane degradation. Use a continuous pH meter with alarm at the dosing point.' },
+        { name: 'Implement monitoring and record-keeping', text: 'Test circulating water weekly for pH, conductivity, chlorine residual, inhibitor residual, and biological count. For cooling towers, quarterly Legionella culture testing is required under Oman\'s HSE Water Safety Plan framework. Record all results, chemical deliveries, and dosing adjustments in a water treatment log for compliance and troubleshooting purposes.' },
+      ],
+    },
   },
   {
     id: 'agricultural-chemicals-oman-buyers-guide',
@@ -422,6 +449,21 @@ Global Chemicals LLC supplies cooling tower treatment chemicals — antiscalants
         answer: 'Oman\'s summer ambient temperatures (45–50°C in Muscat, higher inland) require significant adjustments to standard cooling tower chemical programmes. Biocide consumption increases substantially at higher water temperatures — Legionella and biofilm-forming bacteria multiply faster, and oxidising biocides like sodium hypochlorite degrade more rapidly in heat. Scale risk also intensifies as evaporation rates increase, concentrating minerals faster and raising the Langelier Saturation Index. Practical adjustments for Oman summer: increase biocide dosing frequency to every 5–7 days (versus 14 days in winter), reduce target COC from 5 to 3–4, and increase corrosion inhibitor residual checks from weekly to twice-weekly at high-value assets like PDO facility heat exchangers.',
       },
     ],
+    howTo: {
+      name: 'How to Set Up a Chemical Treatment Programme for Cooling Towers in Oman',
+      description: 'Step-by-step guide to establishing a complete cooling tower water treatment programme for facilities in Oman, covering scale control, corrosion inhibition, Legionella biocide treatment, and blowdown management in Oman\'s extreme climate.',
+      totalTime: 'PT3H',
+      supply: ['Phosphonate antiscalant (HEDP or PBTC)', 'Multi-metal corrosion inhibitor (molybdate or azole-phosphonate)', 'Benzotriazole (BZT) for copper protection', 'Oxidising biocide (sodium hypochlorite or chlorine dioxide)', 'Non-oxidising biocide (isothiazolinone or DBNPA)', 'Online conductivity controller for blowdown', 'pH meter and test kits', 'Dosing pumps (chemical-resistant, PTFE-lined)'],
+      steps: [
+        { name: 'Analyse makeup water quality', text: 'Collect makeup water samples and test for pH, total hardness, calcium hardness, M-alkalinity, chloride, sulphate, silica, iron, and TDS. Calculate the Langelier Saturation Index (LSI) at your target cycles of concentration (COC). For Muscat desalinated supply at 5 COC, LSI is typically 0 to +0.2 — manageable with antiscalant. For Sohar or Salalah groundwater with calcium hardness above 200 mg/L, LSI at 4 COC may exceed +2, requiring significant antiscalant and blowdown management.' },
+        { name: 'Set target cycles of concentration', text: 'Select your operating COC based on makeup water quality and water conservation targets. For Muscat desalinated supply (low hardness, low scaling risk), operating at 4–5 COC is feasible and conserves scarce water. For high-hardness groundwater sources, limit to 3 COC to avoid scale. Install an online conductivity controller with automatic blowdown valve to maintain target COC consistently without manual intervention.' },
+        { name: 'Commission antiscalant dosing', text: 'Install a chemical dosing pump on the makeup water line and dose phosphonate antiscalant (HEDP or PBTC) at 5–15 mg/L. For makeup water with silica above 80 mg/L SiO2, add a silica dispersant polymer alongside the phosphonate. Set the pump for flow-paced dosing using a signal from the makeup water flow meter — this ensures dose tracks actual water consumption and maintains correct concentration in the circulating water.' },
+        { name: 'Set up multi-metal corrosion inhibitor', text: 'Install a second dosing pump for the corrosion inhibitor on the circulating water line (or makeup water line with high-enough retention time). Dose molybdate or azole-phosphonate inhibitor at 10–20 mg/L in the circulating water for carbon steel protection. For systems with copper or copper-alloy heat exchanger tubes (common in Muscat hotel and commercial building chillers), add benzotriazole (BZT) at 1–5 mg/L for copper protection.' },
+        { name: 'Establish oxidising biocide programme', text: 'Install a sodium hypochlorite or chlorine dioxide dosing system on the circulating water return. For Oman\'s summer conditions (water temperature 40–50°C at basin), maintain continuous free chlorine residual of 0.5–1.0 mg/L. In summer, increase chlorine dosing frequency — sodium hypochlorite degrades faster at high temperatures. Maintain circulating water pH at 7.0–8.0 to maximise hypochlorous acid (active biocide) fraction.' },
+        { name: 'Set up rotating non-oxidising biocide schedule', text: 'Programme a third dosing pump for non-oxidising biocide (isothiazolinone CMIT/MIT or DBNPA) on a 7–14 day rotation. Slug-dose the non-oxidising biocide at 50–100 mg/L for 4–6 hours, then resume normal chlorine treatment. This rotation prevents biocide-resistant Legionella strains from developing — a critical requirement under Oman\'s HSE Water Safety Plan framework for Legionella control.' },
+        { name: 'Implement monitoring and Legionella testing programme', text: 'Test circulating water weekly for: pH (target 7.0–8.0), conductivity (to verify COC), free chlorine residual (0.5–1.0 mg/L), inhibitor residual, and turbidity. Conduct quarterly Legionella culture testing at an OAS-accredited laboratory — target below 100 cfu/L, mandatory immediate action threshold at 1,000 cfu/L. In Oman\'s summer (May–October), consider increasing Legionella testing to every 6 weeks. Record all results in a written Water Safety Plan document.' },
+      ],
+    },
   },
   {
     id: 'caustic-soda-supplier-oman',
@@ -484,6 +526,21 @@ Global Chemicals LLC supplies caustic soda flakes, pearls, and liquid solution t
         answer: 'Caustic soda is classified GHS Hazard Category 1 (Skin Corrosion) and causes severe chemical burns on contact. Mandatory PPE for all caustic soda handling in Oman industrial facilities: neoprene or butyl rubber gloves (nitrile is insufficient for concentrated NaOH), full-face shield or chemical splash goggles, chemical-resistant apron, and safety boots. Emergency eyewash stations must be located within 10 seconds of the dosing area (ANSI Z358.1). All staff handling caustic soda must receive SDS training. An Arabic-language SDS must be available at the work area as required by GCC chemical safety regulations.',
       },
     ],
+    howTo: {
+      name: 'How to Safely Dissolve and Dose Caustic Soda Flakes for Industrial Water Treatment',
+      description: 'Step-by-step procedure for safely dissolving caustic soda (NaOH) flakes and setting up accurate chemical dosing for water treatment, pH adjustment, or industrial process applications in Oman.',
+      totalTime: 'PT45M',
+      supply: ['Caustic soda flakes or pearls (NaOH 98–99%)', 'HDPE mixing tank', 'Chemical dosing pump', 'Neoprene or butyl rubber gloves', 'Full-face shield', 'Chemical-resistant apron', 'pH meter', 'Safety boots', 'Eyewash station within 10 seconds of work area'],
+      steps: [
+        { name: 'Don full personal protective equipment', text: 'Before handling caustic soda, put on neoprene or butyl rubber gloves (not nitrile — insufficient for concentrated NaOH), full-face shield with chemical splash protection, chemical-resistant apron, and safety boots. Confirm that the eyewash station is within 10 seconds of your work area and is operational. Have a colleague present when working with caustic soda in case of emergency.' },
+        { name: 'Prepare the HDPE dissolution tank', text: 'Use a clean HDPE (High Density Polyethylene) or mild steel tank — never aluminium, zinc, or tin, which react with NaOH producing hydrogen gas. Ensure the tank is sized for at least the full batch volume plus 20% headspace. Check that the tank drain valve is closed and the overflow pipe is directed to a safe bunded area.' },
+        { name: 'Add water to the tank first', text: 'Always add caustic soda to water, never water to caustic soda. Fill the tank with the required volume of clean water first (ideally at ambient temperature, not hot). Caustic soda dissolution is strongly exothermic — the solution will heat up significantly. Starting with water in the tank and adding solid NaOH slowly distributes the heat safely.' },
+        { name: 'Add caustic soda flakes slowly and with agitation', text: 'Slowly add the measured weight of caustic soda flakes or pearls to the water while stirring with a chemical-resistant paddle or running the tank agitator. Add in batches — do not dump the full quantity at once. Monitor temperature: if the solution exceeds 70°C, stop adding NaOH and allow it to cool before continuing. A 30% NaOH solution in water will typically reach 50–60°C during dissolution.' },
+        { name: 'Allow to cool and verify concentration', text: 'Allow the dissolved caustic soda solution to cool to below 40°C before transferring to dosing tanks or pumping to the process. If needed, measure the solution strength using a hydrometer or refractometer, or verify by pH test: a 1% NaOH solution has a pH of approximately 13, a 10% solution has pH above 14. Adjust with additional water if the solution is more concentrated than required.' },
+        { name: 'Set up the chemical dosing pump', text: 'Transfer the dissolved NaOH solution to a HDPE storage/day tank connected to your chemical dosing pump. Set pump flow rate based on your calculated dose requirement (typically 5–20 mg/L for pH correction in Oman\'s desalinated water treatment). Use a flow pacing signal from the water meter if available — this automatically adjusts dose as flow rate changes.' },
+        { name: 'Verify pH target and log the operation', text: 'After starting the dosing pump, measure the treated water pH downstream at a representative sample point. For Oman desalinated water (pH 6.5–7.0 feed), target treated water pH 7.5–8.0. Adjust pump speed as needed. Record the batch weight dissolved, solution strength, dose rate, and treated water pH in your chemical dosing log. SDS and batch CoA must be kept at the work area as required by GCC chemical safety regulations.' },
+      ],
+    },
   },
   {
     id: 'pac-poly-aluminium-chloride-oman',
@@ -546,6 +603,21 @@ Global Chemicals LLC is a major PAC supplier in Oman, stocking both liquid PAC (
         answer: 'Global Chemicals LLC stocks both liquid PAC (10–12% Al2O3) and powder PAC (28–31% Al2O3) at our Muscat warehouse and offers same-day delivery within Muscat Governorate and next-day delivery to Sohar, Rusayl Industrial Estate, Barka, and Salalah. We supply PAEW-contracted water treatment facilities, industrial effluent plants, hotels, swimming pools, and food processing companies across Oman. Bulk tanker delivery of liquid PAC is available for large municipal facilities. Contact us at info@gcoman.com or +968-93754388 for pricing and availability confirmation.',
       },
     ],
+    howTo: {
+      name: 'How to Perform a Jar Test for PAC Dosing Optimisation in Oman',
+      description: 'Step-by-step procedure for conducting a standard jar test to determine the optimal PAC (Poly Aluminium Chloride) dose rate for your specific water source in Oman, whether from desalinated supply, groundwater, or industrial effluent.',
+      totalTime: 'PT1H',
+      supply: ['Jar test apparatus (6-place gang stirrer)', 'Raw water sample from your source', 'PAC solution (1% stock solution of your product grade)', 'Graduated pipettes or burettes', 'pH meter', 'Turbidimeter or turbidity tubes', 'Stopwatch', 'Beakers (6 × 1-litre)', 'Residual aluminium test kit (optional)'],
+      steps: [
+        { name: 'Prepare PAC stock solution', text: 'Dilute your PAC product (liquid or dissolved powder) to a 1% Al2O3 stock solution using clean water. For liquid PAC (10% Al2O3), mix 1 part PAC with 9 parts water by volume to make 1%. Label clearly. This allows accurate small-volume additions during the jar test.' },
+        { name: 'Collect fresh raw water samples', text: 'Collect water samples directly from your intake or process water source — ideally on the same day as testing since water quality changes. For Muscat facilities using PAEW supply, collect at the inlet to your storage or process tank. For groundwater, collect from the pump outlet. Record pH, turbidity, temperature, and hardness of the raw water before starting.' },
+        { name: 'Set up six beakers with equal water volumes', text: 'Fill six 1-litre beakers with 1,000 mL each of the raw water sample. Keep temperature consistent across all beakers (avoid direct sunlight during the test). Label beakers 1–6 corresponding to your six PAC dose levels.' },
+        { name: 'Add increasing PAC doses to each beaker', text: 'Select a dose range spanning your expected optimum. For low-turbidity Muscat desalinated supply, try doses of 5, 10, 15, 20, 30, and 50 mg/L (as product). For higher turbidity groundwater or effluent, try 10, 20, 30, 50, 75, and 100 mg/L. Using your 1% stock solution, calculate and add the correct volume to each beaker (e.g., 5 mg/L dose = 5 mL of 1% PAC per 1L beaker).' },
+        { name: 'Rapid mix then slow mix', text: 'Simultaneously start all six stirrers at high speed (100–150 rpm) for 1 minute to simulate rapid mixing at the dosing point. Then reduce speed to 30–40 rpm for 15–20 minutes to simulate flocculation. Observe floc formation — good PAC performance shows visible white or light-coloured floc forming within the first few minutes at 30 rpm.' },
+        { name: 'Allow to settle and measure turbidity', text: 'Stop stirring and allow beakers to settle for 20–30 minutes undisturbed. Carefully collect a sample from the middle of each beaker (not from the settled sludge). Measure the turbidity of each settled sample using a turbidimeter or turbidity tube. The dose that gives the lowest turbidity at the lowest chemical cost is your preliminary optimum dose.' },
+        { name: 'Verify pH and residual aluminium', text: 'Measure pH of the supernatant from each beaker. PAC has an acidic reaction — at high doses, pH may drop below 6.5 in low-alkalinity water. If pH drops below 6.5 at the optimum dose, you may need pH correction with caustic soda after coagulation. Optionally test residual aluminium — WHO drinking water guideline is <0.2 mg/L Al. Repeat the jar test seasonally as raw water quality changes throughout Oman\'s year.' },
+      ],
+    },
   },
   {
     id: 'chemical-exporter-oman-uae-dubai',

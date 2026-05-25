@@ -3,7 +3,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import { SEO } from '@/components/SEO';
-import { ArticleStructuredData, BreadcrumbStructuredData, FAQStructuredData } from '@/components/StructuredData';
+import { ArticleStructuredData, BreadcrumbStructuredData, FAQStructuredData, HowToStructuredData } from '@/components/StructuredData';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -73,6 +73,15 @@ const BlogPost = () => {
       />
       {post.faqs && post.faqs.length > 0 && (
         <FAQStructuredData faqs={post.faqs} />
+      )}
+      {post.howTo && (
+        <HowToStructuredData
+          name={post.howTo.name}
+          description={post.howTo.description}
+          totalTime={post.howTo.totalTime}
+          supply={post.howTo.supply}
+          steps={post.howTo.steps}
+        />
       )}
       <BreadcrumbStructuredData items={[
         { name: 'Home', url: 'https://gcoman.com/' },

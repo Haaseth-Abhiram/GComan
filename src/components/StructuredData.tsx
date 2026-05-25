@@ -16,6 +16,7 @@ interface ProductStructuredDataProps {
       applications?: string[];
       casNumber?: string;
       alternativeNames?: string[];
+      wikiUrl?: string;
     };
   };
   url?: string;
@@ -66,7 +67,11 @@ export const ProductStructuredData = ({ product, url }: ProductStructuredDataPro
     }),
     ...(product.details?.casNumber && {
       "productID": product.details.casNumber,
-      "identifier": product.details.casNumber
+      "identifier": product.details.casNumber,
+      "additionalType": "https://schema.org/ChemicalSubstance"
+    }),
+    ...(product.details?.wikiUrl && {
+      "sameAs": [product.details.wikiUrl]
     })
   };
 
@@ -91,6 +96,8 @@ interface ArticleStructuredDataProps {
   publishedDate: string;
   modifiedDate?: string;
   category?: string;
+  keywords?: string[];
+  about?: string[];
 }
 
 export const ArticleStructuredData = ({
@@ -101,7 +108,9 @@ export const ArticleStructuredData = ({
   author,
   publishedDate,
   modifiedDate,
-  category
+  category,
+  keywords,
+  about
 }: ArticleStructuredDataProps) => {
   const articleSchema = {
     "@context": "https://schema.org",
@@ -112,19 +121,28 @@ export const ArticleStructuredData = ({
     "image": image || "https://storage.googleapis.com/gpt-engineer-file-uploads/KCdCgzQqlrUlZx0GJf8ZTPlKH1p2/social-images/social-1761453031792-resize-17607541312075170240GlobalChemicalsLLCLogoPNG.png",
     "author": {
       "@type": "Person",
-      "name": author
+      "name": author,
+      "knowsAbout": ["Industrial Chemicals", "Water Treatment", "Oilfield Chemicals", "Chemical Safety", "GCC Industry"],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Global Chemicals LLC",
+        "url": "https://gcoman.com"
+      }
     },
     "publisher": {
       "@type": "Organization",
       "name": "Global Chemicals LLC",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://gcoman.com/logo.png"
-      }
+      "@id": "https://gcoman.com/#organization",
+      "logo": { "@type": "ImageObject", "url": "https://gcoman.com/logo.png" }
     },
     "datePublished": publishedDate,
     ...(modifiedDate && { "dateModified": modifiedDate }),
     ...(category && { "articleSection": category }),
+    ...(keywords && keywords.length > 0 && { "keywords": keywords.join(", ") }),
+    ...(about && about.length > 0 && {
+      "about": about.map(topic => ({ "@type": "Thing", "name": topic }))
+    }),
+    "inLanguage": "en",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": url
@@ -486,6 +504,77 @@ export const LocalBusinessStructuredData = () => {
     <Helmet defer={false}>
       <script type="application/ld+json">
         {JSON.stringify(localBusinessSchema)}
+      </script>
+    </Helmet>
+  );
+};
+
+// =====================================================
+// HOWTO STRUCTURED DATA (Google AI Overviews #2 signal)
+// =====================================================
+interface HowToStep {
+  name: string;
+  text: string;
+}
+
+interface HowToStructuredDataProps {
+  name: string;
+  description: string;
+  totalTime?: string;    // ISO 8601 e.g. "PT30M"
+  supply?: string[];
+  steps: HowToStep[];
+}
+
+export const HowToStructuredData = ({ name, description, totalTime, supply, steps }: HowToStructuredDataProps) => {
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": name,
+    "description": description,
+    ...(totalTime && { "totalTime": totalTime }),
+    ...(supply && supply.length > 0 && {
+      "supply": supply.map(s => ({ "@type": "HowToSupply", "name": s }))
+    }),
+    "step": steps.map((step, i) => ({
+      "@type": "HowToStep",
+      "position": i + 1,
+      "name": step.name,
+      "text": step.text
+    }))
+  };
+
+  return (
+    <Helmet defer={false}>
+      <script type="application/ld+json">
+        {JSON.stringify(howToSchema)}
+      </script>
+    </Helmet>
+  );
+};
+
+// =====================================================
+// SPEAKABLE STRUCTURED DATA (Google Assistant / voice AI)
+// =====================================================
+interface SpeakableStructuredDataProps {
+  url: string;
+  cssSelector?: string[];
+}
+
+export const SpeakableStructuredData = ({ url, cssSelector }: SpeakableStructuredDataProps) => {
+  const speakableSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "url": url,
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": cssSelector || ["h1", "h2", ".speakable"]
+    }
+  };
+
+  return (
+    <Helmet defer={false}>
+      <script type="application/ld+json">
+        {JSON.stringify(speakableSchema)}
       </script>
     </Helmet>
   );

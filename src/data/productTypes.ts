@@ -32,6 +32,7 @@ export interface Product {
     seoKeywords?: string[]; // Target keywords for this product
     longDescription?: string; // Extended SEO-optimized description
     faqs?: { question: string; answer: string }[];
+    wikiUrl?: string;            // Wikipedia URL for sameAs in ProductStructuredData
 
     // ─── Pilot fields (optional) — render only when present.
     // Curated 2D diagram for the chemistry hero. If absent, the hero falls

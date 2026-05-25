@@ -366,6 +366,7 @@
       },
       "documents": {},
       "casNumber": "1310-73-2",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Sodium_hydroxide",
       "alternativeNames": [
         "Sodium hydroxide flakes",
         "NaOH flakes",
@@ -430,6 +431,7 @@
     "details": {
       "formula": "NaOH",
       "casNumber": "1310-73-2",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Sodium_hydroxide",
       "alternativeNames": [
         "Sodium hydroxide liquid",
         "Liquid caustic",
@@ -490,6 +492,7 @@
     "details": {
       "formula": "Ca(ClO)2",
       "casNumber": "7778-54-3",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Calcium_hypochlorite",
       "alternativeNames": [
         "Cal hypo",
         "Calcium hypochlorite granules",
@@ -551,6 +554,7 @@
     "details": {
       "formula": "NaClO",
       "casNumber": "7681-52-9",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Sodium_hypochlorite",
       "alternativeNames": [
         "Liquid chlorine",
         "Bleach",
@@ -1118,6 +1122,7 @@
     "details": {
       "formula": "Ca(OH)2",
       "casNumber": "1305-62-0",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Calcium_hydroxide",
       "alternativeNames": [
         "Calcium hydroxide",
         "Slaked lime",
