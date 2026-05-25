@@ -125,7 +125,14 @@
         "Bulk density: 0.40-0.55 g/cm³",
         "Moisture content: <5%",
         "Hardness: >95%"
-      ]
+      ],
+      "faqs": [
+        {
+          "question": "How is activated carbon used in oil and gas operations in Oman?",
+          "answer": "Activated carbon is a highly porous adsorbent material used across Oman's oil and gas sector for multiple applications. In gas processing plants, activated carbon guard beds remove heavy hydrocarbons, mercury, and amine degradation products from gas streams ahead of molecular sieve dehydration units, protecting expensive molecular sieves from poisoning and extending their service life. In produced water treatment, activated carbon removes residual hydrocarbons, benzene, toluene, and other BTEX compounds to meet injection water quality specifications or overboard discharge limits. In glycol (TEG/MEG) regeneration systems, activated carbon filters are installed in a slipstream to remove amine degradation products, foaming agents, and colour bodies that accumulate and impair solvent performance. In Oman's HAZMAT and oil spill response context, granular activated carbon is used to adsorb hydrocarbon spills. Global Chemicals LLC supplies coal-based granular activated carbon (GAC) and extruded activated carbon in standard mesh sizes for Oman's gas processing and water treatment applications."
+        }
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Activated_carbon"
     }
   },
   {
@@ -211,6 +218,12 @@
         "Specific gravity: 1.12-1.18",
         "Dosage: 10-50 ppm for oxygen scavenging",
         "Available in drums, IBCs, and bulk"
+      ],
+      "faqs": [
+        {
+          "question": "What is ammonium bisulphite and what is its application in oilfield water treatment?",
+          "answer": "Ammonium bisulphite (ABS, NH₄HSO₃) is an oxygen scavenger used in Oman's oilfield water injection systems to remove dissolved oxygen from injection water before it is pumped into reservoirs. Dissolved oxygen is highly corrosive — even at concentrations of 50–100 ppb, it accelerates pitting corrosion of carbon steel pipelines, flowlines, and injection wellbores, causing premature failure. At typical injection water oxygen levels of 0.5–2.0 mg/L entering the treatment train, ammonium bisulphite is dosed at a 3:1–5:1 molar excess to ensure rapid and complete oxygen removal. The reaction is: NH₄HSO₃ + ½O₂ → NH₄HSO₄. Residual ABS concentration in treated water is typically maintained at 5–20 ppm as measured by colorimetric test kits. Ammonium bisulphite is preferred over sodium sulphite for Oman oilfield applications because of its higher reactivity at ambient temperature, lower pH effect, and lower cost per unit of oxygen removed. Global Chemicals LLC supplies liquid ammonium bisulphite for Oman water injection operations."
+        }
       ]
     }
   },
@@ -297,7 +310,8 @@
         "Solubility: 37g/100ml water at 25°C",
         "Available in powder and solution forms",
         "Packaging: 25kg bags, drums, bulk"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Barium_chloride"
     }
   },
   {
@@ -387,7 +401,8 @@
         "pH (1% solution): 9.0-9.5",
         "Typical dosage: 0.5-2 lb/1000 gal in fracturing",
         "Packaging: 25kg, 50kg bags, bulk"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Borax"
     }
   },
   {
@@ -431,7 +446,8 @@
         "pH (saturated solution): 5.1",
         "Temperature stable - ideal for high-temp wells",
         "Packaging: 25kg bags, drums, bulk"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Boric_acid"
     }
   },
   {
@@ -612,7 +628,14 @@
         "pH: 8-10",
         "Compatible with corrosion inhibitors",
         "Available in drums, IBCs, bulk tankers"
-      ]
+      ],
+      "faqs": [
+        {
+          "question": "What is calcium chloride used for in oilfield drilling operations in Oman?",
+          "answer": "Calcium chloride (CaCl₂) is a dense, hygroscopic salt used in oilfield drilling operations in Oman as a completion fluid and workover brine. Its primary application is as a clear brine packer fluid in the annulus between the wellbore and casing during completion, providing hydrostatic pressure to balance formation pressure without solid weighting agents that could damage perforations or the formation face. Calcium chloride brines at 10–11.6 ppg density range (1,200–1,390 kg/m³) cover the pressure window of many Oman reservoirs. It is also used as a shale stabiliser in water-based drilling muds — CaCl₂ provides KCl-free shale inhibition by reducing water activity and limiting osmotic water migration into reactive clay formations. In Oman's carbonatic reservoirs prone to calcium-sensitive clays, CaCl₂ is preferred over NaCl brines. Global Chemicals LLC supplies dry calcium chloride flakes and concentrated CaCl₂ solution for Oman drilling and completion operations."
+        }
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Calcium_chloride"
     }
   },
   {
@@ -701,7 +724,8 @@
         "Long shelf life when stored dry",
         "Maximum citric acid content",
         "Packaging: 25kg bags, drums, bulk"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Citric_acid"
     }
   },
   {
@@ -835,6 +859,16 @@
         "Compatible with most production chemicals",
         "Available concentrated or pre-diluted",
         "Packaging: 20L, 200L drums, IBCs, bulk"
+      ],
+      "faqs": [
+        {
+          "question": "What types of corrosion inhibitors are used in Oman oilfield pipelines?",
+          "answer": "Oman's oilfield pipelines experience several types of corrosion requiring different inhibitor chemistries. Sweet corrosion (CO₂-dominated) is the most common in Oman's condensate-rich gas fields — organic film-forming inhibitors (imidazolines, amides, quaternary ammonium compounds) adsorb onto steel surfaces and form a protective hydrophobic barrier against carbonic acid attack. Sour corrosion (H₂S-dominated) occurs in PDO's deep gas fields — phosphate ester and film-forming amine inhibitors provide protection, but H₂S also causes hydrogen-induced cracking (HIC) and sulphide stress cracking (SSC) in high-strength steel, requiring inhibitors combined with material selection controls. Galvanic corrosion at dissimilar metal connections and under-deposit corrosion (UDC) beneath wax, scale, or sludge deposits require specialised polymeric dispersants combined with film-forming inhibitors. Global Chemicals LLC works with international inhibitor manufacturers to supply Oman oilfield-approved formulations qualified to NACE TM0197 and PDO/OQ testing protocols."
+        },
+        {
+          "question": "How are corrosion inhibitors applied in oil and gas pipelines in Oman?",
+          "answer": "Corrosion inhibitors in Oman's oil and gas pipelines are applied by three primary methods: continuous injection (CI) via chemical injection quills installed at wellheads, manifolds, or platform injection points, where inhibitor is dosed proportional to production rate; batch treatment (pigging) where inhibitor solution is pigged through the pipeline as a slug to re-film internal surfaces — used for long tie-back lines or when continuous injection is impractical; and fall-back / squeeze treatment into the formation or tubing for downhole corrosion control. Continuous injection rates are calculated to maintain a minimum effective inhibitor concentration at the most corrosive point in the system (typically highest water cut, lowest temperature, highest CO₂ partial pressure). In PDO and OQ pipeline systems, inhibitor injection rates are monitored against corrosion coupons, ER (electrical resistance) probes, and chemical residual analysis to confirm protection. Global Chemicals LLC provides inhibitor design, field monitoring, and chemical supply for Oman's upstream and midstream operations."
+        }
       ]
     }
   },
@@ -928,7 +962,8 @@
         "Lower volatility than MEG",
         "Regenerable in glycol units",
         "Available in drums, IBCs, bulk"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Diethylene_glycol"
     }
   },
   {
@@ -1016,6 +1051,12 @@
         "Typical treatment time: 2-24 hours",
         "Available concentrated or ready-to-use",
         "Packaging: 20L, 200L drums, IBCs, bulk"
+      ],
+      "faqs": [
+        {
+          "question": "What scale types are found in oilfield equipment in Oman and how are they removed?",
+          "answer": "Oman's oil and gas production equipment experiences several distinct scale types depending on reservoir and produced water chemistry. Calcium carbonate (CaCO₃) is the most common scale in Oman's carbonate reservoir formations — it deposits in tubing, wellheads, separators, and heat exchangers as produced water pressure drops and CO₂ degasses, shifting equilibrium towards precipitation. It is effectively dissolved by hydrochloric acid (5–15%) or inhibited acid blends. Calcium sulphate (CaSO₄) scale (anhydrite, gypsum) is harder to dissolve and occurs where reservoir brines mix with sulphate-bearing injection water — EDTA or DTPA chelant treatments are required. Barium sulphate (BaSO₄) is the most problematic scale in Oman's commingled production wells — it is nearly insoluble in any standard acid and requires mechanical removal (coiled tubing milling) or inhibition before it forms. Iron sulphide (FeS) scale occurs in sour wells and requires specialised acid dissolvers. Global Chemicals LLC supplies descalants for all these scale types with field application engineering support."
+        }
       ]
     }
   },
@@ -1061,7 +1102,8 @@
         "Environmentally biodegradable",
         "Less corrosive than mineral acids",
         "Available in drums, IBCs, bulk"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/EDTA"
     }
   },
   {
@@ -1106,7 +1148,8 @@
         "pH (1% solution): 4-5 (disodium), 11-12 (tetrasodium)",
         "Long shelf life when stored dry",
         "Packaging: 25kg bags, drums, bulk"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/EDTA"
     }
   },
   {
@@ -1152,7 +1195,8 @@
         "Lower corrosion rate than HCl",
         "Biodegradable organic acid",
         "Available in drums, IBCs, ISO tanks"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Formic_acid"
     }
   },
   {
@@ -1291,7 +1335,18 @@
         "Typical solution strength: 40-50% MDEA",
         "Low heat of regeneration",
         "Available in drums, IBCs, ISO tanks, bulk"
-      ]
+      ],
+      "faqs": [
+        {
+          "question": "What is MDEA and how is it used for gas sweetening in Oman?",
+          "answer": "MDEA (methyl diethanolamine) is a tertiary alkanolamine used as the primary solvent in gas sweetening (acid gas removal) units in Oman's oil and gas processing plants. Gas sweetening removes hydrogen sulphide (H₂S) and carbon dioxide (CO₂) from sour natural gas and associated gas before export, LNG production, or injection. MDEA selectively absorbs H₂S over CO₂ at standard operating conditions (40–60°C, 5–70 bar), making it preferred where H₂S removal is the primary objective and CO₂ slip is acceptable — as in many Oman PDO gas fields. The absorbed H₂S is released by heating the rich MDEA solvent in a regenerator (stripper) at 120–130°C, regenerating lean MDEA for recirculation. MDEA is preferred over MEA (monoethanolamine) because it has lower solvent degradation, lower corrosion rates, lower energy consumption for regeneration, and higher H₂S loading capacity. Global Chemicals LLC supplies MDEA for Oman's gas treatment units."
+        },
+        {
+          "question": "What is the MDEA concentration typically used in gas sweetening units in Oman?",
+          "answer": "In gas sweetening units in Oman, MDEA is typically used at 40–50 wt% aqueous solution concentration, representing the standard operating range balancing absorption capacity, corrosion rate, and solvent viscosity. At concentrations below 35%, absorption capacity is reduced, requiring higher circulation rates and larger equipment. Above 50%, solvent viscosity increases at low temperatures, and corrosion rates accelerate under high H₂S and CO₂ loading. The exact concentration is set during plant design based on gas composition, inlet H₂S content, target outlet specification, and operating pressure. Oman PDO gas specifications require pipeline gas to contain less than 4 ppm H₂S and less than 2% CO₂ vol/vol. For plants treating very high H₂S concentrations (above 10% v/v in feed), enhanced MDEA formulations with activator additives (piperazine, triethanolamine) are used to accelerate mass transfer. Global Chemicals LLC supplies both standard MDEA and activated MDEA blends for Oman's downstream gas operations."
+        }
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Methyldiethanolamine"
     }
   },
   {
@@ -1337,7 +1392,8 @@
         "Specific gravity: 1.018 at 20°C",
         "Typical solution strength: 15-20% MEA",
         "Available in drums, IBCs, bulk"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Monoethanolamine"
     }
   },
   {
@@ -1384,7 +1440,18 @@
         "Typical injection rate: 0.5-2 gal/MMSCF",
         "Regenerable in glycol regeneration units",
         "Available in drums, IBCs, ISO tanks, bulk"
-      ]
+      ],
+      "faqs": [
+        {
+          "question": "What is MEG (monoethylene glycol) used for in oil and gas operations in Oman?",
+          "answer": "MEG (monoethylene glycol, ethylene glycol) is a primary hydrate inhibitor and gas dehydration chemical used extensively in Oman's oil and gas sector by PDO, OQ, and BP Oman. In subsea and deepwater gas pipelines, hydrates — ice-like crystalline structures of water and gas molecules — can form at high pressure and low temperature, blocking flow lines and creating serious safety hazards. MEG is injected at the wellhead and into pipeline risers to depress the hydrate formation temperature (thermodynamic inhibition), keeping the gas stream in the hydrate-free zone throughout transport. MEG is also used as a dehydration solvent in glycol contactors to remove water vapour from natural gas before export. In Oman's onshore gas fields, MEG injection is standard practice in wet gas gathering systems, condensate lines, and LNG feed gas conditioning. Global Chemicals LLC supplies technical-grade and recovered MEG in bulk and IBC quantities for Oman's oilfield operations."
+        },
+        {
+          "question": "How does MEG compare to TEG for gas dehydration in Oman oil and gas operations?",
+          "answer": "MEG (monoethylene glycol) and TEG (triethylene glycol) are both hygroscopic glycols used for gas dehydration, but they differ significantly in physical properties and applications. TEG has a much higher boiling point (285°C vs MEG's 197°C) and lower vapour pressure, making it superior for deep dehydration in gas processing plants — TEG can achieve dew point depressions of 40–60°C in standard gas-glycol contactors, meeting pipeline water content specifications. MEG is preferred for direct injection into pipelines and wellheads as a flow assurance chemical rather than a bulk dehydration solvent, because its lower molecular weight means lower injection volumes per mole of water removed. In Oman, TEG is the standard dehydration medium in gas processing plants at Saih Rawl, Harweel, and Khazzan, while MEG injection is used in wet gathering lines and multiphase flow lines where TEG contactors are impractical. Global Chemicals LLC supplies both TEG and MEG for Oman oilfield operations."
+        }
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Ethylene_glycol"
     }
   },
   {
@@ -1431,7 +1498,18 @@
         "Typical injection rate: 1-3 gal/MMSCF",
         "Non-regenerable (single-use inhibitor)",
         "Available in drums, IBCs, ISO tanks, bulk"
-      ]
+      ],
+      "faqs": [
+        {
+          "question": "How is methanol used as a hydrate inhibitor in Oman oil and gas operations?",
+          "answer": "Methanol (methyl alcohol, CH₃OH) is a thermodynamic hydrate inhibitor injected into oil and gas flow lines, wellheads, and subsea pipelines to prevent gas hydrate formation. Hydrates form when water and light hydrocarbons (methane, ethane, propane) combine at high pressure and low temperature, creating solid crystalline plugs that block pipelines and can cause blowout hazards during depressurisation. Methanol works by dissolving in the aqueous phase and lowering the water activity, which shifts the hydrate equilibrium curve to lower temperatures, keeping the system in the hydrate-free zone. Typical injection concentrations are 20–50 wt% methanol in the aqueous phase, depending on temperature and pressure. Methanol is preferred over glycols (MEG, DEG) in subsea and offshore applications where regeneration is impractical because methanol losses in the gas phase are accepted as an operating cost. In Oman's offshore Khazzan, Block 61, and onshore wet gas fields, methanol injection is a standard flow assurance measure. Global Chemicals LLC supplies bulk technical-grade methanol for Oman oilfield applications."
+        },
+        {
+          "question": "What is technical-grade methanol and how does it differ from fuel-grade?",
+          "answer": "Technical-grade methanol (also called industrial-grade or reagent-grade methanol) is produced to purity specifications of ≥99.85% CH₃OH minimum, with controlled limits on water (≤0.1%), acetone (≤30 ppm), and residue after evaporation. Technical-grade methanol is suitable for chemical synthesis, solvent applications, gas treatment, fuel cell feedstock, and most industrial process applications. Fuel-grade methanol is produced to lower purity specifications and may contain higher water content, acetaldehyde, and other impurities — acceptable for combustion but not for precision chemical applications. In Oman's oilfield sector, technical-grade methanol is specified for hydrate inhibition, amine unit solvent make-up, and chemical synthesis feedstock because impurities affect amine solvent degradation and process chemistry. For direct fuel blending (Methanol-to-Gasoline projects), fuel-grade is acceptable. Global Chemicals LLC supplies ASTM Grade A technical-grade methanol for Oman industrial and oilfield applications."
+        }
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Methanol"
     }
   },
   {
@@ -1477,7 +1555,8 @@
         "Hot pot solution: 20-40% K2CO3",
         "Lower regeneration energy vs amines",
         "Packaging: 25kg bags, bulk bags"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Potassium_carbonate"
     }
   },
   {
@@ -1522,7 +1601,8 @@
         "Compatible with all water-based systems",
         "Cost-effective shale inhibitor",
         "Packaging: 25kg, 50kg bags, bulk"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Potassium_chloride"
     }
   },
   {
@@ -1568,7 +1648,8 @@
         "Corrosive - handle with care",
         "Higher solubility than NaOH",
         "Available in drums, IBCs, bulk"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Potassium_hydroxide"
     }
   },
   {
@@ -1877,7 +1958,8 @@
         "Melting point: 308°C",
         "Strong oxidizer - handle with care",
         "Packaging: 25kg, 50kg bags, bulk"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Sodium_nitrate"
     }
   },
   {
@@ -1921,7 +2003,8 @@
         "Forms protective passive film on metals",
         "Effective in pH 7-10 range",
         "Packaging: 25kg bags, drums, bulk"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Sodium_nitrite"
     }
   },
   {

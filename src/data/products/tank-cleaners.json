@@ -215,6 +215,12 @@
         "Emulsifies heavy oils and greases",
         "Biodegradable surfactants",
         "Available in 20L, 200L drums, IBCs"
+      ],
+      "faqs": [
+        {
+          "question": "What is a heavy-duty tank degreaser and how is it used in Oman's maritime and oil sector?",
+          "answer": "A heavy-duty tank degreaser is a concentrated alkaline or solvent-based formulation designed to remove petroleum hydrocarbons, crude oil residues, bunker fuel, lubricating oils, sludge, and wax from tank interiors, bilges, engine rooms, and processing vessels. In Oman's maritime sector (Port Sultan Qaboos, Duqm Drydock, Sohar Port) and oil storage tank farms, tank cleaning is required before maintenance, inspection, change of service (cargo changeover), or regulatory compliance surveys. Heavy-duty alkaline degreasers (typically pH 12–13, containing caustic soda, potassium hydroxide, gluconate chelant, and surfactants) are effective on petroleum hydrocarbon contamination when diluted to 5–15% and circulated hot (60–80°C) through the tank via spray nozzles or recirculation systems. The degreasing solution emulsifies and saponifies petroleum hydrocarbons, lifting them from metal surfaces into the wash solution. The resulting contaminated wash water requires treatment before disposal. Global Chemicals LLC supplies heavy-duty tank degreasers meeting MARPOL Convention requirements for marine vessel cleaning and Oman Environment Authority discharge standards."
+        }
       ]
     }
   },
@@ -437,6 +443,12 @@
         "Improves oil recovery",
         "Application: Mix into sludge or inject",
         "Available in 20L, 200L drums, IBCs"
+      ],
+      "faqs": [
+        {
+          "question": "What is a sludge breaker and how does it work in crude oil tank cleaning in Oman?",
+          "answer": "A sludge breaker (also called demulsifier or oil-water separator for crude tank cleaning) is a specialty chemical that breaks the stable water-in-oil or oil-in-water emulsion in crude oil and petroleum sludge, allowing phase separation and recovery of the entrapped oil before disposal. Crude oil storage tanks in Oman accumulate a bottom layer of dense sludge comprising heavy asphaltenes, waxes, mineral solids, and emulsified water — sometimes 1–3 metres deep in large tanks operated for 5–10 years without complete cleanout. Sludge breaker chemicals (aromatic solvents combined with nonionic demulsifier polymers) are introduced into the tank and circulated at elevated temperature (50–70°C), penetrating and dissolving the wax and asphaltene matrix, breaking water-in-crude emulsions, and reducing sludge viscosity to allow pumping. Once treated, the separated crude oil can be recovered and blended back into production, while the water layer and residual mineral solids are processed through the wastewater treatment system. Global Chemicals LLC supplies sludge breakers for PDO, OQ, and independent crude oil storage facilities in Oman."
+        }
       ]
     }
   },
@@ -481,6 +493,12 @@
         "Application: Spray or circulation",
         "Approved for marine use",
         "Available in 20L, 200L drums"
+      ],
+      "faqs": [
+        {
+          "question": "What is an oil spill dispersant and when is it used in Oman maritime operations?",
+          "answer": "An oil spill dispersant is a surface-active chemical applied to oil floating on seawater to break large oil slicks into microscopic droplets (10–70 µm), promoting their dispersion into the water column where natural microbial biodegradation occurs. Dispersants do not remove oil — they transfer it from the sea surface into the water column, which can have environmental trade-offs depending on water depth and marine ecology. Type 3 dispersants (the most commonly approved category under the UK Marine Coastguard Agency and OSPAR protocol) are low-toxicity, biodegradable formulations approved for open water and shoreline spray application in oil spill emergencies. In Oman's maritime jurisdictions (governed by the Ministry of Transport under ROPME and OPRC conventions), oil spill response plans for Oman's coastal industries, ports, and offshore operations must designate approved dispersants and application methods. Oman's National Emergency Management Committee (NCEMA) coordinates major spill responses. Dispersants must be approved by Oman Environment Authority (OEA). Global Chemicals LLC supplies Type 3 IMO-approved oil spill dispersants with OEA documentation for Oman emergency response contractors."
+        }
       ]
     }
   },

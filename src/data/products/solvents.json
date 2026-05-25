@@ -40,6 +40,16 @@
         "Evaporation rate: Medium",
         "Available in 20L, 200L drums, bulk",
         "Meets ASTM D235 specifications"
+      ],
+      "faqs": [
+        {
+          "question": "What is mineral spirits and what are its main industrial uses in Oman?",
+          "answer": "Mineral spirits (also called white spirit, Stoddard solvent, or petroleum spirits) is a petroleum-derived solvent produced by distillation of crude oil in the naphtha range, typically with a boiling range of 140–200°C. It is primarily composed of aliphatic and alicyclic hydrocarbons (C7–C12) with low aromatic content in dearomatised grades. In Oman's industrial sector, mineral spirits is used as: a paint and varnish thinner and clean-up solvent for alkyd, oil-based, and epoxy coatings; a degreasing agent for metal parts, machinery, and workshop tools; a carrier solvent in polishes, lubricants, and rust preventives; and a cleaning solvent in printing, textiles, and automotive maintenance. It is the preferred solvent for cleaning spray guns, rollers, and brushes after oil-based paint application. The dearomatised grade (low benzene, low toluene content) is required for occupational exposure limit compliance in enclosed spaces. Global Chemicals LLC supplies mineral spirits in 5-litre cans to 200-litre drums and IBC for Oman industrial customers."
+        },
+        {
+          "question": "What is the flash point of mineral spirits and is it safe to use in enclosed spaces in Oman?",
+          "answer": "Mineral spirits flash point varies by grade: Type 1 (low flash) has a flash point of approximately 21–30°C; Type 2 (medium flash) 32–50°C; and Type 3 (high flash, most common in Oman) above 55°C. For use in enclosed or confined spaces such as tank interiors, enclosed workshops, or poorly ventilated paint bays in Oman, the high-flash grade (above 55°C flash point) is mandatory to reduce fire and explosion risk. Even with high-flash mineral spirits, adequate ventilation must be maintained to keep vapour concentrations below the Lower Explosive Limit (LEL) and below occupational exposure limits (OEL) for petroleum distillates (typically 100–200 mg/m³ as 8-hour TWA). In Oman's hot climate, higher ambient temperatures accelerate solvent evaporation and reduce the safety margin relative to flash point, making ventilation requirements more stringent in summer. Personal protective equipment (nitrile gloves, chemical goggles, half-face respirator with organic vapour cartridges) is required. Global Chemicals LLC provides safety data sheets and application guidance for all solvent grades."
+        }
       ]
     }
   },
@@ -84,7 +94,14 @@
         "Sulfur content: <0.25%",
         "Available in 200L drums, IBCs, bulk",
         "Meets industrial grade specifications"
-      ]
+      ],
+      "faqs": [
+        {
+          "question": "What is industrial kerosene used for in Oman and how does it differ from aviation fuel?",
+          "answer": "Industrial kerosene (CAS 8008-20-6) is a petroleum distillate fraction with a boiling range of 150–300°C used as a fuel, solvent, and process chemical. In Oman, industrial kerosene applications include: agricultural and marine engine fuel for fishing boats and small vessels in Oman's coastal governorates; heating fuel for industrial ovens, dryers, and process heaters where natural gas is unavailable; cutting fluid and thread-cutting oil in metalworking (kerosene's low viscosity and flash point above 38°C make it safe for light machining and tapping of non-ferrous metals); carrier and diluent in paints, wood preservatives, and agricultural crop sprays; and mosquito and pest control applications. Industrial (commercial) kerosene differs from aviation turbine fuel (Jet-A1) in its more variable specification — Jet-A1 has tighter controls on freeze point, flash point, acidity, and contaminant levels to meet ASTM D1655 requirements for aircraft safety. Industrial kerosene does not meet Jet-A1 specification and must not be used as aircraft fuel. Global Chemicals LLC supplies industrial kerosene in drums and IBC for Oman."
+        }
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Kerosene"
     }
   },
   {
@@ -260,7 +277,14 @@
         "Strong solvency for resins",
         "Miscible with most organic solvents",
         "Available in 200L drums, IBCs"
-      ]
+      ],
+      "faqs": [
+        {
+          "question": "What is MEK solvent and where is it used in Oman?",
+          "answer": "MEK (methyl ethyl ketone, butanone, CAS 78-93-3) is a fast-evaporating ketone solvent used in coatings, adhesives, printing inks, and chemical manufacturing. In Oman's construction and industrial sector, MEK is primarily used as: a surface preparation and cleaning solvent before epoxy or polyurethane coating application (MEK wipe test per SSPC-SP1 is standard for ensuring metal surfaces are free of oil before coating); a solvent for contact cement and PVC adhesives (including UPVC pipe joining compound in plumbing and infrastructure projects); a diluent in industrial coatings, vinyl lacquers, and nitrocellulose coatings; and a solvent in printing inks for flexible packaging. MEK has excellent solvency for resins, oils, fats, and many polymer systems while evaporating quickly enough to allow rapid coating curing. Its flash point is approximately −9°C (flammable liquid Class IB), requiring careful handling and ATEX-compliant equipment in Oman's industrial environments. Global Chemicals LLC supplies MEK in 20-litre cans, 200-litre drums, and IBCs for Oman industrial customers."
+        }
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Methyl_ethyl_ketone"
     }
   }
 ]

@@ -41,6 +41,16 @@
         "Pot life: 30-60 minutes at 25°C",
         "Full cure: 5-7 days",
         "Available in various colors and finishes"
+      ],
+      "faqs": [
+        {
+          "question": "What epoxy coating products does Global Chemicals LLC supply for construction in Oman?",
+          "answer": "Global Chemicals LLC supplies epoxy coating systems for Oman's construction, infrastructure, and industrial sector including: epoxy floor coatings (two-component solvent-free epoxy for concrete floors in warehouses, factories, car parks, and food processing facilities — providing chemical resistance, durability, and hygiene surface compliance); epoxy primer for steel and concrete (high-build epoxy zinc phosphate primers for structural steel, pipelines, and rebar protection in Oman's aggressive coastal and humid environments); epoxy tank linings (for water tanks, chemical storage tanks, and effluent sumps requiring chemical resistance and FDA/WRAS potable water approval); marine epoxy coatings (for Oman's offshore structures, jetties, and ship hull areas); and concrete repair mortars with epoxy binder. In Oman's high-humidity coastal areas (Muscat, Salalah, Dhofar) and the highly corrosive environment of industrial zones like Sohar Industrial Port, epoxy coatings significantly outperform alkyd or acrylic coatings in durability. Global Chemicals LLC provides epoxy coating selection guidance, surface preparation standards (Sa 2.5 or SSPC-SP6 blast cleaning), and technical data sheets for all coating systems."
+        },
+        {
+          "question": "How should epoxy coatings be applied in Oman's hot climate?",
+          "answer": "Epoxy coating application in Oman's hot climate requires careful temperature management because high temperatures dramatically accelerate pot life and cure speed. Standard two-component epoxy coatings have a pot life of 30–60 minutes at 23°C; at Oman's summer ambient temperatures of 38–50°C, pot life can shorten to 10–20 minutes, making large-volume mixing impractical. Best practices for Oman: mix only small batches (2–5 kg) to complete within pot life; begin work in the early morning (5:00–9:00 AM) when surface temperatures are lowest; avoid application when the steel surface temperature exceeds 50°C (measure with surface thermometer); ensure the surface temperature is at least 3°C above the dew point to prevent moisture condensation on freshly applied coating; and use a heat-stabilised epoxy formulation where summer application is unavoidable. Film thickness must be verified wet (wet film gauge) and dry (Elcometer DFT meter) to confirm the specified DFT is achieved. Relative humidity above 85% affects epoxy cure — although less common in Oman's interior, coastal areas during the Khareef monsoon period in Salalah can reach high humidity. Global Chemicals LLC provides application support for all supplied epoxy systems."
+        }
       ]
     }
   },
@@ -130,6 +140,12 @@
         "Application: Brush, spray, or mix with cement",
         "Drying time: 1-2 hours (touch dry)",
         "Available in 5L, 20L, 200L containers"
+      ],
+      "faqs": [
+        {
+          "question": "What is a polymer bonding agent and when is it used in Oman construction?",
+          "answer": "A polymer bonding agent (typically SBR — styrene-butadiene rubber latex, or acrylic polymer) is a liquid chemical additive applied to existing concrete or masonry surfaces before applying new render, screed, or repair mortar to promote adhesion between the old and new substrates. Without a bonding agent, new cement-based material applied to dense, smooth, or contaminated old concrete tends to debond (delaminate) within months as differential movement and thermal cycling cause interface failure. In Oman's hot climate, where daily temperature swings of 15–25°C create significant thermal expansion and contraction in concrete structures, bonding agent application is standard practice for all concrete repair and overlay work. Application method: the bonding agent (diluted SBR latex 1:1 with water for most applications) is brushed onto the prepared substrate and allowed to become 'tacky' (not dry) before applying the fresh concrete overlay. The polymer chains from the bonding agent penetrate both surfaces and form a physical and chemical bond across the interface. Global Chemicals LLC supplies SBR and acrylic polymer bonding agents for Oman's construction repair and maintenance sector."
+        }
       ]
     }
   },

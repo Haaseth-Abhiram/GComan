@@ -41,7 +41,18 @@
         "Water content: <0.1%",
         "Toxic - handle with care",
         "Available in IBCs, ISO tanks, bulk"
-      ]
+      ],
+      "faqs": [
+        {
+          "question": "What is industrial methanol used for in Oman?",
+          "answer": "Industrial methanol (methyl alcohol, CH₃OH, CAS 67-56-1) is one of the highest-volume industrial chemicals in Oman's oilfield and process sector. Its primary uses are: hydrate inhibition in oil and gas pipelines (injected at wellheads and into subsea lines to prevent gas hydrate blockages), where Oman operators including PDO, OQ, and BP Oman consume hundreds of tonnes per month; solvent applications in paints, coatings, adhesives, and chemical synthesis; biodiesel production (methanol is the feedstock for transesterification of vegetable oil or waste fat to produce fatty acid methyl esters); formaldehyde production (a major downstream use globally, producing resins for MDF, plywood, and foam insulation); and as a fuel in industrial burners and fuel cells. Industrial methanol is highly toxic (10 mL can cause blindness, 30 mL can be fatal) and is distinguished from ethanol by the addition of denaturants in fuel ethanol — methanol has no safe consumption use. Global Chemicals LLC supplies ASTM Grade A technical methanol in bulk and IBC for Oman industrial applications."
+        },
+        {
+          "question": "How is methanol transported and stored safely in Oman?",
+          "answer": "Methanol is classified as a flammable liquid (flash point 11°C, UN 1230, IMDG Class 3, Packing Group II) and toxic substance (Category 3 acute oral toxicity) requiring careful transportation and storage. In Oman, methanol transport by road tanker must comply with HAZMAT regulations under Oman's Royal Oman Police transport licensing requirements and ADR/GHS standards. Storage tanks must be grounded and bonded to prevent static electricity ignition, maintained at ambient temperature away from heat sources, equipped with flame arrestors on vent lines, and labeled with UN 1230 hazard placards. Secondary containment (bunded enclosure holding 110% of the largest tank volume) is mandatory for Oman PSAS (Public Authority for Safety and Standards) compliance. Personnel handling methanol must wear chemical-resistant gloves (butyl rubber), splash goggles, and lab coat; prolonged skin contact can cause dermatitis and dermal absorption. Emergency eyewash and shower stations are required within 10 seconds of any methanol handling area. Global Chemicals LLC provides methanol SDS and storage design guidance for Oman industrial customers."
+        }
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Methanol"
     }
   },
   {
@@ -86,7 +97,14 @@
         "Specific gravity: 0.789",
         "Renewable, bio-based alcohol",
         "Available in IBCs, ISO tanks, bulk"
-      ]
+      ],
+      "faqs": [
+        {
+          "question": "What is industrial ethanol and what are its key differences from beverage ethanol?",
+          "answer": "Industrial ethanol (ethyl alcohol, CAS 64-17-5) is ethanol produced for non-beverage purposes, typically from petrochemical routes (ethylene hydration) or fermentation, and rendered undrinkable by addition of denaturants (methanol, isopropanol, bitrex, or other bittering agents) to prevent excise duty evasion. In Oman and GCC countries where alcohol regulation is strict, industrial and food-grade denatured ethanol is available for industrial use without the licensing requirements that apply to beverage alcohol. Industrial ethanol applications in Oman include: pharmaceutical and cosmetic solvent (sanitisers, skin preparations, fragrance extraction), surface cleaning and disinfection (70% ethanol solutions for general surface disinfection), solvent for adhesives, inks, and coatings, chemical intermediate, and fuel blending. Industrial ethanol must not be used for human consumption — denaturants are toxic and can cause serious harm. Denatured ethanol import and use in Oman must comply with Ministry of Commerce regulations. Global Chemicals LLC supplies industrial denatured ethanol with appropriate documentation for Oman industrial use."
+        }
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Ethanol"
     }
   },
   {
@@ -131,7 +149,14 @@
         "Fast evaporation, no residue",
         "Effective disinfectant (70% solution)",
         "Available in 200L drums, IBCs, bulk"
-      ]
+      ],
+      "faqs": [
+        {
+          "question": "What is isopropanol (IPA) used for in Oman's industrial and cleaning sector?",
+          "answer": "Isopropanol (IPA, isopropyl alcohol, 2-propanol, CAS 67-63-0) is a versatile solvent and disinfectant used widely across Oman's industrial, electronics, healthcare, and cleaning sectors. Primary applications include: electronics and semiconductor cleaning — IPA is the standard solvent for removing flux residues from circuit boards, cleaning optical components, and degreasing precision components because it evaporates without residue and is safe for most electronic components; surface preparation — IPA at 70–99% is used to clean metal, plastic, and glass surfaces before bonding, coating, or painting; industrial disinfection — 70% IPA (by volume) is an effective bactericide and virucide for surface sanitisation in Oman's food processing plants, pharmaceutical operations, and healthcare facilities; as a fuel additive and antifreeze for aviation fuel systems; and as a solvent in inks, adhesives, and cosmetics. IPA at 70% concentration is more effective as a disinfectant than 99% because the water content facilitates cell membrane penetration. Flash point is 11.7°C (Class IB flammable liquid). Global Chemicals LLC supplies IPA in 1-litre to IBC quantities for Oman."
+        }
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Isopropanol"
     }
   },
   {
@@ -176,7 +201,8 @@
         "Moderate evaporation rate",
         "Excellent solvency for resins",
         "Available in 200L drums, IBCs, bulk"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/1-Butanol"
     }
   }
 ]

@@ -39,6 +39,16 @@
         "Prevents galvanic corrosion",
         "Includes scale inhibitor",
         "Available in 25kg, 200kg drums, IBCs"
+      ],
+      "faqs": [
+        {
+          "question": "What is a closed-loop corrosion inhibitor and why is it needed in Oman?",
+          "answer": "A closed-loop corrosion inhibitor is a specialty chemical dosed into sealed recirculating water circuits — chilled water systems, hot water heating loops, district cooling secondaries — to prevent metal corrosion in the absence of continuous blowdown. Unlike open cooling towers, closed systems retain the same water indefinitely, so dissolved oxygen, carbon dioxide ingress, and microbiological activity gradually increase corrosivity. In Oman's hot climate, chiller systems run year-round and any corrosion or fouling in the secondary circuit reduces heat transfer efficiency and risks tube leaks. A correctly dosed closed-loop inhibitor forms a protective passivation film on carbon steel, copper, and aluminium surfaces, maintains pH between 8.5 and 10.0, and reduces corrosion rates by over 90%. Global Chemicals LLC supplies closed-loop inhibitors sized for single-building HVAC systems up to large district cooling plants."
+        },
+        {
+          "question": "How often should a closed-loop chilled water system be topped up with corrosion inhibitor?",
+          "answer": "Closed-loop inhibitor concentration should be tested every three months and topped up whenever the product concentration falls below the minimum effective level, typically 1,000–2,000 ppm for most phosphonate-based formulations. Concentration drops occur through system leaks, component replacements, and makeup water additions — all of which dilute the inhibitor charge. In Oman's district cooling and commercial HVAC sector, systems are often expanded or modified during summer shutdowns, introducing large volumes of untreated makeup water that require immediate inhibitor correction. Global Chemicals LLC recommends establishing a baseline chemical log and using test strips or photometric kits for quick on-site monitoring. An annual drain-and-refill is rarely justified unless microbiological contamination is found; instead, continuous top-up maintenance keeps costs low and ensures uninterrupted corrosion protection."
+        }
       ]
     }
   },
@@ -83,6 +93,12 @@
         "Compatible with corrosion inhibitors",
         "Long-lasting residual activity",
         "Available in 25kg, 200kg drums, IBCs"
+      ],
+      "faqs": [
+        {
+          "question": "Why is algae a particular problem in cooling towers in Oman?",
+          "answer": "Oman's year-round sunshine, high ambient temperatures, and open cooling tower design create ideal conditions for rapid algae growth. Cooling tower basins receive natural light, warm water (often 30–45°C in summer), and atmospheric carbon dioxide — exactly the nutrients photosynthetic algae need. Green algae colonise tower fill, distribution decks, basin walls, and spray nozzles, reducing water flow, blocking fill channels, and dramatically decreasing cooling efficiency. Algae biomass also provides a food source and shelter for heterotrophic bacteria, promoting biofilm and increasing Legionella risk. Non-oxidising algaecides such as quaternary ammonium compounds interrupt algae cell respiration and reproduction without the corrosion risks associated with chlorine shock. For Oman's coastal and inland industrial sites, Global Chemicals LLC recommends monthly algaecide treatments combined with regular basin inspection to prevent algae from establishing in warm months."
+        }
       ]
     }
   },
@@ -212,6 +228,16 @@
         "Residual activity: 3-5 days",
         "Compatible with oxidizing biocides",
         "Available in 25kg, 200kg drums, IBCs"
+      ],
+      "faqs": [
+        {
+          "question": "What is the difference between an oxidising and a non-oxidising biocide for cooling water?",
+          "answer": "Oxidising biocides — chlorine, bromine, chlorine dioxide — kill microorganisms by chemically oxidising their cell membranes and internal proteins. They act rapidly, leave measurable residuals testable with ORP or DPD kits, and degrade quickly, reducing environmental discharge concerns. Their limitation is that at high pH (above 8.0) their efficacy drops sharply, and at elevated temperatures they can accelerate corrosion of copper alloys. Non-oxidising biocides — quaternary ammonium compounds, isothiazolinones, glutaraldehyde — penetrate biofilm more effectively, work across a wider pH range, and are not consumed by ammonia or organic contamination. In Oman's industrial cooling systems, a dual-biocide programme combining an oxidising biocide for bulk water control with a non-oxidising biocide for shock biofilm treatment gives the best protection. Global Chemicals LLC supplies both types and can design a compliant programme for PDO, OQ, and Oman LNG facilities."
+        },
+        {
+          "question": "Is Legionella a risk in cooling towers in Oman, and how is it controlled?",
+          "answer": "Yes. Legionella bacteria thrive in warm water between 25°C and 45°C — temperatures found in virtually all Oman cooling tower basins during summer. Inadequately treated systems allow Legionella to colonise biofilm and amplify to infectious levels, posing a serious health risk to people downwind of cooling tower plumes. Oman's Ministry of Health requires periodic risk assessments for cooling towers in public buildings, hospitals, and hotels. Chemical control involves maintaining a free chlorine residual (or alternative oxidant) of 0.2–0.5 mg/L in the basin combined with regular non-oxidising biocide shock dosing to strip existing biofilm. Physical measures — eliminating dead-legs, maintaining blowdown cycles, fitting drift eliminators — complement chemical treatment. Global Chemicals LLC supplies WHO-compliant Legionella control chemicals and technical support for implementing Oman HSE-aligned water safety plans."
+        }
       ]
     }
   },
@@ -255,6 +281,16 @@
         "Disperses calcium and magnesium",
         "Compatible with boiler treatment programs",
         "Available in 25kg, 200kg drums, IBCs"
+      ],
+      "faqs": [
+        {
+          "question": "What causes scale in boilers and how do hardness control chemicals prevent it?",
+          "answer": "Scale forms in boilers when dissolved calcium and magnesium salts in feed water exceed their solubility limits at elevated temperatures and precipitate as calcium carbonate, calcium sulphate, and magnesium silicate on heat transfer surfaces. A 1 mm scale layer increases fuel consumption by 5–8% and creates hot spots that can cause tube overheating and failure. In Oman, boiler feed water frequently comes from desalinated sources with residual hardness or from groundwater with very high natural hardness. Hardness control chemicals work through two mechanisms: chelation (EDTA-based compounds bind calcium and magnesium in soluble complexes that remain mobile and are removed by blowdown) and threshold inhibition (phosphonate polymers prevent crystal lattice growth at very low concentrations). Global Chemicals LLC supplies both all-organic and phosphate/polymer blends to match each customer's water analysis, boiler pressure, and discharge consent requirements."
+        },
+        {
+          "question": "How much blowdown is needed for an industrial boiler in Oman?",
+          "answer": "Blowdown rate depends on the boiler's cycles of concentration target, feed water quality, and steam purity requirements. For a typical industrial firetube boiler in Oman operating at 7–10 bar, a cycles of concentration of 8–12 is common, meaning the dissolved solids in boiler water are 8–12 times higher than in feed water. At this concentration, conductivity in the boiler drum typically runs 2,000–4,000 µS/cm. Continuous blowdown of 5–10% of evaporation rate is used for conductivity control, supplemented by intermittent bottom blowdown to remove settled sludge. Excessive blowdown wastes expensive treated feed water and heat; insufficient blowdown allows scale-forming salts and silica to exceed safe limits. Global Chemicals LLC provides boiler water analysis and blowdown optimisation as part of its chemical treatment service, helping customers balance water savings with equipment protection."
+        }
       ]
     }
   },
@@ -341,6 +377,12 @@
         "Reduces corrosion rates >90%",
         "Compatible with oxidizing biocides",
         "Available in 25kg, 200kg drums, IBCs, bulk"
+      ],
+      "faqs": [
+        {
+          "question": "How is a cooling water corrosion inhibitor dosed in a large industrial cooling tower in Oman?",
+          "answer": "In a large industrial cooling tower, corrosion inhibitor is dosed continuously via a dosing pump set to inject product proportional to the make-up water flow. The dosing rate is calculated to maintain the target inhibitor concentration in the circulating water — typically 20–80 ppm active ingredient for phosphonate-based programmes — accounting for blowdown dilution, system volume, and evaporation losses. Dosing control can be volumetric (based on make-up meter pulse output), conductivity-based (dosing pump triggers when conductivity drops below setpoint), or timer-based for smaller systems. In Oman's PDO and OQ-approved facilities, dosing equipment must be ATEX-rated where applicable and chemical injection points must be upstream of heat exchangers to ensure proper distribution. Global Chemicals LLC provides on-site dosing system design, chemical inventory sizing, and regular water analysis to verify inhibitor performance and adjust dosage as seasonal water quality changes."
+        }
       ]
     }
   },
@@ -384,6 +426,12 @@
         "Single feed point simplicity",
         "Reduces chemical inventory",
         "Available in 25kg, 200kg drums, IBCs"
+      ],
+      "faqs": [
+        {
+          "question": "What does Altreat 4000 contain and which cooling tower problems does it solve?",
+          "answer": "Altreat 4000 is an all-in-one cooling water treatment product that combines a corrosion inhibitor package (molybdate, phosphonate, and azole compounds for steel, copper, and aluminium protection), a scale inhibitor (low molecular weight polyacrylate), and a dispersant (polymer for silt and iron oxide control) in a single liquid formulation. It addresses the three core problems in open recirculating cooling systems simultaneously: metal corrosion that causes leaks and heat exchanger failures; calcium carbonate and sulphate scale that reduces heat transfer; and suspended silt and iron oxide that causes under-deposit corrosion. Altreat 4000 is ideal for medium-sized cooling towers in Oman's commercial and light industrial sector where simplicity of operation is important and separate product dosing is impractical. It is dosed as a single product at 50–150 ppm in circulating water, eliminating the need for multiple chemical feed pumps or complex dosing programmes."
+        }
       ]
     }
   },

@@ -42,6 +42,16 @@
         "Low in heavy metals and impurities",
         "Available: 500ml, 2.5L, 5L bottles",
         "Storage: Glass or PP containers"
+      ],
+      "faqs": [
+        {
+          "question": "What purity grades of sulfuric acid are available for laboratory use in Oman?",
+          "answer": "Laboratory sulfuric acid (H₂SO₄) is supplied in several purity grades to match application requirements. ACS (American Chemical Society) reagent grade is 95–98% H₂SO₄ with strict limits on heavy metals, chloride, nitrate, and residue — required for analytical chemistry titrations, pH standards, and trace analysis. AR (Analytical Reagent) grade from BDH, Sigma-Aldrich, or Merck meets equivalent purity for laboratory analysis. Technical grade is 93–98% but with higher impurity levels, suitable for industrial use but not laboratory analytical work. For HPLC mobile phase preparation, ultra-pure (HPLC grade) sulphuric acid with sub-ppb metal contaminant levels is required. In Oman's university and research laboratory sector (SQU, Sultan Qaboos University; UTAS; CAS), analytical grade is standard. For Oman's industrial quality control labs performing wastewater COD analysis (which uses sulphuric acid), AR grade is specified in Standard Methods for the Examination of Water and Wastewater. Global Chemicals LLC supplies laboratory sulfuric acid from international brands (BDH, Sigma, Merck) with lot-specific certificates of analysis."
+        },
+        {
+          "question": "What safety precautions are required when handling sulfuric acid in an Oman laboratory?",
+          "answer": "Sulfuric acid is one of the most dangerous common laboratory chemicals, with unique hazards: it is strongly corrosive (pH<1 at dilute concentrations), generates intense heat on dilution with water (always add acid to water, never water to acid), and concentrated sulfuric acid dehydrates organic materials (including human tissue) causing severe chemical burns with delayed pain onset. In Oman laboratory environments, mandatory safety controls include: chemical-resistant gloves (butyl rubber or neoprene, not nitrile for concentrated acid), chemical splash goggles (not standard safety glasses), lab coat and closed-toe shoes, use only in a fume hood for concentrated acid, designated acid storage in polypropylene or glass secondary containment cabinets, spill kits containing sodium bicarbonate neutraliser, and emergency eyewash within 10 seconds of handling area. For dilution, always add concentrated acid slowly to water while stirring, never the reverse. Oman's Ministry of Manpower OSH regulations require chemical-specific COSHH assessments for hazardous substance use in laboratories. Global Chemicals LLC provides SDS, risk assessment templates, and personal protective equipment alongside laboratory chemical supply."
+        }
       ]
     }
   },
@@ -86,6 +96,12 @@
         "Low non-volatile residue",
         "Available: 500ml, 2.5L, 5L bottles",
         "Certified analysis provided"
+      ],
+      "faqs": [
+        {
+          "question": "What are the laboratory applications of hydrochloric acid in Oman?",
+          "answer": "Hydrochloric acid (HCl, muriatic acid) is one of the most widely used mineral acids in analytical and research laboratories in Oman. Its principal laboratory applications include: pH adjustment and buffer preparation (HCl buffers at pH 1–2 are used in HPLC mobile phases and enzyme assay systems); gravimetric analysis and titrimetry (HCl standard solutions are primary titrants for base standardisation); metal dissolution and digestion (HCl dissolves iron oxides, carbonates, and many metal samples for ICP-OES or AAS trace metal analysis — often combined with nitric acid as aqua regia for gold, platinum, and refractory metal dissolution); qualitative inorganic analysis (HCl identifies chloride precipitate group cations including lead, mercury, and silver); and wastewater and water testing (COD, nitrogen, and hardness methods use HCl for sample acidification and preservation). Laboratory-grade HCl from Merck, BDH, or Sigma-Aldrich at 36–38% concentration is supplied with certificate of analysis. Global Chemicals LLC stocks laboratory hydrochloric acid in 2.5-litre, 5-litre, and 25-litre quantities for Oman's university, industrial QC, and research laboratory customers."
+        }
       ]
     }
   },
@@ -395,6 +411,12 @@
         "Low UV absorbance (HPLC grade)",
         "Available: 500ml, 2.5L, 4L bottles",
         "Flammable - store properly"
+      ],
+      "faqs": [
+        {
+          "question": "What are the laboratory and industrial uses of acetone in Oman?",
+          "answer": "Acetone (propanone, CAS 67-64-1) is one of the most versatile solvents in both laboratory and industrial settings in Oman. In laboratories, acetone is used for: cleaning glassware (rapidly dissolves most organic residues including oils, greases, adhesives, and many polymer coatings), solvent for organic synthesis and extraction, HPLC solvent and mobile phase component (miscible with water and most organic solvents), TLC (thin layer chromatography) plate development, and drying rinsed glassware before storage (acetone displaces water and evaporates quickly). Industrially, acetone is used in nail varnish removers, paint strippers, fibreglass manufacturing (dissolves polyester resins for cleanup), adhesive formulation (component of contact cements and speciality adhesives), and as a solvent for cellulose acetate, polystyrene, and epoxy resins. In Oman's pharmaceutical and plastics sectors, acetone is a critical process solvent. Flash point is −20°C (extremely flammable, Class IA); storage and use require ATEX-rated environments and grounded metal containers. Laboratory acetone (ACS grade 99.5%+) with water content below 0.02% is available from Global Chemicals LLC in 2.5L and 5L quantities."
+        }
       ]
     }
   },
@@ -440,6 +462,12 @@
         "DNase/RNase-free (molecular biology grade)",
         "Available: 500ml, 1L, 2.5L bottles",
         "Flammable - proper storage required"
+      ],
+      "faqs": [
+        {
+          "question": "What is absolute ethanol and what laboratory applications require it?",
+          "answer": "Absolute ethanol (anhydrous ethanol, 200 proof, CAS 64-17-5) is ethanol with water content below 0.1% (99.5%+ purity by GC), produced by azeotropic or molecular sieve dehydration beyond the normal 95.6% ethanol-water azeotrope. The absence of water makes it essential for applications where any water contamination causes problems: DNA/RNA precipitation and washing in molecular biology (water inhibits alcohol precipitation of nucleic acids); Karl Fischer water content titration (absolute ethanol is the titration solvent); dehydration steps in histology tissue processing (serial dilutions from 70% to 100% ethanol dehydrate tissue before paraffin embedding); anhydrous organic synthesis reactions (Grignard, esterification) where water causes side reactions; spectroscopic standards preparation (water has UV and IR absorptions that interfere); and absolute ethanol is the certified vehicle for many pharmaceutical reference standards. For Oman's university chemistry, biology, and medical laboratory sectors, absolute ethanol from Sigma-Aldrich, Merck, or BDH is the preferred choice. Global Chemicals LLC supplies laboratory absolute ethanol with molecular sieve packaging to prevent atmospheric moisture uptake."
+        }
       ]
     }
   },

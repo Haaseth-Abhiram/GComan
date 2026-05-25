@@ -42,7 +42,8 @@
         "Typical dosage: 0.01-0.5% in foods",
         "Soluble in water and ethanol",
         "Available in 25kg bags/cartons"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Ascorbic_acid"
     }
   },
   {
@@ -178,7 +179,18 @@
         "Typical dosage: 0.1-1.5% in foods",
         "Solubility: 59g/100ml water at 20°C",
         "Available in 25kg bags/cartons"
-      ]
+      ],
+      "faqs": [
+        {
+          "question": "What are the food industry applications of citric acid in Oman?",
+          "answer": "Citric acid (E330) is one of the most versatile food additives in the industry, functioning as an acidulant, preservative, flavour enhancer, and chelating agent. In Oman's food and beverage sector, it is used in soft drinks and juices (the dominant acid in cola, fruit drinks, and sports beverages, providing tartness and buffering the pH for preservative effectiveness), in confectionery (sour candy coating, gummy bears), in canned and bottled foods (pH control to support thermal processing and prevent Clostridium botulinum), in dairy products (cheese making — citric acid acidifies milk before rennet addition in mozzarella and paneer production), and in seafood processing (preventing metal-catalysed oxidation and off-flavours). It is also used in cleaning formulations for descaling food equipment. Global Chemicals LLC supplies food-grade anhydrous citric acid in 25 kg bags, pallet quantities, and bulk with certificate of analysis confirming European Pharmacopoeia and JECFA food-grade specifications."
+        },
+        {
+          "question": "What is the difference between food-grade and technical-grade citric acid?",
+          "answer": "Food-grade citric acid meets the purity standards specified by JECFA (Joint FAO/WHO Expert Committee on Food Additives), the European Pharmacopoeia (BP/EP), and FCC (Food Chemicals Codex) — setting strict upper limits on heavy metals (lead <0.5 ppm, arsenic <1 ppm), sulphated ash, readily carbonisable substances, and microbial counts. Technical-grade citric acid (also called industrial-grade) is manufactured to lower purity standards at reduced cost and may contain higher levels of heavy metal impurities and microbial contamination. Technical-grade citric acid must never be used in food or pharmaceutical production as the impurity profile is not controlled to a level safe for human consumption. In Oman, both grades are available in the market, and some suppliers may mislabel technical grade. Global Chemicals LLC supplies only certified food-grade citric acid with batch-specific certificates of analysis from accredited laboratories, ensuring full traceability for Oman food safety audits and FSSC 22000 / HACCP documentation."
+        }
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Citric_acid"
     }
   },
   {
@@ -223,6 +235,12 @@
         "Rapid evaporation (no rinsing)",
         "Meets food safety standards",
         "Available in 5L, 20L, 200L"
+      ],
+      "faqs": [
+        {
+          "question": "What is food-grade ethanol 70% and what are its applications in Oman?",
+          "answer": "Food-grade ethanol 70% is a disinfectant and sanitiser grade ethyl alcohol produced from food-grade feedstocks (typically sugar cane, molasses, or grain fermentation), meeting pharmacopoeia or food safety purity standards with strict limits on methanol (max 100 ppm), acetaldehyde, and fusel oils. At 70% concentration (by volume), it is more effective against bacteria, viruses, and fungi than 99% alcohol because the water content facilitates cell membrane penetration and protein denaturation. In Oman's food industry, it is used for sanitising food contact surfaces, food equipment, packaging materials, and hands (in conjunction with handwashing). It evaporates cleanly without leaving residues that require rinsing, making it ideal for use on ready-to-eat food preparation surfaces. The 2020 pandemic significantly increased demand for food-grade ethanol-based hand sanitisers. Global Chemicals LLC supplies food-grade ethanol 70% in 5-litre, 25-litre, and IBC quantities for Oman's food processing, catering, and hospitality sectors."
+        }
       ]
     }
   },
@@ -403,6 +421,16 @@
         "Typical CIP dosage: 0.5-2%",
         "Effective protein and fat removal",
         "Available in 25L, 200L, IBCs"
+      ],
+      "faqs": [
+        {
+          "question": "What is food-grade caustic soda and how is it used in the food industry?",
+          "answer": "Food-grade caustic soda (sodium hydroxide, NaOH) is a high-purity alkaline solution that meets food safety standards including codex alimentarius and FDA 21 CFR 184.1763 specifications, with strict limits on heavy metals, chloride, and iron impurities. In the food and beverage industry, it is used primarily for clean-in-place (CIP) cleaning of production equipment — tanks, pipelines, fillers, and pasteurisers — where it dissolves protein soils, fats, and starchy deposits that accumulate during processing. It is also used in food processing itself: for pretzel crust formation (lye dipping), olive curing, noodle making, and pH adjustment in beverages. In Oman's food manufacturing sector, food-grade caustic soda is essential for dairy processing, juicing plants, water bottling lines, and fish processing CIP programmes. Global Chemicals LLC supplies food-grade caustic soda liquid with certificate of analysis confirming food safety compliance."
+        },
+        {
+          "question": "What is the typical CIP concentration of caustic soda for food plant cleaning in Oman?",
+          "answer": "For clean-in-place (CIP) cleaning in food plants, caustic soda is typically used at 0.5–2.0% w/w concentration depending on the soil type and equipment being cleaned. Dairy CIP programmes (for milk, cheese, and yoghurt plants) commonly use 0.8–1.5% caustic at 70–80°C for 10–20 minute contact time to dissolve protein and fat soils. Beverage lines and fruit juice plants use lower concentrations of 0.5–1.0% at 60–75°C. Brewery and winery CIP may use 1.0–2.0% for heavily soiled fermentation vessels. In Oman's hot climate, the higher ambient temperatures mean pre-rinse water is already warm, slightly reducing the heating energy needed. However, concentrated caustic at elevated temperatures significantly increases stainless steel corrosion rates, so precise concentration control is important. Global Chemicals LLC supplies caustic soda with test kit support for accurate on-site concentration measurement during CIP operations."
+        }
       ]
     }
   },
@@ -493,7 +521,8 @@
         "Solubility: 58g/100ml water at 20°C",
         "Odorless and tasteless",
         "Available in 25kg bags/cartons"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Potassium_sorbate"
     }
   },
   {
@@ -539,7 +568,14 @@
         "Non-toxic alternative to ethylene glycol",
         "Typical dosage: 0.5-5% in foods",
         "Available in 200L drums, IBCs"
-      ]
+      ],
+      "faqs": [
+        {
+          "question": "What is food-grade propylene glycol used for and is it safe?",
+          "answer": "Food-grade propylene glycol (PG USP/FCC, 1,2-propanediol) is GRAS (Generally Recognised As Safe) by the FDA and approved as a food additive (E1520) by Codex Alimentarius and the European Food Safety Authority. In the food industry, it serves as a humectant (retains moisture in processed foods, preventing drying), solvent (dissolves flavour compounds, food colouring, and preservatives that are insoluble in water), carrier (vehicle for food-grade antimicrobial and antioxidant additives), and indirect refrigerant (propylene glycol-water mixtures are food-safe secondary refrigerants used in food freezing tunnels, dairy cooling, and cold room systems). In Oman's food processing sector, food-grade propylene glycol is used in bakery products, confectionery, frozen food plants, and brewery chilling systems. It is distinguishable from industrial (non-food) propylene glycol by its USP or FCC purity certification. Global Chemicals LLC supplies propylene glycol USP with full documentation for food safety audits."
+        }
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Propylene_glycol"
     }
   },
   {
@@ -585,7 +621,14 @@
         "Releases CO2 when acidified",
         "Solubility: 9.6g/100ml at 20°C",
         "Available in 25kg bags, 50kg bags"
-      ]
+      ],
+      "faqs": [
+        {
+          "question": "What is food-grade sodium bicarbonate used for in the food and beverage industry?",
+          "answer": "Food-grade sodium bicarbonate (baking soda, NaHCO₃) is a leavening agent, pH regulator, and buffering agent widely used across the food and beverage industry. As a leavening agent in baked goods, it reacts with acidic ingredients (buttermilk, vinegar, citric acid) or heat to release carbon dioxide, causing dough and batter to rise. In beverages, it is used to adjust and buffer pH in soft drinks, flavoured water, and mineral water production. In the confectionery sector, it is used in biscuits, crackers, and snack foods for texture control. As a cleaning and deodourising agent in food processing facilities, dilute sodium bicarbonate solutions neutralise acidic residues and odours. It also functions as a leavening component in chemical baking powder. In Oman's food manufacturing and bakery sector, Global Chemicals LLC supplies food-grade sodium bicarbonate in 25 kg bags meeting BP, FCC, and JECFA purity standards with full certificate of analysis."
+        }
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Sodium_bicarbonate"
     }
   },
   {
@@ -630,7 +673,18 @@
         "pH: 11-13",
         "Fast-acting antimicrobial",
         "Available in 25L, 60L, 200L"
-      ]
+      ],
+      "faqs": [
+        {
+          "question": "What is food-grade sodium hypochlorite and how is it used in food processing?",
+          "answer": "Food-grade sodium hypochlorite is a high-purity chlorine solution produced from food-safe feedstocks, with heavy metal and impurity limits meeting food safety regulations. It is the most widely used disinfectant in food processing worldwide — applied as a surface sanitiser, equipment disinfectant, produce wash, and water disinfectant in CIP and COP (clean-out-of-place) programmes. At concentrations of 50–200 ppm free chlorine, it rapidly kills pathogens including Salmonella, E. coli, Listeria, and Campylobacter on contact surfaces and fresh produce. In Oman's fish processing, meat processing, vegetable packing, and catering sectors, sodium hypochlorite is used daily for sanitising work surfaces, knives, cutting boards, crates, and conveyor belts. It must be used at the correct concentration — too low is ineffective, too high risks chemical contamination and accelerates corrosion. Global Chemicals LLC supplies food-grade sodium hypochlorite with concentration certification."
+        },
+        {
+          "question": "What concentration of sodium hypochlorite is safe for fruit and vegetable washing in Oman?",
+          "answer": "For fresh produce washing, the internationally recommended sodium hypochlorite concentration is 50–200 ppm free available chlorine (FAC) in the wash water, with typical practice in fresh-cut produce operations using 100–150 ppm FAC. At this concentration, the chlorinated wash kills surface pathogens on vegetables and fruit while leaving residual chlorine well within the safe consumption limit (Codex Alimentarius: max 50 ppm residual after rinsing, EU and UAE food safety standards align). The wash solution must be maintained at pH 6.5–7.5 for maximum hypochlorous acid (HOCl) availability — at pH above 8.0, hypochlorite ion (OCl⁻) predominates and antimicrobial efficacy drops by 80%. In Oman's hot climate, produce temperatures can be high, which accelerates chlorine degradation and requires more frequent solution replacement. Global Chemicals LLC supplies food-grade sodium hypochlorite with test strips and photometric kits for accurate FAC monitoring in food operations."
+        }
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Sodium_hypochlorite"
     }
   },
   {
@@ -766,7 +820,8 @@
         "Stable across pH 3-12",
         "Effective temperature: 0-100°C",
         "Available in 25kg bags/cartons"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Xanthan_gum"
     }
   }
 ]

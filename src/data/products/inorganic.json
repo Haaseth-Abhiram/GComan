@@ -41,6 +41,17 @@
         "Dosage: 10-200 ppm (water treatment)",
         "Meets AWWA B403 standards",
         "Available in 25kg bags, 1000L IBCs, bulk"
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Aluminium_sulfate",
+      "faqs": [
+        {
+          "question": "What is aluminium sulfate used for in water treatment in Oman?",
+          "answer": "Aluminium sulfate (alum, Al₂(SO₄)₃, CAS 10043-01-3) is the most widely used primary coagulant in municipal and industrial water treatment plants in Oman. When added to raw water, alum hydrolyses and forms positively charged aluminium hydroxide floc particles, which neutralise the negative charge on colloidal particles (clay, silt, organic matter, bacteria) that cause turbidity. The neutralised particles then aggregate (flocculate) into larger, rapidly settling floc that can be removed by sedimentation and filtration. Typical alum dosage for Oman's surface water treatment is 10–50 mg/L, determined by jar testing. Oman's drinking water treatment plants at Al Ghubrah, Wadi Dayqah Dam, and Falaj Al Qabail use alum or poly-aluminium chloride (PAC) as primary coagulants. Alum is also used in wastewater treatment for phosphorus removal, in paper manufacturing, and as a mordant in textiles. Liquid alum (8% Al₂O₃) is preferred for continuous dosing by chemical pump; granular alum is used where liquid storage is impractical. Global Chemicals LLC supplies both liquid and granular alum for Oman water treatment."
+        },
+        {
+          "question": "What is the optimal pH range for alum coagulation in water treatment?",
+          "answer": "The optimal pH range for aluminium sulfate (alum) coagulation is 6.5–7.5, where aluminium hydroxide Al(OH)₃ floc formation is most efficient and the resulting floc is dense and settles rapidly. At pH below 6.0, aluminium remains in solution as Al³⁺ ions — no floc forms and coagulation fails. At pH above 8.0, aluminium hydroxide redissolves as the aluminate anion Al(OH)₄⁻, again preventing floc formation. Oman's raw water sources vary widely in natural pH: desalinated water from SWRO plants is slightly acidic (pH 5.5–6.5) and may require pH correction before coagulation; dam water from Wadi Dayqah is typically pH 7.5–8.5 due to carbonate geology, which is within the acceptable range; groundwater can be highly alkaline (pH 7.5–9.5). When treating alkaline Oman water with alum, the coagulant dose must be sufficient to overcome alkalinity buffering and achieve the target pH, or pre-acidification may be needed. Jar testing with each raw water source is essential to determine the optimal dose. Global Chemicals LLC provides jar test protocol support and alum optimisation services for Oman water utilities."
+        }
       ]
     }
   },
@@ -131,6 +142,13 @@
         "Typical sizing: 10-50mm lumps",
         "Store in dry conditions",
         "Available in 25kg bags, bulk bags, bulk"
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Calcium_oxide",
+      "faqs": [
+        {
+          "question": "What is the difference between quicklime and hydrated lime and when is each used in Oman?",
+          "answer": "Quicklime (calcium oxide, CaO) and hydrated lime (calcium hydroxide, Ca(OH)₂) are both produced from limestone (calcium carbonate) but at different stages of processing. Quicklime is produced by calcining (burning) limestone at 900–1,200°C, driving off CO₂ to leave CaO. It is a highly reactive material that generates intense heat when mixed with water (the slaking reaction: CaO + H₂O → Ca(OH)₂ + heat), requiring careful handling with full PPE. Hydrated lime is produced by controlled slaking of quicklime with a stoichiometric amount of water, producing a dry white powder of Ca(OH)₂ that is safer and easier to handle but less concentrated than quicklime. In Oman water treatment: hydrated lime (milk of lime slurry) is used for pH adjustment in acidic desalinated water, softening of hard water (lime softening), and stabilisation of wastewater sludge. Quicklime is used in larger industrial applications (flue gas treatment, steel pickling, sugar refining) where the slaking heat is beneficial or where bulk efficiency outweighs handling complexity. Global Chemicals LLC supplies both quicklime and hydrated lime for Oman industrial and water treatment applications."
+        }
       ]
     }
   },
@@ -239,7 +257,8 @@
         "Viscosity: Varies by ratio and concentration",
         "Available in 250kg drums, IBCs, bulk",
         "Meets industrial grade specifications"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Sodium_silicate"
     }
   },
   {
@@ -283,7 +302,8 @@
         "pH: 4-6 (5% solution)",
         "Available in 25kg bags, 50kg bags, bulk bags",
         "Meets agricultural and industrial grades"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Zinc_sulfate"
     }
   }
 ]

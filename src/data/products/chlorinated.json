@@ -41,7 +41,14 @@
         "Contains stabilizers to prevent decomposition",
         "Excellent solvency for oils and greases",
         "Available in 200L drums, IBCs"
-      ]
+      ],
+      "faqs": [
+        {
+          "question": "What is trichloroethylene used for in Oman's industrial sector?",
+          "answer": "Trichloroethylene (TCE, trichloroethene, CAS 79-01-6) is a chlorinated solvent primarily used as a metal degreasing agent in Oman's engineering, aerospace, and manufacturing sector. Its high solvency for oils, greases, and waxes, combined with its low boiling point (87°C) and non-flammability, made it the standard vapour degreasing solvent for precision metal parts cleaning in defence, aerospace, and electronic manufacturing. In vapour degreasing equipment (open-top and closed-top degreasing tanks), TCE is heated to boiling, and the rising solvent vapour condenses on cool metal parts, dissolving contamination and draining back as clean solvent. However, TCE is now subject to significant regulatory restriction: the European Union has phased it out under REACH (Annex XIV authorisation required), and the US EPA has classified it as a likely human carcinogen under chronic exposure. In Oman, TCE use should comply with GHS hazard communication, exposure limits (OEL 10 ppm STEL, 1 ppm TWA in EU standards), and biological monitoring protocols. Safer alternatives include n-propyl bromide, perchloroethylene, and HFC-based solvents. Global Chemicals LLC supplies TCE with full regulatory documentation."
+        }
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Trichloroethylene"
     }
   },
   {
@@ -86,7 +93,14 @@
         "Excellent degreasing properties",
         "Contains stabilizers for aluminum, iron",
         "Available in 200L drums, IBCs"
-      ]
+      ],
+      "faqs": [
+        {
+          "question": "What is perchloroethylene and what are its applications in Oman?",
+          "answer": "Perchloroethylene (PCE, tetrachloroethylene, PERC, CAS 127-18-4) is a chlorinated solvent with excellent stability, non-flammability, and outstanding degreasing power. In Oman, PCE has two primary applications: dry cleaning solvent — PCE is the dominant solvent in commercial dry-cleaning machines (Oman's dry cleaners, hotel laundries, and garment care operations), where it cleans fabrics without water, removing oils, greases, and stains that water-based cleaning cannot address; and metal degreasing and vapour degreasing for precision parts in engineering and electronics manufacturing. PCE has a boiling point of 121°C, is denser than water (1.62 g/mL), and does not absorb water from the air, making it ideal for closed-circuit degreasing systems. PCE is classified as a probable human carcinogen (IARC Group 2A) and is subject to stringent exposure limits (OEL 50 ppm TWA, 100 ppm STEL) and emission controls. Oman dry cleaning operations must use closed-loop machines to prevent PCE evaporative emissions and must comply with waste solvent disposal requirements. Global Chemicals LLC supplies perchloroethylene with SDS and regulatory compliance documentation."
+        }
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Tetrachloroethylene"
     }
   },
   {
@@ -130,7 +144,8 @@
         "Fast evaporation rate",
         "Strong solvency for coatings",
         "Available in 200L drums, IBCs"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Dichloromethane"
     }
   }
 ]

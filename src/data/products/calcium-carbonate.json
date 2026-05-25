@@ -52,7 +52,18 @@
         "Food-grade (E170) available with EU food compliance certificate",
         "Packaging: 25kg bag, 500kg, 1,000kg super sack, bulk tanker",
         "Oil absorption: 18–22 g/100g (typical GCC)"
-      ]
+      ],
+      "faqs": [
+        {
+          "question": "What are the industrial uses of calcium carbonate in Oman?",
+          "answer": "Calcium carbonate (CaCO₃, limestone, calcite, CAS 471-34-1) is one of the most widely consumed industrial minerals in Oman across multiple sectors. In water treatment, calcium carbonate is used for pH correction and water remineralisation — adding alkalinity to acidic desalinated water (produced by RO plants), which is corrosive without calcium and bicarbonate hardness, and for neutralising acidic wastewater in industrial effluent treatment. In construction, ground calcium carbonate is used as a filler in concrete, asphalt, and construction mortars, and as a coating pigment in paints. In Oman's oil and gas sector, calcium carbonate-based lost circulation materials (LCM) are used in drilling muds to seal fractured formations and prevent drill fluid loss. In agriculture, agricultural lime (calcium carbonate) neutralises acidic soils in Oman's interior wadi regions. In manufacturing, calcium carbonate is used as a filler in PVC pipes (common in Oman construction), plastics, rubber, paints, and paper. Global Chemicals LLC supplies calcium carbonate in water treatment, industrial, and agricultural grades in bags and bulk."
+        },
+        {
+          "question": "What is the difference between precipitated calcium carbonate (PCC) and ground calcium carbonate (GCC)?",
+          "answer": "Ground calcium carbonate (GCC) is produced by mechanical grinding of natural limestone rock (calcium carbonate mineral) to produce particles of controlled size. Particle sizes range from coarse (100–1000 µm for water treatment and agriculture) to fine (1–45 µm for fillers in paint, plastics, and rubber). GCC retains the natural crystal form (calcite rhombohedra or aragonite) of the original limestone. Precipitated calcium carbonate (PCC) is synthetically produced by carbonation of calcium hydroxide slurry — carbon dioxide is bubbled through milk of lime, precipitating CaCO₃ crystals. PCC can be manufactured in controlled morphologies (scalenohedral, rhombohedral, acicular) with very narrow particle size distribution and high surface area (15–25 m²/g vs GCC's 1–5 m²/g). PCC's controlled morphology makes it superior as a coating pigment in paper and pharmaceuticals, while GCC's lower cost makes it dominant in construction, water treatment, and agriculture. In Oman, GCC is the standard for water treatment pH correction and construction applications. Global Chemicals LLC supplies both GCC and PCC grades."
+        }
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Calcium_carbonate"
     }
   }
 ]

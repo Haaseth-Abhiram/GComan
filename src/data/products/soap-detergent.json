@@ -482,6 +482,16 @@
         "Specific gravity: 1.05–1.06 g/cm³ at 20°C",
         "Flash point: >100°C",
         "Packaging: 200kg HDPE drum, 1,000kg IBC"
+      ],
+      "faqs": [
+        {
+          "question": "What is LABSA and how is it used in detergent manufacturing in Oman?",
+          "answer": "LABSA (Linear Alkyl Benzene Sulphonic Acid, CAS 68584-22-5) is the world's most widely used synthetic surfactant and the primary raw material for manufacturing household and industrial detergents. In Oman's detergent production sector and soap manufacturing industry, LABSA is neutralised with sodium hydroxide (caustic soda) or triethanolamine to produce the corresponding sulphonate salt, which is the active cleaning ingredient in laundry powders, dishwashing liquids, floor cleaners, and industrial detergents. The resulting linear alkyl benzene sulphonate (LAS) provides excellent hard-surface cleaning, high foam generation, and good compatibility with other surfactants. LABSA at 96% active content is the standard commercial grade — it must be handled and stored above 10°C as it solidifies below this temperature, which is occasionally relevant in Oman's winter months in interior regions. LABSA is readily biodegradable (>90% in 28 days), making LAS-based detergents preferred over branched-chain surfactants from an environmental perspective. Global Chemicals LLC supplies LABSA in drums, IBCs, and bulk tankers for Oman's detergent manufacturers."
+        },
+        {
+          "question": "What is the correct ratio of LABSA to caustic soda for making liquid detergent?",
+          "answer": "The neutralisation ratio of LABSA to caustic soda (sodium hydroxide) depends on the specific LABSA active content and the desired sulphonate concentration. For LABSA at 96% active content (the standard commercial grade), the stoichiometric ratio is approximately 2.2 kg of 98% caustic soda flakes per 10 kg of LABSA to achieve complete neutralisation to sodium linear alkyl benzene sulphonate (SLAS) at pH 7–9. In practice, a slight excess of caustic soda (5–10% over stoichiometric) is used to ensure complete neutralisation and produce a slightly alkaline final product (pH 9–10), which improves cleaning performance and product stability. The neutralisation reaction is exothermic — in Oman's ambient temperatures, the heat generated can raise the temperature to 50–60°C; mixing should be done in a vessel with water cooling capability. For liquid detergent formulation at 15% active content, the LABSA-caustic paste is diluted with water and other ingredients (SLES co-surfactant, salt for viscosity, fragrance, preservative). Global Chemicals LLC provides LABSA with technical support for detergent formulation."
+        }
       ]
     }
   },
@@ -627,6 +637,12 @@
         "Colour (Hazen): 50 maximum",
         "Packaging: 200kg HDPE drum (heated transfer required)",
         "Grade: Technical, Cosmetic (low 1,4-dioxane) on request"
+      ],
+      "faqs": [
+        {
+          "question": "What is SLES 70% and how is it used in personal care and detergent manufacturing?",
+          "answer": "SLES (Sodium Laureth Sulphate, sodium lauryl ether sulphate, CAS 68585-34-2) at 70% active content is one of the most widely used surfactants in personal care and cleaning product manufacturing globally. SLES is produced by ethoxylation of lauryl alcohol followed by sulphation and neutralisation — the ethylene oxide units (typically 2–3 EO) reduce skin irritation compared to its non-ethoxylated counterpart SLS (sodium lauryl sulphate). SLES 70% applications in Oman's manufacturing sector include: shampoo and conditioner manufacturing (primary foaming and cleansing surfactant, typically 10–20% in shampoo formulations), body wash and shower gel production, dishwashing liquid (SLES contributes foam, cleaning, and mildness), household surface cleaners, car wash formulations, and industrial cleaning products. SLES at 70% is a thick paste requiring dilution before incorporation into aqueous formulations. It is compatible with most other anionic, nonionic, and amphoteric surfactants. Dilution to 25–30% active is common for ease of handling in manufacturing. Global Chemicals LLC supplies SLES 70% in drums and IBCs to Oman's personal care and detergent manufacturing sector."
+        }
       ]
     }
   },
@@ -873,6 +889,12 @@
         "pH (1% solution): 9.5–10.2",
         "Appearance: White granular powder",
         "Packaging: 25kg PP bag | Food-grade (E451) available"
+      ],
+      "faqs": [
+        {
+          "question": "What is sodium tripolyphosphate (STPP) and why is it used in detergents?",
+          "answer": "Sodium tripolyphosphate (STPP, pentasodium triphosphate, CAS 7758-29-4) is a phosphate builder used in heavy-duty laundry and dishwashing detergents to improve cleaning performance. It functions through three complementary mechanisms: water softening (STPP chelates calcium and magnesium ions in hard water, preventing them from deactivating the surfactant and depositing as insoluble soap scum), sequestration (maintains calcium and magnesium in solution throughout the wash cycle, preventing redeposition on fabric), and soil suspension (STPP's alkaline buffering action and peptisation of protein and clay soils improves soil release from fabric). Oman's water supply from groundwater sources has high hardness (200–500 mg/L as CaCO₃), making phosphate builders valuable for laundry performance. However, environmental concerns about eutrophication (phosphate in wastewater stimulates algal growth in freshwater bodies) have driven many markets towards zeolite and citrate-based phosphate-free alternatives. In Oman and the Gulf, phosphate-containing detergents remain in use. Global Chemicals LLC supplies STPP in powder form for Oman's detergent manufacturing and industrial cleaning sectors."
+        }
       ]
     }
   },

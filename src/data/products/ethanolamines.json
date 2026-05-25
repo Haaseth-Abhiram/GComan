@@ -41,7 +41,18 @@
         "Typical solution strength: 15-20% MEA",
         "High absorption capacity",
         "Available in drums, IBCs, ISO tanks, bulk"
-      ]
+      ],
+      "faqs": [
+        {
+          "question": "What is MEA (monoethanolamine) used for in gas processing and chemical production?",
+          "answer": "Monoethanolamine (MEA, 2-aminoethanol, CAS 141-43-5) is a primary alkanolamine with two key industrial uses: acid gas removal (gas sweetening) and chemical intermediate production. As a gas sweetening solvent, MEA absorbs both H₂S and CO₂ from natural gas, refinery gas, and flue gas in absorption columns at 40–60°C, and releases them at 120–130°C in the regenerator, producing a purified gas stream. MEA is the most reactive alkanolamine — it achieves very low residual H₂S and CO₂ concentrations (sub-ppm levels) in treated gas, making it suitable where deep acid gas removal is required. However, MEA has significant limitations compared to MDEA: high heat of regeneration (high energy cost), tendency to degrade irreversibly with COS and CS₂, higher corrosivity at elevated concentrations (max 20% vs MDEA's 50%), and foaming tendency. In Oman, MDEA has largely replaced MEA for new gas sweetening units, but MEA remains in some existing units and in CO₂ capture applications. Global Chemicals LLC supplies MEA for Oman's gas processing and chemical sectors."
+        },
+        {
+          "question": "Is monoethanolamine (MEA) used in cosmetics and personal care products in Oman?",
+          "answer": "Yes. Monoethanolamine (MEA) serves as a pH adjuster, emulsifier, and surfactant booster in cosmetics and personal care products. In hair care formulations, MEA neutralises acidic ingredients and adjusts pH to the optimal range for hair cuticle condition. In shampoos and body washes, MEA-based surfactants (MEA-lauryl sulphate, MEA-cocamide) provide cleansing and foaming properties. In skin care products, MEA acts as an alkalising agent and improves formulation stability. Cosmetic-grade MEA must meet purity specifications for nitrogen compounds, colour, and nitrosamine formation potential. In Oman's cosmetics manufacturing and importing sector, MEA is used as a raw material for personal care product manufacturers and formulators. However, cosmetic formulations containing MEA at higher concentrations may raise regulatory questions in certain markets, so formulators typically use dilute concentrations or alternatives (triethanolamine, aminomethyl propanol) for premium formulations. Global Chemicals LLC supplies technical-grade MEA for industrial applications and can advise on cosmetic-grade specifications."
+        }
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Monoethanolamine"
     }
   },
   {
@@ -86,7 +97,14 @@
         "Viscosity: High (hygroscopic)",
         "pH: 10-11 (neutralizer)",
         "Available in 215kg drums, IBCs, bulk"
-      ]
+      ],
+      "faqs": [
+        {
+          "question": "What is triethanolamine (TEA) used for in industry in Oman?",
+          "answer": "Triethanolamine (TEA, tris(2-hydroxyethyl)amine, CAS 102-71-6) is a tertiary alkanolamine with broad industrial applications. As a surfactant and emulsifier, TEA neutralises fatty acids to form soaps (TEA-lauryl sulphate, TEA-stearate) used in personal care products, metalworking fluids, and polishes. As a cement grinding aid, TEA is one of the most widely used additives in cement mills globally — dosed at 0.01–0.05% during clinker grinding, it improves mill efficiency, increases cement fineness, and improves early strength development. In Oman's cement industry (Raysut Cement, Oman Cement) and GCC cement sector, TEA grinding aid is standard practice for energy-efficient clinker grinding. As a pH adjuster and chelating agent, TEA is used in metalworking cutting fluids to maintain alkalinity and prevent rust on machined parts. In personal care, TEA adjusts pH in skin creams, conditioners, and sunscreens. Global Chemicals LLC supplies technical-grade TEA for cement, metalworking, and industrial formulation applications in Oman."
+        }
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Triethanolamine"
     }
   },
   {
@@ -130,7 +148,14 @@
         "Selective for H2S over CO2",
         "Low corrosion rates",
         "Available in drums, IBCs, ISO tanks"
-      ]
+      ],
+      "faqs": [
+        {
+          "question": "What advantages does MDEA have over MEA for gas sweetening in Oman's gas sector?",
+          "answer": "MDEA (methyldiethanolamine) has superseded MEA as the gas sweetening solvent of choice in Oman's modern gas processing plants for five key reasons. First, selectivity: MDEA preferentially absorbs H₂S over CO₂ at standard absorption conditions, allowing CO₂ slip when only H₂S removal is required — important where CO₂ reinjection capacity is limited. Second, lower energy: MDEA has a significantly lower heat of regeneration than MEA, reducing reboiler steam consumption by 20–40% — critical for Oman operations where energy efficiency directly impacts LNG economics. Third, higher loading: MDEA can be used at 40–50 wt% concentration compared to MEA's 20–30% maximum, meaning smaller equipment and lower circulation rates. Fourth, lower degradation: MDEA does not react irreversibly with COS or CS₂ like MEA, and its thermal stability is much higher, reducing solvent replacement costs. Fifth, lower corrosivity: at equivalent acid gas loading, MDEA is significantly less corrosive than MEA, extending equipment life. Global Chemicals LLC supplies pharmaceutical-grade and industrial-grade MDEA for Oman's gas treatment units."
+        }
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Methyldiethanolamine"
     }
   }
 ]
