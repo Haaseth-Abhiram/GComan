@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { CheckCircle2 } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import Footer from '@/components/Footer';
@@ -61,40 +62,52 @@ const Index = () => {
       <main id="main-content">
         <Hero />
 
-        {/* Company snapshot strip — thin, unobtrusive, fully visible prose for AI citation.
-            Must not be hidden or aria-hidden; GEO value requires rendered text. */}
-        <section className="company-snapshot border-y border-border/30 bg-muted/5 py-5">
+        {/* Company snapshot strip — fully visible prose for AI citation + GEO.
+            Must not be hidden or aria-hidden; structured data depends on rendered text. */}
+        <section className="company-snapshot border-y border-border/40 bg-slate-50/70 py-7">
           <div className="container mx-auto px-4 max-w-6xl">
-            <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-10">
-              <p className="flex-1 text-sm text-muted-foreground leading-relaxed">
-                <span className="font-semibold text-foreground">Global Chemicals LLC</span> is
-                a B2B specialty and industrial chemical supplier headquartered in Ghala, Muscat,
-                Oman — ISO 9001:2015 certified, JSRS pre-qualified for Oman's oil and gas sector,
-                and ICV compliant. The company supplies 263+ products across 21 categories including
-                water treatment chemicals (PAC, caustic soda, sodium hypochlorite, antiscalants),
-                industrial lubricants (Shell, Mobil, Castrol), oilfield and refinery chemicals,
-                food-grade chemicals, and laboratory reagents. Customers include water treatment
-                plants, PDO and OQ contractors, hotels, food processors, and manufacturing facilities
-                across Oman. Same-day delivery in Muscat; next-day to Sohar, Salalah, and Duqm;
-                exports to UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain.
-              </p>
-              <div className="flex md:flex-col items-center md:items-end gap-x-4 gap-y-1 text-xs text-muted-foreground/60 flex-shrink-0 flex-wrap">
-                <span className="flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary/50 inline-block" />
-                  ISO 9001:2015
-                </span>
-                <span className="flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary/50 inline-block" />
-                  JSRS Certified
-                </span>
-                <span className="flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary/50 inline-block" />
-                  ICV Compliant
-                </span>
-                <Link to="/about" className="text-primary hover:underline font-medium md:mt-2 text-xs">
+            <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 lg:items-center">
+
+              {/* Prose */}
+              <div className="flex-1 min-w-0">
+                <p className="text-[11px] font-semibold uppercase tracking-widest text-muted-foreground/50 mb-2">
+                  About the Company
+                </p>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  <span className="font-semibold text-foreground">Global Chemicals LLC</span> is
+                  a B2B specialty and industrial chemical supplier headquartered in Ghala, Muscat,
+                  Oman. We supply 263+ products across 22 categories — water treatment chemicals
+                  (PAC, caustic soda, sodium hypochlorite, antiscalants), industrial lubricants
+                  (Shell, Mobil, Castrol), oilfield and refinery chemicals, food-grade chemicals,
+                  and laboratory reagents — to water treatment plants, PDO &amp; OQ contractors,
+                  hotels, food processors, and manufacturers across Oman. Same-day delivery in
+                  Muscat; next-day to Sohar, Salalah, and Duqm; exports to UAE, Saudi Arabia,
+                  Qatar, Kuwait, and Bahrain.
+                </p>
+              </div>
+
+              {/* Vertical divider */}
+              <div className="hidden lg:block w-px bg-border/50 self-stretch" />
+
+              {/* Certification badges + CTA */}
+              <div className="flex flex-row lg:flex-col items-start gap-2 flex-shrink-0 flex-wrap">
+                {(["ISO 9001:2015", "JSRS Certified", "ICV Compliant"] as const).map((cert) => (
+                  <span
+                    key={cert}
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary/[0.07] border border-primary/20 text-xs font-semibold text-primary whitespace-nowrap"
+                  >
+                    <CheckCircle2 className="w-3.5 h-3.5 flex-shrink-0" />
+                    {cert}
+                  </span>
+                ))}
+                <Link
+                  to="/about"
+                  className="inline-flex items-center gap-1 text-xs font-semibold text-primary hover:text-primary/70 transition-colors mt-1 lg:mt-2"
+                >
                   About us →
                 </Link>
               </div>
+
             </div>
           </div>
         </section>

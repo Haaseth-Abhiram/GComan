@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Navigation from '@/components/Navigation';
@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
 import { ArrowLeft, CheckCircle2, Phone, Mail, Beaker, Info, MessageCircle, Truck, Shield, Globe } from 'lucide-react';
-import { loadProductsByCategory } from '@/data/productLoader';
+import { loadProductsByCategorySync } from '@/data/productLoader';
 import { ProductStructuredData, BreadcrumbStructuredData, FAQStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { SEO } from '@/components/SEO';
@@ -22,34 +22,12 @@ const ProductDetail = () => {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
 
-  const [categoryProducts, setCategoryProducts] = useState<any[]>([]);
-  // Track loader settlement separately from the array — an unknown category
-  // (e.g. /products/acids/...) resolves to [], which is indistinguishable from
-  // "still fetching" without this flag. Without it, ProductDetail would stick on
-  // the "Loading…" branch forever and Google's crawler would see a Soft 404.
-  const [productsLoading, setProductsLoading] = useState(true);
-
-  useEffect(() => {
-    if (!category) {
-      setProductsLoading(false);
-      return;
-    }
-    let cancelled = false;
-    setProductsLoading(true);
-    loadProductsByCategory(category)
-      .then((data) => {
-        if (cancelled) return;
-        setCategoryProducts(data);
-        setProductsLoading(false);
-      })
-      .catch((err) => {
-        console.error('[ProductDetail] Failed to load category products:', err);
-        if (cancelled) return;
-        setCategoryProducts([]);
-        setProductsLoading(false);
-      });
-    return () => { cancelled = true; };
-  }, [category]);
+  // Synchronous load: all JSON is statically imported in productLoader.ts so
+  // data is available on the first render. This guarantees the <SEO> component
+  // mounts with the correct per-product title immediately — no async window
+  // where the prerenderer or Lovable's bot renderer can snapshot a loading
+  // state that has no Helmet and therefore shows the index.html fallback title.
+  const categoryProducts = loadProductsByCategorySync(category || '');
 
   // Find product by slug
   const product = categoryProducts.find(p =>
@@ -62,14 +40,6 @@ const ProductDetail = () => {
       trackProductView(product.id, product.title, product.category);
     }
   }, [product]);
-
-  if (productsLoading) {
-    return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
-        <p className="text-muted-foreground">Loading…</p>
-      </div>
-    );
-  }
 
   if (!product) {
     return (

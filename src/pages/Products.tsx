@@ -19,7 +19,7 @@ import { Button } from '@/components/ui/button';
 const productsFAQs = [
   {
     question: "What chemical products does Global Chemicals LLC supply in Oman?",
-    answer: "Global Chemicals LLC supplies 1,000+ industrial and specialty chemicals in Oman including water treatment chemicals (PAC, caustic soda, calcium hypochlorite, antiscalants), industrial lubricants (Shell, Mobil, Castrol), laboratory chemicals (AR grade, HPLC solvents), oilfield chemicals (corrosion inhibitors, demulsifiers, H2S scavengers), swimming pool chemicals, food-grade chemicals, RO chemicals, and construction chemicals."
+    answer: "Global Chemicals LLC supplies 263+ industrial and specialty chemicals in Oman including water treatment chemicals (PAC, caustic soda, calcium hypochlorite, antiscalants), industrial lubricants (Shell, Mobil, Castrol), laboratory chemicals (AR grade, HPLC solvents), oilfield chemicals (corrosion inhibitors, demulsifiers, H2S scavengers), swimming pool chemicals, food-grade chemicals, RO chemicals, and construction chemicals."
   },
   {
     question: "Can I buy chemicals in bulk from Global Chemicals LLC in Muscat?",
@@ -575,7 +575,7 @@ const Products = () => {
               {[
                 {
                   title: 'Comprehensive Range',
-                  description: 'Over 1000+ water treatment chemicals, industrial lubricants, and specialty products from trusted global manufacturers.',
+                  description: '263+ water treatment chemicals, industrial lubricants, and specialty products from trusted global manufacturers.',
                 },
                 {
                   title: 'ISO Quality Assured',

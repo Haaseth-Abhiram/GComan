@@ -1,12 +1,12 @@
-import { Shield, Award, CheckCircle2, Leaf, Lock } from 'lucide-react';
+import { Shield, Award, CheckCircle2, Globe2, Clock } from 'lucide-react';
 
 const TrustBadges = () => {
   const badges = [
-    { icon: Shield, label: 'ISO 9001 Certified', gradient: 'from-primary/15 to-accent/10' },
-    { icon: Leaf, label: 'Eco-Friendly', gradient: 'from-tertiary/15 to-tertiary/5' },
-    { icon: CheckCircle2, label: 'Quality Assured', gradient: 'from-secondary/15 to-secondary/5' },
-    { icon: Lock, label: 'Safe & Secure', gradient: 'from-accent/15 to-primary/5' },
-    { icon: Award, label: 'Industry Leader', gradient: 'from-primary/15 to-secondary/10' },
+    { icon: Shield, label: 'ISO 9001:2015', gradient: 'from-primary/15 to-accent/10' },
+    { icon: Award, label: 'JSRS Certified', gradient: 'from-accent/15 to-primary/5' },
+    { icon: CheckCircle2, label: 'ICV Compliant', gradient: 'from-secondary/15 to-secondary/5' },
+    { icon: Globe2, label: 'GCC Export Ready', gradient: 'from-tertiary/15 to-tertiary/5' },
+    { icon: Clock, label: 'Same-Day Muscat', gradient: 'from-primary/15 to-secondary/10' },
   ];
 
   return (

@@ -46,7 +46,7 @@ const About = () => {
 
   const stats = [
     { icon: Award, value: '10+', label: t('home.statsYears'), color: 'text-primary' },
-    { icon: Factory, value: '1000+', label: t('home.statsProducts'), color: 'text-secondary' },
+    { icon: Factory, value: '263+', label: t('home.statsProducts'), color: 'text-secondary' },
     { icon: Users, value: '200+', label: t('home.statsClients'), color: 'text-primary' },
     { icon: Globe2, value: '98%', label: t('home.statsSatisfaction'), color: 'text-secondary' },
   ];

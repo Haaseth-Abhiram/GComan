@@ -9,7 +9,7 @@ const StatsSection = () => {
 
   const stats = [
     { icon: Award, value: 10, suffix: '+', label: t('home.statsYears'), accent: 'primary' },
-    { icon: Package, value: 1000, suffix: '+', label: t('home.statsProducts'), accent: 'secondary' },
+    { icon: Package, value: 263, suffix: '+', label: t('home.statsProducts'), accent: 'secondary' },
     { icon: Users, value: 200, suffix: '+', label: t('home.statsClients'), accent: 'accent' },
     { icon: Globe2, value: 98, suffix: '%', label: t('home.statsSatisfaction'), accent: 'tertiary' },
   ];

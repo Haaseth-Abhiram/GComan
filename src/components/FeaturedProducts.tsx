@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ArrowRight, Droplets, Wrench } from 'lucide-react';
+import { ArrowRight, Droplets, Wrench, Flame } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import waterTreatmentImg from '@/assets/products/water-treatment-optimized.webp';
 import oilGasImg from '@/assets/products/oil-gas.jpg';
@@ -21,7 +21,7 @@ const FeaturedProducts = () => {
       gradient: 'from-tertiary to-secondary',
     },
     {
-      icon: Droplets,
+      icon: Flame,
       name: t('home.featuredProducts.oilGas'),
       category: t('home.featuredProducts.energy'),
       description: t('home.featuredProducts.oilGasDesc'),

@@ -48,7 +48,7 @@ const QuickActions = () => {
                     </div>
                     <h3 className="font-bold text-white text-lg">{action.title}</h3>
                     <p className="text-white/60 text-sm leading-relaxed">{action.description}</p>
-                    <div className="flex items-center gap-1 text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                    <div className="flex items-center gap-1 text-primary text-sm font-medium">
                       <span>Explore</span>
                       <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                     </div>

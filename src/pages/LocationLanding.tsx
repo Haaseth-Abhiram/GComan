@@ -56,7 +56,7 @@ const locations: Record<string, LocationData> = {
       'Head office located in Ghala, Muscat',
       'Same-day delivery within Muscat',
       'Technical support team on-site',
-      '1000+ products in local stock',
+      '263+ products in local stock',
       'ISO 9001 certified operations'
     ],
     faqs: [
