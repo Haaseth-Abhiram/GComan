@@ -9,7 +9,31 @@ import heroImage from '@/assets/about-hero.jpg';
 import facilityImage from '@/assets/about-facility.jpg';
 import teamImage from '@/assets/about-team.jpg';
 import { SEO } from '@/components/SEO';
-import { BreadcrumbStructuredData, OrganizationStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
+import { BreadcrumbStructuredData, SpeakableStructuredData, FAQStructuredData } from '@/components/StructuredData';
+
+// About page FAQs — company identity, certifications, GCC reach
+const aboutFAQs = [
+  {
+    question: "When was Global Chemicals LLC founded and where is it headquartered?",
+    answer: "Global Chemicals LLC is headquartered in Ghala, Muscat, Oman (Office-3, Building 1737, near Oman LNG). The company has over 10 years of experience serving industrial and commercial clients across Oman and the GCC region with 263+ chemical products across 22 categories."
+  },
+  {
+    question: "Is Global Chemicals LLC ISO 9001:2015 certified?",
+    answer: "Yes, Global Chemicals LLC holds ISO 9001:2015 certification for quality management, JSRS (Joint Supplier Registration System) registration qualifying us to supply PDO, OQ, and major Oman oil & gas operators, and ICV (In-Country Value) compliance. We provide full documentation including Safety Data Sheets (SDS), Certificates of Analysis (CoA), and Certificates of Origin."
+  },
+  {
+    question: "What industries does Global Chemicals LLC serve in Oman and the Middle East?",
+    answer: "Global Chemicals LLC serves oil & gas (PDO, OQ contractors), water treatment and desalination plants, food & beverage manufacturers, hotels and hospitality, healthcare and laboratory facilities, manufacturing, construction, agriculture, and swimming pool operators across Oman, UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain."
+  },
+  {
+    question: "Does Global Chemicals LLC export chemicals to UAE, Saudi Arabia, Qatar and Kuwait?",
+    answer: "Yes. Global Chemicals LLC exports chemicals to all GCC countries: UAE (Dubai, Abu Dhabi, Sharjah, RAK, Fujairah), Saudi Arabia (Riyadh, Jeddah, Dammam), Qatar (Doha), Kuwait (Kuwait City), and Bahrain (Manama). Standard GCC delivery lead times are 3-7 business days. Contact sales@gcoman.com for export pricing and documentation."
+  },
+  {
+    question: "How many products does Global Chemicals LLC offer?",
+    answer: "Global Chemicals LLC offers 263+ products across 22 categories including water treatment chemicals, oilfield and refinery chemicals, industrial lubricants (Shell, Mobil, Castrol), laboratory chemicals (AR grade, HPLC solvents), food-grade chemicals, inorganic chemicals, solvents, glycols, swimming pool chemicals, and specialty chemicals."
+  }
+];
 
 // Breadcrumb items for About page
 const breadcrumbItems = [
@@ -61,7 +85,7 @@ const About = () => {
         ogUrl="https://gcoman.com/about"
         canonical="https://gcoman.com/about"
       />
-      <OrganizationStructuredData />
+      <FAQStructuredData faqs={aboutFAQs} />
       <BreadcrumbStructuredData items={breadcrumbItems} />
       <SpeakableStructuredData url="https://gcoman.com/about" cssSelector={["h1", "h2", ".speakable"]} />
       <Navigation />
@@ -90,7 +114,7 @@ const About = () => {
             <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-secondary-foreground mb-4 sm:mb-6 leading-tight px-4">
               {t('about.heroTitle')}
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-secondary-foreground/85 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl md:text-2xl text-secondary-foreground/85 max-w-3xl mx-auto leading-relaxed px-4 speakable">
               {t('about.heroSubtitle')}
             </p>
           </div>

@@ -61,9 +61,28 @@
 - [Chemical Supplier in Muscat](https://gcoman.com/chemicals/muscat): Location-specific supply information for Muscat, Oman
 - [Chemical Supplier in Sohar](https://gcoman.com/chemicals/sohar): Location-specific supply information for Sohar Industrial Area, Oman
 - [Chemical Supplier in Salalah](https://gcoman.com/chemicals/salalah): Location-specific supply information for Salalah and Dhofar, Oman
+- [Chemical Supplier in Duqm](https://gcoman.com/chemicals/duqm): Location-specific supply information for Duqm Special Economic Zone and Duqm Refinery, Oman
+- [Chemical Supplier in Rusayl](https://gcoman.com/chemicals/rusayl): Chemical supply for Rusayl Industrial Estate, Muscat — Oman's primary manufacturing hub
+- [Chemical Supplier in Rustaq](https://gcoman.com/chemicals/rustaq): Chemical supply for Rustaq and Al Batinah South Governorate, Oman
+- [Chemical Supplier in Dubai](https://gcoman.com/chemicals/dubai): Oman-based chemical exporter supplying industrial and specialty chemicals to Dubai, UAE
+- [Chemical Supplier in Abu Dhabi](https://gcoman.com/chemicals/abu-dhabi): Chemical supply to Abu Dhabi, ADNOC contractors, and UAE industrial facilities
+- [Chemical Supplier in Sharjah](https://gcoman.com/chemicals/sharjah): Industrial and water treatment chemical supply to Sharjah and Northern Emirates, UAE
+- [Chemical Supplier in Ras Al Khaimah](https://gcoman.com/chemicals/ras-al-khaimah): Chemical supply to Ras Al Khaimah, RAK Port, and Northern Emirates industrial zones
+- [Chemical Supplier in Fujairah](https://gcoman.com/chemicals/fujairah): Chemical supply to Fujairah Port, bunkering industry, and East Coast UAE
+- [Chemical Supplier in Riyadh](https://gcoman.com/chemicals/riyadh): Industrial chemical export from Oman to Riyadh, Saudi Arabia — oilfield, water treatment, laboratory
+- [Chemical Supplier in Jeddah](https://gcoman.com/chemicals/jeddah): Chemical supply to Jeddah, SABIC facilities, and Red Sea industrial zone, Saudi Arabia
+- [Chemical Supplier in Dammam](https://gcoman.com/chemicals/dammam): Chemical export to Dammam, Jubail Industrial City, and Eastern Province, Saudi Arabia
+- [Chemical Supplier in Doha](https://gcoman.com/chemicals/doha): Chemical supply to Doha, Ras Laffan Industrial City (RLIC), and Qatar industrial sector
+- [Chemical Supplier in Kuwait City](https://gcoman.com/chemicals/kuwait-city): Industrial and specialty chemical supply to Kuwait City and Shuaiba Industrial Area, Kuwait
+- [Chemical Supplier in Bahrain](https://gcoman.com/chemicals/bahrain): Chemical supply to Manama, Hidd Industrial Area, and Bahrain Petroleum Company (BAPCO) contractors
+- [Chemical Supplier in Baghdad](https://gcoman.com/chemicals/baghdad): Industrial chemical export to Baghdad and Iraqi oil & gas facilities
+- [Chemical Supplier in Amman](https://gcoman.com/chemicals/amman): Chemical supply to Amman and Jordanian industrial sector
+- [Chemical Supplier in Cairo](https://gcoman.com/chemicals/cairo): Industrial chemical export to Cairo and Egyptian manufacturing facilities
 - [Industries Served](https://gcoman.com/industries): Water treatment, oil & gas, food & beverage, manufacturing, construction, hospitality
 - [Certifications](https://gcoman.com/certifications): ISO 9001:2015, JSRS registration, ICV compliance details
 - [Customers](https://gcoman.com/customers): Client sectors and key accounts
+- [Career / Join Our Team](https://gcoman.com/career): Job openings at Global Chemicals LLC — Muscat-based chemical supplier, Oman
+- [Resources](https://gcoman.com/resources): Downloadable product brochures, Safety Data Sheets (SDS), Technical Data Sheets (TDS), and chemical guides
 - [About](https://gcoman.com/about): Company history, team, mission, Vision 2040 alignment
 - [Blog / Technical Articles](https://gcoman.com/blog): Chemical guides and industry reference for Oman & GCC industry
 - [Contact / Request a Quote](https://gcoman.com/contact): RFQ form, WhatsApp, direct contact

@@ -123,7 +123,7 @@ const CausticSodaOman = () => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
                 Caustic Soda Supplier in Oman
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground mb-4 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-lg md:text-xl text-muted-foreground mb-4 max-w-3xl mx-auto leading-relaxed speakable">
                 Global Chemicals LLC is a leading caustic soda (sodium hydroxide — NaOH) supplier in Muscat, Oman, stocking flakes (98–99%), prills (99%), and liquid (30–50%) in both technical and food-grade (E524). Same-day delivery in Muscat. Bulk supply for water treatment, oil & gas, food processing, soap manufacturing, and industrial applications across Oman and the GCC.
               </p>
               <p className="text-base text-muted-foreground mb-8 max-w-2xl mx-auto">

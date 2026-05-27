@@ -11,7 +11,10 @@
     "preview": "vite preview",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
-    "test:e2e:prod": "PROD_BUILD=1 playwright test"
+    "test:e2e:prod": "PROD_BUILD=1 playwright test",
+    "deploy:cloudflare-worker": "wrangler deploy",
+    "verify:seo-routing": "node scripts/verify-seo-routing.mjs",
+    "verify:hostinger-staging": "node scripts/verify-hostinger-staging.mjs"
   },
   "dependencies": {
     "@cloudflare/vite-plugin": "1.37.1",
@@ -112,6 +115,7 @@
     "vite": "7.3.3",
     "vite-imagetools": "^9.0.2",
     "vite-plugin-compression": "^0.5.1",
-    "vite-plugin-webfont-dl": "^3.11.1"
+    "vite-plugin-webfont-dl": "^3.11.1",
+    "wrangler": "^4.94.0"
   }
 }

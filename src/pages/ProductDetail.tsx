@@ -268,7 +268,7 @@ const ProductDetail = () => {
                     <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 leading-tight">
                       {translatedTitle}
                     </h1>
-                    <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                    <p className="text-base md:text-lg text-muted-foreground leading-relaxed product-description">
                       {translatedDescription}
                     </p>
                   </div>
@@ -305,7 +305,7 @@ const ProductDetail = () => {
                 {/* When the hero shows the description inline, skip the duplicate;
                     legacy products still show it here. */}
                 {!product.details?.molecule && (
-                  <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                  <p className="text-lg text-muted-foreground leading-relaxed mb-6 product-description">
                     {translatedDescription}
                   </p>
                 )}

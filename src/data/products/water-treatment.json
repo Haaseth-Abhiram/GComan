@@ -36,7 +36,8 @@
         "Available in granular (8x30 mesh) and powder forms",
         "Moisture content: <5%",
         "Bulk density: 0.40-0.55 g/cm³"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Activated_carbon"
     }
   },
   {
@@ -76,7 +77,8 @@
         "pH (1% solution): 3.0-4.0",
         "Specific gravity: 1.25-1.35",
         "Available in bulk and IBC tanks"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Aluminium_sulfate"
     }
   },
   {
@@ -116,7 +118,8 @@
         "Water insoluble: <0.5%",
         "Iron (Fe) content: <0.5%",
         "Available in 25kg, 50kg bags"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Aluminium_sulfate"
     }
   },
   {
@@ -155,7 +158,8 @@
         "Silicone or non-silicone based",
         "Low dosage requirement: 10-100 ppm",
         "Compatible with various water chemistries"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Defoamer"
     }
   },
   {
@@ -213,7 +217,8 @@
           "question": "How is antiscalant dosed in cooling tower water treatment systems?",
           "answer": "Antiscalant is dosed continuously into the cooling tower make-up water line using a chemical metering pump — typically a diaphragm dosing pump controlled by a water flow signal (proportional dosing) or a timer. Continuous dosing to make-up water is the most reliable method because it maintains a consistent inhibitor concentration in the circulating water regardless of evaporation rate variations. The dosing system includes a day tank (from which the pump draws), a check valve, and a backflow preventer. Monitoring includes periodic measurement of inhibitor residual (using colorimetric test kits or tracer-based monitoring) and scale deposit inspection on heat exchanger surfaces. Global Chemicals LLC supplies antiscalant with dosing calculation sheets and compatible metering pump recommendations."
         }
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Scale_inhibitor"
     }
   },
   {
@@ -253,7 +258,8 @@
         "Fast-acting formulation",
         "Compatible with water treatment chemicals",
         "Low environmental impact"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Biocide"
     }
   },
   {
@@ -294,7 +300,8 @@
         "Particle size: 200-325 mesh",
         "pH (10% slurry): 8-10",
         "Available in 25kg, 50kg bags"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Calcium_carbonate"
     }
   },
   {
@@ -335,7 +342,8 @@
         "Appearance: White granules/liquid",
         "Moisture absorption: Excellent hygroscopic properties",
         "Available in 25kg bags and bulk"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Calcium_chloride"
     }
   },
   {
@@ -348,17 +356,41 @@
       "formula": "NaOH",
       "molecule": {
         "atoms": [
-          { "el": "Na", "x": 18, "y": 50 },
-          { "el": "O",  "x": 50, "y": 50 },
-          { "el": "H",  "x": 82, "y": 50 }
+          {
+            "el": "Na",
+            "x": 18,
+            "y": 50
+          },
+          {
+            "el": "O",
+            "x": 50,
+            "y": 50
+          },
+          {
+            "el": "H",
+            "x": 82,
+            "y": 50
+          }
         ],
         "bonds": [
-          { "from": 0, "to": 1, "order": 1, "kind": "ionic" },
-          { "from": 1, "to": 2, "order": 1, "kind": "covalent" }
+          {
+            "from": 0,
+            "to": 1,
+            "order": 1,
+            "kind": "ionic"
+          },
+          {
+            "from": 1,
+            "to": 2,
+            "order": 1,
+            "kind": "covalent"
+          }
         ]
       },
       "hazard": {
-        "ghs": ["GHS05"],
+        "ghs": [
+          "GHS05"
+        ],
         "unNumber": "1823",
         "hazardClass": "Class 8 — Corrosive",
         "signalWord": "Danger",
@@ -652,7 +684,8 @@
         "Low dust formation",
         "Excellent flowability",
         "Available in 25kg bags"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Sodium_hydroxide"
     }
   },
   {
@@ -694,7 +727,8 @@
         "Slow-dissolving for sustained release",
         "Appearance: White tablets",
         "Available in 5kg, 25kg, 50kg drums"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Trichloroisocyanuric_acid"
     }
   },
   {
@@ -735,7 +769,8 @@
         "pH (1% solution): 2.2",
         "Available in 25kg bags",
         "Food grade (E330) and technical grade"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Citric_acid"
     }
   },
   {
@@ -776,7 +811,8 @@
         "pH (1% solution): 2.2",
         "Available in 25kg bags",
         "Food grade (E330) certified"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Citric_acid"
     }
   },
   {
@@ -818,7 +854,8 @@
         "pH: 3-4",
         "Available in drums and IBC tanks",
         "Easy dosing and application"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Copper(II)_sulfate"
     }
   },
   {
@@ -858,7 +895,8 @@
         "Dosage: 10-50 ppm (depends on system)",
         "Available in drums and IBC tanks",
         "Compatible with all metals"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Corrosion_inhibitor"
     }
   },
   {
@@ -900,7 +938,8 @@
         "Freezing point: -8°C",
         "Specific gravity: 1.118",
         "Available in drums and IBC tanks"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Diethylene_glycol"
     }
   },
   {
@@ -942,7 +981,8 @@
         "Forms: Disodium, tetrasodium salts",
         "Available in 25kg bags",
         "Excellent chelating capacity"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/EDTA"
     }
   },
   {
@@ -984,7 +1024,8 @@
         "Boiling point: 78°C",
         "Available in drums and IBC tanks",
         "USP/BP and technical grades"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Ethanol"
     }
   },
   {
@@ -1026,7 +1067,8 @@
         "pH (1% solution): <2",
         "Available in IBC tanks and bulk",
         "Effective pH range: 4-11"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Iron(III)_chloride"
     }
   },
   {
@@ -1068,7 +1110,8 @@
         "Water insoluble: <0.05%",
         "Available in 25kg, 50kg bags",
         "pH (5% solution): 3-4"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Iron(II)_sulfate"
     }
   },
   {
@@ -1110,7 +1153,8 @@
         "Boiling point: 290°C",
         "Available in drums and IBC tanks",
         "USP, BP, Food grade available"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Glycerol"
     }
   },
   {
@@ -1213,7 +1257,8 @@
         "Dosage: 1-2 ppm per ppm O2",
         "Available in drums",
         "Requires careful handling"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Hydrazine"
     }
   },
   {
@@ -1255,7 +1300,8 @@
         "Boiling point: 197°C",
         "Specific gravity: 1.115",
         "Available in drums and IBC tanks"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Ethylene_glycol"
     }
   },
   {
@@ -1297,7 +1343,8 @@
         "Boiling point: 188°C",
         "Specific gravity: 1.036",
         "Available in drums and IBC tanks"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Propylene_glycol"
     }
   },
   {
@@ -1337,7 +1384,8 @@
         "Congealing point: 52-70°C",
         "Available in 5kg slabs, 25kg cartons",
         "Grades: Fully refined, semi-refined"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Paraffin_wax"
     }
   },
   {
@@ -1377,7 +1425,8 @@
         "Viscosity: 8-9 cSt @ 100°C",
         "Available in drums and pails",
         "Non-toxic (USP grade)"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Petroleum_jelly"
     }
   },
   {
@@ -1535,7 +1584,8 @@
         "Dosage: 0.1-10 ppm",
         "Available in 25kg bags",
         "Powder and liquid forms"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Polyelectrolyte"
     }
   },
   {
@@ -1577,7 +1627,8 @@
         "Available in 25kg bags, drums",
         "Technical and food grade",
         "Highly hygroscopic"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Potassium_hydroxide"
     }
   },
   {
@@ -1619,7 +1670,8 @@
         "Bulk density: 900-1100 kg/m³ (dense)",
         "pH (1% solution): 11.3-11.7",
         "Available in 25kg, 50kg bags"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Sodium_carbonate"
     }
   },
   {
@@ -1661,7 +1713,8 @@
         "Available in 25kg bags",
         "Food grade and technical grade",
         "Excellent buffering capacity"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Sodium_bicarbonate"
     }
   },
   {
@@ -1702,7 +1755,8 @@
         "Safer than mineral acids",
         "Available in 25kg bags, drums",
         "Effective pH control"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Sodium_bisulfate"
     }
   },
   {
@@ -1744,7 +1798,8 @@
         "Available in 25kg bags",
         "Food grade and technical grade",
         "Excellent chelating properties"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Sodium_hexametaphosphate"
     }
   },
   {
@@ -1786,7 +1841,8 @@
         "Specific gravity: 1.20-1.25",
         "Available in IBC tanks and bulk",
         "On-site generation available"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Sodium_hypochlorite"
     }
   },
   {
@@ -1828,7 +1884,8 @@
         "Available in 25kg bags",
         "Strong alkaline properties",
         "Excellent dispersing action"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Sodium_silicate"
     }
   },
   {
@@ -1870,7 +1927,8 @@
         "pH (1% solution): 4.0-5.5",
         "Available in 25kg bags",
         "Food grade and technical grade"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Sodium_metabisulfite"
     }
   },
   {
@@ -1911,7 +1969,8 @@
         "Available in 25kg bags",
         "Reacts with dissolved oxygen",
         "Food grade and technical grade"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Sodium_sulfite"
     }
   },
   {
@@ -1952,7 +2011,8 @@
         "Non-volatile and stable",
         "Available in 25kg bags",
         "Safer than mineral acids"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Sulfamic_acid"
     }
   },
   {
@@ -1994,7 +2054,8 @@
         "Boiling point: 335°C",
         "Available in drums and IBC tanks",
         "Fully water soluble"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Triethanolamine"
     }
   },
   {
@@ -2036,7 +2097,8 @@
         "Available in 25kg bags",
         "Strong alkaline cleaner",
         "Excellent grease cutting power"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Trisodium_phosphate"
     }
   }
 ]

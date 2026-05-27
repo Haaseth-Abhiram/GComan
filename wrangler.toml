@@ -1,0 +1,16 @@
+name = "gcoman-prerender-router"
+main = "cloudflare-worker.js"
+compatibility_date = "2025-05-24"
+
+# account_id is intentionally omitted here — set CLOUDFLARE_ACCOUNT_ID in your
+# shell (or CI secrets) before running `npm run deploy:cloudflare-worker`.
+# Wrangler picks it up from the environment automatically.
+
+# Both routes must be listed. Omitting www means www.gcoman.com bypasses the Worker.
+[[routes]]
+pattern = "gcoman.com/*"
+zone_name = "gcoman.com"
+
+[[routes]]
+pattern = "www.gcoman.com/*"
+zone_name = "gcoman.com"

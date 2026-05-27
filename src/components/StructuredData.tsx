@@ -456,7 +456,7 @@ export const LocalBusinessStructuredData = () => {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
         "opens": "08:00",
-        "closes": "17:00"
+        "closes": "18:00"
       }
     ],
     "areaServed": [
@@ -553,6 +553,58 @@ export const HowToStructuredData = ({ name, description, totalTime, supply, step
 };
 
 // =====================================================
+// ITEMLIST STRUCTURED DATA (product category pages)
+// Helps AI engines understand catalogue structure and
+// enumerate products within a category in rich results.
+// =====================================================
+interface ItemListItem {
+  id: string;
+  title: string;
+  url: string;
+  description?: string;
+  image?: string;
+}
+
+interface ItemListStructuredDataProps {
+  name: string;
+  description: string;
+  url: string;
+  items: ItemListItem[];
+}
+
+export const ItemListStructuredData = ({ name, description, url, items }: ItemListStructuredDataProps) => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": name,
+    "description": description,
+    "url": url,
+    "numberOfItems": items.length,
+    "itemListElement": items.map((item, i) => ({
+      "@type": "ListItem",
+      "position": i + 1,
+      "name": item.title,
+      "url": item.url,
+      ...(item.description && { "description": item.description }),
+      ...(item.image && {
+        "image": {
+          "@type": "ImageObject",
+          "url": item.image
+        }
+      })
+    }))
+  };
+
+  return (
+    <Helmet defer={false}>
+      <script type="application/ld+json">
+        {JSON.stringify(schema)}
+      </script>
+    </Helmet>
+  );
+};
+
+// =====================================================
 // SPEAKABLE STRUCTURED DATA (Google Assistant / voice AI)
 // =====================================================
 interface SpeakableStructuredDataProps {
@@ -576,6 +628,181 @@ export const SpeakableStructuredData = ({ url, cssSelector }: SpeakableStructure
       <script type="application/ld+json">
         {JSON.stringify(speakableSchema)}
       </script>
+    </Helmet>
+  );
+};
+
+// =====================================================
+// WEBSITE STRUCTURED DATA (sitelinks search box signal)
+// =====================================================
+export const WebSiteStructuredData = () => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://gcoman.com/#website",
+    "url": "https://gcoman.com",
+    "name": "Global Chemicals LLC",
+    "alternateName": ["GCOMAN", "Global Chemicals Oman"],
+    "description": "Leading chemical supplier in Oman exporting to UAE, Saudi Arabia, Qatar, Kuwait and Bahrain. ISO 9001 certified. 263+ products across 22 categories.",
+    "inLanguage": ["en", "ar"],
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://gcoman.com/#organization"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://gcoman.com/products?search={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  };
+
+  return (
+    <Helmet defer={false}>
+      <script type="application/ld+json">
+        {JSON.stringify(schema)}
+      </script>
+    </Helmet>
+  );
+};
+
+// =====================================================
+// CONTACT PAGE STRUCTURED DATA
+// =====================================================
+export const ContactPageStructuredData = () => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "@id": "https://gcoman.com/contact#contactpage",
+    "url": "https://gcoman.com/contact",
+    "name": "Contact Global Chemicals LLC — Request a Quote",
+    "description": "Contact Global Chemicals LLC for chemical supply inquiries, quotations, and technical support across Oman, UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain. Phone, email, WhatsApp, and online form.",
+    "inLanguage": "en",
+    "mainEntity": {
+      "@type": "Organization",
+      "@id": "https://gcoman.com/#organization",
+      "name": "Global Chemicals LLC",
+      "telephone": "+968-93754388",
+      "email": "info@gcoman.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Office-3, Building Number 1737, Near Oman LNG",
+        "addressLocality": "Muscat",
+        "addressRegion": "Muscat Governorate",
+        "postalCode": "100",
+        "addressCountry": "OM"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        }
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+968-93754388",
+          "contactType": "sales",
+          "areaServed": ["OM", "AE", "SA", "QA", "KW", "BH"],
+          "availableLanguage": ["en", "ar"],
+          "contactOption": "TollFree"
+        },
+        {
+          "@type": "ContactPoint",
+          "email": "sales@gcoman.com",
+          "contactType": "sales"
+        },
+        {
+          "@type": "ContactPoint",
+          "email": "support@gcoman.com",
+          "contactType": "technical support"
+        }
+      ]
+    }
+  };
+
+  return (
+    <Helmet defer={false}>
+      <script type="application/ld+json">
+        {JSON.stringify(schema)}
+      </script>
+    </Helmet>
+  );
+};
+
+// =====================================================
+// SERVICE STRUCTURED DATA (top chemical services)
+// =====================================================
+export const ServiceStructuredData = () => {
+  const services = [
+    {
+      name: "Water Treatment Chemical Supply in Oman & GCC",
+      description: "Supply of PAC, caustic soda, calcium hypochlorite, sodium hypochlorite, antiscalants, and coagulants for municipal, industrial, and desalination plants across Oman, UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain.",
+      serviceType: "Water Treatment Chemicals Supply",
+      areaServed: ["Oman", "United Arab Emirates", "Saudi Arabia", "Qatar", "Kuwait", "Bahrain"],
+      url: "https://gcoman.com/products/water-treatment"
+    },
+    {
+      name: "Oilfield & Refinery Chemical Supply",
+      description: "JSRS-certified supply of corrosion inhibitors, scale inhibitors, demulsifiers, H2S scavengers, biocides, and drilling chemicals for PDO, OQ, and international operators in Oman.",
+      serviceType: "Oilfield Chemicals Supply",
+      areaServed: ["Oman"],
+      url: "https://gcoman.com/products/oilfield"
+    },
+    {
+      name: "Industrial Lubricants Distribution — Shell, Mobil, Castrol",
+      description: "Authorized distribution of Shell, Mobil, and Castrol industrial lubricants including hydraulic oils, gear oils, compressor oils, and greases for manufacturing, heavy industry, and oil & gas across Oman and the GCC.",
+      serviceType: "Industrial Lubricants Distribution",
+      areaServed: ["Oman", "United Arab Emirates", "Saudi Arabia", "Qatar", "Kuwait", "Bahrain"],
+      url: "https://gcoman.com/products/lubricants"
+    },
+    {
+      name: "Laboratory Chemical Supply in Oman",
+      description: "Supply of AR grade reagents, HPLC solvents, analytical standards, biochemicals, and lab consumables for research, quality control, and educational laboratories across Oman.",
+      serviceType: "Laboratory Chemicals Supply",
+      areaServed: ["Oman"],
+      url: "https://gcoman.com/products/lab-chemicals"
+    },
+    {
+      name: "Food Grade Chemical Supply",
+      description: "Supply of food-grade NaOH (E524), citric acid, phosphoric acid, sodium hypochlorite, and HACCP-compliant CIP chemicals for food & beverage manufacturers in Oman and the GCC.",
+      serviceType: "Food Grade Chemicals Supply",
+      areaServed: ["Oman", "United Arab Emirates", "Saudi Arabia", "Qatar", "Kuwait", "Bahrain"],
+      url: "https://gcoman.com/products/food-beverage"
+    }
+  ];
+
+  const schema = services.map(svc => ({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": svc.name,
+    "description": svc.description,
+    "serviceType": svc.serviceType,
+    "url": svc.url,
+    "provider": {
+      "@type": "Organization",
+      "@id": "https://gcoman.com/#organization",
+      "name": "Global Chemicals LLC"
+    },
+    "areaServed": svc.areaServed.map(c => ({ "@type": "Country", "name": c })),
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": svc.name,
+      "url": svc.url
+    }
+  }));
+
+  return (
+    <Helmet defer={false}>
+      {schema.map((s, i) => (
+        <script key={i} type="application/ld+json">
+          {JSON.stringify(s)}
+        </script>
+      ))}
     </Helmet>
   );
 };

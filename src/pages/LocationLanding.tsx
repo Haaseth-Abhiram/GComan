@@ -21,7 +21,7 @@ import {
   ChevronRight
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
-import { BreadcrumbStructuredData, FAQStructuredData, OrganizationStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
+import { BreadcrumbStructuredData, FAQStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
 
 // Location data for SEO-optimized landing pages
 interface LocationData {
@@ -808,7 +808,6 @@ const LocationLanding = () => {
       />
       <BreadcrumbStructuredData items={breadcrumbItems} />
       <FAQStructuredData faqs={locationData.faqs} />
-      <OrganizationStructuredData />
       <SpeakableStructuredData url={`https://gcoman.com/chemicals/${locationData.slug}`} cssSelector={["h1", "h2", ".speakable"]} />
 
       <Navigation />
@@ -832,7 +831,7 @@ const LocationLanding = () => {
               Chemical Supplier in <span className="text-primary">{locationData.city}</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground mb-8">
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 speakable">
               {locationData.description}
             </p>
 

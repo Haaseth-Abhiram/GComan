@@ -10,7 +10,7 @@ import { useParams } from 'react-router-dom';
 import { AISearchDialog } from '@/components/AISearchDialog';
 import { ProductCard } from '@/components/products/ProductCard';
 import { SEO } from '@/components/SEO';
-import { OrganizationStructuredData, BreadcrumbStructuredData, FAQStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
+import { BreadcrumbStructuredData, FAQStructuredData, SpeakableStructuredData, ItemListStructuredData } from '@/components/StructuredData';
 import { trackSearch } from '@/components/GoogleAnalytics';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -252,7 +252,6 @@ const Products = () => {
         ogUrl={categoryParam ? `https://gcoman.com/products/${categoryParam}` : 'https://gcoman.com/products'}
         canonical={categoryParam ? `https://gcoman.com/products/${categoryParam}` : 'https://gcoman.com/products'}
       />
-      <OrganizationStructuredData includeService={true} />
       <BreadcrumbStructuredData items={[
         { name: 'Home', url: 'https://gcoman.com/' },
         { name: 'Products', url: 'https://gcoman.com/products' },
@@ -260,6 +259,45 @@ const Products = () => {
       ]} />
       <FAQStructuredData faqs={productsFAQs} />
       <SpeakableStructuredData url="https://gcoman.com/products" cssSelector={["h1", "h2", ".speakable"]} />
+      {categoryParam && filteredProducts.length > 0 && (
+        <ItemListStructuredData
+          name={(() => {
+            const categoryTitles: Record<string, string> = {
+              'water-treatment': 'Water Treatment Chemicals — Oman & GCC',
+              'lubricants': 'Industrial Lubricants & Greases — Oman & GCC',
+              'swimming-pool': 'Swimming Pool Chemicals — Oman & GCC',
+              'lab-chemicals': 'Laboratory Chemicals & Reagents — Oman',
+              'oilfield': 'Oilfield & Refinery Chemicals — Oman & GCC',
+              'tank-cleaners': 'Marine & Industrial Tank Cleaners — Oman & GCC',
+              'soap-detergent': 'Soap & Detergent Raw Materials — Oman & GCC',
+              'food-beverage': 'Food & Beverage Grade Chemicals — Oman & GCC',
+              'cooling-water': 'Cooling Water Treatment Chemicals — Oman & GCC',
+              'corrosion-inhibitor': 'Corrosion Inhibitors — Oman & GCC',
+              'ro-chemicals': 'RO Plant Chemicals — Oman & GCC',
+              'solvents': 'Industrial Solvents — Oman & GCC',
+              'inorganic': 'Inorganic Chemicals — Oman & GCC',
+              'construction': 'Construction Chemicals — Oman & GCC',
+              'alcohols': 'Industrial Alcohols — Oman & GCC',
+              'glycols': 'Glycols — Oman & GCC',
+              'ethanolamines': 'Ethanolamines — Oman & GCC',
+              'chlorinated': 'Chlorinated Solvents — Oman & GCC',
+              'lab-equipment': 'Laboratory Equipment — Oman & GCC',
+              'calcium-carbonate': 'Calcium Carbonate — Oman & GCC',
+              'agro': 'Agricultural Chemicals — Oman & GCC',
+              'additives': 'Chemical Additives — Oman & GCC',
+            };
+            return categoryTitles[categoryParam] || `${categoryParam.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} — Global Chemicals LLC Oman`;
+          })()}
+          description={`Product catalogue for ${categoryParam.replace(/-/g, ' ')} chemicals supplied by Global Chemicals LLC in Oman and the GCC region.`}
+          url={`https://gcoman.com/products/${categoryParam}`}
+          items={filteredProducts.map(p => ({
+            id: p.id,
+            title: p.title,
+            url: `https://gcoman.com/products/${p.category}/${p.id}`,
+            description: p.description,
+          }))}
+        />
+      )}
 
       <Navigation />
       <WhatsAppButton />

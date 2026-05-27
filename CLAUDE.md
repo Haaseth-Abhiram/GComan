@@ -105,11 +105,50 @@ See "Deploy chain" above. Without it on Hostinger, every URL serves the homepage
 4. Add an Arabic mirror under the `/ar` route block if the page should be localized.
 5. If the page deserves it, add structured data via [src/components/StructuredData.tsx](src/components/StructuredData.tsx) — every Helmet inside there also needs `defer={false}`.
 
+## Cloudflare Worker (the live routing layer)
+
+`cloudflare-worker.js` at the repo root is the **only routing mechanism that actually fires in production**. Lovable's CDN ignores `_redirects`; Apache's `.htaccess` is never reached because Lovable's CDN sits in front of Hostinger. The Worker intercepts every request at the Cloudflare edge and:
+
+1. 301-redirects all legacy URLs (via `EXACT_REDIRECTS` and `PREFIX_REDIRECTS` maps)
+2. Rewrites clean SPA URLs to `path/index.html` so crawlers get prerendered HTML instead of the homepage shell
+
+**Deploy the Worker:**
+```bash
+export CLOUDFLARE_ACCOUNT_ID=<your-account-id>
+export CLOUDFLARE_API_TOKEN=<your-api-token>
+npm run deploy:cloudflare-worker    # runs: wrangler deploy
+```
+
+**Verify it's working after deploy or DNS change:**
+```bash
+npm run verify:seo-routing
+# All 5 checks must pass and show [worker: prerender-rewrite] on product pages.
+# If worker shows (no header), the DNS nameservers haven't switched to Cloudflare yet.
+```
+
+**Prerequisite — DNS must use your Cloudflare account's nameservers:**
+The Worker only intercepts traffic when gcoman.com's authoritative nameservers are `dion.ns.cloudflare.com` and `jule.ns.cloudflare.com` (your Cloudflare account). Currently they are `ns1/ns2.dns-parking.com`, so the zone shows as `pending` in your Cloudflare dashboard. Until that NS change is made, `npm run deploy:cloudflare-worker` uploads the Worker but traffic bypasses it.
+
+**Before switching nameservers**, add these records in your Cloudflare DNS dashboard so the site stays up:
+- `A` → `gcoman.com` → `185.158.133.1` (proxied, orange cloud)
+- `CNAME` → `www` → `gcoman.com` (proxied, orange cloud)
+
 ## Adding a redirect
 
-Edit BOTH:
-- `public/_redirects` (Netlify format, source of truth, easy to read)
-- `public/.htaccess` (Apache `RewriteRule ^pattern/?$ /target [R=301,L]` — what actually runs on Hostinger)
+Edit ALL THREE:
+- `public/_redirects` (Netlify format, human-readable source of truth)
+- `public/.htaccess` (Apache `RewriteRule ^pattern/?$ /target [R=301,L]` — what actually runs if traffic ever hits Hostinger directly)
+- `cloudflare-worker.js` — add to `EXACT_REDIRECTS` or `PREFIX_REDIRECTS` maps. This is the only layer that actually fires in production. After editing, run `npm run deploy:cloudflare-worker`.
+
+## Product data
+
+Products are split into per-category JSON files under `src/data/products/` (e.g. `water-treatment.json`, `oilfield.json`). `src/data/productLoader.ts` imports them all, maps icon-name strings to Lucide components, and exposes the assembled catalogue. `src/data/products.ts` is a thin re-export shim — **add new products to the JSON files, not that file**.
+
+Each product entry needs at minimum: `id` (slug, must match the URL segment), `title`, `description`, `category` (matches the JSON filename), `iconName` (key in `ICON_MAP`), and `details` (CAS number, long description, applications, etc.). After adding a product, add its canonical URL to `public/sitemap.xml` so it gets prerendered.
+
+`productLoader.ts` wraps every dynamic import in `safeImport()` which auto-retries and force-reloads once on stale-chunk errors (common after a deploy replaces hashed JSON chunks while a user has the old page open).
+
+Blog articles are stored inline in `src/data/blogArticles.ts` as TypeScript — there is no CMS.
 
 ## Supabase
 

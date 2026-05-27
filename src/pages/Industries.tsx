@@ -349,7 +349,7 @@ const Industries = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               {t('industries.title')}
             </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
+            <p className="text-xl text-muted-foreground leading-relaxed speakable">
               {t('industries.heroDesc')}
             </p>
           </div>

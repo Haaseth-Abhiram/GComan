@@ -17,7 +17,31 @@ import soharAluminiumLogo from '@/assets/customers/sohar-aluminium-logo.png';
 import omanLngLogo from '@/assets/customers/oman-lng-logo.png';
 import omifcoLogo from '@/assets/customers/omifco-logo.png';
 import { SEO } from '@/components/SEO';
-import { BreadcrumbStructuredData, ReviewStructuredData } from '@/components/StructuredData';
+import { BreadcrumbStructuredData, ReviewStructuredData, FAQStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
+
+// Customer page FAQs for AI search and rich snippets
+const customerFAQs = [
+  {
+    question: "Which major companies in Oman use Global Chemicals LLC as their chemical supplier?",
+    answer: "Global Chemicals LLC supplies chemicals to leading organizations in Oman including PDO (Petroleum Development Oman), OQ, Occidental Petroleum (Oxy), Oman LNG, OMIFCO, Sohar Aluminium, NAPCO, Arabian Food Industries, Ministry of Health Oman, and many more. Our 200+ active clients span oil & gas, manufacturing, food & beverage, healthcare, and hospitality sectors."
+  },
+  {
+    question: "Is Global Chemicals LLC an approved supplier for PDO and OQ in Oman?",
+    answer: "Yes. Global Chemicals LLC holds JSRS (Joint Supplier Registration System) certification, which is the official qualification system for Oman's oil and gas sector covering PDO, OQ, and international operators. We supply corrosion inhibitors, scale inhibitors, biocides, oilfield chemicals, and related products to PDO and OQ contractors with full technical documentation."
+  },
+  {
+    question: "What is Global Chemicals LLC's customer retention rate?",
+    answer: "Global Chemicals LLC maintains a 98% client retention rate across 200+ active clients. This reflects consistent product quality, reliable on-time delivery, competitive pricing, and responsive technical support. Many of our clients have partnered with us for 5-10 years across sectors including oil & gas, manufacturing, water treatment, and hospitality."
+  },
+  {
+    question: "Can Global Chemicals LLC supply chemicals to GCC companies outside Oman?",
+    answer: "Yes. We export chemicals to companies across the GCC including contractors for ADNOC in UAE (Dubai, Abu Dhabi, Sharjah), Saudi Aramco in Saudi Arabia (Riyadh, Jeddah, Dammam), QatarEnergy in Qatar (Doha, Ras Laffan), Kuwait Petroleum in Kuwait, and Bapco in Bahrain. We provide full export documentation including SDS, CoA, Certificate of Origin, and customs declarations."
+  },
+  {
+    question: "How do I become a customer of Global Chemicals LLC?",
+    answer: "To become a customer, contact us at +968-93754388, email sales@gcoman.com, or fill the inquiry form on our website. Share your chemical requirements, quantities, and delivery location. Our team responds within 24 hours with pricing and availability. For registered suppliers in Oman's oil & gas sector, our JSRS certification streamlines the vendor qualification process."
+  }
+];
 
 // Review structured data using real client sectors — signals E-E-A-T to Google
 const clientReviews = [
@@ -174,7 +198,12 @@ const Customers = () => {
         canonical="https://gcoman.com/customers"
       />
       <ReviewStructuredData reviews={clientReviews} itemReviewed={{ name: "Global Chemicals LLC", type: "Organization" }} />
+      <FAQStructuredData faqs={customerFAQs} />
       <BreadcrumbStructuredData items={breadcrumbItems} />
+      <SpeakableStructuredData
+        url="https://gcoman.com/customers"
+        cssSelector={["h1", "h2", ".speakable"]}
+      />
       <Navigation />
       <WhatsAppButton />
 
@@ -186,7 +215,7 @@ const Customers = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
               Our Valued Customers
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8">
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 speakable">
               Proud to serve leading organizations across Oman and the GCC region with premium chemical solutions and exceptional service
             </p>
           </div>

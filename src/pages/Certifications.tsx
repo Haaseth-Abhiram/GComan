@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import { Shield, Award, CheckCircle2, FileCheck, Globe, Users, Leaf, TrendingUp } from 'lucide-react';
 import { SEO } from '@/components/SEO';
-import { BreadcrumbStructuredData, FAQStructuredData, OrganizationStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
+import { BreadcrumbStructuredData, FAQStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
@@ -226,7 +226,6 @@ const Certifications = () => {
         ogUrl="https://gcoman.com/certifications"
         canonical="https://gcoman.com/certifications"
       />
-      <OrganizationStructuredData />
       <BreadcrumbStructuredData items={breadcrumbItems} />
       <FAQStructuredData faqs={certificationFAQs} />
       <SpeakableStructuredData url="https://gcoman.com/certifications" cssSelector={["h1", "h2", ".speakable"]} />
@@ -247,7 +246,7 @@ const Certifications = () => {
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6">
                 ISO 9001:2015 | JSRS Registered | ICV Compliant
               </p>
-              <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto speakable">
                 Global Chemicals LLC holds the most respected certifications in the chemical industry. Our commitment to quality, safety, and compliance makes us the trusted partner for oil &amp; gas, manufacturing, and industrial sectors across Oman and the GCC region — UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain.
               </p>
             </div>

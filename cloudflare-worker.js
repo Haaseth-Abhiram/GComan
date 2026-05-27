@@ -288,6 +288,9 @@ async function handle(request) {
       if (!headers.has("content-type")) {
         headers.set("content-type", "text/html; charset=utf-8");
       }
+      // Tracing header — confirms this response came from the Worker's prerender
+      // rewrite path (not from Lovable's CDN fallback). Used by verify:seo-routing.
+      headers.set("x-gcoman-worker", "prerender-rewrite");
       return new Response(prerendered.body, {
         status: 200,
         statusText: "OK",

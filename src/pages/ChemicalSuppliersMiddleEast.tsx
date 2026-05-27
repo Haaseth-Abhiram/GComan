@@ -175,7 +175,7 @@ const ChemicalSuppliersMiddleEast = () => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
                 Chemical Exporter from Oman to the Middle East & GCC
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed speakable">
                 Global Chemicals LLC is a leading chemical exporter headquartered in Muscat, Oman, supplying industries across the entire Middle East — UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, Iraq, Jordan, and Egypt. ISO 9001:2015 certified, JSRS registered, with 1,000+ products and full export documentation (CoA, SDS in Arabic & English, Certificate of Origin) ready.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

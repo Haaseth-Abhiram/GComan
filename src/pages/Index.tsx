@@ -10,7 +10,7 @@ import IndustrySelector from '@/components/IndustrySelector';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import QuickActions from '@/components/QuickActions';
 import { SEO } from '@/components/SEO';
-import { OrganizationStructuredData, FAQStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
+import { OrganizationStructuredData, FAQStructuredData, SpeakableStructuredData, WebSiteStructuredData, ServiceStructuredData } from '@/components/StructuredData';
 
 // Homepage FAQs for rich snippets — GCC-wide coverage
 const homepageFAQs = [
@@ -48,6 +48,8 @@ const Index = () => {
         ogUrl="https://gcoman.com/"
         canonical="https://gcoman.com/"
       />
+      <WebSiteStructuredData />
+      <ServiceStructuredData />
       <OrganizationStructuredData includeService={true} />
       <FAQStructuredData faqs={homepageFAQs} />
       <SpeakableStructuredData

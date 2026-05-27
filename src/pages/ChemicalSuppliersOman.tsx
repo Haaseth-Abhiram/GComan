@@ -123,7 +123,7 @@ const ChemicalSuppliersOman = () => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
                 Chemical Supplier in Muscat, Oman
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed speakable">
                 Global Chemicals LLC is Muscat's trusted chemical supplier, providing water treatment chemicals, industrial lubricants, oilfield chemicals, laboratory reagents, and specialty chemicals across Muscat, Sohar, Salalah, Duqm, and the wider GCC region. ISO 9001:2015 certified, JSRS registered, and ICV compliant — with same-day delivery in Muscat and 1,000+ products in stock.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

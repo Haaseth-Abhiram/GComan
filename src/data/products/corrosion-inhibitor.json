@@ -39,7 +39,8 @@
         "Prevents galvanic corrosion",
         "Forms compatible films on all metals",
         "Available in 25kg, 200kg drums, IBCs"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Corrosion_inhibitor"
     }
   },
   {
@@ -82,7 +83,8 @@
         "Effective in aggressive water chemistry",
         "Corrosion rate reduction: >95%",
         "Available in 25kg, 200kg drums, IBCs"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Corrosion_inhibitor"
     }
   },
   {
@@ -125,7 +127,8 @@
         "Easily removable with solvent or detergent",
         "Indoor and outdoor protection grades",
         "Available in 20L, 200L drums, IBCs"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Rust"
     }
   },
   {
@@ -170,7 +173,8 @@
         "Long-term protection (multi-year)",
         "Compatible with glycols",
         "Available in 25kg drums, IBCs"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Sodium_molybdate"
     }
   },
   {
@@ -213,7 +217,8 @@
         "Compatible with treatment chemicals",
         "Economical corrosion control",
         "Available in 25kg, 200kg drums, IBCs, bulk"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Corrosion_inhibitor"
     }
   },
   {
@@ -256,7 +261,8 @@
         "Low foam - compatible with compressors",
         "Protects jackets, coolers, piping",
         "Available in 25kg, 200kg drums, IBCs"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Corrosion_inhibitor"
     }
   },
   {
@@ -302,7 +308,8 @@
         "Environmentally acceptable",
         "Appearance: White crystalline powder",
         "Available in 25kg bags, drums"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Sodium_molybdate"
     }
   },
   {
@@ -363,7 +370,8 @@
           "question": "Can oxygen scavengers be used in closed cooling loop systems?",
           "answer": "Yes. Oxygen scavengers are used in closed cooling water loops to eliminate the oxygen that causes pitting corrosion in pipework, heat exchangers, and chiller circuits. For closed systems — unlike open cooling towers where oxidising biocides are also needed — the primary corrosion mechanism is dissolved oxygen, not scale or biological fouling. After initial system fill and commissioning, a one-time or periodic dose of oxygen scavenger (typically sodium sulphite at 20–50 mg/L residual) along with a film-forming corrosion inhibitor provides effective long-term protection. Closed system oxygen scavenger treatment is particularly important in Oman's chilled water systems where steel pipework is common and the cost of corrosion leak repairs is high."
         }
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Oxygen_scavenger"
     }
   },
   {
@@ -406,7 +414,8 @@
         "Forms corrosion protective films",
         "Simplifies chemical feed",
         "Available in 25kg, 200kg drums, IBCs"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Corrosion_inhibitor"
     }
   },
   {
@@ -450,7 +459,8 @@
         "Minimal makeup requirements",
         "Compatible with glycols",
         "Available in 25kg, 200kg drums, IBCs"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Corrosion_inhibitor"
     }
   }
 ]

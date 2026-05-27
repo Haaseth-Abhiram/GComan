@@ -38,7 +38,8 @@
         "Specific gravity: 1.049 at 20°C",
         "Freezing point: 16-17°C",
         "Available in drums, IBCs, and bulk tankers"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Acetic_acid"
     }
   },
   {
@@ -82,7 +83,8 @@
         "Bead sizes: 3-5mm, 4-6mm, 5-8mm",
         "Regeneration temperature: 150-300°C",
         "Crush strength: >50N"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Aluminium_oxide"
     }
   },
   {
@@ -175,7 +177,8 @@
         "pH (1% solution): 3.5-4.5",
         "Solubility: Highly soluble in water",
         "Available in 25kg bags, drums"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Ammonium_bifluoride"
     }
   },
   {
@@ -224,7 +227,8 @@
           "question": "What is ammonium bisulphite and what is its application in oilfield water treatment?",
           "answer": "Ammonium bisulphite (ABS, NH₄HSO₃) is an oxygen scavenger used in Oman's oilfield water injection systems to remove dissolved oxygen from injection water before it is pumped into reservoirs. Dissolved oxygen is highly corrosive — even at concentrations of 50–100 ppb, it accelerates pitting corrosion of carbon steel pipelines, flowlines, and injection wellbores, causing premature failure. At typical injection water oxygen levels of 0.5–2.0 mg/L entering the treatment train, ammonium bisulphite is dosed at a 3:1–5:1 molar excess to ensure rapid and complete oxygen removal. The reaction is: NH₄HSO₃ + ½O₂ → NH₄HSO₄. Residual ABS concentration in treated water is typically maintained at 5–20 ppm as measured by colorimetric test kits. Ammonium bisulphite is preferred over sodium sulphite for Oman oilfield applications because of its higher reactivity at ambient temperature, lower pH effect, and lower cost per unit of oxygen removed. Global Chemicals LLC supplies liquid ammonium bisulphite for Oman water injection operations."
         }
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Ammonium_bisulfite"
     }
   },
   {
@@ -267,7 +271,8 @@
         "pH (10% solution): 4.5-6.0",
         "Moisture content: <0.5%",
         "Packaging: 25kg, 50kg bags"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Ammonium_chloride"
     }
   },
   {
@@ -356,7 +361,8 @@
         "Moisture content: <12%",
         "Mesh size: 200 mesh minimum",
         "Packaging: 25kg bags, bulk bags"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Bentonite"
     }
   },
   {
@@ -494,7 +500,8 @@
         "Specific gravity: 0.902 at 20°C",
         "Slow evaporation - extended working time",
         "Available in drums, IBCs, bulk"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/2-Butoxyethanol"
     }
   },
   {
@@ -539,7 +546,8 @@
         "Low corrosion with proper inhibitors",
         "Temperature stable up to 200°C",
         "Available in bags, drums, IBCs, bulk"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Calcium_bromide"
     }
   },
   {
@@ -583,7 +591,8 @@
         "Non-toxic - safe for food contact",
         "Meets FDA/USP specifications",
         "Packaging: 25kg bags, drums"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Citric_acid"
     }
   },
   {
@@ -680,7 +689,8 @@
         "Low corrosion compared to mineral acids",
         "Chelating properties for iron control",
         "Available in drums, IBCs, bulk"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Citric_acid"
     }
   },
   {
@@ -770,7 +780,8 @@
         "Compatible with most drilling fluid additives",
         "Effective in pH 7-11 range",
         "Packaging: 25kg bags, bulk bags"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Carboxymethyl_cellulose"
     }
   },
   {
@@ -816,7 +827,8 @@
         "Non-toxic, non-flammable",
         "Purity: >99.5% reagent grade urea",
         "Available in 10L, 20L, 200L drums, IBCs, bulk"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Diesel_exhaust_fluid"
     }
   },
   {
@@ -869,7 +881,8 @@
           "question": "How are corrosion inhibitors applied in oil and gas pipelines in Oman?",
           "answer": "Corrosion inhibitors in Oman's oil and gas pipelines are applied by three primary methods: continuous injection (CI) via chemical injection quills installed at wellheads, manifolds, or platform injection points, where inhibitor is dosed proportional to production rate; batch treatment (pigging) where inhibitor solution is pigged through the pipeline as a slug to re-film internal surfaces — used for long tie-back lines or when continuous injection is impractical; and fall-back / squeeze treatment into the formation or tubing for downhole corrosion control. Continuous injection rates are calculated to maintain a minimum effective inhibitor concentration at the most corrosive point in the system (typically highest water cut, lowest temperature, highest CO₂ partial pressure). In PDO and OQ pipeline systems, inhibitor injection rates are monitored against corrosion coupons, ER (electrical resistance) probes, and chemical residual analysis to confirm protection. Global Chemicals LLC provides inhibitor design, field monitoring, and chemical supply for Oman's upstream and midstream operations."
         }
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Corrosion_inhibitor"
     }
   },
   {
@@ -916,7 +929,8 @@
         "Typical solution strength: 25-30% DEA",
         "Moderate heat of regeneration",
         "Available in drums, IBCs, ISO tanks, bulk"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Diethanolamine"
     }
   },
   {
@@ -1007,7 +1021,8 @@
         "Biodegradable formulations available",
         "Typical dilution: 1:5 to 1:20",
         "Available in 5L, 20L, 200L drums"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Cleaning_agent"
     }
   },
   {
@@ -1057,7 +1072,8 @@
           "question": "What scale types are found in oilfield equipment in Oman and how are they removed?",
           "answer": "Oman's oil and gas production equipment experiences several distinct scale types depending on reservoir and produced water chemistry. Calcium carbonate (CaCO₃) is the most common scale in Oman's carbonate reservoir formations — it deposits in tubing, wellheads, separators, and heat exchangers as produced water pressure drops and CO₂ degasses, shifting equilibrium towards precipitation. It is effectively dissolved by hydrochloric acid (5–15%) or inhibited acid blends. Calcium sulphate (CaSO₄) scale (anhydrite, gypsum) is harder to dissolve and occurs where reservoir brines mix with sulphate-bearing injection water — EDTA or DTPA chelant treatments are required. Barium sulphate (BaSO₄) is the most problematic scale in Oman's commingled production wells — it is nearly insoluble in any standard acid and requires mechanical removal (coiled tubing milling) or inhibition before it forms. Iron sulphide (FeS) scale occurs in sour wells and requires specialised acid dissolvers. Global Chemicals LLC supplies descalants for all these scale types with field application engineering support."
         }
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Descaling_agent"
     }
   },
   {
@@ -1242,7 +1258,8 @@
         "Complete reaction to N2 and H2O",
         "No solid residue formation",
         "Available in drums, IBCs with safety packaging"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Hydrazine"
     }
   },
   {
@@ -1288,7 +1305,8 @@
         "Cement additive dosage: 0.5-3% BWOC",
         "High temperature stability",
         "Packaging: 25kg bags, bulk bags"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Magnesium_oxide"
     }
   },
   {
@@ -1694,7 +1712,8 @@
         "Analytical grade available",
         "USP/pharmaceutical grade available",
         "Packaging: 100g, 500g, 1kg bottles, 25kg drums"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Potassium_iodide"
     }
   },
   {
@@ -1737,7 +1756,8 @@
         "Regeneration temperature: 120-180°C",
         "Reusable after regeneration",
         "Packaging: 1kg, 5kg, 25kg bags, drums"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Silica_gel"
     }
   },
   {
@@ -1781,7 +1801,8 @@
         "Reusable after regeneration",
         "EU compliant - safer alternative to blue gel",
         "Packaging: 1kg, 5kg, 25kg bags, drums"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Silica_gel"
     }
   },
   {
@@ -1825,7 +1846,8 @@
         "Regeneration temperature: 120-180°C",
         "Reusable multiple times",
         "Packaging: 25kg bags, drums, bulk bags"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Silica_gel"
     }
   },
   {
@@ -1870,7 +1892,8 @@
         "Typical dosage: 0.5-2 lb/bbl in drilling fluids",
         "Low dust, easy handling",
         "Packaging: 25kg, 50kg bags, bulk bags"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Sodium_carbonate"
     }
   },
   {
@@ -1914,7 +1937,8 @@
         "Particle size: Fine - rapid dissolution",
         "High surface area for fast mixing",
         "Packaging: 25kg, 50kg bags, bulk bags"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Sodium_carbonate"
     }
   },
   {
@@ -2048,7 +2072,8 @@
         "Dosage: 2-3 parts per 1 part chlorine",
         "Complete neutralization in minutes",
         "Available in 25L, 60L, 200L drums, IBCs"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Sodium_thiosulfate"
     }
   },
   {
@@ -2092,7 +2117,8 @@
         "Dissolves rapidly - ready to use",
         "Long shelf life when stored properly",
         "Packaging: 1kg, 5kg, 25kg bags"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Sodium_thiosulfate"
     }
   },
   {
@@ -2136,7 +2162,8 @@
         "Excellent solvency for oils and greases",
         "Available grades: Light, medium, heavy",
         "Packaging: 20L, 200L drums, IBCs, bulk"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Naphtha"
     }
   },
   {
@@ -2179,7 +2206,8 @@
         "Surfactant types: Anionic, nonionic, cationic",
         "Compatible with most drilling fluid systems",
         "Available in drums, IBCs, bulk"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Sodium_silicate"
     }
   }
 ]

@@ -80,6 +80,7 @@ const Sitemap = () => {
         <meta property="og:url" content="https://gcoman.com/sitemap" />
         <meta property="og:image" content="https://gcoman.com/og-image.jpg" />
         <link rel="canonical" href="https://gcoman.com/sitemap" />
+        <meta name="robots" content="noindex, follow" />
       </Helmet>
       <Navigation />
       <WhatsAppButton />

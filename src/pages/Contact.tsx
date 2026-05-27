@@ -13,7 +13,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { useToast } from '@/hooks/use-toast';
 import { z } from 'zod';
 import { SEO } from '@/components/SEO';
-import { FAQStructuredData, BreadcrumbStructuredData } from '@/components/StructuredData';
+import { FAQStructuredData, BreadcrumbStructuredData, ContactPageStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
 import { trackFormSubmission, trackContactClick } from '@/components/GoogleAnalytics';
 import { PhoneInput } from 'react-international-phone';
 import 'react-international-phone/style.css';
@@ -188,8 +188,13 @@ const Contact = () => {
         ogUrl="https://gcoman.com/contact"
         canonical="https://gcoman.com/contact"
       />
+      <ContactPageStructuredData />
       <FAQStructuredData faqs={contactFAQs} />
       <BreadcrumbStructuredData items={breadcrumbItems} />
+      <SpeakableStructuredData
+        url="https://gcoman.com/contact"
+        cssSelector={["h1", "h2", ".speakable"]}
+      />
       <Navigation />
       <WhatsAppButton />
 
@@ -201,7 +206,7 @@ const Contact = () => {
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 sm:mb-6">
               {t('contact.title')}
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground speakable">
               {t('contact.description')}
             </p>
           </div>

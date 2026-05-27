@@ -51,7 +51,8 @@
           "question": "How should epoxy coatings be applied in Oman's hot climate?",
           "answer": "Epoxy coating application in Oman's hot climate requires careful temperature management because high temperatures dramatically accelerate pot life and cure speed. Standard two-component epoxy coatings have a pot life of 30–60 minutes at 23°C; at Oman's summer ambient temperatures of 38–50°C, pot life can shorten to 10–20 minutes, making large-volume mixing impractical. Best practices for Oman: mix only small batches (2–5 kg) to complete within pot life; begin work in the early morning (5:00–9:00 AM) when surface temperatures are lowest; avoid application when the steel surface temperature exceeds 50°C (measure with surface thermometer); ensure the surface temperature is at least 3°C above the dew point to prevent moisture condensation on freshly applied coating; and use a heat-stabilised epoxy formulation where summer application is unavoidable. Film thickness must be verified wet (wet film gauge) and dry (Elcometer DFT meter) to confirm the specified DFT is achieved. Relative humidity above 85% affects epoxy cure — although less common in Oman's interior, coastal areas during the Khareef monsoon period in Salalah can reach high humidity. Global Chemicals LLC provides application support for all supplied epoxy systems."
         }
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Epoxy"
     }
   },
   {
@@ -96,7 +97,8 @@
         "Water-repellent properties",
         "Food-grade options available",
         "Available in 200L drums, bulk"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Mineral_oil"
     }
   },
   {
@@ -146,7 +148,8 @@
           "question": "What is a polymer bonding agent and when is it used in Oman construction?",
           "answer": "A polymer bonding agent (typically SBR — styrene-butadiene rubber latex, or acrylic polymer) is a liquid chemical additive applied to existing concrete or masonry surfaces before applying new render, screed, or repair mortar to promote adhesion between the old and new substrates. Without a bonding agent, new cement-based material applied to dense, smooth, or contaminated old concrete tends to debond (delaminate) within months as differential movement and thermal cycling cause interface failure. In Oman's hot climate, where daily temperature swings of 15–25°C create significant thermal expansion and contraction in concrete structures, bonding agent application is standard practice for all concrete repair and overlay work. Application method: the bonding agent (diluted SBR latex 1:1 with water for most applications) is brushed onto the prepared substrate and allowed to become 'tacky' (not dry) before applying the fresh concrete overlay. The polymer chains from the bonding agent penetrate both surfaces and form a physical and chemical bond across the interface. Global Chemicals LLC supplies SBR and acrylic polymer bonding agents for Oman's construction repair and maintenance sector."
         }
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Styrene-butadiene"
     }
   },
   {
@@ -190,7 +193,8 @@
         "Low shrinkage formulation",
         "Excellent adhesion to concrete",
         "Available in 25kg bags"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Polymer_concrete"
     }
   },
   {
@@ -234,7 +238,8 @@
         "Extends formwork life up to 100 uses",
         "Easy concrete demolding",
         "Available in 20L, 200L drums"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Mold_release_agent"
     }
   }
 ]

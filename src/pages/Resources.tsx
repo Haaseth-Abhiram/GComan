@@ -42,7 +42,7 @@ import BrochureProductsList from '@/assets/brochures/Global-Chemicals-Products-L
 import { DownloadGateDialog } from '@/components/DownloadGateDialog';
 import { PDFViewerDialog } from '@/components/PDFViewerDialog';
 import { SEO } from '@/components/SEO';
-import { BreadcrumbStructuredData, ArticleStructuredData, FAQStructuredData } from '@/components/StructuredData';
+import { BreadcrumbStructuredData, ArticleStructuredData, FAQStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
 import { Link } from 'react-router-dom';
 import { blogArticles, articleCategories as blogCategories, BlogArticle } from '@/data/blogArticles';
 import { trackDownload } from '@/components/GoogleAnalytics';
@@ -1188,6 +1188,10 @@ const Resources = () => {
         canonical="https://gcoman.com/resources"
       />
       <BreadcrumbStructuredData items={breadcrumbItems} />
+      <SpeakableStructuredData
+        url="https://gcoman.com/resources"
+        cssSelector={["h1", "h2", ".speakable"]}
+      />
       <Navigation />
       <WhatsAppButton />
 
@@ -1198,7 +1202,7 @@ const Resources = () => {
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 sm:mb-6 px-4">
               Resources & Insights
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 px-4">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 px-4 speakable">
               Access downloadable resources, industry news, technical guides, and expert insights
             </p>
             

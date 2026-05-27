@@ -39,7 +39,8 @@
         "Food-grade formulation available",
         "Easy drain and restart procedure",
         "Available in 25kg, 200kg drums, IBCs"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Passivation_(chemistry)"
     }
   },
   {
@@ -84,7 +85,8 @@
         "Temperature: 35-40°C for best results",
         "Food-grade formulation available",
         "Available in 25kg, 200kg drums, IBCs"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Citric_acid"
     }
   },
   {
@@ -172,7 +174,8 @@
         "Compatible with polyamide membranes",
         "Includes surfactants and dispersants",
         "Available in 25kg, 200kg drums, IBCs"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Sodium_hydroxide"
     }
   },
   {
@@ -280,7 +283,8 @@
           "question": "What happens if RO antiscalant is under-dosed or stops being dosed?",
           "answer": "Under-dosing or cessation of RO antiscalant dosing causes rapid scale formation on membranes, typically within hours to days depending on the water chemistry and recovery rate. Early indicators include rising feed-to-reject differential pressure, declining normalised permeate flow, and increasing salt passage. Severe scaling can cause irreversible compaction of membrane fibres and permanent flux loss that cannot be restored by chemical cleaning. In Oman's SWRO plants treating high-sulphate seawater, calcium sulphate scale is particularly dangerous because it is poorly soluble even in acid cleaning solutions. Antiscalant dosing pump failure alarms and low-level tank alarms are therefore critical safety controls in Oman's desalination plant SCADA systems. Global Chemicals LLC recommends maintaining minimum 30 days' antiscalant stock on-site at all times."
         }
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Scale_inhibitor"
     }
   },
   {
@@ -366,7 +370,8 @@
         "Silica scale inhibition up to 200 ppm",
         "NSF/ANSI 60 certified",
         "Available in 25kg, 200kg drums, IBCs, bulk"
-      ]
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Scale_inhibitor"
     }
   }
 ]
