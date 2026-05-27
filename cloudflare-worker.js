@@ -26,7 +26,7 @@
 // 301 redirect map — exact path (no trailing slash) → destination path
 // Sourced from public/_redirects; kept here because Lovable's CDN ignores _redirects
 // ---------------------------------------------------------------------------
-const EXACT_REDIRECTS = new Map([
+const LEGACY_REDIRECTS = new Map([
   // Old /products/acids/* → new categories
   ["/products/acids/citric-acid",       "/products/water-treatment/citric-acid-anhydrous"],
   ["/products/acids/acetic-acid",       "/products/oilfield/acetic-acid"],
@@ -171,25 +171,39 @@ const EXACT_REDIRECTS = new Map([
 ]);
 
 // Wildcard prefix redirects — checked after exact-match fails.
-// Format: [pathPrefix, destination] — destination null = strip prefix only.
-const PREFIX_REDIRECTS = [
-  ["/products/acids/",            "/products"],
-  ["/products/alkalis/",          "/products"],
-  ["/products/salts/",            "/products"],
-  ["/products/oxidizers/",        "/products"],
-  ["/2021/",                      "/blog"],
-  ["/2025/",                      "/blog"],
-  ["/category/",                  "/blog"],
-  ["/tag/",                       "/blog"],
-  ["/author/",                    "/blog"],
-  ["/team-member/",               "/about"],
-];
+const LEGACY_PREFIX_REDIRECTS = new Map([
+  ["/products/acids",    "/products"],
+  ["/products/alkalis",  "/products"],
+  ["/products/salts",    "/products"],
+  ["/products/oxidizers","/products"],
+  ["/2021",              "/blog"],
+  ["/2025",              "/blog"],
+  ["/category",          "/blog"],
+  ["/tag",               "/blog"],
+  ["/author",            "/blog"],
+  ["/team-member",       "/about"],
+]);
 
 // ---------------------------------------------------------------------------
 
-addEventListener("fetch", (event) => {
-  event.respondWith(handle(event.request));
-});
+function withWorkerHeader(response, mode, extraHeaders = {}) {
+  const headers = new Headers(response.headers);
+  headers.set("x-gcoman-worker", mode);
+  for (const [key, value] of Object.entries(extraHeaders)) {
+    headers.set(key, value);
+  }
+  return new Response(response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers,
+  });
+}
+
+export default {
+  async fetch(request) {
+    return handle(request);
+  },
+};
 
 async function handle(request) {
   const url = new URL(request.url);
@@ -203,53 +217,59 @@ async function handle(request) {
 
   // www → non-www (keeps path and query intact).
   if (url.hostname === "www.gcoman.com") {
-    url.hostname = "gcoman.com";
-    return Response.redirect(url.toString(), 301);
+    const redirectUrl = new URL(url.toString());
+    redirectUrl.hostname = "gcoman.com";
+    return Response.redirect(redirectUrl.toString(), 301);
+  }
+
+  // Pass through root — origin already serves the correct homepage there.
+  if (pathname === "/" || pathname === "") {
+    return withWorkerHeader(await fetch(request), "root-passthrough");
   }
 
   // Normalize: strip trailing slash for lookup (except root "/").
-  const normalized = pathname.length > 1 && pathname.endsWith("/")
-    ? pathname.slice(0, -1)
-    : pathname;
+  const normalizedPath = pathname.length > 1 ? pathname.replace(/\/+$/, "") : pathname;
 
   // ------------------------------------------------------------------
   // Step 1: Exact 301 redirect
   // ------------------------------------------------------------------
-  const exactTarget = EXACT_REDIRECTS.get(normalized);
-  if (exactTarget) {
-    url.pathname = exactTarget;
-    return Response.redirect(url.toString(), 301);
+  const legacyTarget = LEGACY_REDIRECTS.get(normalizedPath);
+  if (legacyTarget) {
+    const redirectUrl = new URL(url.toString());
+    redirectUrl.hostname = "gcoman.com";
+    redirectUrl.pathname = legacyTarget;
+    redirectUrl.search = "";
+    return Response.redirect(redirectUrl.toString(), 301);
   }
 
   // ------------------------------------------------------------------
   // Step 2: /en/* → strip /en prefix (English is the default, no prefix)
   // ------------------------------------------------------------------
-  if (normalized === "/en" || normalized.startsWith("/en/")) {
-    url.pathname = normalized === "/en" ? "/" : normalized.slice(3);
-    return Response.redirect(url.toString(), 301);
+  if (normalizedPath === "/en" || normalizedPath.startsWith("/en/")) {
+    const redirectUrl = new URL(url.toString());
+    redirectUrl.pathname = normalizedPath === "/en" ? "/" : normalizedPath.slice(3);
+    return Response.redirect(redirectUrl.toString(), 301);
   }
 
   // ------------------------------------------------------------------
   // Step 3: Wildcard prefix 301 redirects
   // ------------------------------------------------------------------
-  for (const [prefix, target] of PREFIX_REDIRECTS) {
-    if (normalized.startsWith(prefix) && target) {
-      url.pathname = target;
-      return Response.redirect(url.toString(), 301);
+  for (const [prefix, target] of LEGACY_PREFIX_REDIRECTS) {
+    if (normalizedPath === prefix || normalizedPath.startsWith(`${prefix}/`)) {
+      const redirectUrl = new URL(url.toString());
+      redirectUrl.hostname = "gcoman.com";
+      redirectUrl.pathname = target;
+      redirectUrl.search = "";
+      return Response.redirect(redirectUrl.toString(), 301);
     }
   }
 
   // ------------------------------------------------------------------
-  // Step 4: Pass-through for root, static assets, and special paths
+  // Step 4: Pass-through for static assets
   // ------------------------------------------------------------------
-  if (pathname === "/" || pathname === "") {
-    return fetch(request);
-  }
-
   const lastSegment = pathname.split("/").pop() || "";
   if (lastSegment.includes(".")) {
-    // Static file (JS, CSS, images, sitemap.xml, robots.txt, etc.)
-    return fetch(request);
+    return withWorkerHeader(await fetch(request), "asset-passthrough");
   }
 
   if (
@@ -258,7 +278,7 @@ async function handle(request) {
     pathname.startsWith("/admin") ||
     pathname.startsWith("/login")
   ) {
-    return fetch(request);
+    return withWorkerHeader(await fetch(request), "app-passthrough");
   }
 
   // ------------------------------------------------------------------
@@ -285,12 +305,11 @@ async function handle(request) {
 
     if (prerendered.status === 200) {
       const headers = new Headers(prerendered.headers);
+      headers.set("x-gcoman-worker", "prerender-rewrite");
+      headers.set("x-gcoman-worker-rewrite", rewrittenPath);
       if (!headers.has("content-type")) {
         headers.set("content-type", "text/html; charset=utf-8");
       }
-      // Tracing header — confirms this response came from the Worker's prerender
-      // rewrite path (not from Lovable's CDN fallback). Used by verify:seo-routing.
-      headers.set("x-gcoman-worker", "prerender-rewrite");
       return new Response(prerendered.body, {
         status: 200,
         statusText: "OK",
@@ -302,5 +321,5 @@ async function handle(request) {
   }
 
   // SPA shell fallback (handles /ar/* routes, unknown paths, etc.)
-  return fetch(request);
+  return withWorkerHeader(await fetch(request), "fallback-origin");
 }

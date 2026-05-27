@@ -221,7 +221,18 @@ Options -Indexes
   RewriteCond %{REQUEST_FILENAME}/index.html -f
   RewriteRule ^(.+)$ /$1/index.html [L]
 
-  # 3. SPA fallback for genuinely unknown routes — React Router handles 404 UI.
+  # 3. Return 404 for <path>/index.html subrequests when the prerendered file
+  #    doesn't exist. The Cloudflare Worker (cloudflare-worker.js) fetches
+  #    <path>/index.html to check for prerendered content; without this rule
+  #    Apache falls through to the SPA shell with a 200, and the Worker
+  #    mistakes it for the prerendered page, serving homepage HTML for every
+  #    route. With a 404 the Worker correctly falls back to the SPA shell
+  #    via its own final fetch(request) call.
+  RewriteCond %{REQUEST_URI} /index\.html$
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^ - [R=404,L]
+
+  # 4. SPA fallback for genuinely unknown routes — React Router handles 404 UI.
   RewriteRule ^ /index.html [L]
 </IfModule>
 

@@ -585,5 +585,28 @@ https://www.gcoman.com/*      https://gcoman.com/:splat  301!
 /resources                                                           /resources/index.html                                                           200
 /sitemap                                                             /sitemap/index.html                                                             200
 
+# Soft 404 fixes — GSC reported pages (2026-05-20)
+/service/oil-gas-1/ /industries/oil-gas 301
+/service/construction-1/ /industries/construction 301
+/service/construction/ /industries/construction 301
+/service-category/lab-equipment/ /industries/laboratory 301
+/service/alcohols/ /products 301
+/chemicals/amman /chemicals-in-amman 301
+/ar/chemicals/kuwait-city /ar/chemicals 301
+/blog/chemical-exporter-oman-uae-dubai /blog 301
+/blog/caustic-soda-supplier-oman /blog 301
+/products/lubricants/mobil-lubricants /products/lubricants 301
+/alcohols/ /products 301
+/service/laboratories/ /industries/laboratory 301
+/service/inorganic-chemicals/ /products 301
+/service/glycols/ /products 301
+/service/soap-detergent-chemicals/ /products 301
+/service/agro-products-2/ /products 301
+/service/lab-equipment/ /industries/laboratory 301
+/service/lubricants-greases-1/ /products/lubricants 301
+/service/lab-chemical/ /industries/laboratory 301
+/service/ethanolamines/ /products 301
+/service/water-treatment-2/ /products/water-treatment 301
+
 # SPA fallback (must be last)
 /*  /index.html  200
