@@ -16,7 +16,7 @@ const Terms = () => {
         <meta property="og:title" content="Terms of Service | Global Chemicals LLC" />
         <meta property="og:description" content="Terms and conditions for Global Chemicals LLC. Review our service terms and legal agreements." />
         <meta property="og:url" content="https://gcoman.com/terms" />
-        <meta property="og:image" content="https://gcoman.com/og-image.jpg" />
+        <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/KCdCgzQqlrUlZx0GJf8ZTPlKH1p2/social-images/social-1761453031792-resize-17607541312075170240GlobalChemicalsLLCLogoPNG.png" />
         <link rel="canonical" href="https://gcoman.com/terms" />
       </Helmet>
       <Navigation />

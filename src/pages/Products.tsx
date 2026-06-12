@@ -1,12 +1,14 @@
 import { useState, useMemo, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { loadProductsByCategory, loadAllProducts } from '@/data/productLoader';
+import { loadProductsByCategory, loadAllProducts, TOTAL_PRODUCTS, ALL_CATEGORIES } from '@/data/productLoader';
+import type { Product } from '@/data/productTypes';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import { Beaker, Droplets, Wrench, Zap, FlaskConical, TestTube, Factory, Building2, Wheat, Microscope, Sparkles, FlaskRound, Flame, Wind, Wine, ChevronRight, Shield, SprayCan, Search, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { useParams } from 'react-router-dom';
+import { useParams, Link, useLocation } from 'react-router-dom';
+import { getLangPrefixFromPath, withLangPrefix } from '@/lib/langRouting';
 import { AISearchDialog } from '@/components/AISearchDialog';
 import { ProductCard } from '@/components/products/ProductCard';
 import { SEO } from '@/components/SEO';
@@ -19,7 +21,7 @@ import { Button } from '@/components/ui/button';
 const productsFAQs = [
   {
     question: "What chemical products does Global Chemicals LLC supply in Oman?",
-    answer: "Global Chemicals LLC supplies 263+ industrial and specialty chemicals in Oman including water treatment chemicals (PAC, caustic soda, calcium hypochlorite, antiscalants), industrial lubricants (Shell, Mobil, Castrol), laboratory chemicals (AR grade, HPLC solvents), oilfield chemicals (corrosion inhibitors, demulsifiers, H2S scavengers), swimming pool chemicals, food-grade chemicals, RO chemicals, and construction chemicals."
+    answer: `Global Chemicals LLC supplies ${TOTAL_PRODUCTS}+ industrial and specialty chemicals in Oman including water treatment chemicals (PAC, caustic soda, calcium hypochlorite, antiscalants), industrial lubricants (Shell, Mobil, Castrol), laboratory chemicals (AR grade, HPLC solvents), oilfield chemicals (corrosion inhibitors, demulsifiers, H2S scavengers), swimming pool chemicals, food-grade chemicals, RO chemicals, and construction chemicals.`
   },
   {
     question: "Can I buy chemicals in bulk from Global Chemicals LLC in Muscat?",
@@ -39,29 +41,19 @@ const productsFAQs = [
   }
 ];
 
-interface Product {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  icon: any;
-  image?: string;
-  details?: {
-    formula?: string;
-    fullDescription?: string;
-    applications?: string[];
-    casNumber?: string;
-    alternativeNames?: string[];
-    technicalSpecs?: string[];
-    seoKeywords?: string[];
-    longDescription?: string;
-  };
-}
-
-
 const Products = () => {
   const { t } = useTranslation();
   const { category: categoryParam } = useParams<{ category?: string }>();
+  const location = useLocation();
+  const langPrefix = getLangPrefixFromPath(location.pathname);
+
+  // A /products/:category URL whose segment isn't a real category (e.g.
+  // /products/foobar) must not render as an indexable, self-canonical soft-404.
+  const isUnknownCategory = !!categoryParam && !ALL_CATEGORIES.includes(categoryParam);
+
+  // Build the crawlable URL for a sidebar category. 'all' → the products root.
+  const categoryHref = (id: string) =>
+    withLangPrefix(langPrefix, id === 'all' ? '/products' : `/products/${id}`);
 
   const [activeCategory, setActiveCategory] = useState(categoryParam || 'all');
   const [searchQuery, setSearchQuery] = useState('');
@@ -69,16 +61,23 @@ const Products = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [productsLoading, setProductsLoading] = useState(true);
 
+  // Search must span the whole catalogue. On a category URL we'd otherwise only
+  // have that one category loaded, so a query for a sibling-category product
+  // (e.g. "PAC" while on /products/oilfield) would wrongly return nothing even
+  // though the UI promises results "across all categories".
+  const hasSearch = searchQuery.trim().length > 0;
+
   // Sync URL category param → active filter when navigating between category routes
   useEffect(() => {
     setActiveCategory(categoryParam || 'all');
   }, [categoryParam]);
 
-  // Lazy-load products: only the active category (or all if no filter)
+  // Lazy-load products: the active category when browsing, or the full catalogue
+  // when searching (so cross-category search actually works) or on /products.
   useEffect(() => {
     let cancelled = false;
     setProductsLoading(true);
-    const loader = categoryParam
+    const loader = categoryParam && !hasSearch
       ? loadProductsByCategory(categoryParam)
       : loadAllProducts();
     loader
@@ -96,7 +95,7 @@ const Products = () => {
         setProductsLoading(false);
       });
     return () => { cancelled = true; };
-  }, [categoryParam]);
+  }, [categoryParam, hasSearch]);
 
   const handleSearch = (value: string) => {
     setSearchQuery(value);
@@ -249,8 +248,9 @@ const Products = () => {
         keywords="water treatment chemicals Oman UAE, PAC Oman, caustic soda GCC, calcium hypochlorite Middle East, industrial chemicals Muscat Dubai Riyadh, laboratory chemicals Oman, Shell lubricants UAE, Mobil oils Saudi Arabia, chemical supplier GCC, chemicals Dubai, Riyadh chemicals, industrial lubricants Oman, RO chemicals UAE, cooling tower chemicals Middle East, swimming pool chemicals GCC, chemical exporter Oman"
         ogTitle={activeCategory !== 'all' ? `${activeCategory.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} | Global Chemicals LLC Oman & GCC` : 'Chemical Products | Industrial Chemicals Oman & Middle East | Global Chemicals LLC'}
         ogDescription="Leading chemical supplier in Oman exporting to UAE, Saudi Arabia, Qatar, Kuwait & Bahrain. Browse our complete catalog of water treatment chemicals, industrial lubricants, and specialty chemicals."
-        ogUrl={categoryParam ? `https://gcoman.com/products/${categoryParam}` : 'https://gcoman.com/products'}
-        canonical={categoryParam ? `https://gcoman.com/products/${categoryParam}` : 'https://gcoman.com/products'}
+        ogUrl={categoryParam && !isUnknownCategory ? `https://gcoman.com/products/${categoryParam}` : 'https://gcoman.com/products'}
+        canonical={categoryParam && !isUnknownCategory ? `https://gcoman.com/products/${categoryParam}` : 'https://gcoman.com/products'}
+        noIndex={isUnknownCategory}
       />
       <BreadcrumbStructuredData items={[
         { name: 'Home', url: 'https://gcoman.com/' },
@@ -491,10 +491,16 @@ const Products = () => {
                     {categories.map((category) => {
                       const Icon = category.icon;
                       const isActive = activeCategory === category.id;
+                      // Real <Link>s to /products/:category so crawlers can reach
+                      // every category landing page and filtered views are
+                      // shareable. Clearing the query keeps the destination from
+                      // opening under a stale cross-category search.
                       return (
-                        <button
+                        <Link
                           key={category.id}
-                          onClick={() => setActiveCategory(category.id)}
+                          to={categoryHref(category.id)}
+                          onClick={clearSearch}
+                          aria-current={isActive ? 'page' : undefined}
                           className={cn(
                             'w-full flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2 sm:py-3 rounded-lg text-left transition-all group',
                             isActive
@@ -505,7 +511,7 @@ const Products = () => {
                           <Icon className={cn('w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0', isActive ? 'text-primary-foreground' : 'text-primary')} />
                           <span className="flex-1 text-xs sm:text-sm font-medium">{category.name}</span>
                           <ChevronRight className={cn('w-3 h-3 sm:w-4 sm:h-4 transition-transform', isActive ? 'translate-x-0' : '-translate-x-1 opacity-0 group-hover:translate-x-0 group-hover:opacity-100')} />
-                        </button>
+                        </Link>
                       );
                     })}
                   </nav>
@@ -521,44 +527,59 @@ const Products = () => {
                 </div>
               </aside>
 
-              {/* Main Content - Product Grid */}
-              <main className="flex-1 min-w-0">
-                <div className="mb-4 sm:mb-6">
-                  <h2 className="text-xl sm:text-2xl font-bold text-foreground">
-                    {searchQuery.trim()
-                      ? `Search results`
-                      : (categories.find((c) => c.id === activeCategory)?.name || t('products.allProducts'))}
-                  </h2>
-                  <p className="text-xs sm:text-sm text-muted-foreground mt-1">
-                    {filteredProducts.length} {t('products.productsAvailable')} · {t('products.tapToViewDetails')}
-                  </p>
-                </div>
-
-                {productsLoading ? (
+              {/* Product Grid — a plain <div>, not <main>: the page already has a
+                  single <main id="main-content"> landmark wrapping this section. */}
+              <div className="flex-1 min-w-0">
+                {isUnknownCategory ? (
                   <div className="text-center py-16">
-                    <p className="text-muted-foreground text-lg">{t('common.loading') || 'Loading products…'}</p>
+                    <h2 className="text-2xl font-bold text-foreground mb-3">Category not found</h2>
+                    <p className="text-muted-foreground mb-6">
+                      That product category doesn't exist. Browse our full catalogue instead.
+                    </p>
+                    <Button asChild>
+                      <Link to={withLangPrefix(langPrefix, '/products')}>Browse all products</Link>
+                    </Button>
                   </div>
                 ) : (
                   <>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6">
-                      {filteredProducts.map((product) => (
-                        <ProductCard
-                          key={product.id}
-                          product={product}
-                        />
-                      ))}
+                    <div className="mb-4 sm:mb-6">
+                      <h2 className="text-xl sm:text-2xl font-bold text-foreground">
+                        {searchQuery.trim()
+                          ? `Search results`
+                          : (categories.find((c) => c.id === activeCategory)?.name || t('products.allProducts'))}
+                      </h2>
+                      <p className="text-xs sm:text-sm text-muted-foreground mt-1">
+                        {filteredProducts.length} {t('products.productsAvailable')} · {t('products.tapToViewDetails')}
+                      </p>
                     </div>
 
-                    {filteredProducts.length === 0 && (
+                    {productsLoading ? (
                       <div className="text-center py-16">
-                        <p className="text-muted-foreground text-lg">
-                          {t('products.noProductsAvailable')}
-                        </p>
+                        <p className="text-muted-foreground text-lg">{t('common.loading') || 'Loading products…'}</p>
                       </div>
+                    ) : (
+                      <>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6">
+                          {filteredProducts.map((product) => (
+                            <ProductCard
+                              key={product.id}
+                              product={product}
+                            />
+                          ))}
+                        </div>
+
+                        {filteredProducts.length === 0 && (
+                          <div className="text-center py-16">
+                            <p className="text-muted-foreground text-lg">
+                              {t('products.noProductsAvailable')}
+                            </p>
+                          </div>
+                        )}
+                      </>
                     )}
                   </>
                 )}
-              </main>
+              </div>
             </div>
           </div>
         </div>
@@ -575,7 +596,7 @@ const Products = () => {
               {[
                 {
                   title: 'Comprehensive Range',
-                  description: '263+ water treatment chemicals, industrial lubricants, and specialty products from trusted global manufacturers.',
+                  description: `${TOTAL_PRODUCTS}+ water treatment chemicals, industrial lubricants, and specialty products from trusted global manufacturers.`,
                 },
                 {
                   title: 'ISO Quality Assured',

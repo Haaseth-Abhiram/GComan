@@ -11,7 +11,7 @@ import IndustrySelector from '@/components/IndustrySelector';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import QuickActions from '@/components/QuickActions';
 import { SEO } from '@/components/SEO';
-import { OrganizationStructuredData, FAQStructuredData, SpeakableStructuredData, WebSiteStructuredData, ServiceStructuredData } from '@/components/StructuredData';
+import { FAQStructuredData, SpeakableStructuredData, ServiceStructuredData } from '@/components/StructuredData';
 
 // Homepage FAQs for rich snippets — GCC-wide coverage
 const homepageFAQs = [
@@ -49,9 +49,10 @@ const Index = () => {
         ogUrl="https://gcoman.com/"
         canonical="https://gcoman.com/"
       />
-      <WebSiteStructuredData />
+      {/* WebSite (#website) and Organization (#organization) JSON-LD are the
+          single source of truth in index.html — do NOT re-emit them here or
+          Helmet appends duplicate-@id nodes. Service schema is page-specific. */}
       <ServiceStructuredData />
-      <OrganizationStructuredData includeService={true} />
       <FAQStructuredData faqs={homepageFAQs} />
       <SpeakableStructuredData
         url="https://gcoman.com/"

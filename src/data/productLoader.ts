@@ -118,6 +118,12 @@ const categoryData: Record<string, any[]> = {
 
 export const ALL_CATEGORIES = Object.keys(categoryLoaders);
 
+/** Total products in the catalogue — derived so copy/FAQ counts never go stale. */
+export const TOTAL_PRODUCTS = Object.values(categoryData).reduce(
+  (n, arr) => n + arr.length,
+  0
+);
+
 /** Attach icon component to a raw product object from JSON */
 export function hydrateProduct(p: any) {
   return { ...p, icon: ICON_MAP[p.iconName] || Beaker };

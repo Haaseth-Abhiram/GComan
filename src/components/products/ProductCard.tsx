@@ -5,20 +5,7 @@ import { ChevronRight, MessageSquare } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { getLangPrefixFromPath, withLangPrefix } from '@/lib/langRouting';
 import { trackSelectContent } from '@/components/GoogleAnalytics';
-
-interface Product {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  icon: any;
-  image?: string;
-  details?: {
-    formula?: string;
-    fullDescription?: string;
-    applications?: string[];
-  };
-}
+import type { Product } from '@/data/productTypes';
 
 interface ProductCardProps {
   product: Product;
