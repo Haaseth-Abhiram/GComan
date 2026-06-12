@@ -18,7 +18,9 @@ function getCorsOrigin(req: Request): string {
     if (host.endsWith('.lovable.app') || host.endsWith('.lovableproject.com')) {
       return origin;
     }
-  } catch (_) {}
+  } catch {
+    // not a parseable origin URL — fall through to the allowlist check
+  }
   return ALLOWED_ORIGINS.includes(origin) ? origin : 'https://www.gcoman.com';
 }
 
