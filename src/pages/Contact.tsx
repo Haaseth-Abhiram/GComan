@@ -327,6 +327,7 @@ const Contact = () => {
                           placeholder="XXXX XXXX"
                           className="w-full"
                           inputClassName="w-full"
+                          inputProps={{ id: 'phone', name: 'phone' }}
                         />
                       </div>
                       <div className="space-y-2">

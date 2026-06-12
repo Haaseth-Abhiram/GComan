@@ -1654,7 +1654,8 @@ const Resources = () => {
                     <ChevronRight className="h-4 w-4 rotate-180 mr-2" />Back to Articles
                   </Button>
                   <Badge variant="secondary" className="mb-4">{selectedArticle.category}</Badge>
-                  <h1 className="text-3xl sm:text-4xl font-bold mb-4">{selectedArticle.title}</h1>
+                  {/* h2: the page h1 ("Resources & Insights") is still rendered above */}
+                  <h2 className="text-3xl sm:text-4xl font-bold mb-4">{selectedArticle.title}</h2>
                   <div className="flex items-center gap-4 text-sm text-muted-foreground mb-8">
                     <span className="flex items-center gap-1"><User className="h-4 w-4" />{selectedArticle.author}</span>
                     <span className="flex items-center gap-1"><Calendar className="h-4 w-4" />{selectedArticle.date}</span>

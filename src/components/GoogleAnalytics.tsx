@@ -22,7 +22,7 @@ const GoogleAnalytics = () => {
 
   useEffect(() => {
     if (import.meta.env.DEV || !GA_MEASUREMENT_ID) {
-      console.log('Google Analytics disabled in development');
+      if (import.meta.env.DEV) console.log('Google Analytics disabled in development');
       return;
     }
 
