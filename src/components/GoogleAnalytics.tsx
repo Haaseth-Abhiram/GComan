@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { hasAnalyticsConsent, CONSENT_EVENT } from '@/lib/consent';
 
 // Google Analytics Tracking ID
 const GA_MEASUREMENT_ID = 'G-6VX4FTG809';
@@ -25,30 +26,36 @@ const GoogleAnalytics = () => {
       return;
     }
 
-    const script1 = document.createElement('script');
-    script1.async = true;
-    script1.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
-    document.head.appendChild(script1);
+    let injected = false;
 
-    const script2 = document.createElement('script');
-    script2.textContent = `
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', '${GA_MEASUREMENT_ID}', {
-        page_path: window.location.pathname,
-      });
-    `;
-    document.head.appendChild(script2);
+    // Only load the gtag script once the user has granted analytics consent.
+    // Loading it earlier would set GA cookies before consent (GDPR/ePrivacy).
+    const loadGA = () => {
+      if (injected || !hasAnalyticsConsent()) return;
+      injected = true;
 
-    return () => {
-      try {
-        if (script1.parentNode) document.head.removeChild(script1);
-        if (script2.parentNode) document.head.removeChild(script2);
-      } catch (error) {
-        console.error('Error cleaning up GA scripts:', error);
-      }
+      const script1 = document.createElement('script');
+      script1.async = true;
+      script1.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+      document.head.appendChild(script1);
+
+      const script2 = document.createElement('script');
+      script2.textContent = `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '${GA_MEASUREMENT_ID}', {
+          page_path: window.location.pathname,
+        });
+      `;
+      document.head.appendChild(script2);
     };
+
+    // Load now if consent was given in a previous session…
+    loadGA();
+    // …or the moment the user opts in via the cookie banner this session.
+    window.addEventListener(CONSENT_EVENT, loadGA);
+    return () => window.removeEventListener(CONSENT_EVENT, loadGA);
   }, []);
 
   useEffect(() => {

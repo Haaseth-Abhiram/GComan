@@ -10,12 +10,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from '@/components/ui/dialog';
-
-interface CookiePreferences {
-  essential: boolean;
-  analytics: boolean;
-  marketing: boolean;
-}
+import { type CookiePreferences, notifyConsentChanged } from '@/lib/consent';
 
 const CookieConsent = () => {
   const [showBanner, setShowBanner] = useState(false);
@@ -38,6 +33,8 @@ const CookieConsent = () => {
     localStorage.setItem('cookieConsent', 'custom');
     localStorage.setItem('cookiePreferences', JSON.stringify(prefs));
     localStorage.setItem('cookieConsentDate', new Date().toISOString());
+    // Let GA / Zoho load immediately if the user just granted consent — no reload.
+    notifyConsentChanged(prefs);
     setShowBanner(false);
     setShowSettings(false);
   };
