@@ -33,6 +33,22 @@ const signupSchema = z.object({
   path: ["confirmPassword"],
 });
 
+const newPasswordSchema = z.object({
+  password: z.string().min(8, "Password must be at least 8 characters").max(100, "Password must be less than 100 characters")
+    .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
+    .regex(/[a-z]/, "Password must contain at least one lowercase letter")
+    .regex(/[0-9]/, "Password must contain at least one number"),
+  confirmPassword: z.string(),
+}).refine((data) => data.password === data.confirmPassword, {
+  message: "Passwords don't match",
+  path: ["confirmPassword"],
+});
+
+// Captured synchronously at module load — supabase-js consumes the recovery
+// hash when it creates the session, so reading it later misses it.
+const arrivedViaRecoveryLink =
+  typeof window !== 'undefined' && window.location.hash.includes('type=recovery');
+
 const Login = () => {
   const { toast } = useToast();
   const navigate = useNavigate();
@@ -43,6 +59,9 @@ const Login = () => {
   const [showResetDialog, setShowResetDialog] = useState(false);
   const [resetEmail, setResetEmail] = useState('');
   const [isResetting, setIsResetting] = useState(false);
+  const [isRecoveryMode, setIsRecoveryMode] = useState(arrivedViaRecoveryLink);
+  const [newPasswordData, setNewPasswordData] = useState({ password: '', confirmPassword: '' });
+  const [isUpdatingPassword, setIsUpdatingPassword] = useState(false);
   const [loginData, setLoginData] = useState({ email: '', password: '' });
   const [signupData, setSignupData] = useState({ 
     name: '', 
@@ -51,8 +70,21 @@ const Login = () => {
     confirmPassword: '' 
   });
 
+  // Recovery links create a session too — without this listener (and the hash
+  // check above) the redirect below would bounce the user to "/" silently
+  // logged in with their OLD password, never showing the set-new-password form.
+  useEffect(() => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event) => {
+      if (event === 'PASSWORD_RECOVERY') {
+        setIsRecoveryMode(true);
+      }
+    });
+    return () => subscription.unsubscribe();
+  }, []);
+
   // Check if user is already logged in
   useEffect(() => {
+    if (isRecoveryMode) return;
     const checkAuth = async () => {
       const { data: { session } } = await supabase.auth.getSession();
       if (session) {
@@ -60,7 +92,43 @@ const Login = () => {
       }
     };
     checkAuth();
-  }, [navigate]);
+  }, [navigate, isRecoveryMode]);
+
+  const handleNewPasswordSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsUpdatingPassword(true);
+
+    try {
+      newPasswordSchema.parse(newPasswordData);
+
+      const { error } = await supabase.auth.updateUser({ password: newPasswordData.password });
+      if (error) throw error;
+
+      toast({
+        title: "Password updated!",
+        description: "Your new password is now active.",
+      });
+      setIsRecoveryMode(false);
+      setNewPasswordData({ password: '', confirmPassword: '' });
+      navigate('/');
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        toast({
+          title: "Invalid password",
+          description: error.errors[0].message,
+          variant: "destructive"
+        });
+      } else {
+        toast({
+          title: "Error",
+          description: error instanceof Error ? error.message : "Failed to update password. The reset link may have expired — request a new one.",
+          variant: "destructive"
+        });
+      }
+    } finally {
+      setIsUpdatingPassword(false);
+    }
+  };
 
   const handleLoginSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -596,6 +664,53 @@ const Login = () => {
                 {isResetting ? 'Sending...' : 'Send Reset Link'}
               </Button>
             </div>
+          </form>
+        </DialogContent>
+      </Dialog>
+
+      {/* Set New Password Dialog — shown when arriving via a recovery link */}
+      <Dialog open={isRecoveryMode} onOpenChange={(open) => !open && setIsRecoveryMode(false)}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle>Set a New Password</DialogTitle>
+            <DialogDescription>
+              You followed a password reset link. Choose a new password for your account.
+            </DialogDescription>
+          </DialogHeader>
+          <form onSubmit={handleNewPasswordSubmit} className="space-y-4">
+            <div className="space-y-2">
+              <Label htmlFor="new-password">New Password</Label>
+              <div className="relative">
+                <Lock className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                <Input
+                  id="new-password"
+                  type="password"
+                  placeholder="••••••••"
+                  value={newPasswordData.password}
+                  onChange={(e) => setNewPasswordData(prev => ({ ...prev, password: e.target.value }))}
+                  className="pl-10"
+                  required
+                />
+              </div>
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="confirm-new-password">Confirm New Password</Label>
+              <div className="relative">
+                <Lock className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                <Input
+                  id="confirm-new-password"
+                  type="password"
+                  placeholder="••••••••"
+                  value={newPasswordData.confirmPassword}
+                  onChange={(e) => setNewPasswordData(prev => ({ ...prev, confirmPassword: e.target.value }))}
+                  className="pl-10"
+                  required
+                />
+              </div>
+            </div>
+            <Button type="submit" className="w-full" disabled={isUpdatingPassword}>
+              {isUpdatingPassword ? 'Updating...' : 'Update Password'}
+            </Button>
           </form>
         </DialogContent>
       </Dialog>
