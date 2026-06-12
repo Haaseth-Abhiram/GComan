@@ -17,9 +17,7 @@
     "verify:hostinger-staging": "node scripts/verify-hostinger-staging.mjs"
   },
   "dependencies": {
-    "@cloudflare/vite-plugin": "1.37.1",
     "@hookform/resolvers": "^3.10.0",
-    "@lovable.dev/vite-tanstack-config": "1.7.0",
     "@radix-ui/react-accordion": "^1.2.11",
     "@radix-ui/react-alert-dialog": "^1.1.14",
     "@radix-ui/react-aspect-ratio": "^1.1.7",
@@ -51,11 +49,7 @@
     "@react-three/fiber": "^8.18.0",
     "@react-three/postprocessing": "^2.19.1",
     "@supabase/supabase-js": "^2.76.1",
-    "@tailwindcss/vite": "4.3.0",
     "@tanstack/react-query": "^5.83.0",
-    "@tanstack/react-router": "1.170.1",
-    "@tanstack/react-start": "1.168.1",
-    "@vitejs/plugin-react": "5.2.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
@@ -86,7 +80,6 @@
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.171.0",
     "vaul": "^0.9.9",
-    "vite-tsconfig-paths": "6.1.1",
     "xlsx": "0.18.5",
     "zod": "^3.25.76"
   },

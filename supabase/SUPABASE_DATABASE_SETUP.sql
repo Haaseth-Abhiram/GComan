@@ -412,32 +412,43 @@ BEGIN
   END IF;
 END $$;
 
--- Alternative: If you prefer to add multiple admins at once, use this function
+-- Alternative: If you prefer to add multiple admins at once, use this function.
+-- HARDENED (mirrors migration 20260418004730): the original version had no
+-- caller check and default PUBLIC EXECUTE, letting any anon user grant admin
+-- to any signed-up email via POST /rest/v1/rpc/add_admin_role.
 CREATE OR REPLACE FUNCTION public.add_admin_role(user_email TEXT)
 RETURNS TEXT
 LANGUAGE plpgsql
 SECURITY DEFINER
+SET search_path = public, auth
 AS $$
 DECLARE
   v_user_id UUID;
 BEGIN
-  -- Get user ID
+  -- Only existing admins may call this function
+  IF auth.uid() IS NULL OR NOT public.has_role(auth.uid(), 'admin'::public.app_role) THEN
+    RAISE EXCEPTION 'Unauthorized: admin role required';
+  END IF;
+
   SELECT id INTO v_user_id
   FROM auth.users
   WHERE email = user_email;
 
-  -- Check if user exists
   IF v_user_id IS NULL THEN
     RETURN 'ERROR: User with email ' || user_email || ' does not exist';
   END IF;
 
-  -- Add admin role
   INSERT INTO public.user_roles (user_id, role)
-  VALUES (v_user_id, 'admin')
+  VALUES (v_user_id, 'admin'::public.app_role)
   ON CONFLICT (user_id, role) DO NOTHING;
 
   RETURN 'SUCCESS: Admin role added for ' || user_email;
 END;
 $$;
 
-COMMENT ON FUNCTION public.add_admin_role IS 'Helper function to add admin role to a user by email';
+-- Revoke default public execute privileges
+REVOKE EXECUTE ON FUNCTION public.add_admin_role(TEXT) FROM PUBLIC;
+REVOKE EXECUTE ON FUNCTION public.add_admin_role(TEXT) FROM anon;
+REVOKE EXECUTE ON FUNCTION public.add_admin_role(TEXT) FROM authenticated;
+
+COMMENT ON FUNCTION public.add_admin_role IS 'Adds admin role to a user by email. Caller must already be an admin.';
