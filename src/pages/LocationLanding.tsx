@@ -1,4 +1,5 @@
-import { useParams, Navigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import NotFound from '@/pages/NotFound';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -783,9 +784,10 @@ const productCategories = [
 const LocationLanding = () => {
   const { location } = useParams<{ location: string }>();
 
-  // Check if location exists
+  // Unknown city slugs render the (noindexed) 404 page — silently redirecting
+  // to /contact taught crawlers that any /chemicals/* URL resolves with 200.
   if (!location || !locations[location]) {
-    return <Navigate to="/contact" replace />;
+    return <NotFound />;
   }
 
   const locationData = locations[location];

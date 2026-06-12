@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
@@ -8,6 +9,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { Globe } from 'lucide-react';
 import { trackLanguageChange } from '@/components/GoogleAnalytics';
+import { getLangPrefixFromPath, withLangPrefix } from '@/lib/langRouting';
 
 const languages = [
   { code: 'en', name: 'English', nativeName: 'English', flag: '🇬🇧' },
@@ -21,28 +23,19 @@ interface LanguageSwitcherProps {
 
 const LanguageSwitcher = ({ variant = 'default', className = '' }: LanguageSwitcherProps) => {
   const { i18n } = useTranslation();
+  const navigate = useNavigate();
+  const { pathname, search, hash } = useLocation();
 
   const currentLanguage = languages.find((lang) => lang.code === i18n.language) || languages[0];
 
-  const handleLanguageChange = async (langCode: string) => {
-    try {
-      // Explicitly save to localStorage before changing
-      localStorage.setItem('i18nextLng', langCode);
-
-      // Track language change
-      trackLanguageChange(langCode);
-
-      // Change the language
-      await i18n.changeLanguage(langCode);
-
-      // Small delay to ensure state is saved
-      await new Promise(resolve => setTimeout(resolve, 100));
-
-      // Force reload to ensure all components update with new language
-      window.location.reload();
-    } catch (error) {
-      console.error('Failed to change language:', error);
-    }
+  // Language is URL-derived (LanguageSync in App.tsx), so switching language
+  // means navigating to the mirrored route: /products ⇄ /ar/products.
+  const handleLanguageChange = (langCode: string) => {
+    const currentPrefix = getLangPrefixFromPath(pathname);
+    const basePath = currentPrefix ? pathname.slice(currentPrefix.length) || '/' : pathname;
+    const target = withLangPrefix(langCode === 'ar' ? '/ar' : '', basePath) || '/';
+    trackLanguageChange(langCode);
+    if (target !== pathname) navigate(target + search + hash);
   };
 
   if (variant === 'compact') {

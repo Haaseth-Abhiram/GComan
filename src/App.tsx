@@ -59,7 +59,6 @@ const LanguageSync = () => {
     const next = pathname === '/ar' || pathname.startsWith('/ar/') ? 'ar' : 'en';
     if (i18n.language !== next) {
       i18n.changeLanguage(next);
-      localStorage.setItem('i18nextLng', next);
     }
   }, [pathname, i18n]);
 
@@ -70,9 +69,13 @@ const LanguageSync = () => {
 // <LanguageSync>; this just renders the matched child route.
 const LangLayout = () => <Outlet />;
 
-// Redirect component for /en/* routes to avoid duplicate content
-const RedirectToNonLang = ({ to }: { to: string }) => {
-  return <Navigate to={to} replace />;
+// Redirect component for /en/* routes to avoid duplicate content. Reads the
+// live location (a precomputed prop would freeze the target at App mount) and
+// preserves query/hash.
+const RedirectToNonLang = () => {
+  const { pathname, search, hash } = useLocation();
+  const target = pathname.replace(/^\/en(?=\/|$)/, '') || '/';
+  return <Navigate to={target + search + hash} replace />;
 };
 
 const App = () => (
@@ -134,8 +137,8 @@ const App = () => (
                 <Route path="/chemicals/:location" element={<LocationLanding />} />
 
                 {/* 301 Redirects: /en/* to /* (avoid duplicate content) */}
-                <Route path="/en" element={<RedirectToNonLang to="/" />} />
-                <Route path="/en/*" element={<RedirectToNonLang to={window.location.pathname.replace('/en', '')} />} />
+                <Route path="/en" element={<RedirectToNonLang />} />
+                <Route path="/en/*" element={<RedirectToNonLang />} />
 
                 {/* Arabic language routes */}
                 <Route path="/ar" element={<LangLayout />}>
