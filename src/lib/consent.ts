@@ -43,3 +43,18 @@ export function notifyConsentChanged(prefs: CookiePreferences): void {
   if (typeof window === 'undefined') return;
   window.dispatchEvent(new CustomEvent<CookiePreferences>(CONSENT_EVENT, { detail: prefs }));
 }
+
+/** Dispatched on window to reopen the cookie-preferences dialog (GDPR: consent
+ * withdrawal must be as easy as granting it — the Footer link uses this). */
+export const OPEN_SETTINGS_EVENT = 'gc:open-cookie-settings';
+
+export function openCookieSettings(): void {
+  if (typeof window === 'undefined') return;
+  window.dispatchEvent(new CustomEvent(OPEN_SETTINGS_EVENT));
+}
+
+/** True once the user has made any consent choice. */
+export function hasStoredConsent(): boolean {
+  if (typeof localStorage === 'undefined') return false;
+  return localStorage.getItem('cookieConsent') !== null;
+}

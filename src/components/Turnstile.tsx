@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { forwardRef, useEffect, useImperativeHandle, useRef } from 'react';
 
 // Cloudflare Turnstile bot/abuse-protection widget.
 // Renders nothing (no-op) when VITE_TURNSTILE_SITE_KEY is not set, so the
@@ -59,10 +59,29 @@ interface TurnstileProps {
   theme?: 'light' | 'dark' | 'auto';
 }
 
-export const Turnstile = ({ onToken, onExpire, theme = 'auto' }: TurnstileProps) => {
+export interface TurnstileHandle {
+  /**
+   * Tokens are single-use: once a submission reaches siteverify the token is
+   * consumed even if the request then fails validation. Callers must reset
+   * the widget in every failed-submit path or the user's retry sends a dead
+   * token and the form bricks.
+   */
+  reset: () => void;
+}
+
+export const Turnstile = forwardRef<TurnstileHandle, TurnstileProps>(({ onToken, onExpire, theme = 'auto' }, ref) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const widgetIdRef = useRef<string | null>(null);
   const siteKey = import.meta.env.VITE_TURNSTILE_SITE_KEY as string | undefined;
+
+  useImperativeHandle(ref, () => ({
+    reset: () => {
+      if (widgetIdRef.current && window.turnstile) {
+        try { window.turnstile.reset(widgetIdRef.current); } catch { /* widget already gone */ }
+      }
+      onToken('');
+    },
+  }), [onToken]);
 
   useEffect(() => {
     // Skip prerender (no DOM) and dev-without-key.
@@ -96,6 +115,7 @@ export const Turnstile = ({ onToken, onExpire, theme = 'auto' }: TurnstileProps)
 
   if (!siteKey) return null;
   return <div ref={containerRef} className="cf-turnstile" />;
-};
+});
+Turnstile.displayName = 'Turnstile';
 
 export const isTurnstileEnabled = () => Boolean(import.meta.env.VITE_TURNSTILE_SITE_KEY);

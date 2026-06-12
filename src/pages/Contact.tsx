@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
@@ -17,7 +17,7 @@ import { FAQStructuredData, BreadcrumbStructuredData, ContactPageStructuredData,
 import { trackFormSubmission, trackContactClick } from '@/components/GoogleAnalytics';
 import { PhoneInput } from 'react-international-phone';
 import 'react-international-phone/style.css';
-import { Turnstile, isTurnstileEnabled } from '@/components/Turnstile';
+import { Turnstile, isTurnstileEnabled, type TurnstileHandle } from '@/components/Turnstile';
 
 // Contact page FAQs for rich snippets
 const contactFAQs = [
@@ -64,6 +64,7 @@ const Contact = () => {
   const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [turnstileToken, setTurnstileToken] = useState('');
+  const turnstileRef = useRef<TurnstileHandle>(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -119,6 +120,12 @@ const Contact = () => {
             description: result.error,
             variant: "destructive",
           });
+        } else if (result.code === 'CAPTCHA_FAILED') {
+          toast({
+            title: "Verification failed",
+            description: "Please solve the verification again and resubmit.",
+            variant: "destructive",
+          });
         } else {
           toast({
             title: "Submission Failed",
@@ -126,6 +133,9 @@ const Contact = () => {
             variant: "destructive",
           });
         }
+        // The server may have consumed the (single-use) token at siteverify
+        // even though the request failed — reset so the retry gets a fresh one.
+        turnstileRef.current?.reset();
         setIsSubmitting(false);
         return;
       }
@@ -151,6 +161,8 @@ const Contact = () => {
           description: "Failed to send message. Please check your connection and try again.",
           variant: "destructive"
         });
+        // Network/unknown failure after the token may have been consumed.
+        turnstileRef.current?.reset();
       }
       setIsSubmitting(false);
     }
@@ -359,7 +371,7 @@ const Contact = () => {
                       />
                     </div>
 
-                    <Turnstile onToken={setTurnstileToken} />
+                    <Turnstile ref={turnstileRef} onToken={setTurnstileToken} />
 
                     <Button
                       type="submit"
@@ -489,17 +501,19 @@ const Contact = () => {
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Global Chemicals LLC Office Location - Ghala, Muscat, Oman"
               />
-              <div className="mt-4 text-center">
-                <a
-                  href="https://www.google.com/maps/search/?api=1&query=Global+Chemicals+LLC+Ghala+Muscat+Oman"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors"
-                >
-                  <MapPin className="w-4 h-4" />
-                  Get Directions on Google Maps
-                </a>
-              </div>
+            </div>
+            {/* Outside the fixed-height overflow-hidden map box — inside it the
+                link rendered past the 400px boundary and was unclickable. */}
+            <div className="mt-4 text-center">
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Global+Chemicals+LLC+Ghala+Muscat+Oman"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors"
+              >
+                <MapPin className="w-4 h-4" />
+                Get Directions on Google Maps
+              </a>
             </div>
           </div>
         </div>

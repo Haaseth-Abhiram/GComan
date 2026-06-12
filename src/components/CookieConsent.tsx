@@ -10,7 +10,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from '@/components/ui/dialog';
-import { type CookiePreferences, notifyConsentChanged } from '@/lib/consent';
+import { type CookiePreferences, getConsentPreferences, notifyConsentChanged, OPEN_SETTINGS_EVENT } from '@/lib/consent';
 
 const CookieConsent = () => {
   const [showBanner, setShowBanner] = useState(false);
@@ -29,7 +29,19 @@ const CookieConsent = () => {
     }
   }, []);
 
+  // The Footer's "Cookie Settings" link reopens the dialog at any time so
+  // consent can be withdrawn as easily as it was given (GDPR Art. 7(3)).
+  useEffect(() => {
+    const openSettings = () => {
+      setPreferences(getConsentPreferences());
+      setShowSettings(true);
+    };
+    window.addEventListener(OPEN_SETTINGS_EVENT, openSettings);
+    return () => window.removeEventListener(OPEN_SETTINGS_EVENT, openSettings);
+  }, []);
+
   const savePreferences = (prefs: CookiePreferences) => {
+    const previous = getConsentPreferences();
     localStorage.setItem('cookieConsent', 'custom');
     localStorage.setItem('cookiePreferences', JSON.stringify(prefs));
     localStorage.setItem('cookieConsentDate', new Date().toISOString());
@@ -37,6 +49,12 @@ const CookieConsent = () => {
     notifyConsentChanged(prefs);
     setShowBanner(false);
     setShowSettings(false);
+    // Withdrawal: the third-party scripts are already in the page and can't be
+    // unloaded in place — a reload is the only reliable way to stop them.
+    const downgraded =
+      (previous.analytics && !prefs.analytics) ||
+      (previous.marketing && !prefs.marketing);
+    if (downgraded) window.location.reload();
   };
 
   const acceptAll = () => {
@@ -47,11 +65,14 @@ const CookieConsent = () => {
     savePreferences({ essential: true, analytics: false, marketing: false });
   };
 
-  if (!showBanner) return null;
+  // The settings dialog must stay mountable after the banner is dismissed —
+  // the Footer reopens it via OPEN_SETTINGS_EVENT.
+  if (!showBanner && !showSettings) return null;
 
   return (
     <>
       {/* Solid pill banner with gradient ring — always visible on any background */}
+      {showBanner && (
       <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 animate-in slide-in-from-bottom duration-500">
         <div className="rounded-full bg-gradient-to-r from-secondary via-primary to-accent p-[2px] shadow-xl shadow-foreground/10">
           <div className="flex items-center gap-3 rounded-full bg-card pl-4 pr-2 py-2">
@@ -89,6 +110,7 @@ const CookieConsent = () => {
           </div>
         </div>
       </div>
+      )}
 
       {/* Cookie Settings Dialog */}
       <Dialog open={showSettings} onOpenChange={setShowSettings}>

@@ -8,6 +8,7 @@ import { Input } from '@/components/ui/input';
 import { toast } from '@/components/ui/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 import { trackContactClick } from '@/components/GoogleAnalytics';
+import { openCookieSettings } from '@/lib/consent';
 import logo from '@/assets/global-chemicals-logo.svg';
 
 const Footer = () => {
@@ -352,6 +353,13 @@ const Footer = () => {
             <Link to="/sitemap" className="hover:text-primary transition-colors relative z-50">
               {t('footer.sitemap')}
             </Link>
+            <button
+              type="button"
+              onClick={openCookieSettings}
+              className="hover:text-primary transition-colors relative z-50"
+            >
+              {t('footer.cookieSettings', 'Cookie Settings')}
+            </button>
           </div>
           <p className="text-center">
             © {currentYear} {t('footer.companyName')}. {t('footer.copyright')}
