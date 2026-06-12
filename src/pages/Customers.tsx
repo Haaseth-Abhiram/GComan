@@ -17,7 +17,7 @@ import soharAluminiumLogo from '@/assets/customers/sohar-aluminium-logo.png';
 import omanLngLogo from '@/assets/customers/oman-lng-logo.png';
 import omifcoLogo from '@/assets/customers/omifco-logo.png';
 import { SEO } from '@/components/SEO';
-import { BreadcrumbStructuredData, ReviewStructuredData, FAQStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
+import { BreadcrumbStructuredData, FAQStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
 import { LocalizedLink } from '@/components/LocalizedLink';
 
 // Customer page FAQs for AI search and rich snippets
@@ -198,7 +198,10 @@ const Customers = () => {
         ogUrl="https://gcoman.com/customers"
         canonical="https://gcoman.com/customers"
       />
-      <ReviewStructuredData reviews={clientReviews} itemReviewed={{ name: "Global Chemicals LLC", type: "Organization" }} />
+      {/* Deliberately NO review/aggregateRating schema here: self-serving
+          reviews about your own Organization on your own site are ineligible
+          for rich results and risk a structured-data penalty. The visible
+          testimonials below still count for E-E-A-T. */}
       <FAQStructuredData faqs={customerFAQs} />
       <BreadcrumbStructuredData items={breadcrumbItems} />
       <SpeakableStructuredData

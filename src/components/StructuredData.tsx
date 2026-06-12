@@ -238,6 +238,9 @@ export const ReviewStructuredData = ({
   reviews,
   itemReviewed = { name: "Global Chemicals LLC", type: "Organization" }
 }: ReviewStructuredDataProps) => {
+  // Only mount this for genuine third-party reviews of a product/service —
+  // self-serving Organization reviews violate Google's review-snippet policy.
+  if (reviews.length === 0) return null; // empty array would emit NaN aggregateRating
   const avgRating = reviews.reduce((acc, r) => acc + r.rating, 0) / reviews.length;
 
   const reviewSchema = {

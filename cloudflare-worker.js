@@ -262,6 +262,17 @@ async function handle(request) {
   }
 
   // ------------------------------------------------------------------
+  // Step 4b: Canonicalize trailing slashes with a 301 (matches .htaccess
+  // rule A5 / the forced rules in _redirects). Without this, /career/ and
+  // /career would both serve 200 with identical prerendered HTML —
+  // duplicate-content pairs that were a real GSC issue.
+  // ------------------------------------------------------------------
+  if (pathname.length > 1 && pathname.endsWith("/")) {
+    url.pathname = normalized;
+    return Response.redirect(url.toString(), 301);
+  }
+
+  // ------------------------------------------------------------------
   // Step 5: Serve prerendered HTML for clean SPA routes.
   //
   // Lovable's CDN does NOT auto-serve /route/index.html when /route is
