@@ -10,6 +10,7 @@ import facilityImage from '@/assets/about-facility.jpg';
 import teamImage from '@/assets/about-team.jpg';
 import { SEO } from '@/components/SEO';
 import { BreadcrumbStructuredData, SpeakableStructuredData, FAQStructuredData } from '@/components/StructuredData';
+import { LocalizedLink } from '@/components/LocalizedLink';
 
 // About page FAQs — company identity, certifications, GCC reach
 const aboutFAQs = [
@@ -327,18 +328,18 @@ const About = () => {
               {t('about.joinClients')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
+              <LocalizedLink
+                to="/contact"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-105"
               >
                 {t('about.getInTouch')}
-              </a>
-              <a
-                href="/products"
+              </LocalizedLink>
+              <LocalizedLink
+                to="/products"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white hover:bg-white/90 text-secondary font-semibold rounded-lg border-2 border-secondary shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
               >
                 {t('about.exploreProducts')}
-              </a>
+              </LocalizedLink>
             </div>
           </div>
         </div>

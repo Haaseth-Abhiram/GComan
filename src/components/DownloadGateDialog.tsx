@@ -10,6 +10,7 @@ import { Download, Loader2 } from 'lucide-react';
 import { z } from 'zod';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Checkbox } from '@/components/ui/checkbox';
+import { LocalizedLink } from '@/components/LocalizedLink';
 
 interface DownloadGateDialogProps {
   open: boolean;
@@ -332,7 +333,7 @@ export const DownloadGateDialog = ({
               <p className="text-xs text-muted-foreground">
                 I agree to receive product updates and industry insights from Global Chemicals LLC. 
                 You can unsubscribe at any time. View our{' '}
-                <a href="/privacy" className="underline hover:text-primary">Privacy Policy</a>.
+                <LocalizedLink to="/privacy" className="underline hover:text-primary">Privacy Policy</LocalizedLink>.
               </p>
             </div>
           </div>

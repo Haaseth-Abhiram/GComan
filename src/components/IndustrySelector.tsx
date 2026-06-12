@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Card } from '@/components/ui/card';
 import { Apple, Pill, Factory, Fuel, Waves, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { LocalizedLink as Link } from '@/components/LocalizedLink';
 
 const IndustrySelector = () => {
   const { t } = useTranslation();

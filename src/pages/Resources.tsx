@@ -46,6 +46,7 @@ import { BreadcrumbStructuredData, ArticleStructuredData, FAQStructuredData, Spe
 import { Link } from 'react-router-dom';
 import { blogArticles, articleCategories as blogCategories, BlogArticle } from '@/data/blogArticles';
 import { trackDownload } from '@/components/GoogleAnalytics';
+import { LocalizedLink } from '@/components/LocalizedLink';
 
 // Breadcrumb items
 const breadcrumbItems = [
@@ -1566,7 +1567,7 @@ const Resources = () => {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                       <Button size="lg" asChild>
-                        <a href="/contact">Contact Our Team</a>
+                        <LocalizedLink to="/contact">Contact Our Team</LocalizedLink>
                       </Button>
                       <Button size="lg" variant="outline" asChild>
                         <a href="https://wa.me/96893754388">WhatsApp Us</a>
@@ -1768,7 +1769,7 @@ const Resources = () => {
                   </CardHeader>
                   <CardContent className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Button size="lg" asChild>
-                      <a href="/contact">Request Documents</a>
+                      <LocalizedLink to="/contact">Request Documents</LocalizedLink>
                     </Button>
                     <Button size="lg" variant="outline" asChild>
                       <a href="https://wa.me/96893754388">Chat on WhatsApp</a>

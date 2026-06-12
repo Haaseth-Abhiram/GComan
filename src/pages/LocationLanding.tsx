@@ -23,6 +23,7 @@ import {
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { BreadcrumbStructuredData, FAQStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
+import { LocalizedLink } from '@/components/LocalizedLink';
 
 // Location data for SEO-optimized landing pages
 interface LocationData {
@@ -839,10 +840,10 @@ const LocationLanding = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Button size="lg" asChild>
-                <a href="/contact">
+                <LocalizedLink to="/contact">
                   Request Quote for {locationData.city}
                   <ChevronRight className="ml-2 h-4 w-4" />
-                </a>
+                </LocalizedLink>
               </Button>
               <Button size="lg" variant="outline" asChild>
                 <a href="tel:+96893754388">
@@ -914,7 +915,7 @@ const LocationLanding = () => {
                     </CardHeader>
                     <CardContent>
                       <Button variant="link" className="p-0" asChild>
-                        <a href="/products">View Products →</a>
+                        <LocalizedLink to="/products">View Products →</LocalizedLink>
                       </Button>
                     </CardContent>
                   </Card>
@@ -1006,7 +1007,7 @@ const LocationLanding = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Button size="lg" asChild>
-                <a href="/contact">Contact Us</a>
+                <LocalizedLink to="/contact">Contact Us</LocalizedLink>
               </Button>
               <Button size="lg" variant="outline" asChild>
                 <a href="https://wa.me/96893754388">

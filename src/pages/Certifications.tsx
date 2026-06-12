@@ -7,6 +7,7 @@ import { SEO } from '@/components/SEO';
 import { BreadcrumbStructuredData, FAQStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { LocalizedLink } from '@/components/LocalizedLink';
 
 const breadcrumbItems = [
   { name: 'Home', url: 'https://gcoman.com/' },
@@ -406,12 +407,12 @@ const Certifications = () => {
                 Contact our team for certification documentation, compliance certificates, or vendor registration support.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
+                <LocalizedLink
+                  to="/contact"
                   className="inline-flex items-center justify-center px-8 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-semibold"
                 >
                   Request Certificates
-                </a>
+                </LocalizedLink>
                 <a
                   href="tel:+96893754388"
                   className="inline-flex items-center justify-center px-8 py-3 bg-background border-2 border-primary text-primary rounded-lg hover:bg-primary/10 transition-colors font-semibold"

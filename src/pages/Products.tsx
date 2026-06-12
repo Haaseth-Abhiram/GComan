@@ -16,6 +16,7 @@ import { BreadcrumbStructuredData, FAQStructuredData, SpeakableStructuredData, I
 import { trackSearch } from '@/components/GoogleAnalytics';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
+import { LocalizedLink } from '@/components/LocalizedLink';
 
 // FAQ structured data for products page — targets high-intent procurement queries
 const productsFAQs = [
@@ -518,9 +519,9 @@ const Products = () => {
                   <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-muted/50 rounded-lg border border-border">
                     <p className="text-xs text-muted-foreground">
                       {t('products.cantFind')}{' '}
-                      <a href="/contact" className="text-primary hover:underline font-semibold">
+                      <LocalizedLink to="/contact" className="text-primary hover:underline font-semibold">
                         {t('common.contactUs')}
-                      </a>{' '}
+                      </LocalizedLink>{' '}
                       {t('products.contactForCustom')}
                     </p>
                   </div>

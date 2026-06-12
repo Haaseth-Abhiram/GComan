@@ -18,6 +18,7 @@ import omanLngLogo from '@/assets/customers/oman-lng-logo.png';
 import omifcoLogo from '@/assets/customers/omifco-logo.png';
 import { SEO } from '@/components/SEO';
 import { BreadcrumbStructuredData, ReviewStructuredData, FAQStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
+import { LocalizedLink } from '@/components/LocalizedLink';
 
 // Customer page FAQs for AI search and rich snippets
 const customerFAQs = [
@@ -371,10 +372,10 @@ const Customers = () => {
             </CardHeader>
             <CardContent className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
-                <a href="/contact">Get in Touch</a>
+                <LocalizedLink to="/contact">Get in Touch</LocalizedLink>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <a href="/products">View Our Products</a>
+                <LocalizedLink to="/products">View Our Products</LocalizedLink>
               </Button>
             </CardContent>
           </Card>

@@ -21,6 +21,7 @@ import pharmaceuticalImg from '@/assets/industries/pharmaceutical.jpg';
 import constructionImg from '@/assets/industries/construction.jpg';
 import swimmingPoolImg from '@/assets/industries/swimming-pool.jpg';
 import laboratoryImg from '@/assets/industries/laboratory.jpg';
+import { LocalizedLink } from '@/components/LocalizedLink';
 
 // Water Treatment Product Categories
 const waterTreatmentCategories = [
@@ -635,18 +636,18 @@ const Industries = () => {
               {t('industries.customSolutionDesc')}
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a
-                href="/contact"
+              <LocalizedLink
+                to="/contact"
                 className="px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl"
               >
                 {t('industries.contactExperts')}
-              </a>
-              <a
-                href="/products"
+              </LocalizedLink>
+              <LocalizedLink
+                to="/products"
                 className="px-8 py-4 bg-card text-foreground border border-border rounded-lg font-semibold hover:bg-muted transition-colors"
               >
                 {t('industries.browseProducts')}
-              </a>
+              </LocalizedLink>
             </div>
           </div>
         </div>

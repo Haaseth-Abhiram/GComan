@@ -6,6 +6,7 @@ import oilGas from '@/assets/products/oil-gas.jpg';
 import industrialLubricants from '@/assets/products/industrial-lubricants.jpg';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, Shield, Award, Sparkles } from 'lucide-react';
+import { LocalizedLink } from '@/components/LocalizedLink';
 
 const slides = [
   {
@@ -155,35 +156,35 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 pt-6 px-4">
-              <a
-                href="/products"
+              <LocalizedLink
+                to="/products"
                 className="group inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 text-center"
               >
                 {t('hero.ctaSecondary')}
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform rtl:rotate-180" />
-              </a>
-              <a
-                href="/contact"
+              </LocalizedLink>
+              <LocalizedLink
+                to="/contact"
                 className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white hover:bg-white/90 text-secondary font-semibold rounded-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 text-center"
               >
                 {t('hero.cta')}
-              </a>
+              </LocalizedLink>
             </div>
 
             {/* Quick Links */}
             <div className="flex flex-wrap items-center justify-center gap-6 pt-8 text-sm">
-              <a href="/resources" className="text-white/80 hover:text-white transition-colors flex items-center gap-2">
+              <LocalizedLink to="/resources" className="text-white/80 hover:text-white transition-colors flex items-center gap-2">
                 <span className="w-2 h-2 bg-primary rounded-full" />
                 Download SDS
-              </a>
-              <a href="/contact" className="text-white/80 hover:text-white transition-colors flex items-center gap-2">
+              </LocalizedLink>
+              <LocalizedLink to="/contact" className="text-white/80 hover:text-white transition-colors flex items-center gap-2">
                 <span className="w-2 h-2 bg-secondary rounded-full" />
                 Technical Support
-              </a>
-              <a href="/blog" className="text-white/80 hover:text-white transition-colors flex items-center gap-2">
+              </LocalizedLink>
+              <LocalizedLink to="/blog" className="text-white/80 hover:text-white transition-colors flex items-center gap-2">
                 <span className="w-2 h-2 bg-primary rounded-full" />
                 Industry News
-              </a>
+              </LocalizedLink>
             </div>
           </div>
 

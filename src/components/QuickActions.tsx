@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Card } from '@/components/ui/card';
 import { FileText, MessageSquare, Search, Download, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { LocalizedLink as Link } from '@/components/LocalizedLink';
 
 const QuickActions = () => {
   const { t } = useTranslation();

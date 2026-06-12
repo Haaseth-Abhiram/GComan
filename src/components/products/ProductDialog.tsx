@@ -1,5 +1,6 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Drawer, DrawerContent, DrawerHeader, DrawerTitle, DrawerDescription } from '@/components/ui/drawer';
+import { LocalizedLink } from '@/components/LocalizedLink';
 
 interface Product {
   id: string;
@@ -73,9 +74,9 @@ export const ProductDialog = ({ product, isOpen, onClose, isMobile }: ProductDia
         <div className="pt-3 sm:pt-4 border-t border-border">
           <p className="text-xs sm:text-sm text-muted-foreground">
             For more information about this product, pricing, or technical specifications, please{' '}
-            <a href="/contact" className="text-primary hover:underline font-semibold">
+            <LocalizedLink to="/contact" className="text-primary hover:underline font-semibold">
               contact us
-            </a>
+            </LocalizedLink>
             .
           </p>
         </div>

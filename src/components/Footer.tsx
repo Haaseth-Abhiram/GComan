@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom';
+// Locale-aware Link: keeps /ar visitors on the Arabic tree for every footer link.
+import { LocalizedLink as Link } from '@/components/LocalizedLink';
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Youtube, Send, Loader2, Star } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
@@ -44,7 +45,7 @@ const Footer = () => {
   const services = [
     { labelKey: 'footer.services.waterTreatment', path: '/industries#water-treatment' },
     { labelKey: 'footer.services.oilGasChemicals', path: '/industries#oil-gas' },
-    { labelKey: 'footer.services.lubricants', path: '/products?category=lubricants' },
+    { labelKey: 'footer.services.lubricants', path: '/products/lubricants' },
     { labelKey: 'footer.services.laboratoryChemicals', path: '/industries#laboratory' },
     { labelKey: 'footer.services.poolChemicals', path: '/industries#swimming-pool' },
     { labelKey: 'footer.services.constructionChemicals', path: '/industries#construction' },
