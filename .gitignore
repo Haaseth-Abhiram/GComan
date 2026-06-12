@@ -29,6 +29,10 @@ audits/
 # Claude/agent runtime state
 .claude/scheduled_tasks.lock
 
+# Build artifacts
+*.tsbuildinfo
+dist-hostinger.zip
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
