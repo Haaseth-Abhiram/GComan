@@ -1,6 +1,7 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.3";
 import { SMTPClient } from "https://deno.land/x/denomailer@1.6.0/mod.ts";
 import { createZohoLead, splitName } from "../_shared/zoho-crm.ts";
+import { isRateLimited, getClientIp } from "../_shared/rate-limit.ts";
 
 // Allowed origins whitelist - prevents wildcard CORS misconfiguration
 const ALLOWED_ORIGINS = [
@@ -25,27 +26,9 @@ function getCorsHeaders(req: Request) {
   };
 }
 
-// Simple in-memory rate limiting (resets on function cold start)
-const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
-const RATE_LIMIT_MAX = 5; // Max requests per window
-const RATE_LIMIT_WINDOW_MS = 60000; // 1 minute window
-
-function isRateLimited(identifier: string): boolean {
-  const now = Date.now();
-  const record = rateLimitMap.get(identifier);
-  
-  if (!record || now > record.resetTime) {
-    rateLimitMap.set(identifier, { count: 1, resetTime: now + RATE_LIMIT_WINDOW_MS });
-    return false;
-  }
-  
-  if (record.count >= RATE_LIMIT_MAX) {
-    return true;
-  }
-  
-  record.count++;
-  return false;
-}
+// Rate limiting is DB-backed via ../_shared/rate-limit.ts — the previous
+// in-memory Map reset on every cold start and wasn't shared across isolates.
+const RATE_LIMIT_MAX = 5; // Max requests per minute per IP
 
 // Input validation helpers
 function sanitizeString(input: unknown, maxLength: number = 200): string {
@@ -54,6 +37,7 @@ function sanitizeString(input: unknown, maxLength: number = 200): string {
   return input
     .replace(/<[^>]*>/g, '') // Remove HTML tags
     .replace(/[<>"'&]/g, '') // Remove special chars that could be used for injection
+    .replace(/[\r\n]+/g, ' ') // CRLF would allow SMTP header injection via the subject line
     .trim()
     .slice(0, maxLength);
 }
@@ -144,13 +128,16 @@ Deno.serve(async (req) => {
   }
 
   try {
-    // Get client IP for rate limiting
-    const clientIP = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || 
-                     req.headers.get("x-real-ip") || 
-                     "unknown";
+    // Initialize Supabase client with service role key (also used by the
+    // durable rate limiter below)
+    const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
+    const supabaseKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
+    const supabase = createClient(supabaseUrl, supabaseKey);
 
-    // Check rate limit
-    if (isRateLimited(clientIP)) {
+    // Check rate limit (durable, per-IP; cf-connecting-ip preferred over
+    // the client-spoofable x-forwarded-for)
+    const clientIP = getClientIp(req);
+    if (await isRateLimited(supabase, "notify-download", clientIP, RATE_LIMIT_MAX)) {
       console.warn(`Rate limit exceeded for IP: ${clientIP}`);
       return new Response(
         JSON.stringify({ error: "Too many requests. Please try again later." }),
@@ -190,11 +177,6 @@ Deno.serve(async (req) => {
     const { name, email, phone, company, country, industry, resourceTitle, marketingConsent } = validation.data;
 
     console.log("Processing download lead for:", resourceTitle);
-
-    // Initialize Supabase client with service role key
-    const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
-    const supabaseKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
-    const supabase = createClient(supabaseUrl, supabaseKey);
 
     // Insert lead into database
     const { data: leadData, error: dbError } = await supabase

@@ -36,6 +36,7 @@ function sanitizeInput(input: string): string {
   return input
     .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
     .replace(/<[^>]+>/g, '')
+    .replace(/[\r\n]+/g, ' ') // CRLF in the subject would allow SMTP header injection
     .trim();
 }
 
@@ -163,9 +164,9 @@ serve(async (req) => {
 
   try {
     // Get client IP address
-    const ipAddress = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() 
-      || req.headers.get('x-real-ip') 
-      || 'unknown';
+    const ipAddress = req.headers.get('cf-connecting-ip')?.trim()
+      || req.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
+      || 'unknown'; // cf-connecting-ip is not client-spoofable; leftmost XFF is
 
     console.log('Contact form submission from IP:', ipAddress);
 

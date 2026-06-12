@@ -1,5 +1,6 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.3";
 import { createZohoLead } from "../_shared/zoho-crm.ts";
+import { isRateLimited, getClientIp } from "../_shared/rate-limit.ts";
 
 // Allowed origins whitelist
 const ALLOWED_ORIGINS = [
@@ -34,27 +35,9 @@ function getCorsHeaders(req: Request) {
   };
 }
 
-// Simple in-memory rate limiting
-const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
-const RATE_LIMIT_MAX = 5;
-const RATE_LIMIT_WINDOW_MS = 60000; // 1 minute
-
-function isRateLimited(identifier: string): boolean {
-  const now = Date.now();
-  const record = rateLimitMap.get(identifier);
-  
-  if (!record || now > record.resetTime) {
-    rateLimitMap.set(identifier, { count: 1, resetTime: now + RATE_LIMIT_WINDOW_MS });
-    return false;
-  }
-  
-  if (record.count >= RATE_LIMIT_MAX) {
-    return true;
-  }
-  
-  record.count++;
-  return false;
-}
+// Rate limiting is DB-backed via ../_shared/rate-limit.ts — the previous
+// in-memory Map reset on every cold start and wasn't shared across isolates.
+const RATE_LIMIT_MAX = 5; // Max requests per minute per IP
 
 // Email validation
 function validateEmail(email: unknown): string | null {
@@ -62,14 +45,6 @@ function validateEmail(email: unknown): string | null {
   const sanitized = email.trim().toLowerCase().slice(0, 255);
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(sanitized) ? sanitized : null;
-}
-
-// Get client IP from request headers
-function getClientIP(req: Request): string {
-  return req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
-         req.headers.get('x-real-ip') ||
-         req.headers.get('cf-connecting-ip') ||
-         'unknown';
 }
 
 Deno.serve(async (req) => {
@@ -89,11 +64,25 @@ Deno.serve(async (req) => {
   }
 
   try {
-    const clientIP = getClientIP(req);
-    console.log(`[Newsletter] Subscription request from IP: ${clientIP}`);
+    // Initialize Supabase client with service role key (also used by the
+    // durable rate limiter below)
+    const supabaseUrl = Deno.env.get('SUPABASE_URL');
+    const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
 
-    // Rate limiting check
-    if (isRateLimited(clientIP)) {
+    if (!supabaseUrl || !supabaseServiceKey) {
+      console.error('[Newsletter] Missing Supabase environment variables');
+      return new Response(
+        JSON.stringify({ success: false, error: "Server configuration error" }),
+        { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    const supabase = createClient(supabaseUrl, supabaseServiceKey);
+
+    const clientIP = getClientIp(req);
+
+    // Rate limiting check (durable, per-IP)
+    if (await isRateLimited(supabase, "subscribe-newsletter", clientIP, RATE_LIMIT_MAX)) {
       console.warn(`[Newsletter] Rate limit exceeded for IP: ${clientIP}`);
       return new Response(
         JSON.stringify({ success: false, error: "Too many requests. Please try again later." }),
@@ -123,20 +112,6 @@ Deno.serve(async (req) => {
     }
 
     console.log(`[Newsletter] Processing subscription for: ${email}`);
-
-    // Initialize Supabase client with service role key for insert
-    const supabaseUrl = Deno.env.get('SUPABASE_URL');
-    const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
-
-    if (!supabaseUrl || !supabaseServiceKey) {
-      console.error('[Newsletter] Missing Supabase environment variables');
-      return new Response(
-        JSON.stringify({ success: false, error: "Server configuration error" }),
-        { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-      );
-    }
-
-    const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
     // Check if email already exists
     const { data: existingSubscriber, error: checkError } = await supabase

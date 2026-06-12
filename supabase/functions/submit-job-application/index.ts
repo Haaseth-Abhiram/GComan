@@ -1,5 +1,6 @@
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.76.1';
 import { SMTPClient } from "https://deno.land/x/denomailer@1.6.0/mod.ts";
+import { isRateLimited, getClientIp } from "../_shared/rate-limit.ts";
 
 // Allowed origins whitelist - prevents wildcard CORS misconfiguration
 const ALLOWED_ORIGINS = [
@@ -68,7 +69,8 @@ function isValidLinkedInUrl(url: string): boolean {
 }
 
 function sanitizeString(str: string): string {
-  return str.trim().replace(/[<>]/g, '');
+  // CRLF in values that reach the email subject would allow header injection
+  return str.replace(/[\r\n]+/g, ' ').trim().replace(/[<>]/g, '');
 }
 
 function validateApplicationData(data: ApplicationData): { valid: boolean; error?: string } {
@@ -133,29 +135,10 @@ async function verifyTurnstile(token: string | undefined, ip: string): Promise<b
   }
 }
 
-function getClientIP(req: Request): string {
-  return req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
-         req.headers.get('x-real-ip') ||
-         req.headers.get('cf-connecting-ip') ||
-         'unknown';
-}
-
-// In-memory IP rate limiter (per cold-start instance)
-const ipRateLimitMap = new Map<string, { count: number; resetTime: number }>();
+// IP extraction and the durable per-IP rate limiter live in
+// ../_shared/rate-limit.ts (the previous in-memory Map reset on cold starts).
 const IP_RATE_LIMIT_MAX = 3;
 const IP_RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000; // 1 hour
-function isIpRateLimited(ip: string): boolean {
-  if (!ip || ip === 'unknown') return false;
-  const now = Date.now();
-  const rec = ipRateLimitMap.get(ip);
-  if (!rec || now > rec.resetTime) {
-    ipRateLimitMap.set(ip, { count: 1, resetTime: now + IP_RATE_LIMIT_WINDOW_MS });
-    return false;
-  }
-  if (rec.count >= IP_RATE_LIMIT_MAX) return true;
-  rec.count++;
-  return false;
-}
 async function checkRateLimit(supabase: any, email: string): Promise<{ allowed: boolean; error?: string }> {
   const oneHourAgo = new Date(Date.now() - 60 * 60 * 1000).toISOString();
   const oneDayAgo = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
@@ -208,10 +191,10 @@ Deno.serve(async (req) => {
     const supabaseKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
     const supabase = createClient(supabaseUrl, supabaseKey);
 
-    const ipAddress = getClientIP(req);
+    const ipAddress = getClientIp(req);
 
     // IP-based rate limiting (defence against rotating-email abuse)
-    if (isIpRateLimited(ipAddress)) {
+    if (await isRateLimited(supabase, 'submit-job-application', ipAddress, IP_RATE_LIMIT_MAX, IP_RATE_LIMIT_WINDOW_MS)) {
       console.log('IP rate limit exceeded:', ipAddress);
       return new Response(
         JSON.stringify({ error: 'Too many applications from your network. Please try again later.' }),
