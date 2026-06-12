@@ -40,6 +40,8 @@ Use **npm** — the commands above assume it. `bun.lock` is a leftover from a Lo
 - `audit-playwright.mjs` — drives the timestamped snapshots under `audits/<date>-local|prod/`
 - `serve-dist.mjs` — serves `dist/` so you can sanity-check prerendered HTML without rebuilding
 - `zoho-refresh-token.mjs` — refreshes the Zoho CRM OAuth token (the Zoho SalesIQ widget is mounted via [src/components/ZohoSalesIQ.tsx](src/components/ZohoSalesIQ.tsx))
+- `verify-seo-routing.mjs` (`npm run verify:seo-routing`) — confirms the Cloudflare Worker is rewriting clean URLs to prerendered HTML in production
+- `verify-hostinger-staging.mjs` (`npm run verify:hostinger-staging`) — smoke-tests the full site against Hostinger's server IP directly (bypassing DNS) **before** switching A records, so you can validate a host migration without taking the live site down
 
 ## Branch workflow
 
@@ -68,7 +70,7 @@ The site is a pure client-side SPA whose SEO depends on three pieces working tog
 
 #### 1. `<Helmet>` without `defer={false}`
 
-`react-helmet-async` defaults `defer: true`, deferring head commits to `requestAnimationFrame`. rAF is unreliable inside the headless puppeteer prerender, and each new `<Helmet>` cancels the previous queued frame, so prerendered pages ship with the homepage `<title>` baked in. **Every `<Helmet>` in this codebase must include `defer={false}`** — currently 17 instances (1 in SEO.tsx, 11 in StructuredData.tsx, plus one each in Login/Privacy/Terms/Sitemap/NotFound). When adding a new `<Helmet>`, always include the prop.
+`react-helmet-async` defaults `defer: true`, deferring head commits to `requestAnimationFrame`. rAF is unreliable inside the headless puppeteer prerender, and each new `<Helmet>` cancels the previous queued frame, so prerendered pages ship with the homepage `<title>` baked in. **Every `<Helmet>` in this codebase must include `defer={false}`** — currently 22 instances (2 in SEO.tsx, 15 in StructuredData.tsx, plus one each in Login/Privacy/Terms/Sitemap/NotFound). When adding a new `<Helmet>`, always include the prop. Audit with: `grep -rn '<Helmet' src --include='*.tsx' | grep -v 'defer={false}\|HelmetProvider'` — any output (other than multi-line openings) is a bug.
 
 #### 2. Hardcoded page-specific meta tags in `index.html`
 
@@ -167,6 +169,14 @@ The contact form is wired for Turnstile but ships with the captcha **disabled** 
 If only one is set, both halves degrade to "captcha disabled" and the form still works. Get free keys at <https://dash.cloudflare.com/?to=/:account/turnstile>.
 
 Component: [src/components/Turnstile.tsx](src/components/Turnstile.tsx). Server check: [supabase/functions/submit-contact/index.ts](supabase/functions/submit-contact/index.ts) (`verifyTurnstile`).
+
+## Cookie consent & third-party script gating
+
+[src/lib/consent.ts](src/lib/consent.ts) is the single source of truth for cookie-consent state. It defaults to **deny-all** until the user chooses, reads/writes the `cookiePreferences` key in `localStorage`, and exposes `hasAnalyticsConsent()` / `hasMarketingConsent()`.
+
+The load-bearing rule: **no third-party script may load before its category is granted.** [GoogleAnalytics.tsx](src/components/GoogleAnalytics.tsx) gates the gtag injection behind `hasAnalyticsConsent()`; [ZohoSalesIQ.tsx](src/components/ZohoSalesIQ.tsx) gates the SalesIQ widget behind `hasMarketingConsent()`. Loading either earlier would set cookies before consent (GDPR/ePrivacy).
+
+Consent can be granted mid-session (the banner is dismissed without a reload), so [CookieConsent.tsx](src/components/CookieConsent.tsx) dispatches a `CONSENT_EVENT` (`gc:cookie-consent-changed`) on `window` whenever a choice is saved. Both integrations subscribe to it and load the moment the matching category flips to granted. **Any new third-party tag must follow this same pattern** — gate on the consent helper *and* subscribe to `CONSENT_EVENT`; never inject on mount unconditionally.
 
 ## Verification commands
 
