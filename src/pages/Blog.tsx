@@ -42,7 +42,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 'top-chemical-suppliers-oman-2026',
     title: 'Top Chemical Suppliers in Oman 2026: Industry Guide',
-    excerpt: 'Compare Oman's leading chemical suppliers in 2026 — capabilities, certifications, product ranges, and service quality to pick the right partner.',
+    excerpt: 'Compare Oman\'s leading chemical suppliers in 2026 — capabilities, certifications, product ranges, and service quality to pick the right partner.',
     content: `Oman's chemical supply industry is one of the most strategically significant in the Gulf region, serving a diverse base of industries from oil & gas and water treatment to manufacturing, agriculture, and construction. In 2026, the sector continues to grow as Vision 2040 drives industrial diversification and reduces reliance on hydrocarbon revenues. Choosing the right chemical supplier in Oman is therefore a critical procurement decision for any business operating in the sultanate.
 
 What Makes a Reliable Chemical Supplier in Oman?
@@ -87,7 +87,7 @@ Global Chemicals LLC is a JSRS-certified, ISO 9001:2015 accredited chemical supp
   {
     id: 'water-treatment-chemicals-muscat-oman',
     title: 'Water Treatment Chemicals for Industrial Use in Muscat, Oman',
-    excerpt: 'Selecting water treatment chemicals in Muscat — PAC, calcium hypochlorite, antiscalants, and dosing best practices for Oman's water conditions.',
+    excerpt: 'Selecting water treatment chemicals in Muscat — PAC, calcium hypochlorite, antiscalants, and dosing best practices for Oman\'s water conditions.',
     content: `Industrial water treatment in Muscat, Oman presents unique challenges that differ significantly from European or Asian operations. The city's reliance on desalinated seawater and brackish groundwater, combined with ambient temperatures regularly exceeding 45°C in summer, means that standard water treatment chemical programs must be adapted for local conditions. This guide covers the essential chemicals, dosing principles, and best practices for industrial water treatment in Muscat and across the Sultanate of Oman.
 
 Why Water Chemistry Differs in Oman
@@ -1060,7 +1060,7 @@ Global Chemicals LLC supplies a full range of RO membrane chemicals to municipal
   {
     id: 'shell-mobil-castrol-lubricants-oman',
     title: 'Industrial Lubricants in Oman: Shell, Mobil & Castrol Products Guide',
-    excerpt: 'Selecting Shell, Mobil, or Castrol lubricants for Oman's climate — engine oils, hydraulics, gear oils, and greases with viscosity guidance to 50°C.',
+    excerpt: 'Selecting Shell, Mobil, or Castrol lubricants for Oman\'s climate — engine oils, hydraulics, gear oils, and greases with viscosity guidance to 50°C.',
     content: `Industrial lubricants are among the most critical consumable chemicals in Oman's manufacturing, oil and gas, construction, and transport sectors. Selecting the wrong lubricant — the wrong viscosity grade, the wrong base oil type, or a product not rated for Oman's extreme temperatures — leads to premature equipment failure, increased maintenance costs, and unplanned downtime. This guide covers how to select the right lubricant from the major global brands we stock, with specific guidance for Oman's unique operating conditions.
 
 Why Lubricant Selection Is Different in Oman
@@ -1126,7 +1126,7 @@ Global Chemicals LLC is an authorised distributor of Shell, Mobil, and Castrol l
   {
     id: 'swimming-pool-chemicals-oman-muscat',
     title: 'Swimming Pool Chemicals in Oman: Complete Guide for Hotels, Villas & Facilities',
-    excerpt: 'Pool chemicals for Oman's climate — calcium hypochlorite, TCCA, hypochlorite, algaecide, pH control, and dosing for Muscat, Sohar, and Salalah.',
+    excerpt: 'Pool chemicals for Oman\'s climate — calcium hypochlorite, TCCA, hypochlorite, algaecide, pH control, and dosing for Muscat, Sohar, and Salalah.',
     content: `Swimming pool maintenance in Oman presents unique challenges that differ considerably from pool management in temperate climates. Muscat's summer ambient temperatures exceed 45°C, UV radiation is intense year-round, and dust and sand contamination are constant — all of which accelerate chlorine degradation, encourage algae growth, and increase the frequency of chemical dosing required to keep pools safe and clear. Whether you manage a hotel pool in Muscat's Shati al-Qurm, a villa pool in Madinat Qaboos or Al Mouj, a school facility, or an industrial facility, this guide covers the essential pool chemicals, dosing principles, and Oman-specific best practices.
 
 Why Oman Pools Need More Chemical Attention
