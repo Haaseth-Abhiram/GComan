@@ -58,9 +58,9 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* SEO-optimized hidden H1 for consistent keyword targeting */}
-      <h1 className="sr-only">
-        Chemical Supplier Muscat Oman | Caustic Soda, PAC, JSRS Registered | Global Chemicals LLC — Industrial, Water Treatment & Oil Gas Chemicals in Oman, UAE, Saudi Arabia, Qatar, GCC
+      {/* Visible, descriptive H1 for SEO and accessibility */}
+      <h1 className="absolute left-1/2 -translate-x-1/2 top-24 z-20 text-center text-white/95 text-base sm:text-lg md:text-xl font-semibold tracking-wide px-4 max-w-4xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
+        Leading Industrial Chemical Supplier in Oman & the GCC
       </h1>
       {/* Background with Parallax Effect */}
       <div className="absolute inset-0 z-0">
