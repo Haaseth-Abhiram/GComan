@@ -115,9 +115,12 @@ serve(async (req) => {
   }
 
   try {
-    // Rate limiting by IP
-    const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
-               req.headers.get('cf-connecting-ip') || 'unknown';
+    // Rate limiting by IP. Prefer non-spoofable Cloudflare header, then fall back
+    // to the LAST X-Forwarded-For value (infrastructure-appended real IP).
+    const ip = req.headers.get('cf-connecting-ip') ||
+               req.headers.get('x-real-ip') ||
+               req.headers.get('x-forwarded-for')?.split(',').at(-1)?.trim() ||
+               'unknown';
     if (await isRateLimited(ip)) {
       return new Response(
         JSON.stringify({ error: "Too many requests. Please try again in a moment." }),
