@@ -283,7 +283,7 @@ const Footer = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder={t('footer.newsletterPlaceholder')}
-                className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-primary"
+                className="bg-white/10 border-white/20 text-white placeholder:text-white/70 focus:border-primary"
                 disabled={isSubmitting}
                 required
               />
