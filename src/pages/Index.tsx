@@ -70,7 +70,7 @@ const Index = () => {
 
               {/* Prose */}
               <div className="flex-1 min-w-0">
-                <p className="text-[11px] font-semibold uppercase tracking-widest text-muted-foreground/50 mb-2">
+                <p className="text-[11px] font-semibold uppercase tracking-widest text-muted-foreground mb-2">
                   About the Company
                 </p>
                 <p className="text-sm text-muted-foreground leading-relaxed">
