@@ -180,7 +180,7 @@ const Footer = () => {
                 </ul>
               </div>
               <div>
-                <p className="text-white/50 text-xs uppercase tracking-wider mb-2">GCC Export</p>
+                <p className="text-white/80 text-xs uppercase tracking-wider mb-2">GCC Export</p>
                 <ul className="space-y-2">
                   {[
                     { label: 'Dubai', path: '/chemicals/dubai' },
