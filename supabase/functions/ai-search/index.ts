@@ -41,18 +41,16 @@ const supabaseAdmin = createClient(
 async function isRateLimited(ip: string): Promise<boolean> {
   try {
     const windowStart = new Date(Math.floor(Date.now() / RATE_LIMIT_WINDOW_MS) * RATE_LIMIT_WINDOW_MS).toISOString();
-    // Upsert + increment using two-step (Postgres lacks a single-call atomic increment via PostgREST).
-    const { data: existing } = await supabaseAdmin
-      .from("ai_search_rate_limits")
-      .select("request_count")
-      .eq("ip_address", ip)
-      .eq("window_start", windowStart)
-      .maybeSingle();
-
-    const nextCount = (existing?.request_count ?? 0) + 1;
-    await supabaseAdmin
-      .from("ai_search_rate_limits")
-      .upsert({ ip_address: ip, window_start: windowStart, request_count: nextCount });
+    // Atomic increment via SECURITY DEFINER RPC — prevents race conditions where
+    // concurrent requests all read 0 and bypass the limit.
+    const { data: count, error } = await supabaseAdmin.rpc("increment_ai_search_rate_limit", {
+      p_ip: ip,
+      p_window: windowStart,
+    });
+    if (error) {
+      console.error("rate limit rpc failed:", error);
+      return false; // Fail-open on infra hiccup
+    }
 
     // Best-effort cleanup of old rows (older than 1 hour) — fire and forget.
     if (Math.random() < 0.05) {
@@ -60,13 +58,13 @@ async function isRateLimited(ip: string): Promise<boolean> {
       supabaseAdmin.from("ai_search_rate_limits").delete().lt("window_start", cutoff).then(() => {});
     }
 
-    return nextCount > RATE_LIMIT_MAX;
+    return (count ?? 0) > RATE_LIMIT_MAX;
   } catch (err) {
     console.error("rate limit check failed:", err);
-    // Fail-open to avoid blocking legitimate traffic on infra hiccups.
     return false;
   }
 }
+
 
 const COMPANY_CONTEXT = `You are an AI search assistant for Global Chemicals LLC (gcoman.com), a leading chemical supplier in Oman (Muscat).
 
@@ -117,9 +115,12 @@ serve(async (req) => {
   }
 
   try {
-    // Rate limiting by IP
-    const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
-               req.headers.get('cf-connecting-ip') || 'unknown';
+    // Rate limiting by IP. Prefer non-spoofable Cloudflare header, then fall back
+    // to the LAST X-Forwarded-For value (infrastructure-appended real IP).
+    const ip = req.headers.get('cf-connecting-ip') ||
+               req.headers.get('x-real-ip') ||
+               req.headers.get('x-forwarded-for')?.split(',').at(-1)?.trim() ||
+               'unknown';
     if (await isRateLimited(ip)) {
       return new Response(
         JSON.stringify({ error: "Too many requests. Please try again in a moment." }),

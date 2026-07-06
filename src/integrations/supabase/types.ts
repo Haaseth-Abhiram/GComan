@@ -333,6 +333,10 @@ export type Database = {
         }
         Returns: boolean
       }
+      increment_ai_search_rate_limit: {
+        Args: { p_ip: string; p_window: string }
+        Returns: number
+      }
     }
     Enums: {
       app_role: "admin" | "moderator" | "user"
