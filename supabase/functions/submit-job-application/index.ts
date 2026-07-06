@@ -134,11 +134,37 @@ async function verifyTurnstile(token: string | undefined, ip: string): Promise<b
 }
 
 function getClientIP(req: Request): string {
-  return req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
+  // Prefer non-spoofable Cloudflare header, then fall back to the LAST
+  // X-Forwarded-For value (infrastructure-appended real IP).
+  return req.headers.get('cf-connecting-ip') ||
          req.headers.get('x-real-ip') ||
-         req.headers.get('cf-connecting-ip') ||
+         req.headers.get('x-forwarded-for')?.split(',').at(-1)?.trim() ||
          'unknown';
 }
+
+// Server-side file-type validation via magic-byte inspection. The client-supplied
+// MIME type (resumeFile.type) is trivially forgeable in a raw multipart request,
+// so we sniff the actual file signature instead.
+function detectFileType(bytes: Uint8Array): 'pdf' | 'doc' | 'docx' | null {
+  if (bytes.length < 8) return null;
+  // PDF: "%PDF"
+  if (bytes[0] === 0x25 && bytes[1] === 0x50 && bytes[2] === 0x44 && bytes[3] === 0x46) {
+    return 'pdf';
+  }
+  // DOCX (ZIP-based OOXML): "PK\x03\x04"
+  if (bytes[0] === 0x50 && bytes[1] === 0x4b && bytes[2] === 0x03 && bytes[3] === 0x04) {
+    return 'docx';
+  }
+  // Legacy DOC (OLE Compound File): D0 CF 11 E0 A1 B1 1A E1
+  if (
+    bytes[0] === 0xd0 && bytes[1] === 0xcf && bytes[2] === 0x11 && bytes[3] === 0xe0 &&
+    bytes[4] === 0xa1 && bytes[5] === 0xb1 && bytes[6] === 0x1a && bytes[7] === 0xe1
+  ) {
+    return 'doc';
+  }
+  return null;
+}
+
 
 // In-memory IP rate limiter (per cold-start instance)
 const ipRateLimitMap = new Map<string, { count: number; resetTime: number }>();
