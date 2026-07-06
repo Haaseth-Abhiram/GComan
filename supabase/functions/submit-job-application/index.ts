@@ -450,7 +450,7 @@ Submitted at: ${new Date().toLocaleString()}
               filename: sanitizedFileName,
               content: resumeBase64,
               encoding: "base64",
-              contentType: resumeFile.type,
+              contentType: safeContentType,
             },
           ],
         });
