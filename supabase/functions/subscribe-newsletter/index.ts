@@ -64,13 +64,15 @@ function validateEmail(email: unknown): string | null {
   return emailRegex.test(sanitized) ? sanitized : null;
 }
 
-// Get client IP from request headers
+// Get client IP from request headers. Prefer non-spoofable Cloudflare header,
+// then fall back to the LAST X-Forwarded-For value (infrastructure-appended real IP).
 function getClientIP(req: Request): string {
-  return req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
+  return req.headers.get('cf-connecting-ip') ||
          req.headers.get('x-real-ip') ||
-         req.headers.get('cf-connecting-ip') ||
+         req.headers.get('x-forwarded-for')?.split(',').at(-1)?.trim() ||
          'unknown';
 }
+
 
 Deno.serve(async (req) => {
   const corsHeaders = getCorsHeaders(req);
