@@ -144,9 +144,11 @@ Deno.serve(async (req) => {
   }
 
   try {
-    // Get client IP for rate limiting
-    const clientIP = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || 
-                     req.headers.get("x-real-ip") || 
+    // Get client IP for rate limiting. Prefer non-spoofable Cloudflare header,
+    // then fall back to the LAST X-Forwarded-For value (infrastructure-appended real IP).
+    const clientIP = req.headers.get("cf-connecting-ip") ||
+                     req.headers.get("x-real-ip") ||
+                     req.headers.get("x-forwarded-for")?.split(",").at(-1)?.trim() ||
                      "unknown";
 
     // Check rate limit
