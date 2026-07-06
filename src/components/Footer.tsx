@@ -162,7 +162,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4 text-white">{t('footer.weDeliverTo')}</h3>
             <div className="grid grid-cols-2 gap-x-4 gap-y-2">
               <div>
-                <p className="text-white/50 text-xs uppercase tracking-wider mb-2">Oman</p>
+                <p className="text-white/80 text-xs uppercase tracking-wider mb-2">Oman</p>
                 <ul className="space-y-2">
                   {[
                     { labelKey: 'locations.muscat', path: '/chemicals/muscat' },
