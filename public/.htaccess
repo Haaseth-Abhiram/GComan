@@ -165,6 +165,7 @@ Options -Indexes
   RewriteRule ^products/salts/calcium-chloride/?$        /products/water-treatment/calcium-chloride-water [R=301,L]
   RewriteRule ^products/salts/sodium-chloride/?$         /products/lab-chemicals/sodium-chloride-lab [R=301,L]
   RewriteRule ^products/salts/magnesium-sulphate/?$      /products/lab-chemicals/magnesium-sulfate-lab [R=301,L]
+  RewriteRule ^products/salts/sodium-sulphate/?$         /products [R=301,L]
   RewriteRule ^products/salts/?$                         /products [R=301,L]
   RewriteRule ^products/salts/(.+)$                      /products [R=301,L]
 
@@ -201,12 +202,30 @@ Options -Indexes
   RewriteRule ^products/oil-gas/?$                       /products/oilfield [R=301,L]
   RewriteRule ^products/cleaning-products/?$             /products [R=301,L]
 
+  # --- A4c. WordPress-era prefix catch-alls (specific rules above win first) ---
+  RewriteRule ^2021/.*$                                  /blog [R=301,L]
+  RewriteRule ^2025/.*$                                  /blog [R=301,L]
+  RewriteRule ^category/.*$                              /blog [R=301,L]
+  RewriteRule ^tag/.*$                                   /blog [R=301,L]
+  RewriteRule ^author/.*$                                /blog [R=301,L]
+  RewriteRule ^team-member/.*$                           /about [R=301,L]
+
   # --- A5. Trailing-slash normalisation (no slash is canonical) ---
   # Skip if the path is the root or maps to an existing directory we want to
   # serve (handled by A6 below).
   RewriteCond %{REQUEST_URI} !^/$
   RewriteCond %{REQUEST_URI} (.+)/$
   RewriteRule ^ %1 [R=301,L]
+
+  # --- A5b. Serve precompressed assets (vite-plugin-compression emits .br/.gz) ---
+  # Browsers advertising brotli get file.br; gzip fans get file.gz; the
+  # E=no-gzip flag stops mod_deflate double-compressing. Headers set in B.
+  RewriteCond %{HTTP:Accept-Encoding} br
+  RewriteCond %{REQUEST_FILENAME}.br -f
+  RewriteRule ^(.+)$ $1.br [L,E=no-gzip:1]
+  RewriteCond %{HTTP:Accept-Encoding} gzip
+  RewriteCond %{REQUEST_FILENAME}.gz -f
+  RewriteRule ^(.+)$ $1.gz [L,E=no-gzip:1]
 
   # --- A6. Serve prerendered HTML, fall back to SPA shell ---
   # 1. Pass through real files unchanged (sitemap.xml, robots.txt, /assets/*)
@@ -258,6 +277,31 @@ Options -Indexes
   Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://salesiq.zohopublic.com https://js.zohocdn.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://*.supabase.co https://www.google-analytics.com https://salesiq.zohopublic.com https://*.zoho.com https://wa.me; frame-src 'self' https://www.google.com https://maps.google.com https://wa.me;"
 </IfModule>
 
+# Precompressed asset headers (pairs with A5b). ForceType restores the real
+# MIME type that the .br/.gz extension would otherwise mask.
+<IfModule mod_headers.c>
+  <FilesMatch "\.js\.(br|gz)$">
+    ForceType text/javascript
+  </FilesMatch>
+  <FilesMatch "\.css\.(br|gz)$">
+    ForceType text/css
+  </FilesMatch>
+  <FilesMatch "\.svg\.(br|gz)$">
+    ForceType image/svg+xml
+  </FilesMatch>
+  <FilesMatch "\.html\.(br|gz)$">
+    ForceType text/html
+  </FilesMatch>
+  <FilesMatch "\.br$">
+    Header set Content-Encoding br
+    Header append Vary Accept-Encoding
+  </FilesMatch>
+  <FilesMatch "\.gz$">
+    Header set Content-Encoding gzip
+    Header append Vary Accept-Encoding
+  </FilesMatch>
+</IfModule>
+
 # ============================================================
 # C. MIME TYPES
 # ============================================================
@@ -274,7 +318,11 @@ Options -Indexes
 # D. COMPRESSION (Hostinger usually has this on; safety net)
 # ============================================================
 <IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml text/javascript
-  AddOutputFilterByType DEFLATE application/javascript application/json application/xml application/rss+xml
-  AddOutputFilterByType DEFLATE image/svg+xml font/ttf font/otf application/x-font-ttf
+  # AddOutputFilterByType is provided by mod_filter, not mod_deflate — the
+  # nested guard prevents a whole-site 500 on hosts without it.
+  <IfModule mod_filter.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml text/javascript
+    AddOutputFilterByType DEFLATE application/javascript application/json application/xml application/rss+xml
+    AddOutputFilterByType DEFLATE image/svg+xml font/ttf font/otf application/x-font-ttf
+  </IfModule>
 </IfModule>

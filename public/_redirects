@@ -34,6 +34,13 @@
 /team-member/james-logan/  /about  301
 /team-member/michal-wincent/  /about  301
 /team-member/john-tyler/  /about  301
+# WordPress-era prefix catch-alls (specific rules above win first)
+/2021/*  /blog  301
+/2025/*  /blog  301
+/category/*  /blog  301
+/tag/*  /blog  301
+/author/*  /blog  301
+/team-member/*  /about  301
 
 # Blog Posts - Date-based URLs (5 URLs)
 /2021/03/09/the-story-of-a-silk-lends-cotton-like-comfort/  /blog  301
