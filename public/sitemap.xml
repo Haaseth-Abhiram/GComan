@@ -470,10 +470,52 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- agro (1 products) -->
+  <!-- agro (8 products) -->
   <url>
-    <loc>https://gcoman.com/products/agro/agro-products</loc>
-    <lastmod>2026-03-24</lastmod>
+    <loc>https://gcoman.com/products/agro/urea-fertilizer</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gcoman.com/products/agro/dap-fertilizer</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gcoman.com/products/agro/npk-fertilizer</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gcoman.com/products/agro/potassium-chloride-fertilizer</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gcoman.com/products/agro/calcium-nitrate-fertilizer</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gcoman.com/products/agro/zinc-sulphate-agricultural</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gcoman.com/products/agro/agricultural-gypsum</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gcoman.com/products/agro/humic-acid-fertilizer</loc>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
