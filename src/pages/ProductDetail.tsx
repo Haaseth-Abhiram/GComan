@@ -93,6 +93,25 @@ const ProductDetail = () => {
 
   const Icon = product.icon;
 
+  // Arabic SEO meta — only when a real translation exists in products-ar.json
+  // (261 of ~768 products). Passing arTitle/arDescription to <SEO> makes the
+  // /ar twin indexable with a localized meta layer and emits hreflang pairs on
+  // both language versions; products without a translation stay noindex on /ar.
+  // getFixedT('ar') so the English render also knows its Arabic twin exists.
+  const tAr = i18n.getFixedT('ar');
+  const hasArabicSeo =
+    i18n.exists(`products.${product.id}.title`, { lng: 'ar' }) &&
+    i18n.exists(`products.${product.id}.description`, { lng: 'ar' });
+  const arSeoTitle = hasArabicSeo
+    ? `${tAr(`products.${product.id}.title`)} | مورّد كيماويات في عُمان والخليج`
+    : undefined;
+  const arRawDescription = hasArabicSeo ? String(tAr(`products.${product.id}.description`)) : '';
+  const arSeoDescription = hasArabicSeo
+    ? (arRawDescription.length <= 155
+        ? arRawDescription
+        : arRawDescription.slice(0, 154).replace(/\s+\S*$/, '') + '…')
+    : undefined;
+
   // Generate SEO-optimized description — includes GCC cities.
   // Truncate at ~155 chars (Google SERP limit) at a word boundary; longDescription
   // is the full article body and was leaking 1.6KB+ into the meta description.
@@ -164,6 +183,8 @@ const ProductDetail = () => {
       <SEO
         title={`${product.title} | ${catLabel} Supplier | Oman & GCC | Global Chemicals LLC`}
         description={seoDescription}
+        arTitle={arSeoTitle}
+        arDescription={arSeoDescription}
         keywords={keywords}
         ogTitle={`${product.title} - ${catLabel} Chemical Supplier | Oman & GCC | Global Chemicals LLC`}
         ogDescription={seoDescription}

@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 /**
- * Verifies that the Cloudflare Worker is correctly serving prerendered HTML.
- * Run after every Worker deploy or DNS change:
+ * Verifies that production (Hostinger Apache + public/.htaccess) is serving
+ * prerendered HTML, firing the legacy 301s, and exposing the Arabic product
+ * pages. Run after every deploy — especially after re-uploading .htaccess:
  *   npm run verify:seo-routing
  *
  * Exits 0 if all checks pass, 1 if any fail.
@@ -56,6 +57,25 @@ const CHECKS = [
       canonicalSelf: true,
     },
   },
+  {
+    label: 'arabic product page — localized meta, indexable, self-canonical',
+    url: `${BASE}/ar/products/water-treatment/caustic-soda-flakes`,
+    expect: {
+      status: 200,
+      titleNot: HOMEPAGE_TITLE,
+      titleContains: 'مورّد',
+      canonicalSelf: true,
+      bodyContains: 'content="index, follow',
+    },
+  },
+  {
+    label: 'english product page — hreflang pair to /ar twin',
+    url: `${BASE}/products/water-treatment/caustic-soda-flakes`,
+    expect: {
+      status: 200,
+      bodyContains: 'hreflang="ar" href="https://gcoman.com/ar/products/water-treatment/caustic-soda-flakes"',
+    },
+  },
 ];
 
 // ---------------------------------------------------------------------------
@@ -80,7 +100,6 @@ for (const check of CHECKS) {
   const { status } = res;
   const body = status === 200 ? await res.text() : '';
   const location = normalise(res.headers.get('location') ?? '');
-  const worker  = res.headers.get('x-gcoman-worker') ?? '(no header)';
 
   const errs = [];
 
@@ -109,6 +128,10 @@ for (const check of CHECKS) {
     }
   }
 
+  if (check.expect.bodyContains && !body.includes(check.expect.bodyContains)) {
+    errs.push(`body: expected to include ${JSON.stringify(check.expect.bodyContains)}`);
+  }
+
   if (check.expect.canonicalSelf) {
     const canonical = normalise(
       (body.match(/<link rel="canonical" href="([^"]+)"/) ?? [])[1] ?? ''
@@ -120,9 +143,9 @@ for (const check of CHECKS) {
   }
 
   if (errs.length === 0) {
-    console.log(`✅  ${check.label}  [worker: ${worker}]`);
+    console.log(`✅  ${check.label}`);
   } else {
-    console.error(`❌  ${check.label}  [worker: ${worker}]`);
+    console.error(`❌  ${check.label}`);
     errs.forEach(e => console.error(`    ${e}`));
     failed++;
   }

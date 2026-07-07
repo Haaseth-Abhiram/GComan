@@ -7,6 +7,15 @@ interface SEOProps {
   /** Optional override for the <title> tag only (og:title still uses `title`). Use when fitForSerp's automatic shortening is too aggressive. */
   seoTitle?: string;
   description: string;
+  /**
+   * Arabic title + description. Passing BOTH marks the page's /ar twin as
+   * fully localized: the /ar render becomes indexable with this meta and a
+   * /ar canonical, and both language versions emit reciprocal hreflang
+   * alternates. Omit (the default) and the /ar twin stays noindex — the safe
+   * state for pages whose body content is still English.
+   */
+  arTitle?: string;
+  arDescription?: string;
   keywords?: string;
   ogTitle?: string;
   ogDescription?: string;
@@ -49,6 +58,8 @@ export const SEO = ({
   title,
   seoTitle,
   description,
+  arTitle,
+  arDescription,
   keywords,
   ogTitle,
   ogDescription,
@@ -63,21 +74,35 @@ export const SEO = ({
   articleSection,
   articleTags,
 }: SEOProps) => {
-  const titleForSerp = seoTitle ?? fitForSerp(title);
   const { i18n } = useTranslation();
   const location = useLocation();
 
-  const finalOgImage = ogImage || DEFAULT_IMAGE;
-  const finalTitle = ogTitle || title;
-  const finalDescription = ogDescription || description;
-
   const currentLocale = i18n.language === 'ar' ? 'ar_SA' : 'en_US';
-
-  // Arabic (/ar/*) pages show translated body content to users, but their SEO
-  // layer (title, description, canonical) is still English — so keep them out of
-  // the index to avoid duplicate-content competition with the English pages.
-  // Remove this once the Arabic SEO layer is fully localized.
   const isArabic = location.pathname === '/ar' || location.pathname.startsWith('/ar/');
+
+  // A page's Arabic twin is only exposed to crawlers when the caller supplied
+  // a fully localized meta layer. Without it, /ar/* renders keep English
+  // meta + noindex, so half-translated pages never compete with the English
+  // originals as duplicate content.
+  const arReady = Boolean(arTitle && arDescription);
+  const useArabicMeta = isArabic && arReady;
+
+  const effectiveDescription = useArabicMeta ? arDescription! : description;
+  // fitForSerp's brand-suffix logic is tuned for the English titles; Arabic
+  // titles are authored to length and pass through unchanged.
+  const titleForSerp = useArabicMeta ? arTitle! : (seoTitle ?? fitForSerp(title));
+
+  // canonical/ogUrl props are authored as the English URLs. The /ar render
+  // must self-canonicalize (an /ar page pointing its canonical at the English
+  // URL would tell Google to ignore the Arabic version entirely).
+  const toArUrl = (url: string) =>
+    url.replace(/^https:\/\/gcoman\.com(\/|$)/, 'https://gcoman.com/ar$1').replace(/\/ar$/, '/ar/');
+  const effectiveCanonical = canonical && isArabic ? toArUrl(canonical) : canonical;
+  const effectiveOgUrl = ogUrl && isArabic ? toArUrl(ogUrl) : ogUrl;
+
+  const finalOgImage = ogImage || DEFAULT_IMAGE;
+  const finalTitle = useArabicMeta ? arTitle! : (ogTitle || title);
+  const finalDescription = useArabicMeta ? arDescription! : (ogDescription || description);
 
   return (
     // defer={false} forces react-helmet-async to commit head changes
@@ -87,28 +112,39 @@ export const SEO = ({
     // defaults — Google then saw most routes as duplicates of /.
     <Helmet defer={false}>
       <title>{titleForSerp}</title>
-      <meta name="description" content={description} />
+      <meta name="description" content={effectiveDescription} />
       {keywords && <meta name="keywords" content={keywords} />}
 
-      {/* Robots */}
+      {/* Robots — /ar renders are indexable only with a localized meta layer */}
       {noIndex ? (
         <meta name="robots" content="noindex, nofollow" />
-      ) : isArabic ? (
+      ) : isArabic && !arReady ? (
         <meta name="robots" content="noindex, follow" />
       ) : (
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
       )}
 
-      {/* No hreflang: the site is indexed as English-only. /ar/* renders
-          translated body content for users but is noindex (its SEO layer is not
-          yet localized), so there are no reciprocal alternates to advertise. */}
+      {/* hreflang — only for pages with a live, indexable Arabic twin
+          (arTitle/arDescription provided). Both language versions emit the
+          same reciprocal set; x-default is the English page. Pages without
+          Arabic meta emit nothing (their /ar twin is noindex, and hreflang
+          must never point at a noindexed URL). */}
+      {arReady && canonical && !noIndex && (
+        <link rel="alternate" hrefLang="en" href={canonical} />
+      )}
+      {arReady && canonical && !noIndex && (
+        <link rel="alternate" hrefLang="ar" href={toArUrl(canonical)} />
+      )}
+      {arReady && canonical && !noIndex && (
+        <link rel="alternate" hrefLang="x-default" href={canonical} />
+      )}
 
       {/* Open Graph */}
       <meta property="og:type" content={ogType} />
       <meta property="og:site_name" content={SITE_NAME} />
       <meta property="og:title" content={finalTitle} />
       <meta property="og:description" content={finalDescription} />
-      {ogUrl && <meta property="og:url" content={ogUrl} />}
+      {effectiveOgUrl && <meta property="og:url" content={effectiveOgUrl} />}
       <meta property="og:image" content={finalOgImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
@@ -138,8 +174,8 @@ export const SEO = ({
       <meta name="twitter:image" content={finalOgImage} />
       <meta name="twitter:image:alt" content={`${finalTitle} - Global Chemicals LLC`} />
 
-      {/* Canonical */}
-      {canonical && <link rel="canonical" href={canonical} />}
+      {/* Canonical — locale-aware (self-referencing on /ar) */}
+      {effectiveCanonical && <link rel="canonical" href={effectiveCanonical} />}
     </Helmet>
   );
 };
