@@ -57,7 +57,7 @@ Much more than a brochure site. Beyond the obvious marketing pages:
 
 ## Deploy chain
 
-- **Hosting:** Hostinger (Apache) fronted by Cloudflare. Domain → `185.158.133.1`, nameservers `ns1/ns2.dns-parking.com`.
+- **Hosting:** Hostinger (Apache). Domain → `185.158.133.1`, nameservers `ns1/ns2.dns-parking.com` (Hostinger's CDN in front adds `cf-ray` headers — that is Hostinger's Cloudflare partnership, not our account).
 - **Pipeline:** GitHub `main` → Lovable runs `vite build` → Lovable FTPs `dist/` to Hostinger `public_html/`.
 - **`public/.htaccess` is load-bearing** — it makes Hostinger serve per-route prerendered HTML instead of the SPA shell. Without it, all 300+ pages serve as homepage duplicates and Google indexing collapses.
 - `public/_redirects` / `public/_headers` are Netlify format, **ignored on Hostinger** — kept only as the human-readable source `.htaccess` was generated from.
@@ -85,6 +85,14 @@ Pure client-side SPA whose SEO depends on three pieces working together. Touchin
 - All pages are `React.lazy` + `<Suspense fallback={<Loading />}>` — follow this for new pages so per-route chunks stay small.
 - Locale-aware link helpers: [src/lib/langRouting.ts](src/lib/langRouting.ts), `<LocalizedLink>`.
 
+### Arabic SEO model (opt-in per page)
+
+An `/ar/*` render is **noindex by default**. It becomes indexable only when the page passes BOTH `arTitle` and `arDescription` to `<SEO>` — that flips the `/ar` render to localized meta + self-referencing `/ar` canonical, and makes both language versions emit reciprocal hreflang (`en`/`ar`/`x-default`). Never pass Arabic meta for a page whose body content is still English — that's the duplicate-content trap the default protects against.
+
+- Currently enabled: **product detail pages with a full translation in `src/i18n/locales/products-ar.json`** (~250 of ~768 products; title + description present = enabled, enforced in [src/pages/ProductDetail.tsx](src/pages/ProductDetail.tsx)).
+- `scripts/sync-ar-sitemap.mjs` keeps `public/sitemap.xml` in sync: adds hreflang alternates to translated products' English blocks and appends the `/ar` twin blocks so they prerender. Idempotent — rerun after adding product translations.
+- Everything else under `/ar` (home, about, industries, blog…) stays noindex because its page-level prose (FAQs, breadcrumbs, section copy) is hardcoded English even though the `ar.json` UI layer is 100% complete. To enable a page: wire its prose through `t()`, then pass `arTitle`/`arDescription`, then rerun the sitemap sync/add the URL.
+
 ## Adding a new page
 
 1. Create the component, lazy-import in [src/App.tsx](src/App.tsx).
@@ -93,17 +101,17 @@ Pure client-side SPA whose SEO depends on three pieces working together. Touchin
 4. Add an Arabic mirror under `/ar` if localized.
 5. Optional structured data via [src/components/StructuredData.tsx](src/components/StructuredData.tsx) — every Helmet there also needs `defer={false}`.
 
-## Cloudflare Worker (the live routing layer)
+## The production routing layer: `.htaccess`
 
-`cloudflare-worker.js` (repo root) is the **only routing mechanism that actually fires in production** — Lovable's CDN ignores `_redirects` and sits in front of Hostinger so `.htaccess` is never reached. The Worker 301s legacy URLs (`EXACT_REDIRECTS`/`PREFIX_REDIRECTS` maps) and rewrites clean URLs to `path/index.html` for crawlers.
+**The Cloudflare Worker plan is retired** (decision 2026-07-07 — the user closed the Cloudflare account path; `cloudflare-worker.js` + `wrangler.toml` remain in the repo as vestigial). Apache on Hostinger, driven by `public/.htaccess`, is the routing layer: legacy 301s, `/en/*` stripping, trailing-slash normalization, prerendered-HTML serving, SPA fallback, precompressed `.br`/`.gz` asset serving, and all response headers.
 
-- Deploy: `CLOUDFLARE_ACCOUNT_ID=... CLOUDFLARE_API_TOKEN=... npm run deploy:cloudflare-worker`
-- Verify: `npm run verify:seo-routing` — all 5 checks must pass with `[worker: prerender-rewrite]` on product pages. `(no header)` means DNS hasn't switched to Cloudflare yet.
-- **Prerequisite:** the Worker only intercepts traffic once gcoman.com's nameservers are `dion.ns.cloudflare.com`/`jule.ns.cloudflare.com`. They are currently `ns1/ns2.dns-parking.com` (zone `pending`), so deploys upload the Worker but traffic bypasses it. Before switching NS, add in Cloudflare DNS: `A gcoman.com → 185.158.133.1` (proxied) and `CNAME www → gcoman.com` (proxied).
+- Verified live 2026-07-07: **the server's `.htaccess` was a stale version** — serving rules fired but none of the 301s did. After any deploy, if redirects don't fire, re-upload `dist/.htaccess` (= `public/.htaccess`) manually via Hostinger File Manager (see Deploy chain — Lovable strips dotfiles).
+- Verify production: `npm run verify:seo-routing` (prerendered titles, legacy 301s, canonicals, Arabic product pages).
+- Test locally before shipping `.htaccess` changes: run a scratch Apache with `AllowOverride All` against a fake docroot (needs mods: rewrite, headers, dir, mime, filter, deflate) — all redirect groups, prerender serving, SPA fallback, and br/gzip negotiation are testable this way.
 
 ## Adding a redirect
 
-Edit ALL THREE: `public/_redirects` (readable source of truth), `public/.htaccess` (runs if traffic hits Hostinger directly), and `cloudflare-worker.js` maps (the layer that actually fires — then `npm run deploy:cloudflare-worker`).
+Edit BOTH: `public/_redirects` (readable Netlify-format source of truth) and `public/.htaccess` (what actually runs). Then make sure the new `.htaccess` really lands on the server (dotfile-stripping caveat above).
 
 ## Product data
 
@@ -131,7 +139,7 @@ After a build or production deploy, confirm SEO didn't regress:
 
 ```bash
 npm run verify:prerender-titles   # scan dist/ for pages with homepage default <title>; expect 0
-npm run verify:seo-routing        # production: Worker rewriting clean URLs to prerendered HTML
+npm run verify:seo-routing        # production: prerendered HTML, legacy 301s, Arabic product pages
 
 # Production: prerendered HTML served (not SPA shell)
 curl -s https://gcoman.com/career | grep -oE '<title>[^<]+'
@@ -145,12 +153,12 @@ curl -sI https://gcoman.com/service/calcium-carbonate/ -o /dev/null -w '%{http_c
 ## Scripts in `scripts/`
 
 - `deploy-supabase.sh` — deploy all edge functions
-- `add-hreflang-to-sitemap.mjs` — re-sync hreflang annotations in `public/sitemap.xml` after route changes
+- `sync-ar-sitemap.mjs` — see "Arabic SEO model"; run after adding product translations
 - `audit-playwright.mjs` — timestamped site snapshots → `audits/<date>-local|prod/`
 - `serve-dist.mjs` — serve `dist/` to sanity-check prerendered HTML without rebuilding
 - `zoho-refresh-token.mjs` — refresh the Zoho CRM OAuth token
 - `verify-prerender-titles.mjs` — see Verification commands
-- `verify-seo-routing.mjs` — see Cloudflare Worker
+- `verify-seo-routing.mjs` — see "The production routing layer"
 - `verify-hostinger-staging.mjs` — smoke-test the site against Hostinger's IP directly (bypassing DNS) before switching A records
 
 ## Reference docs in this repo
@@ -160,5 +168,6 @@ curl -sI https://gcoman.com/service/calcium-carbonate/ -o /dev/null -w '%{http_c
 
 ## Vestigial files (safe to ignore, do not extend)
 
+- `cloudflare-worker.js`, `wrangler.toml` — the retired Cloudflare Worker routing plan (see "The production routing layer"). Do not add redirects there; `.htaccess` is the live layer.
 - `tanstack-react-start-server-1.120.0.tgz`, `bun.lock`, `vercel.json` — leftovers from the aborted SSR migration, a Lovable bun trial, and an old Vercel preview respectively. Production is Hostinger; runtime router is `react-router-dom` v7.
-- `README.md` — generic Lovable template; this file is the real documentation.
+- `README.md` — project overview only; this file is the real documentation.
