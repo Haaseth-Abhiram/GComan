@@ -79,7 +79,7 @@ const About = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="About Us | Chemical Supplier Oman & GCC | Global Chemicals LLC"
-        description="ISO 9001 certified chemical supplier in Oman exporting to UAE, Saudi Arabia, Qatar, Kuwait & Bahrain. 10+ years excellence, 200+ clients across the GCC. Quality chemicals, expert service."
+        description="ISO 9001 certified Oman chemical supplier exporting to UAE, Saudi Arabia, Qatar, Kuwait & Bahrain. 10+ years, 200+ GCC clients."
         keywords="about global chemicals, chemical supplier Oman GCC, ISO 9001 certified Middle East, chemical company Muscat, specialty chemicals GCC, industrial chemicals supplier UAE, JSRS certified Oman, chemical exporter Middle East, Saudi Arabia chemical supplier, Dubai chemical company"
         ogTitle="About Global Chemicals LLC - Leading Chemical Supplier in Oman & GCC"
         ogDescription="ISO 9001 certified with 10+ years of excellence. Trusted by 200+ clients across Oman, UAE, Saudi Arabia, Qatar, Kuwait & Bahrain. Quality chemicals & expert service."

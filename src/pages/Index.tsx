@@ -42,7 +42,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="Chemical Suppliers in Oman & GCC | Global Chemicals LLC"
-        description="Global Chemicals LLC — Leading chemical supplier in Oman exporting to UAE, Saudi Arabia, Qatar, Kuwait & Bahrain. Industrial, water treatment & oilfield chemicals. ISO 9001 certified. Get a quote."
+        description="Leading Oman chemical supplier exporting to UAE, Saudi Arabia, Qatar, Kuwait & Bahrain. Industrial, water treatment & oilfield chemicals. ISO 9001 certified."
         keywords="chemical suppliers Oman GCC, chemical company oman UAE, industrial chemicals muscat dubai, chemical distributor GCC, chemical supplier UAE Saudi Arabia Qatar, water treatment chemicals GCC, PAC Oman UAE, caustic soda GCC, lubricants Middle East, laboratory chemicals GCC, Shell lubricants UAE, calcium hypochlorite GCC, agricultural chemicals oman, chemical exporter Oman"
         ogTitle="Chemical Suppliers in Oman & GCC | Global Chemicals LLC"
         ogDescription="Global Chemicals LLC — Oman-based chemical supplier exporting to UAE, Saudi Arabia, Qatar, Kuwait & Bahrain. Industrial, water treatment & oilfield chemicals. ISO 9001 certified."
@@ -71,7 +71,7 @@ const Index = () => {
 
               {/* Prose */}
               <div className="flex-1 min-w-0">
-                <p className="text-[11px] font-semibold uppercase tracking-widest text-muted-foreground/50 mb-2">
+                <p className="text-[11px] font-semibold uppercase tracking-widest text-muted-foreground mb-2">
                   About the Company
                 </p>
                 <p className="text-sm text-muted-foreground leading-relaxed">

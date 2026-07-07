@@ -42,7 +42,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 'top-chemical-suppliers-oman-2026',
     title: 'Top Chemical Suppliers in Oman 2026: Industry Guide',
-    excerpt: 'A comprehensive guide to the leading chemical suppliers serving Oman\'s industrial sectors in 2026. Compare capabilities, certifications, product ranges, and service quality to find the right chemical partner for your business.',
+    excerpt: 'Compare Oman\'s leading chemical suppliers in 2026 — capabilities, certifications, product ranges, and service quality to pick the right partner.',
     content: `Oman's chemical supply industry is one of the most strategically significant in the Gulf region, serving a diverse base of industries from oil & gas and water treatment to manufacturing, agriculture, and construction. In 2026, the sector continues to grow as Vision 2040 drives industrial diversification and reduces reliance on hydrocarbon revenues. Choosing the right chemical supplier in Oman is therefore a critical procurement decision for any business operating in the sultanate.
 
 What Makes a Reliable Chemical Supplier in Oman?
@@ -87,7 +87,7 @@ Global Chemicals LLC is a JSRS-certified, ISO 9001:2015 accredited chemical supp
   {
     id: 'water-treatment-chemicals-muscat-oman',
     title: 'Water Treatment Chemicals for Industrial Use in Muscat, Oman',
-    excerpt: 'Essential guide to selecting and using water treatment chemicals for industrial applications in Muscat. Covers PAC, calcium hypochlorite, antiscalants, and dosing best practices for Oman\'s unique water conditions.',
+    excerpt: 'Selecting water treatment chemicals in Muscat — PAC, calcium hypochlorite, antiscalants, and dosing best practices for Oman\'s water conditions.',
     content: `Industrial water treatment in Muscat, Oman presents unique challenges that differ significantly from European or Asian operations. The city's reliance on desalinated seawater and brackish groundwater, combined with ambient temperatures regularly exceeding 45°C in summer, means that standard water treatment chemical programs must be adapted for local conditions. This guide covers the essential chemicals, dosing principles, and best practices for industrial water treatment in Muscat and across the Sultanate of Oman.
 
 Why Water Chemistry Differs in Oman
@@ -158,7 +158,7 @@ Global Chemicals LLC supplies the complete range of water treatment chemicals to
   {
     id: 'agricultural-chemicals-oman-buyers-guide',
     title: 'Agricultural Chemicals in Oman: A Complete Buyer\'s Guide',
-    excerpt: 'Everything you need to know about sourcing agricultural chemicals in Oman. From fertilizers and soil conditioners to crop protection products, this guide helps farmers and agricultural businesses make informed purchasing decisions.',
+    excerpt: 'Sourcing agricultural chemicals in Oman — fertilizers, soil conditioners, and crop protection products for informed farm procurement decisions.',
     content: `Oman's agricultural sector is undergoing a significant transformation driven by the national food security agenda under Vision 2040. The government has invested heavily in expanding cultivated areas in Dhofar, Al Batinah, Al Dakhiliyah, and Al Sharqiyah regions, creating growing demand for quality agricultural chemicals including fertilizers, soil conditioners, pesticides, and irrigation water treatment products.
 
 Understanding Oman's Agricultural Chemical Regulations
@@ -562,7 +562,7 @@ Global Chemicals LLC supplies cooling tower treatment chemicals — antiscalants
   {
     id: 'caustic-soda-supplier-oman',
     title: 'Caustic Soda (Sodium Hydroxide) Supplier in Oman: Complete Guide',
-    excerpt: 'Everything you need to know about sourcing caustic soda (NaOH) in Oman — grades, specifications, storage, handling, and how to get a competitive bulk price from a reliable Muscat supplier.',
+    excerpt: 'Sourcing caustic soda (NaOH) in Oman — grades, specifications, storage, handling, and how to get a competitive bulk price from a Muscat supplier.',
     content: `Caustic soda — chemically known as sodium hydroxide (NaOH) — is one of the most widely used industrial chemicals in Oman. It serves critical functions across water treatment, oil & gas, chemical manufacturing, food processing, soap and detergent production, pulp and paper, and textile industries. As one of the highest-volume commodity chemicals in Oman's B2B market, understanding how to source, specify, and safely handle caustic soda is essential knowledge for any procurement or operations team.
 
 What is Caustic Soda and Why is it Called That?
@@ -639,7 +639,7 @@ Global Chemicals LLC supplies caustic soda flakes, pearls, and liquid solution t
   {
     id: 'pac-poly-aluminium-chloride-oman',
     title: 'PAC (Poly Aluminium Chloride) Supplier in Oman: Grades, Dosing & Pricing',
-    excerpt: 'Complete guide to Poly Aluminium Chloride (PAC) in Oman — liquid vs powder grades, basicity specifications, water treatment dosing, and how to source PAC from a reliable Muscat supplier.',
+    excerpt: 'Poly Aluminium Chloride (PAC) in Oman — liquid vs powder grades, basicity specs, water treatment dosing, and sourcing from a Muscat supplier.',
     content: `Poly Aluminium Chloride — universally known in Oman's water treatment sector as PAC — is the dominant coagulant used in municipal water treatment, industrial effluent treatment, and sludge conditioning across the Sultanate. If you are responsible for water treatment operations in Oman — whether at a municipal treatment plant, a food and beverage factory, a hotel, a petrochemical facility, or a swimming pool — understanding PAC grades, specifications, and dosing principles will help you select the right product and get better performance from your treatment system.
 
 What is PAC and How Does it Work?
@@ -716,7 +716,7 @@ Global Chemicals LLC is a major PAC supplier in Oman, stocking both liquid PAC (
   {
     id: 'chemical-exporter-oman-uae-dubai',
     title: 'Exporting Chemicals from Oman to UAE (Dubai & Abu Dhabi): 2026 Supplier Guide',
-    excerpt: 'How Oman-based chemical exporters supply UAE industries in Dubai, Abu Dhabi, and Sharjah. Covers logistics, documentation, lead times, and why Oman is a trusted chemical source for UAE procurement teams.',
+    excerpt: 'How Oman chemical exporters supply Dubai, Abu Dhabi, and Sharjah — logistics, documentation, lead times, and why UAE procurement trusts Oman.',
     content: `The United Arab Emirates is one of the largest chemical import markets in the Middle East, with industrial demand driven by construction, oil & gas, water treatment, manufacturing, and hospitality sectors spread across Dubai, Abu Dhabi, Sharjah, and the other Emirates. Oman, sharing a border and a deeply integrated trade history with the UAE, is a natural and frequently used chemical supply source for UAE procurement teams — and yet many buyers in the UAE are unaware of the breadth of product and service capability available from established Omani chemical exporters.
 
 Why UAE Companies Source Chemicals from Oman
@@ -787,7 +787,7 @@ UAE procurement teams can request a quote by emailing sales@gcoman.com with the 
   {
     id: 'chemical-exporter-oman-saudi-arabia-qatar-kuwait',
     title: 'Chemical Supply from Oman to Saudi Arabia, Qatar & Kuwait: Export Guide 2026',
-    excerpt: 'How Global Chemicals LLC exports chemicals from Muscat, Oman to Saudi Arabia (Riyadh, Dammam), Qatar (Doha, Ras Laffan), and Kuwait. Lead times, documentation, product availability and getting a quote.',
+    excerpt: 'Exporting chemicals from Muscat to Saudi Arabia, Qatar, and Kuwait — lead times, documentation, product availability, and how to get a quote.',
     content: `Oman's strategic location at the southeastern tip of the Arabian Peninsula, combined with its deep integration into GCC trade frameworks, makes it an efficient and well-positioned source for chemical supply across the broader Gulf region. While UAE supply from Oman is the most common GCC export route, Global Chemicals LLC regularly exports chemicals to Saudi Arabia, Qatar, and Kuwait — serving procurement teams who value competitive Omani pricing, reliable supply chains, and the ability to consolidate multi-country GCC orders through a single supplier.
 
 Exporting Chemicals from Oman to Saudi Arabia
@@ -866,7 +866,7 @@ Global Chemicals LLC ships to all 6 GCC countries from our Muscat warehouse. We 
   {
     id: 'jsrs-chemical-supplier-pdo-oman',
     title: 'JSRS-Certified Chemical Supplier for PDO & Oil and Gas Contractors in Oman',
-    excerpt: 'Everything Oman oil and gas operators and PDO contractors need to know about sourcing chemicals from a JSRS-registered, ISO 9001-certified supplier. Covers JSRS registration, ICV compliance, vendor qualification, and our chemical portfolio for upstream, midstream, and downstream operations.',
+    excerpt: 'Sourcing oil & gas chemicals in Oman from a JSRS-registered, ISO 9001-certified supplier — ICV compliance, vendor qualification, and portfolio.',
     content: `Oman's oil and gas sector — led by Petroleum Development Oman (PDO), OQ, OPAL, and a network of international operators — requires its chemical suppliers to meet a rigorous pre-qualification standard before any supply agreement can be established. This standard is administered through JSRS: the Joint Supplier Registration System. If your company is an oil and gas operator or contractor in Oman sourcing chemicals for production, maintenance, or water treatment, understanding JSRS and finding a certified supplier is the critical first procurement step.
 
 What is JSRS?
@@ -933,7 +933,7 @@ For PDO, OQ, and oil and gas contractor supply enquiries: email sales@gcoman.com
   {
     id: 'food-grade-chemicals-supplier-oman',
     title: 'Food Grade Chemical Supplier in Oman: HACCP-Compliant Chemicals for Food Manufacturing',
-    excerpt: 'Complete guide to food-grade chemicals for Oman\'s food and beverage manufacturing sector. Covers food-grade caustic soda, sodium hypochlorite, citric acid, CIP programs, Halal certification, and how to verify supplier credentials for HACCP-compliant operations.',
+    excerpt: 'Food-grade chemicals for Oman F&B manufacturing — caustic soda, hypochlorite, citric acid, CIP, Halal certification, and HACCP-compliant sourcing.',
     content: `Oman's food manufacturing and processing sector is expanding rapidly under Vision 2040, which targets food security and reduced dependence on imported food. The number of food and beverage facilities in Rusayl Industrial Estate, Sohar, Barka, and across Oman has grown significantly — and with it the demand for certified food-grade chemicals that meet HACCP, Halal, and international food safety standards. This guide covers what food-grade chemicals mean in practice, which certifications matter, the key chemicals Oman food manufacturers need, and how to source them from a reliable supplier.
 
 What "Food Grade" Actually Means
@@ -999,7 +999,7 @@ Global Chemicals LLC supplies a comprehensive range of food-grade chemicals to O
   {
     id: 'ro-membrane-chemicals-antiscalant-oman',
     title: 'RO Membrane Chemicals for Oman: Antiscalants, Cleaners & Passivation Guide',
-    excerpt: 'Essential guide to reverse osmosis membrane chemicals for Oman\'s seawater and brackish water RO systems. Covers antiscalant selection, CIP membrane cleaners (acid and alkaline), passivation, and dosing guidance for Oman\'s specific water chemistry challenges.',
+    excerpt: 'RO membrane chemicals for Oman seawater and brackish water systems — antiscalants, acid/alkaline CIP cleaners, passivation, and dosing guidance.',
     content: `Oman has one of the world's highest concentrations of reverse osmosis (RO) water treatment infrastructure per capita. Municipal drinking water is supplied almost entirely by coastal desalination plants at Al Ghubrah, Barka, Sur, Salalah, and others. Industrial facilities across the country — manufacturing, oil and gas, hotels, food processing — run their own RO and nanofiltration systems for process water and potable water. The demand for RO membrane chemicals — antiscalants, membrane cleaners, passivation agents, and descalers — is substantial and growing. This guide covers the essential RO chemicals for Oman's specific water chemistry challenges, how to select them, and how to apply them correctly.
 
 Why RO Membrane Chemistry Is More Demanding in Oman
@@ -1060,7 +1060,7 @@ Global Chemicals LLC supplies a full range of RO membrane chemicals to municipal
   {
     id: 'shell-mobil-castrol-lubricants-oman',
     title: 'Industrial Lubricants in Oman: Shell, Mobil & Castrol Products Guide',
-    excerpt: 'How to select the right Shell, Mobil, or Castrol lubricant for Oman\'s extreme climate. Covers engine oils, hydraulic fluids, gear oils, and greases for Oman\'s industrial, oil and gas, construction, and transport sectors — with viscosity grade guidance for temperatures up to 50°C.',
+    excerpt: 'Selecting Shell, Mobil, or Castrol lubricants for Oman\'s climate — engine oils, hydraulics, gear oils, and greases with viscosity guidance to 50°C.',
     content: `Industrial lubricants are among the most critical consumable chemicals in Oman's manufacturing, oil and gas, construction, and transport sectors. Selecting the wrong lubricant — the wrong viscosity grade, the wrong base oil type, or a product not rated for Oman's extreme temperatures — leads to premature equipment failure, increased maintenance costs, and unplanned downtime. This guide covers how to select the right lubricant from the major global brands we stock, with specific guidance for Oman's unique operating conditions.
 
 Why Lubricant Selection Is Different in Oman
@@ -1126,7 +1126,7 @@ Global Chemicals LLC is an authorised distributor of Shell, Mobil, and Castrol l
   {
     id: 'swimming-pool-chemicals-oman-muscat',
     title: 'Swimming Pool Chemicals in Oman: Complete Guide for Hotels, Villas & Facilities',
-    excerpt: 'Everything you need to know about pool chemicals for Oman\'s extreme climate. Covers calcium hypochlorite, TCCA tablets, sodium hypochlorite, algaecide, pH management, and dosing schedules for Muscat, Sohar, Salalah, and across the GCC — where 45°C summer heat and UV intensity demand a different approach to pool maintenance.',
+    excerpt: 'Pool chemicals for Oman\'s climate — calcium hypochlorite, TCCA, hypochlorite, algaecide, pH control, and dosing for Muscat, Sohar, and Salalah.',
     content: `Swimming pool maintenance in Oman presents unique challenges that differ considerably from pool management in temperate climates. Muscat's summer ambient temperatures exceed 45°C, UV radiation is intense year-round, and dust and sand contamination are constant — all of which accelerate chlorine degradation, encourage algae growth, and increase the frequency of chemical dosing required to keep pools safe and clear. Whether you manage a hotel pool in Muscat's Shati al-Qurm, a villa pool in Madinat Qaboos or Al Mouj, a school facility, or an industrial facility, this guide covers the essential pool chemicals, dosing principles, and Oman-specific best practices.
 
 Why Oman Pools Need More Chemical Attention

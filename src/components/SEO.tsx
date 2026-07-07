@@ -33,6 +33,7 @@ interface SEOProps {
 
 const DEFAULT_IMAGE = "https://storage.googleapis.com/gpt-engineer-file-uploads/KCdCgzQqlrUlZx0GJf8ZTPlKH1p2/social-images/social-1761453031792-resize-17607541312075170240GlobalChemicalsLLCLogoPNG.png";
 const SITE_NAME = "Global Chemicals LLC";
+const BASE_URL = "https://gcoman.com";
 const TWITTER_HANDLE = "@globalchemicals";
 const BRAND_SUFFIX = ' | Global Chemicals LLC';
 const SERP_TITLE_LIMIT = 60;
@@ -174,8 +175,9 @@ export const SEO = ({
       <meta name="twitter:image" content={finalOgImage} />
       <meta name="twitter:image:alt" content={`${finalTitle} - Global Chemicals LLC`} />
 
-      {/* Canonical — locale-aware (self-referencing on /ar) */}
-      {effectiveCanonical && <link rel="canonical" href={effectiveCanonical} />}
+      {/* Canonical — locale-aware (self-referencing on /ar), falling back to
+          the current path so every page always has a canonical */}
+      <link rel="canonical" href={effectiveCanonical || `${BASE_URL}${location.pathname}`} />
     </Helmet>
   );
 };

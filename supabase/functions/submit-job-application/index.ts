@@ -137,6 +137,29 @@ async function verifyTurnstile(token: string | undefined, ip: string): Promise<b
 
 // IP extraction and the durable per-IP rate limiter live in
 // ../_shared/rate-limit.ts (the previous in-memory Map reset on cold starts).
+
+// Server-side file-type validation via magic-byte inspection. The client-supplied
+// MIME type (resumeFile.type) is trivially forgeable in a raw multipart request,
+// so we sniff the actual file signature instead.
+function detectFileType(bytes: Uint8Array): 'pdf' | 'doc' | 'docx' | null {
+  if (bytes.length < 8) return null;
+  // PDF: "%PDF"
+  if (bytes[0] === 0x25 && bytes[1] === 0x50 && bytes[2] === 0x44 && bytes[3] === 0x46) {
+    return 'pdf';
+  }
+  // DOCX (ZIP-based OOXML): "PK\x03\x04"
+  if (bytes[0] === 0x50 && bytes[1] === 0x4b && bytes[2] === 0x03 && bytes[3] === 0x04) {
+    return 'docx';
+  }
+  // Legacy DOC (OLE Compound File): D0 CF 11 E0 A1 B1 1A E1
+  if (
+    bytes[0] === 0xd0 && bytes[1] === 0xcf && bytes[2] === 0x11 && bytes[3] === 0xe0 &&
+    bytes[4] === 0xa1 && bytes[5] === 0xb1 && bytes[6] === 0x1a && bytes[7] === 0xe1
+  ) {
+    return 'doc';
+  }
+  return null;
+}
 const IP_RATE_LIMIT_MAX = 3;
 const IP_RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000; // 1 hour
 async function checkRateLimit(supabase: any, email: string): Promise<{ allowed: boolean; error?: string }> {
@@ -253,21 +276,45 @@ Deno.serve(async (req) => {
       );
     }
 
-    // Validate file type and size
-    const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
-    if (!allowedTypes.includes(resumeFile.type)) {
-      return new Response(
-        JSON.stringify({ error: 'Invalid file type. Only PDF, DOC, and DOCX are allowed.' }),
-        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-      );
-    }
-
+    // Validate file size first (cheap check before buffering)
     if (resumeFile.size > 5 * 1024 * 1024) {
       return new Response(
         JSON.stringify({ error: 'File size exceeds 5MB limit' }),
         { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       );
     }
+
+    // Read the buffer and validate real file type via magic bytes.
+    // The client-supplied resumeFile.type is forgeable, so we sniff the signature.
+    const fileBuffer = await resumeFile.arrayBuffer();
+    const sniffed = detectFileType(new Uint8Array(fileBuffer, 0, Math.min(16, fileBuffer.byteLength)));
+    if (!sniffed) {
+      return new Response(
+        JSON.stringify({ error: 'Invalid file type. Only PDF, DOC, and DOCX are allowed.' }),
+        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
+    // Cross-check the sniffed type against the declared MIME to reject mismatches
+    // (e.g. an .exe uploaded with Content-Type: application/pdf).
+    const mimeToSniff: Record<string, 'pdf' | 'doc' | 'docx'> = {
+      'application/pdf': 'pdf',
+      'application/msword': 'doc',
+      'application/vnd.openxmlformats-officedocument.wordprocessingml.document': 'docx',
+    };
+    const expected = mimeToSniff[resumeFile.type];
+    if (!expected || expected !== sniffed) {
+      return new Response(
+        JSON.stringify({ error: 'File contents do not match declared type. Only genuine PDF, DOC, or DOCX files are allowed.' }),
+        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
+    // Normalize the stored content-type to the sniffed value (defence-in-depth).
+    const safeContentType =
+      sniffed === 'pdf' ? 'application/pdf' :
+      sniffed === 'docx' ? 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' :
+      'application/msword';
 
     // Organize resumes by position and month for HR: {position-slug}/{YYYY-MM}/{timestamp}-{applicant}-{filename}
     const sanitizedFileName = resumeFile.name.replace(/[^a-zA-Z0-9._-]/g, '_');
@@ -286,14 +333,14 @@ Deno.serve(async (req) => {
     const timestamp = now.getTime();
     const filePath = `${positionSlug}/${yearMonth}/${timestamp}-${applicantSlug}-${sanitizedFileName}`;
 
-    // Upload resume to storage
-    const fileBuffer = await resumeFile.arrayBuffer();
+    // Upload resume to storage with the sniffed content-type (not the client-supplied one).
     const { error: uploadError } = await supabase.storage
       .from('resumes')
       .upload(filePath, fileBuffer, {
-        contentType: resumeFile.type,
+        contentType: safeContentType,
         upsert: false,
       });
+
 
     if (uploadError) {
       console.error('Upload error:', uploadError);
@@ -383,7 +430,7 @@ Submitted at: ${new Date().toLocaleString()}
               filename: sanitizedFileName,
               content: resumeBase64,
               encoding: "base64",
-              contentType: resumeFile.type,
+              contentType: safeContentType,
             },
           ],
         });

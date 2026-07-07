@@ -55,14 +55,15 @@ export async function isRateLimited(
 
 /**
  * Client IP for rate limiting. cf-connecting-ip is set by Cloudflare and not
- * client-spoofable in this deploy; the leftmost x-forwarded-for entry IS
- * attacker-controlled, so it's only a fallback.
+ * client-spoofable; then x-real-ip; then the LAST x-forwarded-for entry —
+ * the one appended by our infrastructure (the leftmost entries are
+ * attacker-controlled).
  */
 export function getClientIp(req: Request): string {
   return (
     req.headers.get("cf-connecting-ip")?.trim() ||
-    req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
     req.headers.get("x-real-ip")?.trim() ||
+    req.headers.get("x-forwarded-for")?.split(",").at(-1)?.trim() ||
     "unknown"
   );
 }
