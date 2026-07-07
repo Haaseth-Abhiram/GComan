@@ -39,6 +39,34 @@ const productsFAQs = [
   }
 ];
 
+// Category-specific FAQ overrides — replaces the generic sitewide FAQ on
+// category pages so structured-data is topically relevant (Google devalues
+// duplicated FAQ markup reused across many URLs).
+const categoryFAQs: Record<string, { question: string; answer: string }[]> = {
+  agro: [
+    {
+      question: "What agricultural chemicals and fertilizers does Global Chemicals LLC supply in Oman?",
+      answer: "We supply straight and compound fertilizers (urea 46% N, DAP 18-46-0, NPK 20-20-20 / 19-19-19 / 15-15-15, potassium chloride 60% K2O, calcium nitrate 15.5% N), micronutrients (zinc sulphate monohydrate 33% Zn, chelated iron, manganese, boron), soil amendments (agricultural gypsum, humic acid, leonardite extract), and irrigation water treatment chemicals for drip systems (acid pH correction, antiscalants, algaecides). Custom NPK blending, soil and irrigation water analysis, and Oman Ministry of Agriculture-approved import documentation available."
+    },
+    {
+      question: "Which fertilizer is best for date palms in Oman?",
+      answer: "Date palms in Oman require a balanced NPK program with heavy potassium emphasis. A typical annual program per mature tree: 2–3 kg urea (46% N) split across three applications, 1–2 kg DAP (18-46-0) at winter dormancy break, and 3–5 kg potassium chloride (60% K2O) split at fruit set and fruit development — potassium is critical for fruit sizing, sugar accumulation, and post-harvest storage quality. Add zinc sulphate (100–200 g/tree) every 2–3 years to correct the near-universal zinc deficiency in Oman's alkaline soils. Apply via basin flooding or fertigation through drip emitters."
+    },
+    {
+      question: "How is calcium nitrate used to prevent blossom-end rot in greenhouse tomatoes?",
+      answer: "Blossom-end rot in Oman greenhouse tomatoes is caused by localised calcium deficiency during rapid fruit expansion — often when high transpiration in summer greenhouses draws calcium to leaves instead of fruit. Continuous fertigation with calcium nitrate (15.5% N, 26.5% CaO) at 150–200 ppm Ca in the drip solution supplies steady calcium throughout the fruiting cycle. Weekly foliar sprays (0.3–0.5% calcium nitrate) supplement soil supply during peak fruit-set weeks. Calcium nitrate is the only widely-available calcium source fully compatible with fertigation — it dissolves clearly and delivers nitrate-nitrogen, which crops prefer over ammonium in alkaline substrates."
+    },
+    {
+      question: "How does agricultural gypsum reclaim sodic soils in Oman?",
+      answer: "Sodic soils are widespread in Oman where saline groundwater irrigation has raised exchangeable sodium above 15% of cation exchange capacity, destroying soil aggregate structure and reducing water infiltration to near zero. Agricultural gypsum (calcium sulphate dihydrate, 23% Ca) supplies soluble calcium that displaces adsorbed sodium from clay exchange sites; the displaced sodium is then leached out with excess irrigation water. Typical reclamation rate is 2–10 tonnes/ha depending on soil texture and sodium adsorption ratio, followed by heavy leaching irrigation. Structure and infiltration usually recover within one cropping season, and gypsum also supplies calcium and sulphur as a non-acidifying nutrient source."
+    },
+    {
+      question: "Do you supply Ministry of Agriculture-approved fertilizers to Omani farms?",
+      answer: "Yes. All fertilizers and agricultural chemicals supplied by Global Chemicals LLC carry Oman Ministry of Agriculture, Fisheries Wealth and Water Resources import approvals and are backed by Certificates of Analysis, Safety Data Sheets (GHS-compliant, English and Arabic), and, where applicable, food/feed-grade documentation. We deliver to farms across Al Batinah, Al Dakhiliyah, Al Sharqiyah, Dhofar, and Musandam, and offer soil and irrigation water analysis to match the fertilizer program to your specific field conditions."
+    }
+  ]
+};
+
 interface Product {
   id: string;
   title: string;
