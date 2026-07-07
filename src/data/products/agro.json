@@ -1,64 +1,282 @@
 [
   {
-    "id": "agro-products",
-    "title": "Agricultural Chemicals & Fertilizers",
-    "description": "Fertilizers, soil conditioners, crop protection chemicals, and irrigation water treatment products for Oman's farming and greenhouse sectors.",
+    "id": "urea-fertilizer",
+    "title": "Urea 46% N Fertilizer",
+    "description": "Prilled and granular urea (46-0-0) — the most concentrated solid nitrogen fertilizer, supplied to date palm, vegetable, and cereal growers across Oman.",
     "category": "agro",
     "iconName": "Wheat",
     "details": {
-      "alternativeNames": [
-        "Agricultural chemicals",
-        "Agrochemicals",
-        "Crop protection chemicals",
-        "Fertilizers Oman",
-        "Farm chemicals"
-      ],
+      "formula": "CO(NH2)2",
+      "casNumber": "57-13-6",
+      "alternativeNames": ["Urea 46-0-0", "Prilled urea", "Granular urea", "Carbamide", "Fertilizer urea"],
       "seoKeywords": [
-        "agricultural chemicals Oman",
-        "fertilizers Oman",
-        "agrochemicals Muscat",
-        "crop protection chemicals Oman",
-        "soil conditioner Oman",
-        "irrigation water treatment Oman",
-        "farming chemicals Oman",
-        "greenhouse chemicals Oman",
-        "agricultural chemicals Dhofar",
-        "Al Batinah farm chemicals Oman",
-        "plant nutrients Oman",
-        "urea fertilizer Oman"
+        "urea fertilizer Oman",
+        "urea 46 Oman",
+        "prilled urea Muscat",
+        "granular urea Sohar",
+        "nitrogen fertilizer Oman",
+        "urea supplier Oman",
+        "date palm fertilizer Oman"
       ],
-      "longDescription": "Agricultural Chemicals and Fertilizers supplier in Oman — Global Chemicals LLC supplies specialty agrochemicals, fertilizers, and crop protection chemicals to farms, greenhouses, and agricultural operations across Oman. Under Vision 2040, Oman has significantly increased investment in domestic food production, expanding cultivated areas in Al Batinah, Al Dakhiliyah, Al Sharqiyah, and Dhofar regions. Global Chemicals LLC supports this agricultural expansion by supplying the critical inputs farmers need. Our agricultural chemical range includes straight and compound fertilizers (urea 46% N, diammonium phosphate — DAP, potassium chloride/sulphate, NPK compound fertilizers, calcium nitrate), micronutrient fertilizers (zinc sulphate, manganese sulphate, boron, iron chelates, copper sulphate — for micronutrient correction in Oman's soils), soil conditioners (gypsum, lime, humic acid, sulphur), irrigation water treatment chemicals (acid for drip irrigation pH correction, antiscalants for emitter protection, algaecides for open channel irrigation), and crop protection products. We supply to farms in Nizwa, Barka, Sohar, Al Batinah coast, and greenhouses across the interior. Delivery to all Oman agricultural regions. Technical advice on fertilizer programmes and soil chemistry available from our team.",
+      "longDescription": "Urea (46% N) is the most concentrated solid nitrogen fertilizer available and the primary nitrogen source across Oman's agriculture — date palm plantations in Al Batinah and Al Dakhiliyah, vegetable farms, greenhouse operations, and cereal cropping. Global Chemicals LLC supplies IFDC-standard prilled and granular urea in 25 kg PP bags and 1,000 kg big bags. Applied by broadcast, fertigation through drip irrigation, or foliar spray (0.5–1.0% solution). In Oman's alkaline calcareous soils (pH 7.5–8.5), prompt incorporation or fertigation minimises ammonia volatilisation losses.",
       "applications": [
-        "Crop fertilization (nitrogen, phosphorus, potassium, micronutrients)",
-        "Soil pH correction and conditioning",
-        "Drip irrigation system maintenance and water treatment",
-        "Greenhouse and hydroponic nutrient supply",
-        "Soil micronutrient correction (zinc, iron, boron, manganese deficiency)",
-        "Irrigation water pH adjustment and scaling prevention",
-        "Organic matter and humic acid soil improvement",
-        "Date palm and fruit tree fertilization programs"
+        "Date palm nitrogen fertilization (150–300 kg/ha/season)",
+        "Vegetable and greenhouse crop fertigation",
+        "Cereal and forage crop broadcast application",
+        "Foliar nitrogen spray for stress recovery",
+        "Feedstock for urea-formaldehyde and melamine resins"
       ],
       "technicalSpecs": [
-        "Urea: 46% N, prilled and granular, IFDC standard",
-        "DAP: 18% N, 46% P2O5, granular",
-        "Potassium Chloride: 60% K2O, standard and granular grade",
-        "Zinc Sulphate Monohydrate: 33% Zn, technical grade",
-        "Calcium Nitrate: 15.5% N (nitrate), 26.5% CaO",
-        "Packaging: 25kg bag to 1,000kg big bag",
-        "Custom NPK blend services available",
-        "Soil and water analysis service available on request"
+        "Total Nitrogen (N): 46% min",
+        "Biuret: <1.0%",
+        "Moisture: <0.5%",
+        "Prill size: 1–2.4 mm (prilled), 2–4 mm (granular)",
+        "Packaging: 25 kg PP bag, 1,000 kg big bag"
       ],
-      "faqs": [
-        {
-          "question": "What agricultural chemicals does Global Chemicals LLC supply in Oman?",
-          "answer": "Global Chemicals LLC supplies a range of agricultural input chemicals to Oman's farming, horticulture, and landscaping sector. Products include soil amendments (calcium carbonate agricultural lime for pH adjustment, dolomite lime, gypsum for sodic soil improvement), fertiliser-grade chemicals (urea, potassium chloride, ammonium nitrate, mono-ammonium phosphate), water treatment chemicals for drip irrigation systems (citric acid for pH reduction, preventing calcium carbonate scale in emitters; chlorine for irrigation water disinfection), and specialty chemicals for date palm, vegetable, and fruit cultivation across Oman's interior regions. In Oman's arid agricultural regions including Batinah Coast, Dakhliyah, and Al Wusta, water quality management and soil amendment are critical for sustainable crop production. We also supply formaldehyde and disinfectants for greenhouse sterilisation, surfactants for pesticide adjuvant formulations, and micronutrient salts. All agricultural chemicals are supplied with crop-safe documentation and applicable Oman Ministry of Agriculture and Fisheries Wealth import approvals."
-        },
-        {
-          "question": "How is urea used in Omani agriculture and what is the correct application rate?",
-          "answer": "Urea (CO(NH₂)₂, 46-0-0) is the most concentrated solid nitrogen fertiliser available (46% nitrogen by weight) and the most widely used nitrogen source in Oman's agriculture, including date palm plantations, vegetable cultivation, and cereal crops. In Oman, urea is applied by three methods: broadcast application (spread uniformly across soil surface and incorporated by irrigation, typical rate 150–300 kg/ha per crop season for date palms), fertigation through drip irrigation (urea dissolved in irrigation water and delivered directly to the root zone at controlled rates — more efficient and reduces nitrogen volatilisation losses), and foliar spray (dilute urea solution 0.5–1.0% applied to leaf surface for rapid nitrogen uptake when roots are under stress). In Oman's alkaline calcareous soils (pH 7.5–8.5), urea hydrolysis to ammonia and subsequent volatilisation can cause nitrogen losses of 20–40% if not incorporated promptly. Urease inhibitors or immediate irrigation after application minimises losses. Global Chemicals LLC supplies food/feed-grade and agricultural-grade urea with Oman Ministry of Agriculture import documentation."
-        }
+      "wikiUrl": "https://en.wikipedia.org/wiki/Urea"
+    }
+  },
+  {
+    "id": "dap-fertilizer",
+    "title": "Diammonium Phosphate (DAP 18-46-0)",
+    "description": "Granular DAP fertilizer — 18% nitrogen, 46% phosphate — the highest-analysis phosphorus fertilizer for base dressing across Omani farms.",
+    "category": "agro",
+    "iconName": "Wheat",
+    "details": {
+      "formula": "(NH4)2HPO4",
+      "casNumber": "7783-28-0",
+      "alternativeNames": ["DAP", "Diammonium phosphate", "DAP 18-46-0", "Ammonium hydrogen phosphate"],
+      "seoKeywords": [
+        "DAP fertilizer Oman",
+        "diammonium phosphate Oman",
+        "phosphate fertilizer Muscat",
+        "DAP 18-46-0 Oman",
+        "base fertilizer Oman"
       ],
-      "wikiUrl": "https://en.wikipedia.org/wiki/Agrochemical"
+      "longDescription": "Diammonium Phosphate (DAP, 18-46-0) is the world's most widely used phosphorus fertilizer and the primary base-dressing product across Oman. Supplied by Global Chemicals LLC in granular form, DAP delivers 18% nitrogen and 46% P2O5 in a single application — ideal for pre-planting incorporation for vegetables, alfalfa, and date palm root feeding. Fully water-soluble in the root zone and compatible with most nitrogen and potassium fertilizers for custom blending.",
+      "applications": [
+        "Pre-plant base dressing for vegetables and cereals",
+        "Date palm root-zone phosphorus application",
+        "Component in NPK compound blends",
+        "Alfalfa and forage crop establishment",
+        "Greenhouse soil and substrate preparation"
+      ],
+      "technicalSpecs": [
+        "Nitrogen (N): 18% min",
+        "Phosphorus (P2O5): 46% min",
+        "Water-soluble P2O5: >90% of total",
+        "Granule size: 2–4 mm",
+        "Packaging: 50 kg bag, 1,000 kg big bag"
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Diammonium_phosphate"
+    }
+  },
+  {
+    "id": "npk-fertilizer",
+    "title": "NPK Compound Fertilizers (Custom Blends)",
+    "description": "Compound and custom-blended NPK fertilizers — 20-20-20, 19-19-19, 15-15-15 and tailored ratios for Oman's date palm, vegetable, and greenhouse growers.",
+    "category": "agro",
+    "iconName": "Wheat",
+    "details": {
+      "alternativeNames": ["NPK 20-20-20", "NPK 19-19-19", "NPK 15-15-15", "Compound fertilizer", "Water-soluble NPK", "Fertigation grade NPK"],
+      "seoKeywords": [
+        "NPK fertilizer Oman",
+        "NPK 20-20-20 Oman",
+        "compound fertilizer Muscat",
+        "water soluble fertilizer Oman",
+        "fertigation NPK Oman",
+        "greenhouse fertilizer Oman"
+      ],
+      "longDescription": "Global Chemicals LLC supplies water-soluble and granular NPK compound fertilizers to farms and greenhouses across Oman — including the standard 20-20-20, 19-19-19, 15-15-15 grades and custom-blended ratios matched to soil analysis and crop stage. Water-soluble grades are formulated for drip fertigation with full solubility, low insolubles (<0.1%), and micronutrient supplementation options (chelated Fe, Mn, Zn, B, Cu, Mo). Granular grades serve conventional broadcast and side-dressing applications for date palm, alfalfa, and open-field vegetables.",
+      "applications": [
+        "Drip fertigation for greenhouses and open-field vegetables",
+        "Date palm balanced nutrition programs",
+        "Alfalfa, forage, and cereal crop side-dressing",
+        "Hydroponic and soilless culture nutrient supply",
+        "Ornamental and landscape nutrition"
+      ],
+      "technicalSpecs": [
+        "Water-soluble grades: <0.1% insolubles",
+        "Standard ratios: 20-20-20, 19-19-19, 15-15-15, 15-5-30, 12-12-36",
+        "Custom NPK blending available with 48-hour turnaround",
+        "Micronutrient supplementation (chelated) on request",
+        "Packaging: 25 kg bag, 1,000 kg big bag"
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Fertilizer"
+    }
+  },
+  {
+    "id": "potassium-chloride-fertilizer",
+    "title": "Potassium Chloride (MOP 60% K2O)",
+    "description": "Muriate of Potash (MOP) — 60% K2O potassium chloride fertilizer for date palms, fruit trees, and field crops across Oman.",
+    "category": "agro",
+    "iconName": "Wheat",
+    "details": {
+      "formula": "KCl",
+      "casNumber": "7447-40-7",
+      "alternativeNames": ["MOP", "Muriate of Potash", "Potassium chloride", "Potash fertilizer", "KCl 60"],
+      "seoKeywords": [
+        "potassium chloride fertilizer Oman",
+        "MOP fertilizer Oman",
+        "muriate of potash Oman",
+        "potash Oman",
+        "date palm potash Oman"
+      ],
+      "longDescription": "Muriate of Potash (MOP / potassium chloride, 60% K2O) is the most widely used potassium fertilizer in Oman — critical for date palm fruit sizing, quality, and post-harvest storage life, and for tolerance to Oman's saline groundwater. Supplied in standard and granular grades, MOP is applied by broadcast, banding, or fertigation (standard grade fully soluble). Global Chemicals LLC also supplies Sulphate of Potash (SOP, 50% K2O) for chloride-sensitive crops on request.",
+      "applications": [
+        "Date palm potassium fertilization (fruit quality and size)",
+        "Fruit tree and citrus potassium programs",
+        "Vegetable and forage crop potassium supply",
+        "Component in custom NPK blends",
+        "Fertigation through drip irrigation"
+      ],
+      "technicalSpecs": [
+        "K2O: 60% min",
+        "Chloride: 46–47%",
+        "Moisture: <0.5%",
+        "Standard grade (<1 mm) and granular (2–4 mm) available",
+        "Packaging: 50 kg bag, 1,000 kg big bag"
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Potassium_chloride"
+    }
+  },
+  {
+    "id": "calcium-nitrate-fertilizer",
+    "title": "Calcium Nitrate Fertilizer",
+    "description": "Water-soluble calcium nitrate — 15.5% N, 26.5% CaO — the standard calcium and nitrate-nitrogen source for fertigation of tomatoes, cucumbers, and greenhouse crops.",
+    "category": "agro",
+    "iconName": "Wheat",
+    "details": {
+      "formula": "Ca(NO3)2·4H2O",
+      "casNumber": "13477-34-4",
+      "alternativeNames": ["Calcium nitrate tetrahydrate", "CN", "Nitrogen calcium fertilizer", "Norwegian saltpeter"],
+      "seoKeywords": [
+        "calcium nitrate Oman",
+        "calcium nitrate fertilizer Oman",
+        "greenhouse calcium Oman",
+        "fertigation calcium nitrate Oman",
+        "blossom end rot prevention Oman"
+      ],
+      "longDescription": "Calcium Nitrate (15.5% N, 26.5% CaO) is the standard calcium fertilizer for greenhouse and open-field horticulture across Oman — essential for preventing blossom-end rot in tomatoes and peppers, tip-burn in lettuce, and bitter pit in fruit. As the only widely-available calcium source fully compatible with fertigation, it dissolves clearly, delivers nitrate-nitrogen (preferred over ammonium in high-pH substrates), and supports strong cell wall structure. Supplied by Global Chemicals LLC in 25 kg bags for greenhouse growers in Nizwa, Barka, and across Al Batinah.",
+      "applications": [
+        "Tomato, pepper, and cucumber fertigation",
+        "Blossom-end rot and tip-burn prevention",
+        "Foliar calcium spray for fruit quality",
+        "Lettuce, cabbage, and brassica calcium supply",
+        "Hydroponic Stock A tank formulation"
+      ],
+      "technicalSpecs": [
+        "Nitrogen (N): 15.5% (14.4% nitrate-N, 1.1% ammonium-N)",
+        "Calcium oxide (CaO): 26.5%",
+        "Water solubility: 1,290 g/L at 20°C",
+        "Insolubles: <0.05%",
+        "Packaging: 25 kg bag, 1,000 kg big bag"
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Calcium_nitrate"
+    }
+  },
+  {
+    "id": "zinc-sulphate-agricultural",
+    "title": "Zinc Sulphate Monohydrate (33% Zn) — Agricultural",
+    "description": "Micronutrient zinc sulphate — 33% Zn monohydrate — for correcting zinc deficiency in Oman's alkaline soils, date palm, and greenhouse crops.",
+    "category": "agro",
+    "iconName": "Wheat",
+    "details": {
+      "formula": "ZnSO4·H2O",
+      "casNumber": "7446-19-7",
+      "alternativeNames": ["Zinc sulphate monohydrate", "ZSM", "Zinc sulphate 33%", "Micronutrient zinc"],
+      "seoKeywords": [
+        "zinc sulphate fertilizer Oman",
+        "micronutrient zinc Oman",
+        "zinc deficiency Oman soils",
+        "zinc sulphate 33% Oman",
+        "date palm zinc Oman"
+      ],
+      "longDescription": "Zinc deficiency is one of the most widespread micronutrient problems in Oman's alkaline calcareous soils — reducing yield in date palm, citrus, vegetables, and forage. Zinc Sulphate Monohydrate (33% Zn) is the standard soil and foliar correction. Global Chemicals LLC supplies agricultural-grade ZSM for soil broadcast (20–40 kg/ha), fertigation, and foliar sprays (0.2–0.5% solution). Chelated zinc EDTA also available for high-pH conditions where sulphate fixation is a concern.",
+      "applications": [
+        "Zinc deficiency correction in date palm, citrus, and vegetables",
+        "Foliar micronutrient spray (0.2–0.5%)",
+        "Fertigation micronutrient supplementation",
+        "Component in custom micronutrient blends",
+        "Seed treatment for cereal crops"
+      ],
+      "technicalSpecs": [
+        "Zinc (Zn): 33% min",
+        "Sulphur (S): 15% min",
+        "Water solubility: fully soluble",
+        "Free-flowing powder or granular",
+        "Packaging: 25 kg bag"
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Zinc_sulfate"
+    }
+  },
+  {
+    "id": "agricultural-gypsum",
+    "title": "Agricultural Gypsum (Calcium Sulphate)",
+    "description": "Agricultural-grade gypsum (calcium sulphate dihydrate) for sodic soil reclamation, calcium supply, and structure improvement across Oman's irrigated farmland.",
+    "category": "agro",
+    "iconName": "Wheat",
+    "details": {
+      "formula": "CaSO4·2H2O",
+      "casNumber": "10101-41-4",
+      "alternativeNames": ["Gypsum", "Calcium sulphate dihydrate", "Agricultural gypsum", "Soil conditioner gypsum", "Land plaster"],
+      "seoKeywords": [
+        "agricultural gypsum Oman",
+        "gypsum fertilizer Oman",
+        "sodic soil reclamation Oman",
+        "calcium sulphate agricultural Oman",
+        "soil conditioner Oman"
+      ],
+      "longDescription": "Agricultural Gypsum (CaSO4·2H2O) is the workhorse soil amendment for reclaiming sodic and saline-sodic soils across Oman's irrigated regions — a common problem where saline groundwater raises exchangeable sodium and destroys soil structure. Gypsum supplies soluble calcium that displaces sodium from the cation exchange complex, restoring aggregate structure and water infiltration. Also a non-acidifying calcium and sulphur nutrient source (23% Ca, 18% S) for peanuts, alfalfa, and forage crops. Global Chemicals LLC supplies mined agricultural gypsum in 25 kg bags and 1,000 kg big bags.",
+      "applications": [
+        "Sodic and saline-sodic soil reclamation (2–10 t/ha)",
+        "Soil structure and infiltration improvement",
+        "Calcium and sulphur nutrition for peanuts, alfalfa",
+        "Irrigation water quality amendment",
+        "Reduction of subsoil aluminum toxicity"
+      ],
+      "technicalSpecs": [
+        "Calcium (Ca): 23%",
+        "Sulphur (S): 18%",
+        "CaSO4·2H2O: 85% min",
+        "Particle size: <2 mm typical",
+        "Packaging: 25 kg bag, 1,000 kg big bag, bulk"
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Calcium_sulfate"
+    }
+  },
+  {
+    "id": "humic-acid-fertilizer",
+    "title": "Humic Acid (Leonardite Extract)",
+    "description": "Water-soluble humic and fulvic acids — leonardite-derived soil conditioner that improves nutrient uptake, soil structure, and root growth in Oman's low-organic desert soils.",
+    "category": "agro",
+    "iconName": "Wheat",
+    "details": {
+      "casNumber": "1415-93-6",
+      "alternativeNames": ["Humic acid", "Fulvic acid", "Leonardite extract", "Potassium humate", "Soil organic amendment"],
+      "seoKeywords": [
+        "humic acid Oman",
+        "fulvic acid Oman",
+        "potassium humate Oman",
+        "soil conditioner Oman",
+        "organic fertilizer Oman"
+      ],
+      "longDescription": "Humic acid (leonardite-derived potassium humate) is a powerful soil conditioner for Oman's low-organic-matter desert and irrigated soils. Boosts cation exchange capacity, chelates and mobilises phosphorus and micronutrients (particularly Fe and Zn), improves soil aggregate structure, and stimulates root growth. Compatible with drip fertigation and foliar sprays. Global Chemicals LLC supplies water-soluble flake and powder forms (65–75% humic acid) — ideal for regenerative fertilization programs on date palm, vegetables, and turf.",
+      "applications": [
+        "Fertigation soil conditioning (5–10 kg/ha/season)",
+        "Foliar biostimulant spray (0.05–0.1%)",
+        "Root-zone drenching at transplant",
+        "Component in liquid organic fertilizer blends",
+        "Turf and landscape soil improvement"
+      ],
+      "technicalSpecs": [
+        "Total humic acids: 65–75%",
+        "Fulvic acid: 10–15%",
+        "K2O: 8–12%",
+        "Water solubility: >98% (soluble flake grade)",
+        "Packaging: 25 kg bag"
+      ],
+      "wikiUrl": "https://en.wikipedia.org/wiki/Humic_substance"
     }
   }
 ]
