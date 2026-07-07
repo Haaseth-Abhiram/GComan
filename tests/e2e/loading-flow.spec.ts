@@ -12,7 +12,10 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Loading flow — never deadlocks', () => {
   test('invalid product category resolves to "Product Not Found" (not stuck on Loading…)', async ({ page }) => {
-    await page.goto('/products/acids/nitric-acid');
+    // NB: must be a category that is NOT in src/lib/legacyRedirects.ts —
+    // legacy category URLs (acids/alkalis/salts/oxidizers) now client-side
+    // redirect to their new homes instead of reaching the Not-Found state.
+    await page.goto('/products/nonexistent-category/some-product');
 
     // Wait for the literal text "Loading…" to disappear, OR for the
     // Not-Found heading to render. Either path proves the loader settled

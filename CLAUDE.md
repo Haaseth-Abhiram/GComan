@@ -57,11 +57,9 @@ Much more than a brochure site. Beyond the obvious marketing pages:
 
 ## Deploy chain
 
-- **Hosting:** Hostinger (Apache). Domain → `185.158.133.1`, nameservers `ns1/ns2.dns-parking.com` (Hostinger's CDN in front adds `cf-ray` headers — that is Hostinger's Cloudflare partnership, not our account).
-- **Pipeline:** GitHub `main` → Lovable runs `vite build` → Lovable FTPs `dist/` to Hostinger `public_html/`.
-- **`public/.htaccess` is load-bearing** — it makes Hostinger serve per-route prerendered HTML instead of the SPA shell. Without it, all 300+ pages serve as homepage duplicates and Google indexing collapses.
-- `public/_redirects` / `public/_headers` are Netlify format, **ignored on Hostinger** — kept only as the human-readable source `.htaccess` was generated from.
-- **Lovable may strip dotfiles when FTPing.** If a deploy doesn't update `.htaccess`, upload it manually via Hostinger File Manager from local `dist/.htaccess`.
+- **Hosting: Lovable's CDN serves production** (verified live 2026-07-07: DNS A record `185.158.133.1` is Lovable's ingress — responses carry `x-deployment-id` and Lovable's Cloudflare edge headers). DNS: nameservers `ns1/ns2.dns-parking.com` (Hostinger's), zone managed in Hostinger hPanel.
+- **Pipeline:** GitHub `main` → Lovable runs `vite build` → publishes `dist/` to its CDN. The CDN resolves clean URLs to the prerendered `dist/<route>/index.html` automatically.
+- **The Hostinger server (`147.93.109.106`) is NOT serving the site** — its `public_html` is empty (everything 404s; run `npm run verify:hostinger-staging` to check its state). The old docs' story that Lovable FTPs `dist/` to Hostinger and `.htaccess` is load-bearing does not match production. `public/.htaccess` / `public/_redirects` / `public/_headers` are inert in production; they are kept in sync as the ready-made config for a future move to self-hosted Apache (which would add real 301s, security headers, and brotli — Lovable's CDN supports none of these).
 
 ## Architecture: the prerender pipeline
 
@@ -101,17 +99,17 @@ An `/ar/*` render is **noindex by default**. It becomes indexable only when the 
 4. Add an Arabic mirror under `/ar` if localized.
 5. Optional structured data via [src/components/StructuredData.tsx](src/components/StructuredData.tsx) — every Helmet there also needs `defer={false}`.
 
-## The production routing layer: `.htaccess`
+## The production redirect layer: client-side
 
-**The Cloudflare Worker plan is retired** (decision 2026-07-07 — the user closed the Cloudflare account path; `cloudflare-worker.js` + `wrangler.toml` remain in the repo as vestigial). Apache on Hostinger, driven by `public/.htaccess`, is the routing layer: legacy 301s, `/en/*` stripping, trailing-slash normalization, prerendered-HTML serving, SPA fallback, precompressed `.br`/`.gz` asset serving, and all response headers.
+Lovable's CDN has no server-side redirect support, so legacy-URL redirects run **inside the app**: [src/lib/legacyRedirects.ts](src/lib/legacyRedirects.ts) (exact + prefix maps, ported from the retired Cloudflare Worker) consulted by `<LegacyRedirectHandler>` in [src/App.tsx](src/App.tsx), which sits above `<Routes>` so it also intercepts legacy paths that would otherwise match live route patterns (e.g. `/products/acids/*` matches `/products/:category/:productSlug`). It also normalizes trailing slashes. Googlebot follows these JS redirects (weaker than real 301s, but the only option on this host). e2e coverage: `tests/e2e/legacy-redirects.spec.ts`.
 
-- Verified live 2026-07-07: **the server's `.htaccess` was a stale version** — serving rules fired but none of the 301s did. After any deploy, if redirects don't fire, re-upload `dist/.htaccess` (= `public/.htaccess`) manually via Hostinger File Manager (see Deploy chain — Lovable strips dotfiles).
-- Verify production: `npm run verify:seo-routing` (prerendered titles, legacy 301s, canonicals, Arabic product pages).
-- Test locally before shipping `.htaccess` changes: run a scratch Apache with `AllowOverride All` against a fake docroot (needs mods: rewrite, headers, dir, mime, filter, deflate) — all redirect groups, prerender serving, SPA fallback, and br/gzip negotiation are testable this way.
+**The Cloudflare Worker plan is retired** (2026-07-07, user closed that path); `cloudflare-worker.js` remains as reference only.
+
+Verify production after a deploy: `npm run verify:seo-routing` — note the legacy-301 checks only pass server-side (they'll show the client-side behavior as 200s; confirm redirects in a browser instead).
 
 ## Adding a redirect
 
-Edit BOTH: `public/_redirects` (readable Netlify-format source of truth) and `public/.htaccess` (what actually runs). Then make sure the new `.htaccess` really lands on the server (dotfile-stripping caveat above).
+Edit ALL THREE: `src/lib/legacyRedirects.ts` (**the layer that actually runs**), plus `public/_redirects` and `public/.htaccess` (kept in sync for a future self-hosted setup). Add an e2e case to `tests/e2e/legacy-redirects.spec.ts` for anything load-bearing.
 
 ## Product data
 

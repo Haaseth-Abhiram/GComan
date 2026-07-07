@@ -1,10 +1,12 @@
 #!/usr/bin/env node
 /**
- * Verifies that production (Hostinger Apache + public/.htaccess) is serving
- * prerendered HTML, firing the legacy 301s, and exposing the Arabic product
- * pages. Run after every deploy — especially after re-uploading .htaccess:
- *   npm run verify:seo-routing
+ * Verifies production (Lovable CDN) is serving prerendered HTML with correct
+ * per-page meta, and exposing the Arabic product pages. Legacy-URL redirects
+ * are client-side (src/lib/legacyRedirects.ts) and can't be asserted with
+ * plain HTTP — they're covered by tests/e2e/legacy-redirects.spec.ts, which
+ * can run against production: BASE_URL=https://gcoman.com npm run test:e2e
  *
+ * Run after every deploy:  npm run verify:seo-routing
  * Exits 0 if all checks pass, 1 if any fail.
  */
 
@@ -33,19 +35,13 @@ const CHECKS = [
     },
   },
   {
-    label: 'legacy redirect — old /products/alkalis/* → new URL',
-    url: `${BASE}/products/alkalis/caustic-soda`,
-    expect: {
-      status: 301,
-      locationContains: 'caustic-soda-flakes',
-    },
-  },
-  {
-    label: 'legacy redirect — old /service/* → new URL',
+    // Client-side redirects serve the SPA shell first; the shell must load
+    // (200) for the JS redirect to fire. Actual redirect behavior is asserted
+    // by tests/e2e/legacy-redirects.spec.ts.
+    label: 'legacy URL — shell loads so client-side redirect can fire',
     url: `${BASE}/service/calcium-carbonate/`,
     expect: {
-      status: 301,
-      locationContains: 'calcium-carbonate',
+      status: 200,
     },
   },
   {

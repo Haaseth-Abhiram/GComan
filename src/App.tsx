@@ -16,6 +16,7 @@ import GoogleAnalytics from "./components/GoogleAnalytics";
 import { ZohoSalesIQ } from "./components/ZohoSalesIQ";
 import BackToTopButton from "./components/BackToTopButton";
 import RouteChangeLoader from "./components/RouteChangeLoader";
+import { resolveLegacyRedirect } from "./lib/legacyRedirects";
 
 // Lazy load all page components
 const Index = lazy(() => import("./pages/Index"));
@@ -69,6 +70,19 @@ const LanguageSync = () => {
 // <LanguageSync>; this just renders the matched child route.
 const LangLayout = () => <Outlet />;
 
+// Redirects legacy WordPress-era URLs and normalizes trailing slashes.
+// Production is served by Lovable's CDN, which has no server-side redirect
+// support, so this client-side layer is what actually fires for old URLs
+// (src/lib/legacyRedirects.ts). Rendered above <Routes> so it also intercepts
+// paths that would otherwise match a live route pattern (e.g. the old
+// /products/acids/* URLs match /products/:category/:productSlug).
+const LegacyRedirectHandler = () => {
+  const { pathname, search, hash } = useLocation();
+  const target = resolveLegacyRedirect(pathname);
+  if (!target) return null;
+  return <Navigate to={target + search + hash} replace />;
+};
+
 // Redirect component for /en/* routes to avoid duplicate content. Reads the
 // live location (a precomputed prop would freeze the target at App mount) and
 // preserves query/hash.
@@ -98,6 +112,7 @@ const App = () => (
             <CookieConsent />
             <BackToTopButton />
             <LanguageSync />
+            <LegacyRedirectHandler />
             <RouteChangeLoader />
             <Suspense fallback={<Loading />}>
               <Routes>
