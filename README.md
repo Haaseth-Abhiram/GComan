@@ -1,73 +1,33 @@
-# Welcome to your Lovable project
+# gcoman.com
 
-## Project info
+Marketing site + lead-capture platform for **Global Chemicals LLC** (Oman / GCC chemical supplier).
 
-**URL**: https://lovable.dev/projects/88275aec-3e28-4007-bd65-43d79fa41e87
+Vite 7 · React 18 · TypeScript · Tailwind · shadcn/ui · react-router-dom v7 · Supabase (Postgres, auth, edge functions) · i18next (English + Arabic) · Puppeteer prerendering for SEO · Cloudflare Worker edge routing.
 
-## How can I edit this code?
+Beyond the public catalogue (~768 products across 22 categories) the app includes an admin dashboard (analytics, contact/job/newsletter tables, resume preview, Excel export), Supabase auth with roles, AI-powered product search, download-gated lead capture synced to Zoho CRM, and a three.js 3D chemistry hero.
 
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/88275aec-3e28-4007-bd65-43d79fa41e87) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+## Quick start
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
 npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+npm run dev        # dev server on http://localhost:8080
 ```
 
-**Edit a file directly in GitHub**
+```sh
+npm run lint       # eslint
+npx tsc -b         # typecheck
+npm run test:e2e   # Playwright smoke suite
+npm run build      # full production build with prerender (~5–10 min, 300+ routes)
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Documentation
 
-**Use GitHub Codespaces**
+**[CLAUDE.md](CLAUDE.md) is the canonical developer guide** — architecture, the prerender/SEO pipeline (and the three ways to silently break it), deploy chain, branch workflow, and verification commands. Read it before making changes.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Additional references live in `docs/` (deployment guides, SEO/security audits).
 
-## What technologies are used for this project?
+## Branches & deploys
 
-This project is built with:
+Work lands on `Develop`; `main` is production and is promoted manually after QA. A push to `main` triggers the Lovable build, which FTPs `dist/` to Hostinger (fronted by Cloudflare). Details in CLAUDE.md → "Deploy chain".
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/88275aec-3e28-4007-bd65-43d79fa41e87) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+This project was originally scaffolded with [Lovable](https://lovable.dev/projects/88275aec-3e28-4007-bd65-43d79fa41e87), which still runs the production build pipeline.
