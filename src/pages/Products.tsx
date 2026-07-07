@@ -275,8 +275,22 @@ const Products = () => {
           return categoryDescs[activeCategory] || 'Comprehensive catalog of industrial chemicals in Oman & GCC — water treatment, lubricants, lab chemicals, oilfield & swimming pool products. ISO certified. Exporting to UAE, Saudi Arabia, Qatar, Kuwait, Bahrain.';
         })()}
         keywords="water treatment chemicals Oman UAE, PAC Oman, caustic soda GCC, calcium hypochlorite Middle East, industrial chemicals Muscat Dubai Riyadh, laboratory chemicals Oman, Shell lubricants UAE, Mobil oils Saudi Arabia, chemical supplier GCC, chemicals Dubai, Riyadh chemicals, industrial lubricants Oman, RO chemicals UAE, cooling tower chemicals Middle East, swimming pool chemicals GCC, chemical exporter Oman"
-        ogTitle={activeCategory !== 'all' ? `${activeCategory.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} | Global Chemicals LLC Oman & GCC` : 'Chemical Products | Industrial Chemicals Oman & Middle East | Global Chemicals LLC'}
-        ogDescription="Leading chemical supplier in Oman exporting to UAE, Saudi Arabia, Qatar, Kuwait & Bahrain. Browse our complete catalog of water treatment chemicals, industrial lubricants, and specialty chemicals."
+        ogTitle={(() => {
+          const categoryOgTitles: Record<string, string> = {
+            'agro': 'Agricultural Chemicals & Fertilizers Supplier | Oman & GCC',
+          };
+          if (categoryOgTitles[activeCategory]) return categoryOgTitles[activeCategory];
+          return activeCategory !== 'all'
+            ? `${activeCategory.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} | Global Chemicals LLC Oman & GCC`
+            : 'Chemical Products | Industrial Chemicals Oman & Middle East | Global Chemicals LLC';
+        })()}
+        ogDescription={(() => {
+          const categoryOgDescs: Record<string, string> = {
+            'agro': 'Fertilizers, micronutrients, soil amendments and irrigation chemicals for Oman farms — urea, DAP, NPK, potassium chloride, calcium nitrate, zinc sulphate, gypsum, humic acid.',
+          };
+          return categoryOgDescs[activeCategory] ||
+            'Leading chemical supplier in Oman exporting to UAE, Saudi Arabia, Qatar, Kuwait & Bahrain. Browse our complete catalog of water treatment chemicals, industrial lubricants, and specialty chemicals.';
+        })()}
         ogUrl={categoryParam ? `https://gcoman.com/products/${categoryParam}` : 'https://gcoman.com/products'}
         canonical={categoryParam ? `https://gcoman.com/products/${categoryParam}` : 'https://gcoman.com/products'}
       />
@@ -285,8 +299,8 @@ const Products = () => {
         { name: 'Products', url: 'https://gcoman.com/products' },
         ...(categoryParam ? [{ name: categoryParam.replace(/-/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()), url: `https://gcoman.com/products/${categoryParam}` }] : [])
       ]} />
-      <FAQStructuredData faqs={productsFAQs} />
-      <SpeakableStructuredData url="https://gcoman.com/products" cssSelector={["h1", "h2", ".speakable"]} />
+      <FAQStructuredData faqs={categoryParam && categoryFAQs[categoryParam] ? categoryFAQs[categoryParam] : productsFAQs} />
+      <SpeakableStructuredData url={categoryParam ? `https://gcoman.com/products/${categoryParam}` : 'https://gcoman.com/products'} cssSelector={["h1", "h2", ".speakable"]} />
       {categoryParam && filteredProducts.length > 0 && (
         <ItemListStructuredData
           name={(() => {
