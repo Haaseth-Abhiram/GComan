@@ -497,9 +497,10 @@ const Products = () => {
                   variant="ghost"
                   size="sm"
                   onClick={clearSearch}
+                  aria-label="Clear search"
                   className="absolute right-2 top-1/2 -translate-y-1/2"
                 >
-                  <X className="h-4 w-4" />
+                  <X className="h-4 w-4" aria-hidden="true" />
                 </Button>
               )}
             </div>
