@@ -249,9 +249,9 @@ const Products = () => {
         })()}
         description={(() => {
           const categoryDescs: Record<string, string> = {
-            'water-treatment': 'Buy water treatment chemicals in Oman & GCC — PAC, caustic soda, calcium hypochlorite, antiscalants & more. Serving Muscat, Dubai, Riyadh, Doha. Request a quote today.',
-            'lubricants': 'Shell, Mobil, Castrol & GP lubricants supplier in Oman & Middle East. Industrial and automotive lubricants for all applications. Fast delivery across Muscat, Dubai, Riyadh, Doha.',
-            'swimming-pool': 'Swimming pool chemicals in Oman & GCC — chlorine tablets, algaecides, TCCA, sodium hypochlorite & more. Serving Muscat, Dubai, Riyadh, Doha. Request a quote today.',
+            'water-treatment': 'Water treatment chemicals in Oman & GCC — PAC, caustic soda, calcium hypochlorite, antiscalants. Fast delivery across Muscat, Dubai & Riyadh.',
+            'lubricants': 'Shell, Mobil, Castrol & GP lubricants supplier in Oman & Middle East. Industrial and automotive grades with same-day Muscat delivery.',
+            'swimming-pool': 'Swimming pool chemicals in Oman & GCC — chlorine tablets, algaecides, TCCA, sodium hypochlorite. Fast delivery across Muscat, Dubai & Riyadh.',
             'lab-chemicals': 'Laboratory chemicals and reagents supplier in Oman & Middle East. AR grade acids, solvents, and analytical reagents for research labs. Request a quote today.',
             'oilfield': 'Oilfield and refinery chemicals in Oman & GCC — drilling fluids, production chemicals, corrosion inhibitors. Trusted by oil & gas companies across the Middle East.',
             'tank-cleaners': 'Heavy duty alkaline, acidic and neutral tank cleaners for marine and industrial applications in Oman & GCC. Environmentally friendly sludge breakers.',
