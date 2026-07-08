@@ -98,7 +98,7 @@ const CausticSodaOman = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="Caustic Soda Supplier Oman | NaOH Flakes, Prills & Liquid | Global Chemicals LLC"
-        description="Global Chemicals LLC — leading caustic soda (sodium hydroxide) supplier in Oman. Caustic soda flakes 98–99%, prills 99%, liquid 30–50%. Technical & food-grade. Same-day delivery Muscat. JSRS certified. Call +968-93754388."
+        description="Caustic soda (sodium hydroxide) supplier in Oman. Flakes 98–99%, prills 99%, liquid 30–50%. Food-grade & technical. Same-day Muscat delivery. JSRS certified."
         keywords="caustic soda Oman, caustic soda supplier Muscat, sodium hydroxide Oman, NaOH Oman, caustic soda flakes Oman, caustic soda liquid Oman, caustic soda prills Oman, caustic soda price Oman, food grade caustic soda Oman, caustic soda water treatment Oman, sodium hydroxide supplier Muscat, buy caustic soda Oman, caustic soda 50% Oman, caustic soda Sohar, caustic soda Salalah, lye Oman"
         ogTitle="Caustic Soda Supplier Oman | Flakes, Prills & Liquid NaOH | Global Chemicals LLC"
         ogDescription="Caustic soda (sodium hydroxide) supplier in Muscat, Oman. Flakes 98–99%, prills 99%, liquid 30–50%. Food-grade & technical. Same-day delivery. JSRS certified."

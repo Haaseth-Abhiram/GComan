@@ -169,6 +169,7 @@ const ProductDetail = () => {
         ogDescription={seoDescription}
         ogUrl={`https://gcoman.com/products/${category}/${productSlug}`}
         canonical={`https://gcoman.com/products/${category}/${productSlug}`}
+        ogType="product"
       />
       
       <ProductStructuredData
