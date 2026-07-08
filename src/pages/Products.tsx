@@ -486,6 +486,7 @@ const Products = () => {
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
               <Input
                 type="text"
+                aria-label="Search products by name, CAS number, formula, or category"
                 placeholder="Search by product name, CAS number, formula, or category..."
                 value={searchQuery}
                 onChange={(e) => handleSearch(e.target.value)}
