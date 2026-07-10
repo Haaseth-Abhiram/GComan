@@ -71,7 +71,7 @@ export const RelatedLinks = ({
                 </p>
               )}
               <span className="inline-flex items-center text-sm text-primary mt-2 group-hover:translate-x-1 transition-transform">
-                Learn more <ChevronRight className="w-4 h-4 ml-1" />
+                Read about {link.title} <ChevronRight className="w-4 h-4 ml-1" aria-hidden="true" />
               </span>
             </Link>
           ))}
