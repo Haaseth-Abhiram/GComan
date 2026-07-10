@@ -191,6 +191,15 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Intentionally excluded from the sitemap: /login (noindex portal), /dev/chemistry-playground (internal dev tool), /en (redirect to English), and /ar (Arabic noindex mirror). -->
+  <!-- Public completion page that was missing from the sitemap. -->
+  <url>
+    <loc>https://gcoman.com/thank-you</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
   <!-- ======================== -->
   <!-- LOCATION LANDING PAGES   -->
   <!-- ======================== -->
