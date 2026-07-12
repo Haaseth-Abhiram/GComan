@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
@@ -8,6 +9,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { Globe } from 'lucide-react';
 import { trackLanguageChange } from '@/components/GoogleAnalytics';
+import { getLangPrefixFromPath } from '@/lib/langRouting';
 
 const languages = [
   { code: 'en', name: 'English', nativeName: 'English', flag: '🇬🇧' },
@@ -19,30 +21,42 @@ interface LanguageSwitcherProps {
   className?: string;
 }
 
+// Rewrite the current pathname to the target language. The route source of
+// truth is the URL (LanguageSync in App.tsx forces i18n to match the path),
+// so language switching MUST navigate — calling i18n.changeLanguage alone
+// gets reverted on the next render.
+const pathForLanguage = (pathname: string, target: 'en' | 'ar') => {
+  const currentPrefix = getLangPrefixFromPath(pathname);
+  // Strip any existing /ar or /en prefix to get the canonical path.
+  let base = pathname;
+  if (currentPrefix) base = pathname.slice(currentPrefix.length) || '/';
+  if (!base.startsWith('/')) base = `/${base}`;
+  if (target === 'ar') {
+    return base === '/' ? '/ar' : `/ar${base}`;
+  }
+  return base;
+};
+
 const LanguageSwitcher = ({ variant = 'default', className = '' }: LanguageSwitcherProps) => {
   const { i18n } = useTranslation();
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const currentLanguage = languages.find((lang) => lang.code === i18n.language) || languages[0];
 
-  const handleLanguageChange = async (langCode: string) => {
+  const handleLanguageChange = (langCode: string) => {
+    if (langCode !== 'en' && langCode !== 'ar') return;
+    if (langCode === i18n.language) return;
+
     try {
-      // Explicitly save to localStorage before changing
       localStorage.setItem('i18nextLng', langCode);
-
-      // Track language change
       trackLanguageChange(langCode);
-
-      // Change the language
-      await i18n.changeLanguage(langCode);
-
-      // Small delay to ensure state is saved
-      await new Promise(resolve => setTimeout(resolve, 100));
-
-      // Force reload to ensure all components update with new language
-      window.location.reload();
-    } catch (error) {
-      console.error('Failed to change language:', error);
+    } catch {
+      // ignore storage/analytics failures — navigation still proceeds
     }
+
+    const nextPath = pathForLanguage(location.pathname, langCode);
+    navigate(`${nextPath}${location.search}${location.hash}`);
   };
 
   if (variant === 'compact') {
