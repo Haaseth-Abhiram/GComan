@@ -7,6 +7,7 @@ import viteCompression from "vite-plugin-compression";
 import { imagetools } from "vite-imagetools";
 import { ViteWebfontDownload } from "vite-plugin-webfont-dl";
 import prerender from "@prerenderer/rollup-plugin";
+import { mcpPlugin } from "@lovable.dev/mcp-js/stacks/supabase/vite";
 
 const routesFromSitemap = (): string[] => {
   const xml = fs.readFileSync(
@@ -26,6 +27,9 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     react(),
+    // Emits supabase/functions/mcp/index.ts from src/lib/mcp/index.ts so
+    // external AI clients (ChatGPT, Claude, Codex, Cursor) can connect via MCP.
+    mcpPlugin(),
     mode === "development" && componentTagger(),
     // Gzip compression for production
     mode === "production" && viteCompression({
