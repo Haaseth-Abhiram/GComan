@@ -132,6 +132,9 @@ const App = () => (
                     so it never enters the prerender or indexing pipeline. */}
                 <Route path="/dev/chemistry-playground" element={<ChemistryPlayground />} />
 
+                {/* Managed OAuth consent for external MCP clients. Must be a public route. */}
+                <Route path="/.lovable/oauth/consent" element={<OAuthConsent />} />
+
                 {/* Location-specific landing pages for SEO */}
                 <Route path="/chemicals/:location" element={<LocationLanding />} />
 
