@@ -1,0 +1,156 @@
+{
+  "version": 1,
+  "sdk_version": "0.20.1",
+  "path": "/mcp",
+  "auth": {
+    "type": "oauth",
+    "issuer": "https://yawbaqdywfrmuajaiptw.supabase.co/auth/v1",
+    "accepted_audiences": [
+      "authenticated"
+    ]
+  },
+  "mcp": {
+    "server": {
+      "name": "gcoman-mcp",
+      "version": "0.1.0",
+      "title": "Global Chemicals LLC (gcoman.com)"
+    },
+    "tools": [
+      {
+        "name": "list_categories",
+        "title": "List product categories",
+        "description": "List every chemical product category Global Chemicals LLC (gcoman.com) supplies. Returns category ids (URL slugs) and human-readable names.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "search_products",
+        "title": "Search products",
+        "description": "Search the Global Chemicals LLC product catalog (200+ industrial chemicals, lubricants, and lab equipment supplied in Oman/GCC) by keyword and optional category. Returns up to `limit` matches with title, category, short description, and canonical URL.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Free-text search string matched against product title, description, and CAS number."
+            },
+            "category": {
+              "type": "string",
+              "description": "Optional category id (see list_categories) to narrow the search, e.g. 'water-treatment'."
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 50,
+              "default": 10,
+              "description": "Maximum number of results to return (1-50)."
+            }
+          },
+          "required": [
+            "query"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_product",
+        "title": "Get product details",
+        "description": "Fetch the full details for a single product by its category slug and product slug (as used in the gcoman.com URL /products/<category>/<slug>). Returns title, description, CAS number, applications, and other structured product data.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Category slug, e.g. 'water-treatment'."
+            },
+            "slug": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Product slug, e.g. 'caustic-soda-flakes'."
+            }
+          },
+          "required": [
+            "category",
+            "slug"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_contact_submissions",
+        "title": "List recent contact submissions",
+        "description": "Admin only. Return the most recent contact-form submissions from gcoman.com (name, email, company, message, created_at). Requires the signed-in user to have the 'admin' role — non-admins receive an empty result under RLS.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 20,
+              "description": "Maximum submissions to return (1-100)."
+            }
+          },
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_download_leads",
+        "title": "List recent download leads",
+        "description": "Admin only. Return the most recent PDF/brochure download leads captured on gcoman.com. Requires the signed-in user to have the 'admin' role — RLS returns no rows otherwise.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 20,
+              "description": "Maximum leads to return (1-100)."
+            }
+          },
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
