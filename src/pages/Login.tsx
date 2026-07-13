@@ -206,7 +206,7 @@ const Login = () => {
           title: "Account created successfully!",
           description: "Welcome to Global Chemicals LLC",
         });
-        navigate('/');
+        navigate(safeNext);
       } else {
         toast({
           title: "Account created!",

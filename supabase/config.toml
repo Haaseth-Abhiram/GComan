@@ -14,3 +14,8 @@ verify_jwt = false
 
 [functions.ai-search]
 verify_jwt = false
+
+# MCP server for external AI clients. mcp-js does bearer-token OAuth
+# verification inside the function, so Supabase's edge JWT gate must be off.
+[functions.mcp]
+verify_jwt = false
