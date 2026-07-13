@@ -74,12 +74,6 @@ export const SEO = ({
 
   const currentLocale = i18n.language === 'ar' ? 'ar_SA' : 'en_US';
 
-  // Arabic (/ar/*) pages show translated body content to users, but their SEO
-  // layer (title, description, canonical) is still English — so keep them out of
-  // the index to avoid duplicate-content competition with the English pages.
-  // Remove this once the Arabic SEO layer is fully localized.
-  const isArabic = location.pathname === '/ar' || location.pathname.startsWith('/ar/');
-
   return (
     // defer={false} forces react-helmet-async to commit head changes
     // synchronously instead of waiting for requestAnimationFrame. rAF is
@@ -94,15 +88,9 @@ export const SEO = ({
       {/* Robots */}
       {noIndex ? (
         <meta name="robots" content="noindex, nofollow" />
-      ) : isArabic ? (
-        <meta name="robots" content="noindex, follow" />
       ) : (
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
       )}
-
-      {/* No hreflang: the site is indexed as English-only. /ar/* renders
-          translated body content for users but is noindex (its SEO layer is not
-          yet localized), so there are no reciprocal alternates to advertise. */}
 
       {/* Open Graph */}
       <meta property="og:type" content={ogType} />
