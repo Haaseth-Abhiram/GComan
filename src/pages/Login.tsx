@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -36,6 +36,7 @@ const signupSchema = z.object({
 const Login = () => {
   const { toast } = useToast();
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const [isLogin, setIsLogin] = useState(true);
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -44,23 +45,30 @@ const Login = () => {
   const [resetEmail, setResetEmail] = useState('');
   const [isResetting, setIsResetting] = useState(false);
   const [loginData, setLoginData] = useState({ email: '', password: '' });
-  const [signupData, setSignupData] = useState({ 
-    name: '', 
-    email: '', 
-    password: '', 
-    confirmPassword: '' 
+  const [signupData, setSignupData] = useState({
+    name: '',
+    email: '',
+    password: '',
+    confirmPassword: ''
   });
+
+  // Where to send the user after a successful auth. Populated by OAuth consent
+  // flows via ?next=/.lovable/oauth/consent?authorization_id=... so external
+  // MCP clients return to the consent screen instead of the homepage.
+  // Validated as a same-origin relative path to prevent open-redirect abuse.
+  const nextParam = searchParams.get('next');
+  const safeNext = nextParam && nextParam.startsWith('/') && !nextParam.startsWith('//') ? nextParam : '/';
 
   // Check if user is already logged in
   useEffect(() => {
     const checkAuth = async () => {
       const { data: { session } } = await supabase.auth.getSession();
       if (session) {
-        navigate('/');
+        navigate(safeNext);
       }
     };
     checkAuth();
-  }, [navigate]);
+  }, [navigate, safeNext]);
 
   const handleLoginSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -118,7 +126,7 @@ const Login = () => {
           title: "Login successful!",
           description: "Welcome back to Global Chemicals LLC",
         });
-        navigate('/');
+        navigate(safeNext);
       }
 
     } catch (error) {
@@ -155,7 +163,7 @@ const Login = () => {
         email: signupData.email,
         password: signupData.password,
         options: {
-          emailRedirectTo: `${window.location.origin}/`,
+          emailRedirectTo: `${window.location.origin}${safeNext}`,
           data: {
             name: signupData.name,
           }
