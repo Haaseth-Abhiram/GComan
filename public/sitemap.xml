@@ -563,8 +563,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/certifications"/>
   </url>
 
-  <!-- Intentionally excluded from the sitemap: /login (noindex portal), /dev/chemistry-playground (internal dev tool), and /en (redirects to unprefixed English). Every English URL has a mirrored /ar/* entry with reciprocal hreflang alternates for Arabic SEO. -->
-  <!-- NOTE: /ar/* pages currently emit `noindex, follow` via src/components/SEO.tsx. The sitemap listings + hreflang alternates below will only be honored by Google once that noindex is removed. -->
+  <!-- Intentionally excluded from the sitemap: /login (noindex portal), /dev/chemistry-playground (internal dev tool), and /en (redirects to unprefixed English). Every English URL has a mirrored /ar/* entry with reciprocal hreflang alternates for Arabic SEO. /ar/* pages are now indexable. -->
 
   <!-- Public completion page that was missing from the sitemap. -->
   <url>
