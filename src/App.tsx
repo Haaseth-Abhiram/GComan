@@ -44,6 +44,8 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 // Internal design tool. Not in sitemap.xml so it doesn't get prerendered or
 // indexed. Reachable manually at /dev/chemistry-playground in any environment.
 const ChemistryPlayground = lazy(() => import("./pages/ChemistryPlayground"));
+// Managed OAuth consent screen for external MCP clients (ChatGPT, Claude, etc.).
+const OAuthConsent = lazy(() => import("./pages/OAuthConsent"));
 
 const queryClient = new QueryClient();
 
