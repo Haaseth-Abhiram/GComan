@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { CheckCircle2 } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
@@ -12,6 +13,7 @@ import WhyChooseUs from '@/components/WhyChooseUs';
 import QuickActions from '@/components/QuickActions';
 import { SEO } from '@/components/SEO';
 import { OrganizationStructuredData, FAQStructuredData, SpeakableStructuredData, WebSiteStructuredData, ServiceStructuredData } from '@/components/StructuredData';
+import heroLcp from '@/assets/hero-water-treatment.webp';
 
 // Homepage FAQs for rich snippets — GCC-wide coverage
 const homepageFAQs = [
