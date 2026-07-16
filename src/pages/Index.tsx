@@ -54,7 +54,7 @@ const Index = () => {
       {/* Preload the LCP hero image so the browser starts fetching it during HTML parse
           instead of after the Hero chunk resolves. Uses the Vite-hashed asset URL. */}
       <Helmet defer={false}>
-        <link rel="preload" as="image" href={heroLcp} fetchpriority="high" type="image/webp" />
+        <link rel="preload" as="image" href={heroLcp} fetchPriority="high" type="image/webp" />
       </Helmet>
       <WebSiteStructuredData />
       <ServiceStructuredData />
