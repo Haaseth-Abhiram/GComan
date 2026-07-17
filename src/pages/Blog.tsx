@@ -1186,6 +1186,105 @@ Global Chemicals LLC supplies a complete range of swimming pool chemicals to hot
       ],
     },
   },
+  {
+    id: 'butylene-glycol-guide-oman-gcc',
+    title: '1,3-Butylene Glycol Guide: Industrial & Cosmetic Applications in Oman & GCC',
+    excerpt: 'Technical guide to 1,3-butylene glycol (1,3-BG, CAS 107-88-0) — applications in cosmetics, personal care, pharmaceuticals, and industrial formulations; specifications, SDS highlights, and procurement in Oman, UAE, Saudi Arabia, Qatar, Kuwait & Bahrain.',
+    content: `1,3-Butylene glycol (1,3-butanediol, 1,3-BG, CAS 107-88-0) is a colourless, nearly odourless, hygroscopic diol widely used across cosmetics, personal care, pharmaceuticals, food flavourings, and industrial polymer formulations. In the Middle East and GCC, demand for 1,3-butylene glycol has grown alongside the region's expanding personal care manufacturing base — with formulators in Dubai, Riyadh, Jeddah, Muscat, and Doha specifying it as a humectant, solvent, and viscosity modifier in skincare and haircare products destined for GCC, African, and South Asian markets.
+
+What Is 1,3-Butylene Glycol?
+
+1,3-Butylene glycol is a four-carbon diol (C4H10O2, molecular weight 90.12) produced commercially by catalytic hydrogenation of acetaldol or by fermentation of sugars. It is fully miscible with water, ethanol, acetone, and most polar solvents. Its low toxicity profile (oral LD50 in rats ~18,600 mg/kg — significantly less toxic than ethylene glycol) has earned it FDA GRAS status for use as a food flavouring carrier and broad regulatory acceptance in cosmetic and pharmaceutical applications worldwide, including under GSO (GCC Standardization Organization) cosmetic regulations.
+
+Key Applications in Cosmetics and Personal Care
+
+The dominant global use of 1,3-butylene glycol is in cosmetics and personal care — accounting for approximately 60–70% of consumption. In these applications, 1,3-BG functions as:
+
+- **Humectant** — attracts and retains moisture in skincare formulations (creams, lotions, serums, sheet masks, toners). Typical use level 2–10% w/w. Delivers a lighter, less tacky skin feel than glycerin, making it the preferred humectant in Korean beauty (K-beauty) style formulations popular across the GCC.
+- **Solvent and extraction medium** — used to extract botanical actives (green tea, centella asiatica, licorice, aloe vera) for use in serums and essences. Butylene glycol extracts are common label ingredients in premium skincare sold across the UAE and Saudi Arabia.
+- **Viscosity modifier** — reduces viscosity in gel formulations and improves spreadability of emulsions.
+- **Preservative booster** — enhances the efficacy of paraben-free and mild preservative systems by reducing water activity; increasingly important as GCC formulators reformulate away from parabens.
+- **Fragrance solubiliser** — solubilises fragrance oils in aqueous formulations (colognes, body sprays, room fragrances).
+
+Pharmaceutical and Food Applications
+
+In pharmaceuticals, 1,3-butylene glycol is used as a solvent and carrier for oral, topical, and parenteral formulations, and as a plasticiser in soft gelatin capsule shells. Its low toxicity and good compatibility with active pharmaceutical ingredients make it a common excipient. In food applications (regulated in the GCC under GSO food additive standards), 1,3-BG is permitted as a flavour carrier and humectant.
+
+Industrial Applications
+
+Beyond personal care, 1,3-butylene glycol is used industrially as:
+- A polyester and alkyd resin monomer in coatings, inks, and specialty polymers
+- A humectant in tobacco products (extending shelf life and preventing drying)
+- A solvent in printing inks and industrial cleaning formulations
+- A hygroscopic component in specialty adhesives
+
+Technical Specifications (Industrial Grade)
+
+- Appearance: Clear, colourless liquid
+- Purity: ≥99.0% (industrial), ≥99.5% (cosmetic grade)
+- Water content: ≤0.1% w/w
+- Density (20°C): 1.004–1.006 g/cm³
+- Boiling point: 207.5°C
+- Flash point: 121°C (closed cup)
+- Freezing point: −50°C
+- Refractive index (20°C): 1.4401
+- pH (10% aqueous solution): 6.0–8.0
+- Colour (APHA): ≤10
+- Available packaging: 200 kg drums, 1,000 kg IBCs, ISO tanks (bulk)
+
+Cosmetic-grade 1,3-BG additionally meets USP/EP monograph requirements and is supplied with a Certificate of Analysis showing heavy metals, arsenic, and microbiological limits.
+
+Safety and SDS Highlights
+
+1,3-Butylene glycol has a favourable safety profile compared to other glycols, but formulators and warehouse operators should note:
+
+- **Toxicity**: Oral LD50 (rat) ~18,600 mg/kg — low acute toxicity. Not classified as hazardous under GHS for acute toxicity.
+- **Skin and eye irritation**: Practically non-irritating to skin; may cause mild transient eye irritation on direct contact.
+- **Combustibility**: Combustible liquid with flash point 121°C — above the GHS flammable liquid threshold. Standard storage precautions apply; no special flame-proofing required.
+- **Storage**: Store in tightly sealed containers away from strong oxidisers. Hygroscopic — prolonged exposure to humid air will increase water content. Nitrogen blanketing recommended for bulk storage in Oman and Gulf summer conditions.
+- **Compatibility**: Compatible with most cosmetic and pharmaceutical actives, surfactants, and preservatives. Incompatible with strong oxidisers, strong acids, and isocyanates.
+- **Shelf life**: 24 months minimum in unopened original packaging stored below 30°C.
+- **First aid**: Skin contact — wash with water. Eye contact — flush with water for 15 minutes. Ingestion — do not induce vomiting; seek medical attention.
+
+Always consult the batch-specific SDS supplied with your purchase; regulatory classifications may vary slightly between suppliers and grades.
+
+Procurement Advantages for GCC Buyers
+
+For personal care manufacturers and industrial formulators in Oman, UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain, procuring 1,3-butylene glycol locally (rather than importing directly from Asia or Europe) delivers several advantages:
+
+- **Faster lead times**: Same-day or next-day delivery within Oman (Muscat, Sohar, Rusayl, Duqm, Salalah); 3–5 working days to UAE, Saudi Arabia, and other GCC destinations.
+- **Lower minimum order quantities**: Local stock allows 1-drum (200 kg) purchases rather than 20-tonne container minimums typical of direct import.
+- **GCC-compliant documentation**: SDS in English and Arabic, Certificate of Origin, GSO-conformant labelling, and customs paperwork for cross-border GCC shipments.
+- **Reduced currency risk**: Local supply in OMR/AED/SAR avoids USD/EUR exposure on smaller orders.
+- **Technical support**: Formulation guidance, compatibility testing, and dosing recommendations from a local technical team familiar with GCC regulatory requirements.
+- **Reduced working capital**: No need to tie up capital in 20-tonne container inventory awaiting slow-moving product turnover.
+
+Global Chemicals LLC supplies 1,3-butylene glycol (industrial and cosmetic grades) from stock in Muscat, with delivery across Oman and export to all GCC countries. Contact info@gcoman.com or call +968-93754388 for pricing, specifications, and Certificate of Analysis.`,
+    author: 'Global Chemicals Technical Team',
+    date: '2026-07-17',
+    readTime: '9 min read',
+    category: 'Industrial Chemicals',
+    tags: ['Butylene Glycol', '1,3-BG', 'Cosmetics', 'Personal Care', 'Glycols', 'Oman', 'GCC', 'Technical Guide'],
+    icon: Beaker,
+    faqs: [
+      {
+        question: 'What is 1,3-butylene glycol used for in cosmetics?',
+        answer: '1,3-Butylene glycol (1,3-BG, CAS 107-88-0) is used in cosmetics primarily as a humectant (2–10% w/w) to retain moisture in creams, lotions, serums, and sheet masks. It also acts as a solvent for botanical extract carriers (green tea, centella asiatica, aloe vera), a viscosity modifier in gels, a preservative booster in paraben-free systems, and a fragrance solubiliser in aqueous formulations. It delivers a lighter, less tacky skin feel than glycerin, making it the preferred humectant in K-beauty style skincare formulations popular across the UAE and Saudi Arabia.',
+      },
+      {
+        question: 'Is 1,3-butylene glycol safe? What does the SDS say?',
+        answer: '1,3-Butylene glycol has a favourable safety profile. Oral LD50 in rats is approximately 18,600 mg/kg — very low acute toxicity, significantly safer than ethylene glycol. It is not classified as hazardous under GHS for acute toxicity, is practically non-irritating to skin, and holds FDA GRAS status for food flavour carrier applications. It is a combustible liquid (flash point 121°C, above the GHS flammable threshold) so standard storage precautions apply but no flame-proofing is required. Store in tightly sealed containers away from strong oxidisers; it is hygroscopic and will absorb atmospheric moisture in Gulf humidity if left open. Always consult the batch-specific SDS.',
+      },
+      {
+        question: 'What is the difference between 1,3-butylene glycol and propylene glycol?',
+        answer: 'Both are low-toxicity diols used as humectants and solvents in cosmetics and pharmaceuticals, but 1,3-butylene glycol (C4H10O2, four carbons) is a larger molecule than propylene glycol (C3H8O2, three carbons). 1,3-BG delivers a lighter, less sticky skin feel and is less likely to cause sensitisation in reactive skin — making it the preferred humectant in premium skincare and K-beauty formulations. Propylene glycol is cheaper and slightly more effective as a preservative booster, but has a stronger reputation for skin irritation in sensitive users. Formulators serving GCC premium skincare brands typically specify 1,3-BG; mass-market and industrial formulations more often use propylene glycol.',
+      },
+      {
+        question: 'Where can I buy 1,3-butylene glycol in Oman and GCC?',
+        answer: 'Global Chemicals LLC supplies 1,3-butylene glycol (both industrial and cosmetic grades) from stock in Muscat, Oman. Same-day delivery in Muscat and next-day delivery to Sohar, Rusayl, Duqm, and Salalah industrial areas. Export supply to UAE (Dubai, Abu Dhabi, Sharjah), Saudi Arabia (Riyadh, Jeddah, Dammam), Qatar (Doha, Ras Laffan), Kuwait, and Bahrain typically ships within 3–5 working days. Available in 200 kg drums, 1,000 kg IBCs, and ISO tank bulk. Full documentation package includes SDS in English and Arabic, batch Certificate of Analysis, GSO-conformant labels, and Certificate of Origin for cross-border GCC shipments. Contact info@gcoman.com or +968-93754388 for pricing and availability.',
+      },
+    ],
+  },
 ];
 
 const categories = ['All', 'Water Treatment', 'Industrial Chemicals', 'Sustainability', 'Safety', 'Oil & Gas', 'Industry Guide'];
