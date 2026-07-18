@@ -60,7 +60,7 @@ export const RelatedLinks = ({
             <Link
               key={index}
               to={link.href}
-              className="group p-4 border rounded-lg hover:border-primary/50 hover:shadow-md transition-all"
+              className="group p-4 logo-gradient-border rounded-lg hover:shadow-md transition-all"
             >
               <h3 className="font-semibold group-hover:text-primary transition-colors">
                 {link.title}
