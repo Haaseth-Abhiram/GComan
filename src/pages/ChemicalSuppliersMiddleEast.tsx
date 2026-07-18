@@ -229,7 +229,7 @@ const ChemicalSuppliersMiddleEast = () => {
               </p>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {gccCountries.map((country, i) => (
-                  <Card key={i} className="p-6 hover:shadow-lg transition-shadow border hover:border-primary/30">
+                  <Card key={i} className="p-6 hover:shadow-lg transition-shadow logo-gradient-border">
                     <div className="flex items-start gap-4">
                       <span className="text-4xl">{country.flag}</span>
                       <div className="flex-1">
