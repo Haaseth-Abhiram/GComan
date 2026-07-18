@@ -229,7 +229,7 @@ const ChemicalSuppliersOman = () => {
                   { city: 'Duqm', path: '/chemicals/duqm', note: '2-3 day delivery' },
                   { city: 'Rusayl', path: '/chemicals/rusayl', note: 'Same-day delivery' },
                 ].map((loc) => (
-                  <Link key={loc.city} to={loc.path} className="p-4 border rounded-lg text-center hover:border-primary hover:shadow-sm transition-all group">
+                  <Link key={loc.city} to={loc.path} className="p-4 logo-gradient-border rounded-lg text-center hover:shadow-sm transition-all group">
                     <p className="font-semibold text-foreground group-hover:text-primary">{loc.city}</p>
                     <p className="text-xs text-muted-foreground mt-1">{loc.note}</p>
                   </Link>
