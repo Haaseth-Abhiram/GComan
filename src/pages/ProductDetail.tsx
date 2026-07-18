@@ -380,7 +380,7 @@ const ProductDetail = () => {
               </div>
 
               {/* CTA Section */}
-              <Card className="p-8 bg-gradient-to-br from-primary/5 to-secondary/5 border-primary/20">
+              <Card className="p-8 bg-gradient-to-br from-primary/5 to-secondary/5 logo-gradient-border">
                 <div className="text-center">
                   <h2 className="text-2xl font-bold mb-2">{t('products.needMoreInfo', { defaultValue: 'Request a Quote' })}</h2>
                   <p className="text-muted-foreground mb-6">

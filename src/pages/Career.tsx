@@ -632,7 +632,7 @@ const Career = () => {
       {/* CTA Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <Card className="max-w-4xl mx-auto text-center border-2 bg-gradient-to-br from-primary/5 to-background">
+          <Card className="max-w-4xl mx-auto text-center logo-gradient-border bg-gradient-to-br from-primary/5 to-background">
             <CardHeader>
               <Coffee className="w-12 h-12 text-primary mx-auto mb-4" />
               <CardTitle className="text-3xl md:text-4xl mb-4">

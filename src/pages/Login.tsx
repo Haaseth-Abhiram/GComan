@@ -338,7 +338,7 @@ const Login = () => {
 
         {/* Right Side - Auth Forms */}
         <div className="w-full max-w-md mx-auto animate-fade-in" style={{ animationDelay: '100ms' }}>
-          <Card className="border-2 shadow-xl">
+          <Card className="logo-gradient-border shadow-xl">
             <CardHeader className="space-y-4">
               <div className="lg:hidden flex justify-center mb-4">
                 <img

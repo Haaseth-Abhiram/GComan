@@ -359,7 +359,7 @@ const Customers = () => {
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-br from-primary/10 to-background">
         <div className="container mx-auto px-4">
-          <Card className="max-w-4xl mx-auto text-center border-2">
+          <Card className="max-w-4xl mx-auto text-center logo-gradient-border">
             <CardHeader>
               <CardTitle className="text-3xl md:text-4xl mb-4">
                 Join Our Growing Family of Satisfied Customers

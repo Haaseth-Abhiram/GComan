@@ -229,7 +229,7 @@ const ChemicalSuppliersOman = () => {
                   { city: 'Duqm', path: '/chemicals/duqm', note: '2-3 day delivery' },
                   { city: 'Rusayl', path: '/chemicals/rusayl', note: 'Same-day delivery' },
                 ].map((loc) => (
-                  <Link key={loc.city} to={loc.path} className="p-4 border rounded-lg text-center hover:border-primary hover:shadow-sm transition-all group">
+                  <Link key={loc.city} to={loc.path} className="p-4 logo-gradient-border rounded-lg text-center hover:shadow-sm transition-all group">
                     <p className="font-semibold text-foreground group-hover:text-primary">{loc.city}</p>
                     <p className="text-xs text-muted-foreground mt-1">{loc.note}</p>
                   </Link>
@@ -253,7 +253,7 @@ const ChemicalSuppliersOman = () => {
                   { label: 'Oilfield Chemicals — JSRS Certified', path: '/products/oilfield', note: 'PDO, OQ, OPAL Approved' },
                   { label: 'Swimming Pool Chemicals Oman', path: '/products/swimming-pool', note: 'Muscat Hotel & Villa Pools' },
                 ].map((item) => (
-                  <Link key={item.path} to={item.path} className="p-4 border rounded-lg hover:border-primary hover:shadow-sm transition-all group">
+                  <Link key={item.path} to={item.path} className="p-4 logo-gradient-border rounded-lg hover:shadow-sm transition-all group">
                     <p className="font-semibold text-foreground group-hover:text-primary text-sm">{item.label}</p>
                     <p className="text-xs text-muted-foreground mt-1">{item.note}</p>
                   </Link>
