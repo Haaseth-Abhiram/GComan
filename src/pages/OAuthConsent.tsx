@@ -94,7 +94,7 @@ export default function OAuthConsent() {
         <title>Authorize connection | Global Chemicals LLC</title>
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
-      <Card className="w-full max-w-md border-2 shadow-xl">
+      <Card className="w-full max-w-md logo-gradient-border shadow-xl">
         <CardHeader className="space-y-3 text-center">
           <img src={logo} alt="Global Chemicals LLC" className="h-12 w-auto mx-auto" />
           <CardTitle className="text-2xl">
