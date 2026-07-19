@@ -310,7 +310,7 @@ const Customers = () => {
                   style={{ animationDelay: `${index * 50}ms` }}
                 >
                   <CardContent className="p-6">
-                    <div className="aspect-square bg-background border-2 border-border rounded-lg flex items-center justify-center p-4 mb-4 group-hover:border-primary/50 transition-colors">
+                    <div className="aspect-square bg-background logo-gradient-border rounded-lg flex items-center justify-center p-4 mb-4 transition-colors">
                       <img
                         src={customer.logo}
                         alt={`${customer.name} logo`}
