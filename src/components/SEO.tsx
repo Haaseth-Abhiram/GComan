@@ -74,6 +74,28 @@ export const SEO = ({
 
   const currentLocale = i18n.language === 'ar' ? 'ar_SA' : 'en_US';
 
+  // Auto-rewrite canonical/ogUrl for Arabic mirror routes. Pages pass an English
+  // canonical prop (e.g. https://gcoman.com/); on the /ar/* route the same
+  // component renders and would otherwise declare its canonical as the English
+  // URL, causing Google to drop every Arabic page as a duplicate. Rewrite host+path
+  // to the /ar-prefixed equivalent so Arabic pages self-canonicalize and hreflang
+  // can pair them with their English twin.
+  const isArabicRoute = location.pathname === '/ar' || location.pathname.startsWith('/ar/');
+  const toArabic = (url: string): string => {
+    try {
+      const u = new URL(url);
+      if (u.pathname === '/' || u.pathname === '') u.pathname = '/ar/';
+      else if (u.pathname !== '/ar' && !u.pathname.startsWith('/ar/')) u.pathname = `/ar${u.pathname}`;
+      return u.toString();
+    } catch {
+      return url;
+    }
+  };
+  const resolvedCanonical = canonical || `${BASE_URL}${location.pathname}`;
+  const finalCanonical = isArabicRoute ? toArabic(resolvedCanonical) : resolvedCanonical;
+  const finalOgUrl = ogUrl ? (isArabicRoute ? toArabic(ogUrl) : ogUrl) : undefined;
+
+
   return (
     // defer={false} forces react-helmet-async to commit head changes
     // synchronously instead of waiting for requestAnimationFrame. rAF is
