@@ -119,7 +119,7 @@ export const SEO = ({
       <meta property="og:site_name" content={SITE_NAME} />
       <meta property="og:title" content={finalTitle} />
       <meta property="og:description" content={finalDescription} />
-      {ogUrl && <meta property="og:url" content={ogUrl} />}
+      {finalOgUrl && <meta property="og:url" content={finalOgUrl} />}
       <meta property="og:image" content={finalOgImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
@@ -149,8 +149,9 @@ export const SEO = ({
       <meta name="twitter:image" content={finalOgImage} />
       <meta name="twitter:image:alt" content={`${finalTitle} - Global Chemicals LLC`} />
 
-      {/* Canonical */}
-      <link rel="canonical" href={canonical || `${BASE_URL}${location.pathname}`} />
+      {/* Canonical — self-referencing per route (Arabic pages get /ar-prefixed URL) */}
+      <link rel="canonical" href={finalCanonical} />
+
     </Helmet>
   );
 };
