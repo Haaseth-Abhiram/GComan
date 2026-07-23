@@ -222,30 +222,30 @@ const Products = () => {
       <SEO
         title={(() => {
           const categoryTitles: Record<string, string> = {
-            'water-treatment': 'Water Treatment Chemicals Supplier | Oman & GCC | Global Chemicals LLC',
-            'lubricants': 'Industrial Lubricants Supplier in Oman & Middle East | Global Chemicals LLC',
-            'swimming-pool': 'Swimming Pool Chemicals | Oman & GCC | Global Chemicals LLC',
-            'lab-chemicals': 'Laboratory Chemicals Supplier | Oman & Middle East | Global Chemicals LLC',
-            'oilfield': 'Oilfield & Refinery Chemicals | Oman & GCC | Global Chemicals LLC',
-            'tank-cleaners': 'Marine & Industrial Tank Cleaners | Oman & Middle East | Global Chemicals',
-            'soap-detergent': 'Soap & Detergent Chemicals | Oman & GCC | Global Chemicals LLC',
-            'food-beverage': 'Food & Beverage Grade Chemicals | Oman & GCC | Global Chemicals LLC',
-            'cooling-water': 'Cooling Water Treatment Chemicals | Oman & GCC | Global Chemicals LLC',
-            'corrosion-inhibitor': 'Corrosion Inhibitors Supplier | Oman & Middle East | Global Chemicals LLC',
-            'ro-chemicals': 'RO Plant Chemicals Supplier | Oman & GCC | Global Chemicals LLC',
-            'solvents': 'Industrial Solvents Supplier | Oman & Middle East | Global Chemicals LLC',
-            'inorganic': 'Inorganic Chemicals Supplier | Oman & GCC | Global Chemicals LLC',
-            'construction': 'Construction Chemicals | Oman & GCC | Global Chemicals LLC',
-            'alcohols': 'Industrial Alcohols Supplier | Oman & GCC | Global Chemicals LLC',
-            'glycols': 'Glycols Supplier | Oman & GCC | Global Chemicals LLC',
-            'ethanolamines': 'Ethanolamines Supplier | Oman & GCC | Global Chemicals LLC',
-            'chlorinated': 'Chlorinated Solvents | Oman & GCC | Global Chemicals LLC',
-            'lab-equipment': 'Laboratory Equipment Supplier | Oman & GCC | Global Chemicals LLC',
-            'calcium-carbonate': 'Calcium Carbonate Supplier | Oman & GCC | Global Chemicals LLC',
-            'agro': 'Agricultural Chemicals | Oman & GCC | Global Chemicals LLC',
-            'additives': 'Chemical Additives Supplier | Oman & GCC | Global Chemicals LLC'
+            'water-treatment': 'Water Treatment Chemicals Oman & GCC | GC Oman',
+            'lubricants': 'Industrial Lubricants Oman & Middle East | GC Oman',
+            'swimming-pool': 'Swimming Pool Chemicals Oman & GCC | GC Oman',
+            'lab-chemicals': 'Laboratory Chemicals Oman & Middle East | GC Oman',
+            'oilfield': 'Oilfield & Refinery Chemicals Oman & GCC | GC Oman',
+            'tank-cleaners': 'Marine & Industrial Tank Cleaners Oman | GC Oman',
+            'soap-detergent': 'Soap & Detergent Chemicals Oman & GCC | GC Oman',
+            'food-beverage': 'Food & Beverage Grade Chemicals Oman & GCC | GC Oman',
+            'cooling-water': 'Cooling Water Chemicals Oman & GCC | GC Oman',
+            'corrosion-inhibitor': 'Corrosion Inhibitors Oman & Middle East | GC Oman',
+            'ro-chemicals': 'RO Plant Chemicals Oman & GCC | GC Oman',
+            'solvents': 'Industrial Solvents Oman & Middle East | GC Oman',
+            'inorganic': 'Inorganic Chemicals Oman & GCC | GC Oman',
+            'construction': 'Construction Chemicals Oman & GCC | GC Oman',
+            'alcohols': 'Industrial Alcohols Oman & GCC | GC Oman',
+            'glycols': 'Glycols Supplier Oman & GCC | GC Oman',
+            'ethanolamines': 'Ethanolamines Supplier Oman & GCC | GC Oman',
+            'chlorinated': 'Chlorinated Solvents Oman & GCC | GC Oman',
+            'lab-equipment': 'Laboratory Equipment Oman & GCC | GC Oman',
+            'calcium-carbonate': 'Calcium Carbonate Supplier Oman & GCC | GC Oman',
+            'agro': 'Agricultural Chemicals Oman & GCC | GC Oman',
+            'additives': 'Chemical Additives Oman & GCC | GC Oman'
           };
-          return categoryTitles[activeCategory] || 'Industrial Chemicals Supplier Oman & Middle East | Global Chemicals LLC';
+          return categoryTitles[activeCategory] || 'Industrial Chemicals Supplier Oman & GCC | GC Oman';
         })()}
         description={(() => {
           const categoryDescs: Record<string, string> = {
