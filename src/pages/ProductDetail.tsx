@@ -162,10 +162,10 @@ const ProductDetail = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title={`${product.title} | ${catLabel} Supplier | Oman & GCC | Global Chemicals LLC`}
+        title={`${product.title} | ${catLabel} | GC Oman`}
         description={seoDescription}
         keywords={keywords}
-        ogTitle={`${product.title} - ${catLabel} Chemical Supplier | Oman & GCC | Global Chemicals LLC`}
+        ogTitle={`${product.title} | ${catLabel} | GC Oman`}
         ogDescription={seoDescription}
         ogUrl={`https://gcoman.com/products/${category}/${productSlug}`}
         canonical={`https://gcoman.com/products/${category}/${productSlug}`}
