@@ -1370,7 +1370,7 @@ Global Chemicals LLC supplies disinfectants, feed preservatives, feed-grade mine
       },
       {
         question: 'Are animal-feed chemicals regulated under GSO standards in Oman and GCC?',
-        answer: 'Yes. Feed additives sold in the GCC must comply with GSO 993 (Animal Feeds — Nomenclature and Definitions) and product-specific GSO standards. Feed-grade chemicals require a Certificate of Analysis showing purity, heavy metals, and microbiological limits, and labelling in English and Arabic. Veterinary biocides for retail sale must be registered with each country\\'s authority (Ministry of Agriculture in Oman; SFDA in Saudi Arabia). Industrial farm use of general-purpose disinfectants (glutaraldehyde blends, peracetic acid, sodium hypochlorite, calcium hypochlorite) is permitted under standard chemical import regulations without individual product registration.',
+        answer: 'Yes. Feed additives sold in the GCC must comply with GSO 993 (Animal Feeds — Nomenclature and Definitions) and product-specific GSO standards. Feed-grade chemicals require a Certificate of Analysis showing purity, heavy metals, and microbiological limits, and labelling in English and Arabic. Veterinary biocides for retail sale must be registered with each country\'s authority (Ministry of Agriculture in Oman; SFDA in Saudi Arabia). Industrial farm use of general-purpose disinfectants (glutaraldehyde blends, peracetic acid, sodium hypochlorite, calcium hypochlorite) is permitted under standard chemical import regulations without individual product registration.',
       },
       {
         question: 'Where can I buy animal health and feed chemicals in Oman and GCC?',
