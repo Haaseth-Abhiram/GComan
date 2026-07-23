@@ -1285,6 +1285,99 @@ Global Chemicals LLC supplies 1,3-butylene glycol (industrial and cosmetic grade
       },
     ],
   },
+  {
+    id: 'animal-health-nutrition-chemicals-oman-gcc',
+    title: 'Animal Health & Nutrition Chemicals: Guide for Poultry & Livestock Farms in Oman & GCC',
+    excerpt: 'Practical guide to specialty biocides, feed-grade additives, and nutritional chemicals for poultry, dairy, and livestock operations across Oman, UAE, Saudi Arabia, Qatar, Kuwait & Bahrain — with GSO compliance notes and local supply logistics.',
+    content: `Animal health and nutrition chemicals are a critical input for the GCC's rapidly modernising poultry, dairy, and livestock sectors. From broiler farms in Saudi Arabia's Al-Kharj corridor to dairy operations in Oman's Barka and Salalah regions, producers rely on a defined toolkit of biocides, feed-grade additives, and nutritional chemicals to protect flock health, extend feed shelf life, and meet GSO (GCC Standardization Organization) veterinary and feed safety standards.
+    
+This guide covers the main categories of animal health and nutrition chemicals used in Oman and the wider GCC, typical dose rates, and procurement notes for buyers sourcing locally rather than importing directly.
+
+Farm Biocides and Disinfection
+
+Biosecurity is the first line of defence in poultry and livestock operations, and disinfection chemistry is where most farm health programmes start. The chemicals most commonly used in GCC farms include:
+
+- **Glutaraldehyde–quaternary ammonium blends** — broad-spectrum disinfectants effective against viruses (Newcastle disease, avian influenza, IBD), bacteria, and fungi. Typical dilution 1:200 to 1:400 for routine disinfection of empty poultry houses between cycles.
+- **Peracetic acid (PAA) solutions** — fast-acting, residue-free oxidiser used for drinking water line sanitisation and terminal disinfection. Effective at low temperatures common in air-conditioned Gulf poultry houses.
+- **Sodium hypochlorite (10–12% w/w)** — chlorine base for drinking water treatment and general surface disinfection. Dosed at 3–5 mg/L free chlorine in poultry drinking lines to control biofilm and pathogens.
+- **Iodophors** — iodine-based teat dips and udder disinfectants for dairy operations. Standard 0.5–1.0% available iodine for post-milking teat dip.
+- **Calcium hypochlorite (65% granular)** — used for footbath disinfection at farm entry points and for periodic shock-sanitisation of drinking water systems.
+
+Feed-Grade Preservatives and Mould Inhibitors
+
+Gulf climate — high summer temperatures, high humidity along coastal Oman and UAE, and long feed storage times in remote farms — makes feed preservation a priority. The main preservatives in use are:
+
+- **Propionic acid and buffered calcium propionate** — the standard mould inhibitor for compound feed, whole grains, and silage. Typical inclusion 1.5–3.0 kg per tonne of finished feed; higher dose (3–5 kg/tonne) for high-moisture grains stored in Oman and Saudi summer conditions.
+- **Formic acid and formate blends** — dual-action mould and bacterial inhibitor; also improves protein utilisation in young poultry. Typical inclusion 2–5 kg/tonne.
+- **Organic acid blends (propionic + formic + sorbic)** — synergistic feed hygiene products for pelleted feed; effective at lower total dose than single acids.
+- **Toxin binders (activated bentonite, hydrated sodium calcium aluminosilicates)** — inclusion 1–2 kg/tonne to bind aflatoxins and mycotoxins in stored feed, particularly important for maize imported through Sohar, Jebel Ali, and Dammam ports during monsoon storage seasons.
+
+Nutritional Additives and Feed-Grade Chemicals
+
+Beyond preservation, GCC feed mills and integrated poultry operations use a range of nutritional chemicals to hit protein, mineral, and vitamin targets:
+
+- **Choline chloride (60% on silica or corn cob carrier)** — essential vitamin for liver function and fat metabolism in broilers and layers. Standard inclusion 500–1,000 g/tonne.
+- **DL-methionine and L-lysine HCl** — synthetic amino acids used to balance vegetable-protein diets in broilers and layers. Reduces reliance on expensive fishmeal and soybean meal.
+- **Monocalcium phosphate (MCP) and dicalcium phosphate (DCP)** — inorganic phosphorus sources for skeletal development in poultry and calcium balancing in dairy rations.
+- **Zinc oxide, copper sulphate, manganese sulphate, ferrous sulphate** — trace mineral premix components. Zinc oxide (feed grade, 72% Zn) is used at 40–100 g/tonne in poultry starter feeds.
+- **Sodium bicarbonate (feed grade)** — buffer for high-yielding dairy cows to prevent rumen acidosis; typical inclusion 150–250 g/head/day. Also used in poultry to counteract heat stress in Gulf summer.
+- **Sodium chloride (feed grade)** — electrolyte balance; standard inclusion 2–4 kg/tonne.
+
+Drinking Water Treatment for Farms
+
+Water quality has an outsized effect on poultry and livestock performance, particularly in Oman and Saudi inland farms drawing from brackish well water. Standard chemicals:
+
+- **Sodium hypochlorite** for continuous chlorination (target 3–5 mg/L free chlorine at the drinker).
+- **Citric acid or phosphoric acid** for water acidification (target pH 6.0–6.5) to improve chlorine efficacy, reduce scale in drinking lines, and support gut health in broilers.
+- **Hydrogen peroxide (35–50%)** for periodic drinking line shock sanitation (5–10% solution flushed through lines during downtime).
+- **Antiscalants (phosphonate-based)** for reverse osmosis pretreatment where farm water is desalinated.
+
+GSO and Regulatory Compliance for GCC Buyers
+
+Feed additives, biocides, and veterinary chemicals sold in the GCC must meet GSO (GCC Standardization Organization) requirements. Key points for buyers:
+
+- **Feed additives** must comply with GSO 993 (Animal Feeds — Nomenclature and Definitions) and product-specific GSO standards. Feed-grade chemicals require Certificate of Analysis showing purity, heavy metals, and microbiological limits.
+- **Veterinary biocides** are regulated by each GCC country's veterinary authority — in Oman the Ministry of Agriculture, Fisheries and Water Resources; in Saudi Arabia the Saudi Food and Drug Authority (SFDA). Product registration is required for retail sale but industrial farm use of general-purpose disinfectants (glutaraldehyde blends, peracetic acid, sodium hypochlorite) is permitted under standard chemical import regulations.
+- **Labelling** must be in English and Arabic, with hazard classification per GHS and safe-handling instructions.
+- **SDS documentation** must be current (revised within the past 3 years) and available in English and Arabic.
+
+Procurement Advantages for GCC Farms
+
+Poultry integrators, dairy operations, and feed mills in Oman, UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain benefit from local supply rather than direct import for most animal health and nutrition chemicals:
+
+- **Faster response** — same-day delivery within Oman (Muscat, Sohar, Barka, Salalah, Duqm); 3–5 working days to GCC neighbours.
+- **Lower minimum order quantities** — 25 kg bags, 200 kg drums, and 1,000 kg IBCs available from local stock, avoiding the 20-tonne container minimums typical of direct import.
+- **GCC-compliant documentation** — SDS in English and Arabic, GSO-conformant labels, Certificate of Analysis, and Certificate of Origin for cross-border GCC shipments.
+- **Cold-chain and temperature-controlled storage** — critical for vitamin premixes and heat-sensitive additives in Gulf summer conditions.
+- **Reduced working capital** — no need to tie up capital in bulk container inventory awaiting slow-moving product turnover.
+- **Local technical support** — dosing recommendations, farm audits, and regulatory guidance from a team familiar with GCC veterinary and feed regulations.
+
+Global Chemicals LLC supplies disinfectants, feed preservatives, feed-grade minerals, and drinking water treatment chemicals to poultry integrators, dairy farms, and feed mills across Oman and the GCC. Contact info@gcoman.com or call +968-93754388 for product specifications, pricing, and Certificate of Analysis.`,
+    author: 'Global Chemicals Technical Team',
+    date: '2026-07-23',
+    readTime: '10 min read',
+    category: 'Industry Guide',
+    tags: ['Animal Health', 'Poultry', 'Livestock', 'Feed Additives', 'Farm Biocides', 'Oman', 'GCC', 'Nutrition'],
+    icon: Leaf,
+    faqs: [
+      {
+        question: 'What disinfectants are used in GCC poultry farms?',
+        answer: 'The most common poultry-house disinfectants in Oman and the wider GCC are glutaraldehyde–quaternary ammonium blends (1:200 to 1:400 dilution for terminal disinfection between cycles), peracetic acid for drinking-line sanitation, sodium hypochlorite (3–5 mg/L free chlorine in drinking water and for surface disinfection), calcium hypochlorite (65% granular) for footbaths and shock-chlorination, and iodophors for dairy teat dips. Selection depends on the target pathogen (Newcastle, avian influenza, IBD, coccidia), water hardness, and whether animals are present or the house is empty.',
+      },
+      {
+        question: 'How much propionic acid should I add to feed to prevent mould in Gulf storage?',
+        answer: 'Standard mould-inhibitor inclusion for compound feed in the GCC is 1.5–3.0 kg of propionic acid (or buffered calcium propionate) per tonne of finished feed. For high-moisture grains, whole maize stored in coastal Oman, UAE, or Saudi ports during summer or monsoon, or feed with expected storage beyond 30 days, increase to 3–5 kg/tonne. Buffered calcium propionate is easier to handle than liquid propionic acid and less corrosive to mill equipment. Combine with a toxin binder (activated bentonite or hydrated sodium calcium aluminosilicate) at 1–2 kg/tonne if aflatoxin contamination is a concern in the raw material.',
+      },
+      {
+        question: 'Are animal-feed chemicals regulated under GSO standards in Oman and GCC?',
+        answer: 'Yes. Feed additives sold in the GCC must comply with GSO 993 (Animal Feeds — Nomenclature and Definitions) and product-specific GSO standards. Feed-grade chemicals require a Certificate of Analysis showing purity, heavy metals, and microbiological limits, and labelling in English and Arabic. Veterinary biocides for retail sale must be registered with each country\'s authority (Ministry of Agriculture in Oman; SFDA in Saudi Arabia). Industrial farm use of general-purpose disinfectants (glutaraldehyde blends, peracetic acid, sodium hypochlorite, calcium hypochlorite) is permitted under standard chemical import regulations without individual product registration.',
+      },
+      {
+        question: 'Where can I buy animal health and feed chemicals in Oman and GCC?',
+        answer: 'Global Chemicals LLC supplies disinfectants, feed preservatives (propionic acid, calcium propionate, formic acid blends), feed-grade minerals (MCP, DCP, choline chloride, zinc oxide), and drinking water treatment chemicals from stock in Muscat. Same-day delivery within Oman (Muscat, Sohar, Barka, Salalah, Duqm) and 3–5 working days to UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain. Available in 25 kg bags, 200 kg drums, and 1,000 kg IBCs. Documentation includes SDS in English and Arabic, batch Certificate of Analysis, GSO-conformant labels, and Certificate of Origin for cross-border shipments. Contact info@gcoman.com or +968-93754388.',
+      },
+    ],
+  },
 ];
 
 const categories = ['All', 'Water Treatment', 'Industrial Chemicals', 'Sustainability', 'Safety', 'Oil & Gas', 'Industry Guide'];
