@@ -10,7 +10,7 @@ import { ArrowRight, Shield, Award, Sparkles } from 'lucide-react';
 const slides = [
   {
     image: waterTreatment,
-    alt: "Water Treatment Chemicals",
+    alt: "Water Treatment Chemicals from Global Chemicals LLC Oman",
     preheading: "B2B Water Treatment Excellence",
     title: "Advanced Water Treatment",
     highlight: "Solutions",
@@ -18,7 +18,7 @@ const slides = [
   },
   {
     image: oilGas,
-    alt: "Oil & Gas Industry Chemicals",
+    alt: "Oil & Gas Industry Chemicals from Global Chemicals LLC Oman",
     preheading: "B2B Oil & Gas Solutions",
     title: "Premium Chemicals for",
     highlight: "Oil & Gas Industry",
@@ -26,7 +26,7 @@ const slides = [
   },
   {
     image: industrialLubricants,
-    alt: "Industrial Lubricants",
+    alt: "Industrial Lubricants from Global Chemicals LLC Oman",
     preheading: "B2B Industrial Performance",
     title: "High-Performance",
     highlight: "Industrial Lubricants",
@@ -34,7 +34,7 @@ const slides = [
   },
   {
     image: heroLab,
-    alt: "Laboratory Chemical Solutions",
+    alt: "Laboratory Chemical Solutions from Global Chemicals LLC Oman",
     preheading: "Your Trusted B2B Chemical Partner",
     title: "Transforming Industries with",
     highlight: "Premium Chemicals",
