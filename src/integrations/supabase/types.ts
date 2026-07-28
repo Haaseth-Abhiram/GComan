@@ -32,6 +32,90 @@ export type Database = {
         }
         Relationships: []
       }
+      ar_index_events: {
+        Row: {
+          acknowledged: boolean
+          became_indexed: boolean
+          created_at: string
+          from_state: string | null
+          id: string
+          to_state: string | null
+          url: string
+        }
+        Insert: {
+          acknowledged?: boolean
+          became_indexed?: boolean
+          created_at?: string
+          from_state?: string | null
+          id?: string
+          to_state?: string | null
+          url: string
+        }
+        Update: {
+          acknowledged?: boolean
+          became_indexed?: boolean
+          created_at?: string
+          from_state?: string | null
+          id?: string
+          to_state?: string | null
+          url?: string
+        }
+        Relationships: []
+      }
+      ar_index_status: {
+        Row: {
+          coverage_state: string | null
+          created_at: string
+          error: string | null
+          google_canonical: string | null
+          id: string
+          indexing_state: string | null
+          is_indexed: boolean
+          last_checked_at: string
+          last_crawl_time: string | null
+          previous_coverage_state: string | null
+          state_changed_at: string | null
+          updated_at: string
+          url: string
+          user_canonical: string | null
+          verdict: string | null
+        }
+        Insert: {
+          coverage_state?: string | null
+          created_at?: string
+          error?: string | null
+          google_canonical?: string | null
+          id?: string
+          indexing_state?: string | null
+          is_indexed?: boolean
+          last_checked_at?: string
+          last_crawl_time?: string | null
+          previous_coverage_state?: string | null
+          state_changed_at?: string | null
+          updated_at?: string
+          url: string
+          user_canonical?: string | null
+          verdict?: string | null
+        }
+        Update: {
+          coverage_state?: string | null
+          created_at?: string
+          error?: string | null
+          google_canonical?: string | null
+          id?: string
+          indexing_state?: string | null
+          is_indexed?: boolean
+          last_checked_at?: string
+          last_crawl_time?: string | null
+          previous_coverage_state?: string | null
+          state_changed_at?: string | null
+          updated_at?: string
+          url?: string
+          user_canonical?: string | null
+          verdict?: string | null
+        }
+        Relationships: []
+      }
       contact_submissions: {
         Row: {
           company: string | null
