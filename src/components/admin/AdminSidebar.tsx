@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { FileText, Briefcase, Download, LayoutDashboard, Home, BarChart3, Mail, FolderOpen, Globe, Search } from 'lucide-react';
+import { FileText, Briefcase, Download, LayoutDashboard, Home, BarChart3, Mail, FolderOpen, Globe, Search, Languages } from 'lucide-react';
 import { useLocation, Link } from 'react-router-dom';
 import {
   Sidebar,
