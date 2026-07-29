@@ -77,6 +77,8 @@ export function AdminSidebar() {
     { title: 'Newsletter',       url: '/admin/newsletter', icon: Mail,            count: counts.newsletter },
     { title: 'Search Console',   url: '/admin/search-console', icon: Search,     count: 0 },
     { title: 'Index Coverage',   url: '/admin/ar-indexing', icon: Globe,          count: 0 },
+    { title: 'AR vs EN SEO',     url: '/admin/seo-languages', icon: Languages,    count: 0 },
+
   ];
 
   return (
