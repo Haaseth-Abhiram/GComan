@@ -104,16 +104,25 @@ Deno.serve(async (req) => {
     const siteUrl = pick.siteUrl;
     const enc = encodeURIComponent(siteUrl);
 
-    const query = (dimensions: string[], limit = rowLimit) =>
+    const query = (dimensions: string[], limit = rowLimit, filters?: any[]) =>
       gsc(`/webmasters/v3/sites/${enc}/searchAnalytics/query`, {
         method: "POST",
-        body: JSON.stringify({ startDate, endDate, dimensions, rowLimit: limit, dataState: "all" }),
+        body: JSON.stringify({
+          startDate, endDate, dimensions, rowLimit: limit, dataState: "all",
+          ...(filters ? { dimensionFilterGroups: [{ groupType: "and", filters }] } : {}),
+        }),
       }).then((r) => r.rows ?? []).catch((e) => {
         console.error(`searchAnalytics ${dimensions.join(",")} failed:`, (e as Error).message);
         return [];
       });
 
-    const [totalsRows, byDate, byQuery, byPage, byCountry, byDevice, sitemaps] = await Promise.all([
+    const AR_FILTER = [{ dimension: "page", operator: "contains", expression: "/ar/" }];
+    const EN_FILTER = [{ dimension: "page", operator: "notContains", expression: "/ar/" }];
+
+    const [
+      totalsRows, byDate, byQuery, byPage, byCountry, byDevice, sitemaps,
+      totalsAr, totalsEn, byQueryAr, byQueryEn, byDateAr, byDateEn, byPageAr, byPageEn,
+    ] = await Promise.all([
       gsc(`/webmasters/v3/sites/${enc}/searchAnalytics/query`, {
         method: "POST",
         body: JSON.stringify({ startDate, endDate, dimensions: [], dataState: "all" }),
@@ -124,9 +133,18 @@ Deno.serve(async (req) => {
       query(["country"], 10),
       query(["device"], 5),
       gsc(`/webmasters/v3/sites/${enc}/sitemaps`).catch(() => ({ sitemap: [] })),
+      query([], 1, AR_FILTER),
+      query([], 1, EN_FILTER),
+      query(["query"], rowLimit, AR_FILTER),
+      query(["query"], rowLimit, EN_FILTER),
+      query(["date"], 500, AR_FILTER),
+      query(["date"], 500, EN_FILTER),
+      query(["page"], rowLimit, AR_FILTER),
+      query(["page"], rowLimit, EN_FILTER),
     ]);
 
     const totals = totalsRows[0] ?? { clicks: 0, impressions: 0, ctr: 0, position: 0 };
+    const zero = { clicks: 0, impressions: 0, ctr: 0, position: 0 };
 
     return new Response(
       JSON.stringify({
@@ -134,9 +152,14 @@ Deno.serve(async (req) => {
         byDate, byQuery, byPage, byCountry, byDevice,
         sitemaps: sitemaps?.sitemap ?? [],
         availableSites: entries.map((e) => e.siteUrl),
+        comparison: {
+          ar: { totals: totalsAr[0] ?? zero, byQuery: byQueryAr, byDate: byDateAr, byPage: byPageAr },
+          en: { totals: totalsEn[0] ?? zero, byQuery: byQueryEn, byDate: byDateEn, byPage: byPageEn },
+        },
       }),
       { headers: { ...corsHeaders, "Content-Type": "application/json" } },
     );
+
   } catch (e) {
     const message = (e as Error).message;
     console.error("search-console failed:", message);
