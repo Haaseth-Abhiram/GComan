@@ -83,9 +83,9 @@ export function ArabicIndexingMonitor() {
     <div className="space-y-6">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
-          <h2 className="text-2xl font-bold flex items-center gap-2"><Globe className="h-6 w-6" /> Arabic Indexing Monitor</h2>
+          <h2 className="text-2xl font-bold flex items-center gap-2"><Globe className="h-6 w-6" /> Index Coverage Monitor</h2>
           <p className="text-sm text-muted-foreground">
-            Weekly Search Console check on every /ar/ URL in the sitemap.
+            Weekly Search Console index check on every URL in the sitemap (English + Arabic).
             {lastRun && ` Last run ${format(new Date(lastRun), 'dd MMM yyyy HH:mm')}.`}
           </p>
         </div>
@@ -100,7 +100,7 @@ export function ArabicIndexingMonitor() {
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-base">
               <CheckCircle2 className="h-5 w-5 text-green-600" />
-              {unacked.length} Arabic page{unacked.length > 1 ? 's' : ''} newly indexed
+              {unacked.length} page{unacked.length > 1 ? 's' : ''} newly indexed
             </CardTitle>
             <CardDescription>These moved from “Discovered – not indexed” to Indexed.</CardDescription>
           </CardHeader>
@@ -134,7 +134,7 @@ export function ArabicIndexingMonitor() {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               className="mt-2 max-w-sm"
-              aria-label="Filter Arabic URLs"
+              aria-label="Filter URLs"
             />
           </CardDescription>
         </CardHeader>
