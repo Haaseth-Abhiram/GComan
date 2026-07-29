@@ -9,6 +9,8 @@ import { ResumesWorkspace } from '@/components/admin/ResumesWorkspace';
 import { NewsletterSubscribersTable } from '@/components/admin/NewsletterSubscribersTable';
 import { ActivityFeed } from '@/components/admin/ActivityFeed';
 import { ArabicIndexingMonitor } from '@/components/admin/ArabicIndexingMonitor';
+import { SearchConsoleDashboard } from '@/components/admin/SearchConsoleDashboard';
+
 import { AnalyticsDialog } from '@/components/admin/AnalyticsDialog';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
