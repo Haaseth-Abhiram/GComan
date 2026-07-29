@@ -713,6 +713,8 @@ const Admin = () => {
                 <Route path="/downloads" element={<DownloadLeadsTable />} />
                 <Route path="/newsletter" element={<NewsletterSubscribersTable />} />
                 <Route path="/ar-indexing" element={<ArabicIndexingMonitor />} />
+                <Route path="/search-console" element={<SearchConsoleDashboard />} />
+
               </Routes>
             </main>
           </div>
