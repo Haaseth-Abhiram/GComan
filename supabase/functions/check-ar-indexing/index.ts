@@ -57,14 +57,17 @@ async function gsc(path: string, init: RequestInit = {}) {
   return text ? JSON.parse(text) : {};
 }
 
-async function arUrlsFromSitemap(): Promise<string[]> {
+async function urlsFromSitemap(scope: "all" | "ar" = "all"): Promise<string[]> {
   const res = await fetch(SITEMAP_URL, { headers: { "User-Agent": "gcoman-index-monitor" } });
   if (!res.ok) throw new Error(`Failed to fetch sitemap: ${res.status}`);
   const xml = await res.text();
   const locs = [...xml.matchAll(/<loc>\s*([^<]+?)\s*<\/loc>/g)].map((m) => m[1]);
-  const ar = locs.filter((u) => /^https:\/\/gcoman\.com\/ar(\/|$)/.test(u));
-  return [...new Set(ar)];
+  const filtered = scope === "ar"
+    ? locs.filter((u) => /^https:\/\/gcoman\.com\/ar(\/|$)/.test(u))
+    : locs.filter((u) => /^https:\/\/gcoman\.com\//.test(u));
+  return [...new Set(filtered)];
 }
+
 
 Deno.serve(async (req) => {
   const corsHeaders = getCorsHeaders(req);
