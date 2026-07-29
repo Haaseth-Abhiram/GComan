@@ -115,7 +115,9 @@ Deno.serve(async (req) => {
     if (!pick) throw new Error("No verified Search Console properties available on this connection");
     const siteUrl = pick.siteUrl;
 
-    const allUrls = await arUrlsFromSitemap();
+    const scope = ((await req.json().catch(() => ({})))?.scope === "ar" ? "ar" : "all") as "ar" | "all";
+    const allUrls = await urlsFromSitemap(scope);
+
     const { data: existingRows } = await admin
       .from("ar_index_status")
       .select("url, coverage_state, is_indexed, last_checked_at");
