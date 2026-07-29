@@ -714,6 +714,8 @@ const Admin = () => {
                 <Route path="/newsletter" element={<NewsletterSubscribersTable />} />
                 <Route path="/ar-indexing" element={<ArabicIndexingMonitor />} />
                 <Route path="/search-console" element={<SearchConsoleDashboard />} />
+                <Route path="/seo-languages" element={<LanguageSeoComparison />} />
+
 
               </Routes>
             </main>
