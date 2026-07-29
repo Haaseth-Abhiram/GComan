@@ -10,6 +10,8 @@ import { NewsletterSubscribersTable } from '@/components/admin/NewsletterSubscri
 import { ActivityFeed } from '@/components/admin/ActivityFeed';
 import { ArabicIndexingMonitor } from '@/components/admin/ArabicIndexingMonitor';
 import { SearchConsoleDashboard } from '@/components/admin/SearchConsoleDashboard';
+import { LanguageSeoComparison } from '@/components/admin/LanguageSeoComparison';
+
 
 import { AnalyticsDialog } from '@/components/admin/AnalyticsDialog';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
