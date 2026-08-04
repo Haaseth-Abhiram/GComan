@@ -1477,6 +1477,147 @@ Global Chemicals LLC supplies disinfectants, feed preservatives, feed-grade mine
       },
     ],
   },
+  {
+    id: 'meg-vs-deg-gas-dehydration-oman-gcc',
+    title: 'MEG vs DEG for Gas Dehydration: Technical Comparison for Oman & GCC Operations',
+    excerpt: 'Monoethylene glycol (MEG) vs diethylene glycol (DEG) for natural gas dehydration and hydrate inhibition — thermal stability, dew point performance, regeneration, losses, and procurement in Oman and the GCC.',
+    content: `Natural gas leaving the wellhead is water-saturated. Left untreated, that water condenses in pipelines, forms hydrates at high pressure and low temperature, and accelerates internal corrosion when combined with CO2 or H2S. Two glycols dominate the field response across Oman's upstream operations and the wider GCC: monoethylene glycol (MEG, CAS 107-21-1) and diethylene glycol (DEG, CAS 111-46-6). They are not interchangeable, and choosing the wrong one leaves either dew point margin or regeneration efficiency on the table.
+
+The Two Roles: Hydrate Inhibition vs Absorption Dehydration
+
+Before comparing the molecules, separate the two duties they perform, because the answer differs by duty.
+
+- **Hydrate inhibition (thermodynamic injection)** — glycol is injected at the wellhead or upstream of a choke/cooler to depress the hydrate formation temperature in a wet gas stream. The glycol travels with the fluids, is separated downstream, and is regenerated.
+- **Absorption dehydration (contactor towers)** — lean glycol is contacted counter-currently with gas in a trayed or packed absorber to strip water vapour and hit a sales-gas water dew point specification. Rich glycol is then regenerated in a reboiler and recirculated.
+
+MEG dominates the first duty. TEG dominates the second, with DEG used where reboiler temperature is constrained or where an existing DEG system is already installed.
+
+Molecular and Physical Property Comparison
+
+| Property | MEG | DEG |
+|---|---|---|
+| Formula | C2H6O2 | C4H10O3 |
+| Molecular weight | 62.07 | 106.12 |
+| Boiling point (1 atm) | 197.6 °C | 245 °C |
+| Freezing point | −12.9 °C | −10.5 °C |
+| Density (20 °C) | 1.113 g/cm³ | 1.118 g/cm³ |
+| Viscosity (20 °C) | ~20 cP | ~35 cP |
+| Thermal decomposition onset | ~165 °C | ~164 °C |
+| Practical reboiler temperature | 120–150 °C | 150–160 °C |
+| Typical lean purity achievable | 80–95 wt% (inhibition service) | 95–97 wt% |
+| Vapour pressure at 38 °C | Higher | Lower |
+
+The critical numbers are the last three rows. MEG's lower molecular weight gives it more hydrate-depression per kilogram injected. DEG's lower vapour pressure gives it materially lower carry-over losses in a contactor. Both decompose above roughly 164 °C, which is why neither reaches the 98.5–99.5 wt% lean purity that TEG achieves at 200 °C reboiler temperature.
+
+Hydrate Depression: Why MEG Wins on Mass
+
+For thermodynamic hydrate inhibition, the depression achieved is approximately proportional to the molar concentration of inhibitor in the free water phase (Hammerschmidt correlation). Because MEG's molecular weight is 62 against DEG's 106, a kilogram of MEG delivers roughly 1.7 times the moles — and therefore roughly 1.7 times the hydrate temperature depression — of a kilogram of DEG.
+
+Worked example: a wet gas line running at 90 bar with a hydrate formation temperature of 21 °C, cooling to a minimum seabed or buried-line temperature of 8 °C, requires about 13 °C of depression plus a 3 °C safety margin — call it 16 °C. Using the Hammerschmidt approach at that duty:
+
+- **MEG** requires roughly 30 wt% in the free water phase.
+- **DEG** requires roughly 42 wt% in the free water phase for the same depression.
+
+On a system circulating 20 m³/day of produced water, that difference translates into materially higher inventory, higher pumping duty, and a larger regeneration package for DEG. For any continuous injection duty in Oman's gas gathering networks — Block 60 area operations, Sohar-bound gas trunk lines, or offshore tie-backs — MEG is the standard answer.
+
+MEG also handles salt. In fields producing formation water, MEG regeneration packages can be specified with a salt-removal (reclamation) stage, which is a mature technology. DEG reclamation is less commonly engineered for this duty.
+
+Dehydration Duty: Why DEG Is Chosen Over MEG
+
+In a contactor tower, the picture reverses:
+
+- **Vaporisation losses** — MEG's higher vapour pressure means significantly more glycol leaves with the dry gas. In a 40 °C contactor, MEG losses can be several times DEG losses on a mass basis. Over a year of continuous operation, that is real make-up cost and a hydrocarbon-dew-point contamination concern downstream.
+- **Achievable dew point depression** — because DEG can be regenerated to 95–97 wt% versus 80–95 wt% for MEG in the same reboiler, DEG delivers a deeper and more stable water dew point.
+- **Foaming and carry-over** — DEG's higher viscosity is a modest disadvantage on tray hydraulics but is manageable with correct tray spacing and an effective inlet separator.
+
+Where DEG does not compete is against TEG. If the specification is a −10 °C or lower water dew point at sales-gas conditions, TEG at 98.5–99.5 wt% lean purity is the standard. DEG is selected when the reboiler is temperature-limited, when the required dew point depression is moderate (roughly 25–45 °C), or when a legacy DEG circuit is in place and conversion cannot be justified.
+
+Regeneration: Practical Constraints in Gulf Conditions
+
+Both glycols degrade thermally above ~164 °C, producing organic acids that drive corrosion in carbon steel reboilers and stills. High ambient temperatures across Oman, the UAE, and Saudi Arabia raise lean glycol temperature at the contactor inlet, which worsens vaporisation losses and reduces absorption efficiency. Three operating disciplines matter more in the Gulf than in temperate climates:
+
+- **Lean glycol cooling** — aim to deliver lean glycol to the contactor at 5–8 °C above the inlet gas temperature. Air-cooled exchangers sized for 20 °C ambient will not achieve this at 48 °C in a Muscat or Rub' al Khali summer; size for peak ambient or add a trim cooler.
+- **Reboiler temperature control** — hold MEG reboilers at 120–150 °C and DEG reboilers at 150–160 °C. Firetube skin temperature, not bulk temperature, drives degradation; keep flux below 25 kW/m² and avoid dry-out.
+- **pH and corrosion control** — maintain glycol pH at 7.0–8.5 with a suitable alkalinity agent. Below pH 6 the acid degradation products attack carbon steel rapidly. Monitor iron content in the circulating glycol as a leading indicator.
+
+Contamination, Monitoring, and Filtration
+
+Whichever glycol is in service, the failure modes are the same and largely preventable:
+
+- **Hydrocarbon carry-over** from a poor inlet separator causes foaming, glycol loss, and reboiler fouling. Specify an efficient two-stage inlet scrubber and a glycol flash tank at 4–6 bar.
+- **Solids** (corrosion products, formation fines, salt) plug trays and score pump internals. Run a 5–10 micron sock filter on 100% of the circulating stream, plus an activated-carbon filter on 10–20% slipstream to remove hydrocarbons and surfactants.
+- **Salt accumulation** in MEG hydrate-inhibition loops requires a reclaimer or periodic slipstream distillation; otherwise salt deposits on reboiler firetubes and causes local overheating.
+- **Routine analysis** — test lean and rich glycol quarterly for water content (Karl Fischer), pH, chloride, iron, total dissolved solids, and hydrocarbon content. Trend the numbers rather than reading single results.
+
+Selection Summary
+
+| Requirement | Recommended glycol |
+|---|---|
+| Wellhead / flowline hydrate inhibition | MEG |
+| Subsea or long tie-back injection with recovery | MEG (with reclamation) |
+| Salty produced water present | MEG with salt reclamation |
+| Contactor dehydration, moderate dew point, limited reboiler temperature | DEG |
+| Contactor dehydration, deep dew point (−10 °C or lower) | TEG (not MEG or DEG) |
+| Minimising glycol vaporisation losses in a contactor | DEG over MEG |
+| Lowest inhibitor mass per °C of depression | MEG |
+
+Specifications and Packaging Available in Oman
+
+**Monoethylene glycol (MEG), fibre grade / industrial grade**
+- Purity (GC): ≥99.8%
+- Water content: ≤0.1% w/w
+- Diethylene glycol content: ≤0.05%
+- Colour (APHA): ≤10
+- Acidity (as acetic acid): ≤0.005%
+- Iron: ≤0.1 ppm
+- Packaging: 230 kg drums, 1,000 kg IBCs, ISO tank bulk
+
+**Diethylene glycol (DEG), industrial grade**
+- Purity (GC): ≥99.5%
+- Water content: ≤0.1% w/w
+- MEG content: ≤0.3%
+- Colour (APHA): ≤15
+- Acidity (as acetic acid): ≤0.01%
+- Packaging: 230 kg drums, 1,000 kg IBCs, ISO tank bulk
+
+Both are supplied with a batch Certificate of Analysis, SDS in English and Arabic, GSO-conformant labelling, and Certificate of Origin for cross-border GCC shipments.
+
+Handling and Safety Notes
+
+MEG is acutely toxic if swallowed (ethylene glycol poisoning) — segregate from any food-grade or potable-water handling area and label clearly in English and Arabic. DEG carries a similar oral toxicity warning. Both are combustible (flash points 111 °C and 143 °C respectively), hygroscopic, and should be stored in sealed carbon steel or stainless steel tanks with a dry nitrogen or desiccant-breather blanket. In coastal Oman and UAE humidity, an unblanketed glycol tank will absorb enough atmospheric water to move a lean glycol off specification within weeks. Use nitrile gloves and splash goggles for transfer operations; both glycols are readily absorbed and cause eye irritation.
+
+Procurement in Oman and the GCC
+
+Global Chemicals LLC supplies MEG and DEG from stock in Muscat to upstream operators, gas processing facilities, EPC contractors, and chemical management providers across Oman — Muscat, Sohar, Duqm, Salalah, and inland field locations — with 3–5 working day supply to the UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain. Drum, IBC, and ISO tank quantities are available, avoiding the 20-tonne container minimums of direct import and the working capital tied up in slow-moving inventory. Contact info@gcoman.com or +968-93754388 for specifications, pricing, and availability.`,
+    author: 'Global Chemicals Technical Team',
+    date: '2026-08-04',
+    readTime: '12 min read',
+    category: 'Oil & Gas',
+    tags: ['MEG', 'DEG', 'Gas Dehydration', 'Hydrate Inhibition', 'Oilfield', 'Glycol', 'Oman', 'GCC'],
+    icon: Factory,
+    faqs: [
+      {
+        question: 'Should I use MEG or DEG for hydrate inhibition in a wet gas line?',
+        answer: 'Use MEG. Hydrate depression is driven by the molar concentration of inhibitor in the free water phase, and MEG (molecular weight 62) delivers roughly 1.7 times the moles per kilogram compared with DEG (molecular weight 106). For a typical 16 °C depression duty, MEG requires around 30 wt% in the water phase where DEG requires around 42 wt% — meaning a smaller inventory, lower pumping duty, and a smaller regeneration package. MEG is also the glycol with mature salt-reclamation technology, which matters when formation water is produced.',
+      },
+      {
+        question: 'Why is DEG preferred over MEG in a glycol contactor?',
+        answer: 'Two reasons. First, MEG has a much higher vapour pressure, so significantly more of it leaves the contactor with the dry gas as vaporisation loss — a real make-up cost over a year of continuous operation. Second, DEG can be regenerated to 95–97 wt% at a 150–160 °C reboiler, whereas MEG typically reaches only 80–95 wt%, so DEG delivers a deeper and more stable water dew point. If the specification calls for a dew point of −10 °C or lower, however, neither is the right answer — TEG at 98.5–99.5 wt% is the standard for that duty.',
+      },
+      {
+        question: 'What reboiler temperature limits apply to MEG and DEG regeneration?',
+        answer: 'Both glycols begin thermal decomposition around 164–165 °C, producing organic acids that corrode carbon steel. Operate MEG reboilers at 120–150 °C and DEG reboilers at 150–160 °C, and control firetube skin temperature rather than bulk temperature — keep heat flux below about 25 kW/m² and avoid dry-out. Maintain glycol pH between 7.0 and 8.5 and trend dissolved iron as a leading indicator of acid attack.',
+      },
+      {
+        question: 'What changes about glycol systems in Gulf ambient conditions?',
+        answer: 'Peak ambient temperatures of 45–50 °C across Oman, the UAE, and Saudi Arabia raise lean glycol temperature at the contactor inlet, which increases vaporisation losses and cuts absorption efficiency. Size air-cooled lean glycol exchangers for peak ambient — not a temperate 20 °C design basis — and target lean glycol delivery at 5–8 °C above inlet gas temperature, adding a trim cooler if necessary. Coastal humidity also matters in storage: an unblanketed glycol tank in Muscat or Sohar can absorb enough atmospheric moisture to move lean glycol off specification within weeks, so use a nitrogen blanket or desiccant breather.',
+      },
+      {
+        question: 'Where can I buy MEG and DEG in Oman and the GCC?',
+        answer: 'Global Chemicals LLC supplies fibre-grade and industrial-grade monoethylene glycol (MEG, CAS 107-21-1, ≥99.8% purity) and industrial-grade diethylene glycol (DEG, CAS 111-46-6, ≥99.5% purity) from stock in Muscat. Available in 230 kg drums, 1,000 kg IBCs, and ISO tank bulk, with same-day delivery in Muscat and next-day supply to Sohar, Duqm, and Salalah; 3–5 working days to the UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain. Every consignment ships with a batch Certificate of Analysis, SDS in English and Arabic, GSO-conformant labels, and Certificate of Origin. Contact info@gcoman.com or +968-93754388.',
+      },
+    ],
+  },
 ];
 
 const categories = ['All', 'Water Treatment', 'Industrial Chemicals', 'Sustainability', 'Safety', 'Oil & Gas', 'Industry Guide'];
