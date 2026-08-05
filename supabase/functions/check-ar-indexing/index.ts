@@ -130,9 +130,11 @@ Deno.serve(async (req) => {
       const prev: any = existing.get(u);
       return !prev?.last_checked_at || new Date(prev.last_checked_at).getTime() < staleBefore;
     });
-    const BATCH = 90;
+    const BATCH = 30;
+    const DEADLINE = Date.now() + 100_000; // stop early so the isolate can chain
     const urls = pending.slice(0, BATCH);
     const remaining = Math.max(pending.length - urls.length, 0);
+
 
 
     const now = new Date().toISOString();
@@ -140,7 +142,11 @@ Deno.serve(async (req) => {
     const newlyIndexed: string[] = [];
     const events: any[] = [];
 
+    let processed = 0;
     for (const url of urls) {
+      if (Date.now() > DEADLINE) break;
+      processed++;
+
       try {
         const result = await gsc("/v1/urlInspection/index:inspect", {
           method: "POST",
@@ -197,8 +203,9 @@ Deno.serve(async (req) => {
     if (events.length) await admin.from("ar_index_events").insert(events);
 
     // Continue the sweep in a follow-up invocation when URLs remain.
-    if (remaining > 0 && cronKey) {
-      fetch(`${supabaseUrl}/functions/v1/check-ar-indexing`, {
+    const stillRemaining = Math.max(pending.length - processed, 0);
+    if (stillRemaining > 0 && cronKey) {
+      const chain = fetch(`${supabaseUrl}/functions/v1/check-ar-indexing`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -207,9 +214,14 @@ Deno.serve(async (req) => {
         },
         body: JSON.stringify({ source: "chain" }),
       }).catch((err) => console.error("Chain invocation failed:", err));
+      // Keep the isolate alive until the follow-up request is actually sent.
+      // @ts-ignore EdgeRuntime is provided by the Supabase edge runtime
+      if (typeof EdgeRuntime !== "undefined" && EdgeRuntime?.waitUntil) EdgeRuntime.waitUntil(chain);
+      else await chain;
     }
 
-    const summary = { siteUrl, total: allUrls.length, checked, indexed, failed, remaining, newlyIndexed };
+    const summary = { siteUrl, total: allUrls.length, checked, indexed, failed, remaining: stillRemaining, newlyIndexed };
+
     console.log("AR indexing check complete", JSON.stringify(summary));
     return new Response(JSON.stringify(summary), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
