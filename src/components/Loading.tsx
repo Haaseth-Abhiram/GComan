@@ -1,4 +1,4 @@
-import gcIcon from "@/assets/gc-icon.png";
+import gcIcon from "@/assets/gc-icon.webp";
 
 export const Loading = () => (
   <div className="flex items-center justify-center min-h-screen bg-background">

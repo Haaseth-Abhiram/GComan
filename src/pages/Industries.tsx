@@ -13,7 +13,7 @@ import { CheckCircle2, Shield, Award, MapPin, Droplets, Filter, Beaker, Thermome
 import { Button } from '@/components/ui/button';
 
 // Import images
-import oilGasImg from '@/assets/products/oil-gas.jpg';
+import oilGasImg from '@/assets/products/oil-gas.webp';
 import waterTreatmentImg from '@/assets/products/water-treatment.jpg';
 import manufacturingImg from '@/assets/industries/manufacturing.jpg';
 import foodBeverageImg from '@/assets/industries/food-beverage.jpg';

@@ -16,7 +16,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { supabase } from '@/integrations/supabase/client';
-import gcLogo from '@/assets/gc-icon.png';
+import gcLogo from '@/assets/gc-icon.webp';
 
 interface NewCounts {
   contacts: number;

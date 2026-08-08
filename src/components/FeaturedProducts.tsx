@@ -4,8 +4,8 @@ import { Badge } from '@/components/ui/badge';
 import { ArrowRight, Droplets, Wrench, Flame } from 'lucide-react';
 import { LocalizedLink as Link } from '@/components/LocalizedLink';
 import waterTreatmentImg from '@/assets/products/water-treatment-optimized.webp';
-import oilGasImg from '@/assets/products/oil-gas.jpg';
-import industrialLubricantsImg from '@/assets/products/industrial-lubricants.jpg';
+import oilGasImg from '@/assets/products/oil-gas.webp';
+import industrialLubricantsImg from '@/assets/products/industrial-lubricants.webp';
 
 const FeaturedProducts = () => {
   const { t } = useTranslation();

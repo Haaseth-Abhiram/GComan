@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
-import heroLab from '@/assets/hero-lab.jpg';
+import heroLab from '@/assets/hero-lab.webp';
 import waterTreatment from '@/assets/hero-water-treatment.webp';
-import oilGas from '@/assets/products/oil-gas.jpg';
-import industrialLubricants from '@/assets/products/industrial-lubricants.jpg';
+import oilGas from '@/assets/products/oil-gas.webp';
+import industrialLubricants from '@/assets/products/industrial-lubricants.webp';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, Shield, Award, Sparkles } from 'lucide-react';
 import { LocalizedLink } from '@/components/LocalizedLink';
