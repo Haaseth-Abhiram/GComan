@@ -6,8 +6,9 @@
 # Migration from old WordPress site to React SPA
 # =====================================
 
-# Product/Service Pages (14 URLs)
+# Product/Service Pages (15 URLs)
 /service/calcium-carbonate/  /products/water-treatment/calcium-carbonate-water  301
+/service/glycols/  /products/glycols  301
 /service/soap-detergent-chemicals/  /products  301
 /service/solvents/  /products  301
 /service/chlorinated-solvents/  /products  301

@@ -12,6 +12,12 @@ test.describe('Legacy URL redirects — client-side', () => {
     expect(new URL(page.url()).pathname).toBe('/products/water-treatment/calcium-carbonate-water');
   });
 
+  test('old service URL redirects to glycols category page', async ({ page }) => {
+    await page.goto('/service/glycols/');
+    await page.waitForURL('**/products/glycols');
+    expect(new URL(page.url()).pathname).toBe('/products/glycols');
+  });
+
   test('old product category URL redirects (would otherwise match live route pattern)', async ({ page }) => {
     await page.goto('/products/alkalis/caustic-soda');
     await page.waitForURL('**/products/water-treatment/caustic-soda-flakes');

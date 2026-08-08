@@ -67,6 +67,7 @@ const EXACT_REDIRECTS = new Map<string, string>([
 
   // Legacy WordPress service pages
   ['/service/calcium-carbonate', '/products/water-treatment/calcium-carbonate-water'],
+  ['/service/glycols', '/products/glycols'],
   ['/service/soap-detergent-chemicals', '/products'],
   ['/service/solvents', '/products'],
   ['/service/chlorinated-solvents', '/products'],
