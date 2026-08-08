@@ -28,7 +28,19 @@ export const ChemistryHero = ({ formula, molecule, productTitle, tuning }: Chemi
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
     if (isPrerender()) return; // prerender keeps the static fallback
-    setMounted(true);
+
+    // Mounting immediately on hydration made the 1.6MB HDRI fetch + three.js
+    // scene/shader init compete directly with the browser making the rest of
+    // the page interactive — measured at ~7.5s of Total Blocking Time on
+    // product pages. requestIdleCallback pushes that work to after the
+    // browser is done with higher-priority work, off the critical path.
+    // Falls back to setTimeout for Safari, which has no native support.
+    if (typeof window.requestIdleCallback === 'function') {
+      const handle = window.requestIdleCallback(() => setMounted(true), { timeout: 2000 });
+      return () => window.cancelIdleCallback(handle);
+    }
+    const timer = window.setTimeout(() => setMounted(true), 200);
+    return () => window.clearTimeout(timer);
   }, []);
 
   return (

@@ -610,8 +610,18 @@ const SceneContent = ({
       {/* HDR environment for soft ambient PBR reflections. Default 'warehouse'
           (large diffuse soft-boxes) avoids the streaking that 'studio' caused
           through the transmission glass — but every preset is now exposed via
-          the playground for live A/B comparison. */}
-      <Environment preset={tuning.envPreset} environmentIntensity={tuning.envIntensity} />
+          the playground for live A/B comparison.
+          The production default ('warehouse') is self-hosted (public/hdri/) —
+          drei's preset CDN (raw.githack.com) was a 1.6MB uncached third-party
+          fetch on every product page, a major contributor to product-page TBT.
+          Only self-hosted the one preset actually used in production; the
+          other 9 still resolve via the CDN, which is fine since they're only
+          reachable from the internal, non-indexed /dev/chemistry-playground. */}
+      {tuning.envPreset === 'warehouse' ? (
+        <Environment files="/hdri/empty_warehouse_01_1k.hdr" environmentIntensity={tuning.envIntensity} />
+      ) : (
+        <Environment preset={tuning.envPreset} environmentIntensity={tuning.envIntensity} />
+      )}
 
       {/* Softened 3-point lighting. Original key light at 1.6 drew long vertical
           specular streaks on the cylinder wall — kept the defaults at 0.95/0.4/0.3. */}
