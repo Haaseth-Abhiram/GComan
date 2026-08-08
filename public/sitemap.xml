@@ -512,9 +512,6 @@
     <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/agro/agro-products"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/agro/agro-products"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/agro/agro-products"/>
   </url>
 
   <!-- alcohols (4 products) -->
@@ -1880,6 +1877,9 @@
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/ro-chemicals/citric-acid-liquid-ro"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/ro-chemicals/citric-acid-liquid-ro"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/ro-chemicals/citric-acid-liquid-ro"/>
   </url>
   <url>
     <loc>https://gcoman.com/products/ro-chemicals/ro-222-descaler</loc>
@@ -2865,15 +2865,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/water-treatment/tsp-water"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/water-treatment/tsp-water"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/water-treatment/tsp-water"/>
-  </url>
-  <url>
-    <loc>https://gcoman.com/ar/products/agro/agro-products</loc>
-    <lastmod>2026-03-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/agro/agro-products"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/agro/agro-products"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/agro/agro-products"/>
   </url>
   <url>
     <loc>https://gcoman.com/ar/products/alcohols/methanol-industrial</loc>
@@ -5119,6 +5110,15 @@
     <lastmod>2026-07-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://gcoman.com/ar/products/ro-chemicals/citric-acid-liquid-ro</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/ro-chemicals/citric-acid-liquid-ro"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/ro-chemicals/citric-acid-liquid-ro"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/ro-chemicals/citric-acid-liquid-ro"/>
   </url>
 
 </urlset>
