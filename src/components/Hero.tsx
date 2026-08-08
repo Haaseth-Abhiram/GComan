@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Helmet } from 'react-helmet-async';
 import heroLab from '@/assets/hero-lab.jpg';
 import waterTreatment from '@/assets/hero-water-treatment.webp';
 import oilGas from '@/assets/products/oil-gas.jpg';
@@ -59,6 +60,13 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Preload the LCP candidate (always slides[0] on first paint) so the
+          browser can start fetching it before it parses the rest of the DOM.
+          defer={false} + prerendering bakes this into the static HTML that
+          real visitors get, not just the post-hydration client render. */}
+      <Helmet defer={false}>
+        <link rel="preload" as="image" href={slides[0].image} fetchPriority="high" />
+      </Helmet>
       {/* Visible, descriptive H1 for SEO and accessibility */}
       <h1 className="absolute left-1/2 -translate-x-1/2 top-24 z-20 text-center text-white/95 text-base sm:text-lg md:text-xl font-semibold tracking-wide px-4 max-w-4xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
         Leading Industrial Chemical Supplier in Oman & the GCC
