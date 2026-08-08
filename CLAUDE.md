@@ -37,6 +37,8 @@ Use **npm**. `bun.lock` is a leftover from a Lovable trial; canonical lockfile i
 
 [.github/workflows/ci.yml](.github/workflows/ci.yml): typecheck + lint + `build:dev` + Playwright smoke on every push/PR to `Develop`/`main`. It is the **only** quality gate before the Lovable auto-deploy ships to production. Before pushing: `npx tsc -b && npm run lint && npm run test:e2e`.
 
+Note: `ci.yml`'s own header comment and `README.md` still describe the retired "Lovable FTPs `dist/` to Hostinger" story — stale relative to "Deploy chain" below. Don't treat those two as sources of truth for the deploy chain.
+
 ## Branch workflow
 
 - **Develop is the working branch** — all commits land here first. New branches fork off `Develop`, not `main`.
@@ -166,6 +168,6 @@ curl -sI https://gcoman.com/service/calcium-carbonate/ -o /dev/null -w '%{http_c
 
 ## Vestigial files (safe to ignore, do not extend)
 
-- `cloudflare-worker.js`, `wrangler.toml` — the retired Cloudflare Worker routing plan (see "The production routing layer"). Do not add redirects there; `.htaccess` is the live layer.
-- `tanstack-react-start-server-1.120.0.tgz`, `bun.lock`, `vercel.json` — leftovers from the aborted SSR migration, a Lovable bun trial, and an old Vercel preview respectively. Production is Hostinger; runtime router is `react-router-dom` v7.
+- `cloudflare-worker.js`, `wrangler.toml` — the retired Cloudflare Worker routing plan (see "The production routing layer"). Do not add redirects there; `legacyRedirects.ts` is the live layer. The `deploy:cloudflare-worker` npm script is dead too — `wrangler` was removed from devDependencies.
+- `tanstack-react-start-server-1.120.0.tgz`, `bun.lock`, `vercel.json` — leftovers from the aborted SSR migration, a Lovable bun trial, and an old Vercel preview respectively. Production is Lovable's CDN (see "Deploy chain"), not Hostinger; runtime router is `react-router-dom` v7.
 - `README.md` — project overview only; this file is the real documentation.
