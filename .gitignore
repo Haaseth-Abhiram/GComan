@@ -17,8 +17,9 @@ dist
 dist-ssr
 *.local
 
-# Playwright audit run artifacts (raw.json + pages.csv per run)
-audits/
+# Playwright audit run artifacts (raw.json + pages.csv per run) — root-level
+# only; docs/audits/ holds tracked, written-up audit reports (see CLAUDE.md)
+/audits/
 
 # Playwright test runner output
 /test-results/
