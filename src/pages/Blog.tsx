@@ -1186,6 +1186,52 @@ Global Chemicals LLC supplies a complete range of swimming pool chemicals to hot
       ],
     },
   },
+  {
+    id: 'gcc-desalination-water-treatment-chemicals',
+    title: 'Desalination & Water Treatment Chemicals Across the GCC: Oman, UAE, Saudi Arabia, Qatar, Kuwait & Bahrain',
+    excerpt: 'Every GCC state depends structurally on desalinated water. A region-wide guide to antiscalants, biocides, coagulants, and corrosion inhibitors for RO, MSF, and MED desalination and downstream industrial water treatment.',
+    content: `Every country in the GCC shares the same underlying water reality: minimal natural freshwater, and near-total structural dependence on desalinating seawater for drinking, industrial process, and utility water. Kuwait draws approximately 90% of its potable water from desalination. Saudi Arabia's Saline Water Conversion Corporation (SWCC) and joint-venture plants like Marafiq's Jubail Independent Water and Power Plant — which alone processes 800,000 m³/day for the Jubail Industrial City complex — anchor water supply for the Kingdom's entire Eastern Province petrochemical sector. Qatar's industrial water, including supply to QatarEnergy's Ras Laffan and Mesaieed complexes, and Bahrain's supply to facilities like Aluminium Bahrain (ALBA) and Bahrain Petroleum Company (BAPCO), follow the same pattern. This is a genuinely regional chemistry problem, not a country-by-country one — the desalination technologies, the chemical categories required, and the operational challenges are the same whether the plant sits in Sohar, Jubail, Ras Laffan, Shuaiba, or Sitra.
+
+Desalination Technologies Used Across the Gulf
+
+Three desalination technologies dominate GCC water production, often co-located at the same industrial sites. Multi-Stage Flash (MSF) distillation, the Gulf's historically dominant technology, boils seawater in successive pressure-reduced stages and remains widely deployed at large legacy plants across Kuwait, Saudi Arabia, and the UAE. Multi-Effect Distillation (MED) uses a similar thermal-evaporation principle at generally lower energy cost than MSF and is increasingly paired with power generation in hybrid utility plants. Reverse Osmosis (RO) — now the fastest-growing technology region-wide, including in newer Saudi SWCC capacity and UAE plants — forces seawater through semi-permeable membranes under pressure, and is markedly more energy-efficient than either thermal method, which is why nearly all new GCC desalination capacity being commissioned today is RO or hybrid RO/thermal.
+
+Chemical Categories Required for Desalination Water Treatment
+
+Each desalination technology creates a different chemistry problem, and each needs a specific chemical response. Antiscalants are the single most critical chemical category for RO plants: seawater's calcium, magnesium, sulphate, and carbonate content will precipitate onto membrane surfaces and fatally reduce flux and salt rejection unless a scale inhibitor is continuously dosed ahead of the membrane train. MSF and MED plants face the same scaling risk on their heat-transfer surfaces and require thermally stable antiscalant formulations suited to their higher operating temperatures. Biocides are essential at the seawater intake stage across every technology — marine biofouling (algae, bacteria, mussels) will foul intake screens, pretreatment filters, and RO membranes alike if left uncontrolled; oxidising biocides (sodium hypochlorite) are typically used at intake with careful dechlorination before RO membranes, since chlorine damages polyamide membrane chemistry. Coagulants and flocculants — Poly Aluminium Chloride (PAC) is the standard choice across GCC pretreatment trains — remove suspended solids and colloidal material ahead of both RO membranes and thermal plant intakes. Corrosion inhibitors protect the carbon steel, copper-alloy, and titanium infrastructure common in MSF/MED evaporator trains and RO high-pressure piping from the Gulf's uniquely aggressive combination of high-chloride seawater and high ambient temperature. Membrane cleaning chemicals — acid cleaners for mineral scale, alkaline cleaners for organic and biological fouling — are required periodically across every RO plant's operating life to restore membrane performance between full replacement cycles.
+
+Why This Differs From Water Treatment Chemistry Elsewhere
+
+GCC desalination and downstream industrial water treatment operate under conditions that make imported, non-region-specific chemical programmes underperform. Seawater feed salinity in the Arabian Gulf (often 45,000–50,000 ppm TDS) runs well above the global seawater average, driving proportionally higher antiscalant and corrosion-inhibitor dosing requirements than plants designed around Atlantic or Mediterranean feedwater assumptions. Summer feedwater temperatures regularly exceeding 35°C accelerate both scaling kinetics and biological growth rates, demanding more frequent biocide dosing and thermally stable antiscalant chemistry. And virtually every major desalination and petrochemical site in the region — Jubail, Ras Laffan, Sohar, Shuaiba, Sitra — pairs desalination output directly with intensive industrial water reuse (cooling towers, boiler feedwater, process water), meaning the chemical programme has to be designed across the full water cycle, not just the desalination train in isolation.
+
+Supplying the GCC's Desalination and Industrial Water Sector
+
+Global Chemicals LLC supplies the core chemical categories used across GCC desalination and industrial water treatment — antiscalants and membrane antiscalants for RO systems, biocides for intake and cooling water, Poly Aluminium Chloride for coagulation, corrosion inhibitors for plant infrastructure, and membrane cleaning chemicals for RO maintenance cycles — from our Muscat base, exporting across Oman, the UAE, Saudi Arabia (including Jubail Industrial City and the Eastern Province's Marafiq-served facilities), Qatar, Kuwait, and Bahrain. As a GCC-based supplier, we work within the region's customs union for efficient cross-border delivery, and provide the documentation — Certificate of Origin, GHS-compliant SDS in English and Arabic, Certificate of Analysis — that desalination plant operators and their contractors require for vendor qualification. For product specifications, dosing guidance, or a quote for your facility's water treatment programme, contact our technical team at info@gcoman.com or +968-93754388.`,
+    author: 'Global Chemicals Technical Team',
+    date: '2026-08-09',
+    readTime: '9 min read',
+    category: 'Water Treatment',
+    tags: ['Desalination', 'Water Treatment', 'GCC', 'RO', 'MSF', 'MED', 'Antiscalant', 'Biocide', 'Saudi Arabia', 'Qatar', 'Kuwait', 'Bahrain'],
+    icon: Droplets,
+    faqs: [
+      {
+        question: 'Why does desalination water treatment chemistry matter across the whole GCC, not just one country?',
+        answer: 'Every GCC state — Oman, UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain — depends structurally on desalinated seawater for drinking and industrial water, using the same core technologies (RO, MSF, MED) at similar Arabian Gulf salinity and temperature conditions. Kuwait sources approximately 90% of its potable water from desalination; Saudi Arabia\'s Marafiq Jubail plant alone processes 800,000 m³/day. Because the underlying seawater chemistry and technology are shared regionally, the chemical programme — antiscalants, biocides, coagulants, corrosion inhibitors — is a genuinely GCC-wide requirement, not a country-specific one.',
+      },
+      {
+        question: 'What is the difference between RO, MSF, and MED desalination, and does each need different chemicals?',
+        answer: 'Reverse Osmosis (RO) forces seawater through membranes under pressure and is the most energy-efficient, fastest-growing technology in new GCC capacity. Multi-Stage Flash (MSF) and Multi-Effect Distillation (MED) are older thermal-evaporation technologies still widely operated at large legacy Gulf plants. RO requires antiscalants dosed ahead of the membrane train, careful dechlorination before membranes (chlorine damages RO membrane chemistry), and periodic acid/alkaline membrane cleaning. MSF and MED require thermally stable antiscalants suited to higher operating temperatures and corrosion inhibitors for their metal heat-transfer surfaces. All three technologies need biocide treatment at the seawater intake stage to control marine biofouling.',
+      },
+      {
+        question: 'What chemicals does a GCC desalination or industrial water treatment plant typically need?',
+        answer: 'Five core categories: antiscalants to prevent calcium/magnesium/sulphate scale on membranes or heat-transfer surfaces; biocides (typically sodium hypochlorite at intake) to control marine biofouling; coagulants like Poly Aluminium Chloride (PAC) to remove suspended solids in pretreatment; corrosion inhibitors to protect carbon steel, copper-alloy, and titanium plant infrastructure from high-chloride Gulf seawater; and membrane cleaning chemicals (acid and alkaline cleaners) for periodic RO membrane restoration. Downstream industrial users typically also need the same chemistry again for cooling towers and boiler feedwater fed by the plant\'s desalinated output.',
+      },
+      {
+        question: 'Why do Gulf desalination plants need different chemical dosing than plants elsewhere in the world?',
+        answer: 'Arabian Gulf seawater salinity (often 45,000–50,000 ppm TDS) runs well above the global seawater average, and summer feedwater temperatures regularly exceed 35°C — both factors that increase scaling risk and biological growth rates compared to Atlantic or Mediterranean-designed water treatment programmes. Chemical dosing rates and biocide frequency calibrated for lower-salinity, cooler feedwater elsewhere will typically underperform in Gulf conditions without regional adjustment.',
+      },
+    ],
+  },
 ];
 
 const categories = ['All', 'Water Treatment', 'Industrial Chemicals', 'Sustainability', 'Safety', 'Oil & Gas', 'Industry Guide'];
