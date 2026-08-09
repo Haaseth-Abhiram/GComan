@@ -93,6 +93,17 @@ const breadcrumbItems = [
   { name: 'Caustic Soda Supplier Oman', url: 'https://gcoman.com/chemical-supplier/caustic-soda-oman' }
 ];
 
+// GCC delivery coverage — lead times match the figures already used on the
+// corresponding /chemicals/<city> location pages, kept consistent site-wide.
+const gccDelivery = [
+  { country: 'Oman', leadTime: 'Same-day (Muscat) / next-day (Sohar)', notes: 'Home market — full stock, no export documentation needed' },
+  { country: 'UAE', leadTime: '3–5 business days', notes: 'Certificate of Origin + Arabic/English SDS provided' },
+  { country: 'Saudi Arabia', leadTime: '4–7 business days (region-dependent)', notes: 'SASO-compliant documentation support for regulated grades' },
+  { country: 'Qatar', leadTime: '3–5 business days', notes: 'Ras Laffan/Mesaieed delivery clearance documentation available' },
+  { country: 'Kuwait', leadTime: '4–6 business days', notes: 'Full customs & Certificate of Origin documentation' },
+  { country: 'Bahrain', leadTime: '3–5 business days', notes: 'GCC preferential Certificate of Origin available' },
+];
+
 const CausticSodaOman = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -140,6 +151,32 @@ const CausticSodaOman = () => {
                     <Phone className="w-5 h-5" /> Call +968 93754388
                   </a>
                 </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* GCC Delivery & Export Coverage — surfaced above the fold so
+            non-Oman GCC buyers see export capability immediately rather
+            than finding it buried in FAQ prose. */}
+        <section className="py-12 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold text-center mb-2 flex items-center justify-center gap-2">
+                <Globe2 className="w-6 h-6 text-primary" />
+                GCC Delivery &amp; Export Coverage
+              </h2>
+              <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
+                We export caustic soda across the entire GCC, not just Oman — with full customs documentation for every destination.
+              </p>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {gccDelivery.map((d, i) => (
+                  <Card key={i} className="p-4 border-border">
+                    <p className="font-semibold text-foreground mb-1">{d.country}</p>
+                    <p className="text-sm text-primary font-medium mb-2">{d.leadTime}</p>
+                    <p className="text-xs text-muted-foreground leading-relaxed">{d.notes}</p>
+                  </Card>
+                ))}
               </div>
             </div>
           </div>
