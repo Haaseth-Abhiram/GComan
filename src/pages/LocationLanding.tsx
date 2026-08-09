@@ -770,6 +770,78 @@ const locations: Record<string, LocationData> = {
     metaTitle: 'Chemical Supplier Dammam | Eastern Province KSA | Aramco Contractors | Global Chemicals LLC',
     metaDescription: 'Chemical supplier exporting to Dammam & Eastern Province, KSA. Saudi Aramco contractors, SABIC, Jubail Industrial City. Oilfield & water treatment chemicals. ISO 9001. Get a quote.',
     metaKeywords: 'chemical supplier Dammam, chemicals Eastern Province Saudi Arabia, Saudi Aramco chemical supplier, oilfield chemicals Dammam, industrial chemicals Eastern Province KSA, Jubail Industrial City chemicals, SABIC chemical supplier, chemical exporter Oman Dammam, Al Khobar chemicals Saudi Arabia'
+  },
+
+  'jubail': {
+    slug: 'jubail',
+    city: 'Jubail',
+    cityArabic: 'الجبيل',
+    country: 'Saudi Arabia',
+    region: 'Eastern Province, Saudi Arabia',
+    description: 'Global Chemicals LLC supplies water treatment and process chemicals to Jubail Industrial City — one of the world\'s largest industrial complexes, with 700+ factories including 13 of SABIC\'s Saudi plants, Sadara Chemical, Saudi Kayan, Petrokemya, and SATORP\'s refinery. Jubail\'s scale runs on desalinated water: Marafiq\'s Jubail IWPP alone processes 800,000 m³/day for cooling towers and boiler feedwater across the complex. We supply antiscalants, membrane cleaners, cooling-tower biocides, corrosion inhibitors, and boiler-water treatment chemicals suited to Jubail\'s petrochemical and desalination-scale water treatment demand.',
+    industries: ['Petrochemicals (SABIC, Sadara, Saudi Kayan, Petrokemya)', 'Refining (SATORP)', 'Desalination & Water Treatment (Marafiq)', 'Power Generation', 'Industrial Manufacturing'],
+    deliveryTime: '4–6 business days to Jubail Industrial City (road freight via Dammam)',
+    keyClients: ['SABIC plant contractors', 'Sadara Chemical suppliers', 'Saudi Kayan & Petrokemya contractors', 'SATORP-affiliated operators', 'Marafiq water treatment operators'],
+    highlights: [
+      'RO membrane antiscalants & cleaners for desalination-scale water treatment',
+      'Cooling-tower biocides and corrosion inhibitors for petrochemical plants',
+      'Boiler-water treatment chemistry',
+      'Full Arabic technical documentation provided',
+      'ISO 9001 and JSRS certified quality assurance'
+    ],
+    faqs: [
+      {
+        question: 'Do you supply chemicals to Jubail Industrial City?',
+        answer: 'Yes, we export water treatment and process chemicals to Jubail Industrial City, one of the world\'s largest petrochemical hubs. Our portfolio includes RO membrane antiscalants and cleaners, cooling-tower biocides, corrosion inhibitors, and boiler-water treatment chemicals suited to Jubail\'s SABIC, Sadara, Saudi Kayan, and Petrokemya plants. Standard delivery from Muscat is 4–6 business days via road freight through Dammam.'
+      },
+      {
+        question: 'Can you supply chemicals for desalination and water treatment plants in Jubail?',
+        answer: 'Yes, water treatment is our strongest category match to Jubail\'s demand — Marafiq\'s Jubail IWPP processes 800,000 m³/day of desalinated water feeding the complex\'s cooling towers and boiler systems. We supply antiscalants, biocides, and corrosion inhibitors specified for large-scale RO and thermal desalination water treatment.'
+      },
+      {
+        question: 'What documentation do you provide for chemical imports into Jubail?',
+        answer: 'We provide complete documentation for Saudi customs and vendor qualification: Certificate of Origin attested by Oman Chamber of Commerce, Safety Data Sheet in English and Arabic, Certificate of Analysis, Technical Data Sheet, and ISO 9001:2015 certification. For SASO-regulated product lines we support the certification process directly.'
+      }
+    ],
+    metaTitle: 'Chemical Supplier Jubail Industrial City | Water Treatment & Petrochemical Chemicals | Global Chemicals LLC',
+    metaDescription: 'Chemical supplier exporting to Jubail Industrial City, Saudi Arabia. Antiscalants, cooling-tower biocides, corrosion inhibitors for SABIC, Sadara, Saudi Kayan & Marafiq desalination. ISO 9001. Get a quote.',
+    metaKeywords: 'chemical supplier Jubail, Jubail Industrial City chemicals, water treatment chemicals Jubail, antiscalant Jubail, SABIC chemical supplier, Sadara Chemical supplier, Marafiq desalination chemicals, cooling tower biocide Jubail, corrosion inhibitor Jubail Saudi Arabia, chemical exporter Oman Jubail'
+  },
+
+  'yanbu': {
+    slug: 'yanbu',
+    city: 'Yanbu',
+    cityArabic: 'ينبع',
+    country: 'Saudi Arabia',
+    region: 'Al Madinah Province, Saudi Arabia',
+    description: 'Global Chemicals LLC exports industrial and process chemicals to Yanbu, Saudi Arabia\'s Red Sea petrochemical and export gateway. Yanbu is home to YASREF (the 400,000 bpd Aramco–Sinopec refinery), YANSAB (SABIC\'s 4-million-tonne-per-year petrochemical complex), and a newly announced Aramco–Sinopec integrated petrochemical expansion. We supply oilfield chemicals, water treatment chemicals, industrial lubricants, and laboratory reagents to contractors and suppliers serving Yanbu\'s refining and petrochemical operations.',
+    industries: ['Refining (YASREF)', 'Petrochemicals (YANSAB, SABIC)', 'Export Logistics & Port Operations', 'Industrial Manufacturing'],
+    deliveryTime: '6–8 business days to Yanbu (road freight) or 5–7 days sea freight via Port of Sohar/Duqm',
+    keyClients: ['YASREF refinery contractors', 'YANSAB & SABIC petrochemical suppliers', 'Yanbu port logistics operators', 'Industrial manufacturing contractors'],
+    highlights: [
+      'Chemicals suited to refining and petrochemical process demand',
+      'Sea freight option via Port of Sohar/Duqm for bulk orders',
+      'Full Saudi customs & SASO documentation support',
+      'Arabic SDS and technical documentation provided',
+      'ISO 9001 and JSRS certified quality assurance'
+    ],
+    faqs: [
+      {
+        question: 'Does Global Chemicals LLC export chemicals to Yanbu?',
+        answer: 'Yes, we export industrial and process chemicals to Yanbu, including contractors and suppliers serving YASREF\'s refinery and YANSAB\'s petrochemical complex. Our range covers oilfield chemicals, water treatment chemicals, industrial lubricants, and laboratory reagents. Road freight from Muscat takes 6–8 business days; sea freight via Sohar or Duqm Port takes 5–7 days.'
+      },
+      {
+        question: 'Do you supply chemicals for Yanbu\'s refining and petrochemical plants?',
+        answer: 'Yes, our oilfield and process chemical portfolio — corrosion inhibitors, scale inhibitors, demulsifiers, and production chemicals — is suited to refining and petrochemical operations like YASREF and YANSAB. With Aramco and Sinopec announcing a new integrated petrochemical complex for Yanbu in 2025, industrial demand in the area is growing.'
+      },
+      {
+        question: 'What documentation do you provide for chemical imports into Yanbu?',
+        answer: 'We provide complete Saudi customs documentation: Certificate of Origin attested by Oman Chamber of Commerce, Safety Data Sheet in Arabic and English, Certificate of Analysis, Technical Data Sheet, and commercial invoice with HS codes. For products requiring SASO conformity, our team provides guidance on the Saudi import permit process.'
+      }
+    ],
+    metaTitle: 'Chemical Supplier Yanbu | Refining & Petrochemical Chemicals Saudi Arabia | Global Chemicals LLC',
+    metaDescription: 'Chemical supplier exporting to Yanbu, Saudi Arabia. Oilfield & process chemicals for YASREF refinery, YANSAB & SABIC petrochemical plants. ISO 9001 certified. Get a quote.',
+    metaKeywords: 'chemical supplier Yanbu, Yanbu Industrial City chemicals, YASREF chemical supplier, YANSAB chemical supplier, oilfield chemicals Yanbu, petrochemical chemicals Yanbu Saudi Arabia, chemical exporter Oman Yanbu, Red Sea chemical supplier Saudi Arabia'
   }
 };
 
