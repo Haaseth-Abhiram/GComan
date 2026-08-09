@@ -189,12 +189,12 @@ const ProductDetail = () => {
         ogTitle={`${product.title} - ${catLabel} Chemical Supplier | Oman & GCC | Global Chemicals LLC`}
         ogDescription={seoDescription}
         ogUrl={`https://gcoman.com/products/${category}/${productSlug}`}
-        canonical={`https://gcoman.com/products/${category}/${productSlug}`}
+        canonical={product.details?.canonicalOverride || `https://gcoman.com/products/${category}/${productSlug}`}
       />
       
       <ProductStructuredData
         product={product}
-        url={`https://gcoman.com/products/${category}/${productSlug}`}
+        url={product.details?.canonicalOverride || `https://gcoman.com/products/${category}/${productSlug}`}
       />
       {product.details?.faqs && product.details.faqs.length > 0 && (
         <FAQStructuredData faqs={product.details.faqs} />

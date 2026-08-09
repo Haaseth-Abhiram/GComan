@@ -33,6 +33,11 @@ export interface Product {
     longDescription?: string; // Extended SEO-optimized description
     faqs?: { question: string; answer: string }[];
     wikiUrl?: string;            // Wikipedia URL for sameAs in ProductStructuredData
+    // Set when this exact product (same CAS/substance) is also listed under
+    // another category for browsing convenience — points the canonical tag
+    // at the primary listing so the two pages don't compete for the same
+    // search queries. Absolute URL, e.g. "https://gcoman.com/products/water-treatment/deg-water".
+    canonicalOverride?: string;
 
     // ─── Pilot fields (optional) — render only when present.
     // Curated 2D diagram for the chemistry hero. If absent, the hero falls
