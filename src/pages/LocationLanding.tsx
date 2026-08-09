@@ -41,6 +41,8 @@ interface LocationData {
   metaTitle: string;
   metaDescription: string;
   metaKeywords: string;
+  /** Optional cross-link to a relevant in-depth guide, e.g. the GCC desalination pillar. */
+  relatedGuide?: { slug: string; title: string; blurb: string };
 }
 
 const locations: Record<string, LocationData> = {
@@ -399,7 +401,12 @@ const locations: Record<string, LocationData> = {
     ],
     metaTitle: 'Chemical Supplier Qatar | Industrial Chemicals Doha | Global Chemicals LLC',
     metaDescription: 'Chemical supplier exporting to Qatar & Doha. LNG, water treatment, oilfield chemicals to Ras Laffan & Doha. ISO 9001 certified. QatarEnergy contractor support. Get a quote.',
-    metaKeywords: 'chemical supplier Qatar, chemicals Doha, industrial chemicals Qatar, water treatment chemicals Qatar, oilfield chemicals Qatar, LNG chemicals Qatar, QatarEnergy chemical supplier, chemical exporter Oman Qatar, Ras Laffan chemicals'
+    metaKeywords: 'chemical supplier Qatar, chemicals Doha, industrial chemicals Qatar, water treatment chemicals Qatar, oilfield chemicals Qatar, LNG chemicals Qatar, QatarEnergy chemical supplier, chemical exporter Oman Qatar, Ras Laffan chemicals',
+    relatedGuide: {
+      slug: 'gcc-desalination-water-treatment-chemicals',
+      title: 'Desalination & Water Treatment Chemicals Across the GCC',
+      blurb: 'A region-wide guide to the antiscalants, biocides, and coagulants used across GCC desalination plants — including Qatar\'s.'
+    }
   },
 
   'kuwait-city': {
@@ -435,7 +442,12 @@ const locations: Record<string, LocationData> = {
     ],
     metaTitle: 'Chemical Supplier Kuwait | Industrial Chemicals Kuwait City | Global Chemicals LLC',
     metaDescription: 'Chemical supplier exporting to Kuwait. Water treatment, oilfield, refinery chemicals to Kuwait City & Shuaiba. ISO 9001 certified. KOC contractor support. Get a quote.',
-    metaKeywords: 'chemical supplier Kuwait, chemicals Kuwait City, industrial chemicals Kuwait, water treatment chemicals Kuwait, oilfield chemicals Kuwait, KOC chemical supplier, KNPC chemicals, chemical exporter Oman Kuwait, Shuaiba chemicals'
+    metaKeywords: 'chemical supplier Kuwait, chemicals Kuwait City, industrial chemicals Kuwait, water treatment chemicals Kuwait, oilfield chemicals Kuwait, KOC chemical supplier, KNPC chemicals, chemical exporter Oman Kuwait, Shuaiba chemicals',
+    relatedGuide: {
+      slug: 'gcc-desalination-water-treatment-chemicals',
+      title: 'Desalination & Water Treatment Chemicals Across the GCC',
+      blurb: 'Kuwait sources around 90% of its potable water from desalination — see the full regional guide to the chemistry behind it.'
+    }
   },
 
   'bahrain': {
@@ -471,7 +483,12 @@ const locations: Record<string, LocationData> = {
     ],
     metaTitle: 'Chemical Supplier Bahrain | Industrial Chemicals Manama | Global Chemicals LLC',
     metaDescription: 'Chemical supplier exporting to Bahrain. Aluminium, refinery, water treatment chemicals to Manama & Hidd. ISO 9001 certified. ALBA & BAPCO contractor support. Get a quote.',
-    metaKeywords: 'chemical supplier Bahrain, chemicals Manama, industrial chemicals Bahrain, water treatment chemicals Bahrain, ALBA chemical supplier, BAPCO chemicals, chemical exporter Oman Bahrain, Hidd industrial chemicals, Sitra chemicals'
+    metaKeywords: 'chemical supplier Bahrain, chemicals Manama, industrial chemicals Bahrain, water treatment chemicals Bahrain, ALBA chemical supplier, BAPCO chemicals, chemical exporter Oman Bahrain, Hidd industrial chemicals, Sitra chemicals',
+    relatedGuide: {
+      slug: 'gcc-desalination-water-treatment-chemicals',
+      title: 'Desalination & Water Treatment Chemicals Across the GCC',
+      blurb: 'See the full regional guide to the antiscalants, biocides, and corrosion inhibitors behind Gulf desalination and industrial water treatment.'
+    }
   },
 
   // ── Additional UAE Cities ──────────────────────────────────────────────────
@@ -769,7 +786,12 @@ const locations: Record<string, LocationData> = {
     ],
     metaTitle: 'Chemical Supplier Dammam | Eastern Province KSA | Aramco Contractors | Global Chemicals LLC',
     metaDescription: 'Chemical supplier exporting to Dammam & Eastern Province, KSA. Saudi Aramco contractors, SABIC, Jubail Industrial City. Oilfield & water treatment chemicals. ISO 9001. Get a quote.',
-    metaKeywords: 'chemical supplier Dammam, chemicals Eastern Province Saudi Arabia, Saudi Aramco chemical supplier, oilfield chemicals Dammam, industrial chemicals Eastern Province KSA, Jubail Industrial City chemicals, SABIC chemical supplier, chemical exporter Oman Dammam, Al Khobar chemicals Saudi Arabia'
+    metaKeywords: 'chemical supplier Dammam, chemicals Eastern Province Saudi Arabia, Saudi Aramco chemical supplier, oilfield chemicals Dammam, industrial chemicals Eastern Province KSA, Jubail Industrial City chemicals, SABIC chemical supplier, chemical exporter Oman Dammam, Al Khobar chemicals Saudi Arabia',
+    relatedGuide: {
+      slug: 'gcc-desalination-water-treatment-chemicals',
+      title: 'Desalination & Water Treatment Chemicals Across the GCC',
+      blurb: 'Marafiq\'s Jubail plant alone processes 800,000 m³/day — see the full regional guide to Gulf desalination water treatment chemistry.'
+    }
   },
 
   'jubail': {
@@ -805,7 +827,12 @@ const locations: Record<string, LocationData> = {
     ],
     metaTitle: 'Chemical Supplier Jubail Industrial City | Water Treatment & Petrochemical Chemicals | Global Chemicals LLC',
     metaDescription: 'Chemical supplier exporting to Jubail Industrial City, Saudi Arabia. Antiscalants, cooling-tower biocides, corrosion inhibitors for SABIC, Sadara, Saudi Kayan & Marafiq desalination. ISO 9001. Get a quote.',
-    metaKeywords: 'chemical supplier Jubail, Jubail Industrial City chemicals, water treatment chemicals Jubail, antiscalant Jubail, SABIC chemical supplier, Sadara Chemical supplier, Marafiq desalination chemicals, cooling tower biocide Jubail, corrosion inhibitor Jubail Saudi Arabia, chemical exporter Oman Jubail'
+    metaKeywords: 'chemical supplier Jubail, Jubail Industrial City chemicals, water treatment chemicals Jubail, antiscalant Jubail, SABIC chemical supplier, Sadara Chemical supplier, Marafiq desalination chemicals, cooling tower biocide Jubail, corrosion inhibitor Jubail Saudi Arabia, chemical exporter Oman Jubail',
+    relatedGuide: {
+      slug: 'gcc-desalination-water-treatment-chemicals',
+      title: 'Desalination & Water Treatment Chemicals Across the GCC',
+      blurb: 'The full technical guide to the antiscalants, biocides, and coagulants behind Marafiq\'s desalination-scale water treatment and every other major Gulf plant.'
+    }
   },
 
   'yanbu': {
@@ -997,6 +1024,31 @@ const LocationLanding = () => {
           </div>
         </div>
       </section>
+
+      {/* Related Guide (optional cross-link, e.g. the GCC desalination pillar) */}
+      {locationData.relatedGuide && (
+        <section className="py-12 border-b">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <Card className="logo-gradient-border relative">
+                <CardContent className="pt-6 flex flex-col sm:flex-row sm:items-center gap-4 justify-between">
+                  <div>
+                    <p className="text-sm font-medium text-primary mb-1">Related Guide</p>
+                    <p className="font-semibold">{locationData.relatedGuide.title}</p>
+                    <p className="text-sm text-muted-foreground mt-1">{locationData.relatedGuide.blurb}</p>
+                  </div>
+                  <Button variant="outline" asChild className="shrink-0">
+                    <LocalizedLink to={`/blog/${locationData.relatedGuide.slug}`}>
+                      Read the guide
+                      <ChevronRight className="ml-2 h-4 w-4" />
+                    </LocalizedLink>
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Why Choose Us */}
       <section className="py-16">
