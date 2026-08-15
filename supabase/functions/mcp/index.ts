@@ -8166,7 +8166,8 @@ var soap_detergent_default = [
         "Packaging: 25kg PP bags, 1000kg super sack",
         "Food-grade (E524) available on request"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_hydroxide"
+      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_hydroxide",
+      canonicalOverride: "https://gcoman.com/products/water-treatment/caustic-soda-flakes"
     }
   },
   {
@@ -8218,7 +8219,8 @@ var soap_detergent_default = [
         "Food-grade (E524) available on request",
         "GHS-compliant SDS supplied with every batch"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_hydroxide"
+      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_hydroxide",
+      canonicalOverride: "https://gcoman.com/products/water-treatment/caustic-soda-liquid"
     }
   },
   {

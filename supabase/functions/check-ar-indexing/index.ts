@@ -215,7 +215,7 @@ Deno.serve(async (req) => {
         body: JSON.stringify({ source: "chain" }),
       }).catch((err) => console.error("Chain invocation failed:", err));
       // Keep the isolate alive until the follow-up request is actually sent.
-      // @ts-ignore EdgeRuntime is provided by the Supabase edge runtime
+      // @ts-expect-error EdgeRuntime is provided by the Supabase edge runtime
       if (typeof EdgeRuntime !== "undefined" && EdgeRuntime?.waitUntil) EdgeRuntime.waitUntil(chain);
       else await chain;
     }
