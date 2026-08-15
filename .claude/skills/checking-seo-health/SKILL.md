@@ -7,12 +7,13 @@ description: Use when doing a periodic or ad-hoc SEO health check on gcoman.com 
 
 ## Overview
 
-gcoman.com has two SEO data sources, checked in this order:
+gcoman.com has three SEO data sources, checked in this order:
 
-1. **The site's own admin dashboard** (`gcoman.com/admin`) — pre-authenticated, first-party GSC proxy + a self-hosted weekly index-coverage crawler. No separate Google login. **Always check this first.**
-2. **GA4 directly** (`analytics.google.com`) — only needed for event-level debugging (Explore, per-event comparisons) that the admin dashboard doesn't expose. Requires a Google login in Chrome; the account picker may bounce through `authuser=0`, `authuser=1`, `authuser=2` before landing on the one with property access — that redirect is normal, not a sign of failure.
+1. **The site's own admin dashboard** (`gcoman.com/admin`) — pre-authenticated, first-party GSC proxy + a self-hosted weekly index-coverage crawler. No separate Google login. **Always check this first** for routine trend-checking — it's the fastest.
+2. **Real Google Search Console directly** (`https://search.google.com/search-console?resource_id=https://gcoman.com/&authuser=2`) — the Chrome profile's Google account #2 (`authuser=2`) already has verified owner access to this property, same as GA4. Use this whenever you need something the admin proxy doesn't expose: **URL Inspection** (live indexing status + "Request Indexing"), **Manual actions / Security issues** (checked clean as of 2026-08-15 — recheck periodically, it's a fast, high-value glance), **Core Web Vitals** field data, **mobile usability**, **Removals**. If `authuser=2` ever stops working (account slots can drift), try `authuser=0`, `1`, `3`... until `https://gcoman.com/` shows up as a verified property.
+3. **GA4 directly** (`analytics.google.com`) — only needed for event-level debugging (Explore, per-event comparisons) that the admin dashboard doesn't expose. Same account, same `authuser=2` pattern.
 
-**Core principle:** a metric that moved is not automatically a real SEO problem. This codebase has two known measurement traps (below) — rule them out before reporting a regression as real.
+**Core principle:** a metric that moved is not automatically a real SEO problem, and the admin dashboard's cached classification is not always current. This codebase has three known false-alarm patterns (below) — rule them out before reporting a regression as real. When the admin dashboard and real-time GSC disagree, **trust real-time GSC (URL Inspection) — it's live, the admin dashboard's index-coverage data is a cached weekly snapshot.**
 
 ## Quick Reference — where to look
 
@@ -27,6 +28,8 @@ gcoman.com has two SEO data sources, checked in this order:
 | Did a real conversion/lead swing happen? | Admin panel `/admin/contacts` and `/admin/jobs` (raw dated rows) | Ground truth — count real submissions in the date range, don't trust a percentage alone |
 | Deep event-level GA4 diagnosis | `analytics.google.com` → Explore → Free form, `Event name` row + `Compare: Previous period` | Per-event current-vs-previous counts |
 | Are events even firing / correctly marked as Key Events? | GA4 Admin → Data display → Events | Each event's "Streams active in last 28 days" — "No stream data detected" means it's configured but has never fired |
+| Is a specific URL *really* indexed right now (not a cached label)? | Real GSC → URL Inspection | Live indexing status, structured-data validation, "Request Indexing" action |
+| Any manual action or security issue on the whole site? | Real GSC → Security & Manual Actions | Binary clean/not-clean — check periodically, high severity if not clean |
 
 ## Routine check (run this periodically)
 
@@ -55,14 +58,16 @@ gcoman.com has two SEO data sources, checked in this order:
 5. **If something looks like it moved a lot** (a metric up/down double digits %), don't report it yet — go to Step 6.
 6. **Rule out the two known false-alarm patterns** before treating any swing as real (see below).
 7. **If tied to a recent deploy**, run the local verification scripts against production: `npm run verify:prerender-titles` and `npm run verify:seo-routing` (see `CLAUDE.md` "Verification commands").
-8. **If a specific page is stuck as `Soft 404`/`Error`/`Discovered — not indexed`**, don't assume it's still broken — `git log --follow -- src/data/products/<category>.json` and `git log -- src/pages/ProductDetail.tsx` to check whether a content fix already landed after the coverage tool's last-crawl date, then `curl` the live URL and compare its title/meta/size against a known-healthy page in the same category. GSC's classification can lag real content fixes by weeks; a page with good live content and an old "Last crawl" date is very likely just waiting on Google's next re-evaluation, not indicating a current defect.
+8. **If a specific page is stuck as `Soft 404`/`Error`/`Discovered — not indexed`** in the admin dashboard, don't trust that cached label — **go inspect it live**: real Search Console → URL Inspection → paste the URL. This is the definitive current status, not the admin dashboard's weekly-cached one (confirmed in practice: two pages the admin dashboard showed as "Soft 404" were actually already "Page is indexed" in live GSC — the admin cache just hadn't caught up since a content fix months earlier). Also `git log --follow -- src/data/products/<category>.json` and `git log -- src/pages/ProductDetail.tsx` to check whether a content fix already landed after the coverage tool's last-crawl date, and `curl` the live URL to compare its title/meta/size against a known-healthy page in the same category.
 9. Report: what's healthy, what moved, and for anything that moved — whether it's real or a measurement artifact, with the evidence either way.
 
-## Two known false-alarm patterns — check these before reporting a regression
+## Three known false-alarm patterns — check these before reporting a regression
 
 **1. GA4 conversion/lead events undercount real leads.** `submit-contact`/`submit-job-application` save to Supabase, email the team, and push to Zoho CRM entirely independently of GA4 — the GA4 tracking call only fires after that already succeeded, and only if the visitor granted analytics-cookie consent (`src/lib/consent.ts` — deny-all default). A visitor who declines cookies still produces a real lead with zero GA4 signal. **Always cross-check `/admin/contacts` and `/admin/jobs` (real dated rows) for the same date range before concluding leads actually dropped.**
 
 **2. A GA4 event can blend two unrelated funnels.** Historically `generate_lead` fired for both the Contact form and the Career form (now split into `generate_lead_contact` / `generate_lead_career` — verify both are still marked as Key Events in GA4 Admin → Events if investigating lead-volume anomalies). A viral spike in job applications can make the *combined* metric swing wildly with zero change in real sales leads. When diagnosing any single blended-sounding event, break it out by source in GA4 Explore before trusting the aggregate.
+
+**3. Every product page's "Product snippets" validator shows "1 invalid item detected" — this is intentional, not a bug.** `src/components/StructuredData.tsx:60-64` documents it: pricing isn't published (quote-based B2B sales), so `offers` is deliberately omitted from the Product schema. A prior attempt to include `offers` without a price triggered a worse GSC error ("missing lowPrice"). Dropping `offers` entirely removes that error while keeping the page indexed normally — the trade-off is losing rich-result eligibility (star/price in SERP), not indexing. Only worth revisiting if the business wants to publish prices or start collecting genuine third-party reviews (there's already a dormant `ReviewStructuredData` component that would supply `aggregateRating` if `reviews.length > 0`).
 
 **Also expected, not a bug:** legacy redirects run client-side (`src/lib/legacyRedirects.ts`), so `curl`/`verify:seo-routing` will show `200` for a legacy URL instead of a `301` — confirm those in an actual browser, not curl.
 
@@ -74,6 +79,10 @@ gcoman.com has two SEO data sources, checked in this order:
 - **Explore → Free form**: drag `Event name` into Rows, enable **Compare: Previous period** in the date picker, remove `Device category` from Columns to simplify — this gives an exact per-event current-vs-previous breakdown, which is how the two false-alarm patterns above get diagnosed in practice.
 - Reports → Search Console (Queries / Google organic search traffic) — GA4's own linked GSC view; cross-check its numbers against `/admin/search-console`'s (they should roughly agree; large divergence suggests a linking or date-range mismatch).
 
-## Future links
+## Direct Search Console access (when the admin dashboard isn't enough)
 
-If given a direct Google Search Console URL (`search.google.com/search-console/...`) later, prefer it for anything not exposed in the admin panel — manual URL Inspection, Removals, Manual Actions/Security Issues, Core Web Vitals field data, mobile usability. Add the property URL here once provided.
+- Property URL: `https://search.google.com/search-console?resource_id=https://gcoman.com/&authuser=2` — same account/authuser pattern as GA4.
+- **URL Inspection** (sidebar): paste any URL to get its *live* status, not a cached one. Shows a "REQUEST INDEXING" action for pages that need a manual recrawl push (e.g., after fixing content that was previously thin/soft-404). Expand "Product snippets" under Enhancements & Experience to see structured-data validation detail per page.
+- **Manual actions** / **Security issues** (sidebar, under "Security & Manual Actions"): binary clean/not-clean checks, worth a periodic glance — a manual action or security issue is a much bigger deal than any indexing nuance and would otherwise go unnoticed.
+- **Core Web Vitals**, **HTTPS**, **Removals**, **Pages**, **Sitemaps**: all under the standard GSC sidebar, self-explanatory.
+- Google's own **Indexing** overview counts (Overview page) differ from the admin dashboard's — GSC's count spans every URL Google has ever discovered for the domain (including old/legacy ones outside the current sitemap), while the admin dashboard only tracks current sitemap URLs. A gap between the two is expected, not a data-integrity problem.
