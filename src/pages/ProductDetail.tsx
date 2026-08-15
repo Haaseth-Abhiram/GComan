@@ -408,7 +408,7 @@ const ProductDetail = () => {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Button asChild size="lg" className="gap-2" onClick={() => trackSelectContent('cta_button', 'get_quote')}>
-                      <Link to={`/contact?product=${encodeURIComponent(product.title)}`}>
+                      <Link to={`/contact?product=${encodeURIComponent(product.title)}`} rel="nofollow">
                         <Mail className="w-4 h-4" />
                         Request a Quote
                       </Link>

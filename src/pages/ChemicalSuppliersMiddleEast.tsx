@@ -147,11 +147,11 @@ const ChemicalSuppliersMiddleEast = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Chemical Supplier Middle East | Oman UAE Saudi Arabia Iraq Jordan Egypt | Global Chemicals LLC"
-        description="Global Chemicals LLC — ISO 9001 certified chemical exporter from Oman supplying UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, Iraq, Jordan & Egypt. Water treatment, industrial, oilfield & lab chemicals. Full Arabic documentation. Get a free export quote."
+        title="Chemical Supplier Middle East | ISO 9001 Exporter from Oman"
+        description="ISO 9001 & JSRS certified chemical exporter from Oman, shipping to UAE, Saudi Arabia, Qatar & the wider GCC. Free quotes within 24 hours, Arabic SDS included."
         keywords="chemical exporter Oman UAE, chemical supplier Middle East, chemical supplier Oman to Dubai, chemical exporter Oman Saudi Arabia, chemical supplier Oman Qatar Kuwait Bahrain, chemical supplier Iraq Baghdad Basra, chemical supplier Jordan Amman, chemical supplier Egypt Cairo Alexandria, chemical export from Oman GCC, water treatment chemicals Middle East, oilfield chemicals Middle East, industrial chemicals export Oman, caustic soda exporter Oman UAE"
-        ogTitle="Chemical Supplier Middle East | UAE, Saudi Arabia, Iraq, Jordan, Egypt | Global Chemicals LLC"
-        ogDescription="ISO 9001 certified chemical exporter from Oman supplying all Middle East markets — UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, Iraq, Jordan & Egypt. Industrial, water treatment & oilfield chemicals with full Arabic documentation."
+        ogTitle="Chemical Supplier & Exporter to the Middle East | Global Chemicals LLC"
+        ogDescription="ISO 9001 & JSRS certified — Global Chemicals LLC exports water treatment, industrial, oilfield & lab chemicals from Oman across the Middle East, with full Arabic documentation."
         ogUrl="https://gcoman.com/chemical-suppliers-middle-east"
         canonical="https://gcoman.com/chemical-suppliers-middle-east"
       />

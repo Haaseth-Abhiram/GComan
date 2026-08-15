@@ -142,7 +142,7 @@ const CausticSodaOman = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="gap-2 text-lg px-8" onClick={() => trackSelectContent('cta_button', 'caustic_soda_quote')}>
-                  <Link to="/contact?product=Caustic+Soda">
+                  <Link to="/contact?product=Caustic+Soda" rel="nofollow">
                     Get a Quote <ArrowRight className="w-5 h-5" />
                   </Link>
                 </Button>
@@ -371,7 +371,7 @@ const CausticSodaOman = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="gap-2" onClick={() => trackSelectContent('cta_button', 'caustic_soda_quote_bottom')}>
-                  <Link to="/contact?product=Caustic+Soda">
+                  <Link to="/contact?product=Caustic+Soda" rel="nofollow">
                     <Mail className="w-5 h-5" /> Get a Free Quote
                   </Link>
                 </Button>

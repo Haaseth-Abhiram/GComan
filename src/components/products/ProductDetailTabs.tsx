@@ -151,7 +151,7 @@ export const ProductDetailTabs = ({
                       variant="outline"
                       className="h-auto py-3 border-primary/30 hover:bg-primary/5"
                     >
-                      <Link to={href}>
+                      <Link to={href} rel="nofollow">
                         <span className="flex items-center gap-2 text-sm font-semibold">
                           <Mail className="h-4 w-4" />
                           Request {label}
