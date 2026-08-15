@@ -89,7 +89,7 @@ Pure client-side SPA whose SEO depends on three pieces working together. Touchin
 
 An `/ar/*` render is **noindex by default**. It becomes indexable only when the page passes BOTH `arTitle` and `arDescription` to `<SEO>` — that flips the `/ar` render to localized meta + self-referencing `/ar` canonical, and makes both language versions emit reciprocal hreflang (`en`/`ar`/`x-default`). Never pass Arabic meta for a page whose body content is still English — that's the duplicate-content trap the default protects against.
 
-- Currently enabled: **product detail pages with a full translation in `src/i18n/locales/products-ar.json`** (~250 of ~768 products; title + description present = enabled, enforced in [src/pages/ProductDetail.tsx](src/pages/ProductDetail.tsx)).
+- Currently enabled: **product detail pages with a full translation in `src/i18n/locales/products-ar.json`** (249 of 270 products; title + description present = enabled, enforced in [src/pages/ProductDetail.tsx](src/pages/ProductDetail.tsx)).
 - `scripts/sync-ar-sitemap.mjs` keeps `public/sitemap.xml` in sync: adds hreflang alternates to translated products' English blocks and appends the `/ar` twin blocks so they prerender. Idempotent — rerun after adding product translations.
 - Everything else under `/ar` (home, about, industries, blog…) stays noindex because its page-level prose (FAQs, breadcrumbs, section copy) is hardcoded English even though the `ar.json` UI layer is 100% complete. To enable a page: wire its prose through `t()`, then pass `arTitle`/`arDescription`, then rerun the sitemap sync/add the URL.
 
@@ -115,7 +115,7 @@ Edit ALL THREE: `src/lib/legacyRedirects.ts` (**the layer that actually runs**),
 
 ## Product data
 
-Per-category JSON files in `src/data/products/` (22 files, ~768 products). `src/data/productLoader.ts` imports them, maps `iconName` strings to Lucide components via `ICON_MAP`, and wraps imports in `safeImport()` (auto-retry + force-reload on stale-chunk errors after deploys). `src/data/products.ts` is a re-export shim — **add products to the JSON files, not there**. Minimum fields: `id` (slug = URL segment), `title`, `description`, `category` (= JSON filename), `iconName`, `details` (CAS, long description, applications…). After adding a product, add its canonical URL to `public/sitemap.xml`. Arabic product strings live in `src/i18n/locales/products-ar.json`.
+Per-category JSON files in `src/data/products/` (22 files, 270 products). `src/data/productLoader.ts` imports them, maps `iconName` strings to Lucide components via `ICON_MAP`, and wraps imports in `safeImport()` (auto-retry + force-reload on stale-chunk errors after deploys). `src/data/products.ts` is a re-export shim — **add products to the JSON files, not there**. Minimum fields: `id` (slug = URL segment), `title`, `description`, `category` (= JSON filename), `iconName`, `details` (CAS, long description, applications…). After adding a product, add its canonical URL to `public/sitemap.xml`. Arabic product strings live in `src/i18n/locales/products-ar.json`.
 
 Blog articles are inline TypeScript in `src/data/blogArticles.ts` — no CMS.
 

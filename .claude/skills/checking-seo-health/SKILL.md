@@ -33,10 +33,30 @@ gcoman.com has two SEO data sources, checked in this order:
 1. **`/admin/search-console`** — note total clicks/impressions/CTR/avg position for 7d and 28d. Open the Sitemaps tab: error count must be 0, and "Last downloaded" should be recent (Google typically re-reads within a week or two — if it's gone stale for a month+, re-submit the sitemap in real Search Console).
 2. **`/admin/ar-indexing`** — despite the sidebar calling it "Index Coverage" and the route name, this covers **every URL in the sitemap, English and Arabic both** — don't skim only the `/ar/*` rows. The page is long: a dismissable "N pages newly indexed" feed sits above the real summary; scroll (or `get_page_text`) past it to the `Tracked / Indexed / Discovered – not indexed / Check errors` counts. Note the Indexed/Tracked ratio and whether it's trending up. `Check errors` should be 0 or explainable. If "Last run" is more than ~7 days old, click **Run check now**. Scan the URL status table for `Excluded by 'noindex' tag` or `URL is unknown to Google` — but expect a batch of these on `/ar/*` pages that don't yet have Arabic translations (see step 3); that's normal, not a regression. A concerning finding is the *English* pages in this state — flag those.
 3. **`/admin/seo-languages`** — look for Arabic pages with real impressions but 0 clicks or a very high (>20) average position; per this repo's Arabic SEO model (see `CLAUDE.md`), a page is only eligible to rank once it has `arTitle`/`arDescription` wired through `<SEO>` — a page stuck at 0 clicks with decent impressions may just need that flip. **Its totals won't reconcile exactly with `/admin/search-console`'s totals** (seen: ~14% impression gap over the same 28-day window) — that's a known quirk of the two dashboards querying GSC differently, not a data-integrity bug; don't report the gap itself as a finding.
-4. **If something looks like it moved a lot** (a metric up/down double digits %), don't report it yet — go to Step 5.
-5. **Rule out the two known false-alarm patterns** before treating any swing as real (see below).
-6. **If tied to a recent deploy**, run the local verification scripts against production: `npm run verify:prerender-titles` and `npm run verify:seo-routing` (see `CLAUDE.md` "Verification commands").
-7. Report: what's healthy, what moved, and for anything that moved — whether it's real or a measurement artifact, with the evidence either way.
+4. **Verify every product is actually submitted for crawling** (don't just eyeball the dashboards — cross-check the real data). Run:
+   ```bash
+   python3 - <<'EOF'
+   import json, re, glob
+   products = []
+   for f in glob.glob('src/data/products/*.json'):
+       category = f.split('/')[-1].replace('.json', '')
+       with open(f) as fh:
+           for p in json.load(fh):
+               products.append((category, p['id']))
+   with open('public/sitemap.xml') as fh:
+       sitemap = fh.read()
+   sitemap_urls = set(re.findall(r'<loc>(https://gcoman\.com/products/[^<]+)</loc>', sitemap))
+   missing = [f"https://gcoman.com/products/{c}/{p}" for c, p in products if f"https://gcoman.com/products/{c}/{p}" not in sitemap_urls]
+   print(f"{len(products)} products in data files, {len(missing)} missing from sitemap")
+   for m in missing: print(" -", m)
+   EOF
+   ```
+   Any product in the data files but not in `sitemap.xml` was never submitted to Google at all — that's a bigger problem than a slow-to-index page, since it means Google was never told the URL exists. (Sanity check: as of 2026-08, the real count is **270 products**, not the "~768" `CLAUDE.md` currently claims — that figure is stale documentation, not a live discrepancy; don't be alarmed if your count differs from 768.)
+5. **If something looks like it moved a lot** (a metric up/down double digits %), don't report it yet — go to Step 6.
+6. **Rule out the two known false-alarm patterns** before treating any swing as real (see below).
+7. **If tied to a recent deploy**, run the local verification scripts against production: `npm run verify:prerender-titles` and `npm run verify:seo-routing` (see `CLAUDE.md` "Verification commands").
+8. **If a specific page is stuck as `Soft 404`/`Error`/`Discovered — not indexed`**, don't assume it's still broken — `git log --follow -- src/data/products/<category>.json` and `git log -- src/pages/ProductDetail.tsx` to check whether a content fix already landed after the coverage tool's last-crawl date, then `curl` the live URL and compare its title/meta/size against a known-healthy page in the same category. GSC's classification can lag real content fixes by weeks; a page with good live content and an old "Last crawl" date is very likely just waiting on Google's next re-evaluation, not indicating a current defect.
+9. Report: what's healthy, what moved, and for anything that moved — whether it's real or a measurement artifact, with the evidence either way.
 
 ## Two known false-alarm patterns — check these before reporting a regression
 
