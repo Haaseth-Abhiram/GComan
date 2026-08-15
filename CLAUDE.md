@@ -42,7 +42,7 @@ Note: `ci.yml`'s own header comment and `README.md` still describe the retired "
 ## Branch workflow
 
 - **Develop is the working branch** — all commits land here first. New branches fork off `Develop`, not `main`.
-- **Main is production.** Never push to it or open a `Develop → main` PR automatically; the user merges manually after their own QA.
+- **Main is production.** Don't push to it or open a `Develop → main` PR unprompted — default to the user merging manually after their own QA. Claude may merge `Develop → main` and push (triggering Lovable's auto-deploy) when the user explicitly asks for it in-session; that push is itself the deploy step, since there's no separate deploy trigger (see "Deploy chain").
 
 ## Map of the code
 
