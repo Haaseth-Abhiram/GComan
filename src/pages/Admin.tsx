@@ -8,6 +8,11 @@ import { DownloadLeadsTable } from '@/components/admin/DownloadLeadsTable';
 import { ResumesWorkspace } from '@/components/admin/ResumesWorkspace';
 import { NewsletterSubscribersTable } from '@/components/admin/NewsletterSubscribersTable';
 import { ActivityFeed } from '@/components/admin/ActivityFeed';
+import { ArabicIndexingMonitor } from '@/components/admin/ArabicIndexingMonitor';
+import { SearchConsoleDashboard } from '@/components/admin/SearchConsoleDashboard';
+import { LanguageSeoComparison } from '@/components/admin/LanguageSeoComparison';
+
+
 import { AnalyticsDialog } from '@/components/admin/AnalyticsDialog';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -709,6 +714,11 @@ const Admin = () => {
                 <Route path="/resumes" element={<ResumesWorkspace />} />
                 <Route path="/downloads" element={<DownloadLeadsTable />} />
                 <Route path="/newsletter" element={<NewsletterSubscribersTable />} />
+                <Route path="/ar-indexing" element={<ArabicIndexingMonitor />} />
+                <Route path="/search-console" element={<SearchConsoleDashboard />} />
+                <Route path="/seo-languages" element={<LanguageSeoComparison />} />
+
+
               </Routes>
             </main>
           </div>

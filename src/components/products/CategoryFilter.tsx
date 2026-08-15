@@ -26,10 +26,10 @@ export const CategoryFilter = ({ categories, activeCategory, onCategoryChange }:
             key={category.id}
             onClick={() => onCategoryChange(category.id)}
             className={cn(
-              'group relative flex flex-col items-center gap-2 p-4 rounded-lg border-2 transition-all duration-300 hover:scale-105',
+              'group relative flex flex-col items-center gap-2 p-4 rounded-lg logo-gradient-border transition-all duration-300 hover:scale-105',
               isActive
-                ? 'border-primary bg-primary/5 shadow-lg'
-                : 'border-border bg-card hover:border-primary/50 hover:shadow-md'
+                ? 'bg-primary/5 shadow-lg'
+                : 'bg-card hover:shadow-md'
             )}
           >
             <div

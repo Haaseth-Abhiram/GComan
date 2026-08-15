@@ -222,36 +222,36 @@ const Products = () => {
       <SEO
         title={(() => {
           const categoryTitles: Record<string, string> = {
-            'water-treatment': 'Water Treatment Chemicals Supplier | Oman & GCC | Global Chemicals LLC',
-            'lubricants': 'Industrial Lubricants Supplier in Oman & Middle East | Global Chemicals LLC',
-            'swimming-pool': 'Swimming Pool Chemicals | Oman & GCC | Global Chemicals LLC',
-            'lab-chemicals': 'Laboratory Chemicals Supplier | Oman & Middle East | Global Chemicals LLC',
-            'oilfield': 'Oilfield & Refinery Chemicals | Oman & GCC | Global Chemicals LLC',
-            'tank-cleaners': 'Marine & Industrial Tank Cleaners | Oman & Middle East | Global Chemicals',
-            'soap-detergent': 'Soap & Detergent Chemicals | Oman & GCC | Global Chemicals LLC',
-            'food-beverage': 'Food & Beverage Grade Chemicals | Oman & GCC | Global Chemicals LLC',
-            'cooling-water': 'Cooling Water Treatment Chemicals | Oman & GCC | Global Chemicals LLC',
-            'corrosion-inhibitor': 'Corrosion Inhibitors Supplier | Oman & Middle East | Global Chemicals LLC',
-            'ro-chemicals': 'RO Plant Chemicals Supplier | Oman & GCC | Global Chemicals LLC',
-            'solvents': 'Industrial Solvents Supplier | Oman & Middle East | Global Chemicals LLC',
-            'inorganic': 'Inorganic Chemicals Supplier | Oman & GCC | Global Chemicals LLC',
-            'construction': 'Construction Chemicals | Oman & GCC | Global Chemicals LLC',
-            'alcohols': 'Industrial Alcohols Supplier | Oman & GCC | Global Chemicals LLC',
-            'glycols': 'Glycols Supplier | Oman & GCC | Global Chemicals LLC',
-            'ethanolamines': 'Ethanolamines Supplier | Oman & GCC | Global Chemicals LLC',
-            'chlorinated': 'Chlorinated Solvents | Oman & GCC | Global Chemicals LLC',
-            'lab-equipment': 'Laboratory Equipment Supplier | Oman & GCC | Global Chemicals LLC',
-            'calcium-carbonate': 'Calcium Carbonate Supplier | Oman & GCC | Global Chemicals LLC',
-            'agro': 'Agricultural Chemicals | Oman & GCC | Global Chemicals LLC',
-            'additives': 'Chemical Additives Supplier | Oman & GCC | Global Chemicals LLC'
+            'water-treatment': 'Water Treatment Chemicals Oman & GCC | GC Oman',
+            'lubricants': 'Industrial Lubricants Oman & Middle East | GC Oman',
+            'swimming-pool': 'Swimming Pool Chemicals Oman & GCC | GC Oman',
+            'lab-chemicals': 'Laboratory Chemicals Oman & Middle East | GC Oman',
+            'oilfield': 'Oilfield & Refinery Chemicals Oman & GCC | GC Oman',
+            'tank-cleaners': 'Marine & Industrial Tank Cleaners Oman | GC Oman',
+            'soap-detergent': 'Soap & Detergent Chemicals Oman & GCC | GC Oman',
+            'food-beverage': 'Food & Beverage Grade Chemicals Oman & GCC | GC Oman',
+            'cooling-water': 'Cooling Water Chemicals Oman & GCC | GC Oman',
+            'corrosion-inhibitor': 'Corrosion Inhibitors Oman & Middle East | GC Oman',
+            'ro-chemicals': 'RO Plant Chemicals Oman & GCC | GC Oman',
+            'solvents': 'Industrial Solvents Oman & Middle East | GC Oman',
+            'inorganic': 'Inorganic Chemicals Oman & GCC | GC Oman',
+            'construction': 'Construction Chemicals Oman & GCC | GC Oman',
+            'alcohols': 'Industrial Alcohols Oman & GCC | GC Oman',
+            'glycols': 'Glycols Supplier Oman & GCC | GC Oman',
+            'ethanolamines': 'Ethanolamines Supplier Oman & GCC | GC Oman',
+            'chlorinated': 'Chlorinated Solvents Oman & GCC | GC Oman',
+            'lab-equipment': 'Laboratory Equipment Oman & GCC | GC Oman',
+            'calcium-carbonate': 'Calcium Carbonate Supplier Oman & GCC | GC Oman',
+            'agro': 'Agricultural Chemicals Oman & GCC | GC Oman',
+            'additives': 'Chemical Additives Oman & GCC | GC Oman'
           };
-          return categoryTitles[activeCategory] || 'Industrial Chemicals Supplier Oman & Middle East | Global Chemicals LLC';
+          return categoryTitles[activeCategory] || 'Industrial Chemicals Supplier Oman & GCC | GC Oman';
         })()}
         description={(() => {
           const categoryDescs: Record<string, string> = {
-            'water-treatment': 'Buy water treatment chemicals in Oman & GCC — PAC, caustic soda, calcium hypochlorite, antiscalants & more. Serving Muscat, Dubai, Riyadh, Doha. Request a quote today.',
-            'lubricants': 'Shell, Mobil, Castrol & GP lubricants supplier in Oman & Middle East. Industrial and automotive lubricants for all applications. Fast delivery across Muscat, Dubai, Riyadh, Doha.',
-            'swimming-pool': 'Swimming pool chemicals in Oman & GCC — chlorine tablets, algaecides, TCCA, sodium hypochlorite & more. Serving Muscat, Dubai, Riyadh, Doha. Request a quote today.',
+            'water-treatment': 'Water treatment chemicals in Oman & GCC — PAC, caustic soda, calcium hypochlorite, antiscalants. Fast delivery across Muscat, Dubai & Riyadh.',
+            'lubricants': 'Shell, Mobil, Castrol & GP lubricants supplier in Oman & Middle East. Industrial and automotive grades with same-day Muscat delivery.',
+            'swimming-pool': 'Swimming pool chemicals in Oman & GCC — chlorine tablets, algaecides, TCCA, sodium hypochlorite. Fast delivery across Muscat, Dubai & Riyadh.',
             'lab-chemicals': 'Laboratory chemicals and reagents supplier in Oman & Middle East. AR grade acids, solvents, and analytical reagents for research labs. Request a quote today.',
             'oilfield': 'Oilfield and refinery chemicals in Oman & GCC — drilling fluids, production chemicals, corrosion inhibitors. Trusted by oil & gas companies across the Middle East.',
             'tank-cleaners': 'Heavy duty alkaline, acidic and neutral tank cleaners for marine and industrial applications in Oman & GCC. Environmentally friendly sludge breakers.',
@@ -487,6 +487,7 @@ const Products = () => {
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
               <Input
                 type="text"
+                aria-label="Search products by name, CAS number, formula, or category"
                 placeholder="Search by product name, CAS number, formula, or category..."
                 value={searchQuery}
                 onChange={(e) => handleSearch(e.target.value)}
@@ -497,9 +498,10 @@ const Products = () => {
                   variant="ghost"
                   size="sm"
                   onClick={clearSearch}
+                  aria-label="Clear search"
                   className="absolute right-2 top-1/2 -translate-y-1/2"
                 >
-                  <X className="h-4 w-4" />
+                  <X className="h-4 w-4" aria-hidden="true" />
                 </Button>
               )}
             </div>

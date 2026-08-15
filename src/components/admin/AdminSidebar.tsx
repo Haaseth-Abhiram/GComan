@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { FileText, Briefcase, Download, LayoutDashboard, Home, BarChart3, Mail, FolderOpen } from 'lucide-react';
+import { FileText, Briefcase, Download, LayoutDashboard, Home, BarChart3, Mail, FolderOpen, Globe, Search, Languages } from 'lucide-react';
 import { useLocation, Link } from 'react-router-dom';
 import {
   Sidebar,
@@ -75,6 +75,10 @@ export function AdminSidebar() {
     { title: 'Resume Folders',   url: '/admin/resumes',    icon: FolderOpen,      count: 0 },
     { title: 'Download Leads',   url: '/admin/downloads',  icon: Download,        count: counts.downloads },
     { title: 'Newsletter',       url: '/admin/newsletter', icon: Mail,            count: counts.newsletter },
+    { title: 'Search Console',   url: '/admin/search-console', icon: Search,     count: 0 },
+    { title: 'Index Coverage',   url: '/admin/ar-indexing', icon: Globe,          count: 0 },
+    { title: 'AR vs EN SEO',     url: '/admin/seo-languages', icon: Languages,    count: 0 },
+
   ];
 
   return (

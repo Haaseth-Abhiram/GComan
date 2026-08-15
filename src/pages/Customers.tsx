@@ -267,7 +267,7 @@ const Customers = () => {
                   <CardHeader className="pb-4">
                     <div className="flex items-start justify-between gap-4">
                       <div className="flex-1">
-                        <div className="h-24 bg-background rounded-lg border-2 border-border flex items-center justify-center p-4 mb-4 group-hover:border-primary/50 transition-colors">
+                        <div className="h-24 bg-background rounded-lg logo-gradient-border flex items-center justify-center p-4 mb-4 transition-colors">
                           <img
                             src={customer.logo}
                             alt={`${customer.name} logo`}
@@ -314,7 +314,7 @@ const Customers = () => {
                   style={{ animationDelay: `${index * 50}ms` }}
                 >
                   <CardContent className="p-6">
-                    <div className="aspect-square bg-background border-2 border-border rounded-lg flex items-center justify-center p-4 mb-4 group-hover:border-primary/50 transition-colors">
+                    <div className="aspect-square bg-background logo-gradient-border rounded-lg flex items-center justify-center p-4 mb-4 transition-colors">
                       <img
                         src={customer.logo}
                         alt={`${customer.name} logo`}
@@ -363,7 +363,7 @@ const Customers = () => {
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-br from-primary/10 to-background">
         <div className="container mx-auto px-4">
-          <Card className="max-w-4xl mx-auto text-center border-2">
+          <Card className="max-w-4xl mx-auto text-center logo-gradient-border">
             <CardHeader>
               <CardTitle className="text-3xl md:text-4xl mb-4">
                 Join Our Growing Family of Satisfied Customers

@@ -60,7 +60,7 @@ export const RelatedLinks = ({
             <Link
               key={index}
               to={link.href}
-              className="group p-4 border rounded-lg hover:border-primary/50 hover:shadow-md transition-all"
+              className="group p-4 logo-gradient-border rounded-lg hover:shadow-md transition-all"
             >
               <h3 className="font-semibold group-hover:text-primary transition-colors">
                 {link.title}
@@ -71,7 +71,7 @@ export const RelatedLinks = ({
                 </p>
               )}
               <span className="inline-flex items-center text-sm text-primary mt-2 group-hover:translate-x-1 transition-transform">
-                Learn more <ChevronRight className="w-4 h-4 ml-1" />
+                Read about {link.title} <ChevronRight className="w-4 h-4 ml-1" aria-hidden="true" />
               </span>
             </Link>
           ))}

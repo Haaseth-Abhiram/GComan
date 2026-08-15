@@ -98,7 +98,7 @@ const ChemicalSuppliersOman = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="Chemical Supplier in Muscat, Oman | Global Chemicals LLC"
-        description="Global Chemicals LLC — Leading chemical supplier in Muscat, Oman. ISO 9001 & JSRS certified. Water treatment, industrial, oilfield & laboratory chemicals. Same-day delivery in Muscat. Get a free quote."
+        description="Leading chemical supplier in Muscat, Oman. ISO 9001 & JSRS certified. Water treatment, industrial, oilfield & lab chemicals with same-day delivery."
         keywords="chemical supplier muscat oman, chemical suppliers in oman, chemical company muscat, industrial chemicals muscat, chemical distributor oman, water treatment chemicals muscat oman, caustic soda oman, caustic soda supplier muscat, PAC supplier muscat oman, poly aluminium chloride oman, oil gas chemicals oman, JSRS chemical supplier oman, PDO chemical supplier oman, Shell lubricants oman, Mobil lubricants muscat, Castrol oman, laboratory chemicals muscat oman, chemical supplier GCC, calcium hypochlorite oman, antiscalant supplier oman, swimming pool chemicals muscat, food grade chemicals oman, RO chemicals oman, chemical supplier sohar, chemical supplier salalah, chemical supplier duqm"
         ogTitle="Chemical Supplier in Muscat, Oman | Global Chemicals LLC"
         ogDescription="Leading chemical supplier in Muscat, Oman. ISO 9001 & JSRS certified. Water treatment, industrial, oilfield & laboratory chemicals. Same-day delivery in Muscat."
@@ -229,7 +229,7 @@ const ChemicalSuppliersOman = () => {
                   { city: 'Duqm', path: '/chemicals/duqm', note: '2-3 day delivery' },
                   { city: 'Rusayl', path: '/chemicals/rusayl', note: 'Same-day delivery' },
                 ].map((loc) => (
-                  <Link key={loc.city} to={loc.path} className="p-4 border rounded-lg text-center hover:border-primary hover:shadow-sm transition-all group">
+                  <Link key={loc.city} to={loc.path} className="p-4 logo-gradient-border rounded-lg text-center hover:shadow-sm transition-all group">
                     <p className="font-semibold text-foreground group-hover:text-primary">{loc.city}</p>
                     <p className="text-xs text-muted-foreground mt-1">{loc.note}</p>
                   </Link>
@@ -253,7 +253,7 @@ const ChemicalSuppliersOman = () => {
                   { label: 'Oilfield Chemicals — JSRS Certified', path: '/products/oilfield', note: 'PDO, OQ, OPAL Approved' },
                   { label: 'Swimming Pool Chemicals Oman', path: '/products/swimming-pool', note: 'Muscat Hotel & Villa Pools' },
                 ].map((item) => (
-                  <Link key={item.path} to={item.path} className="p-4 border rounded-lg hover:border-primary hover:shadow-sm transition-all group">
+                  <Link key={item.path} to={item.path} className="p-4 logo-gradient-border rounded-lg hover:shadow-sm transition-all group">
                     <p className="font-semibold text-foreground group-hover:text-primary text-sm">{item.label}</p>
                     <p className="text-xs text-muted-foreground mt-1">{item.note}</p>
                   </Link>

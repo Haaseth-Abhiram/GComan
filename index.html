@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chemical Supplier Muscat Oman | Caustic Soda, PAC, JSRS | Global Chemicals LLC</title>
+    <title>Chemical Suppliers Oman & GCC | Global Chemicals LLC</title>
     <meta name="author" content="Global Chemicals LLC" />
     <!--
       Per-page <title>, <meta name="description">, <meta name="keywords">,
@@ -35,9 +35,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
 
-    <!-- Arabic Font for RTL Support -->
+    <!-- Arabic Font for RTL Support — loaded non-render-blocking so English pages
+         (the vast majority of mobile LCP entries) don't wait on Google Fonts CSS. -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap"></noscript>
 
     <!-- hreflang, og:*, twitter:* are set per-page by Helmet via SEO.tsx -->
 
@@ -281,10 +284,12 @@
     }
     </script>
 
-    <link rel="icon" href="/favicon.png?v=4" sizes="32x32" type="image/png">
-  <link rel="icon" href="/favicon.png?v=4" sizes="16x16" type="image/png">
-  <link rel="shortcut icon" href="/favicon.png?v=4" type="image/png">
-  <link rel="apple-touch-icon" href="/favicon.png?v=4" sizes="180x180">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png?v=5" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png?v=5" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-192x192.png?v=5" sizes="192x192">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=5" sizes="any">
+    <link rel="shortcut icon" href="/favicon.ico?v=5">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=5" sizes="180x180">
 </head>
 
   <body>

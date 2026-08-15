@@ -247,6 +247,8 @@ serve(async (req) => {
     // Validate subject
     if (!subject || typeof subject !== 'string' || subject.length === 0) {
       errors.push('Subject is required');
+    } else if (sanitizeInput(subject).length > 200) {
+      errors.push('Subject must be less than 200 characters');
     }
 
     // Validate message

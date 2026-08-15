@@ -1232,6 +1232,438 @@ Global Chemicals LLC supplies the core chemical categories used across GCC desal
       },
     ],
   },
+  {
+    id: 'butylene-glycol-guide-oman-gcc',
+    title: '1,3-Butylene Glycol Guide: Industrial & Cosmetic Applications in Oman & GCC',
+    excerpt: 'Technical guide to 1,3-butylene glycol (1,3-BG, CAS 107-88-0) — applications in cosmetics, personal care, pharmaceuticals, and industrial formulations; specifications, SDS highlights, and procurement in Oman, UAE, Saudi Arabia, Qatar, Kuwait & Bahrain.',
+    content: `1,3-Butylene glycol (1,3-butanediol, 1,3-BG, CAS 107-88-0) is a colourless, nearly odourless, hygroscopic diol widely used across cosmetics, personal care, pharmaceuticals, food flavourings, and industrial polymer formulations. In the Middle East and GCC, demand for 1,3-butylene glycol has grown alongside the region's expanding personal care manufacturing base — with formulators in Dubai, Riyadh, Jeddah, Muscat, and Doha specifying it as a humectant, solvent, and viscosity modifier in skincare and haircare products destined for GCC, African, and South Asian markets.
+
+What Is 1,3-Butylene Glycol?
+
+1,3-Butylene glycol is a four-carbon diol (C4H10O2, molecular weight 90.12) produced commercially by catalytic hydrogenation of acetaldol or by fermentation of sugars. It is fully miscible with water, ethanol, acetone, and most polar solvents. Its low toxicity profile (oral LD50 in rats ~18,600 mg/kg — significantly less toxic than ethylene glycol) has earned it FDA GRAS status for use as a food flavouring carrier and broad regulatory acceptance in cosmetic and pharmaceutical applications worldwide, including under GSO (GCC Standardization Organization) cosmetic regulations.
+
+Key Applications in Cosmetics and Personal Care
+
+The dominant global use of 1,3-butylene glycol is in cosmetics and personal care — accounting for approximately 60–70% of consumption. In these applications, 1,3-BG functions as:
+
+- **Humectant** — attracts and retains moisture in skincare formulations (creams, lotions, serums, sheet masks, toners). Typical use level 2–10% w/w. Delivers a lighter, less tacky skin feel than glycerin, making it the preferred humectant in Korean beauty (K-beauty) style formulations popular across the GCC.
+- **Solvent and extraction medium** — used to extract botanical actives (green tea, centella asiatica, licorice, aloe vera) for use in serums and essences. Butylene glycol extracts are common label ingredients in premium skincare sold across the UAE and Saudi Arabia.
+- **Viscosity modifier** — reduces viscosity in gel formulations and improves spreadability of emulsions.
+- **Preservative booster** — enhances the efficacy of paraben-free and mild preservative systems by reducing water activity; increasingly important as GCC formulators reformulate away from parabens.
+- **Fragrance solubiliser** — solubilises fragrance oils in aqueous formulations (colognes, body sprays, room fragrances).
+
+Pharmaceutical and Food Applications
+
+In pharmaceuticals, 1,3-butylene glycol is used as a solvent and carrier for oral, topical, and parenteral formulations, and as a plasticiser in soft gelatin capsule shells. Its low toxicity and good compatibility with active pharmaceutical ingredients make it a common excipient. In food applications (regulated in the GCC under GSO food additive standards), 1,3-BG is permitted as a flavour carrier and humectant.
+
+Industrial Applications
+
+Beyond personal care, 1,3-butylene glycol is used industrially as:
+- A polyester and alkyd resin monomer in coatings, inks, and specialty polymers
+- A humectant in tobacco products (extending shelf life and preventing drying)
+- A solvent in printing inks and industrial cleaning formulations
+- A hygroscopic component in specialty adhesives
+
+Technical Specifications (Industrial Grade)
+
+- Appearance: Clear, colourless liquid
+- Purity: ≥99.0% (industrial), ≥99.5% (cosmetic grade)
+- Water content: ≤0.1% w/w
+- Density (20°C): 1.004–1.006 g/cm³
+- Boiling point: 207.5°C
+- Flash point: 121°C (closed cup)
+- Freezing point: −50°C
+- Refractive index (20°C): 1.4401
+- pH (10% aqueous solution): 6.0–8.0
+- Colour (APHA): ≤10
+- Available packaging: 200 kg drums, 1,000 kg IBCs, ISO tanks (bulk)
+
+Cosmetic-grade 1,3-BG additionally meets USP/EP monograph requirements and is supplied with a Certificate of Analysis showing heavy metals, arsenic, and microbiological limits.
+
+Safety and SDS Highlights
+
+1,3-Butylene glycol has a favourable safety profile compared to other glycols, but formulators and warehouse operators should note:
+
+- **Toxicity**: Oral LD50 (rat) ~18,600 mg/kg — low acute toxicity. Not classified as hazardous under GHS for acute toxicity.
+- **Skin and eye irritation**: Practically non-irritating to skin; may cause mild transient eye irritation on direct contact.
+- **Combustibility**: Combustible liquid with flash point 121°C — above the GHS flammable liquid threshold. Standard storage precautions apply; no special flame-proofing required.
+- **Storage**: Store in tightly sealed containers away from strong oxidisers. Hygroscopic — prolonged exposure to humid air will increase water content. Nitrogen blanketing recommended for bulk storage in Oman and Gulf summer conditions.
+- **Compatibility**: Compatible with most cosmetic and pharmaceutical actives, surfactants, and preservatives. Incompatible with strong oxidisers, strong acids, and isocyanates.
+- **Shelf life**: 24 months minimum in unopened original packaging stored below 30°C.
+- **First aid**: Skin contact — wash with water. Eye contact — flush with water for 15 minutes. Ingestion — do not induce vomiting; seek medical attention.
+
+Always consult the batch-specific SDS supplied with your purchase; regulatory classifications may vary slightly between suppliers and grades.
+
+Procurement Advantages for GCC Buyers
+
+For personal care manufacturers and industrial formulators in Oman, UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain, procuring 1,3-butylene glycol locally (rather than importing directly from Asia or Europe) delivers several advantages:
+
+- **Faster lead times**: Same-day or next-day delivery within Oman (Muscat, Sohar, Rusayl, Duqm, Salalah); 3–5 working days to UAE, Saudi Arabia, and other GCC destinations.
+- **Lower minimum order quantities**: Local stock allows 1-drum (200 kg) purchases rather than 20-tonne container minimums typical of direct import.
+- **GCC-compliant documentation**: SDS in English and Arabic, Certificate of Origin, GSO-conformant labelling, and customs paperwork for cross-border GCC shipments.
+- **Reduced currency risk**: Local supply in OMR/AED/SAR avoids USD/EUR exposure on smaller orders.
+- **Technical support**: Formulation guidance, compatibility testing, and dosing recommendations from a local technical team familiar with GCC regulatory requirements.
+- **Reduced working capital**: No need to tie up capital in 20-tonne container inventory awaiting slow-moving product turnover.
+
+Global Chemicals LLC supplies 1,3-butylene glycol (industrial and cosmetic grades) from stock in Muscat, with delivery across Oman and export to all GCC countries. Contact info@gcoman.com or call +968-93754388 for pricing, specifications, and Certificate of Analysis.`,
+    author: 'Global Chemicals Technical Team',
+    date: '2026-07-17',
+    readTime: '9 min read',
+    category: 'Industrial Chemicals',
+    tags: ['Butylene Glycol', '1,3-BG', 'Cosmetics', 'Personal Care', 'Glycols', 'Oman', 'GCC', 'Technical Guide'],
+    icon: Beaker,
+    faqs: [
+      {
+        question: 'What is 1,3-butylene glycol used for in cosmetics?',
+        answer: '1,3-Butylene glycol (1,3-BG, CAS 107-88-0) is used in cosmetics primarily as a humectant (2–10% w/w) to retain moisture in creams, lotions, serums, and sheet masks. It also acts as a solvent for botanical extract carriers (green tea, centella asiatica, aloe vera), a viscosity modifier in gels, a preservative booster in paraben-free systems, and a fragrance solubiliser in aqueous formulations. It delivers a lighter, less tacky skin feel than glycerin, making it the preferred humectant in K-beauty style skincare formulations popular across the UAE and Saudi Arabia.',
+      },
+      {
+        question: 'Is 1,3-butylene glycol safe? What does the SDS say?',
+        answer: '1,3-Butylene glycol has a favourable safety profile. Oral LD50 in rats is approximately 18,600 mg/kg — very low acute toxicity, significantly safer than ethylene glycol. It is not classified as hazardous under GHS for acute toxicity, is practically non-irritating to skin, and holds FDA GRAS status for food flavour carrier applications. It is a combustible liquid (flash point 121°C, above the GHS flammable threshold) so standard storage precautions apply but no flame-proofing is required. Store in tightly sealed containers away from strong oxidisers; it is hygroscopic and will absorb atmospheric moisture in Gulf humidity if left open. Always consult the batch-specific SDS.',
+      },
+      {
+        question: 'What is the difference between 1,3-butylene glycol and propylene glycol?',
+        answer: 'Both are low-toxicity diols used as humectants and solvents in cosmetics and pharmaceuticals, but 1,3-butylene glycol (C4H10O2, four carbons) is a larger molecule than propylene glycol (C3H8O2, three carbons). 1,3-BG delivers a lighter, less sticky skin feel and is less likely to cause sensitisation in reactive skin — making it the preferred humectant in premium skincare and K-beauty formulations. Propylene glycol is cheaper and slightly more effective as a preservative booster, but has a stronger reputation for skin irritation in sensitive users. Formulators serving GCC premium skincare brands typically specify 1,3-BG; mass-market and industrial formulations more often use propylene glycol.',
+      },
+      {
+        question: 'Where can I buy 1,3-butylene glycol in Oman and GCC?',
+        answer: 'Global Chemicals LLC supplies 1,3-butylene glycol (both industrial and cosmetic grades) from stock in Muscat, Oman. Same-day delivery in Muscat and next-day delivery to Sohar, Rusayl, Duqm, and Salalah industrial areas. Export supply to UAE (Dubai, Abu Dhabi, Sharjah), Saudi Arabia (Riyadh, Jeddah, Dammam), Qatar (Doha, Ras Laffan), Kuwait, and Bahrain typically ships within 3–5 working days. Available in 200 kg drums, 1,000 kg IBCs, and ISO tank bulk. Full documentation package includes SDS in English and Arabic, batch Certificate of Analysis, GSO-conformant labels, and Certificate of Origin for cross-border GCC shipments. Contact info@gcoman.com or +968-93754388 for pricing and availability.',
+      },
+    ],
+  },
+  {
+    id: 'gamma-butyrolactone-gbl-guide-oman-gcc',
+    title: 'Gamma-Butyrolactone (GBL) Guide: Industrial Applications & Specifications in Oman & GCC',
+    excerpt: 'Technical guide to gamma-butyrolactone (GBL, CAS 96-48-0) — industrial solvent applications, paint stripping, electronics cleaning, polymer intermediates, specifications, SDS highlights, regulatory controls, and procurement across Oman and the GCC.',
+    content: `Gamma-butyrolactone (GBL, CAS 96-48-0) is a colourless, hygroscopic cyclic ester with a mild characteristic odour, valued industrially as a high-boiling, low-volatility polar solvent. It dissolves an unusually wide range of polymers, resins, and salts, which makes it a workhorse in paint stripping, electronics manufacturing, polymer processing, and as a chemical intermediate. Across the GCC — from electronics assembly and MRO operations in Dubai and Riyadh to industrial maintenance contractors in Muscat, Sohar, and Duqm — GBL is specified where conventional solvents such as acetone or MEK evaporate too fast or lack solvency.
+
+What Is Gamma-Butyrolactone?
+
+GBL (C4H6O2, molecular weight 86.09) is the cyclic ester (lactone) of 4-hydroxybutyric acid, produced commercially by the dehydrogenation of 1,4-butanediol (BDO). It is fully miscible with water and with most organic solvents including alcohols, ketones, esters, and aromatic hydrocarbons. Its combination of a high boiling point (204°C), low vapour pressure, high polarity, and low flammability risk relative to common solvents is what defines its industrial niche.
+
+Important regulatory note: GBL is a controlled or restricted substance in many jurisdictions because it is a precursor to gamma-hydroxybutyrate (GHB). Supply is legitimate for industrial end-uses only, and buyers in Oman and the GCC should expect end-use declarations, KYC documentation, and import permit checks as part of any purchase.
+
+Key Industrial Applications
+
+- **Paint, coating, and ink stripping** — GBL is the active solvent in many non-methylene-chloride paint removers. It swells and lifts cured epoxies, polyurethanes, and acrylics without the flash-off losses and toxicity profile of dichloromethane. Widely used by aviation MRO, marine coatings contractors, and industrial refurbishment operations in the Gulf.
+- **Electronics manufacturing and cleaning** — used as a photoresist stripper, flux remover, and cleaning solvent for PCB and display manufacturing. Its low volatility means it stays in the bath rather than evaporating in high-temperature Gulf facilities.
+- **Polymer and resin processing** — solvent for polyacrylonitrile, cellulose acetate, polystyrene, and many engineering polymers; also a casting solvent in membrane and film production.
+- **Chemical intermediate** — precursor to 2-pyrrolidone, N-methyl-2-pyrrolidone (NMP), N-vinylpyrrolidone, and PVP, and used in agrochemical and pharmaceutical synthesis routes.
+- **Battery electrolytes** — a co-solvent in some lithium battery and capacitor electrolyte formulations because of its high dielectric constant and electrochemical stability.
+- **Industrial degreasing** — heavy-duty cleaner for cured resin residues, adhesives, and carbonised deposits where hydrocarbon solvents fail.
+- **Viscosity reducer / coalescing aid** — used at low percentages in coatings to improve flow and film formation.
+
+Technical Specifications (Industrial Grade)
+
+- Appearance: Clear, colourless liquid, free of suspended matter
+- Purity (GC): ≥99.5%
+- Water content: ≤0.1% w/w
+- Density (20°C): 1.124–1.130 g/cm³
+- Boiling point: 204°C
+- Melting point: −43.5°C
+- Flash point: 98°C (closed cup)
+- Vapour pressure (20°C): ~0.2 mmHg
+- Refractive index (20°C): 1.435–1.437
+- Acidity (as butyric acid): ≤0.01%
+- Colour (APHA): ≤15
+- Solubility: Fully miscible with water and most organic solvents
+- Packaging: 250 kg drums, 1,000 kg IBCs, ISO tanks (bulk)
+
+Safety and SDS Highlights
+
+- **Hazard classification**: Harmful if swallowed; causes serious eye irritation. May cause drowsiness or dizziness at high vapour concentrations. Not classified as a flammable liquid under GHS (flash point 98°C), but combustible.
+- **Personal protection**: Nitrile or butyl rubber gloves, chemical splash goggles, and long sleeves. Use local exhaust ventilation when heated or sprayed; organic vapour respirator if exposure limits may be exceeded.
+- **Skin and eye contact**: Absorbed through skin; wash immediately with soap and water. For eyes, flush 15 minutes and seek medical attention.
+- **Ingestion**: Harmful — do not induce vomiting; seek immediate medical attention and show the SDS.
+- **Storage**: Store in tightly closed original containers in a cool, dry, well-ventilated area away from strong oxidisers, strong acids, and strong bases. GBL is hygroscopic and slowly hydrolyses to 4-hydroxybutyric acid in the presence of water — keep containers sealed, especially in humid coastal conditions in Muscat, Sohar, and the UAE.
+- **Materials of construction**: Compatible with stainless steel, glass, and PTFE. Attacks many plastics and elastomers including polycarbonate, ABS, PVC, and natural rubber — verify hose and gasket compatibility before transfer.
+- **Shelf life**: 24 months in unopened original packaging stored below 30°C.
+- **Spill response**: Absorb with inert material, collect in sealed containers for licensed disposal; prevent entry into drains and watercourses.
+
+Always work from the batch-specific SDS supplied with your delivery.
+
+Handling GBL in Gulf Conditions
+
+Two properties matter most in Oman and GCC operations. First, hygroscopicity: ambient humidity along the Batinah coast, Duqm, and the UAE coastline will drive water pickup in open or partially used drums, which raises acidity and degrades stripping performance. Use nitrogen blanketing or dedicated closed-transfer systems for bulk storage. Second, temperature: while GBL is not highly volatile, warehouse temperatures above 45°C accelerate hydrolysis in any batch that has already picked up moisture — store under shade or in climate-controlled areas and rotate stock on a strict FIFO basis.
+
+Regulatory and Documentation Requirements
+
+Because GBL is a GHB precursor, legitimate industrial supply in the GCC involves:
+- A signed end-use declaration stating the industrial application and consuming site
+- Company trade licence and, where applicable, industrial or environmental permits
+- KYC verification of the ordering entity and delivery address
+- GSO-conformant labelling and SDS in English and Arabic
+- Certificate of Origin and batch Certificate of Analysis for cross-border GCC shipments
+
+Sales are made to verified industrial and institutional buyers only; consumer or unverified sales are not supported.
+
+Procurement Advantages for GCC Buyers
+
+- **Faster lead times**: Same-day or next-day delivery within Oman (Muscat, Sohar, Rusayl, Duqm, Salalah); typically 3–5 working days to UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain.
+- **Lower minimum order quantities**: Local stock allows single-drum (250 kg) orders instead of full-container import minimums.
+- **Complete compliance pack**: Bilingual SDS, CoA, GSO labelling, end-use documentation support, and customs paperwork prepared for GCC cross-border movement.
+- **Technical support**: Compatibility guidance for stripping baths, cleaning lines, and materials of construction from a local technical team.
+
+Global Chemicals LLC supplies industrial-grade gamma-butyrolactone (GBL) from stock in Muscat to verified industrial buyers, with delivery across Oman and export to the GCC. Contact info@gcoman.com or call +968-93754388 for pricing, specifications, and Certificate of Analysis.`,
+    author: 'Global Chemicals Technical Team',
+    date: '2026-07-27',
+    readTime: '10 min read',
+    category: 'Industrial Chemicals',
+    tags: ['Gamma-Butyrolactone', 'GBL', 'Solvents', 'Paint Stripper', 'Electronics Cleaning', 'Oman', 'GCC', 'Technical Guide'],
+    icon: Beaker,
+    faqs: [
+      {
+        question: 'What is gamma-butyrolactone (GBL) used for industrially?',
+        answer: 'Gamma-butyrolactone (GBL, CAS 96-48-0) is a high-boiling polar solvent used in paint and coating strippers as a safer alternative to methylene chloride, as a photoresist stripper and flux remover in electronics manufacturing, as a solvent for polyacrylonitrile and other engineering polymers, as a chemical intermediate for 2-pyrrolidone, NMP and PVP, as a co-solvent in lithium battery and capacitor electrolytes, and as a heavy-duty degreaser for cured resins and adhesives.',
+      },
+      {
+        question: 'Is GBL a controlled substance in Oman and the GCC?',
+        answer: 'GBL is a precursor to GHB and is therefore restricted or monitored in most jurisdictions, including the GCC. Legitimate industrial supply requires a signed end-use declaration, a valid trade licence, KYC verification of the buying entity and delivery site, and — where applicable — import permits. Global Chemicals LLC supplies GBL only to verified industrial and institutional buyers with complete documentation; consumer sales are not supported.',
+      },
+      {
+        question: 'What are the key GBL specifications and safety precautions?',
+        answer: 'Industrial-grade GBL is a clear colourless liquid with purity ≥99.5%, water content ≤0.1%, density 1.124–1.130 g/cm³ at 20°C, boiling point 204°C, and flash point 98°C (closed cup). It is harmful if swallowed and causes serious eye irritation, and it is absorbed through skin — use nitrile or butyl gloves and splash goggles with adequate ventilation. Store sealed away from oxidisers and acids; GBL is hygroscopic and hydrolyses in the presence of water, so keep drums closed in humid Gulf conditions. It attacks polycarbonate, ABS, PVC, and natural rubber — use stainless steel, glass, or PTFE for transfer.',
+      },
+      {
+        question: 'Where can I buy gamma-butyrolactone (GBL) in Oman and GCC?',
+        answer: 'Global Chemicals LLC supplies industrial-grade GBL from stock in Muscat, Oman, in 250 kg drums, 1,000 kg IBCs, and ISO tank bulk. Same-day delivery in Muscat and next-day delivery to Sohar, Rusayl, Duqm, and Salalah, with export supply to UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain typically shipping in 3–5 working days once documentation clears. Every shipment includes a batch Certificate of Analysis, SDS in English and Arabic, GSO-conformant labelling, and Certificate of Origin. Contact info@gcoman.com or +968-93754388.',
+      },
+    ],
+  },
+  {
+    id: 'animal-health-nutrition-chemicals-oman-gcc',
+    title: 'Animal Health & Nutrition Chemicals: Guide for Poultry & Livestock Farms in Oman & GCC',
+    excerpt: 'Practical guide to specialty biocides, feed-grade additives, and nutritional chemicals for poultry, dairy, and livestock operations across Oman, UAE, Saudi Arabia, Qatar, Kuwait & Bahrain — with GSO compliance notes and local supply logistics.',
+    content: `Animal health and nutrition chemicals are a critical input for the GCC's rapidly modernising poultry, dairy, and livestock sectors. From broiler farms in Saudi Arabia's Al-Kharj corridor to dairy operations in Oman's Barka and Salalah regions, producers rely on a defined toolkit of biocides, feed-grade additives, and nutritional chemicals to protect flock health, extend feed shelf life, and meet GSO (GCC Standardization Organization) veterinary and feed safety standards.
+    
+This guide covers the main categories of animal health and nutrition chemicals used in Oman and the wider GCC, typical dose rates, and procurement notes for buyers sourcing locally rather than importing directly.
+
+Farm Biocides and Disinfection
+
+Biosecurity is the first line of defence in poultry and livestock operations, and disinfection chemistry is where most farm health programmes start. The chemicals most commonly used in GCC farms include:
+
+- **Glutaraldehyde–quaternary ammonium blends** — broad-spectrum disinfectants effective against viruses (Newcastle disease, avian influenza, IBD), bacteria, and fungi. Typical dilution 1:200 to 1:400 for routine disinfection of empty poultry houses between cycles.
+- **Peracetic acid (PAA) solutions** — fast-acting, residue-free oxidiser used for drinking water line sanitisation and terminal disinfection. Effective at low temperatures common in air-conditioned Gulf poultry houses.
+- **Sodium hypochlorite (10–12% w/w)** — chlorine base for drinking water treatment and general surface disinfection. Dosed at 3–5 mg/L free chlorine in poultry drinking lines to control biofilm and pathogens.
+- **Iodophors** — iodine-based teat dips and udder disinfectants for dairy operations. Standard 0.5–1.0% available iodine for post-milking teat dip.
+- **Calcium hypochlorite (65% granular)** — used for footbath disinfection at farm entry points and for periodic shock-sanitisation of drinking water systems.
+
+Feed-Grade Preservatives and Mould Inhibitors
+
+Gulf climate — high summer temperatures, high humidity along coastal Oman and UAE, and long feed storage times in remote farms — makes feed preservation a priority. The main preservatives in use are:
+
+- **Propionic acid and buffered calcium propionate** — the standard mould inhibitor for compound feed, whole grains, and silage. Typical inclusion 1.5–3.0 kg per tonne of finished feed; higher dose (3–5 kg/tonne) for high-moisture grains stored in Oman and Saudi summer conditions.
+- **Formic acid and formate blends** — dual-action mould and bacterial inhibitor; also improves protein utilisation in young poultry. Typical inclusion 2–5 kg/tonne.
+- **Organic acid blends (propionic + formic + sorbic)** — synergistic feed hygiene products for pelleted feed; effective at lower total dose than single acids.
+- **Toxin binders (activated bentonite, hydrated sodium calcium aluminosilicates)** — inclusion 1–2 kg/tonne to bind aflatoxins and mycotoxins in stored feed, particularly important for maize imported through Sohar, Jebel Ali, and Dammam ports during monsoon storage seasons.
+
+Nutritional Additives and Feed-Grade Chemicals
+
+Beyond preservation, GCC feed mills and integrated poultry operations use a range of nutritional chemicals to hit protein, mineral, and vitamin targets:
+
+- **Choline chloride (60% on silica or corn cob carrier)** — essential vitamin for liver function and fat metabolism in broilers and layers. Standard inclusion 500–1,000 g/tonne.
+- **DL-methionine and L-lysine HCl** — synthetic amino acids used to balance vegetable-protein diets in broilers and layers. Reduces reliance on expensive fishmeal and soybean meal.
+- **Monocalcium phosphate (MCP) and dicalcium phosphate (DCP)** — inorganic phosphorus sources for skeletal development in poultry and calcium balancing in dairy rations.
+- **Zinc oxide, copper sulphate, manganese sulphate, ferrous sulphate** — trace mineral premix components. Zinc oxide (feed grade, 72% Zn) is used at 40–100 g/tonne in poultry starter feeds.
+- **Sodium bicarbonate (feed grade)** — buffer for high-yielding dairy cows to prevent rumen acidosis; typical inclusion 150–250 g/head/day. Also used in poultry to counteract heat stress in Gulf summer.
+- **Sodium chloride (feed grade)** — electrolyte balance; standard inclusion 2–4 kg/tonne.
+
+Drinking Water Treatment for Farms
+
+Water quality has an outsized effect on poultry and livestock performance, particularly in Oman and Saudi inland farms drawing from brackish well water. Standard chemicals:
+
+- **Sodium hypochlorite** for continuous chlorination (target 3–5 mg/L free chlorine at the drinker).
+- **Citric acid or phosphoric acid** for water acidification (target pH 6.0–6.5) to improve chlorine efficacy, reduce scale in drinking lines, and support gut health in broilers.
+- **Hydrogen peroxide (35–50%)** for periodic drinking line shock sanitation (5–10% solution flushed through lines during downtime).
+- **Antiscalants (phosphonate-based)** for reverse osmosis pretreatment where farm water is desalinated.
+
+GSO and Regulatory Compliance for GCC Buyers
+
+Feed additives, biocides, and veterinary chemicals sold in the GCC must meet GSO (GCC Standardization Organization) requirements. Key points for buyers:
+
+- **Feed additives** must comply with GSO 993 (Animal Feeds — Nomenclature and Definitions) and product-specific GSO standards. Feed-grade chemicals require Certificate of Analysis showing purity, heavy metals, and microbiological limits.
+- **Veterinary biocides** are regulated by each GCC country's veterinary authority — in Oman the Ministry of Agriculture, Fisheries and Water Resources; in Saudi Arabia the Saudi Food and Drug Authority (SFDA). Product registration is required for retail sale but industrial farm use of general-purpose disinfectants (glutaraldehyde blends, peracetic acid, sodium hypochlorite) is permitted under standard chemical import regulations.
+- **Labelling** must be in English and Arabic, with hazard classification per GHS and safe-handling instructions.
+- **SDS documentation** must be current (revised within the past 3 years) and available in English and Arabic.
+
+Procurement Advantages for GCC Farms
+
+Poultry integrators, dairy operations, and feed mills in Oman, UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain benefit from local supply rather than direct import for most animal health and nutrition chemicals:
+
+- **Faster response** — same-day delivery within Oman (Muscat, Sohar, Barka, Salalah, Duqm); 3–5 working days to GCC neighbours.
+- **Lower minimum order quantities** — 25 kg bags, 200 kg drums, and 1,000 kg IBCs available from local stock, avoiding the 20-tonne container minimums typical of direct import.
+- **GCC-compliant documentation** — SDS in English and Arabic, GSO-conformant labels, Certificate of Analysis, and Certificate of Origin for cross-border GCC shipments.
+- **Cold-chain and temperature-controlled storage** — critical for vitamin premixes and heat-sensitive additives in Gulf summer conditions.
+- **Reduced working capital** — no need to tie up capital in bulk container inventory awaiting slow-moving product turnover.
+- **Local technical support** — dosing recommendations, farm audits, and regulatory guidance from a team familiar with GCC veterinary and feed regulations.
+
+Global Chemicals LLC supplies disinfectants, feed preservatives, feed-grade minerals, and drinking water treatment chemicals to poultry integrators, dairy farms, and feed mills across Oman and the GCC. Contact info@gcoman.com or call +968-93754388 for product specifications, pricing, and Certificate of Analysis.`,
+    author: 'Global Chemicals Technical Team',
+    date: '2026-07-23',
+    readTime: '10 min read',
+    category: 'Industry Guide',
+    tags: ['Animal Health', 'Poultry', 'Livestock', 'Feed Additives', 'Farm Biocides', 'Oman', 'GCC', 'Nutrition'],
+    icon: Leaf,
+    faqs: [
+      {
+        question: 'What disinfectants are used in GCC poultry farms?',
+        answer: 'The most common poultry-house disinfectants in Oman and the wider GCC are glutaraldehyde–quaternary ammonium blends (1:200 to 1:400 dilution for terminal disinfection between cycles), peracetic acid for drinking-line sanitation, sodium hypochlorite (3–5 mg/L free chlorine in drinking water and for surface disinfection), calcium hypochlorite (65% granular) for footbaths and shock-chlorination, and iodophors for dairy teat dips. Selection depends on the target pathogen (Newcastle, avian influenza, IBD, coccidia), water hardness, and whether animals are present or the house is empty.',
+      },
+      {
+        question: 'How much propionic acid should I add to feed to prevent mould in Gulf storage?',
+        answer: 'Standard mould-inhibitor inclusion for compound feed in the GCC is 1.5–3.0 kg of propionic acid (or buffered calcium propionate) per tonne of finished feed. For high-moisture grains, whole maize stored in coastal Oman, UAE, or Saudi ports during summer or monsoon, or feed with expected storage beyond 30 days, increase to 3–5 kg/tonne. Buffered calcium propionate is easier to handle than liquid propionic acid and less corrosive to mill equipment. Combine with a toxin binder (activated bentonite or hydrated sodium calcium aluminosilicate) at 1–2 kg/tonne if aflatoxin contamination is a concern in the raw material.',
+      },
+      {
+        question: 'Are animal-feed chemicals regulated under GSO standards in Oman and GCC?',
+        answer: 'Yes. Feed additives sold in the GCC must comply with GSO 993 (Animal Feeds — Nomenclature and Definitions) and product-specific GSO standards. Feed-grade chemicals require a Certificate of Analysis showing purity, heavy metals, and microbiological limits, and labelling in English and Arabic. Veterinary biocides for retail sale must be registered with each country\'s authority (Ministry of Agriculture in Oman; SFDA in Saudi Arabia). Industrial farm use of general-purpose disinfectants (glutaraldehyde blends, peracetic acid, sodium hypochlorite, calcium hypochlorite) is permitted under standard chemical import regulations without individual product registration.',
+      },
+      {
+        question: 'Where can I buy animal health and feed chemicals in Oman and GCC?',
+        answer: 'Global Chemicals LLC supplies disinfectants, feed preservatives (propionic acid, calcium propionate, formic acid blends), feed-grade minerals (MCP, DCP, choline chloride, zinc oxide), and drinking water treatment chemicals from stock in Muscat. Same-day delivery within Oman (Muscat, Sohar, Barka, Salalah, Duqm) and 3–5 working days to UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain. Available in 25 kg bags, 200 kg drums, and 1,000 kg IBCs. Documentation includes SDS in English and Arabic, batch Certificate of Analysis, GSO-conformant labels, and Certificate of Origin for cross-border shipments. Contact info@gcoman.com or +968-93754388.',
+      },
+    ],
+  },
+  {
+    id: 'meg-vs-deg-gas-dehydration-oman-gcc',
+    title: 'MEG vs DEG for Gas Dehydration: Technical Comparison for Oman & GCC Operations',
+    excerpt: 'Monoethylene glycol (MEG) vs diethylene glycol (DEG) for natural gas dehydration and hydrate inhibition — thermal stability, dew point performance, regeneration, losses, and procurement in Oman and the GCC.',
+    content: `Natural gas leaving the wellhead is water-saturated. Left untreated, that water condenses in pipelines, forms hydrates at high pressure and low temperature, and accelerates internal corrosion when combined with CO2 or H2S. Two glycols dominate the field response across Oman's upstream operations and the wider GCC: monoethylene glycol (MEG, CAS 107-21-1) and diethylene glycol (DEG, CAS 111-46-6). They are not interchangeable, and choosing the wrong one leaves either dew point margin or regeneration efficiency on the table.
+
+The Two Roles: Hydrate Inhibition vs Absorption Dehydration
+
+Before comparing the molecules, separate the two duties they perform, because the answer differs by duty.
+
+- **Hydrate inhibition (thermodynamic injection)** — glycol is injected at the wellhead or upstream of a choke/cooler to depress the hydrate formation temperature in a wet gas stream. The glycol travels with the fluids, is separated downstream, and is regenerated.
+- **Absorption dehydration (contactor towers)** — lean glycol is contacted counter-currently with gas in a trayed or packed absorber to strip water vapour and hit a sales-gas water dew point specification. Rich glycol is then regenerated in a reboiler and recirculated.
+
+MEG dominates the first duty. TEG dominates the second, with DEG used where reboiler temperature is constrained or where an existing DEG system is already installed.
+
+Molecular and Physical Property Comparison
+
+| Property | MEG | DEG |
+|---|---|---|
+| Formula | C2H6O2 | C4H10O3 |
+| Molecular weight | 62.07 | 106.12 |
+| Boiling point (1 atm) | 197.6 °C | 245 °C |
+| Freezing point | −12.9 °C | −10.5 °C |
+| Density (20 °C) | 1.113 g/cm³ | 1.118 g/cm³ |
+| Viscosity (20 °C) | ~20 cP | ~35 cP |
+| Thermal decomposition onset | ~165 °C | ~164 °C |
+| Practical reboiler temperature | 120–150 °C | 150–160 °C |
+| Typical lean purity achievable | 80–95 wt% (inhibition service) | 95–97 wt% |
+| Vapour pressure at 38 °C | Higher | Lower |
+
+The critical numbers are the last three rows. MEG's lower molecular weight gives it more hydrate-depression per kilogram injected. DEG's lower vapour pressure gives it materially lower carry-over losses in a contactor. Both decompose above roughly 164 °C, which is why neither reaches the 98.5–99.5 wt% lean purity that TEG achieves at 200 °C reboiler temperature.
+
+Hydrate Depression: Why MEG Wins on Mass
+
+For thermodynamic hydrate inhibition, the depression achieved is approximately proportional to the molar concentration of inhibitor in the free water phase (Hammerschmidt correlation). Because MEG's molecular weight is 62 against DEG's 106, a kilogram of MEG delivers roughly 1.7 times the moles — and therefore roughly 1.7 times the hydrate temperature depression — of a kilogram of DEG.
+
+Worked example: a wet gas line running at 90 bar with a hydrate formation temperature of 21 °C, cooling to a minimum seabed or buried-line temperature of 8 °C, requires about 13 °C of depression plus a 3 °C safety margin — call it 16 °C. Using the Hammerschmidt approach at that duty:
+
+- **MEG** requires roughly 30 wt% in the free water phase.
+- **DEG** requires roughly 42 wt% in the free water phase for the same depression.
+
+On a system circulating 20 m³/day of produced water, that difference translates into materially higher inventory, higher pumping duty, and a larger regeneration package for DEG. For any continuous injection duty in Oman's gas gathering networks — Block 60 area operations, Sohar-bound gas trunk lines, or offshore tie-backs — MEG is the standard answer.
+
+MEG also handles salt. In fields producing formation water, MEG regeneration packages can be specified with a salt-removal (reclamation) stage, which is a mature technology. DEG reclamation is less commonly engineered for this duty.
+
+Dehydration Duty: Why DEG Is Chosen Over MEG
+
+In a contactor tower, the picture reverses:
+
+- **Vaporisation losses** — MEG's higher vapour pressure means significantly more glycol leaves with the dry gas. In a 40 °C contactor, MEG losses can be several times DEG losses on a mass basis. Over a year of continuous operation, that is real make-up cost and a hydrocarbon-dew-point contamination concern downstream.
+- **Achievable dew point depression** — because DEG can be regenerated to 95–97 wt% versus 80–95 wt% for MEG in the same reboiler, DEG delivers a deeper and more stable water dew point.
+- **Foaming and carry-over** — DEG's higher viscosity is a modest disadvantage on tray hydraulics but is manageable with correct tray spacing and an effective inlet separator.
+
+Where DEG does not compete is against TEG. If the specification is a −10 °C or lower water dew point at sales-gas conditions, TEG at 98.5–99.5 wt% lean purity is the standard. DEG is selected when the reboiler is temperature-limited, when the required dew point depression is moderate (roughly 25–45 °C), or when a legacy DEG circuit is in place and conversion cannot be justified.
+
+Regeneration: Practical Constraints in Gulf Conditions
+
+Both glycols degrade thermally above ~164 °C, producing organic acids that drive corrosion in carbon steel reboilers and stills. High ambient temperatures across Oman, the UAE, and Saudi Arabia raise lean glycol temperature at the contactor inlet, which worsens vaporisation losses and reduces absorption efficiency. Three operating disciplines matter more in the Gulf than in temperate climates:
+
+- **Lean glycol cooling** — aim to deliver lean glycol to the contactor at 5–8 °C above the inlet gas temperature. Air-cooled exchangers sized for 20 °C ambient will not achieve this at 48 °C in a Muscat or Rub' al Khali summer; size for peak ambient or add a trim cooler.
+- **Reboiler temperature control** — hold MEG reboilers at 120–150 °C and DEG reboilers at 150–160 °C. Firetube skin temperature, not bulk temperature, drives degradation; keep flux below 25 kW/m² and avoid dry-out.
+- **pH and corrosion control** — maintain glycol pH at 7.0–8.5 with a suitable alkalinity agent. Below pH 6 the acid degradation products attack carbon steel rapidly. Monitor iron content in the circulating glycol as a leading indicator.
+
+Contamination, Monitoring, and Filtration
+
+Whichever glycol is in service, the failure modes are the same and largely preventable:
+
+- **Hydrocarbon carry-over** from a poor inlet separator causes foaming, glycol loss, and reboiler fouling. Specify an efficient two-stage inlet scrubber and a glycol flash tank at 4–6 bar.
+- **Solids** (corrosion products, formation fines, salt) plug trays and score pump internals. Run a 5–10 micron sock filter on 100% of the circulating stream, plus an activated-carbon filter on 10–20% slipstream to remove hydrocarbons and surfactants.
+- **Salt accumulation** in MEG hydrate-inhibition loops requires a reclaimer or periodic slipstream distillation; otherwise salt deposits on reboiler firetubes and causes local overheating.
+- **Routine analysis** — test lean and rich glycol quarterly for water content (Karl Fischer), pH, chloride, iron, total dissolved solids, and hydrocarbon content. Trend the numbers rather than reading single results.
+
+Selection Summary
+
+| Requirement | Recommended glycol |
+|---|---|
+| Wellhead / flowline hydrate inhibition | MEG |
+| Subsea or long tie-back injection with recovery | MEG (with reclamation) |
+| Salty produced water present | MEG with salt reclamation |
+| Contactor dehydration, moderate dew point, limited reboiler temperature | DEG |
+| Contactor dehydration, deep dew point (−10 °C or lower) | TEG (not MEG or DEG) |
+| Minimising glycol vaporisation losses in a contactor | DEG over MEG |
+| Lowest inhibitor mass per °C of depression | MEG |
+
+Specifications and Packaging Available in Oman
+
+**Monoethylene glycol (MEG), fibre grade / industrial grade**
+- Purity (GC): ≥99.8%
+- Water content: ≤0.1% w/w
+- Diethylene glycol content: ≤0.05%
+- Colour (APHA): ≤10
+- Acidity (as acetic acid): ≤0.005%
+- Iron: ≤0.1 ppm
+- Packaging: 230 kg drums, 1,000 kg IBCs, ISO tank bulk
+
+**Diethylene glycol (DEG), industrial grade**
+- Purity (GC): ≥99.5%
+- Water content: ≤0.1% w/w
+- MEG content: ≤0.3%
+- Colour (APHA): ≤15
+- Acidity (as acetic acid): ≤0.01%
+- Packaging: 230 kg drums, 1,000 kg IBCs, ISO tank bulk
+
+Both are supplied with a batch Certificate of Analysis, SDS in English and Arabic, GSO-conformant labelling, and Certificate of Origin for cross-border GCC shipments.
+
+Handling and Safety Notes
+
+MEG is acutely toxic if swallowed (ethylene glycol poisoning) — segregate from any food-grade or potable-water handling area and label clearly in English and Arabic. DEG carries a similar oral toxicity warning. Both are combustible (flash points 111 °C and 143 °C respectively), hygroscopic, and should be stored in sealed carbon steel or stainless steel tanks with a dry nitrogen or desiccant-breather blanket. In coastal Oman and UAE humidity, an unblanketed glycol tank will absorb enough atmospheric water to move a lean glycol off specification within weeks. Use nitrile gloves and splash goggles for transfer operations; both glycols are readily absorbed and cause eye irritation.
+
+Procurement in Oman and the GCC
+
+Global Chemicals LLC supplies MEG and DEG from stock in Muscat to upstream operators, gas processing facilities, EPC contractors, and chemical management providers across Oman — Muscat, Sohar, Duqm, Salalah, and inland field locations — with 3–5 working day supply to the UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain. Drum, IBC, and ISO tank quantities are available, avoiding the 20-tonne container minimums of direct import and the working capital tied up in slow-moving inventory. Contact info@gcoman.com or +968-93754388 for specifications, pricing, and availability.`,
+    author: 'Global Chemicals Technical Team',
+    date: '2026-08-04',
+    readTime: '12 min read',
+    category: 'Oil & Gas',
+    tags: ['MEG', 'DEG', 'Gas Dehydration', 'Hydrate Inhibition', 'Oilfield', 'Glycol', 'Oman', 'GCC'],
+    icon: Factory,
+    faqs: [
+      {
+        question: 'Should I use MEG or DEG for hydrate inhibition in a wet gas line?',
+        answer: 'Use MEG. Hydrate depression is driven by the molar concentration of inhibitor in the free water phase, and MEG (molecular weight 62) delivers roughly 1.7 times the moles per kilogram compared with DEG (molecular weight 106). For a typical 16 °C depression duty, MEG requires around 30 wt% in the water phase where DEG requires around 42 wt% — meaning a smaller inventory, lower pumping duty, and a smaller regeneration package. MEG is also the glycol with mature salt-reclamation technology, which matters when formation water is produced.',
+      },
+      {
+        question: 'Why is DEG preferred over MEG in a glycol contactor?',
+        answer: 'Two reasons. First, MEG has a much higher vapour pressure, so significantly more of it leaves the contactor with the dry gas as vaporisation loss — a real make-up cost over a year of continuous operation. Second, DEG can be regenerated to 95–97 wt% at a 150–160 °C reboiler, whereas MEG typically reaches only 80–95 wt%, so DEG delivers a deeper and more stable water dew point. If the specification calls for a dew point of −10 °C or lower, however, neither is the right answer — TEG at 98.5–99.5 wt% is the standard for that duty.',
+      },
+      {
+        question: 'What reboiler temperature limits apply to MEG and DEG regeneration?',
+        answer: 'Both glycols begin thermal decomposition around 164–165 °C, producing organic acids that corrode carbon steel. Operate MEG reboilers at 120–150 °C and DEG reboilers at 150–160 °C, and control firetube skin temperature rather than bulk temperature — keep heat flux below about 25 kW/m² and avoid dry-out. Maintain glycol pH between 7.0 and 8.5 and trend dissolved iron as a leading indicator of acid attack.',
+      },
+      {
+        question: 'What changes about glycol systems in Gulf ambient conditions?',
+        answer: 'Peak ambient temperatures of 45–50 °C across Oman, the UAE, and Saudi Arabia raise lean glycol temperature at the contactor inlet, which increases vaporisation losses and cuts absorption efficiency. Size air-cooled lean glycol exchangers for peak ambient — not a temperate 20 °C design basis — and target lean glycol delivery at 5–8 °C above inlet gas temperature, adding a trim cooler if necessary. Coastal humidity also matters in storage: an unblanketed glycol tank in Muscat or Sohar can absorb enough atmospheric moisture to move lean glycol off specification within weeks, so use a nitrogen blanket or desiccant breather.',
+      },
+      {
+        question: 'Where can I buy MEG and DEG in Oman and the GCC?',
+        answer: 'Global Chemicals LLC supplies fibre-grade and industrial-grade monoethylene glycol (MEG, CAS 107-21-1, ≥99.8% purity) and industrial-grade diethylene glycol (DEG, CAS 111-46-6, ≥99.5% purity) from stock in Muscat. Available in 230 kg drums, 1,000 kg IBCs, and ISO tank bulk, with same-day delivery in Muscat and next-day supply to Sohar, Duqm, and Salalah; 3–5 working days to the UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain. Every consignment ships with a batch Certificate of Analysis, SDS in English and Arabic, GSO-conformant labels, and Certificate of Origin. Contact info@gcoman.com or +968-93754388.',
+      },
+    ],
+  },
 ];
 
 const categories = ['All', 'Water Treatment', 'Industrial Chemicals', 'Sustainability', 'Safety', 'Oil & Gas', 'Industry Guide'];

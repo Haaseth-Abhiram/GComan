@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { CheckCircle2 } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
@@ -12,6 +13,7 @@ import WhyChooseUs from '@/components/WhyChooseUs';
 import QuickActions from '@/components/QuickActions';
 import { SEO } from '@/components/SEO';
 import { FAQStructuredData, SpeakableStructuredData, ServiceStructuredData } from '@/components/StructuredData';
+import heroLcp from '@/assets/hero-water-treatment.webp';
 
 // Homepage FAQs for rich snippets — GCC-wide coverage
 const homepageFAQs = [
@@ -52,6 +54,11 @@ const Index = () => {
       {/* WebSite (#website) and Organization (#organization) JSON-LD are the
           single source of truth in index.html — do NOT re-emit them here or
           Helmet appends duplicate-@id nodes. Service schema is page-specific. */}
+      {/* Preload the LCP hero image so the browser starts fetching it during HTML parse
+          instead of after the Hero chunk resolves. Uses the Vite-hashed asset URL. */}
+      <Helmet defer={false}>
+        <link rel="preload" as="image" href={heroLcp} fetchPriority="high" type="image/webp" />
+      </Helmet>
       <ServiceStructuredData />
       <FAQStructuredData faqs={homepageFAQs} />
       <SpeakableStructuredData
