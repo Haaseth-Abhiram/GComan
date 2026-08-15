@@ -85,8 +85,10 @@ const pushEvent = (eventName: string, params: Record<string, any>) => {
 
 // =====================================================
 // GA4 CONVERSION TRACKING
-// IMPORTANT: Mark "generate_lead" as a Key Event in the GA4 dashboard
-// (Admin → Events → Mark as Key Event)
+// IMPORTANT: Mark "generate_lead_contact" and "generate_lead_career" as Key
+// Events in the GA4 dashboard (Admin → Events → Mark as Key Event).
+// Kept as two separate event names (rather than one "generate_lead" event)
+// so a job-application spike/lull can't be misread as a sales-lead trend.
 // =====================================================
 
 /**
@@ -94,7 +96,8 @@ const pushEvent = (eventName: string, params: Record<string, any>) => {
  * This is the PRIMARY conversion event - mark as Key Event in GA4.
  */
 export const trackGenerateLead = (formName: string, method: string = 'web') => {
-  pushEvent('generate_lead', {
+  const eventName = formName === 'career' ? 'generate_lead_career' : 'generate_lead_contact';
+  pushEvent(eventName, {
     form_name: formName,
     method: method,
     currency: 'OMR',
