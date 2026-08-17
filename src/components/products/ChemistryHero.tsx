@@ -29,6 +29,35 @@ export const ChemistryHero = ({ formula, molecule, productTitle, tuning }: Chemi
   useEffect(() => {
     if (isPrerender()) return; // prerender keeps the static fallback
 
+    // Search Console field data (CrUX) showed real-visitor LCP at >2.5s mobile /
+    // >4s desktop across product pages — because once this mounts, the 3D
+    // canvas becomes the largest painted element, so LCP ends up measuring
+    // this entire fetch+init chain, not the fast initial fallback paint.
+    // The HDRI (1.6MB) is pure network I/O with no JS execution cost, so fetch
+    // it immediately — `fetchPriority: low` keeps it from competing with
+    // genuinely critical resources (fonts, hero image), but starting now
+    // instead of after the idle wait below removes ~1.6MB of latency from
+    // the critical chain.
+    const hdriPreload = document.createElement('link');
+    hdriPreload.rel = 'preload';
+    hdriPreload.as = 'fetch';
+    hdriPreload.href = '/hdri/empty_warehouse_01_1k.hdr';
+    hdriPreload.crossOrigin = 'anonymous';
+    hdriPreload.setAttribute('fetchpriority', 'low');
+    document.head.appendChild(hdriPreload);
+
+    // Warm the 1.1MB three.js/r3f/drei chunk's network fetch on a short,
+    // separate idle window — still off the critical initial-render path, but
+    // its own low-timeout callback so the download starts well before the
+    // full mount trigger below, instead of only once that also fires.
+    let prefetchHandle: number | undefined;
+    const prefetchChunk = () => { import('./ChemistryHero3D'); };
+    if (typeof window.requestIdleCallback === 'function') {
+      prefetchHandle = window.requestIdleCallback(prefetchChunk, { timeout: 300 });
+    } else {
+      prefetchChunk();
+    }
+
     // Mounting immediately on hydration made the 1.6MB HDRI fetch + three.js
     // scene/shader init compete directly with the browser making the rest of
     // the page interactive — measured at ~7.5s of Total Blocking Time on
@@ -37,10 +66,17 @@ export const ChemistryHero = ({ formula, molecule, productTitle, tuning }: Chemi
     // Falls back to setTimeout for Safari, which has no native support.
     if (typeof window.requestIdleCallback === 'function') {
       const handle = window.requestIdleCallback(() => setMounted(true), { timeout: 2000 });
-      return () => window.cancelIdleCallback(handle);
+      return () => {
+        window.cancelIdleCallback(handle);
+        if (prefetchHandle !== undefined) window.cancelIdleCallback(prefetchHandle);
+        document.head.removeChild(hdriPreload);
+      };
     }
     const timer = window.setTimeout(() => setMounted(true), 200);
-    return () => window.clearTimeout(timer);
+    return () => {
+      window.clearTimeout(timer);
+      document.head.removeChild(hdriPreload);
+    };
   }, []);
 
   return (
