@@ -98,7 +98,7 @@ export const ChemistryHero = ({ formula, molecule, productTitle, tuning }: Chemi
 const HeroFallback = ({ formula }: { formula: string }) => (
   <div
     aria-hidden
-    className="relative flex h-[320px] sm:h-[380px] md:h-[420px] w-full items-center justify-center overflow-hidden rounded-xl border border-border bg-gradient-to-br from-primary/5 via-background to-secondary/5"
+    className="relative flex h-[340px] sm:h-[400px] md:h-[440px] w-full items-center justify-center overflow-hidden rounded-xl border border-border bg-gradient-to-br from-primary/5 via-background to-secondary/5"
   >
     <div className="text-center">
       <div className="mb-2 inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-mono">

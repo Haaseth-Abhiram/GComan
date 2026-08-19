@@ -11,18 +11,37 @@ import { test, expect } from '@playwright/test';
 // settles.
 
 test.describe('Loading flow — never deadlocks', () => {
-  test('invalid product category resolves to "Product Not Found" (not stuck on Loading…)', async ({ page }) => {
+  test('unknown product category resolves to the generic 404 page (not stuck on Loading…)', async ({ page }) => {
     // NB: must be a category that is NOT in src/lib/legacyRedirects.ts —
     // legacy category URLs (acids/alkalis/salts/oxidizers) now client-side
     // redirect to their new homes instead of reaching the Not-Found state.
+    //
+    // Since ProductDetail was split into one literal route per real category
+    // (see src/App.tsx / src/pages/productDetail/ — each category's JSON now
+    // ships in its own chunk instead of every product page downloading all 22
+    // categories' data), an unrecognized category segment no longer matches
+    // any /products/:category/:productSlug route at all. It falls straight
+    // through to the catch-all NotFound route synchronously — no loader, no
+    // "Loading…" state, and no ProductDetail-branded "Product Not Found" copy
+    // (that's still reserved for a valid category with an unknown product
+    // slug — see the next test).
     await page.goto('/products/nonexistent-category/some-product');
 
-    // Wait for the literal text "Loading…" to disappear, OR for the
-    // Not-Found heading to render. Either path proves the loader settled
-    // and the component did not deadlock.
-    await expect(page.locator('text=Product Not Found')).toBeVisible({ timeout: 10_000 });
+    const notFoundSignal = page.locator('text=/404|page not found/i').first();
+    await expect(notFoundSignal).toBeVisible({ timeout: 10_000 });
 
     // Stale "Loading…" text must NOT linger after settle.
+    await expect(page.locator('text=/^Loading…$/')).toHaveCount(0);
+  });
+
+  test('unknown product slug within a valid category resolves to "Product Not Found" (not stuck on Loading…)', async ({ page }) => {
+    await page.goto('/products/water-treatment/nonexistent-product-slug');
+
+    // This still hits ProductDetail (the category segment is real), whose own
+    // inline not-found branch renders — this is the original deadlock-guard
+    // case the "Loading…" bug history above describes.
+    await expect(page.locator('text=Product Not Found')).toBeVisible({ timeout: 10_000 });
+
     await expect(page.locator('text=/^Loading…$/')).toHaveCount(0);
 
     // The CTA back to /products should be present for users who land here.

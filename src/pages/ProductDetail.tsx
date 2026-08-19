@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
 import { ArrowLeft, CheckCircle2, Phone, Mail, Beaker, Info, MessageCircle, Truck, Shield, Globe } from 'lucide-react';
-import { loadProductsByCategorySync } from '@/data/productLoader';
+import { hydrateProduct } from '@/data/productLoader';
 import { ProductStructuredData, BreadcrumbStructuredData, FAQStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { SEO } from '@/components/SEO';
@@ -17,17 +17,25 @@ import { ProductCard } from '@/components/products/ProductCard';
 import { ChemistryHero } from '@/components/products/ChemistryHero';
 import { ProductDetailTabs } from '@/components/products/ProductDetailTabs';
 
-const ProductDetail = () => {
-  const { category, productSlug } = useParams();
+interface ProductDetailProps {
+  /** Category slug, supplied by the per-category route entry (see src/pages/productDetail/) —
+   * not read from useParams so each category's JSON stays in its own route chunk. */
+  category: string;
+  /** Raw (unhydrated) product JSON for this category, statically imported by the route entry. */
+  rawCategoryProducts: any[];
+}
+
+const ProductDetail = ({ category, rawCategoryProducts }: ProductDetailProps) => {
+  const { productSlug } = useParams();
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
 
-  // Synchronous load: all JSON is statically imported in productLoader.ts so
-  // data is available on the first render. This guarantees the <SEO> component
-  // mounts with the correct per-product title immediately — no async window
-  // where the prerenderer or Lovable's bot renderer can snapshot a loading
-  // state that has no Helmet and therefore shows the index.html fallback title.
-  const categoryProducts = loadProductsByCategorySync(category || '');
+  // Synchronous: the route entry statically imported only this category's JSON,
+  // so data is available on the first render with no async gap. This guarantees
+  // the <SEO> component mounts with the correct per-product title immediately —
+  // no window where the prerenderer or Lovable's bot renderer can snapshot a
+  // loading state that has no Helmet and therefore shows the index.html fallback title.
+  const categoryProducts = rawCategoryProducts.map(hydrateProduct);
 
   // Find product by slug
   const product = categoryProducts.find(p =>

@@ -22,7 +22,36 @@ import { resolveLegacyRedirect } from "./lib/legacyRedirects";
 const Index = lazy(() => import("./pages/Index"));
 const About = lazy(() => import("./pages/About"));
 const Products = lazy(() => import("./pages/Products"));
-const ProductDetail = lazy(() => import("./pages/ProductDetail"));
+// One lazy entry per product category so each category's JSON lands in its own
+// route chunk (instead of every product page downloading all 22 categories'
+// data). See src/pages/productDetail/ for the per-category entry files.
+const productDetailEntries: Record<string, ReturnType<typeof lazy>> = {
+  'water-treatment': lazy(() => import("./pages/productDetail/WaterTreatment")),
+  'lubricants': lazy(() => import("./pages/productDetail/Lubricants")),
+  'oilfield': lazy(() => import("./pages/productDetail/Oilfield")),
+  'lab-chemicals': lazy(() => import("./pages/productDetail/LabChemicals")),
+  'lab-equipment': lazy(() => import("./pages/productDetail/LabEquipment")),
+  'solvents': lazy(() => import("./pages/productDetail/Solvents")),
+  'swimming-pool': lazy(() => import("./pages/productDetail/SwimmingPool")),
+  'inorganic': lazy(() => import("./pages/productDetail/Inorganic")),
+  'alcohols': lazy(() => import("./pages/productDetail/Alcohols")),
+  'glycols': lazy(() => import("./pages/productDetail/Glycols")),
+  'ethanolamines': lazy(() => import("./pages/productDetail/Ethanolamines")),
+  'food-beverage': lazy(() => import("./pages/productDetail/FoodBeverage")),
+  'construction': lazy(() => import("./pages/productDetail/Construction")),
+  'soap-detergent': lazy(() => import("./pages/productDetail/SoapDetergent")),
+  'ro-chemicals': lazy(() => import("./pages/productDetail/RoChemicals")),
+  'cooling-water': lazy(() => import("./pages/productDetail/CoolingWater")),
+  'corrosion-inhibitor': lazy(() => import("./pages/productDetail/CorrosionInhibitor")),
+  'tank-cleaners': lazy(() => import("./pages/productDetail/TankCleaners")),
+  'additives': lazy(() => import("./pages/productDetail/Additives")),
+  'agro': lazy(() => import("./pages/productDetail/Agro")),
+  'chlorinated': lazy(() => import("./pages/productDetail/Chlorinated")),
+  'calcium-carbonate': lazy(() => import("./pages/productDetail/CalciumCarbonate")),
+};
+// Derived from the registry above (not re-imported from productLoader.ts) so App.tsx's
+// own root bundle never pulls in productLoader.ts's eager category JSON imports.
+const PRODUCT_CATEGORIES = Object.keys(productDetailEntries);
 const Industries = lazy(() => import("./pages/Industries"));
 const Resources = lazy(() => import("./pages/Resources"));
 const Contact = lazy(() => import("./pages/Contact"));
@@ -123,7 +152,10 @@ const App = () => (
                 <Route path="/about" element={<About />} />
                 <Route path="/products" element={<Products />} />
                 <Route path="/products/:category" element={<Products />} />
-                <Route path="/products/:category/:productSlug" element={<ProductDetail />} />
+                {PRODUCT_CATEGORIES.map((cat) => {
+                  const Entry = productDetailEntries[cat];
+                  return <Route key={cat} path={`/products/${cat}/:productSlug`} element={<Entry />} />;
+                })}
                 <Route path="/industries" element={<Industries />} />
                 <Route path="/resources" element={<Resources />} />
                 <Route path="/contact" element={<Contact />} />
@@ -166,7 +198,10 @@ const App = () => (
                   <Route path="about" element={<About />} />
                   <Route path="products" element={<Products />} />
                   <Route path="products/:category" element={<Products />} />
-                  <Route path="products/:category/:productSlug" element={<ProductDetail />} />
+                  {PRODUCT_CATEGORIES.map((cat) => {
+                    const Entry = productDetailEntries[cat];
+                    return <Route key={cat} path={`products/${cat}/:productSlug`} element={<Entry />} />;
+                  })}
                   <Route path="industries" element={<Industries />} />
                   <Route path="resources" element={<Resources />} />
                   <Route path="contact" element={<Contact />} />

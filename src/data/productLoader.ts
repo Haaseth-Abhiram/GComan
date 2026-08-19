@@ -143,16 +143,6 @@ export async function loadAllProducts() {
   return all.flat().map(hydrateProduct);
 }
 
-/** Synchronous product data for SSR so route-specific HTML contains real SEO tags. */
-export function loadProductsByCategorySync(category: string) {
-  return (categoryData[category] || []).map(hydrateProduct);
-}
-
-/** Synchronous all-products loader for SSR. */
-export function loadAllProductsSync() {
-  return Object.values(categoryData).flat().map(hydrateProduct);
-}
-
 /** Synchronous lookup within an already-loaded array */
 export function findProduct(allProducts: any[], category: string, id: string) {
   return allProducts.find(p => p.id === id && p.category === category) || null;

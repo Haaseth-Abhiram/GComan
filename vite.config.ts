@@ -89,19 +89,32 @@ export default defineConfig(({ mode }) => ({
     // Code splitting configuration
     rollupOptions: {
       output: {
-        manualChunks: {
+        manualChunks: (id) => {
+          // Force each product category's JSON into its own chunk. Without this,
+          // Rollup's default grouping sees that Products.tsx's "browse all
+          // categories" loadAllProducts() reaches every category.json via one
+          // Promise.all() and bundles all 22 (~all 270 products) together — which
+          // then leaks into every single-category ProductDetail route entry too
+          // (see src/pages/productDetail/), even though each only needs its own
+          // category. Splitting explicitly here is what actually makes that
+          // per-category route splitting pay off.
+          const productDataMatch = id.match(/[\\/]data[\\/]products[\\/]([a-z0-9-]+)\.json$/);
+          if (productDataMatch) return `product-data-${productDataMatch[1]}`;
+
           // Vendor chunks for better caching
-          "vendor-react": ["react", "react-dom", "react-router-dom"],
-          "vendor-ui": [
-            "@radix-ui/react-dialog",
-            "@radix-ui/react-dropdown-menu",
-            "@radix-ui/react-select",
-            "@radix-ui/react-tabs",
-            "@radix-ui/react-toast",
-          ],
-          "vendor-utils": ["date-fns", "clsx", "tailwind-merge"],
+          if (/[\\/]node_modules[\\/](react|react-dom|react-router-dom)[\\/]/.test(id)) {
+            return "vendor-react";
+          }
+          if (/[\\/]node_modules[\\/]@radix-ui[\\/]react-(dialog|dropdown-menu|select|tabs|toast)[\\/]/.test(id)) {
+            return "vendor-ui";
+          }
+          if (/[\\/]node_modules[\\/](date-fns|clsx|tailwind-merge)[\\/]/.test(id)) {
+            return "vendor-utils";
+          }
           // Separate i18n for better caching
-          "vendor-i18n": ["i18next", "react-i18next", "i18next-browser-languagedetector"],
+          if (/[\\/]node_modules[\\/](i18next|react-i18next|i18next-browser-languagedetector)[\\/]/.test(id)) {
+            return "vendor-i18n";
+          }
         },
         // Optimize chunk file names for better caching
         chunkFileNames: (chunkInfo) => {
