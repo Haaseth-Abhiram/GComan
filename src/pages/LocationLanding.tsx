@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import NotFound from '@/pages/NotFound';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -883,6 +884,7 @@ const productCategories = [
 
 const LocationLanding = () => {
   const { location } = useParams<{ location: string }>();
+  const { t, i18n } = useTranslation();
 
   // Unknown city slugs render the (noindexed) 404 page — silently redirecting
   // to /contact taught crawlers that any /chemicals/* URL resolves with 200.
@@ -891,10 +893,51 @@ const LocationLanding = () => {
   }
 
   const locationData = locations[location];
+  const isAr = i18n.language === 'ar';
+  const cityLabel = isAr ? locationData.cityArabic : locationData.city;
+
+  // Arabic SEO meta — only when a real translation exists in
+  // location-pages-ar.json (currently the 5 Saudi Arabia cities). Passing
+  // arTitle/arDescription to <SEO> makes the /ar twin indexable with a
+  // localized meta layer and emits hreflang pairs on both language versions;
+  // cities without a translation stay noindex on /ar (see CLAUDE.md's
+  // Arabic SEO model — never index a page whose body is still English).
+  const tAr = i18n.getFixedT('ar');
+  const hasArabicSeo =
+    i18n.exists(`locationPages.${location}.description`, { lng: 'ar' }) &&
+    i18n.exists(`locationPages.${location}.metaTitle`, { lng: 'ar' });
+  const arSeoTitle = hasArabicSeo ? tAr(`locationPages.${location}.metaTitle`) : undefined;
+  const arSeoDescription = hasArabicSeo ? tAr(`locationPages.${location}.metaDescription`) : undefined;
+
+  // Body content translation, mirroring ProductDetail.tsx's pattern: swap to
+  // the Arabic strings when the /ar route is active and a translation exists,
+  // otherwise fall back to the English data so untranslated cities render
+  // correctly (in English) even when visited under /ar/chemicals/:location.
+  const translatedDescription = isAr
+    ? t(`locationPages.${location}.description`, { defaultValue: locationData.description })
+    : locationData.description;
+  const translatedIndustries = isAr
+    ? (t(`locationPages.${location}.industries`, { returnObjects: true, defaultValue: locationData.industries }) as string[])
+    : locationData.industries;
+  const translatedDeliveryTime = isAr
+    ? t(`locationPages.${location}.deliveryTime`, { defaultValue: locationData.deliveryTime })
+    : locationData.deliveryTime;
+  const translatedKeyClients = isAr
+    ? (t(`locationPages.${location}.keyClients`, { returnObjects: true, defaultValue: locationData.keyClients }) as string[])
+    : locationData.keyClients;
+  const translatedHighlights = isAr
+    ? (t(`locationPages.${location}.highlights`, { returnObjects: true, defaultValue: locationData.highlights }) as string[])
+    : locationData.highlights;
+  const translatedFaqs = isAr
+    ? (t(`locationPages.${location}.faqs`, { returnObjects: true, defaultValue: locationData.faqs }) as { question: string; answer: string }[])
+    : locationData.faqs;
+  const translatedMetaKeywords = isAr
+    ? t(`locationPages.${location}.metaKeywords`, { defaultValue: locationData.metaKeywords })
+    : locationData.metaKeywords;
 
   const breadcrumbItems = [
-    { name: 'Home', url: 'https://gcoman.com/' },
-    { name: `Chemicals ${locationData.city}`, url: `https://gcoman.com/chemicals/${locationData.slug}` }
+    { name: isAr ? 'الرئيسية' : 'Home', url: 'https://gcoman.com/' },
+    { name: isAr ? `كيماويات ${locationData.cityArabic}` : `Chemicals ${locationData.city}`, url: `https://gcoman.com/chemicals/${locationData.slug}` }
   ];
 
   return (
@@ -902,14 +945,16 @@ const LocationLanding = () => {
       <SEO
         title={locationData.metaTitle}
         description={locationData.metaDescription}
-        keywords={locationData.metaKeywords}
+        arTitle={arSeoTitle}
+        arDescription={arSeoDescription}
+        keywords={translatedMetaKeywords}
         ogTitle={`Chemical Supplier in ${locationData.city}, ${locationData.country} | Global Chemicals LLC`}
         ogDescription={locationData.metaDescription}
         ogUrl={`https://gcoman.com/chemicals/${locationData.slug}`}
         canonical={`https://gcoman.com/chemicals/${locationData.slug}`}
       />
       <BreadcrumbStructuredData items={breadcrumbItems} />
-      <FAQStructuredData faqs={locationData.faqs} />
+      <FAQStructuredData faqs={translatedFaqs} />
       <SpeakableStructuredData url={`https://gcoman.com/chemicals/${locationData.slug}`} cssSelector={["h1", "h2", ".speakable"]} />
 
       <Navigation />
@@ -930,17 +975,21 @@ const LocationLanding = () => {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              Chemical Supplier in <span className="text-primary">{locationData.city}</span>
+              {isAr ? (
+                <>مورد الكيماويات في <span className="text-primary">{locationData.cityArabic}</span></>
+              ) : (
+                <>Chemical Supplier in <span className="text-primary">{locationData.city}</span></>
+              )}
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground mb-8 speakable">
-              {locationData.description}
+              {translatedDescription}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Button size="lg" asChild>
                 <LocalizedLink to="/contact">
-                  Request Quote for {locationData.city}
+                  {isAr ? `اطلب عرض سعر لـ${cityLabel}` : `Request Quote for ${locationData.city}`}
                   <ChevronRight className="ml-2 h-4 w-4" />
                 </LocalizedLink>
               </Button>
@@ -956,15 +1005,15 @@ const LocationLanding = () => {
             <div className="flex flex-wrap gap-3">
               <Badge variant="outline" className="bg-emerald-500/10 border-emerald-500/30 text-emerald-700 dark:text-emerald-400">
                 <Shield className="w-3 h-3 mr-1" />
-                ISO 9001 Certified
+                {isAr ? 'معتمدة آيزو 9001' : 'ISO 9001 Certified'}
               </Badge>
               <Badge variant="outline" className="bg-blue-500/10 border-blue-500/30 text-blue-700 dark:text-blue-400">
                 <Award className="w-3 h-3 mr-1" />
-                JSRS Registered
+                {isAr ? 'مسجّلة في JSRS' : 'JSRS Registered'}
               </Badge>
               <Badge variant="outline" className="bg-primary/10 border-primary/30">
                 <Truck className="w-3 h-3 mr-1" />
-                {locationData.deliveryTime}
+                {translatedDeliveryTime}
               </Badge>
             </div>
           </div>
@@ -976,10 +1025,10 @@ const LocationLanding = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold mb-8 text-center">
-              Industries We Serve in {locationData.city}
+              {isAr ? `القطاعات التي نخدمها في ${cityLabel}` : `Industries We Serve in ${locationData.city}`}
             </h2>
             <div className="flex flex-wrap justify-center gap-3">
-              {locationData.industries.map((industry, index) => (
+              {translatedIndustries.map((industry, index) => (
                 <Badge key={index} variant="secondary" className="text-sm py-2 px-4">
                   {industry}
                 </Badge>
@@ -994,10 +1043,12 @@ const LocationLanding = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold mb-4 text-center">
-              Chemicals Available in {locationData.city}
+              {isAr ? `الكيماويات المتوفرة في ${cityLabel}` : `Chemicals Available in ${locationData.city}`}
             </h2>
             <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-              We supply a comprehensive range of industrial and specialty chemicals to {locationData.city} businesses
+              {isAr
+                ? `نورّد مجموعة شاملة من الكيماويات الصناعية والمتخصصة للشركات في ${cityLabel}`
+                : `We supply a comprehensive range of industrial and specialty chemicals to ${locationData.city} businesses`}
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -1055,13 +1106,13 @@ const LocationLanding = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold mb-8 text-center">
-              Why Choose Global Chemicals LLC in {locationData.city}?
+              {isAr ? `لماذا تختار شركة جلوبال كيميكالز في ${cityLabel}؟` : `Why Choose Global Chemicals LLC in ${locationData.city}?`}
             </h2>
 
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <ul className="space-y-4">
-                  {locationData.highlights.map((highlight, index) => (
+                  {translatedHighlights.map((highlight, index) => (
                     <li key={index} className="flex items-start gap-3">
                       <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                       <span>{highlight}</span>
@@ -1074,15 +1125,15 @@ const LocationLanding = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Truck className="h-5 w-5 text-primary" />
-                    Delivery to {locationData.city}
+                    {isAr ? `التوصيل إلى ${cityLabel}` : `Delivery to ${locationData.city}`}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <p className="text-muted-foreground">{locationData.deliveryTime}</p>
+                  <p className="text-muted-foreground">{translatedDeliveryTime}</p>
                   <div className="space-y-2">
-                    <p className="font-medium">Key Clients in {locationData.city}:</p>
+                    <p className="font-medium">{isAr ? `أبرز العملاء في ${cityLabel}:` : `Key Clients in ${locationData.city}:`}</p>
                     <ul className="text-sm text-muted-foreground space-y-1">
-                      {locationData.keyClients.map((client, index) => (
+                      {translatedKeyClients.map((client, index) => (
                         <li key={index}>• {client}</li>
                       ))}
                     </ul>
@@ -1099,11 +1150,11 @@ const LocationLanding = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-8 text-center">
-              Frequently Asked Questions - {locationData.city}
+              {isAr ? `الأسئلة الشائعة - ${cityLabel}` : `Frequently Asked Questions - ${locationData.city}`}
             </h2>
 
             <div className="space-y-4">
-              {locationData.faqs.map((faq, index) => (
+              {translatedFaqs.map((faq, index) => (
                 <Card key={index} className="logo-gradient-border relative">
                   <CardHeader>
                     <CardTitle className="text-lg">{faq.question}</CardTitle>
@@ -1123,19 +1174,21 @@ const LocationLanding = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">
-              Get Chemicals Delivered to {locationData.city}
+              {isAr ? `احصل على توصيل الكيماويات إلى ${cityLabel}` : `Get Chemicals Delivered to ${locationData.city}`}
             </h2>
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Contact our team for product availability, pricing, and delivery schedules to {locationData.city} and {locationData.region}.
+              {isAr
+                ? `تواصل مع فريقنا لمعرفة توفر المنتجات والأسعار ومواعيد التوصيل إلى ${cityLabel}.`
+                : `Contact our team for product availability, pricing, and delivery schedules to ${locationData.city} and ${locationData.region}.`}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Button size="lg" asChild>
-                <LocalizedLink to="/contact">Contact Us</LocalizedLink>
+                <LocalizedLink to="/contact">{isAr ? 'تواصل معنا' : 'Contact Us'}</LocalizedLink>
               </Button>
               <Button size="lg" variant="outline" asChild>
                 <a href="https://wa.me/96893754388">
-                  WhatsApp Us
+                  {isAr ? 'تواصل عبر واتساب' : 'WhatsApp Us'}
                 </a>
               </Button>
             </div>

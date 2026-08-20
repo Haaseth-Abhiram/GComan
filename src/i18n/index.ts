@@ -4,6 +4,7 @@ import { initReactI18next } from 'react-i18next';
 import en from './locales/en.json';
 import ar from './locales/ar.json';
 import productsAr from './locales/products-ar.json';
+import locationPagesAr from './locales/location-pages-ar.json';
 
 const isBrowser = typeof document !== 'undefined';
 
@@ -11,9 +12,13 @@ const isBrowser = typeof document !== 'undefined';
 // Both files define a top-level `products` key (ar.json holds the products-page
 // UI strings, products-ar.json holds per-product-id translations), so the
 // namespace must be deep-merged — a shallow spread would drop the UI strings.
+// location-pages-ar.json defines a fresh top-level `locationPages` key (distinct
+// from ar.json's existing `locations`, which only holds short Oman city-name
+// labels for the footer) — a shallow spread is safe here, no deep merge needed.
 const mergedAr = {
   ...ar,
   ...productsAr,
+  ...locationPagesAr,
   products: {
     ...ar.products,
     ...productsAr.products,
