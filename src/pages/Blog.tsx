@@ -29,6 +29,7 @@ export interface BlogPost {
   image?: string;
   icon: any;
   faqs?: { question: string; answer: string }[];
+  relatedLocations?: { slug: string; label: string }[];
   howTo?: {
     name: string;
     description: string;
@@ -849,6 +850,15 @@ Global Chemicals LLC ships to all 6 GCC countries from our Muscat warehouse. We 
     category: 'Industry Guide',
     tags: ['Chemical Exporter', 'Saudi Arabia', 'Qatar', 'Kuwait', 'GCC Export', 'Oman Chemical Supplier'],
     icon: Globe2,
+    relatedLocations: [
+      { slug: 'riyadh', label: 'Riyadh' },
+      { slug: 'jeddah', label: 'Jeddah' },
+      { slug: 'dammam', label: 'Dammam' },
+      { slug: 'jubail', label: 'Jubail Industrial City' },
+      { slug: 'yanbu', label: 'Yanbu' },
+      { slug: 'doha', label: 'Doha' },
+      { slug: 'kuwait-city', label: 'Kuwait City' },
+    ],
     howTo: {
       name: 'How to Order Chemicals from Oman for Delivery to Saudi Arabia, Qatar, or Kuwait',
       description: 'Step-by-step guide for GCC procurement teams to source and import chemicals from Global Chemicals LLC in Muscat, Oman, to Saudi Arabia, Qatar, or Kuwait.',
@@ -1213,6 +1223,13 @@ Global Chemicals LLC supplies the core chemical categories used across GCC desal
     category: 'Water Treatment',
     tags: ['Desalination', 'Water Treatment', 'GCC', 'RO', 'MSF', 'MED', 'Antiscalant', 'Biocide', 'Saudi Arabia', 'Qatar', 'Kuwait', 'Bahrain'],
     icon: Droplets,
+    relatedLocations: [
+      { slug: 'jubail', label: 'Jubail Industrial City' },
+      { slug: 'sohar', label: 'Sohar' },
+      { slug: 'doha', label: 'Doha' },
+      { slug: 'kuwait-city', label: 'Kuwait City' },
+      { slug: 'bahrain', label: 'Bahrain' },
+    ],
     faqs: [
       {
         question: 'Why does desalination water treatment chemistry matter across the whole GCC, not just one country?',

@@ -7,7 +7,8 @@ import { ArticleStructuredData, BreadcrumbStructuredData, FAQStructuredData, How
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Calendar, Clock, User, ArrowLeft, Tag } from 'lucide-react';
+import { Calendar, Clock, User, ArrowLeft, Tag, ChevronRight } from 'lucide-react';
+import { LocalizedLink } from '@/components/LocalizedLink';
 import { blogPosts } from './Blog';
 
 const BlogPost = () => {
@@ -175,6 +176,22 @@ const BlogPost = () => {
                     </AccordionItem>
                   ))}
                 </Accordion>
+              </div>
+            )}
+
+            {post.relatedLocations && post.relatedLocations.length > 0 && (
+              <div className="mt-10">
+                <p className="text-sm font-medium text-muted-foreground mb-3">We supply to:</p>
+                <div className="flex flex-wrap gap-2">
+                  {post.relatedLocations.map((loc) => (
+                    <Button key={loc.slug} variant="outline" size="sm" asChild>
+                      <LocalizedLink to={`/chemicals/${loc.slug}`}>
+                        {loc.label}
+                        <ChevronRight className="ml-1 h-3 w-3" />
+                      </LocalizedLink>
+                    </Button>
+                  ))}
+                </div>
               </div>
             )}
 
