@@ -202,13 +202,17 @@ const Hero = () => {
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`h-2 rounded-full transition-all ${
-                  index === currentSlide 
-                    ? 'w-8 bg-primary' 
-                    : 'w-2 bg-white/40 hover:bg-white/60'
-                }`}
+                className="flex items-center justify-center p-3 -m-3"
                 aria-label={`Go to slide ${index + 1}`}
-              />
+              >
+                <span
+                  className={`block h-2 rounded-full transition-all ${
+                    index === currentSlide
+                      ? 'w-8 bg-primary'
+                      : 'w-2 bg-white/40 hover:bg-white/60'
+                  }`}
+                />
+              </button>
             ))}
           </div>
         </div>
