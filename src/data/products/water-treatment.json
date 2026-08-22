@@ -4,6 +4,7 @@
     "title": "Activated Carbon",
     "description": "High-performance adsorbent for removing impurities, odors, and contaminants from water.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "casNumber": "64365-11-3",
@@ -45,6 +46,7 @@
     "title": "Aluminium Sulphate - Liquid",
     "description": "Liquid coagulant for efficient flocculation in water and wastewater treatment.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "formula": "Al2(SO4)3",
@@ -86,6 +88,7 @@
     "title": "Aluminium Sulphate - Powder",
     "description": "Powder form coagulant for water clarification and purification processes.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/white-powder.webp",
     "iconName": "Droplets",
     "details": {
       "formula": "Al2(SO4)3",
@@ -127,6 +130,7 @@
     "title": "Antifoam",
     "description": "Controls foam in water treatment processes and industrial applications.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "alternativeNames": [
@@ -167,6 +171,7 @@
     "title": "Antiscalant",
     "description": "Prevents scale formation in RO systems, boilers, and cooling towers.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "alternativeNames": [
@@ -226,6 +231,7 @@
     "title": "Biocide",
     "description": "Antimicrobial agent for controlling bacteria, algae, and fungi in water systems.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "alternativeNames": [
@@ -267,6 +273,7 @@
     "title": "Calcium Carbonate",
     "description": "Mineral supplement for pH adjustment and alkalinity control in water treatment.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "formula": "CaCO3",
@@ -309,6 +316,7 @@
     "title": "Calcium Chloride",
     "description": "Desiccant and de-icing agent used in wastewater treatment and concrete acceleration.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "formula": "CaCl2",
@@ -351,6 +359,7 @@
     "title": "Caustic Soda Flakes",
     "description": "Sodium hydroxide in flake form for pH adjustment and neutralization.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/granules-flakes.webp",
     "iconName": "Droplets",
     "details": {
       "formula": "NaOH",
@@ -459,6 +468,7 @@
     "title": "Caustic Soda Liquid",
     "description": "Liquid sodium hydroxide for industrial cleaning and chemical processing.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "formula": "NaOH",
@@ -520,6 +530,7 @@
     "title": "Calcium Hypochlorite 65–75%",
     "description": "Powerful oxidizing agent and disinfectant for water sanitization and bleaching.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "formula": "Ca(ClO)2",
@@ -582,6 +593,7 @@
     "title": "Sodium Hypochlorite",
     "description": "Liquid bleach and disinfectant for water purification.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "formula": "NaClO",
@@ -649,6 +661,7 @@
     "title": "Caustic Soda Prills",
     "description": "High-purity sodium hydroxide beads for precise dosing and handling.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/granules-flakes.webp",
     "iconName": "Droplets",
     "details": {
       "formula": "NaOH",
@@ -693,6 +706,7 @@
     "title": "Chlorine Tablets TCCA or TICA",
     "description": "Stabilized chlorine tablets for continuous water disinfection and sanitation.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/granules-flakes.webp",
     "iconName": "Droplets",
     "details": {
       "formula": "C3Cl3N3O3",
@@ -736,6 +750,7 @@
     "title": "Citric Acid Anhydrous",
     "description": "Water-free citric acid for descaling, cleaning, and pH control.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "formula": "C6H8O7",
@@ -778,6 +793,7 @@
     "title": "Citric Acid Monohydrate",
     "description": "Hydrated citric acid for chelating metals and preventing scale buildup.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "formula": "C6H8O7·H2O",
@@ -820,6 +836,7 @@
     "title": "Copper Sulphate Liquid",
     "description": "Algaecide and fungicide for controlling algae growth in water bodies.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "formula": "CuSO4",
@@ -863,6 +880,7 @@
     "title": "Corrosion Inhibitor",
     "description": "Protects metal surfaces from corrosion in water systems and pipelines.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "alternativeNames": [
@@ -904,6 +922,7 @@
     "title": "DEG (Diethylene Glycol)",
     "description": "Solvent and humectant for industrial water treatment applications.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "formula": "C4H10O3",
@@ -947,6 +966,7 @@
     "title": "EDTA Powder",
     "description": "Chelating agent for metal ion sequestration and water softening.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/white-powder.webp",
     "iconName": "Droplets",
     "details": {
       "formula": "C10H16N2O8",
@@ -990,6 +1010,7 @@
     "title": "Ethanol 99%",
     "description": "High-purity ethanol for disinfection and chemical synthesis.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "formula": "C2H5OH",
@@ -1033,6 +1054,7 @@
     "title": "Ferric Chloride Liquid 40%",
     "description": "Powerful coagulant for wastewater treatment and phosphorus removal.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "formula": "FeCl3",
@@ -1076,6 +1098,7 @@
     "title": "Ferrous Sulphate",
     "description": "Flocculant and reducing agent for industrial wastewater treatment.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "formula": "FeSO4·7H2O",
@@ -1119,6 +1142,7 @@
     "title": "Glycerine",
     "description": "Humectant and solvent used in various water treatment formulations.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "formula": "C3H8O3",
@@ -1162,6 +1186,7 @@
     "title": "Hydrated Lime Tech Grade",
     "description": "Calcium hydroxide for pH adjustment and water softening.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "formula": "Ca(OH)2",
@@ -1223,6 +1248,7 @@
     "title": "Hydrazine Hydrate",
     "description": "Oxygen scavenger for boiler water treatment and corrosion prevention.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "formula": "N2H4·H2O",
@@ -1266,6 +1292,7 @@
     "title": "MEG (Monoethylene Glycol)",
     "description": "Antifreeze and heat transfer fluid for cooling systems.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "formula": "C2H6O2",
@@ -1309,6 +1336,7 @@
     "title": "MPG (Monopropylene Glycol)",
     "description": "Food-grade antifreeze and coolant for water systems.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "formula": "C3H8O2",
@@ -1352,6 +1380,7 @@
     "title": "Paraffin Wax",
     "description": "Hydrocarbon wax used in water treatment and industrial applications.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "alternativeNames": [
@@ -1393,6 +1422,7 @@
     "title": "Petroleum Jelly",
     "description": "Protective coating and lubricant for water treatment equipment.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "alternativeNames": [
@@ -1434,6 +1464,7 @@
     "title": "Poly Aluminium Chloride Liquid",
     "description": "Advanced liquid coagulant for superior water clarification.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "formula": "Al2(OH)nCl6-n",
@@ -1494,6 +1525,7 @@
     "title": "Poly Aluminium Chloride Powder",
     "description": "High-efficiency powder coagulant for municipal and industrial water treatment.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/white-powder.webp",
     "iconName": "Droplets",
     "details": {
       "formula": "Al2(OH)nCl6-n",
@@ -1552,6 +1584,7 @@
     "title": "Polyelectrolyte",
     "description": "Polymer flocculant for solid-liquid separation and sludge dewatering.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "alternativeNames": [
@@ -1593,6 +1626,7 @@
     "title": "Potassium Hydroxide",
     "description": "Strong alkali for pH adjustment and neutralization processes.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "formula": "KOH",
@@ -1636,6 +1670,7 @@
     "title": "Soda Ash",
     "description": "Sodium carbonate for water softening and pH control.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "formula": "Na2CO3",
@@ -1679,6 +1714,7 @@
     "title": "Sodium Bicarbonate",
     "description": "Alkalinity builder and pH buffer for water treatment systems.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "formula": "NaHCO3",
@@ -1722,6 +1758,7 @@
     "title": "Sodium Bisulphate / Bisulphite",
     "description": "Reducing agent and dechlorination chemical for water treatment.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "formula": "NaHSO4 / NaHSO3",
@@ -1764,6 +1801,7 @@
     "title": "Sodium Hexametaphosphate",
     "description": "Sequestering agent for preventing scale and corrosion in water systems.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "formula": "(NaPO3)6",
@@ -1807,6 +1845,7 @@
     "title": "Sodium Hypochlorite Solution",
     "description": "Liquid bleach and disinfectant for water purification.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "formula": "NaOCl",
@@ -1850,6 +1889,7 @@
     "title": "Sodium Meta Silicate",
     "description": "Alkaline builder and detergent for industrial cleaning and water treatment.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "formula": "Na2SiO3",
@@ -1893,6 +1933,7 @@
     "title": "Sodium Metabisulphite",
     "description": "Preservative and dechlorination agent for water treatment.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "formula": "Na2S2O5",
@@ -1936,6 +1977,7 @@
     "title": "Sodium Sulphite",
     "description": "Oxygen scavenger and preservative for boiler water treatment.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "formula": "Na2SO3",
@@ -1978,6 +2020,7 @@
     "title": "Sulphamic Acid",
     "description": "Descaling agent for removing mineral deposits from equipment.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "formula": "H3NSO3",
@@ -2020,6 +2063,7 @@
     "title": "Tri Ethanol Amine",
     "description": "Corrosion inhibitor and pH adjuster for water systems.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "formula": "C6H15NO3",
@@ -2063,6 +2107,7 @@
     "title": "TSP (Tri Sodium Phosphate)",
     "description": "Heavy-duty cleaner and degreaser for industrial water treatment.",
     "category": "water-treatment",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
     "details": {
       "formula": "Na3PO4",

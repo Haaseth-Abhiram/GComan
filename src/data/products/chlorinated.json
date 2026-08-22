@@ -4,6 +4,7 @@
     "title": "Trichloroethylene (TCE)",
     "description": "High-purity trichloroethylene for metal degreasing and industrial cleaning.",
     "category": "chlorinated",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Flame",
     "details": {
       "formula": "C2HCl3",
@@ -56,6 +57,7 @@
     "title": "Perchloroethylene (PCE)",
     "description": "Industrial perchloroethylene for dry cleaning and metal degreasing.",
     "category": "chlorinated",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Flame",
     "details": {
       "formula": "C2Cl4",
@@ -108,6 +110,7 @@
     "title": "Methylene Chloride (Industrial Grade)",
     "description": "Industrial methylene chloride for paint stripping and industrial cleaning.",
     "category": "chlorinated",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Flame",
     "details": {
       "formula": "CH2Cl2",

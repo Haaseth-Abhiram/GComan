@@ -4,6 +4,7 @@
     "title": "Aluminum Sulfate (Alum)",
     "description": "Industrial aluminum sulfate for water treatment and paper manufacturing.",
     "category": "inorganic",
+    "image": "https://gcoman.com/images/products/white-powder.webp",
     "iconName": "Microscope",
     "details": {
       "formula": "Al2(SO4)3",
@@ -60,6 +61,7 @@
     "title": "Ferric Chloride",
     "description": "Industrial ferric chloride for wastewater treatment and etching.",
     "category": "inorganic",
+    "image": "https://gcoman.com/images/products/white-powder.webp",
     "iconName": "Microscope",
     "details": {
       "formula": "FeCl3",
@@ -105,6 +107,7 @@
     "title": "Quicklime (Calcium Oxide)",
     "description": "Industrial quicklime for pH adjustment, water treatment, and manufacturing.",
     "category": "inorganic",
+    "image": "https://gcoman.com/images/products/white-powder.webp",
     "iconName": "Microscope",
     "details": {
       "formula": "CaO",
@@ -157,6 +160,7 @@
     "title": "Poly Aluminum Chloride (PAC)",
     "description": "High-efficiency polyaluminum chloride coagulant for water treatment.",
     "category": "inorganic",
+    "image": "https://gcoman.com/images/products/white-powder.webp",
     "iconName": "Microscope",
     "details": {
       "formula": "[Al2(OH)nCl6-n]m",
@@ -221,6 +225,7 @@
     "title": "Sodium Silicate Solution (Water Glass)",
     "description": "Industrial sodium silicate for detergents, adhesives, and manufacturing.",
     "category": "inorganic",
+    "image": "https://gcoman.com/images/products/white-powder.webp",
     "iconName": "Microscope",
     "details": {
       "formula": "Na2SiO3",
@@ -266,6 +271,7 @@
     "title": "Zinc Sulfate",
     "description": "Industrial zinc sulfate for agriculture, water treatment, and manufacturing.",
     "category": "inorganic",
+    "image": "https://gcoman.com/images/products/white-powder.webp",
     "iconName": "Microscope",
     "details": {
       "formula": "ZnSO4",

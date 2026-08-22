@@ -4,6 +4,7 @@
     "title": "Acetic Acid",
     "description": "Organic acid used in chemical synthesis and industrial processes.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "formula": "CH3COOH",
@@ -47,6 +48,7 @@
     "title": "Activated Alumina Desiccant",
     "description": "High-capacity desiccant for moisture removal and gas drying.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "casNumber": "1344-28-1",
@@ -92,6 +94,7 @@
     "title": "Activated Carbon",
     "description": "Highly porous carbon for adsorption and purification applications.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "casNumber": "7440-44-0",
@@ -142,6 +145,7 @@
     "title": "Ammonium Bifluoride",
     "description": "Etching and cleaning agent for industrial applications.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "formula": "NH4HF2",
@@ -186,6 +190,7 @@
     "title": "Ammonium Bisulphite",
     "description": "Reducing agent and oxygen scavenger for industrial processes.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "formula": "NH4HSO3",
@@ -236,6 +241,7 @@
     "title": "Ammonium Chloride",
     "description": "Inorganic compound used in drilling fluids and metal treatment.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "formula": "NH4Cl",
@@ -280,6 +286,7 @@
     "title": "Barium Chloride",
     "description": "Heavy metal salt for brine formulation and drilling applications.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "formula": "BaCl2",
@@ -324,6 +331,7 @@
     "title": "Bentonite Powder",
     "description": "Clay-based drilling mud additive for viscosity control.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "casNumber": "1302-78-9",
@@ -370,6 +378,7 @@
     "title": "Borax Powder",
     "description": "Multipurpose boron compound for industrial applications.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "formula": "Na2B4O7·10H2O",
@@ -416,6 +425,7 @@
     "title": "Boric Acid",
     "description": "Weak acid used in chemical synthesis and industrial processes.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "formula": "H3BO3",
@@ -461,6 +471,7 @@
     "title": "Butyl Glycol",
     "description": "Solvent for paints, coatings, and cleaning formulations.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "formula": "C6H14O2",
@@ -509,6 +520,7 @@
     "title": "Calcium Bromide Powder/Liquid",
     "description": "High-density brine for drilling and completion fluids.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "formula": "CaBr2",
@@ -555,6 +567,7 @@
     "title": "Citric Acid Food Grade",
     "description": "Food-grade organic acid for cleaning and pH control.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "formula": "C6H8O7",
@@ -600,6 +613,7 @@
     "title": "Calcium Chloride",
     "description": "Dense brine solution for well completion and workover operations.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "formula": "CaCl2",
@@ -652,6 +666,7 @@
     "title": "Citric Acid Liquid",
     "description": "Liquid acidizing agent for well stimulation and scale removal.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "formula": "C6H8O7",
@@ -698,6 +713,7 @@
     "title": "Citric Acid Powder",
     "description": "Powder form for scale removal and well acidizing.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "formula": "C6H8O7",
@@ -743,6 +759,7 @@
     "title": "CMC Carboxymethylcellulose",
     "description": "Fluid loss control agent and viscosifier for drilling fluids.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "casNumber": "9000-11-7",
@@ -789,6 +806,7 @@
     "title": "Diesel Exhaust Fluid",
     "description": "Emission control solution for diesel engines.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "casNumber": "57-13-6",
@@ -836,6 +854,7 @@
     "title": "Corrosion Inhibitor",
     "description": "Protective chemicals for pipelines and equipment.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "alternativeNames": [
@@ -890,6 +909,7 @@
     "title": "DEA (Diethanolamine)",
     "description": "Gas sweetening agent for acid gas removal.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "formula": "C4H11NO2",
@@ -938,6 +958,7 @@
     "title": "DEG (Diethylene Glycol)",
     "description": "Dehydration agent and inhibitor for gas processing.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "formula": "C4H10O3",
@@ -985,6 +1006,7 @@
     "title": "Degreaser HD",
     "description": "Heavy-duty industrial degreaser for equipment cleaning.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "alternativeNames": [
@@ -1030,6 +1052,7 @@
     "title": "Descalant",
     "description": "Chemical for removing mineral scale deposits.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "alternativeNames": [
@@ -1081,6 +1104,7 @@
     "title": "EDTA Liquid",
     "description": "Chelating agent for scale removal and metal control.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "formula": "C10H16N2O8",
@@ -1127,6 +1151,7 @@
     "title": "EDTA Powder",
     "description": "Powder chelating agent for industrial applications.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "formula": "C10H16N2O8",
@@ -1173,6 +1198,7 @@
     "title": "Formic Acid",
     "description": "Organic acid for drilling fluids and acidizing.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "formula": "HCOOH",
@@ -1220,6 +1246,7 @@
     "title": "Hydrazine Hydrate",
     "description": "Oxygen scavenger for boiler water treatment.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "formula": "N2H4·H2O",
@@ -1267,6 +1294,7 @@
     "title": "Magnesium Oxide",
     "description": "Refractory material and chemical intermediate.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "formula": "MgO",
@@ -1314,6 +1342,7 @@
     "title": "MDEA (Methyl Diethanolamine)",
     "description": "Selective gas treating solvent for acid gas removal.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "formula": "C5H13NO2",
@@ -1372,6 +1401,7 @@
     "title": "MEA (Monoethanolamine)",
     "description": "Amine for CO2 and H2S removal from gas streams.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "formula": "C2H7NO",
@@ -1419,6 +1449,7 @@
     "title": "MEG (Monoethylene Glycol)",
     "description": "Hydrate inhibitor and dehydration agent.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "formula": "C2H6O2",
@@ -1477,6 +1508,7 @@
     "title": "Methanol Tech Grade",
     "description": "Hydrate inhibitor and antifreeze for gas systems.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "formula": "CH3OH",
@@ -1535,6 +1567,7 @@
     "title": "Potassium Carbonate",
     "description": "Alkaline salt for gas treating and chemical processes.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "formula": "K2CO3",
@@ -1582,6 +1615,7 @@
     "title": "Potassium Chloride",
     "description": "Shale inhibitor for water-based drilling fluids.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "formula": "KCl",
@@ -1628,6 +1662,7 @@
     "title": "Potassium Hydroxide",
     "description": "Strong base for pH control and chemical synthesis.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "formula": "KOH",
@@ -1675,6 +1710,7 @@
     "title": "Potassium Iodide",
     "description": "Chemical intermediate and analytical reagent.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "formula": "KI",
@@ -1721,6 +1757,7 @@
     "title": "Silica Gel Blue",
     "description": "Indicating desiccant for moisture control.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "casNumber": "112926-00-8",
@@ -1765,6 +1802,7 @@
     "title": "Silica Gel Orange",
     "description": "Color-changing desiccant for humidity monitoring.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "casNumber": "112926-00-8",
@@ -1810,6 +1848,7 @@
     "title": "Silica Gel White",
     "description": "Non-indicating desiccant for moisture absorption.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "casNumber": "112926-00-8",
@@ -1855,6 +1894,7 @@
     "title": "Soda Ash Dense",
     "description": "Sodium carbonate for pH control and water treatment.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "formula": "Na2CO3",
@@ -1901,6 +1941,7 @@
     "title": "Soda Ash Light",
     "description": "Light density sodium carbonate for various applications.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "formula": "Na2CO3",
@@ -1946,6 +1987,7 @@
     "title": "Sodium Nitrate",
     "description": "Oxidizing agent for industrial processes.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "formula": "NaNO3",
@@ -1991,6 +2033,7 @@
     "title": "Sodium Nitrite",
     "description": "Corrosion inhibitor and oxidizing agent.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "formula": "NaNO2",
@@ -2036,6 +2079,7 @@
     "title": "Sodium Thiosulphate Liquid",
     "description": "Dechlorination agent and neutralizer.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "formula": "Na2S2O3",
@@ -2081,6 +2125,7 @@
     "title": "Sodium Thiosulphate Powder",
     "description": "Powder form for neutralization and treatment.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "formula": "Na2S2O3",
@@ -2126,6 +2171,7 @@
     "title": "Solvent Naphtha",
     "description": "Petroleum solvent for industrial cleaning and processing.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "casNumber": "64742-89-8",
@@ -2171,6 +2217,7 @@
     "title": "Surfactant, Sodium Silicate Alkaline and Neutral",
     "description": "Surface active agents and silicates for drilling applications.",
     "category": "oilfield",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
     "details": {
       "casNumber": "1344-09-8",

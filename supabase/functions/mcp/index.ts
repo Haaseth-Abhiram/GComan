@@ -54,6 +54,7 @@ var additives_default = [
     title: "Industrial Additives",
     description: "Specialty industrial additives to enhance performance, stability, and quality of coatings, plastics, lubricants, and process chemicals across Oman and the GCC.",
     category: "additives",
+    image: "https://gcoman.com/images/products/white-powder.webp",
     iconName: "Zap",
     details: {
       alternativeNames: [
@@ -113,6 +114,7 @@ var agro_default = [
     title: "Urea 46% N Fertilizer",
     description: "Prilled and granular urea (46-0-0) \u2014 the most concentrated solid nitrogen fertilizer, supplied to date palm, vegetable, and cereal growers across Oman.",
     category: "agro",
+    image: "https://gcoman.com/images/products/granules-fertilizer.webp",
     iconName: "Wheat",
     details: {
       formula: "CO(NH2)2",
@@ -150,6 +152,7 @@ var agro_default = [
     title: "Diammonium Phosphate (DAP 18-46-0)",
     description: "Granular DAP fertilizer \u2014 18% nitrogen, 46% phosphate \u2014 the highest-analysis phosphorus fertilizer for base dressing across Omani farms.",
     category: "agro",
+    image: "https://gcoman.com/images/products/granules-fertilizer.webp",
     iconName: "Wheat",
     details: {
       formula: "(NH4)2HPO4",
@@ -185,6 +188,7 @@ var agro_default = [
     title: "NPK Compound Fertilizers (Custom Blends)",
     description: "Compound and custom-blended NPK fertilizers \u2014 20-20-20, 19-19-19, 15-15-15 and tailored ratios for Oman's date palm, vegetable, and greenhouse growers.",
     category: "agro",
+    image: "https://gcoman.com/images/products/granules-fertilizer.webp",
     iconName: "Wheat",
     details: {
       alternativeNames: ["NPK 20-20-20", "NPK 19-19-19", "NPK 15-15-15", "Compound fertilizer", "Water-soluble NPK", "Fertigation grade NPK"],
@@ -219,6 +223,7 @@ var agro_default = [
     title: "Potassium Chloride (MOP 60% K2O)",
     description: "Muriate of Potash (MOP) \u2014 60% K2O potassium chloride fertilizer for date palms, fruit trees, and field crops across Oman.",
     category: "agro",
+    image: "https://gcoman.com/images/products/granules-fertilizer.webp",
     iconName: "Wheat",
     details: {
       formula: "KCl",
@@ -254,6 +259,7 @@ var agro_default = [
     title: "Calcium Nitrate Fertilizer",
     description: "Water-soluble calcium nitrate \u2014 15.5% N, 26.5% CaO \u2014 the standard calcium and nitrate-nitrogen source for fertigation of tomatoes, cucumbers, and greenhouse crops.",
     category: "agro",
+    image: "https://gcoman.com/images/products/granules-fertilizer.webp",
     iconName: "Wheat",
     details: {
       formula: "Ca(NO3)2\xB74H2O",
@@ -289,6 +295,7 @@ var agro_default = [
     title: "Zinc Sulphate Monohydrate (33% Zn) \u2014 Agricultural",
     description: "Micronutrient zinc sulphate \u2014 33% Zn monohydrate \u2014 for correcting zinc deficiency in Oman's alkaline soils, date palm, and greenhouse crops.",
     category: "agro",
+    image: "https://gcoman.com/images/products/granules-fertilizer.webp",
     iconName: "Wheat",
     details: {
       formula: "ZnSO4\xB7H2O",
@@ -324,6 +331,7 @@ var agro_default = [
     title: "Agricultural Gypsum (Calcium Sulphate)",
     description: "Agricultural-grade gypsum (calcium sulphate dihydrate) for sodic soil reclamation, calcium supply, and structure improvement across Oman's irrigated farmland.",
     category: "agro",
+    image: "https://gcoman.com/images/products/granules-fertilizer.webp",
     iconName: "Wheat",
     details: {
       formula: "CaSO4\xB72H2O",
@@ -359,6 +367,7 @@ var agro_default = [
     title: "Humic Acid (Leonardite Extract)",
     description: "Water-soluble humic and fulvic acids \u2014 leonardite-derived soil conditioner that improves nutrient uptake, soil structure, and root growth in Oman's low-organic desert soils.",
     category: "agro",
+    image: "https://gcoman.com/images/products/granules-fertilizer.webp",
     iconName: "Wheat",
     details: {
       casNumber: "1415-93-6",
@@ -397,6 +406,7 @@ var alcohols_default = [
     title: "Methanol (Industrial Grade)",
     description: "Industrial methanol for solvents, fuel, and chemical manufacturing.",
     category: "alcohols",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "FlaskRound",
     details: {
       formula: "CH3OH",
@@ -453,6 +463,7 @@ var alcohols_default = [
     title: "Ethanol (Industrial/Denatured)",
     description: "Industrial and denatured ethanol for solvents, fuel, and manufacturing.",
     category: "alcohols",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "FlaskRound",
     details: {
       formula: "C2H5OH",
@@ -505,6 +516,7 @@ var alcohols_default = [
     title: "Isopropanol (Industrial Grade)",
     description: "Industrial isopropyl alcohol for cleaning, solvents, and manufacturing.",
     category: "alcohols",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "FlaskRound",
     details: {
       formula: "C3H7OH",
@@ -557,6 +569,7 @@ var alcohols_default = [
     title: "N-Butanol (Industrial Grade)",
     description: "Industrial n-butanol for coatings, plastics, and chemical synthesis.",
     category: "alcohols",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "FlaskRound",
     details: {
       formula: "C4H9OH",
@@ -607,6 +620,7 @@ var calcium_carbonate_default = [
     title: "Calcium Carbonate",
     description: "High-purity calcium carbonate (CaCO3) \u2014 ground calcium carbonate (GCC) and precipitated calcium carbonate (PCC) for construction, plastics, paints, food, and industrial applications in Oman.",
     category: "calcium-carbonate",
+    image: "https://gcoman.com/images/products/white-powder.webp",
     iconName: "FlaskConical",
     details: {
       formula: "CaCO3",
@@ -678,6 +692,7 @@ var chlorinated_default = [
     title: "Trichloroethylene (TCE)",
     description: "High-purity trichloroethylene for metal degreasing and industrial cleaning.",
     category: "chlorinated",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Flame",
     details: {
       formula: "C2HCl3",
@@ -730,6 +745,7 @@ var chlorinated_default = [
     title: "Perchloroethylene (PCE)",
     description: "Industrial perchloroethylene for dry cleaning and metal degreasing.",
     category: "chlorinated",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Flame",
     details: {
       formula: "C2Cl4",
@@ -782,6 +798,7 @@ var chlorinated_default = [
     title: "Methylene Chloride (Industrial Grade)",
     description: "Industrial methylene chloride for paint stripping and industrial cleaning.",
     category: "chlorinated",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Flame",
     details: {
       formula: "CH2Cl2",
@@ -831,6 +848,7 @@ var construction_default = [
     title: "Epoxy Coating",
     description: "High-performance protective coating for concrete surfaces and structural elements.",
     category: "construction",
+    image: "https://gcoman.com/images/products/cement-bags.webp",
     iconName: "Building2",
     details: {
       alternativeNames: [
@@ -887,6 +905,7 @@ var construction_default = [
     title: "Paraffin Oil",
     description: "Industrial grade paraffin oil for construction applications and formulations.",
     category: "construction",
+    image: "https://gcoman.com/images/products/cement-bags.webp",
     iconName: "Building2",
     details: {
       casNumber: "8012-95-1",
@@ -933,6 +952,7 @@ var construction_default = [
     title: "Polymer Bonding Agent",
     description: "Advanced bonding agent for enhanced adhesion between concrete layers.",
     category: "construction",
+    image: "https://gcoman.com/images/products/cement-bags.webp",
     iconName: "Building2",
     details: {
       alternativeNames: [
@@ -984,6 +1004,7 @@ var construction_default = [
     title: "Polymer Modified Mortar",
     description: "High-strength mortar with polymer additives for superior bonding and flexibility.",
     category: "construction",
+    image: "https://gcoman.com/images/products/cement-bags.webp",
     iconName: "Building2",
     details: {
       alternativeNames: [
@@ -1029,6 +1050,7 @@ var construction_default = [
     title: "Mould Releasing Agents",
     description: "Formwork release agents for easy concrete demolding and smooth finishes.",
     category: "construction",
+    image: "https://gcoman.com/images/products/cement-bags.webp",
     iconName: "Building2",
     details: {
       alternativeNames: [
@@ -1078,6 +1100,7 @@ var cooling_water_default = [
     title: "Corrosion Inhibitor Closed Loop",
     description: "Corrosion protection for closed-loop cooling water systems.",
     category: "cooling-water",
+    image: "https://gcoman.com/images/products/cooling-tower.webp",
     iconName: "Droplets",
     details: {
       alternativeNames: [
@@ -1132,6 +1155,7 @@ var cooling_water_default = [
     title: "Algae Control",
     description: "Algaecide for preventing algae growth in cooling towers and water systems.",
     category: "cooling-water",
+    image: "https://gcoman.com/images/products/cooling-tower.webp",
     iconName: "Droplets",
     details: {
       casNumber: "7173-51-5",
@@ -1183,6 +1207,7 @@ var cooling_water_default = [
     title: "Biological Guard Antifouling",
     description: "Biocide for controlling biological fouling in cooling water systems.",
     category: "cooling-water",
+    image: "https://gcoman.com/images/products/cooling-tower.webp",
     iconName: "Droplets",
     details: {
       alternativeNames: [
@@ -1227,6 +1252,7 @@ var cooling_water_default = [
     title: "Micro Biocid Cooling Water",
     description: "Microbiocide for microbial control in cooling tower applications.",
     category: "cooling-water",
+    image: "https://gcoman.com/images/products/cooling-tower.webp",
     iconName: "Droplets",
     details: {
       alternativeNames: [
@@ -1271,6 +1297,7 @@ var cooling_water_default = [
     title: "Biocide",
     description: "Broad-spectrum biocide for cooling water treatment and microbial control.",
     category: "cooling-water",
+    image: "https://gcoman.com/images/products/cooling-tower.webp",
     iconName: "Droplets",
     details: {
       alternativeNames: [
@@ -1325,6 +1352,7 @@ var cooling_water_default = [
     title: "Hardness Control Boiler Treatment",
     description: "Chemical treatment for controlling water hardness in boiler systems.",
     category: "cooling-water",
+    image: "https://gcoman.com/images/products/cooling-tower.webp",
     iconName: "Droplets",
     details: {
       alternativeNames: [
@@ -1379,6 +1407,7 @@ var cooling_water_default = [
     title: "Biocide For Closed Loop Chiller Water",
     description: "Specialized biocide for closed-loop chiller water systems.",
     category: "cooling-water",
+    image: "https://gcoman.com/images/products/cooling-tower.webp",
     iconName: "Droplets",
     details: {
       alternativeNames: [
@@ -1423,6 +1452,7 @@ var cooling_water_default = [
     title: "Cool Water Treat Corrosion Inhibitor",
     description: "Corrosion inhibitor formulated for cooling water treatment applications.",
     category: "cooling-water",
+    image: "https://gcoman.com/images/products/cooling-tower.webp",
     iconName: "Droplets",
     details: {
       alternativeNames: [
@@ -1473,6 +1503,7 @@ var cooling_water_default = [
     title: "Altreat 4000",
     description: "All-in-one cooling water treatment chemical for comprehensive system protection.",
     category: "cooling-water",
+    image: "https://gcoman.com/images/products/cooling-tower.webp",
     iconName: "Droplets",
     details: {
       alternativeNames: [
@@ -1522,6 +1553,7 @@ var cooling_water_default = [
     title: "Corro Guard For Antifoulant for Cooling Water",
     description: "Dual-action corrosion inhibitor and antifoulant for cooling water systems.",
     category: "cooling-water",
+    image: "https://gcoman.com/images/products/cooling-tower.webp",
     iconName: "Droplets",
     details: {
       alternativeNames: [
@@ -1566,6 +1598,7 @@ var cooling_water_default = [
     title: "Antifouling Liquid",
     description: "Liquid antifoulant for preventing deposits and fouling in cooling systems.",
     category: "cooling-water",
+    image: "https://gcoman.com/images/products/cooling-tower.webp",
     iconName: "Droplets",
     details: {
       alternativeNames: [
@@ -1614,6 +1647,7 @@ var corrosion_inhibitor_default = [
     title: "Corrosion Inhibitor For Multi Metal Cooling Water",
     description: "Specialized corrosion protection for multi-metal cooling water systems.",
     category: "corrosion-inhibitor",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Shield",
     details: {
       alternativeNames: [
@@ -1658,6 +1692,7 @@ var corrosion_inhibitor_default = [
     title: "Corrosion Inhibitor 2000",
     description: "Advanced formula for comprehensive metal protection in industrial systems.",
     category: "corrosion-inhibitor",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Shield",
     details: {
       alternativeNames: [
@@ -1702,6 +1737,7 @@ var corrosion_inhibitor_default = [
     title: "Corrosion Inhibitor For Metal Rust Preventive",
     description: "Rust prevention solution for metal surfaces and equipment.",
     category: "corrosion-inhibitor",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Shield",
     details: {
       alternativeNames: [
@@ -1746,6 +1782,7 @@ var corrosion_inhibitor_default = [
     title: "Corrosion Inhibitor Closed Cooling System Molybdate",
     description: "Molybdate-based corrosion protection for closed cooling systems.",
     category: "corrosion-inhibitor",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Shield",
     details: {
       casNumber: "7631-95-0",
@@ -1792,6 +1829,7 @@ var corrosion_inhibitor_default = [
     title: "Corrosion Inhibitor",
     description: "General-purpose corrosion prevention chemical for industrial applications.",
     category: "corrosion-inhibitor",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Shield",
     details: {
       alternativeNames: [
@@ -1836,6 +1874,7 @@ var corrosion_inhibitor_default = [
     title: "Corrosion Inhibitor For Gas Compressor",
     description: "Specialized protection for gas compressor systems and components.",
     category: "corrosion-inhibitor",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Shield",
     details: {
       alternativeNames: [
@@ -1880,6 +1919,7 @@ var corrosion_inhibitor_default = [
     title: "Sodium Molybdate",
     description: "Anodic corrosion inhibitor for cooling water treatment systems.",
     category: "corrosion-inhibitor",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Shield",
     details: {
       formula: "Na2MoO4",
@@ -1927,6 +1967,7 @@ var corrosion_inhibitor_default = [
     title: "Oxygen Scavenger",
     description: "Removes dissolved oxygen to prevent corrosion in water systems.",
     category: "corrosion-inhibitor",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Shield",
     details: {
       alternativeNames: [
@@ -1989,6 +2030,7 @@ var corrosion_inhibitor_default = [
     title: "Ph Booster Cum Corrosion Inhibitor",
     description: "Dual-action formula for pH control and corrosion prevention.",
     category: "corrosion-inhibitor",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Shield",
     details: {
       alternativeNames: [
@@ -2033,6 +2075,7 @@ var corrosion_inhibitor_default = [
     title: "Corrosion Inhibitor Closed Cooling System",
     description: "Comprehensive protection for closed-loop cooling systems.",
     category: "corrosion-inhibitor",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Shield",
     details: {
       alternativeNames: [
@@ -2082,6 +2125,7 @@ var ethanolamines_default = [
     title: "MEA (Monoethanolamine)",
     description: "High-purity monoethanolamine for gas sweetening and chemical manufacturing.",
     category: "ethanolamines",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Beaker",
     details: {
       formula: "C2H7NO",
@@ -2138,6 +2182,7 @@ var ethanolamines_default = [
     title: "TEA (Triethanolamine)",
     description: "Industrial triethanolamine for metalworking, cement grinding, and cosmetics.",
     category: "ethanolamines",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Beaker",
     details: {
       formula: "C6H15NO3",
@@ -2190,6 +2235,7 @@ var ethanolamines_default = [
     title: "MDEA (Methyldiethanolamine)",
     description: "Premium MDEA for selective H2S removal and gas sweetening.",
     category: "ethanolamines",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Beaker",
     details: {
       formula: "C5H13NO2",
@@ -2245,6 +2291,7 @@ var food_beverage_default = [
     title: "Ascorbic Acid",
     description: "Vitamin C antioxidant and preservative for food and beverage applications.",
     category: "food-beverage",
+    image: "https://gcoman.com/images/products/food-grade-powder.webp",
     iconName: "Wine",
     details: {
       formula: "C6H8O6",
@@ -2292,6 +2339,7 @@ var food_beverage_default = [
     title: "Calcium Carbonate (Food Grade)",
     description: "Food-grade calcium supplement and pH regulator for food products.",
     category: "food-beverage",
+    image: "https://gcoman.com/images/products/food-grade-powder.webp",
     iconName: "Wine",
     details: {
       formula: "CaCO3",
@@ -2339,6 +2387,7 @@ var food_beverage_default = [
     title: "Calcium Lactate (Food Grade)",
     description: "Calcium fortification agent and firming agent for food processing.",
     category: "food-beverage",
+    image: "https://gcoman.com/images/products/food-grade-powder.webp",
     iconName: "Wine",
     details: {
       formula: "C6H10CaO6",
@@ -2385,6 +2434,7 @@ var food_beverage_default = [
     title: "Citric Acid Anhydrous (Food Grade)",
     description: "Food-grade acidulant and preservative for flavoring and pH control.",
     category: "food-beverage",
+    image: "https://gcoman.com/images/products/food-grade-powder.webp",
     iconName: "Wine",
     details: {
       formula: "C6H8O7",
@@ -2441,6 +2491,7 @@ var food_beverage_default = [
     title: "Ethanol 70% (Food Grade)",
     description: "Food-grade ethanol for sanitization and extraction processes.",
     category: "food-beverage",
+    image: "https://gcoman.com/images/products/food-grade-powder.webp",
     iconName: "Wine",
     details: {
       formula: "C2H5OH",
@@ -2493,6 +2544,7 @@ var food_beverage_default = [
     title: "Formaldehyde 40% (Technical Grade)",
     description: "Industrial preservative and disinfectant for food processing equipment.",
     category: "food-beverage",
+    image: "https://gcoman.com/images/products/food-grade-powder.webp",
     iconName: "Wine",
     details: {
       formula: "CH2O",
@@ -2539,6 +2591,7 @@ var food_beverage_default = [
     title: "Hand Sanitizer (Alcohol-Based)",
     description: "Alcohol-based hand sanitizer for food handling and hygiene compliance.",
     category: "food-beverage",
+    image: "https://gcoman.com/images/products/food-grade-powder.webp",
     iconName: "Wine",
     details: {
       alternativeNames: [
@@ -2584,6 +2637,7 @@ var food_beverage_default = [
     title: "Limestone (Food Grade)",
     description: "Food-grade calcium source and pH adjuster for food and beverage processing.",
     category: "food-beverage",
+    image: "https://gcoman.com/images/products/food-grade-powder.webp",
     iconName: "Wine",
     details: {
       formula: "CaCO3",
@@ -2631,6 +2685,7 @@ var food_beverage_default = [
     title: "Caustic Soda Liquid (Food Grade)",
     description: "Food-grade alkali for cleaning and pH adjustment in food processing.",
     category: "food-beverage",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Wine",
     details: {
       formula: "NaOH",
@@ -2687,6 +2742,7 @@ var food_beverage_default = [
     title: "Nitric Acid 68% (Food Grade)",
     description: "Food-grade acid for equipment cleaning and CIP systems in food facilities.",
     category: "food-beverage",
+    image: "https://gcoman.com/images/products/food-grade-powder.webp",
     iconName: "Wine",
     details: {
       formula: "HNO3",
@@ -2733,6 +2789,7 @@ var food_beverage_default = [
     title: "Potassium Sorbate (Food Grade)",
     description: "Preservative for preventing mold and yeast growth in food and beverages.",
     category: "food-beverage",
+    image: "https://gcoman.com/images/products/food-grade-powder.webp",
     iconName: "Wine",
     details: {
       formula: "C6H7KO2",
@@ -2779,6 +2836,7 @@ var food_beverage_default = [
     title: "Propylene Glycol USP (Food Grade)",
     description: "Food-grade humectant and solvent for flavors and food processing.",
     category: "food-beverage",
+    image: "https://gcoman.com/images/products/food-grade-powder.webp",
     iconName: "Wine",
     details: {
       formula: "C3H8O2",
@@ -2832,6 +2890,7 @@ var food_beverage_default = [
     title: "Sodium Bicarbonate (Food Grade)",
     description: "Food-grade baking soda for leavening, pH control, and food processing.",
     category: "food-beverage",
+    image: "https://gcoman.com/images/products/food-grade-powder.webp",
     iconName: "Wine",
     details: {
       formula: "NaHCO3",
@@ -2885,6 +2944,7 @@ var food_beverage_default = [
     title: "Sodium Hypochlorite (Food Grade)",
     description: "Food-grade sanitizing agent for food contact surfaces and equipment.",
     category: "food-beverage",
+    image: "https://gcoman.com/images/products/food-grade-powder.webp",
     iconName: "Wine",
     details: {
       formula: "NaOCl",
@@ -2941,6 +3001,7 @@ var food_beverage_default = [
     title: "Urea (Food/Feed Grade)",
     description: "Nitrogen source and processing aid for animal feed applications.",
     category: "food-beverage",
+    image: "https://gcoman.com/images/products/food-grade-powder.webp",
     iconName: "Wine",
     details: {
       formula: "CH4N2O",
@@ -2987,6 +3048,7 @@ var food_beverage_default = [
     title: "White Salt (Food Grade)",
     description: "Food-grade refined sodium chloride for seasoning and preservation.",
     category: "food-beverage",
+    image: "https://gcoman.com/images/products/food-grade-powder.webp",
     iconName: "Wine",
     details: {
       formula: "NaCl",
@@ -3034,6 +3096,7 @@ var food_beverage_default = [
     title: "Xanthan Gum (Food Grade)",
     description: "Thickening and stabilizing agent for food and beverage formulations.",
     category: "food-beverage",
+    image: "https://gcoman.com/images/products/food-grade-powder.webp",
     iconName: "Wine",
     details: {
       casNumber: "11138-66-2",
@@ -3084,6 +3147,7 @@ var glycols_default = [
     title: "MEG (Monoethylene Glycol)",
     description: "Industrial monoethylene glycol for antifreeze, coolants, and polyester production.",
     category: "glycols",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Wind",
     details: {
       formula: "C2H6O2",
@@ -3140,6 +3204,7 @@ var glycols_default = [
     title: "TEG (Triethylene Glycol)",
     description: "High-purity triethylene glycol for natural gas dehydration.",
     category: "glycols",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Wind",
     details: {
       formula: "C6H14O4",
@@ -3196,6 +3261,7 @@ var glycols_default = [
     title: "Propylene Glycol (USP/Industrial)",
     description: "Food-grade and industrial propylene glycol for various applications.",
     category: "glycols",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Wind",
     details: {
       formula: "C3H8O2",
@@ -3252,6 +3318,7 @@ var inorganic_default = [
     title: "Aluminum Sulfate (Alum)",
     description: "Industrial aluminum sulfate for water treatment and paper manufacturing.",
     category: "inorganic",
+    image: "https://gcoman.com/images/products/white-powder.webp",
     iconName: "Microscope",
     details: {
       formula: "Al2(SO4)3",
@@ -3308,6 +3375,7 @@ var inorganic_default = [
     title: "Ferric Chloride",
     description: "Industrial ferric chloride for wastewater treatment and etching.",
     category: "inorganic",
+    image: "https://gcoman.com/images/products/white-powder.webp",
     iconName: "Microscope",
     details: {
       formula: "FeCl3",
@@ -3353,6 +3421,7 @@ var inorganic_default = [
     title: "Quicklime (Calcium Oxide)",
     description: "Industrial quicklime for pH adjustment, water treatment, and manufacturing.",
     category: "inorganic",
+    image: "https://gcoman.com/images/products/white-powder.webp",
     iconName: "Microscope",
     details: {
       formula: "CaO",
@@ -3405,6 +3474,7 @@ var inorganic_default = [
     title: "Poly Aluminum Chloride (PAC)",
     description: "High-efficiency polyaluminum chloride coagulant for water treatment.",
     category: "inorganic",
+    image: "https://gcoman.com/images/products/white-powder.webp",
     iconName: "Microscope",
     details: {
       formula: "[Al2(OH)nCl6-n]m",
@@ -3469,6 +3539,7 @@ var inorganic_default = [
     title: "Sodium Silicate Solution (Water Glass)",
     description: "Industrial sodium silicate for detergents, adhesives, and manufacturing.",
     category: "inorganic",
+    image: "https://gcoman.com/images/products/white-powder.webp",
     iconName: "Microscope",
     details: {
       formula: "Na2SiO3",
@@ -3514,6 +3585,7 @@ var inorganic_default = [
     title: "Zinc Sulfate",
     description: "Industrial zinc sulfate for agriculture, water treatment, and manufacturing.",
     category: "inorganic",
+    image: "https://gcoman.com/images/products/white-powder.webp",
     iconName: "Microscope",
     details: {
       formula: "ZnSO4",
@@ -3563,6 +3635,7 @@ var lab_chemicals_default = [
     title: "Sulfuric Acid (Laboratory Grade)",
     description: "High-purity sulfuric acid for laboratory analysis, research, and industrial applications.",
     category: "lab-chemicals",
+    image: "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     iconName: "Beaker",
     details: {
       formula: "H2SO4",
@@ -3620,6 +3693,7 @@ var lab_chemicals_default = [
     title: "Hydrochloric Acid (Laboratory Grade)",
     description: "High-purity hydrochloric acid for laboratory and analytical applications.",
     category: "lab-chemicals",
+    image: "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     iconName: "Beaker",
     details: {
       formula: "HCl",
@@ -3671,6 +3745,7 @@ var lab_chemicals_default = [
     title: "Nitric Acid (Laboratory Grade)",
     description: "High-purity nitric acid for laboratory analysis and oxidation reactions.",
     category: "lab-chemicals",
+    image: "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     iconName: "Beaker",
     details: {
       formula: "HNO3",
@@ -3716,6 +3791,7 @@ var lab_chemicals_default = [
     title: "Acetic Acid (Glacial, Laboratory Grade)",
     description: "High-purity glacial acetic acid for laboratory synthesis and analytical work.",
     category: "lab-chemicals",
+    image: "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     iconName: "Beaker",
     details: {
       formula: "CH3COOH",
@@ -3761,6 +3837,7 @@ var lab_chemicals_default = [
     title: "Phosphoric Acid (Laboratory Grade)",
     description: "High-purity phosphoric acid for laboratory analysis and buffer preparation.",
     category: "lab-chemicals",
+    image: "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     iconName: "Beaker",
     details: {
       formula: "H3PO4",
@@ -3805,6 +3882,7 @@ var lab_chemicals_default = [
     title: "Sodium Hydroxide Pellets (Laboratory Grade)",
     description: "High-purity sodium hydroxide pellets for laboratory use and analysis.",
     category: "lab-chemicals",
+    image: "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     iconName: "Beaker",
     details: {
       formula: "NaOH",
@@ -3851,6 +3929,7 @@ var lab_chemicals_default = [
     title: "Potassium Hydroxide Pellets (Laboratory Grade)",
     description: "High-purity potassium hydroxide pellets for laboratory and analytical use.",
     category: "lab-chemicals",
+    image: "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     iconName: "Beaker",
     details: {
       formula: "KOH",
@@ -3896,6 +3975,7 @@ var lab_chemicals_default = [
     title: "Ammonia Solution (Laboratory Grade)",
     description: "High-purity aqueous ammonia for laboratory analysis and pH adjustment.",
     category: "lab-chemicals",
+    image: "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     iconName: "Beaker",
     details: {
       formula: "NH4OH",
@@ -3942,6 +4022,7 @@ var lab_chemicals_default = [
     title: "Acetone (Laboratory Grade)",
     description: "High-purity acetone for laboratory extractions, cleaning, and synthesis.",
     category: "lab-chemicals",
+    image: "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     iconName: "Beaker",
     details: {
       formula: "CH3COCH3",
@@ -3993,6 +4074,7 @@ var lab_chemicals_default = [
     title: "Ethanol Absolute (Laboratory Grade)",
     description: "High-purity absolute ethanol for laboratory synthesis and extraction.",
     category: "lab-chemicals",
+    image: "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     iconName: "Beaker",
     details: {
       formula: "C2H5OH",
@@ -4045,6 +4127,7 @@ var lab_chemicals_default = [
     title: "Methanol (Laboratory Grade)",
     description: "High-purity methanol for HPLC, extraction, and laboratory synthesis.",
     category: "lab-chemicals",
+    image: "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     iconName: "Beaker",
     details: {
       formula: "CH3OH",
@@ -4090,6 +4173,7 @@ var lab_chemicals_default = [
     title: "Isopropanol (Laboratory Grade)",
     description: "High-purity isopropyl alcohol for laboratory cleaning and DNA extraction.",
     category: "lab-chemicals",
+    image: "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     iconName: "Beaker",
     details: {
       formula: "C3H7OH",
@@ -4136,6 +4220,7 @@ var lab_chemicals_default = [
     title: "Hexane (Laboratory Grade)",
     description: "High-purity n-hexane for extraction, chromatography, and organic synthesis.",
     category: "lab-chemicals",
+    image: "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     iconName: "Beaker",
     details: {
       formula: "C6H14",
@@ -4181,6 +4266,7 @@ var lab_chemicals_default = [
     title: "Toluene (Laboratory Grade)",
     description: "High-purity toluene for extraction, synthesis, and chromatography.",
     category: "lab-chemicals",
+    image: "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     iconName: "Beaker",
     details: {
       formula: "C7H8",
@@ -4226,6 +4312,7 @@ var lab_chemicals_default = [
     title: "Xylene (Laboratory Grade)",
     description: "High-purity xylene for histology, microscopy, and extraction applications.",
     category: "lab-chemicals",
+    image: "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     iconName: "Beaker",
     details: {
       formula: "C8H10",
@@ -4271,6 +4358,7 @@ var lab_chemicals_default = [
     title: "Chloroform (Laboratory Grade)",
     description: "High-purity chloroform for extraction, NMR spectroscopy, and organic synthesis.",
     category: "lab-chemicals",
+    image: "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     iconName: "Beaker",
     details: {
       formula: "CHCl3",
@@ -4316,6 +4404,7 @@ var lab_chemicals_default = [
     title: "Dichloromethane (Laboratory Grade)",
     description: "High-purity dichloromethane for extraction, chromatography, and synthesis.",
     category: "lab-chemicals",
+    image: "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     iconName: "Beaker",
     details: {
       formula: "CH2Cl2",
@@ -4361,6 +4450,7 @@ var lab_chemicals_default = [
     title: "Ethyl Acetate (Laboratory Grade)",
     description: "High-purity ethyl acetate for extraction, chromatography, and organic synthesis.",
     category: "lab-chemicals",
+    image: "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     iconName: "Beaker",
     details: {
       formula: "C4H8O2",
@@ -4406,6 +4496,7 @@ var lab_chemicals_default = [
     title: "Diethyl Ether (Laboratory Grade)",
     description: "High-purity diethyl ether for extraction and organic synthesis.",
     category: "lab-chemicals",
+    image: "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     iconName: "Beaker",
     details: {
       formula: "C4H10O",
@@ -4451,6 +4542,7 @@ var lab_chemicals_default = [
     title: "Petroleum Ether (Laboratory Grade)",
     description: "High-purity petroleum ether for extraction and chromatography.",
     category: "lab-chemicals",
+    image: "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     iconName: "Beaker",
     details: {
       formula: "C5-C7 alkanes",
@@ -4496,6 +4588,7 @@ var lab_chemicals_default = [
     title: "Sodium Chloride (Laboratory Grade)",
     description: "High-purity sodium chloride for buffer preparation and molecular biology.",
     category: "lab-chemicals",
+    image: "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     iconName: "Beaker",
     details: {
       formula: "NaCl",
@@ -4541,6 +4634,7 @@ var lab_chemicals_default = [
     title: "Potassium Chloride (Laboratory Grade)",
     description: "High-purity potassium chloride for buffer preparation and electrophysiology.",
     category: "lab-chemicals",
+    image: "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     iconName: "Beaker",
     details: {
       formula: "KCl",
@@ -4586,6 +4680,7 @@ var lab_chemicals_default = [
     title: "Calcium Chloride (Laboratory Grade)",
     description: "High-purity calcium chloride for molecular biology and cell culture.",
     category: "lab-chemicals",
+    image: "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     iconName: "Beaker",
     details: {
       formula: "CaCl2",
@@ -4630,6 +4725,7 @@ var lab_chemicals_default = [
     title: "Magnesium Sulfate (Laboratory Grade)",
     description: "High-purity magnesium sulfate for drying, cell culture, and molecular biology.",
     category: "lab-chemicals",
+    image: "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     iconName: "Beaker",
     details: {
       formula: "MgSO4",
@@ -4675,6 +4771,7 @@ var lab_chemicals_default = [
     title: "EDTA Disodium Salt (Laboratory Grade)",
     description: "High-purity EDTA for chelation, buffer preparation, and molecular biology.",
     category: "lab-chemicals",
+    image: "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     iconName: "Beaker",
     details: {
       formula: "C10H14N2Na2O8",
@@ -4720,6 +4817,7 @@ var lab_chemicals_default = [
     title: "Tris Base (Laboratory Grade)",
     description: "High-purity Tris for buffer preparation and molecular biology applications.",
     category: "lab-chemicals",
+    image: "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     iconName: "Beaker",
     details: {
       formula: "C4H11NO3",
@@ -4766,6 +4864,7 @@ var lab_chemicals_default = [
     title: "Sodium Thiosulfate (Laboratory Grade)",
     description: "High-purity sodium thiosulfate for titrations and analytical chemistry.",
     category: "lab-chemicals",
+    image: "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     iconName: "Beaker",
     details: {
       formula: "Na2S2O3",
@@ -4811,6 +4910,7 @@ var lab_chemicals_default = [
     title: "Potassium Permanganate (Laboratory Grade)",
     description: "High-purity potassium permanganate for oxidation and titrations.",
     category: "lab-chemicals",
+    image: "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     iconName: "Beaker",
     details: {
       formula: "KMnO4",
@@ -4855,6 +4955,7 @@ var lab_chemicals_default = [
     title: "Silver Nitrate (Laboratory Grade)",
     description: "High-purity silver nitrate for titrations, silver staining, and analytical chemistry.",
     category: "lab-chemicals",
+    image: "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     iconName: "Beaker",
     details: {
       formula: "AgNO3",
@@ -4900,6 +5001,7 @@ var lab_chemicals_default = [
     title: "Phenolphthalein Indicator",
     description: "High-purity phenolphthalein indicator for acid-base titrations.",
     category: "lab-chemicals",
+    image: "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     iconName: "Beaker",
     details: {
       formula: "C20H14O4",
@@ -4944,6 +5046,7 @@ var lab_chemicals_default = [
     title: "Methyl Orange Indicator",
     description: "High-purity methyl orange indicator for acid-base titrations.",
     category: "lab-chemicals",
+    image: "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     iconName: "Beaker",
     details: {
       formula: "C14H14N3NaO3S",
@@ -4989,6 +5092,7 @@ var lab_chemicals_default = [
     title: "Bromothymol Blue Indicator",
     description: "High-purity bromothymol blue indicator for neutral pH range titrations.",
     category: "lab-chemicals",
+    image: "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     iconName: "Beaker",
     details: {
       formula: "C27H28Br2O5S",
@@ -5034,6 +5138,7 @@ var lab_chemicals_default = [
     title: "Agar Bacteriological (Laboratory Grade)",
     description: "High-purity bacteriological agar for microbiology culture media.",
     category: "lab-chemicals",
+    image: "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     iconName: "Beaker",
     details: {
       casNumber: "9002-18-0",
@@ -5079,6 +5184,7 @@ var lab_chemicals_default = [
     title: "Glucose Anhydrous (Laboratory Grade)",
     description: "High-purity anhydrous glucose for cell culture and microbiology.",
     category: "lab-chemicals",
+    image: "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     iconName: "Beaker",
     details: {
       formula: "C6H12O6",
@@ -5128,6 +5234,7 @@ var lab_equipment_default = [
     title: "Laboratory Handling Equipment",
     description: "Premium borosilicate glass laboratory glassware \u2014 beakers, flasks, volumetric glassware, crucibles, and distillation apparatus for analytical and research laboratories in Oman.",
     category: "lab-equipment",
+    image: "https://gcoman.com/images/products/lab-shelf.webp",
     iconName: "TestTube",
     details: {
       alternativeNames: [
@@ -5199,6 +5306,7 @@ var lubricants_default = [
     title: "Shell Lubricants",
     description: "Authorised Shell lubricants distributor in Oman \u2014 Shell Rimula, Shell Tellus, Shell Gadus, Shell Omala, Shell Helix stocked in Muscat for same-day delivery.",
     category: "lubricants",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Wrench",
     details: {
       alternativeNames: [
@@ -5282,6 +5390,7 @@ var lubricants_default = [
     title: "Mobil Lubricants",
     description: "Authorised Mobil lubricants distributor in Oman \u2014 Mobil Delvac, Mobil DTE, Mobil 1 synthetic, Mobilgear stocked in Muscat with same-day delivery.",
     category: "lubricants",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Wrench",
     details: {
       alternativeNames: [
@@ -5365,6 +5474,7 @@ var lubricants_default = [
     title: "Castrol Lubricants",
     description: "Authorised Castrol lubricants distributor in Oman \u2014 Castrol EDGE, Castrol VECTON, Castrol GTX, Castrol Hyspin stocked in Muscat for same-day delivery.",
     category: "lubricants",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Wrench",
     details: {
       alternativeNames: [
@@ -5447,6 +5557,7 @@ var lubricants_default = [
     title: "GP (IPOL) Lubricants",
     description: "GP Petroleums IPOL brand lubricants \u2014 automotive engine oils, hydraulic oils, gear oils, metal working fluids, and specialty greases in Oman.",
     category: "lubricants",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Wrench",
     details: {
       alternativeNames: [
@@ -5525,6 +5636,7 @@ var oilfield_default = [
     title: "Acetic Acid",
     description: "Organic acid used in chemical synthesis and industrial processes.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       formula: "CH3COOH",
@@ -5568,6 +5680,7 @@ var oilfield_default = [
     title: "Activated Alumina Desiccant",
     description: "High-capacity desiccant for moisture removal and gas drying.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       casNumber: "1344-28-1",
@@ -5613,6 +5726,7 @@ var oilfield_default = [
     title: "Activated Carbon",
     description: "Highly porous carbon for adsorption and purification applications.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       casNumber: "7440-44-0",
@@ -5663,6 +5777,7 @@ var oilfield_default = [
     title: "Ammonium Bifluoride",
     description: "Etching and cleaning agent for industrial applications.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       formula: "NH4HF2",
@@ -5707,6 +5822,7 @@ var oilfield_default = [
     title: "Ammonium Bisulphite",
     description: "Reducing agent and oxygen scavenger for industrial processes.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       formula: "NH4HSO3",
@@ -5757,6 +5873,7 @@ var oilfield_default = [
     title: "Ammonium Chloride",
     description: "Inorganic compound used in drilling fluids and metal treatment.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       formula: "NH4Cl",
@@ -5801,6 +5918,7 @@ var oilfield_default = [
     title: "Barium Chloride",
     description: "Heavy metal salt for brine formulation and drilling applications.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       formula: "BaCl2",
@@ -5845,6 +5963,7 @@ var oilfield_default = [
     title: "Bentonite Powder",
     description: "Clay-based drilling mud additive for viscosity control.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       casNumber: "1302-78-9",
@@ -5891,6 +6010,7 @@ var oilfield_default = [
     title: "Borax Powder",
     description: "Multipurpose boron compound for industrial applications.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       formula: "Na2B4O7\xB710H2O",
@@ -5937,6 +6057,7 @@ var oilfield_default = [
     title: "Boric Acid",
     description: "Weak acid used in chemical synthesis and industrial processes.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       formula: "H3BO3",
@@ -5982,6 +6103,7 @@ var oilfield_default = [
     title: "Butyl Glycol",
     description: "Solvent for paints, coatings, and cleaning formulations.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       formula: "C6H14O2",
@@ -6030,6 +6152,7 @@ var oilfield_default = [
     title: "Calcium Bromide Powder/Liquid",
     description: "High-density brine for drilling and completion fluids.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       formula: "CaBr2",
@@ -6076,6 +6199,7 @@ var oilfield_default = [
     title: "Citric Acid Food Grade",
     description: "Food-grade organic acid for cleaning and pH control.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       formula: "C6H8O7",
@@ -6121,6 +6245,7 @@ var oilfield_default = [
     title: "Calcium Chloride",
     description: "Dense brine solution for well completion and workover operations.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       formula: "CaCl2",
@@ -6173,6 +6298,7 @@ var oilfield_default = [
     title: "Citric Acid Liquid",
     description: "Liquid acidizing agent for well stimulation and scale removal.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       formula: "C6H8O7",
@@ -6219,6 +6345,7 @@ var oilfield_default = [
     title: "Citric Acid Powder",
     description: "Powder form for scale removal and well acidizing.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       formula: "C6H8O7",
@@ -6264,6 +6391,7 @@ var oilfield_default = [
     title: "CMC Carboxymethylcellulose",
     description: "Fluid loss control agent and viscosifier for drilling fluids.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       casNumber: "9000-11-7",
@@ -6310,6 +6438,7 @@ var oilfield_default = [
     title: "Diesel Exhaust Fluid",
     description: "Emission control solution for diesel engines.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       casNumber: "57-13-6",
@@ -6357,6 +6486,7 @@ var oilfield_default = [
     title: "Corrosion Inhibitor",
     description: "Protective chemicals for pipelines and equipment.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       alternativeNames: [
@@ -6411,6 +6541,7 @@ var oilfield_default = [
     title: "DEA (Diethanolamine)",
     description: "Gas sweetening agent for acid gas removal.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       formula: "C4H11NO2",
@@ -6459,6 +6590,7 @@ var oilfield_default = [
     title: "DEG (Diethylene Glycol)",
     description: "Dehydration agent and inhibitor for gas processing.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       formula: "C4H10O3",
@@ -6506,6 +6638,7 @@ var oilfield_default = [
     title: "Degreaser HD",
     description: "Heavy-duty industrial degreaser for equipment cleaning.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       alternativeNames: [
@@ -6551,6 +6684,7 @@ var oilfield_default = [
     title: "Descalant",
     description: "Chemical for removing mineral scale deposits.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       alternativeNames: [
@@ -6602,6 +6736,7 @@ var oilfield_default = [
     title: "EDTA Liquid",
     description: "Chelating agent for scale removal and metal control.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       formula: "C10H16N2O8",
@@ -6648,6 +6783,7 @@ var oilfield_default = [
     title: "EDTA Powder",
     description: "Powder chelating agent for industrial applications.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       formula: "C10H16N2O8",
@@ -6694,6 +6830,7 @@ var oilfield_default = [
     title: "Formic Acid",
     description: "Organic acid for drilling fluids and acidizing.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       formula: "HCOOH",
@@ -6741,6 +6878,7 @@ var oilfield_default = [
     title: "Hydrazine Hydrate",
     description: "Oxygen scavenger for boiler water treatment.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       formula: "N2H4\xB7H2O",
@@ -6788,6 +6926,7 @@ var oilfield_default = [
     title: "Magnesium Oxide",
     description: "Refractory material and chemical intermediate.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       formula: "MgO",
@@ -6835,6 +6974,7 @@ var oilfield_default = [
     title: "MDEA (Methyl Diethanolamine)",
     description: "Selective gas treating solvent for acid gas removal.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       formula: "C5H13NO2",
@@ -6893,6 +7033,7 @@ var oilfield_default = [
     title: "MEA (Monoethanolamine)",
     description: "Amine for CO2 and H2S removal from gas streams.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       formula: "C2H7NO",
@@ -6940,6 +7081,7 @@ var oilfield_default = [
     title: "MEG (Monoethylene Glycol)",
     description: "Hydrate inhibitor and dehydration agent.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       formula: "C2H6O2",
@@ -6998,6 +7140,7 @@ var oilfield_default = [
     title: "Methanol Tech Grade",
     description: "Hydrate inhibitor and antifreeze for gas systems.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       formula: "CH3OH",
@@ -7056,6 +7199,7 @@ var oilfield_default = [
     title: "Potassium Carbonate",
     description: "Alkaline salt for gas treating and chemical processes.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       formula: "K2CO3",
@@ -7103,6 +7247,7 @@ var oilfield_default = [
     title: "Potassium Chloride",
     description: "Shale inhibitor for water-based drilling fluids.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       formula: "KCl",
@@ -7149,6 +7294,7 @@ var oilfield_default = [
     title: "Potassium Hydroxide",
     description: "Strong base for pH control and chemical synthesis.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       formula: "KOH",
@@ -7196,6 +7342,7 @@ var oilfield_default = [
     title: "Potassium Iodide",
     description: "Chemical intermediate and analytical reagent.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       formula: "KI",
@@ -7242,6 +7389,7 @@ var oilfield_default = [
     title: "Silica Gel Blue",
     description: "Indicating desiccant for moisture control.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       casNumber: "112926-00-8",
@@ -7286,6 +7434,7 @@ var oilfield_default = [
     title: "Silica Gel Orange",
     description: "Color-changing desiccant for humidity monitoring.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       casNumber: "112926-00-8",
@@ -7331,6 +7480,7 @@ var oilfield_default = [
     title: "Silica Gel White",
     description: "Non-indicating desiccant for moisture absorption.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       casNumber: "112926-00-8",
@@ -7376,6 +7526,7 @@ var oilfield_default = [
     title: "Soda Ash Dense",
     description: "Sodium carbonate for pH control and water treatment.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       formula: "Na2CO3",
@@ -7422,6 +7573,7 @@ var oilfield_default = [
     title: "Soda Ash Light",
     description: "Light density sodium carbonate for various applications.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       formula: "Na2CO3",
@@ -7467,6 +7619,7 @@ var oilfield_default = [
     title: "Sodium Nitrate",
     description: "Oxidizing agent for industrial processes.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       formula: "NaNO3",
@@ -7512,6 +7665,7 @@ var oilfield_default = [
     title: "Sodium Nitrite",
     description: "Corrosion inhibitor and oxidizing agent.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       formula: "NaNO2",
@@ -7557,6 +7711,7 @@ var oilfield_default = [
     title: "Sodium Thiosulphate Liquid",
     description: "Dechlorination agent and neutralizer.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       formula: "Na2S2O3",
@@ -7602,6 +7757,7 @@ var oilfield_default = [
     title: "Sodium Thiosulphate Powder",
     description: "Powder form for neutralization and treatment.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       formula: "Na2S2O3",
@@ -7647,6 +7803,7 @@ var oilfield_default = [
     title: "Solvent Naphtha",
     description: "Petroleum solvent for industrial cleaning and processing.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       casNumber: "64742-89-8",
@@ -7692,6 +7849,7 @@ var oilfield_default = [
     title: "Surfactant, Sodium Silicate Alkaline and Neutral",
     description: "Surface active agents and silicates for drilling applications.",
     category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Factory",
     details: {
       casNumber: "1344-09-8",
@@ -7740,6 +7898,7 @@ var ro_chemicals_default = [
     title: "RO Passivation",
     description: "Passivation treatment for reverse osmosis membrane protection and preservation.",
     category: "ro-chemicals",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       alternativeNames: [
@@ -7784,6 +7943,7 @@ var ro_chemicals_default = [
     title: "Citric Acid Liquid",
     description: "Organic acid cleaner for RO membrane descaling and fouling removal.",
     category: "ro-chemicals",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       formula: "C6H8O7",
@@ -7830,6 +7990,7 @@ var ro_chemicals_default = [
     title: "RO 222 Descaler",
     description: "Specialized descaling solution for reverse osmosis membrane systems.",
     category: "ro-chemicals",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       alternativeNames: [
@@ -7873,6 +8034,7 @@ var ro_chemicals_default = [
     title: "Sodium Hydroxide Based Alkaleen Cleaner",
     description: "Alkaline cleaner for organic fouling and biological growth removal from RO membranes.",
     category: "ro-chemicals",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       formula: "NaOH",
@@ -7919,6 +8081,7 @@ var ro_chemicals_default = [
     title: "Membrane Cleaner",
     description: "Comprehensive cleaning solution for RO membrane maintenance and restoration.",
     category: "ro-chemicals",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       alternativeNames: [
@@ -7962,6 +8125,7 @@ var ro_chemicals_default = [
     title: "Antiscalant RO",
     description: "Scale inhibitor for preventing mineral deposits on reverse osmosis membranes.",
     category: "ro-chemicals",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       alternativeNames: [
@@ -8028,6 +8192,7 @@ var ro_chemicals_default = [
     title: "Membrane Alka Cleaner",
     description: "Alkaline formulation for removing organic and biological fouling from membranes.",
     category: "ro-chemicals",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       alternativeNames: [
@@ -8071,6 +8236,7 @@ var ro_chemicals_default = [
     title: "Membrane Antiscalant RO",
     description: "Advanced antiscalant for comprehensive membrane scale prevention.",
     category: "ro-chemicals",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       alternativeNames: [
@@ -8119,6 +8285,7 @@ var soap_detergent_default = [
     title: "Caustic Soda Flakes",
     description: "Sodium hydroxide flakes (98\u201399% NaOH) for saponification, soap manufacturing, water treatment, and industrial pH adjustment in Oman.",
     category: "soap-detergent",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Sparkles",
     details: {
       formula: "NaOH",
@@ -8175,6 +8342,7 @@ var soap_detergent_default = [
     title: "Caustic Soda Liquid",
     description: "Liquid sodium hydroxide solution (30\u201350% NaOH) for industrial cleaning, water treatment, and continuous-process manufacturing in Oman.",
     category: "soap-detergent",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Sparkles",
     details: {
       formula: "NaOH",
@@ -8228,6 +8396,7 @@ var soap_detergent_default = [
     title: "Caustic Soda Prills",
     description: "High-purity sodium hydroxide prills (99% NaOH) \u2014 low-dust, free-flowing beads for precise dosing in detergent formulation and industrial processes in Oman.",
     category: "soap-detergent",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Sparkles",
     details: {
       formula: "NaOH",
@@ -8278,6 +8447,7 @@ var soap_detergent_default = [
     title: "EDTA Powder",
     description: "Ethylenediaminetetraacetic acid (EDTA) \u2014 chelating agent for water hardness control, metal sequestration, and stability enhancement in detergent, cleaning, and industrial formulations.",
     category: "soap-detergent",
+    image: "https://gcoman.com/images/products/white-powder.webp",
     iconName: "Sparkles",
     details: {
       formula: "C10H16N2O8",
@@ -8324,6 +8494,7 @@ var soap_detergent_default = [
     title: "Glycerine",
     description: "Pharmaceutical/technical grade glycerine (glycerol) \u2014 humectant, solvent, and plasticiser for soap, cosmetics, food, pharmaceutical, and industrial applications in Oman.",
     category: "soap-detergent",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Sparkles",
     details: {
       formula: "C3H8O3",
@@ -8374,6 +8545,7 @@ var soap_detergent_default = [
     title: "Hydrogen Peroxide 3%",
     description: "Hydrogen peroxide 3% solution \u2014 mild antiseptic and bleaching agent for first-aid, hair care, surface disinfection, and light cleaning applications in Oman.",
     category: "soap-detergent",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Sparkles",
     details: {
       formula: "H2O2",
@@ -8421,6 +8593,7 @@ var soap_detergent_default = [
     title: "Hydrogen Peroxide 35%",
     description: "Hydrogen peroxide 35% \u2014 industrial-strength oxidising and bleaching agent for textile bleaching, pulp bleaching, water treatment, and detergent formulation in Oman.",
     category: "soap-detergent",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Sparkles",
     details: {
       formula: "H2O2",
@@ -8470,6 +8643,7 @@ var soap_detergent_default = [
     title: "Hydrogen Peroxide 50%",
     description: "High-concentration hydrogen peroxide 50% \u2014 powerful oxidising agent for industrial bleaching, chemical synthesis, wastewater treatment, and advanced oxidation in Oman.",
     category: "soap-detergent",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Sparkles",
     details: {
       formula: "H2O2",
@@ -8519,6 +8693,7 @@ var soap_detergent_default = [
     title: "Hydrogen Peroxide 6%",
     description: "Hydrogen peroxide 6% \u2014 moderate-strength disinfectant and bleaching agent for salon-grade hair bleaching, surface sanitisation, and cleaning product formulation in Oman.",
     category: "soap-detergent",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Sparkles",
     details: {
       formula: "H2O2",
@@ -8565,6 +8740,7 @@ var soap_detergent_default = [
     title: "LABSA",
     description: "Linear Alkylbenzene Sulphonic Acid (LABSA 96%) \u2014 the primary anionic surfactant raw material for liquid detergent, dish wash, laundry, and industrial cleaner production in Oman and GCC.",
     category: "soap-detergent",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Sparkles",
     details: {
       casNumber: "27176-87-0",
@@ -8627,6 +8803,7 @@ var soap_detergent_default = [
     title: "Nonyl Phenol Ethoxylate",
     description: "Nonyl phenol ethoxylate (NPE) \u2014 non-ionic surfactant and emulsifier for industrial cleaning, textile processing, agrochemical emulsification, and metalworking formulations in Oman.",
     category: "soap-detergent",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Sparkles",
     details: {
       casNumber: "9016-45-9",
@@ -8676,6 +8853,7 @@ var soap_detergent_default = [
     title: "Perchloroethylene",
     description: "Perchloroethylene (PERC / tetrachloroethylene) \u2014 industrial solvent for dry cleaning, metal degreasing, and chemical processing in Oman.",
     category: "soap-detergent",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Sparkles",
     details: {
       formula: "C2Cl4",
@@ -8725,6 +8903,7 @@ var soap_detergent_default = [
     title: "SLES 70%",
     description: "Sodium Lauryl Ether Sulfate 70% (SLES 70%) \u2014 high-active anionic surfactant paste for shampoo, body wash, liquid soap, and personal care formulation in Oman.",
     category: "soap-detergent",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Sparkles",
     details: {
       casNumber: "68585-34-2",
@@ -8781,6 +8960,7 @@ var soap_detergent_default = [
     title: "Soda Ash Dense",
     description: "Dense grade sodium carbonate (Na2CO3) \u2014 alkaline builder, pH regulator, and water softener for detergent powder formulation, glass production, and industrial processing in Oman.",
     category: "soap-detergent",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Sparkles",
     details: {
       formula: "Na2CO3",
@@ -8832,6 +9012,7 @@ var soap_detergent_default = [
     title: "Soda Ash Light",
     description: "Light grade sodium carbonate (Na2CO3) \u2014 fine powder alkaline builder for liquid detergent, soap manufacturing, and chemical production in Oman.",
     category: "soap-detergent",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Sparkles",
     details: {
       formula: "Na2CO3",
@@ -8881,6 +9062,7 @@ var soap_detergent_default = [
     title: "Sodium Hypochlorite 12-15%",
     description: "High-strength sodium hypochlorite solution (12\u201315% available chlorine) \u2014 industrial bleaching, disinfection, and cleaning agent for detergent manufacturing and sanitation in Oman.",
     category: "soap-detergent",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Sparkles",
     details: {
       formula: "NaOCl",
@@ -8932,6 +9114,7 @@ var soap_detergent_default = [
     title: "Sodium Meta Silicate Pentahydrate",
     description: "Sodium metasilicate pentahydrate (Na2SiO3\xB75H2O) \u2014 alkaline builder, corrosion inhibitor, and cleaning agent for heavy-duty industrial and institutional detergents in Oman.",
     category: "soap-detergent",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Sparkles",
     details: {
       formula: "Na2SiO3\xB75H2O",
@@ -8981,6 +9164,7 @@ var soap_detergent_default = [
     title: "Sodium Tripolyphosphate",
     description: "Sodium tripolyphosphate (STPP) \u2014 sequestering agent and detergency builder for laundry detergent powder, dishwasher compounds, and industrial cleaning in Oman.",
     category: "soap-detergent",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Sparkles",
     details: {
       formula: "Na5P3O10",
@@ -9038,6 +9222,7 @@ var soap_detergent_default = [
     title: "Surfactants",
     description: "Comprehensive range of anionic, non-ionic, cationic, and amphoteric surfactants for detergent, personal care, industrial cleaning, and oilfield formulation in Oman.",
     category: "soap-detergent",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Sparkles",
     details: {
       alternativeNames: [
@@ -9086,6 +9271,7 @@ var soap_detergent_default = [
     title: "Trisodium Phosphate",
     description: "Trisodium phosphate (TSP) \u2014 heavy-duty alkaline cleaner, degreaser, and surface preparation agent for industrial, institutional, and household cleaning in Oman.",
     category: "soap-detergent",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Sparkles",
     details: {
       formula: "Na3PO4",
@@ -9140,6 +9326,7 @@ var solvents_default = [
     title: "Mineral Spirits",
     description: "High-quality petroleum distillate solvent for cleaning, degreasing, and thinning.",
     category: "solvents",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "FlaskRound",
     details: {
       casNumber: "64742-88-7",
@@ -9195,6 +9382,7 @@ var solvents_default = [
     title: "Kerosene (Industrial Grade)",
     description: "Industrial-grade kerosene for cleaning, fuel applications, and manufacturing.",
     category: "solvents",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "FlaskRound",
     details: {
       casNumber: "8008-20-6",
@@ -9246,6 +9434,7 @@ var solvents_default = [
     title: "Turpentine (Industrial Grade)",
     description: "Industrial turpentine solvent for paint thinning and industrial applications.",
     category: "solvents",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "FlaskRound",
     details: {
       casNumber: "8006-64-2",
@@ -9291,6 +9480,7 @@ var solvents_default = [
     title: "Naphtha (Industrial Grade)",
     description: "Industrial naphtha solvent for cleaning, dilution, and chemical processing.",
     category: "solvents",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "FlaskRound",
     details: {
       casNumber: "64742-89-8",
@@ -9336,6 +9526,7 @@ var solvents_default = [
     title: "Thinner 402",
     description: "Premium paint thinner for epoxy, polyurethane, and industrial coatings.",
     category: "solvents",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "FlaskRound",
     details: {
       alternativeNames: [
@@ -9379,6 +9570,7 @@ var solvents_default = [
     title: "MEK (Methyl Ethyl Ketone)",
     description: "High-purity MEK solvent for coatings, adhesives, and industrial cleaning.",
     category: "solvents",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "FlaskRound",
     details: {
       formula: "C4H8O",
@@ -9435,6 +9627,7 @@ var swimming_pool_default = [
     title: "Algacide Liquid",
     description: "Effective liquid algaecide for preventing and treating algae growth in swimming pools.",
     category: "swimming-pool",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Droplets",
     details: {
       casNumber: "7173-51-5",
@@ -9478,6 +9671,7 @@ var swimming_pool_default = [
     title: "Chlorine Tablet",
     description: "Standard chlorine tablets for continuous pool water disinfection and sanitation.",
     category: "swimming-pool",
+    image: "https://gcoman.com/images/products/granules-flakes.webp",
     iconName: "Droplets",
     details: {
       casNumber: "87-90-1",
@@ -9544,6 +9738,7 @@ var swimming_pool_default = [
     title: "Swimming Pool Chemical",
     description: "Complete range of specialized chemicals for comprehensive pool maintenance.",
     category: "swimming-pool",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Droplets",
     details: {
       alternativeNames: [
@@ -9587,6 +9782,7 @@ var swimming_pool_default = [
     title: "Sodium Hypochlorite",
     description: "Liquid chlorine solution for pool sanitization and shock treatment.",
     category: "swimming-pool",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Droplets",
     details: {
       casNumber: "7681-52-9",
@@ -9631,6 +9827,7 @@ var swimming_pool_default = [
     title: "Chlorine Tablet Jumbo Size (3 Inch)",
     description: "Large 3-inch slow-dissolving chlorine tablets for extended pool protection.",
     category: "swimming-pool",
+    image: "https://gcoman.com/images/products/granules-flakes.webp",
     iconName: "Droplets",
     details: {
       casNumber: "87-90-1",
@@ -9675,6 +9872,7 @@ var swimming_pool_default = [
     title: "Calcium Hypochlorite Granules",
     description: "Fast-dissolving granular chlorine for quick pool sanitization and shock treatment.",
     category: "swimming-pool",
+    image: "https://gcoman.com/images/products/granules-flakes.webp",
     iconName: "Droplets",
     details: {
       casNumber: "7778-54-3",
@@ -9720,6 +9918,7 @@ var swimming_pool_default = [
     title: "Sodium Hypo Chlorite 12-15%",
     description: "Concentrated liquid chlorine solution for effective pool water treatment.",
     category: "swimming-pool",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Droplets",
     details: {
       casNumber: "7681-52-9",
@@ -9764,6 +9963,7 @@ var swimming_pool_default = [
     title: "Chlorine Liquid",
     description: "Ready-to-use liquid chlorine for immediate pool disinfection.",
     category: "swimming-pool",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Droplets",
     details: {
       casNumber: "7681-52-9",
@@ -9808,6 +10008,7 @@ var swimming_pool_default = [
     title: "Sodium Bi Sulphite Liquid",
     description: "Liquid dechlorination agent for reducing excess chlorine levels in pools.",
     category: "swimming-pool",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Droplets",
     details: {
       casNumber: "7631-90-5",
@@ -9852,6 +10053,7 @@ var swimming_pool_default = [
     title: "Sodium Bi Sulphite Monohydrate",
     description: "Powder form for neutralizing chlorine and adjusting pool chemistry.",
     category: "swimming-pool",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "Droplets",
     details: {
       casNumber: "7631-90-5",
@@ -9896,6 +10098,7 @@ var swimming_pool_default = [
     title: "Trichloroisocyanuric Acid Tablet",
     description: "Stabilized chlorine tablets with built-in cyanuric acid for UV protection.",
     category: "swimming-pool",
+    image: "https://gcoman.com/images/products/granules-flakes.webp",
     iconName: "Droplets",
     details: {
       casNumber: "87-90-1",
@@ -9941,6 +10144,7 @@ var swimming_pool_default = [
     title: "Chlorine Powder",
     description: "Powdered chlorine for rapid pool treatment and shock applications.",
     category: "swimming-pool",
+    image: "https://gcoman.com/images/products/granules-flakes.webp",
     iconName: "Droplets",
     details: {
       casNumber: "7778-54-3",
@@ -9990,6 +10194,7 @@ var tank_cleaners_default = [
     title: "HCF Remover",
     description: "Heavy carbon and fouling remover for industrial tank cleaning.",
     category: "tank-cleaners",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "SprayCan",
     details: {
       alternativeNames: [
@@ -10033,6 +10238,7 @@ var tank_cleaners_default = [
     title: "Resin Clean",
     description: "Specialized cleaner for resin and polymer residue removal.",
     category: "tank-cleaners",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "SprayCan",
     details: {
       alternativeNames: [
@@ -10076,6 +10282,7 @@ var tank_cleaners_default = [
     title: "Universal Wash",
     description: "Multi-purpose cleaning solution for various tank applications.",
     category: "tank-cleaners",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "SprayCan",
     details: {
       alternativeNames: [
@@ -10119,6 +10326,7 @@ var tank_cleaners_default = [
     title: "Methanol Tech Grade",
     description: "Technical grade methanol for industrial cleaning and degreasing.",
     category: "tank-cleaners",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "SprayCan",
     details: {
       formula: "CH3OH",
@@ -10166,6 +10374,7 @@ var tank_cleaners_default = [
     title: "Tank Degreaser Heavy Duty",
     description: "Industrial-strength degreaser for heavy oil and grease removal.",
     category: "tank-cleaners",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "SprayCan",
     details: {
       alternativeNames: [
@@ -10217,6 +10426,7 @@ var tank_cleaners_default = [
     title: "Lye Sodium Hydroxide Liquid",
     description: "Alkaline cleaning solution for industrial tank maintenance.",
     category: "tank-cleaners",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "SprayCan",
     details: {
       formula: "NaOH",
@@ -10264,6 +10474,7 @@ var tank_cleaners_default = [
     title: "Tank Cleaner",
     description: "General-purpose tank cleaning formulation for industrial use.",
     category: "tank-cleaners",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "SprayCan",
     details: {
       alternativeNames: [
@@ -10308,6 +10519,7 @@ var tank_cleaners_default = [
     title: "Sewage Deformer",
     description: "Foam control agent for sewage and wastewater tank systems.",
     category: "tank-cleaners",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "SprayCan",
     details: {
       alternativeNames: [
@@ -10353,6 +10565,7 @@ var tank_cleaners_default = [
     title: "Alkaleen Cleaner Safety Liquid",
     description: "Safe alkaline cleaner for various industrial cleaning applications.",
     category: "tank-cleaners",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "SprayCan",
     details: {
       alternativeNames: [
@@ -10397,6 +10610,7 @@ var tank_cleaners_default = [
     title: "Emulsion Sludge Breaker",
     description: "Breaks down emulsions and sludge in storage tanks.",
     category: "tank-cleaners",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "SprayCan",
     details: {
       alternativeNames: [
@@ -10448,6 +10662,7 @@ var tank_cleaners_default = [
     title: "Oil Spill Dispersent Type 3",
     description: "Type 3 dispersant for oil spill response and tank cleaning.",
     category: "tank-cleaners",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "SprayCan",
     details: {
       alternativeNames: [
@@ -10499,6 +10714,7 @@ var tank_cleaners_default = [
     title: "Aqua Clean HD",
     description: "Heavy-duty aqueous cleaning solution for industrial tanks.",
     category: "tank-cleaners",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "SprayCan",
     details: {
       alternativeNames: [
@@ -10543,6 +10759,7 @@ var tank_cleaners_default = [
     title: "Cold Washer HD",
     description: "Cold-water heavy-duty cleaner for efficient tank washing.",
     category: "tank-cleaners",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "SprayCan",
     details: {
       alternativeNames: [
@@ -10587,6 +10804,7 @@ var tank_cleaners_default = [
     title: "Passivation Liquid",
     description: "Chemical passivation treatment for stainless steel tanks.",
     category: "tank-cleaners",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "SprayCan",
     details: {
       casNumber: "7697-37-2",
@@ -10633,6 +10851,7 @@ var tank_cleaners_default = [
     title: "Edge Sol Cleaner",
     description: "Solvent-based edge and seam cleaning solution.",
     category: "tank-cleaners",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "SprayCan",
     details: {
       alternativeNames: [
@@ -10677,6 +10896,7 @@ var tank_cleaners_default = [
     title: "Enviro Soft 2000",
     description: "Environmentally friendly softening and cleaning agent.",
     category: "tank-cleaners",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "SprayCan",
     details: {
       alternativeNames: [
@@ -10721,6 +10941,7 @@ var tank_cleaners_default = [
     title: "Dual HD Cleaner",
     description: "Dual-action heavy-duty cleaner for versatile tank applications.",
     category: "tank-cleaners",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "SprayCan",
     details: {
       alternativeNames: [
@@ -10765,6 +10986,7 @@ var tank_cleaners_default = [
     title: "Metal Bright",
     description: "Metal brightening and cleaning solution for tank surfaces.",
     category: "tank-cleaners",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "SprayCan",
     details: {
       alternativeNames: [
@@ -10809,6 +11031,7 @@ var tank_cleaners_default = [
     title: "P Xylene Pure",
     description: "Pure p-xylene solvent for industrial cleaning applications.",
     category: "tank-cleaners",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "SprayCan",
     details: {
       formula: "C8H10",
@@ -10856,6 +11079,7 @@ var tank_cleaners_default = [
     title: "CTC Volc Cleaner",
     description: "Volcanic ash and carbon cleaner for specialized tank cleaning.",
     category: "tank-cleaners",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "SprayCan",
     details: {
       alternativeNames: [
@@ -10900,6 +11124,7 @@ var tank_cleaners_default = [
     title: "Aquatuff Ship Hold Cleaner",
     description: "Marine-grade cleaner for ship holds and cargo tanks.",
     category: "tank-cleaners",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
     iconName: "SprayCan",
     details: {
       alternativeNames: [
@@ -10948,6 +11173,7 @@ var water_treatment_default = [
     title: "Activated Carbon",
     description: "High-performance adsorbent for removing impurities, odors, and contaminants from water.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       casNumber: "64365-11-3",
@@ -10989,6 +11215,7 @@ var water_treatment_default = [
     title: "Aluminium Sulphate - Liquid",
     description: "Liquid coagulant for efficient flocculation in water and wastewater treatment.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       formula: "Al2(SO4)3",
@@ -11030,6 +11257,7 @@ var water_treatment_default = [
     title: "Aluminium Sulphate - Powder",
     description: "Powder form coagulant for water clarification and purification processes.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/white-powder.webp",
     iconName: "Droplets",
     details: {
       formula: "Al2(SO4)3",
@@ -11071,6 +11299,7 @@ var water_treatment_default = [
     title: "Antifoam",
     description: "Controls foam in water treatment processes and industrial applications.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       alternativeNames: [
@@ -11111,6 +11340,7 @@ var water_treatment_default = [
     title: "Antiscalant",
     description: "Prevents scale formation in RO systems, boilers, and cooling towers.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       alternativeNames: [
@@ -11170,6 +11400,7 @@ var water_treatment_default = [
     title: "Biocide",
     description: "Antimicrobial agent for controlling bacteria, algae, and fungi in water systems.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       alternativeNames: [
@@ -11211,6 +11442,7 @@ var water_treatment_default = [
     title: "Calcium Carbonate",
     description: "Mineral supplement for pH adjustment and alkalinity control in water treatment.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       formula: "CaCO3",
@@ -11253,6 +11485,7 @@ var water_treatment_default = [
     title: "Calcium Chloride",
     description: "Desiccant and de-icing agent used in wastewater treatment and concrete acceleration.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       formula: "CaCl2",
@@ -11295,6 +11528,7 @@ var water_treatment_default = [
     title: "Caustic Soda Flakes",
     description: "Sodium hydroxide in flake form for pH adjustment and neutralization.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/granules-flakes.webp",
     iconName: "Droplets",
     details: {
       formula: "NaOH",
@@ -11403,6 +11637,7 @@ var water_treatment_default = [
     title: "Caustic Soda Liquid",
     description: "Liquid sodium hydroxide for industrial cleaning and chemical processing.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       formula: "NaOH",
@@ -11464,6 +11699,7 @@ var water_treatment_default = [
     title: "Calcium Hypochlorite 65\u201375%",
     description: "Powerful oxidizing agent and disinfectant for water sanitization and bleaching.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       formula: "Ca(ClO)2",
@@ -11526,6 +11762,7 @@ var water_treatment_default = [
     title: "Sodium Hypochlorite",
     description: "Liquid bleach and disinfectant for water purification.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       formula: "NaClO",
@@ -11593,6 +11830,7 @@ var water_treatment_default = [
     title: "Caustic Soda Prills",
     description: "High-purity sodium hydroxide beads for precise dosing and handling.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/granules-flakes.webp",
     iconName: "Droplets",
     details: {
       formula: "NaOH",
@@ -11637,6 +11875,7 @@ var water_treatment_default = [
     title: "Chlorine Tablets TCCA or TICA",
     description: "Stabilized chlorine tablets for continuous water disinfection and sanitation.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/granules-flakes.webp",
     iconName: "Droplets",
     details: {
       formula: "C3Cl3N3O3",
@@ -11680,6 +11919,7 @@ var water_treatment_default = [
     title: "Citric Acid Anhydrous",
     description: "Water-free citric acid for descaling, cleaning, and pH control.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       formula: "C6H8O7",
@@ -11722,6 +11962,7 @@ var water_treatment_default = [
     title: "Citric Acid Monohydrate",
     description: "Hydrated citric acid for chelating metals and preventing scale buildup.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       formula: "C6H8O7\xB7H2O",
@@ -11764,6 +12005,7 @@ var water_treatment_default = [
     title: "Copper Sulphate Liquid",
     description: "Algaecide and fungicide for controlling algae growth in water bodies.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       formula: "CuSO4",
@@ -11807,6 +12049,7 @@ var water_treatment_default = [
     title: "Corrosion Inhibitor",
     description: "Protects metal surfaces from corrosion in water systems and pipelines.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       alternativeNames: [
@@ -11848,6 +12091,7 @@ var water_treatment_default = [
     title: "DEG (Diethylene Glycol)",
     description: "Solvent and humectant for industrial water treatment applications.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       formula: "C4H10O3",
@@ -11891,6 +12135,7 @@ var water_treatment_default = [
     title: "EDTA Powder",
     description: "Chelating agent for metal ion sequestration and water softening.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/white-powder.webp",
     iconName: "Droplets",
     details: {
       formula: "C10H16N2O8",
@@ -11934,6 +12179,7 @@ var water_treatment_default = [
     title: "Ethanol 99%",
     description: "High-purity ethanol for disinfection and chemical synthesis.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       formula: "C2H5OH",
@@ -11977,6 +12223,7 @@ var water_treatment_default = [
     title: "Ferric Chloride Liquid 40%",
     description: "Powerful coagulant for wastewater treatment and phosphorus removal.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       formula: "FeCl3",
@@ -12020,6 +12267,7 @@ var water_treatment_default = [
     title: "Ferrous Sulphate",
     description: "Flocculant and reducing agent for industrial wastewater treatment.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       formula: "FeSO4\xB77H2O",
@@ -12063,6 +12311,7 @@ var water_treatment_default = [
     title: "Glycerine",
     description: "Humectant and solvent used in various water treatment formulations.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       formula: "C3H8O3",
@@ -12106,6 +12355,7 @@ var water_treatment_default = [
     title: "Hydrated Lime Tech Grade",
     description: "Calcium hydroxide for pH adjustment and water softening.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       formula: "Ca(OH)2",
@@ -12167,6 +12417,7 @@ var water_treatment_default = [
     title: "Hydrazine Hydrate",
     description: "Oxygen scavenger for boiler water treatment and corrosion prevention.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       formula: "N2H4\xB7H2O",
@@ -12210,6 +12461,7 @@ var water_treatment_default = [
     title: "MEG (Monoethylene Glycol)",
     description: "Antifreeze and heat transfer fluid for cooling systems.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       formula: "C2H6O2",
@@ -12253,6 +12505,7 @@ var water_treatment_default = [
     title: "MPG (Monopropylene Glycol)",
     description: "Food-grade antifreeze and coolant for water systems.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       formula: "C3H8O2",
@@ -12296,6 +12549,7 @@ var water_treatment_default = [
     title: "Paraffin Wax",
     description: "Hydrocarbon wax used in water treatment and industrial applications.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       alternativeNames: [
@@ -12337,6 +12591,7 @@ var water_treatment_default = [
     title: "Petroleum Jelly",
     description: "Protective coating and lubricant for water treatment equipment.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       alternativeNames: [
@@ -12378,6 +12633,7 @@ var water_treatment_default = [
     title: "Poly Aluminium Chloride Liquid",
     description: "Advanced liquid coagulant for superior water clarification.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       formula: "Al2(OH)nCl6-n",
@@ -12438,6 +12694,7 @@ var water_treatment_default = [
     title: "Poly Aluminium Chloride Powder",
     description: "High-efficiency powder coagulant for municipal and industrial water treatment.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/white-powder.webp",
     iconName: "Droplets",
     details: {
       formula: "Al2(OH)nCl6-n",
@@ -12496,6 +12753,7 @@ var water_treatment_default = [
     title: "Polyelectrolyte",
     description: "Polymer flocculant for solid-liquid separation and sludge dewatering.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       alternativeNames: [
@@ -12537,6 +12795,7 @@ var water_treatment_default = [
     title: "Potassium Hydroxide",
     description: "Strong alkali for pH adjustment and neutralization processes.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       formula: "KOH",
@@ -12580,6 +12839,7 @@ var water_treatment_default = [
     title: "Soda Ash",
     description: "Sodium carbonate for water softening and pH control.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       formula: "Na2CO3",
@@ -12623,6 +12883,7 @@ var water_treatment_default = [
     title: "Sodium Bicarbonate",
     description: "Alkalinity builder and pH buffer for water treatment systems.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       formula: "NaHCO3",
@@ -12666,6 +12927,7 @@ var water_treatment_default = [
     title: "Sodium Bisulphate / Bisulphite",
     description: "Reducing agent and dechlorination chemical for water treatment.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       formula: "NaHSO4 / NaHSO3",
@@ -12708,6 +12970,7 @@ var water_treatment_default = [
     title: "Sodium Hexametaphosphate",
     description: "Sequestering agent for preventing scale and corrosion in water systems.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       formula: "(NaPO3)6",
@@ -12751,6 +13014,7 @@ var water_treatment_default = [
     title: "Sodium Hypochlorite Solution",
     description: "Liquid bleach and disinfectant for water purification.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       formula: "NaOCl",
@@ -12794,6 +13058,7 @@ var water_treatment_default = [
     title: "Sodium Meta Silicate",
     description: "Alkaline builder and detergent for industrial cleaning and water treatment.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       formula: "Na2SiO3",
@@ -12837,6 +13102,7 @@ var water_treatment_default = [
     title: "Sodium Metabisulphite",
     description: "Preservative and dechlorination agent for water treatment.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       formula: "Na2S2O5",
@@ -12880,6 +13146,7 @@ var water_treatment_default = [
     title: "Sodium Sulphite",
     description: "Oxygen scavenger and preservative for boiler water treatment.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       formula: "Na2SO3",
@@ -12922,6 +13189,7 @@ var water_treatment_default = [
     title: "Sulphamic Acid",
     description: "Descaling agent for removing mineral deposits from equipment.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       formula: "H3NSO3",
@@ -12964,6 +13232,7 @@ var water_treatment_default = [
     title: "Tri Ethanol Amine",
     description: "Corrosion inhibitor and pH adjuster for water systems.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       formula: "C6H15NO3",
@@ -13007,6 +13276,7 @@ var water_treatment_default = [
     title: "TSP (Tri Sodium Phosphate)",
     description: "Heavy-duty cleaner and degreaser for industrial water treatment.",
     category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     iconName: "Droplets",
     details: {
       formula: "Na3PO4",

@@ -4,6 +4,7 @@
     "title": "Sulfuric Acid (Laboratory Grade)",
     "description": "High-purity sulfuric acid for laboratory analysis, research, and industrial applications.",
     "category": "lab-chemicals",
+    "image": "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     "iconName": "Beaker",
     "details": {
       "formula": "H2SO4",
@@ -61,6 +62,7 @@
     "title": "Hydrochloric Acid (Laboratory Grade)",
     "description": "High-purity hydrochloric acid for laboratory and analytical applications.",
     "category": "lab-chemicals",
+    "image": "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     "iconName": "Beaker",
     "details": {
       "formula": "HCl",
@@ -112,6 +114,7 @@
     "title": "Nitric Acid (Laboratory Grade)",
     "description": "High-purity nitric acid for laboratory analysis and oxidation reactions.",
     "category": "lab-chemicals",
+    "image": "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     "iconName": "Beaker",
     "details": {
       "formula": "HNO3",
@@ -157,6 +160,7 @@
     "title": "Acetic Acid (Glacial, Laboratory Grade)",
     "description": "High-purity glacial acetic acid for laboratory synthesis and analytical work.",
     "category": "lab-chemicals",
+    "image": "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     "iconName": "Beaker",
     "details": {
       "formula": "CH3COOH",
@@ -202,6 +206,7 @@
     "title": "Phosphoric Acid (Laboratory Grade)",
     "description": "High-purity phosphoric acid for laboratory analysis and buffer preparation.",
     "category": "lab-chemicals",
+    "image": "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     "iconName": "Beaker",
     "details": {
       "formula": "H3PO4",
@@ -246,6 +251,7 @@
     "title": "Sodium Hydroxide Pellets (Laboratory Grade)",
     "description": "High-purity sodium hydroxide pellets for laboratory use and analysis.",
     "category": "lab-chemicals",
+    "image": "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     "iconName": "Beaker",
     "details": {
       "formula": "NaOH",
@@ -292,6 +298,7 @@
     "title": "Potassium Hydroxide Pellets (Laboratory Grade)",
     "description": "High-purity potassium hydroxide pellets for laboratory and analytical use.",
     "category": "lab-chemicals",
+    "image": "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     "iconName": "Beaker",
     "details": {
       "formula": "KOH",
@@ -337,6 +344,7 @@
     "title": "Ammonia Solution (Laboratory Grade)",
     "description": "High-purity aqueous ammonia for laboratory analysis and pH adjustment.",
     "category": "lab-chemicals",
+    "image": "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     "iconName": "Beaker",
     "details": {
       "formula": "NH4OH",
@@ -383,6 +391,7 @@
     "title": "Acetone (Laboratory Grade)",
     "description": "High-purity acetone for laboratory extractions, cleaning, and synthesis.",
     "category": "lab-chemicals",
+    "image": "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     "iconName": "Beaker",
     "details": {
       "formula": "CH3COCH3",
@@ -434,6 +443,7 @@
     "title": "Ethanol Absolute (Laboratory Grade)",
     "description": "High-purity absolute ethanol for laboratory synthesis and extraction.",
     "category": "lab-chemicals",
+    "image": "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     "iconName": "Beaker",
     "details": {
       "formula": "C2H5OH",
@@ -486,6 +496,7 @@
     "title": "Methanol (Laboratory Grade)",
     "description": "High-purity methanol for HPLC, extraction, and laboratory synthesis.",
     "category": "lab-chemicals",
+    "image": "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     "iconName": "Beaker",
     "details": {
       "formula": "CH3OH",
@@ -531,6 +542,7 @@
     "title": "Isopropanol (Laboratory Grade)",
     "description": "High-purity isopropyl alcohol for laboratory cleaning and DNA extraction.",
     "category": "lab-chemicals",
+    "image": "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     "iconName": "Beaker",
     "details": {
       "formula": "C3H7OH",
@@ -577,6 +589,7 @@
     "title": "Hexane (Laboratory Grade)",
     "description": "High-purity n-hexane for extraction, chromatography, and organic synthesis.",
     "category": "lab-chemicals",
+    "image": "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     "iconName": "Beaker",
     "details": {
       "formula": "C6H14",
@@ -622,6 +635,7 @@
     "title": "Toluene (Laboratory Grade)",
     "description": "High-purity toluene for extraction, synthesis, and chromatography.",
     "category": "lab-chemicals",
+    "image": "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     "iconName": "Beaker",
     "details": {
       "formula": "C7H8",
@@ -667,6 +681,7 @@
     "title": "Xylene (Laboratory Grade)",
     "description": "High-purity xylene for histology, microscopy, and extraction applications.",
     "category": "lab-chemicals",
+    "image": "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     "iconName": "Beaker",
     "details": {
       "formula": "C8H10",
@@ -712,6 +727,7 @@
     "title": "Chloroform (Laboratory Grade)",
     "description": "High-purity chloroform for extraction, NMR spectroscopy, and organic synthesis.",
     "category": "lab-chemicals",
+    "image": "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     "iconName": "Beaker",
     "details": {
       "formula": "CHCl3",
@@ -757,6 +773,7 @@
     "title": "Dichloromethane (Laboratory Grade)",
     "description": "High-purity dichloromethane for extraction, chromatography, and synthesis.",
     "category": "lab-chemicals",
+    "image": "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     "iconName": "Beaker",
     "details": {
       "formula": "CH2Cl2",
@@ -802,6 +819,7 @@
     "title": "Ethyl Acetate (Laboratory Grade)",
     "description": "High-purity ethyl acetate for extraction, chromatography, and organic synthesis.",
     "category": "lab-chemicals",
+    "image": "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     "iconName": "Beaker",
     "details": {
       "formula": "C4H8O2",
@@ -847,6 +865,7 @@
     "title": "Diethyl Ether (Laboratory Grade)",
     "description": "High-purity diethyl ether for extraction and organic synthesis.",
     "category": "lab-chemicals",
+    "image": "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     "iconName": "Beaker",
     "details": {
       "formula": "C4H10O",
@@ -892,6 +911,7 @@
     "title": "Petroleum Ether (Laboratory Grade)",
     "description": "High-purity petroleum ether for extraction and chromatography.",
     "category": "lab-chemicals",
+    "image": "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     "iconName": "Beaker",
     "details": {
       "formula": "C5-C7 alkanes",
@@ -937,6 +957,7 @@
     "title": "Sodium Chloride (Laboratory Grade)",
     "description": "High-purity sodium chloride for buffer preparation and molecular biology.",
     "category": "lab-chemicals",
+    "image": "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     "iconName": "Beaker",
     "details": {
       "formula": "NaCl",
@@ -982,6 +1003,7 @@
     "title": "Potassium Chloride (Laboratory Grade)",
     "description": "High-purity potassium chloride for buffer preparation and electrophysiology.",
     "category": "lab-chemicals",
+    "image": "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     "iconName": "Beaker",
     "details": {
       "formula": "KCl",
@@ -1027,6 +1049,7 @@
     "title": "Calcium Chloride (Laboratory Grade)",
     "description": "High-purity calcium chloride for molecular biology and cell culture.",
     "category": "lab-chemicals",
+    "image": "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     "iconName": "Beaker",
     "details": {
       "formula": "CaCl2",
@@ -1071,6 +1094,7 @@
     "title": "Magnesium Sulfate (Laboratory Grade)",
     "description": "High-purity magnesium sulfate for drying, cell culture, and molecular biology.",
     "category": "lab-chemicals",
+    "image": "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     "iconName": "Beaker",
     "details": {
       "formula": "MgSO4",
@@ -1116,6 +1140,7 @@
     "title": "EDTA Disodium Salt (Laboratory Grade)",
     "description": "High-purity EDTA for chelation, buffer preparation, and molecular biology.",
     "category": "lab-chemicals",
+    "image": "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     "iconName": "Beaker",
     "details": {
       "formula": "C10H14N2Na2O8",
@@ -1161,6 +1186,7 @@
     "title": "Tris Base (Laboratory Grade)",
     "description": "High-purity Tris for buffer preparation and molecular biology applications.",
     "category": "lab-chemicals",
+    "image": "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     "iconName": "Beaker",
     "details": {
       "formula": "C4H11NO3",
@@ -1207,6 +1233,7 @@
     "title": "Sodium Thiosulfate (Laboratory Grade)",
     "description": "High-purity sodium thiosulfate for titrations and analytical chemistry.",
     "category": "lab-chemicals",
+    "image": "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     "iconName": "Beaker",
     "details": {
       "formula": "Na2S2O3",
@@ -1252,6 +1279,7 @@
     "title": "Potassium Permanganate (Laboratory Grade)",
     "description": "High-purity potassium permanganate for oxidation and titrations.",
     "category": "lab-chemicals",
+    "image": "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     "iconName": "Beaker",
     "details": {
       "formula": "KMnO4",
@@ -1296,6 +1324,7 @@
     "title": "Silver Nitrate (Laboratory Grade)",
     "description": "High-purity silver nitrate for titrations, silver staining, and analytical chemistry.",
     "category": "lab-chemicals",
+    "image": "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     "iconName": "Beaker",
     "details": {
       "formula": "AgNO3",
@@ -1341,6 +1370,7 @@
     "title": "Phenolphthalein Indicator",
     "description": "High-purity phenolphthalein indicator for acid-base titrations.",
     "category": "lab-chemicals",
+    "image": "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     "iconName": "Beaker",
     "details": {
       "formula": "C20H14O4",
@@ -1385,6 +1415,7 @@
     "title": "Methyl Orange Indicator",
     "description": "High-purity methyl orange indicator for acid-base titrations.",
     "category": "lab-chemicals",
+    "image": "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     "iconName": "Beaker",
     "details": {
       "formula": "C14H14N3NaO3S",
@@ -1430,6 +1461,7 @@
     "title": "Bromothymol Blue Indicator",
     "description": "High-purity bromothymol blue indicator for neutral pH range titrations.",
     "category": "lab-chemicals",
+    "image": "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     "iconName": "Beaker",
     "details": {
       "formula": "C27H28Br2O5S",
@@ -1475,6 +1507,7 @@
     "title": "Agar Bacteriological (Laboratory Grade)",
     "description": "High-purity bacteriological agar for microbiology culture media.",
     "category": "lab-chemicals",
+    "image": "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     "iconName": "Beaker",
     "details": {
       "casNumber": "9002-18-0",
@@ -1520,6 +1553,7 @@
     "title": "Glucose Anhydrous (Laboratory Grade)",
     "description": "High-purity anhydrous glucose for cell culture and microbiology.",
     "category": "lab-chemicals",
+    "image": "https://gcoman.com/images/products/lab-reagent-bottle.webp",
     "iconName": "Beaker",
     "details": {
       "formula": "C6H12O6",

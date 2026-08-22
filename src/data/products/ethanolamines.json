@@ -4,6 +4,7 @@
     "title": "MEA (Monoethanolamine)",
     "description": "High-purity monoethanolamine for gas sweetening and chemical manufacturing.",
     "category": "ethanolamines",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Beaker",
     "details": {
       "formula": "C2H7NO",
@@ -60,6 +61,7 @@
     "title": "TEA (Triethanolamine)",
     "description": "Industrial triethanolamine for metalworking, cement grinding, and cosmetics.",
     "category": "ethanolamines",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Beaker",
     "details": {
       "formula": "C6H15NO3",
@@ -112,6 +114,7 @@
     "title": "MDEA (Methyldiethanolamine)",
     "description": "Premium MDEA for selective H2S removal and gas sweetening.",
     "category": "ethanolamines",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Beaker",
     "details": {
       "formula": "C5H13NO2",

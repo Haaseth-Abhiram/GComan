@@ -4,6 +4,7 @@
     "title": "Ascorbic Acid",
     "description": "Vitamin C antioxidant and preservative for food and beverage applications.",
     "category": "food-beverage",
+    "image": "https://gcoman.com/images/products/food-grade-powder.webp",
     "iconName": "Wine",
     "details": {
       "formula": "C6H8O6",
@@ -51,6 +52,7 @@
     "title": "Calcium Carbonate (Food Grade)",
     "description": "Food-grade calcium supplement and pH regulator for food products.",
     "category": "food-beverage",
+    "image": "https://gcoman.com/images/products/food-grade-powder.webp",
     "iconName": "Wine",
     "details": {
       "formula": "CaCO3",
@@ -98,6 +100,7 @@
     "title": "Calcium Lactate (Food Grade)",
     "description": "Calcium fortification agent and firming agent for food processing.",
     "category": "food-beverage",
+    "image": "https://gcoman.com/images/products/food-grade-powder.webp",
     "iconName": "Wine",
     "details": {
       "formula": "C6H10CaO6",
@@ -144,6 +147,7 @@
     "title": "Citric Acid Anhydrous (Food Grade)",
     "description": "Food-grade acidulant and preservative for flavoring and pH control.",
     "category": "food-beverage",
+    "image": "https://gcoman.com/images/products/food-grade-powder.webp",
     "iconName": "Wine",
     "details": {
       "formula": "C6H8O7",
@@ -200,6 +204,7 @@
     "title": "Ethanol 70% (Food Grade)",
     "description": "Food-grade ethanol for sanitization and extraction processes.",
     "category": "food-beverage",
+    "image": "https://gcoman.com/images/products/food-grade-powder.webp",
     "iconName": "Wine",
     "details": {
       "formula": "C2H5OH",
@@ -252,6 +257,7 @@
     "title": "Formaldehyde 40% (Technical Grade)",
     "description": "Industrial preservative and disinfectant for food processing equipment.",
     "category": "food-beverage",
+    "image": "https://gcoman.com/images/products/food-grade-powder.webp",
     "iconName": "Wine",
     "details": {
       "formula": "CH2O",
@@ -298,6 +304,7 @@
     "title": "Hand Sanitizer (Alcohol-Based)",
     "description": "Alcohol-based hand sanitizer for food handling and hygiene compliance.",
     "category": "food-beverage",
+    "image": "https://gcoman.com/images/products/food-grade-powder.webp",
     "iconName": "Wine",
     "details": {
       "alternativeNames": [
@@ -343,6 +350,7 @@
     "title": "Limestone (Food Grade)",
     "description": "Food-grade calcium source and pH adjuster for food and beverage processing.",
     "category": "food-beverage",
+    "image": "https://gcoman.com/images/products/food-grade-powder.webp",
     "iconName": "Wine",
     "details": {
       "formula": "CaCO3",
@@ -390,6 +398,7 @@
     "title": "Caustic Soda Liquid (Food Grade)",
     "description": "Food-grade alkali for cleaning and pH adjustment in food processing.",
     "category": "food-beverage",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Wine",
     "details": {
       "formula": "NaOH",
@@ -446,6 +455,7 @@
     "title": "Nitric Acid 68% (Food Grade)",
     "description": "Food-grade acid for equipment cleaning and CIP systems in food facilities.",
     "category": "food-beverage",
+    "image": "https://gcoman.com/images/products/food-grade-powder.webp",
     "iconName": "Wine",
     "details": {
       "formula": "HNO3",
@@ -492,6 +502,7 @@
     "title": "Potassium Sorbate (Food Grade)",
     "description": "Preservative for preventing mold and yeast growth in food and beverages.",
     "category": "food-beverage",
+    "image": "https://gcoman.com/images/products/food-grade-powder.webp",
     "iconName": "Wine",
     "details": {
       "formula": "C6H7KO2",
@@ -538,6 +549,7 @@
     "title": "Propylene Glycol USP (Food Grade)",
     "description": "Food-grade humectant and solvent for flavors and food processing.",
     "category": "food-beverage",
+    "image": "https://gcoman.com/images/products/food-grade-powder.webp",
     "iconName": "Wine",
     "details": {
       "formula": "C3H8O2",
@@ -591,6 +603,7 @@
     "title": "Sodium Bicarbonate (Food Grade)",
     "description": "Food-grade baking soda for leavening, pH control, and food processing.",
     "category": "food-beverage",
+    "image": "https://gcoman.com/images/products/food-grade-powder.webp",
     "iconName": "Wine",
     "details": {
       "formula": "NaHCO3",
@@ -644,6 +657,7 @@
     "title": "Sodium Hypochlorite (Food Grade)",
     "description": "Food-grade sanitizing agent for food contact surfaces and equipment.",
     "category": "food-beverage",
+    "image": "https://gcoman.com/images/products/food-grade-powder.webp",
     "iconName": "Wine",
     "details": {
       "formula": "NaOCl",
@@ -700,6 +714,7 @@
     "title": "Urea (Food/Feed Grade)",
     "description": "Nitrogen source and processing aid for animal feed applications.",
     "category": "food-beverage",
+    "image": "https://gcoman.com/images/products/food-grade-powder.webp",
     "iconName": "Wine",
     "details": {
       "formula": "CH4N2O",
@@ -746,6 +761,7 @@
     "title": "White Salt (Food Grade)",
     "description": "Food-grade refined sodium chloride for seasoning and preservation.",
     "category": "food-beverage",
+    "image": "https://gcoman.com/images/products/food-grade-powder.webp",
     "iconName": "Wine",
     "details": {
       "formula": "NaCl",
@@ -793,6 +809,7 @@
     "title": "Xanthan Gum (Food Grade)",
     "description": "Thickening and stabilizing agent for food and beverage formulations.",
     "category": "food-beverage",
+    "image": "https://gcoman.com/images/products/food-grade-powder.webp",
     "iconName": "Wine",
     "details": {
       "casNumber": "11138-66-2",

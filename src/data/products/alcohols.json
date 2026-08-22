@@ -4,6 +4,7 @@
     "title": "Methanol (Industrial Grade)",
     "description": "Industrial methanol for solvents, fuel, and chemical manufacturing.",
     "category": "alcohols",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "FlaskRound",
     "details": {
       "formula": "CH3OH",
@@ -60,6 +61,7 @@
     "title": "Ethanol (Industrial/Denatured)",
     "description": "Industrial and denatured ethanol for solvents, fuel, and manufacturing.",
     "category": "alcohols",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "FlaskRound",
     "details": {
       "formula": "C2H5OH",
@@ -112,6 +114,7 @@
     "title": "Isopropanol (Industrial Grade)",
     "description": "Industrial isopropyl alcohol for cleaning, solvents, and manufacturing.",
     "category": "alcohols",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "FlaskRound",
     "details": {
       "formula": "C3H7OH",
@@ -164,6 +167,7 @@
     "title": "N-Butanol (Industrial Grade)",
     "description": "Industrial n-butanol for coatings, plastics, and chemical synthesis.",
     "category": "alcohols",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "FlaskRound",
     "details": {
       "formula": "C4H9OH",

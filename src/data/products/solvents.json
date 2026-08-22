@@ -4,6 +4,7 @@
     "title": "Mineral Spirits",
     "description": "High-quality petroleum distillate solvent for cleaning, degreasing, and thinning.",
     "category": "solvents",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "FlaskRound",
     "details": {
       "casNumber": "64742-88-7",
@@ -59,6 +60,7 @@
     "title": "Kerosene (Industrial Grade)",
     "description": "Industrial-grade kerosene for cleaning, fuel applications, and manufacturing.",
     "category": "solvents",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "FlaskRound",
     "details": {
       "casNumber": "8008-20-6",
@@ -110,6 +112,7 @@
     "title": "Turpentine (Industrial Grade)",
     "description": "Industrial turpentine solvent for paint thinning and industrial applications.",
     "category": "solvents",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "FlaskRound",
     "details": {
       "casNumber": "8006-64-2",
@@ -155,6 +158,7 @@
     "title": "Naphtha (Industrial Grade)",
     "description": "Industrial naphtha solvent for cleaning, dilution, and chemical processing.",
     "category": "solvents",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "FlaskRound",
     "details": {
       "casNumber": "64742-89-8",
@@ -200,6 +204,7 @@
     "title": "Thinner 402",
     "description": "Premium paint thinner for epoxy, polyurethane, and industrial coatings.",
     "category": "solvents",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "FlaskRound",
     "details": {
       "alternativeNames": [
@@ -243,6 +248,7 @@
     "title": "MEK (Methyl Ethyl Ketone)",
     "description": "High-purity MEK solvent for coatings, adhesives, and industrial cleaning.",
     "category": "solvents",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "FlaskRound",
     "details": {
       "formula": "C4H8O",

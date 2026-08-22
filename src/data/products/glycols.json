@@ -4,6 +4,7 @@
     "title": "MEG (Monoethylene Glycol)",
     "description": "Industrial monoethylene glycol for antifreeze, coolants, and polyester production.",
     "category": "glycols",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Wind",
     "details": {
       "formula": "C2H6O2",
@@ -60,6 +61,7 @@
     "title": "TEG (Triethylene Glycol)",
     "description": "High-purity triethylene glycol for natural gas dehydration.",
     "category": "glycols",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Wind",
     "details": {
       "formula": "C6H14O4",
@@ -116,6 +118,7 @@
     "title": "Propylene Glycol (USP/Industrial)",
     "description": "Food-grade and industrial propylene glycol for various applications.",
     "category": "glycols",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Wind",
     "details": {
       "formula": "C3H8O2",

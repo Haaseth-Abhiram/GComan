@@ -4,6 +4,7 @@
     "title": "Urea 46% N Fertilizer",
     "description": "Prilled and granular urea (46-0-0) — the most concentrated solid nitrogen fertilizer, supplied to date palm, vegetable, and cereal growers across Oman.",
     "category": "agro",
+    "image": "https://gcoman.com/images/products/granules-fertilizer.webp",
     "iconName": "Wheat",
     "details": {
       "formula": "CO(NH2)2",
@@ -41,6 +42,7 @@
     "title": "Diammonium Phosphate (DAP 18-46-0)",
     "description": "Granular DAP fertilizer — 18% nitrogen, 46% phosphate — the highest-analysis phosphorus fertilizer for base dressing across Omani farms.",
     "category": "agro",
+    "image": "https://gcoman.com/images/products/granules-fertilizer.webp",
     "iconName": "Wheat",
     "details": {
       "formula": "(NH4)2HPO4",
@@ -76,6 +78,7 @@
     "title": "NPK Compound Fertilizers (Custom Blends)",
     "description": "Compound and custom-blended NPK fertilizers — 20-20-20, 19-19-19, 15-15-15 and tailored ratios for Oman's date palm, vegetable, and greenhouse growers.",
     "category": "agro",
+    "image": "https://gcoman.com/images/products/granules-fertilizer.webp",
     "iconName": "Wheat",
     "details": {
       "alternativeNames": ["NPK 20-20-20", "NPK 19-19-19", "NPK 15-15-15", "Compound fertilizer", "Water-soluble NPK", "Fertigation grade NPK"],
@@ -110,6 +113,7 @@
     "title": "Potassium Chloride (MOP 60% K2O)",
     "description": "Muriate of Potash (MOP) — 60% K2O potassium chloride fertilizer for date palms, fruit trees, and field crops across Oman.",
     "category": "agro",
+    "image": "https://gcoman.com/images/products/granules-fertilizer.webp",
     "iconName": "Wheat",
     "details": {
       "formula": "KCl",
@@ -145,6 +149,7 @@
     "title": "Calcium Nitrate Fertilizer",
     "description": "Water-soluble calcium nitrate — 15.5% N, 26.5% CaO — the standard calcium and nitrate-nitrogen source for fertigation of tomatoes, cucumbers, and greenhouse crops.",
     "category": "agro",
+    "image": "https://gcoman.com/images/products/granules-fertilizer.webp",
     "iconName": "Wheat",
     "details": {
       "formula": "Ca(NO3)2·4H2O",
@@ -180,6 +185,7 @@
     "title": "Zinc Sulphate Monohydrate (33% Zn) — Agricultural",
     "description": "Micronutrient zinc sulphate — 33% Zn monohydrate — for correcting zinc deficiency in Oman's alkaline soils, date palm, and greenhouse crops.",
     "category": "agro",
+    "image": "https://gcoman.com/images/products/granules-fertilizer.webp",
     "iconName": "Wheat",
     "details": {
       "formula": "ZnSO4·H2O",
@@ -215,6 +221,7 @@
     "title": "Agricultural Gypsum (Calcium Sulphate)",
     "description": "Agricultural-grade gypsum (calcium sulphate dihydrate) for sodic soil reclamation, calcium supply, and structure improvement across Oman's irrigated farmland.",
     "category": "agro",
+    "image": "https://gcoman.com/images/products/granules-fertilizer.webp",
     "iconName": "Wheat",
     "details": {
       "formula": "CaSO4·2H2O",
@@ -250,6 +257,7 @@
     "title": "Humic Acid (Leonardite Extract)",
     "description": "Water-soluble humic and fulvic acids — leonardite-derived soil conditioner that improves nutrient uptake, soil structure, and root growth in Oman's low-organic desert soils.",
     "category": "agro",
+    "image": "https://gcoman.com/images/products/granules-fertilizer.webp",
     "iconName": "Wheat",
     "details": {
       "casNumber": "1415-93-6",

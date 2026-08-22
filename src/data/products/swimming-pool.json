@@ -4,6 +4,7 @@
     "title": "Algacide Liquid",
     "description": "Effective liquid algaecide for preventing and treating algae growth in swimming pools.",
     "category": "swimming-pool",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Droplets",
     "details": {
       "casNumber": "7173-51-5",
@@ -47,6 +48,7 @@
     "title": "Chlorine Tablet",
     "description": "Standard chlorine tablets for continuous pool water disinfection and sanitation.",
     "category": "swimming-pool",
+    "image": "https://gcoman.com/images/products/granules-flakes.webp",
     "iconName": "Droplets",
     "details": {
       "casNumber": "87-90-1",
@@ -113,6 +115,7 @@
     "title": "Swimming Pool Chemical",
     "description": "Complete range of specialized chemicals for comprehensive pool maintenance.",
     "category": "swimming-pool",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Droplets",
     "details": {
       "alternativeNames": [
@@ -156,6 +159,7 @@
     "title": "Sodium Hypochlorite",
     "description": "Liquid chlorine solution for pool sanitization and shock treatment.",
     "category": "swimming-pool",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Droplets",
     "details": {
       "casNumber": "7681-52-9",
@@ -200,6 +204,7 @@
     "title": "Chlorine Tablet Jumbo Size (3 Inch)",
     "description": "Large 3-inch slow-dissolving chlorine tablets for extended pool protection.",
     "category": "swimming-pool",
+    "image": "https://gcoman.com/images/products/granules-flakes.webp",
     "iconName": "Droplets",
     "details": {
       "casNumber": "87-90-1",
@@ -244,6 +249,7 @@
     "title": "Calcium Hypochlorite Granules",
     "description": "Fast-dissolving granular chlorine for quick pool sanitization and shock treatment.",
     "category": "swimming-pool",
+    "image": "https://gcoman.com/images/products/granules-flakes.webp",
     "iconName": "Droplets",
     "details": {
       "casNumber": "7778-54-3",
@@ -289,6 +295,7 @@
     "title": "Sodium Hypo Chlorite 12-15%",
     "description": "Concentrated liquid chlorine solution for effective pool water treatment.",
     "category": "swimming-pool",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Droplets",
     "details": {
       "casNumber": "7681-52-9",
@@ -333,6 +340,7 @@
     "title": "Chlorine Liquid",
     "description": "Ready-to-use liquid chlorine for immediate pool disinfection.",
     "category": "swimming-pool",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Droplets",
     "details": {
       "casNumber": "7681-52-9",
@@ -377,6 +385,7 @@
     "title": "Sodium Bi Sulphite Liquid",
     "description": "Liquid dechlorination agent for reducing excess chlorine levels in pools.",
     "category": "swimming-pool",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Droplets",
     "details": {
       "casNumber": "7631-90-5",
@@ -421,6 +430,7 @@
     "title": "Sodium Bi Sulphite Monohydrate",
     "description": "Powder form for neutralizing chlorine and adjusting pool chemistry.",
     "category": "swimming-pool",
+    "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Droplets",
     "details": {
       "casNumber": "7631-90-5",
@@ -465,6 +475,7 @@
     "title": "Trichloroisocyanuric Acid Tablet",
     "description": "Stabilized chlorine tablets with built-in cyanuric acid for UV protection.",
     "category": "swimming-pool",
+    "image": "https://gcoman.com/images/products/granules-flakes.webp",
     "iconName": "Droplets",
     "details": {
       "casNumber": "87-90-1",
@@ -510,6 +521,7 @@
     "title": "Chlorine Powder",
     "description": "Powdered chlorine for rapid pool treatment and shock applications.",
     "category": "swimming-pool",
+    "image": "https://gcoman.com/images/products/granules-flakes.webp",
     "iconName": "Droplets",
     "details": {
       "casNumber": "7778-54-3",
