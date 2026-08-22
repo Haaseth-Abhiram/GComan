@@ -1075,11 +1075,26 @@ const Resources = () => {
     const paragraphs = text.split('\n\n');
 
     return paragraphs.map((paragraph, pIndex) => {
-      // Split each paragraph by bold markers
-      const parts = paragraph.split(/(\*\*.*?\*\*)/g);
+      // Split each paragraph by bold markers (**text**) and lightweight
+      // markdown-style internal links ([label](/products/category/id)) —
+      // the only two inline markup forms this content supports.
+      const parts = paragraph.split(/(\*\*.*?\*\*|\[[^\]]+\]\(\/[^)]+\))/g);
       const content = parts.map((part, index) => {
         if (part.startsWith('**') && part.endsWith('**')) {
           return <strong key={index} className="font-semibold text-foreground">{part.slice(2, -2)}</strong>;
+        }
+        const linkMatch = part.match(/^\[([^\]]+)\]\((\/[^)]+)\)$/);
+        if (linkMatch) {
+          const [, label, href] = linkMatch;
+          return (
+            <LocalizedLink
+              key={index}
+              to={href}
+              className="font-semibold text-primary underline underline-offset-2 hover:no-underline"
+            >
+              {label}
+            </LocalizedLink>
+          );
         }
         return part;
       });

@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Search, Sparkles, Loader2, Send, X } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
+import { trackAISearch } from '@/components/GoogleAnalytics';
 import { useToast } from '@/hooks/use-toast';
 import ReactMarkdown from 'react-markdown';
 import gcIcon from '@/assets/gc-icon.webp';
@@ -36,6 +37,7 @@ export const AISearchDialog = ({ open, onOpenChange }: AISearchDialogProps) => {
     setQuery(trimmed);
     setIsLoading(true);
     setAnswer('');
+    trackAISearch(trimmed);
 
     try {
       const { data, error } = await supabase.functions.invoke('ai-search', {

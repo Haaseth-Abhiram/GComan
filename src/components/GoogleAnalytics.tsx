@@ -162,6 +162,13 @@ export const trackSearch = (searchTerm: string) => {
   pushEvent('search', { search_term: searchTerm });
 };
 
+// Separate event name from trackSearch's generic 'search' (the on-page product
+// catalog filter) so AI Search Dialog queries don't blend into the same metric —
+// same reasoning as the generate_lead_contact/generate_lead_career split above.
+export const trackAISearch = (searchTerm: string) => {
+  pushEvent('ai_search_query', { search_term: searchTerm });
+};
+
 export const trackDownload = (resourceName: string) => {
   trackFileDownload(resourceName);
 };

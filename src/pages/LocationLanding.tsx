@@ -876,10 +876,23 @@ const locations: Record<string, LocationData> = {
 
 
 const productCategories = [
-  { name: 'Water Treatment Chemicals', icon: Droplets, description: 'PAC, chlorine, antiscalants, biocides' },
-  { name: 'Industrial Lubricants', icon: Factory, description: 'Shell, Mobil, Castrol oils & greases' },
-  { name: 'Laboratory Chemicals', icon: Beaker, description: 'AR grade, HPLC solvents, reagents' },
-  { name: 'Oil & Gas Chemicals', icon: Building2, description: 'Corrosion inhibitors, demulsifiers' },
+  { name: 'Water Treatment Chemicals', icon: Droplets, description: 'PAC, chlorine, antiscalants, biocides', category: 'water-treatment' },
+  { name: 'Industrial Lubricants', icon: Factory, description: 'Shell, Mobil, Castrol oils & greases', category: 'lubricants' },
+  { name: 'Laboratory Chemicals', icon: Beaker, description: 'AR grade, HPLC solvents, reagents', category: 'lab-chemicals' },
+  { name: 'Oil & Gas Chemicals', icon: Building2, description: 'Corrosion inhibitors, demulsifiers', category: 'oilfield' },
+];
+
+// Popular, specific product pages surfaced from location-page prose (FAQs
+// repeatedly name these by product, not just category — PAC, sodium
+// hypochlorite, caustic soda, antiscalants). Deep-linking here gives Google
+// and buyers a direct path from a location page to the actual product page,
+// rather than only the generic category listing.
+const popularWaterTreatmentProducts = [
+  { label: 'Poly Aluminium Chloride (PAC)', category: 'water-treatment', slug: 'pac-liquid' },
+  { label: 'Calcium Hypochlorite', category: 'water-treatment', slug: 'calcium-hypochlorite-water' },
+  { label: 'Sodium Hypochlorite', category: 'water-treatment', slug: 'sodium-hypochlorite' },
+  { label: 'Caustic Soda Liquid', category: 'water-treatment', slug: 'caustic-soda-liquid' },
+  { label: 'Antiscalant', category: 'water-treatment', slug: 'antiscalant-water' },
 ];
 
 const LocationLanding = () => {
@@ -1065,12 +1078,31 @@ const LocationLanding = () => {
                     </CardHeader>
                     <CardContent>
                       <Button variant="link" className="p-0" asChild>
-                        <LocalizedLink to="/products">View Products →</LocalizedLink>
+                        <LocalizedLink to={`/products/${category.category}`}>View Products →</LocalizedLink>
                       </Button>
                     </CardContent>
                   </Card>
                 );
               })}
+            </div>
+
+            {/* Popular Products — direct links to specific product pages,
+                not just the category listing, so buyers reading about a
+                chemical by name (PAC, caustic soda, antiscalants...) in the
+                FAQs above can click straight through to it. */}
+            <div className="mt-10 text-center">
+              <p className="text-sm font-medium text-muted-foreground mb-3">
+                {isAr ? 'منتجات شائعة:' : 'Popular products:'}
+              </p>
+              <div className="flex flex-wrap justify-center gap-2">
+                {popularWaterTreatmentProducts.map((product) => (
+                  <Button key={product.slug} variant="outline" size="sm" asChild>
+                    <LocalizedLink to={`/products/${product.category}/${product.slug}`}>
+                      {product.label}
+                    </LocalizedLink>
+                  </Button>
+                ))}
+              </div>
             </div>
           </div>
         </div>
