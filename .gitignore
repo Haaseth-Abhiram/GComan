@@ -44,3 +44,4 @@ dist-hostinger.zip
 *.njsproj
 *.sln
 *.sw?
+supabase/.temp/
