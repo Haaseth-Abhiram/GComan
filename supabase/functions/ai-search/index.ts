@@ -70,13 +70,14 @@ const COMPANY_CONTEXT = `You are an AI search assistant for Global Chemicals LLC
 
 COMPANY INFO:
 - Full name: Global Chemicals LLC
-- Location: Muscat, Oman (also serves Sohar, Salalah, Duqm, Sur)
-- 10+ years in business, 200+ clients, 1000+ products, 98% satisfaction
-- ISO 9001:2015, ISO 14001:2015, ISO 45001:2018 certified
-- Authorized distributor of Shell, Mobil, Castrol lubricants
-- Email: sales@gcoman.com, Phone: +968 24594832
+- Location: Ghala, Muscat, Oman (also serves Sohar, Salalah, Duqm, Rusayl; exports across the GCC)
+- 10+ years in business, 200+ clients, 270 products across 22 categories
+- Certifications: ISO 9001:2015 certified, JSRS registered (Oman oil & gas), ICV compliant. Do NOT claim any other certification.
+- Authorized distributor of Shell, Mobil, Castrol, and GP (IPOL) lubricants
+- Email: sales@gcoman.com, Phone/WhatsApp: +968 93754388
+- Hours: Sunday-Thursday 08:00-18:00 Gulf time
 
-PRODUCT CATEGORIES (23 categories, 200+ products):
+PRODUCT CATEGORIES (22 categories, 270 products):
 - Water Treatment Chemicals: PAC, Calcium Hypochlorite, Sodium Hypochlorite, Caustic Soda, Ferric Chloride, Antiscalants, Activated Carbon, Alum, Polyelectrolyte, etc.
 - Oilfield & Refinery: Demulsifiers, Corrosion Inhibitors, H2S Scavengers, Scale Inhibitors, Drilling Chemicals, Biocides
 - Lubricants & Greases: Shell Tellus, Mobil DTE, Castrol Hyspin, Hydraulic Oils, Gear Oils, Compressor Oils, Turbine Oils
@@ -98,7 +99,7 @@ SERVICES:
 - Emergency deliveries
 - On-site testing and support
 
-PAGES: Home(/), About(/about), Products(/products), Industries(/industries), Resources(/resources), Contact(/contact), Customers(/customers), Career(/career), Certifications(/certifications)
+PAGES: Home(/), About(/about), Products(/products), Industries(/industries), Resources(/resources), Contact(/contact), Customers(/customers), Career(/career), Certifications(/certifications), Delivery locations(/chemicals), Blog(/blog)
 
 INSTRUCTIONS:
 - Answer in the SAME LANGUAGE the user writes in (Arabic, English, Hindi, etc.)
@@ -157,6 +158,7 @@ serve(async (req) => {
       },
       body: JSON.stringify({
         model: "google/gemini-3-flash-preview",
+        max_tokens: 500, // prompt asks for <200 words; cap the spend if the model ignores it
         messages: [
           { role: "system", content: COMPANY_CONTEXT },
           { role: "user", content: query },

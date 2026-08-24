@@ -30,6 +30,10 @@ jobs:
       # Fix with: node scripts/sync-ar-sitemap.mjs
       - name: Sitemap health
         run: npm run verify:sitemap-health
+      # Fails if the eager Arabic SEO-meta subset drifts from the full
+      # translation files. Fix with: node scripts/sync-ar-meta.mjs
+      - name: Arabic meta subset
+        run: npm run verify:ar-meta
       - name: Build (dev mode, no prerender)
         run: npm run build:dev
 

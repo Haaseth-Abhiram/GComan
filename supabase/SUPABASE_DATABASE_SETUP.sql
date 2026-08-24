@@ -157,11 +157,13 @@ ON public.contact_submissions
 FOR INSERT
 WITH CHECK (true);
 
--- Allow authenticated users to view submissions (for admin purposes)
-CREATE POLICY "Authenticated users can view contact submissions"
+-- Admin-only: lead PII must not be readable by every authenticated account.
+-- (Matches migration 2025-12-05, which dropped the earlier looser policy.)
+CREATE POLICY "Admins can view all contact submissions"
 ON public.contact_submissions
 FOR SELECT
-USING (auth.role() = 'authenticated');
+TO authenticated
+USING (public.has_role(auth.uid(), 'admin'::app_role));
 
 -- Create trigger for automatic timestamp updates
 CREATE TRIGGER update_contact_submissions_updated_at
@@ -190,11 +192,13 @@ CREATE POLICY "Anyone can submit download leads"
   FOR INSERT
   WITH CHECK (true);
 
--- Create policy to allow authenticated users to view download leads
-CREATE POLICY "Authenticated users can view download leads"
+-- Admin-only: lead PII must not be readable by every authenticated account.
+-- (Matches migration 2025-12-05, which dropped the earlier looser policy.)
+CREATE POLICY "Admins can view all download leads"
   ON public.download_leads
   FOR SELECT
-  USING (auth.role() = 'authenticated');
+  TO authenticated
+  USING (public.has_role(auth.uid(), 'admin'::app_role));
 
 -- Create index for faster email lookups
 CREATE INDEX idx_download_leads_email ON public.download_leads(email);

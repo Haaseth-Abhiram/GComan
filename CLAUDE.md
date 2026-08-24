@@ -6,7 +6,7 @@ gcoman.com — marketing site + lead-capture platform for Global Chemicals LLC (
 
 ## Tech stack
 
-Vite 7 + React 18 + TypeScript (loose: `strict: false`, `noImplicitAny: false`) + Tailwind + shadcn/ui (Radix). Routing: `react-router-dom` v7 via `BrowserRouter` in [src/App.tsx](src/App.tsx). Data: `@tanstack/react-query` (the only legitimate `@tanstack/*` package — the router/start packages from the aborted SSR migration were removed; don't reintroduce them). Forms: `react-hook-form` + Zod. Backend: Supabase (Postgres + auth + storage + Deno edge functions). i18n: `i18next`, `en` default (unprefixed URLs), `ar` under `/ar/*`. Path alias `@/` → `src/`.
+Vite 7 + React 18 + TypeScript (loose: `strict: false`, `noImplicitAny: false`) + Tailwind + shadcn/ui (Radix). Routing: `react-router-dom` v7 via `BrowserRouter` in [src/App.tsx](src/App.tsx). Data: `@tanstack/react-query` (the only legitimate `@tanstack/*` package — the router/start packages from the aborted SSR migration were removed; don't reintroduce them). Forms: controlled `useState` + server-side validation in the edge functions (`react-hook-form`/Zod are installed and wrapped in `ui/form.tsx` but no page uses them yet). Backend: Supabase (Postgres + auth + storage + Deno edge functions). i18n: `i18next`, `en` default (unprefixed URLs), `ar` under `/ar/*`. Path alias `@/` → `src/`.
 
 ## Commands
 
@@ -154,6 +154,7 @@ curl -sI https://gcoman.com/service/calcium-carbonate/ -o /dev/null -w '%{http_c
 
 - `deploy-supabase.sh` — deploy all edge functions
 - `sync-ar-sitemap.mjs` — owns `public/sitemap.xml` (prune + hreflang + /ar twins); see "Arabic SEO model". `--check` is wired into CI as `npm run verify:sitemap-health`
+- `sync-ar-meta.mjs` — regenerates `src/i18n/locales/ar-meta.json`, the small eager subset (product title/description, location metaTitle/metaDescription) that keeps the hreflang/indexability gates synchronous while the full `products-ar.json`/`location-pages-ar.json` lazy-load only on `/ar` (they were ~80% of the main JS bundle when statically imported — never re-add a static import of either file). Rerun after editing either translation file; `--check` is CI's `npm run verify:ar-meta`
 - `audit-playwright.mjs` — timestamped site snapshots → `audits/<date>-local|prod/`
 - `serve-dist.mjs` — serve `dist/` to sanity-check prerendered HTML without rebuilding
 - `zoho-refresh-token.mjs` — refresh the Zoho CRM OAuth token

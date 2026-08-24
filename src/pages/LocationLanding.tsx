@@ -915,10 +915,15 @@ const LocationLanding = () => {
   // localized meta layer and emits hreflang pairs on both language versions;
   // cities without a translation stay noindex on /ar (see CLAUDE.md's
   // Arabic SEO model — never index a page whose body is still English).
+  // Gate on metaTitle + metaDescription: the same rule sync-ar-sitemap.mjs
+  // uses, and the exact fields the eager ar-meta.json subset carries — so this
+  // check stays correct on English renders before (or without) the lazy full
+  // Arabic bundle. Do NOT gate on body fields like `description` here; those
+  // live only in the lazily-loaded location-pages-ar.json.
   const tAr = i18n.getFixedT('ar');
   const hasArabicSeo =
-    i18n.exists(`locationPages.${location}.description`, { lng: 'ar' }) &&
-    i18n.exists(`locationPages.${location}.metaTitle`, { lng: 'ar' });
+    i18n.exists(`locationPages.${location}.metaTitle`, { lng: 'ar' }) &&
+    i18n.exists(`locationPages.${location}.metaDescription`, { lng: 'ar' });
   const arSeoTitle = hasArabicSeo ? tAr(`locationPages.${location}.metaTitle`) : undefined;
   const arSeoDescription = hasArabicSeo ? tAr(`locationPages.${location}.metaDescription`) : undefined;
 
