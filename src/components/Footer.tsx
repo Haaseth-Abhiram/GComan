@@ -26,8 +26,8 @@ const Footer = () => {
   const socialLinks = [
     { icon: Facebook, href: 'https://www.facebook.com/people/Global-Chemicals-LLC/61552652407210/', label: 'Facebook' },
     { icon: Twitter, href: 'https://x.com/LlcChemica92705', label: 'Twitter' },
-    { icon: Linkedin, href: 'https://www.linkedin.com/company/global-chemicalls-llc/', label: 'LinkedIn' },
-    { icon: Instagram, href: 'https://www.instagram.com/globalchemicalsllc/?next=%2F', label: 'Instagram' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/global-chemicals-llc/', label: 'LinkedIn' },
+    { icon: Instagram, href: 'https://www.instagram.com/globalchemicalsllc/', label: 'Instagram' },
     { icon: Youtube, href: 'https://www.youtube.com/@GlobalChemicalsLLC', label: 'YouTube' },
     { icon: ThreadsIcon, href: 'https://www.threads.com/@globalchemicalsllc', label: 'Threads' },
   ];
@@ -39,6 +39,7 @@ const Footer = () => {
     { labelKey: 'nav.resources', path: '/resources' },
     { labelKey: 'nav.contact', path: '/contact' },
     { labelKey: 'nav.careers', path: '/career' },
+    { labelKey: 'nav.certifications', path: '/certifications' },
     { label: 'Chemical Suppliers Oman', path: '/chemical-suppliers-oman' },
     { label: 'Chemical Suppliers Middle East', path: '/chemical-suppliers-middle-east' },
   ];
@@ -187,6 +188,9 @@ const Footer = () => {
                   {[
                     { label: 'Dubai', path: '/chemicals/dubai' },
                     { label: 'Abu Dhabi', path: '/chemicals/abu-dhabi' },
+                    { label: 'Sharjah', path: '/chemicals/sharjah' },
+                    { label: 'Fujairah', path: '/chemicals/fujairah' },
+                    { label: 'Ras Al Khaimah', path: '/chemicals/ras-al-khaimah' },
                     { label: 'Riyadh', path: '/chemicals/riyadh' },
                     { label: 'Jeddah', path: '/chemicals/jeddah' },
                     { label: 'Dammam', path: '/chemicals/dammam' },
@@ -311,34 +315,46 @@ const Footer = () => {
 
         {/* Certifications & Trust Badges */}
         <div className="mb-8 pb-8 border-b border-white/10">
+          {/* Each badge links to /certifications. Without these the page has no
+              inbound internal link at all — it is the strongest trust asset on
+              the site (JSRS gates PDO tenders) and was orphaned. */}
           <div className="flex flex-wrap items-center justify-center gap-6 mb-6">
-            <div className="flex items-center gap-2 bg-emerald-500/10 px-4 py-2 rounded-lg border border-emerald-500/30">
+            <Link
+              to="/certifications"
+              className="flex items-center gap-2 bg-emerald-500/10 px-4 py-2 rounded-lg border border-emerald-500/30 hover:bg-emerald-500/20 hover:border-emerald-500/50 transition-colors"
+            >
               <div className="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center">
-                <span className="text-emerald-400 font-bold text-xs">JSRS</span>
+                <span className="text-emerald-300 font-bold text-xs">JSRS</span>
               </div>
               <div className="text-start">
                 <p className="text-white text-sm font-semibold">{t('certifications.jsrs')}</p>
-                <p className="text-white/60 text-xs">{t('certifications.jsrsDesc')}</p>
+                <p className="text-white/75 text-xs">{t('certifications.jsrsDesc')}</p>
               </div>
-            </div>
-            <div className="flex items-center gap-2 bg-blue-500/10 px-4 py-2 rounded-lg border border-blue-500/30">
+            </Link>
+            <Link
+              to="/certifications"
+              className="flex items-center gap-2 bg-blue-500/10 px-4 py-2 rounded-lg border border-blue-500/30 hover:bg-blue-500/20 hover:border-blue-500/50 transition-colors"
+            >
               <div className="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center">
-                <span className="text-blue-400 font-bold text-xs">ICV</span>
+                <span className="text-blue-300 font-bold text-xs">ICV</span>
               </div>
               <div className="text-start">
                 <p className="text-white text-sm font-semibold">{t('certifications.icv')}</p>
-                <p className="text-white/60 text-xs">{t('certifications.icvDesc')}</p>
+                <p className="text-white/75 text-xs">{t('certifications.icvDesc')}</p>
               </div>
-            </div>
-            <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg border border-white/20">
+            </Link>
+            <Link
+              to="/certifications"
+              className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg border border-white/20 hover:bg-white/20 hover:border-white/40 transition-colors"
+            >
               <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
                 <span className="text-white font-bold text-xs">ISO</span>
               </div>
               <div className="text-start">
                 <p className="text-white text-sm font-semibold">{t('certifications.iso')}</p>
-                <p className="text-white/60 text-xs">{t('certifications.isoDesc')}</p>
+                <p className="text-white/75 text-xs">{t('certifications.isoDesc')}</p>
               </div>
-            </div>
+            </Link>
           </div>
           <p className="text-white/70 text-sm text-center">
             {t('footer.tagline')}

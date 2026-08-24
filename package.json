@@ -8,6 +8,7 @@
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
+    "verify:sitemap-health": "node scripts/sync-ar-sitemap.mjs --check",
     "preview": "vite preview",
     "deploy:cloudflare-worker": "wrangler deploy",
     "verify:seo-routing": "node scripts/verify-seo-routing.mjs",

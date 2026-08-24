@@ -35,7 +35,7 @@ Use **npm**. `bun.lock` is a leftover from a Lovable trial; canonical lockfile i
 
 ## CI (GitHub Actions)
 
-[.github/workflows/ci.yml](.github/workflows/ci.yml): typecheck + lint + `build:dev` + Playwright smoke on every push/PR to `Develop`/`main`. It is the **only** quality gate before the Lovable auto-deploy ships to production. Before pushing: `npx tsc -b && npm run lint && npm run test:e2e`.
+[.github/workflows/ci.yml](.github/workflows/ci.yml): typecheck + lint + `verify:sitemap-health` + `build:dev` + Playwright smoke on every push/PR to `Develop`/`main`. It is the **only** quality gate before the Lovable auto-deploy ships to production. Before pushing: `npx tsc -b && npm run lint && npm run verify:sitemap-health && npm run test:e2e`.
 
 Note: `ci.yml`'s own header comment and `README.md` still describe the retired "Lovable FTPs `dist/` to Hostinger" story — stale relative to "Deploy chain" below. Don't treat those two as sources of truth for the deploy chain.
 
@@ -90,7 +90,7 @@ Pure client-side SPA whose SEO depends on three pieces working together. Touchin
 An `/ar/*` render is **noindex by default**. It becomes indexable only when the page passes BOTH `arTitle` and `arDescription` to `<SEO>` — that flips the `/ar` render to localized meta + self-referencing `/ar` canonical, and makes both language versions emit reciprocal hreflang (`en`/`ar`/`x-default`). Never pass Arabic meta for a page whose body content is still English — that's the duplicate-content trap the default protects against.
 
 - Currently enabled: **product detail pages with a full translation in `src/i18n/locales/products-ar.json`** (249 of 270 products; title + description present = enabled, enforced in [src/pages/ProductDetail.tsx](src/pages/ProductDetail.tsx)).
-- `scripts/sync-ar-sitemap.mjs` keeps `public/sitemap.xml` in sync: adds hreflang alternates to translated products' English blocks and appends the `/ar` twin blocks so they prerender. Idempotent — rerun after adding product translations.
+- `scripts/sync-ar-sitemap.mjs` **owns `public/sitemap.xml` — never hand-edit that file.** It runs three passes: **prune** every URL that renders `noindex` or canonicalises elsewhere, **annotate** each surviving English page with its `en`/`ar`/`x-default` alternates, and **twin** in the matching `/ar` block so the prerenderer generates it. Indexability is derived from the same sources the components read (`products-ar.json` for products, `location-pages-ar.json` for locations, `details.canonicalOverride` for duplicate SKUs), so the sitemap cannot drift from what `<SEO>` renders. Idempotent; rerun after adding any Arabic translation. `npm run verify:sitemap-health` (`--check`) is the CI gate and fails the build if the file is stale.
 - Everything else under `/ar` (home, about, industries, blog…) stays noindex because its page-level prose (FAQs, breadcrumbs, section copy) is hardcoded English even though the `ar.json` UI layer is 100% complete. To enable a page: wire its prose through `t()`, then pass `arTitle`/`arDescription`, then rerun the sitemap sync/add the URL.
 
 ## Adding a new page
@@ -153,7 +153,7 @@ curl -sI https://gcoman.com/service/calcium-carbonate/ -o /dev/null -w '%{http_c
 ## Scripts in `scripts/`
 
 - `deploy-supabase.sh` — deploy all edge functions
-- `sync-ar-sitemap.mjs` — see "Arabic SEO model"; run after adding product translations
+- `sync-ar-sitemap.mjs` — owns `public/sitemap.xml` (prune + hreflang + /ar twins); see "Arabic SEO model". `--check` is wired into CI as `npm run verify:sitemap-health`
 - `audit-playwright.mjs` — timestamped site snapshots → `audits/<date>-local|prod/`
 - `serve-dist.mjs` — serve `dist/` to sanity-check prerendered HTML without rebuilding
 - `zoho-refresh-token.mjs` — refresh the Zoho CRM OAuth token

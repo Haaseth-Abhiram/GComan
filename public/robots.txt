@@ -1,86 +1,114 @@
 User-agent: Googlebot
 Allow: /
+Disallow: /admin
 Disallow: /dev/
-Disallow: /en
+Disallow: /en$
+Disallow: /en/
 Disallow: /login
 
 User-agent: Bingbot
 Allow: /
+Disallow: /admin
 Disallow: /dev/
-Disallow: /en
+Disallow: /en$
+Disallow: /en/
 Disallow: /login
 
 User-agent: Twitterbot
 Allow: /
+Disallow: /admin
 Disallow: /dev/
-Disallow: /en
+Disallow: /en$
+Disallow: /en/
 Disallow: /login
 
 User-agent: facebookexternalhit
 Allow: /
+Disallow: /admin
 Disallow: /dev/
-Disallow: /en
+Disallow: /en$
+Disallow: /en/
 Disallow: /login
 
 # AI Search Crawlers — explicitly permitted for search/answer visibility
 User-agent: GPTBot
 Allow: /
+Disallow: /admin
 Disallow: /dev/
-Disallow: /en
+Disallow: /en$
+Disallow: /en/
 Disallow: /login
 
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /admin
 Disallow: /dev/
-Disallow: /en
+Disallow: /en$
+Disallow: /en/
 Disallow: /login
 
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /admin
 Disallow: /dev/
-Disallow: /en
+Disallow: /en$
+Disallow: /en/
 Disallow: /login
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /admin
 Disallow: /dev/
-Disallow: /en
+Disallow: /en$
+Disallow: /en/
 Disallow: /login
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /admin
 Disallow: /dev/
-Disallow: /en
+Disallow: /en$
+Disallow: /en/
 Disallow: /login
 
 User-agent: Bytespider
 Allow: /
+Disallow: /admin
 Disallow: /dev/
-Disallow: /en
+Disallow: /en$
+Disallow: /en/
 Disallow: /login
 
 User-agent: Applebot
 Allow: /
+Disallow: /admin
 Disallow: /dev/
-Disallow: /en
+Disallow: /en$
+Disallow: /en/
 Disallow: /login
 
 User-agent: DuckDuckBot
 Allow: /
+Disallow: /admin
 Disallow: /dev/
-Disallow: /en
+Disallow: /en$
+Disallow: /en/
 Disallow: /login
 
 User-agent: YandexBot
 Allow: /
+Disallow: /admin
 Disallow: /dev/
-Disallow: /en
+Disallow: /en$
+Disallow: /en/
 Disallow: /login
 
 User-agent: ia_archiver
 Allow: /
+Disallow: /admin
 Disallow: /dev/
-Disallow: /en
+Disallow: /en$
+Disallow: /en/
 Disallow: /login
 
 # SEO audit bots — blocked (no commercial value, high crawl cost)
@@ -111,8 +139,10 @@ Disallow: /
 
 User-agent: *
 Allow: /
+Disallow: /admin
 Disallow: /dev/
-Disallow: /en
+Disallow: /en$
+Disallow: /en/
 Disallow: /login
 
 Sitemap: https://gcoman.com/sitemap.xml

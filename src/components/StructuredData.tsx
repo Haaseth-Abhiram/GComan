@@ -368,7 +368,7 @@ export const JobPostingStructuredData = ({
         "streetAddress": "Office-3, Building Number 1737, Near Oman LNG",
         "addressLocality": location.split(',')[0]?.trim() || "Muscat",
         "addressRegion": "Muscat Governorate",
-        "postalCode": "112",
+        "postalCode": "111",
         "addressCountry": "OM"
       }
     },
@@ -568,7 +568,7 @@ export const ContactPageStructuredData = () => {
         "streetAddress": "Office-3, Building Number 1737, Near Oman LNG",
         "addressLocality": "Muscat",
         "addressRegion": "Muscat Governorate",
-        "postalCode": "100",
+        "postalCode": "111",
         "addressCountry": "OM"
       },
       "openingHoursSpecification": [
@@ -585,8 +585,7 @@ export const ContactPageStructuredData = () => {
           "telephone": "+968-93754388",
           "contactType": "sales",
           "areaServed": ["OM", "AE", "SA", "QA", "KW", "BH"],
-          "availableLanguage": ["en", "ar"],
-          "contactOption": "TollFree"
+          "availableLanguage": ["en", "ar"]
         },
         {
           "@type": "ContactPoint",

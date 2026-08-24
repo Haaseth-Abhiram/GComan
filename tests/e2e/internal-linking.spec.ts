@@ -1,0 +1,55 @@
+import { test, expect } from '@playwright/test';
+
+// Regression guards for internal-linking and entity-consistency defects found in
+// the Aug 2026 audit. Each of these shipped to production once:
+//   - /certifications was indexable with zero internal links anywhere on the site
+//   - /chemicals/{sharjah,fujairah,ras-al-khaimah} were indexable but unlinked,
+//     so their /ar twins were orphaned too
+//   - twitter:site named an account the company does not link to
+test.describe('Internal linking & entity consistency', () => {
+  test('certifications is linked from the footer (was orphaned)', async ({ page }) => {
+    await page.goto('/');
+    await page.waitForLoadState('networkidle');
+    const links = page.locator('footer a[href="/certifications"]');
+    const n = await links.count();
+    console.log('  /certifications footer links:', n);
+    expect(n).toBeGreaterThanOrEqual(4); // 3 trust badges + 1 quick link
+  });
+
+  test('the three orphaned GCC cities are linked (EN)', async ({ page }) => {
+    await page.goto('/');
+    await page.waitForLoadState('networkidle');
+    for (const slug of ['sharjah', 'fujairah', 'ras-al-khaimah']) {
+      await expect(page.locator(`footer a[href="/chemicals/${slug}"]`).first()).toHaveCount(1);
+    }
+  });
+
+  test('the three orphaned GCC cities are linked (AR, locale-prefixed)', async ({ page }) => {
+    await page.goto('/ar/');
+    await page.waitForLoadState('networkidle');
+    for (const slug of ['sharjah', 'fujairah', 'ras-al-khaimah']) {
+      await expect(page.locator(`footer a[href="/ar/chemicals/${slug}"]`).first()).toHaveCount(1);
+    }
+  });
+
+  test('nav.certifications resolves in both locales (no raw i18n key)', async ({ page }) => {
+    await page.goto('/');
+    await page.waitForLoadState('networkidle');
+    // .first() = the Quick Links entry; the later matches are the trust badges.
+    await expect(page.locator('footer a[href="/certifications"]').first()).toHaveText('Certifications');
+    await page.goto('/ar/');
+    await page.waitForLoadState('networkidle');
+    const arText = await page.locator('footer a[href="/ar/certifications"]').first().textContent();
+    console.log('  AR label:', arText);
+    expect(arText).not.toContain('nav.certifications');
+    expect(arText?.trim()).toBe('الشهادات');
+  });
+
+  test('twitter:site uses the handle the footer links to', async ({ page }) => {
+    await page.goto('/');
+    const handle = await page.locator('meta[name="twitter:site"]').getAttribute('content');
+    const href = await page.locator('footer a[href*="x.com/"]').first().getAttribute('href');
+    console.log('  twitter:site =', handle, '| footer =', href);
+    expect(href).toContain(String(handle).replace('@', ''));
+  });
+});

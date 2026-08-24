@@ -34,7 +34,10 @@ interface SEOProps {
 const DEFAULT_IMAGE = "https://storage.googleapis.com/gpt-engineer-file-uploads/KCdCgzQqlrUlZx0GJf8ZTPlKH1p2/social-images/social-1761453031792-resize-17607541312075170240GlobalChemicalsLLCLogoPNG.png";
 const SITE_NAME = "Global Chemicals LLC";
 const BASE_URL = "https://gcoman.com";
-const TWITTER_HANDLE = "@globalchemicals";
+// The account the site itself links to from the footer. Do not guess a
+// prettier handle here — a wrong twitter:site attributes every social card
+// on the site to someone else's account.
+const TWITTER_HANDLE = "@LlcChemica92705";
 const BRAND_SUFFIX = ' | Global Chemicals LLC';
 const SERP_TITLE_LIMIT = 60;
 const SERP_TITLE_SOFT_LIMIT = 65;

@@ -25,6 +25,11 @@ jobs:
         run: npx tsc -b
       - name: Lint
         run: npm run lint
+      # Fails if public/sitemap.xml drifts from what <SEO> actually renders —
+      # i.e. if it submits a noindex URL or one that canonicalises elsewhere.
+      # Fix with: node scripts/sync-ar-sitemap.mjs
+      - name: Sitemap health
+        run: npm run verify:sitemap-health
       - name: Build (dev mode, no prerender)
         run: npm run build:dev
 
