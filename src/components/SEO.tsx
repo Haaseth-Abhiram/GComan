@@ -1,6 +1,8 @@
+import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
+import { loadFullArabic } from '@/i18n';
 
 interface SEOProps {
   title: string;
@@ -120,6 +122,34 @@ export const SEO = ({
     url.replace(/^https:\/\/gcoman\.com(\/|$)/, 'https://gcoman.com/ar$1').replace(/\/ar$/, '/ar/');
   const effectiveCanonical = canonical && isArabic ? toArUrl(canonical) : canonical;
   const effectiveOgUrl = ogUrl && isArabic ? toArUrl(ogUrl) : ogUrl;
+
+  // ── Prerender readiness signal ─────────────────────────────────────────
+  // vite.config.ts uses renderAfterDocumentEvent('prerender-ready'): the
+  // snapshot is taken only after a page explicitly says it is committed.
+  // Every prerendered route mounts <SEO> exactly once, and this effect runs
+  // after the commit that rendered the page's real head + body — unlike the
+  // old fixed renderAfterTime, which raced the build machine's CPU and, on a
+  // slow builder, shipped 310 half-rendered pages to production (25 Aug 2026:
+  // homepage default <title>, English bodies on /ar). On /ar routes we also
+  // wait for the lazily-loaded Arabic catalogue so localized bodies are in
+  // the snapshot. Harmless no-op for real visitors.
+  useEffect(() => {
+    let cancelled = false;
+    const signal = async () => {
+      if (isArabic) {
+        try { await loadFullArabic(); } catch { /* meta subset still correct */ }
+        // let the changeLanguage-triggered re-render commit
+        await new Promise((r) => setTimeout(r, 0));
+      }
+      // NO requestAnimationFrame here: rAF stalls in headless puppeteer (the
+      // same quirk that forced defer={false} on Helmet). useEffect already
+      // runs after the DOM commit; a zero-timeout is margin enough.
+      await new Promise((r) => setTimeout(r, 0));
+      if (!cancelled) document.dispatchEvent(new Event('prerender-ready'));
+    };
+    void signal();
+    return () => { cancelled = true; };
+  });
 
   const finalOgImage = ogImage || DEFAULT_IMAGE;
   const finalTitle = useArabicMeta ? arTitle! : (ogTitle || title);

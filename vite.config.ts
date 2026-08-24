@@ -72,18 +72,15 @@ export default defineConfig(({ mode }) => ({
         : routesFromSitemap(),
       renderer: "@prerenderer/renderer-puppeteer",
       rendererOptions: {
-        // 2.5s gives the lazy chunk time to load + Helmet to commit. The
-        // Helmet commits are now synchronous (we set defer={false} on every
-        // <Helmet> in the codebase) — without that, puppeteer snapshotted
-        // before requestAnimationFrame fired and most routes shipped the
-        // homepage <title> baked in.
-        renderAfterTime: 2500,
-        // 8 concurrent tabs, not 4: with 630 sitemap routes × 2.5 s each the
-        // prerender wall-time at 4 was ~8 min locally and TIMED OUT Lovable's
-        // production build (publish failure, 25 Aug 2026). Doubling the tab
-        // pool roughly halves wall time; keep renderAfterTime untouched — it
-        // is the guard that Arabic bodies and lazy chunks are committed
-        // before the snapshot.
+        // Event-driven readiness, NOT a fixed sleep. Each page dispatches
+        // 'prerender-ready' from <SEO> after its real head + body (and, on
+        // /ar, the lazy Arabic catalogue) have committed — see SEO.tsx. The
+        // previous fixed renderAfterTime raced the build machine: on
+        // Lovable's slower builder the snapshot fired mid-render and shipped
+        // 310 pages with the homepage default <title> (25 Aug 2026). If a
+        // page never signals, the route fails LOUDLY at `timeout` below and
+        // aborts the build — a broken build beats silently broken SEO.
+        renderAfterDocumentEvent: 'prerender-ready',
         maxConcurrentRoutes: 8,
         // page.goto waits for networkidle0 with a 30 s default — under a full
         // 630-route queue a straggler route occasionally exceeds it, which
