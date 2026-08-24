@@ -97,11 +97,11 @@ const ChemicalSuppliersOman = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Chemical Supplier in Muscat, Oman | Global Chemicals LLC"
-        description="Leading chemical supplier in Muscat, Oman. ISO 9001 & JSRS certified. Water treatment, industrial, oilfield & lab chemicals with same-day delivery."
+        title="Chemical Suppliers in Oman | ISO 9001 & JSRS Certified"
+        description="Leading chemical suppliers in Oman — ISO 9001 & JSRS certified. Water treatment, oilfield, industrial & lab chemicals delivered nationwide from Muscat."
         keywords="chemical supplier muscat oman, chemical suppliers in oman, chemical company muscat, industrial chemicals muscat, chemical distributor oman, water treatment chemicals muscat oman, caustic soda oman, caustic soda supplier muscat, PAC supplier muscat oman, poly aluminium chloride oman, oil gas chemicals oman, JSRS chemical supplier oman, PDO chemical supplier oman, Shell lubricants oman, Mobil lubricants muscat, Castrol oman, laboratory chemicals muscat oman, chemical supplier GCC, calcium hypochlorite oman, antiscalant supplier oman, swimming pool chemicals muscat, food grade chemicals oman, RO chemicals oman, chemical supplier sohar, chemical supplier salalah, chemical supplier duqm"
-        ogTitle="Chemical Supplier in Muscat, Oman | Global Chemicals LLC"
-        ogDescription="Leading chemical supplier in Muscat, Oman. ISO 9001 & JSRS certified. Water treatment, industrial, oilfield & laboratory chemicals. Same-day delivery in Muscat."
+        ogTitle="Chemical Suppliers in Oman | Global Chemicals LLC"
+        ogDescription="Leading chemical suppliers in Oman — ISO 9001 & JSRS certified. Nationwide delivery from Muscat: water treatment, oilfield, industrial & laboratory chemicals."
         ogUrl="https://gcoman.com/chemical-suppliers-oman"
         canonical="https://gcoman.com/chemical-suppliers-oman"
       />
