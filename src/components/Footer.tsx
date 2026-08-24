@@ -162,7 +162,9 @@ const Footer = () => {
 
           {/* Locations - We Deliver To */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">{t('footer.weDeliverTo')}</h3>
+            <h3 className="text-lg font-semibold mb-4 text-white">
+              <Link to="/chemicals" className="hover:text-primary transition-colors">{t('footer.weDeliverTo')}</Link>
+            </h3>
             <div className="grid grid-cols-2 gap-x-4 gap-y-2">
               <div>
                 <p className="text-white/80 text-xs uppercase tracking-wider mb-2">Oman</p>

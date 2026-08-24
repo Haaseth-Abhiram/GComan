@@ -131,6 +131,8 @@
 # Prevent duplicate content from /path/ vs /path
 # =====================================
 /products/                              /products                               301!
+# /chemical-supplier bare path -> delivery-locations hub
+/chemical-supplier                      /chemicals                              301
 /chemical-suppliers-oman/               /chemical-suppliers-oman                301!
 /chemical-suppliers-middle-east/        /chemical-suppliers-middle-east         301!
 /chemical-supplier/caustic-soda-oman/   /chemical-supplier/caustic-soda-oman    301!

@@ -49,3 +49,24 @@ test.describe('Legacy URL redirects — client-side', () => {
     expect(new URL(page.url()).pathname).toBe('/products/water-treatment/caustic-soda-flakes');
   });
 });
+
+test.describe('/chemicals hub', () => {
+  test('bare /chemical-supplier redirects to the delivery-locations hub', async ({ page }) => {
+    await page.goto('/chemical-supplier');
+    await page.waitForURL('**/chemicals');
+    expect(new URL(page.url()).pathname).toBe('/chemicals');
+  });
+
+  test('/chemicals renders the hub with all 22 location links', async ({ page }) => {
+    await page.goto('/chemicals');
+    await expect(page.locator('h1')).toContainText('Chemical Supply Across Oman');
+    const cityLinks = page.locator('main a[href^="/chemicals/"]');
+    expect(await cityLinks.count()).toBe(22);
+  });
+
+  test('/chemical-supplier/caustic-soda-oman still resolves (must not be caught by the bare redirect)', async ({ page }) => {
+    await page.goto('/chemical-supplier/caustic-soda-oman');
+    await expect(page.locator('h1').first()).not.toHaveText(/404/);
+    expect(new URL(page.url()).pathname).toBe('/chemical-supplier/caustic-soda-oman');
+  });
+});

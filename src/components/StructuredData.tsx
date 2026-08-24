@@ -118,7 +118,7 @@ export const ArticleStructuredData = ({
     "headline": title,
     "description": description,
     "url": url,
-    "image": image || "https://storage.googleapis.com/gpt-engineer-file-uploads/KCdCgzQqlrUlZx0GJf8ZTPlKH1p2/social-images/social-1761453031792-resize-17607541312075170240GlobalChemicalsLLCLogoPNG.png",
+    "image": image || "https://gcoman.com/images/og-default.png",
     "author": {
       "@type": "Person",
       "name": author,

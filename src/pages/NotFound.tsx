@@ -22,7 +22,7 @@ const NotFound = () => {
         <meta name="robots" content="noindex, nofollow" />
         <meta property="og:title" content="Page Not Found | Global Chemicals LLC" />
         <meta property="og:description" content="The page you are looking for could not be found." />
-        <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/KCdCgzQqlrUlZx0GJf8ZTPlKH1p2/social-images/social-1761453031792-resize-17607541312075170240GlobalChemicalsLLCLogoPNG.png" />
+        <meta property="og:image" content="https://gcoman.com/images/og-default.png" />
       </Helmet>
       <div className="text-center">
         <h1 className="mb-4 text-4xl font-bold text-foreground">404</h1>

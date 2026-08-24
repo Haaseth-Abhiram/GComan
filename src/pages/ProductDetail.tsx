@@ -197,6 +197,7 @@ const ProductDetail = ({ category, rawCategoryProducts }: ProductDetailProps) =>
         ogTitle={`${product.title} - ${catLabel} Chemical Supplier | Oman & GCC | Global Chemicals LLC`}
         ogDescription={seoDescription}
         ogUrl={`https://gcoman.com/products/${category}/${productSlug}`}
+        ogImage={product.image}
         canonical={product.details?.canonicalOverride || `https://gcoman.com/products/${category}/${productSlug}`}
       />
       

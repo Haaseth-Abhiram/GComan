@@ -53,3 +53,21 @@ test.describe('Internal linking & entity consistency', () => {
     expect(href).toContain(String(handle).replace('@', ''));
   });
 });
+
+// The 21 products translated in Aug 2026 (agro / lubricants / tank-cleaners
+// batch) must render as fully-localized Arabic pages: indexable robots +
+// Arabic title. If the products-ar.json entry is malformed the page silently
+// falls back to English meta + noindex — this pins one product per batch.
+test.describe('Arabic product translations (Aug 2026 batch)', () => {
+  for (const slug of ['products/agro/urea-fertilizer', 'products/lubricants/shell-lubricants']) {
+    test(`/ar/${slug} is indexable with Arabic meta`, async ({ page }) => {
+      await page.goto(`/ar/${slug}`);
+      await page.waitForLoadState('networkidle');
+      const robots = await page.locator('meta[name="robots"]').first().getAttribute('content');
+      expect(robots).toContain('index, follow');
+      expect(robots).not.toContain('noindex');
+      const title = await page.title();
+      expect(title).toMatch(/[؀-ۿ]/); // contains Arabic script
+    });
+  }
+});

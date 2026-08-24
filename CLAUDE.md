@@ -53,7 +53,7 @@ Much more than a brochure site. Beyond the obvious marketing pages:
 - **AI product search** — `src/components/AISearchDialog.tsx` → `ai-search` edge function (LLM-backed, markdown responses).
 - **Lead capture** — `DownloadGateDialog.tsx` gates resource downloads behind name/email → `notify-download` edge function → Zoho CRM.
 - **3D chemistry hero** — `src/components/products/ChemistryHero3D.tsx` + `scene/` (three.js / @react-three/fiber, custom GLSL dissolve shader, Brownian particle physics). Tuning tool at `/dev/chemistry-playground` (`ChemistryPlayground.tsx`) — internal, deliberately NOT in the sitemap.
-- **SEO landing pages** — `LocationLanding.tsx` (dynamic `/chemicals/:location`), plus static ones (`ChemicalSuppliersOman.tsx` etc.).
+- **SEO landing pages** — `LocationLanding.tsx` (dynamic `/chemicals/:location`) with `ChemicalsHub.tsx` as the `/chemicals` index (location list lives in `src/data/locationIndex.ts` — keep slugs in sync with LocationLanding's `locations` record), plus static ones (`ChemicalSuppliersOman.tsx` etc.).
 - **Integrations** — `GoogleAnalytics.tsx`, `ZohoSalesIQ.tsx`, `Turnstile.tsx`, `WhatsAppButton.tsx`, `CookieConsent.tsx`.
 - **i18n data** — `src/i18n/locales/`: `en.json`, `ar.json`, plus `products-ar.json` (translated product names/descriptions).
 
@@ -89,7 +89,7 @@ Pure client-side SPA whose SEO depends on three pieces working together. Touchin
 
 An `/ar/*` render is **noindex by default**. It becomes indexable only when the page passes BOTH `arTitle` and `arDescription` to `<SEO>` — that flips the `/ar` render to localized meta + self-referencing `/ar` canonical, and makes both language versions emit reciprocal hreflang (`en`/`ar`/`x-default`). Never pass Arabic meta for a page whose body content is still English — that's the duplicate-content trap the default protects against.
 
-- Currently enabled: **product detail pages with a full translation in `src/i18n/locales/products-ar.json`** (249 of 270 products; title + description present = enabled, enforced in [src/pages/ProductDetail.tsx](src/pages/ProductDetail.tsx)).
+- Currently enabled: **product detail pages with a full translation in `src/i18n/locales/products-ar.json`** (270 of 270 products — full coverage since 2026-08-24; title + description present = enabled, enforced in [src/pages/ProductDetail.tsx](src/pages/ProductDetail.tsx)).
 - `scripts/sync-ar-sitemap.mjs` **owns `public/sitemap.xml` — never hand-edit that file.** It runs three passes: **prune** every URL that renders `noindex` or canonicalises elsewhere, **annotate** each surviving English page with its `en`/`ar`/`x-default` alternates, and **twin** in the matching `/ar` block so the prerenderer generates it. Indexability is derived from the same sources the components read (`products-ar.json` for products, `location-pages-ar.json` for locations, `details.canonicalOverride` for duplicate SKUs), so the sitemap cannot drift from what `<SEO>` renders. Idempotent; rerun after adding any Arabic translation. `npm run verify:sitemap-health` (`--check`) is the CI gate and fails the build if the file is stale.
 - Everything else under `/ar` (home, about, industries, blog…) stays noindex because its page-level prose (FAQs, breadcrumbs, section copy) is hardcoded English even though the `ar.json` UI layer is 100% complete. To enable a page: wire its prose through `t()`, then pass `arTitle`/`arDescription`, then rerun the sitemap sync/add the URL.
 

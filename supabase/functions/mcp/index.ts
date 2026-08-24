@@ -12583,7 +12583,8 @@ var water_treatment_default = [
         "Available in 5kg slabs, 25kg cartons",
         "Grades: Fully refined, semi-refined"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Paraffin_wax"
+      wikiUrl: "https://en.wikipedia.org/wiki/Paraffin_wax",
+      casNumber: "8002-74-2"
     }
   },
   {
@@ -12625,7 +12626,8 @@ var water_treatment_default = [
         "Available in drums and pails",
         "Non-toxic (USP grade)"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Petroleum_jelly"
+      wikiUrl: "https://en.wikipedia.org/wiki/Petroleum_jelly",
+      casNumber: "8009-03-8"
     }
   },
   {

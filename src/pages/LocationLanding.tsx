@@ -950,6 +950,7 @@ const LocationLanding = () => {
 
   const breadcrumbItems = [
     { name: isAr ? 'الرئيسية' : 'Home', url: 'https://gcoman.com/' },
+    { name: isAr ? 'مواقع التوصيل' : 'Delivery Locations', url: 'https://gcoman.com/chemicals' },
     { name: isAr ? `كيماويات ${locationData.cityArabic}` : `Chemicals ${locationData.city}`, url: `https://gcoman.com/chemicals/${locationData.slug}` }
   ];
 

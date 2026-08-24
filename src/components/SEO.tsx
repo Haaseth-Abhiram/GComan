@@ -31,7 +31,7 @@ interface SEOProps {
   articleTags?: string[];
 }
 
-const DEFAULT_IMAGE = "https://storage.googleapis.com/gpt-engineer-file-uploads/KCdCgzQqlrUlZx0GJf8ZTPlKH1p2/social-images/social-1761453031792-resize-17607541312075170240GlobalChemicalsLLCLogoPNG.png";
+const DEFAULT_IMAGE = "https://gcoman.com/images/og-default.png";
 const SITE_NAME = "Global Chemicals LLC";
 const BASE_URL = "https://gcoman.com";
 // The account the site itself links to from the footer. Do not guess a
@@ -40,7 +40,13 @@ const BASE_URL = "https://gcoman.com";
 const TWITTER_HANDLE = "@LlcChemica92705";
 const BRAND_SUFFIX = ' | Global Chemicals LLC';
 const SERP_TITLE_LIMIT = 60;
-const SERP_TITLE_SOFT_LIMIT = 65;
+// Post-strip grace was 65, but Google truncates on pixel width (~580 px) and
+// the wide-character titles at 61–65 chars were measurably cut in mobile
+// SERPs (55 pages in the Aug 2026 audit). 60 keeps the whole title visible.
+const SERP_TITLE_SOFT_LIMIT = 60;
+// Descriptions are cut around 155–160 chars; past that the closing CTA never
+// renders. Clamp at a word boundary before 158 so the snippet ends clean.
+const SERP_DESCRIPTION_LIMIT = 158;
 
 // Smart fit for the <title> tag. Google truncates around ~580 px (≈60 chars).
 // 1. Short enough → untouched.
@@ -56,6 +62,17 @@ function fitForSerp(title: string): string {
     .slice(0, SERP_TITLE_LIMIT)
     .replace(/\s+\S*$/, '')        // drop the partial trailing word
     .replace(/[\s:;,.\-—–|]+$/, ''); // and trailing punctuation/separators
+}
+
+// Same idea for the meta description: never emit more than Google will show.
+// English only — Arabic descriptions are authored to length and Arabic SERP
+// truncation behaves differently, so they pass through unchanged.
+function fitDescription(text: string): string {
+  if (text.length <= SERP_DESCRIPTION_LIMIT) return text;
+  return text
+    .slice(0, SERP_DESCRIPTION_LIMIT)
+    .replace(/\s+\S*$/, '')
+    .replace(/[\s:;,.\-—–|]+$/, '');
 }
 
 export const SEO = ({
@@ -91,7 +108,7 @@ export const SEO = ({
   const arReady = Boolean(arTitle && arDescription);
   const useArabicMeta = isArabic && arReady;
 
-  const effectiveDescription = useArabicMeta ? arDescription! : description;
+  const effectiveDescription = useArabicMeta ? arDescription! : fitDescription(description);
   // fitForSerp's brand-suffix logic is tuned for the English titles; Arabic
   // titles are authored to length and pass through unchanged.
   const titleForSerp = useArabicMeta ? arTitle! : (seoTitle ?? fitForSerp(title));
@@ -150,8 +167,11 @@ export const SEO = ({
       <meta property="og:description" content={finalDescription} />
       {effectiveOgUrl && <meta property="og:url" content={effectiveOgUrl} />}
       <meta property="og:image" content={finalOgImage} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
+      {/* Dimension hints only for the default card, whose size we control.
+          Caller-supplied images (e.g. 1200×900 product photos) vary, and a
+          wrong height claim makes scrapers crop the preview badly. */}
+      {finalOgImage === DEFAULT_IMAGE && <meta property="og:image:width" content="1200" />}
+      {finalOgImage === DEFAULT_IMAGE && <meta property="og:image:height" content="630" />}
       <meta property="og:image:alt" content={`${finalTitle} - Global Chemicals LLC`} />
       <meta property="og:locale" content={currentLocale} />
       <meta property="og:locale:alternate" content={currentLocale === 'en_US' ? 'ar_SA' : 'en_US'} />

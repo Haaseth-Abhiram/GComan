@@ -187,6 +187,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://gcoman.com/chemicals</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://gcoman.com/chemicals/abu-dhabi</loc>
     <lastmod>2026-08-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -392,6 +398,9 @@
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/additives/additives"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/additives/additives"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/additives/additives"/>
   </url>
   <url>
     <loc>https://gcoman.com/products/agro</loc>
@@ -404,48 +413,72 @@
     <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/agro/agricultural-gypsum"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/agro/agricultural-gypsum"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/agro/agricultural-gypsum"/>
   </url>
   <url>
     <loc>https://gcoman.com/products/agro/calcium-nitrate-fertilizer</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/agro/calcium-nitrate-fertilizer"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/agro/calcium-nitrate-fertilizer"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/agro/calcium-nitrate-fertilizer"/>
   </url>
   <url>
     <loc>https://gcoman.com/products/agro/dap-fertilizer</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/agro/dap-fertilizer"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/agro/dap-fertilizer"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/agro/dap-fertilizer"/>
   </url>
   <url>
     <loc>https://gcoman.com/products/agro/humic-acid-fertilizer</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/agro/humic-acid-fertilizer"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/agro/humic-acid-fertilizer"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/agro/humic-acid-fertilizer"/>
   </url>
   <url>
     <loc>https://gcoman.com/products/agro/npk-fertilizer</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/agro/npk-fertilizer"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/agro/npk-fertilizer"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/agro/npk-fertilizer"/>
   </url>
   <url>
     <loc>https://gcoman.com/products/agro/potassium-chloride-fertilizer</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/agro/potassium-chloride-fertilizer"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/agro/potassium-chloride-fertilizer"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/agro/potassium-chloride-fertilizer"/>
   </url>
   <url>
     <loc>https://gcoman.com/products/agro/urea-fertilizer</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/agro/urea-fertilizer"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/agro/urea-fertilizer"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/agro/urea-fertilizer"/>
   </url>
   <url>
     <loc>https://gcoman.com/products/agro/zinc-sulphate-agricultural</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/agro/zinc-sulphate-agricultural"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/agro/zinc-sulphate-agricultural"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/agro/zinc-sulphate-agricultural"/>
   </url>
   <url>
     <loc>https://gcoman.com/products/alcohols</loc>
@@ -500,6 +533,9 @@
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/calcium-carbonate/calcium-carbonate"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/calcium-carbonate/calcium-carbonate"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/calcium-carbonate/calcium-carbonate"/>
   </url>
   <url>
     <loc>https://gcoman.com/products/chlorinated</loc>
@@ -710,6 +746,9 @@
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/corrosion-inhibitor/corrosion-inhibitor-closed-system"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/corrosion-inhibitor/corrosion-inhibitor-closed-system"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/corrosion-inhibitor/corrosion-inhibitor-closed-system"/>
   </url>
   <url>
     <loc>https://gcoman.com/products/corrosion-inhibitor/corrosion-inhibitor-gas-compressor</loc>
@@ -1391,6 +1430,9 @@
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/lab-equipment/lab-equipment"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/lab-equipment/lab-equipment"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/lab-equipment/lab-equipment"/>
   </url>
   <url>
     <loc>https://gcoman.com/products/lubricants</loc>
@@ -1403,24 +1445,36 @@
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/lubricants/castrol-lubricants"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/lubricants/castrol-lubricants"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/lubricants/castrol-lubricants"/>
   </url>
   <url>
     <loc>https://gcoman.com/products/lubricants/gp-lubricants</loc>
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/lubricants/gp-lubricants"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/lubricants/gp-lubricants"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/lubricants/gp-lubricants"/>
   </url>
   <url>
     <loc>https://gcoman.com/products/lubricants/mobil-lubricants</loc>
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/lubricants/mobil-lubricants"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/lubricants/mobil-lubricants"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/lubricants/mobil-lubricants"/>
   </url>
   <url>
     <loc>https://gcoman.com/products/lubricants/shell-lubricants</loc>
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/lubricants/shell-lubricants"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/lubricants/shell-lubricants"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/lubricants/shell-lubricants"/>
   </url>
   <url>
     <loc>https://gcoman.com/products/oilfield</loc>
@@ -2021,6 +2075,9 @@
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/soap-detergent/perchloroethylene-soap-detergent"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/soap-detergent/perchloroethylene-soap-detergent"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/soap-detergent/perchloroethylene-soap-detergent"/>
   </url>
   <url>
     <loc>https://gcoman.com/products/soap-detergent/sles-70</loc>
@@ -2369,6 +2426,9 @@
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/tank-cleaners/lye-sodium-hydroxide-liquid"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/tank-cleaners/lye-sodium-hydroxide-liquid"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/tank-cleaners/lye-sodium-hydroxide-liquid"/>
   </url>
   <url>
     <loc>https://gcoman.com/products/tank-cleaners/metal-bright</loc>
@@ -2438,12 +2498,18 @@
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/tank-cleaners/tank-cleaner-general"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/tank-cleaners/tank-cleaner-general"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/tank-cleaners/tank-cleaner-general"/>
   </url>
   <url>
     <loc>https://gcoman.com/products/tank-cleaners/tank-degreaser-heavy-duty</loc>
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/tank-cleaners/tank-degreaser-heavy-duty"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/tank-cleaners/tank-degreaser-heavy-duty"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/tank-cleaners/tank-degreaser-heavy-duty"/>
   </url>
   <url>
     <loc>https://gcoman.com/products/tank-cleaners/universal-wash</loc>
@@ -2807,6 +2873,9 @@
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/water-treatment/sodium-hypochlorite-2"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/water-treatment/sodium-hypochlorite-2"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/water-treatment/sodium-hypochlorite-2"/>
   </url>
   <url>
     <loc>https://gcoman.com/products/water-treatment/sodium-meta-silicate</loc>
@@ -2986,6 +3055,87 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/chemicals/yanbu"/>
   </url>
   <url>
+    <loc>https://gcoman.com/ar/products/additives/additives</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/additives/additives"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/additives/additives"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/additives/additives"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/ar/products/agro/agricultural-gypsum</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/agro/agricultural-gypsum"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/agro/agricultural-gypsum"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/agro/agricultural-gypsum"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/ar/products/agro/calcium-nitrate-fertilizer</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/agro/calcium-nitrate-fertilizer"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/agro/calcium-nitrate-fertilizer"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/agro/calcium-nitrate-fertilizer"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/ar/products/agro/dap-fertilizer</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/agro/dap-fertilizer"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/agro/dap-fertilizer"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/agro/dap-fertilizer"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/ar/products/agro/humic-acid-fertilizer</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/agro/humic-acid-fertilizer"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/agro/humic-acid-fertilizer"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/agro/humic-acid-fertilizer"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/ar/products/agro/npk-fertilizer</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/agro/npk-fertilizer"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/agro/npk-fertilizer"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/agro/npk-fertilizer"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/ar/products/agro/potassium-chloride-fertilizer</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/agro/potassium-chloride-fertilizer"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/agro/potassium-chloride-fertilizer"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/agro/potassium-chloride-fertilizer"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/ar/products/agro/urea-fertilizer</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/agro/urea-fertilizer"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/agro/urea-fertilizer"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/agro/urea-fertilizer"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/ar/products/agro/zinc-sulphate-agricultural</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/agro/zinc-sulphate-agricultural"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/agro/zinc-sulphate-agricultural"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/agro/zinc-sulphate-agricultural"/>
+  </url>
+  <url>
     <loc>https://gcoman.com/ar/products/alcohols/butanol-industrial</loc>
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
@@ -3020,6 +3170,15 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/alcohols/methanol-industrial"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/alcohols/methanol-industrial"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/alcohols/methanol-industrial"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/ar/products/calcium-carbonate/calcium-carbonate</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/calcium-carbonate/calcium-carbonate"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/calcium-carbonate/calcium-carbonate"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/calcium-carbonate/calcium-carbonate"/>
   </url>
   <url>
     <loc>https://gcoman.com/ar/products/chlorinated/methylene-chloride-industrial</loc>
@@ -3200,6 +3359,15 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/corrosion-inhibitor/corrosion-inhibitor-2000"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/corrosion-inhibitor/corrosion-inhibitor-2000"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/corrosion-inhibitor/corrosion-inhibitor-2000"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/ar/products/corrosion-inhibitor/corrosion-inhibitor-closed-system</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/corrosion-inhibitor/corrosion-inhibitor-closed-system"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/corrosion-inhibitor/corrosion-inhibitor-closed-system"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/corrosion-inhibitor/corrosion-inhibitor-closed-system"/>
   </url>
   <url>
     <loc>https://gcoman.com/ar/products/corrosion-inhibitor/corrosion-inhibitor-gas-compressor</loc>
@@ -3841,6 +4009,51 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/lab-chemicals/xylene-lab"/>
   </url>
   <url>
+    <loc>https://gcoman.com/ar/products/lab-equipment/lab-equipment</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/lab-equipment/lab-equipment"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/lab-equipment/lab-equipment"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/lab-equipment/lab-equipment"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/ar/products/lubricants/castrol-lubricants</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/lubricants/castrol-lubricants"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/lubricants/castrol-lubricants"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/lubricants/castrol-lubricants"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/ar/products/lubricants/gp-lubricants</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/lubricants/gp-lubricants"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/lubricants/gp-lubricants"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/lubricants/gp-lubricants"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/ar/products/lubricants/mobil-lubricants</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/lubricants/mobil-lubricants"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/lubricants/mobil-lubricants"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/lubricants/mobil-lubricants"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/ar/products/lubricants/shell-lubricants</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/lubricants/shell-lubricants"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/lubricants/shell-lubricants"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/lubricants/shell-lubricants"/>
+  </url>
+  <url>
     <loc>https://gcoman.com/ar/products/oilfield/acetic-acid</loc>
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
@@ -4417,6 +4630,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/soap-detergent/nonyl-phenol-ethoxylate"/>
   </url>
   <url>
+    <loc>https://gcoman.com/ar/products/soap-detergent/perchloroethylene-soap-detergent</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/soap-detergent/perchloroethylene-soap-detergent"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/soap-detergent/perchloroethylene-soap-detergent"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/soap-detergent/perchloroethylene-soap-detergent"/>
+  </url>
+  <url>
     <loc>https://gcoman.com/ar/products/soap-detergent/sles-70</loc>
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
@@ -4741,6 +4963,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/tank-cleaners/hcf-remover"/>
   </url>
   <url>
+    <loc>https://gcoman.com/ar/products/tank-cleaners/lye-sodium-hydroxide-liquid</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/tank-cleaners/lye-sodium-hydroxide-liquid"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/tank-cleaners/lye-sodium-hydroxide-liquid"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/tank-cleaners/lye-sodium-hydroxide-liquid"/>
+  </url>
+  <url>
     <loc>https://gcoman.com/ar/products/tank-cleaners/metal-bright</loc>
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
@@ -4802,6 +5033,24 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/tank-cleaners/sewage-deformer"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/tank-cleaners/sewage-deformer"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/tank-cleaners/sewage-deformer"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/ar/products/tank-cleaners/tank-cleaner-general</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/tank-cleaners/tank-cleaner-general"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/tank-cleaners/tank-cleaner-general"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/tank-cleaners/tank-cleaner-general"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/ar/products/tank-cleaners/tank-degreaser-heavy-duty</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/tank-cleaners/tank-degreaser-heavy-duty"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/tank-cleaners/tank-degreaser-heavy-duty"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/tank-cleaners/tank-degreaser-heavy-duty"/>
   </url>
   <url>
     <loc>https://gcoman.com/ar/products/tank-cleaners/universal-wash</loc>
@@ -5153,6 +5402,15 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/water-treatment/sodium-hypochlorite"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/water-treatment/sodium-hypochlorite"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/water-treatment/sodium-hypochlorite"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/ar/products/water-treatment/sodium-hypochlorite-2</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/water-treatment/sodium-hypochlorite-2"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/water-treatment/sodium-hypochlorite-2"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/water-treatment/sodium-hypochlorite-2"/>
   </url>
   <url>
     <loc>https://gcoman.com/ar/products/water-treatment/sodium-meta-silicate</loc>

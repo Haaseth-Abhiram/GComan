@@ -1,6 +1,6 @@
 # Global Chemicals LLC — LLMs.txt
 # https://gcoman.com/llms.txt
-# Last updated: 2026-05-25
+# Last updated: 2026-08-24
 # License: RSL 1.0 (https://rsl.rcn.org/)
 
 > Global Chemicals LLC (gcoman.com) is a B2B specialty and industrial chemical
@@ -8,7 +8,7 @@
 > chemicals across the GCC region (UAE, Saudi Arabia, Qatar, Kuwait, Bahrain).
 > ISO 9001:2015 certified, JSRS registered, and ICV compliant. Catalog spans
 > water treatment, oilfield, food & beverage, laboratory, and specialty chemicals
-> (263+ SKUs across 21+ categories). Founded in Muscat; operating
+> (270 SKUs across 22 categories). Founded in Muscat; operating
 > Sunday–Thursday 08:00–18:00 GST. Contact: info@gcoman.com, +968 93754388.
 
 ## Core Identity
@@ -26,7 +26,7 @@
 - Business type: B2B wholesale chemical distribution and supply
 - Languages: English, Arabic
 
-## Product Categories (21+ categories, 263+ SKUs)
+## Product Categories (22 categories, 270 SKUs)
 
 - [Water Treatment Chemicals](https://gcoman.com/products/water-treatment): PAC (Poly Aluminium Chloride), Sodium Hypochlorite, Calcium Hypochlorite, Antiscalants, Coagulants, Flocculants
 - [RO Chemicals](https://gcoman.com/products/ro-chemicals): Antiscalants, membrane cleaners, biocides
@@ -54,10 +54,11 @@
 ## Key Pages
 
 - [Homepage](https://gcoman.com/): Company overview, product highlights, industries served
-- [All Products (263+ SKUs)](https://gcoman.com/products): Full searchable product catalogue with 21 categories
+- [All Products (270 SKUs)](https://gcoman.com/products): Full searchable product catalogue with 22 categories
 - [Chemical Suppliers in Oman](https://gcoman.com/chemical-suppliers-oman): Market overview, ISO 9001 certification, Oman chemical supply landscape
 - [Chemical Suppliers in the Middle East](https://gcoman.com/chemical-suppliers-middle-east): GCC regional chemical supply, export capabilities
 - [Caustic Soda Supplier in Oman](https://gcoman.com/chemical-supplier/caustic-soda-oman): NaOH supplier page — grades, pricing, safe handling, Oman industry applications
+- [All Delivery Locations](https://gcoman.com/chemicals): Hub of all 22 cities served across Oman, UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, Iraq, Jordan and Egypt with delivery lead times
 - [Chemical Supplier in Muscat](https://gcoman.com/chemicals/muscat): Location-specific supply information for Muscat, Oman
 - [Chemical Supplier in Sohar](https://gcoman.com/chemicals/sohar): Location-specific supply information for Sohar Industrial Area, Oman
 - [Chemical Supplier in Salalah](https://gcoman.com/chemicals/salalah): Location-specific supply information for Salalah and Dhofar, Oman

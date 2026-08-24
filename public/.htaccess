@@ -22,6 +22,9 @@ Options -Indexes
 # ============================================================
 <IfModule mod_rewrite.c>
   RewriteEngine On
+# /chemical-supplier bare path -> delivery-locations hub
+RewriteRule ^chemical-supplier$ /chemicals [R=301,L]
+
   RewriteBase /
 
   # --- A1. Force HTTPS (Cloudflare usually already does this; safety net) ---

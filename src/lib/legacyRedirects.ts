@@ -10,6 +10,11 @@
 // self-hosted Apache. When adding a redirect, update all three.
 
 const EXACT_REDIRECTS = new Map<string, string>([
+  // /chemical-supplier has one real child (caustic-soda-oman) but no index of
+  // its own; the bare path fell through to the SPA-shell soft-404. Send it to
+  // the delivery-locations hub, the nearest real page.
+  ['/chemical-supplier', '/chemicals'],
+
   // Old /products/acids/* → new categories
   ['/products/acids/citric-acid', '/products/water-treatment/citric-acid-anhydrous'],
   ['/products/acids/acetic-acid', '/products/oilfield/acetic-acid'],
