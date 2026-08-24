@@ -67,7 +67,9 @@ export default defineConfig(({ mode }) => ({
     // Prerender resolves Helmet head tags + JSON-LD + body content into
     // each route's static HTML.
     mode === "production" && (prerender({
-      routes: routesFromSitemap(),
+      routes: process.env.PRERENDER_ROUTES
+        ? process.env.PRERENDER_ROUTES.split(',')
+        : routesFromSitemap(),
       renderer: "@prerenderer/renderer-puppeteer",
       rendererOptions: {
         // 2.5s gives the lazy chunk time to load + Helmet to commit. The
@@ -76,7 +78,25 @@ export default defineConfig(({ mode }) => ({
         // before requestAnimationFrame fired and most routes shipped the
         // homepage <title> baked in.
         renderAfterTime: 2500,
-        maxConcurrentRoutes: 4,
+        // 8 concurrent tabs, not 4: with 630 sitemap routes × 2.5 s each the
+        // prerender wall-time at 4 was ~8 min locally and TIMED OUT Lovable's
+        // production build (publish failure, 25 Aug 2026). Doubling the tab
+        // pool roughly halves wall time; keep renderAfterTime untouched — it
+        // is the guard that Arabic bodies and lazy chunks are committed
+        // before the snapshot.
+        maxConcurrentRoutes: 8,
+        // page.goto waits for networkidle0 with a 30 s default — under a full
+        // 630-route queue a straggler route occasionally exceeds it, which
+        // aborts the WHOLE build ("Navigation timeout of 30000 ms exceeded",
+        // seen both locally and as Lovable's publish-timeout failure on
+        // 25 Aug 2026). Give individual navigations a 120 s ceiling; total
+        // build time stays bounded by the concurrency pool.
+        timeout: 130_000,
+        navigationOptions: { timeout: 120_000 },
+        // Chrome DevTools-protocol calls (Network.enable etc.) also default to
+        // a tight timeout that a loaded build machine can miss while eight
+        // tabs spin up at once — same all-or-nothing build abort.
+        launchOptions: { protocolTimeout: 180_000 },
       },
     }) as unknown as PluginOption),
   ].filter(Boolean),
