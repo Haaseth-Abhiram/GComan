@@ -201,7 +201,8 @@
     "sortBy": "ترتيب حسب",
     "featured": "مميز",
     "priceAsc": "السعر: من الأقل للأعلى",
-    "priceDesc": "السعر: من الأعلى للأقل"
+    "priceDesc": "السعر: من الأعلى للأقل",
+    "getQuote": "اطلب عرض سعر"
   },
   "industries": {
     "title": "القطاعات التي نخدمها",
@@ -242,6 +243,7 @@
       "subject": "الموضوع",
       "message": "الرسالة",
       "messagePlaceholder": "يرجى وصف استفسارك بالتفصيل...",
+      "quoteTemplate": "أرغب في الحصول على عرض سعر لـ: {{product}}\n\nالكمية المطلوبة: \nموقع التسليم: \n\nتفاصيل إضافية: ",
       "selectSubject": "اختر موضوعاً",
       "subjects": {
         "productInquiry": "استفسار عن المنتجات",

@@ -201,7 +201,8 @@
     "sortBy": "Sort By",
     "featured": "Featured",
     "priceAsc": "Price: Low to High",
-    "priceDesc": "Price: High to Low"
+    "priceDesc": "Price: High to Low",
+    "getQuote": "Get Quote"
   },
   "industries": {
     "title": "Industries We Serve",
@@ -242,6 +243,7 @@
       "subject": "Subject",
       "message": "Message",
       "messagePlaceholder": "Please describe your inquiry in detail...",
+      "quoteTemplate": "I would like a quotation for: {{product}}\n\nQuantity required: \nDelivery location: \n\nAdditional details: ",
       "selectSubject": "Select a subject",
       "subjects": {
         "productInquiry": "Product Inquiry",

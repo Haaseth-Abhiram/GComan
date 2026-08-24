@@ -1,6 +1,6 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -14,7 +14,7 @@ import { useToast } from '@/hooks/use-toast';
 import { z } from 'zod';
 import { SEO } from '@/components/SEO';
 import { FAQStructuredData, BreadcrumbStructuredData, ContactPageStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
-import { trackFormSubmission, trackContactClick } from '@/components/GoogleAnalytics';
+import { trackFormSubmission, trackContactClick, trackGenerateLead } from '@/components/GoogleAnalytics';
 import { PhoneInput } from 'react-international-phone';
 import 'react-international-phone/style.css';
 import { Turnstile, isTurnstileEnabled, type TurnstileHandle } from '@/components/Turnstile';
@@ -62,9 +62,11 @@ const Contact = () => {
   const { toast } = useToast();
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [turnstileToken, setTurnstileToken] = useState('');
   const turnstileRef = useRef<TurnstileHandle>(null);
+  const formRef = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -73,6 +75,36 @@ const Contact = () => {
     subject: '',
     message: '',
   });
+
+  // Every "Get Quote" button on the 270 product pages and product cards links
+  // here as /contact?product=<name>&ref=<category/slug>. Until Aug 2026 this
+  // parameter was silently discarded — the buyer landed on a blank form and
+  // had to re-type which product they wanted, and sales received inquiries
+  // with no product context. Prefill the quotation instead, and bring the
+  // form into view so the buyer only adds quantity + destination.
+  useEffect(() => {
+    const product = searchParams.get('product');
+    if (!product || product.length > 120) return;
+    const ref = searchParams.get('ref') || '';
+    const productLine = /^[\w/-]{1,80}$/.test(ref)
+      ? `${product} (gcoman.com/products/${ref})`
+      : product;
+    setFormData((prev) => ({
+      ...prev,
+      subject: 'quotation',
+      message: t('contact.form.quoteTemplate', {
+        product: productLine,
+        defaultValue:
+          'I would like a quotation for: {{product}}\n\nQuantity required: \nDelivery location: \n\nAdditional details: ',
+      }),
+    }));
+    // Let the prerendered layout settle, then bring the form into view.
+    const id = window.setTimeout(() => {
+      formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 150);
+    return () => window.clearTimeout(id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -142,6 +174,8 @@ const Contact = () => {
 
       // Track successful form submission
       trackFormSubmission('contact');
+      const quotedProduct = searchParams.get('product');
+      if (quotedProduct) trackGenerateLead(`quote:${quotedProduct.slice(0, 60)}`, 'contact_form');
 
       // Success — redirect to /thank-you for conversion tracking
       navigate('/thank-you');
@@ -290,7 +324,7 @@ const Contact = () => {
               <div className="lg:col-span-3">
                 <div className="bg-card p-8 rounded-xl logo-gradient-border logo-gradient-top relative">
                   <h2 className="text-2xl font-bold text-foreground mb-6">{t('contact.form.submit')}</h2>
-                  <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                  <form ref={formRef} onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                       <div className="space-y-2">
                         <Label htmlFor="name">{t('contact.form.name')} *</Label>
