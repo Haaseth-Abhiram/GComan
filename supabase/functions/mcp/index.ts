@@ -275,7 +275,9 @@ var agro_default = [
         "Standard grade (<1 mm) and granular (2\u20134 mm) available",
         "Packaging: 50 kg bag, 1,000 kg big bag"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Potassium_chloride"
+      wikiUrl: "https://en.wikipedia.org/wiki/Potassium_chloride",
+      seoTitle: "Potassium Chloride Fertilizer (MOP 60% K2O) \u2014 Bulk Supplier",
+      seoDescription: "Muriate of Potash 60% K2O for date palms, fertigation and NPK blending. 25/50 kg bags and bulk tonnage, same-day Muscat dispatch, GCC export. Price today."
     }
   },
   {
@@ -639,7 +641,9 @@ var alcohols_default = [
           answer: "Isopropanol (IPA, isopropyl alcohol, 2-propanol, CAS 67-63-0) is a versatile solvent and disinfectant used widely across Oman's industrial, electronics, healthcare, and cleaning sectors. Primary applications include: electronics and semiconductor cleaning \u2014 IPA is the standard solvent for removing flux residues from circuit boards, cleaning optical components, and degreasing precision components because it evaporates without residue and is safe for most electronic components; surface preparation \u2014 IPA at 70\u201399% is used to clean metal, plastic, and glass surfaces before bonding, coating, or painting; industrial disinfection \u2014 70% IPA (by volume) is an effective bactericide and virucide for surface sanitisation in Oman's food processing plants, pharmaceutical operations, and healthcare facilities; as a fuel additive and antifreeze for aviation fuel systems; and as a solvent in inks, adhesives, and cosmetics. IPA at 70% concentration is more effective as a disinfectant than 99% because the water content facilitates cell membrane penetration. Flash point is 11.7\xB0C (Class IB flammable liquid). Global Chemicals LLC supplies IPA in 1-litre to IBC quantities for Oman."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Isopropanol"
+      wikiUrl: "https://en.wikipedia.org/wiki/Isopropanol",
+      seoTitle: "Isopropyl Alcohol (IPA 99%) \u2014 Bulk Industrial Supplier Oman",
+      seoDescription: "IPA 99.5% for electronics cleaning, disinfectant production and coatings \u2014 5 L to 200 L drums and IBC with CoA. Same-day Muscat, GCC delivery 2\u20137 days."
     }
   },
   {
@@ -1092,7 +1096,9 @@ var construction_default = [
           answer: "A polymer bonding agent (typically SBR \u2014 styrene-butadiene rubber latex, or acrylic polymer) is a liquid chemical additive applied to existing concrete or masonry surfaces before applying new render, screed, or repair mortar to promote adhesion between the old and new substrates. Without a bonding agent, new cement-based material applied to dense, smooth, or contaminated old concrete tends to debond (delaminate) within months as differential movement and thermal cycling cause interface failure. In Oman's hot climate, where daily temperature swings of 15\u201325\xB0C create significant thermal expansion and contraction in concrete structures, bonding agent application is standard practice for all concrete repair and overlay work. Application method: the bonding agent (diluted SBR latex 1:1 with water for most applications) is brushed onto the prepared substrate and allowed to become 'tacky' (not dry) before applying the fresh concrete overlay. The polymer chains from the bonding agent penetrate both surfaces and form a physical and chemical bond across the interface. Global Chemicals LLC supplies SBR and acrylic polymer bonding agents for Oman's construction repair and maintenance sector."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Styrene-butadiene"
+      wikiUrl: "https://en.wikipedia.org/wiki/Styrene-butadiene",
+      seoTitle: "Polymer Bonding Agent for Concrete & Mortar \u2014 Supplier Oman",
+      seoDescription: "SBR/acrylic bonding agent for new-to-old concrete, screeds and repair mortars \u2014 dosage guidance, 5\u2013200 L packs, datasheets. Same-day Muscat dispatch."
     }
   },
   {
@@ -2640,7 +2646,9 @@ var food_beverage_default = [
           answer: "Food-grade ethanol 70% is a disinfectant and sanitiser grade ethyl alcohol produced from food-grade feedstocks (typically sugar cane, molasses, or grain fermentation), meeting pharmacopoeia or food safety purity standards with strict limits on methanol (max 100 ppm), acetaldehyde, and fusel oils. At 70% concentration (by volume), it is more effective against bacteria, viruses, and fungi than 99% alcohol because the water content facilitates cell membrane penetration and protein denaturation. In Oman's food industry, it is used for sanitising food contact surfaces, food equipment, packaging materials, and hands (in conjunction with handwashing). It evaporates cleanly without leaving residues that require rinsing, making it ideal for use on ready-to-eat food preparation surfaces. The 2020 pandemic significantly increased demand for food-grade ethanol-based hand sanitisers. Global Chemicals LLC supplies food-grade ethanol 70% in 5-litre, 25-litre, and IBC quantities for Oman's food processing, catering, and hospitality sectors."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Ethanol"
+      wikiUrl: "https://en.wikipedia.org/wiki/Ethanol",
+      seoTitle: "Ethanol 70% \u2014 Food-Plant & Lab Sanitiser Grade Supplier",
+      seoDescription: "Ready-to-use ethanol 70% for food-equipment sanitising and lab disinfection \u2014 5 L, 25 L and drum packs with CoA and SDS. Same-day Muscat, GCC 2\u20137 days."
     }
   },
   {
@@ -2687,7 +2695,9 @@ var food_beverage_default = [
         "Requires proper PPE and ventilation",
         "Available in 30L, 200L drums"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Formaldehyde"
+      wikiUrl: "https://en.wikipedia.org/wiki/Formaldehyde",
+      seoTitle: "Formaldehyde 40% (Formalin) \u2014 Industrial Supplier Oman",
+      seoDescription: "Formalin 37\u201340% stabilised with methanol \u2014 biocide, resin feedstock and preservation duty. Drums and IBCs, GHS SDS and CoA. Muscat stock, GCC delivery."
     }
   },
   {
@@ -2885,7 +2895,9 @@ var food_beverage_default = [
         "Temperature: 50-70\xB0C for CIP",
         "Available in 30L, 200L drums"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Nitric_acid"
+      wikiUrl: "https://en.wikipedia.org/wiki/Nitric_acid",
+      seoTitle: "Nitric Acid 68% \u2014 Food Grade & Technical Supplier Oman",
+      seoDescription: "Nitric acid 68% in food-contact and technical grades \u2014 dairy/CIP cleaning, metal treatment, labs. Drums and IBCs with CoA. Same-day Muscat, GCC 2\u20137 days."
     }
   },
   {
@@ -3144,7 +3156,9 @@ var food_beverage_default = [
         "Requires proper mixing in feed",
         "Available in 50kg bags, bulk"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Urea"
+      wikiUrl: "https://en.wikipedia.org/wiki/Urea",
+      seoTitle: "Food Grade Urea Supplier \u2014 Process & Feed Use, Oman & GCC",
+      seoDescription: "Food-grade urea with compliance documentation for food-process and feed applications \u2014 25 kg bags, CoA per batch, same-day Muscat dispatch, GCC delivery."
     }
   },
   {
@@ -4210,7 +4224,9 @@ var lab_chemicals_default = [
         "Low carbonate content",
         "Available: 500g, 1kg, 5kg bottles"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Potassium_hydroxide"
+      wikiUrl: "https://en.wikipedia.org/wiki/Potassium_hydroxide",
+      seoTitle: "Potassium Hydroxide Pellets (KOH) AR Grade \u2014 Lab Supplier",
+      seoDescription: "KOH pellets \u226585% AR grade for analysis and synthesis \u2014 500 g and 1 kg lab packs with CoA and lot traceability. Muscat stock; industrial flakes also stocked."
     }
   },
   {
@@ -5099,7 +5115,9 @@ var lab_chemicals_default = [
         "Assay: Meets specifications",
         "Available: 100g, 500g, 1kg, 5kg"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Tris"
+      wikiUrl: "https://en.wikipedia.org/wiki/Tris",
+      seoTitle: "Tris Buffer (Tris Base) Molecular Biology Grade \u2014 Supplier",
+      seoDescription: "Tris base \u226599.8% for Tris-HCl, TAE and TBE buffer prep \u2014 molecular-biology and analytical grade with CoA per lot. In stock Muscat; GCC delivery 2\u20137 days."
     }
   },
   {
@@ -5327,7 +5345,9 @@ var lab_chemicals_default = [
         "Available: 100ml, 500ml bottles",
         "Stable at room temperature"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Methyl_orange"
+      wikiUrl: "https://en.wikipedia.org/wiki/Methyl_orange",
+      seoTitle: "Methyl Orange Indicator \u2014 Solution & Powder, Lab Supplier",
+      seoDescription: "Methyl orange pH indicator (3.1\u20134.4 range) as powder and ready 0.1% solution \u2014 ACS grade with CoA. In stock Muscat for labs across Oman and the GCC."
     }
   },
   {
@@ -5373,7 +5393,9 @@ var lab_chemicals_default = [
         "Available: 100ml, 500ml bottles",
         "Suitable for biological applications"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Bromothymol_blue"
+      wikiUrl: "https://en.wikipedia.org/wiki/Bromothymol_blue",
+      seoTitle: "Bromothymol Blue (BTB) Indicator \u2014 Lab Grade Supplier",
+      seoDescription: "BTB pH indicator (6.0\u20137.6 range) in powder and 0.04% solution \u2014 for water testing, aquaria and titrations. CoA per lot; Muscat stock, GCC delivery."
     }
   },
   {
@@ -5419,7 +5441,9 @@ var lab_chemicals_default = [
         "Available: 100g, 500g, 1kg",
         "Store in dry conditions"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Agar"
+      wikiUrl: "https://en.wikipedia.org/wiki/Agar",
+      seoTitle: "Bacteriological Agar Powder \u2014 Culture Media Grade Supplier",
+      seoDescription: "Bacteriological-grade agar powder for culture media \u2014 gel strength \u2265800 g/cm\xB2, low pigment, 500 g and 5 kg packs with CoA. Muscat stock, GCC delivery."
     }
   },
   {
@@ -6565,7 +6589,9 @@ var oilfield_default = [
           answer: "Calcium chloride (CaCl\u2082) is a dense, hygroscopic salt used in oilfield drilling operations in Oman as a completion fluid and workover brine. Its primary application is as a clear brine packer fluid in the annulus between the wellbore and casing during completion, providing hydrostatic pressure to balance formation pressure without solid weighting agents that could damage perforations or the formation face. Calcium chloride brines at 10\u201311.6 ppg density range (1,200\u20131,390 kg/m\xB3) cover the pressure window of many Oman reservoirs. It is also used as a shale stabiliser in water-based drilling muds \u2014 CaCl\u2082 provides KCl-free shale inhibition by reducing water activity and limiting osmotic water migration into reactive clay formations. In Oman's carbonatic reservoirs prone to calcium-sensitive clays, CaCl\u2082 is preferred over NaCl brines. Global Chemicals LLC supplies dry calcium chloride flakes and concentrated CaCl\u2082 solution for Oman drilling and completion operations."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Calcium_chloride"
+      wikiUrl: "https://en.wikipedia.org/wiki/Calcium_chloride",
+      seoTitle: "Calcium Chloride Oilfield Grade \u2014 Brine & Completion Fluids",
+      seoDescription: "CaCl2 94\u201397% for completion brines to 11.6 ppg, cementing accelerator and dust control. Brine-density guidance, CoA per lot, JSRS-registered supply in Oman."
     }
   },
   {
@@ -7300,7 +7326,9 @@ var oilfield_default = [
           answer: "In gas sweetening units in Oman, MDEA is typically used at 40\u201350 wt% aqueous solution concentration, representing the standard operating range balancing absorption capacity, corrosion rate, and solvent viscosity. At concentrations below 35%, absorption capacity is reduced, requiring higher circulation rates and larger equipment. Above 50%, solvent viscosity increases at low temperatures, and corrosion rates accelerate under high H\u2082S and CO\u2082 loading. The exact concentration is set during plant design based on gas composition, inlet H\u2082S content, target outlet specification, and operating pressure. Oman PDO gas specifications require pipeline gas to contain less than 4 ppm H\u2082S and less than 2% CO\u2082 vol/vol. For plants treating very high H\u2082S concentrations (above 10% v/v in feed), enhanced MDEA formulations with activator additives (piperazine, triethanolamine) are used to accelerate mass transfer. Global Chemicals LLC supplies both standard MDEA and activated MDEA blends for Oman's downstream gas operations."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Methyldiethanolamine"
+      wikiUrl: "https://en.wikipedia.org/wiki/Methyldiethanolamine",
+      seoTitle: "MDEA \u2014 Gas Sweetening Amine Supplier, Oman & GCC",
+      seoDescription: "Methyldiethanolamine \u226599% for selective H2S removal and CO2 slip control in amine units \u2014 drums and IBCs with CoA. JSRS-registered supply to Oman gas plants."
     }
   },
   {
@@ -12330,7 +12358,9 @@ var water_treatment_default = [
         "Available in drums and IBC tanks",
         "Easy dosing and application"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Copper(II)_sulfate"
+      wikiUrl: "https://en.wikipedia.org/wiki/Copper(II)_sulfate",
+      seoTitle: "Copper Sulphate Solution \u2014 Algaecide & Water Treatment",
+      seoDescription: "Copper sulphate liquid for algae control in raw-water tanks, lagoons and cooling systems \u2014 dosing guidance included, drums and IBCs with CoA. Muscat stock."
     }
   },
   {
@@ -13253,7 +13283,9 @@ var water_treatment_default = [
         "Available in 25kg bags, drums",
         "Effective pH control"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_bisulfate"
+      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_bisulfate",
+      seoTitle: "Sodium Bisulphate & Bisulphite \u2014 Bulk Supplier Oman",
+      seoDescription: "Dry-acid pH reducer (bisulphate) and dechlorination / oxygen-scavenger grade (bisulphite) in stock \u2014 25 kg bags and drums with CoA. Same-day Muscat dispatch."
     }
   },
   {

@@ -57,11 +57,14 @@ test.describe('/chemicals hub', () => {
     expect(new URL(page.url()).pathname).toBe('/chemicals');
   });
 
-  test('/chemicals renders the hub with all 22 location links', async ({ page }) => {
+  test('/chemicals renders the hub with all city + country links', async ({ page }) => {
     await page.goto('/chemicals');
     await expect(page.locator('h1')).toContainText('Chemical Supply Across Oman');
-    const cityLinks = page.locator('main a[href^="/chemicals/"]');
-    expect(await cityLinks.count()).toBe(22);
+    // 22 city cards + 2 country-hub heading links (UAE, Saudi Arabia)
+    const links = page.locator('main a[href^="/chemicals/"]');
+    expect(await links.count()).toBe(24);
+    await expect(page.locator('main a[href="/chemicals/saudi-arabia"]')).toHaveCount(1);
+    await expect(page.locator('main a[href="/chemicals/uae"]')).toHaveCount(1);
   });
 
   test('/chemical-supplier/caustic-soda-oman still resolves (must not be caught by the bare redirect)', async ({ page }) => {

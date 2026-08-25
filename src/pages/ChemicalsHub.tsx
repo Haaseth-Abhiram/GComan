@@ -105,11 +105,26 @@ const ChemicalsHub = () => {
         {/* Country groups */}
         <section className="pb-16">
           <div className="container mx-auto px-4">
-            {locationIndex.map((group) => (
+            {locationIndex.map((group) => {
+              // Country-level hub pages exist for the two biggest export
+              // markets; their headings link through. Other countries are
+              // plain headings until they earn a hub of their own.
+              const countryHub: Record<string, string> = {
+                'United Arab Emirates': '/chemicals/uae',
+                'Saudi Arabia': '/chemicals/saudi-arabia',
+              };
+              const hubPath = countryHub[group.country];
+              return (
               <div key={group.country} className="mb-10">
                 <h2 className="text-2xl font-bold text-foreground mb-4 flex items-center gap-2">
                   <MapPin className="w-5 h-5 text-primary" aria-hidden="true" />
-                  {group.country}
+                  {hubPath ? (
+                    <Link to={hubPath} className="hover:text-primary transition-colors underline-offset-4 hover:underline">
+                      {group.country}
+                    </Link>
+                  ) : (
+                    group.country
+                  )}
                 </h2>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                   {group.locations.map((loc) => (
@@ -133,7 +148,8 @@ const ChemicalsHub = () => {
                   ))}
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </section>
 

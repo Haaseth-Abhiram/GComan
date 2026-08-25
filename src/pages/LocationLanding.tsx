@@ -870,6 +870,90 @@ const locations: Record<string, LocationData> = {
     metaTitle: 'Chemical Supplier Yanbu | Refining & Petrochemical Chemicals Saudi Arabia | Global Chemicals LLC',
     metaDescription: 'Chemical supplier exporting to Yanbu, Saudi Arabia. Oilfield & process chemicals for YASREF refinery, YANSAB & SABIC petrochemical plants. ISO 9001 certified. Get a quote.',
     metaKeywords: 'chemical supplier Yanbu, Yanbu Industrial City chemicals, YASREF chemical supplier, YANSAB chemical supplier, oilfield chemicals Yanbu, petrochemical chemicals Yanbu Saudi Arabia, chemical exporter Oman Yanbu, Red Sea chemical supplier Saudi Arabia'
+  },
+  // ── Country-level hubs ───────────────────────────────────────────────────
+  // The Aug 2026 GSC data showed country-level queries landing on NOTHING:
+  // "chemical suppliers in saudi arabia" @48.5 and "chemical supplier in uae"
+  // @66.8 had no page — only city pages existed. These two entries aggregate
+  // the country story around the import angle (GCC customs union, lanes,
+  // documentation), which is the winnable intent for an Oman-based exporter.
+  'saudi-arabia': {
+    slug: 'saudi-arabia',
+    city: 'Saudi Arabia',
+    cityArabic: 'المملكة العربية السعودية',
+    country: 'Saudi Arabia',
+    region: 'Riyadh, Jeddah, Dammam, Jubail & Yanbu',
+    description: 'Global Chemicals LLC is a GCC-based chemical supplier exporting to Saudi Arabia from our Muscat warehouse — no Saudi agent required for most industrial imports under the GCC customs union. We serve manufacturers, water treatment plants, construction projects, food producers, and oilfield service companies across Riyadh, Jeddah, Dammam, Jubail Industrial City, and Yanbu with water treatment chemicals, industrial and food-grade chemicals, corrosion inhibitors, glycols, and laboratory reagents. Road freight reaches the Eastern Province in 4–6 business days and Riyadh in 5–7; sea freight from Sohar Port serves Jeddah and Yanbu for bulk orders. Every consignment ships with Certificate of Origin attested by the Oman Chamber of Commerce, Arabic and English SDS, CoA, and HS-coded commercial invoices, with SASO/SFDA guidance where product categories require it.',
+    industries: ['Water Treatment & Desalination', 'Oil & Gas / Petrochemicals', 'Construction & Infrastructure', 'Food & Beverage Processing', 'Manufacturing', 'Pharmaceuticals & Healthcare', 'Agriculture'],
+    deliveryTime: '4–7 business days by road (Dammam 4–6, Riyadh 5–7); sea freight via Sohar Port to Jeddah/Yanbu in 4–6 days',
+    keyClients: ['Jubail & Yanbu industrial city manufacturers', 'Eastern Province water treatment operators', 'Riyadh construction & infrastructure projects', 'Jeddah food and pharmaceutical producers', 'Oilfield service contractors'],
+    highlights: [
+      'GCC customs union — streamlined import, no local agent needed for most products',
+      'Five Saudi delivery lanes: Riyadh, Jeddah, Dammam, Jubail, Yanbu',
+      'Certificate of Origin, Arabic SDS, and SASO/SFDA documentation support',
+      'Road and Sohar-Port sea freight options for drum, IBC and container loads',
+      'ISO 9001:2015 certified supplier with full batch CoA'
+    ],
+    faqs: [
+      {
+        question: 'Who supplies industrial chemicals to Saudi Arabia from the GCC?',
+        answer: 'Global Chemicals LLC exports industrial, water-treatment, food-grade and oilfield chemicals to Saudi Arabia from Muscat, Oman. Under the GCC customs union most industrial chemicals move without a Saudi import agent — we deliver by road to Riyadh, Dammam and Jubail in 4–7 business days and by sea from Sohar Port to Jeddah and Yanbu. Request a quote with your product list and destination city for delivered pricing.'
+      },
+      {
+        question: 'What documentation is required to import chemicals into Saudi Arabia?',
+        answer: 'Standard consignments ship with a Certificate of Origin attested by the Oman Chamber of Commerce, Safety Data Sheets in Arabic and English, batch Certificate of Analysis, Technical Data Sheet, and an HS-coded commercial invoice. Product categories under SASO conformity or SFDA supervision (food-contact, cosmetic, and certain hazardous classes) need import permits — our export team advises on the requirement per product before shipment.'
+      },
+      {
+        question: 'How long does chemical delivery from Oman to Saudi Arabia take?',
+        answer: 'Road freight under GCC customs transit reaches the Eastern Province (Dammam, Jubail) in 4–6 business days and Riyadh in 5–7. For Red Sea destinations, container and IBC loads ship from Sohar Port to Jeddah or Yanbu in 4–6 days. Urgent partial loads can be consolidated on scheduled weekly departures.'
+      },
+      {
+        question: 'Which cities in Saudi Arabia do you deliver chemicals to?',
+        answer: 'Scheduled lanes serve Riyadh, Jeddah, Dammam, Jubail Industrial City, and Yanbu — see each city page for lane detail — and we quote ad-hoc deliveries to other Saudi destinations including NEOM, Rabigh, and Qassim on request.'
+      }
+    ],
+    metaTitle: 'Chemical Suppliers in Saudi Arabia — Import from Oman',
+    metaDescription: 'Chemical suppliers serving Saudi Arabia from Oman: water treatment, industrial, food-grade & oilfield chemicals to Riyadh, Jeddah, Dammam, Jubail & Yanbu. SASO/SFDA guidance, Arabic SDS. Get a quote.',
+    metaKeywords: 'chemical suppliers in saudi arabia, chemical supplier saudi arabia, industrial chemicals saudi arabia, specialty chemical distributors in saudi arabia, import chemicals saudi arabia, chemical exporter oman saudi arabia, water treatment chemicals riyadh, chemical supply jubail yanbu'
+  },
+  'uae': {
+    slug: 'uae',
+    city: 'United Arab Emirates',
+    cityArabic: 'الإمارات العربية المتحدة',
+    country: 'UAE',
+    region: 'Dubai, Abu Dhabi, Sharjah, Fujairah & Ras Al Khaimah',
+    description: 'Global Chemicals LLC supplies chemicals to the United Arab Emirates from our Muscat warehouse — the fastest cross-border lane in our network, with Fujairah reachable in 2–4 hours by road and Dubai and Abu Dhabi in 3–5 business days under GCC customs transit. Importing from Oman gives UAE buyers a second-source supply line at GCC-preferential terms: water treatment and RO chemicals, food-grade products, glycols and solvents, corrosion inhibitors, construction chemicals, and laboratory reagents, all shipped with CoA, GHS SDS in Arabic and English, and HS-coded export documentation. We serve industrial zones across all seven emirates including JAFZA, Dubai Industrial City, ICAD Abu Dhabi, Sharjah SAIF Zone, Fujairah Free Zone, and RAKEZ.',
+    industries: ['Water Treatment & RO/Desalination', 'Construction & Infrastructure', 'Manufacturing & Free Zones', 'Food & Beverage Processing', 'Oil & Gas Services', 'Hospitality & Facilities Management', 'Marine & Ports'],
+    deliveryTime: 'Fujairah 2–4 hours by road; Dubai, Sharjah & Abu Dhabi 3–5 business days; Ras Al Khaimah 3–5 days',
+    keyClients: ['JAFZA and Dubai Industrial City manufacturers', 'Abu Dhabi ICAD industrial operators', 'Sharjah and Ajman factories', 'Fujairah bunkering and marine services', 'RAKEZ manufacturing companies'],
+    highlights: [
+      'Fujairah in 2–4 hours — the fastest chemical import lane from Oman',
+      'GCC customs transit to all seven emirates, 3–5 day standard delivery',
+      'Second-source supply line independent of Jebel Ali congestion',
+      'Free-zone delivery experience: JAFZA, ICAD, SAIF, RAKEZ, Fujairah FZ',
+      'Arabic + English SDS, CoA and HS-coded export documents on every load'
+    ],
+    faqs: [
+      {
+        question: 'Can UAE companies import chemicals from Oman easily?',
+        answer: 'Yes — Oman and the UAE are both GCC customs-union members, so most industrial chemicals move across the border under customs transit without duties or a local import agent. Our trucks cross at Khatm Al Shikla/Hatta or via Al Ain daily; Fujairah deliveries take 2–4 hours and Dubai or Abu Dhabi 3–5 business days. It is a practical second-source lane when Jebel Ali lead times or supplier concentration are a concern.'
+      },
+      {
+        question: 'Which chemicals do you supply to Dubai and Abu Dhabi?',
+        answer: 'The full catalogue ships to the UAE: water treatment and RO chemicals (antiscalants, membrane cleaners, PAC, hypochlorite), food-grade chemicals with HACCP-compatible documents, glycols (MEG, PG, TEG), industrial solvents and alcohols, corrosion inhibitors, construction chemicals, swimming-pool chemicals, and laboratory reagents. Free-zone and mainland deliveries both supported with the correct customs paperwork.'
+      },
+      {
+        question: 'How fast is chemical delivery from Oman to the UAE?',
+        answer: 'Fujairah and the east coast: 2–4 hours by road — same-day for morning orders. Dubai, Sharjah and Abu Dhabi: 3–5 business days on scheduled departures, with urgent dedicated-truck options quoted on request. Ras Al Khaimah and the northern emirates: 3–5 business days.'
+      },
+      {
+        question: 'Do you deliver to UAE free zones like JAFZA and RAKEZ?',
+        answer: 'Yes — we deliver into JAFZA, Dubai Industrial City, ICAD Abu Dhabi, SAIF Zone, RAKEZ, and Fujairah Free Zone with the free-zone gate documentation prepared in advance. State the zone and company licence details in your enquiry and our export team prepares the paperwork before dispatch.'
+      }
+    ],
+    metaTitle: 'Chemical Supplier to UAE & Dubai — Import from Oman',
+    metaDescription: 'Chemical supplier to the UAE from Oman: Fujairah in 2–4 hours, Dubai & Abu Dhabi in 3–5 days under GCC customs. Water treatment, food-grade, glycols & industrial chemicals. Get a quote.',
+    metaKeywords: 'chemical supplier in uae, chemical suppliers in uae, industrial chemicals dubai, chemical supplier dubai import, industrial chemical wholesale suppliers in dubai uae, import chemicals from oman to uae, chemical supplier abu dhabi, free zone chemical delivery jafza'
   }
 };
 

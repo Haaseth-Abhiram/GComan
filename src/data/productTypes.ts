@@ -27,6 +27,10 @@ export interface Product {
     fullDescription?: string;
     applications?: string[];
     casNumber?: string;
+    /** Hand-written SERP <title> override (≤60 chars) for CTR-critical pages. */
+    seoTitle?: string;
+    /** Hand-written meta description (≤158 chars) — overrides the longDescription truncation. */
+    seoDescription?: string;
     alternativeNames?: string[]; // For SEO - different search terms
     technicalSpecs?: string[];
     seoKeywords?: string[]; // Target keywords for this product

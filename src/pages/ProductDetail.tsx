@@ -125,9 +125,14 @@ const ProductDetail = ({ category, rawCategoryProducts }: ProductDetailProps) =>
   // is the full article body and was leaking 1.6KB+ into the meta description.
   const rawDescription = product.details?.longDescription ||
     `${product.title} supplier in Oman & GCC. ${product.description} High-quality ${product.title.toLowerCase()} for water treatment, industrial, and commercial applications. Exporting to Dubai, Riyadh, Doha, Kuwait, Bahrain. Serving Muscat, Sohar, Salalah. Contact Global Chemicals LLC for pricing and technical specifications.`;
-  const seoDescription = rawDescription.length <= 155
-    ? rawDescription
-    : rawDescription.slice(0, 154).replace(/\s+\S*$/, '') + '…';
+  // details.seoDescription: hand-written SERP snippet for pages where the
+  // longDescription truncation costs clicks. The Aug 2026 GSC data showed a
+  // family of page-1 rankings with ~0% CTR (tris-base 329 imp @9 → 0 clicks)
+  // — the snippet, not the position, was the problem.
+  const seoDescription = product.details?.seoDescription
+    ?? (rawDescription.length <= 155
+      ? rawDescription
+      : rawDescription.slice(0, 154).replace(/\s+\S*$/, '') + '…');
 
   // Generate keywords — auto-adds UAE/Saudi/Qatar variants for every product
   const keywords = [
@@ -190,6 +195,7 @@ const ProductDetail = ({ category, rawCategoryProducts }: ProductDetailProps) =>
     <div className="min-h-screen bg-background">
       <SEO
         title={`${product.title} | ${catLabel} Supplier | Oman & GCC | Global Chemicals LLC`}
+        seoTitle={product.details?.seoTitle}
         description={seoDescription}
         arTitle={arSeoTitle}
         arDescription={arSeoDescription}
