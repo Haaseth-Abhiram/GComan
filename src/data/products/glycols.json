@@ -57,6 +57,65 @@
     }
   },
   {
+    "id": "deg-diethylene-glycol",
+    "title": "DEG (Diethylene Glycol)",
+    "description": "Diethylene glycol ≥99.5% for polyester resins, plasticisers, and natural-gas dehydration blend make-up in Oman & GCC.",
+    "category": "glycols",
+    "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
+    "iconName": "Wind",
+    "details": {
+      "formula": "C4H10O3",
+      "casNumber": "111-46-6",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Diethylene_glycol",
+      "alternativeNames": [
+        "Diethylene glycol",
+        "DEG",
+        "2,2'-Oxydiethanol",
+        "Diglycol",
+        "DEG glycol"
+      ],
+      "seoKeywords": [
+        "DEG supplier Oman",
+        "diethylene glycol Muscat",
+        "DEG glycol GCC",
+        "diethylene glycol supplier UAE",
+        "glycol suppliers Oman",
+        "DEG drums IBC"
+      ],
+      "longDescription": "Diethylene glycol (DEG) supplier in Oman — Global Chemicals LLC stocks DEG at ≥99.5% purity in our Muscat warehouse for same-day Oman dispatch and scheduled GCC delivery. DEG is the intermediate chain length in the ethylene glycol series: less volatile than MEG, lighter than TEG. In the Gulf it serves three main duties — unsaturated polyester resin and plasticiser manufacture, natural-gas dehydration blend make-up alongside TEG, and as a solvent-humectant in industrial formulations (printing inks, textile conditioning). Supplied with batch Certificate of Analysis covering purity, water content and colour (APHA), plus GHS-compliant SDS. DEG is strictly an industrial chemical — never for food or pharmaceutical use — and we supply against end-use declarations where destination import rules require them.",
+      "applications": [
+        "Unsaturated polyester resin (UPR) production",
+        "Plasticiser and ester manufacture",
+        "Natural-gas dehydration blend make-up (with TEG)",
+        "Printing-ink and dye solvent-humectant",
+        "Textile conditioning and finishing",
+        "Cement grinding-aid formulations"
+      ],
+      "technicalSpecs": [
+        "Purity: ≥99.5% (GC)",
+        "Water content: ≤0.1% (Karl Fischer)",
+        "Colour: ≤10 APHA",
+        "Density: 1.118 g/cm³ at 20°C",
+        "Boiling point: 244–245°C",
+        "Packaging: 235 kg drums, 1,000 L IBC, bulk"
+      ],
+      "faqs": [
+        {
+          "question": "Who supplies diethylene glycol (DEG) in Oman?",
+          "answer": "Global Chemicals LLC stocks DEG ≥99.5% in Muscat with same-day local dispatch and 2–7 day GCC delivery (Fujairah 2–4 hours by road, Dubai 3–5 days, Saudi Arabia 4–7 days). Every consignment ships with batch CoA and GHS SDS; drum, IBC and bulk quantities. Request a quote with your volume for same-day pricing."
+        },
+        {
+          "question": "What is the difference between DEG and MEG or TEG?",
+          "answer": "DEG sits between MEG and TEG in the ethylene glycol series. MEG is the antifreeze and PET feedstock; TEG is the standard gas-dehydration desiccant; DEG serves polyester resins, plasticisers and dehydration blend make-up, with lower volatility than MEG at lower cost than TEG. For chilled-water antifreeze use MEG or propylene glycol — not DEG."
+        },
+        {
+          "question": "Is DEG safe for food or pharmaceutical use?",
+          "answer": "No. Diethylene glycol is toxic if ingested and must never be used in food, beverage, pharmaceutical or personal-care products. For those applications we supply USP/EP-grade propylene glycol (E1520). DEG is sold for industrial use only, with end-use declarations where required."
+        }
+      ]
+    }
+  },
+  {
     "id": "teg-triethylene-glycol",
     "title": "TEG (Triethylene Glycol)",
     "description": "High-purity triethylene glycol for natural gas dehydration.",
@@ -77,7 +136,11 @@
         "triethylene glycol Muscat",
         "gas dehydration Oman",
         "TEG dehydration Sohar",
-        "triethylene glycol Muscat"
+        "triethylene glycol Muscat",
+        "TEG glycol supplier",
+        "triethylene glycol Oman",
+        "TEG gas dehydration supply",
+        "glycols supplier GCC"
       ],
       "longDescription": "Triethylene Glycol (TEG) supplier in Oman - Global Chemicals LLC provides high-purity TEG for natural gas dehydration and industrial applications in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our TEG is the industry standard for removing water vapor from natural gas streams to meet pipeline specifications and prevent hydrate formation. Essential for gas processing plants, glycol dehydration units, and natural gas conditioning. The hygroscopic liquid absorbs water effectively with low vaporization losses. Widely used in gas processing facilities, LNG plants, and oilfield operations across Oman. Also serves as a solvent for resins, inks, and as a plasticizer for vinyl and polyurethane. The preferred glycol for gas dehydration due to optimal balance of performance and economics.",
       "applications": [
@@ -108,6 +171,10 @@
         {
           "question": "What causes TEG degradation in gas plant regenerators in Oman?",
           "answer": "TEG degradation in Oman gas plant regenerators occurs through several mechanisms. Thermal degradation begins at reboiler temperatures above 207°C, producing 1,4-dioxane, diethylene glycol, and polyglycol oligomers that accumulate as dark-coloured solids reducing TEG purity and absorption capacity. Oxidative degradation occurs when air ingresses into the system — oxygen reacts with TEG at elevated temperatures to form glycolic acid, oxalic acid, and other acidic degradation products that lower pH, accelerate corrosion, and promote foaming. pH control below 6.0 indicates acid degradation requiring base injection (sodium hydroxide, borax) and activated carbon filtration to remove degradation products. Contaminant accumulation from produced water (methanol, heavy hydrocarbons, amines, corrosion inhibitors) also accelerates TEG deterioration. In Oman's gas plants, TEG quality is monitored monthly by pH, colour, purity, and specific gravity testing. Reclaimer units and activated carbon filters significantly extend TEG service life. Global Chemicals LLC supplies fresh make-up TEG and regeneration chemicals for Oman gas operations."
+        },
+        {
+          "question": "Who supplies TEG for gas dehydration in Oman?",
+          "answer": "Global Chemicals LLC supplies fresh triethylene glycol ≥99% for dehydration contactor first-fill and make-up, delivered to gas plants across Oman under JSRS registration (PDO/OQ approved lists) and exported GCC-wide. Batch CoA covers purity, water content and pH; 225 kg drums and IBCs, with DEG also stocked for blend make-up."
         }
       ],
       "wikiUrl": "https://en.wikipedia.org/wiki/Triethylene_glycol"
@@ -134,7 +201,11 @@
         "PG Muscat",
         "food grade propylene glycol Oman",
         "USP propylene glycol Sohar",
-        "propylene glycol Muscat"
+        "propylene glycol Muscat",
+        "propylene glycol suppliers",
+        "USP propylene glycol Oman",
+        "food grade propylene glycol GCC",
+        "PG supplier Muscat"
       ],
       "longDescription": "Propylene Glycol supplier in Oman - Global Chemicals LLC provides USP and industrial-grade propylene glycol for food, pharmaceutical, and industrial applications in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our PG is a versatile, non-toxic glycol suitable for food-grade antifreeze, pharmaceuticals, cosmetics, and industrial processes. Essential for formulating food-safe heat transfer fluids, pharmaceutical solvents, and personal care products. The GRAS-status chemical offers similar properties to MEG but with food-safe certification. Widely used in food processing, pharmaceutical manufacturing, cosmetic production, and beverage industries across Oman. Also serves in de-icing fluids, electronic cigarettes, and theatrical fog production. Available in USP (pharmaceutical) and technical grades.",
       "applications": [
@@ -161,6 +232,10 @@
         {
           "question": "What is the difference between propylene glycol and ethylene glycol for Oman industrial use?",
           "answer": "Propylene glycol (PG, 1,2-propanediol, CAS 57-55-6) and ethylene glycol (MEG, 1,2-ethanediol) are both diols widely used as antifreeze, coolants, and industrial solvents, but differ critically in toxicity. Ethylene glycol is toxic (LD50 4,700 mg/kg in rats), metabolised to oxalic acid which causes kidney failure; propylene glycol is Generally Recognised As Safe (GRAS) by the FDA for use in food, cosmetics, and pharmaceuticals. This toxicity difference makes propylene glycol the mandatory choice for food processing refrigeration systems, brewery chilling loops, pharmaceutical manufacturing coolants, and any application where human contact is possible. In performance, both provide similar freeze protection and boiling point elevation at equivalent concentrations, but PG is slightly more viscous than MEG, requiring higher pump power in cold conditions. Cost: propylene glycol is typically 30–60% more expensive than MEG. For Oman industrial applications with no food contact risk (HVAC, process cooling, oilfield), MEG remains the standard. Global Chemicals LLC supplies both grades with documentation for food and industrial applications."
+        },
+        {
+          "question": "Who supplies propylene glycol in Oman — industrial and USP grade?",
+          "answer": "Global Chemicals LLC stocks both industrial-grade PG (≥99.5%) and USP/EP food grade (E1520) in Muscat, in 215 kg drums and IBCs with the compliance documentation each grade requires. Same-day Oman dispatch, GCC delivery 2–7 days. State the grade and volume in your enquiry for same-day pricing."
         }
       ],
       "wikiUrl": "https://en.wikipedia.org/wiki/Propylene_glycol"

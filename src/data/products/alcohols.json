@@ -183,7 +183,11 @@
         "n-butanol Muscat",
         "butyl alcohol industrial Oman",
         "butanol solvent Sohar",
-        "n-butanol supplier Muscat"
+        "n-butanol supplier Muscat",
+        "n butanol suppliers",
+        "n-butanol supplier Oman",
+        "n-butanol distributor GCC",
+        "butanol drums UAE"
       ],
       "longDescription": "Industrial Grade N-Butanol supplier in Oman - Global Chemicals LLC provides n-butanol for coatings, plastics, and chemical manufacturing in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our n-butyl alcohol is a primary alcohol essential for producing butyl acetate (lacquer solvent), butyl acrylate, and glycol ethers. The versatile solvent offers excellent dissolving power for resins, oils, and dyes with moderate evaporation rate. Widely used in paint and coating industries, plastics manufacturing, textile processing, and chemical synthesis across Oman. Also serves in brake fluid formulation, hydraulic fluids, and as an extractant in pharmaceutical production. The four-carbon alcohol provides optimal balance of solvency and evaporation rate.",
       "applications": [
@@ -206,7 +210,21 @@
         "Excellent solvency for resins",
         "Available in 200L drums, IBCs, bulk"
       ],
-      "wikiUrl": "https://en.wikipedia.org/wiki/1-Butanol"
+      "wikiUrl": "https://en.wikipedia.org/wiki/1-Butanol",
+      "faqs": [
+        {
+          "question": "Who supplies n-butanol in Oman and the GCC?",
+          "answer": "Global Chemicals LLC stocks industrial n-butanol ≥99.5% in Muscat for same-day Oman dispatch and GCC delivery in 2–7 days (Fujairah 2–4 hours by road, Dubai 3–5 days, Saudi Arabia 4–7 days). 200 L drums and IBCs with batch CoA (purity, water) and GHS SDS. Send volume and destination for same-day pricing."
+        },
+        {
+          "question": "What is n-butanol used for industrially?",
+          "answer": "The largest uses are butyl acrylate and butyl acetate production, solvent duty in paints, lacquers and coatings (excellent flow and blush resistance), plasticiser esters (DBP), and as a coupling agent in metal-cleaning and textile formulations. In the Gulf, coatings and construction-chemical formulators are the main consumers alongside oilfield solvent blends."
+        },
+        {
+          "question": "n-Butanol vs isobutanol — which do I need?",
+          "answer": "n-Butanol (linear) is the standard for acrylate/acetate esters and most coating solvency specs; isobutanol (branched) is cheaper for some solvent and additive duties with faster evaporation. Check the ester or solvency specification of your formulation — our technical team can confirm from your recipe. We supply both."
+        }
+      ]
     }
   }
 ]

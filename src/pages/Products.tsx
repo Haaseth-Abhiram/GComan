@@ -46,6 +46,68 @@ const productsFAQs = [
 // category pages so structured-data is topically relevant (Google devalues
 // duplicated FAQ markup reused across many URLs).
 const categoryFAQs: Record<string, { question: string; answer: string }[]> = {
+  glycols: [
+    {
+      question: "Who supplies glycols in bulk in Oman and the GCC?",
+      answer: "Global Chemicals LLC stocks MEG, DEG, TEG, propylene glycol (industrial and USP), and butyl glycol in our Muscat warehouse for same-day Oman dispatch and scheduled GCC delivery — Fujairah in 2–4 hours by road, Dubai and Abu Dhabi in 3–5 days, Saudi Arabia in 4–7 days. Drum, IBC, and ISO-tank quantities with batch CoA and SDS on every consignment. Request a quote with your grade and volume for same-day pricing.",
+    },
+    {
+      question: "What is the difference between MEG, DEG and TEG?",
+      answer: "All three are ethylene glycols differing in chain length. MEG (monoethylene glycol) is the antifreeze and PET feedstock workhorse; DEG (diethylene glycol) serves polyester resins, plasticisers and dehydration blend make-up; TEG (triethylene glycol) is the standard desiccant liquid in natural-gas dehydration contactors because of its higher boiling point and low vapour loss. For gas plants we supply fresh TEG and DEG for make-up; for HVAC antifreeze duty, inhibited MEG.",
+    },
+    {
+      question: "Which glycol should be used in chilled water and district cooling systems?",
+      answer: "Inhibited MEG at 25–35% concentration is the Gulf standard for closed chilled-water loops. Where lower toxicity is required — hotels, food factories, or any system with potential incidental contact — propylene glycol is used instead at a slightly higher concentration for the same freeze/burst protection. We supply both, plus the corrosion-inhibitor package and glycol-concentration test equipment.",
+    },
+    {
+      question: "Do you supply food-grade propylene glycol (E1520 / USP) in Oman?",
+      answer: "Yes — USP/EP-grade propylene glycol (E1520) with food-compliance documentation compatible with HACCP systems, in 215 kg drums and IBCs. It serves flavour and colour carrier duty, humectant use in food and personal care, and pharmaceutical formulation. Industrial grade is stocked separately for coatings, antifreeze and de-icing applications.",
+    },
+    {
+      question: "Can you deliver TEG to gas plants in Oman's interior?",
+      answer: "Yes. TEG for dehydration contactor circuits is delivered to upstream sites across Oman including the Marmul, Nimr and Qarn Alam areas under our JSRS registration (PDO/OQ approved supplier lists). Batch CoA covers purity, water content and pH; drum and IBC deliveries run on scheduled interior routes with hazmat-trained drivers.",
+    },
+    {
+      question: "What packaging options are available for bulk glycol orders?",
+      answer: "Standard packaging is 215–235 kg steel or HDPE drums (glycol-dependent) and 1,000 L IBC totes. For recurring volume users we arrange ISO-tank and bulk tanker delivery into customer storage. Palletised container loads for GCC export are prepared with full customs documentation from our Muscat facility.",
+    },
+  ],
+  'corrosion-inhibitor': [
+    {
+      question: "What is the best corrosion inhibitor for closed-loop cooling systems?",
+      answer: "For Gulf conditions — desalinated make-up water with elevated chloride — a molybdate-based programme is the most reliable for mild-steel chilled-water circuits: 10–20 mg/L molybdate residual for the steel, plus tolyltriazole at 1–5 mg/L for copper heat-exchanger tubes. Nitrite-based programmes are the lower-cost alternative where microbiological control is well managed. We supply blended closed-system inhibitors, straight sodium molybdate, and residual test kits.",
+    },
+    {
+      question: "Which corrosion inhibitors are used for gas pipelines?",
+      answer: "Film-forming amine inhibitors — typically imidazoline chemistry — injected continuously at 10–50 ppm or batch-applied between pigging runs. Product selection depends on whether the service is sweet (CO₂) or sour (H₂S), water cut, and temperature. We supply oilfield corrosion inhibitors qualified for both continuous and batch programmes, with dose-rate guidance from our technical team and JSRS-registered supply into PDO/OQ contractor procurement.",
+    },
+    {
+      question: "How do you choose a corrosion inhibitor for a cooling tower?",
+      answer: "Open recirculating towers need a phosphonate-azole blend with polymer dispersant, dosed at 80–150 ppm of recirculating water and paired with a biocide programme. The right blend depends on cycles of concentration, make-up hardness and chloride. Send us your make-up water analysis and target cycles — we specify the programme and supply test kits for phosphonate residual monitoring.",
+    },
+    {
+      question: "Do you supply oxygen scavengers for boiler feedwater in Oman?",
+      answer: "Yes — catalysed sulphite oxygen scavengers for feedwater and hydrotest preservation, dosed to a 20–40 ppm sulphite residual, alongside pH boosters and condensate-line amine treatments. All ship from Muscat stock with CoA; dosing pumps and residual test kits can be included in the package.",
+    },
+    {
+      question: "Can one inhibitor protect mixed metallurgy — steel, copper and aluminium?",
+      answer: "Multi-metal closed-system formulations combine molybdate or nitrite for ferrous protection with azoles for copper alloys and silicate or specific azole chemistry for aluminium components. Our Multi-Metal CI covers mixed district-cooling and HVAC loops; where aluminium content is high we adjust the programme — send the metallurgy list with your enquiry.",
+    },
+  ],
+  ethanolamines: [
+    {
+      question: "Who supplies MEA, DEA, TEA and MDEA in Oman and the GCC?",
+      answer: "Global Chemicals LLC stocks the full ethanolamine series at ≥99% purity in Muscat — monoethanolamine, diethanolamine, triethanolamine (85% and 99%), and MDEA — with batch CoA and GHS SDS. Same-day Muscat dispatch, GCC delivery in 2–7 days depending on destination, and long-term contract pricing for gas plants, cement producers, and formulators.",
+    },
+    {
+      question: "Which amine is best for gas sweetening — MEA, DEA or MDEA?",
+      answer: "MEA removes CO₂ aggressively at low pressure but costs the most regeneration energy; DEA suits refinery streams with mixed CO₂/H₂S at moderate loadings; MDEA is the modern choice for selective H₂S removal at high pressure with the lowest energy demand, tunable with activators for CO₂ slip. We supply all three for make-up and first-fill to gas treating operations in Oman and the GCC.",
+    },
+    {
+      question: "What is triethanolamine used for in cement production?",
+      answer: "TEA at 85% is the classic cement grinding aid — dosed at 0.02–0.05% of clinker it reduces pack-set and improves mill throughput and early strength development. We supply TEA 85% and 99% in 230 kg drums and IBCs to grinding-aid formulators and cement plants across the GCC, with consistent water content confirmed on every batch CoA.",
+    },
+  ],
   agro: [
     {
       question: "What agricultural chemicals and fertilizers does Global Chemicals LLC supply in Oman?",
@@ -368,7 +430,18 @@ const Products = () => {
 
       {/* Category Intro Block — unique content per category for SEO */}
       {activeCategory !== 'all' && (() => {
-        const categoryIntros: Record<string, { heading: string; body: string }> = {
+        // Hub-grade categories can add `sections` (subheaded prose) and a
+        // comparison `table` under the intro paragraph — the supplier-page
+        // depth that "X supplier" queries reward (Aug 2026 gap analysis:
+        // these families had real impressions at positions 25-70 because the
+        // page was a catalogue card, not a supplier page).
+        type CategoryIntro = {
+          heading: string;
+          body: string;
+          sections?: { heading: string; body: string }[];
+          table?: { caption: string; headers: string[]; rows: string[][] };
+        };
+        const categoryIntros: Record<string, CategoryIntro> = {
           'water-treatment': {
             heading: 'Water Treatment Chemicals Supplier in Oman & GCC',
             body: 'Global Chemicals LLC supplies a comprehensive range of water treatment chemicals to municipal water utilities, industrial plants, hotels, and desalination facilities across Oman and the GCC. Our water treatment portfolio covers coagulants (PAC — Poly Aluminium Chloride, aluminium sulphate), disinfectants (calcium hypochlorite, sodium hypochlorite, chlorine tablets), pH adjustment chemicals (caustic soda flakes, soda ash, sulphuric acid), antiscalants for RO and desalination systems, corrosion inhibitors, biocides, antifoams, and flocculants. All products are supplied with GHS-compliant SDS and CoA. Same-day delivery in Muscat; next-day delivery to Sohar and Salalah. JSRS certified for supply to PDO and OQ water treatment operations.'
@@ -402,8 +475,23 @@ const Products = () => {
             body: "Global Chemicals LLC supplies reverse osmosis (RO) membrane chemicals to desalination plants, industrial RO systems, and commercial water treatment facilities across Oman. Oman has one of the highest per-capita RO infrastructure densities in the world — and the country's specific water chemistry (high TDS brackish groundwater, high-TDS seawater) creates significant membrane fouling and scaling challenges. Our RO chemical range includes antiscalants (specifically formulated for Oman's high-sulphate brackish water), membrane cleaners (alkaline and acidic grades for biofouling, carbonate, and silica removal), passivation agents (for new membrane commissioning), and descalants. Technical dosing programmes and RO system optimisation support available."
           },
           'corrosion-inhibitor': {
-            heading: 'Corrosion Inhibitors Supplier — Oman, UAE & GCC',
-            body: "Global Chemicals LLC supplies a comprehensive range of corrosion inhibitors for closed-loop cooling systems, boilers, chilled water systems, oilfield pipelines, and industrial process equipment across Oman and the GCC. Oman's high-temperature environment and often aggressive water chemistry (high chlorides, high TDS) accelerate metal corrosion in plant and infrastructure — making effective corrosion inhibitor programmes critical for asset protection and operational efficiency. Our range includes molybdate-based, phosphonate-based, and azole-based inhibitors for ferrous and non-ferrous metals, oxygen scavengers for boiler systems, pH boosters, and multi-metal corrosion inhibitors for mixed-metallurgy systems."
+            heading: 'Corrosion Inhibitor Supplier — Pipelines, Cooling Systems, Water Treatment',
+            body: "Global Chemicals LLC supplies corrosion inhibitors matched to the application, not one-size-fits-all: film-forming amine inhibitors for gas pipelines and flowlines, molybdate and nitrite programmes for closed-loop chilled water, phosphonate blends for open cooling towers, oxygen scavengers for boiler feedwater, and multi-metal packages for mixed-metallurgy district cooling networks across Oman and the GCC. Tell us the system — metallurgy, water chemistry, temperature, and whether the loop is open or closed — and we specify the inhibitor and dose rate. JSRS-registered for supply to PDO, OQ and their contractors.",
+            table: {
+              caption: 'Which corrosion inhibitor for which system',
+              headers: ['Application', 'Recommended chemistry', 'Our products', 'Typical dose'],
+              rows: [
+                ['Gas pipelines & flowlines', 'Film-forming amines, imidazoline-based', 'Corrosion Inhibitor (oilfield), Gas Compressor CI', 'Continuous 10–50 ppm or batch'],
+                ['Closed-loop chillers / district cooling', 'Molybdate, nitrite-azole multi-metal', 'Closed System CI, Sodium Molybdate, Multi-Metal CI', '2–5% initial charge, then maintain'],
+                ['Open cooling towers', 'Phosphonate-azole with dispersant', 'Cool Water Treat CI, Corro Guard', '80–150 ppm of recirculation'],
+                ['Boiler feedwater', 'Oxygen scavenger + pH control', 'Oxygen Scavenger, pH Booster CI', 'To residual sulphite 20–40 ppm'],
+                ['Water treatment plants', 'Blended phosphonate programmes', 'Corrosion Inhibitor (water treatment)', 'Per water analysis'],
+              ],
+            },
+            sections: [
+              { heading: 'Closed-loop systems: why molybdate programmes win in the Gulf', body: 'High-chloride make-up water (desalinated supply with elevated residual chloride) attacks mild steel in chilled-water circuits. Molybdate residuals of 10–20 mg/L protect steel pipework, with tolyltriazole at 1–5 mg/L protecting copper heat-exchanger tubes — the standard specification for hospital, hotel, and district-cooling loops in Muscat and Dubai. We supply both the blended product and sodium molybdate for in-house programmes, with residual test kits.' },
+              { heading: 'Pipelines and oilfield systems', body: 'For sweet and sour service flowlines we supply film-forming inhibitors qualified for continuous injection or batch treatment, plus H₂S scavengers and oxygen scavengers for hydrotest and preservation water. JSRS registration covers supply into PDO, OQ, Oxy and contractor procurement; CoA and dose-rate guidance ship with every order.' },
+            ],
           },
           'tank-cleaners': {
             heading: 'Marine & Industrial Tank Cleaners Supplier in Oman',
@@ -430,12 +518,38 @@ const Products = () => {
             body: "Global Chemicals LLC supplies high-purity chlorinated solvents — methylene chloride (DCM/dichloromethane), perchloroethylene (PCE/perc/tetrachloroethylene), and trichloroethylene (TCE) — to industrial degreasing, dry cleaning, paint stripping, and pharmaceutical extraction customers in Oman, UAE, and across the GCC. Chlorinated solvents are aggressive cleaners with strict handling and disposal requirements; we supply only with current GHS-compliant SDS, exposure-control guidance, and full Certificate of Analysis confirming purity (≥99.5%) and stabiliser content. Packaging: 250kg drums and 1,100kg IBCs. Stocked in our Muscat warehouse for same-day Oman dispatch; export to GCC on documented end-use."
           },
           'ethanolamines': {
-            heading: 'Ethanolamines Supplier — MEA, DEA, TEA Oman & GCC',
-            body: "Global Chemicals LLC supplies the full ethanolamine series — monoethanolamine (MEA), diethanolamine (DEA), and triethanolamine (TEA) — to gas-sweetening operations, soap and personal-care manufacturers, cement grinding aid producers, metalworking fluid blenders, and corrosion-inhibitor formulators across Oman, UAE, Saudi Arabia, and Qatar. MEA and DEA are critical for amine gas treating in Oman's upstream gas plants and refineries (Sohar, Duqm); TEA serves cement industry grinding aids and personal-care formulations. Supplied at ≥99% purity with full CoA in 230kg drums and bulk IBCs. Long-term contract pricing available for industrial buyers."
+            heading: 'Ethanolamine Suppliers — MEA, DEA, TEA, MDEA in Oman & GCC',
+            body: "Global Chemicals LLC supplies and distributes the full ethanolamine series — monoethanolamine (MEA), diethanolamine (DEA), triethanolamine (TEA 85% and 99%), and methyldiethanolamine (MDEA) — to gas-sweetening operations, soap and personal-care manufacturers, cement grinding-aid producers, metalworking-fluid blenders, and corrosion-inhibitor formulators across Oman, UAE, Saudi Arabia, and Qatar. MEA, DEA and MDEA serve amine gas treating in Oman's upstream gas plants and refineries (Sohar, Duqm); TEA serves cement grinding aids, surfactant neutralisation, and personal-care formulation. Supplied at ≥99% purity with full CoA in 230 kg drums and IBCs; long-term contract pricing for industrial buyers.",
+            table: {
+              caption: 'Ethanolamine selection at a glance',
+              headers: ['Amine', 'Where it wins', 'Notes'],
+              rows: [
+                ['MEA', 'Deep CO₂ removal at low pressure', 'Highest reactivity; higher regeneration energy'],
+                ['DEA', 'Refinery gas treating, mixed CO₂/H₂S', 'Lower corrosion than MEA at moderate loadings'],
+                ['MDEA', 'Selective H₂S removal, high-pressure gas', 'Selectivity tunable with activators; lowest energy'],
+                ['TEA 85/99', 'Cement grinding aids, cosmetics, esters', 'Mild base; surfactant and emulsifier chemistry'],
+              ],
+            },
           },
           'glycols': {
-            heading: 'Glycols Supplier — MEG, DEG, MPG Oman & GCC',
-            body: "Global Chemicals LLC supplies industrial and food-grade glycols — monoethylene glycol (MEG), diethylene glycol (DEG), and monopropylene glycol (MPG) — to refrigerant and antifreeze blenders, polyester and PET manufacturers, food and pharmaceutical formulators, and oilfield gas-dehydration operators across Oman and the GCC. MEG is the workhorse for HVAC chiller coolants and gas hydrate inhibition; DEG serves natural gas dehydration in Oman's upstream operations; MPG (USP/EP grade) is supplied for food, beverage, and pharmaceutical applications under HACCP-compatible documentation. Supplied in 230kg drums and 1,000L IBCs; bulk tanker delivery available for established users."
+            heading: 'Glycol Suppliers in Oman & GCC — MEG, DEG, TEG, Propylene Glycol',
+            body: "Global Chemicals LLC is a bulk glycol supplier and distributor serving Oman, UAE, Saudi Arabia, Qatar, Kuwait and Bahrain from our Muscat warehouse. We stock the full glycol series — monoethylene glycol (MEG), diethylene glycol (DEG), triethylene glycol (TEG), propylene glycol (industrial and USP food grade) and butyl glycol (EGBE) — for HVAC and district-cooling contractors, natural-gas dehydration operators, polyester and resin producers, coatings formulators, and food and pharmaceutical manufacturers. Every consignment ships with batch Certificate of Analysis and GHS-compliant SDS; same-day dispatch in Muscat, 2–4 hour road lane to Fujairah, and scheduled GCC freight (see delivery lanes below).",
+            table: {
+              caption: 'Glycol selection guide — grades stocked in Muscat',
+              headers: ['Glycol', 'Typical purity', 'Primary applications in the GCC', 'Packaging'],
+              rows: [
+                ['MEG (monoethylene glycol)', '≥99.8%', 'Chilled-water/district cooling antifreeze, gas hydrate inhibition, PET/polyester feedstock', '230 kg drums · 1,000 L IBC · bulk'],
+                ['DEG (diethylene glycol)', '≥99.5%', 'Natural-gas dehydration (TEG make-up blends), unsaturated polyester resins, plasticisers', '235 kg drums · IBC'],
+                ['TEG (triethylene glycol)', '≥99.0%', 'Gas dehydration contactor circuits (upstream Oman), humectant, solvent', '225 kg drums · IBC'],
+                ['Propylene glycol (PG)', 'Industrial ≥99.5% / USP', 'Food & beverage (E1520), pharma formulation, low-toxicity HVAC loops, fog fluid', '215 kg drums · IBC'],
+                ['Butyl glycol (EGBE)', '≥99.0%', 'Coatings and lacquer solvent, industrial cleaners, drilling-fluid additive', '190 kg drums · IBC'],
+              ],
+            },
+            sections: [
+              { heading: 'Which glycol do you need?', body: "For closed-loop chilled water and district cooling in the Gulf's ambient temperatures, inhibited MEG at 25–35% is the standard; use PG where incidental food contact or lower toxicity is required (hotels, food plants). For natural-gas dehydration, TEG is the contactor workhorse — we supply both fresh TEG and DEG for blend make-up to operators in Oman's upstream sector. Coatings and cleaner formulators typically want butyl glycol for its evaporation profile. Unsure between grades? Send us the duty specification and our technical team will confirm the right glycol, concentration, and inhibitor package." },
+              { heading: 'Delivery lanes for bulk glycols', body: 'Same-day delivery in Muscat and Rusayl; next-day Sohar and Nizwa; 2–3 days Salalah and Duqm. Cross-border: Fujairah in 2–4 hours by road, Dubai and Abu Dhabi in 3–5 days, Saudi Arabia (Riyadh, Dammam, Jubail) in 4–7 days under GCC customs transit, with sea freight from Sohar Port for Jeddah and Yanbu bulk orders. Full drum, palletised IBC, and ISO-tank quantities.' },
+              { heading: 'Documentation and compliance', body: 'Every glycol shipment includes batch CoA (purity, water content, colour APHA), GHS SDS, and — for USP propylene glycol — food-grade compliance documentation compatible with HACCP systems. DEG and MEG are supplied for industrial use with end-use declarations where required by import regulations in the destination GCC state.' },
+            ],
           },
           'alcohols': {
             heading: 'Industrial Alcohols Supplier — Methanol, Ethanol, IPA, Butanol Oman',
@@ -466,6 +580,35 @@ const Products = () => {
               <div className="max-w-4xl mx-auto">
                 <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">{intro.heading}</h2>
                 <p className="text-muted-foreground leading-relaxed">{intro.body}</p>
+                {intro.table && (
+                  <div className="mt-8 overflow-x-auto rounded-lg border border-border">
+                    <table className="w-full text-sm min-w-[560px]">
+                      <caption className="text-left text-xs text-muted-foreground p-2 caption-top font-medium">{intro.table.caption}</caption>
+                      <thead>
+                        <tr className="bg-muted/50">
+                          {intro.table.headers.map((h) => (
+                            <th key={h} className="text-start font-semibold text-foreground px-3 py-2 border-b border-border">{h}</th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {intro.table.rows.map((row, i) => (
+                          <tr key={i} className={i % 2 ? 'bg-muted/20' : ''}>
+                            {row.map((cell, j) => (
+                              <td key={j} className={`px-3 py-2 border-b border-border/50 ${j === 0 ? 'font-medium text-foreground' : 'text-muted-foreground'}`}>{cell}</td>
+                            ))}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
+                {intro.sections?.map((sec) => (
+                  <div key={sec.heading} className="mt-6">
+                    <h3 className="text-lg font-semibold text-foreground mb-2">{sec.heading}</h3>
+                    <p className="text-muted-foreground leading-relaxed text-sm">{sec.body}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </section>

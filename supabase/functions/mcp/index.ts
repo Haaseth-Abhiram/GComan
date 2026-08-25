@@ -119,7 +119,13 @@ var agro_default = [
     details: {
       formula: "CO(NH2)2",
       casNumber: "57-13-6",
-      alternativeNames: ["Urea 46-0-0", "Prilled urea", "Granular urea", "Carbamide", "Fertilizer urea"],
+      alternativeNames: [
+        "Urea 46-0-0",
+        "Prilled urea",
+        "Granular urea",
+        "Carbamide",
+        "Fertilizer urea"
+      ],
       seoKeywords: [
         "urea fertilizer Oman",
         "urea 46 Oman",
@@ -157,7 +163,12 @@ var agro_default = [
     details: {
       formula: "(NH4)2HPO4",
       casNumber: "7783-28-0",
-      alternativeNames: ["DAP", "Diammonium phosphate", "DAP 18-46-0", "Ammonium hydrogen phosphate"],
+      alternativeNames: [
+        "DAP",
+        "Diammonium phosphate",
+        "DAP 18-46-0",
+        "Ammonium hydrogen phosphate"
+      ],
       seoKeywords: [
         "DAP fertilizer Oman",
         "diammonium phosphate Oman",
@@ -191,7 +202,14 @@ var agro_default = [
     image: "https://gcoman.com/images/products/granules-fertilizer.webp",
     iconName: "Wheat",
     details: {
-      alternativeNames: ["NPK 20-20-20", "NPK 19-19-19", "NPK 15-15-15", "Compound fertilizer", "Water-soluble NPK", "Fertigation grade NPK"],
+      alternativeNames: [
+        "NPK 20-20-20",
+        "NPK 19-19-19",
+        "NPK 15-15-15",
+        "Compound fertilizer",
+        "Water-soluble NPK",
+        "Fertigation grade NPK"
+      ],
       seoKeywords: [
         "NPK fertilizer Oman",
         "NPK 20-20-20 Oman",
@@ -228,7 +246,13 @@ var agro_default = [
     details: {
       formula: "KCl",
       casNumber: "7447-40-7",
-      alternativeNames: ["MOP", "Muriate of Potash", "Potassium chloride", "Potash fertilizer", "KCl 60"],
+      alternativeNames: [
+        "MOP",
+        "Muriate of Potash",
+        "Potassium chloride",
+        "Potash fertilizer",
+        "KCl 60"
+      ],
       seoKeywords: [
         "potassium chloride fertilizer Oman",
         "MOP fertilizer Oman",
@@ -264,7 +288,12 @@ var agro_default = [
     details: {
       formula: "Ca(NO3)2\xB74H2O",
       casNumber: "13477-34-4",
-      alternativeNames: ["Calcium nitrate tetrahydrate", "CN", "Nitrogen calcium fertilizer", "Norwegian saltpeter"],
+      alternativeNames: [
+        "Calcium nitrate tetrahydrate",
+        "CN",
+        "Nitrogen calcium fertilizer",
+        "Norwegian saltpeter"
+      ],
       seoKeywords: [
         "calcium nitrate Oman",
         "calcium nitrate fertilizer Oman",
@@ -300,13 +329,22 @@ var agro_default = [
     details: {
       formula: "ZnSO4\xB7H2O",
       casNumber: "7446-19-7",
-      alternativeNames: ["Zinc sulphate monohydrate", "ZSM", "Zinc sulphate 33%", "Micronutrient zinc"],
+      alternativeNames: [
+        "Zinc sulphate monohydrate",
+        "ZSM",
+        "Zinc sulphate 33%",
+        "Micronutrient zinc"
+      ],
       seoKeywords: [
         "zinc sulphate fertilizer Oman",
         "micronutrient zinc Oman",
         "zinc deficiency Oman soils",
         "zinc sulphate 33% Oman",
-        "date palm zinc Oman"
+        "date palm zinc Oman",
+        "zinc sulphate supplier",
+        "distributor zinc sulphate GCC",
+        "zinc sulphate monohydrate Oman",
+        "zinc fertiliser supplier"
       ],
       longDescription: "Zinc deficiency is one of the most widespread micronutrient problems in Oman's alkaline calcareous soils \u2014 reducing yield in date palm, citrus, vegetables, and forage. Zinc Sulphate Monohydrate (33% Zn) is the standard soil and foliar correction. Global Chemicals LLC supplies agricultural-grade ZSM for soil broadcast (20\u201340 kg/ha), fertigation, and foliar sprays (0.2\u20130.5% solution). Chelated zinc EDTA also available for high-pH conditions where sulphate fixation is a concern.",
       applications: [
@@ -323,7 +361,17 @@ var agro_default = [
         "Free-flowing powder or granular",
         "Packaging: 25 kg bag"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Zinc_sulfate"
+      wikiUrl: "https://en.wikipedia.org/wiki/Zinc_sulfate",
+      faqs: [
+        {
+          question: "Who supplies zinc sulphate in Oman and the GCC?",
+          answer: "Global Chemicals LLC stocks zinc sulphate monohydrate (33% Zn) in 25 kg bags in Muscat, with same-day Oman dispatch and GCC delivery in 2\u20137 days. Batch CoA covers zinc assay, sulphur and heavy-metal limits. Agricultural and industrial-grade enquiries both welcome \u2014 state your application for the right specification and price."
+        },
+        {
+          question: "How is zinc deficiency corrected in Gulf soils?",
+          answer: "The region's alkaline, calcareous soils lock up zinc, showing as interveinal chlorosis and short internodes in date palm, citrus and vegetables. Correct with soil-applied zinc sulphate at 10\u201325 kg/ha, 0.2\u20130.5% foliar sprays during active growth, or continuous fertigation dosing. Our agronomy support can interpret your leaf-analysis report and set the programme."
+        }
+      ]
     }
   },
   {
@@ -336,13 +384,23 @@ var agro_default = [
     details: {
       formula: "CaSO4\xB72H2O",
       casNumber: "10101-41-4",
-      alternativeNames: ["Gypsum", "Calcium sulphate dihydrate", "Agricultural gypsum", "Soil conditioner gypsum", "Land plaster"],
+      alternativeNames: [
+        "Gypsum",
+        "Calcium sulphate dihydrate",
+        "Agricultural gypsum",
+        "Soil conditioner gypsum",
+        "Land plaster"
+      ],
       seoKeywords: [
         "agricultural gypsum Oman",
         "gypsum fertilizer Oman",
         "sodic soil reclamation Oman",
         "calcium sulphate agricultural Oman",
-        "soil conditioner Oman"
+        "soil conditioner Oman",
+        "agricultural gypsum supplier",
+        "gypsum supplier Oman",
+        "agricultural gypsum price GCC",
+        "soil gypsum for sodic soils"
       ],
       longDescription: "Agricultural Gypsum (CaSO4\xB72H2O) is the workhorse soil amendment for reclaiming sodic and saline-sodic soils across Oman's irrigated regions \u2014 a common problem where saline groundwater raises exchangeable sodium and destroys soil structure. Gypsum supplies soluble calcium that displaces sodium from the cation exchange complex, restoring aggregate structure and water infiltration. Also a non-acidifying calcium and sulphur nutrient source (23% Ca, 18% S) for peanuts, alfalfa, and forage crops. Global Chemicals LLC supplies mined agricultural gypsum in 25 kg bags and 1,000 kg big bags.",
       applications: [
@@ -359,7 +417,21 @@ var agro_default = [
         "Particle size: <2 mm typical",
         "Packaging: 25 kg bag, 1,000 kg big bag, bulk"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Calcium_sulfate"
+      wikiUrl: "https://en.wikipedia.org/wiki/Calcium_sulfate",
+      faqs: [
+        {
+          question: "Who supplies agricultural gypsum in Oman?",
+          answer: "Global Chemicals LLC supplies agricultural-grade gypsum (calcium sulphate dihydrate, 23% Ca, 18% S) in 25 kg and 50 kg bags with bulk tonnage for farm-scale reclamation projects. Same-day Muscat dispatch; delivery across Oman's agricultural regions and GCC export on request. CoA confirms purity and particle size on every lot."
+        },
+        {
+          question: "How much gypsum is needed to reclaim sodic soil?",
+          answer: "Typical reclamation rates run 2\u201310 t/ha depending on exchangeable sodium percentage and soil texture \u2014 a soil test converts ESP to a precise gypsum requirement. Apply, incorporate into the top 15\u201320 cm, then leach with good-quality irrigation water. For maintenance of irrigated ground under saline water, annual rates of 0.5\u20132 t/ha are common. Send us your soil analysis and we'll calculate the tonnage."
+        },
+        {
+          question: "What is the price of agricultural gypsum in Oman?",
+          answer: "Pricing depends on volume, bag size and delivery zone \u2014 bulk farm-scale tonnage prices substantially below bagged retail. Request a quote with your tonnage and location; we respond with delivered pricing the same business day."
+        }
+      ]
     }
   },
   {
@@ -371,7 +443,13 @@ var agro_default = [
     iconName: "Wheat",
     details: {
       casNumber: "1415-93-6",
-      alternativeNames: ["Humic acid", "Fulvic acid", "Leonardite extract", "Potassium humate", "Soil organic amendment"],
+      alternativeNames: [
+        "Humic acid",
+        "Fulvic acid",
+        "Leonardite extract",
+        "Potassium humate",
+        "Soil organic amendment"
+      ],
       seoKeywords: [
         "humic acid Oman",
         "fulvic acid Oman",
@@ -585,7 +663,11 @@ var alcohols_default = [
         "n-butanol Muscat",
         "butyl alcohol industrial Oman",
         "butanol solvent Sohar",
-        "n-butanol supplier Muscat"
+        "n-butanol supplier Muscat",
+        "n butanol suppliers",
+        "n-butanol supplier Oman",
+        "n-butanol distributor GCC",
+        "butanol drums UAE"
       ],
       longDescription: "Industrial Grade N-Butanol supplier in Oman - Global Chemicals LLC provides n-butanol for coatings, plastics, and chemical manufacturing in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our n-butyl alcohol is a primary alcohol essential for producing butyl acetate (lacquer solvent), butyl acrylate, and glycol ethers. The versatile solvent offers excellent dissolving power for resins, oils, and dyes with moderate evaporation rate. Widely used in paint and coating industries, plastics manufacturing, textile processing, and chemical synthesis across Oman. Also serves in brake fluid formulation, hydraulic fluids, and as an extractant in pharmaceutical production. The four-carbon alcohol provides optimal balance of solvency and evaporation rate.",
       applications: [
@@ -608,7 +690,21 @@ var alcohols_default = [
         "Excellent solvency for resins",
         "Available in 200L drums, IBCs, bulk"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/1-Butanol"
+      wikiUrl: "https://en.wikipedia.org/wiki/1-Butanol",
+      faqs: [
+        {
+          question: "Who supplies n-butanol in Oman and the GCC?",
+          answer: "Global Chemicals LLC stocks industrial n-butanol \u226599.5% in Muscat for same-day Oman dispatch and GCC delivery in 2\u20137 days (Fujairah 2\u20134 hours by road, Dubai 3\u20135 days, Saudi Arabia 4\u20137 days). 200 L drums and IBCs with batch CoA (purity, water) and GHS SDS. Send volume and destination for same-day pricing."
+        },
+        {
+          question: "What is n-butanol used for industrially?",
+          answer: "The largest uses are butyl acrylate and butyl acetate production, solvent duty in paints, lacquers and coatings (excellent flow and blush resistance), plasticiser esters (DBP), and as a coupling agent in metal-cleaning and textile formulations. In the Gulf, coatings and construction-chemical formulators are the main consumers alongside oilfield solvent blends."
+        },
+        {
+          question: "n-Butanol vs isobutanol \u2014 which do I need?",
+          answer: "n-Butanol (linear) is the standard for acrylate/acetate esters and most coating solvency specs; isobutanol (branched) is cheaper for some solvent and additive duties with faster evaporation. Check the ester or solvency specification of your formulation \u2014 our technical team can confirm from your recipe. We supply both."
+        }
+      ]
     }
   }
 ];
@@ -2198,7 +2294,11 @@ var ethanolamines_default = [
         "triethanolamine Muscat",
         "TEA industrial Oman",
         "metalworking TEA Sohar",
-        "triethanolamine supplier Muscat"
+        "triethanolamine supplier Muscat",
+        "triethanolamine supplier",
+        "triethanolamine distributor GCC",
+        "TEA 85 supplier Oman",
+        "TEA 99 cement grinding aid"
       ],
       longDescription: "Triethanolamine (TEA) supplier in Oman - Global Chemicals LLC provides industrial-grade TEA for metalworking fluids, cement grinding aids, and manufacturing in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our triethanolamine is a versatile tertiary amine used as an alkalizing agent, emulsifier, and corrosion inhibitor. Essential for formulating metalworking fluids, cement grinding aids, and as a surfactant in industrial cleaners. The viscous liquid neutralizes acids and provides excellent corrosion protection for ferrous metals. Widely used in metalworking industries, cement plants, cosmetic manufacturing, and industrial chemical production across Oman. Also serves in gas treating, textile processing, and as a curing accelerator for epoxy resins.",
       applications: [
@@ -2225,6 +2325,10 @@ var ethanolamines_default = [
         {
           question: "What is triethanolamine (TEA) used for in industry in Oman?",
           answer: "Triethanolamine (TEA, tris(2-hydroxyethyl)amine, CAS 102-71-6) is a tertiary alkanolamine with broad industrial applications. As a surfactant and emulsifier, TEA neutralises fatty acids to form soaps (TEA-lauryl sulphate, TEA-stearate) used in personal care products, metalworking fluids, and polishes. As a cement grinding aid, TEA is one of the most widely used additives in cement mills globally \u2014 dosed at 0.01\u20130.05% during clinker grinding, it improves mill efficiency, increases cement fineness, and improves early strength development. In Oman's cement industry (Raysut Cement, Oman Cement) and GCC cement sector, TEA grinding aid is standard practice for energy-efficient clinker grinding. As a pH adjuster and chelating agent, TEA is used in metalworking cutting fluids to maintain alkalinity and prevent rust on machined parts. In personal care, TEA adjusts pH in skin creams, conditioners, and sunscreens. Global Chemicals LLC supplies technical-grade TEA for cement, metalworking, and industrial formulation applications in Oman."
+        },
+        {
+          question: "Who distributes triethanolamine (TEA) in Oman and the GCC?",
+          answer: "Global Chemicals LLC stocks TEA 85% and TEA 99% in Muscat in 230 kg drums and IBCs, with batch CoA (assay, water, colour) and same-day Oman dispatch; GCC delivery 2\u20137 days. Cement grinding-aid formulators, surfactant producers, and metalworking-fluid blenders are our largest TEA buyers \u2014 contract pricing available for recurring volume."
         }
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Triethanolamine"
@@ -3200,6 +3304,65 @@ var glycols_default = [
     }
   },
   {
+    id: "deg-diethylene-glycol",
+    title: "DEG (Diethylene Glycol)",
+    description: "Diethylene glycol \u226599.5% for polyester resins, plasticisers, and natural-gas dehydration blend make-up in Oman & GCC.",
+    category: "glycols",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
+    iconName: "Wind",
+    details: {
+      formula: "C4H10O3",
+      casNumber: "111-46-6",
+      wikiUrl: "https://en.wikipedia.org/wiki/Diethylene_glycol",
+      alternativeNames: [
+        "Diethylene glycol",
+        "DEG",
+        "2,2'-Oxydiethanol",
+        "Diglycol",
+        "DEG glycol"
+      ],
+      seoKeywords: [
+        "DEG supplier Oman",
+        "diethylene glycol Muscat",
+        "DEG glycol GCC",
+        "diethylene glycol supplier UAE",
+        "glycol suppliers Oman",
+        "DEG drums IBC"
+      ],
+      longDescription: "Diethylene glycol (DEG) supplier in Oman \u2014 Global Chemicals LLC stocks DEG at \u226599.5% purity in our Muscat warehouse for same-day Oman dispatch and scheduled GCC delivery. DEG is the intermediate chain length in the ethylene glycol series: less volatile than MEG, lighter than TEG. In the Gulf it serves three main duties \u2014 unsaturated polyester resin and plasticiser manufacture, natural-gas dehydration blend make-up alongside TEG, and as a solvent-humectant in industrial formulations (printing inks, textile conditioning). Supplied with batch Certificate of Analysis covering purity, water content and colour (APHA), plus GHS-compliant SDS. DEG is strictly an industrial chemical \u2014 never for food or pharmaceutical use \u2014 and we supply against end-use declarations where destination import rules require them.",
+      applications: [
+        "Unsaturated polyester resin (UPR) production",
+        "Plasticiser and ester manufacture",
+        "Natural-gas dehydration blend make-up (with TEG)",
+        "Printing-ink and dye solvent-humectant",
+        "Textile conditioning and finishing",
+        "Cement grinding-aid formulations"
+      ],
+      technicalSpecs: [
+        "Purity: \u226599.5% (GC)",
+        "Water content: \u22640.1% (Karl Fischer)",
+        "Colour: \u226410 APHA",
+        "Density: 1.118 g/cm\xB3 at 20\xB0C",
+        "Boiling point: 244\u2013245\xB0C",
+        "Packaging: 235 kg drums, 1,000 L IBC, bulk"
+      ],
+      faqs: [
+        {
+          question: "Who supplies diethylene glycol (DEG) in Oman?",
+          answer: "Global Chemicals LLC stocks DEG \u226599.5% in Muscat with same-day local dispatch and 2\u20137 day GCC delivery (Fujairah 2\u20134 hours by road, Dubai 3\u20135 days, Saudi Arabia 4\u20137 days). Every consignment ships with batch CoA and GHS SDS; drum, IBC and bulk quantities. Request a quote with your volume for same-day pricing."
+        },
+        {
+          question: "What is the difference between DEG and MEG or TEG?",
+          answer: "DEG sits between MEG and TEG in the ethylene glycol series. MEG is the antifreeze and PET feedstock; TEG is the standard gas-dehydration desiccant; DEG serves polyester resins, plasticisers and dehydration blend make-up, with lower volatility than MEG at lower cost than TEG. For chilled-water antifreeze use MEG or propylene glycol \u2014 not DEG."
+        },
+        {
+          question: "Is DEG safe for food or pharmaceutical use?",
+          answer: "No. Diethylene glycol is toxic if ingested and must never be used in food, beverage, pharmaceutical or personal-care products. For those applications we supply USP/EP-grade propylene glycol (E1520). DEG is sold for industrial use only, with end-use declarations where required."
+        }
+      ]
+    }
+  },
+  {
     id: "teg-triethylene-glycol",
     title: "TEG (Triethylene Glycol)",
     description: "High-purity triethylene glycol for natural gas dehydration.",
@@ -3220,7 +3383,11 @@ var glycols_default = [
         "triethylene glycol Muscat",
         "gas dehydration Oman",
         "TEG dehydration Sohar",
-        "triethylene glycol Muscat"
+        "triethylene glycol Muscat",
+        "TEG glycol supplier",
+        "triethylene glycol Oman",
+        "TEG gas dehydration supply",
+        "glycols supplier GCC"
       ],
       longDescription: "Triethylene Glycol (TEG) supplier in Oman - Global Chemicals LLC provides high-purity TEG for natural gas dehydration and industrial applications in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our TEG is the industry standard for removing water vapor from natural gas streams to meet pipeline specifications and prevent hydrate formation. Essential for gas processing plants, glycol dehydration units, and natural gas conditioning. The hygroscopic liquid absorbs water effectively with low vaporization losses. Widely used in gas processing facilities, LNG plants, and oilfield operations across Oman. Also serves as a solvent for resins, inks, and as a plasticizer for vinyl and polyurethane. The preferred glycol for gas dehydration due to optimal balance of performance and economics.",
       applications: [
@@ -3251,6 +3418,10 @@ var glycols_default = [
         {
           question: "What causes TEG degradation in gas plant regenerators in Oman?",
           answer: "TEG degradation in Oman gas plant regenerators occurs through several mechanisms. Thermal degradation begins at reboiler temperatures above 207\xB0C, producing 1,4-dioxane, diethylene glycol, and polyglycol oligomers that accumulate as dark-coloured solids reducing TEG purity and absorption capacity. Oxidative degradation occurs when air ingresses into the system \u2014 oxygen reacts with TEG at elevated temperatures to form glycolic acid, oxalic acid, and other acidic degradation products that lower pH, accelerate corrosion, and promote foaming. pH control below 6.0 indicates acid degradation requiring base injection (sodium hydroxide, borax) and activated carbon filtration to remove degradation products. Contaminant accumulation from produced water (methanol, heavy hydrocarbons, amines, corrosion inhibitors) also accelerates TEG deterioration. In Oman's gas plants, TEG quality is monitored monthly by pH, colour, purity, and specific gravity testing. Reclaimer units and activated carbon filters significantly extend TEG service life. Global Chemicals LLC supplies fresh make-up TEG and regeneration chemicals for Oman gas operations."
+        },
+        {
+          question: "Who supplies TEG for gas dehydration in Oman?",
+          answer: "Global Chemicals LLC supplies fresh triethylene glycol \u226599% for dehydration contactor first-fill and make-up, delivered to gas plants across Oman under JSRS registration (PDO/OQ approved lists) and exported GCC-wide. Batch CoA covers purity, water content and pH; 225 kg drums and IBCs, with DEG also stocked for blend make-up."
         }
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Triethylene_glycol"
@@ -3277,7 +3448,11 @@ var glycols_default = [
         "PG Muscat",
         "food grade propylene glycol Oman",
         "USP propylene glycol Sohar",
-        "propylene glycol Muscat"
+        "propylene glycol Muscat",
+        "propylene glycol suppliers",
+        "USP propylene glycol Oman",
+        "food grade propylene glycol GCC",
+        "PG supplier Muscat"
       ],
       longDescription: "Propylene Glycol supplier in Oman - Global Chemicals LLC provides USP and industrial-grade propylene glycol for food, pharmaceutical, and industrial applications in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our PG is a versatile, non-toxic glycol suitable for food-grade antifreeze, pharmaceuticals, cosmetics, and industrial processes. Essential for formulating food-safe heat transfer fluids, pharmaceutical solvents, and personal care products. The GRAS-status chemical offers similar properties to MEG but with food-safe certification. Widely used in food processing, pharmaceutical manufacturing, cosmetic production, and beverage industries across Oman. Also serves in de-icing fluids, electronic cigarettes, and theatrical fog production. Available in USP (pharmaceutical) and technical grades.",
       applications: [
@@ -3304,6 +3479,10 @@ var glycols_default = [
         {
           question: "What is the difference between propylene glycol and ethylene glycol for Oman industrial use?",
           answer: "Propylene glycol (PG, 1,2-propanediol, CAS 57-55-6) and ethylene glycol (MEG, 1,2-ethanediol) are both diols widely used as antifreeze, coolants, and industrial solvents, but differ critically in toxicity. Ethylene glycol is toxic (LD50 4,700 mg/kg in rats), metabolised to oxalic acid which causes kidney failure; propylene glycol is Generally Recognised As Safe (GRAS) by the FDA for use in food, cosmetics, and pharmaceuticals. This toxicity difference makes propylene glycol the mandatory choice for food processing refrigeration systems, brewery chilling loops, pharmaceutical manufacturing coolants, and any application where human contact is possible. In performance, both provide similar freeze protection and boiling point elevation at equivalent concentrations, but PG is slightly more viscous than MEG, requiring higher pump power in cold conditions. Cost: propylene glycol is typically 30\u201360% more expensive than MEG. For Oman industrial applications with no food contact risk (HVAC, process cooling, oilfield), MEG remains the standard. Global Chemicals LLC supplies both grades with documentation for food and industrial applications."
+        },
+        {
+          question: "Who supplies propylene glycol in Oman \u2014 industrial and USP grade?",
+          answer: "Global Chemicals LLC stocks both industrial-grade PG (\u226599.5%) and USP/EP food grade (E1520) in Muscat, in 215 kg drums and IBCs with the compliance documentation each grade requires. Same-day Oman dispatch, GCC delivery 2\u20137 days. State the grade and volume in your enquiry for same-day pricing."
         }
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Propylene_glycol"
@@ -3624,6 +3803,70 @@ var inorganic_default = [
         "Meets agricultural and industrial grades"
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Zinc_sulfate"
+    }
+  },
+  {
+    id: "caustic-potash",
+    title: "Caustic Potash (Potassium Hydroxide Flakes)",
+    description: "Caustic potash (KOH) flakes 90% for liquid soaps, potassium soaps, fertilisers, and industrial synthesis \u2014 supplier in Oman & GCC.",
+    category: "inorganic",
+    image: "https://gcoman.com/images/products/white-powder.webp",
+    iconName: "Microscope",
+    details: {
+      formula: "KOH",
+      casNumber: "1310-58-3",
+      wikiUrl: "https://en.wikipedia.org/wiki/Potassium_hydroxide",
+      alternativeNames: [
+        "Potassium hydroxide",
+        "KOH",
+        "Caustic potash flakes",
+        "Potash lye",
+        "E525"
+      ],
+      seoKeywords: [
+        "caustic potash Oman",
+        "potassium hydroxide supplier Oman",
+        "KOH flakes Muscat",
+        "caustic potash exporter GCC",
+        "potassium hydroxide manufacturers supplier",
+        "KOH for liquid soap"
+      ],
+      longDescription: "Caustic potash (potassium hydroxide, KOH) supplier in Oman \u2014 Global Chemicals LLC stocks KOH flakes at 90% minimum assay in our Muscat warehouse, serving liquid-soap and detergent manufacturers, biodiesel producers, fertiliser formulators (potassium-based liquid NPK), electroplating and battery-electrolyte users, and chemical-synthesis customers across Oman, UAE, Saudi Arabia and the wider GCC. Where sodium hydroxide makes hard bar soaps, potassium hydroxide is the alkali of choice for liquid and soft soaps because potassium soaps stay soluble. We supply industrial grade as standard, with food-grade (E525) available on request for food-processing duties. Every batch ships with Certificate of Analysis (assay, carbonate, chloride, iron) and GHS-compliant SDS; 25 kg bags on shrink-wrapped pallets, with container-load export from Sohar Port.",
+      applications: [
+        "Liquid soap and soft-soap manufacture (potassium soaps)",
+        "Biodiesel transesterification catalyst",
+        "Liquid NPK and potassium-based fertiliser formulation",
+        "Alkaline battery electrolyte preparation",
+        "Electroplating and metal surface treatment",
+        "pH adjustment and neutralisation in chemical synthesis",
+        "Food processing (E525 grade, on request)"
+      ],
+      technicalSpecs: [
+        "Assay (KOH): \u226590%",
+        "K2CO3 (carbonate): \u22640.5%",
+        "Chloride: \u22640.01%",
+        "Iron (Fe): \u226410 ppm",
+        "Appearance: white flakes, hygroscopic",
+        "Packaging: 25 kg bags, 1,000 kg big bags on request"
+      ],
+      faqs: [
+        {
+          question: "Who supplies caustic potash (potassium hydroxide) in Oman and the GCC?",
+          answer: "Global Chemicals LLC stocks KOH flakes 90% in Muscat with same-day local dispatch, GCC road delivery in 2\u20137 days, and container-load export from Sohar Port. CoA (assay, carbonate, chloride, iron) and GHS SDS with every batch; 25 kg bags standard, big bags on request. Send your volume and destination for same-day pricing."
+        },
+        {
+          question: "What is the difference between caustic potash and caustic soda?",
+          answer: "Caustic potash is potassium hydroxide (KOH); caustic soda is sodium hydroxide (NaOH). Both are strong alkalis, but KOH makes soft/liquid soaps (potassium soaps stay soluble) and is required where the potassium ion matters \u2014 liquid fertilisers, battery electrolyte, certain esters. NaOH is cheaper per unit of alkalinity and makes hard bar soaps. We stock both, in multiple grades."
+        },
+        {
+          question: "Which KOH grade is used for liquid soap production?",
+          answer: "Industrial-grade KOH flakes at 90% assay are the standard for liquid and soft soap saponification, dosed against the saponification value of the oil blend. For personal-care and food-adjacent products, E525 food-grade KOH is available on request with compliance documentation. Our technical team can review your formulation and confirm grade and dose."
+        },
+        {
+          question: "Do you export potassium hydroxide to the UAE and Saudi Arabia?",
+          answer: "Yes \u2014 palletised 25 kg bags move by road to the UAE (Fujairah 2\u20134 hours, Dubai/Abu Dhabi 3\u20135 days) and Saudi Arabia (4\u20137 days) under GCC customs transit, with full export documentation from Muscat. Container-load sea freight from Sohar Port serves Jeddah, Yanbu and beyond."
+        }
+      ]
     }
   }
 ];
@@ -5652,7 +5895,11 @@ var oilfield_default = [
         "ethanoic acid Muscat",
         "glacial acetic acid Oman",
         "acetic acid oilfield Sohar",
-        "acidizing agent Oman"
+        "acidizing agent Oman",
+        "acetic acid supplier",
+        "glacial acetic acid supplier Oman",
+        "acetic acid suppliers GCC",
+        "glacial acetic acid drums"
       ],
       longDescription: "Premium Acetic Acid supplier in Oman - Global Chemicals LLC provides high-purity glacial acetic acid for oilfield, refinery, and industrial applications in Muscat, Sohar, Duqm, Salalah. Our acetic acid (CH3COOH) is widely used in well stimulation, acidizing operations, scale removal, and chemical synthesis. The glacial grade offers 99%+ purity for demanding applications. Essential for petroleum production enhancement, pipeline cleaning, and drilling fluid additives. Acetic acid effectively dissolves carbonate scales and enhances well productivity. Serving major oil & gas companies, refineries, and industrial facilities across Oman with reliable supply and technical support. In Oman's oilfield sector, acetic acid is primarily used for wellbore acidizing (stimulation) in carbonate formations \u2014 the moderate acid strength prevents deep etching that HCl can cause, making it preferred for near-wellbore damage removal in chalk and dolomite reservoirs. Global Chemicals LLC supplies glacial acetic acid to PDO, OQ, and oilfield service companies (Schlumberger, Halliburton, Baker Hughes) operating in Oman's interior basins. Supply in drums and IBC containers; technical and oilfield-grade certificates provided. JSRS-registered supplier.",
       applications: [
@@ -5672,7 +5919,21 @@ var oilfield_default = [
         "Freezing point: 16-17\xB0C",
         "Available in drums, IBCs, and bulk tankers"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Acetic_acid"
+      wikiUrl: "https://en.wikipedia.org/wiki/Acetic_acid",
+      faqs: [
+        {
+          question: "Who supplies glacial acetic acid in Oman and the GCC?",
+          answer: "Global Chemicals LLC stocks glacial acetic acid \u226599.85% in Muscat, with same-day local dispatch, GCC road delivery in 2\u20137 days, and container export from Sohar Port. HDPE drums (30\u2013220 kg) and IBCs, batch CoA and GHS SDS on every consignment. Food-grade (E260) and laboratory AR grades are also stocked \u2014 state the grade when requesting your quote."
+        },
+        {
+          question: "Which grade of acetic acid do I need \u2014 glacial, food, or lab?",
+          answer: "Glacial (\u226599.85%) is the industrial workhorse for esters, textile dyeing, oilfield acidising blends and pH control. Food grade (E260) covers vinegar-strength dilutions, pickling and preservation with food-compliance documents. Laboratory AR grade serves analytical work with tighter impurity limits and lot traceability. All three ship from Muscat stock."
+        },
+        {
+          question: "How is acetic acid used in oilfield operations?",
+          answer: "As a retarded, low-corrosivity acidising fluid for carbonate formations (often blended with HCl), for scale removal where iron control matters, and as a pH modifier in completion fluids. We supply drummed glacial acetic acid with oilfield documentation under JSRS registration for PDO/OQ contractor procurement."
+        }
+      ]
     }
   },
   {
@@ -6121,7 +6382,11 @@ var oilfield_default = [
         "solvent Oman",
         "2-butoxyethanol Sohar",
         "EGBE Oman",
-        "glycol ether Oman"
+        "glycol ether Oman",
+        "butyl glycol suppliers",
+        "butyl glycol supplier Oman",
+        "EGBE supplier GCC",
+        "butyl glycol coatings solvent"
       ],
       longDescription: "Butyl Glycol (2-Butoxyethanol) supplier in Oman - Global Chemicals LLC provides high-quality butyl glycol for oilfield, coatings, and industrial cleaning applications in Muscat, Sohar, Duqm, Salalah. Our butyl glycol serves as an excellent solvent for oils, resins, greases, and dirt, making it essential for oilfield cleaning operations and industrial degreasers. The compound effectively dissolves both water-soluble and oil-soluble contaminants. Widely used in paint and coating formulations, well stimulation treatments, and production chemical additives. Butyl glycol provides superior coupling and solvency in cleaning formulations for wellhead equipment, pipelines, and industrial facilities. The slow evaporation rate and good water miscibility make it ideal for heavy-duty cleaning applications across Oman.",
       applications: [
@@ -6144,7 +6409,17 @@ var oilfield_default = [
         "Slow evaporation - extended working time",
         "Available in drums, IBCs, bulk"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/2-Butoxyethanol"
+      wikiUrl: "https://en.wikipedia.org/wiki/2-Butoxyethanol",
+      faqs: [
+        {
+          question: "Who supplies butyl glycol in Oman and the GCC?",
+          answer: "Global Chemicals LLC stocks butyl glycol (EGBE, 2-butoxyethanol) \u226599% in Muscat in 190 kg drums and IBCs, with same-day Oman dispatch and GCC delivery in 2\u20137 days. Batch CoA and GHS SDS included. It is our most requested coatings solvent alongside n-butanol \u2014 both ship from the same warehouse."
+        },
+        {
+          question: "What is butyl glycol used for?",
+          answer: "Its slow, even evaporation makes it the classic coalescing and flow solvent for water-based and solvent-based coatings, and a workhorse in industrial cleaners and degreasers (it couples oil and water). It also serves in drilling-fluid additives and textile processing. Where a faster tail solvent is needed, pair it with n-butanol or switch to butyl di-glycol."
+        }
+      ]
     }
   },
   {
@@ -7311,7 +7586,11 @@ var oilfield_default = [
         "caustic potash Muscat",
         "KOH Oman",
         "potassium hydroxide industrial Sohar",
-        "caustic potash oilfield Oman"
+        "caustic potash oilfield Oman",
+        "potassium hydroxide supplier",
+        "KOH supplier Oman",
+        "potassium hydroxide pellets supplier",
+        "caustic potash supplier GCC"
       ],
       longDescription: "Potassium Hydroxide (Caustic Potash) supplier in Oman - Global Chemicals LLC provides KOH in liquid and flake forms for oilfield, chemical, and industrial applications in Muscat, Sohar, Duqm, Salalah. Our potassium hydroxide serves as a strong alkali for pH control, chemical synthesis, and neutralization operations. Essential for manufacturing potassium compounds, producing biodiesel, and alkaline cleaning formulations. KOH offers higher solubility than sodium hydroxide and is preferred for applications requiring potassium salts. Used in drilling fluids for pH adjustment, battery electrolyte production, and specialty chemical manufacturing. The strong base effectively neutralizes acids and removes acidic contaminants. Widely used across Oman's chemical processing, petroleum, and manufacturing sectors.",
       applications: [
@@ -7334,7 +7613,17 @@ var oilfield_default = [
         "Higher solubility than NaOH",
         "Available in drums, IBCs, bulk"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Potassium_hydroxide"
+      wikiUrl: "https://en.wikipedia.org/wiki/Potassium_hydroxide",
+      faqs: [
+        {
+          question: "Who supplies potassium hydroxide (KOH) in Oman?",
+          answer: "Global Chemicals LLC stocks KOH in Muscat \u2014 flakes 90% for industrial duty (see our Caustic Potash listing), pellets for laboratory and synthesis use, and solution grades on request \u2014 with same-day Oman dispatch and GCC delivery in 2\u20137 days. CoA and GHS SDS with every batch."
+        },
+        {
+          question: "What is KOH used for in oilfield and industrial applications?",
+          answer: "Drilling-fluid alkalinity control (KOH-lime and polymer muds where potassium inhibits shale swelling), pH adjustment in produced-water treatment, biodiesel catalysis, liquid-soap saponification, and battery-electrolyte preparation. Potassium chemistry is preferred over sodium wherever shale inhibition or potassium soaps are required."
+        }
+      ]
     }
   },
   {

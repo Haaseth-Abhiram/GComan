@@ -311,5 +311,69 @@
       ],
       "wikiUrl": "https://en.wikipedia.org/wiki/Zinc_sulfate"
     }
+  },
+  {
+    "id": "caustic-potash",
+    "title": "Caustic Potash (Potassium Hydroxide Flakes)",
+    "description": "Caustic potash (KOH) flakes 90% for liquid soaps, potassium soaps, fertilisers, and industrial synthesis — supplier in Oman & GCC.",
+    "category": "inorganic",
+    "image": "https://gcoman.com/images/products/white-powder.webp",
+    "iconName": "Microscope",
+    "details": {
+      "formula": "KOH",
+      "casNumber": "1310-58-3",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Potassium_hydroxide",
+      "alternativeNames": [
+        "Potassium hydroxide",
+        "KOH",
+        "Caustic potash flakes",
+        "Potash lye",
+        "E525"
+      ],
+      "seoKeywords": [
+        "caustic potash Oman",
+        "potassium hydroxide supplier Oman",
+        "KOH flakes Muscat",
+        "caustic potash exporter GCC",
+        "potassium hydroxide manufacturers supplier",
+        "KOH for liquid soap"
+      ],
+      "longDescription": "Caustic potash (potassium hydroxide, KOH) supplier in Oman — Global Chemicals LLC stocks KOH flakes at 90% minimum assay in our Muscat warehouse, serving liquid-soap and detergent manufacturers, biodiesel producers, fertiliser formulators (potassium-based liquid NPK), electroplating and battery-electrolyte users, and chemical-synthesis customers across Oman, UAE, Saudi Arabia and the wider GCC. Where sodium hydroxide makes hard bar soaps, potassium hydroxide is the alkali of choice for liquid and soft soaps because potassium soaps stay soluble. We supply industrial grade as standard, with food-grade (E525) available on request for food-processing duties. Every batch ships with Certificate of Analysis (assay, carbonate, chloride, iron) and GHS-compliant SDS; 25 kg bags on shrink-wrapped pallets, with container-load export from Sohar Port.",
+      "applications": [
+        "Liquid soap and soft-soap manufacture (potassium soaps)",
+        "Biodiesel transesterification catalyst",
+        "Liquid NPK and potassium-based fertiliser formulation",
+        "Alkaline battery electrolyte preparation",
+        "Electroplating and metal surface treatment",
+        "pH adjustment and neutralisation in chemical synthesis",
+        "Food processing (E525 grade, on request)"
+      ],
+      "technicalSpecs": [
+        "Assay (KOH): ≥90%",
+        "K2CO3 (carbonate): ≤0.5%",
+        "Chloride: ≤0.01%",
+        "Iron (Fe): ≤10 ppm",
+        "Appearance: white flakes, hygroscopic",
+        "Packaging: 25 kg bags, 1,000 kg big bags on request"
+      ],
+      "faqs": [
+        {
+          "question": "Who supplies caustic potash (potassium hydroxide) in Oman and the GCC?",
+          "answer": "Global Chemicals LLC stocks KOH flakes 90% in Muscat with same-day local dispatch, GCC road delivery in 2–7 days, and container-load export from Sohar Port. CoA (assay, carbonate, chloride, iron) and GHS SDS with every batch; 25 kg bags standard, big bags on request. Send your volume and destination for same-day pricing."
+        },
+        {
+          "question": "What is the difference between caustic potash and caustic soda?",
+          "answer": "Caustic potash is potassium hydroxide (KOH); caustic soda is sodium hydroxide (NaOH). Both are strong alkalis, but KOH makes soft/liquid soaps (potassium soaps stay soluble) and is required where the potassium ion matters — liquid fertilisers, battery electrolyte, certain esters. NaOH is cheaper per unit of alkalinity and makes hard bar soaps. We stock both, in multiple grades."
+        },
+        {
+          "question": "Which KOH grade is used for liquid soap production?",
+          "answer": "Industrial-grade KOH flakes at 90% assay are the standard for liquid and soft soap saponification, dosed against the saponification value of the oil blend. For personal-care and food-adjacent products, E525 food-grade KOH is available on request with compliance documentation. Our technical team can review your formulation and confirm grade and dose."
+        },
+        {
+          "question": "Do you export potassium hydroxide to the UAE and Saudi Arabia?",
+          "answer": "Yes — palletised 25 kg bags move by road to the UAE (Fujairah 2–4 hours, Dubai/Abu Dhabi 3–5 days) and Saudi Arabia (4–7 days) under GCC customs transit, with full export documentation from Muscat. Container-load sea freight from Sohar Port serves Jeddah, Yanbu and beyond."
+        }
+      ]
+    }
   }
 ]

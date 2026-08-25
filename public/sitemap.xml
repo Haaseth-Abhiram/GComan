@@ -1021,6 +1021,15 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://gcoman.com/products/glycols/deg-diethylene-glycol</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/glycols/deg-diethylene-glycol"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/glycols/deg-diethylene-glycol"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/glycols/deg-diethylene-glycol"/>
+  </url>
+  <url>
     <loc>https://gcoman.com/products/glycols/meg-ethylene-glycol</loc>
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
@@ -1061,6 +1070,15 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/inorganic/aluminum-sulfate"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/inorganic/aluminum-sulfate"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/inorganic/aluminum-sulfate"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/products/inorganic/caustic-potash</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/inorganic/caustic-potash"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/inorganic/caustic-potash"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/inorganic/caustic-potash"/>
   </url>
   <url>
     <loc>https://gcoman.com/products/inorganic/ferric-chloride</loc>
@@ -3622,6 +3640,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/food-beverage/xanthan-gum"/>
   </url>
   <url>
+    <loc>https://gcoman.com/ar/products/glycols/deg-diethylene-glycol</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/glycols/deg-diethylene-glycol"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/glycols/deg-diethylene-glycol"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/glycols/deg-diethylene-glycol"/>
+  </url>
+  <url>
     <loc>https://gcoman.com/ar/products/glycols/meg-ethylene-glycol</loc>
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
@@ -3656,6 +3683,15 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/inorganic/aluminum-sulfate"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/inorganic/aluminum-sulfate"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/inorganic/aluminum-sulfate"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/ar/products/inorganic/caustic-potash</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/inorganic/caustic-potash"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/inorganic/caustic-potash"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/inorganic/caustic-potash"/>
   </url>
   <url>
     <loc>https://gcoman.com/ar/products/inorganic/ferric-chloride</loc>

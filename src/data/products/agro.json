@@ -9,7 +9,13 @@
     "details": {
       "formula": "CO(NH2)2",
       "casNumber": "57-13-6",
-      "alternativeNames": ["Urea 46-0-0", "Prilled urea", "Granular urea", "Carbamide", "Fertilizer urea"],
+      "alternativeNames": [
+        "Urea 46-0-0",
+        "Prilled urea",
+        "Granular urea",
+        "Carbamide",
+        "Fertilizer urea"
+      ],
       "seoKeywords": [
         "urea fertilizer Oman",
         "urea 46 Oman",
@@ -47,7 +53,12 @@
     "details": {
       "formula": "(NH4)2HPO4",
       "casNumber": "7783-28-0",
-      "alternativeNames": ["DAP", "Diammonium phosphate", "DAP 18-46-0", "Ammonium hydrogen phosphate"],
+      "alternativeNames": [
+        "DAP",
+        "Diammonium phosphate",
+        "DAP 18-46-0",
+        "Ammonium hydrogen phosphate"
+      ],
       "seoKeywords": [
         "DAP fertilizer Oman",
         "diammonium phosphate Oman",
@@ -81,7 +92,14 @@
     "image": "https://gcoman.com/images/products/granules-fertilizer.webp",
     "iconName": "Wheat",
     "details": {
-      "alternativeNames": ["NPK 20-20-20", "NPK 19-19-19", "NPK 15-15-15", "Compound fertilizer", "Water-soluble NPK", "Fertigation grade NPK"],
+      "alternativeNames": [
+        "NPK 20-20-20",
+        "NPK 19-19-19",
+        "NPK 15-15-15",
+        "Compound fertilizer",
+        "Water-soluble NPK",
+        "Fertigation grade NPK"
+      ],
       "seoKeywords": [
         "NPK fertilizer Oman",
         "NPK 20-20-20 Oman",
@@ -118,7 +136,13 @@
     "details": {
       "formula": "KCl",
       "casNumber": "7447-40-7",
-      "alternativeNames": ["MOP", "Muriate of Potash", "Potassium chloride", "Potash fertilizer", "KCl 60"],
+      "alternativeNames": [
+        "MOP",
+        "Muriate of Potash",
+        "Potassium chloride",
+        "Potash fertilizer",
+        "KCl 60"
+      ],
       "seoKeywords": [
         "potassium chloride fertilizer Oman",
         "MOP fertilizer Oman",
@@ -154,7 +178,12 @@
     "details": {
       "formula": "Ca(NO3)2·4H2O",
       "casNumber": "13477-34-4",
-      "alternativeNames": ["Calcium nitrate tetrahydrate", "CN", "Nitrogen calcium fertilizer", "Norwegian saltpeter"],
+      "alternativeNames": [
+        "Calcium nitrate tetrahydrate",
+        "CN",
+        "Nitrogen calcium fertilizer",
+        "Norwegian saltpeter"
+      ],
       "seoKeywords": [
         "calcium nitrate Oman",
         "calcium nitrate fertilizer Oman",
@@ -190,13 +219,22 @@
     "details": {
       "formula": "ZnSO4·H2O",
       "casNumber": "7446-19-7",
-      "alternativeNames": ["Zinc sulphate monohydrate", "ZSM", "Zinc sulphate 33%", "Micronutrient zinc"],
+      "alternativeNames": [
+        "Zinc sulphate monohydrate",
+        "ZSM",
+        "Zinc sulphate 33%",
+        "Micronutrient zinc"
+      ],
       "seoKeywords": [
         "zinc sulphate fertilizer Oman",
         "micronutrient zinc Oman",
         "zinc deficiency Oman soils",
         "zinc sulphate 33% Oman",
-        "date palm zinc Oman"
+        "date palm zinc Oman",
+        "zinc sulphate supplier",
+        "distributor zinc sulphate GCC",
+        "zinc sulphate monohydrate Oman",
+        "zinc fertiliser supplier"
       ],
       "longDescription": "Zinc deficiency is one of the most widespread micronutrient problems in Oman's alkaline calcareous soils — reducing yield in date palm, citrus, vegetables, and forage. Zinc Sulphate Monohydrate (33% Zn) is the standard soil and foliar correction. Global Chemicals LLC supplies agricultural-grade ZSM for soil broadcast (20–40 kg/ha), fertigation, and foliar sprays (0.2–0.5% solution). Chelated zinc EDTA also available for high-pH conditions where sulphate fixation is a concern.",
       "applications": [
@@ -213,7 +251,17 @@
         "Free-flowing powder or granular",
         "Packaging: 25 kg bag"
       ],
-      "wikiUrl": "https://en.wikipedia.org/wiki/Zinc_sulfate"
+      "wikiUrl": "https://en.wikipedia.org/wiki/Zinc_sulfate",
+      "faqs": [
+        {
+          "question": "Who supplies zinc sulphate in Oman and the GCC?",
+          "answer": "Global Chemicals LLC stocks zinc sulphate monohydrate (33% Zn) in 25 kg bags in Muscat, with same-day Oman dispatch and GCC delivery in 2–7 days. Batch CoA covers zinc assay, sulphur and heavy-metal limits. Agricultural and industrial-grade enquiries both welcome — state your application for the right specification and price."
+        },
+        {
+          "question": "How is zinc deficiency corrected in Gulf soils?",
+          "answer": "The region's alkaline, calcareous soils lock up zinc, showing as interveinal chlorosis and short internodes in date palm, citrus and vegetables. Correct with soil-applied zinc sulphate at 10–25 kg/ha, 0.2–0.5% foliar sprays during active growth, or continuous fertigation dosing. Our agronomy support can interpret your leaf-analysis report and set the programme."
+        }
+      ]
     }
   },
   {
@@ -226,13 +274,23 @@
     "details": {
       "formula": "CaSO4·2H2O",
       "casNumber": "10101-41-4",
-      "alternativeNames": ["Gypsum", "Calcium sulphate dihydrate", "Agricultural gypsum", "Soil conditioner gypsum", "Land plaster"],
+      "alternativeNames": [
+        "Gypsum",
+        "Calcium sulphate dihydrate",
+        "Agricultural gypsum",
+        "Soil conditioner gypsum",
+        "Land plaster"
+      ],
       "seoKeywords": [
         "agricultural gypsum Oman",
         "gypsum fertilizer Oman",
         "sodic soil reclamation Oman",
         "calcium sulphate agricultural Oman",
-        "soil conditioner Oman"
+        "soil conditioner Oman",
+        "agricultural gypsum supplier",
+        "gypsum supplier Oman",
+        "agricultural gypsum price GCC",
+        "soil gypsum for sodic soils"
       ],
       "longDescription": "Agricultural Gypsum (CaSO4·2H2O) is the workhorse soil amendment for reclaiming sodic and saline-sodic soils across Oman's irrigated regions — a common problem where saline groundwater raises exchangeable sodium and destroys soil structure. Gypsum supplies soluble calcium that displaces sodium from the cation exchange complex, restoring aggregate structure and water infiltration. Also a non-acidifying calcium and sulphur nutrient source (23% Ca, 18% S) for peanuts, alfalfa, and forage crops. Global Chemicals LLC supplies mined agricultural gypsum in 25 kg bags and 1,000 kg big bags.",
       "applications": [
@@ -249,7 +307,21 @@
         "Particle size: <2 mm typical",
         "Packaging: 25 kg bag, 1,000 kg big bag, bulk"
       ],
-      "wikiUrl": "https://en.wikipedia.org/wiki/Calcium_sulfate"
+      "wikiUrl": "https://en.wikipedia.org/wiki/Calcium_sulfate",
+      "faqs": [
+        {
+          "question": "Who supplies agricultural gypsum in Oman?",
+          "answer": "Global Chemicals LLC supplies agricultural-grade gypsum (calcium sulphate dihydrate, 23% Ca, 18% S) in 25 kg and 50 kg bags with bulk tonnage for farm-scale reclamation projects. Same-day Muscat dispatch; delivery across Oman's agricultural regions and GCC export on request. CoA confirms purity and particle size on every lot."
+        },
+        {
+          "question": "How much gypsum is needed to reclaim sodic soil?",
+          "answer": "Typical reclamation rates run 2–10 t/ha depending on exchangeable sodium percentage and soil texture — a soil test converts ESP to a precise gypsum requirement. Apply, incorporate into the top 15–20 cm, then leach with good-quality irrigation water. For maintenance of irrigated ground under saline water, annual rates of 0.5–2 t/ha are common. Send us your soil analysis and we'll calculate the tonnage."
+        },
+        {
+          "question": "What is the price of agricultural gypsum in Oman?",
+          "answer": "Pricing depends on volume, bag size and delivery zone — bulk farm-scale tonnage prices substantially below bagged retail. Request a quote with your tonnage and location; we respond with delivered pricing the same business day."
+        }
+      ]
     }
   },
   {
@@ -261,7 +333,13 @@
     "iconName": "Wheat",
     "details": {
       "casNumber": "1415-93-6",
-      "alternativeNames": ["Humic acid", "Fulvic acid", "Leonardite extract", "Potassium humate", "Soil organic amendment"],
+      "alternativeNames": [
+        "Humic acid",
+        "Fulvic acid",
+        "Leonardite extract",
+        "Potassium humate",
+        "Soil organic amendment"
+      ],
       "seoKeywords": [
         "humic acid Oman",
         "fulvic acid Oman",
