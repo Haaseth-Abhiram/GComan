@@ -85,7 +85,7 @@ const DosingCalculator = () => {
   // Glycol state
   const [glVolume, setGlVolume] = useState('5000');
   const [glType, setGlType] = useState<'meg' | 'pg'>('meg');
-  const [glTarget, setGlTarget] = useState('-14');
+  const [glTarget, setGlTarget] = useState('-15');
   const glycol = useMemo(() => {
     const target = parseFloat(glTarget);
     const row = GLYCOL_TABLE[glType].find((r) => r.freezeC <= target) ?? GLYCOL_TABLE[glType][GLYCOL_TABLE[glType].length - 1];

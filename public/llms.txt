@@ -8,7 +8,7 @@
 > chemicals across the GCC region (UAE, Saudi Arabia, Qatar, Kuwait, Bahrain).
 > ISO 9001:2015 certified, JSRS registered, and ICV compliant. Catalog spans
 > water treatment, oilfield, food & beverage, laboratory, and specialty chemicals
-> (272 SKUs across 22 categories). Founded in Muscat; operating
+> (275 SKUs across 22 categories). Founded in Muscat; operating
 > Sunday–Thursday 08:00–18:00 GST. Contact: info@gcoman.com, +968 93754388.
 
 ## Core Identity
@@ -26,7 +26,7 @@
 - Business type: B2B wholesale chemical distribution and supply
 - Languages: English, Arabic
 
-## Product Categories (22 categories, 272 SKUs)
+## Product Categories (22 categories, 275 SKUs)
 
 - [Water Treatment Chemicals](https://gcoman.com/products/water-treatment): PAC (Poly Aluminium Chloride), Sodium Hypochlorite, Calcium Hypochlorite, Antiscalants, Coagulants, Flocculants
 - [RO Chemicals](https://gcoman.com/products/ro-chemicals): Antiscalants, membrane cleaners, biocides
@@ -54,7 +54,7 @@
 ## Key Pages
 
 - [Homepage](https://gcoman.com/): Company overview, product highlights, industries served
-- [All Products (272 SKUs)](https://gcoman.com/products): Full searchable product catalogue with 22 categories
+- [All Products (275 SKUs)](https://gcoman.com/products): Full searchable product catalogue with 22 categories
 - [Chemical Suppliers in Oman](https://gcoman.com/chemical-suppliers-oman): Market overview, ISO 9001 certification, Oman chemical supply landscape
 - [Chemical Suppliers in the Middle East](https://gcoman.com/chemical-suppliers-middle-east): GCC regional chemical supply, export capabilities
 - [Caustic Soda Supplier in Oman](https://gcoman.com/chemical-supplier/caustic-soda-oman): NaOH supplier page — grades, pricing, safe handling, Oman industry applications

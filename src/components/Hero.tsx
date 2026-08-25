@@ -87,7 +87,7 @@ const Hero = () => {
               height={1080}
               loading={index === 0 ? "eager" : "lazy"}
               decoding={index === 0 ? "sync" : "async"}
-              fetchPriority={index === 0 ? "high" : "low"}
+              {...{ fetchpriority: index === 0 ? 'high' : 'low' }}
               className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
                 index === currentSlide ? 'opacity-100' : 'opacity-0'
               }`}
@@ -105,7 +105,7 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 pt-32 pb-20">
+      <div className="relative z-10 container mx-auto px-4 pt-44 sm:pt-40 md:pt-32 pb-20">
         <div className="max-w-5xl mx-auto space-y-8">
           {/* Trust Indicators */}
           <div className="flex flex-wrap items-center justify-center gap-3 animate-fade-in">

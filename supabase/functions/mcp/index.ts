@@ -8205,6 +8205,171 @@ var oilfield_default = [
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Sodium_silicate"
     }
+  },
+  {
+    id: "tht-gas-odorant",
+    title: "THT Gas Odorant (Tetrahydrothiophene)",
+    description: "Tetrahydrothiophene (THT) odorant for natural gas and fuel-gas leak detection \u2014 208 L drums with CoA, supplied in Oman & GCC.",
+    category: "oilfield",
+    image: "https://gcoman.com/images/products/chemical-drums.webp",
+    iconName: "Factory",
+    details: {
+      formula: "C4H8S",
+      casNumber: "110-01-0",
+      wikiUrl: "https://en.wikipedia.org/wiki/Tetrahydrothiophene",
+      alternativeNames: [
+        "Tetrahydrothiophene",
+        "THT",
+        "Thiophane",
+        "Thiolane",
+        "Gas odorant THT"
+      ],
+      seoKeywords: [
+        "THT odorant supplier Oman",
+        "tetrahydrothiophene GCC",
+        "natural gas odorant supplier",
+        "gas odorization chemical Oman",
+        "THT drum 208L"
+      ],
+      longDescription: "THT gas odorant supplier in Oman \u2014 Global Chemicals LLC supplies tetrahydrothiophene (THT), the standard odorant for natural gas networks, to gas distribution companies, city-gas projects, and industrial fuel-gas operators across Oman and the GCC. Natural gas is odourless; THT gives it the characteristic warning smell so leaks are detected at concentrations far below the flammability limit. THT is favoured over mercaptan blends for pipeline networks because of its oxidation stability and low soil adsorption, giving consistent odour intensity along long distribution runs. Supplied at \u226599% purity in sealed 208 L steel drums with nitrogen blanket, batch Certificate of Analysis, and GHS-compliant SDS. Handling guidance and dosing-skid compatibility information available from our technical team; typical odorization rates run 10\u201325 mg/m\xB3 of gas, set to the local regulator's detectability requirement.",
+      applications: [
+        "Natural gas network odorization (city gas, industrial distribution)",
+        "Fuel-gas and process-gas leak-detection odorization",
+        "LPG odorization blends (with mercaptans, per specification)",
+        "Biogas and syngas odorization before grid injection",
+        "Odorant make-up for dosing skids and wick systems"
+      ],
+      technicalSpecs: [
+        "Purity: \u226599.0% (GC)",
+        "Sulphur content: ~38% (as S)",
+        "Density: 1.00 g/cm\xB3 at 20\xB0C",
+        "Boiling point: 121\xB0C",
+        "Flash point: 13\xB0C \u2014 flammable liquid, Class 3",
+        "Packaging: 208 L steel drums, nitrogen-blanketed"
+      ],
+      faqs: [
+        {
+          question: "Who supplies THT gas odorant in Oman and the GCC?",
+          answer: "Global Chemicals LLC supplies tetrahydrothiophene (THT) odorant in sealed 208 L drums with batch CoA and SDS, delivered to gas utilities and industrial operators across Oman and exported GCC-wide. THT is a Class 3 flammable liquid with a strong odour \u2014 we ship it under ADR-compliant hazmat transport with trained drivers. Send your annual volume and delivery point for pricing."
+        },
+        {
+          question: "THT vs mercaptan odorants \u2014 which should a gas network use?",
+          answer: "THT resists oxidation and adsorbs less onto pipe walls and soil, so its odour intensity stays stable along long distribution networks \u2014 the reason most city-gas grids specify it. Mercaptan blends (e.g. TBM-based) have a lower odour threshold per mg but fade faster in some conditions. The network's odorization philosophy and regulator requirement decide; we supply THT and can advise on blend specifications."
+        },
+        {
+          question: "What is the typical THT dosing rate for natural gas?",
+          answer: "Most networks odorize at 10\u201325 mg of THT per standard cubic metre of gas, tuned so gas is detectable by smell at one-fifth of the lower flammability limit, per the applicable gas code. Dosing is set on injection skids proportional to flow; our technical team can review your skid specification and detectability target."
+        }
+      ]
+    }
+  },
+  {
+    id: "demulsifier-oilfield",
+    title: "Demulsifier (Crude Oil Emulsion Breaker)",
+    description: "Oil-soluble demulsifier formulations for crude dehydration and desalting \u2014 drum and IBC supply for Oman & GCC oilfield operations.",
+    category: "oilfield",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
+    iconName: "Factory",
+    details: {
+      alternativeNames: [
+        "Emulsion breaker",
+        "Crude oil demulsifier",
+        "Dehazer",
+        "Oil-water separator chemical",
+        "Desalter demulsifier"
+      ],
+      seoKeywords: [
+        "demulsifier supplier Oman",
+        "crude oil emulsion breaker GCC",
+        "oilfield demulsifier drum",
+        "desalter demulsifier supplier",
+        "demulsifier PDO OQ contractors"
+      ],
+      longDescription: "Demulsifier supplier in Oman \u2014 Global Chemicals LLC supplies oil-soluble demulsifier formulations (emulsion breakers) for crude oil dehydration and desalting to production operators, tank-farm and terminal operators, and waste-oil treatment facilities across Oman and the GCC. Produced crude arrives as a water-in-oil emulsion stabilised by asphaltenes, resins and fine solids; the demulsifier's blended surfactant package migrates to the droplet interface and collapses the film so water separates in the FWKO, desalter or settling tank. Because crude chemistry varies field to field, demulsifier selection is done by bottle test \u2014 send us a sample or your current treatment specification and we match a formulation, or supply against an existing qualified grade. JSRS-registered for supply into PDO, OQ and contractor procurement; drums (208 L) and IBCs with batch CoA and SDS.",
+      applications: [
+        "Crude dehydration at FWKO and wash-tank stage",
+        "Desalter demulsification upstream of refining",
+        "Tank-farm and terminal slop-oil treatment",
+        "Waste-oil and used-oil recovery facilities",
+        "Marine and port oily-water separation support"
+      ],
+      technicalSpecs: [
+        "Chemistry: blended oxyalkylated resins / polyol esters in aromatic or alcohol solvent",
+        "Dosage: typically 10\u2013100 ppm on wet crude (bottle-test confirmed)",
+        "Form: clear to amber liquid, oil-soluble",
+        "Injection: continuous, upstream of separation train",
+        "Packaging: 208 L drums, 1,000 L IBC",
+        "Selection: bottle-test matching service available"
+      ],
+      faqs: [
+        {
+          question: "Who supplies demulsifiers for crude oil treatment in Oman?",
+          answer: "Global Chemicals LLC supplies oil-soluble demulsifier formulations in drums and IBCs to production and terminal operators across Oman under JSRS registration (PDO/OQ approved supplier systems). Because the right demulsifier depends on your crude's emulsion chemistry, we work from a bottle test on your sample or match an already-qualified grade \u2014 send your current specification with the enquiry."
+        },
+        {
+          question: "How is the right demulsifier selected for a crude?",
+          answer: "By bottle test: candidate formulations are dosed into fresh wet-crude samples at increasing ppm, and water drop, interface quality and BS&W are compared over time at process temperature. The winning chemistry then gets field-trialled at the FWKO or desalter. We run bottle-test matching and can supply trial quantities before committing to bulk."
+        },
+        {
+          question: "What dosage does a demulsifier typically require?",
+          answer: "Most crude systems treat in the 10\u2013100 ppm range on wet crude, with tight emulsions (heavy crude, high solids) at the upper end. Overdosing can stabilise reverse emulsions and hurt water quality \u2014 dose from the bottle-test optimum and adjust on BS&W and produced-water oil content."
+        }
+      ]
+    }
+  },
+  {
+    id: "reverse-demulsifier",
+    title: "Reverse Demulsifier (Produced Water Clarifier)",
+    description: "Water-soluble reverse demulsifier for oil-in-water clarification of produced water \u2014 drums and IBCs for Oman & GCC operators.",
+    category: "oilfield",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
+    iconName: "Factory",
+    details: {
+      alternativeNames: [
+        "Water clarifier",
+        "Deoiler",
+        "Oil-in-water demulsifier",
+        "Produced water treatment polymer",
+        "Reverse emulsion breaker"
+      ],
+      seoKeywords: [
+        "reverse demulsifier supplier Oman",
+        "produced water clarifier GCC",
+        "deoiler chemical supplier",
+        "oil in water treatment Oman",
+        "water clarifier oilfield"
+      ],
+      longDescription: "Reverse demulsifier (water clarifier / deoiler) supplier in Oman \u2014 Global Chemicals LLC supplies water-soluble reverse demulsifiers for produced-water treatment to production operators, water-injection plants, and maritime waste-treatment facilities across Oman and the GCC. Where a conventional demulsifier breaks water-out-of-oil, a reverse demulsifier does the opposite job: it destabilises the small oil droplets dispersed in the produced-water stream (oil-in-water emulsion) so they coalesce and float, letting CPI separators, induced-gas flotation and nutshell filters bring oil-in-water down to discharge or re-injection specification. Chemistry is typically a cationic coagulant/polyamine blend dosed at 2\u201320 ppm ahead of the flotation stage. Supplied in 208 L drums and 1,000 L IBCs with batch CoA and SDS; jar-test selection service available against your produced-water sample. JSRS-registered supply for PDO, OQ and contractors.",
+      applications: [
+        "Produced-water deoiling ahead of injection or disposal",
+        "Induced-gas / dissolved-gas flotation enhancement",
+        "CPI and skim-tank performance improvement",
+        "Maritime and port oily-water treatment facilities",
+        "Refinery effluent oil-in-water polishing"
+      ],
+      technicalSpecs: [
+        "Chemistry: cationic polyamine / polyDADMAC-type blends, water-soluble",
+        "Dosage: typically 2\u201320 ppm ahead of flotation (jar-test confirmed)",
+        "Form: clear to pale viscous liquid",
+        "Compatible with IGF/DGF, CPI, nutshell filtration trains",
+        "Packaging: 208 L drums, 1,000 L IBC",
+        "Selection: jar-test matching service available"
+      ],
+      faqs: [
+        {
+          question: "Who supplies reverse demulsifiers for produced water in Oman?",
+          answer: "Global Chemicals LLC supplies water-soluble reverse demulsifiers (deoilers/water clarifiers) in drums and IBCs across Oman and the GCC, including maritime and port waste-treatment facilities, under JSRS registration. Selection is jar-tested against your produced-water sample; trial quantities available before bulk commitment."
+        },
+        {
+          question: "What is the difference between a demulsifier and a reverse demulsifier?",
+          answer: "A demulsifier treats the OIL stream: it breaks water-in-oil emulsions so wet crude dehydrates. A reverse demulsifier treats the WATER stream: it coagulates the fine oil droplets dispersed in produced water so flotation and separation equipment can remove them. Most production facilities run both \u2014 one upstream at the separator train, one ahead of the water-treatment plant. We supply both from Muscat stock."
+        },
+        {
+          question: "What oil-in-water level can a reverse demulsifier programme achieve?",
+          answer: "Correctly jar-tested and dosed ahead of gas flotation, reverse demulsifier programmes routinely bring produced water from hundreds of ppm oil down to the 10\u201340 ppm range required for re-injection or regulated discharge, with nutshell polishing taking it lower where specifications demand. Performance depends on droplet size, temperature and salinity \u2014 send your water spec for a programme recommendation."
+        }
+      ]
+    }
   }
 ];
 

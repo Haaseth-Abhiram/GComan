@@ -18,11 +18,14 @@ test.describe('Dosing calculators', () => {
     await expect(page.locator('[data-result="chlorination"]')).toContainText('3.08 kg/day');
   });
 
-  test('glycol: -14°C target on 5000 L MEG system → 30% = 1,500 L glycol', async ({ page }) => {
+  test('glycol: -15°C target on 5000 L MEG system → 40% = 2,000 L glycol', async ({ page }) => {
     await page.goto('/tools/dosing-calculator');
+    // The default target must be one of the select's options, or the
+    // trigger renders blank (Radix shows nothing for an unmatched value).
+    await expect(page.locator('[data-calc="glycol"] button[role="combobox"]').nth(1)).toContainText('-15 °C');
     const result = page.locator('[data-result="glycol"]');
-    await expect(result).toContainText('30% v/v');
-    await expect(result).toContainText('1,500 L glycol');
+    await expect(result).toContainText('40% v/v');
+    await expect(result).toContainText('2,000 L glycol');
   });
 
   test('cooling tower: 500 m³/h, ΔT 6, C=5 → E≈4.59, B≈1.15', async ({ page }) => {

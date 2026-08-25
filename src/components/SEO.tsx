@@ -63,7 +63,7 @@ function fitForSerp(title: string): string {
   return stripped
     .slice(0, SERP_TITLE_LIMIT)
     .replace(/\s+\S*$/, '')        // drop the partial trailing word
-    .replace(/[\s:;,.\-—–|]+$/, ''); // and trailing punctuation/separators
+    .replace(/[\s:;,.\-—–|&]+$/, ''); // and trailing punctuation/separators/conjunctions
 }
 
 // Same idea for the meta description: never emit more than Google will show.
