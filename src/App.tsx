@@ -67,6 +67,7 @@ const Terms = lazy(() => import("./pages/Terms"));
 const Sitemap = lazy(() => import("./pages/Sitemap"));
 const LocationLanding = lazy(() => import("./pages/LocationLanding"));
 const ChemicalsHub = lazy(() => import("./pages/ChemicalsHub"));
+const DosingCalculator = lazy(() => import("./pages/DosingCalculator"));
 const ChemicalSuppliersOman = lazy(() => import("./pages/ChemicalSuppliersOman"));
 const ChemicalSuppliersMiddleEast = lazy(() => import("./pages/ChemicalSuppliersMiddleEast"));
 const CausticSodaOman = lazy(() => import("./pages/CausticSodaOman"));
@@ -188,6 +189,7 @@ const App = () => (
 
                 {/* Location-specific landing pages for SEO */}
                 <Route path="/chemicals" element={<ChemicalsHub />} />
+                <Route path="/tools/dosing-calculator" element={<DosingCalculator />} />
                 <Route path="/chemicals/:location" element={<LocationLanding />} />
 
                 {/* 301 Redirects: /en/* to /* (avoid duplicate content) */}
@@ -226,6 +228,7 @@ const App = () => (
                   <Route path="chemical-supplier/caustic-soda-oman" element={<CausticSodaOman />} />
                   <Route path="thank-you" element={<ThankYou />} />
                   <Route path="chemicals" element={<ChemicalsHub />} />
+                  <Route path="tools/dosing-calculator" element={<DosingCalculator />} />
                   <Route path="chemicals/:location" element={<LocationLanding />} />
                 </Route>
 

@@ -40,6 +40,7 @@ const Footer = () => {
     { labelKey: 'nav.contact', path: '/contact' },
     { labelKey: 'nav.careers', path: '/career' },
     { labelKey: 'nav.certifications', path: '/certifications' },
+    { label: 'Dosing Calculators', path: '/tools/dosing-calculator' },
     { label: 'Chemical Suppliers Oman', path: '/chemical-suppliers-oman' },
     { label: 'Chemical Suppliers Middle East', path: '/chemical-suppliers-middle-east' },
   ];
