@@ -293,7 +293,7 @@ serve(async (req) => {
       phone: phone ? sanitizeInput(phone) : null,
       company: company ? sanitizeInput(company) : null,
       subject: sanitizeInput(subject),
-      message: sanitizeInput(message),
+      message: sanitizeMultilineInput(message),
       ip_address: ipAddress,
       email_sent: true,
       email_sent_at: new Date().toISOString(),
