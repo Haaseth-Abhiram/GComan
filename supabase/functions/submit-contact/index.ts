@@ -40,6 +40,18 @@ function sanitizeInput(input: string): string {
     .trim();
 }
 
+// Sanitize multi-line fields (message body): strips HTML/scripts but preserves
+// line breaks so quote templates stay readable in email and CRM. Newlines are
+// safe here — the body is never used in SMTP headers.
+function sanitizeMultilineInput(input: string): string {
+  return input
+    .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
+    .replace(/<[^>]+>/g, '')
+    .replace(/\r\n?/g, '\n')
+    .replace(/\n{3,}/g, '\n\n')
+    .trim();
+}
+
 // Validate email format
 function isValidEmail(email: string): boolean {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
