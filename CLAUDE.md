@@ -18,8 +18,9 @@ npm run lint              # eslint
 npx tsc -b                # typecheck (no npm script; CI runs this)
 npm run preview           # serve dist/ locally
 
-# Playwright e2e — 3 modes in playwright.config.ts. Coverage is one smoke file
-# (tests/e2e/loading-flow.spec.ts): "tests pass" is a smoke check, not broad assurance.
+# Playwright e2e — 3 modes in playwright.config.ts. Six spec files in tests/e2e/
+# (loading-flow, legacy-redirects, dosing-calculator, quote-funnel, internal-linking,
+# lazy-arabic-bundle): targeted coverage of load-bearing flows, not broad assurance.
 npm run test:e2e          # vite dev server (port 4179, NOT 8080)
 npm run test:e2e:prod     # PROD_BUILD=1 → build:dev + vite preview
 BASE_URL=https://gcoman.com npm run test:e2e   # against any remote target
@@ -53,7 +54,9 @@ Much more than a brochure site. Beyond the obvious marketing pages:
 - **AI product search** — `src/components/AISearchDialog.tsx` → `ai-search` edge function (LLM-backed, markdown responses).
 - **Lead capture** — `DownloadGateDialog.tsx` gates resource downloads behind name/email → `notify-download` edge function → Zoho CRM.
 - **3D chemistry hero** — `src/components/products/ChemistryHero3D.tsx` + `scene/` (three.js / @react-three/fiber, custom GLSL dissolve shader, Brownian particle physics). Tuning tool at `/dev/chemistry-playground` (`ChemistryPlayground.tsx`) — internal, deliberately NOT in the sitemap.
-- **SEO landing pages** — `LocationLanding.tsx` (dynamic `/chemicals/:location`) with `ChemicalsHub.tsx` as the `/chemicals` index (location list lives in `src/data/locationIndex.ts` — keep slugs in sync with LocationLanding's `locations` record), plus static ones (`ChemicalSuppliersOman.tsx` etc.).
+- **SEO landing pages** — `LocationLanding.tsx` (dynamic `/chemicals/:location` — city pages plus country hubs `uae`/`saudi-arabia`) with `ChemicalsHub.tsx` as the `/chemicals` index (location list lives in `src/data/locationIndex.ts` — keep slugs in sync with LocationLanding's `locations` record), plus static ones (`ChemicalSuppliersOman.tsx` etc.). Arabic location strings: `src/i18n/locales/location-pages-ar.json`.
+- **Dosing calculators** — `src/pages/DosingCalculator.tsx` at `/tools/dosing-calculator`: four water-treatment calculators, the site's linkable asset. Formulas shown in the open; each result block feeds the prefilled quote funnel. Arithmetic pinned by `tests/e2e/dosing-calculator.spec.ts`. `/ar` render deliberately noindex until localized.
+- **Public MCP server** — `src/lib/mcp/` (tools: search/get products, list categories, admin-auth'd lead listings) is the SOURCE; the Vite plugin `mcpPlugin()` from `@lovable.dev/mcp-js` bundles it to `supabase/functions/mcp/index.ts` on build. That output file is auto-generated — edit `src/lib/mcp/`, never the bundle.
 - **Integrations** — `GoogleAnalytics.tsx`, `ZohoSalesIQ.tsx`, `Turnstile.tsx`, `WhatsAppButton.tsx`, `CookieConsent.tsx`.
 - **i18n data** — `src/i18n/locales/`: `en.json`, `ar.json`, plus `products-ar.json` (translated product names/descriptions).
 
@@ -89,7 +92,7 @@ Pure client-side SPA whose SEO depends on three pieces working together. Touchin
 
 An `/ar/*` render is **noindex by default**. It becomes indexable only when the page passes BOTH `arTitle` and `arDescription` to `<SEO>` — that flips the `/ar` render to localized meta + self-referencing `/ar` canonical, and makes both language versions emit reciprocal hreflang (`en`/`ar`/`x-default`). Never pass Arabic meta for a page whose body content is still English — that's the duplicate-content trap the default protects against.
 
-- Currently enabled: **product detail pages with a full translation in `src/i18n/locales/products-ar.json`** (270 of 270 products — full coverage since 2026-08-24; title + description present = enabled, enforced in [src/pages/ProductDetail.tsx](src/pages/ProductDetail.tsx)).
+- Currently enabled: **product detail pages with a full translation in `src/i18n/locales/products-ar.json`** (275 of 275 products — full coverage maintained since 2026-08-24; title + description present = enabled, enforced in [src/pages/ProductDetail.tsx](src/pages/ProductDetail.tsx)) and **location pages translated in `location-pages-ar.json`** (includes the UAE/Saudi country hubs).
 - `scripts/sync-ar-sitemap.mjs` **owns `public/sitemap.xml` — never hand-edit that file.** It runs three passes: **prune** every URL that renders `noindex` or canonicalises elsewhere, **annotate** each surviving English page with its `en`/`ar`/`x-default` alternates, and **twin** in the matching `/ar` block so the prerenderer generates it. Indexability is derived from the same sources the components read (`products-ar.json` for products, `location-pages-ar.json` for locations, `details.canonicalOverride` for duplicate SKUs), so the sitemap cannot drift from what `<SEO>` renders. Idempotent; rerun after adding any Arabic translation. `npm run verify:sitemap-health` (`--check`) is the CI gate and fails the build if the file is stale.
 - Everything else under `/ar` (home, about, industries, blog…) stays noindex because its page-level prose (FAQs, breadcrumbs, section copy) is hardcoded English even though the `ar.json` UI layer is 100% complete. To enable a page: wire its prose through `t()`, then pass `arTitle`/`arDescription`, then rerun the sitemap sync/add the URL.
 
@@ -115,14 +118,14 @@ Edit ALL THREE: `src/lib/legacyRedirects.ts` (**the layer that actually runs**),
 
 ## Product data
 
-Per-category JSON files in `src/data/products/` (22 files, 270 products). `src/data/productLoader.ts` imports them, maps `iconName` strings to Lucide components via `ICON_MAP`, and wraps imports in `safeImport()` (auto-retry + force-reload on stale-chunk errors after deploys). `src/data/products.ts` is a re-export shim — **add products to the JSON files, not there**. Minimum fields: `id` (slug = URL segment), `title`, `description`, `category` (= JSON filename), `iconName`, `details` (CAS, long description, applications…). After adding a product, add its canonical URL to `public/sitemap.xml`. Arabic product strings live in `src/i18n/locales/products-ar.json`.
+Per-category JSON files in `src/data/products/` (22 files, 275 products). `src/data/productLoader.ts` imports them, maps `iconName` strings to Lucide components via `ICON_MAP`, and wraps imports in `safeImport()` (auto-retry + force-reload on stale-chunk errors after deploys). `src/data/products.ts` is a re-export shim — **add products to the JSON files, not there**. Minimum fields: `id` (slug = URL segment), `title`, `description`, `category` (= JSON filename), `iconName`, `details` (CAS, long description, applications…). After adding a product, add its canonical URL to `public/sitemap.xml`. Arabic product strings live in `src/i18n/locales/products-ar.json`.
 
 Blog articles are inline TypeScript in `src/data/blogArticles.ts` — no CMS.
 
 ## Supabase
 
 - Client: [src/integrations/supabase/](src/integrations/supabase/). Migrations: [supabase/migrations/](supabase/migrations/); one-shot bootstrap `supabase/SUPABASE_DATABASE_SETUP.sql`.
-- Edge functions ([supabase/functions/](supabase/functions/)): `submit-contact` (form → email + Zoho CRM, Turnstile check), `submit-job-application` (resume upload, rate-limited), `subscribe-newsletter` (→ Zoho), `notify-download` (download-gate leads), `ai-search` (LLM product search), `refresh-analytics` (analytics snapshots). Shared: `_shared/zoho-crm.ts` (OAuth/API helpers), `_shared/rate-limit.ts` (DB-backed sliding window).
+- Edge functions ([supabase/functions/](supabase/functions/)): `submit-contact` (form → email + Zoho CRM, Turnstile check), `submit-job-application` (resume upload, rate-limited), `subscribe-newsletter` (→ Zoho), `notify-download` (download-gate leads), `ai-search` (LLM product search), `refresh-analytics` (analytics snapshots), `search-console` (admin-only GSC proxy for the dashboard), `check-ar-indexing` (weekly GSC inspection of `/ar/*` sitemap URLs → `ar_index_status`/`ar_index_events` tables), `mcp` (**auto-generated bundle** of `src/lib/mcp/` — see "Public MCP server" above; do not edit directly). Shared: `_shared/zoho-crm.ts` (OAuth/API helpers), `_shared/rate-limit.ts` (DB-backed sliding window).
 - Zoho OAuth token refresh: `scripts/zoho-refresh-token.mjs`.
 
 ## Bot protection (Cloudflare Turnstile)
