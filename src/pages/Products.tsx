@@ -129,6 +129,240 @@ const categoryFAQs: Record<string, { question: string; answer: string }[]> = {
       question: "Do you supply Ministry of Agriculture-approved fertilizers to Omani farms?",
       answer: "Yes. All fertilizers and agricultural chemicals supplied by Global Chemicals LLC carry Oman Ministry of Agriculture, Fisheries Wealth and Water Resources import approvals and are backed by Certificates of Analysis, Safety Data Sheets (GHS-compliant, English and Arabic), and, where applicable, food/feed-grade documentation. We deliver to farms across Al Batinah, Al Dakhiliyah, Al Sharqiyah, Dhofar, and Musandam, and offer soil and irrigation water analysis to match the fertilizer program to your specific field conditions."
     }
+  ],
+  'water-treatment': [
+    {
+      question: "Who supplies water treatment chemicals in bulk in Oman and the GCC?",
+      answer: "Global Chemicals LLC stocks the full municipal and industrial water treatment range in Muscat — PAC (poly aluminium chloride, liquid 10–18% and powder 30%), aluminium sulphate, calcium and sodium hypochlorite, chlorine tablets (TCCA), caustic soda, soda ash, antiscalants, biocides, and flocculants — with same-day Muscat delivery, next-day Sohar/Nizwa, and scheduled GCC export lanes to the UAE and Saudi Arabia. Every batch ships with CoA and GHS SDS; JSRS registration covers supply to PDO and OQ water operations."
+    },
+    {
+      question: "PAC or alum — which coagulant should a water treatment plant use?",
+      answer: "PAC (poly aluminium chloride) outperforms aluminium sulphate in most Gulf applications: it works across a wider pH window (5–9 versus alum's narrow 5.5–7.5), consumes far less alkalinity, produces denser faster-settling floc, and leaves lower residual aluminium — decisive advantages on Oman's alkaline, high-TDS source waters. Alum remains the lower-cost option for well-buffered waters with simple turbidity loads. Typical PAC dosing is 5–50 ppm as product depending on raw-water turbidity; jar testing confirms the optimum, and our technical team runs dose trials with customer samples."
+    },
+    {
+      question: "What chlorine dose is required for potable water disinfection?",
+      answer: "Standard practice targets a free chlorine residual of 0.2–0.5 mg/L at the furthest point of the network. Breakpoint dosing depends on ammonia and organic load — typically 1–3 mg/L applied dose for treated water and up to 5+ mg/L for raw well water. Calcium hypochlorite 65–70% granules suit remote sites and tanker disinfection (1.5 g per 1,000 L gives roughly 1 mg/L); sodium hypochlorite 12.5% suits dosed systems with metering pumps; TCCA tablets provide slow-release residual in storage tanks. Use our online chlorine dosing calculator at /tools/dosing-calculator to convert between products and target residuals."
+    },
+    {
+      question: "Do you supply antiscalants and chemicals for desalination plants?",
+      answer: "Yes — antiscalant formulations for RO seawater and brackish-water trains dosed at 2–5 ppm ahead of the membranes, plus the supporting chemistry: sodium metabisulphite for dechlorination, citric and sulphamic acid descalants, membrane cleaners, caustic soda and soda ash for post-treatment pH correction and remineralisation support, and calcium hypochlorite for intake shock dosing. We serve municipal desalination operators and private RO plants across Oman and export to GCC water utilities with full documentation."
+    }
+  ],
+  oilfield: [
+    {
+      question: "Who supplies oilfield production chemicals to PDO and OQ contractors in Oman?",
+      answer: "Global Chemicals LLC is JSRS-certified for supply to Petroleum Development Oman (PDO), OQ, OPAL and their approved contractors. Our production chemicals range covers corrosion inhibitors, scale inhibitors, H2S scavengers, demulsifiers and reverse demulsifiers, oxygen scavengers, biocides, defoamers, THT gas odorant, methanol and MEG for hydrate control, and drilling additives (bentonite, barite, CMC). Deliveries run on scheduled interior routes to Marmul, Nimr, Qarn Alam and Fahud with hazmat-trained drivers, and every batch carries CoA and GHS SDS."
+    },
+    {
+      question: "How are demulsifiers selected and dosed for crude oil treatment?",
+      answer: "Demulsifier selection is bottle-test driven: candidate chemistries are screened against a fresh wellhead emulsion sample for water drop-out speed, interface quality, and dehydrated-crude BS&W. Typical continuous injection is 10–100 ppm upstream of the FWKO or desalter, adjusted seasonally as water cut changes. For produced-water clean-up the mirror problem — oil dispersed in water — takes a reverse demulsifier at 2–20 ppm ahead of flotation or hydrocyclones to meet oil-in-water discharge or reinjection specs. We supply both chemistries and support field bottle testing."
+    },
+    {
+      question: "What is THT and how is natural gas odorized in Oman and the GCC?",
+      answer: "THT (tetrahydrothiophene) is the sulphur odorant injected into odourless natural gas so leaks are detectable by smell — the safety requirement for city-gas grids, industrial distribution, and CNG networks. Typical injection is 10–25 mg/m³ of gas, dosed by proportional injection pumps at the city-gate or distribution station. THT is favoured over mercaptan blends where oxidation stability and low soil-adsorption matter, holding its odour intensity further down the network. We supply THT in sealed drums with Class 3 handling documentation and injection-rate guidance."
+    },
+    {
+      question: "Which scale and corrosion inhibitors work for high-salinity produced water?",
+      answer: "Oman's produced waters commonly run high in chloride, calcium and sulphate, driving both CaCO3/CaSO4 scaling and accelerated steel corrosion. Phosphonate scale inhibitors (dosed 3–10 ppm continuous) handle carbonate and sulphate scale up to moderate supersaturation; for harsher brines, polymer-blend inhibitors are squeezed or continuously injected. Corrosion control pairs film-forming imidazoline inhibitors (10–50 ppm continuous, or batch between pig runs) with oxygen scavengers on any system open to air ingress. Send your water analysis and our technical team will specify the programme and doses."
+    }
+  ],
+  solvents: [
+    {
+      question: "Who supplies industrial solvents in drum and bulk quantities in Oman?",
+      answer: "Global Chemicals LLC stocks the full industrial solvent range in Muscat — acetone, methanol, ethanol, isopropanol (IPA), toluene, xylene, n-hexane, MEK, ethyl acetate, white spirit, thinner 402, and industrial kerosene — in 20L jerricans, 200L drums and IBCs, with bulk tanker supply for repeat buyers. Same-day Muscat dispatch, GCC export with HS-coded documentation, and every batch confirmed by Certificate of Analysis for purity (typically ≥99%), water content and non-volatile residue."
+    },
+    {
+      question: "Which solvent should be used for paint thinning versus equipment degreasing?",
+      answer: "For thinning: match the resin system — white spirit or thinner 402 for alkyd/enamel paints, xylene for chlorinated rubber and some epoxies, MEK or acetone-based blends for fast-flash industrial coatings, and IPA for shellac and some inks. For degreasing: white spirit and kerosene handle general workshop grease safely on most metals; acetone and MEK cut resins, adhesives and uncured composites but attack many plastics; hexane suits low-residue extraction and precision cleaning. If the duty involves electronics or sensitive substrates, IPA 99% leaves the least residue. Our team advises against the actual soil and substrate, not just the solvent family."
+    },
+    {
+      question: "What is the difference between MEK and acetone as industrial solvents?",
+      answer: "Both are ketones with strong dissolving power for resins, inks and adhesives. Acetone evaporates roughly twice as fast, making it the choice for rapid-flash cleaning and surface prep, but its speed can cause blushing in humid coastal conditions. MEK evaporates slower, giving longer open time for coatings, fibreglass lay-up, and adhesive activation, with slightly stronger solvency for vinyls and certain resins. MEK's slower flash also means lower solvent loss in open processes. We stock both at ≥99.5% purity with batch CoA."
+    },
+    {
+      question: "Do you provide SDS and export documentation for solvent shipments to the GCC?",
+      answer: "Yes. Every solvent consignment ships with a GHS-compliant SDS (English, Arabic available), batch Certificate of Analysis, and for export orders a Certificate of Origin attested by the Oman Chamber of Commerce plus HS-coded commercial invoice — flammable-liquid (Class 3) transport documentation included. We export solvents to the UAE, Saudi Arabia and Qatar under GCC customs with end-use declarations where destination regulations require them."
+    }
+  ],
+  'lab-chemicals': [
+    {
+      question: "Who supplies laboratory chemicals and AR-grade reagents in Oman?",
+      answer: "Global Chemicals LLC supplies analytical reagent (AR/ACS) grade chemicals to QC laboratories, universities, hospitals and water-testing labs across Oman — AR acids (sulphuric, hydrochloric, nitric, acetic), AR bases (sodium and potassium hydroxide pellets), HPLC and GC-grade solvents (acetonitrile, methanol, hexane, toluene), buffers and reference standards (tris base, EDTA), indicators (phenolphthalein, silver nitrate for argentometric titration), and microbiological media (agar, peptone, glucose). Minimum orders start at 500 ml / 100 g, with CoA per batch and same-day Muscat delivery."
+    },
+    {
+      question: "What is the difference between AR grade, LR grade and HPLC grade chemicals?",
+      answer: "AR (analytical reagent, equivalent to ACS grade) certifies tight maximum-impurity limits suitable for quantitative analysis and titration standards. LR (laboratory reagent) grade carries looser specs — fine for teaching labs, qualitative work and general preparation, at meaningfully lower cost. HPLC grade adds UV-transparency and filtered particulate specs required for liquid chromatography mobile phases; GC grades certify low-residue volatility profiles. Using LR where AR is needed skews assays; paying for HPLC grade in general wet chemistry wastes budget — we stock all three tiers so labs can match grade to method."
+    },
+    {
+      question: "Can you supply chemicals for water and wastewater testing laboratories?",
+      answer: "Yes — the standard-methods reagent set: silver nitrate and potassium chromate for chloride titration, EDTA and Eriochrome Black T for hardness, phenolphthalein and methyl orange for alkalinity, sodium thiosulphate for residual chlorine (iodometric), buffer tablets and solutions (pH 4/7/10), COD digestion reagents, and nutrient media for microbiological counts. We serve municipal water labs, desalination plant QC, and environmental consultancies across Oman with traceable CoA documentation."
+    },
+    {
+      question: "Do lab chemical orders come with Certificates of Analysis and SDS?",
+      answer: "Every batch ships with its Certificate of Analysis stating assay and impurity results against the grade specification, plus a GHS-compliant SDS. For accredited laboratories (ISO/IEC 17025) we support traceability requirements with lot numbers, expiry dates, and manufacturer certificates on request. Controlled and precursor chemicals are supplied against the required Royal Oman Police permits with end-user declarations — our team advises which items on your list need permits before ordering."
+    }
+  ],
+  'food-beverage': [
+    {
+      question: "Who supplies food-grade chemicals with HACCP documentation in Oman?",
+      answer: "Global Chemicals LLC supplies food-contact-grade chemicals to food and beverage factories, dairies and bakeries across Oman — citric acid anhydrous and monohydrate (E330), ascorbic acid (E300), sodium bicarbonate (E500), potassium sorbate (E202), xanthan gum (E415), propylene glycol USP (E1520), calcium lactate, food-grade caustic soda and sodium hypochlorite for CIP, and nitric acid 68% for membrane-plant cleaning. Every food-grade item ships with CoA, food-safety datasheet and HACCP-compatible documentation, Halal-compatible sourcing, and same-day Muscat delivery."
+    },
+    {
+      question: "Which chemicals are used for CIP (clean-in-place) in dairy and beverage plants?",
+      answer: "A standard CIP sequence runs: caustic soda 1–2% at 70–80°C to strip fats and proteins, an intermediate rinse, then nitric acid 0.5–1% at 60–70°C to remove mineral scale (milkstone/beerstone), finishing with a sanitising rinse — sodium hypochlorite 100–200 ppm available chlorine or peracetic-based sanitiser for chlorine-sensitive lines. We supply food-grade caustic soda liquid, nitric acid 68%, and food-grade hypochlorite with dosing guidance matched to your plant's CIP skid, water hardness and soil load."
+    },
+    {
+      question: "What preservatives and stabilisers do you stock for beverage production?",
+      answer: "Potassium sorbate (E202) at 200–500 ppm controls yeast and mould in juices and syrups; ascorbic acid (E300) protects colour and vitamin claims while scavenging dissolved oxygen; citric acid (E330) sets pH to the 3.0–3.5 range where sorbate is effective and flavour is balanced; xanthan gum (E415) at 0.05–0.3% stabilises suspension in pulpy and flavoured drinks. All are supplied in food-grade packaging with lot-level CoA; our team helps convert per-litre recipes into batch weighing sheets."
+    },
+    {
+      question: "Are your food-grade chemicals Halal-compatible and export-documented?",
+      answer: "Yes — food-grade items are sourced from manufacturers with Halal-compatible production and supplied with CoA, food-grade compliance statements, and where available manufacturer Halal certificates. For export to the UAE, Saudi Arabia and Qatar we prepare Certificates of Origin and the documentation food-safety authorities (including SFDA and Qatar MOPH categories) expect for food-contact chemicals. State the certification your auditor requires and we confirm availability per product before you order."
+    }
+  ],
+  'soap-detergent': [
+    {
+      question: "Who supplies soap and detergent raw materials in Oman and the GCC?",
+      answer: "Global Chemicals LLC stocks the core detergent raw-materials basket in Muscat: caustic soda (flakes, prills and 50% liquid) for saponification, LABSA 96% and SLES 70% surfactants, soda ash light and dense, sodium metasilicate, STPP, trisodium phosphate, glycerine, EDTA, hydrogen peroxide 35–50%, and optical brighteners. We supply soap plants, liquid-detergent blenders and car-wash chemical producers across Oman with bulk pricing, and export to GCC manufacturers with full customs documentation."
+    },
+    {
+      question: "How much caustic soda is needed to saponify oils in bar soap production?",
+      answer: "Each oil has a saponification value; in practice the NaOH charge is calculated per formulation — coconut oil needs roughly 0.183 kg NaOH per kg oil, palm oil ~0.142, olive oil ~0.135 — then discounted by a 5–8% superfat margin so finished bars retain free oils for mildness. A typical 100 kg mixed-oil batch (60% palm, 30% coconut, 10% castor) takes about 14.5 kg of caustic soda dissolved to a 30–33% lye solution. We supply flakes and prills at 98–99% purity with per-batch CoA so saponification calculations stay accurate."
+    },
+    {
+      question: "What is the difference between LABSA and SLES in detergent formulation?",
+      answer: "LABSA (linear alkylbenzene sulphonic acid, 96%) is the anionic workhorse for powders, dishwash and hard-surface cleaners — high detergency and low cost, but it must be neutralised (typically with caustic soda to sodium-LAS) and is relatively harsh on skin. SLES 70% is milder, high-foaming and already neutralised, the base of shampoos, body washes and premium dishwash liquids. Many liquid formulations blend the two: LABSA-salt for cleaning power, SLES for foam and mildness, with betaine or CDEA as foam boosters. Both are stocked in Muscat with technical formulation support."
+    },
+    {
+      question: "Do you provide formulation support for new detergent manufacturers?",
+      answer: "Yes — starter formulations for dishwashing liquid, laundry liquid and powder, hand wash, floor cleaner and car shampoo, with raw-material ratios, neutralisation guidance (LABSA to pH 7–8), viscosity building (salt curve with SLES systems), and preservation. We also help scale recipes from lab bench to production batch and supply the full ingredient list from stock so new plants can commission with one supplier and consistent batch documentation."
+    }
+  ],
+  'tank-cleaners': [
+    {
+      question: "Who supplies marine and industrial tank cleaning chemicals in Oman?",
+      answer: "Global Chemicals LLC stocks tank cleaning chemistry for vessel cargo holds, fuel and crude storage tanks, and process vessels at Oman's ports (Sohar, Duqm, Salalah, Muscat) — Aquatuff ship-hold cleaner, Aqua Clean HD alkaline degreaser, alkaleen safety cleaner, general tank cleaner concentrates, resin-clean solvent blends, acid descalants, and methanol-grade cleaners. Products are matched to MARPOL discharge constraints, supplied in drums and IBCs with SDS and application guidance, and delivered dockside with short notice for vessels on tight port stays."
+    },
+    {
+      question: "Which chemical removes hydrocarbon residue from cargo holds and fuel tanks?",
+      answer: "Alkaline surfactant degreasers are the standard for petroleum residues: applied 2–10% in seawater or fresh water by recirculation, Butterworth machine or hand-spray at 40–60°C where heating is available, followed by water rinse. For heavy crude bottoms and sludge, a solvent-emulsifier pre-treatment breaks and suspends the sludge so it pumps out with the wash water. Grain-clean and water-white standards after chemical cargoes usually need a two-step alkaline wash plus fresh-water rinse with wall-wash verification. Send the last-cargo list and target standard and we specify the product and dose."
+    },
+    {
+      question: "How is scale and rust removed from industrial storage tanks?",
+      answer: "Mineral scale and rust take an acid descalant — typically inhibited sulphamic or phosphoric-based blends circulated at 5–15% until effervescence stops, then neutralised and rinsed. Inhibited formulations protect the base steel during cleaning; stainless vessels finish with a passivation rinse to rebuild the chromium-oxide layer. Never acid-clean a tank that held hypochlorite or cyanides without specialist gas control. Our range covers inhibited descalants, neutralising agents and passivation liquids with confined-space application guidance."
+    },
+    {
+      question: "Are your tank cleaners compliant with MARPOL discharge rules?",
+      answer: "We supply cleaners formulated for marine use with biodegradable surfactant systems, and advise on which products and wash-water handling meet MARPOL Annex I/II discharge conditions for the cleaning duty — including where slops must be retained for shore reception instead of discharged. Each product ships with SDS and dosing instructions; for chemical-tanker prewash duties we confirm compatibility with the cargo's Annex II category before recommending the wash programme."
+    }
+  ],
+  'ro-chemicals': [
+    {
+      question: "Who supplies RO membrane chemicals and antiscalants in Oman?",
+      answer: "Global Chemicals LLC supplies the complete RO chemical programme from Muscat stock: broad-spectrum antiscalants for seawater and brackish trains, alkaline and acid membrane cleaners, RO-222 descaler, sodium metabisulphite for dechlorination, biocides for CIP sanitisation, and pH-correction chemicals. We serve municipal desalination plants, hotel and compound RO systems, and industrial process-water trains across Oman and the GCC, with dosing guidance calibrated to the region's high-TDS feed waters."
+    },
+    {
+      question: "What antiscalant dose does an RO plant need?",
+      answer: "Typical antiscalant dosing is 2–5 ppm into the feed ahead of the cartridge filters, set by the projection software output for your water analysis and recovery — Oman's brackish wells often run high sulphate and silica, which push the required dose toward the upper end or a silica-specific formulation. Overdosing wastes chemical and can itself foul membranes; underdosing scales the tail elements first (visible as rising differential pressure on the last stage). Send your feed analysis and recovery target and we return a dosing projection with the product recommendation — or use the RO antiscalant calculator at /tools/dosing-calculator for a first estimate."
+    },
+    {
+      question: "When should RO membranes be cleaned, and with what chemicals?",
+      answer: "Clean when normalised permeate flow drops 10–15%, differential pressure rises 10–15%, or normalised salt passage climbs — waiting longer sets fouling permanently. Match the cleaner to the foulant: high-pH alkaline cleaners (pH 11–12, 30–35°C) remove biofilm and organics; low-pH acid cleaners (pH 2–3) dissolve carbonate scale and iron; silica and sulphate scales need specialised high-pH or chelant formulations. Always clean stage-by-stage, alkaline before acid when both are needed. We stock both cleaner families plus RO-222 descaler and provide CIP procedures per membrane manufacturer limits."
+    },
+    {
+      question: "Why is sodium metabisulphite dosed ahead of RO membranes?",
+      answer: "Polyamide RO membranes are destroyed by free chlorine — even fractions of a ppm oxidise the membrane surface irreversibly. Where feed water is chlorinated, sodium metabisulphite (SMBS) is dosed at roughly 3–5 ppm per 1 ppm of free chlorine ahead of the membranes to neutralise it, verified by an ORP setpoint (typically below ~200 mV) interlocked to the high-pressure pumps. SMBS is also the standard preservation solution (1–1.5%) for membrane storage during shutdowns. We supply food-grade and technical SMBS in 25 kg bags with CoA."
+    }
+  ],
+  'cooling-water': [
+    {
+      question: "Who supplies cooling tower treatment chemicals in Oman and the GCC?",
+      answer: "Global Chemicals LLC stocks the complete open- and closed-loop programme in Muscat: scale and corrosion inhibitors (Altreat 4000, Cool Water Treat, Corro Guard), oxidising and non-oxidising biocides, antifoulants for seawater-cooled systems, closed-loop chiller inhibitors and biocides, and hardness-control boiler chemicals. We treat district cooling plants, hotel and mall HVAC, and process cooling across Oman and the UAE, with water-analysis-based programme design and residual test kits supplied alongside the chemicals."
+    },
+    {
+      question: "How is Legionella controlled in cooling towers in the Gulf?",
+      answer: "Gulf ambient temperatures put tower basins in the ideal Legionella growth band for most of the year, so control has to be continuous, not reactive: maintain an oxidising biocide residual (0.5–1 ppm free halogen) with a weekly alternating non-oxidising biocide shot to prevent resistance, keep cycles of concentration controlled to limit nutrient build-up, and physically clean basins and fill quarterly. Monitoring pairs weekly dip-slide counts with periodic Legionella-specific sampling. We supply both biocide families with a dosing schedule matched to your system volume and blowdown."
+    },
+    {
+      question: "What causes scale in cooling towers and how is it prevented?",
+      answer: "Evaporation concentrates the make-up water's calcium and alkalinity until calcium carbonate exceeds solubility — in Oman's climate a tower at 5 cycles concentrates minerals five-fold at the region's highest evaporation rates. Prevention combines cycles-of-concentration control via conductivity-based blowdown with a phosphonate-polymer inhibitor (80–150 ppm of recirculating water) that holds hardness in suspension. The sustainable cycles depend on make-up hardness, silica and the inhibitor programme — send your make-up analysis and we calculate target cycles, blowdown rate and chemical consumption."
+    },
+    {
+      question: "What treatment does a closed chilled-water loop need?",
+      answer: "A closed loop needs three things at commissioning and maintained thereafter: a corrosion inhibitor (molybdate or nitrite programme at an initial 2–5% charge for mild steel, with azole for copper), a compatible biocide to stop microbiological growth in the low-flow sections, and — where freeze or heat-transfer specs demand it — inhibited glycol at the engineered concentration. Annual water analysis confirms inhibitor residual and checks for bacterial activity or glycol degradation. We supply the inhibitors, closed-loop biocides, inhibited MEG/PG, and the test kits to monitor all three."
+    }
+  ],
+  construction: [
+    {
+      question: "Who supplies construction chemicals and concrete admixtures in Oman?",
+      answer: "Global Chemicals LLC supplies contractors, ready-mix plants and precast yards across Oman with concrete admixtures (superplasticisers, retarders, accelerators), epoxy coatings and bonding agents, polymer-modified mortars, mould release agents, paraffin oil for shuttering, curing compounds and waterproofing chemistry. Our technical team advises on hot-weather concreting practice for the Gulf — where mix temperature, slump retention and curing discipline decide durability — and supplies from Muscat stock with same-day delivery to sites across the capital area."
+    },
+    {
+      question: "Which admixture keeps concrete workable in Oman's hot weather?",
+      answer: "Above 35°C ambient, plain concrete can lose placeable slump in under 30 minutes. The standard response is a retarding superplasticiser: the retarder component slows cement hydration to extend working time by 1–3 hours, while the plasticiser recovers workability at a lower water-cement ratio — protecting both placement and strength. Dosing typically runs 0.6–1.2% by cement weight, trialled per mix design. For night pours and mass concrete, ice or chilled-water batching supplements the admixture. We supply retarding and high-range water-reducing admixtures with mix-design trial support."
+    },
+    {
+      question: "What is polymer-modified mortar used for in repairs?",
+      answer: "Polymer modification (SBR or acrylic dispersion in the gauging liquid) gives repair mortars the properties plain cement mortar lacks: adhesion to existing concrete, flexural strength, reduced shrinkage cracking, and much lower water permeability. It is the standard chemistry for spall repairs on reinforced concrete, screeds bonded to old slabs, and render in wet areas. Typical dosing is 5–20% polymer solids on cement weight depending on duty. We supply polymer bonding agents and ready-formulated repair mortars, plus epoxy systems where structural-grade adhesion is specified."
+    },
+    {
+      question: "Do you supply epoxy coatings for industrial floors and tanks in Oman?",
+      answer: "Yes — epoxy coating systems for warehouse and workshop floors, secondary-containment bunds, and internal tank linings, with surface-preparation and application guidance (substrate moisture limits matter in coastal Oman, and amine-blush risk in humid conditions dictates recoat windows). Alongside the coatings we stock the supporting chemistry: degreasers for substrate cleaning, acid etchants for concrete preparation, and mould release agents and shuttering oils for formwork. Site-specific system recommendations available against your exposure conditions."
+    }
+  ],
+  alcohols: [
+    {
+      question: "Who supplies industrial alcohols — methanol, ethanol, IPA — in Oman?",
+      answer: "Global Chemicals LLC stocks industrial alcohols in Muscat for same-day dispatch: methanol (technical grade), ethanol (96% and absolute ≥99.5%, denatured and undenatured against permit), isopropanol 99% (IPA), and n-butanol — in 20L jerricans, 200L drums, IBCs and bulk. Customers span oilfield services (methanol hydrate control), pharmaceutical and disinfectant producers (IPA, ethanol), and coatings manufacturers (butanol). Every batch ships with CoA confirming assay and water content, plus Class 3 flammable-liquid transport documentation."
+    },
+    {
+      question: "What is the difference between ethanol 96% and absolute ethanol?",
+      answer: "Ethanol and water form an azeotrope at ~96% — ordinary distillation cannot pass it, so 96% (rectified spirit) is the standard industrial grade for disinfection, extraction and general solvent use. Absolute ethanol (≥99.5–99.9%) is further dehydrated for uses where water interferes: analytical work, pharmaceutical formulation, water-sensitive reactions, and fuel blending. For 70% disinfectant production, 96% grade is the economical feedstock — absolute grade adds cost without benefit. Undenatured ethanol in Oman requires the applicable permits; denatured grades ship without them."
+    },
+    {
+      question: "Why is methanol used for hydrate inhibition in gas operations?",
+      answer: "Gas hydrates — ice-like solids of water and gas — form in pipelines and chokes at high pressure and the cool temperatures of night-time desert operations, blocking flow. Methanol injected at the wellhead or upstream of restrictions depresses the hydrate formation temperature; typical continuous rates run tens of litres per MMscf depending on water production and pipeline conditions, with batch injection ahead of shut-ins. MEG serves the same duty where recovery/regeneration is economic. We supply technical methanol in drums, IBCs and bulk to oilfield operations across Oman under JSRS registration."
+    },
+    {
+      question: "Which alcohol grade is right for hand sanitiser and disinfectant manufacture?",
+      answer: "WHO-formulation sanitisers use either ethanol at a final 80% v/v or IPA at 75% v/v, with glycerol as humectant and hydrogen peroxide 0.125% to eliminate spores in the packaging. Ethanol 96% and IPA 99% are the standard feedstocks — both stocked in Muscat with CoA. Producers registering products with Oman's Ministry of Health need batch documentation and assay certificates, which we supply per delivery, along with the glycerine and hydrogen peroxide to complete the formulation from one source."
+    }
+  ],
+  'calcium-carbonate': [
+    {
+      question: "Who supplies calcium carbonate in bulk quantities from Oman?",
+      answer: "Global Chemicals LLC supplies ground calcium carbonate (GCC) from Oman's high-purity limestone deposits — one of the country's flagship mineral exports — in multiple particle-size grades from coarse feed grades down to fine coated grades, packed in 25 kg bags, 1-tonne jumbo bags, and bulk. Customers span plastics and masterbatch compounders, paint and coatings producers, paper, rubber, animal feed and construction users across the GCC and Indian Ocean markets. Every grade ships with CoA covering purity, particle-size distribution, brightness and moisture."
+    },
+    {
+      question: "What is the difference between coated and uncoated calcium carbonate?",
+      answer: "Coated grades are surface-treated with stearic acid (typically ~1%), making the particle hydrophobic so it disperses uniformly in polymer melts and improves flow in PVC, PP and PE compounding — the standard for plastics masterbatch and cable filler duty. Uncoated grades stay hydrophilic, which suits water-based systems: paints and emulsions, paper coating, construction products and feed. Choosing wrong shows up as poor dispersion, die build-up in extrusion, or viscosity problems in paints. We stock both, in the particle sizes each application needs."
+    },
+    {
+      question: "Which calcium carbonate particle size is right for my application?",
+      answer: "Coarser grades (20–40 μm) serve construction products, putties and feed where cost per tonne dominates. Mid grades (5–20 μm) are the general workhorse for paints, paper filler and rubber. Fine grades (≤5 μm, top-cut controlled) go into plastics compounding, high-PVC paints and sealants where surface finish, gloss and mechanical properties matter; the finest coated grades approach functional-additive duty in rigid PVC. Brightness (whiteness ≥90 for decorative uses) is specified alongside size. Send the application and current spec sheet and we match the economic grade."
+    },
+    {
+      question: "Do you supply food-grade or pharma-grade calcium carbonate?",
+      answer: "Yes — food-grade (E170) and USP/BP pharmacopoeia grades are available on indent with full compliance documentation: heavy-metals limits, microbiological counts, and assay per the pharmacopoeia monograph. These grades serve calcium fortification, antacid manufacture, and toothpaste production. Technical grades for industry ship from Muscat stock; food/pharma grades are ordered against your specification with manufacturer certificates and typically 3–4 week lead time. State the pharmacopoeia edition your QA requires when enquiring."
+    }
+  ],
+  additives: [
+    {
+      question: "Who supplies specialty chemical additives to manufacturers in Oman and the GCC?",
+      answer: "Global Chemicals LLC supplies performance additives to plastics compounders, coatings and ink producers, lubricant blenders and adhesive manufacturers across Oman and the GCC — UV stabilisers and antioxidants, dispersants and wetting agents, defoamers, rheology modifiers, slip and anti-block agents, biocides and in-can preservatives, and pour-point depressants. Because additive selection is formulation-specific, our technical team works from your base formulation and failure mode (fading, settling, foaming, viscosity drift) to shortlist candidates, with samples for trial before committing to drum quantities."
+    },
+    {
+      question: "Which additives protect plastics from Gulf sun and heat?",
+      answer: "Outdoor plastic in the Gulf faces a double attack: UV irradiance among the world's highest, and surface temperatures on dark parts exceeding 80°C. A durable package pairs a HALS (hindered-amine light stabiliser) for long-term UV protection with a phenolic antioxidant for processing and heat ageing, plus a phosphite co-stabiliser for melt-processing colour hold; TiO2 or carbon-black pigmentation adds screening. Typical loadings run 0.2–0.6% HALS and 0.1–0.3% antioxidant depending on polymer and service life target. We supply the stabiliser families with loading guidance per polymer."
+    },
+    {
+      question: "How do defoamers and dispersants improve paint and coating production?",
+      answer: "Dispersants (dosed on pigment weight, commonly 0.5–2% for inorganic and up to 20%+ for fine organic pigments) charge-stabilise or sterically stabilise pigment particles during grinding — cutting grind time, raising colour strength, and preventing flocculation, flooding and settling in the can. Defoamers (0.1–0.5% split between grind and letdown) collapse the foam that milling and filling entrain, preventing surface craters and pinholes in the applied film. Wrong defoamer choice itself causes craters, so we sample-test candidates against your formulation before scale-up."
+    },
+    {
+      question: "Do you supply pour-point depressants and viscosity modifiers for lubricant blending?",
+      answer: "Yes — for lubricant blenders we supply viscosity-index improvers to hit multigrade targets, pour-point depressants for low-temperature flow, plus the supporting additive slate (antiwear, antioxidant, demulsifier components) depending on the blend programme. Loadings depend on base-oil group and target grade; we work from your blend recipe and target spec (SAE grade, VI, pour point) to confirm the additive and treat rate, with lab-scale samples for blend validation ahead of drum supply."
+    }
   ]
 };
 
