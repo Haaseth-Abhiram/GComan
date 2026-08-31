@@ -339,34 +339,43 @@ const locations: Record<string, LocationData> = {
     cityArabic: 'الرياض',
     country: 'Saudi Arabia',
     region: 'Riyadh Region, Saudi Arabia',
-    description: 'Global Chemicals LLC exports industrial and specialty chemicals to Riyadh and the broader Saudi Arabian market. We supply water treatment chemicals, industrial lubricants, laboratory reagents, oilfield chemicals, and construction chemicals to industries across the Kingdom — from Riyadh\'s industrial areas to the Eastern Province oil hubs.',
-    industries: ['Oil & Gas', 'Petrochemicals', 'Water Treatment & Desalination', 'Manufacturing', 'Construction', 'Pharmaceuticals', 'Mining'],
-    deliveryTime: '5-7 business days to Riyadh (road/sea freight)',
-    keyClients: ['Saudi Aramco contractors', 'SABIC facilities', 'NWC water utilities', 'Industrial manufacturers', 'Pharmaceutical labs'],
+    description: 'Global Chemicals LLC supplies industrial and specialty chemicals to Riyadh from our Muscat warehouse, moving under GCC customs transit so most industrial grades clear without a Saudi import agent. Road freight runs the Batha border lane (Muscat–Hofuf–Riyadh) in 5–7 business days, with drum, IBC, and full-container loads consolidated on scheduled weekly departures; Eastern Province transfers via Dammam add 1–2 days. We serve Riyadh\'s Second Industrial City (Sudair and Al Kharj corridors), NWC water and wastewater operators, construction and infrastructure contractors, pharmaceutical and laboratory buyers, and Aramco- and SABIC-tier service companies with water treatment chemicals, glycols and solvents, corrosion and scale inhibitors, food-grade products, and laboratory reagents. Every consignment ships with a Certificate of Origin attested by the Oman Chamber of Commerce, GHS Safety Data Sheets in Arabic and English, batch Certificate of Analysis, Technical Data Sheet, and HS-coded commercial invoice, with SASO conformity and SFDA permit guidance advised per product before shipment.',
+    industries: ['Water Treatment & Desalination', 'Oil & Gas / Petrochemicals', 'Construction & Infrastructure', 'Manufacturing', 'Pharmaceuticals & Laboratories', 'Food & Beverage Processing'],
+    deliveryTime: '5–7 business days by road via the Batha border crossing (Dammam/Eastern Province transfers 4–6 days)',
+    keyClients: ['Saudi Aramco and SABIC tier contractors', 'NWC water & wastewater operators', 'Riyadh Second Industrial City manufacturers', 'Construction & infrastructure projects', 'Pharmaceutical and analytical laboratories'],
     highlights: [
-      'Saudi Aramco supply chain documentation',
-      'SABIC-grade chemical quality',
-      'Full Arabic documentation available',
-      'Halal-certified products where applicable',
-      'Large volume bulk supply capability'
+      'Batha-border road lane, Muscat to Riyadh in 5–7 business days',
+      'GCC customs union — no Saudi agent for most industrial grades',
+      'Vendor-qualification pack: CoO, Arabic + English SDS, batch CoA, TDS',
+      'SASO conformity and SFDA permit guidance advised per product',
+      'Drum, IBC and full-container loads on scheduled weekly departures'
     ],
     faqs: [
       {
-        question: 'Does Global Chemicals LLC supply chemicals to Saudi Arabia?',
-        answer: 'Yes, we export chemicals to all regions of Saudi Arabia including Riyadh, Jeddah, Dammam, and the Eastern Province. Products include water treatment chemicals, oilfield chemicals (corrosion inhibitors, scale inhibitors, demulsifiers), industrial lubricants, and laboratory reagents. Lead times are typically 5-7 business days.'
+        question: 'How long does chemical delivery from Oman to Riyadh take?',
+        answer: 'Road freight under GCC customs transit runs the Batha border lane from Muscat to Riyadh in 5–7 business days. Consignments routed through Dammam and the Eastern Province clear in 4–6 days, with a 1–2 day onward transfer to Riyadh. Drum, IBC and full-container loads move on scheduled weekly departures, and partial loads can be consolidated for urgent requirements.'
       },
       {
-        question: 'Can you supply chemicals approved for Saudi Aramco contractors?',
-        answer: 'Yes, we have experience supplying chemicals to Saudi Aramco-approved contractors. We provide full documentation packages including COA, SDS, Certificate of Origin, and technical data sheets to support vendor qualification processes. Contact our team for specific Aramco product list requirements.'
+        question: 'Do I need a Saudi import agent to buy chemicals from Oman?',
+        answer: 'For most industrial chemical grades, no. Oman and Saudi Arabia share the GCC customs union, so consignments move under customs transit without a separate Saudi import agent. Categories under SASO conformity assessment or SFDA supervision — food-contact, cosmetic, and certain hazardous classifications — do require import permits, and our export team confirms the requirement per product before shipment.'
       },
       {
-        question: 'What payment terms and currencies do you accept for Saudi Arabia?',
-        answer: 'We accept payment in SAR (Saudi Riyal), USD, and other major currencies. Standard payment terms include advance payment, 30-day net for established accounts, and Letter of Credit (LC) for large orders. We provide complete export documentation for customs clearance at Saudi port of entry.'
+        question: 'Can you supply chemicals for Saudi Aramco and SABIC contractor requirements?',
+        answer: 'We supply Aramco- and SABIC-tier service companies and provide the documentation pack their vendor-qualification workflows ask for: Certificate of Origin attested by the Oman Chamber of Commerce, batch Certificate of Analysis, GHS Safety Data Sheets in Arabic and English, Technical Data Sheets, and ISO 9001:2015 certification. Send us the specification or approved-product list and we will confirm which grades we can match before you register the line item.'
+      },
+      {
+        question: 'Which chemicals do you deliver to Riyadh?',
+        answer: 'Water treatment and RO chemicals (PAC, caustic soda, antiscalants, sodium hypochlorite), glycols and solvents, corrosion and scale inhibitors, construction chemicals, food-grade products, and laboratory reagents. Bulk and packed quantities both ship on the Riyadh lane — send your product list and destination district for delivered pricing in SAR or USD.'
+      },
+      {
+        question: 'What payment terms and currencies do you accept for Saudi orders?',
+        answer: 'We invoice in SAR, USD, or other major currencies. Terms include advance payment, 30-day net for established accounts, and Letter of Credit for large or bulk orders. Complete export documentation is issued with each shipment for customs clearance at the Saudi point of entry.'
       }
     ],
-    metaTitle: 'Chemical Supplier Saudi Arabia | Industrial Chemicals Riyadh | Global Chemicals LLC',
-    metaDescription: 'Chemical supplier exporting to Saudi Arabia. Water treatment, oilfield, industrial chemicals to Riyadh, Jeddah, Dammam. ISO 9001 certified. Full export documentation. Get a quote.',
-    metaKeywords: 'chemical supplier Saudi Arabia, chemicals Riyadh, chemical supplier Riyadh, industrial chemicals Saudi Arabia, water treatment chemicals KSA, oilfield chemicals Saudi Arabia, Saudi Aramco chemical supplier, chemical exporter Oman Saudi'
+    metaTitle: 'Chemical Supplier Riyadh, Saudi Arabia | Global Chemicals LLC',
+    metaDescription: 'Chemicals delivered to Riyadh from Oman in 5–7 days via the Batha lane. Water treatment, oilfield & lab chemicals with Arabic SDS and CoO. Get a quote.',
+    metaKeywords: 'chemical supplier Riyadh, chemicals Riyadh, industrial chemicals Riyadh, chemical supplier Saudi Arabia, water treatment chemicals Riyadh, oilfield chemicals Saudi Arabia, Saudi Aramco chemical supplier, SABIC chemical supplier, chemical exporter Oman Saudi'
+
   },
 
   'doha': {
