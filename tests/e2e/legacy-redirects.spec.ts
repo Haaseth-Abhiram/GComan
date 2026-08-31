@@ -60,11 +60,20 @@ test.describe('/chemicals hub', () => {
   test('/chemicals renders the hub with all city + country links', async ({ page }) => {
     await page.goto('/chemicals');
     await expect(page.locator('h1')).toContainText('Chemical Supply Across Oman');
-    // 22 city cards + 2 country-hub heading links (UAE, Saudi Arabia)
+    // 22 city cards + 4 country-hub heading links (UAE, Saudi Arabia, Qatar, Kuwait)
     const links = page.locator('main a[href^="/chemicals/"]');
-    expect(await links.count()).toBe(24);
+    expect(await links.count()).toBe(26);
     await expect(page.locator('main a[href="/chemicals/saudi-arabia"]')).toHaveCount(1);
     await expect(page.locator('main a[href="/chemicals/uae"]')).toHaveCount(1);
+    await expect(page.locator('main a[href="/chemicals/qatar"]')).toHaveCount(1);
+    await expect(page.locator('main a[href="/chemicals/kuwait"]')).toHaveCount(1);
+  });
+
+  test('the Qatar and Kuwait country hubs render (not the 404 page)', async ({ page }) => {
+    await page.goto('/chemicals/qatar');
+    await expect(page.locator('h1').first()).toContainText(/Qatar/);
+    await page.goto('/chemicals/kuwait');
+    await expect(page.locator('h1').first()).toContainText(/Kuwait/);
   });
 
   test('/chemical-supplier/caustic-soda-oman still resolves (must not be caught by the bare redirect)', async ({ page }) => {

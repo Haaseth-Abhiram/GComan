@@ -106,12 +106,14 @@ const ChemicalsHub = () => {
         <section className="pb-16">
           <div className="container mx-auto px-4">
             {locationIndex.map((group) => {
-              // Country-level hub pages exist for the two biggest export
-              // markets; their headings link through. Other countries are
-              // plain headings until they earn a hub of their own.
+              // Country-level hub pages exist for the GCC export markets;
+              // their headings link through. Other countries are plain
+              // headings until they earn a hub of their own.
               const countryHub: Record<string, string> = {
                 'United Arab Emirates': '/chemicals/uae',
                 'Saudi Arabia': '/chemicals/saudi-arabia',
+                'Qatar': '/chemicals/qatar',
+                'Kuwait': '/chemicals/kuwait',
               };
               const hubPath = countryHub[group.country];
               return (

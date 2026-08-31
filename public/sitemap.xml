@@ -260,6 +260,9 @@
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/chemicals/duqm"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/chemicals/duqm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/chemicals/duqm"/>
   </url>
   <url>
     <loc>https://gcoman.com/chemicals/fujairah</loc>
@@ -289,6 +292,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/chemicals/jubail"/>
   </url>
   <url>
+    <loc>https://gcoman.com/chemicals/kuwait</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/chemicals/kuwait"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/chemicals/kuwait"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/chemicals/kuwait"/>
+  </url>
+  <url>
     <loc>https://gcoman.com/chemicals/kuwait-city</loc>
     <lastmod>2026-08-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -302,6 +314,18 @@
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/chemicals/muscat"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/chemicals/muscat"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/chemicals/muscat"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/chemicals/qatar</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/chemicals/qatar"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/chemicals/qatar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/chemicals/qatar"/>
   </url>
   <url>
     <loc>https://gcoman.com/chemicals/ras-al-khaimah</loc>
@@ -326,18 +350,27 @@
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/chemicals/rusayl"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/chemicals/rusayl"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/chemicals/rusayl"/>
   </url>
   <url>
     <loc>https://gcoman.com/chemicals/rustaq</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/chemicals/rustaq"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/chemicals/rustaq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/chemicals/rustaq"/>
   </url>
   <url>
     <loc>https://gcoman.com/chemicals/salalah</loc>
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/chemicals/salalah"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/chemicals/salalah"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/chemicals/salalah"/>
   </url>
   <url>
     <loc>https://gcoman.com/chemicals/saudi-arabia</loc>
@@ -362,6 +395,9 @@
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/chemicals/sohar"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/chemicals/sohar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/chemicals/sohar"/>
   </url>
   <url>
     <loc>https://gcoman.com/chemicals/uae</loc>
@@ -3052,6 +3088,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/chemicals/dubai"/>
   </url>
   <url>
+    <loc>https://gcoman.com/ar/chemicals/duqm</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/chemicals/duqm"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/chemicals/duqm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/chemicals/duqm"/>
+  </url>
+  <url>
     <loc>https://gcoman.com/ar/chemicals/fujairah</loc>
     <lastmod>2026-08-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -3079,6 +3124,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/chemicals/jubail"/>
   </url>
   <url>
+    <loc>https://gcoman.com/ar/chemicals/kuwait</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/chemicals/kuwait"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/chemicals/kuwait"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/chemicals/kuwait"/>
+  </url>
+  <url>
     <loc>https://gcoman.com/ar/chemicals/kuwait-city</loc>
     <lastmod>2026-08-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -3086,6 +3140,24 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/chemicals/kuwait-city"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/chemicals/kuwait-city"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/chemicals/kuwait-city"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/ar/chemicals/muscat</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/chemicals/muscat"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/chemicals/muscat"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/chemicals/muscat"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/ar/chemicals/qatar</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/chemicals/qatar"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/chemicals/qatar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/chemicals/qatar"/>
   </url>
   <url>
     <loc>https://gcoman.com/ar/chemicals/ras-al-khaimah</loc>
@@ -3106,6 +3178,33 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/chemicals/riyadh"/>
   </url>
   <url>
+    <loc>https://gcoman.com/ar/chemicals/rusayl</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/chemicals/rusayl"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/chemicals/rusayl"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/chemicals/rusayl"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/ar/chemicals/rustaq</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/chemicals/rustaq"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/chemicals/rustaq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/chemicals/rustaq"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/ar/chemicals/salalah</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/chemicals/salalah"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/chemicals/salalah"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/chemicals/salalah"/>
+  </url>
+  <url>
     <loc>https://gcoman.com/ar/chemicals/saudi-arabia</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
@@ -3122,6 +3221,15 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/chemicals/sharjah"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/chemicals/sharjah"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/chemicals/sharjah"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/ar/chemicals/sohar</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/chemicals/sohar"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/chemicals/sohar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/chemicals/sohar"/>
   </url>
   <url>
     <loc>https://gcoman.com/ar/chemicals/uae</loc>

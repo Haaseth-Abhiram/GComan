@@ -954,6 +954,100 @@ const locations: Record<string, LocationData> = {
     metaTitle: 'Chemical Supplier to UAE & Dubai — Import from Oman',
     metaDescription: 'Chemical supplier to the UAE from Oman: Fujairah in 2–4 hours, Dubai & Abu Dhabi in 3–5 days under GCC customs. Water treatment, food-grade, glycols & industrial chemicals. Get a quote.',
     metaKeywords: 'chemical supplier in uae, chemical suppliers in uae, industrial chemicals dubai, chemical supplier dubai import, industrial chemical wholesale suppliers in dubai uae, import chemicals from oman to uae, chemical supplier abu dhabi, free zone chemical delivery jafza'
+  },
+  // Qatar and Kuwait hubs complete the GCC country-hub set (added after the
+  // Aug 2026 GCC coverage review): both countries previously had only a single
+  // city page (doha / kuwait-city) while UAE and Saudi Arabia got the full
+  // exporter-intent hub treatment. Lane facts mirror the city pages and the
+  // export-guide blog: no Oman–Qatar land border (road via Saudi Arabia, or
+  // sea Sohar Port → Hamad Port); Kuwait by road via Saudi Arabia.
+  'qatar': {
+    slug: 'qatar',
+    city: 'Qatar',
+    cityArabic: 'قطر',
+    country: 'Qatar',
+    region: 'Doha, Ras Laffan, Mesaieed & Hamad Port',
+    description: 'Global Chemicals LLC is a GCC-based chemical supplier exporting to Qatar from our Muscat warehouse. Oman and Qatar do not share a land border, so consignments move by road through Saudi Arabia under GCC customs transit in 3–5 business days, or by sea from Sohar Port to Hamad Port — a lane proven at scale when Oman became Qatar\'s main transshipment partner. We serve LNG and gas-processing operations in Ras Laffan Industrial City, petrochemical and fertilizer producers in Mesaieed, Kahramaa desalination and network contractors, construction projects across Doha, food and beverage processors, and manufacturers in the Qatar Free Zones (Ras Bufontas, Umm Al Houl) and Manateq industrial zones. Every consignment ships with a Certificate of Origin attested by the Oman Chamber of Commerce, Arabic and English SDS, batch Certificate of Analysis, and HS-coded commercial invoices, with guidance on Ministry of Public Health and QatarEnergy vendor documentation where required.',
+    industries: ['LNG & Gas Processing', 'Petrochemicals & Fertilizers', 'Water Treatment & Desalination', 'Construction & Infrastructure', 'Food & Beverage Processing', 'Manufacturing & Free Zones', 'Utilities & District Cooling'],
+    deliveryTime: '3–5 business days by road via Saudi Arabia; sea freight from Sohar Port to Hamad Port for container and bulk loads',
+    keyClients: ['QatarEnergy and Ras Laffan contractors', 'Mesaieed petrochemical and fertilizer producers', 'Kahramaa desalination and utility contractors', 'Doha construction and infrastructure projects', 'QFZ and Manateq zone manufacturers'],
+    highlights: [
+      'GCC customs union — streamlined import with no local agent needed for most products',
+      'Two lanes: road via Saudi Arabia (3–5 days) or sea Sohar Port → Hamad Port',
+      'Ras Laffan and QatarEnergy vendor documentation experience',
+      'Certificate of Origin, Arabic + English SDS and batch CoA on every load',
+      'ISO 9001:2015 certified supplier quoting in QAR, USD or OMR'
+    ],
+    faqs: [
+      {
+        question: 'Who supplies industrial chemicals to Qatar from the GCC?',
+        answer: 'Global Chemicals LLC exports industrial, water-treatment, food-grade and oilfield chemicals to Qatar from Muscat, Oman. Under the GCC customs union most industrial chemicals clear without a Qatari import agent — we deliver by road through Saudi Arabia in 3–5 business days, or by sea from Sohar Port to Hamad Port for container loads. Send your product list and destination for delivered pricing in QAR, USD or OMR.'
+      },
+      {
+        question: 'How do chemicals ship from Oman to Qatar without a land border?',
+        answer: 'Two proven lanes: road freight transits Saudi Arabia under GCC customs transit and crosses into Qatar at Abu Samra, reaching Doha in 3–5 business days; sea freight sails from Sohar Port direct to Hamad Port — the route that carried the bulk of Oman–Qatar trade from 2017 onward — and suits container, IBC and drum consignments on weekly departures.'
+      },
+      {
+        question: 'What documentation is required to import chemicals into Qatar?',
+        answer: 'Standard consignments ship with a Certificate of Origin attested by the Oman Chamber of Commerce (GCC preferential), Safety Data Sheets in Arabic and English, batch Certificate of Analysis, Technical Data Sheet, and an HS-coded commercial invoice. Food-contact and consumable categories fall under Ministry of Public Health supervision, and Ras Laffan deliveries need site security clearance — our export team prepares both before dispatch.'
+      },
+      {
+        question: 'Which areas of Qatar do you deliver chemicals to?',
+        answer: 'We deliver to Doha and its industrial areas, Ras Laffan Industrial City, Mesaieed Industrial City, the Qatar Free Zones at Ras Bufontas and Umm Al Houl, and Manateq logistics and industrial parks. Other destinations including Dukhan and Al Wakrah are quoted on request — see the Doha city page for lane detail.'
+      }
+    ],
+    metaTitle: 'Chemical Suppliers in Qatar — Import from Oman',
+    metaDescription: 'Chemical suppliers serving Qatar from Oman: water treatment, LNG, food-grade & industrial chemicals to Doha, Ras Laffan & Mesaieed. Road via Saudi Arabia or sea Sohar–Hamad Port. Get a quote.',
+    metaKeywords: 'chemical suppliers in qatar, chemical supplier qatar, industrial chemicals qatar, chemical companies in qatar, import chemicals qatar, chemical exporter oman qatar, water treatment chemicals doha, ras laffan chemical supplier, mesaieed chemicals, hamad port chemical import',
+    relatedGuide: {
+      slug: 'chemical-exporter-oman-saudi-arabia-qatar-kuwait',
+      title: 'Chemical Supply from Oman to Saudi Arabia, Qatar & Kuwait: Export Guide 2026',
+      blurb: 'Lead times, documentation and product availability for exporting chemicals from Muscat to Qatar — including the Sohar–Hamad Port sea lane.'
+    }
+  },
+  'kuwait': {
+    slug: 'kuwait',
+    city: 'Kuwait',
+    cityArabic: 'الكويت',
+    country: 'Kuwait',
+    region: 'Kuwait City, Shuaiba, Mina Abdullah & Al Zour',
+    description: 'Global Chemicals LLC is a GCC-based chemical supplier exporting to Kuwait from our Muscat warehouse — road freight transits Saudi Arabia under GCC customs and reaches Kuwait City in 4–6 business days, with sea freight to Shuwaikh and Shuaiba ports for container loads. We serve Kuwait\'s refining sector — KNPC\'s Mina Al-Ahmadi and Mina Abdullah refineries and the KIPIC Al Zour complex — alongside KOC oilfield service contractors, EQUATE and PIC petrochemical supply chains, Ministry of Electricity & Water desalination and power stations, Shuaiba and Sabhan industrial area manufacturers, and construction projects across the country. Every consignment ships with a Certificate of Origin attested by the Oman Chamber of Commerce, Arabic and English SDS, batch Certificate of Analysis, and HS-coded commercial invoices, with KUCAS conformity guidance where product categories require it.',
+    industries: ['Oil Refining (KNPC & KIPIC)', 'Oilfield Services (KOC)', 'Petrochemicals', 'Power & Desalination', 'Construction & Infrastructure', 'Manufacturing', 'Water Treatment'],
+    deliveryTime: '4–6 business days by road via Saudi Arabia; sea freight to Shuwaikh/Shuaiba ports for container and bulk loads',
+    keyClients: ['KNPC and KIPIC refinery supply chains', 'KOC oilfield service contractors', 'EQUATE and PIC petrochemical operations', 'MEW power and desalination stations', 'Shuaiba and Sabhan industrial manufacturers'],
+    highlights: [
+      'GCC customs union — streamlined import with no local agent needed for most products',
+      'Road lane via Saudi Arabia in 4–6 days; sea freight to Shuwaikh and Shuaiba',
+      'KOC/KNPC vendor documentation experience and refinery-grade portfolio',
+      'KUCAS conformity guidance plus CoO, Arabic SDS and batch CoA on every load',
+      'ISO 9001:2015 certified supplier quoting in KWD, USD or OMR'
+    ],
+    faqs: [
+      {
+        question: 'Who supplies industrial chemicals to Kuwait from the GCC?',
+        answer: 'Global Chemicals LLC exports industrial, water-treatment, oilfield and refinery chemicals to Kuwait from Muscat, Oman. Under the GCC customs union most industrial chemicals clear without a Kuwaiti import agent — road freight through Saudi Arabia reaches Kuwait City in 4–6 business days, and container loads ship by sea to Shuwaikh or Shuaiba. Send your product list for delivered pricing in KWD, USD or OMR.'
+      },
+      {
+        question: 'What documentation is required to import chemicals into Kuwait?',
+        answer: 'Standard consignments ship with a Certificate of Origin attested by the Oman Chamber of Commerce (GCC preferential), Safety Data Sheets in Arabic and English, batch Certificate of Analysis, Technical Data Sheet, and an HS-coded commercial invoice. Product categories under the Kuwait Conformity Assessment Scheme (KUCAS) need a Technical Evaluation Report before customs clearance — our export team confirms the requirement per product and prepares the paperwork before shipment.'
+      },
+      {
+        question: 'How long does chemical delivery from Oman to Kuwait take?',
+        answer: 'Road freight under GCC customs transit crosses Saudi Arabia and reaches Kuwait City, Shuaiba and the industrial areas in 4–6 business days. Container and bulk consignments ship by sea to Shuwaikh Port or Shuaiba Port; urgent partial loads can be consolidated on scheduled weekly road departures.'
+      },
+      {
+        question: 'Do you supply chemicals for Kuwait\'s refineries and the Al Zour complex?',
+        answer: 'Yes — our refinery and oilfield portfolio covers corrosion inhibitors, oxygen scavengers, demulsifiers, antiscalants, glycols and water treatment chemicals used across KNPC\'s Mina Al-Ahmadi and Mina Abdullah refineries and the KIPIC Al Zour refinery and petrochemical complex, and we provide the full documentation packages KOC and KNPC contractor qualification requires.'
+      }
+    ],
+    metaTitle: 'Chemical Suppliers in Kuwait — Import from Oman',
+    metaDescription: 'Chemical suppliers serving Kuwait from Oman: refinery, oilfield, water treatment & industrial chemicals to Kuwait City, Shuaiba & Al Zour. KUCAS guidance, Arabic SDS. Get a quote.',
+    metaKeywords: 'chemical suppliers in kuwait, chemical supplier kuwait, industrial chemicals kuwait, chemical companies in kuwait, import chemicals kuwait, chemical exporter oman kuwait, refinery chemicals kuwait, KNPC chemical supplier, shuaiba industrial chemicals, al zour refinery chemicals',
+    relatedGuide: {
+      slug: 'chemical-exporter-oman-saudi-arabia-qatar-kuwait',
+      title: 'Chemical Supply from Oman to Saudi Arabia, Qatar & Kuwait: Export Guide 2026',
+      blurb: 'Lead times, documentation and product availability for exporting chemicals from Muscat to Kuwait — including KUCAS conformity requirements.'
+    }
   }
 };
 
@@ -994,7 +1088,8 @@ const LocationLanding = () => {
   const cityLabel = isAr ? locationData.cityArabic : locationData.city;
 
   // Arabic SEO meta — only when a real translation exists in
-  // location-pages-ar.json (currently the 5 Saudi Arabia cities). Passing
+  // location-pages-ar.json (GCC cities, the country hubs, and the Oman
+  // cities are translated; Iraq/Jordan/Egypt pages are not yet). Passing
   // arTitle/arDescription to <SEO> makes the /ar twin indexable with a
   // localized meta layer and emits hreflang pairs on both language versions;
   // cities without a translation stay noindex on /ar (see CLAUDE.md's

@@ -33,7 +33,9 @@ test.describe('Lazy Arabic bundle', () => {
   });
 
   test('untranslated AR page stays noindex (gate did not loosen)', async ({ page }) => {
-    await page.goto('/ar/chemicals/muscat');
+    // cairo: Egypt pages have no Arabic translation; the Oman + GCC pages are
+    // all translated now, so they can no longer serve as the noindex fixture.
+    await page.goto('/ar/chemicals/cairo');
     await page.waitForLoadState('networkidle');
     const robots = await page.locator('meta[name="robots"]').first().getAttribute('content');
     expect(robots).toContain('noindex');
