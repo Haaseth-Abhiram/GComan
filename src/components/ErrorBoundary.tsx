@@ -1,6 +1,7 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { isChunkLoadError, hasUsedChunkReload, reloadOnceOnChunkError } from '@/lib/lazyRetry';
 
 interface Props {
   children: ReactNode;
@@ -32,6 +33,14 @@ class ErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
+    // A failed lazy-chunk fetch is a delivery problem, not an app bug: showing
+    // the error card here replaced fully-prerendered pages with "Something
+    // went wrong", which Googlebot indexed as Soft 404s (GSC live test,
+    // 2026-08-31). Recover with one reload per session; the reload serves the
+    // prerendered HTML again and refetches current-build chunk URLs.
+    if (isChunkLoadError(error) && reloadOnceOnChunkError()) {
+      return; // page is reloading — keep the blank frame, don't mount the card
+    }
     this.setState({
       error,
       errorInfo
@@ -49,6 +58,12 @@ class ErrorBoundary extends Component<Props, State> {
 
   render() {
     if (this.state.hasError) {
+      // Chunk-load failure with the session's recovery reload still unused:
+      // componentDidCatch is about to trigger it — render nothing for the
+      // instant before the reload instead of flashing the error card.
+      if (isChunkLoadError(this.state.error) && !hasUsedChunkReload()) {
+        return null;
+      }
       return (
         <div className="min-h-screen bg-background flex items-center justify-center p-4">
           <div className="max-w-md w-full bg-card border border-border rounded-lg p-8 text-center">

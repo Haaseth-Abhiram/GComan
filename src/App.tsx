@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect } from "react";
+import { Suspense, useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -17,67 +17,68 @@ import { ZohoSalesIQ } from "./components/ZohoSalesIQ";
 import BackToTopButton from "./components/BackToTopButton";
 import RouteChangeLoader from "./components/RouteChangeLoader";
 import { resolveLegacyRedirect } from "./lib/legacyRedirects";
+import { lazyRetry } from "./lib/lazyRetry";
 
 // Lazy load all page components
-const Index = lazy(() => import("./pages/Index"));
-const About = lazy(() => import("./pages/About"));
-const Products = lazy(() => import("./pages/Products"));
+const Index = lazyRetry(() => import("./pages/Index"));
+const About = lazyRetry(() => import("./pages/About"));
+const Products = lazyRetry(() => import("./pages/Products"));
 // One lazy entry per product category so each category's JSON lands in its own
 // route chunk (instead of every product page downloading all 22 categories'
 // data). See src/pages/productDetail/ for the per-category entry files.
-const productDetailEntries: Record<string, ReturnType<typeof lazy>> = {
-  'water-treatment': lazy(() => import("./pages/productDetail/WaterTreatment")),
-  'lubricants': lazy(() => import("./pages/productDetail/Lubricants")),
-  'oilfield': lazy(() => import("./pages/productDetail/Oilfield")),
-  'lab-chemicals': lazy(() => import("./pages/productDetail/LabChemicals")),
-  'lab-equipment': lazy(() => import("./pages/productDetail/LabEquipment")),
-  'solvents': lazy(() => import("./pages/productDetail/Solvents")),
-  'swimming-pool': lazy(() => import("./pages/productDetail/SwimmingPool")),
-  'inorganic': lazy(() => import("./pages/productDetail/Inorganic")),
-  'alcohols': lazy(() => import("./pages/productDetail/Alcohols")),
-  'glycols': lazy(() => import("./pages/productDetail/Glycols")),
-  'ethanolamines': lazy(() => import("./pages/productDetail/Ethanolamines")),
-  'food-beverage': lazy(() => import("./pages/productDetail/FoodBeverage")),
-  'construction': lazy(() => import("./pages/productDetail/Construction")),
-  'soap-detergent': lazy(() => import("./pages/productDetail/SoapDetergent")),
-  'ro-chemicals': lazy(() => import("./pages/productDetail/RoChemicals")),
-  'cooling-water': lazy(() => import("./pages/productDetail/CoolingWater")),
-  'corrosion-inhibitor': lazy(() => import("./pages/productDetail/CorrosionInhibitor")),
-  'tank-cleaners': lazy(() => import("./pages/productDetail/TankCleaners")),
-  'additives': lazy(() => import("./pages/productDetail/Additives")),
-  'agro': lazy(() => import("./pages/productDetail/Agro")),
-  'chlorinated': lazy(() => import("./pages/productDetail/Chlorinated")),
-  'calcium-carbonate': lazy(() => import("./pages/productDetail/CalciumCarbonate")),
+const productDetailEntries: Record<string, ReturnType<typeof lazyRetry>> = {
+  'water-treatment': lazyRetry(() => import("./pages/productDetail/WaterTreatment")),
+  'lubricants': lazyRetry(() => import("./pages/productDetail/Lubricants")),
+  'oilfield': lazyRetry(() => import("./pages/productDetail/Oilfield")),
+  'lab-chemicals': lazyRetry(() => import("./pages/productDetail/LabChemicals")),
+  'lab-equipment': lazyRetry(() => import("./pages/productDetail/LabEquipment")),
+  'solvents': lazyRetry(() => import("./pages/productDetail/Solvents")),
+  'swimming-pool': lazyRetry(() => import("./pages/productDetail/SwimmingPool")),
+  'inorganic': lazyRetry(() => import("./pages/productDetail/Inorganic")),
+  'alcohols': lazyRetry(() => import("./pages/productDetail/Alcohols")),
+  'glycols': lazyRetry(() => import("./pages/productDetail/Glycols")),
+  'ethanolamines': lazyRetry(() => import("./pages/productDetail/Ethanolamines")),
+  'food-beverage': lazyRetry(() => import("./pages/productDetail/FoodBeverage")),
+  'construction': lazyRetry(() => import("./pages/productDetail/Construction")),
+  'soap-detergent': lazyRetry(() => import("./pages/productDetail/SoapDetergent")),
+  'ro-chemicals': lazyRetry(() => import("./pages/productDetail/RoChemicals")),
+  'cooling-water': lazyRetry(() => import("./pages/productDetail/CoolingWater")),
+  'corrosion-inhibitor': lazyRetry(() => import("./pages/productDetail/CorrosionInhibitor")),
+  'tank-cleaners': lazyRetry(() => import("./pages/productDetail/TankCleaners")),
+  'additives': lazyRetry(() => import("./pages/productDetail/Additives")),
+  'agro': lazyRetry(() => import("./pages/productDetail/Agro")),
+  'chlorinated': lazyRetry(() => import("./pages/productDetail/Chlorinated")),
+  'calcium-carbonate': lazyRetry(() => import("./pages/productDetail/CalciumCarbonate")),
 };
 // Derived from the registry above (not re-imported from productLoader.ts) so App.tsx's
 // own root bundle never pulls in productLoader.ts's eager category JSON imports.
 const PRODUCT_CATEGORIES = Object.keys(productDetailEntries);
-const Industries = lazy(() => import("./pages/Industries"));
-const Resources = lazy(() => import("./pages/Resources"));
-const Contact = lazy(() => import("./pages/Contact"));
-const Customers = lazy(() => import("./pages/Customers"));
-const Career = lazy(() => import("./pages/Career"));
-const Certifications = lazy(() => import("./pages/Certifications"));
-const Login = lazy(() => import("./pages/Login"));
-const Admin = lazy(() => import("./pages/Admin"));
-const Blog = lazy(() => import("./pages/Blog"));
-const BlogPost = lazy(() => import("./pages/BlogPost"));
-const Privacy = lazy(() => import("./pages/Privacy"));
-const Terms = lazy(() => import("./pages/Terms"));
-const Sitemap = lazy(() => import("./pages/Sitemap"));
-const LocationLanding = lazy(() => import("./pages/LocationLanding"));
-const ChemicalsHub = lazy(() => import("./pages/ChemicalsHub"));
-const DosingCalculator = lazy(() => import("./pages/DosingCalculator"));
-const ChemicalSuppliersOman = lazy(() => import("./pages/ChemicalSuppliersOman"));
-const ChemicalSuppliersMiddleEast = lazy(() => import("./pages/ChemicalSuppliersMiddleEast"));
-const CausticSodaOman = lazy(() => import("./pages/CausticSodaOman"));
-const ThankYou = lazy(() => import("./pages/ThankYou"));
-const NotFound = lazy(() => import("./pages/NotFound"));
+const Industries = lazyRetry(() => import("./pages/Industries"));
+const Resources = lazyRetry(() => import("./pages/Resources"));
+const Contact = lazyRetry(() => import("./pages/Contact"));
+const Customers = lazyRetry(() => import("./pages/Customers"));
+const Career = lazyRetry(() => import("./pages/Career"));
+const Certifications = lazyRetry(() => import("./pages/Certifications"));
+const Login = lazyRetry(() => import("./pages/Login"));
+const Admin = lazyRetry(() => import("./pages/Admin"));
+const Blog = lazyRetry(() => import("./pages/Blog"));
+const BlogPost = lazyRetry(() => import("./pages/BlogPost"));
+const Privacy = lazyRetry(() => import("./pages/Privacy"));
+const Terms = lazyRetry(() => import("./pages/Terms"));
+const Sitemap = lazyRetry(() => import("./pages/Sitemap"));
+const LocationLanding = lazyRetry(() => import("./pages/LocationLanding"));
+const ChemicalsHub = lazyRetry(() => import("./pages/ChemicalsHub"));
+const DosingCalculator = lazyRetry(() => import("./pages/DosingCalculator"));
+const ChemicalSuppliersOman = lazyRetry(() => import("./pages/ChemicalSuppliersOman"));
+const ChemicalSuppliersMiddleEast = lazyRetry(() => import("./pages/ChemicalSuppliersMiddleEast"));
+const CausticSodaOman = lazyRetry(() => import("./pages/CausticSodaOman"));
+const ThankYou = lazyRetry(() => import("./pages/ThankYou"));
+const NotFound = lazyRetry(() => import("./pages/NotFound"));
 // Internal design tool. Not in sitemap.xml so it doesn't get prerendered or
 // indexed. Reachable manually at /dev/chemistry-playground in any environment.
-const ChemistryPlayground = lazy(() => import("./pages/ChemistryPlayground"));
+const ChemistryPlayground = lazyRetry(() => import("./pages/ChemistryPlayground"));
 // Managed OAuth consent screen for external MCP clients (ChatGPT, Claude, etc.).
-const OAuthConsent = lazy(() => import("./pages/OAuthConsent"));
+const OAuthConsent = lazyRetry(() => import("./pages/OAuthConsent"));
 
 const queryClient = new QueryClient();
 
