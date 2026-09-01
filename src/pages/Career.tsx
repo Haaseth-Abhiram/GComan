@@ -185,6 +185,42 @@ const Career = () => {
         'Coordinate with legal and compliance teams to ensure contract terms are acceptable'
       ],
       featured: true
+    },
+    {
+      id: '4',
+      title: 'Accountant',
+      department: 'Finance',
+      location: 'Muscat, Oman',
+      type: 'Full-time',
+      experience: '2-4 years',
+      salary: 'Competitive',
+      description: 'Global Chemicals LLC is seeking a detail-oriented Accountant to join our finance team in Muscat. In this role, you will manage daily accounting operations, maintain accurate financial records, process invoices and payments, reconcile bank statements, and support monthly and annual financial reporting. You will work closely with procurement, sales, and operations teams to ensure proper cost tracking, inventory valuation, and compliance with Omani tax and VAT regulations. The ideal candidate has hands-on experience with accounting software, strong Excel skills, and a solid understanding of GCC accounting practices. This is an excellent opportunity for a finance professional looking to grow within a stable, expanding industrial trading company serving Oman and the GCC region.',
+      requirements: [
+        'Bachelor\'s degree in Accounting, Finance, or a related field',
+        '2-4 years of accounting experience, preferably in trading, manufacturing, or chemical industry',
+        'Proficiency in accounting software (Tally, Zoho Books, QuickBooks, or similar) and Microsoft Excel',
+        'Solid understanding of Omani VAT regulations and GCC accounting standards',
+        'Experience with accounts payable, accounts receivable, bank reconciliations, and general ledger entries',
+        'Strong attention to detail and accuracy in financial data entry and reporting',
+        'Good analytical and problem-solving skills with ability to support cost analysis',
+        'Excellent communication skills in English (Arabic is a plus)',
+        'Ability to meet deadlines and handle multiple priorities in a fast-paced environment',
+        'Professional integrity and commitment to confidentiality'
+      ],
+      responsibilities: [
+        'Record day-to-day financial transactions and maintain accurate general ledger entries',
+        'Process accounts payable and accounts receivable, including supplier and customer invoices',
+        'Reconcile bank statements, petty cash, and credit card accounts on a regular basis',
+        'Assist in monthly, quarterly, and annual financial closing and reporting activities',
+        'Support inventory valuation, cost of goods sold tracking, and stock reconciliation',
+        'Prepare VAT returns and ensure compliance with Omani tax regulations',
+        'Maintain organized digital and physical financial records for audit purposes',
+        'Coordinate with procurement and sales teams to verify purchase orders, deliveries, and payments',
+        'Assist in budgeting, forecasting, and cash-flow monitoring as requested by management',
+        'Generate financial reports and provide insights to support decision-making',
+        'Support external auditors and ensure timely completion of audit requirements'
+      ],
+      featured: true
     }
   ];
 
