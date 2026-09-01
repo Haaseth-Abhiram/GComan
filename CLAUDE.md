@@ -26,7 +26,10 @@ npm run test:e2e:prod     # PROD_BUILD=1 → build:dev + vite preview
 BASE_URL=https://gcoman.com npm run test:e2e   # against any remote target
 npx playwright test tests/e2e/loading-flow.spec.ts -g "name of test"   # single test
 
-# Supabase edge functions
+# Supabase edge functions — NOTE: the Supabase project is managed by Lovable
+# Cloud and there are NO standalone Supabase credentials (confirmed 2026-09-01).
+# In practice functions deploy when Lovable builds/publishes main; the CLI
+# commands below only work if someone has a Supabase access token.
 ./scripts/deploy-supabase.sh                   # deploy all functions
 supabase functions deploy submit-contact       # one function
 supabase secrets set TURNSTILE_SECRET_KEY=...  # rotate a secret
