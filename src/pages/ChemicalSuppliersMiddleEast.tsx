@@ -147,8 +147,8 @@ const ChemicalSuppliersMiddleEast = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Chemical Supplier Middle East | ISO 9001 Exporter from Oman"
-        description="ISO 9001 & JSRS certified chemical exporter from Oman, shipping to UAE, Saudi Arabia, Qatar & the wider GCC. Free quotes within 24 hours, Arabic SDS included."
+        title="Middle East Chemical Supplier | Oman Export in 3–5 Days"
+        description="Export chemicals from Oman to UAE (3–5 days), Saudi (5–7), Qatar, Kuwait & Bahrain. ISO 9001 + JSRS certified, Arabic SDS, CoA & CoO. Quote in 24 hours."
         keywords="chemical exporter Oman UAE, chemical supplier Middle East, chemical supplier Oman to Dubai, chemical exporter Oman Saudi Arabia, chemical supplier Oman Qatar Kuwait Bahrain, chemical supplier Iraq Baghdad Basra, chemical supplier Jordan Amman, chemical supplier Egypt Cairo Alexandria, chemical export from Oman GCC, water treatment chemicals Middle East, oilfield chemicals Middle East, industrial chemicals export Oman, caustic soda exporter Oman UAE"
         ogTitle="Chemical Supplier & Exporter to the Middle East | Global Chemicals LLC"
         ogDescription="ISO 9001 & JSRS certified — Global Chemicals LLC exports water treatment, industrial, oilfield & lab chemicals from Oman across the Middle East, with full Arabic documentation."
@@ -216,6 +216,98 @@ const ChemicalSuppliersMiddleEast = () => {
             </div>
           </div>
         </section>
+
+        {/* Procurement quick-reference: lead times, incoterms, documentation */}
+        <section className="py-16 md:py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+                Export Lead Times, Incoterms &amp; Documentation
+              </h2>
+              <p className="text-muted-foreground text-center mb-10 max-w-2xl mx-auto speakable">
+                What a procurement team needs before raising a PO: typical road-freight transit
+                from our Muscat warehouse, the incoterms we quote on, and the customs paperwork
+                shipped with every consignment.
+              </p>
+
+              <div className="overflow-x-auto rounded-xl border">
+                <table className="w-full text-left text-sm">
+                  <caption className="sr-only">
+                    Chemical export lead times and documentation by Middle East destination
+                  </caption>
+                  <thead className="bg-muted/50">
+                    <tr>
+                      <th scope="col" className="px-4 py-3 font-semibold">Destination</th>
+                      <th scope="col" className="px-4 py-3 font-semibold">Road freight lead time</th>
+                      <th scope="col" className="px-4 py-3 font-semibold">Incoterms quoted</th>
+                      <th scope="col" className="px-4 py-3 font-semibold">Notes</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y">
+                    {[
+                      ['UAE — Dubai, Abu Dhabi, Sharjah', '3–5 business days', 'FOB Muscat / CIF / DAP', 'Air freight to Dubai or Abu Dhabi within 24 hours for urgent orders; Fujairah can be same-day'],
+                      ['Saudi Arabia — Riyadh, Jeddah, Dammam, Jubail', '5–7 business days', 'FOB Muscat / CIF / DAP', 'SASO compliance where applicable; CoO attested by Oman Chamber of Commerce'],
+                      ['Qatar — Doha, Ras Laffan', '3–5 business days', 'FOB / CIF / DAP, QAR or USD', 'Experience with Ras Laffan Security Clearance and QatarEnergy vendor qualification'],
+                      ['Kuwait — Kuwait City, Shuaiba, Ahmadi', '4–6 business days', 'FOB Muscat / CIF Shuwaikh, KWD or USD', 'KOC and KNPC contractor documentation supported'],
+                      ['Bahrain — Manama, Hidd, Sitra', '4–7 business days', 'FOB / CIF / DAP, USD', 'Sea freight option for bulk volumes'],
+                      ['Iraq, Jordan, Egypt', 'Quoted per consignment', 'FOB / CIF / DAP, USD', 'Air freight available for urgent requirements; Arabic SDS supplied'],
+                    ].map(([dest, lead, incoterm, notes]) => (
+                      <tr key={dest} className="align-top">
+                        <th scope="row" className="px-4 py-3 font-medium text-foreground">{dest}</th>
+                        <td className="px-4 py-3 text-muted-foreground whitespace-nowrap">{lead}</td>
+                        <td className="px-4 py-3 text-muted-foreground">{incoterm}</td>
+                        <td className="px-4 py-3 text-muted-foreground">{notes}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6 mt-8">
+                <Card className="p-6">
+                  <h3 className="font-bold text-foreground mb-3">Documents shipped with every order</h3>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    {[
+                      'Certificate of Analysis (CoA) per batch',
+                      'Safety Data Sheet (SDS/MSDS) in Arabic and English',
+                      'Technical Data Sheet (TDS)',
+                      'Certificate of Origin attested by Oman Chamber of Commerce',
+                      'Commercial invoice and packing list',
+                      'Halal certificate where applicable',
+                    ].map((doc) => (
+                      <li key={doc} className="flex items-start gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                        <span>{doc}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </Card>
+                <Card className="p-6">
+                  <h3 className="font-bold text-foreground mb-3">Supplier qualification proofs</h3>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    {[
+                      'ISO 9001:2015 certified quality management system',
+                      'JSRS (Joint Supplier Registration System) registered for oil &amp; gas supply',
+                      'ICV compliant for Oman in-country value scoring',
+                      'Supplying PDO, OQ, Aramco, ADNOC and QatarEnergy contractors',
+                    ].map((proof) => (
+                      <li key={proof} className="flex items-start gap-2">
+                        <Award className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                        <span>{proof.replace('&amp;', '&')}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Button asChild className="mt-5 gap-2 w-full">
+                    <Link to="/contact">
+                      Request a quote — reply within 24 hours <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </Button>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </section>
+
 
         {/* GCC Countries Grid */}
         <section className="py-16 md:py-24">
