@@ -147,8 +147,8 @@ const ChemicalSuppliersMiddleEast = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Chemical Supplier Middle East | ISO 9001 Exporter from Oman"
-        description="ISO 9001 & JSRS certified chemical exporter from Oman, shipping to UAE, Saudi Arabia, Qatar & the wider GCC. Free quotes within 24 hours, Arabic SDS included."
+        title="Middle East Chemical Supplier | Oman Export in 3–5 Days"
+        description="Export chemicals from Oman to UAE (3–5 days), Saudi (5–7), Qatar, Kuwait & Bahrain. ISO 9001 + JSRS certified, Arabic SDS, CoA & CoO. Quote in 24 hours."
         keywords="chemical exporter Oman UAE, chemical supplier Middle East, chemical supplier Oman to Dubai, chemical exporter Oman Saudi Arabia, chemical supplier Oman Qatar Kuwait Bahrain, chemical supplier Iraq Baghdad Basra, chemical supplier Jordan Amman, chemical supplier Egypt Cairo Alexandria, chemical export from Oman GCC, water treatment chemicals Middle East, oilfield chemicals Middle East, industrial chemicals export Oman, caustic soda exporter Oman UAE"
         ogTitle="Chemical Supplier & Exporter to the Middle East | Global Chemicals LLC"
         ogDescription="ISO 9001 & JSRS certified — Global Chemicals LLC exports water treatment, industrial, oilfield & lab chemicals from Oman across the Middle East, with full Arabic documentation."
