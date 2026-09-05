@@ -41,6 +41,10 @@ const faqs = [
   {
     question: "How do I get a quote for chemical export to the Middle East?",
     answer: "Contact our export team by email at sales@gcoman.com, call +968-93754388, or use WhatsApp for fast quotes. Include the chemical name or CAS number, required quantity, delivery country and city, and your preferred incoterms (FOB/CIF/DAP). We typically provide quotes within 24 hours with competitive pricing and lead times."
+  },
+  {
+    question: "Which regulatory registrations do imported chemicals need in GCC countries?",
+    answer: "Each market has its own import-control regime, and we prepare the required documentation for all of them: SASO/SABER product registration for Saudi Arabia, MOIAT/ESMA conformity for the UAE, KUCAS verification for Kuwait, QatarEnergy vendor qualification for Qatar, and GOEIC/Nafeza pre-clearance for Egypt. Our export team supplies SABER-ready test reports, GCC preferential-origin certificates, and Arabic SDS packs so your consignment clears customs without delays."
   }
 ];
 
