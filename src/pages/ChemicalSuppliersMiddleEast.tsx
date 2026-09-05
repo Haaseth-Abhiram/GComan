@@ -308,6 +308,53 @@ const ChemicalSuppliersMiddleEast = () => {
           </div>
         </section>
 
+        {/* Country-by-country customs & regulatory compliance */}
+        <section className="py-16 md:py-20 bg-muted/30 border-y">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+                Customs &amp; Regulatory Compliance by Country
+              </h2>
+              <p className="text-muted-foreground text-center mb-10 max-w-2xl mx-auto">
+                Every GCC and wider Middle East destination has its own import-control regime.
+                We prepare the registration certificates and conformity paperwork each market
+                requires so your consignment clears without delays.
+              </p>
+              <div className="overflow-x-auto rounded-xl border bg-background">
+                <table className="w-full text-left text-sm">
+                  <caption className="sr-only">
+                    Chemical import compliance requirements by Middle East country
+                  </caption>
+                  <thead className="bg-muted/50">
+                    <tr>
+                      <th scope="col" className="px-4 py-3 font-semibold">Market</th>
+                      <th scope="col" className="px-4 py-3 font-semibold">Regulatory regime</th>
+                      <th scope="col" className="px-4 py-3 font-semibold">How we support your import</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y">
+                    {[
+                      ['UAE', 'MOIAT / ESMA conformity, Dubai Municipality registration for regulated chemicals', 'Emirates-compliant labeling, product certificates, and CoA packs prepared for JAFZA, KIZAD, and Sharjah industrial clearances'],
+                      ['Saudi Arabia', 'SASO / SABER product registration, SFDA for applicable products', 'SABER-ready test reports and conformity documents; CoO attested by Oman Chamber of Commerce'],
+                      ['Qatar', 'QatarEnergy vendor qualification, Ras Laffan Security Clearance (RLSC)', 'Pre-qualified documentation packs for Ras Laffan and Doha industrial deliveries'],
+                      ['Kuwait', 'KUCAS conformity assessment, KOC / KNPC contractor documentation', 'Verification certificates and technical files formatted to KOC and KNPC requirements'],
+                      ['Bahrain', 'Bahrain customs declaration via King Fahd Causeway, ALBA / BAPCO contractor qualification', 'GCC preferential-origin paperwork to reduce import duties where eligible'],
+                      ['Egypt', 'GOEIC import registration, Nafeza single-window pre-clearance (ACID number)', 'Nafeza-compatible documentation and Halal certification for food-grade shipments'],
+                      ['Jordan', 'JFDA requirements for pharma-grade materials, Aqaba free-zone processing', 'Full Arabic SDS and tariff-code guidance under the Jordan–GCC trade agreements'],
+                      ['Iraq', 'Iraqi import licensing for hazardous and non-hazardous chemicals', 'LC (letter of credit) support and Arabic documentation packs for Baghdad and Basra consignees'],
+                    ].map(([market, regime, support]) => (
+                      <tr key={market} className="align-top">
+                        <th scope="row" className="px-4 py-3 font-medium text-foreground whitespace-nowrap">{market}</th>
+                        <td className="px-4 py-3 text-muted-foreground">{regime}</td>
+                        <td className="px-4 py-3 text-muted-foreground">{support}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* GCC Countries Grid */}
         <section className="py-16 md:py-24">
