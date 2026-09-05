@@ -41,6 +41,10 @@ const faqs = [
   {
     question: "How do I get a quote for chemical export to the Middle East?",
     answer: "Contact our export team by email at sales@gcoman.com, call +968-93754388, or use WhatsApp for fast quotes. Include the chemical name or CAS number, required quantity, delivery country and city, and your preferred incoterms (FOB/CIF/DAP). We typically provide quotes within 24 hours with competitive pricing and lead times."
+  },
+  {
+    question: "Which regulatory registrations do imported chemicals need in GCC countries?",
+    answer: "Each market has its own import-control regime, and we prepare the required documentation for all of them: SASO/SABER product registration for Saudi Arabia, MOIAT/ESMA conformity for the UAE, KUCAS verification for Kuwait, QatarEnergy vendor qualification for Qatar, and GOEIC/Nafeza pre-clearance for Egypt. Our export team supplies SABER-ready test reports, GCC preferential-origin certificates, and Arabic SDS packs so your consignment clears customs without delays."
   }
 ];
 
@@ -147,9 +151,9 @@ const ChemicalSuppliersMiddleEast = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Middle East Chemical Supplier | Oman Export in 3–5 Days"
-        description="Export chemicals from Oman to UAE (3–5 days), Saudi (5–7), Qatar, Kuwait & Bahrain. ISO 9001 + JSRS certified, Arabic SDS, CoA & CoO. Quote in 24 hours."
-        keywords="chemical exporter Oman UAE, chemical supplier Middle East, chemical supplier Oman to Dubai, chemical exporter Oman Saudi Arabia, chemical supplier Oman Qatar Kuwait Bahrain, chemical supplier Iraq Baghdad Basra, chemical supplier Jordan Amman, chemical supplier Egypt Cairo Alexandria, chemical export from Oman GCC, water treatment chemicals Middle East, oilfield chemicals Middle East, industrial chemicals export Oman, caustic soda exporter Oman UAE"
+        title="GCC Chemical Exporter Oman | UAE, Saudi & Middle East Supply"
+        description="GCC chemical exporter from Oman to UAE, Saudi Arabia, Qatar, Kuwait & Bahrain. 3–7 day road freight, Arabic SDS, CoA, CoO & SASO/SABER documentation."
+        keywords="GCC chemical exporter, industrial chemical supplier UAE Saudi Arabia, chemical exporter Oman UAE, chemical supplier Middle East, chemical supplier Oman to Dubai, chemical exporter Oman Saudi Arabia, chemical supplier Oman Qatar Kuwait Bahrain, chemical supplier Iraq Baghdad Basra, chemical supplier Jordan Amman, chemical supplier Egypt Cairo Alexandria, chemical export from Oman GCC, water treatment chemicals Middle East, oilfield chemicals Middle East, industrial chemicals export Oman, caustic soda exporter Oman UAE"
         ogTitle="Chemical Supplier & Exporter to the Middle East | Global Chemicals LLC"
         ogDescription="ISO 9001 & JSRS certified — Global Chemicals LLC exports water treatment, industrial, oilfield & lab chemicals from Oman across the Middle East, with full Arabic documentation."
         ogUrl="https://gcoman.com/chemical-suppliers-middle-east"
@@ -308,6 +312,53 @@ const ChemicalSuppliersMiddleEast = () => {
           </div>
         </section>
 
+        {/* Country-by-country customs & regulatory compliance */}
+        <section className="py-16 md:py-20 bg-muted/30 border-y">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+                Customs &amp; Regulatory Compliance by Country
+              </h2>
+              <p className="text-muted-foreground text-center mb-10 max-w-2xl mx-auto">
+                Every GCC and wider Middle East destination has its own import-control regime.
+                We prepare the registration certificates and conformity paperwork each market
+                requires so your consignment clears without delays.
+              </p>
+              <div className="overflow-x-auto rounded-xl border bg-background">
+                <table className="w-full text-left text-sm">
+                  <caption className="sr-only">
+                    Chemical import compliance requirements by Middle East country
+                  </caption>
+                  <thead className="bg-muted/50">
+                    <tr>
+                      <th scope="col" className="px-4 py-3 font-semibold">Market</th>
+                      <th scope="col" className="px-4 py-3 font-semibold">Regulatory regime</th>
+                      <th scope="col" className="px-4 py-3 font-semibold">How we support your import</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y">
+                    {[
+                      ['UAE', 'MOIAT / ESMA conformity, Dubai Municipality registration for regulated chemicals', 'Emirates-compliant labeling, product certificates, and CoA packs prepared for JAFZA, KIZAD, and Sharjah industrial clearances'],
+                      ['Saudi Arabia', 'SASO / SABER product registration, SFDA for applicable products', 'SABER-ready test reports and conformity documents; CoO attested by Oman Chamber of Commerce'],
+                      ['Qatar', 'QatarEnergy vendor qualification, Ras Laffan Security Clearance (RLSC)', 'Pre-qualified documentation packs for Ras Laffan and Doha industrial deliveries'],
+                      ['Kuwait', 'KUCAS conformity assessment, KOC / KNPC contractor documentation', 'Verification certificates and technical files formatted to KOC and KNPC requirements'],
+                      ['Bahrain', 'Bahrain customs declaration via King Fahd Causeway, ALBA / BAPCO contractor qualification', 'GCC preferential-origin paperwork to reduce import duties where eligible'],
+                      ['Egypt', 'GOEIC import registration, Nafeza single-window pre-clearance (ACID number)', 'Nafeza-compatible documentation and Halal certification for food-grade shipments'],
+                      ['Jordan', 'JFDA requirements for pharma-grade materials, Aqaba free-zone processing', 'Full Arabic SDS and tariff-code guidance under the Jordan–GCC trade agreements'],
+                      ['Iraq', 'Iraqi import licensing for hazardous and non-hazardous chemicals', 'LC (letter of credit) support and Arabic documentation packs for Baghdad and Basra consignees'],
+                    ].map(([market, regime, support]) => (
+                      <tr key={market} className="align-top">
+                        <th scope="row" className="px-4 py-3 font-medium text-foreground whitespace-nowrap">{market}</th>
+                        <td className="px-4 py-3 text-muted-foreground">{regime}</td>
+                        <td className="px-4 py-3 text-muted-foreground">{support}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* GCC Countries Grid */}
         <section className="py-16 md:py-24">
