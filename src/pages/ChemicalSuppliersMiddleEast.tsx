@@ -416,9 +416,20 @@ const ChemicalSuppliersMiddleEast = () => {
                   <p className="text-muted-foreground leading-relaxed text-lg mb-4">
                     We regularly supply to clients in Jebel Ali Free Zone (JAFZA), Dubai Industrial City, KIZAD (Khalifa Industrial Zone Abu Dhabi), Abu Dhabi Industrial City, and Sharjah industrial areas. Products are exported with full UAE customs documentation: Certificate of Analysis (CoA), Safety Data Sheet (SDS/MSDS), Certificate of Origin, commercial invoice, and packing list. FOB Muscat and CIF Dubai/Abu Dhabi pricing available.
                   </p>
-                  <Link to="/chemicals/dubai" className="inline-flex items-center gap-1 text-primary font-medium hover:underline">
-                    Chemical supplier details for UAE <ArrowRight className="w-4 h-4" />
-                  </Link>
+                  <div className="flex flex-wrap gap-x-6 gap-y-2">
+                    <Link to="/chemicals/uae" className="inline-flex items-center gap-1 text-primary font-medium hover:underline">
+                      Chemical supplier for UAE <ArrowRight className="w-4 h-4" />
+                    </Link>
+                    <Link to="/chemicals/dubai" className="inline-flex items-center gap-1 text-primary font-medium hover:underline">
+                      Chemical suppliers in Dubai <ArrowRight className="w-4 h-4" />
+                    </Link>
+                    <Link to="/chemicals/abu-dhabi" className="inline-flex items-center gap-1 text-primary font-medium hover:underline">
+                      Chemical suppliers in Abu Dhabi <ArrowRight className="w-4 h-4" />
+                    </Link>
+                    <Link to="/chemicals/sharjah" className="inline-flex items-center gap-1 text-primary font-medium hover:underline">
+                      Chemical suppliers in Sharjah <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
                 </div>
               </div>
 
@@ -433,9 +444,23 @@ const ChemicalSuppliersMiddleEast = () => {
                   <p className="text-muted-foreground leading-relaxed text-lg mb-4">
                     We provide full Saudi import documentation: Certificate of Origin (attested by Oman Chamber of Commerce), Safety Data Sheet in Arabic and English, Certificate of Analysis, SASO compliance where applicable, commercial invoice, and packing list. Products include PAC, caustic soda, antiscalants, corrosion inhibitors, demulsifiers, H2S scavengers, and 1,000+ other chemicals.
                   </p>
-                  <Link to="/chemicals/riyadh" className="inline-flex items-center gap-1 text-primary font-medium hover:underline">
-                    Chemical supplier details for Saudi Arabia <ArrowRight className="w-4 h-4" />
-                  </Link>
+                  <div className="flex flex-wrap gap-x-6 gap-y-2">
+                    <Link to="/chemicals/saudi-arabia" className="inline-flex items-center gap-1 text-primary font-medium hover:underline">
+                      Chemical supplier for Saudi Arabia <ArrowRight className="w-4 h-4" />
+                    </Link>
+                    <Link to="/chemicals/riyadh" className="inline-flex items-center gap-1 text-primary font-medium hover:underline">
+                      Chemical suppliers in Riyadh <ArrowRight className="w-4 h-4" />
+                    </Link>
+                    <Link to="/chemicals/jeddah" className="inline-flex items-center gap-1 text-primary font-medium hover:underline">
+                      Chemical suppliers in Jeddah <ArrowRight className="w-4 h-4" />
+                    </Link>
+                    <Link to="/chemicals/dammam" className="inline-flex items-center gap-1 text-primary font-medium hover:underline">
+                      Chemical suppliers in Dammam <ArrowRight className="w-4 h-4" />
+                    </Link>
+                    <Link to="/chemicals/jubail" className="inline-flex items-center gap-1 text-primary font-medium hover:underline">
+                      Chemical suppliers in Jubail <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
                 </div>
               </div>
 

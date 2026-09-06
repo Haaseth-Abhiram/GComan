@@ -267,16 +267,16 @@ const locations: Record<string, LocationData> = {
     cityArabic: 'دبي',
     country: 'UAE',
     region: 'Dubai, United Arab Emirates',
-    description: 'Global Chemicals LLC exports a comprehensive range of industrial and specialty chemicals to Dubai and the broader UAE. We supply water treatment chemicals, oilfield chemicals, industrial lubricants, laboratory reagents, and construction chemicals to industries across Jebel Ali Free Zone (JAFZA), Dubai Industrial City, and major project sites throughout the Emirates.',
-    industries: ['Oil & Gas', 'Construction', 'Manufacturing', 'Water Treatment', 'Hospitality', 'Pharmaceuticals', 'Food Processing'],
-    deliveryTime: '3-5 business days to Dubai (road freight) or 1-2 days (air freight)',
-    keyClients: ['JAFZA-registered companies', 'Dubai construction projects', 'Hotel chains', 'Manufacturing facilities', 'Pharmaceutical labs'],
+    description: 'Global Chemicals LLC supplies industrial and specialty chemicals to Dubai from our Muscat warehouse, moving under GCC customs transit so most industrial grades clear without a separate UAE import agent. Road freight runs the Hatta and Al Ain border lanes to Dubai in 3–5 business days, with drum, IBC, and full-container loads consolidated on scheduled weekly departures; air freight from Muscat reaches Dubai within 24 hours for urgent requirements. We serve buyers across Jebel Ali Free Zone (JAFZA), Dubai Industrial City, Dubai Investments Park (DIP), Al Quoz Industrial Area, and National Industries Park — water treatment and facilities-management companies, district cooling operators, construction and MEP contractors, hotel and hospitality chains, food processors, marine chandlers at Jebel Ali, and pharmaceutical and analytical laboratories. Every consignment ships with a Certificate of Origin attested by the Oman Chamber of Commerce, GHS Safety Data Sheets in Arabic and English, batch Certificate of Analysis, Technical Data Sheet, and HS-coded commercial invoice; conformity and permit guidance for regulated categories is advised per product before shipment.',
+    industries: ['Water Treatment & District Cooling', 'Oil & Gas', 'Construction & MEP', 'Manufacturing', 'Hospitality & Facilities Management', 'Pharmaceuticals & Laboratories', 'Food Processing', 'Marine & Ship Supply'],
+    deliveryTime: '3–5 business days by road via the Hatta / Al Ain border lanes; 24-hour air freight available',
+    keyClients: ['JAFZA-registered companies', 'District cooling & FM operators', 'Dubai construction & MEP contractors', 'Hotel chains & hospitality groups', 'Marine chandlers at Jebel Ali', 'Pharmaceutical & QC labs'],
     highlights: [
-      'Full export documentation provided (COA, SDS, CO)',
-      'FOB Muscat / CIF Dubai pricing available',
-      'ISO 9001 certified quality assurance',
-      'Competitive USD export pricing',
-      'Large order bulk supply capability'
+      'GCC customs union — no UAE import agent for most industrial grades',
+      'Road freight Muscat to Dubai in 3–5 business days; air freight in 24h',
+      'JAFZA, DIP, Al Quoz & Dubai Industrial City delivery experience',
+      'Vendor pack: attested CoO, Arabic + English SDS, batch CoA, TDS',
+      'Drum, IBC and full-container loads on scheduled weekly departures'
     ],
     faqs: [
       {
@@ -290,11 +290,19 @@ const locations: Record<string, LocationData> = {
       {
         question: 'Can you supply chemicals to Jebel Ali Free Zone (JAFZA)?',
         answer: 'Yes, we regularly supply chemicals to clients in JAFZA and Dubai Industrial City. We can coordinate with freight forwarders for delivery to free zone warehouses and provide all required documentation for free zone import procedures.'
+      },
+      {
+        question: 'Do I need a UAE import agent to buy chemicals from Oman?',
+        answer: 'For most industrial chemical grades, no. Oman and the UAE share the GCC customs union, so consignments move under customs transit without a separate UAE import agent or local trade licence on our side. Regulated categories — food-contact, cosmetic-grade, and certain hazardous classifications — carry additional UAE conformity or permit requirements, and our export team confirms what applies per product before shipment.'
+      },
+      {
+        question: 'Why import chemicals from Oman instead of buying locally in Dubai?',
+        answer: 'Direct import from our Muscat warehouse removes one trading margin from the chain, and GCC preferential origin applies to eligible products. For recurring volume in commodity chemicals — caustic soda, PAC, sodium hypochlorite, glycols, solvents — landed cost via the 3–5 day road lane is frequently below local trader pricing, and scheduled weekly departures keep stock replenishment predictable. We quote FOB Muscat, CIF Jebel Ali, or DAP-to-door in AED or USD so you can compare like for like.'
       }
     ],
-    metaTitle: 'Chemical Supplier Dubai | Industrial Chemicals UAE | Global Chemicals LLC',
-    metaDescription: 'Chemical supplier exporting to Dubai & UAE. Water treatment chemicals, industrial lubricants, lab chemicals, oilfield chemicals. ISO 9001 certified. 3-5 day delivery. Get a quote.',
-    metaKeywords: 'chemical supplier Dubai, chemicals Dubai, industrial chemicals UAE, water treatment chemicals Dubai, laboratory chemicals Dubai, chemical exporter Oman UAE, chemical supplier UAE, oilfield chemicals Dubai, JAFZA chemical supplier'
+    metaTitle: 'Chemical Suppliers in Dubai UAE | Global Chemicals LLC',
+    metaDescription: 'Chemical suppliers in Dubai: import from Oman in 3–5 days, 24h air freight. Water treatment, oilfield & lab chemicals to JAFZA, DIP, Al Quoz. Get a quote.',
+    metaKeywords: 'chemical suppliers in Dubai, chemical supplier Dubai, chemicals Dubai, industrial chemicals UAE, water treatment chemicals Dubai, laboratory chemicals Dubai, chemical exporter Oman UAE, chemical supplier UAE, oilfield chemicals Dubai, JAFZA chemical supplier, chemical trading companies in Dubai'
   },
 
   'abu-dhabi': {
@@ -545,7 +553,7 @@ const locations: Record<string, LocationData> = {
     cityArabic: 'الشارقة',
     country: 'UAE',
     region: 'Sharjah, United Arab Emirates',
-    description: 'Global Chemicals LLC exports industrial and specialty chemicals to Sharjah, UAE\'s third-largest emirate and one of the GCC\'s most significant industrial and free zone hubs. We serve Hamriyah Free Zone (HFZA), SAIF Zone (Sharjah Airport International Free Zone), Sharjah Industrial Area, and the emirate\'s diverse manufacturing and education sectors with water treatment chemicals, industrial lubricants, laboratory reagents, and specialty chemicals.',
+    description: 'Global Chemicals LLC supplies industrial and specialty chemicals to Sharjah from our Muscat warehouse, moving under GCC customs transit so most industrial grades clear without a separate UAE import agent. Road freight reaches Sharjah in 3–5 business days via the Hatta and Al Ain border lanes, with drum, IBC, and full-container loads consolidated on scheduled weekly departures. Sharjah is one of the GCC\'s densest industrial and chemical-trading hubs, and we serve it district by district: Hamriyah Free Zone (HFZA) — the region\'s largest chemical storage and trading zone, SAIF Zone at Sharjah International Airport, Sharjah Industrial Areas 1–13, Al Sajaa Industrial Area, and the University City research corridor. Buyers include manufacturers, chemical traders and re-exporters, construction materials producers, food processors, and university and QC laboratories. Every consignment ships with a Certificate of Origin attested by the Oman Chamber of Commerce, GHS Safety Data Sheets in Arabic and English, batch Certificate of Analysis, Technical Data Sheet, and HS-coded commercial invoice, with conformity and permit guidance for regulated categories advised per product before shipment.',
     industries: ['Manufacturing & Industry', 'Chemicals Trading (Hamriyah FZ)', 'Construction Materials', 'Food Processing', 'Logistics & Warehousing', 'Education & Research', 'Pharmaceuticals'],
     deliveryTime: '3–5 business days to Sharjah (road freight)',
     keyClients: ['Hamriyah Free Zone (HFZA) companies', 'SAIF Zone businesses', 'Sharjah Industrial Area manufacturers', 'University & research labs', 'Food processing facilities'],
@@ -568,11 +576,19 @@ const locations: Record<string, LocationData> = {
       {
         question: 'What laboratory chemicals can you supply to Sharjah universities and research institutes?',
         answer: 'We supply AR grade laboratory chemicals, HPLC-grade solvents, buffer solutions, indicators, and specialty analytical chemicals to universities, research institutions, and QC labs in Sharjah. We stock 50+ standard laboratory chemicals and can source specialty items on request with full CoA and SDS documentation.'
+      },
+      {
+        question: 'Do I need a UAE import agent to buy chemicals from Oman for Sharjah?',
+        answer: 'For most industrial chemical grades, no. Oman and the UAE share the GCC customs union, so consignments move under customs transit without a separate UAE import agent. Regulated categories — food-contact, cosmetic-grade, and certain hazardous classifications — carry additional UAE conformity or permit requirements, and our export team confirms what applies per product before shipment.'
+      },
+      {
+        question: 'Can you supply chemical traders and re-exporters in Hamriyah Free Zone?',
+        answer: 'Yes. Many HFZA companies buy from us in bulk — drums, IBCs, or full container loads — for onward regional trading and re-export. We quote FOB Muscat or DAP Hamriyah in AED or USD, supply GCC preferential-origin documentation where eligible, and can ship with neutral or private labelling arrangements for trading houses on request.'
       }
     ],
-    metaTitle: 'Chemical Supplier Sharjah | Hamriyah Free Zone HFZA Chemicals | Global Chemicals LLC',
-    metaDescription: 'Chemical supplier exporting to Sharjah, UAE. Hamriyah Free Zone, SAIF Zone & Sharjah Industrial Area supply. Water treatment, lab & industrial chemicals. ISO 9001. Get a quote.',
-    metaKeywords: 'chemical supplier Sharjah, chemicals Sharjah UAE, Hamriyah Free Zone chemicals HFZA, SAIF Zone chemicals Sharjah, industrial chemicals Sharjah, water treatment chemicals Sharjah, laboratory chemicals Sharjah, chemical exporter Oman Sharjah, chemical distributor Sharjah UAE'
+    metaTitle: 'Chemical Suppliers in Sharjah | HFZA & SAIF Zone Supply',
+    metaDescription: 'Chemical suppliers in Sharjah — import from Oman in 3–5 days. HFZA, SAIF Zone & Industrial Area supply. Water treatment & lab chemicals. Get a quote.',
+    metaKeywords: 'chemical suppliers in Sharjah, chemical supplier Sharjah, chemicals Sharjah UAE, Hamriyah Free Zone chemicals HFZA, SAIF Zone chemicals Sharjah, industrial chemicals Sharjah, water treatment chemicals Sharjah, laboratory chemicals Sharjah, chemical exporter Oman Sharjah, chemical distributor Sharjah UAE'
   },
 
   'ras-al-khaimah': {
