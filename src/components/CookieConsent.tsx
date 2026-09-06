@@ -73,14 +73,14 @@ const CookieConsent = () => {
     <>
       {/* Solid pill banner with gradient ring — always visible on any background */}
       {showBanner && (
-      <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[60] animate-in slide-in-from-bottom duration-500">
+      <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[60] max-w-[calc(100vw-1rem)] animate-in slide-in-from-bottom duration-500">
         <div className="rounded-full bg-gradient-to-r from-secondary via-primary to-accent p-[2px] shadow-xl shadow-foreground/10">
-          <div className="flex items-center gap-3 rounded-full bg-card pl-4 pr-2 py-2">
+          <div className="flex items-center gap-2 sm:gap-3 rounded-full bg-card pl-3 sm:pl-4 pr-2 py-2">
             <Cookie className="h-4 w-4 text-primary flex-shrink-0" />
-            <span className="text-xs font-medium text-foreground whitespace-nowrap">
+            <span className="hidden sm:inline text-xs font-medium text-foreground whitespace-nowrap">
               We use cookies
             </span>
-            <div className="h-4 w-px bg-border" />
+            <div className="hidden sm:block h-4 w-px bg-border" />
             <div className="flex items-center gap-1.5">
               <Button
                 onClick={() => setShowSettings(true)}

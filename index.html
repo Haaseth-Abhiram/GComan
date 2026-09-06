@@ -31,16 +31,13 @@
     <meta name="distribution" content="global" />
     <meta name="target" content="all" />
     
-    <!-- Performance Optimization -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-
-    <!-- Arabic Font for RTL Support — loaded non-render-blocking so English pages
-         (the vast majority of mobile LCP entries) don't wait on Google Fonts CSS. -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap"></noscript>
+    <!-- Arabic fonts (Noto Sans Arabic) are downloaded at build time and
+         self-hosted by ViteWebfontDownload (vite.config.ts): the @font-face
+         rules are inlined into the built CSS with unicode-range, so English
+         pages download zero font binaries and /ar pages fetch same-origin
+         woff2 — no runtime Google Fonts request. Do NOT re-add
+         fonts.googleapis.com links here; they'd be a redundant third-party
+         round trip duplicating the self-hosted set. -->
 
     <!-- hreflang, og:*, twitter:* are set per-page by Helmet via SEO.tsx -->
 

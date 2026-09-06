@@ -58,7 +58,7 @@ export default defineConfig(({ mode }) => ({
     }),
     // Download and self-host web fonts for better performance
     ViteWebfontDownload([
-      'https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;700&display=swap',
+      'https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap',
     ]),
     // Static prerendering for SEO — runs only on production builds.
     // Why: site is a pure SPA, so without this every URL ships an empty
