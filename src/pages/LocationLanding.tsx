@@ -311,16 +311,16 @@ const locations: Record<string, LocationData> = {
     cityArabic: 'أبوظبي',
     country: 'UAE',
     region: 'Abu Dhabi, United Arab Emirates',
-    description: 'Global Chemicals LLC serves Abu Dhabi\'s oil & gas, manufacturing, and construction sectors with industrial and specialty chemical exports. We supply chemicals to ADNOC contractors, KIZAD (Khalifa Industrial Zone), Abu Dhabi Industrial City, and major infrastructure projects across the UAE capital.',
-    industries: ['Oil & Gas (ADNOC)', 'Refining & Petrochemicals', 'Manufacturing', 'Construction & Infrastructure', 'Desalination', 'Utilities', 'Pharmaceuticals'],
-    deliveryTime: '3-5 business days to Abu Dhabi (road freight)',
-    keyClients: ['ADNOC contractors', 'KIZAD companies', 'Abu Dhabi construction projects', 'Utility companies', 'Petrochemical facilities'],
+    description: 'Global Chemicals LLC supplies industrial and specialty chemicals to Abu Dhabi from our Muscat warehouse, moving under GCC customs transit so most industrial grades clear without a separate UAE import agent. Road freight runs the Al Ain / Mezyad border lane to the capital in 3–5 business days, with drum, IBC, and full-container loads consolidated on scheduled weekly departures; air freight from Muscat reaches Abu Dhabi within 24–48 hours for urgent requirements. We serve buyers across Mussafah and the ICAD industrial cities, KEZAD (Khalifa Economic Zones, formerly KIZAD), and the Ruwais refining corridor — ADNOC group contractors and oilfield service companies, desalination and utility operators, construction and infrastructure contractors, manufacturers, and pharmaceutical and analytical laboratories. Every consignment ships with a Certificate of Origin attested by the Oman Chamber of Commerce, GHS Safety Data Sheets in Arabic and English, batch Certificate of Analysis, Technical Data Sheet, and HS-coded commercial invoice, with conformity and permit guidance for regulated categories advised per product before shipment.',
+    industries: ['Oil & Gas (ADNOC)', 'Refining & Petrochemicals (Ruwais)', 'Desalination & Utilities', 'Construction & Infrastructure', 'Manufacturing (Mussafah / ICAD / KEZAD)', 'Pharmaceuticals & Laboratories'],
+    deliveryTime: '3–5 business days by road via the Al Ain / Mezyad border lane; 24–48h air freight available',
+    keyClients: ['ADNOC group contractors & oilfield service companies', 'KEZAD & ICAD manufacturers', 'Desalination & utility operators', 'Abu Dhabi construction & infrastructure projects', 'Pharmaceutical & QC laboratories'],
     highlights: [
-      'ADNOC supply chain experience',
-      'KIZAD and Abu Dhabi Industrial City supply',
-      'Oilfield & refinery chemical expertise',
-      'Full regulatory documentation',
-      'Bulk and project-based supply'
+      'GCC customs union — no UAE import agent for most industrial grades',
+      'Al Ain / Mezyad road lane, Muscat to Abu Dhabi in 3–5 business days',
+      'Mussafah, ICAD, KEZAD & Ruwais corridor delivery experience',
+      'Vendor pack: attested CoO, Arabic + English SDS, batch CoA, TDS',
+      'Drum, IBC and full-container loads on scheduled weekly departures'
     ],
     faqs: [
       {
@@ -334,11 +334,19 @@ const locations: Record<string, LocationData> = {
       {
         question: 'What is the lead time for chemical supply to Abu Dhabi?',
         answer: 'Standard road freight from Muscat to Abu Dhabi typically takes 3-5 business days. For urgent requirements, air freight can deliver within 1-2 business days. We also offer scheduled weekly shipments for regular clients with standing orders.'
+      },
+      {
+        question: 'Do I need a UAE import agent to buy chemicals from Oman for Abu Dhabi?',
+        answer: 'For most industrial chemical grades, no. Oman and the UAE share the GCC customs union, so consignments move under customs transit without a separate UAE import agent. Regulated categories — food-contact, cosmetic-grade, and certain hazardous classifications — carry additional UAE conformity or permit requirements, and our export team confirms what applies per product before shipment.'
+      },
+      {
+        question: 'Can you deliver chemicals to Mussafah and the ICAD industrial cities?',
+        answer: 'Yes. Mussafah and the ICAD I–III industrial cities are regular delivery destinations on our Abu Dhabi lane, alongside KEZAD and project sites on the Ruwais corridor. We quote FOB Muscat, CIF Abu Dhabi, or DAP-to-door in AED or USD, and consolidate drum and IBC orders with full-container loads on scheduled weekly departures.'
       }
     ],
-    metaTitle: 'Chemical Supplier Abu Dhabi | ADNOC Supply Chain Chemicals | Global Chemicals LLC',
-    metaDescription: 'Chemical supplier exporting to Abu Dhabi & KIZAD. Oilfield chemicals, water treatment, industrial lubricants. ISO 9001 certified. Serving ADNOC contractors. Get a quote.',
-    metaKeywords: 'chemical supplier Abu Dhabi, chemicals Abu Dhabi, ADNOC chemical supplier, KIZAD chemicals, oilfield chemicals Abu Dhabi, water treatment chemicals Abu Dhabi, industrial chemicals UAE, chemical exporter Oman'
+    metaTitle: 'Chemical Suppliers in Abu Dhabi | ADNOC Supply Chain',
+    metaDescription: 'Chemical suppliers in Abu Dhabi — import from Oman in 3–5 days. Oilfield, water treatment & lab chemicals to Mussafah, ICAD & KEZAD. Get a quote.',
+    metaKeywords: 'chemical suppliers in Abu Dhabi, chemical supplier Abu Dhabi, chemicals Abu Dhabi, ADNOC chemical supplier, KEZAD chemicals, KIZAD chemicals, Mussafah industrial chemicals, oilfield chemicals Abu Dhabi, water treatment chemicals Abu Dhabi, industrial chemicals UAE, chemical exporter Oman'
   },
 
   'riyadh': {
@@ -392,7 +400,7 @@ const locations: Record<string, LocationData> = {
     cityArabic: 'الدوحة',
     country: 'Qatar',
     region: 'Doha, Qatar',
-    description: 'Global Chemicals LLC exports specialty and industrial chemicals to Qatar, serving Doha\'s rapidly growing industrial, LNG, and infrastructure sectors. We supply water treatment chemicals, oilfield production chemicals, laboratory reagents, and industrial lubricants to QatarEnergy contractors, Ras Laffan Industrial City, and Doha-based industries.',
+    description: 'Global Chemicals LLC supplies industrial and specialty chemicals to Qatar from our Muscat warehouse, with road freight reaching Doha in 3–5 business days and drum, IBC, and full-container loads consolidated on scheduled weekly departures. We serve Qatar\'s industrial map end to end: QatarEnergy contractors and LNG operators in Ras Laffan Industrial City, petrochemical and fertilizer producers in Mesaieed Industrial City (MIC), manufacturers in the Doha Industrial Area and New Industrial Area, water and utility operators, infrastructure contractors, and analytical laboratories. The portfolio spans oilfield production chemicals (corrosion inhibitors, hydrate inhibitors, scale inhibitors, demulsifiers), water treatment and RO chemicals, industrial lubricants, and laboratory reagents. Every consignment ships with a Certificate of Origin attested by the Oman Chamber of Commerce, GHS Safety Data Sheets in Arabic and English, batch Certificate of Analysis, Technical Data Sheet, and HS-coded commercial invoice, and our team is experienced with Ras Laffan security clearance and QatarEnergy vendor-qualification documentation.',
     industries: ['LNG & Gas Processing', 'Petrochemicals', 'Water Treatment & Desalination', 'Construction', 'Manufacturing', 'Oil & Gas', 'Utilities'],
     deliveryTime: '3-5 business days to Doha (road freight)',
     keyClients: ['QatarEnergy contractors', 'Ras Laffan companies', 'Doha construction projects', 'Utility companies', 'Industrial manufacturers'],
@@ -415,11 +423,19 @@ const locations: Record<string, LocationData> = {
       {
         question: 'Can you handle LNG sector chemical requirements in Qatar?',
         answer: 'Yes, our chemical portfolio includes products specifically suited for LNG and gas processing operations, including corrosion inhibitors, hydrate inhibitors, defoamers, and water treatment chemicals. We can provide product specifications and technical support for LNG sector applications.'
+      },
+      {
+        question: 'Can you deliver chemicals to Mesaieed Industrial City (MIC)?',
+        answer: 'Yes. Mesaieed Industrial City\'s petrochemical, fertilizer, and steel producers are regular destinations on our Qatar lane, alongside the Doha Industrial Area and New Industrial Area. We quote FOB Muscat, CIF Hamad Port, or DAP-to-site in QAR or USD, and consolidate drum and IBC orders with full-container loads on scheduled weekly departures.'
+      },
+      {
+        question: 'What payment terms and currencies do you accept for Qatar orders?',
+        answer: 'We invoice in QAR, USD, or other major currencies. Terms include advance payment, 30-day net for established accounts, and Letter of Credit for large or bulk orders. Complete export documentation is issued with each shipment for clearance at the Qatari point of entry.'
       }
     ],
-    metaTitle: 'Chemical Supplier Qatar | Industrial Chemicals Doha | Global Chemicals LLC',
-    metaDescription: 'Chemical supplier exporting to Qatar & Doha. LNG, water treatment, oilfield chemicals to Ras Laffan & Doha. ISO 9001 certified. QatarEnergy contractor support. Get a quote.',
-    metaKeywords: 'chemical supplier Qatar, chemicals Doha, industrial chemicals Qatar, water treatment chemicals Qatar, oilfield chemicals Qatar, LNG chemicals Qatar, QatarEnergy chemical supplier, chemical exporter Oman Qatar, Ras Laffan chemicals',
+    metaTitle: 'Chemical Suppliers in Qatar | Doha & Ras Laffan Supply',
+    metaDescription: 'Chemical suppliers in Qatar — Doha & Ras Laffan supply from Oman in 3–5 days. LNG, water treatment, oilfield & lab chemicals. Get a quote.',
+    metaKeywords: 'chemical suppliers in Qatar, chemical suppliers in Doha, chemical supplier Qatar, chemicals Doha, industrial chemicals Qatar, water treatment chemicals Qatar, oilfield chemicals Qatar, LNG chemicals Qatar, QatarEnergy chemical supplier, chemical exporter Oman Qatar, Ras Laffan chemicals, Mesaieed chemicals',
     relatedGuide: {
       slug: 'gcc-desalination-water-treatment-chemicals',
       title: 'Desalination & Water Treatment Chemicals Across the GCC',
@@ -433,7 +449,7 @@ const locations: Record<string, LocationData> = {
     cityArabic: 'مدينة الكويت',
     country: 'Kuwait',
     region: 'Kuwait City, Kuwait',
-    description: 'Global Chemicals LLC exports industrial and specialty chemicals to Kuwait, serving Kuwait City\'s oil refining, manufacturing, and water treatment sectors. We supply chemicals to Kuwait Oil Company (KOC) contractors, KNPC refineries supply chains, Shuaiba Industrial Area, and other industrial zones across Kuwait.',
+    description: 'Global Chemicals LLC supplies industrial and specialty chemicals to Kuwait from our Muscat warehouse, moving under GCC customs transit with road freight through Saudi Arabia reaching Kuwait City in 4–6 business days; drum, IBC, and full-container loads consolidate on scheduled weekly departures. We serve Kuwait\'s industrial map end to end: KOC contractors and oilfield service companies in Ahmadi, KNPC refinery supply chains across Mina Abdullah, Mina Al-Ahmadi, and the Al-Zour complex, manufacturers in Shuaiba Industrial Area and Sabhan, desalination and power-plant operators, and analytical laboratories. The portfolio spans refinery and oilfield production chemicals, water treatment and RO chemicals for Kuwait\'s desalination-dependent water system, industrial lubricants, and laboratory reagents. Every consignment ships with a Certificate of Origin attested by the Oman Chamber of Commerce, GHS Safety Data Sheets in Arabic and English, batch Certificate of Analysis, Technical Data Sheet, and HS-coded commercial invoice, with vendor-qualification documentation support for KOC and KNPC contractor workflows.',
     industries: ['Oil Refining (KNPC)', 'Petrochemicals', 'Water Treatment & Desalination', 'Manufacturing', 'Construction', 'Utilities'],
     deliveryTime: '4-6 business days to Kuwait City (road freight)',
     keyClients: ['KOC contractors', 'KNPC supply chains', 'Shuaiba Industrial Area companies', 'Kuwait utility companies', 'Manufacturing facilities'],
@@ -456,11 +472,19 @@ const locations: Record<string, LocationData> = {
       {
         question: 'What export pricing terms do you offer for Kuwait?',
         answer: 'We can quote on FOB Muscat, CIF Shuwaikh Port, or DAP delivery terms. Pricing is available in KWD, USD, or OMR. For regular clients we offer open account terms; for new relationships we typically start with advance payment or Letter of Credit.'
+      },
+      {
+        question: 'Do I need a Kuwaiti import agent to buy chemicals from Oman?',
+        answer: 'For most industrial chemical grades, no. Oman and Kuwait share the GCC customs union, so consignments move under customs transit without a separate Kuwaiti import agent. Regulated categories — food-contact, cosmetic-grade, and certain hazardous classifications — carry additional conformity or permit requirements, and our export team confirms what applies per product before shipment.'
+      },
+      {
+        question: 'Can you deliver chemicals to Shuaiba, Ahmadi, and the Al-Zour complex?',
+        answer: 'Yes. Shuaiba Industrial Area, the Ahmadi oil-sector hub, and the Al-Zour refinery and power complex are regular destinations on our Kuwait lane, alongside Sabhan and the Shuwaikh port area. We quote FOB Muscat, CIF Shuwaikh, or DAP-to-site in KWD or USD, and consolidate drum and IBC orders with full-container loads on scheduled weekly departures.'
       }
     ],
-    metaTitle: 'Chemical Supplier Kuwait | Industrial Chemicals Kuwait City | Global Chemicals LLC',
-    metaDescription: 'Chemical supplier exporting to Kuwait. Water treatment, oilfield, refinery chemicals to Kuwait City & Shuaiba. ISO 9001 certified. KOC contractor support. Get a quote.',
-    metaKeywords: 'chemical supplier Kuwait, chemicals Kuwait City, industrial chemicals Kuwait, water treatment chemicals Kuwait, oilfield chemicals Kuwait, KOC chemical supplier, KNPC chemicals, chemical exporter Oman Kuwait, Shuaiba chemicals',
+    metaTitle: 'Chemical Suppliers in Kuwait | KNPC & Shuaiba Supply',
+    metaDescription: 'Chemical suppliers in Kuwait — import from Oman in 4–6 days. Refinery, water treatment & lab chemicals to Shuaiba, Ahmadi & Al-Zour. Get a quote.',
+    metaKeywords: 'chemical suppliers in Kuwait, chemical suppliers in Kuwait City, chemical supplier Kuwait, chemicals Kuwait City, industrial chemicals Kuwait, water treatment chemicals Kuwait, oilfield chemicals Kuwait, KOC chemical supplier, KNPC chemicals, chemical exporter Oman Kuwait, Shuaiba chemicals, Al-Zour chemicals',
     relatedGuide: {
       slug: 'gcc-desalination-water-treatment-chemicals',
       title: 'Desalination & Water Treatment Chemicals Across the GCC',
@@ -474,7 +498,7 @@ const locations: Record<string, LocationData> = {
     cityArabic: 'البحرين',
     country: 'Bahrain',
     region: 'Manama, Kingdom of Bahrain',
-    description: 'Global Chemicals LLC exports specialty and industrial chemicals to the Kingdom of Bahrain, supporting Manama\'s aluminum, refining, financial, and manufacturing sectors. We supply chemicals to ALBA (Aluminium Bahrain), BAPCO refinery contractors, Hidd Industrial Area, Sitra Industrial Area, and other major industrial zones in Bahrain.',
+    description: 'Global Chemicals LLC supplies industrial and specialty chemicals to the Kingdom of Bahrain from our Muscat warehouse, moving under GCC customs transit with road freight via Saudi Arabia and the King Fahd Causeway reaching Manama in 3–5 business days; drum, IBC, and full-container loads consolidate on scheduled weekly departures. We serve Bahrain\'s industrial map end to end: ALBA (Aluminium Bahrain) supply chains, Bapco refining contractors in Sitra and Awali, manufacturers in the Hidd and Salman industrial areas and the Bahrain International Investment Park (BIIP), desalination and utility operators, and pharmaceutical and analytical laboratories. The portfolio spans aluminum process chemicals including caustic soda, refinery and water treatment chemicals, industrial lubricants, and laboratory reagents. Every consignment ships with a Certificate of Origin attested by the Oman Chamber of Commerce — GCC preferential origin applied where eligible to reduce import duty — plus GHS Safety Data Sheets in Arabic and English, batch Certificate of Analysis, Technical Data Sheet, and HS-coded commercial invoice.',
     industries: ['Aluminium Production (ALBA)', 'Oil Refining (BAPCO)', 'Manufacturing', 'Water Treatment', 'Construction', 'Pharmaceuticals', 'Financial Services Infrastructure'],
     deliveryTime: '3-5 business days to Bahrain (road freight via Saudi Arabia)',
     keyClients: ['ALBA supply chains', 'BAPCO contractors', 'Hidd Industrial Area companies', 'Sitra Industrial Area businesses', 'Bahrain utility companies'],
@@ -497,11 +521,19 @@ const locations: Record<string, LocationData> = {
       {
         question: 'What import documentation do you provide for Bahrain?',
         answer: 'We provide complete export documentation for Bahrain customs: Certificate of Origin (GCC preferential if applicable), Certificate of Analysis, Safety Data Sheet, Halal certificates (where applicable), commercial invoice, packing list, and Bill of Lading or Airway Bill.'
+      },
+      {
+        question: 'Do I need a Bahraini import agent to buy chemicals from Oman?',
+        answer: 'For most industrial chemical grades, no. Oman and Bahrain share the GCC customs union, so consignments move under customs transit without a separate Bahraini import agent, and GCC preferential origin reduces import duty on eligible products. Regulated categories — food-contact, cosmetic-grade, and certain hazardous classifications — carry additional conformity or permit requirements, confirmed per product before shipment.'
+      },
+      {
+        question: 'Can you deliver chemicals to Hidd, Sitra, and the Bahrain International Investment Park?',
+        answer: 'Yes. The Hidd and Salman industrial areas, Sitra\'s refining and petrochemical cluster, and BIIP manufacturers are regular destinations on our Bahrain lane. We quote FOB Muscat, CIF Khalifa Bin Salman Port, or DAP-to-site in BHD or USD, and consolidate drum and IBC orders with full-container loads on scheduled weekly departures.'
       }
     ],
-    metaTitle: 'Chemical Supplier Bahrain | Industrial Chemicals Manama | Global Chemicals LLC',
-    metaDescription: 'Chemical supplier exporting to Bahrain. Aluminium, refinery, water treatment chemicals to Manama & Hidd. ISO 9001 certified. ALBA & BAPCO contractor support. Get a quote.',
-    metaKeywords: 'chemical supplier Bahrain, chemicals Manama, industrial chemicals Bahrain, water treatment chemicals Bahrain, ALBA chemical supplier, BAPCO chemicals, chemical exporter Oman Bahrain, Hidd industrial chemicals, Sitra chemicals',
+    metaTitle: 'Chemical Suppliers in Bahrain | ALBA & BAPCO Supply',
+    metaDescription: 'Chemical suppliers in Bahrain — import from Oman in 3–5 days via Saudi. Aluminium, refinery & water treatment chemicals to Hidd & Sitra. Get a quote.',
+    metaKeywords: 'chemical suppliers in Bahrain, chemical supplier Bahrain, chemicals Manama, industrial chemicals Bahrain, water treatment chemicals Bahrain, ALBA chemical supplier, BAPCO chemicals, chemical exporter Oman Bahrain, Hidd industrial chemicals, Sitra chemicals, BIIP chemicals',
     relatedGuide: {
       slug: 'gcc-desalination-water-treatment-chemicals',
       title: 'Desalination & Water Treatment Chemicals Across the GCC',

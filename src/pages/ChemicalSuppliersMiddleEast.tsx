@@ -476,7 +476,7 @@ const ChemicalSuppliersMiddleEast = () => {
                     Our team has experience navigating Ras Laffan Security Clearance (RLSC) requirements and QatarEnergy vendor qualification documentation. We provide full CoA, SDS, TDS, and Certificate of Origin documentation for Qatar customs. Competitive QAR and USD pricing available with FOB, CIF, and DAP incoterms.
                   </p>
                   <Link to="/chemicals/doha" className="inline-flex items-center gap-1 text-primary font-medium hover:underline">
-                    Chemical supplier details for Qatar <ArrowRight className="w-4 h-4" />
+                    Chemical suppliers in Doha &amp; Qatar <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
               </div>
@@ -493,7 +493,7 @@ const ChemicalSuppliersMiddleEast = () => {
                     Products available include Poly Aluminium Chloride (PAC), caustic soda, sodium hypochlorite, antiscalants for Kuwait's desalination plants, corrosion inhibitors for refinery operations, and Shell/Mobil lubricants. We offer FOB Muscat and CIF Shuwaikh Port pricing in KWD and USD. Full Arabic and English documentation provided for Kuwait customs clearance.
                   </p>
                   <Link to="/chemicals/kuwait-city" className="inline-flex items-center gap-1 text-primary font-medium hover:underline">
-                    Chemical supplier details for Kuwait <ArrowRight className="w-4 h-4" />
+                    Chemical suppliers in Kuwait City <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
               </div>
@@ -510,7 +510,7 @@ const ChemicalSuppliersMiddleEast = () => {
                     We support ALBA and BAPCO contractor qualification with full documentation: Certificate of Analysis, Safety Data Sheet (Arabic and English), Certificate of Origin, Halal certificates where applicable, and commercial documentation for Bahrain customs. GCC preferential origin applies where eligible, reducing import duties for Bahrain customers.
                   </p>
                   <Link to="/chemicals/bahrain" className="inline-flex items-center gap-1 text-primary font-medium hover:underline">
-                    Chemical supplier details for Bahrain <ArrowRight className="w-4 h-4" />
+                    Chemical suppliers in Bahrain <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
               </div>
@@ -527,7 +527,7 @@ const ChemicalSuppliersMiddleEast = () => {
                     We provide full Arabic-language documentation for Iraqi customs compliance: Safety Data Sheet in Arabic, Certificate of Origin attested by Oman Chamber of Commerce, Certificate of Analysis, and commercial invoice. USD pricing is standard; we can accommodate letters of credit (LC) for Iraqi importers. Our team is experienced in navigating Iraqi import procedures for hazardous and non-hazardous chemicals.
                   </p>
                   <Link to="/chemicals/baghdad" className="inline-flex items-center gap-1 text-primary font-medium hover:underline">
-                    Chemical supplier details for Iraq <ArrowRight className="w-4 h-4" />
+                    Chemical suppliers in Baghdad &amp; Iraq <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
               </div>
@@ -544,7 +544,7 @@ const ChemicalSuppliersMiddleEast = () => {
                     We provide full documentation for Jordanian customs: Certificate of Origin, Safety Data Sheet in Arabic, Certificate of Analysis, and commercial invoice. Jordan has a Free Trade Agreement with several GCC states that may reduce duties for eligible Omani-origin goods. Our team can advise on applicable tariff codes and duty exemptions for your specific chemicals.
                   </p>
                   <Link to="/chemicals/amman" className="inline-flex items-center gap-1 text-primary font-medium hover:underline">
-                    Chemical supplier details for Jordan <ArrowRight className="w-4 h-4" />
+                    Chemical suppliers in Amman, Jordan <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
               </div>
@@ -561,7 +561,7 @@ const ChemicalSuppliersMiddleEast = () => {
                     We provide full Arabic documentation for Egyptian customs and GOEIC (General Organization for Export and Import Control) clearance: Certificate of Analysis, Safety Data Sheet, Certificate of Origin attested by the Oman Chamber of Commerce, Halal certificates for food-grade products, and commercial invoice. We can arrange CIF Alexandria, CIF Port Said, or FOB Salalah/Muscat pricing in USD or EGP-equivalent quotes.
                   </p>
                   <Link to="/chemicals/cairo" className="inline-flex items-center gap-1 text-primary font-medium hover:underline">
-                    Chemical supplier details for Egypt <ArrowRight className="w-4 h-4" />
+                    Chemical suppliers in Cairo, Egypt <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
               </div>
