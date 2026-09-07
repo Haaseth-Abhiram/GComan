@@ -231,26 +231,26 @@ const ProductDetail = ({ category, rawCategoryProducts }: ProductDetailProps) =>
       <main id="main-content">
         <section className="pt-32 pb-8 bg-muted/30">
           <div className="container mx-auto px-4">
-            <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-4" aria-label="Breadcrumb">
+            <nav className="flex flex-nowrap items-center gap-2 overflow-x-auto whitespace-nowrap text-sm text-muted-foreground mb-4" aria-label="Breadcrumb">
               <Link to="/" className="hover:text-primary transition-colors">{t('nav.home')}</Link>
               <span>/</span>
               <Link to="/products" className="hover:text-primary transition-colors">{t('nav.products')}</Link>
               <span>/</span>
-              <Link to={`/products/${category}`} className="hover:text-primary transition-colors capitalize">
+              <Link to={`/products/${category}`} className="hover:text-primary transition-colors capitalize whitespace-nowrap">
                 {category?.replace(/-/g, ' ')}
               </Link>
               <span>/</span>
-              <span className="text-foreground font-medium line-clamp-1">{translatedTitle}</span>
+              <span className="text-foreground font-medium truncate max-w-[45vw] sm:max-w-none">{translatedTitle}</span>
             </nav>
           </div>
         </section>
 
         {/* Product Header */}
-        <section className="py-16">
+        <section className="pt-6 pb-16">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <Button 
-                variant="ghost" 
+              <Button
+                variant="ghost"
                 onClick={() => navigate('/products')}
                 className="mb-6"
               >

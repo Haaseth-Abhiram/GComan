@@ -16,7 +16,7 @@ import { LocalizedLink } from '@/components/LocalizedLink';
 const aboutFAQs = [
   {
     question: "When was Global Chemicals LLC founded and where is it headquartered?",
-    answer: "Global Chemicals LLC is headquartered in Ghala, Muscat, Oman (Office-3, Building 1737, near Oman LNG). The company has over 10 years of experience serving industrial and commercial clients across Oman and the GCC region with 263+ chemical products across 22 categories."
+    answer: "Global Chemicals LLC is headquartered in Ghala, Muscat, Oman (Office-3, Building 1737, near Oman LNG). The company has over 10 years of experience serving industrial and commercial clients across Oman and the GCC region with 275+ chemical products across 22 categories."
   },
   {
     question: "Is Global Chemicals LLC ISO 9001:2015 certified?",
@@ -32,7 +32,7 @@ const aboutFAQs = [
   },
   {
     question: "How many products does Global Chemicals LLC offer?",
-    answer: "Global Chemicals LLC offers 263+ products across 22 categories including water treatment chemicals, oilfield and refinery chemicals, industrial lubricants (Shell, Mobil, Castrol), laboratory chemicals (AR grade, HPLC solvents), food-grade chemicals, inorganic chemicals, solvents, glycols, swimming pool chemicals, and specialty chemicals."
+    answer: "Global Chemicals LLC offers 275+ products across 22 categories including water treatment chemicals, oilfield and refinery chemicals, industrial lubricants (Shell, Mobil, Castrol), laboratory chemicals (AR grade, HPLC solvents), food-grade chemicals, inorganic chemicals, solvents, glycols, swimming pool chemicals, and specialty chemicals."
   }
 ];
 
@@ -47,7 +47,7 @@ const About = () => {
 
   const stats = [
     { icon: Award, value: '10+', label: t('home.statsYears'), color: 'text-primary' },
-    { icon: Factory, value: '263+', label: t('home.statsProducts'), color: 'text-secondary' },
+    { icon: Factory, value: '275+', label: t('home.statsProducts'), color: 'text-secondary' },
     { icon: Users, value: '200+', label: t('home.statsClients'), color: 'text-primary' },
     { icon: Globe2, value: '98%', label: t('home.statsSatisfaction'), color: 'text-secondary' },
   ];
@@ -253,7 +253,7 @@ const About = () => {
             <div className="text-center mb-16 animate-fade-in">
               <Badge variant="outline" className="text-primary border-primary/30 mb-4">{t('about.whatDrivesUs')}</Badge>
               <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">{t('about.coreValues')}</h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
                 {t('about.coreValuesDesc')}
               </p>
             </div>

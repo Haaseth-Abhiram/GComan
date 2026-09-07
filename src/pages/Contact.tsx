@@ -290,8 +290,8 @@ const Contact = () => {
                 {
                   icon: MapPin,
                   title: t('contact.visitUs'),
-                  content: 'Office-3, Building Number 1737',
-                  description: t('contact.info.address'),
+                  content: t('contact.info.address'),
+                  description: '',
                   link: null,
                 },
               ].map((item, index) => {
@@ -312,7 +312,7 @@ const Contact = () => {
                     ) : (
                       <p className="text-foreground font-medium mb-1">{item.content}</p>
                     )}
-                    <p className="text-sm text-muted-foreground">{item.description}</p>
+                    {item.description && <p className="text-sm text-muted-foreground">{item.description}</p>}
                   </div>
                 );
               })}

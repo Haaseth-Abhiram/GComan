@@ -43,7 +43,7 @@ const Navigation = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-sm">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border shadow-sm">
       {/* Utility Bar */}
       <div className="hidden lg:block border-b border-border/50">
         <div className="container mx-auto px-4">

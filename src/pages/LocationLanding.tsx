@@ -61,7 +61,7 @@ const locations: Record<string, LocationData> = {
       'Head office located in Ghala, Muscat',
       'Same-day delivery within Muscat',
       'Technical support team on-site',
-      '263+ products in local stock',
+      '275+ products in local stock',
       'ISO 9001 certified operations'
     ],
     faqs: [
@@ -1383,7 +1383,7 @@ const LocationLanding = () => {
               {isAr ? `لماذا تختار شركة جلوبال كيميكالز في ${cityLabel}؟` : `Why Choose Global Chemicals LLC in ${locationData.city}?`}
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-8 items-start">
               <div>
                 <ul className="space-y-4">
                   {translatedHighlights.map((highlight, index) => (

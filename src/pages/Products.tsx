@@ -366,8 +366,35 @@ const categoryFAQs: Record<string, { question: string; answer: string }[]> = {
   ]
 };
 
+// Display titles for category pages — used for both the H1 (category views
+// must not reuse the generic /products hero heading) and ItemList schema.
+const CATEGORY_DISPLAY_TITLES: Record<string, string> = {
+  'water-treatment': 'Water Treatment Chemicals — Oman & GCC',
+  'lubricants': 'Industrial Lubricants & Greases — Oman & GCC',
+  'swimming-pool': 'Swimming Pool Chemicals — Oman & GCC',
+  'lab-chemicals': 'Laboratory Chemicals & Reagents — Oman',
+  'oilfield': 'Oilfield & Refinery Chemicals — Oman & GCC',
+  'tank-cleaners': 'Marine & Industrial Tank Cleaners — Oman & GCC',
+  'soap-detergent': 'Soap & Detergent Raw Materials — Oman & GCC',
+  'food-beverage': 'Food & Beverage Grade Chemicals — Oman & GCC',
+  'cooling-water': 'Cooling Water Treatment Chemicals — Oman & GCC',
+  'corrosion-inhibitor': 'Corrosion Inhibitors — Oman & GCC',
+  'ro-chemicals': 'RO Plant Chemicals — Oman & GCC',
+  'solvents': 'Industrial Solvents — Oman & GCC',
+  'inorganic': 'Inorganic Chemicals — Oman & GCC',
+  'construction': 'Construction Chemicals — Oman & GCC',
+  'alcohols': 'Industrial Alcohols — Oman & GCC',
+  'glycols': 'Glycols — Oman & GCC',
+  'ethanolamines': 'Ethanolamines — Oman & GCC',
+  'chlorinated': 'Chlorinated Solvents — Oman & GCC',
+  'lab-equipment': 'Laboratory Equipment — Oman & GCC',
+  'calcium-carbonate': 'Calcium Carbonate — Oman & GCC',
+  'agro': 'Agricultural Chemicals — Oman & GCC',
+  'additives': 'Chemical Additives — Oman & GCC',
+};
+
 const Products = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { category: categoryParam } = useParams<{ category?: string }>();
   const location = useLocation();
   const langPrefix = getLangPrefixFromPath(location.pathname);
@@ -600,33 +627,7 @@ const Products = () => {
       <SpeakableStructuredData url={categoryParam ? `https://gcoman.com/products/${categoryParam}` : 'https://gcoman.com/products'} cssSelector={["h1", "h2", ".speakable"]} />
       {categoryParam && filteredProducts.length > 0 && (
         <ItemListStructuredData
-          name={(() => {
-            const categoryTitles: Record<string, string> = {
-              'water-treatment': 'Water Treatment Chemicals — Oman & GCC',
-              'lubricants': 'Industrial Lubricants & Greases — Oman & GCC',
-              'swimming-pool': 'Swimming Pool Chemicals — Oman & GCC',
-              'lab-chemicals': 'Laboratory Chemicals & Reagents — Oman',
-              'oilfield': 'Oilfield & Refinery Chemicals — Oman & GCC',
-              'tank-cleaners': 'Marine & Industrial Tank Cleaners — Oman & GCC',
-              'soap-detergent': 'Soap & Detergent Raw Materials — Oman & GCC',
-              'food-beverage': 'Food & Beverage Grade Chemicals — Oman & GCC',
-              'cooling-water': 'Cooling Water Treatment Chemicals — Oman & GCC',
-              'corrosion-inhibitor': 'Corrosion Inhibitors — Oman & GCC',
-              'ro-chemicals': 'RO Plant Chemicals — Oman & GCC',
-              'solvents': 'Industrial Solvents — Oman & GCC',
-              'inorganic': 'Inorganic Chemicals — Oman & GCC',
-              'construction': 'Construction Chemicals — Oman & GCC',
-              'alcohols': 'Industrial Alcohols — Oman & GCC',
-              'glycols': 'Glycols — Oman & GCC',
-              'ethanolamines': 'Ethanolamines — Oman & GCC',
-              'chlorinated': 'Chlorinated Solvents — Oman & GCC',
-              'lab-equipment': 'Laboratory Equipment — Oman & GCC',
-              'calcium-carbonate': 'Calcium Carbonate — Oman & GCC',
-              'agro': 'Agricultural Chemicals — Oman & GCC',
-              'additives': 'Chemical Additives — Oman & GCC',
-            };
-            return categoryTitles[categoryParam] || `${categoryParam.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} — Global Chemicals LLC Oman`;
-          })()}
+          name={CATEGORY_DISPLAY_TITLES[categoryParam] || `${categoryParam.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} — Global Chemicals LLC Oman`}
           description={`Product catalogue for ${categoryParam.replace(/-/g, ' ')} chemicals supplied by Global Chemicals LLC in Oman and the GCC region.`}
           url={`https://gcoman.com/products/${categoryParam}`}
           items={filteredProducts.map(p => ({
@@ -647,7 +648,14 @@ const Products = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-              {t('products.heroTitle')}
+              {/* Category views get their own identity as the H1 — reusing the
+                  generic /products hero heading on category URLs left users
+                  (and crawlers) unable to tell the pages apart. Arabic renders
+                  keep the localized generic heading (category titles are
+                  English-only and /ar category views are noindex). */}
+              {categoryParam && i18n.language !== 'ar'
+                ? (CATEGORY_DISPLAY_TITLES[categoryParam] ?? `${categoryParam.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} — Oman & GCC`)
+                : t('products.heroTitle')}
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
               {t('products.heroDesc')}

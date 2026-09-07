@@ -84,7 +84,7 @@ const Index = () => {
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   <span className="font-semibold text-foreground">Global Chemicals LLC</span> is
                   a B2B specialty and industrial chemical supplier headquartered in Ghala, Muscat,
-                  Oman. We supply 263+ products across 22 categories — water treatment chemicals
+                  Oman. We supply 275+ products across 22 categories — water treatment chemicals
                   (PAC, caustic soda, sodium hypochlorite, antiscalants), industrial lubricants
                   (Shell, Mobil, Castrol), oilfield and refinery chemicals, food-grade chemicals,
                   and laboratory reagents — to water treatment plants, PDO &amp; OQ contractors,
