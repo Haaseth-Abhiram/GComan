@@ -44,7 +44,11 @@ const certificationFAQs = [
 
 const Certifications = () => {
   const spotlight = useSpotlight();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  // Every certification and "why it matters" entry already carries a full
+  // Arabic translation (titleAr / descriptionAr / benefitsAr). None of it was
+  // ever rendered, so /ar/certifications served a fully English page.
+  const isAr = i18n.language === 'ar';
 
   const certifications = [
     {
@@ -260,9 +264,9 @@ const Certifications = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Certifications</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">{isAr ? 'شهاداتنا' : 'Our Certifications'}</h2>
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                  Recognized and verified by national and international regulatory bodies
+                  {isAr ? 'معتمدة وموثقة من جهات تنظيمية وطنية ودولية' : 'Recognized and verified by national and international regulatory bodies'}
                 </p>
               </div>
 
@@ -277,29 +281,29 @@ const Certifications = () => {
                         </div>
                         <div className="flex-1">
                           <h3 className="text-xl font-bold text-foreground mb-1">
-                            {cert.title}
+                            {isAr && cert.titleAr ? cert.titleAr : cert.title}
                           </h3>
                           <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
                             <CheckCircle2 className="w-4 h-4 text-green-600" />
-                            <span>Certified since {cert.certifiedSince}</span>
+                            <span>{isAr ? `معتمد منذ ${cert.certifiedSince}` : `Certified since ${cert.certifiedSince}`}</span>
                           </div>
                         </div>
                       </div>
 
                       <p className="text-muted-foreground mb-4">
-                        {cert.description}
+                        {isAr && cert.descriptionAr ? cert.descriptionAr : cert.description}
                       </p>
 
                       <div className="mb-4">
                         <p className="text-sm font-semibold text-foreground mb-2">
-                          Verified by: <span className="text-primary">{cert.verifiedBy}</span>
+                          {isAr ? 'جهة التوثيق:' : 'Verified by:'} <span className="text-primary">{cert.verifiedBy}</span>
                         </p>
                       </div>
 
                       <div>
-                        <p className="text-sm font-semibold text-foreground mb-2">Key Benefits:</p>
+                        <p className="text-sm font-semibold text-foreground mb-2">{isAr ? 'أبرز الفوائد:' : 'Key Benefits:'}</p>
                         <ul className="space-y-1">
-                          {cert.benefits.map((benefit, idx) => (
+                          {(isAr && cert.benefitsAr ? cert.benefitsAr : cert.benefits).map((benefit, idx) => (
                             <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
                               <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
                               <span>{benefit}</span>
@@ -320,7 +324,7 @@ const Certifications = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Our Certifications Matter</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">{isAr ? 'لماذا تهم شهاداتنا' : 'Why Our Certifications Matter'}</h2>
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                   Peace of mind for your chemical procurement needs
                 </p>
@@ -334,8 +338,8 @@ const Certifications = () => {
                       <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
                         <Icon className="w-6 h-6 text-primary" />
                       </div>
-                      <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>
-                      <p className="text-sm text-muted-foreground">{item.description}</p>
+                      <h3 className="font-semibold text-foreground mb-2">{isAr && item.titleAr ? item.titleAr : item.title}</h3>
+                      <p className="text-sm text-muted-foreground">{isAr && item.descriptionAr ? item.descriptionAr : item.description}</p>
                     </Card>
                   );
                 })}

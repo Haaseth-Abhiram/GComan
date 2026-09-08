@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { SEO } from '@/components/SEO';
 import { FAQStructuredData, BreadcrumbStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
@@ -129,8 +131,49 @@ const waterTreatmentApplications = [
   }
 ];
 
+const INDUSTRY_IDS = [
+  'oil-gas',
+  'water-treatment',
+  'manufacturing',
+  'food-beverage',
+  'pharmaceutical',
+  'construction',
+  'swimming-pool',
+  'laboratory',
+] as const;
+
+const DEFAULT_INDUSTRY = 'oil-gas';
+
 const Industries = () => {
   const { t } = useTranslation();
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  // The footer links here as /industries#water-treatment (and four siblings).
+  // A URL hash cannot open a Radix tab on its own, so those links used to land
+  // on the page showing whichever industry happened to be the default —
+  // six footer links that silently went to the wrong content. Drive the tab
+  // from the hash instead, and mirror the selection back into the URL so a
+  // given industry is linkable and survives a refresh.
+  const hashId = location.hash.replace('#', '');
+  const activeIndustry = (INDUSTRY_IDS as readonly string[]).includes(hashId)
+    ? hashId
+    : DEFAULT_INDUSTRY;
+
+  // replace: true so switching tabs doesn't fill the back button with history.
+  const handleIndustryChange = (value: string) => {
+    navigate(`${location.pathname}${location.search}#${value}`, { replace: true });
+  };
+
+  // Arriving with a hash should land on the tabs, not the top of the page.
+  useEffect(() => {
+    if (!hashId) return;
+    document.getElementById('industry-tabs')?.scrollIntoView({
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+      block: 'start',
+    });
+    // Only when the targeted industry changes, not on every render.
+  }, [hashId]);
 
   const industries = [
     {
@@ -366,9 +409,9 @@ const Industries = () => {
       </section>
 
       {/* Industries Tabs Section */}
-      <section className="py-16">
+      <section className="py-16" id="industry-tabs" style={{ scrollMarginTop: '6rem' }}>
         <div className="container mx-auto px-4">
-          <Tabs defaultValue="oil-gas" className="w-full">
+          <Tabs value={activeIndustry} onValueChange={handleIndustryChange} className="w-full">
             <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 lg:grid-cols-8 mb-12 h-auto gap-2 bg-transparent">
               {industries.map((industry) => (
                 <TabsTrigger

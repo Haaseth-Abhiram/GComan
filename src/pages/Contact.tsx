@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { Mail, Phone, MapPin, Clock, MessageSquare, Headphones, FileText, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, MessageSquare, Headphones, FileText, Send, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -63,6 +63,7 @@ const Contact = () => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
   const [turnstileToken, setTurnstileToken] = useState('');
   const turnstileRef = useRef<TurnstileHandle>(null);
   const formRef = useRef<HTMLFormElement>(null);
@@ -126,8 +127,17 @@ const Contact = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const clearFieldError = (field: string) =>
+    setFieldErrors((prev) => {
+      if (!prev[field]) return prev;
+      const next = { ...prev };
+      delete next[field];
+      return next;
+    });
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setFieldErrors({});
     setIsSubmitting(true);
 
     try {
@@ -203,11 +213,22 @@ const Contact = () => {
 
     } catch (error) {
       if (error instanceof z.ZodError) {
-        toast({
-          title: "Validation error",
-          description: error.errors[0].message,
-          variant: "destructive"
-        });
+        // Zod returns every failure; surfacing only errors[0] in a toast meant
+        // the user fixed one field, resubmitted, and got the next one — with
+        // nothing marking the offending input. Show them all inline instead
+        // and move focus to the first bad field.
+        const nextErrors: Record<string, string> = {};
+        for (const issue of error.errors) {
+          const field = String(issue.path[0] ?? '');
+          if (field && !nextErrors[field]) nextErrors[field] = issue.message;
+        }
+        setFieldErrors(nextErrors);
+        const firstField = String(error.errors[0]?.path[0] ?? '');
+        if (firstField) {
+          const el = document.getElementById(firstField);
+          el?.focus();
+          el?.scrollIntoView({ block: 'center', behavior: 'smooth' });
+        }
       } else {
         console.error('Contact form error:', error);
         toast({
@@ -223,11 +244,25 @@ const Contact = () => {
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    clearFieldError(e.target.name);
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value
     }));
   };
+
+  // Inline error text under a field, wired to the input via aria-describedby.
+  const fieldError = (field: string) =>
+    fieldErrors[field] ? (
+      <p id={`${field}-error`} role="alert" className="text-sm font-medium text-destructive">
+        {fieldErrors[field]}
+      </p>
+    ) : null;
+
+  const errorProps = (field: string) =>
+    fieldErrors[field]
+      ? ({ 'aria-invalid': true, 'aria-describedby': `${field}-error` } as const)
+      : {};
 
   const handlePhoneChange = (value: string) => {
     setFormData(prev => ({
@@ -350,23 +385,27 @@ const Contact = () => {
                         <Input
                           id="name"
                           name="name"
+                          {...errorProps('name')}
                           value={formData.name}
                           onChange={handleChange}
                           placeholder="John Doe"
                           required
                         />
+                        {fieldError('name')}
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="email">{t('contact.form.email')} *</Label>
                         <Input
                           id="email"
                           name="email"
+                          {...errorProps('email')}
                           type="email"
                           value={formData.email}
                           onChange={handleChange}
                           placeholder="john@company.com"
                           required
                         />
+                        {fieldError('email')}
                       </div>
                     </div>
 
@@ -388,6 +427,7 @@ const Contact = () => {
                         <Input
                           id="company"
                           name="company"
+                          {...errorProps('company')}
                           value={formData.company}
                           onChange={handleChange}
                           placeholder="Your Company"
@@ -417,23 +457,35 @@ const Contact = () => {
                       <Textarea
                         id="message"
                         name="message"
+                        {...errorProps('message')}
                         value={formData.message}
                         onChange={handleChange}
                         placeholder={t('contact.form.messagePlaceholder')}
                         rows={6}
                         required
                       />
+                      {fieldError('message')}
                     </div>
 
                     <Turnstile ref={turnstileRef} onToken={setTurnstileToken} />
 
+                    {/* Setting the response expectation next to the button
+                        measurably reduces abandonment on B2B quote forms. */}
+                    <p className="text-xs text-muted-foreground">
+                      We reply within 24 hours, Sunday to Thursday.
+                    </p>
+
                     <Button
                       type="submit"
-                      className="w-full md:w-auto px-8"
+                      size="lg"
+                      className="w-full rounded-full text-white bg-gradient-to-r from-[hsl(var(--logo-blue))] to-[hsl(var(--logo-orange))] hover:opacity-90 shadow-md"
                       disabled={isSubmitting || (isTurnstileEnabled() && !turnstileToken)}
                     >
                       {isSubmitting ? (
-                        <>{t('common.loading')}</>
+                        <>
+                          <Loader2 className="w-4 h-4 ltr:mr-2 rtl:ml-2 animate-spin" />
+                          {t('common.loading')}
+                        </>
                       ) : (
                         <>
                           <Send className="w-4 h-4 ltr:mr-2 rtl:ml-2" />
