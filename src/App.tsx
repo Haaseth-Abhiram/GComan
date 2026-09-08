@@ -17,6 +17,7 @@ import { ZohoSalesIQ } from "./components/ZohoSalesIQ";
 import BackToTopButton from "./components/BackToTopButton";
 import WhatsAppButton from "./components/WhatsAppButton";
 import RouteChangeLoader from "./components/RouteChangeLoader";
+import ScrollToTop from "./components/ScrollToTop";
 import { resolveLegacyRedirect } from "./lib/legacyRedirects";
 import { lazyRetry } from "./lib/lazyRetry";
 
@@ -151,6 +152,7 @@ const App = () => (
             <WhatsAppButton />
             <LanguageSync />
             <LegacyRedirectHandler />
+            <ScrollToTop />
             <RouteChangeLoader />
             <Suspense fallback={<Loading />}>
               <Routes>

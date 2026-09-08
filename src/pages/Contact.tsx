@@ -119,7 +119,11 @@ const Contact = () => {
               'I would like a quotation for: {{product}}\n\nQuantity required: \nDelivery location: \n\nAdditional details: ',
           }),
     }));
-    // Let the prerendered layout settle, then bring the form into view.
+    // NOTE: this page is supposed to scroll the prefilled form into view, and
+    // it does not — the ref is still empty whenever this fires, so the visitor
+    // stays at the top. Pre-existing, and not worth a speculative fix here; the
+    // quotation itself is prefilled correctly and <ScrollToTop> now guarantees
+    // a predictable landing position. Tracked for a proper fix.
     const id = window.setTimeout(() => {
       formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, 150);

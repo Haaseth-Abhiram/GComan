@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { SEO } from '@/components/SEO';
@@ -165,14 +165,26 @@ const Industries = () => {
     navigate(`${location.pathname}${location.search}#${value}`, { replace: true });
   };
 
-  // Arriving with a hash should land on the tabs, not the top of the page.
+  // Arriving with a hash (e.g. from a footer link) should land on the tabs.
+  // Mount only: once the visitor is here, clicking between tabs also rewrites
+  // the hash, and re-scrolling on every one of those would yank the page.
+  const didScrollToTabs = useRef(false);
   useEffect(() => {
-    if (!hashId) return;
-    document.getElementById('industry-tabs')?.scrollIntoView({
-      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
-      block: 'start',
-    });
-    // Only when the targeted industry changes, not on every render.
+    if (!hashId || didScrollToTabs.current) return;
+    // Deferred a frame: on a cold load the hero image and lazy chunk are still
+    // settling when the effect first runs, and a scroll issued then gets
+    // discarded. The guard is only consumed once the element is actually
+    // there, so a missed attempt can retry rather than silently doing nothing.
+    const id = window.setTimeout(() => {
+      const el = document.getElementById('industry-tabs');
+      if (!el) return;
+      didScrollToTabs.current = true;
+      el.scrollIntoView({
+        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+        block: 'start',
+      });
+    }, 120);
+    return () => window.clearTimeout(id);
   }, [hashId]);
 
   const industries = [
