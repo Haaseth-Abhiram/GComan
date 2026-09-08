@@ -17,7 +17,8 @@
     "test:e2e:ui": "playwright test --ui",
     "test:e2e:prod": "PROD_BUILD=1 playwright test",
     "verify:prerender-titles": "node scripts/verify-prerender-titles.mjs",
-    "verify:hostinger-staging": "node scripts/verify-hostinger-staging.mjs"
+    "verify:hostinger-staging": "node scripts/verify-hostinger-staging.mjs",
+    "audit:product-content": "node scripts/audit-product-content.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
