@@ -123,19 +123,47 @@ const ProductDetail = ({ category, rawCategoryProducts }: ProductDetailProps) =>
         : arRawDescription.slice(0, 154).replace(/\s+\S*$/, '') + '…')
     : undefined;
 
-  // Generate SEO-optimized description — includes GCC cities.
-  // Truncate at ~155 chars (Google SERP limit) at a word boundary; longDescription
-  // is the full article body and was leaking 1.6KB+ into the meta description.
-  const rawDescription = product.details?.longDescription ||
-    `${product.title} supplier in Oman & GCC. ${product.description} High-quality ${product.title.toLowerCase()} for water treatment, industrial, and commercial applications. Exporting to Dubai, Riyadh, Doha, Kuwait, Bahrain. Serving Muscat, Sohar, Salalah. Contact Global Chemicals LLC for pricing and technical specifications.`;
-  // details.seoDescription: hand-written SERP snippet for pages where the
-  // longDescription truncation costs clicks. The Aug 2026 GSC data showed a
-  // family of page-1 rankings with ~0% CTR (tris-base 329 imp @9 → 0 clicks)
-  // — the snippet, not the position, was the problem.
-  const seoDescription = product.details?.seoDescription
-    ?? (rawDescription.length <= 155
-      ? rawDescription
-      : rawDescription.slice(0, 154).replace(/\s+\S*$/, '') + '…');
+  // SERP snippet.
+  // details.seoDescription is a hand-written snippet and always wins (16 products).
+  // For the rest we COMPOSE a complete sentence from structured fields instead of
+  // truncating longDescription at 154 chars. That truncation shipped an article
+  // opening cut mid-thought as the meta description on 259 of 275 products, and
+  // GSC (3 months to 2026-09-05) shows exactly the CTR damage you would expect
+  // from it: a family of page-1 rankings with zero clicks — tris-base-lab 342
+  // impressions at position 12.4 → 1 click, acetic-acid-lab 306 → 0,
+  // "chemical supplier in muscat" position 3.4 → 0 clicks. Position was never the
+  // problem on those; the snippet was.
+  // Composed form answers the three things a B2B buyer scans for — is it the right
+  // substance (CAS), does it do my job (application), can I actually get it
+  // (stock + export + CTA) — and always terminates cleanly under the 155-char cap.
+  const buildSnippet = () => {
+    const LIMIT = 155;
+    const TAIL = 'Ex-stock Muscat, export GCC. Request a quote.';
+    const cas = product.details?.casNumber;
+    const withCas = `${product.title} (CAS ${cas}) supplier in Oman & GCC.`;
+    const plain = `${product.title} supplier in Oman & GCC.`;
+    // Drop the CAS rather than the call to action when the title is long.
+    const lead = cas && withCas.length + 1 + TAIL.length <= LIMIT ? withCas : plain;
+
+    const budget = LIMIT - lead.length - 1 - TAIL.length;
+    const chosen: string[] = [];
+    for (const raw of product.details?.applications ?? []) {
+      const app = String(raw).trim().replace(/\.+$/, '');
+      if (!app || chosen.length >= 2) break;
+      // Lower-case follow-on items so the joined clause reads as one sentence
+      // ("Pharmaceutical ointments, cosmetics and skincare.") rather than a
+      // run of capitalised fragments.
+      const next = chosen.length === 0 ? app : app.charAt(0).toLowerCase() + app.slice(1);
+      if ([...chosen, next].join(', ').length + 2 > budget) break;
+      chosen.push(next);
+    }
+
+    const composed = [lead, chosen.length ? `${chosen.join(', ')}.` : '', TAIL]
+      .filter(Boolean)
+      .join(' ');
+    return composed.length <= LIMIT ? composed : `${lead} ${TAIL}`;
+  };
+  const seoDescription = product.details?.seoDescription ?? buildSnippet();
 
   // Generate keywords — auto-adds UAE/Saudi/Qatar variants for every product
   const keywords = [
@@ -505,11 +533,29 @@ const ProductDetail = ({ category, rawCategoryProducts }: ProductDetailProps) =>
                 </div>
               </Card>
 
-              {/* Related Products */}
+              {/* Related Products.
+                  Selection ROTATES by this product's index instead of taking the
+                  first N of the category. `.slice(0, 3)` meant all 50 oilfield
+                  pages linked to the same 3 products, so 201 of 275 products
+                  received zero inbound links from a sibling page and lived on the
+                  single link from their category index. GSC (2026-09-08) showed
+                  89% of the "Discovered – currently not indexed" products in that
+                  zero-inbound set vs 70% of indexed ones. A rotating window gives
+                  every product in a category exactly RELATED_COUNT inbound links
+                  (verified: zero-inbound 201 → 3, and those 3 are the
+                  single-product categories that have no sibling to link from).
+                  Stays inside categoryProducts on purpose — the route entry only
+                  statically imports this category's JSON, so reaching across
+                  categories here would pull every product chunk into the bundle. */}
               {(() => {
-                const relatedProducts = categoryProducts
-                  .filter(p => p.category === product.category && p.id !== product.id)
-                  .slice(0, 3);
+                const RELATED_COUNT = 6;
+                const siblings = categoryProducts
+                  .filter(p => p.category === product.category && p.id !== product.id);
+                const selfIndex = Math.max(0, categoryProducts.findIndex(p => p.id === product.id));
+                const relatedProducts = siblings.length === 0 ? [] : Array.from(
+                  { length: Math.min(RELATED_COUNT, siblings.length) },
+                  (_, k) => siblings[(selfIndex + k) % siblings.length],
+                );
                 if (relatedProducts.length === 0) return null;
                 return (
                   <div className="mt-12">
