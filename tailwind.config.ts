@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 import tailwindcssAnimate from "tailwindcss-animate";
+import typography from "@tailwindcss/typography";
 
 export default {
   darkMode: ["class"],
@@ -104,6 +105,14 @@ export default {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" },
         },
+        "shimmer": {
+          "0%": { transform: "translateX(-150%) skewX(-15deg)" },
+          "100%": { transform: "translateX(250%) skewX(-15deg)" },
+        },
+        "gradient-x": {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -113,8 +122,10 @@ export default {
         "slide-in": "slide-in 0.4s ease-out",
         "scale-in": "scale-in 0.3s ease-out",
         "float": "float 3s ease-in-out infinite",
+        "shimmer": "shimmer 2.5s ease-in-out infinite",
+        "gradient-x": "gradient-x 4s ease infinite",
       },
     },
   },
-  plugins: [tailwindcssAnimate],
+  plugins: [tailwindcssAnimate, typography],
 } satisfies Config;

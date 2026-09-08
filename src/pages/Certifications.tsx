@@ -1,13 +1,14 @@
 import { useTranslation } from 'react-i18next';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import WhatsAppButton from '@/components/WhatsAppButton';
 import { Shield, Award, CheckCircle2, FileCheck, Globe, Users, Leaf, TrendingUp } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { BreadcrumbStructuredData, FAQStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { LocalizedLink } from '@/components/LocalizedLink';
+import { useSpotlight } from '@/hooks/useSpotlight';
+import { GradientCTA } from '@/components/ui/gradient-cta';
 
 const breadcrumbItems = [
   { name: 'Home', url: 'https://gcoman.com/' },
@@ -42,6 +43,7 @@ const certificationFAQs = [
 ];
 
 const Certifications = () => {
+  const spotlight = useSpotlight();
   const { t } = useTranslation();
 
   const certifications = [
@@ -231,7 +233,6 @@ const Certifications = () => {
       <FAQStructuredData faqs={certificationFAQs} />
       <SpeakableStructuredData url="https://gcoman.com/certifications" cssSelector={["h1", "h2", ".speakable"]} />
       <Navigation />
-      <WhatsAppButton />
 
       <main id="main-content">
         {/* Hero Section */}
@@ -329,7 +330,7 @@ const Certifications = () => {
                 {whyItMatters.map((item, index) => {
                   const Icon = item.icon;
                   return (
-                    <Card key={index} className="p-6 text-center hover:shadow-lg transition-shadow logo-gradient-border relative">
+                    <Card key={index} onMouseMove={spotlight} className="p-6 text-center hover:shadow-lg transition-shadow logo-gradient-border spotlight-card relative">
                       <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
                         <Icon className="w-6 h-6 text-primary" />
                       </div>
@@ -407,15 +408,12 @@ const Certifications = () => {
                 Contact our team for certification documentation, compliance certificates, or vendor registration support.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <LocalizedLink
-                  to="/contact"
-                  className="inline-flex items-center justify-center px-8 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-semibold"
-                >
+                <GradientCTA to="/contact" size="lg">
                   Request Certificates
-                </LocalizedLink>
+                </GradientCTA>
                 <a
                   href="tel:+96893754388"
-                  className="inline-flex items-center justify-center px-8 py-3 bg-background border-2 border-primary text-primary rounded-lg hover:bg-primary/10 transition-colors font-semibold"
+                  className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-background/80 backdrop-blur border-2 border-primary text-primary hover:bg-primary/10 transition-colors font-semibold"
                 >
                   Call: +968 93754388
                 </a>

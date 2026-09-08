@@ -29,20 +29,19 @@ const StatsSection = () => {
     const [count, setCount] = useState(0);
     useEffect(() => {
       if (!isVisible) return;
-      const duration = 1500;
-      const steps = 40;
-      const increment = end / steps;
-      let current = 0;
-      const timer = setInterval(() => {
-        current += increment;
-        if (current >= end) {
-          setCount(end);
-          clearInterval(timer);
-        } else {
-          setCount(Math.floor(current));
-        }
-      }, duration / steps);
-      return () => clearInterval(timer);
+      const duration = 1800;
+      let raf: number;
+      let start: number | null = null;
+      const tick = (now: number) => {
+        if (start === null) start = now;
+        const progress = Math.min((now - start) / duration, 1);
+        // easeOutExpo — fast start, gentle settle
+        const eased = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+        setCount(Math.round(eased * end));
+        if (progress < 1) raf = requestAnimationFrame(tick);
+      };
+      raf = requestAnimationFrame(tick);
+      return () => cancelAnimationFrame(raf);
     }, [isVisible, end]);
 
     return (
@@ -56,22 +55,33 @@ const StatsSection = () => {
     <section ref={sectionRef} className="relative py-20 overflow-hidden">
       {/* Gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-secondary via-secondary/95 to-primary/90" />
+      {/* Dot-grid texture */}
+      <div
+        aria-hidden
+        className="absolute inset-0 opacity-[0.14]"
+        style={{
+          backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.6) 1px, transparent 1px)',
+          backgroundSize: '26px 26px',
+          maskImage: 'radial-gradient(ellipse 70% 60% at 50% 50%, black 30%, transparent 100%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 70% 60% at 50% 50%, black 30%, transparent 100%)',
+        }}
+      />
       {/* Decorative shapes */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-primary/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/15 rounded-full blur-3xl translate-x-1/3 translate-y-1/3" />
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 max-w-5xl mx-auto">
           {stats.map((stat, index) => {
             const Icon = stat.icon;
             return (
               <div
                 key={index}
-                className="text-center space-y-3 animate-fade-in"
+                className="group text-center space-y-3 animate-fade-in rounded-2xl border border-white/15 bg-white/[0.06] backdrop-blur-md px-4 py-8 transition-all duration-300 hover:bg-white/[0.10] hover:border-white/25 hover:-translate-y-1"
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
                 <div className="flex justify-center mb-2">
-                  <div className="w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/20">
+                  <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center border border-white/20 transition-transform duration-300 group-hover:scale-110">
                     <Icon className="w-7 h-7 text-white" />
                   </div>
                 </div>

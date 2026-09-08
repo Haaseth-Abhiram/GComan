@@ -3,13 +3,13 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import WhatsAppButton from '@/components/WhatsAppButton';
 import { SEO } from '@/components/SEO';
 import { BlogListingStructuredData, BreadcrumbStructuredData } from '@/components/StructuredData';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Calendar, Clock, User, ArrowRight, TrendingUp, Beaker, Droplets, Factory, Leaf, Globe2 } from 'lucide-react';
+import { useSpotlight } from '@/hooks/useSpotlight';
 
 export interface HowToStep {
   name: string;
@@ -1686,6 +1686,7 @@ Global Chemicals LLC supplies MEG and DEG from stock in Muscat to upstream opera
 const categories = ['All', 'Water Treatment', 'Industrial Chemicals', 'Sustainability', 'Safety', 'Oil & Gas', 'Industry Guide'];
 
 const Blog = () => {
+  const spotlight = useSpotlight();
   useTranslation();
   const [selectedCategory, setSelectedCategory] = useState('All');
 
@@ -1711,7 +1712,6 @@ const Blog = () => {
       ]} />
 
       <Navigation />
-      <WhatsAppButton />
 
       <main id="main-content">
         {/* Hero Section */}
@@ -1797,7 +1797,7 @@ const Blog = () => {
                 {filteredPosts.slice(selectedCategory === 'All' ? 1 : 0).map((post) => {
                   const IconComponent = post.icon;
                   return (
-                    <Card key={post.id} className="overflow-hidden hover:shadow-xl transition-all group logo-gradient-border relative">
+                    <Card key={post.id} onMouseMove={spotlight} className="overflow-hidden hover:shadow-xl transition-all group logo-gradient-border spotlight-card relative">
                       <div className="bg-gradient-to-br from-primary/10 to-secondary/10 p-12 flex items-center justify-center">
                         <IconComponent className="h-20 w-20 text-primary group-hover:scale-110 transition-transform" />
                       </div>

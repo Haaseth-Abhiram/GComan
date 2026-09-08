@@ -4,7 +4,6 @@ import { loadProductsByCategory, loadAllProducts, TOTAL_PRODUCTS, ALL_CATEGORIES
 import type { Product } from '@/data/productTypes';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import WhatsAppButton from '@/components/WhatsAppButton';
 import { Beaker, Droplets, Wrench, Zap, FlaskConical, TestTube, Factory, Building2, Wheat, Microscope, Sparkles, FlaskRound, Flame, Wind, Wine, ChevronRight, Shield, SprayCan, Search, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useParams, Link, useLocation } from 'react-router-dom';
@@ -13,6 +12,7 @@ import { AISearchDialog } from '@/components/AISearchDialog';
 import { ProductCard } from '@/components/products/ProductCard';
 import { SEO } from '@/components/SEO';
 import { BreadcrumbStructuredData, FAQStructuredData, SpeakableStructuredData, ItemListStructuredData } from '@/components/StructuredData';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { trackSearch } from '@/components/GoogleAnalytics';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -403,6 +403,11 @@ const Products = () => {
   // /products/foobar) must not render as an indexable, self-canonical soft-404.
   const isUnknownCategory = !!categoryParam && !ALL_CATEGORIES.includes(categoryParam);
 
+  // Single source for both the rendered accordion and the FAQ JSON-LD, so the
+  // markup can never describe questions the page doesn't actually show.
+  const visibleFAQs =
+    categoryParam && categoryFAQs[categoryParam] ? categoryFAQs[categoryParam] : productsFAQs;
+
   // Build the crawlable URL for a sidebar category. 'all' → the products root.
   const categoryHref = (id: string) =>
     withLangPrefix(langPrefix, id === 'all' ? '/products' : `/products/${id}`);
@@ -623,7 +628,7 @@ const Products = () => {
         { name: 'Products', url: 'https://gcoman.com/products' },
         ...(categoryParam ? [{ name: categoryParam.replace(/-/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()), url: `https://gcoman.com/products/${categoryParam}` }] : [])
       ]} />
-      <FAQStructuredData faqs={categoryParam && categoryFAQs[categoryParam] ? categoryFAQs[categoryParam] : productsFAQs} />
+      <FAQStructuredData faqs={visibleFAQs} />
       <SpeakableStructuredData url={categoryParam ? `https://gcoman.com/products/${categoryParam}` : 'https://gcoman.com/products'} cssSelector={["h1", "h2", ".speakable"]} />
       {categoryParam && filteredProducts.length > 0 && (
         <ItemListStructuredData
@@ -640,7 +645,6 @@ const Products = () => {
       )}
 
       <Navigation />
-      <WhatsAppButton />
 
       <main id="main-content">
       {/* Hero Section */}
@@ -1011,6 +1015,34 @@ const Products = () => {
                 )}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQs. `productsFAQs`/`categoryFAQs` were only ever fed to
+          FAQStructuredData — ~320 lines of buyer-objection copy that no human
+          could see, and FAQ markup is supposed to mirror visible content. */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold text-center text-foreground mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-center text-muted-foreground mb-10">
+              Sourcing, documentation and delivery — answered.
+            </p>
+            <Accordion type="single" collapsible className="w-full">
+              {visibleFAQs.map((faq, i) => (
+                <AccordionItem key={i} value={`products-faq-${i}`}>
+                  <AccordionTrigger className="text-left text-base font-semibold">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
         </div>
       </section>

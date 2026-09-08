@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import NotFound from '@/pages/NotFound';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import WhatsAppButton from '@/components/WhatsAppButton';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -1213,12 +1212,33 @@ const LocationLanding = () => {
       <SpeakableStructuredData url={`https://gcoman.com/chemicals/${locationData.slug}`} cssSelector={["h1", "h2", ".speakable"]} />
 
       <Navigation />
-      <WhatsAppButton />
+      <main id="main-content">
 
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-br from-primary/10 via-background to-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
+            {/* Visible breadcrumb. BreadcrumbStructuredData already declared
+                Home → Delivery Locations → City, but no city page actually
+                linked back to /chemicals — the hub exists to parent this
+                cluster of 22 pages and none of its children pointed at it. */}
+            <nav
+              className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground mb-4"
+              aria-label="Breadcrumb"
+            >
+              <LocalizedLink to="/" className="hover:text-primary transition-colors">
+                {isAr ? 'الرئيسية' : 'Home'}
+              </LocalizedLink>
+              <span>/</span>
+              <LocalizedLink to="/chemicals" className="hover:text-primary transition-colors">
+                {isAr ? 'مواقع التوصيل' : 'Delivery Locations'}
+              </LocalizedLink>
+              <span>/</span>
+              <span className="text-foreground font-medium">
+                {isAr ? locationData.cityArabic : locationData.city}
+              </span>
+            </nav>
+
             <div className="flex items-center gap-2 mb-4">
               <Badge variant="secondary" className="text-sm">
                 <MapPin className="w-3 h-3 mr-1" />
@@ -1461,7 +1481,7 @@ const LocationLanding = () => {
                 <LocalizedLink to="/contact">{isAr ? 'تواصل معنا' : 'Contact Us'}</LocalizedLink>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <a href="https://wa.me/96893754388">
+                <a href="https://wa.me/96893754388" target="_blank" rel="noopener noreferrer">
                   {isAr ? 'تواصل عبر واتساب' : 'WhatsApp Us'}
                 </a>
               </Button>
@@ -1485,6 +1505,7 @@ const LocationLanding = () => {
         </div>
       </section>
 
+      </main>
       <Footer />
     </div>
   );

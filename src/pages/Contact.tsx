@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import WhatsAppButton from '@/components/WhatsAppButton';
 import { Mail, Phone, MapPin, Clock, MessageSquare, Headphones, FileText, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -89,14 +88,35 @@ const Contact = () => {
     const productLine = /^[\w/-]{1,80}$/.test(ref)
       ? `${product} (gcoman.com/products/${ref})`
       : product;
+
+    // `qty` is sent by the dosing calculator carrying the figure the visitor
+    // just computed. Validated by shape rather than an allow-list, because a
+    // \w allow-list rejects the units these figures are written in (m³, °C, —):
+    // bounded length, no angle brackets, no control characters.
+    const qtyRaw = searchParams.get('qty') || '';
+    const hasUnsafeChars =
+      /[<>]/.test(qtyRaw) ||
+      [...qtyRaw].some((ch) => {
+        const code = ch.codePointAt(0) ?? 0;
+        return code < 0x20 || code === 0x7f;
+      });
+    const quantity = qtyRaw.length <= 160 && !hasUnsafeChars ? qtyRaw : '';
+
     setFormData((prev) => ({
       ...prev,
       subject: 'quotation',
-      message: t('contact.form.quoteTemplate', {
-        product: productLine,
-        defaultValue:
-          'I would like a quotation for: {{product}}\n\nQuantity required: \nDelivery location: \n\nAdditional details: ',
-      }),
+      message: quantity
+        ? t('contact.form.quoteTemplateWithQty', {
+            product: productLine,
+            quantity,
+            defaultValue:
+              'I would like a quotation for: {{product}}\n\nQuantity required: {{quantity}}\nDelivery location: \n\nAdditional details: ',
+          })
+        : t('contact.form.quoteTemplate', {
+            product: productLine,
+            defaultValue:
+              'I would like a quotation for: {{product}}\n\nQuantity required: \nDelivery location: \n\nAdditional details: ',
+          }),
     }));
     // Let the prerendered layout settle, then bring the form into view.
     const id = window.setTimeout(() => {
@@ -242,7 +262,6 @@ const Contact = () => {
         cssSelector={["h1", "h2", ".speakable"]}
       />
       <Navigation />
-      <WhatsAppButton />
 
       <main id="main-content">
       {/* Hero Section */}

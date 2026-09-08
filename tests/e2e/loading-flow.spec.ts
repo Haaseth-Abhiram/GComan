@@ -45,7 +45,11 @@ test.describe('Loading flow — never deadlocks', () => {
     await expect(page.locator('text=/^Loading…$/')).toHaveCount(0);
 
     // The CTA back to /products should be present for users who land here.
-    await expect(page.getByRole('button', { name: /back to products/i })).toBeVisible();
+    // It is a real link (not a button with an onClick) so it carries an href,
+    // supports middle-click, and keeps the /ar prefix for Arabic visitors.
+    const backLink = page.getByRole('link', { name: /back to products/i });
+    await expect(backLink).toBeVisible();
+    await expect(backLink).toHaveAttribute('href', /\/products$/);
   });
 
   test('valid product page renders product content (not Loading…)', async ({ page }) => {

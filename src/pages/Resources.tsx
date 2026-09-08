@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import WhatsAppButton from '@/components/WhatsAppButton';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -1052,19 +1051,41 @@ const Resources = () => {
   const [selectedGuide, setSelectedGuide] = useState<IndustryGuide | null>(null);
   const [selectedArticle, setSelectedArticle] = useState<BlogArticle | null>(null);
 
-  const downloadCategories = [
-    { id: 'all', label: 'All Resources' },
-    { id: 'catalogs', label: 'Product Catalogs' },
-    { id: 'sds', label: 'Safety Data Sheets' },
-    { id: 'technical', label: 'Technical Documents' },
-    { id: 'certificates', label: 'Certifications' },
-    { id: 'guides', label: 'Industry Guides' },
-  ];
+  // Labels for every download category we may ever offer. The visible filter
+  // list is derived from the documents that actually exist (see
+  // `downloadCategories` below) — the old hard-coded list advertised SDS,
+  // Technical Documents, Certifications and Industry Guides, and all four
+  // rendered "No resources found" because every resource is a catalog. Add a
+  // resource in a new category and its filter appears automatically.
+  const downloadCategoryLabels: Record<string, string> = {
+    catalogs: 'Product Catalogs',
+    sds: 'Safety Data Sheets',
+    technical: 'Technical Documents',
+    certificates: 'Certifications',
+    guides: 'Industry Guides',
+  };
 
-  // Filter articles based on category
+  // The hero search box used to feed ONLY the Downloads tab, while the page
+  // opens on Guides and the placeholder promised "articles and resources" —
+  // so typing appeared to do nothing. It now filters guides and articles too.
+  const query = searchQuery.trim().toLowerCase();
+  const matchesQuery = (...fields: (string | undefined)[]) =>
+    !query || fields.some((f) => f?.toLowerCase().includes(query));
+
+  const filteredGuides = industryGuides.filter((guide) =>
+    matchesQuery(
+      guide.title,
+      guide.excerpt,
+      guide.category,
+      ...(guide.keyProducts ?? []),
+      ...guide.sections.map((s) => s.title)
+    )
+  );
+
+  // Filter articles based on category and the hero search query
   const filteredArticles = blogArticles.filter((article) => {
     const matchesCategory = selectedArticleCategory === 'All' || article.category === selectedArticleCategory;
-    return matchesCategory;
+    return matchesCategory && matchesQuery(article.title, article.excerpt, article.category);
   });
 
   const featuredArticle = blogArticles.find((article) => article.featured);
@@ -1150,6 +1171,13 @@ const Resources = () => {
     }
   ];
 
+  const downloadCategories = [
+    { id: 'all', label: 'All Resources' },
+    ...Object.entries(downloadCategoryLabels)
+      .filter(([id]) => resources.some((r) => r.category === id))
+      .map(([id, label]) => ({ id, label })),
+  ];
+
   const filteredResources = resources.filter(resource => {
     const matchesSearch = resource.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          resource.description.toLowerCase().includes(searchQuery.toLowerCase());
@@ -1209,7 +1237,7 @@ const Resources = () => {
         cssSelector={["h1", "h2", ".speakable"]}
       />
       <Navigation />
-      <WhatsAppButton />
+      <main id="main-content">
 
       {/* Hero Section */}
       <section className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 bg-gradient-to-br from-primary/5 via-background to-background">
@@ -1224,13 +1252,20 @@ const Resources = () => {
             
             {/* Search Bar */}
             <div className="relative max-w-2xl mx-auto">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+              <label htmlFor="resources-search" className="sr-only">
+                Search guides, articles and downloads
+              </label>
+              <Search
+                aria-hidden
+                className="absolute ltr:left-4 rtl:right-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground"
+              />
               <Input
-                type="text"
-                placeholder="Search articles and resources..."
+                id="resources-search"
+                type="search"
+                placeholder="Search guides, articles and downloads..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-12 h-14 text-lg"
+                className="ltr:pl-12 rtl:pr-12 h-14 text-lg"
               />
             </div>
           </div>
@@ -1342,13 +1377,22 @@ const Resources = () => {
 
                   {/* Guides Grid */}
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {industryGuides.map((guide) => {
+                    {filteredGuides.map((guide) => {
                       const IconComponent = guide.icon;
                       return (
                         <Card
                           key={guide.id}
-                          className="hover:shadow-lg transition-all cursor-pointer group logo-gradient-border relative"
+                          role="button"
+                          tabIndex={0}
+                          aria-label={`Open guide: ${guide.title}`}
+                          className="hover:shadow-lg transition-all cursor-pointer group logo-gradient-border relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                           onClick={() => setSelectedGuide(guide)}
+                          onKeyDown={(e) => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                              e.preventDefault();
+                              setSelectedGuide(guide);
+                            }
+                          }}
                         >
                           <CardHeader>
                             <div className="flex items-start justify-between mb-2">
@@ -1386,6 +1430,20 @@ const Resources = () => {
                       );
                     })}
                   </div>
+
+                  {filteredGuides.length === 0 && (
+                    <div className="text-center py-16" role="status">
+                      <p className="text-lg font-semibold text-foreground mb-2">
+                        No guides match “{searchQuery}”
+                      </p>
+                      <p className="text-muted-foreground mb-6">
+                        Try a broader term, or ask our technical team directly.
+                      </p>
+                      <Button variant="outline" onClick={() => setSearchQuery('')}>
+                        Clear search
+                      </Button>
+                    </div>
+                  )}
 
                   {/* SEO Content Section */}
                   <div className="mt-12 bg-muted/50 rounded-lg p-6 sm:p-8">
@@ -1677,8 +1735,11 @@ const Resources = () => {
                     <span className="flex items-center gap-1"><Clock className="h-4 w-4" />{selectedArticle.readTime}</span>
                   </div>
                   <div className="prose prose-lg max-w-none">
+                    {/* renderContent already emits <p> blocks; wrapping it in
+                        another <p> was invalid HTML and browsers auto-closed
+                        the outer tag, breaking the spacing. */}
                     {selectedArticle.content.map((paragraph, index) => (
-                      <p key={index} className="mb-4 text-muted-foreground whitespace-pre-line">{renderContent(paragraph)}</p>
+                      <div key={index} className="mb-4 text-muted-foreground">{renderContent(paragraph)}</div>
                     ))}
                   </div>
                   {selectedArticle.relatedProducts && selectedArticle.relatedProducts.length > 0 && (
@@ -1798,6 +1859,7 @@ const Resources = () => {
         </div>
       </section>
 
+      </main>
       <Footer />
       
       {/* PDF Viewer Dialog */}

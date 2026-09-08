@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import WhatsAppButton from '@/components/WhatsAppButton';
 import { SEO } from '@/components/SEO';
 import { FAQStructuredData, BreadcrumbStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
 import { Button } from '@/components/ui/button';
@@ -123,7 +122,6 @@ const CausticSodaOman = () => {
         cssSelector={["h1", "h2", ".speakable"]}
       />
       <Navigation />
-      <WhatsAppButton />
 
       <main id="main-content">
         {/* Hero */}

@@ -1,7 +1,6 @@
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import WhatsAppButton from '@/components/WhatsAppButton';
 import { SEO } from '@/components/SEO';
 import { ArticleStructuredData, BreadcrumbStructuredData, FAQStructuredData, HowToStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
@@ -10,10 +9,28 @@ import { Button } from '@/components/ui/button';
 import { Calendar, Clock, User, ArrowLeft, Tag, ChevronRight } from 'lucide-react';
 import { LocalizedLink } from '@/components/LocalizedLink';
 import { blogPosts } from './Blog';
+import { ArticleTOC, type TOCHeading } from '@/components/ArticleTOC';
+import { ShareButtons } from '@/components/ShareButtons';
+import { ReadingProgress } from '@/components/ReadingProgress';
+
+/* Article bodies are plain text: paragraphs separated by blank lines, with
+   section headings stored as bare short lines. Promote those to real <h2>s so
+   each article has an outline and anchor targets instead of 40 flat <p>s.
+   A heading is short, spans a single sentence, and carries no terminal
+   punctuation (question marks are common and intentional). */
+const isHeadingLine = (text: string) =>
+  text.length <= 100 && !/[.,;:]$/.test(text) && !text.includes('. ');
+
+const slugifyHeading = (text: string) =>
+  text
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, '')
+    .trim()
+    .replace(/\s+/g, '-')
+    .slice(0, 60);
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
-  const navigate = useNavigate();
 
   const post = blogPosts.find((p) => p.id === slug);
 
@@ -30,9 +47,11 @@ const BlogPost = () => {
         <div className="container mx-auto px-4 py-32 text-center">
           <h1 className="text-4xl font-bold mb-4">Article Not Found</h1>
           <p className="text-muted-foreground mb-8">The article you're looking for doesn't exist or has been moved.</p>
-          <Button onClick={() => navigate('/blog')}>
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to Blog
+          <Button asChild>
+            <LocalizedLink to="/blog">
+              <ArrowLeft className="mr-2 h-4 w-4" />
+              Back to Blog
+            </LocalizedLink>
           </Button>
         </div>
         <Footer />
@@ -42,6 +61,13 @@ const BlogPost = () => {
 
   const Icon = post.icon;
   const canonicalUrl = `https://gcoman.com/blog/${post.id}`;
+  // Derived from the same heuristic that renders the <h2>s, so the TOC can
+  // never list a heading the article doesn't actually have.
+  const headings: TOCHeading[] = post.content
+    .split('\n')
+    .map((l) => l.trim())
+    .filter((l) => l && isHeadingLine(l))
+    .map((text) => ({ id: slugifyHeading(text), text }));
   const relatedPosts = blogPosts
     .filter((p) => p.id !== post.id && (p.category === post.category || p.tags.some((t) => post.tags.includes(t))))
     .slice(0, 3);
@@ -96,19 +122,21 @@ const BlogPost = () => {
         { name: post.title, url: canonicalUrl },
       ]} />
       <Navigation />
-      <WhatsAppButton />
+      <ReadingProgress />
 
       <main id="main-content">
         {/* Hero */}
         <section className="pt-32 pb-12 bg-gradient-to-br from-primary/5 via-secondary/5 to-background">
           <div className="container mx-auto px-4 max-w-3xl">
             <Button
+              asChild
               variant="ghost"
-              onClick={() => navigate('/blog')}
-              className="mb-6 -ml-2 text-muted-foreground hover:text-foreground"
+              className="mb-6 ltr:-ml-2 rtl:-mr-2 text-muted-foreground hover:text-foreground"
             >
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              Back to Blog
+              <LocalizedLink to="/blog">
+                <ArrowLeft className="ltr:mr-2 rtl:ml-2 h-4 w-4 rtl:rotate-180" />
+                Back to Blog
+              </LocalizedLink>
             </Button>
 
             <div className="flex items-center gap-3 mb-4">
@@ -148,15 +176,50 @@ const BlogPost = () => {
 
         {/* Article Body */}
         <section className="py-12">
-          <div className="container mx-auto px-4 max-w-3xl">
-            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center mb-8">
-              <Icon className="w-8 h-8 text-primary" />
-            </div>
+          <div className="container mx-auto px-4 max-w-3xl lg:max-w-6xl">
+            <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_240px] lg:gap-12">
+              <div className="min-w-0 lg:max-w-3xl">
+                <div className="flex items-center justify-between gap-4 mb-8">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center flex-shrink-0">
+                    <Icon className="w-8 h-8 text-primary" />
+                  </div>
+                  <ShareButtons url={canonicalUrl} title={post.title} />
+                </div>
 
-            <div className="prose prose-lg max-w-none text-foreground">
-              {post.content.split('\n').map((paragraph, i) => (
-                paragraph.trim() ? <p key={i} className="mb-4 leading-relaxed text-foreground/90">{paragraph}</p> : null
-              ))}
+                <ArticleTOC headings={headings} variant="inline" />
+
+                <div className="prose prose-lg max-w-none prose-headings:text-foreground prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-10 prose-h2:mb-4 prose-p:text-foreground/90 prose-p:leading-relaxed prose-a:text-primary prose-strong:text-foreground">
+                  {post.content.split('\n').map((line, i) => {
+                    const text = line.trim();
+                    if (!text) return null;
+                    return isHeadingLine(text) ? (
+                      <h2 key={i} id={slugifyHeading(text)} className="scroll-mt-28">
+                        {text}
+                      </h2>
+                    ) : (
+                      <p key={i}>{text}</p>
+                    );
+                  })}
+                </div>
+
+                {/* Author / review credibility — E-E-A-T signal and a trust cue
+                    right where the reader finishes the technical argument. */}
+                <div className="mt-10 flex flex-wrap items-center gap-4 rounded-xl border border-border bg-muted/30 p-5">
+                  <div className="w-11 h-11 rounded-full bg-gradient-to-br from-[hsl(var(--logo-blue))] to-[hsl(var(--logo-orange))] flex items-center justify-center flex-shrink-0">
+                    <User className="w-5 h-5 text-white" />
+                  </div>
+                  <div className="min-w-0">
+                    <p className="text-sm font-semibold text-foreground">{post.author}</p>
+                    <p className="text-xs text-muted-foreground">
+                      Reviewed by our applications engineering team · ISO 9001:2015 · JSRS registered
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <aside className="hidden lg:block">
+                <ArticleTOC headings={headings} variant="rail" />
+              </aside>
             </div>
 
             {post.faqs && post.faqs.length > 0 && (
@@ -217,10 +280,10 @@ const BlogPost = () => {
               </p>
               <div className="flex flex-wrap gap-3">
                 <Button asChild>
-                  <Link to="/contact">Request a Quote</Link>
+                  <LocalizedLink to="/contact">Request a Quote</LocalizedLink>
                 </Button>
                 <Button variant="outline" asChild>
-                  <Link to="/products">Browse Products</Link>
+                  <LocalizedLink to="/products">Browse Products</LocalizedLink>
                 </Button>
               </div>
             </div>
@@ -236,7 +299,7 @@ const BlogPost = () => {
                 {relatedPosts.map((related) => {
                   const RelatedIcon = related.icon;
                   return (
-                    <Link
+                    <LocalizedLink
                       key={related.id}
                       to={`/blog/${related.id}`}
                       className="flex items-start gap-4 p-4 bg-background rounded-lg border border-border hover:border-primary/40 hover:shadow-sm transition-all"
@@ -249,7 +312,7 @@ const BlogPost = () => {
                         <p className="text-sm text-muted-foreground mt-1 line-clamp-2">{related.excerpt}</p>
                         <p className="text-xs text-muted-foreground mt-1">{related.readTime}</p>
                       </div>
-                    </Link>
+                    </LocalizedLink>
                   );
                 })}
               </div>

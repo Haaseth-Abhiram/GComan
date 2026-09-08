@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import WhatsAppButton from '@/components/WhatsAppButton';
 import { Map, ChevronRight } from 'lucide-react';
 
 const Sitemap = () => {
@@ -83,7 +82,6 @@ const Sitemap = () => {
         <meta name="robots" content="noindex, follow" />
       </Helmet>
       <Navigation />
-      <WhatsAppButton />
       
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-br from-primary/5 via-background to-background">

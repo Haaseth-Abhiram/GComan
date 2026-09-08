@@ -15,6 +15,7 @@ import { Loading } from "./components/Loading";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 import { ZohoSalesIQ } from "./components/ZohoSalesIQ";
 import BackToTopButton from "./components/BackToTopButton";
+import WhatsAppButton from "./components/WhatsAppButton";
 import RouteChangeLoader from "./components/RouteChangeLoader";
 import { resolveLegacyRedirect } from "./lib/legacyRedirects";
 import { lazyRetry } from "./lib/lazyRetry";
@@ -145,6 +146,9 @@ const App = () => (
             </a>
             <CookieConsent />
             <BackToTopButton />
+            {/* Global: was imported per-page, so it was missing exactly where a
+                stuck visitor needs it most (404 and /thank-you). */}
+            <WhatsAppButton />
             <LanguageSync />
             <LegacyRedirectHandler />
             <RouteChangeLoader />

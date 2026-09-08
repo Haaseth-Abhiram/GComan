@@ -1,9 +1,12 @@
 import { useTranslation } from 'react-i18next';
 import { Card } from '@/components/ui/card';
 import { Shield, Zap, Headphones, TrendingUp, Award, Leaf } from 'lucide-react';
+import { useSpotlight } from '@/hooks/useSpotlight';
 
 const WhyChooseUs = () => {
   const { t } = useTranslation();
+
+  const handleSpotlight = useSpotlight();
 
   const reasons = [
     { icon: Shield, title: t('home.whyChoose.qualityAssurance'), description: t('home.whyChoose.qualityAssuranceDesc'), gradient: 'from-primary to-accent' },
@@ -33,7 +36,8 @@ const WhyChooseUs = () => {
             return (
               <Card
                 key={index}
-                className="relative p-8 hover:shadow-xl transition-all duration-300 group animate-fade-in overflow-hidden logo-gradient-border"
+                onMouseMove={handleSpotlight}
+                className="relative p-8 hover:shadow-xl transition-all duration-300 group animate-fade-in overflow-hidden logo-gradient-border spotlight-card"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Top gradient accent line */}

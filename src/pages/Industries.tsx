@@ -1,10 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import { SEO } from '@/components/SEO';
 import { FAQStructuredData, BreadcrumbStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
-import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import WhatsAppButton from '@/components/WhatsAppButton';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -339,12 +337,22 @@ const Industries = () => {
       <FAQStructuredData faqs={waterTreatmentFaqs} />
       <SpeakableStructuredData url="https://gcoman.com/industries" cssSelector={["h1", "h2", ".speakable"]} />
       <Navigation />
-      <WhatsAppButton />
 
       <main id="main-content">
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-br from-primary/10 via-secondary/5 to-background relative overflow-hidden">
-        <div className="absolute inset-0 bg-grid-pattern opacity-5" />
+        {/* `bg-grid-pattern` was never defined in Tailwind config or CSS, so
+            this texture layer rendered nothing. Inline dot-grid instead. */}
+        <div
+          aria-hidden
+          className="absolute inset-0 opacity-[0.12]"
+          style={{
+            backgroundImage: 'radial-gradient(circle, hsl(var(--foreground)) 1px, transparent 1px)',
+            backgroundSize: '26px 26px',
+            maskImage: 'radial-gradient(ellipse 70% 60% at 50% 40%, black 20%, transparent 100%)',
+            WebkitMaskImage: 'radial-gradient(ellipse 70% 60% at 50% 40%, black 20%, transparent 100%)',
+          }}
+        />
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
@@ -605,18 +613,18 @@ const Industries = () => {
                         Contact our technical team for expert consultation, product recommendations, and competitive pricing for your water treatment chemical requirements.
                       </p>
                       <div className="flex flex-wrap justify-center gap-4">
-                        <Link to="/contact">
-                          <Button size="lg">
-                            <Phone className="w-5 h-5 mr-2" />
+                        <Button size="lg" asChild>
+                          <LocalizedLink to="/contact">
+                            <Phone className="w-5 h-5 ltr:mr-2 rtl:ml-2" />
                             Request a Quote
-                          </Button>
-                        </Link>
-                        <Link to="/products?category=water-treatment">
-                          <Button size="lg" variant="outline">
+                          </LocalizedLink>
+                        </Button>
+                        <Button size="lg" variant="outline" asChild>
+                          <LocalizedLink to="/products/water-treatment">
                             View All Products
-                            <ArrowRight className="w-5 h-5 ml-2" />
-                          </Button>
-                        </Link>
+                            <ArrowRight className="w-5 h-5 ltr:ml-2 rtl:mr-2 rtl:rotate-180" />
+                          </LocalizedLink>
+                        </Button>
                       </div>
                     </div>
                   </>

@@ -4,7 +4,6 @@ import { CheckCircle2 } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import Footer from '@/components/Footer';
-import WhatsAppButton from '@/components/WhatsAppButton';
 import TrustBadges from '@/components/TrustBadges';
 import StatsSection from '@/components/StatsSection';
 import FeaturedProducts from '@/components/FeaturedProducts';
@@ -66,7 +65,6 @@ const Index = () => {
         cssSelector={["h1", "h2", ".company-snapshot"]}
       />
       <Navigation />
-      <WhatsAppButton />
       <main id="main-content">
         <Hero />
 

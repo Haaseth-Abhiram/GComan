@@ -41,23 +41,36 @@ const ProductCardComponent = ({ product }: ProductCardProps) => {
       ? t(`products.${product.id}.description`, { defaultValue: product.description })
       : product.description;
 
+  // Card-wide click without an overlay link: an absolutely-positioned overlay
+  // (or pointer-events-none content) makes the whole card unselectable, and
+  // buyers copy product names and CAS numbers straight off these cards. The
+  // title stays a real <a> for crawlers, middle-click and keyboard; this
+  // handler only adds mouse convenience, and bails when the user was selecting
+  // text rather than clicking.
+  const handleCardClick = (e: React.MouseEvent) => {
+    if ((e.target as HTMLElement).closest('a,button')) return;
+    if (window.getSelection()?.toString()) return;
+    navigate(productUrl);
+  };
+
   return (
-    <Card className="group relative overflow-hidden transition-all duration-300 hover:shadow-lg bg-card hover:-translate-y-1 logo-gradient-border focus-within:ring-2 focus-within:ring-primary focus-within:ring-offset-2 rounded-lg">
-      {/* Whole-card link as an absolutely-positioned overlay; interactive
-          siblings (the quote CTA) stack above it with a higher z-index. */}
-      <Link
-        to={productUrl}
-        aria-label={translatedTitle}
-        className="absolute inset-0 z-0 focus-visible:outline-none"
-      />
-      <div className="p-5 sm:p-6 flex flex-col h-full pointer-events-none">
+    <Card
+      onClick={handleCardClick}
+      className="group relative overflow-hidden transition-all duration-300 hover:shadow-lg bg-card hover:-translate-y-1 logo-gradient-border focus-within:ring-2 focus-within:ring-primary focus-within:ring-offset-2 rounded-lg cursor-pointer cv-auto"
+    >
+      <div className="p-5 sm:p-6 flex flex-col h-full">
         <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
           <div className="flex-shrink-0 p-2.5 sm:p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
             <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
           </div>
           <div className="flex-1 min-w-0">
-            <h3 className="text-base sm:text-lg font-bold text-foreground group-hover:text-primary transition-colors leading-tight mb-1 sm:mb-2 line-clamp-2">
-              {translatedTitle}
+            <h3 className="text-base sm:text-lg font-bold text-foreground leading-tight mb-1 sm:mb-2 line-clamp-2">
+              <Link
+                to={productUrl}
+                className="hover:text-primary group-hover:text-primary transition-colors focus-visible:outline-none focus-visible:underline"
+              >
+                {translatedTitle}
+              </Link>
             </h3>
           </div>
         </div>
@@ -73,11 +86,12 @@ const ProductCardComponent = ({ product }: ProductCardProps) => {
           </div>
           <button
             type="button"
-            onClick={() => {
+            onClick={(e) => {
+              e.stopPropagation();
               trackSelectContent('cta_button', `get_quote:${product.id}`);
               navigate(quoteUrl);
             }}
-            className="pointer-events-auto relative z-10 text-xs font-semibold px-3 py-1.5 rounded-md bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+            className="relative z-10 text-xs font-semibold px-3 py-1.5 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
           >
             {t('products.getQuote', { defaultValue: 'Get Quote' })}
           </button>

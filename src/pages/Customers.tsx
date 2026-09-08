@@ -1,10 +1,9 @@
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import WhatsAppButton from '@/components/WhatsAppButton';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Building2, Award, Users, TrendingUp } from 'lucide-react';
+import { Building2, Award, Users, TrendingUp, Quote, Star } from 'lucide-react';
 import oqLogo from '@/assets/customers/oq-logo.png';
 import oxyLogo from '@/assets/customers/oxy-logo.png';
 import pdoLogo from '@/assets/customers/pdo-logo.png';
@@ -209,7 +208,7 @@ const Customers = () => {
         cssSelector={["h1", "h2", ".speakable"]}
       />
       <Navigation />
-      <WhatsAppButton />
+      <main id="main-content">
 
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-br from-primary/5 via-background to-background">
@@ -339,8 +338,52 @@ const Customers = () => {
         </div>
       </section>
 
-      {/* Industry Categories */}
+      {/* Client testimonials.
+          NOTE: `clientReviews` shipped in this file for months without ever
+          being rendered. Displayed here as plain testimonials only — no
+          Review/AggregateRating JSON-LD, because self-serving org reviews are
+          not eligible for rich results and risk a manual action. */}
       <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <span className="block text-center text-xs font-semibold tracking-[0.2em] uppercase text-primary mb-3">
+              In Their Words
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+              What Our Customers Say
+            </h2>
+            <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+              Feedback from procurement, maintenance and engineering teams across Oman
+            </p>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {clientReviews.map((review) => (
+                <Card
+                  key={`${review.author}-${review.company}`}
+                  className="relative p-6 bg-card hover:shadow-lg transition-shadow flex flex-col"
+                >
+                  <Quote className="w-8 h-8 text-primary/20 mb-3 flex-shrink-0" />
+                  <div className="flex items-center gap-0.5 mb-3" aria-label={`${review.rating} out of 5`}>
+                    {Array.from({ length: review.rating }).map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-[hsl(var(--logo-orange))] text-[hsl(var(--logo-orange))]" />
+                    ))}
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed flex-grow">
+                    {review.reviewBody}
+                  </p>
+                  <div className="mt-5 pt-4 border-t border-border">
+                    <p className="text-sm font-semibold text-foreground">{review.author}</p>
+                    <p className="text-xs text-muted-foreground">{review.company}</p>
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Industry Categories */}
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -385,6 +428,7 @@ const Customers = () => {
         </div>
       </section>
 
+      </main>
       <Footer />
     </div>
   );

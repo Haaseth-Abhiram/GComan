@@ -1,6 +1,6 @@
 // Locale-aware Link: keeps /ar visitors on the Arabic tree for every footer link.
 import { LocalizedLink as Link } from '@/components/LocalizedLink';
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Youtube, Send, Loader2, Star } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Youtube, Send, Loader2, Star, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
@@ -99,8 +99,48 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#3a4453] text-white pt-16 pb-8">
-      <div className="container mx-auto px-4">
+    <footer className="relative bg-[hsl(var(--footer))] text-white pt-16 pb-8 overflow-hidden">
+      {/* Gradient hairline ties the footer back to the navbar CTA */}
+      <div
+        aria-hidden
+        className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-[hsl(var(--logo-blue))] via-[hsl(var(--logo-orange))] to-[hsl(var(--logo-blue))]"
+      />
+      {/* Dot-grid texture, same treatment as StatsSection */}
+      <div
+        aria-hidden
+        className="absolute inset-0 opacity-[0.06]"
+        style={{
+          backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)',
+          backgroundSize: '26px 26px',
+          maskImage: 'radial-gradient(ellipse 80% 60% at 50% 0%, black 10%, transparent 100%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 80% 60% at 50% 0%, black 10%, transparent 100%)',
+        }}
+      />
+      <div className="container mx-auto px-4 relative z-10">
+        {/* Conversion band: the footer previously offered no way to ask for a
+            quote, despite being where a visitor lands after a long scroll. */}
+        <div className="mb-12 pb-12 border-b border-white/10 flex flex-col md:flex-row md:items-center md:justify-between gap-5 text-center md:text-left">
+          <div>
+            <p className="text-lg font-bold text-white">
+              Need pricing on a specific chemical?
+            </p>
+            <p className="text-sm text-white/70 mt-1">
+              Send us the product and quantity — our team replies within 24 hours.
+            </p>
+          </div>
+          <Link
+            to="/contact"
+            className="group relative overflow-hidden inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-[hsl(var(--logo-blue))] to-[hsl(var(--logo-orange))] shadow-md hover:shadow-lg transition-all hover:scale-[1.03] motion-reduce:transform-none flex-shrink-0 self-center"
+          >
+            <span
+              aria-hidden
+              className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-transparent via-white/25 to-transparent animate-shimmer motion-reduce:hidden"
+            />
+            Request a Quote
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 transition-transform rtl:rotate-180" />
+          </Link>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 lg:gap-10 mb-12">
           {/* Company Info */}
           <div className="space-y-6 md:col-span-2 lg:col-span-1">
@@ -291,7 +331,11 @@ const Footer = () => {
               {t('footer.newsletterDesc')}
             </p>
             <form onSubmit={handleSubscribe} className="flex gap-3 max-w-md mx-auto">
+              <label htmlFor="footer-newsletter-email" className="sr-only">
+                {t('footer.newsletterPlaceholder')}
+              </label>
               <Input
+                id="footer-newsletter-email"
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -300,9 +344,9 @@ const Footer = () => {
                 disabled={isSubmitting}
                 required
               />
-              <Button 
+              <Button
                 type="submit"
-                className="bg-primary hover:bg-primary/90 text-white flex-shrink-0"
+                className="flex-shrink-0 text-white bg-gradient-to-r from-[hsl(var(--logo-blue))] to-[hsl(var(--logo-orange))] hover:opacity-90 shadow-md"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? (

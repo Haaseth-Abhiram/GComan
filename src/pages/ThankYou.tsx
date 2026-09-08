@@ -4,7 +4,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
-import { CheckCircle2, Phone, Mail, ArrowRight, Package, FileText } from 'lucide-react';
+import { CheckCircle2, Phone, MessageCircle, ArrowRight, Package, FileText } from 'lucide-react';
 import { trackSelectContent } from '@/components/GoogleAnalytics';
 
 const ThankYou = () => {
@@ -67,7 +67,7 @@ const ThankYou = () => {
                 className="flex items-center justify-center gap-3 p-5 rounded-xl border border-border bg-muted/30 hover:border-green-500/40 hover:bg-green-500/5 transition-all"
                 onClick={() => trackSelectContent('contact_click', 'whatsapp_thankyou')}
               >
-                <Mail className="w-5 h-5 text-green-500" />
+                <MessageCircle className="w-5 h-5 text-[#25D366]" />
                 <div className="text-left">
                   <p className="font-semibold text-foreground text-sm">WhatsApp</p>
                   <p className="text-muted-foreground text-sm">Instant response</p>

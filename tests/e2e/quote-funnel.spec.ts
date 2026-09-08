@@ -42,14 +42,50 @@ test.describe('Quote funnel', () => {
     await expect(page.locator('textarea#message')).toHaveValue(/quotation for:/);
   });
 
-  test('card overlay still navigates to the product page (nested-anchor fix)', async ({ page }) => {
+  test('quote CTA is never nested inside a link (nested-anchor fix)', async ({ page }) => {
     await page.goto('/products/water-treatment');
     await page.waitForLoadState('networkidle');
-    // The card body sits under a full-card overlay <a> — clicks anywhere on
-    // the card (except the quote button) land on that link by design.
-    const overlay = page.locator('a[aria-label="Calcium Carbonate"]').first();
-    await overlay.scrollIntoViewIfNeeded();
-    await overlay.click();
+    // History: the card was once an <a> wrapping another <a>, which some
+    // browsers resolve by dropping the inner link — silently eating quote
+    // clicks. The quote CTA must stay a sibling of the card's link, never a
+    // descendant of one.
+    const quoteBtn = page.getByRole('button', { name: 'Get Quote' }).first();
+    await expect(quoteBtn).toBeVisible();
+    expect(await quoteBtn.evaluate((el) => Boolean(el.closest('a')))).toBe(false);
+  });
+
+  test('card title link navigates to the product page', async ({ page }) => {
+    await page.goto('/products/water-treatment');
+    await page.waitForLoadState('networkidle');
+    // The title is a real <a> (crawlable, middle-clickable) rather than an
+    // absolutely-positioned overlay, which used to make the whole card — CAS
+    // numbers included — impossible to select or copy.
+    // Scoped to the card: the sidebar also carries a "Calcium Carbonate"
+    // category link, which points at a different URL.
+    const title = page
+      .getByRole('button', { name: 'Get Quote' })
+      .first()
+      .locator('xpath=ancestor::*[contains(@class,"logo-gradient-border")][1]')
+      .getByRole('link')
+      .first();
+    await title.scrollIntoViewIfNeeded();
+    await title.click();
+    await page.waitForURL('**/products/water-treatment/**');
+    expect(page.url()).toContain('/products/water-treatment/');
+  });
+
+  test('clicking the card body (not the CTA) opens the product page', async ({ page }) => {
+    await page.goto('/products/water-treatment');
+    await page.waitForLoadState('networkidle');
+    // Whole-card click convenience is now a JS handler rather than an overlay
+    // link, so it needs its own guard.
+    const card = page
+      .getByRole('button', { name: 'Get Quote' })
+      .first()
+      .locator('xpath=ancestor::*[contains(@class,"logo-gradient-border")][1]');
+    await card.scrollIntoViewIfNeeded();
+    // Click near the top-left corner, away from the title link and the CTA.
+    await card.click({ position: { x: 8, y: 8 } });
     await page.waitForURL('**/products/water-treatment/**');
     expect(page.url()).toContain('/products/water-treatment/');
   });

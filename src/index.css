@@ -84,6 +84,10 @@ All colors MUST be HSL.
     /* Logo gradient colors */
     --logo-blue: 224 65% 36%;
     --logo-orange: 16 87% 55%;
+
+    /* Footer slab. Tokenised from the old hardcoded #3a4453 so the site's
+       most-seen surface participates in theming instead of sitting outside it. */
+    --footer: 218 18% 27%;
     
     --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -271,6 +275,13 @@ All colors MUST be HSL.
   }
 }
 
+/* Skip layout/paint for offscreen cards in long catalogue grids.
+   contain-intrinsic-size keeps the scrollbar stable before a card is painted. */
+.cv-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 260px;
+}
+
 /* Logo Gradient Border Utility */
 .logo-gradient-border {
   position: relative;
@@ -279,12 +290,30 @@ All colors MUST be HSL.
   z-index: 0;
 }
 
+/* At rest this is a STATIC linear gradient. The rotating conic version below
+   is hover-only on purpose: `--gradient-angle` is a registered @property, so
+   animating it forces a full re-raster of the conic gradient through the XOR
+   mask every frame. On a catalogue page that renders 275 cards at once that is
+   ~1.6 Gpx/s of paint work and it wedges the renderer process. One hovered
+   card is free; 275 animating at once is not. */
 .logo-gradient-border::before {
   content: '';
   position: absolute;
   inset: 0;
   padding: 2px;
   border-radius: inherit;
+  background: linear-gradient(135deg, hsl(var(--logo-blue)), hsl(var(--logo-orange)));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.75;
+  transition: opacity 0.3s ease;
+}
+
+.logo-gradient-border:hover::before {
+  opacity: 1;
   background: conic-gradient(
     from var(--gradient-angle, 0deg),
     hsl(var(--logo-blue)) 0%,
@@ -293,29 +322,21 @@ All colors MUST be HSL.
     hsl(var(--logo-orange)) 75%,
     hsl(var(--logo-blue)) 100%
   );
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-  z-index: -1;
-  opacity: 0.75;
-  transition: opacity 0.3s ease;
   animation: gradient-rotate 6s linear infinite;
 }
 
-.logo-gradient-border:hover::before {
-  opacity: 1;
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .logo-gradient-border::before {
+  .logo-gradient-border:hover::before {
     animation: none;
     background: linear-gradient(135deg, hsl(var(--logo-blue)), hsl(var(--logo-orange)));
   }
 }
 
-/* Gradient top accent bar */
-.logo-gradient-top::before {
+/* Gradient top accent bar.
+   Uses ::after because .logo-gradient-border already owns ::before — the two
+   utilities are combined on several cards and used to silently cancel each
+   other out. Do NOT combine with .spotlight-card, which also owns ::after. */
+.logo-gradient-top::after {
   content: '';
   position: absolute;
   top: 0;
@@ -326,6 +347,38 @@ All colors MUST be HSL.
   border-radius: inherit;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Cursor-tracking spotlight overlay for cards.
+   The card sets --spot-x / --spot-y from a mousemove handler; the ::after
+   layer paints a soft radial glow at that point. Composes with
+   .logo-gradient-border (which uses ::before at z-index -1). */
+.spotlight-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  background: radial-gradient(
+    420px circle at var(--spot-x, 50%) var(--spot-y, 50%),
+    hsl(var(--logo-blue) / 0.10) 0%,
+    hsl(var(--logo-orange) / 0.06) 35%,
+    transparent 70%
+  );
+}
+
+.spotlight-card:hover::after {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce), (hover: none) {
+  .spotlight-card::after {
+    display: none;
+  }
 }
 
 /* Zoho SalesIQ Chat Widget Positioning - Move above footer on mobile */

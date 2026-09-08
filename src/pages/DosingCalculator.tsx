@@ -2,7 +2,6 @@ import { useMemo, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import WhatsAppButton from '@/components/WhatsAppButton';
 import { SEO } from '@/components/SEO';
 import { BreadcrumbStructuredData, FAQStructuredData } from '@/components/StructuredData';
 import { LocalizedLink as Link } from '@/components/LocalizedLink';
@@ -11,6 +10,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { trackSelectContent } from '@/components/GoogleAnalytics';
 import { Droplets, Snowflake, Wind, Waves, Calculator } from 'lucide-react';
 
@@ -118,7 +118,13 @@ const DosingCalculator = () => {
     return { gH, kgDay: (gH * 24) / 1000, kgMonth: (gH * 24 * 30) / 1000 };
   }, [roFlow, roDose]);
 
-  const quoteHref = (product: string) => `/contact?product=${encodeURIComponent(product)}`;
+  // Carry the sized requirement into the quote form. Previously only the
+  // product name travelled, so a buyer who had just computed "1,540 kg/month"
+  // landed on a form with an empty "Quantity required:" line and had to retype
+  // it — turning a qualified, sized RFQ back into a blank enquiry.
+  const quoteHref = (product: string, quantity?: string) =>
+    `/contact?product=${encodeURIComponent(product)}` +
+    (quantity ? `&qty=${encodeURIComponent(quantity)}` : '');
   const canonical = 'https://gcoman.com/tools/dosing-calculator';
 
   return (
@@ -155,7 +161,6 @@ const DosingCalculator = () => {
       <FAQStructuredData faqs={calculatorFAQs} />
 
       <Navigation />
-      <WhatsAppButton />
 
       <main id="main-content">
         <section className="pt-32 pb-10 bg-muted/30">
@@ -232,7 +237,7 @@ const DosingCalculator = () => {
                 kg/day = dose × flow ÷ (1000 × available-Cl fraction)
               </p>
               <Button asChild size="sm" className="mt-4" onClick={() => trackSelectContent('cta_button', 'calc_quote_chlorine')}>
-                <Link to={quoteHref(chlorine.product.quote)} rel="nofollow">Get a {chlorine.product.quote} quote</Link>
+                <Link to={quoteHref(chlorine.product.quote, `${fmt(chlorine.kgMonth)} kg/month (${clFlow} m³/day at ${clDose} mg/L, ${chlorine.product.label}) — sized with your dosing calculator`)} rel="nofollow">Get a {chlorine.product.quote} quote</Link>
               </Button>
             </Card>
 
@@ -288,7 +293,7 @@ const DosingCalculator = () => {
                 Approximate table values — verify the final mix with a refractometer. Use inhibited glycol matched to system metallurgy.
               </p>
               <Button asChild size="sm" className="mt-4" onClick={() => trackSelectContent('cta_button', 'calc_quote_glycol')}>
-                <Link to={quoteHref(glType === 'meg' ? 'MEG (Monoethylene Glycol)' : 'Propylene Glycol (USP/Industrial)')} rel="nofollow">
+                <Link to={quoteHref(glType === 'meg' ? 'MEG (Monoethylene Glycol)' : 'Propylene Glycol (USP/Industrial)', `${fmt(glycol.glycolL)} L glycol for a ${fmt(num(glVolume))} L system at ${glycol.pct}% (freeze point ${glycol.freezeC} °C) — sized with your dosing calculator`)} rel="nofollow">
                   Get a glycol quote
                 </Link>
               </Button>
@@ -345,7 +350,7 @@ const DosingCalculator = () => {
                 E ≈ 0.00153 × R × ΔT · B = E ÷ (C − 1) · feed = ppm × B ÷ 1000
               </p>
               <Button asChild size="sm" className="mt-4" onClick={() => trackSelectContent('cta_button', 'calc_quote_tower')}>
-                <Link to={quoteHref('Cool Water Treat Corrosion Inhibitor')} rel="nofollow">Get a cooling-water programme quote</Link>
+                <Link to={quoteHref('Cool Water Treat Corrosion Inhibitor', `${fmt(tower.inhibitorKgDay * 30)} kg/month inhibitor (blowdown ${fmt(tower.blowdown)} m³/h at ${ctCycles} cycles, ${ctPpm} mg/L residual) — sized with your dosing calculator`)} rel="nofollow">Get a cooling-water programme quote</Link>
               </Button>
             </Card>
 
@@ -388,7 +393,7 @@ const DosingCalculator = () => {
                 g/h = dose (mg/L) × feed flow (m³/h) — dose from a projection against your water analysis (typ. 2–4 mg/L)
               </p>
               <Button asChild size="sm" className="mt-4" onClick={() => trackSelectContent('cta_button', 'calc_quote_ro')}>
-                <Link to={quoteHref('Antiscalant RO')} rel="nofollow">Get an antiscalant quote + free projection</Link>
+                <Link to={quoteHref('Antiscalant RO', `${fmt(ro.kgMonth)} kg/month (${roFlow} m³/h feed at ${roDose} mg/L) — sized with your dosing calculator`)} rel="nofollow">Get an antiscalant quote + free projection</Link>
               </Button>
             </Card>
           </div>
@@ -401,6 +406,28 @@ const DosingCalculator = () => {
               all of that at no cost when you request a programme. Formulas may be reproduced with attribution and a
               link to this page.
             </div>
+          </div>
+
+          {/* These FAQs were previously passed to FAQStructuredData only, with
+              no visible counterpart — FAQ markup must correspond to content on
+              the page, and this is ~700 words of the exact "how do you
+              calculate X" copy the page is meant to rank for. */}
+          <div className="container mx-auto px-4 max-w-3xl mt-14">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 text-center">
+              Frequently Asked Questions
+            </h2>
+            <Accordion type="single" collapsible className="w-full">
+              {calculatorFAQs.map((faq, i) => (
+                <AccordionItem key={i} value={`calc-faq-${i}`}>
+                  <AccordionTrigger className="text-left text-base font-semibold">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
         </section>
       </main>

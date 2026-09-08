@@ -1,9 +1,10 @@
 import { useEffect } from 'react';
-import { useParams, useNavigate, Link } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
+import { LocalizedLink } from '@/components/LocalizedLink';
+import { GradientCTA } from '@/components/ui/gradient-cta';
 import { useTranslation } from 'react-i18next';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import WhatsAppButton from '@/components/WhatsAppButton';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
@@ -64,9 +65,11 @@ const ProductDetail = ({ category, rawCategoryProducts }: ProductDetailProps) =>
         <div className="container mx-auto px-4 py-32 text-center">
           <h2 className="text-4xl font-bold mb-4">{t('products.productNotFound', { defaultValue: 'Product Not Found' })}</h2>
           <p className="text-muted-foreground mb-8">{t('products.productNotFoundDesc', { defaultValue: "The product you're looking for doesn't exist." })}</p>
-          <Button onClick={() => navigate('/products')}>
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            {t('products.backToProducts', { defaultValue: 'Back to Products' })}
+          <Button asChild>
+            <LocalizedLink to="/products">
+              <ArrowLeft className="w-4 h-4 ltr:mr-2 rtl:ml-2 rtl:rotate-180" />
+              {t('products.backToProducts', { defaultValue: 'Back to Products' })}
+            </LocalizedLink>
           </Button>
         </div>
         <Footer />
@@ -226,19 +229,18 @@ const ProductDetail = ({ category, rawCategoryProducts }: ProductDetailProps) =>
       ]} />
       
       <Navigation />
-      <WhatsAppButton />
 
       <main id="main-content">
         <section className="pt-32 pb-8 bg-muted/30">
           <div className="container mx-auto px-4">
             <nav className="flex flex-nowrap items-center gap-2 overflow-x-auto whitespace-nowrap text-sm text-muted-foreground mb-4" aria-label="Breadcrumb">
-              <Link to="/" className="hover:text-primary transition-colors">{t('nav.home')}</Link>
+              <LocalizedLink to="/" className="hover:text-primary transition-colors">{t('nav.home')}</LocalizedLink>
               <span>/</span>
-              <Link to="/products" className="hover:text-primary transition-colors">{t('nav.products')}</Link>
+              <LocalizedLink to="/products" className="hover:text-primary transition-colors">{t('nav.products')}</LocalizedLink>
               <span>/</span>
-              <Link to={`/products/${category}`} className="hover:text-primary transition-colors capitalize whitespace-nowrap">
+              <LocalizedLink to={`/products/${category}`} className="hover:text-primary transition-colors capitalize whitespace-nowrap">
                 {category?.replace(/-/g, ' ')}
-              </Link>
+              </LocalizedLink>
               <span>/</span>
               <span className="text-foreground font-medium truncate max-w-[45vw] sm:max-w-none">{translatedTitle}</span>
             </nav>
@@ -249,13 +251,11 @@ const ProductDetail = ({ category, rawCategoryProducts }: ProductDetailProps) =>
         <section className="pt-6 pb-16">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <Button
-                variant="ghost"
-                onClick={() => navigate('/products')}
-                className="mb-6"
-              >
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                {t('products.backToProducts', { defaultValue: 'Back to Products' })}
+              <Button asChild variant="ghost" className="mb-6">
+                <LocalizedLink to="/products">
+                  <ArrowLeft className="w-4 h-4 ltr:mr-2 rtl:ml-2 rtl:rotate-180" />
+                  {t('products.backToProducts', { defaultValue: 'Back to Products' })}
+                </LocalizedLink>
               </Button>
 
               {/* Hero: title block + 3D molecule side-by-side on desktop, stacked on mobile.
@@ -301,6 +301,45 @@ const ProductDetail = ({ category, rawCategoryProducts }: ProductDetailProps) =>
                   </div>
                 </div>
               )}
+
+              {/* Identity + ask, above the fold.
+                  CAS number is the first thing a chemical buyer looks for and
+                  it used to sit as one inline line at the bottom of the
+                  Overview card; the quote CTA sat six cards further down, so a
+                  visitor arriving from search had to scroll past Overview,
+                  Applications, Specs and FAQs before finding a way to ask for
+                  a price. Both are surfaced here instead. */}
+              <div className="mb-10 flex flex-col gap-4 rounded-2xl border border-border bg-muted/30 p-5 sm:flex-row sm:items-center sm:justify-between">
+                <div className="flex flex-wrap items-center gap-2">
+                  {product.details?.casNumber && (
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-background border border-border px-3 py-1.5 text-xs font-semibold">
+                      <span className="text-muted-foreground">CAS</span>
+                      <span className="font-mono text-foreground select-all">{product.details.casNumber}</span>
+                    </span>
+                  )}
+                  {product.details?.formula && (
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-background border border-border px-3 py-1.5 text-xs font-semibold">
+                      <span className="text-muted-foreground">Formula</span>
+                      <span className="font-mono text-foreground select-all">{product.details.formula}</span>
+                    </span>
+                  )}
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-background border border-border px-3 py-1.5 text-xs font-semibold text-muted-foreground">
+                    <Truck className="w-3.5 h-3.5 text-primary" />
+                    Same-day Muscat · next-day Sohar, Salalah, Duqm
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-background border border-border px-3 py-1.5 text-xs font-semibold text-muted-foreground">
+                    <Shield className="w-3.5 h-3.5 text-primary" />
+                    SDS + CoA with every batch
+                  </span>
+                </div>
+                <GradientCTA
+                  to={`/contact?product=${encodeURIComponent(product.title)}&ref=${encodeURIComponent(`${category}/${productSlug}`)}`}
+                  onClick={() => trackSelectContent('cta_button', 'get_quote_above_fold')}
+                  className="flex-shrink-0 self-start sm:self-center"
+                >
+                  Request a Quote
+                </GradientCTA>
+              </div>
 
               {/* Product Overview — first thing buyers read after the hero. */}
               <Card className="p-8 mb-8">
@@ -360,14 +399,36 @@ const ProductDetail = ({ category, rawCategoryProducts }: ProductDetailProps) =>
               {translatedTechnicalSpecs && Array.isArray(translatedTechnicalSpecs) && translatedTechnicalSpecs.length > 0 && (
                 <Card className="p-8 mb-8">
                   <h2 className="text-2xl font-bold mb-6">{t('products.technicalSpecs')}</h2>
-                  <div className="space-y-3">
-                    {translatedTechnicalSpecs.map((spec, index) => (
-                      <div key={index} className="flex items-start gap-3 pb-3 border-b border-border last:border-0">
-                        <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-muted-foreground">{spec}</span>
-                      </div>
-                    ))}
-                  </div>
+                  {/* Specs are stored as "Purity: 99%" strings. Rendering them as
+                      ✓ bullets (identical to the Applications list above) gave no
+                      key/value alignment and nothing to scan or copy into a spec
+                      sheet — split on the first colon into a real definition
+                      table, and fall back to a plain row when there is no colon. */}
+                  <dl className="divide-y divide-border">
+                    {translatedTechnicalSpecs.map((spec, index) => {
+                      const splitAt = spec.indexOf(':');
+                      const hasPair = splitAt > 0 && splitAt < spec.length - 1;
+                      const term = hasPair ? spec.slice(0, splitAt).trim() : '';
+                      const value = hasPair ? spec.slice(splitAt + 1).trim() : spec;
+                      return (
+                        <div
+                          key={index}
+                          className="grid grid-cols-1 gap-1 py-3 sm:grid-cols-[minmax(0,14rem)_1fr] sm:gap-4"
+                        >
+                          {hasPair && (
+                            <dt className="text-sm font-semibold text-foreground">{term}</dt>
+                          )}
+                          <dd
+                            className={`text-sm text-muted-foreground tabular-nums select-all ${
+                              hasPair ? '' : 'sm:col-span-2'
+                            }`}
+                          >
+                            {value}
+                          </dd>
+                        </div>
+                      );
+                    })}
+                  </dl>
                 </Card>
               )}
 
@@ -423,10 +484,10 @@ const ProductDetail = ({ category, rawCategoryProducts }: ProductDetailProps) =>
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Button asChild size="lg" className="gap-2" onClick={() => trackSelectContent('cta_button', 'get_quote')}>
-                      <Link to={`/contact?product=${encodeURIComponent(product.title)}&ref=${encodeURIComponent(`${category}/${productSlug}`)}`} rel="nofollow">
+                      <LocalizedLink to={`/contact?product=${encodeURIComponent(product.title)}&ref=${encodeURIComponent(`${category}/${productSlug}`)}`}>
                         <Mail className="w-4 h-4" />
                         Request a Quote
-                      </Link>
+                      </LocalizedLink>
                     </Button>
                     <Button asChild size="lg" variant="outline" className="gap-2 border-green-500/50 text-green-700 dark:text-green-400 hover:bg-green-500/10" onClick={() => trackContactClick('whatsapp')}>
                       <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">

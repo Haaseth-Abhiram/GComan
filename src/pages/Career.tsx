@@ -3,7 +3,6 @@ import { SEO } from '@/components/SEO';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { BreadcrumbStructuredData, JobPostingStructuredData } from '@/components/StructuredData';
-import WhatsAppButton from '@/components/WhatsAppButton';
 import { trackFormSubmission } from '@/components/GoogleAnalytics';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -30,6 +29,7 @@ import {
 import { useToast } from '@/hooks/use-toast';
 import { z } from 'zod';
 import { LocalizedLink } from '@/components/LocalizedLink';
+import { useSpotlight } from '@/hooks/useSpotlight';
 
 interface JobOpening {
   id: string;
@@ -60,6 +60,7 @@ const applicationSchema = z.object({
 });
 
 const Career = () => {
+  const spotlight = useSpotlight();
   const { toast } = useToast();
   const [selectedJob, setSelectedJob] = useState<string>('');
   const [viewingJob, setViewingJob] = useState<JobOpening | null>(null);
@@ -247,8 +248,7 @@ const Career = () => {
     }
   ];
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
+  const acceptFile = (file: File | undefined | null) => {
     if (file) {
       // Validate file type
       const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
@@ -271,6 +271,19 @@ const Career = () => {
       }
       setSelectedFile(file);
     }
+  };
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    acceptFile(e.target.files?.[0]);
+  };
+
+  // The drop zone advertises "drag and drop", so actually support it —
+  // without these handlers the browser navigates away to the dropped file.
+  const [isDragging, setIsDragging] = useState(false);
+  const handleDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragging(false);
+    acceptFile(e.dataTransfer.files?.[0]);
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -404,7 +417,7 @@ const Career = () => {
       ))}
 
       <Navigation />
-      <WhatsAppButton />
+      <main id="main-content">
 
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-br from-primary/5 via-background to-background">
@@ -436,7 +449,7 @@ const Career = () => {
               {benefits.map((benefit, index) => {
                 const IconComponent = benefit.icon;
                 return (
-                  <Card key={index} className="hover:shadow-lg transition-all hover:-translate-y-1 animate-fade-in logo-gradient-border relative" style={{ animationDelay: `${index * 100}ms` }}>
+                  <Card key={index} onMouseMove={spotlight} className="hover:shadow-lg transition-all hover:-translate-y-1 animate-fade-in logo-gradient-border spotlight-card relative" style={{ animationDelay: `${index * 100}ms` }}>
                     <CardHeader>
                       <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                         <IconComponent className="h-6 w-6 text-primary" />
@@ -633,14 +646,24 @@ const Career = () => {
 
                   <div className="space-y-2">
                     <Label htmlFor="resume">Upload Resume/CV *</Label>
-                    <div className="border-2 border-dashed border-border rounded-lg p-6 text-center hover:border-primary/50 transition-colors">
+                    <div
+                      onDragOver={(e) => { e.preventDefault(); setIsDragging(true); }}
+                      onDragLeave={() => setIsDragging(false)}
+                      onDrop={handleDrop}
+                      className={`border-2 border-dashed rounded-lg p-6 text-center transition-colors ${
+                        isDragging ? 'border-primary bg-primary/5' : 'border-border hover:border-primary/50'
+                      }`}
+                    >
+                      {/* No `required` here: the input is display:none, so a
+                          native validation failure targets an unfocusable
+                          control and Chrome silently refuses to submit the
+                          whole form. handleSubmit validates selectedFile. */}
                       <input
                         type="file"
                         id="resume"
                         onChange={handleFileChange}
                         accept=".pdf,.doc,.docx"
                         className="hidden"
-                        required
                       />
                       <label htmlFor="resume" className="cursor-pointer">
                         <Upload className="h-8 w-8 mx-auto mb-2 text-muted-foreground" />
@@ -691,6 +714,7 @@ const Career = () => {
         </div>
       </section>
 
+      </main>
       <Footer />
 
       {/* Job Details Dialog */}

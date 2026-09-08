@@ -149,7 +149,7 @@ const Hero = () => {
             >
               {slide.title}
               <br />
-              <span className="text-primary drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]">
+              <span className="bg-gradient-to-r from-primary via-orange-300 to-primary bg-[length:200%_auto] bg-clip-text text-transparent animate-gradient-x drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]">
                 {slide.highlight}
               </span>
             </h2>
@@ -166,8 +166,10 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 pt-6 px-4">
               <LocalizedLink
                 to="/products"
-                className="group inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 text-center"
+                className="group relative overflow-hidden inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 text-center"
               >
+                {/* Shimmer sweep */}
+                <span aria-hidden className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer motion-reduce:hidden" />
                 {t('hero.ctaSecondary')}
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform rtl:rotate-180" />
               </LocalizedLink>

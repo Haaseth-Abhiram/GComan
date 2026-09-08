@@ -1,6 +1,5 @@
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import WhatsAppButton from '@/components/WhatsAppButton';
 import { SEO } from '@/components/SEO';
 import { BreadcrumbStructuredData, ItemListStructuredData } from '@/components/StructuredData';
 import { LocalizedLink as Link } from '@/components/LocalizedLink';
@@ -45,7 +44,6 @@ const ChemicalsHub = () => {
       />
 
       <Navigation />
-      <WhatsAppButton />
 
       <main id="main-content">
         {/* Hero */}

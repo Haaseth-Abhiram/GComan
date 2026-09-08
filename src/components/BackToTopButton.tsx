@@ -5,34 +5,43 @@ const BackToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    let frame = 0;
     const toggleVisibility = () => {
-      if (window.scrollY > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+      // rAF-throttled: the raw scroll handler called setState on every event.
+      if (frame) return;
+      frame = requestAnimationFrame(() => {
+        frame = 0;
+        setIsVisible(window.scrollY > 300);
+      });
     };
 
-    window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);
+    toggleVisibility();
+    window.addEventListener('scroll', toggleVisibility, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', toggleVisibility);
+      if (frame) cancelAnimationFrame(frame);
+    };
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
   };
+
+  // Hidden = not rendered at all, so it also leaves the tab order (opacity-0
+  // alone left an invisible focusable control behind).
+  if (!isVisible) return null;
 
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-20 sm:bottom-24 right-4 sm:right-8 z-40 w-12 h-12 sm:w-14 sm:h-14 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full shadow-xl hover:shadow-2xl transition-all transform hover:scale-110 flex items-center justify-center ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
-      }`}
+      // bottom-40 on mobile clears the Zoho SalesIQ bubble, which index.css
+      // pins to bottom:80px/right:16px under 768px — exactly where this button
+      // used to sit.
+      className="fixed bottom-40 sm:bottom-24 ltr:right-4 ltr:sm:right-8 rtl:left-4 rtl:sm:left-8 z-40 w-12 h-12 sm:w-14 sm:h-14 rounded-full shadow-xl hover:shadow-2xl transition-all transform hover:scale-110 motion-reduce:transform-none flex items-center justify-center bg-background/80 backdrop-blur-md border border-border text-foreground hover:text-primary hover:border-primary/40 animate-fade-in"
       aria-label="Back to top"
     >
-      <ArrowUp className="w-6 h-6 sm:w-7 sm:h-7" />
+      <ArrowUp className="w-5 h-5 sm:w-6 sm:h-6" />
     </button>
   );
 };

@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import WhatsAppButton from '@/components/WhatsAppButton';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { CheckCircle2, Target, Eye, Shield, Award, Users, TrendingUp, Globe2, Leaf, Lightbulb, Heart, Factory } from 'lucide-react';
@@ -11,6 +10,9 @@ import teamImage from '@/assets/about-team.jpg';
 import { SEO } from '@/components/SEO';
 import { BreadcrumbStructuredData, SpeakableStructuredData, FAQStructuredData } from '@/components/StructuredData';
 import { LocalizedLink } from '@/components/LocalizedLink';
+import { useSpotlight } from '@/hooks/useSpotlight';
+import { GradientCTA } from '@/components/ui/gradient-cta';
+import StatsSection from '@/components/StatsSection';
 
 // About page FAQs — company identity, certifications, GCC reach
 const aboutFAQs = [
@@ -43,14 +45,9 @@ const breadcrumbItems = [
 ];
 
 const About = () => {
+  const spotlight = useSpotlight();
   const { t } = useTranslation();
 
-  const stats = [
-    { icon: Award, value: '10+', label: t('home.statsYears'), color: 'text-primary' },
-    { icon: Factory, value: '275+', label: t('home.statsProducts'), color: 'text-secondary' },
-    { icon: Users, value: '200+', label: t('home.statsClients'), color: 'text-primary' },
-    { icon: Globe2, value: '98%', label: t('home.statsSatisfaction'), color: 'text-secondary' },
-  ];
 
   const values = [
     {
@@ -90,7 +87,6 @@ const About = () => {
       <BreadcrumbStructuredData items={breadcrumbItems} />
       <SpeakableStructuredData url="https://gcoman.com/about" cssSelector={["h1", "h2", ".speakable"]} />
       <Navigation />
-      <WhatsAppButton />
 
       <main id="main-content">
       {/* Hero Section with Image */}
@@ -132,33 +128,11 @@ const About = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-gradient-to-br from-primary/5 to-secondary/5">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            {stats.map((stat, index) => {
-              const Icon = stat.icon;
-              return (
-                <div
-                  key={index}
-                  className="text-center space-y-4 animate-fade-in"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <div className="flex justify-center">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
-                      <Icon className={`w-8 h-8 ${stat.color}`} />
-                    </div>
-                  </div>
-                  <div className={stat.color}>
-                    <span className="text-4xl md:text-5xl font-bold">{stat.value}</span>
-                  </div>
-                  <p className="text-muted-foreground font-medium">{stat.label}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      {/* Stats. Shares the homepage component (glass tiles, dot-grid, animated
+          counters) instead of a third hand-rolled copy of the same numbers —
+          the duplicates had already drifted (275+ here vs 263+ on the home
+          page) because each maintained its own values. */}
+      <StatsSection />
 
       {/* Company Overview with Image */}
       <section className="py-20">
@@ -264,7 +238,8 @@ const About = () => {
                 return (
                   <Card
                     key={index}
-                    className="p-6 hover:shadow-xl transition-all hover:-translate-y-1 group animate-fade-in logo-gradient-border relative overflow-hidden"
+                    onMouseMove={spotlight}
+                    className="p-6 hover:shadow-xl transition-all hover:-translate-y-1 group animate-fade-in logo-gradient-border spotlight-card relative overflow-hidden"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-all">
@@ -328,15 +303,12 @@ const About = () => {
               {t('about.joinClients')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <LocalizedLink
-                to="/contact"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-105"
-              >
+              <GradientCTA to="/contact" size="lg">
                 {t('about.getInTouch')}
-              </LocalizedLink>
+              </GradientCTA>
               <LocalizedLink
                 to="/products"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white hover:bg-white/90 text-secondary font-semibold rounded-lg border-2 border-secondary shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-background/80 backdrop-blur border-2 border-secondary text-secondary font-semibold shadow-sm hover:shadow-md hover:border-primary hover:text-primary transition-all"
               >
                 {t('about.exploreProducts')}
               </LocalizedLink>
