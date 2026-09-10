@@ -75,11 +75,24 @@ const locations: Record<string, LocationData> = {
       {
         question: 'Do you provide technical support in Muscat?',
         answer: 'Yes, our technical team is based in Muscat and provides on-site support for product selection, dosing optimization, and troubleshooting. We offer free consultations for industrial clients in the Muscat area.'
+      },
+      {
+        question: 'How fast can you deliver chemicals within Muscat?',
+        answer: 'Same-day delivery is available across the Muscat metropolitan area for orders placed before 12 PM, dispatched from our Ghala warehouse. That covers Ghala, Rusayl, Ghubrah, Azaiba, Wattayah, Al Khuwair, Seeb, Ruwi and Muttrah. Orders after the cut-off, or requiring decanting into customer containers, normally go out the following working morning. For bulk road-tanker or ISO-tank movements we schedule a delivery slot with your site rather than working to a fixed lead time.'
+      },
+      {
+        question: 'What paperwork comes with a Muscat delivery?',
+        answer: 'Every batch ships with a Certificate of Analysis, a GHS-compliant Safety Data Sheet in English (Arabic on request) and a Technical Data Sheet. Global Chemicals LLC is JSRS-registered and ISO 9001:2015 certified, so the pack is accepted for vendor qualification with PDO and the major EPC contractors. If your QA team needs a specific format, batch traceability or a Certificate of Origin for re-export, tell us at order stage and it travels with the consignment.'
       }
     ],
     metaTitle: 'Chemical Supplier Muscat | Industrial Chemicals Muscat | Global Chemicals LLC',
     metaDescription: 'Leading chemical supplier in Muscat, Oman. Same-day delivery. Water treatment chemicals, industrial lubricants, lab chemicals. ISO 9001 certified. Call +968-93754388.',
-    metaKeywords: 'chemical supplier Muscat, chemicals Muscat, industrial chemicals Muscat, water treatment Muscat, PAC Muscat, caustic soda Muscat, lubricants Muscat, laboratory chemicals Muscat, chemical distributor Muscat Oman'
+    metaKeywords: 'chemical supplier Muscat, chemicals Muscat, industrial chemicals Muscat, water treatment Muscat, PAC Muscat, caustic soda Muscat, lubricants Muscat, laboratory chemicals Muscat, chemical distributor Muscat Oman',
+    relatedGuide: {
+      slug: 'water-treatment-chemicals-muscat-oman',
+      title: 'Water Treatment Chemicals in Muscat',
+      blurb: 'Dosing, storage and product selection for Muscat\'s municipal, industrial and hotel water systems.'
+    }
   },
   'sohar': {
     slug: 'sohar',
@@ -110,11 +123,24 @@ const locations: Record<string, LocationData> = {
       {
         question: 'Can you supply chemicals for aluminum production in Sohar?',
         answer: 'Yes, we supply specialized chemicals for aluminum smelting and refining operations including caustic soda, hydrofluoric acid handling equipment, and process chemicals. Contact our technical team for specific requirements.'
+      },
+      {
+        question: 'How quickly can you deliver to Sohar Port and Sohar Freezone?',
+        answer: 'Next-day delivery to the Sohar area, including Sohar Industrial Port, Sohar Freezone and the surrounding industrial estate, for orders confirmed before the daily cut-off. Deliveries run from our Muscat warehouse up the Batinah highway. For gate-pass-controlled sites inside the port and freezone we need the consignee contact and gate-pass details at order stage, since access is arranged before the vehicle leaves Muscat.'
+      },
+      {
+        question: 'Which Sohar industries do you supply chemicals to?',
+        answer: 'Sohar\'s cluster is heavy industry, and the chemical demand splits accordingly: the refinery and petrochemical plants take production and process chemicals; the aluminium smelter and steel plants take pickling, descaling and surface-treatment chemistry; power and desalination take water-treatment chemicals — antiscalant, biocide, oxygen scavenger, pH correction; and port and marine operators take tank-cleaning and degreasing products. We supply across all of these from stock.'
       }
     ],
     metaTitle: 'Chemical Supplier Sohar | Industrial Chemicals SOHAR Freezone | Global Chemicals LLC',
     metaDescription: 'Chemical supplier for Sohar Industrial Estate & SOHAR Freezone. Oil refinery chemicals, petrochemicals, water treatment. Next-day delivery. ISO 9001 certified.',
-    metaKeywords: 'chemical supplier Sohar, chemicals Sohar, SOHAR Freezone chemicals, Sohar Industrial Estate, refinery chemicals Sohar, petrochemicals Sohar, water treatment Sohar, industrial lubricants Sohar'
+    metaKeywords: 'chemical supplier Sohar, chemicals Sohar, SOHAR Freezone chemicals, Sohar Industrial Estate, refinery chemicals Sohar, petrochemicals Sohar, water treatment Sohar, industrial lubricants Sohar',
+    relatedGuide: {
+      slug: 'jsrs-chemical-supplier-pdo-oman',
+      title: 'JSRS Registration & Supplying PDO in Oman',
+      blurb: 'How vendor qualification works for Sohar\'s refinery, petrochemical and smelter contractors.'
+    }
   },
   'salalah': {
     slug: 'salalah',
@@ -145,11 +171,24 @@ const locations: Record<string, LocationData> = {
       {
         question: 'Do you provide chemicals for agricultural use in Dhofar?',
         answer: 'Yes, we supply agricultural chemicals suitable for Dhofar\'s unique climate including fertilizers, soil treatments, and water treatment chemicals for irrigation systems. Our team can recommend products for the Khareef season conditions.'
+      },
+      {
+        question: 'What is the lead time for chemical delivery to Salalah?',
+        answer: 'Two to three business days from Muscat to Salalah, covering Salalah Port, Salalah Free Zone, Raysut Industrial Area and the wider Dhofar Governorate. Because it is a long-haul road movement we consolidate Salalah orders, so placing a slightly larger order less frequently is usually both faster and cheaper per unit than repeated small drops. For project or commissioning volumes we can position stock ahead of your schedule.'
+      },
+      {
+        question: 'Do you supply Salalah\'s port, fisheries and agriculture sectors?',
+        answer: 'Yes — those three drive most of the local demand. Port and marine operators take tank cleaners, degreasers and marine-grade lubricants. The fisheries and food-processing plants take food-grade chemistry, sanitisers and CIP cleaning chemicals with the food-grade documentation to match. Dhofar\'s agriculture takes fertilisers and irrigation-water treatment, where the Khareef season and local groundwater salinity both affect what is appropriate.'
       }
     ],
     metaTitle: 'Chemical Supplier Salalah | Chemicals Dhofar | Global Chemicals LLC Oman',
     metaDescription: 'Chemical supplier for Salalah & Dhofar region. Pool chemicals, water treatment, industrial supplies. Regular deliveries. Serving Salalah Free Zone & Port of Salalah.',
-    metaKeywords: 'chemical supplier Salalah, chemicals Salalah, Dhofar chemicals, Salalah Free Zone, pool chemicals Salalah, water treatment Salalah, industrial chemicals Dhofar'
+    metaKeywords: 'chemical supplier Salalah, chemicals Salalah, Dhofar chemicals, Salalah Free Zone, pool chemicals Salalah, water treatment Salalah, industrial chemicals Dhofar',
+    relatedGuide: {
+      slug: 'food-grade-chemicals-supplier-oman',
+      title: 'Food-Grade Chemicals: Grades, Documentation & Use',
+      blurb: 'Relevant to Salalah\'s fisheries, food processing and CIP cleaning operations.'
+    }
   },
   'duqm': {
     slug: 'duqm',
@@ -180,11 +219,24 @@ const locations: Record<string, LocationData> = {
       {
         question: 'Can you support new projects in Duqm SEZ?',
         answer: 'Absolutely. We provide project-based chemical supply including bulk quantities during construction and commissioning phases. Our team can support chemical specification and procurement planning for new developments in Duqm SEZ.'
+      },
+      {
+        question: 'How long does delivery to Duqm SEZ take?',
+        answer: 'Two to three business days from our Muscat warehouse into Duqm Special Economic Zone. Duqm is a long road haul across Al Wusta, so we plan consolidated runs rather than daily drops — for construction and commissioning phases it is usually better to schedule staged deliveries against your programme than to order ad hoc. Site access inside the SEZ needs the consignee and gate-pass details supplied at order stage.'
+      },
+      {
+        question: 'What documentation do you provide for Duqm SEZ vendor registration?',
+        answer: 'The standard pack is a Certificate of Analysis per batch, a GHS-compliant Safety Data Sheet in English with Arabic on request, and a Technical Data Sheet. Global Chemicals LLC is JSRS-registered and ISO 9001:2015 certified, which covers most of what SEZ contractors and the refinery\'s procurement teams ask for. Certificates of Origin for imported grades are available on request — flag it at enquiry stage so it is issued with the shipment rather than afterwards.'
       }
     ],
     metaTitle: 'Chemical Supplier Duqm | Duqm SEZ Chemicals | Global Chemicals LLC Oman',
     metaDescription: 'Chemical supplier for Duqm SEZ, Duqm Refinery & Dry Dock. Refinery chemicals, marine chemicals, water treatment. Supporting Oman\'s new industrial hub.',
-    metaKeywords: 'chemical supplier Duqm, Duqm SEZ chemicals, Duqm Refinery chemicals, Duqm Dry Dock, industrial chemicals Duqm, water treatment Duqm, marine chemicals Oman'
+    metaKeywords: 'chemical supplier Duqm, Duqm SEZ chemicals, Duqm Refinery chemicals, Duqm Dry Dock, industrial chemicals Duqm, water treatment Duqm, marine chemicals Oman',
+    relatedGuide: {
+      slug: 'jsrs-chemical-supplier-pdo-oman',
+      title: 'JSRS Registration & Supplying PDO in Oman',
+      blurb: 'The documentation and approvals Duqm SEZ and refinery contractors ask a chemical supplier for.'
+    }
   },
   'rusayl': {
     slug: 'rusayl',
@@ -215,11 +267,24 @@ const locations: Record<string, LocationData> = {
       {
         question: 'Can you supply small quantities to Rusayl SMEs?',
         answer: 'Absolutely. We understand that many Rusayl businesses are SMEs with varying requirements. We offer flexible order quantities and can supply from single units to bulk containers depending on your needs.'
+      },
+      {
+        question: 'Do you deliver same-day to Rusayl Industrial Estate?',
+        answer: 'Yes. Rusayl is a short run from our Ghala warehouse, so orders confirmed before 12 PM are normally delivered the same working day. That applies to drums, IBCs and palletised bagged goods. Larger movements needing a tail-lift, forklift offload or a road tanker are scheduled with your site rather than delivered ad hoc — tell us the offload arrangement when you order and we send the right vehicle first time.'
+      },
+      {
+        question: 'Which Rusayl manufacturers do you supply?',
+        answer: 'Rusayl is Oman\'s oldest industrial estate and its mix is light-to-medium manufacturing, so demand is broad rather than deep: food and beverage plants take food-grade chemistry and CIP cleaning; plastics and packaging take additives and solvents; detergent and cleaning-product manufacturers take LABSA, caustic soda, soda ash and surfactants; metal fabrication takes degreasers, pickling acids and passivation chemistry. Most of it moves in 25 kg bags, 200 L drums or 1,000 L IBCs.'
       }
     ],
     metaTitle: 'Chemical Supplier Rusayl | Rusayl Industrial Estate Chemicals | Global Chemicals LLC',
     metaDescription: 'Chemical supplier for Rusayl Industrial Estate. Food-grade chemicals, pharmaceutical reagents, industrial supplies. Same-day delivery. Serving 500+ Rusayl industries.',
-    metaKeywords: 'chemical supplier Rusayl, Rusayl Industrial Estate chemicals, food grade chemicals Rusayl, pharmaceutical chemicals Rusayl, industrial chemicals Rusayl, manufacturing chemicals Oman'
+    metaKeywords: 'chemical supplier Rusayl, Rusayl Industrial Estate chemicals, food grade chemicals Rusayl, pharmaceutical chemicals Rusayl, industrial chemicals Rusayl, manufacturing chemicals Oman',
+    relatedGuide: {
+      slug: 'food-grade-chemicals-supplier-oman',
+      title: 'Food-Grade Chemicals: Grades, Documentation & Use',
+      blurb: 'Rusayl\'s food and beverage manufacturers need food-grade chemistry with matching paperwork.'
+    }
   },
 
   'rustaq': {
@@ -251,11 +316,24 @@ const locations: Record<string, LocationData> = {
       {
         question: 'Can you supply water treatment chemicals for Rustaq municipal systems?',
         answer: 'Yes. We supply Poly Aluminium Chloride (PAC), sodium hypochlorite, chlorine tablets, antiscalants, and coagulants used in municipal water treatment and distribution across Oman\'s governorates including South Al Batinah. Contact us for bulk pricing and delivery schedules.'
+      },
+      {
+        question: 'How do you deliver chemicals to Rustaq and Al Batinah South?',
+        answer: 'Twenty-four to forty-eight hours from Muscat to Rustaq, covering Al Batinah South including Nakhal, Awabi and the surrounding agricultural areas. Deliveries run on scheduled routes rather than on demand, so ordering a day ahead of when you need the material is worth doing. For farm and estate deliveries we need to know the offload arrangement — many sites have no forklift, which changes whether we send bagged goods on pallets or loose.'
+      },
+      {
+        question: 'What do you supply for agriculture around Rustaq?',
+        answer: 'Al Batinah South is date palm, fruit and vegetable country, and the chemistry follows: potassium fertiliser as MOP for fruit sizing and quality, urea and DAP for nitrogen and phosphorus, humic acid for soil structure, and agricultural gypsum where sodic soils need calcium to displace sodium. On the water side, Batinah groundwater salinity and hardness are the recurring problem — we supply irrigation-water treatment and can advise on dosing against your own water analysis.'
       }
     ],
     metaTitle: 'Chemical Supplier Rustaq | Industrial Chemicals South Al Batinah | Global Chemicals LLC',
     metaDescription: 'Chemical supplier for Rustaq, Oman. Agricultural chemicals, water treatment, food-grade & industrial chemicals. 24–48 hour delivery from Muscat. Call +968-93754388.',
-    metaKeywords: 'chemical supplier Rustaq, chemicals Rustaq Oman, agricultural chemicals Rustaq, water treatment Rustaq, industrial chemicals South Al Batinah, chemical supplier Nakhal Oman'
+    metaKeywords: 'chemical supplier Rustaq, chemicals Rustaq Oman, agricultural chemicals Rustaq, water treatment Rustaq, industrial chemicals South Al Batinah, chemical supplier Nakhal Oman',
+    relatedGuide: {
+      slug: 'agricultural-chemicals-oman-buyers-guide',
+      title: 'Agricultural Chemicals: An Oman Buyer\'s Guide',
+      blurb: 'Fertiliser selection, soil correction and irrigation-water treatment for Al Batinah growers.'
+    }
   },
 
   // ── GCC / Middle East Location Pages ──────────────────────────────────────

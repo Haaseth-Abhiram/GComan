@@ -71,3 +71,34 @@ test.describe('Arabic product translations (Aug 2026 batch)', () => {
     });
   }
 });
+
+// Oman city pages are where the site can actually rank — a 2026-09-10 SERP
+// sweep put gcoman #1 for Duqm, Rusayl and Muscat queries and nowhere for
+// Riyadh or Dubai. Yet the content investment had gone the other way: the six
+// Oman pages carried ~300 words and 3 FAQs against 650–717 words and 5 FAQs on
+// the GCC pages, which is why the homepage was outranking /chemicals/duqm and
+// /chemicals/salalah for their own city terms.
+test.describe('Oman location pages carry their weight', () => {
+  const OMAN = ['muscat', 'sohar', 'salalah', 'duqm', 'rusayl', 'rustaq'];
+
+  for (const city of OMAN) {
+    test(`/chemicals/${city} renders the deepened FAQ set and a related guide`, async ({ page }) => {
+      await page.goto(`/chemicals/${city}`);
+      await page.waitForLoadState('networkidle');
+
+      // FAQPage schema is built from the same array the accordion renders, so
+      // counting the JSON-LD entries checks both at once.
+      const ld = await page.locator('script[type="application/ld+json"]').allTextContents();
+      const faqBlock = ld.find((t) => t.includes('FAQPage'));
+      expect(faqBlock, `${city} must emit FAQPage schema`).toBeTruthy();
+      const questions = (faqBlock!.match(/"@type"\s*:\s*"Question"/g) || []).length;
+      expect(questions, `${city} FAQ count`).toBeGreaterThanOrEqual(5);
+
+      // Each Oman city funnels to a topically matched guide.
+      await expect(
+        page.locator('a[href^="/blog/"]').first(),
+        `${city} must link to its related guide`,
+      ).toHaveCount(1);
+    });
+  }
+});
