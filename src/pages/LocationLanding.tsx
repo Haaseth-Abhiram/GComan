@@ -85,7 +85,7 @@ const locations: Record<string, LocationData> = {
         answer: 'Every batch ships with a Certificate of Analysis, a GHS-compliant Safety Data Sheet in English (Arabic on request) and a Technical Data Sheet. Global Chemicals LLC is JSRS-registered and ISO 9001:2015 certified, so the pack is accepted for vendor qualification with PDO and the major EPC contractors. If your QA team needs a specific format, batch traceability or a Certificate of Origin for re-export, tell us at order stage and it travels with the consignment.'
       }
     ],
-    metaTitle: 'Chemical Supplier Muscat | Industrial Chemicals Muscat | Global Chemicals LLC',
+    metaTitle: 'Chemical Supplier in Muscat, Oman | Same-Day Delivery',
     metaDescription: 'Leading chemical supplier in Muscat, Oman. Same-day delivery. Water treatment chemicals, industrial lubricants, lab chemicals. ISO 9001 certified. Call +968-93754388.',
     metaKeywords: 'chemical supplier Muscat, chemicals Muscat, industrial chemicals Muscat, water treatment Muscat, PAC Muscat, caustic soda Muscat, lubricants Muscat, laboratory chemicals Muscat, chemical distributor Muscat Oman',
     relatedGuide: {
@@ -133,7 +133,7 @@ const locations: Record<string, LocationData> = {
         answer: 'Sohar\'s cluster is heavy industry, and the chemical demand splits accordingly: the refinery and petrochemical plants take production and process chemicals; the aluminium smelter and steel plants take pickling, descaling and surface-treatment chemistry; power and desalination take water-treatment chemicals — antiscalant, biocide, oxygen scavenger, pH correction; and port and marine operators take tank-cleaning and degreasing products. We supply across all of these from stock.'
       }
     ],
-    metaTitle: 'Chemical Supplier Sohar | Industrial Chemicals SOHAR Freezone | Global Chemicals LLC',
+    metaTitle: 'Chemical Supplier Sohar | Port & Freezone, Next-Day',
     metaDescription: 'Chemical supplier for Sohar Industrial Estate & SOHAR Freezone. Oil refinery chemicals, petrochemicals, water treatment. Next-day delivery. ISO 9001 certified.',
     metaKeywords: 'chemical supplier Sohar, chemicals Sohar, SOHAR Freezone chemicals, Sohar Industrial Estate, refinery chemicals Sohar, petrochemicals Sohar, water treatment Sohar, industrial lubricants Sohar',
     relatedGuide: {
@@ -181,7 +181,7 @@ const locations: Record<string, LocationData> = {
         answer: 'Yes — those three drive most of the local demand. Port and marine operators take tank cleaners, degreasers and marine-grade lubricants. The fisheries and food-processing plants take food-grade chemistry, sanitisers and CIP cleaning chemicals with the food-grade documentation to match. Dhofar\'s agriculture takes fertilisers and irrigation-water treatment, where the Khareef season and local groundwater salinity both affect what is appropriate.'
       }
     ],
-    metaTitle: 'Chemical Supplier Salalah | Chemicals Dhofar | Global Chemicals LLC Oman',
+    metaTitle: 'Chemical Supplier Salalah | Dhofar & Salalah Port',
     metaDescription: 'Chemical supplier for Salalah & Dhofar region. Pool chemicals, water treatment, industrial supplies. Regular deliveries. Serving Salalah Free Zone & Port of Salalah.',
     metaKeywords: 'chemical supplier Salalah, chemicals Salalah, Dhofar chemicals, Salalah Free Zone, pool chemicals Salalah, water treatment Salalah, industrial chemicals Dhofar',
     relatedGuide: {
@@ -229,7 +229,7 @@ const locations: Record<string, LocationData> = {
         answer: 'The standard pack is a Certificate of Analysis per batch, a GHS-compliant Safety Data Sheet in English with Arabic on request, and a Technical Data Sheet. Global Chemicals LLC is JSRS-registered and ISO 9001:2015 certified, which covers most of what SEZ contractors and the refinery\'s procurement teams ask for. Certificates of Origin for imported grades are available on request — flag it at enquiry stage so it is issued with the shipment rather than afterwards.'
       }
     ],
-    metaTitle: 'Chemical Supplier Duqm | Duqm SEZ Chemicals | Global Chemicals LLC Oman',
+    metaTitle: 'Chemical Supplier Duqm | Duqm SEZ & Refinery Supply',
     metaDescription: 'Chemical supplier for Duqm SEZ, Duqm Refinery & Dry Dock. Refinery chemicals, marine chemicals, water treatment. Supporting Oman\'s new industrial hub.',
     metaKeywords: 'chemical supplier Duqm, Duqm SEZ chemicals, Duqm Refinery chemicals, Duqm Dry Dock, industrial chemicals Duqm, water treatment Duqm, marine chemicals Oman',
     relatedGuide: {
@@ -277,7 +277,7 @@ const locations: Record<string, LocationData> = {
         answer: 'Rusayl is Oman\'s oldest industrial estate and its mix is light-to-medium manufacturing, so demand is broad rather than deep: food and beverage plants take food-grade chemistry and CIP cleaning; plastics and packaging take additives and solvents; detergent and cleaning-product manufacturers take LABSA, caustic soda, soda ash and surfactants; metal fabrication takes degreasers, pickling acids and passivation chemistry. Most of it moves in 25 kg bags, 200 L drums or 1,000 L IBCs.'
       }
     ],
-    metaTitle: 'Chemical Supplier Rusayl | Rusayl Industrial Estate Chemicals | Global Chemicals LLC',
+    metaTitle: 'Chemical Supplier Rusayl Industrial Estate | Same-Day',
     metaDescription: 'Chemical supplier for Rusayl Industrial Estate. Food-grade chemicals, pharmaceutical reagents, industrial supplies. Same-day delivery. Serving 500+ Rusayl industries.',
     metaKeywords: 'chemical supplier Rusayl, Rusayl Industrial Estate chemicals, food grade chemicals Rusayl, pharmaceutical chemicals Rusayl, industrial chemicals Rusayl, manufacturing chemicals Oman',
     relatedGuide: {
@@ -326,7 +326,7 @@ const locations: Record<string, LocationData> = {
         answer: 'Al Batinah South is date palm, fruit and vegetable country, and the chemistry follows: potassium fertiliser as MOP for fruit sizing and quality, urea and DAP for nitrogen and phosphorus, humic acid for soil structure, and agricultural gypsum where sodic soils need calcium to displace sodium. On the water side, Batinah groundwater salinity and hardness are the recurring problem — we supply irrigation-water treatment and can advise on dosing against your own water analysis.'
       }
     ],
-    metaTitle: 'Chemical Supplier Rustaq | Industrial Chemicals South Al Batinah | Global Chemicals LLC',
+    metaTitle: 'Chemical Supplier Rustaq | Al Batinah South, Oman',
     metaDescription: 'Chemical supplier for Rustaq, Oman. Agricultural chemicals, water treatment, food-grade & industrial chemicals. 24–48 hour delivery from Muscat. Call +968-93754388.',
     metaKeywords: 'chemical supplier Rustaq, chemicals Rustaq Oman, agricultural chemicals Rustaq, water treatment Rustaq, industrial chemicals South Al Batinah, chemical supplier Nakhal Oman',
     relatedGuide: {
@@ -377,7 +377,7 @@ const locations: Record<string, LocationData> = {
         answer: 'Direct import from our Muscat warehouse removes one trading margin from the chain, and GCC preferential origin applies to eligible products. For recurring volume in commodity chemicals — caustic soda, PAC, sodium hypochlorite, glycols, solvents — landed cost via the 3–5 day road lane is frequently below local trader pricing, and scheduled weekly departures keep stock replenishment predictable. We quote FOB Muscat, CIF Jebel Ali, or DAP-to-door in AED or USD so you can compare like for like.'
       }
     ],
-    metaTitle: 'Chemical Suppliers in Dubai UAE | Global Chemicals LLC',
+    metaTitle: 'Chemical Supplier Dubai UAE | Export from Oman',
     metaDescription: 'Chemical suppliers in Dubai: import from Oman in 3–5 days, 24h air freight. Water treatment, oilfield & lab chemicals to JAFZA, DIP, Al Quoz. Get a quote.',
     metaKeywords: 'chemical suppliers in Dubai, chemical supplier Dubai, chemicals Dubai, industrial chemicals UAE, water treatment chemicals Dubai, laboratory chemicals Dubai, chemical exporter Oman UAE, chemical supplier UAE, oilfield chemicals Dubai, JAFZA chemical supplier, chemical trading companies in Dubai'
   },
@@ -421,7 +421,7 @@ const locations: Record<string, LocationData> = {
         answer: 'Yes. Mussafah and the ICAD I–III industrial cities are regular delivery destinations on our Abu Dhabi lane, alongside KEZAD and project sites on the Ruwais corridor. We quote FOB Muscat, CIF Abu Dhabi, or DAP-to-door in AED or USD, and consolidate drum and IBC orders with full-container loads on scheduled weekly departures.'
       }
     ],
-    metaTitle: 'Chemical Suppliers in Abu Dhabi | ADNOC Supply Chain',
+    metaTitle: 'Chemical Supplier Abu Dhabi | ADNOC Supply Chain',
     metaDescription: 'Chemical suppliers in Abu Dhabi — import from Oman in 3–5 days. Oilfield, water treatment & lab chemicals to Mussafah, ICAD & KEZAD. Get a quote.',
     metaKeywords: 'chemical suppliers in Abu Dhabi, chemical supplier Abu Dhabi, chemicals Abu Dhabi, ADNOC chemical supplier, KEZAD chemicals, KIZAD chemicals, Mussafah industrial chemicals, oilfield chemicals Abu Dhabi, water treatment chemicals Abu Dhabi, industrial chemicals UAE, chemical exporter Oman'
   },
@@ -465,7 +465,7 @@ const locations: Record<string, LocationData> = {
         answer: 'We invoice in SAR, USD, or other major currencies. Terms include advance payment, 30-day net for established accounts, and Letter of Credit for large or bulk orders. Complete export documentation is issued with each shipment for customs clearance at the Saudi point of entry.'
       }
     ],
-    metaTitle: 'Chemical Supplier Riyadh, Saudi Arabia | Global Chemicals LLC',
+    metaTitle: 'Chemical Supplier Riyadh | Export from Oman to KSA',
     metaDescription: 'Chemicals delivered to Riyadh from Oman in 5–7 days via the Batha lane. Water treatment, oilfield & lab chemicals with Arabic SDS and CoO. Get a quote.',
     metaKeywords: 'chemical supplier Riyadh, chemicals Riyadh, industrial chemicals Riyadh, chemical supplier Saudi Arabia, water treatment chemicals Riyadh, oilfield chemicals Saudi Arabia, Saudi Aramco chemical supplier, SABIC chemical supplier, chemical exporter Oman Saudi'
 
@@ -510,7 +510,7 @@ const locations: Record<string, LocationData> = {
         answer: 'We invoice in QAR, USD, or other major currencies. Terms include advance payment, 30-day net for established accounts, and Letter of Credit for large or bulk orders. Complete export documentation is issued with each shipment for clearance at the Qatari point of entry.'
       }
     ],
-    metaTitle: 'Chemical Suppliers in Qatar | Doha & Ras Laffan Supply',
+    metaTitle: 'Chemical Supplier Doha Qatar | Export from Oman',
     metaDescription: 'Chemical suppliers in Qatar — Doha & Ras Laffan supply from Oman in 3–5 days. LNG, water treatment, oilfield & lab chemicals. Get a quote.',
     metaKeywords: 'chemical suppliers in Qatar, chemical suppliers in Doha, chemical supplier Qatar, chemicals Doha, industrial chemicals Qatar, water treatment chemicals Qatar, oilfield chemicals Qatar, LNG chemicals Qatar, QatarEnergy chemical supplier, chemical exporter Oman Qatar, Ras Laffan chemicals, Mesaieed chemicals',
     relatedGuide: {
@@ -559,7 +559,7 @@ const locations: Record<string, LocationData> = {
         answer: 'Yes. Shuaiba Industrial Area, the Ahmadi oil-sector hub, and the Al-Zour refinery and power complex are regular destinations on our Kuwait lane, alongside Sabhan and the Shuwaikh port area. We quote FOB Muscat, CIF Shuwaikh, or DAP-to-site in KWD or USD, and consolidate drum and IBC orders with full-container loads on scheduled weekly departures.'
       }
     ],
-    metaTitle: 'Chemical Suppliers in Kuwait | KNPC & Shuaiba Supply',
+    metaTitle: 'Chemical Supplier Kuwait City | KNPC & Shuaiba',
     metaDescription: 'Chemical suppliers in Kuwait — import from Oman in 4–6 days. Refinery, water treatment & lab chemicals to Shuaiba, Ahmadi & Al-Zour. Get a quote.',
     metaKeywords: 'chemical suppliers in Kuwait, chemical suppliers in Kuwait City, chemical supplier Kuwait, chemicals Kuwait City, industrial chemicals Kuwait, water treatment chemicals Kuwait, oilfield chemicals Kuwait, KOC chemical supplier, KNPC chemicals, chemical exporter Oman Kuwait, Shuaiba chemicals, Al-Zour chemicals',
     relatedGuide: {
@@ -608,7 +608,7 @@ const locations: Record<string, LocationData> = {
         answer: 'Yes. The Hidd and Salman industrial areas, Sitra\'s refining and petrochemical cluster, and BIIP manufacturers are regular destinations on our Bahrain lane. We quote FOB Muscat, CIF Khalifa Bin Salman Port, or DAP-to-site in BHD or USD, and consolidate drum and IBC orders with full-container loads on scheduled weekly departures.'
       }
     ],
-    metaTitle: 'Chemical Suppliers in Bahrain | ALBA & BAPCO Supply',
+    metaTitle: 'Chemical Supplier Bahrain | ALBA & BAPCO Supply',
     metaDescription: 'Chemical suppliers in Bahrain — import from Oman in 3–5 days via Saudi. Aluminium, refinery & water treatment chemicals to Hidd & Sitra. Get a quote.',
     metaKeywords: 'chemical suppliers in Bahrain, chemical supplier Bahrain, chemicals Manama, industrial chemicals Bahrain, water treatment chemicals Bahrain, ALBA chemical supplier, BAPCO chemicals, chemical exporter Oman Bahrain, Hidd industrial chemicals, Sitra chemicals, BIIP chemicals',
     relatedGuide: {
@@ -651,7 +651,7 @@ const locations: Record<string, LocationData> = {
         answer: 'Yes, we export chemicals to FFZA-registered companies and the broader Fujairah industrial area. We provide complete UAE customs documentation: Certificate of Origin, Certificate of Analysis, SDS/MSDS, and commercial invoices. Our proximity means we can fulfil urgent orders the same day.'
       }
     ],
-    metaTitle: 'Chemical Supplier Fujairah UAE | Same-Day Delivery from Oman | Global Chemicals LLC',
+    metaTitle: 'Chemical Supplier Fujairah | Same-Day from Oman',
     metaDescription: 'Chemical supplier to Fujairah, UAE. Same-day delivery possible — Oman shares border with Fujairah. Oil bunkering, maritime & industrial chemicals. ISO 9001 certified. Get a quote.',
     metaKeywords: 'chemical supplier Fujairah, chemicals Fujairah UAE, chemical exporter Oman Fujairah, oil bunkering chemicals Fujairah, maritime chemicals Fujairah, Fujairah Free Zone chemicals FFZA, industrial chemicals Fujairah, water treatment chemicals Fujairah, same day chemical delivery Fujairah from Oman'
   },
@@ -695,7 +695,7 @@ const locations: Record<string, LocationData> = {
         answer: 'Yes. Many HFZA companies buy from us in bulk — drums, IBCs, or full container loads — for onward regional trading and re-export. We quote FOB Muscat or DAP Hamriyah in AED or USD, supply GCC preferential-origin documentation where eligible, and can ship with neutral or private labelling arrangements for trading houses on request.'
       }
     ],
-    metaTitle: 'Chemical Suppliers in Sharjah | HFZA & SAIF Zone Supply',
+    metaTitle: 'Chemical Supplier Sharjah | HFZA & SAIF Zone',
     metaDescription: 'Chemical suppliers in Sharjah — import from Oman in 3–5 days. HFZA, SAIF Zone & Industrial Area supply. Water treatment & lab chemicals. Get a quote.',
     metaKeywords: 'chemical suppliers in Sharjah, chemical supplier Sharjah, chemicals Sharjah UAE, Hamriyah Free Zone chemicals HFZA, SAIF Zone chemicals Sharjah, industrial chemicals Sharjah, water treatment chemicals Sharjah, laboratory chemicals Sharjah, chemical exporter Oman Sharjah, chemical distributor Sharjah UAE'
   },
@@ -731,7 +731,7 @@ const locations: Record<string, LocationData> = {
         answer: 'Yes, we supply chemicals to businesses in RAKEZ\'s Al Hamra, Al Ghail, and other zones. We provide all required import documentation: Certificate of Origin, Safety Data Sheet, Certificate of Analysis, packing list, and commercial invoice in the format required for RAKEZ customs clearance.'
       }
     ],
-    metaTitle: 'Chemical Supplier Ras Al Khaimah | RAKEZ Industrial Chemicals UAE | Global Chemicals LLC',
+    metaTitle: 'Chemical Supplier Ras Al Khaimah | RAKEZ, from Oman',
     metaDescription: 'Chemical supplier exporting to Ras Al Khaimah (RAK), UAE. RAKEZ, RAK Ceramics, construction & industrial chemicals. ISO 9001 certified. 3-5 day delivery from Muscat. Get a quote.',
     metaKeywords: 'chemical supplier Ras Al Khaimah, chemicals RAK UAE, RAKEZ chemical supplier, RAK Ceramics chemicals, construction chemicals RAK, industrial chemicals Ras Al Khaimah, water treatment RAK UAE, chemical exporter Oman RAK, manufacturing chemicals Ras Al Khaimah UAE'
   },
@@ -769,7 +769,7 @@ const locations: Record<string, LocationData> = {
         answer: 'We provide complete Saudi customs documentation: Certificate of Origin attested by Oman Chamber of Commerce, Safety Data Sheet in Arabic and English, Certificate of Analysis, Technical Data Sheet, and commercial invoice with HS codes. For products requiring SASO conformity or SFDA approval, our team provides guidance on the Saudi import permit process.'
       }
     ],
-    metaTitle: 'Chemical Supplier Jeddah | Industrial Chemicals Saudi Arabia | Global Chemicals LLC',
+    metaTitle: 'Chemical Supplier Jeddah | Export from Oman to KSA',
     metaDescription: 'Chemical supplier exporting to Jeddah, Saudi Arabia. Jeddah Industrial City, KAEC, pharma & food-grade chemicals. ISO 9001 certified. Full Saudi customs documentation. Get a quote.',
     metaKeywords: 'chemical supplier Jeddah, chemicals Jeddah Saudi Arabia, industrial chemicals Jeddah, food grade chemicals Jeddah, pharmaceutical chemicals Jeddah, KAEC chemical supplier, Jeddah Industrial City chemicals, water treatment Jeddah, chemical exporter Oman Jeddah KSA'
   },
@@ -807,7 +807,7 @@ const locations: Record<string, LocationData> = {
         answer: 'We provide all required export documentation for Iraqi customs: Certificate of Origin attested by Oman Chamber of Commerce, Certificate of Analysis, Safety Data Sheet in Arabic and English, Technical Data Sheet, commercial invoice, packing list, and Bill of Lading. Our team has experience navigating Iraqi import requirements and can advise on specific documentation needs for your sector.'
       }
     ],
-    metaTitle: 'Chemical Supplier Iraq | Baghdad Basra Oil & Industrial Chemicals | Global Chemicals LLC',
+    metaTitle: 'Chemical Supplier Iraq | Baghdad & Basra, from Oman',
     metaDescription: 'Chemical supplier exporting to Iraq — Baghdad, Basra, Kirkuk. Oilfield chemicals, water treatment, industrial chemicals for Iraq oil sector. ISO 9001. Arabic documentation. Get a quote.',
     metaKeywords: 'chemical supplier Iraq, chemicals Baghdad, chemicals Basra Iraq, oilfield chemicals Iraq, industrial chemicals Iraq, water treatment chemicals Iraq, chemical exporter Oman Iraq, Iraq oil sector chemicals, corrosion inhibitor Iraq, chemical supplier Baghdad'
   },
@@ -845,7 +845,7 @@ const locations: Record<string, LocationData> = {
         answer: 'Yes. Jordan faces acute water scarcity — it is among the world\'s most water-stressed countries — making water treatment chemicals essential infrastructure inputs. We supply PAC, chlorine, antiscalants, biocides, corrosion inhibitors, and specialty water treatment chemicals to support Jordan\'s water treatment plants and distribution networks. All products come with full technical documentation.'
       }
     ],
-    metaTitle: 'Chemical Supplier Jordan | Amman Pharma Water Treatment Chemicals | Global Chemicals LLC',
+    metaTitle: 'Chemical Supplier Jordan | Amman, Export from Oman',
     metaDescription: 'Chemical supplier exporting to Jordan — Amman, Zarqa, Aqaba. Pharmaceutical, water treatment, agricultural & industrial chemicals. ISO 9001 certified. Arabic documentation. Get a quote.',
     metaKeywords: 'chemical supplier Jordan, chemicals Amman Jordan, pharmaceutical chemicals Jordan, water treatment chemicals Jordan, industrial chemicals Amman, agricultural chemicals Jordan, chemical exporter Oman Jordan, Aqaba chemicals, Zarqa Industrial City chemicals, chemical supplier Middle East Jordan'
   },
@@ -883,7 +883,7 @@ const locations: Record<string, LocationData> = {
         answer: 'We ship chemicals to Egypt primarily via sea freight from Port of Sohar or Muscat Port to Alexandria Port or Damietta Port, taking 7–12 business days. For urgent requirements, air freight via Cairo International Airport is available with 3–5 day delivery. We handle all required export documentation including Certificate of Origin attested by Oman Chamber of Commerce, Arabic SDS, Certificate of Analysis, and Egypt Customs-compliant invoicing.'
       }
     ],
-    metaTitle: 'Chemical Supplier Egypt | Cairo Alexandria Industrial Chemicals | Global Chemicals LLC',
+    metaTitle: 'Chemical Supplier Egypt | Cairo & Alexandria',
     metaDescription: 'Chemical supplier exporting to Egypt — Cairo, Alexandria, Suez. Pharma, food-grade, water treatment & industrial chemicals. ISO 9001 certified. Arabic documentation. Get a quote.',
     metaKeywords: 'chemical supplier Egypt, chemicals Cairo Egypt, chemicals Alexandria Egypt, pharmaceutical chemicals Egypt, water treatment chemicals Egypt, industrial chemicals Egypt, chemical exporter Oman Egypt, food grade chemicals Egypt, agricultural chemicals Egypt, chemical supplier Middle East Egypt'
   },
@@ -919,7 +919,7 @@ const locations: Record<string, LocationData> = {
         answer: 'Yes, Jubail Industrial City — one of the world\'s largest industrial zones — is within our Eastern Province supply territory. We export chemicals to SABIC contractors, petrochemical facilities, and other Jubail industrial operators. Water treatment chemicals, industrial lubricants, and specialty oilfield chemicals are among our most requested products for the Jubail sector.'
       }
     ],
-    metaTitle: 'Chemical Supplier Dammam | Eastern Province KSA | Aramco Contractors | Global Chemicals LLC',
+    metaTitle: 'Chemical Supplier Dammam | Aramco & Eastern Province',
     metaDescription: 'Chemical supplier exporting to Dammam & Eastern Province, KSA. Saudi Aramco contractors, SABIC, Jubail Industrial City. Oilfield & water treatment chemicals. ISO 9001. Get a quote.',
     metaKeywords: 'chemical supplier Dammam, chemicals Eastern Province Saudi Arabia, Saudi Aramco chemical supplier, oilfield chemicals Dammam, industrial chemicals Eastern Province KSA, Jubail Industrial City chemicals, SABIC chemical supplier, chemical exporter Oman Dammam, Al Khobar chemicals Saudi Arabia',
     relatedGuide: {
@@ -960,7 +960,7 @@ const locations: Record<string, LocationData> = {
         answer: 'We provide complete documentation for Saudi customs and vendor qualification: Certificate of Origin attested by Oman Chamber of Commerce, Safety Data Sheet in English and Arabic, Certificate of Analysis, Technical Data Sheet, and ISO 9001:2015 certification. For SASO-regulated product lines we support the certification process directly.'
       }
     ],
-    metaTitle: 'Chemical Supplier Jubail Industrial City | Water Treatment & Petrochemical Chemicals | Global Chemicals LLC',
+    metaTitle: 'Chemical Supplier Jubail Industrial City | From Oman',
     metaDescription: 'Chemical supplier exporting to Jubail Industrial City, Saudi Arabia. Antiscalants, cooling-tower biocides, corrosion inhibitors for SABIC, Sadara, Saudi Kayan & Marafiq desalination. ISO 9001. Get a quote.',
     metaKeywords: 'chemical supplier Jubail, Jubail Industrial City chemicals, water treatment chemicals Jubail, antiscalant Jubail, SABIC chemical supplier, Sadara Chemical supplier, Marafiq desalination chemicals, cooling tower biocide Jubail, corrosion inhibitor Jubail Saudi Arabia, chemical exporter Oman Jubail',
     relatedGuide: {
@@ -1001,7 +1001,7 @@ const locations: Record<string, LocationData> = {
         answer: 'We provide complete Saudi customs documentation: Certificate of Origin attested by Oman Chamber of Commerce, Safety Data Sheet in Arabic and English, Certificate of Analysis, Technical Data Sheet, and commercial invoice with HS codes. For products requiring SASO conformity, our team provides guidance on the Saudi import permit process.'
       }
     ],
-    metaTitle: 'Chemical Supplier Yanbu | Refining & Petrochemical Chemicals Saudi Arabia | Global Chemicals LLC',
+    metaTitle: 'Chemical Supplier Yanbu | Refining & Petrochemical',
     metaDescription: 'Chemical supplier exporting to Yanbu, Saudi Arabia. Oilfield & process chemicals for YASREF refinery, YANSAB & SABIC petrochemical plants. ISO 9001 certified. Get a quote.',
     metaKeywords: 'chemical supplier Yanbu, Yanbu Industrial City chemicals, YASREF chemical supplier, YANSAB chemical supplier, oilfield chemicals Yanbu, petrochemical chemicals Yanbu Saudi Arabia, chemical exporter Oman Yanbu, Red Sea chemical supplier Saudi Arabia'
   },

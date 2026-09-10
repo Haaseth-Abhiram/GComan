@@ -102,3 +102,33 @@ test.describe('Oman location pages carry their weight', () => {
     });
   }
 });
+
+// Location <title>s are clamped to 60 chars by SEO.tsx. 16 of 26 were running
+// over and losing their differentiator — Riyadh, the best-performing GCC page,
+// showed only 38 of the 60 available characters because the brand suffix was
+// stripped wholesale. Rewritten to fit, leading with the city and then the
+// Oman-origin angle a 2026-09-10 SERP test showed us winning on ("chemical
+// exporter from oman to saudi arabia" -> #1 and #2).
+test.describe('Location page titles fit the SERP', () => {
+  const SAMPLE = [
+    { slug: 'riyadh', mustContain: 'Riyadh' },
+    { slug: 'dubai', mustContain: 'Dubai' },
+    { slug: 'dammam', mustContain: 'Dammam' },
+    { slug: 'duqm', mustContain: 'Duqm' },
+    { slug: 'rusayl', mustContain: 'Rusayl' },
+  ];
+
+  for (const { slug, mustContain } of SAMPLE) {
+    test(`/chemicals/${slug} title is inside the clamp and keeps the city`, async ({ page }) => {
+      await page.goto(`/chemicals/${slug}`);
+      await expect
+        .poll(async () => await page.title(), { timeout: 10_000 })
+        .not.toBe('Chemical Suppliers Oman & GCC | Global Chemicals LLC');
+      const title = (await page.title()).trim();
+      expect(title.length, `${slug} title length`).toBeLessThanOrEqual(60);
+      expect(title, `${slug} must keep its city name`).toContain(mustContain);
+      // No half-phrase left behind by the clamp.
+      expect(title).not.toMatch(/[|\-–—:,]\s*$/);
+    });
+  }
+});
