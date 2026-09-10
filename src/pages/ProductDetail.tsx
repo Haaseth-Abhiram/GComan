@@ -503,6 +503,38 @@ const ProductDetail = ({ category, rawCategoryProducts }: ProductDetailProps) =>
                 </span>
               </div>
 
+              {/* Buying guide link.
+                  Opt-in per product via details.guideUrl / details.guideLabel.
+                  Exists because the geo landing pages (e.g.
+                  /chemical-supplier/caustic-soda-oman) target the high-intent
+                  "<product> supplier oman" queries but were almost orphaned —
+                  the caustic-soda hub had exactly ONE inbound link in the whole
+                  site, from ChemicalSuppliersOman, and none from the four
+                  caustic-soda product pages themselves. A hub with no internal
+                  links behind it cannot outrank competitors on the query it was
+                  built for. This gives every product a way to point at its guide. */}
+              {product.details?.guideUrl && (
+                <Card className="p-6 mb-8 border-primary/20 bg-primary/[0.03]">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:justify-between">
+                    <div className="flex items-start gap-3">
+                      <Info className="w-5 h-5 text-primary shrink-0 mt-0.5" aria-hidden="true" />
+                      <p className="text-sm text-muted-foreground">
+                        {t('products.guideIntro', { defaultValue: 'Comparing grades, pack sizes and delivery options?' })}{' '}
+                        <span className="text-foreground font-medium">
+                          {product.details.guideLabel || 'Read the full buying guide'}
+                        </span>
+                      </p>
+                    </div>
+                    <Button asChild variant="outline" size="sm" className="gap-2 shrink-0">
+                      <LocalizedLink to={product.details.guideUrl}>
+                        {t('products.readGuide', { defaultValue: 'Read the guide' })}
+                        <ArrowLeft className="w-4 h-4 rotate-180" aria-hidden="true" />
+                      </LocalizedLink>
+                    </Button>
+                  </div>
+                </Card>
+              )}
+
               {/* CTA Section */}
               <Card className="p-8 bg-gradient-to-br from-primary/5 to-secondary/5 border-primary/20">
                 <div className="text-center">

@@ -55,7 +55,11 @@ const gradeForms = [
     description: "Most widely used form for soap making, water treatment, and industrial pH adjustment. Easy to weigh and dissolve. Available in technical grade and food grade (E524).",
     specs: ["Purity: 98–99% NaOH", "Na2CO3: ≤0.5%", "NaCl: ≤0.03%", "Packaging: 25kg bag, 1,000kg super sack"],
     uses: ["Soap & detergent manufacturing", "Water treatment pH adjustment", "Food processing (E524)", "Industrial chemical synthesis"],
-    productLink: "/products/soap-detergent/caustic-soda-flakes-soap"
+    // Points at the water-treatment SKU, which is the canonical one. The
+    // soap-detergent twin carries a canonicalOverride to exactly this URL, so
+    // linking there sent both users and link equity into a page that tells
+    // Google to look somewhere else.
+    productLink: "/products/water-treatment/caustic-soda-flakes"
   },
   {
     icon: Beaker,
@@ -64,7 +68,7 @@ const gradeForms = [
     description: "Preferred for continuous-dosing applications, automated chemical feed systems, and large industrial operations. Ideal for municipal water treatment plants and food processing CIP systems.",
     specs: ["Concentration: 30%, 48%, or 50%", "Appearance: Clear, colourless liquid", "SG (50%): 1.52 g/cm³", "Packaging: 25L, 200L, 1000L IBC, bulk"],
     uses: ["Municipal water treatment", "Swimming pool pH control", "Food processing CIP cleaning", "Pulp & paper manufacturing"],
-    productLink: "/products/soap-detergent/caustic-soda-liquid-soap"
+    productLink: "/products/water-treatment/caustic-soda-liquid"
   },
   {
     icon: FlaskConical,
@@ -73,7 +77,7 @@ const gradeForms = [
     description: "Low-dust spherical beads with superior flow characteristics. Preferred for automated dispensing, pharmaceutical-adjacent, and precision formulation applications requiring exact NaOH quantities.",
     specs: ["Purity: 99% NaOH", "Na2CO3: ≤0.4%", "Form: Spherical beads 2–4mm", "Packaging: 25kg PP bag, 500kg big bag"],
     uses: ["Industrial detergent formulation", "Pharmaceutical applications", "Automated dosing systems", "High-purity chemical synthesis"],
-    productLink: "/products/soap-detergent/caustic-soda-prills-soap"
+    productLink: "/products/water-treatment/caustic-soda-prills"
   }
 ];
 
