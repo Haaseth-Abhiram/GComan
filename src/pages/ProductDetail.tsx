@@ -222,16 +222,36 @@ const ProductDetail = ({ category, rawCategoryProducts }: ProductDetailProps) =>
   };
   const catLabel = CATEGORY_LABEL[category || ''] ?? (category || '').replace(/-/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase());
 
+  // SERP title. Word order matters more than wording here, because SEO.tsx
+  // clamps the <title> to 60 chars and Google truncates at about the same width.
+  // The previous order — "{product} | {category} Supplier | Oman & GCC | Global
+  // Chemicals LLC" — ran ~90 chars, so the clamp ate the tail: 86 of 272 product
+  // pages shipped with no "Oman" in the title at all, and some ended mid-phrase
+  // ("Agricultural Gypsum (Calcium Sulphate) | Agricultural").
+  //
+  // That is the signal the 2026-09-10 live SERP checks showed deciding these
+  // queries: we rank for "agricultural gypsum oman" and "dap npk fertilizer
+  // oman" — where our page names the buyer's phrase — and lose where a
+  // competitor's title/URL is the phrase verbatim.
+  //
+  // Leading with "<product> Supplier in Oman" puts product + intent + geo inside
+  // the visible window; the category qualifier trails, still keeping
+  // cross-category SKUs unique (EDTA Powder exists in three categories).
+  // Measured across the catalogue: "Oman" 186 -> 254 of 272, "Supplier"
+  // 247 -> 269, duplicate titles still 0, max length still 60.
+  const serpTitle = `${product.title} Supplier in Oman | ${catLabel}`;
+
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title={`${product.title} | ${catLabel} Supplier | Oman & GCC | Global Chemicals LLC`}
+        title={serpTitle}
         seoTitle={product.details?.seoTitle}
         description={seoDescription}
         arTitle={arSeoTitle}
         arDescription={arSeoDescription}
         keywords={keywords}
-        ogTitle={`${product.title} - ${catLabel} Chemical Supplier | Oman & GCC | Global Chemicals LLC`}
+        // og:title is not width-clamped the way <title> is, so it keeps the brand.
+        ogTitle={`${product.title} Supplier in Oman & GCC | Global Chemicals LLC`}
         ogDescription={seoDescription}
         ogUrl={`https://gcoman.com/products/${category}/${productSlug}`}
         ogImage={product.image}

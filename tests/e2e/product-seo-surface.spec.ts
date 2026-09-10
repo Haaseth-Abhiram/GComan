@@ -100,3 +100,51 @@ test.describe('Product page SEO surface', () => {
     ).toBeFalsy();
   });
 });
+
+// Title word order. SEO.tsx clamps <title> to 60 chars, so whatever trails gets
+// cut. The old template put "Oman" last and 86 of 272 product pages lost it
+// entirely — the exact geo signal the 2026-09-10 SERP checks showed deciding
+// "<product> supplier oman" queries.
+//
+// These read the title via a poll: on the dev server the page is client-rendered,
+// so page.goto() resolves while <title> is still the index.html fallback
+// ("Chemical Suppliers Oman & GCC | Global Chemicals LLC") and Helmet has not
+// committed yet. Reading it straight after goto() is a flake.
+const FALLBACK = 'Chemical Suppliers Oman & GCC | Global Chemicals LLC';
+
+async function settledTitle(page: import('@playwright/test').Page, url: string) {
+  await page.goto(url);
+  await expect
+    .poll(async () => await page.title(), { timeout: 10_000 })
+    .not.toBe(FALLBACK);
+  return (await page.title()).trim();
+}
+
+test.describe('Product SERP title', () => {
+  test('leads with product + Supplier in Oman, and stays inside the clamp', async ({ page }) => {
+    for (const url of [
+      '/products/agro/agricultural-gypsum',
+      '/products/agro/dap-fertilizer',
+      '/products/water-treatment/caustic-soda-flakes',
+    ]) {
+      const title = await settledTitle(page, url);
+      expect(title.length, `${url} title length`).toBeLessThanOrEqual(60);
+      expect(title, `${url} must keep the geo signal`).toContain('Oman');
+      expect(title, `${url} must state the commercial intent`).toContain('Supplier');
+      // The clamp must never leave a dangling separator or half a phrase.
+      expect(title).not.toMatch(/[|\-–—:,]\s*$/);
+    }
+  });
+
+  test('cross-category SKUs keep distinct titles', async ({ page }) => {
+    const titles: string[] = [];
+    for (const url of [
+      '/products/oilfield/edta-powder',
+      '/products/soap-detergent/edta-powder-soap',
+      '/products/water-treatment/edta-powder-water',
+    ]) {
+      titles.push(await settledTitle(page, url));
+    }
+    expect(new Set(titles).size, `EDTA titles must be unique: ${titles.join(' // ')}`).toBe(3);
+  });
+});
