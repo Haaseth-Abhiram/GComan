@@ -461,13 +461,17 @@ const locations: Record<string, LocationData> = {
         answer: 'Water treatment and RO chemicals (PAC, caustic soda, antiscalants, sodium hypochlorite), glycols and solvents, corrosion and scale inhibitors, construction chemicals, food-grade products, and laboratory reagents. Bulk and packed quantities both ship on the Riyadh lane — send your product list and destination district for delivered pricing in SAR or USD.'
       },
       {
+        question: 'Do you deliver to Sudair City for Industry and the Al Kharj corridor?',
+        answer: 'Yes. Sudair City for Industry and Business, 120 km north of Riyadh, is served on the same Batha lane with scheduled full-container and IBC drops — typical lines are glycols, solvents, caustic soda, hydrochloric acid, and process- and cooling-water treatment chemicals for building-materials, plastics, pharmaceutical and battery plants. Al Kharj, 80 km south, is covered on the same departures for dairy, food-processing, poultry and agricultural buyers: food-grade chemicals, CIP cleaning and sanitising products, and boiler and cooling-water programmes. Both corridors add no extra transit day over central Riyadh; give us the plant name and gate and we quote delivered to site.'
+      },
+      {
         question: 'What payment terms and currencies do you accept for Saudi orders?',
         answer: 'We invoice in SAR, USD, or other major currencies. Terms include advance payment, 30-day net for established accounts, and Letter of Credit for large or bulk orders. Complete export documentation is issued with each shipment for customs clearance at the Saudi point of entry.'
       }
     ],
-    metaTitle: 'Chemical Supplier Riyadh | Export from Oman to KSA',
-    metaDescription: 'Chemicals delivered to Riyadh from Oman in 5–7 days via the Batha lane. Water treatment, oilfield & lab chemicals with Arabic SDS and CoO. Get a quote.',
-    metaKeywords: 'chemical supplier Riyadh, chemicals Riyadh, industrial chemicals Riyadh, chemical supplier Saudi Arabia, water treatment chemicals Riyadh, oilfield chemicals Saudi Arabia, Saudi Aramco chemical supplier, SABIC chemical supplier, chemical exporter Oman Saudi'
+    metaTitle: 'Chemical Supplier Riyadh, Sudair & Al Kharj | From Oman',
+    metaDescription: 'Chemicals delivered to Riyadh, Sudair & Al Kharj from Oman in 5–7 days via the Batha lane. Food-grade, water treatment & lab grades, Arabic SDS, CoO, SASO help.',
+    metaKeywords: 'chemical supplier Riyadh, chemicals Riyadh, industrial chemicals Riyadh, chemical supplier Sudair City for Industry, chemical supplier Al Kharj, food grade chemicals Al Kharj, chemical supplier Saudi Arabia, water treatment chemicals Riyadh, oilfield chemicals Saudi Arabia, Saudi Aramco chemical supplier, SABIC chemical supplier, chemical exporter Oman Saudi'
 
   },
 
