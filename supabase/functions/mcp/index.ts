@@ -2848,7 +2848,9 @@ var food_beverage_default = [
           answer: "For clean-in-place (CIP) cleaning in food plants, caustic soda is typically used at 0.5\u20132.0% w/w concentration depending on the soil type and equipment being cleaned. Dairy CIP programmes (for milk, cheese, and yoghurt plants) commonly use 0.8\u20131.5% caustic at 70\u201380\xB0C for 10\u201320 minute contact time to dissolve protein and fat soils. Beverage lines and fruit juice plants use lower concentrations of 0.5\u20131.0% at 60\u201375\xB0C. Brewery and winery CIP may use 1.0\u20132.0% for heavily soiled fermentation vessels. In Oman's hot climate, the higher ambient temperatures mean pre-rinse water is already warm, slightly reducing the heating energy needed. However, concentrated caustic at elevated temperatures significantly increases stainless steel corrosion rates, so precise concentration control is important. Global Chemicals LLC supplies caustic soda with test kit support for accurate on-site concentration measurement during CIP operations."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_hydroxide"
+      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_hydroxide",
+      guideUrl: "/chemical-supplier/caustic-soda-oman",
+      guideLabel: "Caustic Soda Supplier in Oman \u2014 flakes, prills & liquid compared"
     }
   },
   {
@@ -8921,7 +8923,8 @@ var soap_detergent_default = [
         "Packaging: 25kg PP bags, 500kg big bag",
         "Low dust, free-flowing characteristics"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_hydroxide"
+      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_hydroxide",
+      canonicalOverride: "https://gcoman.com/products/water-treatment/caustic-soda-prills"
     }
   },
   {
@@ -10948,7 +10951,9 @@ var tank_cleaners_default = [
         "Exothermic when mixed with water",
         "Available in drums, IBCs, bulk"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_hydroxide"
+      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_hydroxide",
+      guideUrl: "/chemical-supplier/caustic-soda-oman",
+      guideLabel: "Caustic Soda Supplier in Oman \u2014 flakes, prills & liquid compared"
     }
   },
   {
@@ -12111,7 +12116,9 @@ var water_treatment_default = [
           question: "What industries use caustic soda in Oman and the GCC?",
           answer: "Caustic soda is one of the most widely used industrial chemicals across Oman and the GCC. Major sectors include: water treatment (pH adjustment in municipal and industrial systems), petroleum refining (sour gas scrubbing, crude oil treating at OQ and PDO), soap and detergent manufacturing (saponification of fats and oils), aluminium production (Bayer process \u2014 relevant to UAE's ALBA and the wider GCC), textile processing (mercerisation of cotton), pulp and paper (kraft pulping), and food processing (surface treatment for olives, pretzels, pH control). In Oman specifically, demand is driven by water treatment, petrochemical operations at Sohar, and the growing consumer goods manufacturing sector."
         }
-      ]
+      ],
+      guideUrl: "/chemical-supplier/caustic-soda-oman",
+      guideLabel: "Caustic Soda Supplier in Oman \u2014 flakes, prills & liquid compared"
     }
   },
   {
@@ -12173,7 +12180,9 @@ var water_treatment_default = [
           question: "What packaging and delivery options are available for caustic soda liquid in Oman?",
           answer: "Global Chemicals LLC supplies liquid caustic soda in 25L HDPE jerricans, 200L HDPE drums, and 1,000L IBC containers for routine industrial and commercial accounts. Bulk tanker delivery (5\u201320 tonne loads) is available for major water treatment plants, textile facilities, and large industrial accounts in Muscat, Sohar, Salalah, and Duqm. Both 32% and 48\u201350% concentrations are available. Technical grade (for water treatment and industrial use) and food grade (E524, for food processing applications) are both stocked. Same-day delivery within Muscat for IBC and drum quantities. CoA and SDS provided with each delivery."
         }
-      ]
+      ],
+      guideUrl: "/chemical-supplier/caustic-soda-oman",
+      guideLabel: "Caustic Soda Supplier in Oman \u2014 flakes, prills & liquid compared"
     }
   },
   {
@@ -12349,7 +12358,9 @@ var water_treatment_default = [
         "Excellent flowability",
         "Available in 25kg bags"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_hydroxide"
+      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_hydroxide",
+      guideUrl: "/chemical-supplier/caustic-soda-oman",
+      guideLabel: "Caustic Soda Supplier in Oman \u2014 flakes, prills & liquid compared"
     }
   },
   {
