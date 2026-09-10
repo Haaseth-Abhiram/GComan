@@ -582,7 +582,14 @@ const ProductDetail = ({ category, rawCategoryProducts }: ProductDetailProps) =>
               {(() => {
                 const RELATED_COUNT = 6;
                 const siblings = categoryProducts
-                  .filter(p => p.category === product.category && p.id !== product.id);
+                  .filter(p => p.category === product.category && p.id !== product.id)
+                  // Never link to a SKU that canonicalises elsewhere: the page
+                  // renders, so nothing 404s, but it tells Google the real page
+                  // is somewhere else — so the click and the link equity both
+                  // land in a dead end. A 2026-09-10 audit of the built output
+                  // found 33 such links, mostly from this rotation and the
+                  // category grid pointing at the three caustic-soda twins.
+                  .filter(p => !p.details?.canonicalOverride);
                 const selfIndex = Math.max(0, categoryProducts.findIndex(p => p.id === product.id));
                 const relatedProducts = siblings.length === 0 ? [] : Array.from(
                   { length: Math.min(RELATED_COUNT, siblings.length) },

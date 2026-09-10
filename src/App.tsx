@@ -52,6 +52,35 @@ const productDetailEntries: Record<string, ReturnType<typeof lazyRetry>> = {
   'chlorinated': lazyRetry(() => import("./pages/productDetail/Chlorinated")),
   'calcium-carbonate': lazyRetry(() => import("./pages/productDetail/CalciumCarbonate")),
 };
+// Per-category entries for the CATEGORY LISTING page, mirroring the pattern
+// above. Each statically imports only its own category JSON so the product grid
+// is present in the first render — see the comment on ProductsProps in
+// src/pages/Products.tsx for why the previous useEffect-only load left 16 of 22
+// category pages with no product links in the prerendered HTML.
+const productCategoryEntries: Record<string, ReturnType<typeof lazyRetry>> = {
+  'water-treatment': lazyRetry(() => import("./pages/productCategory/WaterTreatment")),
+  'lubricants': lazyRetry(() => import("./pages/productCategory/Lubricants")),
+  'oilfield': lazyRetry(() => import("./pages/productCategory/Oilfield")),
+  'lab-chemicals': lazyRetry(() => import("./pages/productCategory/LabChemicals")),
+  'lab-equipment': lazyRetry(() => import("./pages/productCategory/LabEquipment")),
+  'solvents': lazyRetry(() => import("./pages/productCategory/Solvents")),
+  'swimming-pool': lazyRetry(() => import("./pages/productCategory/SwimmingPool")),
+  'inorganic': lazyRetry(() => import("./pages/productCategory/Inorganic")),
+  'alcohols': lazyRetry(() => import("./pages/productCategory/Alcohols")),
+  'glycols': lazyRetry(() => import("./pages/productCategory/Glycols")),
+  'ethanolamines': lazyRetry(() => import("./pages/productCategory/Ethanolamines")),
+  'food-beverage': lazyRetry(() => import("./pages/productCategory/FoodBeverage")),
+  'construction': lazyRetry(() => import("./pages/productCategory/Construction")),
+  'soap-detergent': lazyRetry(() => import("./pages/productCategory/SoapDetergent")),
+  'ro-chemicals': lazyRetry(() => import("./pages/productCategory/RoChemicals")),
+  'cooling-water': lazyRetry(() => import("./pages/productCategory/CoolingWater")),
+  'corrosion-inhibitor': lazyRetry(() => import("./pages/productCategory/CorrosionInhibitor")),
+  'tank-cleaners': lazyRetry(() => import("./pages/productCategory/TankCleaners")),
+  'additives': lazyRetry(() => import("./pages/productCategory/Additives")),
+  'agro': lazyRetry(() => import("./pages/productCategory/Agro")),
+  'chlorinated': lazyRetry(() => import("./pages/productCategory/Chlorinated")),
+  'calcium-carbonate': lazyRetry(() => import("./pages/productCategory/CalciumCarbonate")),
+};
 // Derived from the registry above (not re-imported from productLoader.ts) so App.tsx's
 // own root bundle never pulls in productLoader.ts's eager category JSON imports.
 const PRODUCT_CATEGORIES = Object.keys(productDetailEntries);
@@ -160,6 +189,11 @@ const App = () => (
                 <Route path="/" element={<Index />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/products" element={<Products />} />
+                {PRODUCT_CATEGORIES.map((cat) => {
+                  const Entry = productCategoryEntries[cat];
+                  return <Route key={`cat-${cat}`} path={`/products/${cat}`} element={<Entry />} />;
+                })}
+                {/* Keeps unknown categories resolving to the normal (lazy) page. */}
                 <Route path="/products/:category" element={<Products />} />
                 {PRODUCT_CATEGORIES.map((cat) => {
                   const Entry = productDetailEntries[cat];
@@ -208,6 +242,10 @@ const App = () => (
                   <Route index element={<Index />} />
                   <Route path="about" element={<About />} />
                   <Route path="products" element={<Products />} />
+                  {PRODUCT_CATEGORIES.map((cat) => {
+                    const Entry = productCategoryEntries[cat];
+                    return <Route key={`cat-${cat}`} path={`products/${cat}`} element={<Entry />} />;
+                  })}
                   <Route path="products/:category" element={<Products />} />
                   {PRODUCT_CATEGORIES.map((cat) => {
                     const Entry = productDetailEntries[cat];

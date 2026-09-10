@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { loadProductsByCategory, loadAllProducts, TOTAL_PRODUCTS, ALL_CATEGORIES } from '@/data/productLoader';
+import { loadProductsByCategory, loadAllProducts, hydrateProduct, TOTAL_PRODUCTS, ALL_CATEGORIES } from '@/data/productLoader';
 import type { Product } from '@/data/productTypes';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -393,9 +393,41 @@ const CATEGORY_DISPLAY_TITLES: Record<string, string> = {
   'additives': 'Chemical Additives — Oman & GCC',
 };
 
-const Products = () => {
+interface ProductsProps {
+  /**
+   * Category slug and its raw (unhydrated) JSON, statically imported by the
+   * per-category route entry in src/pages/productCategory/. Supplied only on
+   * /products/:category.
+   *
+   * Why this exists: the category list used to load exclusively through a
+   * dynamic import inside useEffect, so nothing was in the DOM on first paint.
+   * The prerenderer waits renderAfterTime (2500 ms) and snapshots — which made
+   * it a race. It was being lost: an audit of the built output on 2026-09-10
+   * found 16 of 22 category pages shipped to Googlebot with ZERO links to
+   * their own products, leaving 169 of 275 products with no crawl path from
+   * their category. oilfield (50 products) and lab-chemicals (34) — the two
+   * biggest, and the two with the most "Discovered – currently not indexed"
+   * pages in Search Console — were both empty.
+   *
+   * Seeding synchronously removes the race, exactly as
+   * src/pages/productDetail/ already does for product pages. Each entry
+   * statically imports only its own category JSON and is lazily routed, so no
+   * page pulls in the other 21 categories.
+   */
+  initialCategory?: string;
+  initialProducts?: any[];
+}
+
+const Products = ({ initialCategory, initialProducts }: ProductsProps = {}) => {
   const { t, i18n } = useTranslation();
-  const { category: categoryParam } = useParams<{ category?: string }>();
+  // The known categories are routed on literal paths (/products/oilfield) by the
+  // per-category entries, so useParams() has no :category there — fall back to
+  // the slug the entry passed in. Unknown categories still hit the /products/:category
+  // wildcard, where useParams() supplies it. Everything downstream (canonical,
+  // og:url, FAQs, the active filter) reads this one value, so it must be right
+  // in both cases.
+  const { category: routeCategory } = useParams<{ category?: string }>();
+  const categoryParam = routeCategory ?? initialCategory;
   const location = useLocation();
   const langPrefix = getLangPrefixFromPath(location.pathname);
 
@@ -415,8 +447,15 @@ const Products = () => {
   const [activeCategory, setActiveCategory] = useState(categoryParam || 'all');
   const [searchQuery, setSearchQuery] = useState('');
   const [isAISearchOpen, setIsAISearchOpen] = useState(false);
-  const [products, setProducts] = useState<Product[]>([]);
-  const [productsLoading, setProductsLoading] = useState(true);
+  // Seed synchronously when the route entry handed us this category's data, so
+  // the grid is in the very first render — no async gap for the prerenderer (or
+  // a bot renderer) to snapshot as an empty list.
+  const seeded =
+    initialProducts && initialCategory && categoryParam === initialCategory
+      ? initialProducts.map(hydrateProduct)
+      : null;
+  const [products, setProducts] = useState<Product[]>(seeded ?? []);
+  const [productsLoading, setProductsLoading] = useState(!seeded);
 
   // Search must span the whole catalogue. On a category URL we'd otherwise only
   // have that one category loaded, so a query for a sibling-category product
@@ -433,6 +472,13 @@ const Products = () => {
   // when searching (so cross-category search actually works) or on /products.
   useEffect(() => {
     let cancelled = false;
+    // Already seeded by the route entry and not searching → nothing to fetch.
+    // Searching still falls through, because search must span all 22 categories.
+    if (seeded && !hasSearch) {
+      setProducts(seeded);
+      setProductsLoading(false);
+      return;
+    }
     setProductsLoading(true);
     const loader = categoryParam && !hasSearch
       ? loadProductsByCategory(categoryParam)
@@ -497,7 +543,12 @@ const Products = () => {
     // Search is global: when the user has typed a query, ignore the active
     // category so they don't get an empty page when their term lives in a
     // sibling category (e.g. searching "PAC" while on Oilfield).
-    let filtered = products;
+    // Hide SKUs that canonicalise to another URL. They still render if visited
+    // directly (the canonical tag handles that), but listing them here sent both
+    // shoppers and link equity to a page telling Google the real one is
+    // elsewhere — e.g. /products/soap-detergent linked to all three caustic-soda
+    // twins that canonicalise into water-treatment.
+    let filtered = products.filter((product) => !product.details?.canonicalOverride);
     if (!trimmedQuery && activeCategory !== 'all') {
       filtered = filtered.filter((product) => product.category === activeCategory);
     }
