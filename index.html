@@ -3,7 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- No static <title>: every route sets its own via src/components/SEO.tsx -->
+    <!--
+      Fallback page title only. Every route sets its own via
+      src/components/SEO.tsx — Helmet REPLACES the title element (unlike meta
+      tags, which it appends), so this leaves no duplicate.
+      Keep this string byte-identical to HOME_TITLE in
+      scripts/verify-prerender-titles.mjs: that check finds prerender failures
+      by spotting pages that shipped with this title still baked in. Delete the
+      element and a failed route ships with no title at all, which the check
+      cannot see — so removing it silently disables the guard.
+    -->
+    <title>Chemical Suppliers in Oman &amp; GCC | Global Chemicals LLC</title>
     <meta name="author" content="Global Chemicals LLC" />
     <!--
       Per-page <title>, <meta name="description">, <meta name="keywords">,
