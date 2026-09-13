@@ -7,7 +7,9 @@ import { test, expect } from '@playwright/test';
 test.describe('Quote funnel', () => {
   test('contact form prefills from ?product= & ?ref=', async ({ page }) => {
     await page.goto('/contact?product=Calcium%20Carbonate&ref=water-treatment%2Fcalcium-carbonate-water');
-    await page.waitForLoadState('networkidle');
+    // No networkidle here: /contact embeds a Google Maps iframe whose tile
+    // requests keep the network busy, so the page never reliably goes idle.
+    // The toHaveValue assertions below auto-wait for the real condition.
     const message = page.locator('textarea#message');
     await expect(message).toHaveValue(/quotation for: Calcium Carbonate/);
     await expect(message).toHaveValue(/gcoman\.com\/products\/water-treatment\/calcium-carbonate-water/);
@@ -18,8 +20,11 @@ test.describe('Quote funnel', () => {
 
   test('malicious ref is not reflected into the message', async ({ page }) => {
     await page.goto('/contact?product=Test&ref=%3Cscript%3Ealert(1)%3C%2Fscript%3E');
-    await page.waitForLoadState('networkidle');
-    const value = await page.locator('textarea#message').inputValue();
+    // See above — /contact never reaches networkidle. Wait on the prefill
+    // itself, then read the raw value; inputValue() does not auto-wait.
+    const message = page.locator('textarea#message');
+    await expect(message).toHaveValue(/quotation for: Test/);
+    const value = await message.inputValue();
     expect(value).not.toContain('<script>');
     expect(value).toContain('quotation for: Test');
   });

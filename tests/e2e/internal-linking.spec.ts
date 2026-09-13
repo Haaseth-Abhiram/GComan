@@ -123,7 +123,7 @@ test.describe('Location page titles fit the SERP', () => {
       await page.goto(`/chemicals/${slug}`);
       await expect
         .poll(async () => await page.title(), { timeout: 10_000 })
-        .not.toBe('Chemical Suppliers Oman & GCC | Global Chemicals LLC');
+        .not.toBe('Chemical Suppliers in Oman & GCC | Global Chemicals LLC');
       const title = (await page.title()).trim();
       expect(title.length, `${slug} title length`).toBeLessThanOrEqual(60);
       expect(title, `${slug} must keep its city name`).toContain(mustContain);

@@ -60,6 +60,10 @@ test.describe('Caustic soda hub — product+geo template', () => {
   });
 
   test('caustic soda product pages link back to the hub', async ({ page }) => {
+    // Three full page loads against a cold dev server sit right on the default
+    // 30s budget (25s even unparallelised), so this tips over whenever the other
+    // workers are busy. The work is genuinely slow, not stuck — give it the room.
+    test.slow();
     // Reciprocal linking is the actual fix — a hub nothing points at cannot rank.
     for (const url of CANONICAL_PRODUCTS) {
       await page.goto(url);

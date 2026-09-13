@@ -108,9 +108,9 @@ test.describe('Product page SEO surface', () => {
 //
 // These read the title via a poll: on the dev server the page is client-rendered,
 // so page.goto() resolves while <title> is still the index.html fallback
-// ("Chemical Suppliers Oman & GCC | Global Chemicals LLC") and Helmet has not
+// ("Chemical Suppliers in Oman & GCC | Global Chemicals LLC") and Helmet has not
 // committed yet. Reading it straight after goto() is a flake.
-const FALLBACK = 'Chemical Suppliers Oman & GCC | Global Chemicals LLC';
+const FALLBACK = 'Chemical Suppliers in Oman & GCC | Global Chemicals LLC';
 
 async function settledTitle(page: import('@playwright/test').Page, url: string) {
   await page.goto(url);
