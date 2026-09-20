@@ -86,7 +86,7 @@ const locations: Record<string, LocationData> = {
       }
     ],
     metaTitle: 'Chemical Supplier in Muscat, Oman | Same-Day Delivery',
-    metaDescription: 'Leading chemical supplier in Muscat, Oman. Same-day delivery. Water treatment chemicals, industrial lubricants, lab chemicals. ISO 9001 certified. Call +968-93754388.',
+    metaDescription: 'Chemical supplier in Muscat — same-day delivery from our Ghala warehouse. 275+ products ex-stock: water treatment, lab chemicals, lubricants. Get a quote.',
     metaKeywords: 'chemical supplier Muscat, chemicals Muscat, industrial chemicals Muscat, water treatment Muscat, PAC Muscat, caustic soda Muscat, lubricants Muscat, laboratory chemicals Muscat, chemical distributor Muscat Oman',
     relatedGuide: {
       slug: 'water-treatment-chemicals-muscat-oman',
