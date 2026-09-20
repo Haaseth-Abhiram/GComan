@@ -276,8 +276,8 @@ var agro_default = [
         "Packaging: 50 kg bag, 1,000 kg big bag"
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Potassium_chloride",
-      seoTitle: "Potassium Chloride Fertilizer (MOP 60% K2O) \u2014 Bulk Supplier",
-      seoDescription: "Muriate of Potash 60% K2O for date palms, fertigation and NPK blending. 25/50 kg bags and bulk tonnage, same-day Muscat dispatch, GCC export. Price today."
+      seoTitle: "Potassium Chloride Fertilizer (MOP 60%) Supplier in Oman",
+      seoDescription: "Potassium chloride fertilizer (MOP 60% K2O) ex-stock Muscat, Oman. For date palms, fertigation & NPK blends. 50 kg bags or bulk \u2014 request a quote today."
     }
   },
   {
@@ -6592,7 +6592,7 @@ var oilfield_default = [
         }
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Calcium_chloride",
-      seoTitle: "Calcium Chloride Oilfield Grade \u2014 Brine & Completion Fluids",
+      seoTitle: "Calcium Chloride Brine Supplier in Oman (CaCl2 Oilfield)",
       seoDescription: "CaCl2 94\u201397% for completion brines to 11.6 ppg, cementing accelerator and dust control. Brine-density guidance, CoA per lot, JSRS-registered supply in Oman."
     }
   },
