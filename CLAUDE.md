@@ -28,6 +28,7 @@ npm run audit:internal-links     # link graph in dist/ — run `npm run build` f
 # targeted coverage of load-bearing flows, not broad assurance.
 npm run test:e2e          # vite dev server (port 4179, NOT 8080)
 npm run test:e2e:prod     # PROD_BUILD=1 → build:dev + vite preview
+npm run test:e2e:ui       # Playwright UI mode — step through a failing spec
 BASE_URL=https://gcoman.com npm run test:e2e   # against any remote target
 npx playwright test tests/e2e/loading-flow.spec.ts -g "name of test"   # single test
 
@@ -42,11 +43,15 @@ supabase secrets set TURNSTILE_SECRET_KEY=...  # rotate a secret
 
 Use **npm**. `bun.lock` is a leftover from a Lovable trial; canonical lockfile is `package-lock.json`.
 
+### Local env
+
+`npm run dev` needs a `.env` (see [.env.example](.env.example)): `VITE_SUPABASE_PROJECT_ID`, `VITE_SUPABASE_PUBLISHABLE_KEY`, `VITE_SUPABASE_URL` — without them the Supabase client, admin dashboard, and every form fail at runtime while the marketing pages still render. These values come from the **Lovable Cloud** project (see "Supabase" below), not from `supabase login` — there is no standalone Supabase credential to issue them. `VITE_TURNSTILE_SITE_KEY` is optional and disables the captcha when blank (see "Bot protection").
+
 ## CI (GitHub Actions)
 
 [.github/workflows/ci.yml](.github/workflows/ci.yml): typecheck + lint + `verify:sitemap-health` + `verify:ar-meta` + `build:dev` + Playwright smoke on every push/PR to `Develop`/`main`. It is the **only** quality gate before the Lovable auto-deploy ships to production. Before pushing: `npx tsc -b && npm run lint && npm run verify:sitemap-health && npm run verify:ar-meta && npm run test:e2e`.
 
-Note: `ci.yml`'s own header comment and `README.md` still describe the retired "Lovable FTPs `dist/` to Hostinger" story — stale relative to "Deploy chain" below. Don't treat those two as sources of truth for the deploy chain.
+Note: `ci.yml`'s own header comment still describes the retired "Lovable FTPs `dist/` to Hostinger" story — stale relative to "Deploy chain" below. Don't treat it as a source of truth for the deploy chain (`README.md` was corrected 2026-09-20).
 
 ## Branch workflow
 
@@ -87,7 +92,7 @@ Pure client-side SPA whose SEO depends on three pieces working together. Touchin
 
 ### Three things that silently break SEO — agents have tripped on each
 
-**1. `<Helmet>` without `defer={false}`.** `react-helmet-async` defers head commits to rAF, which is unreliable in headless puppeteer, and each new `<Helmet>` cancels the previous queued frame — prerendered pages ship with the homepage `<title>`. **Every `<Helmet>` must include `defer={false}`** (currently 22 instances). Audit: `grep -rn '<Helmet' src --include='*.tsx' | grep -v 'defer={false}\|HelmetProvider'` — any output (other than multi-line openings) is a bug.
+**1. `<Helmet>` without `defer={false}`.** `react-helmet-async` defers head commits to rAF, which is unreliable in headless puppeteer, and each new `<Helmet>` cancels the previous queued frame — prerendered pages ship with the homepage `<title>`. **Every `<Helmet>` must include `defer={false}`.** Audit: `grep -rn '<Helmet' src --include='*.tsx' | grep -v 'defer={false}\|HelmetProvider'` — any output (other than multi-line openings) is a bug.
 
 **2. Page-specific meta tags hardcoded in `index.html`.** Helmet **appends** meta tags rather than replacing, so a `description`/`og:*`/`twitter:*`/`hreflang` baked into `index.html` becomes a homepage-default duplicate ahead of the Helmet tag — Google reads the first (wrong) one. `index.html` holds ONLY: charset/viewport, `<title>` fallback, author, verification tokens, `geo.*`/`ICBM`, `content-language`/`distribution`/`target`, font preconnects, favicons, and the global Organization/LocalBusiness/WebSite/BreadcrumbList JSON-LD (single source of site-wide entity schema — never also mount `<LocalBusinessStructuredData />` from pages; same-`@id` duplicates). Everything else belongs in `<SEO>` ([src/components/SEO.tsx](src/components/SEO.tsx)). A comment block in `index.html` says this — preserve it.
 
@@ -114,7 +119,7 @@ Why it must stay this way:
 An `/ar/*` render is **noindex by default**. It becomes indexable only when the page passes BOTH `arTitle` and `arDescription` to `<SEO>` — that flips the `/ar` render to localized meta + self-referencing `/ar` canonical, and makes both language versions emit reciprocal hreflang (`en`/`ar`/`x-default`). Never pass Arabic meta for a page whose body content is still English — that's the duplicate-content trap the default protects against.
 
 - Currently enabled: **product detail pages with a full translation in `src/i18n/locales/products-ar.json`** (275 of 275 products — full coverage maintained since 2026-08-24; title + description present = enabled, enforced in [src/pages/ProductDetail.tsx](src/pages/ProductDetail.tsx)) and **location pages translated in `location-pages-ar.json`** (includes the UAE/Saudi country hubs).
-- `scripts/sync-ar-sitemap.mjs` **owns `public/sitemap.xml`.** Hand-editing is limited to adding or removing an *English* `<url>` block for a new/retired page; **never hand-write an `/ar` URL or an `<xhtml:link>` alternate** — the script is the only thing that may touch those, and it rewrites them on every run. It runs three passes: **prune** every URL that renders `noindex` or canonicalises elsewhere, **annotate** each surviving English page with its `en`/`ar`/`x-default` alternates, and **twin** in the matching `/ar` block so the prerenderer generates it. Indexability is derived from the same sources the components read (`products-ar.json` for products, `location-pages-ar.json` for locations, `details.canonicalOverride` for duplicate SKUs), so the sitemap cannot drift from what `<SEO>` renders. Idempotent; rerun after adding any Arabic translation. `npm run verify:sitemap-health` (`--check`) is the CI gate and fails the build if the file is stale.
+- `scripts/sync-ar-sitemap.mjs` **owns `public/sitemap.xml`.** Hand-editing is limited to adding or removing an *English* `<url>` block for a new/retired page; **never hand-write an `/ar` URL or an `<xhtml:link>` alternate** — the script is the only thing that may touch those, and it rewrites them on every run. It runs three passes: **prune** every URL that renders `noindex` or canonicalises elsewhere, **annotate** each surviving English page with its `en`/`ar`/`x-default` alternates, and **twin** in the matching `/ar` block so the prerenderer generates it. Indexability is derived from the same sources the components read (`products-ar.json` for products, `location-pages-ar.json` for locations, `details.canonicalOverride` for duplicate SKUs), so the sitemap cannot drift from what `<SEO>` renders. Idempotent; rerun after adding any Arabic translation. `npm run verify:sitemap-health` (`--check`) is the CI gate and fails the build if the file is stale. Current shape: **653 `<loc>` entries, 295 of them `/ar`** — a run that collapses those counts is a bug, not a prune.
 - Everything else under `/ar` (home, about, industries, blog…) stays noindex because its page-level prose (FAQs, breadcrumbs, section copy) is hardcoded English even though the `ar.json` UI layer is 100% complete. To enable a page: wire its prose through `t()`, then pass `arTitle`/`arDescription`, then rerun the sitemap sync/add the URL.
 
 ## Adding a new page
@@ -187,11 +192,17 @@ curl -sI https://gcoman.com/service/calcium-carbonate/ -o /dev/null -w '%{http_c
 - `serve-dist.mjs` — serve `dist/` to sanity-check prerendered HTML without rebuilding
 - `zoho-refresh-token.mjs` — refresh the Zoho CRM OAuth token
 - `verify-prerender-titles.mjs` — see Verification commands
-- `verify-seo-routing.mjs` — see "The production routing layer"
+- `verify-seo-routing.mjs` — see "The production redirect layer: client-side"
 - `verify-hostinger-staging.mjs` — smoke-test the site against Hostinger's IP directly (bypassing DNS) before switching A records
 - `audit-product-content.mjs` (`npm run audit:product-content`) — ranks product pages by content debt x demand. Built on the 2026-09-08 finding that indexing was never the bottleneck (82% indexed) — thin bodies were. Scores identity (CAS/formula), prose depth, applications, specs and FAQs; pass a GSC Pages export to weight by real impressions
 - `audit-internal-links.mjs` (`npm run audit:internal-links`) — reads the **prerendered `dist/`**, not src, because that's the link graph Googlebot sees. Flags links into `canonicalOverride` products, unrelated duplicate SKUs both in the sitemap, and landing pages nothing links to. Run `npm run build` first
 - `scan-bordered-surfaces.mjs` — UI consistency sweep: bordered/rounded surfaces that are candidates for `.logo-gradient-border` but don't use it yet. Exits 1 when candidates exist
+
+## Repo-local Claude skills & workflows
+
+`.claude/skills/` ships 15 checked-in skills that load automatically in this directory. Most are generic engineering workflows (TDD, systematic debugging, writing/executing plans, code review), but **`checking-seo-health`** is project-specific: the standing procedure for a periodic or pre/post-deploy SEO check on gcoman.com (sitemap submission, crawl/index coverage, Search Console queries, the Arabic-vs-English indexing gap, GA4 swings). Use it instead of improvising an SEO health check.
+
+`.claude/workflows/full-repo-analysis.js` is a saved multi-agent Workflow: 12 parallel subsystem deep-reads → adversarial verification of every finding → completeness critic. Run it (only on explicit user opt-in to multi-agent orchestration) for a full-repo audit instead of authoring a new workflow from scratch.
 
 ## Reference docs in this repo
 
@@ -200,6 +211,6 @@ curl -sI https://gcoman.com/service/calcium-carbonate/ -o /dev/null -w '%{http_c
 
 ## Vestigial files (safe to ignore, do not extend)
 
-- `cloudflare-worker.js`, `wrangler.toml` — the retired Cloudflare Worker routing plan (see "The production routing layer"). Do not add redirects there; `legacyRedirects.ts` is the live layer. The `deploy:cloudflare-worker` npm script is dead too — `wrangler` was removed from devDependencies.
+- `cloudflare-worker.js`, `wrangler.toml` — the retired Cloudflare Worker routing plan (see "The production redirect layer: client-side"). Do not add redirects there; `legacyRedirects.ts` is the live layer. The `deploy:cloudflare-worker` npm script is dead too — `wrangler` was removed from devDependencies.
 - `tanstack-react-start-server-1.120.0.tgz`, `bun.lock`, `vercel.json` — leftovers from the aborted SSR migration, a Lovable bun trial, and an old Vercel preview respectively. Production is Lovable's CDN (see "Deploy chain"), not Hostinger; runtime router is `react-router-dom` v7.
 - `README.md` — project overview only; this file is the real documentation.
