@@ -1,7 +1,9 @@
-# Quality gate for the Lovable auto-deploy chain (push to main → Lovable
-# builds dist/ → FTP to Hostinger). Nothing else checks types, lint, or the
-# e2e smoke suite before code reaches production, so this workflow must stay
-# green on Develop before promoting to main.
+# Quality gate for the Lovable auto-deploy chain (push to main → Lovable runs
+# vite build → publishes dist/ to Lovable's CDN, which serves production).
+# Nothing else checks types, lint, or the e2e smoke suite before code reaches
+# production, so this workflow must stay green on Develop before promoting to
+# main. See CLAUDE.md "Deploy chain" — the old "FTP to Hostinger" story is
+# retired; that server's public_html is empty and serves nothing.
 name: CI
 
 on:

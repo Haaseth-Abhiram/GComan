@@ -58,10 +58,21 @@ export const ProductStructuredData = ({ product, url }: ProductStructuredDataPro
       }
     },
     // Price-on-application: pricing is not published, so the Product is emitted
-    // without an `offers` block. An Offer with no price still triggered GSC's
-    // Product Snippets validator with "missing lowPrice"; dropping it removes
-    // the validator error while keeping the page indexed normally (no rich
-    // Product card in SERP, but no error either).
+    // without an `offers` block — and deliberately also without `review` or
+    // `aggregateRating`, since there are no genuine third-party reviews to cite.
+    //
+    // This is an ACCEPTED trade-off, not a clean result. GSC's Product Snippets
+    // validator reports every product page as invalid (18 invalid / 0 valid as
+    // of 2026-09-07) with "Either 'offers', 'review', or 'aggregateRating'
+    // should be specified". An earlier attempt that emitted an Offer with no
+    // price produced a worse, more specific error ("missing lowPrice"), so this
+    // shape is the better of the two — but neither is error-free.
+    //
+    // IMPACT IS COSMETIC: pages index and rank normally; they are only
+    // ineligible for rich Product cards (star/price in SERP). Revisit only if
+    // the business starts publishing prices or collecting real reviews — the
+    // dormant ReviewStructuredData component already supplies `aggregateRating`
+    // once `reviews.length > 0`.
     ...(product.details?.alternativeNames && {
       "alternateName": product.details.alternativeNames
     }),
