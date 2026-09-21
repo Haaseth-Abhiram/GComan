@@ -409,7 +409,7 @@ const Career = () => {
           key={job.id}
           title={job.title}
           description={`${job.description} Requirements: ${job.requirements.join(', ')}`}
-          datePosted="2025-01-01"
+          datePosted="2026-09-21" /* refresh when listings are re-verified — Google can auto-expire stale JobPostings */
           validThrough="2026-12-31"
           employmentType={job.type === 'Full-time' ? 'FULL_TIME' : 'PART_TIME'}
           location={job.location}

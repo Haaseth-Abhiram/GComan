@@ -38,9 +38,16 @@ const AccordionContent = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
 >(({ className, children, ...props }, ref) => (
+  // forceMount keeps the answer text in the server-rendered DOM. Without it,
+  // Radix unmounts closed content entirely, so every prerendered FAQ answer
+  // existed ONLY inside the FAQPage JSON-LD — invisible to crawlers as body
+  // copy (2026-09-21 audit, critical finding C1). Closed items are collapsed
+  // with data-[state=closed]:hidden instead of unmounting; the open animation
+  // is kept, the close animation can't run under display:none and is dropped.
   <AccordionPrimitive.Content
     ref={ref}
-    className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+    forceMount
+    className="overflow-hidden text-sm transition-all data-[state=closed]:hidden data-[state=open]:animate-accordion-down"
     {...props}
   >
     <div className={cn("pb-4 pt-0", className)}>{children}</div>
