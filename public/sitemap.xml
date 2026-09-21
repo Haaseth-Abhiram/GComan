@@ -2842,6 +2842,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/water-treatment/hydrazine-hydrate-water"/>
   </url>
   <url>
+    <loc>https://gcoman.com/products/water-treatment/hydrochloric-acid-industrial</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/water-treatment/hydrochloric-acid-industrial"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/water-treatment/hydrochloric-acid-industrial"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/water-treatment/hydrochloric-acid-industrial"/>
+  </url>
+  <url>
     <loc>https://gcoman.com/products/water-treatment/meg-water</loc>
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
@@ -2939,6 +2948,15 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/water-treatment/sodium-bisulphate-bisulphite"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/water-treatment/sodium-bisulphate-bisulphite"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/water-treatment/sodium-bisulphate-bisulphite"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/products/water-treatment/sodium-chloride-industrial</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/water-treatment/sodium-chloride-industrial"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/water-treatment/sodium-chloride-industrial"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/water-treatment/sodium-chloride-industrial"/>
   </url>
   <url>
     <loc>https://gcoman.com/products/water-treatment/sodium-hexametaphosphate</loc>
@@ -5509,6 +5527,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/water-treatment/hydrazine-hydrate-water"/>
   </url>
   <url>
+    <loc>https://gcoman.com/ar/products/water-treatment/hydrochloric-acid-industrial</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/water-treatment/hydrochloric-acid-industrial"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/water-treatment/hydrochloric-acid-industrial"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/water-treatment/hydrochloric-acid-industrial"/>
+  </url>
+  <url>
     <loc>https://gcoman.com/ar/products/water-treatment/meg-water</loc>
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
@@ -5606,6 +5633,15 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/water-treatment/sodium-bisulphate-bisulphite"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/water-treatment/sodium-bisulphate-bisulphite"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/water-treatment/sodium-bisulphate-bisulphite"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/ar/products/water-treatment/sodium-chloride-industrial</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/water-treatment/sodium-chloride-industrial"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/water-treatment/sodium-chloride-industrial"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/water-treatment/sodium-chloride-industrial"/>
   </url>
   <url>
     <loc>https://gcoman.com/ar/products/water-treatment/sodium-hexametaphosphate</loc>

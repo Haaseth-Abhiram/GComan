@@ -12313,7 +12313,8 @@ var water_treatment_default = [
           question: "Is sodium hypochlorite safe for drinking water treatment?",
           answer: "Yes. Sodium hypochlorite at the correct dosage is approved for drinking water disinfection worldwide, including under Oman's national potable water standards and WHO guidelines. The key requirement is maintaining residual chlorine within the range of 0.2\u20130.5 mg/L in distributed water \u2014 sufficient to kill pathogens while remaining below the taste threshold (typically above 0.6 mg/L). The main by-products of concern are trihalomethanes (THMs), formed when chlorine reacts with naturally occurring organic matter. In Oman's desalinated water supply, which has very low organic matter content, THM formation is minimal. The product supplied must be food-grade or potable water grade with NSF or equivalent certification."
         }
-      ]
+      ],
+      seoDescription: "Sodium hypochlorite 12\u201315% (CAS 7681-52-9) ex-stock Muscat, Oman. Water disinfection, tank cleaning & RO sanitisation. Drums, IBCs or bulk \u2014 get a quote."
     }
   },
   {
@@ -13812,6 +13813,141 @@ var water_treatment_default = [
         "Excellent grease cutting power"
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Trisodium_phosphate"
+    }
+  },
+  {
+    id: "hydrochloric-acid-industrial",
+    title: "Hydrochloric Acid (HCl 30-33%)",
+    description: "Technical-grade hydrochloric acid for pH control, descaling, ion-exchange resin regeneration, and metal pickling across Oman's industries.",
+    category: "water-treatment",
+    image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
+    iconName: "Droplets",
+    details: {
+      formula: "HCl",
+      casNumber: "7647-01-0",
+      alternativeNames: [
+        "Muriatic acid",
+        "HCl 33%",
+        "Commercial hydrochloric acid",
+        "Hydrogen chloride solution"
+      ],
+      seoKeywords: [
+        "hydrochloric acid Oman",
+        "HCl supplier Oman",
+        "muriatic acid Muscat",
+        "hydrochloric acid 33% Oman",
+        "descaling acid Oman",
+        "HCl water treatment Oman"
+      ],
+      longDescription: "Global Chemicals LLC supplies technical-grade hydrochloric acid (30\u201333% w/w) from Muscat stock to industries across Oman and the GCC. Hydrochloric acid is one of the highest-volume industrial acids in the Sultanate: water and wastewater plants use it for pH neutralisation of alkaline effluent and for regenerating cation ion-exchange resins; facilities-management and O&M contractors use inhibited HCl dilutions for descaling boilers, heat exchangers, cooling-tower fill and RO CIP circuits; steel fabricators use it for pickling and surface preparation ahead of galvanising; and well-service contractors use it in scale-dissolution treatments. We deliver in 35 kg HDPE carboys, 200\u2013220 L PE drums, 1,000 L IBCs and by bulk tanker, with same-day dispatch available within the Muscat metropolitan area from our Ghala warehouse. Every consignment ships with a Certificate of Analysis, a GHS-compliant Safety Data Sheet in English (Arabic on request) and a Technical Data Sheet; Global Chemicals LLC is JSRS-registered and ISO 9001:2015 certified, so the documentation pack is accepted for vendor qualification with PDO and the major EPC contractors. Our technical team advises on materials compatibility (PE, PP, PVC, FRP and rubber-lined storage), dosing-pump selection and safe dilution and neutralisation practice. For laboratory-grade hydrochloric acid in small packs, see the Laboratory Chemicals range.",
+      applications: [
+        "pH neutralisation of alkaline effluent in water and wastewater treatment",
+        "Descaling boilers, heat exchangers, cooling towers and RO CIP circuits",
+        "Regeneration of cation ion-exchange resins in demineralisation plants",
+        "Steel pickling and surface preparation before galvanising or coating",
+        "Scale-dissolution and well-service treatments in the oilfield",
+        "Brine acidification and general chemical processing"
+      ],
+      technicalSpecs: [
+        "HCl content: 30\u201333% w/w",
+        "Specific gravity: 1.15\u20131.16 at 25\xB0C",
+        "Appearance: clear to pale-yellow fuming liquid",
+        "Grade: commercial / technical",
+        "Packaging: 35 kg HDPE carboys, 200\u2013220 L drums, 1,000 L IBC, bulk tanker"
+      ],
+      faqs: [
+        {
+          question: "What concentration of hydrochloric acid do you supply in Oman?",
+          answer: "We stock commercial-grade hydrochloric acid at 30\u201333% w/w, the standard industrial strength for descaling, pH control and resin regeneration. If your process needs a specific dilution, our team can advise on safe on-site dilution practice \u2014 always acid into water, never the reverse."
+        },
+        {
+          question: "How is hydrochloric acid packaged and delivered?",
+          answer: "Standard packaging is 35 kg HDPE carboys, 200\u2013220 L polyethylene drums and 1,000 L IBC totes, with bulk tanker deliveries for plant-scale users. Same-day dispatch is available within the Muscat metropolitan area for orders placed before 12 PM, from our Ghala warehouse."
+        },
+        {
+          question: "What documents come with an HCl delivery?",
+          answer: "Every batch ships with a Certificate of Analysis, a GHS-compliant Safety Data Sheet in English (Arabic on request) and a Technical Data Sheet. Global Chemicals LLC is JSRS-registered and ISO 9001:2015 certified, so the pack is accepted for vendor qualification with PDO and the major EPC contractors."
+        },
+        {
+          question: "Can I use hydrochloric acid to descale RO membranes or boilers?",
+          answer: "Yes \u2014 diluted, inhibited HCl is widely used for removing carbonate scale from boilers, heat exchangers and cooling-tower fill, and low-pH cleaning solutions are used in RO CIP programmes. Follow the equipment manufacturer's chemical-compatibility limits; our technical team can recommend dilution rates and corrosion inhibitors for your system."
+        },
+        {
+          question: "What storage materials are compatible with hydrochloric acid?",
+          answer: "Use polyethylene (PE), polypropylene (PP), PVC, FRP or rubber-lined steel for storage and transfer. Never store HCl in bare carbon steel or stainless steel. Store vented, away from oxidisers and bases, with local exhaust for fume control."
+        }
+      ],
+      wikiUrl: "https://en.wikipedia.org/wiki/Hydrochloric_acid",
+      seoTitle: "Hydrochloric Acid (HCl 30-33%) Supplier in Oman",
+      seoDescription: "Hydrochloric acid 30\u201333% (CAS 7647-01-0) ex-stock Muscat, Oman. pH control, descaling, resin regeneration, pickling. Drums, IBCs or bulk \u2014 get a quote."
+    }
+  },
+  {
+    id: "sodium-chloride-industrial",
+    title: "Industrial Salt (Sodium Chloride)",
+    description: "High-purity sodium chloride for water-softener regeneration, drilling brines, and industrial processing \u2014 refined, PVD, and tablet grades.",
+    category: "water-treatment",
+    image: "https://gcoman.com/images/products/white-powder.webp",
+    iconName: "Droplets",
+    details: {
+      formula: "NaCl",
+      casNumber: "7647-14-5",
+      alternativeNames: [
+        "Industrial salt",
+        "PVD salt",
+        "Water softener salt",
+        "Tablet salt",
+        "Halite"
+      ],
+      seoKeywords: [
+        "industrial salt Oman",
+        "sodium chloride supplier Oman",
+        "water softener salt Muscat",
+        "PVD salt Oman",
+        "drilling salt Oman",
+        "pool salt Oman"
+      ],
+      longDescription: "Global Chemicals LLC supplies industrial-grade sodium chloride from Muscat stock in the grades Oman's water-treatment and drilling sectors actually use. Refined fine salt (NaCl \u2265 99%) serves general process and brine-making duties. Pure dried vacuum (PVD) salt (\u2265 99.9%) and tablet salt are the correct choices for regenerating water-softener resin \u2014 protecting RO pre-treatment trains, boiler feedwater systems, commercial laundries and hotel utility plants from hardness scaling. Coarse salt suits brine ponds and general utility applications, and salt-chlorinator swimming pools use granular pool-grade salt. Drilling and well-service contractors use sodium chloride for completion and workover brines \u2014 saturated NaCl brine reaches approximately 1.19 s.g. (10 ppg), the workhorse low-density clear brine. We pack in 25 kg and 50 kg PP bags and 1,000 kg big bags, with bulk deliveries for plant-scale users, and same-day dispatch is available within the Muscat metropolitan area from our Ghala warehouse. Every consignment ships with a Certificate of Analysis, a GHS-compliant Safety Data Sheet in English (Arabic on request) and a Technical Data Sheet; Global Chemicals LLC is JSRS-registered and ISO 9001:2015 certified. For food-grade salt, see White Salt (Food Grade) in the Food & Beverage range.",
+      applications: [
+        "Water-softener resin regeneration (PVD and tablet salt)",
+        "Completion and workover brines for drilling and well services",
+        "Brine feed for industrial chemical processing",
+        "Salt-chlorinator swimming pools (granular pool salt)",
+        "Textile dyeing and leather tanning",
+        "General utility brines and process applications"
+      ],
+      technicalSpecs: [
+        "NaCl content: \u2265 99.0% (refined) / \u2265 99.9% (PVD)",
+        "Moisture: \u2264 0.5%",
+        "Grades: refined fine, PVD, tablet, coarse",
+        "Appearance: white crystals / compacted tablets",
+        "Packaging: 25 kg & 50 kg PP bags, 1,000 kg big bags, bulk"
+      ],
+      faqs: [
+        {
+          question: "Which salt grade should I use for a water softener?",
+          answer: "Use tablet salt or PVD salt (\u2265 99.9% NaCl). Their low insolubles keep the brine tank clean and protect the resin bed. Refined fine salt works for open brine-making tanks but leaves more residue in enclosed softener cabinets."
+        },
+        {
+          question: "Do you supply food-grade sodium chloride?",
+          answer: "Yes, as a separate SKU \u2014 see White Salt (Food Grade) in our Food & Beverage range. The industrial grades on this page are intended for softeners, brines and process use, not food production."
+        },
+        {
+          question: "What density can a sodium chloride completion brine reach?",
+          answer: "A saturated NaCl brine reaches approximately 1.19 s.g. (about 10 ppg) at surface temperature. For higher densities, calcium chloride brines reach 11.6 ppg \u2014 see our Calcium Chloride (Oilfield) page \u2014 and our team can advise on blended brine programmes."
+        },
+        {
+          question: "How is industrial salt packaged and delivered in Oman?",
+          answer: "Standard packaging is 25 kg and 50 kg PP bags and 1,000 kg big bags, with bulk deliveries arranged for plant-scale users. Same-day dispatch is available within the Muscat metropolitan area for orders placed before 12 PM from our Ghala warehouse."
+        },
+        {
+          question: "Can I use this salt in a salt-chlorinator swimming pool?",
+          answer: "Yes \u2014 granular refined salt with \u2265 99% NaCl and low insolubles is suitable for salt-chlorinator pools. Dose to the chlorinator manufacturer's target (typically 3,000\u20135,000 ppm) and check cell condition regularly in Oman's high-evaporation conditions."
+        }
+      ],
+      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_chloride",
+      seoTitle: "Industrial Salt (Sodium Chloride) Supplier in Oman",
+      seoDescription: "Industrial salt (NaCl, CAS 7647-14-5) ex-stock Muscat \u2014 refined, PVD & tablet grades for softeners, drilling brine & pools. Bags or bulk. Get a quote."
     }
   }
 ];
