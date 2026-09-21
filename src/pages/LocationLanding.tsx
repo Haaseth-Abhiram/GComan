@@ -610,6 +610,10 @@ const locations: Record<string, LocationData> = {
       {
         question: 'Can you deliver chemicals to Hidd, Sitra, and the Bahrain International Investment Park?',
         answer: 'Yes. The Hidd and Salman industrial areas, Sitra\'s refining and petrochemical cluster, and BIIP manufacturers are regular destinations on our Bahrain lane. We quote FOB Muscat, CIF Khalifa Bin Salman Port, or DAP-to-site in BHD or USD, and consolidate drum and IBC orders with full-container loads on scheduled weekly departures.'
+      },
+      {
+        question: 'Can you supply nitric acid and other industrial acids to Bahrain at short notice?',
+        answer: 'Yes. Food-grade and technical nitric acid 68%, hydrochloric acid 30–33%, and our wider acids range ship from Muscat stock and reach Manama in 3–5 business days by road via Saudi Arabia. When regional supply is tight, ex-stock Muscat availability under GCC customs transit makes Oman a dependable alternative source — every consignment carries a Certificate of Analysis, GHS SDS and Certificate of Origin. Contact us for current availability and a same-day quote.'
       }
     ],
     metaTitle: 'Chemical Supplier Bahrain | ALBA & BAPCO Supply',
@@ -1048,6 +1052,10 @@ const locations: Record<string, LocationData> = {
       {
         question: 'Which cities in Saudi Arabia do you deliver chemicals to?',
         answer: 'Scheduled lanes serve Riyadh, Jeddah, Dammam, Jubail Industrial City, and Yanbu — see each city page for lane detail — and we quote ad-hoc deliveries to other Saudi destinations including NEOM, Rabigh, and Qassim on request.'
+      },
+      {
+        question: 'Can you supply nitric acid and other industrial acids to Saudi Arabia at short notice?',
+        answer: 'Yes. Food-grade and technical nitric acid 68%, hydrochloric acid 30–33%, and our wider acids range ship from Muscat stock — Dammam in 4–6 days by road, Jeddah and Yanbu in 4–6 days by sea via Sohar Port. When regional supply is disrupted, ex-stock Muscat availability under GCC customs transit gives Saudi buyers a dependable alternative source, with CoA, GHS SDS and Certificate of Origin on every consignment. Contact us for current availability and a same-day quote.'
       }
     ],
     metaTitle: 'Chemical Suppliers in Saudi Arabia — Import from Oman',
@@ -1087,6 +1095,10 @@ const locations: Record<string, LocationData> = {
       {
         question: 'Do you deliver to UAE free zones like JAFZA and RAKEZ?',
         answer: 'Yes — we deliver into JAFZA, Dubai Industrial City, ICAD Abu Dhabi, SAIF Zone, RAKEZ, and Fujairah Free Zone with the free-zone gate documentation prepared in advance. State the zone and company licence details in your enquiry and our export team prepares the paperwork before dispatch.'
+      },
+      {
+        question: 'Can you supply nitric acid and other industrial acids to the UAE at short notice?',
+        answer: 'Yes. Food-grade and technical nitric acid 68%, hydrochloric acid 30–33%, and our wider acids range ship from Muscat stock — Fujairah in 2–4 hours by road, Dubai, Sharjah and Abu Dhabi in 3–5 business days. When regional supply is tight, ex-stock Muscat availability under GCC customs transit gives UAE buyers a dependable alternative source, with CoA, GHS SDS and Certificate of Origin on every consignment. Contact us for current availability and a same-day quote.'
       }
     ],
     metaTitle: 'Chemical Supplier to UAE & Dubai — Import from Oman',
@@ -1132,6 +1144,10 @@ const locations: Record<string, LocationData> = {
       {
         question: 'Which areas of Qatar do you deliver chemicals to?',
         answer: 'We deliver to Doha and its industrial areas, Ras Laffan Industrial City, Mesaieed Industrial City, the Qatar Free Zones at Ras Bufontas and Umm Al Houl, and Manateq logistics and industrial parks. Other destinations including Dukhan and Al Wakrah are quoted on request — see the Doha city page for lane detail.'
+      },
+      {
+        question: 'Can you supply nitric acid and other industrial acids to Qatar at short notice?',
+        answer: 'Yes. Food-grade and technical nitric acid 68%, hydrochloric acid 30–33%, and our wider acids range ship from Muscat stock — 3–5 business days by road via Saudi Arabia, or by sea from Sohar Port to Hamad Port for container loads. When regional supply is disrupted, ex-stock Muscat availability makes Oman a dependable alternative source, with CoA, GHS SDS and Certificate of Origin on every consignment. Contact us for current availability and a same-day quote.'
       }
     ],
     metaTitle: 'Chemical Suppliers in Qatar — Import from Oman',
@@ -1176,6 +1192,10 @@ const locations: Record<string, LocationData> = {
       {
         question: 'Do you supply chemicals for Kuwait\'s refineries and the Al Zour complex?',
         answer: 'Yes — our refinery and oilfield portfolio covers corrosion inhibitors, oxygen scavengers, demulsifiers, antiscalants, glycols and water treatment chemicals used across KNPC\'s Mina Al-Ahmadi and Mina Abdullah refineries and the KIPIC Al Zour refinery and petrochemical complex, and we provide the full documentation packages KOC and KNPC contractor qualification requires.'
+      },
+      {
+        question: 'Can you supply nitric acid and other industrial acids to Kuwait at short notice?',
+        answer: 'Yes. Food-grade and technical nitric acid 68%, hydrochloric acid 30–33%, and our wider acids range ship from Muscat stock — 4–6 business days by road via Saudi Arabia, or by sea to Shuwaikh and Shuaiba ports. When regional supply is tight, ex-stock Muscat availability under GCC customs transit gives Kuwaiti buyers a dependable alternative source, with CoA, GHS SDS and Certificate of Origin on every consignment. Contact us for current availability and a same-day quote.'
       }
     ],
     metaTitle: 'Chemical Suppliers in Kuwait — Import from Oman',
