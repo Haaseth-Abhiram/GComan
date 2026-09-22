@@ -26,7 +26,7 @@ import {
 } from '@/components/ui/alert-dialog';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { format } from 'date-fns';
-import { Loader2, Eye, Mail, MailCheck, MailX, AlertCircle, FileSpreadsheet, Search, ExternalLink, CheckCircle2, XCircle, CircleDashed, Trash2 } from 'lucide-react';
+import { Loader2, Eye, Mail, MailCheck, MailX, AlertCircle, FileSpreadsheet, Search, ExternalLink, CheckCircle2, XCircle, CircleDashed, Trash2, RefreshCw } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 import { exportToExcel } from '@/lib/exportToExcel';
 import { DateRangeFilter, inDateRange, loadDateRange, DateRange } from './DateRangeFilter';
@@ -60,6 +60,59 @@ export const ContactSubmissionsTable = () => {
   const [dateRange, setDateRange] = useState<DateRange>(loadDateRange('contacts'));
   const [deleteTarget, setDeleteTarget] = useState<ContactSubmission | null>(null);
   const [isDeleting, setIsDeleting] = useState(false);
+  const [resyncing, setResyncing] = useState(false);
+  const [resyncPreview, setResyncPreview] = useState<{ wouldPush: number; skipped: number } | null>(null);
+
+  /**
+   * Re-push submissions that never reached Zoho. Two-step on purpose: the
+   * first click is a dry run (writes nothing) and reports what would be sent;
+   * the button then switches to "Push N to Zoho" and only that second click
+   * creates Leads. The function itself skips anything that already has a
+   * zoho_lead_id, so repeats cannot duplicate a Lead.
+   */
+  const handleResync = async () => {
+    setResyncing(true);
+    try {
+      const execute = resyncPreview !== null;
+      const { data, error } = await supabase.functions.invoke('resync-zoho-leads', {
+        body: execute ? { execute: true, limit: 50 } : {},
+      });
+      if (error) throw error;
+
+      if (!execute) {
+        setResyncPreview({ wouldPush: data.wouldPush, skipped: data.skipped?.length ?? 0 });
+        toast({
+          title: `${data.wouldPush} submission(s) missing from Zoho`,
+          description:
+            data.wouldPush > 0
+              ? `${data.skipped?.length ?? 0} test/internal/spam row(s) will be skipped. Click again to push.`
+              : 'Nothing to re-push — every genuine enquiry is already in the CRM.',
+        });
+        if (data.wouldPush === 0) setResyncPreview(null);
+      } else {
+        setResyncPreview(null);
+        toast({
+          title: `Pushed ${data.pushedCount} lead(s) to Zoho`,
+          description:
+            data.failedCount > 0
+              ? `${data.failedCount} failed — see the CRM Status column for the error.`
+              : data.remaining > 0
+                ? `${data.remaining} remaining — run again to continue.`
+                : 'All caught up.',
+          variant: data.failedCount > 0 ? 'destructive' : undefined,
+        });
+        fetchSubmissions();
+      }
+    } catch (err) {
+      toast({
+        title: 'CRM sync failed',
+        description: err instanceof Error ? err.message : 'Unexpected error',
+        variant: 'destructive',
+      });
+    } finally {
+      setResyncing(false);
+    }
+  };
 
   useEffect(() => {
     fetchSubmissions();
@@ -256,10 +309,28 @@ export const ContactSubmissionsTable = () => {
               <CardTitle>Contact Submissions</CardTitle>
               <CardDescription>All contact form submissions with email notification status</CardDescription>
             </div>
-            <Button variant="outline" size="sm" onClick={handleExport} disabled={!filtered.length}>
-              <FileSpreadsheet className="h-4 w-4 mr-2" />
-              Export Excel ({filtered.length})
-            </Button>
+            <div className="flex items-center gap-2">
+              {/* Backfill for submissions that never reached Zoho. Always runs a
+                  dry run first — the second click is what actually writes. */}
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={handleResync}
+                disabled={resyncing}
+                title="Re-push contact submissions that never reached Zoho CRM"
+              >
+                {resyncing ? (
+                  <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                ) : (
+                  <RefreshCw className="h-4 w-4 mr-2" />
+                )}
+                {resyncPreview ? `Push ${resyncPreview.wouldPush} to Zoho` : 'Check CRM sync'}
+              </Button>
+              <Button variant="outline" size="sm" onClick={handleExport} disabled={!filtered.length}>
+                <FileSpreadsheet className="h-4 w-4 mr-2" />
+                Export Excel ({filtered.length})
+              </Button>
+            </div>
           </div>
           <div className="flex flex-col md:flex-row gap-3 mt-4 md:items-end">
             <div className="relative flex-1">
