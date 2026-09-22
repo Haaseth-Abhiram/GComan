@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect, useRef } from 'react';
+import { useState, useMemo, useEffect, useRef, Suspense } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, LogOut, User, Shield, Search, ArrowRight, ChevronDown } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
@@ -8,8 +8,16 @@ import { useUserRole } from '@/hooks/useUserRole';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import logo from '@/assets/global-chemicals-logo.svg';
 import { getLangPrefixFromPath, withLangPrefix } from '@/lib/langRouting';
-import { AISearchDialog } from '@/components/AISearchDialog';
 import ProductsMegaMenu from '@/components/ProductsMegaMenu';
+import { lazyRetry } from '@/lib/lazyRetry';
+
+// The AI search dialog pulls the Supabase SDK (it calls the ai-search edge
+// function) and shipped on every page through this navbar, even though most
+// visitors never open it. Loading it on first open keeps that weight off the
+// critical path. lazyRetry, not bare React.lazy — see src/lib/lazyRetry.ts.
+const AISearchDialog = lazyRetry(() =>
+  import('@/components/AISearchDialog').then((m) => ({ default: m.AISearchDialog })),
+);
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -324,7 +332,11 @@ const Navigation = () => {
           </div>
         </div>
       )}
-      <AISearchDialog open={isSearchOpen} onOpenChange={setIsSearchOpen} />
+      {isSearchOpen && (
+        <Suspense fallback={null}>
+          <AISearchDialog open={isSearchOpen} onOpenChange={setIsSearchOpen} />
+        </Suspense>
+      )}
     </nav>
   );
 };

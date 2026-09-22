@@ -6,7 +6,6 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { toast } from '@/components/ui/use-toast';
-import { supabase } from '@/integrations/supabase/client';
 import { trackContactClick } from '@/components/GoogleAnalytics';
 import { openCookieSettings } from '@/lib/consent';
 import logo from '@/assets/global-chemicals-logo.svg';
@@ -69,6 +68,9 @@ const Footer = () => {
     setIsSubmitting(true);
     
     try {
+      // Loaded on submit, not on mount: the Footer renders on every page but
+      // only needs the SDK when someone actually subscribes.
+      const { supabase } = await import('@/integrations/supabase/client');
       const { data, error } = await supabase.functions.invoke('subscribe-newsletter', {
         body: { email: email.trim() },
       });

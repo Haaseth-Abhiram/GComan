@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/contexts/AuthContext';
 
 export const useUserRole = () => {
@@ -28,6 +27,11 @@ export const useUserRole = () => {
       setCheckedUserId(null);
 
       try {
+        // Imported here rather than at module scope: Navigation and AdminRoute
+        // both call this hook on every page, which put the Supabase SDK in the
+        // always-loaded bundle. Anonymous visitors return above without ever
+        // reaching this line, so they now never download it.
+        const { supabase } = await import('@/integrations/supabase/client');
         const { data, error } = await supabase
           .from('user_roles')
           .select('role')

@@ -22,12 +22,42 @@ const isPrerender = (): boolean => {
   return /HeadlessChrome|Prerender/i.test(navigator.userAgent);
 };
 
+// The 3D hero costs ~2.7 MB on first view (1.6 MB HDRI + 1.1 MB three.js/r3f
+// chunk) and, once mounted, becomes the largest painted element — so LCP ends
+// up measuring that whole chain. GSC field data had every product page at
+// "Poor" on mobile. It is decoration: the prerendered HTML already ships the
+// static formula fallback, which stays put for anyone who does not clear the
+// bar below. Capable desktop visitors still get the full scene.
+const canAfford3D = (): boolean => {
+  if (typeof window === 'undefined' || typeof navigator === 'undefined') return false;
+  if (isPrerender()) return false;
+
+  if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return false;
+
+  // Phones and small tablets: this is exactly where CrUX marks us Poor, and
+  // where 2.7 MB of decoration is least affordable.
+  if (window.matchMedia?.('(max-width: 1023px)').matches) return false;
+
+  const nav = navigator as Navigator & {
+    connection?: { saveData?: boolean; effectiveType?: string };
+    deviceMemory?: number;
+  };
+  if (nav.connection?.saveData) return false;
+  if (nav.connection?.effectiveType && /(^|-)[23]g$/.test(nav.connection.effectiveType)) return false;
+  if (typeof nav.hardwareConcurrency === 'number' && nav.hardwareConcurrency < 4) return false;
+  if (typeof nav.deviceMemory === 'number' && nav.deviceMemory < 4) return false;
+
+  return true;
+};
+
 export const ChemistryHero = ({ formula, molecule, productTitle, tuning }: ChemistryHeroProps) => {
   // Defer mounting until after client hydration so the prerendered HTML is the
   // static fallback (better SEO, no canvas-related layout shift on slow clients).
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
-    if (isPrerender()) return; // prerender keeps the static fallback
+    // Covers the prerenderer too (canAfford3D returns false for it), so the
+    // prerendered HTML still ships the static fallback.
+    if (!canAfford3D()) return;
 
     // Search Console field data (CrUX) showed real-visitor LCP at >2.5s mobile /
     // >4s desktop across product pages — because once this mounts, the 3D

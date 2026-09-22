@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
-import { User, Session } from '@supabase/supabase-js';
-import { supabase } from '@/integrations/supabase/client';
+// Type-only: erased at build time, so it does not pull the SDK into the bundle.
+import type { User, Session } from '@supabase/supabase-js';
 import { useNavigate } from 'react-router-dom';
 import { useToast } from '@/hooks/use-toast';
 
@@ -21,27 +21,48 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const { toast } = useToast();
 
   useEffect(() => {
-    // Set up auth state listener FIRST
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      (event, session) => {
-        setSession(session);
-        setUser(session?.user ?? null);
-        setIsLoading(false);
-      }
-    );
+    // The Supabase SDK is ~150 KB and used to sit in the entry bundle because
+    // this provider wraps the whole app — so every one of the 657 routes paid
+    // for it before first paint, including the 275 product pages and every
+    // location/blog page, where no visitor is ever signed in. Importing it
+    // here moves it off the critical path: auth still initialises on mount,
+    // just after the page has painted. `isLoading` stays true until the SDK
+    // has answered, so ProtectedRoute/AdminRoute never see a premature
+    // "signed out" and redirect a real session away.
+    let active = true;
+    let unsubscribe: (() => void) | undefined;
 
-    // THEN check for existing session
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setSession(session);
-      setUser(session?.user ?? null);
+    void (async () => {
+      const { supabase } = await import('@/integrations/supabase/client');
+      if (!active) return;
+
+      // Listener FIRST, then the existing-session read (order matters: a token
+      // refresh landing between the two would otherwise be missed).
+      const { data: { subscription } } = supabase.auth.onAuthStateChange(
+        (event, nextSession) => {
+          setSession(nextSession);
+          setUser(nextSession?.user ?? null);
+          setIsLoading(false);
+        }
+      );
+      unsubscribe = () => subscription.unsubscribe();
+
+      const { data: { session: existingSession } } = await supabase.auth.getSession();
+      if (!active) return;
+      setSession(existingSession);
+      setUser(existingSession?.user ?? null);
       setIsLoading(false);
-    });
+    })();
 
-    return () => subscription.unsubscribe();
+    return () => {
+      active = false;
+      unsubscribe?.();
+    };
   }, []);
 
   const signOut = async () => {
     try {
+      const { supabase } = await import('@/integrations/supabase/client');
       const { error } = await supabase.auth.signOut();
       if (error) throw error;
       
