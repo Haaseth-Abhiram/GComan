@@ -52,6 +52,7 @@ Live Google positions for the standing keyword set. **Method:** manual/agent SER
 food grade chemicals supplier oman · construction chemicals oman · ro chemicals supplier oman · caustic soda flakes oman (post-verdict) · nitric acid food grade oman (re-check) · chlorine tablets pool oman
 
 ## Change Log
+- **2026-09-22** — GSC: sitemap 657 healthy; indexing requested for /chemicals/bahrain, /chemicals/uae, /chemicals/saudi-arabia (shortage-FAQ pages) before hitting the rolling 24h quota. **Crawl defect found & fixed:** /chemicals/qatar was "Discovered – never crawled" and /chemicals/kuwait "unknown to Google" — all four GCC country hubs had only ONE inbound internal link. City pages now link up to their country hub and hubs cross-link siblings (qatar/kuwait 1→6, uae/saudi 1→11 inbound), live on prod. Also fixed 12 blog guides starved at 1 inbound link (shell/mobil/castrol 240 impr, GBL 264 impr) via product guideUrl cross-links → 3–8 each. Queued for next quota window: qatar, kuwait, nitric-acid-68, nitric-acid-lab.
 - **2026-09-21** — Tracker created. 6 fresh checks (3 new page-1 finds: lab chemicals #2, glycols #4, corrosion inhibitors #4–5). Sitemap 657 resubmitted to GSC (read same day). Indexing requested: 2 new pages + 3 stale soft-404s + 4 changed-snippet pages (9 of ~10 daily quota).
 - Baselines from 2026-09-10 21-query audit and 2026-09-20/21 chlor-alkali + category sweeps (see docs/audits/2026-09-21-full-seo-audit.md and memory).
 
