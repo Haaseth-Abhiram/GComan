@@ -1231,6 +1231,22 @@ const popularWaterTreatmentProducts = [
   { label: 'Antiscalant', category: 'water-treatment', slug: 'antiscalant-water' },
 ];
 
+// GCC country hubs, keyed by the `country` value used in the locations record.
+// These four (uae, saudi-arabia, qatar, kuwait) each had exactly ONE inbound
+// internal link site-wide — the single entry on /chemicals — and the crawl
+// result was visible in GSC on 2026-09-22: Qatar "Discovered – currently not
+// indexed" (never crawled) and Kuwait "URL is unknown to Google". Same orphan
+// pattern that stalled the caustic-soda hub. City pages now link UP to their
+// country hub, and the hubs cross-link each other, so every hub gains 5–9
+// inbound links from pages that are themselves indexed and earning clicks.
+const COUNTRY_HUBS: { slug: string; country: string; label: string }[] = [
+  { slug: 'uae', country: 'UAE', label: 'United Arab Emirates' },
+  { slug: 'saudi-arabia', country: 'Saudi Arabia', label: 'Saudi Arabia' },
+  { slug: 'qatar', country: 'Qatar', label: 'Qatar' },
+  { slug: 'kuwait', country: 'Kuwait', label: 'Kuwait' },
+  { slug: 'bahrain', country: 'Bahrain', label: 'Bahrain' },
+];
+
 const LocationLanding = () => {
   const { location } = useParams<{ location: string }>();
   const { t, i18n } = useTranslation();
@@ -1244,6 +1260,15 @@ const LocationLanding = () => {
   const locationData = locations[location];
   const isAr = i18n.language === 'ar';
   const cityLabel = isAr ? locationData.cityArabic : locationData.city;
+
+  // A city page links up to its own country hub; a country hub links across to
+  // its siblings. Both guard against self-links (Bahrain is its own hub).
+  const countryHub = COUNTRY_HUBS.find(
+    (hub) => hub.country === locationData.country && hub.slug !== location,
+  );
+  const siblingHubs = COUNTRY_HUBS.some((hub) => hub.slug === location)
+    ? COUNTRY_HUBS.filter((hub) => hub.slug !== location)
+    : [];
 
   // Arabic SEO meta — only when a real translation exists in
   // location-pages-ar.json (GCC cities, the country hubs, and the Oman
@@ -1490,6 +1515,49 @@ const LocationLanding = () => {
                       <ChevronRight className="ml-2 h-4 w-4" />
                     </LocalizedLink>
                   </Button>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* GCC export network — see COUNTRY_HUBS for why these links exist */}
+      {(countryHub || siblingHubs.length > 0) && (
+        <section className="py-12 border-b">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <Card className="logo-gradient-border relative">
+                <CardContent className="pt-6">
+                  <p className="text-sm font-medium text-primary mb-1">GCC export network</p>
+                  {countryHub ? (
+                    <>
+                      <p className="font-semibold">Importing into {countryHub.label} from Oman</p>
+                      <p className="text-sm text-muted-foreground mt-1 mb-4">
+                        Country-level lead times, customs documentation and the full range we ship from our Muscat warehouse.
+                      </p>
+                      <Button variant="outline" asChild className="shrink-0">
+                        <LocalizedLink to={`/chemicals/${countryHub.slug}`}>
+                          {countryHub.label} supply guide
+                          <ChevronRight className="ml-2 h-4 w-4" />
+                        </LocalizedLink>
+                      </Button>
+                    </>
+                  ) : (
+                    <>
+                      <p className="font-semibold">We also export from Oman to</p>
+                      <p className="text-sm text-muted-foreground mt-1 mb-4">
+                        Same ex-stock availability, same documentation pack — delivered across the Gulf.
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {siblingHubs.map((hub) => (
+                          <Button key={hub.slug} variant="outline" size="sm" asChild>
+                            <LocalizedLink to={`/chemicals/${hub.slug}`}>{hub.label}</LocalizedLink>
+                          </Button>
+                        ))}
+                      </div>
+                    </>
+                  )}
                 </CardContent>
               </Card>
             </div>
