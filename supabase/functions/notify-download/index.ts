@@ -250,8 +250,8 @@ Downloaded at: ${new Date().toLocaleString()}
       }
     })();
 
-    // Push to Zoho CRM in background (fire-and-forget)
-    (async () => {
+    // Push to Zoho CRM in the background.
+    const zohoTask = (async () => {
       const { first, last } = splitName(name);
       const result = await createZohoLead({
         Last_Name: last,
@@ -269,8 +269,23 @@ Downloaded at: ${new Date().toLocaleString()}
           .from('download_leads')
           .update({ zoho_lead_id: result.leadId, synced_to_zoho: true })
           .eq('id', leadData.id);
+      } else {
+        // download_leads has no zoho_error column (only contact_submissions
+        // does), so a failure is logged rather than persisted — at least it
+        // is no longer swallowed entirely.
+        console.error('Zoho lead creation failed for download lead:', leadData.id, result.error);
       }
     })().catch((err) => console.error('Zoho push error:', err));
+
+    // Keep the isolate alive until the background work settles; without this
+    // the runtime can tear it down the moment the response returns and kill
+    // an in-flight CRM push.
+    const background = Promise.allSettled([zohoTask]);
+    // @ts-expect-error EdgeRuntime is provided by the Supabase edge runtime
+    if (typeof EdgeRuntime !== 'undefined' && EdgeRuntime?.waitUntil) {
+      // @ts-expect-error see above
+      EdgeRuntime.waitUntil(background);
+    }
 
     return new Response(
       JSON.stringify({ success: true, message: "Lead saved successfully", id: leadData.id }),

@@ -183,8 +183,8 @@ Deno.serve(async (req) => {
 
     console.log(`[Newsletter] Successfully subscribed: ${email}`);
 
-    // Push to Zoho CRM in background (fire-and-forget)
-    (async () => {
+    // Push to Zoho CRM in the background.
+    const zohoTask = (async () => {
       const result = await createZohoLead({
         Last_Name: email.split('@')[0],
         Email: email,
@@ -197,8 +197,21 @@ Deno.serve(async (req) => {
           .from('newsletter_subscribers')
           .update({ zoho_lead_id: result.leadId, synced_to_zoho: true })
           .eq('id', newSub.id);
+      } else if (!result.success) {
+        // newsletter_subscribers has no zoho_error column, so log it rather
+        // than swallowing the failure silently.
+        console.error('[Newsletter] Zoho lead creation failed:', result.error);
       }
     })().catch((err) => console.error('[Newsletter] Zoho push error:', err));
+
+    // Keep the isolate alive until the CRM push settles — otherwise the
+    // runtime can terminate it as soon as the response returns.
+    const background = Promise.allSettled([zohoTask]);
+    // @ts-expect-error EdgeRuntime is provided by the Supabase edge runtime
+    if (typeof EdgeRuntime !== 'undefined' && EdgeRuntime?.waitUntil) {
+      // @ts-expect-error see above
+      EdgeRuntime.waitUntil(background);
+    }
 
     return new Response(
       JSON.stringify({ success: true, message: "Thank you for subscribing to our newsletter!" }),

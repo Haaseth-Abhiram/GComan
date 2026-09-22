@@ -327,12 +327,12 @@ serve(async (req) => {
     // Fire email notification in the background — do NOT await it.
     // Awaiting it caused SMTP timeouts to propagate as a failed response even
     // though the DB insert had already succeeded and the email was delivered.
-    sendEmailNotification(supabase, data.id, sanitizedData, ipAddress).catch(
+    const emailTask = sendEmailNotification(supabase, data.id, sanitizedData, ipAddress).catch(
       (err) => console.error('Background email notification error:', err)
     );
 
-    // Push to Zoho CRM in background (fire-and-forget)
-    (async () => {
+    // Push to Zoho CRM in the background.
+    const zohoTask = (async () => {
       const { first, last } = splitName(sanitizedData.name);
       const result = await createZohoLead({
         Last_Name: last,
@@ -344,13 +344,43 @@ serve(async (req) => {
         Title: sanitizedData.subject,
         Description: sanitizedData.message,
       });
+
       if (result.success && result.leadId) {
         await supabase
           .from('contact_submissions')
-          .update({ zoho_lead_id: result.leadId, synced_to_zoho: true })
+          .update({
+            zoho_lead_id: result.leadId,
+            synced_to_zoho: true,
+            zoho_synced_at: new Date().toISOString(),
+            zoho_error: null,
+          })
           .eq('id', data.id);
+        return;
       }
+
+      // Record the failure. Without this branch a failed push left the row
+      // with synced_to_zoho=false and zoho_error=null, which the admin table
+      // renders as "Pending" — indistinguishable from a submission that
+      // predates the CRM integration. Real lost leads were invisible, and the
+      // "Failed" badge the UI already implements was unreachable code.
+      console.error('Zoho lead creation failed:', result.error);
+      await supabase
+        .from('contact_submissions')
+        .update({ zoho_error: (result.error ?? 'Unknown Zoho error').slice(0, 2000) })
+        .eq('id', data.id);
     })().catch((err) => console.error('Zoho push error:', err));
+
+    // Both tasks run after the response is sent. Supabase Edge Functions may
+    // tear the isolate down as soon as the response returns, which silently
+    // killed in-flight pushes — the same submitter synced on one day and not
+    // the next with identical input, because it was a race, not a data
+    // problem. waitUntil keeps the isolate alive until both settle.
+    const background = Promise.allSettled([emailTask, zohoTask]);
+    // @ts-expect-error EdgeRuntime is provided by the Supabase edge runtime
+    if (typeof EdgeRuntime !== 'undefined' && EdgeRuntime?.waitUntil) {
+      // @ts-expect-error see above
+      EdgeRuntime.waitUntil(background);
+    }
 
     return new Response(
       JSON.stringify({ 
