@@ -34,8 +34,16 @@ npx playwright test tests/e2e/loading-flow.spec.ts -g "name of test"   # single 
 
 # Supabase edge functions — NOTE: the Supabase project is managed by Lovable
 # Cloud and there are NO standalone Supabase credentials (confirmed 2026-09-01).
-# In practice functions deploy when Lovable builds/publishes main; the CLI
-# commands below only work if someone has a Supabase access token.
+# CORRECTION 2026-09-22: a Lovable Publish does NOT deploy edge functions.
+# Verified in Lovable → More → Cloud → Edge functions, which lists each
+# function's "Last updated": after pushing edge-function changes to main and
+# publishing (site rebuilt, new deployment id), submit-contact / notify-download
+# / subscribe-newsletter still read "21–22 days ago" and a NEWLY ADDED function
+# did not appear at all (its URL 404s). Only `mcp` refreshes, because the Vite
+# build regenerates that file itself. So: frontend changes ship on Publish,
+# edge-function changes DO NOT. They need a Supabase access token and the CLI
+# below (or someone to deploy them from the Lovable side). Never tell the user
+# an edge-function fix is "live" after a Publish — check that panel first.
 ./scripts/deploy-supabase.sh                   # deploy all functions
 supabase functions deploy submit-contact       # one function
 supabase secrets set TURNSTILE_SECRET_KEY=...  # rotate a secret
