@@ -54,7 +54,9 @@
           "answer": "Sulfuric acid is one of the most dangerous common laboratory chemicals, with unique hazards: it is strongly corrosive (pH<1 at dilute concentrations), generates intense heat on dilution with water (always add acid to water, never water to acid), and concentrated sulfuric acid dehydrates organic materials (including human tissue) causing severe chemical burns with delayed pain onset. In Oman laboratory environments, mandatory safety controls include: chemical-resistant gloves (butyl rubber or neoprene, not nitrile for concentrated acid), chemical splash goggles (not standard safety glasses), lab coat and closed-toe shoes, use only in a fume hood for concentrated acid, designated acid storage in polypropylene or glass secondary containment cabinets, spill kits containing sodium bicarbonate neutraliser, and emergency eyewash within 10 seconds of handling area. For dilution, always add concentrated acid slowly to water while stirring, never the reverse. Oman's Ministry of Manpower OSH regulations require chemical-specific COSHH assessments for hazardous substance use in laboratories. Global Chemicals LLC provides SDS, risk assessment templates, and personal protective equipment alongside laboratory chemical supply."
         }
       ],
-      "wikiUrl": "https://en.wikipedia.org/wiki/Sulfuric_acid"
+      "wikiUrl": "https://en.wikipedia.org/wiki/Sulfuric_acid",
+      "guideUrl": "/blog/lab-chemical-safety",
+      "guideLabel": "Laboratory chemical safety — storage, handling and incompatibilities"
     }
   },
   {
@@ -106,7 +108,9 @@
           "answer": "Hydrochloric acid (HCl, muriatic acid) is one of the most widely used mineral acids in analytical and research laboratories in Oman. Its principal laboratory applications include: pH adjustment and buffer preparation (HCl buffers at pH 1–2 are used in HPLC mobile phases and enzyme assay systems); gravimetric analysis and titrimetry (HCl standard solutions are primary titrants for base standardisation); metal dissolution and digestion (HCl dissolves iron oxides, carbonates, and many metal samples for ICP-OES or AAS trace metal analysis — often combined with nitric acid as aqua regia for gold, platinum, and refractory metal dissolution); qualitative inorganic analysis (HCl identifies chloride precipitate group cations including lead, mercury, and silver); and wastewater and water testing (COD, nitrogen, and hardness methods use HCl for sample acidification and preservation). Laboratory-grade HCl from Merck, BDH, or Sigma-Aldrich at 36–38% concentration is supplied with certificate of analysis. Global Chemicals LLC stocks laboratory hydrochloric acid in 2.5-litre, 5-litre, and 25-litre quantities for Oman's university, industrial QC, and research laboratory customers."
         }
       ],
-      "wikiUrl": "https://en.wikipedia.org/wiki/Hydrochloric_acid"
+      "wikiUrl": "https://en.wikipedia.org/wiki/Hydrochloric_acid",
+      "guideUrl": "/blog/lab-chemical-safety",
+      "guideLabel": "Laboratory chemical safety — storage, handling and incompatibilities"
     }
   },
   {
@@ -154,7 +158,9 @@
       ],
       "wikiUrl": "https://en.wikipedia.org/wiki/Nitric_acid",
       "seoTitle": "Nitric Acid Lab Grade (HNO3) Supplier in Oman",
-      "seoDescription": "Laboratory-grade nitric acid (CAS 7697-37-2) ex-stock Muscat, Oman. Analytical digestion, ICP prep & trace-metal work. 2.5 L packs with CoA — get a quote."
+      "seoDescription": "Laboratory-grade nitric acid (CAS 7697-37-2) ex-stock Muscat, Oman. Analytical digestion, ICP prep & trace-metal work. 2.5 L packs with CoA — get a quote.",
+      "guideUrl": "/blog/lab-chemical-safety",
+      "guideLabel": "Laboratory chemical safety — storage, handling and incompatibilities"
     }
   },
   {
@@ -387,7 +393,9 @@
         "Available: 500ml, 2.5L bottles",
         "Store in tightly sealed bottles"
       ],
-      "wikiUrl": "https://en.wikipedia.org/wiki/Aqueous_ammonia"
+      "wikiUrl": "https://en.wikipedia.org/wiki/Aqueous_ammonia",
+      "guideUrl": "/blog/lab-chemical-safety",
+      "guideLabel": "Laboratory chemical safety — storage, handling and incompatibilities"
     }
   },
   {

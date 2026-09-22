@@ -544,7 +544,9 @@
           "question": "What is butyl glycol used for?",
           "answer": "Its slow, even evaporation makes it the classic coalescing and flow solvent for water-based and solvent-based coatings, and a workhorse in industrial cleaners and degreasers (it couples oil and water). It also serves in drilling-fluid additives and textile processing. Where a faster tail solvent is needed, pair it with n-butanol or switch to butyl di-glycol."
         }
-      ]
+      ],
+      "guideUrl": "/blog/butylene-glycol-guide-oman-gcc",
+      "guideLabel": "Butylene & propylene glycol guide — grades and applications in the GCC"
     }
   },
   {
@@ -1032,7 +1034,9 @@
         "Regenerable in glycol units",
         "Available in drums, IBCs, bulk"
       ],
-      "wikiUrl": "https://en.wikipedia.org/wiki/Diethylene_glycol"
+      "wikiUrl": "https://en.wikipedia.org/wiki/Diethylene_glycol",
+      "guideUrl": "/blog/meg-vs-deg-gas-dehydration-oman-gcc",
+      "guideLabel": "MEG vs DEG for gas dehydration — which glycol for which duty"
     }
   },
   {
@@ -1536,7 +1540,9 @@
           "answer": "MEG (monoethylene glycol) and TEG (triethylene glycol) are both hygroscopic glycols used for gas dehydration, but they differ significantly in physical properties and applications. TEG has a much higher boiling point (285°C vs MEG's 197°C) and lower vapour pressure, making it superior for deep dehydration in gas processing plants — TEG can achieve dew point depressions of 40–60°C in standard gas-glycol contactors, meeting pipeline water content specifications. MEG is preferred for direct injection into pipelines and wellheads as a flow assurance chemical rather than a bulk dehydration solvent, because its lower molecular weight means lower injection volumes per mole of water removed. In Oman, TEG is the standard dehydration medium in gas processing plants at Saih Rawl, Harweel, and Khazzan, while MEG injection is used in wet gathering lines and multiphase flow lines where TEG contactors are impractical. Global Chemicals LLC supplies both TEG and MEG for Oman oilfield operations."
         }
       ],
-      "wikiUrl": "https://en.wikipedia.org/wiki/Ethylene_glycol"
+      "wikiUrl": "https://en.wikipedia.org/wiki/Ethylene_glycol",
+      "guideUrl": "/blog/meg-vs-deg-gas-dehydration-oman-gcc",
+      "guideLabel": "MEG vs DEG for gas dehydration — which glycol for which duty"
     }
   },
   {

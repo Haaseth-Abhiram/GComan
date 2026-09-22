@@ -3343,7 +3343,9 @@ var glycols_default = [
           answer: "For industrial cooling systems in Oman, a MEG-water mixture of 30\u201340% MEG by volume provides adequate protection against freezing and raises the boiling point of the coolant. Pure water boils at 100\xB0C at sea level; a 40% MEG mixture raises the boiling point to approximately 108\xB0C and provides freeze protection to \u221224\xB0C \u2014 more than adequate for Oman's climate where freezing is not a concern. The benefit of MEG antifreeze in Oman is boiling point elevation and corrosion inhibition rather than freeze protection. A properly inhibited MEG coolant protects aluminium, steel, copper, and cast iron components from corrosion, cavitation, and scale formation, extending cooling system life by 3\u20135 years compared to plain water. Higher MEG concentrations (above 60%) actually reduce heat transfer efficiency and increase viscosity without benefit in Oman conditions. Automotive MEG antifreeze products include corrosion inhibitor packages; industrial MEG for process cooling systems requires separate inhibitor addition. Global Chemicals LLC supplies MEG with inhibitor recommendations."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Ethylene_glycol"
+      wikiUrl: "https://en.wikipedia.org/wiki/Ethylene_glycol",
+      guideUrl: "/blog/meg-vs-deg-gas-dehydration-oman-gcc",
+      guideLabel: "MEG vs DEG for gas dehydration \u2014 which glycol for which duty"
     }
   },
   {
@@ -3402,7 +3404,9 @@ var glycols_default = [
           question: "Is DEG safe for food or pharmaceutical use?",
           answer: "No. Diethylene glycol is toxic if ingested and must never be used in food, beverage, pharmaceutical or personal-care products. For those applications we supply USP/EP-grade propylene glycol (E1520). DEG is sold for industrial use only, with end-use declarations where required."
         }
-      ]
+      ],
+      guideUrl: "/blog/meg-vs-deg-gas-dehydration-oman-gcc",
+      guideLabel: "MEG vs DEG for gas dehydration \u2014 which glycol for which duty"
     }
   },
   {
@@ -3467,7 +3471,9 @@ var glycols_default = [
           answer: "Global Chemicals LLC supplies fresh triethylene glycol \u226599% for dehydration contactor first-fill and make-up, delivered to gas plants across Oman under JSRS registration (PDO/OQ approved lists) and exported GCC-wide. Batch CoA covers purity, water content and pH; 225 kg drums and IBCs, with DEG also stocked for blend make-up."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Triethylene_glycol"
+      wikiUrl: "https://en.wikipedia.org/wiki/Triethylene_glycol",
+      guideUrl: "/blog/meg-vs-deg-gas-dehydration-oman-gcc",
+      guideLabel: "MEG vs DEG for gas dehydration \u2014 which glycol for which duty"
     }
   },
   {
@@ -3528,7 +3534,9 @@ var glycols_default = [
           answer: "Global Chemicals LLC stocks both industrial-grade PG (\u226599.5%) and USP/EP food grade (E1520) in Muscat, in 215 kg drums and IBCs with the compliance documentation each grade requires. Same-day Oman dispatch, GCC delivery 2\u20137 days. State the grade and volume in your enquiry for same-day pricing."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Propylene_glycol"
+      wikiUrl: "https://en.wikipedia.org/wiki/Propylene_glycol",
+      guideUrl: "/blog/butylene-glycol-guide-oman-gcc",
+      guideLabel: "Butylene & propylene glycol guide \u2014 grades and applications in the GCC"
     }
   }
 ];
@@ -3971,7 +3979,9 @@ var lab_chemicals_default = [
           answer: "Sulfuric acid is one of the most dangerous common laboratory chemicals, with unique hazards: it is strongly corrosive (pH<1 at dilute concentrations), generates intense heat on dilution with water (always add acid to water, never water to acid), and concentrated sulfuric acid dehydrates organic materials (including human tissue) causing severe chemical burns with delayed pain onset. In Oman laboratory environments, mandatory safety controls include: chemical-resistant gloves (butyl rubber or neoprene, not nitrile for concentrated acid), chemical splash goggles (not standard safety glasses), lab coat and closed-toe shoes, use only in a fume hood for concentrated acid, designated acid storage in polypropylene or glass secondary containment cabinets, spill kits containing sodium bicarbonate neutraliser, and emergency eyewash within 10 seconds of handling area. For dilution, always add concentrated acid slowly to water while stirring, never the reverse. Oman's Ministry of Manpower OSH regulations require chemical-specific COSHH assessments for hazardous substance use in laboratories. Global Chemicals LLC provides SDS, risk assessment templates, and personal protective equipment alongside laboratory chemical supply."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Sulfuric_acid"
+      wikiUrl: "https://en.wikipedia.org/wiki/Sulfuric_acid",
+      guideUrl: "/blog/lab-chemical-safety",
+      guideLabel: "Laboratory chemical safety \u2014 storage, handling and incompatibilities"
     }
   },
   {
@@ -4023,7 +4033,9 @@ var lab_chemicals_default = [
           answer: "Hydrochloric acid (HCl, muriatic acid) is one of the most widely used mineral acids in analytical and research laboratories in Oman. Its principal laboratory applications include: pH adjustment and buffer preparation (HCl buffers at pH 1\u20132 are used in HPLC mobile phases and enzyme assay systems); gravimetric analysis and titrimetry (HCl standard solutions are primary titrants for base standardisation); metal dissolution and digestion (HCl dissolves iron oxides, carbonates, and many metal samples for ICP-OES or AAS trace metal analysis \u2014 often combined with nitric acid as aqua regia for gold, platinum, and refractory metal dissolution); qualitative inorganic analysis (HCl identifies chloride precipitate group cations including lead, mercury, and silver); and wastewater and water testing (COD, nitrogen, and hardness methods use HCl for sample acidification and preservation). Laboratory-grade HCl from Merck, BDH, or Sigma-Aldrich at 36\u201338% concentration is supplied with certificate of analysis. Global Chemicals LLC stocks laboratory hydrochloric acid in 2.5-litre, 5-litre, and 25-litre quantities for Oman's university, industrial QC, and research laboratory customers."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Hydrochloric_acid"
+      wikiUrl: "https://en.wikipedia.org/wiki/Hydrochloric_acid",
+      guideUrl: "/blog/lab-chemical-safety",
+      guideLabel: "Laboratory chemical safety \u2014 storage, handling and incompatibilities"
     }
   },
   {
@@ -4071,7 +4083,9 @@ var lab_chemicals_default = [
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Nitric_acid",
       seoTitle: "Nitric Acid Lab Grade (HNO3) Supplier in Oman",
-      seoDescription: "Laboratory-grade nitric acid (CAS 7697-37-2) ex-stock Muscat, Oman. Analytical digestion, ICP prep & trace-metal work. 2.5 L packs with CoA \u2014 get a quote."
+      seoDescription: "Laboratory-grade nitric acid (CAS 7697-37-2) ex-stock Muscat, Oman. Analytical digestion, ICP prep & trace-metal work. 2.5 L packs with CoA \u2014 get a quote.",
+      guideUrl: "/blog/lab-chemical-safety",
+      guideLabel: "Laboratory chemical safety \u2014 storage, handling and incompatibilities"
     }
   },
   {
@@ -4304,7 +4318,9 @@ var lab_chemicals_default = [
         "Available: 500ml, 2.5L bottles",
         "Store in tightly sealed bottles"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Aqueous_ammonia"
+      wikiUrl: "https://en.wikipedia.org/wiki/Aqueous_ammonia",
+      guideUrl: "/blog/lab-chemical-safety",
+      guideLabel: "Laboratory chemical safety \u2014 storage, handling and incompatibilities"
     }
   },
   {
@@ -5680,7 +5696,9 @@ var lubricants_default = [
           answer: "Yes. Global Chemicals LLC is JSRS (Joint Supplier Registration System) registered, enabling supply to PDO, OQ, OPAL, and their approved contractors in Oman. We supply Shell Rimula engine oils, Shell Tellus hydraulic oils, Shell Gadus greases, and Shell Omala gear oils to oil & gas field operations, power plants, drilling contractors, and refinery maintenance teams across Oman including South Oman field areas. All products are supplied with original CoA documentation and are compliant with OEM and principal specifications required in PDO supply contracts."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Shell_plc"
+      wikiUrl: "https://en.wikipedia.org/wiki/Shell_plc",
+      guideUrl: "/blog/shell-mobil-castrol-lubricants-oman",
+      guideLabel: "Shell, Mobil & Castrol lubricants in Oman \u2014 grades, OEM approvals and how to choose"
     }
   },
   {
@@ -5764,7 +5782,9 @@ var lubricants_default = [
           answer: "Yes. Global Chemicals LLC stocks Mobil SHC synthetic lubricants \u2014 the premium polyalphaolefin (PAO) synthetic series \u2014 for high-temperature, high-load, and extended-drain applications where mineral oil is insufficient. Key products include Mobil SHC 626 (ISO VG 68 synthetic bearing and circulation oil), Mobil SHC 630 (ISO VG 150 synthetic), Mobil SHC Gear 220/320 (synthetic enclosed gear oil), and Mobilith SHC 220 (NLGI 2 synthetic grease). These products are commonly specified for high-speed centrifuges, gas turbine auxiliary systems, and high-temperature conveyor bearings at Oman's cement plants, petrochemical facilities, and Sohar Aluminium smelter."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Mobil"
+      wikiUrl: "https://en.wikipedia.org/wiki/Mobil",
+      guideUrl: "/blog/shell-mobil-castrol-lubricants-oman",
+      guideLabel: "Shell, Mobil & Castrol lubricants in Oman \u2014 grades, OEM approvals and how to choose"
     }
   },
   {
@@ -5847,7 +5867,9 @@ var lubricants_default = [
           answer: "Yes. Castrol is an approved lubricant brand on PDO (Petroleum Development Oman) and OQ (formerly Oman Oil Company Exploration and Production) qualified supplier lists for various lubricant categories. Specific Castrol products \u2014 including VECTON heavy-duty engine oils, Hyspin hydraulic oils, Optigear gear oils, and Molub-Alloy specialty greases \u2014 hold approvals for use in PDO and OQ operations. Global Chemicals LLC can provide product-specific approval documentation and supply in quantities meeting operator call-off requirements. For new lubricant qualification at PDO or OQ, we can assist with submitting technical data sheets and safety data sheets to the relevant vendor management team. JSRS (Joint Supplier Registration System) registration is maintained for Oman's oil and gas sector supply. Contact our technical team with your specific equipment OEM requirements for Castrol approval confirmation."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Castrol"
+      wikiUrl: "https://en.wikipedia.org/wiki/Castrol",
+      guideUrl: "/blog/shell-mobil-castrol-lubricants-oman",
+      guideLabel: "Shell, Mobil & Castrol lubricants in Oman \u2014 grades, OEM approvals and how to choose"
     }
   },
   {
@@ -5922,7 +5944,9 @@ var lubricants_default = [
           answer: "For GP IPOL lubricants, Global Chemicals LLC accepts orders from a single 20-litre pail or 25-kg grease drum with no minimum order quantity requirement for standard stocked items. Volume pricing applies at 210-litre drum, 1,000-litre IBC, and bulk tanker quantities, with significant savings for industrial users consuming 200+ litres per month. Delivery is available to Muscat, Sohar, Nizwa, Sur, Salalah, Duqm, and other Oman locations. Express same-day delivery within Muscat Governorate is available for stocked items ordered before 12:00. For custom blends, non-stock grades, or specially packaged products, lead times of 3\u20137 working days apply. Credit terms are available for established Oman businesses with verified trade references. Contact the Global Chemicals LLC sales team for a volume pricing schedule or for GP IPOL product technical data sheets."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Lubricant"
+      wikiUrl: "https://en.wikipedia.org/wiki/Lubricant",
+      guideUrl: "/blog/shell-mobil-castrol-lubricants-oman",
+      guideLabel: "Shell, Mobil & Castrol lubricants in Oman \u2014 grades, OEM approvals and how to choose"
     }
   }
 ];
@@ -6474,7 +6498,9 @@ var oilfield_default = [
           question: "What is butyl glycol used for?",
           answer: "Its slow, even evaporation makes it the classic coalescing and flow solvent for water-based and solvent-based coatings, and a workhorse in industrial cleaners and degreasers (it couples oil and water). It also serves in drilling-fluid additives and textile processing. Where a faster tail solvent is needed, pair it with n-butanol or switch to butyl di-glycol."
         }
-      ]
+      ],
+      guideUrl: "/blog/butylene-glycol-guide-oman-gcc",
+      guideLabel: "Butylene & propylene glycol guide \u2014 grades and applications in the GCC"
     }
   },
   {
@@ -6962,7 +6988,9 @@ var oilfield_default = [
         "Regenerable in glycol units",
         "Available in drums, IBCs, bulk"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Diethylene_glycol"
+      wikiUrl: "https://en.wikipedia.org/wiki/Diethylene_glycol",
+      guideUrl: "/blog/meg-vs-deg-gas-dehydration-oman-gcc",
+      guideLabel: "MEG vs DEG for gas dehydration \u2014 which glycol for which duty"
     }
   },
   {
@@ -7466,7 +7494,9 @@ var oilfield_default = [
           answer: "MEG (monoethylene glycol) and TEG (triethylene glycol) are both hygroscopic glycols used for gas dehydration, but they differ significantly in physical properties and applications. TEG has a much higher boiling point (285\xB0C vs MEG's 197\xB0C) and lower vapour pressure, making it superior for deep dehydration in gas processing plants \u2014 TEG can achieve dew point depressions of 40\u201360\xB0C in standard gas-glycol contactors, meeting pipeline water content specifications. MEG is preferred for direct injection into pipelines and wellheads as a flow assurance chemical rather than a bulk dehydration solvent, because its lower molecular weight means lower injection volumes per mole of water removed. In Oman, TEG is the standard dehydration medium in gas processing plants at Saih Rawl, Harweel, and Khazzan, while MEG injection is used in wet gathering lines and multiphase flow lines where TEG contactors are impractical. Global Chemicals LLC supplies both TEG and MEG for Oman oilfield operations."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Ethylene_glycol"
+      wikiUrl: "https://en.wikipedia.org/wiki/Ethylene_glycol",
+      guideUrl: "/blog/meg-vs-deg-gas-dehydration-oman-gcc",
+      guideLabel: "MEG vs DEG for gas dehydration \u2014 which glycol for which duty"
     }
   },
   {
@@ -8495,7 +8525,9 @@ var ro_chemicals_default = [
         "Food-grade formulation available",
         "Available in 25kg, 200kg drums, IBCs"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Citric_acid"
+      wikiUrl: "https://en.wikipedia.org/wiki/Citric_acid",
+      guideUrl: "/blog/ro-membrane-chemicals-antiscalant-oman",
+      guideLabel: "RO membrane chemicals \u2014 antiscalant selection and CIP programmes"
     }
   },
   {
@@ -8539,7 +8571,9 @@ var ro_chemicals_default = [
         "Temperature: Ambient to 40\xB0C",
         "Safe for polyamide membranes",
         "Available in 25kg, 200kg drums, IBCs"
-      ]
+      ],
+      guideUrl: "/blog/ro-membrane-chemicals-antiscalant-oman",
+      guideLabel: "RO membrane chemicals \u2014 antiscalant selection and CIP programmes"
     }
   },
   {
@@ -8630,7 +8664,9 @@ var ro_chemicals_default = [
         "Temperature: Ambient to 40\xB0C",
         "Compatible with all composite membranes",
         "Available in 25kg, 200kg drums, IBCs"
-      ]
+      ],
+      guideUrl: "/blog/ro-membrane-chemicals-antiscalant-oman",
+      guideLabel: "RO membrane chemicals \u2014 antiscalant selection and CIP programmes"
     }
   },
   {
@@ -8697,7 +8733,9 @@ var ro_chemicals_default = [
           answer: "Under-dosing or cessation of RO antiscalant dosing causes rapid scale formation on membranes, typically within hours to days depending on the water chemistry and recovery rate. Early indicators include rising feed-to-reject differential pressure, declining normalised permeate flow, and increasing salt passage. Severe scaling can cause irreversible compaction of membrane fibres and permanent flux loss that cannot be restored by chemical cleaning. In Oman's SWRO plants treating high-sulphate seawater, calcium sulphate scale is particularly dangerous because it is poorly soluble even in acid cleaning solutions. Antiscalant dosing pump failure alarms and low-level tank alarms are therefore critical safety controls in Oman's desalination plant SCADA systems. Global Chemicals LLC recommends maintaining minimum 30 days' antiscalant stock on-site at all times."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Scale_inhibitor"
+      wikiUrl: "https://en.wikipedia.org/wiki/Scale_inhibitor",
+      guideUrl: "/blog/ro-membrane-chemicals-antiscalant-oman",
+      guideLabel: "RO membrane chemicals \u2014 antiscalant selection and CIP programmes"
     }
   },
   {
@@ -8741,7 +8779,9 @@ var ro_chemicals_default = [
         "Contains surfactants and chelating agents",
         "Safe for polyamide membranes",
         "Available in 25kg, 200kg drums, IBCs"
-      ]
+      ],
+      guideUrl: "/blog/ro-membrane-chemicals-antiscalant-oman",
+      guideLabel: "RO membrane chemicals \u2014 antiscalant selection and CIP programmes"
     }
   },
   {
@@ -8786,7 +8826,9 @@ var ro_chemicals_default = [
         "NSF/ANSI 60 certified",
         "Available in 25kg, 200kg drums, IBCs, bulk"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Scale_inhibitor"
+      wikiUrl: "https://en.wikipedia.org/wiki/Scale_inhibitor",
+      guideUrl: "/blog/ro-membrane-chemicals-antiscalant-oman",
+      guideLabel: "RO membrane chemicals \u2014 antiscalant selection and CIP programmes"
     }
   }
 ];
@@ -10288,7 +10330,9 @@ var swimming_pool_default = [
         "Available in retail and bulk quantities",
         "Comprehensive water testing services"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Swimming_pool_sanitation"
+      wikiUrl: "https://en.wikipedia.org/wiki/Swimming_pool_sanitation",
+      guideUrl: "/blog/swimming-pool-chemicals-oman-muscat",
+      guideLabel: "Swimming pool chemicals in Oman \u2014 dosing for hotels, villas and facilities"
     }
   },
   {
@@ -10424,7 +10468,9 @@ var swimming_pool_default = [
         "No chlorine stabilizer - ideal for shock",
         "Packaging: 1kg, 5kg, 25kg, 50kg bags"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Calcium_hypochlorite"
+      wikiUrl: "https://en.wikipedia.org/wiki/Calcium_hypochlorite",
+      guideUrl: "/blog/swimming-pool-chemicals-oman-muscat",
+      guideLabel: "Swimming pool chemicals in Oman \u2014 dosing for hotels, villas and facilities"
     }
   },
   {
@@ -10469,7 +10515,9 @@ var swimming_pool_default = [
         "Compatible with dosing pumps and feeders",
         "Available in 25L, 60L, 200L, 1000L IBC"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_hypochlorite"
+      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_hypochlorite",
+      guideUrl: "/blog/swimming-pool-chemicals-oman-muscat",
+      guideLabel: "Swimming pool chemicals in Oman \u2014 dosing for hotels, villas and facilities"
     }
   },
   {
@@ -10650,7 +10698,9 @@ var swimming_pool_default = [
         "Dosage: 1-3 tablets per 10,000 liters weekly",
         "Packaging: 1kg, 5kg, 10kg, 25kg buckets"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Trichloroisocyanuric_acid"
+      wikiUrl: "https://en.wikipedia.org/wiki/Trichloroisocyanuric_acid",
+      guideUrl: "/blog/swimming-pool-chemicals-oman-muscat",
+      guideLabel: "Swimming pool chemicals in Oman \u2014 dosing for hotels, villas and facilities"
     }
   },
   {
@@ -12652,7 +12702,9 @@ var water_treatment_default = [
         "Specific gravity: 1.118",
         "Available in drums and IBC tanks"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Diethylene_glycol"
+      wikiUrl: "https://en.wikipedia.org/wiki/Diethylene_glycol",
+      guideUrl: "/blog/meg-vs-deg-gas-dehydration-oman-gcc",
+      guideLabel: "MEG vs DEG for gas dehydration \u2014 which glycol for which duty"
     }
   },
   {
@@ -13022,7 +13074,9 @@ var water_treatment_default = [
         "Specific gravity: 1.115",
         "Available in drums and IBC tanks"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Ethylene_glycol"
+      wikiUrl: "https://en.wikipedia.org/wiki/Ethylene_glycol",
+      guideUrl: "/blog/meg-vs-deg-gas-dehydration-oman-gcc",
+      guideLabel: "MEG vs DEG for gas dehydration \u2014 which glycol for which duty"
     }
   },
   {
@@ -13213,7 +13267,9 @@ var water_treatment_default = [
           question: "What are the storage requirements for PAC liquid in Oman's climate?",
           answer: "PAC liquid should be stored in shaded, covered HDPE or FRP tanks away from direct sunlight to minimise temperature-driven degradation. In Oman's summer conditions (ambient temperatures up to 45\xB0C), exposed tanks can reach 50\u201355\xB0C, accelerating hydrolysis and basicity shift in the PAC solution, which reduces coagulation performance. Ideal storage temperature is below 35\xB0C. Shelf life is typically 6\u201312 months from manufacture in correct storage conditions. PAC liquid must not be stored near alkalis (caustic soda, lime) as mixing causes immediate precipitation. Global Chemicals LLC supplies PAC liquid with manufacture date and Al\u2082O\u2083 assay certificate, and can advise on tank sizing and storage arrangements."
         }
-      ]
+      ],
+      guideUrl: "/blog/pac-poly-aluminium-chloride-oman",
+      guideLabel: "PAC (poly aluminium chloride) in Oman \u2014 dosing, jar testing and selection"
     }
   },
   {
@@ -13272,7 +13328,9 @@ var water_treatment_default = [
           question: "What packaging is available for PAC powder in Oman?",
           answer: "Global Chemicals LLC supplies PAC powder (28\u201330% Al\u2082O\u2083) in 25kg polypropylene bags for standard industrial and municipal water treatment customers. Pallet quantities (40 bags per pallet, 1,000 kg) are available for larger accounts with warehousing space. The powder has a shelf life of 24 months in sealed, dry storage conditions \u2014 a significant advantage over PAC liquid (6\u201312 months shelf life) for remote locations and projects with infrequent supply. Custom pack sizes may be available for specific project requirements. Delivery is available to all Oman governorates including interior regions (Al Dakhiliyah, Al Sharqiyah, Al Wusta) and Dhofar."
         }
-      ]
+      ],
+      guideUrl: "/blog/pac-poly-aluminium-chloride-oman",
+      guideLabel: "PAC (poly aluminium chloride) in Oman \u2014 dosing, jar testing and selection"
     }
   },
   {

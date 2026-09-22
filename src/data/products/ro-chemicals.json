@@ -88,7 +88,9 @@
         "Food-grade formulation available",
         "Available in 25kg, 200kg drums, IBCs"
       ],
-      "wikiUrl": "https://en.wikipedia.org/wiki/Citric_acid"
+      "wikiUrl": "https://en.wikipedia.org/wiki/Citric_acid",
+      "guideUrl": "/blog/ro-membrane-chemicals-antiscalant-oman",
+      "guideLabel": "RO membrane chemicals — antiscalant selection and CIP programmes"
     }
   },
   {
@@ -132,7 +134,9 @@
         "Temperature: Ambient to 40°C",
         "Safe for polyamide membranes",
         "Available in 25kg, 200kg drums, IBCs"
-      ]
+      ],
+      "guideUrl": "/blog/ro-membrane-chemicals-antiscalant-oman",
+      "guideLabel": "RO membrane chemicals — antiscalant selection and CIP programmes"
     }
   },
   {
@@ -223,7 +227,9 @@
         "Temperature: Ambient to 40°C",
         "Compatible with all composite membranes",
         "Available in 25kg, 200kg drums, IBCs"
-      ]
+      ],
+      "guideUrl": "/blog/ro-membrane-chemicals-antiscalant-oman",
+      "guideLabel": "RO membrane chemicals — antiscalant selection and CIP programmes"
     }
   },
   {
@@ -290,7 +296,9 @@
           "answer": "Under-dosing or cessation of RO antiscalant dosing causes rapid scale formation on membranes, typically within hours to days depending on the water chemistry and recovery rate. Early indicators include rising feed-to-reject differential pressure, declining normalised permeate flow, and increasing salt passage. Severe scaling can cause irreversible compaction of membrane fibres and permanent flux loss that cannot be restored by chemical cleaning. In Oman's SWRO plants treating high-sulphate seawater, calcium sulphate scale is particularly dangerous because it is poorly soluble even in acid cleaning solutions. Antiscalant dosing pump failure alarms and low-level tank alarms are therefore critical safety controls in Oman's desalination plant SCADA systems. Global Chemicals LLC recommends maintaining minimum 30 days' antiscalant stock on-site at all times."
         }
       ],
-      "wikiUrl": "https://en.wikipedia.org/wiki/Scale_inhibitor"
+      "wikiUrl": "https://en.wikipedia.org/wiki/Scale_inhibitor",
+      "guideUrl": "/blog/ro-membrane-chemicals-antiscalant-oman",
+      "guideLabel": "RO membrane chemicals — antiscalant selection and CIP programmes"
     }
   },
   {
@@ -334,7 +342,9 @@
         "Contains surfactants and chelating agents",
         "Safe for polyamide membranes",
         "Available in 25kg, 200kg drums, IBCs"
-      ]
+      ],
+      "guideUrl": "/blog/ro-membrane-chemicals-antiscalant-oman",
+      "guideLabel": "RO membrane chemicals — antiscalant selection and CIP programmes"
     }
   },
   {
@@ -379,7 +389,9 @@
         "NSF/ANSI 60 certified",
         "Available in 25kg, 200kg drums, IBCs, bulk"
       ],
-      "wikiUrl": "https://en.wikipedia.org/wiki/Scale_inhibitor"
+      "wikiUrl": "https://en.wikipedia.org/wiki/Scale_inhibitor",
+      "guideUrl": "/blog/ro-membrane-chemicals-antiscalant-oman",
+      "guideLabel": "RO membrane chemicals — antiscalant selection and CIP programmes"
     }
   }
 ]

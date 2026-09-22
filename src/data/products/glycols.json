@@ -53,7 +53,9 @@
           "answer": "For industrial cooling systems in Oman, a MEG-water mixture of 30–40% MEG by volume provides adequate protection against freezing and raises the boiling point of the coolant. Pure water boils at 100°C at sea level; a 40% MEG mixture raises the boiling point to approximately 108°C and provides freeze protection to −24°C — more than adequate for Oman's climate where freezing is not a concern. The benefit of MEG antifreeze in Oman is boiling point elevation and corrosion inhibition rather than freeze protection. A properly inhibited MEG coolant protects aluminium, steel, copper, and cast iron components from corrosion, cavitation, and scale formation, extending cooling system life by 3–5 years compared to plain water. Higher MEG concentrations (above 60%) actually reduce heat transfer efficiency and increase viscosity without benefit in Oman conditions. Automotive MEG antifreeze products include corrosion inhibitor packages; industrial MEG for process cooling systems requires separate inhibitor addition. Global Chemicals LLC supplies MEG with inhibitor recommendations."
         }
       ],
-      "wikiUrl": "https://en.wikipedia.org/wiki/Ethylene_glycol"
+      "wikiUrl": "https://en.wikipedia.org/wiki/Ethylene_glycol",
+      "guideUrl": "/blog/meg-vs-deg-gas-dehydration-oman-gcc",
+      "guideLabel": "MEG vs DEG for gas dehydration — which glycol for which duty"
     }
   },
   {
@@ -112,7 +114,9 @@
           "question": "Is DEG safe for food or pharmaceutical use?",
           "answer": "No. Diethylene glycol is toxic if ingested and must never be used in food, beverage, pharmaceutical or personal-care products. For those applications we supply USP/EP-grade propylene glycol (E1520). DEG is sold for industrial use only, with end-use declarations where required."
         }
-      ]
+      ],
+      "guideUrl": "/blog/meg-vs-deg-gas-dehydration-oman-gcc",
+      "guideLabel": "MEG vs DEG for gas dehydration — which glycol for which duty"
     }
   },
   {
@@ -177,7 +181,9 @@
           "answer": "Global Chemicals LLC supplies fresh triethylene glycol ≥99% for dehydration contactor first-fill and make-up, delivered to gas plants across Oman under JSRS registration (PDO/OQ approved lists) and exported GCC-wide. Batch CoA covers purity, water content and pH; 225 kg drums and IBCs, with DEG also stocked for blend make-up."
         }
       ],
-      "wikiUrl": "https://en.wikipedia.org/wiki/Triethylene_glycol"
+      "wikiUrl": "https://en.wikipedia.org/wiki/Triethylene_glycol",
+      "guideUrl": "/blog/meg-vs-deg-gas-dehydration-oman-gcc",
+      "guideLabel": "MEG vs DEG for gas dehydration — which glycol for which duty"
     }
   },
   {
@@ -238,7 +244,9 @@
           "answer": "Global Chemicals LLC stocks both industrial-grade PG (≥99.5%) and USP/EP food grade (E1520) in Muscat, in 215 kg drums and IBCs with the compliance documentation each grade requires. Same-day Oman dispatch, GCC delivery 2–7 days. State the grade and volume in your enquiry for same-day pricing."
         }
       ],
-      "wikiUrl": "https://en.wikipedia.org/wiki/Propylene_glycol"
+      "wikiUrl": "https://en.wikipedia.org/wiki/Propylene_glycol",
+      "guideUrl": "/blog/butylene-glycol-guide-oman-gcc",
+      "guideLabel": "Butylene & propylene glycol guide — grades and applications in the GCC"
     }
   }
 ]
