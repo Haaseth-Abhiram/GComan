@@ -837,7 +837,8 @@ var chlorinated_default = [
           answer: "Trichloroethylene (TCE, trichloroethene, CAS 79-01-6) is a chlorinated solvent primarily used as a metal degreasing agent in Oman's engineering, aerospace, and manufacturing sector. Its high solvency for oils, greases, and waxes, combined with its low boiling point (87\xB0C) and non-flammability, made it the standard vapour degreasing solvent for precision metal parts cleaning in defence, aerospace, and electronic manufacturing. In vapour degreasing equipment (open-top and closed-top degreasing tanks), TCE is heated to boiling, and the rising solvent vapour condenses on cool metal parts, dissolving contamination and draining back as clean solvent. However, TCE is now subject to significant regulatory restriction: the European Union has phased it out under REACH (Annex XIV authorisation required), and the US EPA has classified it as a likely human carcinogen under chronic exposure. In Oman, TCE use should comply with GHS hazard communication, exposure limits (OEL 10 ppm STEL, 1 ppm TWA in EU standards), and biological monitoring protocols. Safer alternatives include n-propyl bromide, perchloroethylene, and HFC-based solvents. Global Chemicals LLC supplies TCE with full regulatory documentation."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Trichloroethylene"
+      wikiUrl: "https://en.wikipedia.org/wiki/Trichloroethylene",
+      seoDescription: "Trichloroethylene 99.5% stabilised (CAS 79-01-6) ex-stock Muscat, Oman. Vapour degreasing & precision metal cleaning. Drums \u2014 request a quote."
     }
   },
   {
@@ -1301,7 +1302,8 @@ var cooling_water_default = [
           answer: "Oman's year-round sunshine, high ambient temperatures, and open cooling tower design create ideal conditions for rapid algae growth. Cooling tower basins receive natural light, warm water (often 30\u201345\xB0C in summer), and atmospheric carbon dioxide \u2014 exactly the nutrients photosynthetic algae need. Green algae colonise tower fill, distribution decks, basin walls, and spray nozzles, reducing water flow, blocking fill channels, and dramatically decreasing cooling efficiency. Algae biomass also provides a food source and shelter for heterotrophic bacteria, promoting biofilm and increasing Legionella risk. Non-oxidising algaecides such as quaternary ammonium compounds interrupt algae cell respiration and reproduction without the corrosion risks associated with chlorine shock. For Oman's coastal and inland industrial sites, Global Chemicals LLC recommends monthly algaecide treatments combined with regular basin inspection to prevent algae from establishing in warm months."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Algaecide"
+      wikiUrl: "https://en.wikipedia.org/wiki/Algaecide",
+      seoDescription: "Non-oxidising algaecide for cooling towers in Oman. Dose 10-50 ppm initial, 5-10 ppm maintenance; green & blue-green algae. Drums or IBC \u2014 get a quote."
     }
   },
   {
@@ -1786,7 +1788,8 @@ var corrosion_inhibitor_default = [
         "Forms compatible films on all metals",
         "Available in 25kg, 200kg drums, IBCs"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Corrosion_inhibitor"
+      wikiUrl: "https://en.wikipedia.org/wiki/Corrosion_inhibitor",
+      seoDescription: "Multi-metal corrosion inhibitor for mixed-metallurgy cooling systems in Oman. Protects steel, copper, aluminium & SS at 50-150 ppm. Get a quote."
     }
   },
   {
@@ -3282,7 +3285,8 @@ var food_beverage_default = [
         "Effective temperature: 0-100\xB0C",
         "Available in 25kg bags/cartons"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Xanthan_gum"
+      wikiUrl: "https://en.wikipedia.org/wiki/Xanthan_gum",
+      seoDescription: "Xanthan gum food grade 99%, E415 / FDA GRAS (CAS 11138-66-2), ex-stock Muscat. Thickener & stabiliser for sauces and drinks. Get a quote."
     }
   }
 ];
@@ -3981,7 +3985,8 @@ var lab_chemicals_default = [
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Sulfuric_acid",
       guideUrl: "/blog/lab-chemical-safety",
-      guideLabel: "Laboratory chemical safety \u2014 storage, handling and incompatibilities"
+      guideLabel: "Laboratory chemical safety \u2014 storage, handling and incompatibilities",
+      seoDescription: "Sulfuric acid 95-98%, ACS reagent grade (CAS 7664-93-9), ex-stock Muscat, Oman. Titrations, digestion & pH work. CoA per lot \u2014 request a quote."
     }
   },
   {
@@ -4223,7 +4228,8 @@ var lab_chemicals_default = [
         "Hygroscopic - store in sealed container",
         "Available: 500g, 1kg, 5kg bottles"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_hydroxide"
+      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_hydroxide",
+      seoDescription: "Sodium hydroxide pellets, ACS reagent grade 97-99% (CAS 1310-73-2), ex-stock Muscat. For titrations, pH work & saponification. CoA per lot \u2014 get a quote."
     }
   },
   {
@@ -4748,7 +4754,8 @@ var lab_chemicals_default = [
         "Available: 1L, 2.5L, 4L bottles",
         "Use with adequate ventilation"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Dichloromethane"
+      wikiUrl: "https://en.wikipedia.org/wiki/Dichloromethane",
+      seoDescription: "Dichloromethane 99.5% ACS/HPLC grade (CAS 75-09-2), ex-stock Muscat. Extraction & HPLC mobile phase. CoA per lot, GHS SDS \u2014 get a quote."
     }
   },
   {
@@ -4886,7 +4893,8 @@ var lab_chemicals_default = [
         "Available: 1L, 2.5L, 4L bottles",
         "Highly flammable - proper ventilation required"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Petroleum_ether"
+      wikiUrl: "https://en.wikipedia.org/wiki/Petroleum_ether",
+      seoDescription: "Petroleum ether lab grade (CAS 8032-32-4), 40-60\xB0C and 60-80\xB0C boiling ranges, ex-stock Muscat. Extraction & chromatography. CoA included \u2014 get a quote."
     }
   },
   {
@@ -5946,7 +5954,8 @@ var lubricants_default = [
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Lubricant",
       guideUrl: "/blog/shell-mobil-castrol-lubricants-oman",
-      guideLabel: "Shell, Mobil & Castrol lubricants in Oman \u2014 grades, OEM approvals and how to choose"
+      guideLabel: "Shell, Mobil & Castrol lubricants in Oman \u2014 grades, OEM approvals and how to choose",
+      seoDescription: "GP (IPOL) lubricants in Oman \u2014 engine oils API SN/CI-4, hydraulic ISO VG 32/46/68 to DIN 51524, spindle oils. Authorised distributor. Get a quote."
     }
   }
 ];
@@ -6435,7 +6444,8 @@ var oilfield_default = [
         "Temperature stable - ideal for high-temp wells",
         "Packaging: 25kg bags, drums, bulk"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Boric_acid"
+      wikiUrl: "https://en.wikipedia.org/wiki/Boric_acid",
+      seoDescription: "Boric acid 99.5% (CAS 10043-35-3) ex-stock Muscat, Oman. Drilling-fluid pH control and high-temperature wellbore stabilisation. Get a quote."
     }
   },
   {
@@ -7326,7 +7336,8 @@ var oilfield_default = [
         "High temperature stability",
         "Packaging: 25kg bags, bulk bags"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Magnesium_oxide"
+      wikiUrl: "https://en.wikipedia.org/wiki/Magnesium_oxide",
+      seoDescription: "Magnesium oxide 85-98% MgO (CAS 1309-48-4), light- and dead-burned grades, ex-stock Muscat. Cement retarder & mud pH buffer. Request a quote."
     }
   },
   {
@@ -8127,7 +8138,8 @@ var oilfield_default = [
         "Complete neutralization in minutes",
         "Available in 25L, 60L, 200L drums, IBCs"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_thiosulfate"
+      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_thiosulfate",
+      seoDescription: "Sodium thiosulphate liquid 25-50% (CAS 7772-98-7), ex-stock Muscat. Chlorine/oxidiser neutralisation & produced-water treatment. IBCs \u2014 get a quote."
     }
   },
   {
@@ -8429,7 +8441,8 @@ var oilfield_default = [
           question: "What oil-in-water level can a reverse demulsifier programme achieve?",
           answer: "Correctly jar-tested and dosed ahead of gas flotation, reverse demulsifier programmes routinely bring produced water from hundreds of ppm oil down to the 10\u201340 ppm range required for re-injection or regulated discharge, with nutshell polishing taking it lower where specifications demand. Performance depends on droplet size, temperature and salinity \u2014 send your water spec for a programme recommendation."
         }
-      ]
+      ],
+      seoDescription: "Reverse demulsifier for produced-water deoiling in Oman. Cationic polyamine, 2-20 ppm ahead of flotation, jar-test confirmed. Request a quote."
     }
   }
 ];
@@ -9712,7 +9725,8 @@ var soap_detergent_default = [
         "Bulk density: 800\u2013950 kg/m\xB3",
         "Packaging: 25kg PP bag"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_metasilicate"
+      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_metasilicate",
+      seoDescription: "Sodium metasilicate pentahydrate 98% (CAS 6834-92-0) ex-stock Muscat. For CIP cleaners, dishwash powders & heavy-duty detergents. Get a quote."
     }
   },
   {
@@ -9930,7 +9944,8 @@ var solvents_default = [
           answer: "Mineral spirits flash point varies by grade: Type 1 (low flash) has a flash point of approximately 21\u201330\xB0C; Type 2 (medium flash) 32\u201350\xB0C; and Type 3 (high flash, most common in Oman) above 55\xB0C. For use in enclosed or confined spaces such as tank interiors, enclosed workshops, or poorly ventilated paint bays in Oman, the high-flash grade (above 55\xB0C flash point) is mandatory to reduce fire and explosion risk. Even with high-flash mineral spirits, adequate ventilation must be maintained to keep vapour concentrations below the Lower Explosive Limit (LEL) and below occupational exposure limits (OEL) for petroleum distillates (typically 100\u2013200 mg/m\xB3 as 8-hour TWA). In Oman's hot climate, higher ambient temperatures accelerate solvent evaporation and reduce the safety margin relative to flash point, making ventilation requirements more stringent in summer. Personal protective equipment (nitrile gloves, chemical goggles, half-face respirator with organic vapour cartridges) is required. Global Chemicals LLC provides safety data sheets and application guidance for all solvent grades."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/White_spirit"
+      wikiUrl: "https://en.wikipedia.org/wiki/White_spirit",
+      seoDescription: "Mineral spirits / white spirit (CAS 64742-88-7) ex-stock Muscat, Oman. Paint thinning, equipment cleaning & degreasing. Drums or bulk \u2014 request a quote."
     }
   },
   {
@@ -10607,7 +10622,8 @@ var swimming_pool_default = [
         "Complete reaction in 15-30 minutes",
         "Available in 5L, 20L, 60L containers"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_bisulfite"
+      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_bisulfite",
+      seoDescription: "Sodium bisulphite liquid 38-40% for pools in Oman. Neutralises excess chlorine after shock dosing. Drums, ex-stock Muscat \u2014 request a quote."
     }
   },
   {
@@ -12704,7 +12720,8 @@ var water_treatment_default = [
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Diethylene_glycol",
       guideUrl: "/blog/meg-vs-deg-gas-dehydration-oman-gcc",
-      guideLabel: "MEG vs DEG for gas dehydration \u2014 which glycol for which duty"
+      guideLabel: "MEG vs DEG for gas dehydration \u2014 which glycol for which duty",
+      seoDescription: "DEG, diethylene glycol 99.5% (CAS 111-46-6), ex-stock Muscat, Oman. Gas dehydration and solvent duties. Drums, IBCs or bulk \u2014 get a quote."
     }
   },
   {
@@ -13330,7 +13347,8 @@ var water_treatment_default = [
         }
       ],
       guideUrl: "/blog/pac-poly-aluminium-chloride-oman",
-      guideLabel: "PAC (poly aluminium chloride) in Oman \u2014 dosing, jar testing and selection"
+      guideLabel: "PAC (poly aluminium chloride) in Oman \u2014 dosing, jar testing and selection",
+      seoDescription: "PAC powder, 28-30% Al2O3 (CAS 1327-41-9), ex-stock Muscat, Oman. Coagulant for municipal & industrial water. 25 kg bags \u2014 request a quote."
     }
   },
   {
@@ -13460,7 +13478,8 @@ var water_treatment_default = [
         "pH (1% solution): 11.3-11.7",
         "Available in 25kg, 50kg bags"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_carbonate"
+      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_carbonate",
+      seoDescription: "Soda ash 99.2% Na2CO3 (CAS 497-19-8), dense and light grades, ex-stock Muscat, Oman. Water softening & pH correction. 25 kg bags \u2014 get a quote."
     }
   },
   {
@@ -13681,7 +13700,8 @@ var water_treatment_default = [
         "Strong alkaline properties",
         "Excellent dispersing action"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_silicate"
+      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_silicate",
+      seoDescription: "Sodium metasilicate anhydrous (CAS 6834-92-0), pH 12-13 at 1%, ex-stock Muscat. Metal degreasing & detergent manufacture. 25 kg \u2014 get a quote."
     }
   },
   {
