@@ -737,11 +737,20 @@ const Products = ({ initialCategory, initialProducts }: ProductsProps = {}) => {
           body: string;
           sections?: { heading: string; body: string }[];
           table?: { caption: string; headers: string[]; rows: string[][] };
+          // Opt-in per category, same pattern as details.guideUrl on individual
+          // product pages (see ProductDetail.tsx). Surfaces the JSRS blog guide
+          // — the site's strongest "named local institution" content for PDO/OQ
+          // vendor-qualification credibility — on the two categories where oil
+          // & gas / industrial procurement teams actually vet suppliers on it.
+          guideUrl?: string;
+          guideLabel?: string;
         };
         const categoryIntros: Record<string, CategoryIntro> = {
           'water-treatment': {
             heading: 'Water Treatment Chemicals Supplier in Oman & GCC',
-            body: 'Global Chemicals LLC supplies a comprehensive range of water treatment chemicals to municipal water utilities, industrial plants, hotels, and desalination facilities across Oman and the GCC. Our water treatment portfolio covers coagulants (PAC — Poly Aluminium Chloride, aluminium sulphate), disinfectants (calcium hypochlorite, sodium hypochlorite, chlorine tablets), pH adjustment chemicals (caustic soda flakes, soda ash, sulphuric acid), antiscalants for RO and desalination systems, corrosion inhibitors, biocides, antifoams, and flocculants. All products are supplied with GHS-compliant SDS and CoA. Same-day delivery in Muscat; next-day delivery to Sohar and Salalah. JSRS certified for supply to PDO and OQ water treatment operations.'
+            body: 'Global Chemicals LLC supplies a comprehensive range of water treatment chemicals to municipal water utilities, industrial plants, hotels, and desalination facilities across Oman and the GCC. Our water treatment portfolio covers coagulants (PAC — Poly Aluminium Chloride, aluminium sulphate), disinfectants (calcium hypochlorite, sodium hypochlorite, chlorine tablets), pH adjustment chemicals (caustic soda flakes, soda ash, sulphuric acid), antiscalants for RO and desalination systems, corrosion inhibitors, biocides, antifoams, and flocculants. All products are supplied with GHS-compliant SDS and CoA. Same-day delivery in Muscat; next-day delivery to Sohar and Salalah. JSRS certified for supply to PDO and OQ water treatment operations.',
+            guideUrl: '/blog/jsrs-chemical-supplier-pdo-oman',
+            guideLabel: 'JSRS supplier qualification guide',
           },
           'lubricants': {
             heading: 'Shell, Mobil, Castrol & GP Lubricants Supplier in Oman',
@@ -749,7 +758,9 @@ const Products = ({ initialCategory, initialProducts }: ProductsProps = {}) => {
           },
           'oilfield': {
             heading: 'Oilfield & Refinery Chemicals Supplier — JSRS Certified Oman',
-            body: "Global Chemicals LLC is JSRS (Joint Supplier Registration System) certified, qualifying us to supply chemicals directly to Petroleum Development Oman (PDO), OQ, OPAL, Occidental (Oxy), and their approved contractors. Our oilfield chemicals range includes corrosion inhibitors, scale inhibitors, H2S scavengers, demulsifiers, wax inhibitors, biocides, drilling fluid additives (bentonite, CMC, barite), well stimulation chemicals, and production chemicals for Oman's upstream and midstream oil & gas sector. We supply field operations across South Oman (Marmul, Nimr, Qarn Alam), the Duqm Refinery zone, and Sohar Refinery. Rapid supply chain with emergency delivery capability."
+            body: "Global Chemicals LLC is JSRS (Joint Supplier Registration System) certified, qualifying us to supply chemicals directly to Petroleum Development Oman (PDO), OQ, OPAL, Occidental (Oxy), and their approved contractors. Our oilfield chemicals range includes corrosion inhibitors, scale inhibitors, H2S scavengers, demulsifiers, wax inhibitors, biocides, drilling fluid additives (bentonite, CMC, barite), well stimulation chemicals, and production chemicals for Oman's upstream and midstream oil & gas sector. We supply field operations across South Oman (Marmul, Nimr, Qarn Alam), the Duqm Refinery zone, and Sohar Refinery. Rapid supply chain with emergency delivery capability.",
+            guideUrl: '/blog/jsrs-chemical-supplier-pdo-oman',
+            guideLabel: 'JSRS supplier qualification guide',
           },
           'swimming-pool': {
             heading: 'Swimming Pool Chemicals Supplier in Oman — Muscat & Nationwide',
@@ -877,6 +888,15 @@ const Products = ({ initialCategory, initialProducts }: ProductsProps = {}) => {
               <div className="max-w-4xl mx-auto">
                 <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">{intro.heading}</h2>
                 <p className="text-muted-foreground leading-relaxed">{intro.body}</p>
+                {intro.guideUrl && (
+                  <p className="text-muted-foreground leading-relaxed text-sm mt-3">
+                    Our JSRS registration is what qualifies this product range for PDO and OQ vendor lists — see the{' '}
+                    <LocalizedLink to={intro.guideUrl} className="text-primary font-medium hover:underline">
+                      {intro.guideLabel || 'JSRS supplier qualification guide'}
+                    </LocalizedLink>{' '}
+                    for how the process works.
+                  </p>
+                )}
                 {intro.table && (
                   <div className="mt-8 overflow-x-auto rounded-lg border border-border">
                     <table className="w-full text-sm min-w-[560px]">
