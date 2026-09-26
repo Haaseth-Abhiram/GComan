@@ -557,6 +557,66 @@ export const SpeakableStructuredData = ({ url, cssSelector }: SpeakableStructure
 };
 
 // =====================================================
+// LOCATION SERVICE STRUCTURED DATA (chemical-supply location pages)
+// One Service entity per /chemicals/:location page (LocationLanding.tsx) —
+// city pages emit a City areaServed, the five country hubs (uae,
+// saudi-arabia, qatar, kuwait, bahrain — see COUNTRY_HUBS in
+// LocationLanding.tsx) emit a Country areaServed instead. `provider`
+// references the site-wide Organization by its index.html @id — it must
+// NEVER re-declare that entity's own properties (name/address/etc.), or it
+// becomes the same-@id duplicate CLAUDE.md's prerender-pipeline notes warn
+// about. `description` reuses the location's existing metaDescription — no
+// new claims beyond what's already published on the page.
+// =====================================================
+interface LocationServiceStructuredDataProps {
+  city: string;
+  country: string;
+  /** True for the five country-hub pages — emits a Country areaServed and
+   *  drops the redundant "City, Country" name (city === country there). */
+  isCountryHub?: boolean;
+  description: string;
+  url: string;
+  serviceType?: string;
+}
+
+export const LocationServiceStructuredData = ({
+  city,
+  country,
+  isCountryHub = false,
+  description,
+  url,
+  serviceType = "Chemical Supply"
+}: LocationServiceStructuredDataProps) => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": isCountryHub ? `Chemical Supply in ${country}` : `Chemical Supply in ${city}, ${country}`,
+    "description": description,
+    "serviceType": serviceType,
+    "url": url,
+    "provider": {
+      "@type": "Organization",
+      "@id": "https://gcoman.com/#organization"
+    },
+    "areaServed": isCountryHub
+      ? { "@type": "Country", "name": country }
+      : {
+          "@type": "City",
+          "name": city,
+          "containedInPlace": { "@type": "Country", "name": country }
+        }
+  };
+
+  return (
+    <Helmet defer={false}>
+      <script type="application/ld+json">
+        {JSON.stringify(schema)}
+      </script>
+    </Helmet>
+  );
+};
+
+// =====================================================
 // CONTACT PAGE STRUCTURED DATA
 // =====================================================
 export const ContactPageStructuredData = () => {

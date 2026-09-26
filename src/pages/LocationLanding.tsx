@@ -22,7 +22,7 @@ import {
   ChevronRight
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
-import { BreadcrumbStructuredData, FAQStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
+import { BreadcrumbStructuredData, FAQStructuredData, SpeakableStructuredData, LocationServiceStructuredData } from '@/components/StructuredData';
 import { LocalizedLink } from '@/components/LocalizedLink';
 
 // Location data for SEO-optimized landing pages
@@ -1266,7 +1266,8 @@ const LocationLanding = () => {
   const countryHub = COUNTRY_HUBS.find(
     (hub) => hub.country === locationData.country && hub.slug !== location,
   );
-  const siblingHubs = COUNTRY_HUBS.some((hub) => hub.slug === location)
+  const isCountryHubPage = COUNTRY_HUBS.some((hub) => hub.slug === location);
+  const siblingHubs = isCountryHubPage
     ? COUNTRY_HUBS.filter((hub) => hub.slug !== location)
     : [];
 
@@ -1337,6 +1338,13 @@ const LocationLanding = () => {
       <BreadcrumbStructuredData items={breadcrumbItems} />
       <FAQStructuredData faqs={translatedFaqs} />
       <SpeakableStructuredData url={`https://gcoman.com/chemicals/${locationData.slug}`} cssSelector={["h1", "h2", ".speakable"]} />
+      <LocationServiceStructuredData
+        city={locationData.city}
+        country={locationData.country}
+        isCountryHub={isCountryHubPage}
+        description={locationData.metaDescription}
+        url={`https://gcoman.com/chemicals/${locationData.slug}`}
+      />
 
       <Navigation />
       <main id="main-content">
