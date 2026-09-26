@@ -474,7 +474,8 @@ var agro_default = [
         "Water solubility: >98% (soluble flake grade)",
         "Packaging: 25 kg bag"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Humic_substance"
+      wikiUrl: "https://en.wikipedia.org/wiki/Humic_substance",
+      seoDescription: "Humic acid, leonardite extract 65-75% humic acids (CAS 1415-93-6), ex-stock Muscat. Fertigation & foliar biostimulant. 25 kg bags \u2014 get a quote."
     }
   }
 ];
@@ -1739,7 +1740,8 @@ var cooling_water_default = [
         "Compatible with inhibitors and biocides",
         "Available in 25kg, 200kg drums, IBCs"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Antifouling"
+      wikiUrl: "https://en.wikipedia.org/wiki/Antifouling",
+      seoDescription: "Antifouling liquid for cooling towers in Oman. Dispersant dosage 10-50 ppm; controls silt, mud & scale deposits. Drums, IBCs \u2014 get a quote."
     }
   }
 ];
@@ -2127,7 +2129,8 @@ var corrosion_inhibitor_default = [
           answer: "Yes. Oxygen scavengers are used in closed cooling water loops to eliminate the oxygen that causes pitting corrosion in pipework, heat exchangers, and chiller circuits. For closed systems \u2014 unlike open cooling towers where oxidising biocides are also needed \u2014 the primary corrosion mechanism is dissolved oxygen, not scale or biological fouling. After initial system fill and commissioning, a one-time or periodic dose of oxygen scavenger (typically sodium sulphite at 20\u201350 mg/L residual) along with a film-forming corrosion inhibitor provides effective long-term protection. Closed system oxygen scavenger treatment is particularly important in Oman's chilled water systems where steel pipework is common and the cost of corrosion leak repairs is high."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Oxygen_scavenger"
+      wikiUrl: "https://en.wikipedia.org/wiki/Oxygen_scavenger",
+      seoDescription: "Oxygen scavenger (catalysed sulphite, DEHA) for boiler water in Oman. Dosage 10 ppm per ppm dissolved O2. Drums, IBCs \u2014 request a quote."
     }
   },
   {
@@ -2172,7 +2175,8 @@ var corrosion_inhibitor_default = [
         "Simplifies chemical feed",
         "Available in 25kg, 200kg drums, IBCs"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Corrosion_inhibitor"
+      wikiUrl: "https://en.wikipedia.org/wiki/Corrosion_inhibitor",
+      seoDescription: "Ph booster cum corrosion inhibitor for Oman cooling systems. Dual-action dosing at 50-200 ppm lifts pH to 8.0-9.5. Get a quote."
     }
   },
   {
@@ -2976,7 +2980,8 @@ var food_beverage_default = [
         "Odorless and tasteless",
         "Available in 25kg bags/cartons"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Potassium_sorbate"
+      wikiUrl: "https://en.wikipedia.org/wiki/Potassium_sorbate",
+      seoDescription: "Potassium sorbate 99% food grade, E202 (CAS 24634-61-5), ex-stock Muscat. Mould & yeast inhibitor at 0.02-0.1% dosage. 25 kg bags \u2014 get a quote."
     }
   },
   {
@@ -4524,7 +4529,8 @@ var lab_chemicals_default = [
         "Available: 500ml, 2.5L, 4L bottles",
         "Flammable - proper ventilation required"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Propan-2-ol"
+      wikiUrl: "https://en.wikipedia.org/wiki/Propan-2-ol",
+      seoDescription: "Isopropanol (IPA) 99.5% ACS grade (CAS 67-63-0), ex-stock Muscat. DNA precipitation, HPLC prep & electronics cleaning. CoA \u2014 get a quote."
     }
   },
   {
@@ -4847,7 +4853,8 @@ var lab_chemicals_default = [
         "Available: 500ml, 1L, 2.5L bottles",
         "Extremely flammable - handle with extreme care"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Diethyl_ether"
+      wikiUrl: "https://en.wikipedia.org/wiki/Diethyl_ether",
+      seoDescription: "Diethyl ether 99% ACS grade, BHT-stabilised (CAS 60-29-7), ex-stock Muscat. Extraction & Grignard reactions. 500 mL-2.5 L bottles \u2014 get a quote."
     }
   },
   {
@@ -7288,7 +7295,8 @@ var oilfield_default = [
         "No solid residue formation",
         "Available in drums, IBCs with safety packaging"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Hydrazine"
+      wikiUrl: "https://en.wikipedia.org/wiki/Hydrazine",
+      seoDescription: "Hydrazine hydrate 35/55/80% (CAS 7803-57-8), ex-stock Muscat. Boiler oxygen scavenger at 1-2 ppm per ppm O2. Drums, IBCs \u2014 request a quote."
     }
   },
   {
@@ -7954,7 +7962,8 @@ var oilfield_default = [
         "Low dust, easy handling",
         "Packaging: 25kg, 50kg bags, bulk bags"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_carbonate"
+      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_carbonate",
+      seoDescription: "Soda ash dense 99.2% Na2CO3 (CAS 497-19-8), ex-stock Muscat. Drilling-fluid pH control at 0.5-2 lb/bbl. Bulk bags \u2014 request a quote."
     }
   },
   {
@@ -9106,7 +9115,8 @@ var soap_detergent_default = [
         "Packaging: 250kg drum, 1,250kg IBC",
         "Grade: Pharmaceutical (USP/BP), Food-grade (E422), Technical"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Glycerol"
+      wikiUrl: "https://en.wikipedia.org/wiki/Glycerol",
+      seoDescription: "Glycerine 99.5% pharmaceutical/USP grade (CAS 56-81-5), ex-stock Muscat. Humectant & plasticiser for soap and cosmetics. Get a quote."
     }
   },
   {
@@ -10089,7 +10099,8 @@ var solvents_default = [
         "Available in drums, IBCs, ISO tanks, bulk",
         "Meets ASTM specifications"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Naphtha"
+      wikiUrl: "https://en.wikipedia.org/wiki/Naphtha",
+      seoDescription: "Industrial naphtha, light/medium/heavy grades (CAS 64742-89-8), ex-stock Muscat. Degreasing & petrochemical feedstock. Drums to bulk \u2014 get a quote."
     }
   },
   {
@@ -10347,7 +10358,8 @@ var swimming_pool_default = [
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Swimming_pool_sanitation",
       guideUrl: "/blog/swimming-pool-chemicals-oman-muscat",
-      guideLabel: "Swimming pool chemicals in Oman \u2014 dosing for hotels, villas and facilities"
+      guideLabel: "Swimming pool chemicals in Oman \u2014 dosing for hotels, villas and facilities",
+      seoDescription: "Swimming pool chemicals in Oman \u2014 sanitisers, pH balancers & algaecides for free chlorine 1-3 ppm, pH 7.2-7.6. Full range \u2014 request a quote."
     }
   },
   {
@@ -11184,7 +11196,8 @@ var tank_cleaners_default = [
         "Biodegradable surfactant system",
         "Lower corrosion on metals vs high pH cleaners",
         "Available in 20L, 200L drums"
-      ]
+      ],
+      seoDescription: "Alkaleen safety cleaner, pH 10-12 alkaline liquid, dilution 1:10-1:20. Low-hazard tank & equipment degreasing. 20 L, 200 L drums \u2014 get a quote."
     }
   },
   {
@@ -11236,7 +11249,8 @@ var tank_cleaners_default = [
           answer: "A sludge breaker (also called demulsifier or oil-water separator for crude tank cleaning) is a specialty chemical that breaks the stable water-in-oil or oil-in-water emulsion in crude oil and petroleum sludge, allowing phase separation and recovery of the entrapped oil before disposal. Crude oil storage tanks in Oman accumulate a bottom layer of dense sludge comprising heavy asphaltenes, waxes, mineral solids, and emulsified water \u2014 sometimes 1\u20133 metres deep in large tanks operated for 5\u201310 years without complete cleanout. Sludge breaker chemicals (aromatic solvents combined with nonionic demulsifier polymers) are introduced into the tank and circulated at elevated temperature (50\u201370\xB0C), penetrating and dissolving the wax and asphaltene matrix, breaking water-in-crude emulsions, and reducing sludge viscosity to allow pumping. Once treated, the separated crude oil can be recovered and blended back into production, while the water layer and residual mineral solids are processed through the wastewater treatment system. Global Chemicals LLC supplies sludge breakers for PDO, OQ, and independent crude oil storage facilities in Oman."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Emulsion"
+      wikiUrl: "https://en.wikipedia.org/wiki/Emulsion",
+      seoDescription: "Emulsion sludge breaker for crude tank bottoms in Oman. Dosage 100-1000 ppm, separates in 2-24 hours. Drums, IBCs \u2014 request a quote."
     }
   },
   {
@@ -11789,7 +11803,8 @@ var water_treatment_default = [
         "Moisture content: <5%",
         "Bulk density: 0.40-0.55 g/cm\xB3"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Activated_carbon"
+      wikiUrl: "https://en.wikipedia.org/wiki/Activated_carbon",
+      seoDescription: "Activated carbon, iodine number >900 mg/g (CAS 64365-11-3), ex-stock Muscat. GAC 8x30 mesh & PAC grades for water treatment. Get a quote."
     }
   },
   {

@@ -30,6 +30,7 @@ export interface BlogPost {
   icon: any;
   faqs?: { question: string; answer: string }[];
   relatedLocations?: { slug: string; label: string }[];
+  relatedProducts?: { url: string; label: string }[];
   howTo?: {
     name: string;
     description: string;
@@ -71,6 +72,12 @@ Global Chemicals LLC is a JSRS-certified, ISO 9001:2015 accredited chemical supp
     category: 'Industry Guide',
     tags: ['Chemical Suppliers', 'Oman', 'Industry Guide', 'JSRS', 'ISO 9001'],
     icon: TrendingUp,
+    relatedProducts: [
+      { url: '/products/soap-detergent/sodium-meta-silicate-pentahydrate', label: 'Sodium Meta Silicate Pentahydrate' },
+      { url: '/products/soap-detergent/glycerine-soap', label: 'Glycerine' },
+      { url: '/products/tank-cleaners/alkaleen-cleaner-safety', label: 'Alkaleen Cleaner Safety Liquid' },
+      { url: '/products/tank-cleaners/emulsion-sludge-breaker', label: 'Emulsion Sludge Breaker' },
+    ],
     howTo: {
       name: 'How to Evaluate and Select a Chemical Supplier in Oman for Industrial, Oilfield, or Laboratory Requirements',
       description: 'Step-by-step guide for procurement and operations teams to shortlist, qualify, and award contracts to a compliant chemical supplier in Oman covering JSRS, ISO 9001, product range, logistics, and technical support.',
@@ -197,6 +204,9 @@ Global Chemicals LLC supplies agricultural chemicals including fertilizers, soil
     category: 'Industry Guide',
     tags: ['Agricultural Chemicals', 'Oman', 'Buyer Guide', 'Fertilizers', 'Soil'],
     icon: Leaf,
+    relatedProducts: [
+      { url: '/products/agro/humic-acid-fertilizer', label: 'Humic Acid (Leonardite Extract)' },
+    ],
     howTo: {
       name: 'How to Source Agricultural Chemicals for Oman Farming Operations',
       description: 'Step-by-step guide to selecting and procuring fertilizers, soil conditioners, and irrigation water treatment chemicals for farms and agricultural operations in Oman.',
@@ -248,6 +258,11 @@ Global Chemicals LLC monitors water treatment trends across Oman and the GCC to 
     category: 'Water Treatment',
     tags: ['Desalination', 'Innovation', 'Sustainability', 'MBR', 'Oman', 'Wastewater'],
     icon: Droplets,
+    relatedProducts: [
+      { url: '/products/water-treatment/soda-ash-water', label: 'Soda Ash' },
+      { url: '/products/water-treatment/sodium-meta-silicate', label: 'Sodium Meta Silicate' },
+      { url: '/products/water-treatment/activated-carbon-water', label: 'Activated Carbon' },
+    ],
     howTo: {
       name: 'How to Evaluate and Adopt Advanced Water Treatment Technologies for Industrial Facilities in Oman',
       description: 'Step-by-step guide to assessing current water treatment systems and upgrading to 2025-standard technologies — AOP, smart dosing, MBR, and ZLD — for industrial facilities in Oman.',
@@ -298,6 +313,11 @@ Global Chemicals LLC supplies Shell, Mobil, Castrol, and Total lubricants to ind
     category: 'Industrial Chemicals',
     tags: ['Lubricants', 'Maintenance', 'Best Practices', 'Shell', 'Mobil', 'Oman'],
     icon: Factory,
+    relatedProducts: [
+      { url: '/products/solvents/mineral-spirits', label: 'Mineral Spirits' },
+      { url: '/products/solvents/naphtha-industrial', label: 'Naphtha (Industrial Grade)' },
+      { url: '/products/chlorinated/trichloroethylene', label: 'Trichloroethylene (TCE)' },
+    ],
     howTo: {
       name: 'How to Select the Right Industrial Lubricant for Oman\'s Climate and Equipment',
       description: 'Step-by-step guide to choosing the correct viscosity grade and base oil type for industrial equipment operating in Oman\'s high-temperature, dusty desert environment.',
@@ -398,6 +418,13 @@ Global Chemicals LLC supplies laboratory chemicals including analytical reagents
     category: 'Safety',
     tags: ['Laboratory', 'Safety', 'Compliance', 'GHS', 'SDS', 'Oman'],
     icon: Beaker,
+    relatedProducts: [
+      { url: '/products/lab-chemicals/sodium-hydroxide-pellets-lab', label: 'Sodium Hydroxide Pellets (Lab Grade)' },
+      { url: '/products/lab-chemicals/sulfuric-acid-lab', label: 'Sulfuric Acid (Lab Grade)' },
+      { url: '/products/lab-chemicals/isopropanol-lab', label: 'Isopropanol (Lab Grade)' },
+      { url: '/products/lab-chemicals/dichloromethane-lab', label: 'Dichloromethane (Lab Grade)' },
+      { url: '/products/lab-chemicals/diethyl-ether-lab', label: 'Diethyl Ether (Lab Grade)' },
+    ],
     howTo: {
       name: 'How to Set Up Safe Chemical Storage in an Omani Laboratory',
       description: 'Step-by-step guide to establishing GHS-compliant chemical storage and safety systems in a laboratory in Oman, covering segregation, labelling, PPE, and emergency response.',
@@ -455,6 +482,13 @@ Contact our oilfield chemicals team at sales@gcoman.com or +968-93754388 to disc
     category: 'Oil & Gas',
     tags: ['Oilfield', 'Production', 'Innovation', 'PDO', 'JSRS', 'Oman', 'EOR'],
     icon: TrendingUp,
+    relatedProducts: [
+      { url: '/products/oilfield/sodium-thiosulphate-liquid', label: 'Sodium Thiosulphate Liquid' },
+      { url: '/products/oilfield/magnesium-oxide', label: 'Magnesium Oxide' },
+      { url: '/products/oilfield/hydrazine-hydrate', label: 'Hydrazine Hydrate' },
+      { url: '/products/oilfield/soda-ash-dense', label: 'Soda Ash Dense' },
+      { url: '/products/oilfield/reverse-demulsifier', label: 'Reverse Demulsifier (Produced Water Clarifier)' },
+    ],
     faqs: [
       {
         question: 'What corrosion inhibitors are used in Oman\'s PDO oilfield operations?',
@@ -526,6 +560,13 @@ Global Chemicals LLC supplies cooling tower treatment chemicals — antiscalants
     category: 'Water Treatment',
     tags: ['Cooling Tower', 'Maintenance', 'Efficiency', 'Legionella', 'Scale', 'Oman'],
     icon: Droplets,
+    relatedProducts: [
+      { url: '/products/cooling-water/algae-control', label: 'Algae Control' },
+      { url: '/products/cooling-water/antifouling-liquid', label: 'Antifouling Liquid' },
+      { url: '/products/corrosion-inhibitor/corrosion-inhibitor-multi-metal', label: 'Corrosion Inhibitor (Multi Metal Cooling Water)' },
+      { url: '/products/corrosion-inhibitor/ph-booster-corrosion-inhibitor', label: 'pH Booster cum Corrosion Inhibitor' },
+      { url: '/products/corrosion-inhibitor/oxygen-scavenger', label: 'Oxygen Scavenger' },
+    ],
     faqs: [
       {
         question: 'What chemicals are required for cooling tower water treatment in Oman?',
@@ -924,6 +965,10 @@ For PDO, OQ, and oil and gas contractor supply enquiries: email sales@gcoman.com
     category: 'Oil & Gas',
     tags: ['JSRS', 'PDO', 'OQ', 'Oil Gas Chemicals', 'Oman', 'ICV', 'ISO 9001'],
     icon: TrendingUp,
+    relatedProducts: [
+      { url: '/products/oilfield/boric-acid', label: 'Boric Acid' },
+      { url: '/products/corrosion-inhibitor/oxygen-scavenger', label: 'Oxygen Scavenger' },
+    ],
     howTo: {
       name: 'How to Add a Chemical Supplier to the Approved Vendor List for PDO or OQ in Oman',
       description: 'Step-by-step guide for oil and gas procurement teams in Oman to onboard a new JSRS-registered chemical supplier to their approved vendor list for PDO, OQ, OPAL, or contractor procurement systems.',
@@ -990,6 +1035,10 @@ Global Chemicals LLC supplies a comprehensive range of food-grade chemicals to O
     category: 'Industrial Chemicals',
     tags: ['Food Grade Chemicals', 'HACCP', 'Halal', 'CIP', 'Oman', 'Food Manufacturing', 'Caustic Soda'],
     icon: Leaf,
+    relatedProducts: [
+      { url: '/products/food-beverage/xanthan-gum', label: 'Xanthan Gum (Food Grade)' },
+      { url: '/products/food-beverage/potassium-sorbate', label: 'Potassium Sorbate (Food Grade)' },
+    ],
     howTo: {
       name: 'How to Set Up a HACCP-Compliant CIP Programme in an Oman Food Plant',
       description: 'Step-by-step guide to establishing a Clean-in-Place (CIP) chemical programme for food and beverage manufacturing facilities in Oman, meeting HACCP and food-grade chemical requirements.',
@@ -1118,6 +1167,9 @@ Global Chemicals LLC is an authorised distributor of Shell, Mobil, and Castrol l
     category: 'Industrial Chemicals',
     tags: ['Shell Lubricants', 'Mobil Lubricants', 'Castrol', 'Industrial Lubricants', 'Oman', 'Engine Oil', 'Hydraulic Oil'],
     icon: Factory,
+    relatedProducts: [
+      { url: '/products/lubricants/gp-lubricants', label: 'GP (IPOL) Lubricants' },
+    ],
     howTo: {
       name: 'How to Select the Right Industrial Lubricant for Oman\'s Extreme Climate',
       description: 'Step-by-step guide to choosing the correct Shell, Mobil, Castrol, or GP lubricant for industrial equipment operating in Oman\'s high-temperature environment, covering engine oils, hydraulic fluids, gear oils, and greases.',
@@ -1180,6 +1232,10 @@ Global Chemicals LLC supplies a complete range of swimming pool chemicals to hot
     category: 'Water Treatment',
     tags: ['Swimming Pool Chemicals', 'Calcium Hypochlorite', 'TCCA', 'Pool Maintenance', 'Oman', 'Muscat', 'Hotels'],
     icon: Droplets,
+    relatedProducts: [
+      { url: '/products/swimming-pool/sodium-bi-sulphite-liquid-pool', label: 'Sodium Bi Sulphite Liquid' },
+      { url: '/products/swimming-pool/swimming-pool-chemical', label: 'Swimming Pool Chemical' },
+    ],
     howTo: {
       name: 'How to Set Up a Swimming Pool Chemical Programme in Oman',
       description: 'Complete step-by-step guide to balancing pool water chemistry and establishing a chemical dosing routine for hotel, resort, villa, and commercial swimming pools in Oman\'s extreme summer heat.',
@@ -1658,6 +1714,9 @@ Global Chemicals LLC supplies MEG and DEG from stock in Muscat to upstream opera
     category: 'Oil & Gas',
     tags: ['MEG', 'DEG', 'Gas Dehydration', 'Hydrate Inhibition', 'Oilfield', 'Glycol', 'Oman', 'GCC'],
     icon: Factory,
+    relatedProducts: [
+      { url: '/products/water-treatment/deg-water', label: 'DEG (Diethylene Glycol)' },
+    ],
     faqs: [
       {
         question: 'Should I use MEG or DEG for hydrate inhibition in a wet gas line?',

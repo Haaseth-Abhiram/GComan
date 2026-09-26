@@ -258,6 +258,22 @@ const BlogPost = () => {
               </div>
             )}
 
+            {post.relatedProducts && post.relatedProducts.length > 0 && (
+              <div className="mt-10">
+                <p className="text-sm font-medium text-muted-foreground mb-3">Related products:</p>
+                <div className="flex flex-wrap gap-2">
+                  {post.relatedProducts.map((prod) => (
+                    <Button key={prod.url} variant="outline" size="sm" asChild>
+                      <LocalizedLink to={prod.url}>
+                        {prod.label}
+                        <ChevronRight className="ml-1 h-3 w-3" />
+                      </LocalizedLink>
+                    </Button>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {/* Tags */}
             <div className="mt-10 pt-6 border-t border-border">
               <p className="text-sm font-medium text-muted-foreground mb-3">Tags:</p>
