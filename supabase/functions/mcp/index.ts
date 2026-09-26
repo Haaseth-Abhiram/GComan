@@ -734,7 +734,7 @@ var alcohols_default = [
 var calcium_carbonate_default = [
   {
     id: "calcium-carbonate",
-    title: "Calcium Carbonate",
+    title: "Calcium Carbonate (Industrial Grade)",
     description: "High-purity calcium carbonate (CaCO3) \u2014 ground calcium carbonate (GCC) and precipitated calcium carbonate (PCC) for construction, plastics, paints, food, and industrial applications in Oman.",
     category: "calcium-carbonate",
     image: "https://gcoman.com/images/products/white-powder.webp",
@@ -1453,7 +1453,7 @@ var cooling_water_default = [
   },
   {
     id: "biocide-cooling",
-    title: "Biocide",
+    title: "Biocide (Cooling Tower Grade)",
     description: "Broad-spectrum biocide for cooling water treatment and microbial control.",
     category: "cooling-water",
     image: "https://gcoman.com/images/products/cooling-tower.webp",
@@ -2037,7 +2037,7 @@ var corrosion_inhibitor_default = [
   },
   {
     id: "corrosion-inhibitor-general",
-    title: "Corrosion Inhibitor",
+    title: "Corrosion Inhibitor (General Industrial Grade)",
     description: "General-purpose corrosion prevention chemical for industrial applications.",
     category: "corrosion-inhibitor",
     image: "https://gcoman.com/images/products/chemical-drums.webp",
@@ -2355,7 +2355,7 @@ var corrosion_inhibitor_default = [
 var ethanolamines_default = [
   {
     id: "mea-monoethanolamine",
-    title: "MEA (Monoethanolamine)",
+    title: "MEA (Monoethanolamine) \u2014 Refinery & Industrial Grade",
     description: "High-purity monoethanolamine for gas sweetening and chemical manufacturing.",
     category: "ethanolamines",
     image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
@@ -3502,7 +3502,7 @@ var food_beverage_default = [
 var glycols_default = [
   {
     id: "meg-ethylene-glycol",
-    title: "MEG (Monoethylene Glycol)",
+    title: "MEG (Monoethylene Glycol) \u2014 Antifreeze & Polyester Grade",
     description: "Industrial monoethylene glycol for antifreeze, coolants, and polyester production.",
     category: "glycols",
     image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
@@ -3565,7 +3565,7 @@ var glycols_default = [
   },
   {
     id: "deg-diethylene-glycol",
-    title: "DEG (Diethylene Glycol)",
+    title: "DEG (Diethylene Glycol) \u2014 Resin & Plasticiser Grade",
     description: "Diethylene glycol \u226599.5% for polyester resins, plasticisers, and natural-gas dehydration blend make-up in Oman & GCC.",
     category: "glycols",
     image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
@@ -6473,7 +6473,7 @@ var oilfield_default = [
   },
   {
     id: "activated-carbon",
-    title: "Activated Carbon",
+    title: "Activated Carbon (Refinery Grade)",
     description: "Highly porous carbon for adsorption and purification applications.",
     category: "oilfield",
     image: "https://gcoman.com/images/products/chemical-drums.webp",
@@ -7039,7 +7039,7 @@ var oilfield_default = [
   },
   {
     id: "calcium-chloride-oil",
-    title: "Calcium Chloride",
+    title: "Calcium Chloride (Oilfield Brine Grade)",
     description: "Dense brine solution for well completion and workover operations.",
     category: "oilfield",
     image: "https://gcoman.com/images/products/chemical-drums.webp",
@@ -7094,7 +7094,7 @@ var oilfield_default = [
   },
   {
     id: "citric-acid-liquid",
-    title: "Citric Acid Liquid",
+    title: "Citric Acid Liquid (Oilfield Acidizing Grade)",
     description: "Liquid acidizing agent for well stimulation and scale removal.",
     category: "oilfield",
     image: "https://gcoman.com/images/products/chemical-drums.webp",
@@ -7302,7 +7302,7 @@ var oilfield_default = [
   },
   {
     id: "corrosion-inhibitor",
-    title: "Corrosion Inhibitor",
+    title: "Corrosion Inhibitor (Oilfield Grade)",
     description: "Protective chemicals for pipelines and equipment.",
     category: "oilfield",
     image: "https://gcoman.com/images/products/chemical-drums.webp",
@@ -7416,7 +7416,7 @@ var oilfield_default = [
   },
   {
     id: "deg",
-    title: "DEG (Diethylene Glycol)",
+    title: "DEG (Diethylene Glycol) \u2014 Gas Dehydration Grade",
     description: "Dehydration agent and inhibitor for gas processing.",
     category: "oilfield",
     image: "https://gcoman.com/images/products/chemical-drums.webp",
@@ -7631,7 +7631,7 @@ var oilfield_default = [
   },
   {
     id: "edta-powder",
-    title: "EDTA Powder",
+    title: "EDTA Powder (Oilfield Grade)",
     description: "Powder chelating agent for industrial applications.",
     category: "oilfield",
     image: "https://gcoman.com/images/products/chemical-drums.webp",
@@ -7736,7 +7736,7 @@ var oilfield_default = [
   },
   {
     id: "hydrazine-hydrate",
-    title: "Hydrazine Hydrate",
+    title: "Hydrazine Hydrate (Oilfield Boiler Grade)",
     description: "Oxygen scavenger for boiler water treatment.",
     category: "oilfield",
     image: "https://gcoman.com/images/products/chemical-drums.webp",
@@ -7899,7 +7899,7 @@ var oilfield_default = [
   },
   {
     id: "mea",
-    title: "MEA (Monoethanolamine)",
+    title: "MEA (Monoethanolamine) \u2014 Oilfield Gas Treating Grade",
     description: "Amine for CO2 and H2S removal from gas streams.",
     category: "oilfield",
     image: "https://gcoman.com/images/products/chemical-drums.webp",
@@ -7947,7 +7947,7 @@ var oilfield_default = [
   },
   {
     id: "meg",
-    title: "MEG (Monoethylene Glycol)",
+    title: "MEG (Monoethylene Glycol) \u2014 Hydrate Inhibitor Grade",
     description: "Hydrate inhibitor and dehydration agent.",
     category: "oilfield",
     image: "https://gcoman.com/images/products/chemical-drums.webp",
@@ -8008,7 +8008,7 @@ var oilfield_default = [
   },
   {
     id: "methanol-tech",
-    title: "Methanol Tech Grade",
+    title: "Methanol Tech Grade (Hydrate Inhibitor)",
     description: "Hydrate inhibitor and antifreeze for gas systems.",
     category: "oilfield",
     image: "https://gcoman.com/images/products/chemical-drums.webp",
@@ -8182,7 +8182,7 @@ var oilfield_default = [
   },
   {
     id: "potassium-hydroxide",
-    title: "Potassium Hydroxide",
+    title: "Potassium Hydroxide (Drilling Fluid Grade)",
     description: "Strong base for pH control and chemical synthesis.",
     category: "oilfield",
     image: "https://gcoman.com/images/products/chemical-drums.webp",
@@ -8458,7 +8458,7 @@ var oilfield_default = [
   },
   {
     id: "soda-ash-dense",
-    title: "Soda Ash Dense",
+    title: "Soda Ash Dense (Drilling Fluid Grade)",
     description: "Sodium carbonate for pH control and water treatment.",
     category: "oilfield",
     image: "https://gcoman.com/images/products/chemical-drums.webp",
@@ -8506,7 +8506,7 @@ var oilfield_default = [
   },
   {
     id: "soda-ash-light",
-    title: "Soda Ash Light",
+    title: "Soda Ash Light (Industrial Grade)",
     description: "Light density sodium carbonate for various applications.",
     category: "oilfield",
     image: "https://gcoman.com/images/products/chemical-drums.webp",
@@ -9061,7 +9061,7 @@ var ro_chemicals_default = [
   },
   {
     id: "citric-acid-liquid-ro",
-    title: "Citric Acid Liquid",
+    title: "Citric Acid Liquid (RO Membrane Cleaning Grade)",
     description: "Organic acid cleaner for RO membrane descaling and fouling removal.",
     category: "ro-chemicals",
     image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
@@ -9612,7 +9612,7 @@ var soap_detergent_default = [
   },
   {
     id: "edta-powder-soap",
-    title: "EDTA Powder",
+    title: "EDTA Powder (Detergent Grade)",
     description: "Ethylenediaminetetraacetic acid (EDTA) \u2014 chelating agent for water hardness control, metal sequestration, and stability enhancement in detergent, cleaning, and industrial formulations.",
     category: "soap-detergent",
     image: "https://gcoman.com/images/products/white-powder.webp",
@@ -9669,7 +9669,7 @@ var soap_detergent_default = [
   },
   {
     id: "glycerine-soap",
-    title: "Glycerine",
+    title: "Glycerine (Soap & Personal Care Grade)",
     description: "Pharmaceutical/technical grade glycerine (glycerol) \u2014 humectant, solvent, and plasticiser for soap, cosmetics, food, pharmaceutical, and industrial applications in Oman.",
     category: "soap-detergent",
     image: "https://gcoman.com/images/products/chemical-drums.webp",
@@ -10180,7 +10180,7 @@ var soap_detergent_default = [
   },
   {
     id: "soda-ash-dense-soap",
-    title: "Soda Ash Dense",
+    title: "Soda Ash Dense (Detergent Grade)",
     description: "Dense grade sodium carbonate (Na2CO3) \u2014 alkaline builder, pH regulator, and water softener for detergent powder formulation, glass production, and industrial processing in Oman.",
     category: "soap-detergent",
     image: "https://gcoman.com/images/products/chemical-drums.webp",
@@ -10242,7 +10242,7 @@ var soap_detergent_default = [
   },
   {
     id: "soda-ash-light-soap",
-    title: "Soda Ash Light",
+    title: "Soda Ash Light (Detergent Grade)",
     description: "Light grade sodium carbonate (Na2CO3) \u2014 fine powder alkaline builder for liquid detergent, soap manufacturing, and chemical production in Oman.",
     category: "soap-detergent",
     image: "https://gcoman.com/images/products/chemical-drums.webp",
@@ -11076,7 +11076,7 @@ var swimming_pool_default = [
   },
   {
     id: "sodium-hypochlorite-pool",
-    title: "Sodium Hypochlorite",
+    title: "Sodium Hypochlorite (Pool Grade)",
     description: "Liquid chlorine solution for pool sanitization and shock treatment.",
     category: "swimming-pool",
     image: "https://gcoman.com/images/products/chemical-drums.webp",
@@ -11677,7 +11677,7 @@ var tank_cleaners_default = [
   },
   {
     id: "methanol-tech-grade-cleaner",
-    title: "Methanol Tech Grade",
+    title: "Methanol Tech Grade (Tank Cleaning)",
     description: "Technical grade methanol for industrial cleaning and degreasing.",
     category: "tank-cleaners",
     image: "https://gcoman.com/images/products/chemical-drums.webp",
@@ -12602,7 +12602,7 @@ var tank_cleaners_default = [
 var water_treatment_default = [
   {
     id: "activated-carbon-water",
-    title: "Activated Carbon",
+    title: "Activated Carbon (Water Treatment Grade)",
     description: "High-performance adsorbent for removing impurities, odors, and contaminants from water.",
     category: "water-treatment",
     image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
@@ -12846,7 +12846,7 @@ var water_treatment_default = [
   },
   {
     id: "biocide-water",
-    title: "Biocide",
+    title: "Biocide (Water Treatment Grade)",
     description: "Antimicrobial agent for controlling bacteria, algae, and fungi in water systems.",
     category: "water-treatment",
     image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
@@ -12894,7 +12894,7 @@ var water_treatment_default = [
   },
   {
     id: "calcium-carbonate-water",
-    title: "Calcium Carbonate",
+    title: "Calcium Carbonate (Water Treatment Grade)",
     description: "Mineral supplement for pH adjustment and alkalinity control in water treatment.",
     category: "water-treatment",
     image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
@@ -12947,7 +12947,7 @@ var water_treatment_default = [
   },
   {
     id: "calcium-chloride-water",
-    title: "Calcium Chloride",
+    title: "Calcium Chloride (De-Icing Grade)",
     description: "Desiccant and de-icing agent used in wastewater treatment and concrete acceleration.",
     category: "water-treatment",
     image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
@@ -13232,7 +13232,7 @@ var water_treatment_default = [
   },
   {
     id: "sodium-hypochlorite",
-    title: "Sodium Hypochlorite",
+    title: "Sodium Hypochlorite (Municipal Grade)",
     description: "Liquid bleach and disinfectant for water purification.",
     category: "water-treatment",
     image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
@@ -13554,7 +13554,7 @@ var water_treatment_default = [
   },
   {
     id: "corrosion-inhibitor-water",
-    title: "Corrosion Inhibitor",
+    title: "Corrosion Inhibitor (Boiler & Cooling Grade)",
     description: "Protects metal surfaces from corrosion in water systems and pipelines.",
     category: "water-treatment",
     image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
@@ -13596,7 +13596,7 @@ var water_treatment_default = [
   },
   {
     id: "deg-water",
-    title: "DEG (Diethylene Glycol)",
+    title: "DEG (Diethylene Glycol) \u2014 Industrial Solvent Grade",
     description: "Solvent and humectant for industrial water treatment applications.",
     category: "water-treatment",
     image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
@@ -13643,7 +13643,7 @@ var water_treatment_default = [
   },
   {
     id: "edta-powder-water",
-    title: "EDTA Powder",
+    title: "EDTA Powder (Water Softening Grade)",
     description: "Chelating agent for metal ion sequestration and water softening.",
     category: "water-treatment",
     image: "https://gcoman.com/images/products/white-powder.webp",
@@ -13839,7 +13839,7 @@ var water_treatment_default = [
   },
   {
     id: "glycerine-water",
-    title: "Glycerine",
+    title: "Glycerine (Pharmaceutical & Food Grade)",
     description: "Humectant and solvent used in various water treatment formulations.",
     category: "water-treatment",
     image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
@@ -13959,7 +13959,7 @@ var water_treatment_default = [
   },
   {
     id: "hydrazine-hydrate-water",
-    title: "Hydrazine Hydrate",
+    title: "Hydrazine Hydrate (Utility Boiler Grade)",
     description: "Oxygen scavenger for boiler water treatment and corrosion prevention.",
     category: "water-treatment",
     image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
@@ -14003,7 +14003,7 @@ var water_treatment_default = [
   },
   {
     id: "meg-water",
-    title: "MEG (Monoethylene Glycol)",
+    title: "MEG (Monoethylene Glycol) \u2014 HVAC Coolant Grade",
     description: "Antifreeze and heat transfer fluid for cooling systems.",
     category: "water-treatment",
     image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
@@ -14386,7 +14386,7 @@ var water_treatment_default = [
   },
   {
     id: "potassium-hydroxide-water",
-    title: "Potassium Hydroxide",
+    title: "Potassium Hydroxide (Water Treatment Grade)",
     description: "Strong alkali for pH adjustment and neutralization processes.",
     category: "water-treatment",
     image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",

@@ -109,7 +109,7 @@
   },
   {
     "id": "activated-carbon",
-    "title": "Activated Carbon",
+    "title": "Activated Carbon (Refinery Grade)",
     "description": "Highly porous carbon for adsorption and purification applications.",
     "category": "oilfield",
     "image": "https://gcoman.com/images/products/chemical-drums.webp",
@@ -675,7 +675,7 @@
   },
   {
     "id": "calcium-chloride-oil",
-    "title": "Calcium Chloride",
+    "title": "Calcium Chloride (Oilfield Brine Grade)",
     "description": "Dense brine solution for well completion and workover operations.",
     "category": "oilfield",
     "image": "https://gcoman.com/images/products/chemical-drums.webp",
@@ -730,7 +730,7 @@
   },
   {
     "id": "citric-acid-liquid",
-    "title": "Citric Acid Liquid",
+    "title": "Citric Acid Liquid (Oilfield Acidizing Grade)",
     "description": "Liquid acidizing agent for well stimulation and scale removal.",
     "category": "oilfield",
     "image": "https://gcoman.com/images/products/chemical-drums.webp",
@@ -938,7 +938,7 @@
   },
   {
     "id": "corrosion-inhibitor",
-    "title": "Corrosion Inhibitor",
+    "title": "Corrosion Inhibitor (Oilfield Grade)",
     "description": "Protective chemicals for pipelines and equipment.",
     "category": "oilfield",
     "image": "https://gcoman.com/images/products/chemical-drums.webp",
@@ -1052,7 +1052,7 @@
   },
   {
     "id": "deg",
-    "title": "DEG (Diethylene Glycol)",
+    "title": "DEG (Diethylene Glycol) — Gas Dehydration Grade",
     "description": "Dehydration agent and inhibitor for gas processing.",
     "category": "oilfield",
     "image": "https://gcoman.com/images/products/chemical-drums.webp",
@@ -1267,7 +1267,7 @@
   },
   {
     "id": "edta-powder",
-    "title": "EDTA Powder",
+    "title": "EDTA Powder (Oilfield Grade)",
     "description": "Powder chelating agent for industrial applications.",
     "category": "oilfield",
     "image": "https://gcoman.com/images/products/chemical-drums.webp",
@@ -1372,7 +1372,7 @@
   },
   {
     "id": "hydrazine-hydrate",
-    "title": "Hydrazine Hydrate",
+    "title": "Hydrazine Hydrate (Oilfield Boiler Grade)",
     "description": "Oxygen scavenger for boiler water treatment.",
     "category": "oilfield",
     "image": "https://gcoman.com/images/products/chemical-drums.webp",
@@ -1535,7 +1535,7 @@
   },
   {
     "id": "mea",
-    "title": "MEA (Monoethanolamine)",
+    "title": "MEA (Monoethanolamine) — Oilfield Gas Treating Grade",
     "description": "Amine for CO2 and H2S removal from gas streams.",
     "category": "oilfield",
     "image": "https://gcoman.com/images/products/chemical-drums.webp",
@@ -1583,7 +1583,7 @@
   },
   {
     "id": "meg",
-    "title": "MEG (Monoethylene Glycol)",
+    "title": "MEG (Monoethylene Glycol) — Hydrate Inhibitor Grade",
     "description": "Hydrate inhibitor and dehydration agent.",
     "category": "oilfield",
     "image": "https://gcoman.com/images/products/chemical-drums.webp",
@@ -1644,7 +1644,7 @@
   },
   {
     "id": "methanol-tech",
-    "title": "Methanol Tech Grade",
+    "title": "Methanol Tech Grade (Hydrate Inhibitor)",
     "description": "Hydrate inhibitor and antifreeze for gas systems.",
     "category": "oilfield",
     "image": "https://gcoman.com/images/products/chemical-drums.webp",
@@ -1818,7 +1818,7 @@
   },
   {
     "id": "potassium-hydroxide",
-    "title": "Potassium Hydroxide",
+    "title": "Potassium Hydroxide (Drilling Fluid Grade)",
     "description": "Strong base for pH control and chemical synthesis.",
     "category": "oilfield",
     "image": "https://gcoman.com/images/products/chemical-drums.webp",
@@ -2094,7 +2094,7 @@
   },
   {
     "id": "soda-ash-dense",
-    "title": "Soda Ash Dense",
+    "title": "Soda Ash Dense (Drilling Fluid Grade)",
     "description": "Sodium carbonate for pH control and water treatment.",
     "category": "oilfield",
     "image": "https://gcoman.com/images/products/chemical-drums.webp",
@@ -2142,7 +2142,7 @@
   },
   {
     "id": "soda-ash-light",
-    "title": "Soda Ash Light",
+    "title": "Soda Ash Light (Industrial Grade)",
     "description": "Light density sodium carbonate for various applications.",
     "category": "oilfield",
     "image": "https://gcoman.com/images/products/chemical-drums.webp",

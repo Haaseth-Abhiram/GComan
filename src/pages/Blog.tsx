@@ -74,7 +74,7 @@ Global Chemicals LLC is a JSRS-certified, ISO 9001:2015 accredited chemical supp
     icon: TrendingUp,
     relatedProducts: [
       { url: '/products/soap-detergent/sodium-meta-silicate-pentahydrate', label: 'Sodium Meta Silicate Pentahydrate' },
-      { url: '/products/soap-detergent/glycerine-soap', label: 'Glycerine' },
+      { url: '/products/soap-detergent/glycerine-soap', label: 'Glycerine (Soap & Personal Care Grade)' },
       { url: '/products/tank-cleaners/alkaleen-cleaner-safety', label: 'Alkaleen Cleaner Safety Liquid' },
       { url: '/products/tank-cleaners/emulsion-sludge-breaker', label: 'Emulsion Sludge Breaker' },
     ],
@@ -261,7 +261,7 @@ Global Chemicals LLC monitors water treatment trends across Oman and the GCC to 
     relatedProducts: [
       { url: '/products/water-treatment/soda-ash-water', label: 'Soda Ash' },
       { url: '/products/water-treatment/sodium-meta-silicate', label: 'Sodium Meta Silicate' },
-      { url: '/products/water-treatment/activated-carbon-water', label: 'Activated Carbon' },
+      { url: '/products/water-treatment/activated-carbon-water', label: 'Activated Carbon (Water Treatment Grade)' },
     ],
     howTo: {
       name: 'How to Evaluate and Adopt Advanced Water Treatment Technologies for Industrial Facilities in Oman',
@@ -485,8 +485,8 @@ Contact our oilfield chemicals team at sales@gcoman.com or +968-93754388 to disc
     relatedProducts: [
       { url: '/products/oilfield/sodium-thiosulphate-liquid', label: 'Sodium Thiosulphate Liquid' },
       { url: '/products/oilfield/magnesium-oxide', label: 'Magnesium Oxide' },
-      { url: '/products/oilfield/hydrazine-hydrate', label: 'Hydrazine Hydrate' },
-      { url: '/products/oilfield/soda-ash-dense', label: 'Soda Ash Dense' },
+      { url: '/products/oilfield/hydrazine-hydrate', label: 'Hydrazine Hydrate (Oilfield Boiler Grade)' },
+      { url: '/products/oilfield/soda-ash-dense', label: 'Soda Ash Dense (Drilling Fluid Grade)' },
       { url: '/products/oilfield/reverse-demulsifier', label: 'Reverse Demulsifier (Produced Water Clarifier)' },
     ],
     faqs: [
@@ -1715,7 +1715,7 @@ Global Chemicals LLC supplies MEG and DEG from stock in Muscat to upstream opera
     tags: ['MEG', 'DEG', 'Gas Dehydration', 'Hydrate Inhibition', 'Oilfield', 'Glycol', 'Oman', 'GCC'],
     icon: Factory,
     relatedProducts: [
-      { url: '/products/water-treatment/deg-water', label: 'DEG (Diethylene Glycol)' },
+      { url: '/products/water-treatment/deg-water', label: 'DEG (Diethylene Glycol) — Industrial Solvent Grade' },
     ],
     faqs: [
       {

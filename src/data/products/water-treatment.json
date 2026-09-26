@@ -1,7 +1,7 @@
 [
   {
     "id": "activated-carbon-water",
-    "title": "Activated Carbon",
+    "title": "Activated Carbon (Water Treatment Grade)",
     "description": "High-performance adsorbent for removing impurities, odors, and contaminants from water.",
     "category": "water-treatment",
     "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
@@ -245,7 +245,7 @@
   },
   {
     "id": "biocide-water",
-    "title": "Biocide",
+    "title": "Biocide (Water Treatment Grade)",
     "description": "Antimicrobial agent for controlling bacteria, algae, and fungi in water systems.",
     "category": "water-treatment",
     "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
@@ -293,7 +293,7 @@
   },
   {
     "id": "calcium-carbonate-water",
-    "title": "Calcium Carbonate",
+    "title": "Calcium Carbonate (Water Treatment Grade)",
     "description": "Mineral supplement for pH adjustment and alkalinity control in water treatment.",
     "category": "water-treatment",
     "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
@@ -346,7 +346,7 @@
   },
   {
     "id": "calcium-chloride-water",
-    "title": "Calcium Chloride",
+    "title": "Calcium Chloride (De-Icing Grade)",
     "description": "Desiccant and de-icing agent used in wastewater treatment and concrete acceleration.",
     "category": "water-treatment",
     "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
@@ -631,7 +631,7 @@
   },
   {
     "id": "sodium-hypochlorite",
-    "title": "Sodium Hypochlorite",
+    "title": "Sodium Hypochlorite (Municipal Grade)",
     "description": "Liquid bleach and disinfectant for water purification.",
     "category": "water-treatment",
     "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
@@ -953,7 +953,7 @@
   },
   {
     "id": "corrosion-inhibitor-water",
-    "title": "Corrosion Inhibitor",
+    "title": "Corrosion Inhibitor (Boiler & Cooling Grade)",
     "description": "Protects metal surfaces from corrosion in water systems and pipelines.",
     "category": "water-treatment",
     "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
@@ -995,7 +995,7 @@
   },
   {
     "id": "deg-water",
-    "title": "DEG (Diethylene Glycol)",
+    "title": "DEG (Diethylene Glycol) — Industrial Solvent Grade",
     "description": "Solvent and humectant for industrial water treatment applications.",
     "category": "water-treatment",
     "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
@@ -1042,7 +1042,7 @@
   },
   {
     "id": "edta-powder-water",
-    "title": "EDTA Powder",
+    "title": "EDTA Powder (Water Softening Grade)",
     "description": "Chelating agent for metal ion sequestration and water softening.",
     "category": "water-treatment",
     "image": "https://gcoman.com/images/products/white-powder.webp",
@@ -1238,7 +1238,7 @@
   },
   {
     "id": "glycerine-water",
-    "title": "Glycerine",
+    "title": "Glycerine (Pharmaceutical & Food Grade)",
     "description": "Humectant and solvent used in various water treatment formulations.",
     "category": "water-treatment",
     "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
@@ -1358,7 +1358,7 @@
   },
   {
     "id": "hydrazine-hydrate-water",
-    "title": "Hydrazine Hydrate",
+    "title": "Hydrazine Hydrate (Utility Boiler Grade)",
     "description": "Oxygen scavenger for boiler water treatment and corrosion prevention.",
     "category": "water-treatment",
     "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
@@ -1402,7 +1402,7 @@
   },
   {
     "id": "meg-water",
-    "title": "MEG (Monoethylene Glycol)",
+    "title": "MEG (Monoethylene Glycol) — HVAC Coolant Grade",
     "description": "Antifreeze and heat transfer fluid for cooling systems.",
     "category": "water-treatment",
     "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
@@ -1785,7 +1785,7 @@
   },
   {
     "id": "potassium-hydroxide-water",
-    "title": "Potassium Hydroxide",
+    "title": "Potassium Hydroxide (Water Treatment Grade)",
     "description": "Strong alkali for pH adjustment and neutralization processes.",
     "category": "water-treatment",
     "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
