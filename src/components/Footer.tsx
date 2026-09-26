@@ -314,7 +314,7 @@ const Footer = () => {
 
             {/* Google Reviews CTA */}
             <a
-              href="https://www.google.com/maps/search/?api=1&query=Global+Chemicals+LLC+Ghala+Muscat+Oman"
+              href="https://g.page/r/CWLBtunkhjqlEBM/review"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 mt-3 px-4 py-2 bg-white/10 hover:bg-white/20 text-white text-sm font-medium rounded-lg transition-colors border border-white/20"
