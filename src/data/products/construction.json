@@ -100,6 +100,16 @@
         "Food-grade options available",
         "Available in 200L drums, bulk"
       ],
+      "faqs": [
+        {
+          "question": "What grade and pack sizes of Paraffin Oil are available in Oman?",
+          "answer": "Global Chemicals LLC supplies Paraffin Oil in Oman — Appearance: Clear, colorless oil — available in 200L drums, bulk, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+        },
+        {
+          "question": "What is Paraffin Oil used for?",
+          "answer": "Paraffin Oil is commonly used for Concrete curing compound formulation, Formwork and mold release agent, and Dust control and suppression. Global Chemicals LLC supplies Paraffin Oil across Oman and the wider GCC with full SDS documentation to support these applications."
+        }
+      ],
       "wikiUrl": "https://en.wikipedia.org/wiki/Mineral_oil"
     }
   },
@@ -150,6 +160,10 @@
         {
           "question": "What is a polymer bonding agent and when is it used in Oman construction?",
           "answer": "A polymer bonding agent (typically SBR — styrene-butadiene rubber latex, or acrylic polymer) is a liquid chemical additive applied to existing concrete or masonry surfaces before applying new render, screed, or repair mortar to promote adhesion between the old and new substrates. Without a bonding agent, new cement-based material applied to dense, smooth, or contaminated old concrete tends to debond (delaminate) within months as differential movement and thermal cycling cause interface failure. In Oman's hot climate, where daily temperature swings of 15–25°C create significant thermal expansion and contraction in concrete structures, bonding agent application is standard practice for all concrete repair and overlay work. Application method: the bonding agent (diluted SBR latex 1:1 with water for most applications) is brushed onto the prepared substrate and allowed to become 'tacky' (not dry) before applying the fresh concrete overlay. The polymer chains from the bonding agent penetrate both surfaces and form a physical and chemical bond across the interface. Global Chemicals LLC supplies SBR and acrylic polymer bonding agents for Oman's construction repair and maintenance sector."
+        },
+        {
+          "question": "What grade and pack sizes of Polymer Bonding Agent are available in Oman?",
+          "answer": "Global Chemicals LLC supplies Polymer Bonding Agent in Oman — Solids content: 40-50% — available in 5L, 20L, 200L containers, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
         }
       ],
       "wikiUrl": "https://en.wikipedia.org/wiki/Styrene-butadiene",
@@ -245,6 +259,16 @@
         "Extends formwork life up to 100 uses",
         "Easy concrete demolding",
         "Available in 20L, 200L drums"
+      ],
+      "faqs": [
+        {
+          "question": "What grade and pack sizes of Mould Releasing Agents are available in Oman?",
+          "answer": "Global Chemicals LLC supplies Mould Releasing Agents in Oman — Types: Oil-based, water-based, chemical reactive — available in 20L, 200L drums, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+        },
+        {
+          "question": "What is Mould Releasing Agents used for?",
+          "answer": "Mould Releasing Agents is commonly used for Concrete formwork treatment, Precast concrete production, and Steel and timber form treatment. Global Chemicals LLC supplies Mould Releasing Agents across Oman and the wider GCC with full SDS documentation to support these applications."
+        }
       ],
       "wikiUrl": "https://en.wikipedia.org/wiki/Mold_release_agent"
     }

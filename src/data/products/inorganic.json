@@ -52,6 +52,10 @@
         {
           "question": "What is the optimal pH range for alum coagulation in water treatment?",
           "answer": "The optimal pH range for aluminium sulfate (alum) coagulation is 6.5–7.5, where aluminium hydroxide Al(OH)₃ floc formation is most efficient and the resulting floc is dense and settles rapidly. At pH below 6.0, aluminium remains in solution as Al³⁺ ions — no floc forms and coagulation fails. At pH above 8.0, aluminium hydroxide redissolves as the aluminate anion Al(OH)₄⁻, again preventing floc formation. Oman's raw water sources vary widely in natural pH: desalinated water from SWRO plants is slightly acidic (pH 5.5–6.5) and may require pH correction before coagulation; dam water from Wadi Dayqah is typically pH 7.5–8.5 due to carbonate geology, which is within the acceptable range; groundwater can be highly alkaline (pH 7.5–9.5). When treating alkaline Oman water with alum, the coagulant dose must be sufficient to overcome alkalinity buffering and achieve the target pH, or pre-acidification may be needed. Jar testing with each raw water source is essential to determine the optimal dose. Global Chemicals LLC provides jar test protocol support and alum optimisation services for Oman water utilities."
+        },
+        {
+          "question": "What grade and pack sizes of Aluminum Sulfate (Alum) are available in Oman?",
+          "answer": "Global Chemicals LLC supplies Aluminum Sulfate (Alum) in Oman — Al2O3 content: 17% minimum — available in 25kg bags, 1000L IBCs, bulk, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
         }
       ]
     }
@@ -151,6 +155,10 @@
         {
           "question": "What is the difference between quicklime and hydrated lime and when is each used in Oman?",
           "answer": "Quicklime (calcium oxide, CaO) and hydrated lime (calcium hydroxide, Ca(OH)₂) are both produced from limestone (calcium carbonate) but at different stages of processing. Quicklime is produced by calcining (burning) limestone at 900–1,200°C, driving off CO₂ to leave CaO. It is a highly reactive material that generates intense heat when mixed with water (the slaking reaction: CaO + H₂O → Ca(OH)₂ + heat), requiring careful handling with full PPE. Hydrated lime is produced by controlled slaking of quicklime with a stoichiometric amount of water, producing a dry white powder of Ca(OH)₂ that is safer and easier to handle but less concentrated than quicklime. In Oman water treatment: hydrated lime (milk of lime slurry) is used for pH adjustment in acidic desalinated water, softening of hard water (lime softening), and stabilisation of wastewater sludge. Quicklime is used in larger industrial applications (flue gas treatment, steel pickling, sugar refining) where the slaking heat is beneficial or where bulk efficiency outweighs handling complexity. Global Chemicals LLC supplies both quicklime and hydrated lime for Oman industrial and water treatment applications."
+        },
+        {
+          "question": "What grade and pack sizes of Quicklime (Calcium Oxide) are available in Oman?",
+          "answer": "Global Chemicals LLC supplies Quicklime (Calcium Oxide) in Oman — CaO content: 90-95% — available in 25kg bags, bulk bags, bulk, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
         }
       ]
     }
@@ -263,6 +271,16 @@
         "Available in 250kg drums, IBCs, bulk",
         "Meets industrial grade specifications"
       ],
+      "faqs": [
+        {
+          "question": "What grade and pack sizes of Sodium Silicate Solution (Water Glass) are available in Oman?",
+          "answer": "Global Chemicals LLC supplies Sodium Silicate Solution (Water Glass) in Oman — Ratios: 2.0R, 2.4R, 3.22R, 3.75R — available in 250kg drums, IBCs, bulk, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+        },
+        {
+          "question": "What is Sodium Silicate Solution (Water Glass) used for?",
+          "answer": "Sodium Silicate Solution (Water Glass) is commonly used for Detergent and soap formulation, Adhesives and binders, and Concrete and cement additives. Global Chemicals LLC supplies Sodium Silicate Solution (Water Glass) across Oman and the wider GCC with full SDS documentation to support these applications."
+        }
+      ],
       "wikiUrl": "https://en.wikipedia.org/wiki/Sodium_silicate"
     }
   },
@@ -308,6 +326,16 @@
         "pH: 4-6 (5% solution)",
         "Available in 25kg bags, 50kg bags, bulk bags",
         "Meets agricultural and industrial grades"
+      ],
+      "faqs": [
+        {
+          "question": "What grade and pack sizes of Zinc Sulfate are available in Oman?",
+          "answer": "Global Chemicals LLC supplies Zinc Sulfate in Oman — Zinc content: 21-23% — available in 25kg bags, 50kg bags, bulk bags, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+        },
+        {
+          "question": "What is Zinc Sulfate used for?",
+          "answer": "Zinc Sulfate is commonly used for Agricultural fertilizer (zinc deficiency correction), Animal feed supplement, and Rayon and fiber production. Global Chemicals LLC supplies Zinc Sulfate across Oman and the wider GCC with full SDS documentation to support these applications."
+        }
       ],
       "wikiUrl": "https://en.wikipedia.org/wiki/Zinc_sulfate"
     }
