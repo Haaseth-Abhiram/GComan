@@ -12,6 +12,7 @@ import WhyChooseUs from '@/components/WhyChooseUs';
 import QuickActions from '@/components/QuickActions';
 import { SEO } from '@/components/SEO';
 import { FAQStructuredData, SpeakableStructuredData, ServiceStructuredData } from '@/components/StructuredData';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import heroLcp from '@/assets/hero-water-treatment.webp';
 
 // Homepage FAQs for rich snippets — GCC-wide coverage
@@ -35,6 +36,10 @@ const homepageFAQs = [
   {
     question: "Does Global Chemicals provide technical support for chemical applications?",
     answer: "Yes, we provide comprehensive technical support including product selection guidance for water treatment, oilfield, and industrial applications, Safety Data Sheets (SDS), Certificates of Analysis (CoA), and on-site technical consultation. Our experienced team has 10+ years of expertise serving industries across Oman and the Middle East."
+  },
+  {
+    question: "Is Global Chemicals LLC the same company as Global Chemicals & Maintenance Systems LLC?",
+    answer: "No. Global Chemicals LLC (gcoman.com) is a separate, independent company — a B2B chemical supplier based in Ghala, Muscat, supplying water treatment, oilfield, laboratory, and industrial chemicals across Oman and the GCC. Global Chemicals & Maintenance Systems LLC is a different Oman-registered company. If you were looking for chemical products, industrial lubricants, or laboratory reagents, you're in the right place — contact us at info@gcoman.com or +968-93754388."
   }
 ];
 
@@ -124,6 +129,30 @@ const Index = () => {
         <IndustrySelector />
         <WhyChooseUs />
         <QuickActions />
+
+        {/* Visible FAQ section — the homepageFAQs schema above must reflect
+            rendered text, not just JSON-LD (the same C1 forceMount lesson
+            applied site-wide: AI crawlers and Google's rich-results checker
+            both expect FAQPage structured data to match visible content). */}
+        <section className="py-16 bg-slate-50/70 border-t border-border/40">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 text-center">
+              Frequently Asked Questions
+            </h2>
+            <Accordion type="single" collapsible className="w-full">
+              {homepageFAQs.map((faq, index) => (
+                <AccordionItem key={index} value={`faq-${index}`}>
+                  <AccordionTrigger className="text-left font-semibold text-base">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>
