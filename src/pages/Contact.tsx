@@ -13,6 +13,7 @@ import { useToast } from '@/hooks/use-toast';
 import { z } from 'zod';
 import { SEO } from '@/components/SEO';
 import { FAQStructuredData, BreadcrumbStructuredData, ContactPageStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
+import { FAQSection } from '@/components/FAQSection';
 import { trackFormSubmission, trackContactClick, trackGenerateLead } from '@/components/GoogleAnalytics';
 import { PhoneInput } from 'react-international-phone';
 import 'react-international-phone/style.css';
@@ -654,6 +655,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
+        <FAQSection faqs={contactFAQs} />
       </main>
 
       <Footer />

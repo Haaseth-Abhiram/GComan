@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import { Shield, Award, CheckCircle2, FileCheck, Globe, Users, Leaf, TrendingUp } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { BreadcrumbStructuredData, FAQStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
+import { FAQSection } from '@/components/FAQSection';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { LocalizedLink } from '@/components/LocalizedLink';
@@ -425,6 +426,7 @@ const Certifications = () => {
             </div>
           </div>
         </section>
+        <FAQSection faqs={certificationFAQs} />
       </main>
 
       <Footer />

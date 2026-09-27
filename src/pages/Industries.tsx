@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { SEO } from '@/components/SEO';
 import { FAQStructuredData, BreadcrumbStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
+import { FAQSection } from '@/components/FAQSection';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -715,6 +716,7 @@ const Industries = () => {
           </div>
         </div>
       </section>
+        <FAQSection faqs={waterTreatmentFaqs} />
       </main>
 
       <Footer />

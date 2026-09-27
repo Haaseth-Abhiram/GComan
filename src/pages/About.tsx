@@ -9,6 +9,7 @@ import facilityImage from '@/assets/about-facility.jpg';
 import teamImage from '@/assets/about-team.jpg';
 import { SEO } from '@/components/SEO';
 import { BreadcrumbStructuredData, SpeakableStructuredData, FAQStructuredData } from '@/components/StructuredData';
+import { FAQSection } from '@/components/FAQSection';
 import { LocalizedLink } from '@/components/LocalizedLink';
 import { useSpotlight } from '@/hooks/useSpotlight';
 import { GradientCTA } from '@/components/ui/gradient-cta';
@@ -316,6 +317,7 @@ const About = () => {
           </div>
         </div>
       </section>
+        <FAQSection faqs={aboutFAQs} />
       </main>
 
       <Footer />

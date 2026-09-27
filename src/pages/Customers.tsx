@@ -17,6 +17,7 @@ import omanLngLogo from '@/assets/customers/oman-lng-logo.png';
 import omifcoLogo from '@/assets/customers/omifco-logo.png';
 import { SEO } from '@/components/SEO';
 import { BreadcrumbStructuredData, FAQStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
+import { FAQSection } from '@/components/FAQSection';
 import { LocalizedLink } from '@/components/LocalizedLink';
 
 // Customer page FAQs for AI search and rich snippets
@@ -428,6 +429,7 @@ const Customers = () => {
         </div>
       </section>
 
+        <FAQSection faqs={customerFAQs} />
       </main>
       <Footer />
     </div>

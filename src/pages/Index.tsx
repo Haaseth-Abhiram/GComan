@@ -12,7 +12,7 @@ import WhyChooseUs from '@/components/WhyChooseUs';
 import QuickActions from '@/components/QuickActions';
 import { SEO } from '@/components/SEO';
 import { FAQStructuredData, SpeakableStructuredData, ServiceStructuredData } from '@/components/StructuredData';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { FAQSection } from '@/components/FAQSection';
 import heroLcp from '@/assets/hero-water-treatment.webp';
 
 // Homepage FAQs for rich snippets — GCC-wide coverage
@@ -130,29 +130,9 @@ const Index = () => {
         <WhyChooseUs />
         <QuickActions />
 
-        {/* Visible FAQ section — the homepageFAQs schema above must reflect
-            rendered text, not just JSON-LD (the same C1 forceMount lesson
-            applied site-wide: AI crawlers and Google's rich-results checker
-            both expect FAQPage structured data to match visible content). */}
-        <section className="py-16 bg-slate-50/70 border-t border-border/40">
-          <div className="container mx-auto px-4 max-w-3xl">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 text-center">
-              Frequently Asked Questions
-            </h2>
-            <Accordion type="single" collapsible className="w-full">
-              {homepageFAQs.map((faq, index) => (
-                <AccordionItem key={index} value={`faq-${index}`}>
-                  <AccordionTrigger className="text-left font-semibold text-base">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground leading-relaxed">
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </div>
-        </section>
+        {/* Visible FAQ — must mirror the homepageFAQs schema emitted above.
+            Shared component so schema and rendered text can't drift apart. */}
+        <FAQSection faqs={homepageFAQs} />
       </main>
       <Footer />
     </div>
