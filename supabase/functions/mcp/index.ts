@@ -100,6 +100,10 @@ var additives_default = [
         {
           question: "What antifoam and defoamer products are available for industrial use in Oman?",
           answer: "Defoamers and antifoam agents prevent or destroy unwanted foam in industrial processes in Oman. Silicone defoamers (polydimethylsiloxane emulsions at 10\u201330% active content) are the most effective broad-spectrum antifoam agents \u2014 widely used in wastewater treatment plants, paper and pulp processing, fermentation, and textile processing, dosed at 50\u2013500 ppm. They function by spreading over the foam bubble surface, reducing local surface tension and causing bubble rupture. Silicone defoamers are not suitable for food applications or where silicone contamination affects downstream processes (certain coatings, some polymer systems). Non-silicone defoamers based on mineral oil, fatty alcohol polyglycol ethers, or EO-PO block copolymers are preferred for food-grade, pharmaceutical, and painting applications. For Oman's water treatment and effluent plants, cost-effective mineral oil-based antifoam is standard. For higher-performance applications such as PDO wastewater injection plants or process separators, specialty polydimethylsiloxane defoamers provide superior performance at lower dosage rates. Global Chemicals LLC supplies both silicone and non-silicone defoamers in drum and IBC quantities for Oman."
+        },
+        {
+          question: "What is Industrial Additives used for?",
+          answer: "Industrial Additives is commonly used for Coatings and paint formulation (defoamers, dispersants, wetting agents), Plastics compounding (UV stabilisers, antioxidants, flame retardants), and Lubricant additive packages (VI improvers, antiwear, EP agents). Global Chemicals LLC supplies Industrial Additives across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Chemical_additive"
@@ -910,6 +914,10 @@ var chlorinated_default = [
         {
           question: "What is perchloroethylene and what are its applications in Oman?",
           answer: "Perchloroethylene (PCE, tetrachloroethylene, PERC, CAS 127-18-4) is a chlorinated solvent with excellent stability, non-flammability, and outstanding degreasing power. In Oman, PCE has two primary applications: dry cleaning solvent \u2014 PCE is the dominant solvent in commercial dry-cleaning machines (Oman's dry cleaners, hotel laundries, and garment care operations), where it cleans fabrics without water, removing oils, greases, and stains that water-based cleaning cannot address; and metal degreasing and vapour degreasing for precision parts in engineering and electronics manufacturing. PCE has a boiling point of 121\xB0C, is denser than water (1.62 g/mL), and does not absorb water from the air, making it ideal for closed-circuit degreasing systems. PCE is classified as a probable human carcinogen (IARC Group 2A) and is subject to stringent exposure limits (OEL 50 ppm TWA, 100 ppm STEL) and emission controls. Oman dry cleaning operations must use closed-loop machines to prevent PCE evaporative emissions and must comply with waste solvent disposal requirements. Global Chemicals LLC supplies perchloroethylene with SDS and regulatory compliance documentation."
+        },
+        {
+          question: "What grade and pack sizes of Perchloroethylene (PCE) are available in Oman?",
+          answer: "Global Chemicals LLC supplies Perchloroethylene (PCE) in Oman \u2014 Purity: 99.9% minimum (stabilized) \u2014 available in 200L drums, IBCs, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
         }
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Tetrachloroethylene"
@@ -1363,7 +1371,7 @@ var cooling_water_default = [
   },
   {
     id: "biological-guard-antifouling",
-    title: "Biological Guard Antifouling",
+    title: "Biofilm & Legionella Control Biocide (Biological Guard)",
     description: "Biocide for controlling biological fouling in cooling water systems.",
     category: "cooling-water",
     image: "https://gcoman.com/images/products/cooling-tower.webp",
@@ -1408,7 +1416,7 @@ var cooling_water_default = [
   },
   {
     id: "micro-biocid-cooling-water",
-    title: "Micro Biocid Cooling Water",
+    title: "Microbiological Control for Cooling Towers (Micro Biocid)",
     description: "Microbiocide for microbial control in cooling tower applications.",
     category: "cooling-water",
     image: "https://gcoman.com/images/products/cooling-tower.webp",
@@ -1512,7 +1520,7 @@ var cooling_water_default = [
   },
   {
     id: "hardness-control-boiler",
-    title: "Hardness Control Boiler Treatment",
+    title: "Boiler & Cooling Tower Scale Inhibitor (Hardness Control Treatment)",
     description: "Chemical treatment for controlling water hardness in boiler systems.",
     category: "cooling-water",
     image: "https://gcoman.com/images/products/cooling-tower.webp",
@@ -1890,7 +1898,7 @@ var corrosion_inhibitor_default = [
   },
   {
     id: "corrosion-inhibitor-2000",
-    title: "Corrosion Inhibitor 2000",
+    title: "High-Temperature Corrosion Inhibitor (Corrosion Inhibitor 2000)",
     description: "Advanced formula for comprehensive metal protection in industrial systems.",
     category: "corrosion-inhibitor",
     image: "https://gcoman.com/images/products/chemical-drums.webp",
@@ -2132,6 +2140,16 @@ var corrosion_inhibitor_default = [
         "Protects jackets, coolers, piping",
         "Available in 25kg, 200kg drums, IBCs"
       ],
+      faqs: [
+        {
+          question: "What grade and pack sizes of Corrosion Inhibitor For Gas Compressor are available in Oman?",
+          answer: "Global Chemicals LLC supplies Corrosion Inhibitor For Gas Compressor in Oman \u2014 Specialized compressor formulation \u2014 available in 25kg, 200kg drums, IBCs, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+        },
+        {
+          question: "What is Corrosion Inhibitor For Gas Compressor used for?",
+          answer: "Corrosion Inhibitor For Gas Compressor is commonly used for Gas compressor cooling water treatment, Compressor jacket water protection, and Intercooler corrosion prevention. Global Chemicals LLC supplies Corrosion Inhibitor For Gas Compressor across Oman and the wider GCC with full SDS documentation to support these applications."
+        }
+      ],
       wikiUrl: "https://en.wikipedia.org/wiki/Corrosion_inhibitor"
     }
   },
@@ -2346,6 +2364,16 @@ var corrosion_inhibitor_default = [
         "Compatible with glycols",
         "Available in 25kg, 200kg drums, IBCs"
       ],
+      faqs: [
+        {
+          question: "What grade and pack sizes of Corrosion Inhibitor Closed Cooling System are available in Oman?",
+          answer: "Global Chemicals LLC supplies Corrosion Inhibitor Closed Cooling System in Oman \u2014 Multi-metal closed system formulation \u2014 available in 25kg, 200kg drums, IBCs, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+        },
+        {
+          question: "What is Corrosion Inhibitor Closed Cooling System used for?",
+          answer: "Corrosion Inhibitor Closed Cooling System is commonly used for Chilled water closed-loop systems, District cooling network protection, and HVAC closed circuit treatment. Global Chemicals LLC supplies Corrosion Inhibitor Closed Cooling System across Oman and the wider GCC with full SDS documentation to support these applications."
+        }
+      ],
       wikiUrl: "https://en.wikipedia.org/wiki/Corrosion_inhibitor"
     }
   }
@@ -2526,6 +2554,14 @@ var ethanolamines_default = [
         {
           question: "What advantages does MDEA have over MEA for gas sweetening in Oman's gas sector?",
           answer: "MDEA (methyldiethanolamine) has superseded MEA as the gas sweetening solvent of choice in Oman's modern gas processing plants for five key reasons. First, selectivity: MDEA preferentially absorbs H\u2082S over CO\u2082 at standard absorption conditions, allowing CO\u2082 slip when only H\u2082S removal is required \u2014 important where CO\u2082 reinjection capacity is limited. Second, lower energy: MDEA has a significantly lower heat of regeneration than MEA, reducing reboiler steam consumption by 20\u201340% \u2014 critical for Oman operations where energy efficiency directly impacts LNG economics. Third, higher loading: MDEA can be used at 40\u201350 wt% concentration compared to MEA's 20\u201330% maximum, meaning smaller equipment and lower circulation rates. Fourth, lower degradation: MDEA does not react irreversibly with COS or CS\u2082 like MEA, and its thermal stability is much higher, reducing solvent replacement costs. Fifth, lower corrosivity: at equivalent acid gas loading, MDEA is significantly less corrosive than MEA, extending equipment life. Global Chemicals LLC supplies pharmaceutical-grade and industrial-grade MDEA for Oman's gas treatment units."
+        },
+        {
+          question: "What grade and pack sizes of MDEA (Methyldiethanolamine) are available in Oman?",
+          answer: "Global Chemicals LLC supplies MDEA (Methyldiethanolamine) in Oman \u2014 Purity: 99% minimum \u2014 available in drums, IBCs, ISO tanks, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+        },
+        {
+          question: "What is MDEA (Methyldiethanolamine) used for?",
+          answer: "MDEA (Methyldiethanolamine) is commonly used for Selective H2S removal from natural gas, LNG plant gas sweetening, and Sour gas processing. Global Chemicals LLC supplies MDEA (Methyldiethanolamine) across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Methyldiethanolamine"
@@ -2637,6 +2673,16 @@ var food_beverage_default = [
         "pH: 8-10 (10% slurry)",
         "Typical dosage: 0.1-2% in foods",
         "Available in 25kg bags"
+      ],
+      faqs: [
+        {
+          question: "What grade and pack sizes of Calcium Carbonate (Food Grade) are available in Oman?",
+          answer: "Global Chemicals LLC supplies Calcium Carbonate (Food Grade) in Oman \u2014 Purity: 98-100% CaCO3 (food grade) \u2014 available in 25kg bags, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+        },
+        {
+          question: "What is Calcium Carbonate (Food Grade) used for?",
+          answer: "Calcium Carbonate (Food Grade) is commonly used for Flour and bread calcium fortification, Dairy alternative calcium enrichment, and Wine and juice acidity regulation. Global Chemicals LLC supplies Calcium Carbonate (Food Grade) across Oman and the wider GCC with full SDS documentation to support these applications."
+        }
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Calcium_carbonate"
     }
@@ -3866,6 +3912,16 @@ var inorganic_default = [
         "Dosage: 20-300 ppm (water treatment)",
         "Meets AWWA specifications",
         "Available in 30L, 200L drums, IBCs, bulk"
+      ],
+      faqs: [
+        {
+          question: "What grade and pack sizes of Ferric Chloride are available in Oman?",
+          answer: "Global Chemicals LLC supplies Ferric Chloride in Oman \u2014 Concentration: 38-42% FeCl3 \u2014 available in 30L, 200L drums, IBCs, bulk, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+        },
+        {
+          question: "What is Ferric Chloride used for?",
+          answer: "Ferric Chloride is commonly used for Municipal sewage treatment, Industrial wastewater coagulation, and Phosphorus and heavy metal removal. Global Chemicals LLC supplies Ferric Chloride across Oman and the wider GCC with full SDS documentation to support these applications."
+        }
       ]
     }
   },
@@ -3987,6 +4043,10 @@ var inorganic_default = [
         {
           question: "What forms of PAC does Global Chemicals LLC supply in Oman?",
           answer: "Global Chemicals LLC supplies PAC in two forms: liquid PAC (10% Al\u2082O\u2083, yellow to brown solution) in 1,000L IBC containers and bulk tanker, and PAC powder (28\u201330% Al\u2082O\u2083, white to pale yellow powder) in 25kg bags. Liquid PAC is ready to dose directly via metering pump and is preferred for large continuous-operation plants. PAC powder must be dissolved on-site before dosing but offers a 24-month shelf life and lower transport cost per unit of active chemical \u2014 making it suitable for remote plants in Oman's interior, smaller water treatment operations, and construction site water treatment. Both forms are NSF/ANSI 60 certified for use in drinking water treatment. Technical data sheets, jar test guidance, and dosage calculations are provided with supply."
+        },
+        {
+          question: "What grade and pack sizes of Poly Aluminum Chloride (PAC) are available in Oman?",
+          answer: "Global Chemicals LLC supplies Poly Aluminum Chloride (PAC) in Oman \u2014 Al2O3 content: 10% (liquid), 28-30% (powder) \u2014 available in 25kg bags, 1000L IBCs, bulk, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
         }
       ]
     }
@@ -5575,6 +5635,16 @@ var lab_chemicals_default = [
         "Available: 500g, 1kg, 5kg",
         "Store in tightly closed container"
       ],
+      faqs: [
+        {
+          question: "What grade and pack sizes of Sodium Thiosulfate (Laboratory Grade) are available in Oman?",
+          answer: "Global Chemicals LLC supplies Sodium Thiosulfate (Laboratory Grade) in Oman \u2014 Purity: 99.5% minimum (ACS grade) \u2014 available in 500g, 1kg, 5kg, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+        },
+        {
+          question: "What is Sodium Thiosulfate (Laboratory Grade) used for?",
+          answer: "Sodium Thiosulfate (Laboratory Grade) is commonly used for Iodometric titrations, Chlorine and bleach analysis, and Dissolved oxygen determination (Winkler). Global Chemicals LLC supplies Sodium Thiosulfate (Laboratory Grade) across Oman and the wider GCC with full SDS documentation to support these applications."
+        }
+      ],
       wikiUrl: "https://en.wikipedia.org/wiki/Sodium_thiosulfate"
     }
   },
@@ -6468,6 +6538,12 @@ var oilfield_default = [
         "Regeneration temperature: 150-300\xB0C",
         "Crush strength: >50N"
       ],
+      faqs: [
+        {
+          question: "What is Activated Alumina Desiccant used for?",
+          answer: "Activated Alumina Desiccant is commonly used for Natural gas dehydration and processing, Compressed air and instrument air drying, and Hydrocarbon stream drying in refineries. Global Chemicals LLC supplies Activated Alumina Desiccant across Oman and the wider GCC with full SDS documentation to support these applications."
+        }
+      ],
       wikiUrl: "https://en.wikipedia.org/wiki/Aluminium_oxide"
     }
   },
@@ -6613,6 +6689,10 @@ var oilfield_default = [
         {
           question: "What is ammonium bisulphite and what is its application in oilfield water treatment?",
           answer: "Ammonium bisulphite (ABS, NH\u2084HSO\u2083) is an oxygen scavenger used in Oman's oilfield water injection systems to remove dissolved oxygen from injection water before it is pumped into reservoirs. Dissolved oxygen is highly corrosive \u2014 even at concentrations of 50\u2013100 ppb, it accelerates pitting corrosion of carbon steel pipelines, flowlines, and injection wellbores, causing premature failure. At typical injection water oxygen levels of 0.5\u20132.0 mg/L entering the treatment train, ammonium bisulphite is dosed at a 3:1\u20135:1 molar excess to ensure rapid and complete oxygen removal. The reaction is: NH\u2084HSO\u2083 + \xBDO\u2082 \u2192 NH\u2084HSO\u2084. Residual ABS concentration in treated water is typically maintained at 5\u201320 ppm as measured by colorimetric test kits. Ammonium bisulphite is preferred over sodium sulphite for Oman oilfield applications because of its higher reactivity at ambient temperature, lower pH effect, and lower cost per unit of oxygen removed. Global Chemicals LLC supplies liquid ammonium bisulphite for Oman water injection operations."
+        },
+        {
+          question: "What grade and pack sizes of Ammonium Bisulphite are available in Oman?",
+          answer: "Global Chemicals LLC supplies Ammonium Bisulphite in Oman \u2014 Concentration: 40-60% NH4HSO3 \u2014 available in drums, IBCs, and bulk, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
         }
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Ammonium_bisulfite"
@@ -6771,6 +6851,16 @@ var oilfield_default = [
         "Moisture content: <12%",
         "Mesh size: 200 mesh minimum",
         "Packaging: 25kg bags, bulk bags"
+      ],
+      faqs: [
+        {
+          question: "What grade and pack sizes of Bentonite Powder are available in Oman?",
+          answer: "Global Chemicals LLC supplies Bentonite Powder in Oman \u2014 Moisture content: <12% \u2014 available in 25kg bags, bulk bags, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+        },
+        {
+          question: "What is Bentonite Powder used for?",
+          answer: "Bentonite Powder is commonly used for Water-based drilling mud formulations, Viscosity and gel strength control, and Fluid loss control in drilling. Global Chemicals LLC supplies Bentonite Powder across Oman and the wider GCC with full SDS documentation to support these applications."
+        }
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Bentonite"
     }
@@ -6988,6 +7078,16 @@ var oilfield_default = [
         "Temperature stable up to 200\xB0C",
         "Available in bags, drums, IBCs, bulk"
       ],
+      faqs: [
+        {
+          question: "What grade and pack sizes of Calcium Bromide Powder/Liquid are available in Oman?",
+          answer: "Global Chemicals LLC supplies Calcium Bromide Powder/Liquid in Oman \u2014 Density range: 1.20-1.84 sg (powder dissolved) \u2014 available in bags, drums, IBCs, bulk, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+        },
+        {
+          question: "What is Calcium Bromide Powder/Liquid used for?",
+          answer: "Calcium Bromide Powder/Liquid is commonly used for High-density completion fluids (up to 1.84 sg), Clear workover and kill fluids, and Packer fluids in production wells. Global Chemicals LLC supplies Calcium Bromide Powder/Liquid across Oman and the wider GCC with full SDS documentation to support these applications."
+        }
+      ],
       wikiUrl: "https://en.wikipedia.org/wiki/Calcium_bromide"
     }
   },
@@ -7033,6 +7133,16 @@ var oilfield_default = [
         "Non-toxic - safe for food contact",
         "Meets FDA/USP specifications",
         "Packaging: 25kg bags, drums"
+      ],
+      faqs: [
+        {
+          question: "What grade and pack sizes of Citric Acid Food Grade are available in Oman?",
+          answer: "Global Chemicals LLC supplies Citric Acid Food Grade in Oman \u2014 Purity: USP/Food Grade 99.5%+ \u2014 available in 25kg bags, drums, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+        },
+        {
+          question: "What is Citric Acid Food Grade used for?",
+          answer: "Citric Acid Food Grade is commonly used for Environmentally-friendly well acidizing, Offshore platform cleaning operations, and Food processing equipment cleaning. Global Chemicals LLC supplies Citric Acid Food Grade across Oman and the wider GCC with full SDS documentation to support these applications."
+        }
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Citric_acid"
     }
@@ -7192,6 +7302,16 @@ var oilfield_default = [
         "Maximum citric acid content",
         "Packaging: 25kg bags, drums, bulk"
       ],
+      faqs: [
+        {
+          question: "What grade and pack sizes of Citric Acid Powder are available in Oman?",
+          answer: "Global Chemicals LLC supplies Citric Acid Powder in Oman \u2014 Purity: 99.5% minimum \u2014 available in 25kg bags, drums, bulk, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+        },
+        {
+          question: "What is Citric Acid Powder used for?",
+          answer: "Citric Acid Powder is commonly used for Field-prepared acidizing solutions, Matrix acidizing treatments, and Scale removal in wellbores. Global Chemicals LLC supplies Citric Acid Powder across Oman and the wider GCC with full SDS documentation to support these applications."
+        }
+      ],
       wikiUrl: "https://en.wikipedia.org/wiki/Citric_acid"
     }
   },
@@ -7296,6 +7416,16 @@ var oilfield_default = [
         "Non-toxic, non-flammable",
         "Purity: >99.5% reagent grade urea",
         "Available in 10L, 20L, 200L drums, IBCs, bulk"
+      ],
+      faqs: [
+        {
+          question: "What grade and pack sizes of Diesel Exhaust Fluid are available in Oman?",
+          answer: "Global Chemicals LLC supplies Diesel Exhaust Fluid in Oman \u2014 Urea content: 32.5% \xB1 0.5% (by weight) \u2014 available in 10L, 20L, 200L drums, IBCs, bulk, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+        },
+        {
+          question: "What is Diesel Exhaust Fluid used for?",
+          answer: "Diesel Exhaust Fluid is commonly used for SCR emission control in diesel vehicles, Oilfield equipment and drilling rigs, and Heavy-duty trucks and transport. Global Chemicals LLC supplies Diesel Exhaust Fluid across Oman and the wider GCC with full SDS documentation to support these applications."
+        }
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Diesel_exhaust_fluid"
     }
@@ -7577,6 +7707,14 @@ var oilfield_default = [
         {
           question: "What scale types are found in oilfield equipment in Oman and how are they removed?",
           answer: "Oman's oil and gas production equipment experiences several distinct scale types depending on reservoir and produced water chemistry. Calcium carbonate (CaCO\u2083) is the most common scale in Oman's carbonate reservoir formations \u2014 it deposits in tubing, wellheads, separators, and heat exchangers as produced water pressure drops and CO\u2082 degasses, shifting equilibrium towards precipitation. It is effectively dissolved by hydrochloric acid (5\u201315%) or inhibited acid blends. Calcium sulphate (CaSO\u2084) scale (anhydrite, gypsum) is harder to dissolve and occurs where reservoir brines mix with sulphate-bearing injection water \u2014 EDTA or DTPA chelant treatments are required. Barium sulphate (BaSO\u2084) is the most problematic scale in Oman's commingled production wells \u2014 it is nearly insoluble in any standard acid and requires mechanical removal (coiled tubing milling) or inhibition before it forms. Iron sulphide (FeS) scale occurs in sour wells and requires specialised acid dissolvers. Global Chemicals LLC supplies descalants for all these scale types with field application engineering support."
+        },
+        {
+          question: "What grade and pack sizes of Descalant are available in Oman?",
+          answer: "Global Chemicals LLC supplies Descalant in Oman \u2014 Types: Acid-based, chelant-based, combination \u2014 available in 20L, 200L drums, IBCs, bulk, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+        },
+        {
+          question: "What is Descalant used for?",
+          answer: "Descalant is commonly used for Wellbore scale removal and stimulation, Pipeline and tubing descaling, and Heat exchanger cleaning. Global Chemicals LLC supplies Descalant across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Descaling_agent"
@@ -7625,6 +7763,16 @@ var oilfield_default = [
         "Environmentally biodegradable",
         "Less corrosive than mineral acids",
         "Available in drums, IBCs, bulk"
+      ],
+      faqs: [
+        {
+          question: "What grade and pack sizes of EDTA Liquid are available in Oman?",
+          answer: "Global Chemicals LLC supplies EDTA Liquid in Oman \u2014 Concentration: 38-40% typical \u2014 available in drums, IBCs, bulk, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+        },
+        {
+          question: "What is EDTA Liquid used for?",
+          answer: "EDTA Liquid is commonly used for Carbonate scale removal from wellbores, Iron deposit chelation and removal, and Heavy metal control in water systems. Global Chemicals LLC supplies EDTA Liquid across Oman and the wider GCC with full SDS documentation to support these applications."
+        }
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/EDTA"
     }
@@ -8341,6 +8489,16 @@ var oilfield_default = [
         "Reusable after regeneration",
         "Packaging: 1kg, 5kg, 25kg bags, drums"
       ],
+      faqs: [
+        {
+          question: "What grade and pack sizes of Silica Gel Blue are available in Oman?",
+          answer: "Global Chemicals LLC supplies Silica Gel Blue in Oman \u2014 Color indication: Blue (dry) to Pink (saturated) \u2014 available in 1kg, 5kg, 25kg bags, drums, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+        },
+        {
+          question: "What is Silica Gel Blue used for?",
+          answer: "Silica Gel Blue is commonly used for Instrument air and compressed air drying, Natural gas moisture removal, and Equipment and spare parts protection. Global Chemicals LLC supplies Silica Gel Blue across Oman and the wider GCC with full SDS documentation to support these applications."
+        }
+      ],
       wikiUrl: "https://en.wikipedia.org/wiki/Silica_gel"
     }
   },
@@ -8593,6 +8751,16 @@ var oilfield_default = [
         "Strong oxidizer - handle with care",
         "Packaging: 25kg, 50kg bags, bulk"
       ],
+      faqs: [
+        {
+          question: "What grade and pack sizes of Sodium Nitrate are available in Oman?",
+          answer: "Global Chemicals LLC supplies Sodium Nitrate in Oman \u2014 Purity: 99% minimum \u2014 available in 25kg, 50kg bags, bulk, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+        },
+        {
+          question: "What is Sodium Nitrate used for?",
+          answer: "Sodium Nitrate is commonly used for Drilling fluid corrosion inhibitor component, Explosives and pyrotechnics manufacturing, and Cement set accelerator. Global Chemicals LLC supplies Sodium Nitrate across Oman and the wider GCC with full SDS documentation to support these applications."
+        }
+      ],
       wikiUrl: "https://en.wikipedia.org/wiki/Sodium_nitrate"
     }
   },
@@ -8638,6 +8806,16 @@ var oilfield_default = [
         "Forms protective passive film on metals",
         "Effective in pH 7-10 range",
         "Packaging: 25kg bags, drums, bulk"
+      ],
+      faqs: [
+        {
+          question: "What grade and pack sizes of Sodium Nitrite are available in Oman?",
+          answer: "Global Chemicals LLC supplies Sodium Nitrite in Oman \u2014 Purity: 98% minimum \u2014 available in 25kg bags, drums, bulk, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+        },
+        {
+          question: "What is Sodium Nitrite used for?",
+          answer: "Sodium Nitrite is commonly used for Corrosion inhibitor in drilling and completion fluids, Packer fluid corrosion protection, and Closed-loop system corrosion control. Global Chemicals LLC supplies Sodium Nitrite across Oman and the wider GCC with full SDS documentation to support these applications."
+        }
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Sodium_nitrite"
     }
@@ -8731,6 +8909,16 @@ var oilfield_default = [
         "Dissolves rapidly - ready to use",
         "Long shelf life when stored properly",
         "Packaging: 1kg, 5kg, 25kg bags"
+      ],
+      faqs: [
+        {
+          question: "What grade and pack sizes of Sodium Thiosulphate Powder are available in Oman?",
+          answer: "Global Chemicals LLC supplies Sodium Thiosulphate Powder in Oman \u2014 Purity: 99% minimum \u2014 available in 1kg, 5kg, 25kg bags, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+        },
+        {
+          question: "What is Sodium Thiosulphate Powder used for?",
+          answer: "Sodium Thiosulphate Powder is commonly used for Field preparation of dechlorination solutions, Chlorine neutralization in oilfield operations, and Produced water treatment. Global Chemicals LLC supplies Sodium Thiosulphate Powder across Oman and the wider GCC with full SDS documentation to support these applications."
+        }
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Sodium_thiosulfate"
     }
@@ -8833,6 +9021,16 @@ var oilfield_default = [
         "Compatible with most drilling fluid systems",
         "Available in drums, IBCs, bulk"
       ],
+      faqs: [
+        {
+          question: "What grade and pack sizes of Surfactant, Sodium Silicate Alkaline and Neutral are available in Oman?",
+          answer: "Global Chemicals LLC supplies Surfactant, Sodium Silicate Alkaline and Neutral in Oman \u2014 Sodium silicate grades: Alkaline (pH 11-13), Neutral (pH 7-9) \u2014 available in drums, IBCs, bulk, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+        },
+        {
+          question: "What is Surfactant, Sodium Silicate Alkaline and Neutral used for?",
+          answer: "Surfactant, Sodium Silicate Alkaline and Neutral is commonly used for Cement accelerator in oil well cementing, Shale stabilization in drilling fluids, and Lost circulation material for severe losses. Global Chemicals LLC supplies Surfactant, Sodium Silicate Alkaline and Neutral across Oman and the wider GCC with full SDS documentation to support these applications."
+        }
+      ],
       wikiUrl: "https://en.wikipedia.org/wiki/Sodium_silicate"
     }
   },
@@ -8889,6 +9087,10 @@ var oilfield_default = [
         {
           question: "What is the typical THT dosing rate for natural gas?",
           answer: "Most networks odorize at 10\u201325 mg of THT per standard cubic metre of gas, tuned so gas is detectable by smell at one-fifth of the lower flammability limit, per the applicable gas code. Dosing is set on injection skids proportional to flow; our technical team can review your skid specification and detectability target."
+        },
+        {
+          question: "What grade and pack sizes of THT Gas Odorant (Tetrahydrothiophene) are available in Oman?",
+          answer: "Global Chemicals LLC supplies THT Gas Odorant (Tetrahydrothiophene) in Oman \u2014 Purity: \u226599.0% (GC) \u2014 available in 208 L steel drums, nitrogen-blanketed, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
         }
       ]
     }
@@ -9056,6 +9258,16 @@ var ro_chemicals_default = [
         "Easy drain and restart procedure",
         "Available in 25kg, 200kg drums, IBCs"
       ],
+      faqs: [
+        {
+          question: "What grade and pack sizes of RO Passivation are available in Oman?",
+          answer: "Global Chemicals LLC supplies RO Passivation in Oman \u2014 Preservative concentration: 1-2% solution \u2014 available in 25kg, 200kg drums, IBCs, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+        },
+        {
+          question: "What is RO Passivation used for?",
+          answer: "RO Passivation is commonly used for RO membrane shutdown protection, Short-term membrane storage (up to 30 days), and Seasonal plant shutdown preservation. Global Chemicals LLC supplies RO Passivation across Oman and the wider GCC with full SDS documentation to support these applications."
+        }
+      ],
       wikiUrl: "https://en.wikipedia.org/wiki/Passivation_(chemistry)"
     }
   },
@@ -9120,7 +9332,7 @@ var ro_chemicals_default = [
   },
   {
     id: "ro-222-descaler",
-    title: "RO 222 Descaler",
+    title: "RO Membrane Descaler (RO 222)",
     description: "Specialized descaling solution for reverse osmosis membrane systems.",
     category: "ro-chemicals",
     image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
@@ -9223,7 +9435,7 @@ var ro_chemicals_default = [
   },
   {
     id: "membrane-cleaner-ro",
-    title: "Membrane Cleaner",
+    title: "RO Membrane Cleaner \u2014 General Fouling Removal",
     description: "Comprehensive cleaning solution for RO membrane maintenance and restoration.",
     category: "ro-chemicals",
     image: "https://gcoman.com/images/products/liquid-ibc-tank.webp",
@@ -9437,6 +9649,16 @@ var ro_chemicals_default = [
         "Silica scale inhibition up to 200 ppm",
         "NSF/ANSI 60 certified",
         "Available in 25kg, 200kg drums, IBCs, bulk"
+      ],
+      faqs: [
+        {
+          question: "What grade and pack sizes of Membrane Antiscalant RO are available in Oman?",
+          answer: "Global Chemicals LLC supplies Membrane Antiscalant RO in Oman \u2014 Advanced polymer and phosphonate blend \u2014 available in 25kg, 200kg drums, IBCs, bulk, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+        },
+        {
+          question: "What is Membrane Antiscalant RO used for?",
+          answer: "Membrane Antiscalant RO is commonly used for Sea water reverse osmosis (SWRO), High-recovery RO systems (>85%), and High-hardness brackish water treatment. Global Chemicals LLC supplies Membrane Antiscalant RO across Oman and the wider GCC with full SDS documentation to support these applications."
+        }
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Scale_inhibitor",
       guideUrl: "/blog/ro-membrane-chemicals-antiscalant-oman",
@@ -9940,6 +10162,16 @@ var soap_detergent_default = [
         "pH: 3\u20135 (stabilised)",
         "Packaging: 5L jerrican, 25L drum, 60L drum",
         "Grade: Technical, Cosmetic/Salon, Pharmaceutical (BP) on request"
+      ],
+      faqs: [
+        {
+          question: "What grade and pack sizes of Hydrogen Peroxide 6% are available in Oman?",
+          answer: "Global Chemicals LLC supplies Hydrogen Peroxide 6% in Oman \u2014 H2O2 concentration: 6.0% w/v (20 Volume) \u2014 available in 5L jerrican, 25L drum, 60L drum, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+        },
+        {
+          question: "What is Hydrogen Peroxide 6% used for?",
+          answer: "Hydrogen Peroxide 6% is commonly used for Professional hair bleaching and lightening (20 Volume), Hair colouring developer (bleach powder activation), and Healthcare surface and equipment disinfection. Global Chemicals LLC supplies Hydrogen Peroxide 6% across Oman and the wider GCC with full SDS documentation to support these applications."
+        }
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Hydrogen_peroxide"
     }
@@ -10957,6 +11189,16 @@ var swimming_pool_default = [
         "pH stability: Effective at pH 7.2-7.8",
         "Available in 1L, 5L, and 20L containers"
       ],
+      faqs: [
+        {
+          question: "What grade and pack sizes of Algacide Liquid are available in Oman?",
+          answer: "Global Chemicals LLC supplies Algacide Liquid in Oman \u2014 Active ingredient: Quaternary ammonium compound 10-15% \u2014 available in 1L, 5L, and 20L containers, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+        },
+        {
+          question: "What is Algacide Liquid used for?",
+          answer: "Algacide Liquid is commonly used for Swimming pool algae prevention and treatment, Hotel and resort pool maintenance, and Public swimming pool sanitation. Global Chemicals LLC supplies Algacide Liquid across Oman and the wider GCC with full SDS documentation to support these applications."
+        }
+      ],
       wikiUrl: "https://en.wikipedia.org/wiki/Quaternary_ammonium_cation"
     }
   },
@@ -11022,6 +11264,14 @@ var swimming_pool_default = [
         {
           question: "How should chlorine tablets be stored safely in Oman's hot climate?",
           answer: "TCCA chlorine tablets must be stored in a cool, dry, well-ventilated area away from direct sunlight and heat. In Oman's summer, outdoor storage temperatures can exceed 60\xB0C in direct sun, which can cause rapid decomposition, chlorine gas release, and fire risk if TCCA comes into contact with moisture or organic materials. Store TCCA tablets in their original sealed buckets or containers, in a shaded warehouse or store room with ambient temperature below 40\xB0C. Keep away from: lubricants and oils (fire hazard if contaminated), acids (chlorine gas release), reducing agents, and other pool chemicals. Never mix different pool chemicals together. Emergency eyewash and handwashing facilities must be nearby."
+        },
+        {
+          question: "What grade and pack sizes of Chlorine Tablet are available in Oman?",
+          answer: "Global Chemicals LLC supplies Chlorine Tablet in Oman \u2014 Available chlorine: 90% minimum \u2014 available in Tablet size: 200g standard, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+        },
+        {
+          question: "What is Chlorine Tablet used for?",
+          answer: "Chlorine Tablet is commonly used for Continuous swimming pool sanitization, Automatic chlorine feeder systems, and Floating chlorine dispensers. Global Chemicals LLC supplies Chlorine Tablet across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Trichloroisocyanuric_acid"
@@ -11160,6 +11410,16 @@ var swimming_pool_default = [
         "Contains cyanuric acid stabilizer",
         "Dosage: 1-2 tablets per 10,000 liters weekly",
         "Packaging: 5kg, 10kg, 25kg buckets"
+      ],
+      faqs: [
+        {
+          question: "What grade and pack sizes of Chlorine Tablet Jumbo Size (3 Inch) are available in Oman?",
+          answer: "Global Chemicals LLC supplies Chlorine Tablet Jumbo Size (3 Inch) in Oman \u2014 Available chlorine: 90% minimum \u2014 available in 5kg, 10kg, 25kg buckets, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+        },
+        {
+          question: "What is Chlorine Tablet Jumbo Size (3 Inch) used for?",
+          answer: "Chlorine Tablet Jumbo Size (3 Inch) is commonly used for Large swimming pool maintenance, Automatic chlorine feeder systems, and Floating chlorinator dispensers. Global Chemicals LLC supplies Chlorine Tablet Jumbo Size (3 Inch) across Oman and the wider GCC with full SDS documentation to support these applications."
+        }
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Trichloroisocyanuric_acid"
     }
@@ -11320,6 +11580,16 @@ var swimming_pool_default = [
         "Dosage: 1-2 liters per 10,000 liters",
         "Compatible with all pool types",
         "Available in 5L, 20L, 25L containers"
+      ],
+      faqs: [
+        {
+          question: "What grade and pack sizes of Chlorine Liquid are available in Oman?",
+          answer: "Global Chemicals LLC supplies Chlorine Liquid in Oman \u2014 Available chlorine: 10-12% \u2014 available in 5L, 20L, 25L containers, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+        },
+        {
+          question: "What is Chlorine Liquid used for?",
+          answer: "Chlorine Liquid is commonly used for Immediate pool disinfection, Emergency chlorine boost, and Automated dosing and feed systems. Global Chemicals LLC supplies Chlorine Liquid across Oman and the wider GCC with full SDS documentation to support these applications."
+        }
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Sodium_hypochlorite"
     }
@@ -11516,6 +11786,16 @@ var swimming_pool_default = [
         "No built-in stabilizer",
         "Packaging: 500g, 1kg, 5kg, 25kg, 50kg"
       ],
+      faqs: [
+        {
+          question: "What grade and pack sizes of Chlorine Powder are available in Oman?",
+          answer: "Global Chemicals LLC supplies Chlorine Powder in Oman \u2014 Available chlorine: 65-70% \u2014 available in 500g, 1kg, 5kg, 25kg, 50kg, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+        },
+        {
+          question: "What is Chlorine Powder used for?",
+          answer: "Chlorine Powder is commonly used for Weekly shock treatment programs, Rapid algae elimination, and Cloudy water clarification. Global Chemicals LLC supplies Chlorine Powder across Oman and the wider GCC with full SDS documentation to support these applications."
+        }
+      ],
       wikiUrl: "https://en.wikipedia.org/wiki/Calcium_hypochlorite"
     }
   }
@@ -11633,7 +11913,7 @@ var tank_cleaners_default = [
   },
   {
     id: "universal-wash",
-    title: "Universal Wash",
+    title: "Multi-Cargo Tank Cleaner (Universal Wash)",
     description: "Multi-purpose cleaning solution for various tank applications.",
     category: "tank-cleaners",
     image: "https://gcoman.com/images/products/chemical-drums.webp",
@@ -12051,7 +12331,7 @@ var tank_cleaners_default = [
   },
   {
     id: "oil-spill-dispersent-type-3",
-    title: "Oil Spill Dispersent Type 3",
+    title: "Oil Spill Dispersant Type 3",
     description: "Type 3 dispersant for oil spill response and tank cleaning.",
     category: "tank-cleaners",
     image: "https://gcoman.com/images/products/chemical-drums.webp",
@@ -12158,7 +12438,7 @@ var tank_cleaners_default = [
   },
   {
     id: "cold-washer-hd",
-    title: "Cold Washer HD",
+    title: "Cold-Water Tank Cleaner (Cold Washer HD)",
     description: "Cold-water heavy-duty cleaner for efficient tank washing.",
     category: "tank-cleaners",
     image: "https://gcoman.com/images/products/chemical-drums.webp",
@@ -12260,7 +12540,7 @@ var tank_cleaners_default = [
   },
   {
     id: "edge-sol-cleaner",
-    title: "Edge Sol Cleaner",
+    title: "Tank Edge & Seam Cleaner (Edge Sol)",
     description: "Solvent-based edge and seam cleaning solution.",
     category: "tank-cleaners",
     image: "https://gcoman.com/images/products/chemical-drums.webp",
@@ -12305,7 +12585,7 @@ var tank_cleaners_default = [
   },
   {
     id: "enviro-soft-2000",
-    title: "Enviro Soft 2000",
+    title: "Eco-Friendly Tank Cleaner (Enviro Soft 2000)",
     description: "Environmentally friendly softening and cleaning agent.",
     category: "tank-cleaners",
     image: "https://gcoman.com/images/products/chemical-drums.webp",
@@ -12350,7 +12630,7 @@ var tank_cleaners_default = [
   },
   {
     id: "dual-hd-cleaner",
-    title: "Dual HD Cleaner",
+    title: "Dual-Action Tank Cleaner (Dual HD Cleaner)",
     description: "Dual-action heavy-duty cleaner for versatile tank applications.",
     category: "tank-cleaners",
     image: "https://gcoman.com/images/products/chemical-drums.webp",
@@ -12395,7 +12675,7 @@ var tank_cleaners_default = [
   },
   {
     id: "metal-bright",
-    title: "Metal Bright",
+    title: "Stainless Steel Tank Brightener (Metal Bright)",
     description: "Metal brightening and cleaning solution for tank surfaces.",
     category: "tank-cleaners",
     image: "https://gcoman.com/images/products/chemical-drums.webp",
@@ -12440,7 +12720,7 @@ var tank_cleaners_default = [
   },
   {
     id: "p-xylene-pure",
-    title: "P Xylene Pure",
+    title: "P-Xylene (Tank Cleaning Solvent Grade)",
     description: "Pure p-xylene solvent for industrial cleaning applications.",
     category: "tank-cleaners",
     image: "https://gcoman.com/images/products/chemical-drums.webp",
@@ -13439,6 +13719,16 @@ var water_treatment_default = [
         "pH (1% solution): 2.2",
         "Available in 25kg bags",
         "Food grade (E330) and technical grade"
+      ],
+      faqs: [
+        {
+          question: "What grade and pack sizes of Citric Acid Anhydrous are available in Oman?",
+          answer: "Global Chemicals LLC supplies Citric Acid Anhydrous in Oman \u2014 Purity: 99.5% min \u2014 available in 25kg bags, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+        },
+        {
+          question: "What is Citric Acid Anhydrous used for?",
+          answer: "Citric Acid Anhydrous is commonly used for Descaling boilers and equipment, pH adjustment in water treatment, and Food and beverage acidulant. Global Chemicals LLC supplies Citric Acid Anhydrous across Oman and the wider GCC with full SDS documentation to support these applications."
+        }
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Citric_acid"
     }
@@ -14514,6 +14804,16 @@ var water_treatment_default = [
         "Food grade and technical grade",
         "Excellent buffering capacity"
       ],
+      faqs: [
+        {
+          question: "What grade and pack sizes of Sodium Bicarbonate are available in Oman?",
+          answer: "Global Chemicals LLC supplies Sodium Bicarbonate in Oman \u2014 NaHCO3 purity: 99% min \u2014 available in 25kg bags, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+        },
+        {
+          question: "What is Sodium Bicarbonate used for?",
+          answer: "Sodium Bicarbonate is commonly used for pH buffering in water treatment, Alkalinity adjustment, and Flue gas desulfurization. Global Chemicals LLC supplies Sodium Bicarbonate across Oman and the wider GCC with full SDS documentation to support these applications."
+        }
+      ],
       wikiUrl: "https://en.wikipedia.org/wiki/Sodium_bicarbonate"
     }
   },
@@ -14602,6 +14902,16 @@ var water_treatment_default = [
         "Available in 25kg bags",
         "Food grade and technical grade",
         "Excellent chelating properties"
+      ],
+      faqs: [
+        {
+          question: "What grade and pack sizes of Sodium Hexametaphosphate are available in Oman?",
+          answer: "Global Chemicals LLC supplies Sodium Hexametaphosphate in Oman \u2014 P2O5 content: 68% min \u2014 available in 25kg bags, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+        },
+        {
+          question: "What is Sodium Hexametaphosphate used for?",
+          answer: "Sodium Hexametaphosphate is commonly used for Water softening, Scale and corrosion inhibition, and Detergent builder. Global Chemicals LLC supplies Sodium Hexametaphosphate across Oman and the wider GCC with full SDS documentation to support these applications."
+        }
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Sodium_hexametaphosphate"
     }

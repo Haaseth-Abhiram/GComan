@@ -41,6 +41,16 @@
         "Easy drain and restart procedure",
         "Available in 25kg, 200kg drums, IBCs"
       ],
+      "faqs": [
+        {
+          "question": "What grade and pack sizes of RO Passivation are available in Oman?",
+          "answer": "Global Chemicals LLC supplies RO Passivation in Oman — Preservative concentration: 1-2% solution — available in 25kg, 200kg drums, IBCs, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+        },
+        {
+          "question": "What is RO Passivation used for?",
+          "answer": "RO Passivation is commonly used for RO membrane shutdown protection, Short-term membrane storage (up to 30 days), and Seasonal plant shutdown preservation. Global Chemicals LLC supplies RO Passivation across Oman and the wider GCC with full SDS documentation to support these applications."
+        }
+      ],
       "wikiUrl": "https://en.wikipedia.org/wiki/Passivation_(chemistry)"
     }
   },
@@ -105,7 +115,7 @@
   },
   {
     "id": "ro-222-descaler",
-    "title": "RO 222 Descaler",
+    "title": "RO Membrane Descaler (RO 222)",
     "description": "Specialized descaling solution for reverse osmosis membrane systems.",
     "category": "ro-chemicals",
     "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
@@ -208,7 +218,7 @@
   },
   {
     "id": "membrane-cleaner-ro",
-    "title": "Membrane Cleaner",
+    "title": "RO Membrane Cleaner — General Fouling Removal",
     "description": "Comprehensive cleaning solution for RO membrane maintenance and restoration.",
     "category": "ro-chemicals",
     "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
@@ -422,6 +432,16 @@
         "Silica scale inhibition up to 200 ppm",
         "NSF/ANSI 60 certified",
         "Available in 25kg, 200kg drums, IBCs, bulk"
+      ],
+      "faqs": [
+        {
+          "question": "What grade and pack sizes of Membrane Antiscalant RO are available in Oman?",
+          "answer": "Global Chemicals LLC supplies Membrane Antiscalant RO in Oman — Advanced polymer and phosphonate blend — available in 25kg, 200kg drums, IBCs, bulk, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+        },
+        {
+          "question": "What is Membrane Antiscalant RO used for?",
+          "answer": "Membrane Antiscalant RO is commonly used for Sea water reverse osmosis (SWRO), High-recovery RO systems (>85%), and High-hardness brackish water treatment. Global Chemicals LLC supplies Membrane Antiscalant RO across Oman and the wider GCC with full SDS documentation to support these applications."
+        }
       ],
       "wikiUrl": "https://en.wikipedia.org/wiki/Scale_inhibitor",
       "guideUrl": "/blog/ro-membrane-chemicals-antiscalant-oman",
