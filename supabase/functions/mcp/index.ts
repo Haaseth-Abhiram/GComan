@@ -385,7 +385,8 @@ var agro_default = [
           question: "What is Zinc Sulphate Monohydrate (33% Zn) \u2014 Agricultural used for?",
           answer: "Zinc Sulphate Monohydrate (33% Zn) \u2014 Agricultural is commonly used for Zinc deficiency correction in date palm, citrus, and vegetables, Foliar micronutrient spray (0.2\u20130.5%), and Fertigation micronutrient supplementation. Global Chemicals LLC supplies Zinc Sulphate Monohydrate (33% Zn) \u2014 Agricultural across Oman and the wider GCC with full SDS documentation to support these applications."
         }
-      ]
+      ],
+      seoTitle: "Zinc Sulphate 33% Zn Supplier in Oman \u2014 Agricultural"
     }
   },
   {
@@ -1411,7 +1412,8 @@ var cooling_water_default = [
         "Residual activity: 3-7 days",
         "Available in 25kg, 200kg drums, IBCs"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Biocide"
+      wikiUrl: "https://en.wikipedia.org/wiki/Biocide",
+      seoTitle: "Cooling Tower Antifouling Biocide Supplier in Oman"
     }
   },
   {
@@ -1456,7 +1458,8 @@ var cooling_water_default = [
         "Compatible with inhibitor programs",
         "Available in 25kg, 200kg drums, IBCs"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Biocide"
+      wikiUrl: "https://en.wikipedia.org/wiki/Biocide",
+      seoTitle: "Cooling Tower Microbiocide Supplier in Oman"
     }
   },
   {
@@ -1570,7 +1573,8 @@ var cooling_water_default = [
           answer: "Blowdown rate depends on the boiler's cycles of concentration target, feed water quality, and steam purity requirements. For a typical industrial firetube boiler in Oman operating at 7\u201310 bar, a cycles of concentration of 8\u201312 is common, meaning the dissolved solids in boiler water are 8\u201312 times higher than in feed water. At this concentration, conductivity in the boiler drum typically runs 2,000\u20134,000 \xB5S/cm. Continuous blowdown of 5\u201310% of evaporation rate is used for conductivity control, supplemented by intermittent bottom blowdown to remove settled sludge. Excessive blowdown wastes expensive treated feed water and heat; insufficient blowdown allows scale-forming salts and silica to exceed safe limits. Global Chemicals LLC provides boiler water analysis and blowdown optimisation as part of its chemical treatment service, helping customers balance water savings with equipment protection."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Water_softening"
+      wikiUrl: "https://en.wikipedia.org/wiki/Water_softening",
+      seoTitle: "Boiler Scale & Hardness Inhibitor Supplier in Oman"
     }
   },
   {
@@ -1797,7 +1801,8 @@ var cooling_water_default = [
           answer: "Corro Guard For Antifoulant for Cooling Water is commonly used for Cooling tower dual-action protection, Corrosion and fouling prevention, and High-solids water treatment. Global Chemicals LLC supplies Corro Guard For Antifoulant for Cooling Water across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Antifouling"
+      wikiUrl: "https://en.wikipedia.org/wiki/Antifouling",
+      seoTitle: "Cooling Water Antifoulant Supplier in Oman"
     }
   },
   {
@@ -1893,6 +1898,7 @@ var corrosion_inhibitor_default = [
         "Available in 25kg, 200kg drums, IBCs"
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Corrosion_inhibitor",
+      seoTitle: "Multi-Metal Corrosion Inhibitor Supplier in Oman",
       seoDescription: "Multi-metal corrosion inhibitor for mixed-metallurgy cooling systems in Oman. Protects steel, copper, aluminium & SS at 50-150 ppm. Get a quote."
     }
   },
@@ -1938,7 +1944,8 @@ var corrosion_inhibitor_default = [
         "Corrosion rate reduction: >95%",
         "Available in 25kg, 200kg drums, IBCs"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Corrosion_inhibitor"
+      wikiUrl: "https://en.wikipedia.org/wiki/Corrosion_inhibitor",
+      seoTitle: "High-Temp Corrosion Inhibitor Supplier in Oman"
     }
   },
   {
@@ -1993,7 +2000,8 @@ var corrosion_inhibitor_default = [
           answer: "Corrosion Inhibitor For Metal Rust Preventive is commonly used for Equipment storage rust prevention, Spare parts protection during storage, and Machinery protection during shutdowns. Global Chemicals LLC supplies Corrosion Inhibitor For Metal Rust Preventive across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Rust"
+      wikiUrl: "https://en.wikipedia.org/wiki/Rust",
+      seoTitle: "Rust Preventive Corrosion Inhibitor Supplier in Oman"
     }
   },
   {
@@ -2040,7 +2048,8 @@ var corrosion_inhibitor_default = [
         "Compatible with glycols",
         "Available in 25kg drums, IBCs"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_molybdate"
+      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_molybdate",
+      seoTitle: "Molybdate Corrosion Inhibitor Supplier in Oman"
     }
   },
   {
@@ -2095,7 +2104,8 @@ var corrosion_inhibitor_default = [
           answer: "Corrosion Inhibitor is commonly used for General cooling water corrosion protection, Industrial water system treatment, and Boiler corrosion prevention. Global Chemicals LLC supplies Corrosion Inhibitor across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Corrosion_inhibitor"
+      wikiUrl: "https://en.wikipedia.org/wiki/Corrosion_inhibitor",
+      seoTitle: "Industrial Corrosion Inhibitor Supplier in Oman"
     }
   },
   {
@@ -2439,7 +2449,8 @@ var ethanolamines_default = [
           answer: "Global Chemicals LLC supplies MEA (Monoethanolamine) in Oman \u2014 Purity: 99% minimum \u2014 available in drums, IBCs, ISO tanks, bulk, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Monoethanolamine"
+      wikiUrl: "https://en.wikipedia.org/wiki/Monoethanolamine",
+      seoTitle: "MEA Monoethanolamine Supplier in Oman \u2014 Refinery"
     }
   },
   {
@@ -3606,7 +3617,8 @@ var glycols_default = [
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Ethylene_glycol",
       guideUrl: "/blog/meg-vs-deg-gas-dehydration-oman-gcc",
-      guideLabel: "MEG vs DEG for gas dehydration \u2014 which glycol for which duty"
+      guideLabel: "MEG vs DEG for gas dehydration \u2014 which glycol for which duty",
+      seoTitle: "MEG Monoethylene Glycol Supplier in Oman \u2014 Antifreeze"
     }
   },
   {
@@ -3667,7 +3679,8 @@ var glycols_default = [
         }
       ],
       guideUrl: "/blog/meg-vs-deg-gas-dehydration-oman-gcc",
-      guideLabel: "MEG vs DEG for gas dehydration \u2014 which glycol for which duty"
+      guideLabel: "MEG vs DEG for gas dehydration \u2014 which glycol for which duty",
+      seoTitle: "DEG Diethylene Glycol Supplier in Oman \u2014 Resin Grade"
     }
   },
   {
@@ -4224,7 +4237,8 @@ var inorganic_default = [
           question: "Do you export potassium hydroxide to the UAE and Saudi Arabia?",
           answer: "Yes \u2014 palletised 25 kg bags move by road to the UAE (Fujairah 2\u20134 hours, Dubai/Abu Dhabi 3\u20135 days) and Saudi Arabia (4\u20137 days) under GCC customs transit, with full export documentation from Muscat. Container-load sea freight from Sohar Port serves Jeddah, Yanbu and beyond."
         }
-      ]
+      ],
+      seoTitle: "Caustic Potash KOH Flakes Supplier in Oman"
     }
   }
 ];
@@ -4556,6 +4570,7 @@ var lab_chemicals_default = [
         "Available: 500g, 1kg, 5kg bottles"
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Sodium_hydroxide",
+      seoTitle: "Sodium Hydroxide Pellets AR Supplier in Oman \u2014 Lab",
       seoDescription: "Sodium hydroxide pellets, ACS reagent grade 97-99% (CAS 1310-73-2), ex-stock Muscat. For titrations, pH work & saponification. CoA per lot \u2014 get a quote."
     }
   },
@@ -7256,7 +7271,8 @@ var oilfield_default = [
           answer: "Citric Acid Liquid is commonly used for Matrix acidizing in carbonate reservoirs, Iron scale and rust removal, and Calcium carbonate scale dissolution. Global Chemicals LLC supplies Citric Acid Liquid across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Citric_acid"
+      wikiUrl: "https://en.wikipedia.org/wiki/Citric_acid",
+      seoTitle: "Citric Acid Liquid Supplier in Oman \u2014 Well Acidizing"
     }
   },
   {
@@ -7601,7 +7617,8 @@ var oilfield_default = [
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Diethylene_glycol",
       guideUrl: "/blog/meg-vs-deg-gas-dehydration-oman-gcc",
-      guideLabel: "MEG vs DEG for gas dehydration \u2014 which glycol for which duty"
+      guideLabel: "MEG vs DEG for gas dehydration \u2014 which glycol for which duty",
+      seoTitle: "DEG Supplier in Oman \u2014 Gas Dehydration Grade"
     }
   },
   {
@@ -8090,7 +8107,8 @@ var oilfield_default = [
         "Typical solution strength: 15-20% MEA",
         "Available in drums, IBCs, bulk"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Monoethanolamine"
+      wikiUrl: "https://en.wikipedia.org/wiki/Monoethanolamine",
+      seoTitle: "MEA Supplier in Oman \u2014 Gas Sweetening Grade"
     }
   },
   {
@@ -8151,7 +8169,8 @@ var oilfield_default = [
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Ethylene_glycol",
       guideUrl: "/blog/meg-vs-deg-gas-dehydration-oman-gcc",
-      guideLabel: "MEG vs DEG for gas dehydration \u2014 which glycol for which duty"
+      guideLabel: "MEG vs DEG for gas dehydration \u2014 which glycol for which duty",
+      seoTitle: "MEG Supplier in Oman \u2014 Hydrate Inhibitor Grade"
     }
   },
   {
@@ -9031,7 +9050,8 @@ var oilfield_default = [
           answer: "Surfactant, Sodium Silicate Alkaline and Neutral is commonly used for Cement accelerator in oil well cementing, Shale stabilization in drilling fluids, and Lost circulation material for severe losses. Global Chemicals LLC supplies Surfactant, Sodium Silicate Alkaline and Neutral across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_silicate"
+      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_silicate",
+      seoTitle: "Sodium Silicate Surfactant Supplier in Oman"
     }
   },
   {
@@ -9209,6 +9229,7 @@ var oilfield_default = [
           answer: "Correctly jar-tested and dosed ahead of gas flotation, reverse demulsifier programmes routinely bring produced water from hundreds of ppm oil down to the 10\u201340 ppm range required for re-injection or regulated discharge, with nutshell polishing taking it lower where specifications demand. Performance depends on droplet size, temperature and salinity \u2014 send your water spec for a programme recommendation."
         }
       ],
+      seoTitle: "Reverse Demulsifier Supplier in Oman \u2014 Produced Water",
       seoDescription: "Reverse demulsifier for produced-water deoiling in Oman. Cationic polyamine, 2-20 ppm ahead of flotation, jar-test confirmed. Request a quote."
     }
   }
@@ -9327,7 +9348,8 @@ var ro_chemicals_default = [
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Citric_acid",
       guideUrl: "/blog/ro-membrane-chemicals-antiscalant-oman",
-      guideLabel: "RO membrane chemicals \u2014 antiscalant selection and CIP programmes"
+      guideLabel: "RO membrane chemicals \u2014 antiscalant selection and CIP programmes",
+      seoTitle: "Citric Acid Liquid Supplier in Oman \u2014 RO Cleaning"
     }
   },
   {
@@ -9476,7 +9498,8 @@ var ro_chemicals_default = [
         "Available in 25kg, 200kg drums, IBCs"
       ],
       guideUrl: "/blog/ro-membrane-chemicals-antiscalant-oman",
-      guideLabel: "RO membrane chemicals \u2014 antiscalant selection and CIP programmes"
+      guideLabel: "RO membrane chemicals \u2014 antiscalant selection and CIP programmes",
+      seoTitle: "RO Membrane Cleaner Supplier in Oman"
     }
   },
   {
@@ -10534,7 +10557,7 @@ var soap_detergent_default = [
   },
   {
     id: "sodium-hypochlorite-12-15-soap",
-    title: "Sodium Hypochlorite 12-15%",
+    title: "Sodium Hypochlorite 12-15% (Bleach Manufacturing Grade)",
     description: "High-strength sodium hypochlorite solution (12\u201315% available chlorine) \u2014 industrial bleaching, disinfection, and cleaning agent for detergent manufacturing and sanitation in Oman.",
     category: "soap-detergent",
     image: "https://gcoman.com/images/products/chemical-drums.webp",
@@ -10581,7 +10604,8 @@ var soap_detergent_default = [
         "Packaging: 25L jerrican, 200L HDPE drum, 1,000L IBC",
         "Stability: 3\u20136 months at 15\u201320\xB0C away from heat and light"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_hypochlorite"
+      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_hypochlorite",
+      seoTitle: "Sodium Hypochlorite 12-15% Supplier in Oman \u2014 Bleach Grade"
     }
   },
   {
@@ -11484,7 +11508,7 @@ var swimming_pool_default = [
   },
   {
     id: "sodium-hypo-chlorite-12-15",
-    title: "Sodium Hypo Chlorite 12-15%",
+    title: "Sodium Hypochlorite 12-15% (Pool Grade)",
     description: "Concentrated liquid chlorine solution for effective pool water treatment.",
     category: "swimming-pool",
     image: "https://gcoman.com/images/products/chemical-drums.webp",
@@ -11536,7 +11560,8 @@ var swimming_pool_default = [
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Sodium_hypochlorite",
       guideUrl: "/blog/swimming-pool-chemicals-oman-muscat",
-      guideLabel: "Swimming pool chemicals in Oman \u2014 dosing for hotels, villas and facilities"
+      guideLabel: "Swimming pool chemicals in Oman \u2014 dosing for hotels, villas and facilities",
+      seoTitle: "Sodium Hypochlorite 12-15% Supplier in Oman \u2014 Pool Grade"
     }
   },
   {
@@ -12625,7 +12650,8 @@ var tank_cleaners_default = [
         "Effective cleaning with lower environmental impact",
         "Meets green chemistry standards",
         "Available in 20L, 200L drums"
-      ]
+      ],
+      seoTitle: "Eco-Friendly Tank Cleaner Supplier in Oman"
     }
   },
   {
@@ -12715,7 +12741,8 @@ var tank_cleaners_default = [
         "Dilution: Use concentrated or dilute 1:5",
         "Rinse thoroughly after treatment",
         "Available in 20L, 200L drums"
-      ]
+      ],
+      seoTitle: "Stainless Tank Brightener Supplier in Oman"
     }
   },
   {
@@ -13881,7 +13908,8 @@ var water_treatment_default = [
         "Available in drums and IBC tanks",
         "Compatible with all metals"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Corrosion_inhibitor"
+      wikiUrl: "https://en.wikipedia.org/wiki/Corrosion_inhibitor",
+      seoTitle: "Boiler & Cooling Corrosion Inhibitor Supplier in Oman"
     }
   },
   {
@@ -13928,6 +13956,7 @@ var water_treatment_default = [
       wikiUrl: "https://en.wikipedia.org/wiki/Diethylene_glycol",
       guideUrl: "/blog/meg-vs-deg-gas-dehydration-oman-gcc",
       guideLabel: "MEG vs DEG for gas dehydration \u2014 which glycol for which duty",
+      seoTitle: "DEG Diethylene Glycol Supplier in Oman \u2014 Industrial",
       seoDescription: "DEG, diethylene glycol 99.5% (CAS 111-46-6), ex-stock Muscat, Oman. Gas dehydration and solvent duties. Drums, IBCs or bulk \u2014 get a quote."
     }
   },
@@ -14334,7 +14363,8 @@ var water_treatment_default = [
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Ethylene_glycol",
       guideUrl: "/blog/meg-vs-deg-gas-dehydration-oman-gcc",
-      guideLabel: "MEG vs DEG for gas dehydration \u2014 which glycol for which duty"
+      guideLabel: "MEG vs DEG for gas dehydration \u2014 which glycol for which duty",
+      seoTitle: "MEG Supplier in Oman \u2014 HVAC Coolant Grade"
     }
   },
   {
@@ -14715,7 +14745,8 @@ var water_treatment_default = [
         "Technical and food grade",
         "Highly hygroscopic"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Potassium_hydroxide"
+      wikiUrl: "https://en.wikipedia.org/wiki/Potassium_hydroxide",
+      seoTitle: "Potassium Hydroxide Supplier in Oman \u2014 Water Grade"
     }
   },
   {

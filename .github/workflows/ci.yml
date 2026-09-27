@@ -36,6 +36,13 @@ jobs:
       # translation files. Fix with: node scripts/sync-ar-meta.mjs
       - name: Arabic meta subset
         run: npm run verify:ar-meta
+      # Fails if any product's rendered <title> exceeds the 60-char SERP clamp,
+      # duplicates another product's, or gets truncated past the word "Oman".
+      # Catches the 2026-09-27 class of regression, where retitling pushed 20
+      # composed titles over the clamp and silently dropped the geo signal —
+      # invisible to tsc/lint/build/e2e. Fix by adding a details.seoTitle.
+      - name: Product SERP titles
+        run: npm run verify:serp-titles
       - name: Build (dev mode, no prerender)
         run: npm run build:dev
 

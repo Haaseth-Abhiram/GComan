@@ -126,6 +126,16 @@ test.describe('Product SERP title', () => {
       '/products/agro/agricultural-gypsum',
       '/products/agro/dap-fertilizer',
       '/products/water-treatment/caustic-soda-flakes',
+      // Regression cases (2026-09-27): retitling for cross-category
+      // disambiguation pushed these composed titles past the 60-char clamp,
+      // and fitForSerp truncated them past the word "Oman". This sampled test
+      // passed anyway because none of the 3 URLs above were affected — hence
+      // `npm run verify:serp-titles`, which checks the whole catalogue. These
+      // four keep the *rendered* form of that regression covered here too.
+      '/products/oilfield/deg',
+      '/products/water-treatment/meg-water',
+      '/products/corrosion-inhibitor/corrosion-inhibitor-general',
+      '/products/cooling-water/hardness-control-boiler',
     ]) {
       const title = await settledTitle(page, url);
       expect(title.length, `${url} title length`).toBeLessThanOrEqual(60);
