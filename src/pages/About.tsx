@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Card } from '@/components/ui/card';
@@ -85,6 +86,12 @@ const About = () => {
         canonical="https://gcoman.com/about"
       />
       <FAQStructuredData faqs={aboutFAQs} />
+      {/* The hero is this page's LCP element and already renders eager +
+          fetchPriority=high, but without a preload the browser only discovers
+          it after the route chunk resolves. Same pattern as the homepage. */}
+      <Helmet defer={false}>
+        <link rel="preload" as="image" href={heroImage} fetchPriority="high" />
+      </Helmet>
       <BreadcrumbStructuredData items={breadcrumbItems} />
       <SpeakableStructuredData url="https://gcoman.com/about" cssSelector={["h1", "h2", ".speakable"]} />
       <Navigation />
@@ -96,8 +103,8 @@ const About = () => {
           <img
             src={heroImage}
             alt="Global Chemicals Laboratory"
-            width={1920}
-            height={1080}
+            width={1536}
+            height={1024}
             className="w-full h-full object-cover"
             loading="eager"
             decoding="sync"
