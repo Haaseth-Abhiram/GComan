@@ -102,6 +102,29 @@ const ProductDetail = ({ category, rawCategoryProducts }: ProductDetailProps) =>
     ? (t(`products.${product.id}.alternativeNames`, { returnObjects: true, defaultValue: product.details?.alternativeNames }) as string[])
     : product.details?.alternativeNames;
 
+  const isArabicRender = i18n.language === 'ar';
+
+  // FAQs are authored in English only — products-ar.json carries no `faqs` key
+  // for any of its 277 entries (checked 2026-09-28). The /ar product pages are
+  // indexable, so rendering the English FAQ there published English body text
+  // on an Arabic page AND duplicated the English page's FAQ verbatim. Show and
+  // schema-emit the FAQ on /ar only once a translation actually exists; this
+  // self-heals the moment `faqs` is added to products-ar.json.
+  const translatedFaqs = isArabicRender
+    ? (i18n.exists(`products.${product.id}.faqs`, { lng: 'ar' })
+        ? (t(`products.${product.id}.faqs`, { returnObjects: true }) as { question: string; answer: string }[])
+        : undefined)
+    : product.details?.faqs;
+
+  // Structured data must agree with the head. SEO.tsx rewrites the canonical to
+  // the /ar URL on Arabic renders, but the JSON-LD below was emitting the
+  // English URL and English strings there — so the canonical said "this is the
+  // Arabic page" while Product/BreadcrumbList said "this is the English page".
+  // Mirrors SEO.tsx's toArUrl so the two can't disagree.
+  const toArUrl = (u: string) =>
+    u.replace(/^https:\/\/gcoman\.com(\/|$)/, 'https://gcoman.com/ar$1');
+  const localizeUrl = (u: string) => (isArabicRender ? toArUrl(u) : u);
+
   const Icon = product.icon;
 
   // Arabic SEO meta — only when a real translation exists in products-ar.json
@@ -259,21 +282,21 @@ const ProductDetail = ({ category, rawCategoryProducts }: ProductDetailProps) =>
       />
       
       <ProductStructuredData
-        product={product}
-        url={product.details?.canonicalOverride || `https://gcoman.com/products/${category}/${productSlug}`}
+        product={isArabicRender ? { ...product, title: translatedTitle, description: translatedDescription } : product}
+        url={localizeUrl(product.details?.canonicalOverride || `https://gcoman.com/products/${category}/${productSlug}`)}
       />
-      {product.details?.faqs && product.details.faqs.length > 0 && (
-        <FAQStructuredData faqs={product.details.faqs} />
+      {translatedFaqs && translatedFaqs.length > 0 && (
+        <FAQStructuredData faqs={translatedFaqs} />
       )}
       <SpeakableStructuredData
-        url={`https://gcoman.com/products/${category}/${productSlug}`}
+        url={localizeUrl(`https://gcoman.com/products/${category}/${productSlug}`)}
         cssSelector={["h1", "h2", ".product-description", ".speakable"]}
       />
       <BreadcrumbStructuredData items={[
-        { name: 'Home', url: 'https://gcoman.com' },
-        { name: 'Products', url: 'https://gcoman.com/products' },
-        { name: category ? category.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) : 'Category', url: `https://gcoman.com/products/${category}` },
-        { name: product.title, url: `https://gcoman.com/products/${category}/${productSlug}` }
+        { name: t('nav.home'), url: localizeUrl('https://gcoman.com') },
+        { name: t('nav.products'), url: localizeUrl('https://gcoman.com/products') },
+        { name: catLabel, url: localizeUrl(`https://gcoman.com/products/${category}`) },
+        { name: translatedTitle, url: localizeUrl(`https://gcoman.com/products/${category}/${productSlug}`) }
       ]} />
       
       <Navigation />
@@ -480,13 +503,13 @@ const ProductDetail = ({ category, rawCategoryProducts }: ProductDetailProps) =>
                 </Card>
               )}
 
-              {product.details?.faqs && product.details.faqs.length > 0 && (
+              {translatedFaqs && translatedFaqs.length > 0 && (
                 <Card className="p-8 mb-8">
                   <h2 className="text-2xl font-bold mb-6">
-                    Frequently Asked Questions — {translatedTitle}
+                    {t('products.faqHeading', { defaultValue: 'Frequently Asked Questions' })} — {translatedTitle}
                   </h2>
                   <Accordion type="single" collapsible className="w-full">
-                    {product.details.faqs.map((faq, index) => (
+                    {translatedFaqs.map((faq, index) => (
                       <AccordionItem key={index} value={`faq-${index}`}>
                         <AccordionTrigger className="text-left font-semibold text-base">
                           {faq.question}

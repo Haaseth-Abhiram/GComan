@@ -202,7 +202,20 @@
     "featured": "مميز",
     "priceAsc": "السعر: من الأقل للأعلى",
     "priceDesc": "السعر: من الأعلى للأقل",
-    "getQuote": "اطلب عرض سعر"
+    "getQuote": "اطلب عرض سعر",
+    "productOverview": "نظرة عامة على المنتج",
+    "detailedDescription": "الوصف التفصيلي",
+    "applicationsAndUses": "التطبيقات والاستخدامات",
+    "alsoKnownAs": "يُعرف أيضًا باسم:",
+    "casNumber": "رقم CAS:",
+    "backToProducts": "العودة إلى المنتجات",
+    "faqHeading": "الأسئلة الشائعة",
+    "relatedProducts": "منتجات ذات صلة",
+    "needMoreInfo": "طلب عرض سعر",
+    "readGuide": "اقرأ الدليل",
+    "guideIntro": "هل تقارن بين الدرجات وأحجام العبوات وخيارات التوصيل؟",
+    "productNotFound": "المنتج غير موجود",
+    "productNotFoundDesc": "المنتج الذي تبحث عنه غير موجود أو تم نقله."
   },
   "industries": {
     "title": "القطاعات التي نخدمها",
