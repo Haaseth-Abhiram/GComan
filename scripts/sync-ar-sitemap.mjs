@@ -141,6 +141,24 @@ for (const e of [...kept]) {
   added.push(entry);
 }
 
+// ── RE-SEED: keep every twin's lastmod tracking its English source ────────
+// An /ar page is its English page run through the translation layer, so the
+// two change together. The loop above only seeds lastmod for twins it CREATES,
+// which left pre-existing twins frozen forever: on 2026-09-28, 264 of 297 /ar
+// URLs still claimed 2026-03-24 while their English sources had moved into
+// September. arTwinOf only ever produces `/ar` + the English path, so slicing
+// the prefix back off is an exact inverse.
+let reseeded = 0;
+const enByPath = new Map(kept.filter((e) => !e.path.startsWith('/ar')).map((e) => [e.path, e]));
+for (const e of kept) {
+  if (!e.path.startsWith('/ar')) continue;
+  const en = enByPath.get(e.path.slice(3));
+  if (en?.lastmod && e.lastmod !== en.lastmod) {
+    e.lastmod = en.lastmod;
+    reseeded++;
+  }
+}
+
 // ── ANNOTATE + serialise ───────────────────────────────────────────────────
 /** The en/ar pair this path belongs to, or null if it has no Arabic twin. */
 function pairFor(path) {
@@ -202,6 +220,7 @@ console.log(`[ar-sitemap] canonicalised SKUs  : ${canonicalisedProducts.size}`);
 console.log(`[ar-sitemap] pruned ${pruned.length} URL(s):`);
 for (const [k, v] of [...counts].sort((a, b) => b[1] - a[1])) console.log(`               ${String(v).padStart(3)}  ${k}`);
 if (added.length) console.log(`[ar-sitemap] added ${added.length} missing /ar twin(s)`);
+if (reseeded) console.log(`[ar-sitemap] re-seeded lastmod on ${reseeded} /ar twin(s) from their EN source`);
 console.log(`[ar-sitemap] hreflang-annotated  : ${annotated}`);
 console.log(`[ar-sitemap] ${entries.length} URLs in → ${kept.length} URLs out`);
 
