@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 export interface FAQEntry {
@@ -26,13 +27,18 @@ interface FAQSectionProps {
  * text is present in the prerendered HTML even while collapsed — the same
  * crawlability fix product and blog pages rely on.
  */
-export const FAQSection = ({ faqs, heading = 'Frequently Asked Questions', className }: FAQSectionProps) => {
+export const FAQSection = ({ faqs, heading, className }: FAQSectionProps) => {
+  const { t } = useTranslation();
   if (!faqs || faqs.length === 0) return null;
+
+  // Heading goes through i18n so /ar renders get the Arabic heading
+  // (ar.json products.faqHeading) instead of hardcoded English.
+  const resolvedHeading = heading ?? t('products.faqHeading', { defaultValue: 'Frequently Asked Questions' });
 
   return (
     <section className={className ?? 'py-16 bg-slate-50/70 border-t border-border/40'}>
       <div className="container mx-auto px-4 max-w-3xl">
-        <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 text-center">{heading}</h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 text-center">{resolvedHeading}</h2>
         <Accordion type="single" collapsible className="w-full">
           {faqs.map((faq, index) => (
             <AccordionItem key={index} value={`faq-${index}`}>

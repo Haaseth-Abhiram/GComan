@@ -76,7 +76,6 @@ function perEntityDates(path, extract) {
   return dates;
 }
 
-const canon = (o) => JSON.stringify(o, Object.keys(o).sort());
 const extractProducts = (blob) => {
   const arr = JSON.parse(blob);
   return new Map(arr.filter((p) => p && p.id).map((p) => [p.id, JSON.stringify(sortDeep(p))]));
@@ -143,7 +142,6 @@ const STATIC = {
   'chemical-supplier/caustic-soda-oman': ['src/pages/CausticSodaOman.tsx'],
   'tools/dosing-calculator': ['src/pages/DosingCalculator.tsx'],
   'blog': ['src/pages/Blog.tsx'],
-  'products': productFiles,
 };
 
 function lastmodFor(loc) {

@@ -642,25 +642,13 @@ const Industries = () => {
                       </div>
                     </div>
 
-                    {/* FAQs */}
-                    <div className="mb-16">
-                      <h3 className="text-2xl font-bold text-foreground mb-4 text-center">Frequently Asked Questions</h3>
-                      <p className="text-muted-foreground mb-8 text-center">Common questions about water treatment chemicals in Oman</p>
-                      <div className="max-w-3xl mx-auto">
-                        <Accordion type="single" collapsible className="space-y-4">
-                          {waterTreatmentFaqs.map((faq, index) => (
-                            <AccordionItem key={index} value={`faq-${index}`} className="border rounded-lg px-4">
-                              <AccordionTrigger className="text-left hover:no-underline">
-                                <span className="font-medium">{faq.question}</span>
-                              </AccordionTrigger>
-                              <AccordionContent className="text-muted-foreground">
-                                {faq.answer}
-                              </AccordionContent>
-                            </AccordionItem>
-                          ))}
-                        </Accordion>
-                      </div>
-                    </div>
+                    {/* FAQs for this tab render once, page-wide, via the
+                        <FAQSection> at the bottom of the page — the copy that
+                        used to live here was inside Radix Tabs content, which
+                        does NOT prerender (verified: 0 occurrences in dist/),
+                        so crawlers never saw it, and once FAQSection was added
+                        for schema-visibility compliance, client-side visitors
+                        saw the same accordion twice. */}
 
                     {/* CTA */}
                     <div className="text-center py-8 bg-muted/30 rounded-xl">

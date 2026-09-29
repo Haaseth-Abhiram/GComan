@@ -120,9 +120,12 @@ const ProductDetail = ({ category, rawCategoryProducts }: ProductDetailProps) =>
   // the /ar URL on Arabic renders, but the JSON-LD below was emitting the
   // English URL and English strings there — so the canonical said "this is the
   // Arabic page" while Product/BreadcrumbList said "this is the English page".
-  // Mirrors SEO.tsx's toArUrl so the two can't disagree.
+  // Mirrors SEO.tsx's toArUrl EXACTLY, including the trailing-slash step: the
+  // Arabic homepage canonicalises as /ar/ (not /ar), and the first review of
+  // this code found the copy here had dropped that step — putting the Home
+  // breadcrumb crumb back in disagreement with the canonical it was meant to match.
   const toArUrl = (u: string) =>
-    u.replace(/^https:\/\/gcoman\.com(\/|$)/, 'https://gcoman.com/ar$1');
+    u.replace(/^https:\/\/gcoman\.com(\/|$)/, 'https://gcoman.com/ar$1').replace(/\/ar$/, '/ar/');
   const localizeUrl = (u: string) => (isArabicRender ? toArUrl(u) : u);
 
   const Icon = product.icon;
@@ -244,6 +247,11 @@ const ProductDetail = ({ category, rawCategoryProducts }: ProductDetailProps) =>
     'solvents': 'Industrial Solvent',
   };
   const catLabel = CATEGORY_LABEL[category || ''] ?? (category || '').replace(/-/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase());
+  // Arabic renders localize the category crumb too — it was the one remaining
+  // English item (position 3) in an otherwise-Arabic BreadcrumbList on /ar.
+  const catLabelLocalized = isArabicRender
+    ? t(`products.categoryLabels.${category}`, { defaultValue: catLabel })
+    : catLabel;
 
   // SERP title. Word order matters more than wording here, because SEO.tsx
   // clamps the <title> to 60 chars and Google truncates at about the same width.
@@ -282,7 +290,17 @@ const ProductDetail = ({ category, rawCategoryProducts }: ProductDetailProps) =>
       />
       
       <ProductStructuredData
-        product={isArabicRender ? { ...product, title: translatedTitle, description: translatedDescription } : product}
+        product={isArabicRender
+          ? {
+              ...product,
+              title: translatedTitle,
+              description: translatedDescription,
+              // alternateName is read from details.alternativeNames inside
+              // ProductStructuredData — localize it too, or the /ar Product
+              // node ships Arabic name/description with English aliases.
+              details: { ...product.details, alternativeNames: translatedAlternativeNames ?? product.details?.alternativeNames },
+            }
+          : product}
         url={localizeUrl(product.details?.canonicalOverride || `https://gcoman.com/products/${category}/${productSlug}`)}
       />
       {translatedFaqs && translatedFaqs.length > 0 && (
@@ -295,7 +313,7 @@ const ProductDetail = ({ category, rawCategoryProducts }: ProductDetailProps) =>
       <BreadcrumbStructuredData items={[
         { name: t('nav.home'), url: localizeUrl('https://gcoman.com') },
         { name: t('nav.products'), url: localizeUrl('https://gcoman.com/products') },
-        { name: catLabel, url: localizeUrl(`https://gcoman.com/products/${category}`) },
+        { name: catLabelLocalized, url: localizeUrl(`https://gcoman.com/products/${category}`) },
         { name: translatedTitle, url: localizeUrl(`https://gcoman.com/products/${category}/${productSlug}`) }
       ]} />
       

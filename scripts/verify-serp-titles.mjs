@@ -35,10 +35,25 @@ function fitForSerp(title) {
 // --- mirrored from src/pages/ProductDetail.tsx : CATEGORY_LABEL + serpTitle -
 function loadCategoryLabels() {
   const src = readFileSync('src/pages/ProductDetail.tsx', 'utf8');
-  const block = src.match(/CATEGORY_LABEL[^=]*=\s*\{([\s\S]*?)\n\}/);
+  // Stop at the first `};` on its own (possibly indented) line — the map is
+  // declared INSIDE the component, so its closing brace is `  };`, and the
+  // original `\n\}` pattern (column-0 brace) lazily over-captured ~24KB of
+  // component body and scraped stray quoted pairs out of JSX. Review finding
+  // 2026-09-29; the count assertion below turns any future drift into a loud
+  // failure instead of a guard that silently checks the wrong titles.
+  const block = src.match(/CATEGORY_LABEL[^=]*=\s*\{([\s\S]*?)\n\s*\};/);
   const labels = {};
   if (block) {
     for (const [, k, v] of block[1].matchAll(/'([^']+)':\s*'([^']+)'/g)) labels[k] = v;
+  }
+  const n = Object.keys(labels).length;
+  if (n < 20 || n > 40) {
+    console.error(
+      `[serp-titles] FATAL: extracted ${n} category labels from ProductDetail.tsx ` +
+        `(expected ~22). The CATEGORY_LABEL extraction no longer matches the source — ` +
+        `fix loadCategoryLabels() before trusting this guard.`
+    );
+    process.exit(1);
   }
   return labels;
 }

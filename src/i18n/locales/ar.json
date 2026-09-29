@@ -215,7 +215,31 @@
     "readGuide": "اقرأ الدليل",
     "guideIntro": "هل تقارن بين الدرجات وأحجام العبوات وخيارات التوصيل؟",
     "productNotFound": "المنتج غير موجود",
-    "productNotFoundDesc": "المنتج الذي تبحث عنه غير موجود أو تم نقله."
+    "productNotFoundDesc": "المنتج الذي تبحث عنه غير موجود أو تم نقله.",
+    "categoryLabels": {
+      "water-treatment": "معالجة المياه",
+      "oilfield": "حقول النفط",
+      "soap-detergent": "الصابون والمنظفات",
+      "ro-chemicals": "محطات التناضح العكسي",
+      "cooling-water": "أبراج التبريد",
+      "tank-cleaners": "تنظيف الخزانات",
+      "glycols": "الجليكولات",
+      "ethanolamines": "الإيثانول أمينات",
+      "corrosion-inhibitor": "مثبطات التآكل",
+      "calcium-carbonate": "الحشوات الصناعية",
+      "swimming-pool": "معالجة المسابح",
+      "lubricants": "زيوت التشحيم",
+      "lab-chemicals": "كيماويات المختبرات",
+      "lab-equipment": "معدات المختبرات",
+      "food-beverage": "الدرجة الغذائية",
+      "construction": "الإنشاءات",
+      "inorganic": "الكيماويات اللاعضوية",
+      "additives": "الإضافات الصناعية",
+      "agro": "الزراعة",
+      "alcohols": "الكحولات الصناعية",
+      "chlorinated": "المذيبات المكلورة",
+      "solvents": "المذيبات الصناعية"
+    }
   },
   "industries": {
     "title": "القطاعات التي نخدمها",
