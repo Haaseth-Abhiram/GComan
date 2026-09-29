@@ -8,48 +8,52 @@ Live Google positions for the standing keyword set. **Method:** manual/agent SER
 
 | Keyword | Position | Our URL | Last checked | Notes |
 |---|---|---|---|---|
-| global chemicals llc oman | #1 + sitelinks + Knowledge Panel | / | 2026-09-10 | 5.0★, 2 reviews |
-| chemical supplier in oman | #1 | / | 2026-09-10 | Competitor (Sohar Chemicals) panel shows on this SERP |
-| chemical supplier in muscat | #1 | / | 2026-09-10 | Snippet fixed 09-20; watch CTR in GSC |
+| global chemicals llc oman | #1 + sitelinks + Knowledge Panel | / | 2026-09-28 (WS) | 5.0★, 2 reviews. WS (global index) can't see the local Knowledge Panel/sitelinks — not a comparable signal, no change assumed. |
+| chemical supplier in oman | #1 | / | 2026-09-28 (WS) | Competitor (Sohar Chemicals) panel shows on this SERP. WS shows gcoman.com ~#2 of 10 (DubiChem above); needs gl=om re-verify — keeping #1 per last browser check. |
+| chemical supplier in muscat | #1 | / | 2026-09-28 (WS) | Snippet fixed 09-20; watch CTR in GSC. WS confirms gcoman.com as the top result — consistent. |
 
 ## Tier 2 — Page-1 positions (push to #1)
 
 | Keyword | Position | Our URL | Last checked | Notes |
 |---|---|---|---|---|
-| laboratory chemicals supplier oman | **#2** | / | 2026-09-21 | NEW find; omanchem #1 |
-| shell lubricants distributor oman | #3 | /products/lubricants | 2026-09-10 | Distributor-relationship win |
-| glycol supplier oman | **#4** | /products/glycols | 2026-09-21 | NEW find; muscatchemical #1 |
-| corrosion inhibitor supplier oman | **#4–5** | /products/corrosion-inhibitor | 2026-09-21 | NEW find; omanchem/muscatchemical above |
-| agricultural gypsum oman | #1 | /products/agro/agricultural-gypsum | 2026-09-10 | Exact-phrase win |
-| dap npk fertilizer oman | #1 | /products/agro/dap-fertilizer | 2026-09-10 | Exact-phrase win |
-| urea fertilizer supplier oman | #7 | /products/agro/urea-fertilizer | 2026-09-10 | Control query; SXO 9/10 fit |
-| water treatment chemicals supplier oman | #1 | / | 2026-09-10 | Homepage carries it; category-page rebuild planned |
-| chemical suppliers in duqm / rusayl / salalah | #1–2 | / and /chemicals/rusayl | 2026-09-10 | Institution/geo wins |
-| jsrs approved chemical supplier pdo oman | #1 + #3 | /blog/jsrs-chemical-supplier-pdo-oman | 2026-09-10 | Strongest content page |
-| chemical exporter oman to saudi arabia | #1 + #2 | /blog/chemical-exporter-… | 2026-09-10 | Export frame wins |
-| chemical suppliers in jeddah | #4 | /chemicals/jeddah | 2026-09-10 | Best KSA city result |
+| laboratory chemicals supplier oman | **#2** | / | 2026-09-28 (WS) | NEW find; omanchem #1. WS shows gcoman.com ~#4 of 10; needs gl=om re-verify — keeping #2 per last browser check. |
+| shell lubricants distributor oman | #3 | /products/lubricants | 2026-09-28 (WS) | Distributor-relationship win. WS shows gcoman.com not visible (Sayarti/Shell Oman dominate the global index); needs gl=om re-verify. |
+| glycol supplier oman | **#4** | /products/glycols | 2026-09-28 (WS) | NEW find; muscatchemical #1. WS shows gcoman.com not visible; needs gl=om re-verify. |
+| corrosion inhibitor supplier oman | **#4–5** | /products/corrosion-inhibitor | 2026-09-28 (WS) | NEW find; omanchem/muscatchemical above. WS shows the product page ~#2 of 9 — possible improvement; needs gl=om re-verify before promoting. |
+| agricultural gypsum oman | #1 | /products/agro/agricultural-gypsum | 2026-09-28 (WS) | Exact-phrase win. WS (agri-gypsum industry query) doesn't surface gcoman.com at all — likely a different query interpretation (mining/industry vs. buy-online intent); needs gl=om re-verify. |
+| dap npk fertilizer oman | #1 | /products/agro/dap-fertilizer | 2026-09-28 (WS) | Exact-phrase win. WS doesn't surface gcoman.com (results skew to manufacturing-equipment queries); needs gl=om re-verify. |
+| urea fertilizer supplier oman | #7 | /products/agro/urea-fertilizer | 2026-09-28 (WS) | Control query; SXO 9/10 fit. WS's visible list (~top 9) doesn't reach #7 — consistent with the prior position, no contradiction. |
+| water treatment chemicals supplier oman | #1 | / | 2026-09-28 (WS) | Homepage carries it; category-page rebuild planned. WS shows gcoman.com ~#3 of 9; needs gl=om re-verify — keeping #1 per last browser check. |
+| chemical suppliers in duqm / rusayl / salalah | #1–2 | / and /chemicals/rusayl | 2026-09-28 (WS) | Institution/geo wins. WS confirms /chemicals/duqm as the top result for "chemical suppliers in duqm" — consistent. |
+| jsrs approved chemical supplier pdo oman | #1 + #3 | /blog/jsrs-chemical-supplier-pdo-oman | 2026-09-28 (WS) | Strongest content page. WS shows the blog page lower (~#5 of 9, with the gcoman.com home/about pages also appearing ~#6–7); needs gl=om re-verify — keeping #1/#3 per last browser check. |
+| chemical exporter oman to saudi arabia | #1 + #2 | /blog/chemical-exporter-… | 2026-09-28 (WS) | Export frame wins. WS shows the gcoman.com homepage ~#3 of 9 (trade-data sites above); needs gl=om re-verify — keeping #1/#2 per last browser check. |
+| chemical suppliers in jeddah | #4 | /chemicals/jeddah | 2026-09-28 (WS) | Best KSA city result. WS query returned only Jeddah-local companies, gcoman.com not visible — likely a different query interpretation (local vs. cross-border supplier intent); needs gl=om re-verify. |
+| food grade chemicals supplier oman | **#1 (WS)** | / | 2026-09-28 (WS) | PROMOTED from Queued — WS shows the gcoman.com homepage as the top result; needs gl=om verify, and currently ranks on the homepage rather than a dedicated category page. |
+| ro chemicals supplier oman | **#4 (WS)** | /about | 2026-09-28 (WS) | PROMOTED from Queued — WS shows the gcoman.com /about page ~#4 of 9; ranking on the wrong page (About, not an RO/antiscalant product page) — needs gl=om verify plus a dedicated landing page. |
 
 ## Tier 3 — Absent / page 2+ (the battle list)
 
 | Keyword | Position | Winner(s) | Last checked | Next lever |
 |---|---|---|---|---|
-| hydrochloric acid supplier oman | — | muscatchemical, omanchem, Oman Chlorine | 2026-09-21 | NEW page live 09-21 + indexing requested; re-check 10-12 |
-| industrial salt / sodium chloride oman | — organic (local pack ✓) | muscatchemical, omanchem | 2026-09-21 | NEW page live 09-21; re-check 10-12 |
-| sodium hypochlorite supplier oman | — | Oman Chlorine, omanchem | 2026-09-21 | Snippet shipped; authority-bound |
-| calcium chloride supplier oman | — organic (**local pack #2** ✓) | Oman Chlorine | 2026-09-21 | Brine title shipped 09-21 |
-| caustic soda supplier oman | — | omanchem #1, muscatchemical #2 | 2026-09-10 | CONTROLLED TEST — verdict ~10-01, do not touch |
-| swimming pool chemicals oman | — | omanchem, muscatchemical | 2026-09-21 | Blog/category cannibalization fix queued |
-| poly aluminium chloride supplier oman | — | omanchem, muscatchemical, sohar | 2026-09-21 | Authority-bound |
-| meg monoethylene glycol supplier oman | — (AI Overview cites competitors) | network ×3 | 2026-09-21 | MEG 3-page consolidation queued |
-| soda ash supplier oman | — | muscatchemical + pack | 2026-09-21 | Authority-bound |
-| acetic acid supplier oman | — | muscatchemical, omanchem | 2026-09-21 | Authority-bound |
-| tank cleaning chemicals oman | — (pack: competitors) | omanchem, sohar, RXSOL net | 2026-09-21 | Authority-bound; marine niche |
-| fertilizer supplier oman (generic) | — | specialist fertilizer cos | 2026-09-21 | Different set; keep product-level wins |
-| chemical suppliers in dubai / riyadh / bahrain | — | local incumbents | 2026-09-10 | Strategy: export frame only, don't chase |
-| co2 carbon dioxide gas supplier oman | — | industrial-gas companies | 2026-09-20 | Deliberately skipped (different market) |
+| hydrochloric acid supplier oman | — | muscatchemical, omanchem, Oman Chlorine | 2026-09-28 (WS) | NEW page live 09-21 + indexing requested; re-check 10-12. WS 09-28: still not visible (muscatchemical/Oman Chlorine dominate); re-check 10-12 holds. |
+| industrial salt / sodium chloride oman | — organic (local pack ✓) | muscatchemical, omanchem | 2026-09-28 (WS) | NEW page live 09-21; re-check 10-12. WS 09-28: not visible in global generic results either (industrial-salt market/news sites dominate); re-check 10-12 holds. |
+| sodium hypochlorite supplier oman | — | Oman Chlorine, omanchem | 2026-09-28 (WS) | Snippet shipped; authority-bound. WS 09-28: **NEW** — gcoman.com homepage now appears ~#4 of 10 (DubiChem/Wilco above, MuscatChemical/Oman Chlorine below) — first WS sighting since tracking began; needs gl=om verify, promotion candidate if confirmed. |
+| calcium chloride supplier oman | — organic (**local pack #2** ✓) | Oman Chlorine | 2026-09-28 (WS) | Brine title shipped 09-21. WS 09-28: not visible in generic results (Dubichem/Globex/Muscat Chemical dominate) — consistent with organic-only local-pack visibility. |
+| caustic soda supplier oman | — | omanchem #1, muscatchemical #2 | 2026-09-28 (WS) | CONTROLLED TEST — verdict ~10-01, do not touch. Recording observed position only: WS 09-28 shows gcoman.com not visible; Dubichem/Hakim/Innova/Oman Chlorine dominate the global index (omanchem/muscatchemical not visible in WS either — different competitor mix than gl=om). Verdict date unchanged. |
+| swimming pool chemicals oman | — | omanchem, muscatchemical | 2026-09-28 (WS) | Blog/category cannibalization fix queued. WS 09-28: still not visible (Blue Storm/GWTS/Muscat Chemical dominate). |
+| poly aluminium chloride supplier oman | — | omanchem, muscatchemical, sohar | 2026-09-28 (WS) | Authority-bound. WS 09-28: **NEW** — gcoman.com's PAC blog page (`/blog/pac-poly-aluminium-chloride-oman`) appears ~#2 of 9 (only DubiChem above) — strongest WS signal of the cycle; needs gl=om verify, top promotion candidate. |
+| meg monoethylene glycol supplier oman | — (AI Overview cites competitors) | network ×3 | 2026-09-28 (WS) | MEG 3-page consolidation queued. WS 09-28: still not visible (Dubichem/Oman Chemical/West India Chemicals dominate); the WebSearch tool doesn't expose AI Overview content, so the competitor-citation claim couldn't be re-confirmed this cycle. |
+| soda ash supplier oman | — | muscatchemical + pack | 2026-09-28 (WS) | Authority-bound. WS 09-28: **NEW** — gcoman.com's soda ash product page appears ~#5 of 8; needs gl=om verify, promotion candidate. |
+| acetic acid supplier oman | — | muscatchemical, omanchem | 2026-09-28 (WS) | Authority-bound. WS 09-28: still not visible (import-data sites, Oman Chemical Co LLC, Dubichem dominate). |
+| tank cleaning chemicals oman | — (pack: competitors) | omanchem, sohar, RXSOL net | 2026-09-28 (WS) | Authority-bound; marine niche. WS 09-28: still not visible (Sohar Chemicals/Oman Chemical/RXSOL dominate). |
+| fertilizer supplier oman (generic) | — | specialist fertilizer cos | 2026-09-28 (WS) | Different set; keep product-level wins. WS 09-28: confirmed different set (OMIFCO, Sohar Sulphur, Oman Agri-Fertilizer) — strategy holds. |
+| chemical suppliers in dubai / riyadh / bahrain | — | local incumbents | 2026-09-28 (WS) | Strategy: export frame only, don't chase. WS 09-28: confirmed Dubai-local incumbents (Kemipex, Trice, Chemway) dominate; strategy holds. |
+| co2 carbon dioxide gas supplier oman | — | industrial-gas companies | 2026-09-28 (WS) | Deliberately skipped (different market). WS 09-28: confirmed (Gulf Cryo, Air Products); still deliberately skipped. |
 
 ## Queued for first check
-food grade chemicals supplier oman · construction chemicals oman · ro chemicals supplier oman · caustic soda flakes oman (post-verdict) · nitric acid food grade oman (re-check) · chlorine tablets pool oman
+construction chemicals oman · caustic soda flakes oman (post-verdict) · nitric acid food grade oman (re-check) · chlorine tablets pool oman
+
+`food grade chemicals supplier oman` and `ro chemicals supplier oman` promoted to Tier 2 on 2026-09-28 (WS) — see table above. WS 09-28 check on the remaining four: all still not visible (`construction chemicals oman` — Gulf International Chemicals SAOG/BASF dominate; `caustic soda flakes oman` — Hakim/Innova/Oman Chlorine, caustic-soda-adjacent so recorded only, not otherwise touched per standing instruction; `nitric acid food grade oman` — Chemstock/DubiChem/MBBT; `chlorine tablets pool oman` — Blue Storm/Oman Chemical-RXSOL). All four remain queued for a gl=om browser check.
 
 ## Change Log
 - **2026-09-29 (3)** — **Bing Webmaster Tools access recovered + first-ever read of Bing's native AI-citation data.** Login mystery solved: the property was registered via **Sign-in-with-Google** (globalchemicalsllc8@gmail.com) — there was never a Microsoft password, which is why Microsoft-account login "failed". Property: `www.gcoman.com`. Findings, per Bing Webmaster Tools:
@@ -73,6 +77,12 @@ food grade chemicals supplier oman · construction chemicals oman · ro chemical
   - **Verified CLEAN** (so these don't get re-audited): meta descriptions (274, all unique, none truncated, all inside the 158 clamp — checked specifically because it's the same bug class as the title regression); hreflang reciprocity across all 297 pairs; zero noindex-in-sitemap; zero dead links / orphans / equity dead-ends; zero JSON-LD parse failures or duplicate `@id`. **The 2026-09-21 audit's C3 finding is genuinely fixed** — a product page now loads 344 KB gzip with *zero bytes* of three.js; the 3D hero and its 1.6 MB HDRI are fully off the critical path.
   - **Still open, not actioned:** sitemap `lastmod` is stale (558/657 URLs still say 2026-03-24; `sync-ar-sitemap.mjs` only *copies* lastmod, never refreshes it — so Google is told nothing changed since March despite ~200 pages changing this week); `/contact` pulls 218 twemoji flag SVGs from cdnjs (lazy-loaded, so low perf cost, but a third-party dependency + IP leak on the highest-intent page, which sits awkwardly with this repo's deny-all consent stance); 10 JPGs not WebP (~1.15 MB → ~600 KB); `favicon.png` is 97 KB, byte-identical to `logo.png`, and referenced only by the inert `_redirects`; one `/ar/chemicals/yanbu` duplicate English FAQPage node (prerender race artifact).
   - **Doc drift:** CLAUDE.md says `index.html` holds a global BreadcrumbList — it does not (0 occurrences); it does carry undocumented `Certification`, `Offer`, `OfferCatalog`, `SearchAction` nodes.
+- **2026-09-28** — Weekly WS (global-index) sweep: all 3 Tier-1, 12 Tier-2 (incl. 2 new promotions), 14 Tier-3, and 6 queued keywords checked. Method caveat applies throughout (WS ≠ Oman-localized gl=om) — no browser-verified position was overwritten; every discrepancy is recorded as a note flagging "needs gl=om re-verify" rather than a position change.
+  - **New page-1 entries (promoted from Queued):** `food grade chemicals supplier oman` (~#1 WS, ranking on homepage) and `ro chemicals supplier oman` (~#4 WS, ranking on /about — needs a dedicated landing page). Both need gl=om confirmation before being treated as settled.
+  - **Notable Tier-3 sightings (not promoted, flagged for verification):** `poly aluminium chloride supplier oman` — gcoman.com's PAC blog page newly visible ~#2 of 9, the single strongest new signal this cycle; `sodium hypochlorite supplier oman` — homepage newly visible ~#4 of 10; `soda ash supplier oman` — product page newly visible ~#5 of 8. All three were "—" (absent) as of the 2026-09-21 browser check.
+  - **Drops / concerns (WS shows a weaker or absent position than the last browser-verified check — unresolved, needs re-verify):** `chemical supplier in oman` (Tier 1, browser #1 → WS ~#2), `water treatment chemicals supplier oman` (browser #1 → WS ~#3), `jsrs approved chemical supplier pdo oman` (browser #1/#3 → WS ~#5–7), `chemical exporter oman to saudi arabia` (browser #1/#2 → WS ~#3), `laboratory chemicals supplier oman` (browser #2 → WS ~#4), and four keywords WS shows not visible at all despite a prior browser win — `shell lubricants distributor oman`, `glycol supplier oman`, `agricultural gypsum oman`, `dap npk fertilizer oman` — most likely query-interpretation mismatches (global generic search vs. Oman buy-intent), not real drops, but unverified either way. Given two of these touch core commercial/brand-defense terms, prioritize `chemical supplier in oman` and `water treatment chemicals supplier oman` for the next gl=om check rather than waiting for the normal weekly cadence.
+  - **Unchanged / WS-consistent (11):** `chemical supplier in muscat`, `chemical suppliers in duqm`, `urea fertilizer supplier oman`, `calcium chloride supplier oman`, `caustic soda supplier oman` (controlled test, recorded only), `swimming pool chemicals oman`, `meg monoethylene glycol supplier oman`, `acetic acid supplier oman`, `tank cleaning chemicals oman`, `fertilizer supplier oman` (generic), `chemical suppliers in dubai/riyadh/bahrain`, `co2 carbon dioxide gas supplier oman`.
+  - **Odd:** the MEG AI-Overview-cites-competitors note from 09-21 couldn't be re-confirmed or refuted — the WebSearch tool used for this cycle doesn't expose AI Overview content, only organic-style results.
 - **2026-09-27 (2)** — **Self-review of the 09-26/09-27 retitling found two real defects it had introduced. Both fixed.**
   - **Regression: 20 product titles silently lost the word "Oman".** The disambiguating retitles made composed titles (`{title} Supplier in Oman | {catLabel}`) longer; 48 of 52 then exceeded SEO.tsx's 60-char clamp, and `fitForSerp` hard-truncates *past* "Oman" — undoing the earlier deliberate optimization that had pushed the geo signal into 254/272 titles. Measured before/after: 9 titles lacked "Oman" pre-change → 29 after (20 newly broken by me). Fixed all 29 (my 20 + the 9 pre-existing) with hand-written `details.seoTitle` overrides ≤60 chars that keep both the disambiguating qualifier and the geo signal. **Why nothing caught it:** the only title assertion in the suite (`product-seo-surface.spec.ts`) samples 3 hardcoded URLs, none affected — so tsc, lint, build, prerender-titles and all 77 e2e passed on a 20-page regression.
   - **Gap: the disambiguation only landed in English.** The `/ar` twins are indexable and their `<title>` carries no category suffix, so 9 groups of Arabic product titles stayed byte-identical (e.g. three separate pages all titled `مثبط التآكل`). Mirrored the English qualifiers into `products-ar.json` (19 titles) and re-ran `sync-ar-meta.mjs`. **The Arabic wording should get a native-speaker review** — it is my translation of the English qualifier, not a reviewed one.
