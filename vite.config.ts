@@ -9,14 +9,43 @@ import { ViteWebfontDownload } from "vite-plugin-webfont-dl";
 import prerender from "@prerenderer/rollup-plugin";
 import { mcpPlugin } from "@lovable.dev/mcp-js/stacks/supabase/vite";
 
+/**
+ * Routes that must be prerendered *precisely because* they are noindex.
+ *
+ * These are deliberately absent from sitemap.xml (submitting a noindex URL
+ * would contradict itself), which meant they were never prerendered — so the
+ * SPA shell was served, and the shell's default `robots: index, follow` is
+ * what crawlers actually saw. The `noIndex` prop on the page only took effect
+ * after React + Helmet ran.
+ *
+ * Google and Bing execute JS so they eventually saw the noindex (Bing's own
+ * SEO report flagged /thank-you, proving it rendered the page). **AI crawlers
+ * do not execute JavaScript** — GPTBot, ClaudeBot and PerplexityBot were
+ * therefore reading "Thank you, your enquiry was received" as ordinary
+ * indexable content. Prerendering these puts the noindex in the raw HTML for
+ * every crawler, without adding them to the sitemap. Found 2026-09-29 while
+ * verifying Bing Webmaster's NOINDEX recommendation.
+ *
+ * NOT included: `/sitemap` (the HTML sitemap page). It was tried and reliably
+ * exceeds the 120s puppeteer navigation timeout — it renders the entire
+ * 657-route link list — which fails the whole build. It is also the far
+ * milder case: it is a legitimate link hub, so being crawled is desirable,
+ * and an indexed HTML sitemap is low-harm. Left on the JS-only noindex.
+ */
+const NOINDEX_PRERENDER_ROUTES = ["/thank-you"];
+
 const routesFromSitemap = (): string[] => {
   const xml = fs.readFileSync(
     path.resolve(__dirname, "public/sitemap.xml"),
     "utf-8"
   );
-  return Array.from(xml.matchAll(/<loc>https:\/\/gcoman\.com([^<]*)<\/loc>/g))
+  const fromSitemap = Array.from(
+    xml.matchAll(/<loc>https:\/\/gcoman\.com([^<]*)<\/loc>/g)
+  )
     .map((m) => m[1] || "/")
     .filter((p) => !p.startsWith("/admin") && !p.startsWith("/login"));
+  // de-dupe defensively in case one is ever added to the sitemap by mistake
+  return Array.from(new Set([...fromSitemap, ...NOINDEX_PRERENDER_ROUTES]));
 };
 
 // https://vitejs.dev/config/
