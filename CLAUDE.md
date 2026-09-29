@@ -211,7 +211,7 @@ curl -sI https://gcoman.com/service/calcium-carbonate/ -o /dev/null -w '%{http_c
 
 `.claude/skills/` ships 15 checked-in skills that load automatically in this directory. Most are generic engineering workflows (TDD, systematic debugging, writing/executing plans, code review), but **`checking-seo-health`** is project-specific: the standing procedure for a periodic or pre/post-deploy SEO check on gcoman.com (sitemap submission, crawl/index coverage, Search Console queries, the Arabic-vs-English indexing gap, GA4 swings). Use it instead of improvising an SEO health check.
 
-`.claude/workflows/full-repo-analysis.js` is a saved multi-agent Workflow (currently untracked in git — not yet committed): 12 parallel subsystem deep-reads → adversarial verification of every finding → completeness critic. Run it (only on explicit user opt-in to multi-agent orchestration) for a full-repo audit instead of authoring a new workflow from scratch.
+`.claude/workflows/full-repo-analysis.js` — a saved multi-agent Workflow (12 parallel subsystem deep-reads → adversarial verification of every finding → completeness critic) — was previously documented here but is **gone from disk as of 2026-09-29** (it was untracked in git, so nothing recovers it from history). If a full-repo audit is needed (only on explicit user opt-in to multi-agent orchestration), author a fresh workflow script rather than assuming this one still exists.
 
 ## Reference docs in this repo
 
