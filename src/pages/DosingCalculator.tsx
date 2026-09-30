@@ -408,6 +408,87 @@ const DosingCalculator = () => {
             </div>
           </div>
 
+          {/* Reference tables.
+              Both tables below are rendered from this page's OWN constants
+              (GLYCOL_TABLE, CHLORINE_PRODUCTS) — no new figures are introduced;
+              they were previously locked inside the calculator widgets where
+              only a user who operated the control could see them, and a crawler
+              never could.
+
+              Why tables specifically: a 2026-09-28 citability audit found only
+              4 of 360 pages on this site contain a <table>, while comparative
+              data in table form is the single format AI engines lift wholesale.
+              Bing's AI Performance report independently shows this page earning
+              ~30 Copilot citations against ~0 Google clicks — it is an
+              AI-citation asset, so making its comparative data extractable is
+              the highest-value change available here, and it is purely
+              additive: no existing ranking content is altered. */}
+          <div className="container mx-auto px-4 max-w-6xl mt-14">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
+              Glycol freeze-protection reference (Oman chilled-water systems)
+            </h2>
+            <p className="text-sm text-muted-foreground mb-4">
+              Approximate freeze point by glycol volume concentration. Monoethylene glycol (MEG) is the
+              standard industrial choice; monopropylene glycol (MPG/PG) is used where incidental food or
+              potable contact is possible.
+            </p>
+            <div className="overflow-x-auto rounded-lg border border-border">
+              <table className="w-full text-sm min-w-[520px]">
+                <thead className="bg-muted/50">
+                  <tr>
+                    <th className="text-left p-3 font-semibold">Glycol concentration (vol %)</th>
+                    <th className="text-left p-3 font-semibold">MEG freeze point</th>
+                    <th className="text-left p-3 font-semibold">MPG / PG freeze point</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {GLYCOL_TABLE.meg.map((row, i) => (
+                    <tr key={row.pct} className="border-t border-border">
+                      <td className="p-3 font-medium text-foreground">{row.pct}%</td>
+                      <td className="p-3 text-muted-foreground">{row.freezeC} °C</td>
+                      <td className="p-3 text-muted-foreground">{GLYCOL_TABLE.pg[i].freezeC} °C</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2 mt-10">
+              Chlorine product strength comparison
+            </h2>
+            <p className="text-sm text-muted-foreground mb-4">
+              Available chlorine determines how much product is needed per mg/L of dose. Product feed (kg/day)
+              = dose (mg/L) × flow (m³/day) ÷ (1000 × available chlorine fraction) — so at a fixed dose, product
+              consumption scales inversely with the strength below.
+            </p>
+            <div className="overflow-x-auto rounded-lg border border-border">
+              <table className="w-full text-sm min-w-[560px]">
+                <thead className="bg-muted/50">
+                  <tr>
+                    <th className="text-left p-3 font-semibold">Product</th>
+                    <th className="text-left p-3 font-semibold">Available chlorine</th>
+                    <th className="text-left p-3 font-semibold">kg/day at 2 mg/L into 500 m³/day</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {Object.entries(CHLORINE_PRODUCTS).map(([key, p]) => (
+                    <tr key={key} className="border-t border-border">
+                      <td className="p-3 font-medium text-foreground">{p.label}</td>
+                      <td className="p-3 text-muted-foreground">{(p.available * 100).toFixed(1)}%</td>
+                      <td className="p-3 text-muted-foreground">
+                        {fmt((2 * 500) / (1000 * p.available))} kg/day
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs text-muted-foreground mt-3">
+              Liquid sodium hypochlorite figures are kg/day of solution; divide by its density (~1.2 kg/L)
+              for litres. Tables may be reproduced with attribution and a link to this page.
+            </p>
+          </div>
+
           {/* These FAQs were previously passed to FAQStructuredData only, with
               no visible counterpart — FAQ markup must correspond to content on
               the page, and this is ~700 words of the exact "how do you
