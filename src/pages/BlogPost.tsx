@@ -29,6 +29,48 @@ const slugifyHeading = (text: string) =>
     .replace(/\s+/g, '-')
     .slice(0, 60);
 
+/* Article bodies are plain text, so a markdown pipe table written into one was
+   being emitted verbatim: the MEG-vs-DEG guide shipped
+   "| Property | MEG | DEG |    |---|---|---|    | Formula | C2H6O2 | ..."
+   as literal paragraphs — visible junk for readers, and unparseable for the
+   crawlers that would otherwise lift it. That page is the densest on the site
+   (2,275 words, ~40 unit facts) and comparative data in table form is the one
+   format AI engines quote wholesale, so it was the worst possible place to
+   lose a table. Detected 2026-09-30 via Bing Site Scan follow-up.
+
+   These helpers segment a run of consecutive `| a | b |` lines into a real
+   <table>. Everything that isn't a pipe row keeps its existing
+   heading/paragraph handling untouched. */
+const isTableRow = (t: string) => t.startsWith('|') && t.endsWith('|') && t.length > 2;
+/** The `|---|:--:|` separator row carries no data and must not become a cell. */
+const isTableDivider = (t: string) => /^\|[\s:|-]+\|$/.test(t) && t.includes('-');
+const splitRow = (t: string) =>
+  t.slice(1, -1).split('|').map((c) => c.trim());
+
+type Block = { kind: 'line'; text: string } | { kind: 'table'; rows: string[][] };
+
+/** Group raw content lines into renderable blocks, folding pipe runs into tables. */
+const toBlocks = (content: string): Block[] => {
+  const lines = content.split('\n').map((l) => l.trim()).filter(Boolean);
+  const blocks: Block[] = [];
+  for (let i = 0; i < lines.length; i++) {
+    if (!isTableRow(lines[i])) {
+      blocks.push({ kind: 'line', text: lines[i] });
+      continue;
+    }
+    const rows: string[][] = [];
+    while (i < lines.length && isTableRow(lines[i])) {
+      if (!isTableDivider(lines[i])) rows.push(splitRow(lines[i]));
+      i++;
+    }
+    i--; // the for-loop will advance past the last consumed line
+    // A lone pipe line isn't a table — keep it as text rather than inventing one.
+    if (rows.length >= 2) blocks.push({ kind: 'table', rows });
+    else rows.forEach((r) => blocks.push({ kind: 'line', text: `| ${r.join(' | ')} |` }));
+  }
+  return blocks;
+};
+
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
 
@@ -61,13 +103,15 @@ const BlogPost = () => {
 
   const Icon = post.icon;
   const canonicalUrl = `https://gcoman.com/blog/${post.id}`;
-  // Derived from the same heuristic that renders the <h2>s, so the TOC can
-  // never list a heading the article doesn't actually have.
-  const headings: TOCHeading[] = post.content
-    .split('\n')
-    .map((l) => l.trim())
-    .filter((l) => l && isHeadingLine(l))
-    .map((text) => ({ id: slugifyHeading(text), text }));
+  // Derived from the same blocks that render the body, so the TOC can never
+  // list a heading the article doesn't actually have. Sourcing this from
+  // toBlocks() (rather than re-splitting the raw string) is what keeps it
+  // correct for table rows: `| Property | MEG | DEG |` satisfies every
+  // isHeadingLine test — short, no terminal punctuation, no ". " — so the
+  // raw-split version was publishing table rows as table-of-contents entries.
+  const headings: TOCHeading[] = toBlocks(post.content)
+    .filter((b): b is { kind: 'line'; text: string } => b.kind === 'line' && isHeadingLine(b.text))
+    .map(({ text }) => ({ id: slugifyHeading(text), text }));
   const relatedPosts = blogPosts
     .filter((p) => p.id !== post.id && (p.category === post.category || p.tags.some((t) => post.tags.includes(t))))
     .slice(0, 3);
@@ -189,15 +233,40 @@ const BlogPost = () => {
                 <ArticleTOC headings={headings} variant="inline" />
 
                 <div className="prose prose-lg max-w-none prose-headings:text-foreground prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-10 prose-h2:mb-4 prose-p:text-foreground/90 prose-p:leading-relaxed prose-a:text-primary prose-strong:text-foreground">
-                  {post.content.split('\n').map((line, i) => {
-                    const text = line.trim();
-                    if (!text) return null;
-                    return isHeadingLine(text) ? (
-                      <h2 key={i} id={slugifyHeading(text)} className="scroll-mt-28">
-                        {text}
+                  {toBlocks(post.content).map((block, i) => {
+                    if (block.kind === 'table') {
+                      const [header, ...body] = block.rows;
+                      return (
+                        <div key={i} className="overflow-x-auto my-6 rounded-lg border border-border not-prose">
+                          <table className="w-full text-sm min-w-[520px]">
+                            <thead className="bg-muted/50">
+                              <tr>
+                                {header.map((cell, c) => (
+                                  <th key={c} className="text-left p-3 font-semibold text-foreground">{cell}</th>
+                                ))}
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {body.map((row, r) => (
+                                <tr key={r} className="border-t border-border">
+                                  {row.map((cell, c) => (
+                                    <td key={c} className={c === 0 ? 'p-3 font-medium text-foreground' : 'p-3 text-muted-foreground'}>
+                                      {cell}
+                                    </td>
+                                  ))}
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      );
+                    }
+                    return isHeadingLine(block.text) ? (
+                      <h2 key={i} id={slugifyHeading(block.text)} className="scroll-mt-28">
+                        {block.text}
                       </h2>
                     ) : (
-                      <p key={i}>{text}</p>
+                      <p key={i}>{block.text}</p>
                     );
                   })}
                 </div>
