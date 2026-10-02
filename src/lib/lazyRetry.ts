@@ -74,3 +74,20 @@ export function lazyRetry<T extends ComponentType<unknown>>(
     }
   });
 }
+
+/**
+ * Same chunk-fetch resilience as lazyRetry, for a dynamic import that isn't
+ * a React.lazy component (e.g. the Supabase client, loaded at point-of-use
+ * rather than at module scope to keep it off the critical path).
+ */
+export function safeImport<T>(importer: () => Promise<T>): Promise<T> {
+  return importer().catch(async (err) => {
+    if (!isChunkLoadError(err)) throw err;
+    try {
+      return await importer();
+    } catch {
+      reloadOnceOnChunkError();
+      throw err;
+    }
+  });
+}

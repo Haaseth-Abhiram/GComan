@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
+import { safeImport } from '@/lib/lazyRetry';
 
 export const useUserRole = () => {
   const { user, isLoading: authLoading } = useAuth();
@@ -31,7 +32,7 @@ export const useUserRole = () => {
         // both call this hook on every page, which put the Supabase SDK in the
         // always-loaded bundle. Anonymous visitors return above without ever
         // reaching this line, so they now never download it.
-        const { supabase } = await import('@/integrations/supabase/client');
+        const { supabase } = await safeImport(() => import('@/integrations/supabase/client'));
         const { data, error } = await supabase
           .from('user_roles')
           .select('role')

@@ -3,6 +3,7 @@ import { createContext, useContext, useEffect, useState, ReactNode } from 'react
 import type { User, Session } from '@supabase/supabase-js';
 import { useNavigate } from 'react-router-dom';
 import { useToast } from '@/hooks/use-toast';
+import { safeImport } from '@/lib/lazyRetry';
 
 interface AuthContextType {
   user: User | null;
@@ -33,7 +34,15 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     let unsubscribe: (() => void) | undefined;
 
     void (async () => {
-      const { supabase } = await import('@/integrations/supabase/client');
+      let supabase;
+      try {
+        ({ supabase } = await safeImport(() => import('@/integrations/supabase/client')));
+      } catch {
+        // The SDK never answered — resolve to signed-out rather than hang
+        // ProtectedRoute/AdminRoute on isLoading forever.
+        if (active) setIsLoading(false);
+        return;
+      }
       if (!active) return;
 
       // Listener FIRST, then the existing-session read (order matters: a token
@@ -62,7 +71,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
   const signOut = async () => {
     try {
-      const { supabase } = await import('@/integrations/supabase/client');
+      const { supabase } = await safeImport(() => import('@/integrations/supabase/client'));
       const { error } = await supabase.auth.signOut();
       if (error) throw error;
       
