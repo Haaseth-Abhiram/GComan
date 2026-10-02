@@ -1,5 +1,7 @@
 # SEO/GEO Handoff — state as of 2026-09-30
 
+> **Update 2026-10-01 (day 1 of the watch):** all alarms clear — manual actions *None*, Bing errors *0*, clicks 533 / impressions 10.4K / position 8.7 / homepage 264 / Google indexed 456, gates + 77/77 e2e green. **One correction to §1 below: production is NOT current.** `8b06c5e` (markdown tables) is merged to `main` but unshipped — prod still serves the 09-30 build and renders two tables as raw pipe text on the MEG/DEG blog. Needs a Lovable Publish, no code. Full numbers in `strategy-and-watch-2026-09-30.md` §6.
+
 **Read this first in a new session.** Then `docs/seo/strategy-and-watch-2026-09-30.md` (the restraint plan + baseline numbers) and `docs/seo/citation-execution-plan-2026-09-30.md` (the user's own task list).
 
 ---
@@ -8,8 +10,8 @@
 
 | | |
 |---|---|
-| Git | `main` == `Develop` == `8b06c5e`; nothing uncommitted, nothing unpushed |
-| Production | deploy `psr2.d75791a9…`, homepage 200, sitemap **657 URLs** |
+| Git | `main` == `8b06c5e`; `Develop` ahead by docs commits only |
+| Production | deploy `psr2.d75791a9…` (built at `c85b4d5` — **one code commit behind `main`**), homepage 200, sitemap **657 URLs** |
 | Gates | tsc · lint · prerender-titles · serp-titles · sitemap-health · ar-meta all clean; **77/77 e2e** |
 | Scope shipped | 35 commits since `5e2f873` |
 
@@ -113,6 +115,7 @@ None of these can be judged before recrawl. **Anyone claiming today that the wor
 
 - **Bing Webmaster** — registered via *Sign-in-with-Google* as `globalchemicalsllc8@gmail.com`. **No Microsoft password exists.** That was the whole login mystery.
 - **GSC / GA4** — same Google account; the `authuser` index **drifts**. Match on the account email, never the index.
+- **GSC is a URL-prefix property, `https://gcoman.com/`** — not a domain property. `resource_id=sc-domain:gcoman.com` returns *"you don't have access to this property"* **even on the correct account**, which is indistinguishable from being signed in as the wrong user. Working shape (verified 2026-10-01): `search.google.com/u/1/search-console/<section>?resource_id=https%3A%2F%2Fgcoman.com%2F`.
 - **Supabase** — managed by Lovable Cloud; **no standalone credentials exist**. Never suggest `supabase login`.
 - **Edge functions do NOT deploy on a Lovable Publish** (verified) — frontend does. Never call an edge-function fix "live" after a Publish.
 - **Legacy redirects are client-side** — `curl` shows 200, not 301. Confirm in a browser, not curl.

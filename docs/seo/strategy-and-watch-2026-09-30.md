@@ -85,3 +85,41 @@ Competitors beat us on product queries with **worse** pages — one winning caus
 Which means: **more code cannot buy the remaining ground.** Bing shows **1 referring domain** for gcoman.com — and it is a job-posting link. The good news is the gap is smaller than it looks: competitor muscatchemical's 16 domains are mostly their own network; their genuine third-party links number about **six**.
 
 **Roughly six good citations — directories, D&B, a trade listing — would close the measurable authority gap.** That is the highest-leverage work available, it is a business action rather than a code change, and it cannot harm the lead flow.
+
+---
+
+## 6. Week-1 check — 2026-10-01 (day 1 of the watch)
+
+Too early for gains; this pass was looking for **damage**. None found. One deploy gap found.
+
+| Metric | Baseline 09-30 | 10-01 | Alarm | |
+|---|---|---|---|---|
+| GSC clicks 28d | 536 | **533** | < 450 | ✅ |
+| GSC impressions 28d | 10.5K | **10.4K** | < 9K | ✅ |
+| GSC avg position | 9.0 | **8.7** | > 11 | ✅ |
+| GSC CTR | — | 5.1% | — | — |
+| Homepage clicks 28d | 271 | **264** (49.5% of all) | < 230 | ✅ |
+| Google indexed | 456 (333 not) | **456 (333 not)** | < 430 | ✅ |
+| **Manual actions** | None | **No issues detected** | any | ✅ |
+| Security issues | — | **No issues detected** | any | ✅ |
+| Bing indexed | 540, 0 errors | **544, 0 errors** (117 warn, 7 excl) | < 500 or any error | ✅ |
+| Bing AI citations 3M | ~1,300 | **1.3K** | collapse | ✅ |
+
+*Per Search Console* (property `https://gcoman.com/`, data 8.5h old) · *per Bing Webmaster* · *per the live site*.
+Leads not yet readable — 1 Oct.
+
+Gates re-run locally at `c998313`: tsc · lint · sitemap-health · ar-meta · prerender-titles · serp-titles all clean; **77/77 e2e in 27.8s**. Production: 657-URL sitemap, 297 `/ar`, robots + llms.txt 200, homepage/JSRS/dosing-calculator/location/caustic-soda hub all 200 with correct prerendered titles.
+
+### Open deploy gap — `8b06c5e` is merged but NOT live
+
+`main` is at `8b06c5e` (the markdown-table fix) while production still serves deploy `psr2.d75791a9…` from the 09-30 baseline (`c85b4d5`). Proof, not inference:
+
+| `/blog/meg-vs-deg-gas-dehydration-oman-gcc` | raw `\|---\|` rows | `<table>` |
+|---|---|---|
+| production | 9 | 0 |
+| local `dist/` built from HEAD | 0 | 2 |
+
+Two comparison tables on a 2,275-word page are rendering to readers and crawlers as raw pipe text. **Fix is a Lovable Publish — no code work.** Consistent with the known rule that a git merge alone does not ship.
+
+### Verdict
+Watch continues unchanged. Nothing to build. Next real signal ~7 Oct.
