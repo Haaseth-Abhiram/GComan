@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import { CheckCircle2 } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
@@ -44,6 +45,18 @@ const homepageFAQs = [
 ];
 
 const Index = () => {
+  const { t, i18n } = useTranslation();
+
+  // The FAQ copy below is English-only. On /ar this previously rendered an
+  // Arabic heading over an untranslated English wall of text — the same
+  // duplicate-content trap product pages already guard against (see
+  // ProductDetail.tsx's translatedFaqs). Show it only once home.faqs exists.
+  const visibleFAQs = i18n.language === 'ar'
+    ? (i18n.exists('home.faqs', { lng: 'ar' })
+        ? (t('home.faqs', { returnObjects: true }) as { question: string; answer: string }[])
+        : undefined)
+    : homepageFAQs;
+
   return (
     <div className="min-h-screen bg-background">
       <SEO
@@ -64,7 +77,9 @@ const Index = () => {
         <link rel="preload" as="image" href={heroLcp} fetchPriority="high" type="image/webp" />
       </Helmet>
       <ServiceStructuredData />
-      <FAQStructuredData faqs={homepageFAQs} />
+      {visibleFAQs && visibleFAQs.length > 0 && (
+        <FAQStructuredData faqs={visibleFAQs} />
+      )}
       <SpeakableStructuredData
         url="https://gcoman.com/"
         cssSelector={["h1", "h2", ".company-snapshot"]}
@@ -132,7 +147,7 @@ const Index = () => {
 
         {/* Visible FAQ — must mirror the homepageFAQs schema emitted above.
             Shared component so schema and rendered text can't drift apart. */}
-        <FAQSection faqs={homepageFAQs} />
+        <FAQSection faqs={visibleFAQs ?? []} />
       </main>
       <Footer />
     </div>

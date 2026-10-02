@@ -48,7 +48,16 @@ const breadcrumbItems = [
 
 const About = () => {
   const spotlight = useSpotlight();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  // See ProductDetail.tsx's translatedFaqs — same guard, same reason: this
+  // FAQ copy is English-only, so /ar must not render it until about.faqs
+  // actually exists in the Arabic bundle.
+  const visibleFAQs = i18n.language === 'ar'
+    ? (i18n.exists('about.faqs', { lng: 'ar' })
+        ? (t('about.faqs', { returnObjects: true }) as { question: string; answer: string }[])
+        : undefined)
+    : aboutFAQs;
 
 
   const values = [
@@ -85,7 +94,9 @@ const About = () => {
         ogUrl="https://gcoman.com/about"
         canonical="https://gcoman.com/about"
       />
-      <FAQStructuredData faqs={aboutFAQs} />
+      {visibleFAQs && visibleFAQs.length > 0 && (
+        <FAQStructuredData faqs={visibleFAQs} />
+      )}
       {/* The hero is this page's LCP element and already renders eager +
           fetchPriority=high, but without a preload the browser only discovers
           it after the route chunk resolves. Same pattern as the homepage. */}
@@ -324,7 +335,7 @@ const About = () => {
           </div>
         </div>
       </section>
-        <FAQSection faqs={aboutFAQs} />
+        <FAQSection faqs={visibleFAQs ?? []} />
       </main>
 
       <Footer />

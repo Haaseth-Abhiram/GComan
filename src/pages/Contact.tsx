@@ -60,8 +60,16 @@ const contactSchema = z.object({
 
 const Contact = () => {
   const { toast } = useToast();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const navigate = useNavigate();
+
+  // See ProductDetail.tsx's translatedFaqs — this FAQ copy is English-only,
+  // so /ar must not render it until contact.faqs actually exists.
+  const visibleFAQs = i18n.language === 'ar'
+    ? (i18n.exists('contact.faqs', { lng: 'ar' })
+        ? (t('contact.faqs', { returnObjects: true }) as { question: string; answer: string }[])
+        : undefined)
+    : contactFAQs;
   const [searchParams] = useSearchParams();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
@@ -295,7 +303,9 @@ const Contact = () => {
         canonical="https://gcoman.com/contact"
       />
       <ContactPageStructuredData />
-      <FAQStructuredData faqs={contactFAQs} />
+      {visibleFAQs && visibleFAQs.length > 0 && (
+        <FAQStructuredData faqs={visibleFAQs} />
+      )}
       <BreadcrumbStructuredData items={breadcrumbItems} />
       <SpeakableStructuredData
         url="https://gcoman.com/contact"
@@ -655,7 +665,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
-        <FAQSection faqs={contactFAQs} />
+        <FAQSection faqs={visibleFAQs ?? []} />
       </main>
 
       <Footer />

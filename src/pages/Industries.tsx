@@ -146,8 +146,16 @@ const INDUSTRY_IDS = [
 const DEFAULT_INDUSTRY = 'oil-gas';
 
 const Industries = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const location = useLocation();
+
+  // See ProductDetail.tsx's translatedFaqs — this FAQ copy is English-only,
+  // so /ar must not render it until industries.faqs actually exists.
+  const visibleFAQs = i18n.language === 'ar'
+    ? (i18n.exists('industries.faqs', { lng: 'ar' })
+        ? (t('industries.faqs', { returnObjects: true }) as { question: string; answer: string }[])
+        : undefined)
+    : waterTreatmentFaqs;
   const navigate = useNavigate();
 
   // The footer links here as /industries#water-treatment (and four siblings).
@@ -390,7 +398,9 @@ const Industries = () => {
         { name: 'Home', url: 'https://gcoman.com/' },
         { name: 'Industries', url: 'https://gcoman.com/industries' },
       ]} />
-      <FAQStructuredData faqs={waterTreatmentFaqs} />
+      {visibleFAQs && visibleFAQs.length > 0 && (
+        <FAQStructuredData faqs={visibleFAQs} />
+      )}
       <SpeakableStructuredData url="https://gcoman.com/industries" cssSelector={["h1", "h2", ".speakable"]} />
       <Navigation />
 
@@ -704,7 +714,7 @@ const Industries = () => {
           </div>
         </div>
       </section>
-        <FAQSection faqs={waterTreatmentFaqs} />
+        <FAQSection faqs={visibleFAQs ?? []} />
       </main>
 
       <Footer />

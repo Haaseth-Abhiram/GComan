@@ -51,6 +51,14 @@ const Certifications = () => {
   // ever rendered, so /ar/certifications served a fully English page.
   const isAr = i18n.language === 'ar';
 
+  // Unlike the content above, the FAQ copy has no Arabic translation yet — see
+  // ProductDetail.tsx's translatedFaqs for the same guard applied there.
+  const visibleFAQs = isAr
+    ? (i18n.exists('certifications.faqs', { lng: 'ar' })
+        ? (t('certifications.faqs', { returnObjects: true }) as { question: string; answer: string }[])
+        : undefined)
+    : certificationFAQs;
+
   const certifications = [
     {
       icon: Shield,
@@ -235,7 +243,9 @@ const Certifications = () => {
         canonical="https://gcoman.com/certifications"
       />
       <BreadcrumbStructuredData items={breadcrumbItems} />
-      <FAQStructuredData faqs={certificationFAQs} />
+      {visibleFAQs && visibleFAQs.length > 0 && (
+        <FAQStructuredData faqs={visibleFAQs} />
+      )}
       <SpeakableStructuredData url="https://gcoman.com/certifications" cssSelector={["h1", "h2", ".speakable"]} />
       <Navigation />
 
@@ -426,7 +436,7 @@ const Certifications = () => {
             </div>
           </div>
         </section>
-        <FAQSection faqs={certificationFAQs} />
+        <FAQSection faqs={visibleFAQs ?? []} />
       </main>
 
       <Footer />

@@ -18,6 +18,7 @@ import omifcoLogo from '@/assets/customers/omifco-logo.png';
 import { SEO } from '@/components/SEO';
 import { BreadcrumbStructuredData, FAQStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
 import { FAQSection } from '@/components/FAQSection';
+import { useTranslation } from 'react-i18next';
 import { LocalizedLink } from '@/components/LocalizedLink';
 
 // Customer page FAQs for AI search and rich snippets
@@ -98,6 +99,16 @@ interface Customer {
 }
 
 const Customers = () => {
+  const { t, i18n } = useTranslation();
+
+  // See ProductDetail.tsx's translatedFaqs — this FAQ copy is English-only,
+  // so /ar must not render it until customers.faqs actually exists.
+  const visibleFAQs = i18n.language === 'ar'
+    ? (i18n.exists('customers.faqs', { lng: 'ar' })
+        ? (t('customers.faqs', { returnObjects: true }) as { question: string; answer: string }[])
+        : undefined)
+    : customerFAQs;
+
   const customers: Customer[] = [
     {
       name: 'OQ',
@@ -202,7 +213,9 @@ const Customers = () => {
           reviews about your own Organization on your own site are ineligible
           for rich results and risk a structured-data penalty. The visible
           testimonials below still count for E-E-A-T. */}
-      <FAQStructuredData faqs={customerFAQs} />
+      {visibleFAQs && visibleFAQs.length > 0 && (
+        <FAQStructuredData faqs={visibleFAQs} />
+      )}
       <BreadcrumbStructuredData items={breadcrumbItems} />
       <SpeakableStructuredData
         url="https://gcoman.com/customers"
@@ -429,7 +442,7 @@ const Customers = () => {
         </div>
       </section>
 
-        <FAQSection faqs={customerFAQs} />
+        <FAQSection faqs={visibleFAQs ?? []} />
       </main>
       <Footer />
     </div>
