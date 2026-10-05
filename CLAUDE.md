@@ -18,6 +18,13 @@ npm run lint              # eslint
 npx tsc -b                # typecheck (no npm script; CI runs this)
 npm run preview           # serve dist/ locally
 
+# SEO gates & maintenance (see "Scripts in scripts/" for what each one reads)
+npm run verify:serp-titles       # CI gate: all 277 product titles ≤60 chars, unique, "Oman" intact
+npm run verify:sitemap-health    # CI gate: sitemap.xml is in sync with what <SEO> actually renders
+npm run verify:ar-meta           # CI gate: ar-meta.json matches the full AR translation files
+npm run sync:sitemap-lastmod     # derive each English <lastmod> from git history
+npm run submit:indexnow          # ping IndexNow (Bing/Yandex) with changed URLs
+
 # Catalogue audits (read dist/ or src/ — see "Scripts in scripts/")
 npm run audit:product-content    # rank product pages by content debt x demand
 npm run audit:internal-links     # link graph in dist/ — run `npm run build` first
@@ -57,7 +64,9 @@ Use **npm**. `bun.lock` is a leftover from a Lovable trial; canonical lockfile i
 
 ## CI (GitHub Actions)
 
-[.github/workflows/ci.yml](.github/workflows/ci.yml): typecheck + lint + `verify:sitemap-health` + `verify:ar-meta` + `build:dev` + Playwright smoke on every push/PR to `Develop`/`main`. It is the **only** quality gate before the Lovable auto-deploy ships to production. Before pushing: `npx tsc -b && npm run lint && npm run verify:sitemap-health && npm run verify:ar-meta && npm run test:e2e`.
+[.github/workflows/ci.yml](.github/workflows/ci.yml): typecheck + lint + `verify:sitemap-health` + `verify:ar-meta` + `verify:serp-titles` + `build:dev` + Playwright smoke on every push/PR to `Develop`/`main`. It is the **only** quality gate before the Lovable auto-deploy ships to production. Before pushing: `npx tsc -b && npm run lint && npm run verify:sitemap-health && npm run verify:ar-meta && npm run verify:serp-titles && npm run test:e2e`.
+
+A full-suite e2e run is ~30–50 s. If it reports minutes-long timings or scattered failures, check `uptime` before suspecting the code — load average above ~8 on this 11-core machine starves puppeteer and produces exactly that shape (one run read 60/77 in 1.5 h, then 77/77 in 47 s on an idle machine). Also note `npm run build 2>&1 | tail -1; echo $?` reports the *pipe's* status, not the build's — redirect to a file and check that instead.
 
 `ci.yml`'s header comment now matches "Deploy chain" below (corrected; the retired-Hostinger-FTP story was removed from it).
 
@@ -95,6 +104,7 @@ Much more than a brochure site. Beyond the obvious marketing pages:
 Pure client-side SPA whose SEO depends on three pieces working together. Touching one in isolation silently breaks indexing.
 
 1. **`public/sitemap.xml` is the source of truth for routes.** [vite.config.ts](vite.config.ts) parses it (`routesFromSitemap()`) and feeds `@prerenderer/rollup-plugin`. A route not in the sitemap gets no prerendered HTML — Googlebot sees the empty shell (Soft 404). Conversely, anything meant to stay out of the index (admin, `/dev/*`) must NOT be in the sitemap; the plugin also filters `/admin*` and `/login*` defensively.
+   **"Prerendered" and "in the sitemap" are separate decisions.** `NOINDEX_PRERENDER_ROUTES` in `vite.config.ts` is merged into the route list so a page can be prerendered *without* being submitted for indexing. This exists because `/thank-you` carries `noIndex` in its `<SEO>`, but with no prerendered HTML the SPA shell's default meta was served instead — so the page advertised `index, follow` to every crawler that doesn't run JS (which is all the AI crawlers). Put a noindex page here rather than in the sitemap. `/sitemap` is deliberately excluded from both: rendering it blows the 120 s puppeteer timeout.
 2. **Puppeteer prerender** renders each route, waits `renderAfterTime: 2500` ms for the lazy chunk + Helmet to commit, writes `dist/<route>/index.html`.
 3. **Apache `.htaccess`** serves the prerendered HTML per URL (SPA shell fallback for unknown routes).
 
@@ -118,7 +128,7 @@ Pure client-side SPA whose SEO depends on three pieces working together. Touchin
 `/products/:category` and `/products/:category/:productSlug` are NOT served by one generic component. [src/App.tsx](src/App.tsx) holds two registries — `productCategoryEntries` and `productDetailEntries` — mapping each of the 22 category slugs to a one-line shim in `src/pages/productCategory/` / `src/pages/productDetail/` that **statically** imports only its own `src/data/products/<cat>.json` and renders `Products` / `ProductDetail` with it seeded as a prop.
 
 Why it must stay this way:
-- **Prerender correctness.** Loading the category list through a dynamic import inside `useEffect` made the product grid a race against `renderAfterTime`. A 2026-09-10 audit of `dist/` found 16 of 22 category pages shipped to Googlebot with zero links to their own products, orphaning 169 of 275 products. Static seeding removes the race.
+- **Prerender correctness.** Loading the category list through a dynamic import inside `useEffect` made the product grid a race against `renderAfterTime`. A 2026-09-10 audit of `dist/` found 16 of 22 category pages shipped to Googlebot with zero links to their own products, orphaning 169 of 277 products. Static seeding removes the race.
 - **Bundle size.** One entry per category keeps each category's JSON in its own route chunk instead of every product page pulling all 22.
 - `PRODUCT_CATEGORIES` is derived from `Object.keys(productDetailEntries)` — deliberately *not* re-imported from `productLoader.ts`, so App.tsx's root bundle never pulls in that module's eager JSON imports. Unknown categories still fall through to the `/products/:category` wildcard.
 
@@ -126,7 +136,7 @@ Why it must stay this way:
 
 An `/ar/*` render is **noindex by default**. It becomes indexable only when the page passes BOTH `arTitle` and `arDescription` to `<SEO>` — that flips the `/ar` render to localized meta + self-referencing `/ar` canonical, and makes both language versions emit reciprocal hreflang (`en`/`ar`/`x-default`). Never pass Arabic meta for a page whose body content is still English — that's the duplicate-content trap the default protects against.
 
-- Currently enabled: **product detail pages with a full translation in `src/i18n/locales/products-ar.json`** (275 of 275 products — full coverage maintained since 2026-08-24; title + description present = enabled, enforced in [src/pages/ProductDetail.tsx](src/pages/ProductDetail.tsx)) and **location pages translated in `location-pages-ar.json`** (includes the UAE/Saudi country hubs).
+- Currently enabled: **product detail pages with a full translation in `src/i18n/locales/products-ar.json`** (277 of 277 products — full coverage maintained since 2026-08-24; title + description present = enabled, enforced in [src/pages/ProductDetail.tsx](src/pages/ProductDetail.tsx)) and **location pages translated in `location-pages-ar.json`** (includes the UAE/Saudi country hubs).
 - `scripts/sync-ar-sitemap.mjs` **owns `public/sitemap.xml`.** Hand-editing is limited to adding or removing an *English* `<url>` block for a new/retired page; **never hand-write an `/ar` URL or an `<xhtml:link>` alternate** — the script is the only thing that may touch those, and it rewrites them on every run. It runs three passes: **prune** every URL that renders `noindex` or canonicalises elsewhere, **annotate** each surviving English page with its `en`/`ar`/`x-default` alternates, and **twin** in the matching `/ar` block so the prerenderer generates it. Indexability is derived from the same sources the components read (`products-ar.json` for products, `location-pages-ar.json` for locations, `details.canonicalOverride` for duplicate SKUs), so the sitemap cannot drift from what `<SEO>` renders. Idempotent; rerun after adding any Arabic translation. `npm run verify:sitemap-health` (`--check`) is the CI gate and fails the build if the file is stale. Current shape (as of 2026-09-26): **657 `<loc>` entries, 297 of them `/ar`** — these numbers drift upward as products/pages are added; treat a sudden *drop* as a bug, not a prune.
 - Everything else under `/ar` (home, about, industries, blog…) stays noindex because its page-level prose (FAQs, breadcrumbs, section copy) is hardcoded English even though the `ar.json` UI layer is 100% complete. To enable a page: wire its prose through `t()`, then pass `arTitle`/`arDescription`, then rerun the sitemap sync/add the URL.
 
@@ -137,6 +147,8 @@ An `/ar/*` render is **noindex by default**. It becomes indexable only when the 
 3. Add the English `<url>` block to [public/sitemap.xml](public/sitemap.xml) so it gets prerendered (skip deliberately for internal-only pages), then run `node scripts/sync-ar-sitemap.mjs` — hand-add English URLs only; the script owns every `/ar` URL and every hreflang block.
 4. Add an Arabic mirror under `/ar` if localized.
 5. Optional structured data via [src/components/StructuredData.tsx](src/components/StructuredData.tsx) — every Helmet there also needs `defer={false}`.
+
+**If you emit `FAQPageStructuredData`, render the same Q&As visibly too** — use [src/components/FAQSection.tsx](src/components/FAQSection.tsx) (the shared accordion, mounted on Index/About/Contact/Industries/Customers/Certifications). Five pages once published FAQPage schema describing content that appeared nowhere on the page, which is schema Google treats as mismatched rather than as a rich-result opportunity.
 
 ## The production redirect layer: client-side
 
@@ -152,13 +164,15 @@ Edit ALL THREE: `src/lib/legacyRedirects.ts` (**the layer that actually runs**),
 
 ## Product data
 
-Per-category JSON files in `src/data/products/` (22 files, 275 products). `src/data/productLoader.ts` imports them, maps `iconName` strings to Lucide components via `ICON_MAP`, and wraps imports in `safeImport()` (auto-retry + force-reload on stale-chunk errors after deploys). `src/data/products.ts` is a re-export shim — **add products to the JSON files, not there**. Minimum fields: `id` (slug = URL segment), `title`, `description`, `category` (= JSON filename), `iconName`, `details` (CAS, long description, applications…). `details.canonicalOverride` marks a duplicate SKU as canonicalising elsewhere — `sync-ar-sitemap.mjs` prunes those from the sitemap and `audit:internal-links` flags anything still linking to one.
+Per-category JSON files in `src/data/products/` (22 files, 277 products). `src/data/productLoader.ts` imports them, maps `iconName` strings to Lucide components via `ICON_MAP`, and wraps imports in `safeImport()` (auto-retry + force-reload on stale-chunk errors after deploys). `src/data/products.ts` is a re-export shim — **add products to the JSON files, not there**. Minimum fields: `id` (slug = URL segment), `title`, `description`, `category` (= JSON filename), `iconName`, `details` (CAS, long description, applications…). `details.canonicalOverride` marks a duplicate SKU as canonicalising elsewhere — `sync-ar-sitemap.mjs` prunes those from the sitemap and `audit:internal-links` flags anything still linking to one.
 
-Adding a **product**: edit the category JSON → add the English URL to `public/sitemap.xml` → add the Arabic strings to `src/i18n/locales/products-ar.json` (275/275 translated today; skipping it leaves the page's `/ar` twin noindex) → `node scripts/sync-ar-sitemap.mjs && node scripts/sync-ar-meta.mjs`.
+Adding a **product**: edit the category JSON → add the English URL to `public/sitemap.xml` → add the Arabic strings to `src/i18n/locales/products-ar.json` (277/277 translated today; skipping it leaves the page's `/ar` twin noindex) → `node scripts/sync-ar-sitemap.mjs && node scripts/sync-ar-meta.mjs`.
 
 Adding a **new category** also needs four more edits or the route 404s / prerenders empty: a shim in `src/pages/productCategory/`, one in `src/pages/productDetail/`, and an entry in each App.tsx registry (see "Product routes" above).
 
-Blog articles are inline TypeScript in `src/data/blogArticles.ts` — no CMS.
+Blog articles are inline TypeScript in `src/data/blogArticles.ts` — no CMS. Post metadata (including the `relatedProducts` pill links that connect articles to catalogue pages) lives in `src/pages/Blog.tsx`; `BlogPost.tsx` renders the body.
+
+**Article bodies are plain text, not markdown — with one exception.** `BlogPost.tsx` splits content on newlines and renders headings/paragraphs itself; `**bold**`, links and lists are *not* parsed. The exception is **pipe tables**: a run of consecutive `| a | b |` lines is folded into a real `<table>` (the `|---|` separator row is dropped). Anything else markdown-flavoured ships as literal text to readers and crawlers alike. Tables are worth using — comparative data in table form is the format AI engines lift wholesale, and only a handful of pages have one. Note the table parser also feeds the table-of-contents, because a pipe row otherwise satisfies every "is this a heading?" test and gets published as a TOC entry.
 
 ## Supabase
 
@@ -197,6 +211,9 @@ curl -sI https://gcoman.com/service/calcium-carbonate/ -o /dev/null -w '%{http_c
 - `deploy-supabase.sh` — deploy all edge functions
 - `sync-ar-sitemap.mjs` — owns `public/sitemap.xml` (prune + hreflang + /ar twins); see "Arabic SEO model". `--check` is wired into CI as `npm run verify:sitemap-health`
 - `sync-ar-meta.mjs` — regenerates `src/i18n/locales/ar-meta.json`, the small eager subset (product title/description, location metaTitle/metaDescription) that keeps the hreflang/indexability gates synchronous while the full `products-ar.json`/`location-pages-ar.json` lazy-load only on `/ar` (they were ~80% of the main JS bundle when statically imported — never re-add a static import of either file). Rerun after editing either translation file; `--check` is CI's `npm run verify:ar-meta`
+- `verify-serp-titles.mjs` (`npm run verify:serp-titles`) — CI gate over all 277 products' **composed** titles: ≤60 chars, unique, geo signal present. Exists because a batch of disambiguating qualifiers pushed titles past the 60-char clamp and `fitForSerp` silently truncated 20 of them before the word "Oman" — the only title e2e test sampled 3 hardcoded URLs and saw nothing. Treat a failure here as a real ranking regression, not a lint nit
+- `sync-sitemap-lastmod.mjs` (`npm run sync:sitemap-lastmod`) — derives each English `<lastmod>` from git history (per-product for products, per-post for blogs, file-level otherwise) instead of stamping everything with today's date
+- `submit-indexnow.mjs` (`npm run submit:indexnow`) — pushes URLs to IndexNow (Bing/Yandex). Pre-flight fetches the live key file (`public/<key>.txt`) and aborts if it isn't being served, since a missing key silently voids the whole submission
 - `audit-playwright.mjs` — timestamped site snapshots → `audits/<date>-local|prod/`
 - `serve-dist.mjs` — serve `dist/` to sanity-check prerendered HTML without rebuilding
 - `zoho-refresh-token.mjs` — refresh the Zoho CRM OAuth token
@@ -215,6 +232,7 @@ curl -sI https://gcoman.com/service/calcium-carbonate/ -o /dev/null -w '%{http_c
 
 ## Reference docs in this repo
 
+- **[docs/seo/HANDOFF.md](docs/seo/HANDOFF.md) — read this before doing any SEO/GEO work.** The programme is mid-flight with a live measurement window, a baseline table with alarm thresholds, and an explicit do-NOT-do list (no more bulk FAQ generation, no more retitling, don't touch the homepage or the JSRS blog). It also records conclusions that cost a full investigation to reach — chiefly that technical GEO is *not* the bottleneck, so writing more code cannot move the remaining ground. Starting fresh work without reading it risks undoing a deliberate hold.
 - `docs/seo/` — historical SEO audits and plans; `docs/audits/` — written-up full-site audit reports; `docs/deployment/` — Supabase/env/admin setup guides; `docs/security/` — security audit
 - `audits/` (repo root, gitignored) — raw snapshot artifacts from `audit-playwright.mjs` (distinct from `docs/audits/` reports)
 
