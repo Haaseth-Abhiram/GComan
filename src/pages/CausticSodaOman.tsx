@@ -261,6 +261,58 @@ const CausticSodaOman = () => {
           </div>
         </section>
 
+        {/* Technical specification table.
+            Added 2026-10-05 for parity with the nitric acid and hydrochloric
+            acid hubs, which both carry one. No page-1 competitor in Oman
+            publishes a specification table for caustic soda (checked against
+            omanchlorine, omanchem, uvwater, muscatchemical, hakimwater), and a
+            table is the format AI answer engines lift wholesale. Every figure
+            below is taken from the gradeForms array above, which in turn
+            mirrors the published product pages. */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Caustic Soda Technical Specifications</h2>
+              <p className="text-center text-muted-foreground mb-10 max-w-2xl mx-auto">
+                Typical properties of the three forms supplied in Oman. A Certificate of Analysis for the specific batch accompanies every consignment.
+              </p>
+              <div className="overflow-x-auto rounded-lg border border-border bg-background">
+                <table className="w-full text-sm">
+                  <thead className="bg-muted/50">
+                    <tr>
+                      <th className="text-left font-semibold text-foreground px-4 py-3">Property</th>
+                      <th className="text-left font-semibold text-foreground px-4 py-3">Flakes</th>
+                      <th className="text-left font-semibold text-foreground px-4 py-3">Liquid (Lye)</th>
+                      <th className="text-left font-semibold text-foreground px-4 py-3">Prills</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      ['Chemical formula', 'NaOH', 'NaOH', 'NaOH'],
+                      ['CAS number', '1310-73-2', '1310-73-2', '1310-73-2'],
+                      ['Concentration', '98–99%', '30% · 48% · 50%', '99%'],
+                      ['Appearance', 'White flakes', 'Clear, colourless liquid', 'Spherical beads 2–4 mm'],
+                      ['Na2CO3', '≤0.5%', '—', '≤0.4%'],
+                      ['NaCl', '≤0.03%', '—', '—'],
+                      ['Specific gravity', '—', '1.52 g/cm³ (50%)', '—'],
+                      ['Food grade (E524)', 'Available', 'Available', '—'],
+                      ['Pack formats', '25 kg bag · 1,000 kg super sack', '25 L · 200 L · 1,000 L IBC · bulk', '25 kg PP bag · 500 kg big bag'],
+                      ['Documentation', 'SDS (GHS) · CoA per batch', 'SDS · CoA · TDS', 'SDS · CoA per batch'],
+                    ].map((row, i) => (
+                      <tr key={i} className={i % 2 ? 'bg-muted/20' : ''}>
+                        <td className="px-4 py-3 font-medium text-foreground">{row[0]}</td>
+                        <td className="px-4 py-3 text-muted-foreground">{row[1]}</td>
+                        <td className="px-4 py-3 text-muted-foreground">{row[2]}</td>
+                        <td className="px-4 py-3 text-muted-foreground">{row[3]}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Applications */}
         <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
