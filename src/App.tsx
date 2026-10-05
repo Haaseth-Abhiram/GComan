@@ -103,6 +103,7 @@ const DosingCalculator = lazyRetry(() => import("./pages/DosingCalculator"));
 const ChemicalSuppliersOman = lazyRetry(() => import("./pages/ChemicalSuppliersOman"));
 const ChemicalSuppliersMiddleEast = lazyRetry(() => import("./pages/ChemicalSuppliersMiddleEast"));
 const CausticSodaOman = lazyRetry(() => import("./pages/CausticSodaOman"));
+const NitricAcidOman = lazyRetry(() => import("./pages/NitricAcidOman"));
 const ThankYou = lazyRetry(() => import("./pages/ThankYou"));
 const NotFound = lazyRetry(() => import("./pages/NotFound"));
 // Internal design tool. Not in sitemap.xml so it doesn't get prerendered or
@@ -219,6 +220,7 @@ const App = () => (
                 <Route path="/chemical-suppliers-oman" element={<ChemicalSuppliersOman />} />
                 <Route path="/chemical-suppliers-middle-east" element={<ChemicalSuppliersMiddleEast />} />
                 <Route path="/chemical-supplier/caustic-soda-oman" element={<CausticSodaOman />} />
+                <Route path="/chemical-supplier/nitric-acid-oman" element={<NitricAcidOman />} />
                 <Route path="/thank-you" element={<ThankYou />} />
 
                 {/* Internal design tool — kept out of sitemap.xml on purpose
@@ -271,6 +273,7 @@ const App = () => (
                   <Route path="chemical-suppliers-oman" element={<ChemicalSuppliersOman />} />
                   <Route path="chemical-suppliers-middle-east" element={<ChemicalSuppliersMiddleEast />} />
                   <Route path="chemical-supplier/caustic-soda-oman" element={<CausticSodaOman />} />
+                  <Route path="chemical-supplier/nitric-acid-oman" element={<NitricAcidOman />} />
                   <Route path="thank-you" element={<ThankYou />} />
                   <Route path="chemicals" element={<ChemicalsHub />} />
                   <Route path="tools/dosing-calculator" element={<DosingCalculator />} />
