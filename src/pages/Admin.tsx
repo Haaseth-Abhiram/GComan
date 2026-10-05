@@ -13,14 +13,13 @@ import { SearchConsoleDashboard } from '@/components/admin/SearchConsoleDashboar
 import { LanguageSeoComparison } from '@/components/admin/LanguageSeoComparison';
 
 
-import { AnalyticsDialog } from '@/components/admin/AnalyticsDialog';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { 
   Loader2, FileText, Briefcase, Download, TrendingUp, Users, Eye, 
-  ArrowUpRight, ArrowDownRight, RefreshCw, Calendar, Clock, Globe,
-  BarChart3, Activity, MousePointerClick, Timer, ExternalLink
+  RefreshCw, Calendar, Clock, Globe,
+  BarChart3, Activity, MousePointerClick
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { supabase } from '@/integrations/supabase/client';
@@ -28,14 +27,7 @@ import {
   BarChart, Bar, LineChart, Line, PieChart, Pie, Cell, XAxis, YAxis, 
   CartesianGrid, Tooltip, ResponsiveContainer, Legend, AreaChart, Area 
 } from 'recharts';
-import { format, subDays, parseISO } from 'date-fns';
-
-interface DailyData {
-  date: string;
-  visitors: number;
-  pageviews: number;
-  bounceRate: number;
-}
+import { format, parseISO } from 'date-fns';
 
 interface Stats {
   contacts: number;
@@ -47,35 +39,30 @@ interface Stats {
   categoryData: Array<{ name: string; value: number; color: string }>;
 }
 
-interface Deltas {
-  visitorsPct: number | null;
-  pageviewsPct: number | null;
-  bouncePct: number | null;
-  conversionPct: number | null;
+/**
+ * Real Google Search Console figures, via the `search-console` edge function.
+ *
+ * These replaced a synthetic analytics layer: `refresh-analytics` derived
+ * "Total Visitors" from `submissions * 2.5`, computed bounce rate as
+ * `45 + ((i * 17) % 25)`, and hardcoded the traffic-source split and device
+ * donut — trend arrows included. Those numbers were plausible enough to be
+ * read as measurements and acted on, so the cards now show figures Google
+ * actually reports. The submission counts below them were always real and are
+ * unchanged.
+ *
+ * Lovable Analytics (More -> Analytics) separately measures real visits and
+ * referrers; it has no public API, so it stays a manual read for now.
+ */
+interface GscTotals {
+  clicks: number;
+  impressions: number;
+  ctr: number;
+  position: number;
 }
-
-const pctChange = (current: number, previous: number): number | null => {
-  if (!previous || previous === 0) return null;
-  return ((current - previous) / previous) * 100;
-};
-
-const formatDelta = (pct: number | null, invertColor = false) => {
-  if (pct === null || !isFinite(pct)) return { text: 'No prior data', positive: true };
-  const positive = invertColor ? pct < 0 : pct > 0;
-  const sign = pct > 0 ? '+' : '';
-  return { text: `${sign}${pct.toFixed(1)}% vs prior period`, positive };
-};
-
-interface AnalyticsData {
-  totalVisitors: number;
-  totalPageviews: number;
-  avgBounceRate: number;
-  avgPagesPerVisit: number;
-  dailyData: DailyData[];
-  deviceBreakdown: Array<{ name: string; value: number; color: string }>;
-  topPages: Array<{ page: string; views: number; percentage: number }>;
-  trafficSources: Array<{ source: string; visits: number; percentage: number; trend: string }>;
-  countryBreakdown: Array<{ country: string; visitors: number; percentage: number }>;
+interface GscSeriesPoint {
+  date: string;
+  clicks: number;
+  impressions: number;
 }
 
 const AdminOverview = () => {
@@ -89,31 +76,42 @@ const AdminOverview = () => {
     categoryData: [],
   });
   
-  const [analytics, setAnalytics] = useState<AnalyticsData>({
-    totalVisitors: 0,
-    totalPageviews: 0,
-    avgBounceRate: 0,
-    avgPagesPerVisit: 0,
-    dailyData: [],
-    deviceBreakdown: [],
-    topPages: [],
-    trafficSources: [],
-    countryBreakdown: [],
-  });
-  
   const [isLoading, setIsLoading] = useState(true);
   const [lastUpdated, setLastUpdated] = useState<Date>(new Date());
-  const [analyticsDialogOpen, setAnalyticsDialogOpen] = useState(false);
-  const [analyticsDialogType, setAnalyticsDialogType] = useState<'visitors' | 'pageviews' | 'bounce' | 'conversion'>('visitors');
-  const [deltas, setDeltas] = useState<Deltas>({ visitorsPct: null, pageviewsPct: null, bouncePct: null, conversionPct: null });
 
-  const openAnalyticsDialog = (type: 'visitors' | 'pageviews' | 'bounce' | 'conversion') => {
-    setAnalyticsDialogType(type);
-    setAnalyticsDialogOpen(true);
+  const [gsc, setGsc] = useState<GscTotals | null>(null);
+  const [gscSeries, setGscSeries] = useState<GscSeriesPoint[]>([]);
+  const [gscError, setGscError] = useState<string | null>(null);
+
+  /** Real Search Console figures for the headline cards and traffic chart. */
+  const fetchGsc = async () => {
+    try {
+      const { data: res, error } = await supabase.functions.invoke('search-console', {
+        body: { days: 28, rowLimit: 50 },
+      });
+      if (error) throw error;
+      if ((res as any)?.error) throw new Error((res as any).details || (res as any).error);
+      const payload = res as { totals?: GscTotals; byDate?: Array<{ keys: string[]; clicks: number; impressions: number }> };
+      setGsc(payload?.totals ?? null);
+      setGscSeries(
+        (payload?.byDate ?? [])
+          .slice()
+          .sort((a, b) => a.keys[0].localeCompare(b.keys[0]))
+          .map((r) => ({ date: r.keys[0], clicks: r.clicks, impressions: r.impressions })),
+      );
+      setGscError(null);
+    } catch (err: any) {
+      // Surfaced in the UI rather than silently falling back to a made-up
+      // number — an empty card is honest, an invented one is not.
+      setGsc(null);
+      setGscSeries([]);
+      setGscError(err?.message ?? 'Search Console data unavailable');
+    }
   };
 
   const fetchStats = async () => {
     setIsLoading(true);
+    void fetchGsc();
     try {
       const now = new Date();
       const sevenDaysAgo = new Date(now); sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
@@ -164,73 +162,10 @@ const AdminOverview = () => {
         categoryData,
       });
 
-      // Refresh: compute a brand-new snapshot from live submissions data,
-      // then read the latest snapshot back.
-      try {
-        await supabase.functions.invoke('refresh-analytics');
-      } catch (e) {
-        console.warn('refresh-analytics invoke failed, using last snapshot', e);
-      }
-
-      const { data: analyticsSnapshot } = await supabase
-        .from('site_analytics_snapshots')
-        .select('*')
-        .order('created_at', { ascending: false })
-        .limit(1)
-        .maybeSingle();
-
-      if (analyticsSnapshot) {
-        const dailyData: DailyData[] = ((analyticsSnapshot.daily_data as any[]) ?? []).map((d: any) => ({
-          date: d.date,
-          visitors: d.visitors,
-          pageviews: d.pageviews,
-          bounceRate: d.bounceRate,
-        }));
-
-        setAnalytics({
-          totalVisitors: analyticsSnapshot.total_visitors,
-          totalPageviews: analyticsSnapshot.total_pageviews,
-          avgBounceRate: Number(analyticsSnapshot.avg_bounce_rate),
-          avgPagesPerVisit: Number(analyticsSnapshot.avg_pages_per_visit),
-          dailyData,
-          deviceBreakdown: (analyticsSnapshot.device_breakdown as any[]) ?? [],
-          topPages: (analyticsSnapshot.top_pages as any[]) ?? [],
-          trafficSources: (analyticsSnapshot.traffic_sources as any[]) ?? [],
-          countryBreakdown: (analyticsSnapshot.country_breakdown as any[]) ?? [],
-        });
-
-        // Period-over-period from daily_data: split into two halves
-        if (dailyData.length >= 2) {
-          const mid = Math.floor(dailyData.length / 2);
-          const prior = dailyData.slice(0, mid);
-          const current = dailyData.slice(mid);
-          const sum = (arr: DailyData[], k: keyof DailyData) =>
-            arr.reduce((a, d) => a + (Number(d[k]) || 0), 0);
-          const avg = (arr: DailyData[], k: keyof DailyData) =>
-            arr.length ? sum(arr, k) / arr.length : 0;
-
-          const curVisitors = sum(current, 'visitors');
-          const prevVisitors = sum(prior, 'visitors');
-          const curPageviews = sum(current, 'pageviews');
-          const prevPageviews = sum(prior, 'pageviews');
-          const curBounce = avg(current, 'bounceRate');
-          const prevBounce = avg(prior, 'bounceRate');
-
-          const curLeads = (last30Contacts.count || 0) + (last30Jobs.count || 0) + (last30Downloads.count || 0);
-          const prevLeads = (prev30Contacts.count || 0) + (prev30Jobs.count || 0) + (prev30Downloads.count || 0);
-          const curConv = curVisitors > 0 ? (curLeads / curVisitors) * 100 : 0;
-          const prevConv = prevVisitors > 0 ? (prevLeads / prevVisitors) * 100 : 0;
-
-          setDeltas({
-            visitorsPct: pctChange(curVisitors, prevVisitors),
-            pageviewsPct: pctChange(curPageviews, prevPageviews),
-            bouncePct: pctChange(curBounce, prevBounce),
-            conversionPct: pctChange(curConv, prevConv),
-          });
-        } else {
-          setDeltas({ visitorsPct: null, pageviewsPct: null, bouncePct: null, conversionPct: null });
-        }
-      }
+      // The synthetic `refresh-analytics` snapshot that used to populate the
+      // headline cards is deliberately no longer read — it invented visitors,
+      // bounce rate, traffic sources and devices. Real figures now come from
+      // Search Console via fetchGsc(); lead counts above are real rows.
 
       setLastUpdated(new Date());
     } catch (error) {
@@ -245,9 +180,6 @@ const AdminOverview = () => {
   }, []);
 
   const totalLeads = stats.contacts + stats.jobs + stats.downloads;
-  const conversionRate = analytics.totalVisitors > 0 
-    ? ((totalLeads / analytics.totalVisitors) * 100).toFixed(1) 
-    : '0';
 
   const recentTotal = stats.recentContacts + stats.recentJobs + stats.recentDownloads;
 
@@ -274,121 +206,75 @@ const AdminOverview = () => {
         </Button>
       </div>
 
-      {/* Primary Stats - Website Analytics (Clickable) */}
+      {/* Primary stats — Google Search Console (real) + real submission counts */}
+      {gscError && (
+        <div className="rounded-md border border-amber-300 bg-amber-50 px-4 py-2 text-sm text-amber-900">
+          Search Console data unavailable: {gscError}
+        </div>
+      )}
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-        <Card 
-          className="relative overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-200 hover:scale-[1.02]"
-          onClick={() => openAnalyticsDialog('visitors')}
-        >
+        <Card className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent" />
           <CardContent className="p-6 relative">
             <div className="flex items-center justify-between mb-3">
               <div className="p-2.5 bg-blue-500/10 rounded-lg">
                 <Users className="h-5 w-5 text-blue-600" />
               </div>
-              <Badge variant="secondary" className="bg-blue-100 text-blue-700 text-xs flex items-center gap-1">
-                Last 30 days
-                <ExternalLink className="h-2.5 w-2.5" />
-              </Badge>
+              <Badge variant="secondary" className="bg-blue-100 text-blue-700 text-xs">Search Console · 28d</Badge>
             </div>
-            <p className="text-sm font-medium text-muted-foreground">Total Visitors</p>
-            <p className="text-3xl font-bold mt-1">{analytics.totalVisitors.toLocaleString()}</p>
-            {(() => { const d = formatDelta(deltas.visitorsPct); const Up = d.positive ? ArrowUpRight : ArrowDownRight; return (
-              <div className={`flex items-center gap-1 mt-2 text-xs ${d.positive ? 'text-green-600' : 'text-red-600'}`}>
-                <Up className="h-3 w-3" />
-                <span>{d.text}</span>
-              </div>
-            ); })()}
+            <p className="text-sm font-medium text-muted-foreground">Search Clicks</p>
+            <p className="text-3xl font-bold mt-1">{gsc ? gsc.clicks.toLocaleString() : '—'}</p>
+            <p className="mt-2 text-xs text-muted-foreground">Visitors Google sent to the site</p>
           </CardContent>
         </Card>
 
-        <Card 
-          className="relative overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-200 hover:scale-[1.02]"
-          onClick={() => openAnalyticsDialog('pageviews')}
-        >
+        <Card className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent" />
           <CardContent className="p-6 relative">
             <div className="flex items-center justify-between mb-3">
               <div className="p-2.5 bg-purple-500/10 rounded-lg">
                 <Eye className="h-5 w-5 text-purple-600" />
               </div>
-              <Badge variant="secondary" className="bg-purple-100 text-purple-700 text-xs flex items-center gap-1">
-                Last 30 days
-                <ExternalLink className="h-2.5 w-2.5" />
-              </Badge>
+              <Badge variant="secondary" className="bg-purple-100 text-purple-700 text-xs">Search Console · 28d</Badge>
             </div>
-            <p className="text-sm font-medium text-muted-foreground">Page Views</p>
-            <p className="text-3xl font-bold mt-1">{analytics.totalPageviews.toLocaleString()}</p>
-            {(() => { const d = formatDelta(deltas.pageviewsPct); const Up = d.positive ? ArrowUpRight : ArrowDownRight; return (
-              <div className={`flex items-center gap-1 mt-2 text-xs ${d.positive ? 'text-green-600' : 'text-red-600'}`}>
-                <Up className="h-3 w-3" />
-                <span>{d.text} · {analytics.avgPagesPerVisit} pages/visit</span>
-              </div>
-            ); })()}
+            <p className="text-sm font-medium text-muted-foreground">Impressions</p>
+            <p className="text-3xl font-bold mt-1">{gsc ? gsc.impressions.toLocaleString() : '—'}</p>
+            <p className="mt-2 text-xs text-muted-foreground">
+              {gsc ? `${(gsc.ctr * 100).toFixed(1)}% click-through rate` : 'Times a page was shown'}
+            </p>
           </CardContent>
         </Card>
 
-        <Card 
-          className="relative overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-200 hover:scale-[1.02]"
-          onClick={() => openAnalyticsDialog('bounce')}
-        >
+        <Card className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 to-transparent" />
           <CardContent className="p-6 relative">
             <div className="flex items-center justify-between mb-3">
               <div className="p-2.5 bg-amber-500/10 rounded-lg">
                 <MousePointerClick className="h-5 w-5 text-amber-600" />
               </div>
-              <Badge variant="secondary" className="bg-amber-100 text-amber-700 text-xs flex items-center gap-1">
-                Avg Rate
-                <ExternalLink className="h-2.5 w-2.5" />
-              </Badge>
+              <Badge variant="secondary" className="bg-amber-100 text-amber-700 text-xs">Search Console · 28d</Badge>
             </div>
-            <p className="text-sm font-medium text-muted-foreground">Bounce Rate</p>
-            <p className="text-3xl font-bold mt-1">{analytics.avgBounceRate}%</p>
-            {(() => { const d = formatDelta(deltas.bouncePct, true); const Up = d.positive ? ArrowDownRight : ArrowUpRight; return (
-              <div className={`flex items-center gap-1 mt-2 text-xs ${d.positive ? 'text-green-600' : 'text-red-600'}`}>
-                <Up className="h-3 w-3" />
-                <span>{d.text}</span>
-              </div>
-            ); })()}
+            <p className="text-sm font-medium text-muted-foreground">Average Position</p>
+            <p className="text-3xl font-bold mt-1">{gsc ? gsc.position.toFixed(1) : '—'}</p>
+            <p className="mt-2 text-xs text-muted-foreground">Lower is better</p>
           </CardContent>
         </Card>
 
-        <Card 
-          className="relative overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-200 hover:scale-[1.02]"
-          onClick={() => openAnalyticsDialog('conversion')}
-        >
+        <Card className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-transparent" />
           <CardContent className="p-6 relative">
             <div className="flex items-center justify-between mb-3">
               <div className="p-2.5 bg-green-500/10 rounded-lg">
                 <TrendingUp className="h-5 w-5 text-green-600" />
               </div>
-              <Badge variant="secondary" className="bg-green-100 text-green-700 text-xs flex items-center gap-1">
-                All Time
-                <ExternalLink className="h-2.5 w-2.5" />
-              </Badge>
+              <Badge variant="secondary" className="bg-green-100 text-green-700 text-xs">All time</Badge>
             </div>
-            <p className="text-sm font-medium text-muted-foreground">Conversion Rate</p>
-            <p className="text-3xl font-bold mt-1">{conversionRate}%</p>
-            {(() => { const d = formatDelta(deltas.conversionPct); const Up = d.positive ? ArrowUpRight : ArrowDownRight; return (
-              <div className={`flex items-center gap-1 mt-2 text-xs ${d.positive ? 'text-green-600' : 'text-red-600'}`}>
-                <Up className="h-3 w-3" />
-                <span>{d.text} · {totalLeads} leads</span>
-              </div>
-            ); })()}
+            <p className="text-sm font-medium text-muted-foreground">Total Leads</p>
+            <p className="text-3xl font-bold mt-1">{totalLeads.toLocaleString()}</p>
+            <p className="mt-2 text-xs text-muted-foreground">{recentTotal} in the last 7 days</p>
           </CardContent>
         </Card>
       </div>
-
-      {/* Analytics Deep Dive Dialog */}
-      <AnalyticsDialog 
-        open={analyticsDialogOpen}
-        onOpenChange={setAnalyticsDialogOpen}
-        type={analyticsDialogType}
-        analyticsData={analytics}
-        totalLeads={totalLeads}
-      />
 
       {/* Lead Stats Cards */}
       <div className="grid gap-4 md:grid-cols-3">
@@ -489,15 +375,15 @@ const AdminOverview = () => {
               <div>
                 <CardTitle className="flex items-center gap-2">
                   <Activity className="h-5 w-5 text-primary" />
-                  Website Traffic
+                  Search Traffic
                 </CardTitle>
-                <CardDescription>Daily visitors and pageviews (Last 30 days)</CardDescription>
+                <CardDescription>Daily clicks and impressions from Google Search (last 28 days)</CardDescription>
               </div>
             </div>
           </CardHeader>
           <CardContent>
             <ResponsiveContainer width="100%" height={280}>
-              <AreaChart data={analytics.dailyData}>
+              <AreaChart data={gscSeries}>
                 <defs>
                   <linearGradient id="colorVisitors" x1="0" y1="0" x2="0" y2="1">
                     <stop offset="5%" stopColor="hsl(221, 83%, 53%)" stopOpacity={0.3}/>
@@ -528,21 +414,21 @@ const AdminOverview = () => {
                 <Legend />
                 <Area 
                   type="monotone" 
-                  dataKey="visitors" 
+                  dataKey="clicks" 
                   stroke="hsl(221, 83%, 53%)" 
                   fillOpacity={1} 
                   fill="url(#colorVisitors)"
                   strokeWidth={2}
-                  name="Visitors"
+                  name="Clicks"
                 />
                 <Area 
                   type="monotone" 
-                  dataKey="pageviews" 
+                  dataKey="impressions" 
                   stroke="hsl(262, 83%, 58%)" 
                   fillOpacity={1} 
                   fill="url(#colorPageviews)"
                   strokeWidth={2}
-                  name="Page Views"
+                  name="Impressions"
                 />
               </AreaChart>
             </ResponsiveContainer>
