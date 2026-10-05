@@ -2,6 +2,8 @@
 
 **This is the only document you need to work from.** The other 26 files in `docs/seo/` are the evidence behind it; this is the instruction set.
 
+*For an engineer picking this up cold: [`HANDOFF.md`](./HANDOFF.md) carries the standing constraints (the measurement window, the protected pages, and what deliberately must **not** be done).*
+
 Everything the website can do has been done. What remains is four things only you can do, and they are ordered by effect. Nothing here needs a developer.
 
 ---

@@ -6,6 +6,8 @@
 
 > **Update 2026-10-05 (late):** shipped and live at `psr2.ef1e3fcd` — the Arabic FAQ route gate, the admin dashboard rebuilt on real Search Console data, a live security audit (data access clean), and the **nitric acid product+geo hub** at `/chemical-supplier/nitric-acid-oman` (4,014 words, 11-row spec table, 8 FAQs, submitted to Google's priority crawl queue and accepted by IndexNow). See §11 for the one question that matters now.
 
+> **If you only read one file, read [`ACTION-PACK.md`](./ACTION-PACK.md)** — it is the instruction set (what is live, the four off-site actions, how to measure). This handoff is the background and the standing constraints.
+
 **Read this first in a new session.** Then `docs/seo/strategy-and-watch-2026-09-30.md` (the restraint plan + baseline numbers) and `docs/seo/citation-execution-plan-2026-09-30.md` (the user's own task list).
 
 ---
