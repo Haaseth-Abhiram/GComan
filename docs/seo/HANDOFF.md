@@ -1,6 +1,8 @@
 # SEO/GEO Handoff — state as of 2026-09-30
 
-> **Update 2026-10-01 (day 1 of the watch):** all alarms clear — manual actions *None*, Bing errors *0*, clicks 533 / impressions 10.4K / position 8.7 / homepage 264 / Google indexed 456, gates + 77/77 e2e green. **One correction to §1 below: production is NOT current.** `8b06c5e` (markdown tables) is merged to `main` but unshipped — prod still serves the 09-30 build and renders two tables as raw pipe text on the MEG/DEG blog. Needs a Lovable Publish, no code. Full numbers in `strategy-and-watch-2026-09-30.md` §6.
+> **Update 2026-10-01 (day 1 of the watch):** all alarms clear — manual actions *None*, Bing errors *0*, clicks 533 / impressions 10.4K / position 8.7 / homepage 264 / Google indexed 456, gates + 77/77 e2e green. **One correction to §1 below: production is NOT current.** `8b06c5e` (markdown tables) is merged to `main` but unshipped — prod still serves the 09-30 build and renders two tables as raw pipe text on the MEG/DEG blog. Needs a Lovable Publish, no code.
+>
+> **Update 2026-10-05 (day 5):** the Publish happened — deploy is now `psr2.c7119f35…` and the MEG/DEG blog serves **2 real `<table>`s / 19 rows, zero raw pipe junk**, matching local verification. The day-1 correction above is resolved; §1 is accurate again. All alarms still clear, two metrics *improved*. Full table in §5a.
 
 **Read this first in a new session.** Then `docs/seo/strategy-and-watch-2026-09-30.md` (the restraint plan + baseline numbers) and `docs/seo/citation-execution-plan-2026-09-30.md` (the user's own task list).
 
@@ -11,7 +13,7 @@
 | | |
 |---|---|
 | Git | `main` == `8b06c5e`; `Develop` ahead by docs commits only |
-| Production | deploy `psr2.d75791a9…` (built at `c85b4d5` — **one code commit behind `main`**), homepage 200, sitemap **657 URLs** |
+| Production | deploy `psr2.c7119f35…` — **current with `main`**, homepage 200, sitemap **657 URLs** |
 | Gates | tsc · lint · prerender-titles · serp-titles · sitemap-health · ar-meta all clean; **77/77 e2e** |
 | Scope shipped | 35 commits since `5e2f873` |
 
@@ -74,6 +76,29 @@ Baseline captured 2026-09-30. **Any trip = stop and diagnose before building any
 | Leads/month | Sep = 27 | Oct < 18 |
 
 **Now → 7 Oct:** week-1 regression check only. Too early for gains — look for *damage*, not improvement.
+
+### 5a. Day-5 reading (2026-10-05, measured directly — GSC/Bing/live site/admin, each checked separately)
+
+| Metric | Baseline | Day 5 | |
+|---|---|---|---|
+| GSC clicks 28d | 536 | **508** | ✅ −5%, well above the 450 alarm |
+| GSC impressions 28d | 10.5K | **9.96K** | ✅ −5%, above the 9K alarm |
+| GSC avg position | 9.0 | **8.7** | ✅ **improved** |
+| Homepage clicks 28d | 271 | **250** | ✅ above the 230 alarm; still ~49% of clicks |
+| Google indexed | 456 | **456** | ✅ unchanged (333 not indexed, also unchanged) |
+| Google manual actions | None | **None** | ✅ the templated-FAQ risk has not fired |
+| Google security issues | — | **None** | ✅ |
+| Bing indexed | 540 | **555** | ✅ **improved**, 0 errors |
+| Leads | Sep = 27 | **4 in Oct 1–3** | ✅ ~1.3/day vs September's 0.9/day — ahead of pace, but 3 days proves nothing |
+| **Bing referring domains** | **1** | **1** | ❌ **unmoved — this is the whole point** |
+
+**Read the −5% correctly.** The 28-day window slid from "Sep 2–29" to "Sep 5–Oct 2", so it is a different sample, not necessarily a decline. Average position *improving* while clicks dip slightly is the opposite signature to a content penalty. Nothing here justifies acting.
+
+**The one number that matters is the one that did not move.** Referring domains is still 1 (`tamol.om`, the job-posting link). None of the six citations have landed. Everything else on this page is noise by comparison — the site is healthy and the authority gap is exactly where it was.
+
+**Two Bing notes:**
+- Its "Set up IndexNow" recommendation is a **false alarm** — the IndexNow panel shows **657 URLs submitted**. It is a generic prompt, not a detected gap. Do not "fix" it.
+- Its sitemap list carries a stale entry: `https://gcoman.com/sitemap` (submitted 2026-05-14) is the **HTML sitemap page**, not an XML sitemap. It discovers 0 URLs and is the sole source of the permanent "1 sitemap with warnings". Harmless, but worth removing from Bing's sitemap list — a Bing-account change, so it needs the user.
 
 **7 → 27 Oct:** re-measure B/C/Z-band product impressions; re-run the 6-engine AI panel; **decide on the 320 templated FAQs** (see risk register below).
 
