@@ -4,6 +4,8 @@
 >
 > **Update 2026-10-05 (day 5):** the Publish happened — deploy is now `psr2.c7119f35…` and the MEG/DEG blog serves **2 real `<table>`s / 19 rows, zero raw pipe junk**, matching local verification. The day-1 correction above is resolved; §1 is accurate again. All alarms still clear, two metrics *improved*. Full table in §5a.
 
+> **Update 2026-10-05 (late):** shipped and live at `psr2.ef1e3fcd` — the Arabic FAQ route gate, the admin dashboard rebuilt on real Search Console data, a live security audit (data access clean), and the **nitric acid product+geo hub** at `/chemical-supplier/nitric-acid-oman` (4,014 words, 11-row spec table, 8 FAQs, submitted to Google's priority crawl queue and accepted by IndexNow). See §11 for the one question that matters now.
+
 **Read this first in a new session.** Then `docs/seo/strategy-and-watch-2026-09-30.md` (the restraint plan + baseline numbers) and `docs/seo/citation-execution-plan-2026-09-30.md` (the user's own task list).
 
 ---
@@ -12,12 +14,11 @@
 
 | | |
 |---|---|
-| Git | `main` == `8b06c5e`; `Develop` ahead by docs commits only |
-| Production | deploy `psr2.c7119f35…` — **current with `main`**, homepage 200, sitemap **657 URLs** |
+| Git | `main` == `Develop` == `acee74b`, working tree clean |
+| Production | deploy `psr2.ef1e3fcd` — **current with `main`**, homepage 200, sitemap **658 URLs** |
 | Gates | tsc · lint · prerender-titles · serp-titles · sitemap-health · ar-meta all clean; **77/77 e2e** |
-| Scope shipped | 35 commits since `5e2f873` |
 
-**There is no unfinished code task.** Do not go looking for one.
+**There is no unfinished code task.** Do not go looking for one — see §11.
 
 ---
 
@@ -164,3 +165,36 @@ None of these can be judged before recrawl. **Anyone claiming today that the wor
 - **`$?` after a pipe reports the wrong command's status.** Redirect to a file first.
 - **No force-push.** A diverged remote (weekly scheduled agent) was merged, conflicts resolved keeping both sides.
 - Label every finding by source: *per Search Console / per GA4 / per Lovable / per the live site / per the admin dashboard.* Never blend them.
+
+---
+
+## 11. "What else do we need to do to be #1?" — answered 2026-10-05
+
+**Nothing further on the website.** That is the honest answer, and the nitric acid work proved it with a controlled example.
+
+We built a page that beats the Oman #1 on every content dimension — 4,014 words against ~250, an 11-row specification table against none, published pack formats against none, a price answer against none, JSRS + ISO 9001 + ICV against no certifications at all. **It still will not outrank them on content**, because `omanchem.com` ranks on domain authority and Bing reports gcoman.com at **1 referring domain** (a job-posting link).
+
+That is the whole constraint, stated once: **we win on pages and lose on corroboration.**
+
+### What actually moves #1 now — all off-site, all yours
+
+| # | Action | Why it is the lever | Cost |
+|---|---|---|---|
+| 1 | **The six citations** — Bing Places, **D&B**, Made in Oman Gate, Metoree, OmanYP, Yellow Pages | Referring domains is the binding constraint. D&B first: it is a root record others inherit, and it is the fix for the name collision that costs ~20 clicks/month from India alone | ~$20 total |
+| 2 | **A Wikidata entry** | **Verified 2026-10-05: none exists.** ChatGPT grounds heavily on Wikipedia/Wikidata, and we are optimising for AI where this site already outperforms. It also disambiguates us from Al Barami's "Global Chemicals & Maintenance Systems", which *does* hold the third-party record layer | free |
+| 3 | **Google reviews** | 5.0★ on only **2 reviews**. Review velocity is the documented lever for the local pack | free |
+| 4 | Industry directories — ChemNet, Chemical Register, TradeKey, Zauba | For a B2B chemical supplier these are links *and* lead sources at once | mostly free |
+
+Brand mentions correlate roughly **3× more strongly with AI citation than backlinks do**, so items 2–4 pay into the AI channel, which is where this site is already strongest (277 generative-AI impressions on nitric acid against 43 classic).
+
+### What is left on-site — marginal, and deferred
+
+After the watch closes **27 Oct**: UAE snippet work (951 impressions converting at 3.7% against Oman's 9.0%), replicating the JSRS pattern at a commercial query, and the decision on the 320 templated FAQs. None of these changes the #1 answer.
+
+### Operational items still open (not SEO)
+
+- `resync-zoho-leads` returns **404** in production — the admin CRM-backfill button cannot work. Needs a Supabase CLI deploy.
+- Leaked-password protection **off** — one toggle in Supabase Auth.
+- Lovable's **deep security scan never completed** — worth re-running.
+
+**Do not let a future session answer "what else for #1?" with more code.** The ceiling is authority, and authority is bought with citations, an entity record, and reviews — not with pages.
