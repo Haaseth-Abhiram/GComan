@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
+import { useIsArabicRoute } from '@/lib/langRouting';
 import { CheckCircle2 } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
@@ -46,12 +47,13 @@ const homepageFAQs = [
 
 const Index = () => {
   const { t, i18n } = useTranslation();
+  const isArabicRoute = useIsArabicRoute();
 
   // The FAQ copy below is English-only. On /ar this previously rendered an
   // Arabic heading over an untranslated English wall of text — the same
   // duplicate-content trap product pages already guard against (see
   // ProductDetail.tsx's translatedFaqs). Show it only once home.faqs exists.
-  const visibleFAQs = i18n.language === 'ar'
+  const visibleFAQs = isArabicRoute
     ? (i18n.exists('home.faqs', { lng: 'ar' })
         ? (t('home.faqs', { returnObjects: true }) as { question: string; answer: string }[])
         : undefined)

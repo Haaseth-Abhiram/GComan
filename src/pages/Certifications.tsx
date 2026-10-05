@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { useIsArabicRoute } from '@/lib/langRouting';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Shield, Award, CheckCircle2, FileCheck, Globe, Users, Leaf, TrendingUp } from 'lucide-react';
@@ -49,7 +50,8 @@ const Certifications = () => {
   // Every certification and "why it matters" entry already carries a full
   // Arabic translation (titleAr / descriptionAr / benefitsAr). None of it was
   // ever rendered, so /ar/certifications served a fully English page.
-  const isAr = i18n.language === 'ar';
+  // Routed on the path, not i18n.language — see useIsArabicRoute.
+  const isAr = useIsArabicRoute();
 
   // Unlike the content above, the FAQ copy has no Arabic translation yet — see
   // ProductDetail.tsx's translatedFaqs for the same guard applied there.

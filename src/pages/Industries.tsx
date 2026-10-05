@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useIsArabicRoute } from '@/lib/langRouting';
 import { SEO } from '@/components/SEO';
 import { FAQStructuredData, BreadcrumbStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
 import { FAQSection } from '@/components/FAQSection';
@@ -147,11 +148,12 @@ const DEFAULT_INDUSTRY = 'oil-gas';
 
 const Industries = () => {
   const { t, i18n } = useTranslation();
+  const isArabicRoute = useIsArabicRoute();
   const location = useLocation();
 
   // See ProductDetail.tsx's translatedFaqs — this FAQ copy is English-only,
   // so /ar must not render it until industries.faqs actually exists.
-  const visibleFAQs = i18n.language === 'ar'
+  const visibleFAQs = isArabicRoute
     ? (i18n.exists('industries.faqs', { lng: 'ar' })
         ? (t('industries.faqs', { returnObjects: true }) as { question: string; answer: string }[])
         : undefined)

@@ -19,6 +19,7 @@ import { SEO } from '@/components/SEO';
 import { BreadcrumbStructuredData, FAQStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
 import { FAQSection } from '@/components/FAQSection';
 import { useTranslation } from 'react-i18next';
+import { useIsArabicRoute } from '@/lib/langRouting';
 import { LocalizedLink } from '@/components/LocalizedLink';
 
 // Customer page FAQs for AI search and rich snippets
@@ -100,10 +101,11 @@ interface Customer {
 
 const Customers = () => {
   const { t, i18n } = useTranslation();
+  const isArabicRoute = useIsArabicRoute();
 
   // See ProductDetail.tsx's translatedFaqs — this FAQ copy is English-only,
   // so /ar must not render it until customers.faqs actually exists.
-  const visibleFAQs = i18n.language === 'ar'
+  const visibleFAQs = isArabicRoute
     ? (i18n.exists('customers.faqs', { lng: 'ar' })
         ? (t('customers.faqs', { returnObjects: true }) as { question: string; answer: string }[])
         : undefined)

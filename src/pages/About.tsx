@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { useIsArabicRoute } from '@/lib/langRouting';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -49,11 +50,12 @@ const breadcrumbItems = [
 const About = () => {
   const spotlight = useSpotlight();
   const { t, i18n } = useTranslation();
+  const isArabicRoute = useIsArabicRoute();
 
   // See ProductDetail.tsx's translatedFaqs — same guard, same reason: this
   // FAQ copy is English-only, so /ar must not render it until about.faqs
   // actually exists in the Arabic bundle.
-  const visibleFAQs = i18n.language === 'ar'
+  const visibleFAQs = isArabicRoute
     ? (i18n.exists('about.faqs', { lng: 'ar' })
         ? (t('about.faqs', { returnObjects: true }) as { question: string; answer: string }[])
         : undefined)

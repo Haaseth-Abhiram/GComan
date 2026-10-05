@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useIsArabicRoute } from '@/lib/langRouting';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -61,11 +62,12 @@ const contactSchema = z.object({
 const Contact = () => {
   const { toast } = useToast();
   const { t, i18n } = useTranslation();
+  const isArabicRoute = useIsArabicRoute();
   const navigate = useNavigate();
 
   // See ProductDetail.tsx's translatedFaqs — this FAQ copy is English-only,
   // so /ar must not render it until contact.faqs actually exists.
-  const visibleFAQs = i18n.language === 'ar'
+  const visibleFAQs = isArabicRoute
     ? (i18n.exists('contact.faqs', { lng: 'ar' })
         ? (t('contact.faqs', { returnObjects: true }) as { question: string; answer: string }[])
         : undefined)
