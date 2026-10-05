@@ -2090,7 +2090,8 @@
           "answer": "Sodium Hypochlorite Solution is commonly used for Municipal water disinfection, Wastewater treatment, and Swimming pool chlorination. Global Chemicals LLC supplies Sodium Hypochlorite Solution across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      "wikiUrl": "https://en.wikipedia.org/wiki/Sodium_hypochlorite"
+      "wikiUrl": "https://en.wikipedia.org/wiki/Sodium_hypochlorite",
+      "canonicalOverride": "https://gcoman.com/products/water-treatment/sodium-hypochlorite"
     }
   },
   {
@@ -2460,7 +2461,9 @@
       ],
       "wikiUrl": "https://en.wikipedia.org/wiki/Hydrochloric_acid",
       "seoTitle": "Hydrochloric Acid (HCl 30-33%) Supplier in Oman",
-      "seoDescription": "Hydrochloric acid 30–33% (CAS 7647-01-0) ex-stock Muscat, Oman. pH control, descaling, resin regeneration, pickling. Drums, IBCs or bulk — get a quote."
+      "seoDescription": "Hydrochloric acid 30–33% (CAS 7647-01-0) ex-stock Muscat, Oman. pH control, descaling, resin regeneration, pickling. Drums, IBCs or bulk — get a quote.",
+      "guideUrl": "/chemical-supplier/hydrochloric-acid-oman",
+      "guideLabel": "Hydrochloric Acid Supplier in Oman — HCl 30–33%, carboy to bulk tanker"
     }
   },
   {
