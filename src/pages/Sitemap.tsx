@@ -43,6 +43,7 @@ const Sitemap = () => {
       links: [
         { label: 'Chemical Suppliers Oman', path: '/chemical-suppliers-oman' },
         { label: 'Caustic Soda Supplier Oman', path: '/chemical-supplier/caustic-soda-oman' },
+        { label: 'Nitric Acid Supplier Oman', path: '/chemical-supplier/nitric-acid-oman' },
         { label: 'Chemical Suppliers Middle East', path: '/chemical-suppliers-middle-east' },
         { label: 'Chemicals Muscat', path: '/chemicals/muscat' },
         { label: 'Chemicals Sohar', path: '/chemicals/sohar' },

@@ -245,6 +245,7 @@ const ChemicalSuppliersOman = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {[
                   { label: 'Caustic Soda Supplier Oman', path: '/chemical-supplier/caustic-soda-oman', note: 'Flakes, Prills & Liquid NaOH' },
+                  { label: 'Nitric Acid Supplier Oman', path: '/chemical-supplier/nitric-acid-oman', note: '68% HNO3 — Industrial, Food & Lab' },
                   { label: 'Chemical Suppliers Middle East', path: '/chemical-suppliers-middle-east', note: 'Export to UAE, KSA, Qatar & GCC' },
                   { label: 'Water Treatment Chemicals', path: '/products/water-treatment', note: 'PAC, Hypochlorite, Antiscalants' },
                   { label: 'Shell / Mobil / Castrol Lubricants', path: '/products/lubricants', note: 'Authorised Oman Distributor' },
