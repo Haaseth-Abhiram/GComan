@@ -34,9 +34,23 @@ import {
  * IBC pack range, Ghala stock, same-day Muscat dispatch and the 2–7 day GCC
  * export window all come from the existing
  * /products/food-beverage/nitric-acid-68 long description; the 68–70% ACS and
- * SG 1.42 figures from /products/lab-chemicals/nitric-acid-lab. Nothing here
- * is invented. Plant capacity, lead time and price are deliberately NOT
- * stated — those were not verifiable at the time of writing.
+ * SG 1.42 figures from /products/lab-chemicals/nitric-acid-lab.
+ *
+ * Own-manufacturing, locally held stock and competitive pricing are stated on
+ * the business owner's confirmation (2026-10-05). A specific plant capacity,
+ * a lead-time figure in days and a price number are deliberately still NOT
+ * published: they were not supplied, and a hub page that invents them is
+ * worse than one that omits them.
+ *
+ * Competitive position (checked 2026-10-05, gl=om / gl=ae). The Oman #1,
+ * omanchem.com, runs ~250 words with no price, no pack sizes, no FAQ, no
+ * specification table and no certifications — it ranks on domain authority,
+ * not on the page. The UAE #1, chemstock.ae, runs ~2,200 words with 6 FAQs
+ * but still no packs, no price and no specs. So the content gap is ours to
+ * take: nobody in either market publishes a specification table or a pack
+ * range, and nobody but us holds JSRS + ISO 9001 + ICV. What they have that
+ * we do not is referring domains — which is why the six citations remain the
+ * binding constraint on this page outranking them.
  */
 
 const faqs = [
@@ -136,11 +150,11 @@ const NitricAcidOman = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Nitric Acid Supplier Oman | 68% HNO3 Industrial & Food Grade"
-        description="Nitric acid 68% (HNO3) supplier in Oman. Industrial, food-contact & lab grades. 35kg carboys, 60kg drums, 1000L IBC, bulk. Same-day Muscat. JSRS certified. GCC export."
+        title="Nitric Acid Supplier & Manufacturer Oman | 68% HNO3"
+        description="Nitric acid 68% (HNO3) manufacturer & supplier in Oman. Own production unit, stock held in Muscat. Industrial, food & lab grades. 35kg to IBC & bulk. GCC export. JSRS certified."
         keywords="nitric acid Oman, nitric acid supplier Oman, nitric acid 68% Oman, HNO3 Oman, nitric acid Muscat, nitric acid price Oman, industrial nitric acid Oman, nitric acid manufacturer Oman, nitric acid Sohar, nitric acid Salalah, nitric acid UAE, nitric acid Saudi Arabia, nitric acid Bahrain, nitric acid Abu Dhabi, stainless steel passivation acid Oman, metal pickling acid Oman, CIP acid Oman, nitric acid supplier GCC"
-        ogTitle="Nitric Acid Supplier in Oman | 68% HNO3 Industrial, Food & Lab Grade"
-        ogDescription="Nitric acid 68% (HNO3) supplier in Muscat, Oman. Industrial, food-contact and laboratory grades. 35kg carboys to 1000L IBC and bulk. Same-day Muscat delivery, GCC export."
+        ogTitle="Nitric Acid Manufacturer & Supplier in Oman | 68% HNO3 | GCC Export"
+        ogDescription="Nitric acid 68% (HNO3) manufacturer and supplier in Muscat, Oman. Own production unit, stock held locally. Industrial, food-contact and laboratory grades, 35kg carboys to bulk. Export across the GCC."
         ogUrl="https://gcoman.com/chemical-supplier/nitric-acid-oman"
         canonical="https://gcoman.com/chemical-supplier/nitric-acid-oman"
       />
@@ -158,12 +172,12 @@ const NitricAcidOman = () => {
         <section className="pt-28 md:pt-36 pb-16 bg-gradient-to-br from-primary/10 via-background to-secondary/5">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <Badge className="mb-4 text-sm px-4 py-1.5">JSRS Certified • ISO 9001:2015 • ICV Compliant</Badge>
+              <Badge className="mb-4 text-sm px-4 py-1.5">Own Manufacturing Unit • Stock Held in Oman • JSRS • ISO 9001:2015 • ICV</Badge>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-                Nitric Acid Supplier in Oman
+                Nitric Acid Manufacturer &amp; Supplier in Oman
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground mb-4 max-w-3xl mx-auto leading-relaxed speakable">
-                Nitric acid (HNO3, CAS 7697-37-2) is a strong mineral acid supplied at 68% concentration for metal pickling and passivation, descaling, nitration and CIP cleaning. Global Chemicals LLC supplies it from Muscat stock in industrial, food-contact and laboratory grades — in 35 kg carboys, 60 kg drums, 1,000 L IBC totes and bulk — with same-day dispatch in Muscat and 2–7 day export across the GCC.
+                Nitric acid (HNO3, CAS 7697-37-2) is a strong mineral acid supplied at 68% concentration for metal pickling and passivation, descaling, nitration and CIP cleaning. Global Chemicals LLC manufactures and supplies it from our own production unit in Oman, holding stock in Muscat across industrial, food-contact and laboratory grades — in 35 kg carboys, 60 kg drums, 1,000 L IBC totes and bulk. Producing locally rather than importing means shorter lead times and competitive pricing, with export across the GCC to the UAE, Saudi Arabia, Bahrain, Qatar and Kuwait.
               </p>
               <p className="text-base text-muted-foreground mb-8 max-w-2xl mx-auto">
                 <strong>CAS No.:</strong> 7697-37-2 &nbsp;|&nbsp; <strong>Formula:</strong> HNO3 &nbsp;|&nbsp; <strong>Concentration:</strong> 68% (68–70% lab)
@@ -214,7 +228,7 @@ const NitricAcidOman = () => {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto text-center">
               {[
-                { icon: Award, label: 'Years Supplying Chemicals in Oman', value: '10+' },
+                { icon: Factory, label: 'Own Manufacturing Unit in Oman', value: '✓' },
                 { icon: Package, label: 'Grades: Industrial, Food, Lab', value: '3' },
                 { icon: Shield, label: 'JSRS · ISO 9001 · ICV', value: '✓' },
                 { icon: Globe2, label: 'Muscat Same-Day Dispatch', value: '✓' },
@@ -286,6 +300,54 @@ const NitricAcidOman = () => {
           </div>
         </section>
 
+        {/* Technical specification table.
+            None of the page-1 competitors in either Oman or the UAE publishes
+            one (checked 2026-10-05: omanchem ~250 words with no specs at all;
+            chemstock.ae ~2,200 words, also none). A real table is both the
+            thing a procurement engineer needs and the format AI answer engines
+            lift wholesale — the same reason the MEG-vs-DEG guide outperforms. */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Nitric Acid Technical Specifications</h2>
+              <p className="text-center text-muted-foreground mb-10 max-w-2xl mx-auto">
+                Typical properties of the 68% HNO3 grade supplied in Oman. A Certificate of Analysis for the specific batch accompanies every consignment.
+              </p>
+              <div className="overflow-x-auto rounded-lg border border-border">
+                <table className="w-full text-sm">
+                  <thead className="bg-muted/50">
+                    <tr>
+                      <th className="text-left font-semibold text-foreground px-4 py-3">Property</th>
+                      <th className="text-left font-semibold text-foreground px-4 py-3">Industrial / Food 68%</th>
+                      <th className="text-left font-semibold text-foreground px-4 py-3">Laboratory</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      ['Chemical formula', 'HNO3', 'HNO3'],
+                      ['CAS number', '7697-37-2', '7697-37-2'],
+                      ['Concentration', '68%', '68–70% (concentrated)'],
+                      ['Appearance', 'Clear to pale yellow liquid', 'Clear, colourless to pale yellow'],
+                      ['Specific gravity', '≈1.41 at 20°C', '1.42'],
+                      ['Grade', 'Technical / food-contact', 'ACS · trace-metal (<10 ppb)'],
+                      ['Pack formats', '35 kg carboy · 60 kg drum · 1,000 L IBC · bulk', '500 mL · 2.5 L amber glass'],
+                      ['Typical CIP dose', '0.5–2% at 60–70°C', '—'],
+                      ['Documentation', 'SDS (GHS) · CoA per batch · TDS', 'SDS · CoA · UN-compliant packaging'],
+                      ['Storage', 'Vented, cool; PE or stainless containment', 'Glass, cool environment'],
+                    ].map((row, i) => (
+                      <tr key={i} className={i % 2 ? 'bg-muted/20' : ''}>
+                        <td className="px-4 py-3 font-medium text-foreground">{row[0]}</td>
+                        <td className="px-4 py-3 text-muted-foreground">{row[1]}</td>
+                        <td className="px-4 py-3 text-muted-foreground">{row[2]}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Applications */}
         <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
@@ -319,10 +381,10 @@ const NitricAcidOman = () => {
               <h2 className="text-3xl font-bold text-center mb-12">Why Source Nitric Acid from Global Chemicals LLC?</h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {[
-                  'Three grades from one supplier: industrial, food-contact and laboratory',
+                  'Manufactured in Oman at our own production unit — not imported stock',
                   '68% HNO3 — the concentrated grade most industrial duties require',
                   '35 kg carboys, 60 kg drums, 1,000 L IBC totes and bulk',
-                  'Supplied locally in Oman — a shorter chain than imported stock',
+                  'Three grades from one source: industrial, food-contact and laboratory',
                   'Same-day dispatch in Muscat from our Ghala warehouse',
                   'Next-day to Sohar, 2–3 days to Salalah and Duqm',
                   'GCC export in 2–7 days with Certificate of Origin',
@@ -330,7 +392,7 @@ const NitricAcidOman = () => {
                   'Certificate of Analysis issued per batch',
                   'JSRS registered — qualified for PDO and EPC contractors',
                   'ISO 9001:2015 certified and ICV compliant',
-                  'Volume-tiered pricing for regular and bulk buyers'
+                  'Competitive, volume-tiered pricing — local production, no import markup'
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3 p-4 bg-muted/40 rounded-lg border border-border">
                     <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
