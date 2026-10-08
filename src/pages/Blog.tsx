@@ -613,7 +613,16 @@ The name "caustic soda" refers to the highly corrosive (caustic) nature of sodiu
 
 Caustic Soda Grades Available in Oman
 
-Industrial-grade caustic soda is available in Oman in three physical forms. Caustic soda flakes (98–99% NaOH) are white solid flakes that are easier to handle than liquid for smaller operations. They dissolve readily in water with significant heat generation (dissolution is exothermic). Caustic soda pearls (98–99% NaOH) are small spherical beads with lower dust generation than flakes — preferred in industries where dust inhalation is a concern. Caustic soda solution (liquid, 45–50% NaOH) is the most convenient form for industrial water treatment and process applications where large continuous volumes are required. It is pumped directly via chemical dosing systems, eliminating the manual dissolving step.
+Industrial-grade caustic soda is available in Oman in three physical forms, plus a food-grade specification.
+
+| Grade | NaOH content | Supplied as | Best suited to | Key handling note |
+|---|---|---|---|---|
+| Flakes | 98–99% | White solid flakes | Smaller operations and batch dosing | Dissolves readily; dissolution is strongly exothermic |
+| Pearls | 98–99% | Small spherical beads | Sites where dust inhalation is a concern | Lower dust generation than flakes |
+| Liquid solution | 45–50% | Bulk liquid | Continuous dosing and industrial water treatment | Pumped directly via dosing systems; freezes below 12 °C |
+| Food-grade (NaOH FCC / E524) | Food-grade certified | Flakes or liquid | Food processing and pharmaceutical | Tighter lead, mercury and arsenic limits; request the batch CoA |
+
+Liquid is the most convenient form for industrial water treatment and process applications where large continuous volumes are required, because it is pumped directly via chemical dosing systems and eliminates the manual dissolving step. Flakes and pearls remain easier to handle where volumes are too small to justify bulk liquid storage.
 
 For food-grade applications (food processing, pharmaceutical), food-grade caustic soda (also called NaOH FCC or E524) is available with tighter heavy metal limits — particularly for lead, mercury, and arsenic — and documentation of food safety compliance. Always request the Certificate of Analysis (CoA) with the actual analytical results for the specific batch when purchasing food-grade caustic soda.
 
@@ -694,17 +703,43 @@ The key specification differences in PAC products relate to basicity (% OH) and 
 
 Liquid PAC vs Powder PAC
 
-Liquid PAC (typically 10–12% Al2O3, 150–200 g/L aluminium content) is the standard form for water treatment plants with dosing pump systems. It is supplied in 25-litre jerricans, 200-litre drums, or bulk IBC (1,000-litre) containers. For large municipal plants, bulk liquid PAC is delivered by tanker truck and stored in dedicated dosing tanks. Powder PAC (typically 28–31% Al2O3) is used where liquid delivery is impractical, particularly in remote locations, or where storage space is limited. Powder PAC must be dissolved in water before dosing — a mixing tank is required. Powder is also more cost-effective per kilogram of active Al2O3, but handling requires dust control measures.
+| Factor | Liquid PAC | Powder PAC |
+|---|---|---|
+| Al2O3 content | 10–12% (150–200 g/L aluminium) | 28–31% |
+| Supplied in | 25 L jerricans, 200 L drums, 1,000 L IBCs, or bulk tanker | Sealed bags |
+| Preparation before dosing | None — pumped directly | Must be dissolved in water; mixing tank required |
+| Best suited to | Plants with dosing pump systems | Remote locations, or where storage space is limited |
+| Cost per kg of active Al2O3 | Higher | More cost-effective |
+| Handling consideration | Corrosive liquid (pH 3.5–5.0) | Requires dust control measures |
+
+For large municipal plants, bulk liquid PAC is delivered by tanker truck and stored in dedicated dosing tanks.
 
 Typical PAC Dosing Rates for Oman Water Conditions
 
-Dosing rates depend heavily on raw water quality. For Muscat's municipal supply (low turbidity, desalinated origin): 5–15 mg/L liquid PAC (as product) is typically sufficient. For industrial process water from groundwater sources (higher turbidity, up to 200 NTU): 20–50 mg/L may be required. For swimming pool water treatment and polishing: 5–10 mg/L followed by sand filtration. For industrial effluent treatment (suspended solids >500 mg/L): 50–200 mg/L PAC with polymer flocculant aid.
+Dosing rates depend heavily on raw water quality.
+
+| Application | Raw water condition | Typical liquid PAC dose (as product) |
+|---|---|---|
+| Muscat municipal supply | Low turbidity, desalinated origin | 5–15 mg/L |
+| Industrial process water | Groundwater, turbidity up to 200 NTU | 20–50 mg/L |
+| Swimming pool treatment and polishing | Pool water | 5–10 mg/L, followed by sand filtration |
+| Industrial effluent | Suspended solids above 500 mg/L | 50–200 mg/L, with polymer flocculant aid |
 
 Always conduct a jar test using your actual source water before finalising dose rates. Optimal dose minimises residual aluminium in treated water — WHO guideline for drinking water is <0.2 mg/L Al.
 
 PAC vs Alum: Which to Choose for Oman?
 
-For most Oman water treatment applications, PAC outperforms alum (aluminium sulphate) for the following reasons. PAC works at higher pH (7.5–8.5) common in Oman's desalinated supply, while alum loses effectiveness above pH 7.5. PAC produces 20–40% less sludge volume, reducing disposal and dewatering costs. PAC reacts faster, allowing shorter flocculation times in high-throughput systems. PAC is less sensitive to temperature fluctuations — important given Oman's extreme seasonal temperature range. The only scenario where alum remains competitive is on a cost-per-dose basis for very large volume, price-sensitive applications where performance differences are acceptable.
+For most Oman water treatment applications, PAC outperforms alum (aluminium sulphate).
+
+| Factor | PAC | Alum (aluminium sulphate) |
+|---|---|---|
+| Effective pH range | 5.5–9.0 | 6.5–7.5 |
+| Performance at Oman's desalinated supply pH (7.5–8.5) | Works well | Loses effectiveness above pH 7.5 |
+| Sludge volume | 20–40% less — lower disposal and dewatering cost | Higher |
+| Reaction speed | Faster — allows shorter flocculation times | Slower |
+| Sensitivity to temperature swings | Low | High |
+
+The only scenario where alum remains competitive is on a cost-per-dose basis for very large volume, price-sensitive applications where performance differences are acceptable. PAC's lower temperature sensitivity matters given Oman's extreme seasonal temperature range.
 
 PAC Storage and Handling
 
