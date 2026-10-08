@@ -6,6 +6,8 @@
 
 > **Update 2026-10-05 (late):** shipped and live at `psr2.ef1e3fcd` — the Arabic FAQ route gate, the admin dashboard rebuilt on real Search Console data, a live security audit (data access clean), and the **nitric acid product+geo hub** at `/chemical-supplier/nitric-acid-oman` (4,014 words, 11-row spec table, 8 FAQs, submitted to Google's priority crawl queue and accepted by IndexNow). See §11 for the one question that matters now.
 
+> **Update 2026-10-08 — THE WATCH IS CLOSED, AND IT CLOSED CLEAN.** Final reading: GSC 28d **497 clicks / 9.49K impressions / CTR 5.2% / average position 8.4**, manual actions and security issues both *None*. Every alarm threshold in §5 is clear, and average position has now improved three readings running (9.0 baseline → 8.7 day 5 → **8.4**) — the opposite signature to a content penalty. **None of the §6 self-inflicted risks fired.** The restraint hold in §2 is therefore lifted and §8 conditional work is unlocked; §8 item 3 is now done (see below). The measurement cadence returns to monthly — next read early November. Also shipped: **leaked-password protection is now ON** (Lovable → Cloud → Users → Auth settings → "Password HIBP check"; saved, "Auth config updated"), closing one of the three §11 operational items.
+>
 > **If you only read one file, read [`ACTION-PACK.md`](./ACTION-PACK.md)** — it is the instruction set (what is live, the four off-site actions, how to measure). This handoff is the background and the standing constraints.
 
 **Read this first in a new session.** Then `docs/seo/strategy-and-watch-2026-09-30.md` (the restraint plan + baseline numbers) and `docs/seo/citation-execution-plan-2026-09-30.md` (the user's own task list).
@@ -131,7 +133,7 @@ None of these can be judged before recrawl. **Anyone claiming today that the wor
 
 1. Extend the dosing calculator — Bing proves 30 AI citations; tables added 09-30; nothing to lose
 2. Replicate the JSRS pattern (named institution + credential + procedure) for one more vertical — most evidence-backed pattern we have
-3. Tables on the PAC and caustic-soda blogs — reformatting published facts, no new claims
+3. ~~Tables on the PAC and caustic-soda blogs — reformatting published facts, no new claims~~ **DONE 2026-10-08** (`ed788cf`): 4 tables added — caustic soda grades; PAC liquid-vs-powder, dosing rates, and PAC-vs-alum. Every cell sourced from the prose it replaced. Verified against `BlogPost.tsx`'s actual parser (no ragged rows, no stray pipe lines, no TOC leakage) and 77/77 e2e. **Needs a Lovable Publish to reach production.**
 4. Fix two fact-vacuums: `/chemical-suppliers-middle-east` (2 numeric facts in 2,758 words) and the JSRS blog (add the real JSRS registration number, ICV %, ISO cert number)
 
 ### Explicitly NOT doing
@@ -196,7 +198,7 @@ After the watch closes **27 Oct**: UAE snippet work (951 impressions converting 
 ### Operational items still open (not SEO)
 
 - `resync-zoho-leads` returns **404** in production — the admin CRM-backfill button cannot work. Needs a Supabase CLI deploy.
-- Leaked-password protection **off** — one toggle in Supabase Auth.
-- Lovable's **deep security scan never completed** — worth re-running.
+- ~~Leaked-password protection **off**~~ — **FIXED 2026-10-08.** The control is Lovable → Cloud → Users → Auth settings → **"Password HIBP check"** (not a Supabase-console toggle, as earlier notes assumed). Enabled and saved.
+- Lovable's **deep security scan never completed** — re-run started 2026-10-08 from Lovable → More → Security → "Run again" (~12–15 min); the browser session dropped before the result could be read, so **the outcome is still unseen**. The one standing finding it had already surfaced was the leaked-password warning now fixed above.
 
 **Do not let a future session answer "what else for #1?" with more code.** The ceiling is authority, and authority is bought with citations, an entity record, and reviews — not with pages.
