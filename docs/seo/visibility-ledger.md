@@ -31,6 +31,15 @@ Personalisation caveat: browser is UAE-located and signed in; Maps/AI answers ca
 | B4 | Wikidata item | user | **open** | `wbsearchentities` "Global Chemicals LLC" → none (2026-10-11) | | done + 4 weeks (write the date) |
 | B1 | Indicative price band on the 3 hubs | user decides → Claude builds | **waiting on user's figures** | Hubs carry no OMR price for us (2026-10-11) | | done + 4 weeks (write the date) |
 | C1 | Add each new listing / Wikidata URL to Organization `sameAs` | Claude | Bing Places: waiting for its public URL (after publish); others blocked | | | |
+| P1 | Google Business Profile website → `https://gcoman.com/` (it is `https://www.gcoman.com/`, a 302 hop for every Maps/Bing visitor; Bing Places copies it weekly) | user | **open** | GBP + Bing Places show www (2026-10-11) | | — |
+| P2 | Remove the stale `gcoman.com/sitemap` and duplicate `www.gcoman.com/sitemap.xml` from Bing WMT | Claude | **done** | Bing WMT now lists only `gcoman.com/sitemap.xml` (657 URLs) | 2026-10-11 | — |
+| P3 | GA4: mark `contact_click` (WhatsApp/phone/email taps) as a key event | Claude | **done** | GA4 confirmed "contact_click has now been enabled as a key event". Also candidates: SalesIQ "Offline Message Submitted", "Chat Initiated" (not marked) | 2026-10-11 | — |
+| P4 | GA4 consent mode v2 (decision: keep strict blocking vs allow cookieless pings) | user decides → Claude builds | **decision needed** | GA4 Consent settings: "Analytics cookie consent signals inactive" (2026-10-11) | | — |
+| P5 | Soft-404 clean-up | Claude | **done (code waiting on Publish)** | Request indexing: labsa + corrosion-inhibitor-closed-loop (priority crawl queue); /chemicals/cairo already indexed (stale label). Redirect /chemicals/khasab → /chemical-suppliers-oman added (+ e2e). The other 12 are legacy /service/* URLs already redirected client-side | 2026-10-11 | re-inspect 2026-10-18 |
+| P6 | Mobile speed: real-user LCP 5.4 s, TTFB 2.7 s, FCP 3.9 s; 58 URLs Poor on GSC CWV | Claude (code) + hosting limit | **code done, waiting on Publish** | Homepage: 2nd hero slide no longer downloads alongside the LCP image (mounted after window load, never prerendered); featured-product cards resized to 800 px at build (−34 KB). TTFB is Lovable hosting, not code | 2026-10-11 | re-read CWV 2026-10-25 and again 28 days after Publish |
+| P7 | GSC Domain property (`sc-domain:gcoman.com`) via DNS TXT in Hostinger hPanel | user | **open** | only URL-prefix property exists | | — |
+| P8 | BigQuery: GSC bulk export + GA4 link (needs a Google Cloud project; optional) | user | **optional** | neither linked (2026-10-11) | | — |
+| P9 | `npm run submit:indexnow` after every Publish | Claude | **standing** | last IndexNow submission 2026-10-05 | | — |
 | KPI | Bing referring domains 1 → 6+ | — | 1 | Bing WMT (2026-10-11) | | monthly |
 
 ## Notes per run
