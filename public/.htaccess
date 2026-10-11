@@ -24,6 +24,8 @@ Options -Indexes
   RewriteEngine On
 # /chemical-supplier bare path -> delivery-locations hub
 RewriteRule ^chemical-supplier$ /chemicals [R=301,L]
+# retired location page -> Oman hub
+RewriteRule ^chemicals/khasab/?$ /chemical-suppliers-oman [R=301,L]
 
   RewriteBase /
 

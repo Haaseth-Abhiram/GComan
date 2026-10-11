@@ -14,6 +14,9 @@ const EXACT_REDIRECTS = new Map<string, string>([
   // its own; the bare path fell through to the SPA-shell soft-404. Send it to
   // the delivery-locations hub, the nearest real page.
   ['/chemical-supplier', '/chemicals'],
+  // A retired location page Google still crawls (GSC Soft 404, last crawl
+  // 2026-05-25). Khasab has no page of its own, so send it to the Oman hub.
+  ['/chemicals/khasab', '/chemical-suppliers-oman'],
 
   // Old /products/acids/* → new categories
   ['/products/acids/citric-acid', '/products/water-treatment/citric-acid-anhydrous'],

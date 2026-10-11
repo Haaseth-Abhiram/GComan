@@ -44,9 +44,29 @@ const slides = [
   }
 ];
 
+// Headless prerender (Puppeteer) — same check as ChemistryHero's isPrerender.
+const isPrerender = (): boolean =>
+  typeof navigator === 'undefined' || /HeadlessChrome|Prerender/i.test(navigator.userAgent);
+
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  // The next slide's <img> sits inside the viewport (absolute inset-0), so
+  // loading="lazy" does not defer it: it downloaded alongside the LCP image
+  // and competed with it. Mount it only after the window load event, and
+  // never in the prerendered HTML.
+  const [pageLoaded, setPageLoaded] = useState(false);
   const { t } = useTranslation();
+
+  useEffect(() => {
+    if (isPrerender()) return;
+    if (document.readyState === 'complete') {
+      setPageLoaded(true);
+      return;
+    }
+    const onLoad = () => setPageLoaded(true);
+    window.addEventListener('load', onLoad, { once: true });
+    return () => window.removeEventListener('load', onLoad);
+  }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -75,8 +95,10 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 mix-blend-multiply z-10" />
         {slides.map((s, index) => {
-          // Only render slides that have been viewed (or are next), keep first eager for LCP
-          const shouldRender = index === 0 || index <= currentSlide + 1;
+          // Only render slides that have been viewed, plus the next one once the
+          // page has loaded; the first stays eager for LCP
+          const shouldRender =
+            index <= currentSlide || (pageLoaded && index === currentSlide + 1);
           if (!shouldRender) return null;
           return (
             <img

@@ -57,6 +57,12 @@ test.describe('/chemicals hub', () => {
     expect(new URL(page.url()).pathname).toBe('/chemicals');
   });
 
+  test('retired /chemicals/khasab redirects to the Oman hub (was a GSC soft 404)', async ({ page }) => {
+    await page.goto('/chemicals/khasab');
+    await page.waitForURL('**/chemical-suppliers-oman');
+    expect(new URL(page.url()).pathname).toBe('/chemical-suppliers-oman');
+  });
+
   test('/chemicals renders the hub with all city + country links', async ({ page }) => {
     await page.goto('/chemicals');
     await expect(page.locator('h1')).toContainText('Chemical Supply Across Oman');

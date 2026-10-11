@@ -3,9 +3,11 @@ import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, Droplets, Wrench, Flame } from 'lucide-react';
 import { LocalizedLink as Link } from '@/components/LocalizedLink';
-import waterTreatmentImg from '@/assets/products/water-treatment-optimized.webp';
-import oilGasImg from '@/assets/products/oil-gas.webp';
-import industrialLubricantsImg from '@/assets/products/industrial-lubricants.webp';
+// Cards render ~400 CSS px wide; 800 px covers 2x screens. The sources are
+// 960–1024 px, so vite-imagetools resizes them at build time (~34 KB saved).
+import waterTreatmentImg from '@/assets/products/water-treatment-optimized.webp?w=800&format=webp&quality=78';
+import oilGasImg from '@/assets/products/oil-gas.webp?w=800&format=webp&quality=78';
+import industrialLubricantsImg from '@/assets/products/industrial-lubricants.webp?w=800&format=webp&quality=78';
 
 const FeaturedProducts = () => {
   const { t } = useTranslation();
