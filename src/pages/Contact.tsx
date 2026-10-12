@@ -629,7 +629,7 @@ const Contact = () => {
                 link rendered past the 400px boundary and was unclickable. */}
             <div className="mt-4 text-center">
               <a
-                href="https://www.google.com/maps/search/?api=1&query=Global+Chemicals+LLC+Ghala+Muscat+Oman"
+                href="https://www.google.com/maps?cid=11905976882639061346"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors"
