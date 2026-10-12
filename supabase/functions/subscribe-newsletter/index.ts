@@ -136,27 +136,15 @@ Deno.serve(async (req) => {
           { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
         );
       } else {
-        // Reactivate subscription
-        const { error: updateError } = await supabase
-          .from('newsletter_subscribers')
-          .update({ 
-            is_active: true, 
-            unsubscribed_at: null,
-            subscribed_at: new Date().toISOString()
-          })
-          .eq('id', existingSubscriber.id);
-
-        if (updateError) {
-          console.error('[Newsletter] Error reactivating subscription:', updateError);
-          return new Response(
-            JSON.stringify({ success: false, error: "Failed to reactivate subscription" }),
-            { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-          );
-        }
-
-        console.log(`[Newsletter] Subscription reactivated for: ${email}`);
+        // Do NOT reactivate: nothing proves the requester owns this address,
+        // so anyone could re-subscribe a person who opted out. The owner can
+        // rejoin by contacting us from that mailbox.
+        console.log(`[Newsletter] Reactivation refused for unsubscribed email: ${email}`);
         return new Response(
-          JSON.stringify({ success: true, message: "Welcome back! Your subscription has been reactivated." }),
+          JSON.stringify({
+            success: true,
+            message: "This email previously unsubscribed. To rejoin, please email info@gcoman.com from this address.",
+          }),
           { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
         );
       }

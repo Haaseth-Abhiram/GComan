@@ -8,6 +8,7 @@ import { trackAISearch } from '@/components/GoogleAnalytics';
 import { useToast } from '@/hooks/use-toast';
 import ReactMarkdown from 'react-markdown';
 import gcIcon from '@/assets/gc-icon.webp';
+import { Turnstile, isTurnstileEnabled, type TurnstileHandle } from '@/components/Turnstile';
 
 interface AISearchDialogProps {
   open: boolean;
@@ -19,6 +20,8 @@ export const AISearchDialog = ({ open, onOpenChange }: AISearchDialogProps) => {
   const [answer, setAnswer] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
+  const [turnstileToken, setTurnstileToken] = useState('');
+  const turnstileRef = useRef<TurnstileHandle>(null);
   const { toast } = useToast();
 
   useEffect(() => {
@@ -33,6 +36,10 @@ export const AISearchDialog = ({ open, onOpenChange }: AISearchDialogProps) => {
   const handleSearch = async (searchQuery?: string) => {
     const trimmed = (searchQuery || query).trim();
     if (!trimmed || isLoading) return;
+    if (isTurnstileEnabled() && !turnstileToken) {
+      toast({ title: 'Please wait', description: 'Completing a quick security check — try again in a moment.' });
+      return;
+    }
 
     setQuery(trimmed);
     setIsLoading(true);
@@ -41,7 +48,7 @@ export const AISearchDialog = ({ open, onOpenChange }: AISearchDialogProps) => {
 
     try {
       const { data, error } = await supabase.functions.invoke('ai-search', {
-        body: { query: trimmed },
+        body: { query: trimmed, turnstileToken: turnstileToken || undefined },
       });
 
       if (error) throw error;
@@ -53,6 +60,8 @@ export const AISearchDialog = ({ open, onOpenChange }: AISearchDialogProps) => {
       toast({ title: 'Search Error', description: msg, variant: 'destructive' });
     } finally {
       setIsLoading(false);
+      // Tokens are single-use; fetch a fresh one for the next question.
+      turnstileRef.current?.reset();
     }
   };
 
@@ -79,6 +88,11 @@ export const AISearchDialog = ({ open, onOpenChange }: AISearchDialogProps) => {
             Ask anything about our products, services, or company in any language.
           </DialogDescription>
         </DialogHeader>
+        {isTurnstileEnabled() && (
+          <div className="px-5 pt-3 flex justify-center">
+            <Turnstile ref={turnstileRef} onToken={setTurnstileToken} />
+          </div>
+        )}
 
         {/* Search Input */}
         <div className="px-5 py-3 border-b border-border/30 bg-background">
