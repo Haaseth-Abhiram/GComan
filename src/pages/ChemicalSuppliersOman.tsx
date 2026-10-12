@@ -96,8 +96,8 @@ const ChemicalSuppliersOman = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Chemical Suppliers in Oman | ISO 9001 & JSRS Certified"
-        description="Leading chemical suppliers in Oman — ISO 9001 & JSRS certified. Water treatment, oilfield, industrial & lab chemicals delivered nationwide from Muscat."
+        title="Chemical Suppliers in Oman | 275+ Chemicals, ISO 9001"
+        description="ISO 9001 & JSRS certified chemical supplier in Oman with 275+ chemicals. Same-day delivery in Muscat, 1–2 days to Sohar. Water treatment, oilfield & lab grades."
         keywords="chemical supplier muscat oman, chemical suppliers in oman, chemical company muscat, industrial chemicals muscat, chemical distributor oman, water treatment chemicals muscat oman, caustic soda oman, caustic soda supplier muscat, PAC supplier muscat oman, poly aluminium chloride oman, oil gas chemicals oman, JSRS chemical supplier oman, PDO chemical supplier oman, Shell lubricants oman, Mobil lubricants muscat, Castrol oman, laboratory chemicals muscat oman, chemical supplier GCC, calcium hypochlorite oman, antiscalant supplier oman, swimming pool chemicals muscat, food grade chemicals oman, RO chemicals oman, chemical supplier sohar, chemical supplier salalah, chemical supplier duqm"
         ogTitle="Chemical Suppliers in Oman | Global Chemicals LLC"
         ogDescription="Leading chemical suppliers in Oman — ISO 9001 & JSRS certified. Nationwide delivery from Muscat: water treatment, oilfield, industrial & laboratory chemicals."
@@ -209,6 +209,27 @@ const ChemicalSuppliersOman = () => {
                     <span className="text-foreground">{item}</span>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Muscat & Sohar distribution */}
+        <section className="py-12 border-t">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 text-center">Local Distribution from Muscat to Sohar</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Muscat: stock held in Ghala</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Our head office and main warehouse are in Ghala, near Oman LNG, so orders in Muscat ship from stock on the same day. That covers Rusayl Industrial Area, Wadi Kabir, Azaiba, Madinat Sultan Qaboos and Seeb. Caustic soda, PAC, calcium hypochlorite, antiscalants and branded Shell, Mobil and Castrol lubricants go out with their CoA and SDS.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Sohar: 1–2 day delivery up the Batinah coast</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Sohar Industrial Zone, SOHAR Port and Freezone are served by road from Muscat in 1–2 days, and lubricants are usually delivered the next day. Sohar customers order water-treatment, cooling-water, industrial and oilfield chemicals from the same catalogue of 275+ products, with the same documentation.
+                </p>
               </div>
             </div>
           </div>
