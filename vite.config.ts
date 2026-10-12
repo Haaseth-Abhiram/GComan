@@ -130,6 +130,9 @@ export default defineConfig(({ mode }) => ({
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+    // Single React copy: two pre-bundled chunks (seen after a dep install)
+    // gave AuthProvider a null dispatcher ("reading 'useState'").
+    dedupe: ["react", "react-dom", "react/jsx-runtime"],
   },
   build: {
     // Code splitting configuration
@@ -194,7 +197,7 @@ export default defineConfig(({ mode }) => ({
   },
   // Optimize dependencies
   optimizeDeps: {
-    include: ["react", "react-dom", "react-router-dom"],
+    include: ["react", "react-dom", "react/jsx-runtime", "react-router-dom", "framer-motion"],
     // Pre-bundle large dependencies
     force: mode === "development",
   },
