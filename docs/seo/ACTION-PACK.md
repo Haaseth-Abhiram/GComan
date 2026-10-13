@@ -1,6 +1,6 @@
 # Action Pack — getting to #1 and converting inquiries
 
-**This is the only document you need to work from.** The other 26 files in `docs/seo/` are the evidence behind it; this is the instruction set.
+**Execution order now lives in [`MASTER-PLAN.md`](./MASTER-PLAN.md) — say "continue the Number One plan" to resume it.** This file remains the instruction set for the actions only you can take. The other 26 files in `docs/seo/` are the evidence behind it; this is the instruction set.
 
 *For an engineer picking this up cold: [`HANDOFF.md`](./HANDOFF.md) carries the standing constraints (the measurement window, the protected pages, and what deliberately must **not** be done).*
 
