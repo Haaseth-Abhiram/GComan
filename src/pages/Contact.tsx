@@ -85,6 +85,14 @@ const Contact = () => {
     company: '',
     subject: '',
     message: '',
+    // Derived from the phone input's dial code (react-international-phone
+    // reports the parsed country on every change). Lead attribution by market
+    // was impossible before this: only 15 of 88 leads since 2026-07-15 carried
+    // a country in Zoho (2026-10-13), so "more enquiries from the GCC" could
+    // not be measured. Sent as `country` for submit-contact and, until that
+    // edge function is redeployed, also appended to the message so it lands in
+    // the Zoho Description today.
+    country: '',
   });
 
   // Every "Get Quote" button on the 270 product pages and product cards links
@@ -178,7 +186,13 @@ const Contact = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ ...formData, turnstileToken: turnstileToken || undefined }),
+        body: JSON.stringify({
+          ...formData,
+          message: formData.country
+            ? `${formData.message}\n\nCountry (from phone code): ${formData.country}`
+            : formData.message,
+          turnstileToken: turnstileToken || undefined,
+        }),
       });
 
       const result = await response.json();
@@ -279,10 +293,11 @@ const Contact = () => {
       ? ({ 'aria-invalid': true, 'aria-describedby': `${field}-error` } as const)
       : {};
 
-  const handlePhoneChange = (value: string) => {
+  const handlePhoneChange = (value: string, meta?: { country?: { name?: string } }) => {
     setFormData(prev => ({
       ...prev,
-      phone: value
+      phone: value,
+      country: meta?.country?.name ?? prev.country,
     }));
   };
 

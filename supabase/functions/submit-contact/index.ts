@@ -135,6 +135,7 @@ Name: ${sanitizedData.name}
 Email: ${sanitizedData.email}
 Phone: ${sanitizedData.phone || "Not provided"}
 Company: ${sanitizedData.company || "Not provided"}
+Country: ${leadCountry || "Not provided"}
 Subject: ${sanitizedData.subject}
 
 Message:
@@ -207,7 +208,7 @@ serve(async (req) => {
 
     // Parse request body
     const body = await req.json();
-    const { name, email, phone, company, subject, message, turnstileToken } = body;
+    const { name, email, phone, company, subject, message, country, turnstileToken } = body;
 
     // Verify Turnstile (early reject before doing any work)
     const captchaOk = await verifyTurnstile(turnstileToken, ipAddress);
@@ -249,6 +250,11 @@ serve(async (req) => {
     // Validate phone (optional)
     if (phone && typeof phone === 'string' && phone.length > 20) {
       errors.push('Phone number must be less than 20 characters');
+    }
+
+    // Validate country (optional; the contact form derives it from the phone dial code)
+    if (country && (typeof country !== 'string' || sanitizeInput(country).length > 60)) {
+      errors.push('Country must be less than 60 characters');
     }
 
     // Validate company (optional)
@@ -299,6 +305,11 @@ serve(async (req) => {
       email_sent_at: new Date().toISOString(),
     };
 
+    // Kept OUT of sanitizedData: that object is inserted into contact_submissions
+    // as-is and the table has no country column. Used for the email and the
+    // Zoho lead only.
+    const leadCountry = country && typeof country === 'string' ? sanitizeInput(country) : null;
+
     console.log('Inserting contact submission:', { ...sanitizedData, ip_address: '[REDACTED]' });
 
     // Insert into database
@@ -340,6 +351,7 @@ serve(async (req) => {
         Email: sanitizedData.email,
         Phone: sanitizedData.phone || undefined,
         Company: sanitizedData.company || 'Website Contact',
+        Country: leadCountry || undefined,
         Lead_Source: 'Website - Contact Form',
         Title: sanitizedData.subject,
         Description: sanitizedData.message,
