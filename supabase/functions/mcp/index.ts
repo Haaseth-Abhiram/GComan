@@ -2809,7 +2809,8 @@ var food_beverage_default = [
           answer: "Food-grade citric acid meets the purity standards specified by JECFA (Joint FAO/WHO Expert Committee on Food Additives), the European Pharmacopoeia (BP/EP), and FCC (Food Chemicals Codex) \u2014 setting strict upper limits on heavy metals (lead <0.5 ppm, arsenic <1 ppm), sulphated ash, readily carbonisable substances, and microbial counts. Technical-grade citric acid (also called industrial-grade) is manufactured to lower purity standards at reduced cost and may contain higher levels of heavy metal impurities and microbial contamination. Technical-grade citric acid must never be used in food or pharmaceutical production as the impurity profile is not controlled to a level safe for human consumption. In Oman, both grades are available in the market, and some suppliers may mislabel technical grade. Global Chemicals LLC supplies only certified food-grade citric acid with batch-specific certificates of analysis from accredited laboratories, ensuring full traceability for Oman food safety audits and FSSC 22000 / HACCP documentation."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Citric_acid"
+      wikiUrl: "https://en.wikipedia.org/wiki/Citric_acid",
+      canonicalOverride: "https://gcoman.com/products/water-treatment/citric-acid-anhydrous"
     }
   },
   {
@@ -3096,7 +3097,8 @@ var food_beverage_default = [
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Sodium_hydroxide",
       guideUrl: "/chemical-supplier/caustic-soda-oman",
-      guideLabel: "Caustic Soda Supplier in Oman \u2014 flakes, prills & liquid compared"
+      guideLabel: "Caustic Soda Supplier in Oman \u2014 flakes, prills & liquid compared",
+      canonicalOverride: "https://gcoman.com/products/water-treatment/caustic-soda-liquid"
     }
   },
   {
@@ -3387,7 +3389,8 @@ var food_beverage_default = [
           answer: "For fresh produce washing, the internationally recommended sodium hypochlorite concentration is 50\u2013200 ppm free available chlorine (FAC) in the wash water, with typical practice in fresh-cut produce operations using 100\u2013150 ppm FAC. At this concentration, the chlorinated wash kills surface pathogens on vegetables and fruit while leaving residual chlorine well within the safe consumption limit (Codex Alimentarius: max 50 ppm residual after rinsing, EU and UAE food safety standards align). The wash solution must be maintained at pH 6.5\u20137.5 for maximum hypochlorous acid (HOCl) availability \u2014 at pH above 8.0, hypochlorite ion (OCl\u207B) predominates and antimicrobial efficacy drops by 80%. In Oman's hot climate, produce temperatures can be high, which accelerates chlorine degradation and requires more frequent solution replacement. Global Chemicals LLC supplies food-grade sodium hypochlorite with test strips and photometric kits for accurate FAC monitoring in food operations."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_hypochlorite"
+      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_hypochlorite",
+      canonicalOverride: "https://gcoman.com/products/water-treatment/sodium-hypochlorite"
     }
   },
   {
@@ -7161,7 +7164,8 @@ var oilfield_default = [
           answer: "Citric Acid Food Grade is commonly used for Environmentally-friendly well acidizing, Offshore platform cleaning operations, and Food processing equipment cleaning. Global Chemicals LLC supplies Citric Acid Food Grade across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Citric_acid"
+      wikiUrl: "https://en.wikipedia.org/wiki/Citric_acid",
+      canonicalOverride: "https://gcoman.com/products/water-treatment/citric-acid-anhydrous"
     }
   },
   {
@@ -7274,7 +7278,8 @@ var oilfield_default = [
         }
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Citric_acid",
-      seoTitle: "Citric Acid Liquid Supplier in Oman \u2014 Well Acidizing"
+      seoTitle: "Citric Acid Liquid Supplier in Oman \u2014 Well Acidizing",
+      canonicalOverride: "https://gcoman.com/products/water-treatment/citric-acid-anhydrous"
     }
   },
   {
@@ -7330,7 +7335,8 @@ var oilfield_default = [
           answer: "Citric Acid Powder is commonly used for Field-prepared acidizing solutions, Matrix acidizing treatments, and Scale removal in wellbores. Global Chemicals LLC supplies Citric Acid Powder across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Citric_acid"
+      wikiUrl: "https://en.wikipedia.org/wiki/Citric_acid",
+      canonicalOverride: "https://gcoman.com/products/water-treatment/citric-acid-anhydrous"
     }
   },
   {
@@ -9351,7 +9357,8 @@ var ro_chemicals_default = [
       wikiUrl: "https://en.wikipedia.org/wiki/Citric_acid",
       guideUrl: "/blog/ro-membrane-chemicals-antiscalant-oman",
       guideLabel: "RO membrane chemicals \u2014 antiscalant selection and CIP programmes",
-      seoTitle: "Citric Acid Liquid Supplier in Oman \u2014 RO Cleaning"
+      seoTitle: "Citric Acid Liquid Supplier in Oman \u2014 RO Cleaning",
+      canonicalOverride: "https://gcoman.com/products/water-treatment/citric-acid-anhydrous"
     }
   },
   {
@@ -10021,7 +10028,8 @@ var soap_detergent_default = [
           answer: "Hydrogen Peroxide 3% is commonly used for Wound antiseptic and first-aid disinfection, Hair bleaching and lightening formulations, and Household surface disinfection (chlorine-free). Global Chemicals LLC supplies Hydrogen Peroxide 3% across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Hydrogen_peroxide"
+      wikiUrl: "https://en.wikipedia.org/wiki/Hydrogen_peroxide",
+      canonicalOverride: "https://gcoman.com/products/soap-detergent/hydrogen-peroxide-35"
     }
   },
   {
@@ -10050,7 +10058,7 @@ var soap_detergent_default = [
         "hydrogen peroxide supplier Oman",
         "peroxide 35% industrial Muscat"
       ],
-      longDescription: "Hydrogen Peroxide 35% supplier in Oman \u2014 Global Chemicals LLC supplies industrial-grade hydrogen peroxide 35% (H2O2) to textile mills, food processors, water treatment operations, detergent manufacturers, and chemical formulators across Muscat, Sohar Industrial Area, and Oman. Hydrogen peroxide 35% is one of the most widely used industrial concentrations \u2014 offering significant oxidising power while being more manageable than higher-concentration grades (50%, 60%, 70%). It is a clear, colourless liquid that decomposes to water and oxygen, leaving no halogen residues \u2014 making it a preferred bleaching and oxidising agent where chlorine-free processes are required. In the textile industry, H2O2 35% is the standard bleaching agent for cotton, synthetic fibres, and blended fabrics, producing bright whites without fibre degradation. In food processing, food-grade 35% H2O2 is used for aseptic packaging sterilisation (Tetra Pak and similar systems), surface disinfection, and bleaching of flours, oils, and starches. In water treatment, it is applied for odour control (H2S removal), BOD/COD reduction, and advanced oxidation (AOP) combined with UV or ozone. In detergent formulation, it is the raw material for oxygen-based fabric cleaners and automatic dishwash boosters. Global Chemicals LLC supplies H2O2 35% in 35kg carboys, 60kg drums, and 1,000kg IBC containers. Food-grade (FCC) and technical grade available.",
+      longDescription: "Hydrogen Peroxide 35% supplier in Oman \u2014 Global Chemicals LLC supplies industrial-grade hydrogen peroxide 35% (H2O2) to textile mills, food processors, water treatment operations, detergent manufacturers, and chemical formulators across Muscat, Sohar Industrial Area, and Oman. Hydrogen peroxide 35% is one of the most widely used industrial concentrations \u2014 offering significant oxidising power while being more manageable than higher-concentration grades (50%, 60%, 70%). It is a clear, colourless liquid that decomposes to water and oxygen, leaving no halogen residues \u2014 making it a preferred bleaching and oxidising agent where chlorine-free processes are required. In the textile industry, H2O2 35% is the standard bleaching agent for cotton, synthetic fibres, and blended fabrics, producing bright whites without fibre degradation. In food processing, food-grade 35% H2O2 is used for aseptic packaging sterilisation (Tetra Pak and similar systems), surface disinfection, and bleaching of flours, oils, and starches. In water treatment, it is applied for odour control (H2S removal), BOD/COD reduction, and advanced oxidation (AOP) combined with UV or ozone. In detergent formulation, it is the raw material for oxygen-based fabric cleaners and automatic dishwash boosters. Global Chemicals LLC supplies H2O2 35% in 35kg carboys, 60kg drums, and 1,000kg IBC containers. Food-grade (FCC) and technical grade available. Also supplied as 50% technical grade in 30 kg carboys, 230 kg drums and IBCs for industrial bleaching and effluent treatment, and as 3% and 6% dilutions for sanitiser and cosmetic formulation.",
       applications: [
         "Textile bleaching \u2014 cotton, synthetic, and blended fabrics",
         "Food-grade aseptic packaging sterilisation (Tetra Pak systems)",
@@ -10141,7 +10149,8 @@ var soap_detergent_default = [
           answer: "Hydrogen Peroxide 50% is commonly used for Industrial pulp and paper high-brightness bleaching, Textile and nonwoven fabric bleaching, and Chemical synthesis \u2014 epoxidation, hydroxylation, oxidation reactions. Global Chemicals LLC supplies Hydrogen Peroxide 50% across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Hydrogen_peroxide"
+      wikiUrl: "https://en.wikipedia.org/wiki/Hydrogen_peroxide",
+      canonicalOverride: "https://gcoman.com/products/soap-detergent/hydrogen-peroxide-35"
     }
   },
   {
@@ -10198,7 +10207,8 @@ var soap_detergent_default = [
           answer: "Hydrogen Peroxide 6% is commonly used for Professional hair bleaching and lightening (20 Volume), Hair colouring developer (bleach powder activation), and Healthcare surface and equipment disinfection. Global Chemicals LLC supplies Hydrogen Peroxide 6% across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Hydrogen_peroxide"
+      wikiUrl: "https://en.wikipedia.org/wiki/Hydrogen_peroxide",
+      canonicalOverride: "https://gcoman.com/products/soap-detergent/hydrogen-peroxide-35"
     }
   },
   {
@@ -10607,7 +10617,8 @@ var soap_detergent_default = [
         "Stability: 3\u20136 months at 15\u201320\xB0C away from heat and light"
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Sodium_hypochlorite",
-      seoTitle: "Sodium Hypochlorite 12-15% Supplier in Oman \u2014 Bleach Grade"
+      seoTitle: "Sodium Hypochlorite 12-15% Supplier in Oman \u2014 Bleach Grade",
+      canonicalOverride: "https://gcoman.com/products/water-treatment/sodium-hypochlorite"
     }
   },
   {
@@ -13433,7 +13444,7 @@ var water_treatment_default = [
         "liquid caustic soda Oman"
       ],
       fullDescription: "Caustic Soda Liquid (Sodium Hydroxide) is a strong alkaline solution widely used across Oman for pH adjustment, neutralization, and chemical processing. Our high-purity caustic soda liquid ensures consistent quality for water treatment, chemical manufacturing, and industrial cleaning applications.",
-      longDescription: "Buy Caustic Soda Liquid in Oman from Global Chemicals LLC - the leading supplier of sodium hydroxide in Muscat, Sohar, and Salalah. Our caustic soda liquid is ideal for water treatment, pH control, pulp and paper manufacturing, and industrial cleaning. Available in various concentrations with safe handling and delivery across Oman. Liquid caustic soda (sodium hydroxide solution) is preferred for continuous industrial dosing applications where manual bag handling of flakes or prills would be impractical. In municipal water treatment plants across Oman, liquid caustic (30\u201350% NaOH) is dosed by automated chemical feed pumps to raise pH in desalinated water before distribution \u2014 a critical step that prevents pipe corrosion in Muscat and other urban distribution networks. In industrial applications, liquid caustic is used in oilfield sour gas scrubbing, aluminium surface treatment, textile scouring, and pulp and paper kraft cooking. Global Chemicals LLC supplies liquid caustic soda in 25L jerricans, 200L HDPE drums, 1,000L IBC containers, and bulk tanker for major industrial accounts. Technical and food-grade certificates (E524) provided. Same-day delivery in Muscat.",
+      longDescription: "Buy Caustic Soda Liquid in Oman from Global Chemicals LLC - the leading supplier of sodium hydroxide in Muscat, Sohar, and Salalah. Our caustic soda liquid is ideal for water treatment, pH control, pulp and paper manufacturing, and industrial cleaning. Available in various concentrations with safe handling and delivery across Oman. Liquid caustic soda (sodium hydroxide solution) is preferred for continuous industrial dosing applications where manual bag handling of flakes or prills would be impractical. In municipal water treatment plants across Oman, liquid caustic (30\u201350% NaOH) is dosed by automated chemical feed pumps to raise pH in desalinated water before distribution \u2014 a critical step that prevents pipe corrosion in Muscat and other urban distribution networks. In industrial applications, liquid caustic is used in oilfield sour gas scrubbing, aluminium surface treatment, textile scouring, and pulp and paper kraft cooking. Global Chemicals LLC supplies liquid caustic soda in 25L jerricans, 200L HDPE drums, 1,000L IBC containers, and bulk tanker for major industrial accounts. Technical and food-grade certificates (E524) provided. Same-day delivery in Muscat. A food-contact grade of the same 48\u201350% lye, with batch certificate of analysis, is supplied to dairies, bottlers and food processors for CIP cleaning.",
       applications: [
         "Water treatment pH adjustment",
         "Wastewater neutralization",
@@ -13565,7 +13576,7 @@ var water_treatment_default = [
         "bleach solution Oman"
       ],
       fullDescription: "Sodium Hypochlorite is a liquid chlorine solution used extensively for water disinfection and sanitization across Oman. Available in various concentrations, it provides reliable and cost-effective disinfection for municipal water treatment, swimming pools, and industrial applications.",
-      longDescription: "Sodium Hypochlorite supplier in Oman - Global Chemicals LLC provides high-quality liquid chlorine for water treatment plants, swimming pools, and industrial facilities in Muscat, Sohar, Salalah. Our sodium hypochlorite ensures effective disinfection with reliable delivery and technical support throughout Oman. Sodium hypochlorite is the most widely used disinfectant in Oman's water treatment infrastructure \u2014 applied in PAEW municipal water treatment plants, industrial water treatment, swimming pools, and food processing sanitisation across the country. At 12\u201315% available chlorine, bulk sodium hypochlorite is dosed by metering pumps into treatment plant clearwells, distribution system boosters, and process water systems. In Oman's extensive desalination infrastructure, sodium hypochlorite is used for pre-treatment biocide dosing to prevent biofouling of RO membranes. Global Chemicals LLC supplies sodium hypochlorite in 25L jerricans, 200L HDPE drums, 1,000L IBC containers, and bulk tanker. On-site hypochlorite generation systems (electrochlorination) available for large-volume users. Technical grade supplied with chlorine assay certificate. Delivery to all Oman governorates.",
+      longDescription: "Sodium Hypochlorite supplier in Oman - Global Chemicals LLC provides high-quality liquid chlorine for water treatment plants, swimming pools, and industrial facilities in Muscat, Sohar, Salalah. Our sodium hypochlorite ensures effective disinfection with reliable delivery and technical support throughout Oman. Sodium hypochlorite is the most widely used disinfectant in Oman's water treatment infrastructure \u2014 applied in PAEW municipal water treatment plants, industrial water treatment, swimming pools, and food processing sanitisation across the country. At 12\u201315% available chlorine, bulk sodium hypochlorite is dosed by metering pumps into treatment plant clearwells, distribution system boosters, and process water systems. In Oman's extensive desalination infrastructure, sodium hypochlorite is used for pre-treatment biocide dosing to prevent biofouling of RO membranes. Global Chemicals LLC supplies sodium hypochlorite in 25L jerricans, 200L HDPE drums, 1,000L IBC containers, and bulk tanker. On-site hypochlorite generation systems (electrochlorination) available for large-volume users. Technical grade supplied with chlorine assay certificate. Delivery to all Oman governorates. Grades held in stock: municipal 10\u201312% for water and wastewater disinfection, food-contact grade for CIP and bottling lines, and 12\u201315% for detergent and laundry formulation \u2014 the same NaOCl, supplied in 25 L carboys, 200 L drums, 1,000 L IBCs and bulk tanker from Muscat.",
       applications: [
         "Municipal water treatment",
         "Swimming pool chlorination",
@@ -13731,7 +13742,7 @@ var water_treatment_default = [
         "citric acid supplier Oman",
         "citric acid anhydrous Oman"
       ],
-      longDescription: "Citric Acid Anhydrous supplier in Oman - Global Chemicals LLC provides food grade and technical grade anhydrous citric acid for descaling, cleaning, pH control, and food processing in Muscat, Sohar, Salalah. Our water-free citric acid offers higher purity, longer shelf life, and effective chelating properties for diverse applications. Citric acid anhydrous is an important industrial chemical in Oman's water treatment and food processing sectors. As a descaling agent, citric acid is used for commissioning new RO systems (membrane cleaning), boiler and heat exchanger descaling, and cooling tower scale removal \u2014 being preferred over HCl for its safer handling profile and lower corrosivity to metal equipment. In Oman's food and beverage industry (one of the fastest-growing manufacturing sectors under Vision 2040), citric acid is the most widely used food acidulant \u2014 used in fruit drinks, carbonated beverages, confectionery, dairy, and condiments. Global Chemicals LLC supplies citric acid anhydrous (food grade E330 and technical grade) in 25kg bags. CoA and food safety documentation available. Delivery to Muscat, Sohar, Salalah, and all Oman regions; export to UAE and GCC.",
+      longDescription: "Citric Acid Anhydrous supplier in Oman - Global Chemicals LLC provides food grade and technical grade anhydrous citric acid for descaling, cleaning, pH control, and food processing in Muscat, Sohar, Salalah. Our water-free citric acid offers higher purity, longer shelf life, and effective chelating properties for diverse applications. Citric acid anhydrous is an important industrial chemical in Oman's water treatment and food processing sectors. As a descaling agent, citric acid is used for commissioning new RO systems (membrane cleaning), boiler and heat exchanger descaling, and cooling tower scale removal \u2014 being preferred over HCl for its safer handling profile and lower corrosivity to metal equipment. In Oman's food and beverage industry (one of the fastest-growing manufacturing sectors under Vision 2040), citric acid is the most widely used food acidulant \u2014 used in fruit drinks, carbonated beverages, confectionery, dairy, and condiments. Global Chemicals LLC supplies citric acid anhydrous (food grade E330 and technical grade) in 25kg bags. CoA and food safety documentation available. Delivery to Muscat, Sohar, Salalah, and all Oman regions; export to UAE and GCC. One citric acid, several packs: anhydrous powder (25 kg bags) for water treatment and oilfield descaling, food-grade anhydrous for beverages and dairy, and a 50% liquid solution in carboys and IBCs for RO membrane cleaning and well treatment \u2014 all ex-stock Muscat with CoA.",
       applications: [
         "Descaling boilers and equipment",
         "pH adjustment in water treatment",
