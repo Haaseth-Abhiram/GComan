@@ -18,7 +18,7 @@ npm run lint              # eslint
 npx tsc -b                # typecheck (no npm script; CI runs this)
 npm run preview           # serve dist/ locally
 
-# SEO gates & maintenance (see "Scripts in scripts/" for what each one reads)
+# SEO gates & maintenance (the `verifying-seo-pipeline` skill explains what each one reads)
 npm run verify:serp-titles       # CI gate: all 277 product titles ≤60 chars, unique, "Oman" intact
 npm run verify:sitemap-health    # CI gate: sitemap.xml is in sync with what <SEO> actually renders
 npm run verify:ar-meta           # CI gate: ar-meta.json matches the full AR translation files
@@ -73,30 +73,21 @@ A full-suite e2e run is ~30–50 s. If it reports minutes-long timings or scatte
 ## Branch workflow
 
 - **Develop is the working branch** — all commits land here first. New branches fork off `Develop`, not `main`.
-- **Main is production.** Don't push to it or open a `Develop → main` PR unprompted — default to the user merging manually after their own QA. Claude may merge `Develop → main` and push (triggering Lovable's auto-deploy) when the user explicitly asks for it in-session; that push is itself the deploy step, since there's no separate deploy trigger (see "Deploy chain").
+- **Main is production.** Don't push to it or open a `Develop → main` PR unprompted — default to the user merging manually after their own QA. Claude may merge `Develop → main`, push, and click **Publish** in Lovable when the user explicitly asks for it in-session (authorized 2026-08-15). The push alone does **not** deploy — Publish is the trigger (see "Deploy chain").
 
 ## Map of the code
 
-Much more than a brochure site. Beyond the obvious marketing pages:
+Much more than a brochure site (admin dashboard, Supabase auth, AI search, download-gated lead capture, dosing calculators — `ls src/pages src/components` shows the rest). The parts the code cannot explain on its own:
 
-- **Admin dashboard** — `src/pages/Admin.tsx` + `src/components/admin/`: analytics charts (Recharts), contact/download/job-application/newsletter tables with Excel export (`src/lib/exportToExcel.ts`, xlsx), resume browser with PDF preview (pdfjs-dist), activity feed. Guarded by `AdminRoute` + role checks (`src/hooks/useUserRole.ts`). `ContactSubmissionsTable.tsx` has a "Check CRM sync" / "Push N to Zoho" control backed by the `resync-zoho-leads` edge function, for backfilling contact submissions that never reached Zoho CRM.
-- **Auth** — `src/pages/Login.tsx` + `src/contexts/AuthContext.tsx`: Supabase email/password with recovery and role-based access.
-- **AI product search** — `src/components/AISearchDialog.tsx` → `ai-search` edge function (LLM-backed, markdown responses).
-- **Lead capture** — `DownloadGateDialog.tsx` gates resource downloads behind name/email → `notify-download` edge function → Zoho CRM.
 - **3D chemistry hero** — `src/components/products/ChemistryHero3D.tsx` + `scene/` (three.js / @react-three/fiber, custom GLSL dissolve shader, Brownian particle physics), gated behind `ChemistryHero.tsx`: `canAfford3D()` only allows the 3D render when not prerendering, `prefers-reduced-motion` is off, viewport ≥1024px, no Save-Data/2G/3G, ≥4 CPU cores, ≥4GB memory — everyone else gets the static prerendered fallback (added 2026-09-22 to take the 3D asset off the CWV-critical path; pinned by `tests/e2e/chemistry-hero-budget.spec.ts`). Tuning tool at `/dev/chemistry-playground` (`ChemistryPlayground.tsx`) — internal, deliberately NOT in the sitemap.
 - **SEO landing pages** — `LocationLanding.tsx` (dynamic `/chemicals/:location` — city pages plus country hubs `uae`/`saudi-arabia`) with `ChemicalsHub.tsx` as the `/chemicals` index (location list lives in `src/data/locationIndex.ts` — keep slugs in sync with LocationLanding's `locations` record), plus static ones (`ChemicalSuppliersOman.tsx` etc.). Arabic location strings: `src/i18n/locales/location-pages-ar.json`.
-- **Dosing calculators** — `src/pages/DosingCalculator.tsx` at `/tools/dosing-calculator`: four water-treatment calculators, the site's linkable asset. Formulas shown in the open; each result block feeds the prefilled quote funnel. Arithmetic pinned by `tests/e2e/dosing-calculator.spec.ts`. `/ar` render deliberately noindex until localized.
 - **Public MCP server** — `src/lib/mcp/` (tools: search/get products, list categories, admin-auth'd lead listings) is the SOURCE; the Vite plugin `mcpPlugin()` from `@lovable.dev/mcp-js` bundles it to `supabase/functions/mcp/index.ts` on build. That output file is auto-generated — edit `src/lib/mcp/`, never the bundle.
 - **Product+geo hub pages** — hand-written commercial landings outside the catalogue, all under `/chemical-supplier/*`: `CausticSodaOman.tsx` (the original controlled test, pinned by `tests/e2e/caustic-soda-hub.spec.ts`), `NitricAcidOman.tsx`, `HydrochloricAcidOman.tsx` — plus `ChemicalSuppliersOman.tsx` and `ChemicalSuppliersMiddleEast.tsx`. Each hub carries CAS/concentration, a technical specification table, pack formats, cities served, GCC export lead times, and FAQs matched to `FAQStructuredData`. **Before adding a fourth, read the header comment in `NitricAcidOman.tsx`**: hubs were built for products the site was *absent* for, not for products that merely rank badly — caustic soda has had a hub for weeks and still averages position 57, because the ceiling is referring domains, not page quality. A new hub must also be linked from at least the product page's `guideUrl`, `ChemicalSuppliersOman.tsx` and `Sitemap.tsx`, or it ships orphaned (Google reported "Referring page: None detected" when the nitric hub first went live).
-- **HTML sitemap page** — `Sitemap.tsx` at `/sitemap` (noindex; distinct from `public/sitemap.xml`).
-- **MCP OAuth consent** — `OAuthConsent.tsx` at `/.lovable/oauth/consent`: Lovable-managed consent screen for external MCP clients (ChatGPT, Claude) connecting to the public MCP server. Uses beta `supabase.auth.oauth` behind a narrow typed wrapper.
-- **Integrations** — `GoogleAnalytics.tsx`, `ZohoSalesIQ.tsx`, `Turnstile.tsx`, `WhatsAppButton.tsx`, `CookieConsent.tsx`.
-- **i18n data** — `src/i18n/locales/`: `en.json`, `ar.json`, plus `products-ar.json` (translated product names/descriptions).
 
 ## Deploy chain
 
 - **Hosting: Lovable's CDN serves production** (verified live 2026-07-07: DNS A record `185.158.133.1` is Lovable's ingress — responses carry `x-deployment-id` and Lovable's Cloudflare edge headers). DNS: nameservers `ns1/ns2.dns-parking.com` (Hostinger's), zone managed in Hostinger hPanel.
-- **Pipeline:** GitHub `main` → Lovable runs `vite build` → publishes `dist/` to its CDN. The CDN resolves clean URLs to the prerendered `dist/<route>/index.html` automatically.
+- **Pipeline:** GitHub `main` → Lovable's **Publish** button (top-right of the Lovable project) runs a fresh `vite build` → publishes `dist/` to its CDN. Verified across several deploys (2026-08-15..17): a push to `main` by itself does nothing in production; someone must click Publish. The full build+publish takes ~7–10 min for 300+ prerendered routes — confirm it landed by watching `curl -sI https://gcoman.com/ | grep x-deployment-id` change. Lovable AI credits do not gate git-sourced publishes, and the "Build unsuccessful / Preview is out of date" badge on GitHub-pushed commits is only the live-preview iframe, not the production build. The CDN resolves clean URLs to the prerendered `dist/<route>/index.html` automatically.
 - **The Hostinger server (`147.93.109.106`) is NOT serving the site** — its `public_html` is empty (everything 404s; run `npm run verify:hostinger-staging` to check its state). The old docs' story that Lovable FTPs `dist/` to Hostinger and `.htaccess` is load-bearing does not match production. `public/.htaccess` / `public/_redirects` / `public/_headers` are inert in production; they are kept in sync as the ready-made config for a future move to self-hosted Apache (which would add real 301s, security headers, and brotli — Lovable's CDN supports none of these).
 
 ## Architecture: the prerender pipeline
@@ -138,6 +129,7 @@ An `/ar/*` render is **noindex by default**. It becomes indexable only when the 
 
 - Currently enabled: **product detail pages with a full translation in `src/i18n/locales/products-ar.json`** (277 of 277 products — full coverage maintained since 2026-08-24; title + description present = enabled, enforced in [src/pages/ProductDetail.tsx](src/pages/ProductDetail.tsx)) and **location pages translated in `location-pages-ar.json`** (includes the UAE/Saudi country hubs).
 - `scripts/sync-ar-sitemap.mjs` **owns `public/sitemap.xml`.** Hand-editing is limited to adding or removing an *English* `<url>` block for a new/retired page; **never hand-write an `/ar` URL or an `<xhtml:link>` alternate** — the script is the only thing that may touch those, and it rewrites them on every run. It runs three passes: **prune** every URL that renders `noindex` or canonicalises elsewhere, **annotate** each surviving English page with its `en`/`ar`/`x-default` alternates, and **twin** in the matching `/ar` block so the prerenderer generates it. Indexability is derived from the same sources the components read (`products-ar.json` for products, `location-pages-ar.json` for locations, `details.canonicalOverride` for duplicate SKUs), so the sitemap cannot drift from what `<SEO>` renders. Idempotent; rerun after adding any Arabic translation. `npm run verify:sitemap-health` (`--check`) is the CI gate and fails the build if the file is stale. Current shape (as of 2026-10-05): **657 `<loc>` entries, 296 of them `/ar`** — these numbers drift upward as products/pages are added; treat a sudden *drop* as a bug, not a prune.
+- `/tools/dosing-calculator` (`DosingCalculator.tsx`) is deliberately noindex under `/ar` until its copy is localized.
 - Everything else under `/ar` (home, about, industries, blog…) stays noindex because its page-level prose (FAQs, breadcrumbs, section copy) is hardcoded English even though the `ar.json` UI layer is 100% complete. To enable a page: wire its prose through `t()`, then pass `arTitle`/`arDescription`, then rerun the sitemap sync/add the URL.
 
 ## Adding a new page
@@ -189,44 +181,18 @@ Wired but **disabled** until both env vars exist: `VITE_TURNSTILE_SITE_KEY` (fro
 
 [src/lib/consent.ts](src/lib/consent.ts) is the single source of truth: deny-all default, `cookiePreferences` in localStorage, `hasAnalyticsConsent()`/`hasMarketingConsent()`. **No third-party script may load before its category is granted** — GoogleAnalytics gates on analytics consent, ZohoSalesIQ on marketing consent. Consent can flip mid-session: [CookieConsent.tsx](src/components/CookieConsent.tsx) dispatches `CONSENT_EVENT` (`gc:cookie-consent-changed`) on `window`, and integrations subscribe to load the moment their category is granted. **Any new third-party tag must gate on the consent helper AND subscribe to `CONSENT_EVENT`** — never inject on mount unconditionally.
 
-## Verification commands
+## Verifying SEO after a build or deploy; the `scripts/` toolbox
 
-After a build or production deploy, confirm SEO didn't regress:
-
-```bash
-npm run verify:prerender-titles   # scan dist/ for pages with homepage default <title>; expect 0
-npm run verify:seo-routing        # production: prerendered HTML, legacy 301s, Arabic product pages
-
-# Production: prerendered HTML served (not SPA shell)
-curl -s https://gcoman.com/career | grep -oE '<title>[^<]+'
-# expected: <title>Careers & Jobs | Join Our Team | Global Chemicals LLC
-
-# Production: legacy 301s fire
-curl -sI https://gcoman.com/service/calcium-carbonate/ -o /dev/null -w '%{http_code} %{redirect_url}\n'
-# expected: 301 https://gcoman.com/products/water-treatment/calcium-carbonate-water
-```
-
-## Scripts in `scripts/`
-
-- `deploy-supabase.sh` — deploy all edge functions
-- `sync-ar-sitemap.mjs` — owns `public/sitemap.xml` (prune + hreflang + /ar twins); see "Arabic SEO model". `--check` is wired into CI as `npm run verify:sitemap-health`
-- `sync-ar-meta.mjs` — regenerates `src/i18n/locales/ar-meta.json`, the small eager subset (product title/description, location metaTitle/metaDescription) that keeps the hreflang/indexability gates synchronous while the full `products-ar.json`/`location-pages-ar.json` lazy-load only on `/ar` (they were ~80% of the main JS bundle when statically imported — never re-add a static import of either file). Rerun after editing either translation file; `--check` is CI's `npm run verify:ar-meta`
-- `verify-serp-titles.mjs` (`npm run verify:serp-titles`) — CI gate over all 277 products' **composed** titles: ≤60 chars, unique, geo signal present. Exists because a batch of disambiguating qualifiers pushed titles past the 60-char clamp and `fitForSerp` silently truncated 20 of them before the word "Oman" — the only title e2e test sampled 3 hardcoded URLs and saw nothing. Treat a failure here as a real ranking regression, not a lint nit
-- `sync-sitemap-lastmod.mjs` (`npm run sync:sitemap-lastmod`) — derives each English `<lastmod>` from git history (per-product for products, per-post for blogs, file-level otherwise) instead of stamping everything with today's date
-- `submit-indexnow.mjs` (`npm run submit:indexnow`) — pushes URLs to IndexNow (Bing/Yandex). Pre-flight fetches the live key file (`public/<key>.txt`) and aborts if it isn't being served, since a missing key silently voids the whole submission
-- `audit-playwright.mjs` — timestamped site snapshots → `audits/<date>-local|prod/`
-- `serve-dist.mjs` — serve `dist/` to sanity-check prerendered HTML without rebuilding
-- `zoho-refresh-token.mjs` — refresh the Zoho CRM OAuth token
-- `verify-prerender-titles.mjs` — see Verification commands
-- `verify-seo-routing.mjs` — see "The production redirect layer: client-side"
-- `verify-hostinger-staging.mjs` — smoke-test the site against Hostinger's IP directly (bypassing DNS) before switching A records
-- `audit-product-content.mjs` (`npm run audit:product-content`) — ranks product pages by content debt x demand. Built on the 2026-09-08 finding that indexing was never the bottleneck (82% indexed) — thin bodies were. Scores identity (CAS/formula), prose depth, applications, specs and FAQs; pass a GSC Pages export to weight by real impressions
-- `audit-internal-links.mjs` (`npm run audit:internal-links`) — reads the **prerendered `dist/`**, not src, because that's the link graph Googlebot sees. Flags links into `canonicalOverride` products, unrelated duplicate SKUs both in the sitemap, and landing pages nothing links to. Run `npm run build` first
-- `scan-bordered-surfaces.mjs` — UI consistency sweep: bordered/rounded surfaces that are candidates for `.logo-gradient-border` but don't use it yet. Exits 1 when candidates exist
+Moved to the **`verifying-seo-pipeline`** skill ([.claude/skills/verifying-seo-pipeline/SKILL.md](.claude/skills/verifying-seo-pipeline/SKILL.md)): the post-build / post-deploy verification commands with their expected output, and what each `scripts/*.mjs` tool reads and why it exists. The three CI gates stay listed under "Commands" above. Invoke the skill before claiming a deploy did not regress SEO.
 
 ## Repo-local Claude skills & workflows
 
-`.claude/skills/` ships 15 checked-in skills that load automatically in this directory. Most are generic engineering workflows (TDD, systematic debugging, writing/executing plans, code review), but **`checking-seo-health`** is project-specific: the standing procedure for a periodic or pre/post-deploy SEO check on gcoman.com (sitemap submission, crawl/index coverage, Search Console queries, the Arabic-vs-English indexing gap, GA4 swings). Use it instead of improvising an SEO health check.
+`.claude/skills/` holds 18 skills that load automatically in this directory (16 tracked in git; `auditing-platform-presence` and `verifying-seo-pipeline` were still untracked as of 2026-10-13 — commit them, or they vanish the way the workflow below nearly did). Most are generic engineering workflows (TDD, systematic debugging, writing/executing plans, code review). Four are project-specific and divide the SEO work between them — use the right one instead of improvising:
+
+- **`checking-seo-health`** — deep diagnosis inside GSC / GA4 / Lovable / the live site for a periodic or pre/post-deploy check (sitemap submission, crawl/index coverage, Search Console queries, the Arabic-vs-English indexing gap, GA4 swings). Enforces the "four sources, labelled, never blended" rule.
+- **`monitoring-search-visibility`** — the cross-engine scoreboard: is gcoman.com #1 on Google, Maps, AI Overviews/AI Mode, Bing, ChatGPT, Perplexity, Gemini, Copilot for the money queries? Every number read live and appended to `docs/seo/visibility-ledger.md`. Use when the user says a competitor shows above us, or for the weekly check.
+- **`auditing-platform-presence`** — platform-by-platform "is it configured and consistent?" checklist (GBP, GSC, GA4, Bing Webmaster/Places, Wikipedia/Wikidata, social). The website is the source of truth for NAP, hours and coordinates; every platform must match it.
+- **`verifying-seo-pipeline`** — after `npm run build` or a production deploy: the verification commands with expected output, plus the reference for every `scripts/*.mjs` audit/verify tool (what it reads, why it exists).
 
 `.claude/workflows/full-repo-analysis.js` — a saved multi-agent Workflow (12 parallel subsystem deep-reads → adversarial verification of every finding → completeness critic). It is **present on disk but untracked in git** (verified 2026-10-01; an earlier note here wrongly declared it gone). Because nothing in git recovers it, treat it as a local artefact: check it still exists before relying on it, and only run a full-repo audit on explicit user opt-in to multi-agent orchestration.
 
@@ -234,6 +200,7 @@ curl -sI https://gcoman.com/service/calcium-carbonate/ -o /dev/null -w '%{http_c
 
 - **[docs/seo/ACTION-PACK.md](docs/seo/ACTION-PACK.md) — the operational instruction set.** What is live, the four off-site actions that decide ranking, and the measurement table. The user works from this one; `docs/seo/` holds the evidence behind it.
 - **[docs/seo/HANDOFF.md](docs/seo/HANDOFF.md) — read this before doing any SEO/GEO work.** The programme is mid-flight with a live measurement window, a baseline table with alarm thresholds, and an explicit do-NOT-do list (no more bulk FAQ generation, no more retitling, don't touch the homepage or the JSRS blog). It also records conclusions that cost a full investigation to reach — chiefly that technical GEO is *not* the bottleneck, so writing more code cannot move the remaining ground. Starting fresh work without reading it risks undoing a deliberate hold.
+- **[docs/seo/visibility-ledger.md](docs/seo/visibility-ledger.md)** and **[docs/seo/keyword-rank-tracker.md](docs/seo/keyword-rank-tracker.md)** — append-only ledgers written by the `monitoring-search-visibility` skill (one row per run; Oman-localised, personalised, directional not rank-tracker-grade). Never rewrite history in them — add a dated row.
 - `docs/seo/` — historical SEO audits and plans; `docs/audits/` — written-up full-site audit reports; `docs/deployment/` — Supabase/env/admin setup guides; `docs/security/` — security audit
 - `audits/` (repo root, gitignored) — raw snapshot artifacts from `audit-playwright.mjs` (distinct from `docs/audits/` reports)
 

@@ -4,7 +4,7 @@ Marketing site + lead-capture platform for **Global Chemicals LLC** (Oman / GCC 
 
 Vite 7 · React 18 · TypeScript · Tailwind · shadcn/ui · react-router-dom v7 · Supabase (Postgres, auth, edge functions) · i18next (English + Arabic) · Puppeteer prerendering for SEO · client-side legacy-URL redirects.
 
-Beyond the public catalogue (275 products across 22 categories) the app includes an admin dashboard (analytics, contact/job/newsletter tables, resume preview, Excel export), Supabase auth with roles, AI-powered product search, download-gated lead capture synced to Zoho CRM, and a three.js 3D chemistry hero.
+Beyond the public catalogue (277 products across 22 categories) the app includes an admin dashboard (analytics, contact/job/newsletter tables, resume preview, Excel export), Supabase auth with roles, AI-powered product search, download-gated lead capture synced to Zoho CRM, and a three.js 3D chemistry hero.
 
 ## Quick start
 
