@@ -1239,6 +1239,13 @@ const popularWaterTreatmentProducts = [
 // pattern that stalled the caustic-soda hub. City pages now link UP to their
 // country hub, and the hubs cross-link each other, so every hub gains 5–9
 // inbound links from pages that are themselves indexed and earning clicks.
+// Product+geo hubs under /chemical-supplier/*. Keep in sync with App.tsx.
+const PRODUCT_HUBS: { slug: string; label: string }[] = [
+  { slug: 'nitric-acid-oman', label: 'Nitric acid 68%' },
+  { slug: 'hydrochloric-acid-oman', label: 'Hydrochloric acid 30–33%' },
+  { slug: 'caustic-soda-oman', label: 'Caustic soda flakes & lye' },
+];
+
 const COUNTRY_HUBS: { slug: string; country: string; label: string }[] = [
   { slug: 'uae', country: 'UAE', label: 'United Arab Emirates' },
   { slug: 'saudi-arabia', country: 'Saudi Arabia', label: 'Saudi Arabia' },
@@ -1572,6 +1579,31 @@ const LocationLanding = () => {
           </div>
         </section>
       )}
+
+      {/* Product+geo hubs — the deepest product pages on the site. Search
+          Console (2026-10-13) showed the nitric and hydrochloric hubs with
+          "Referring page: sitemap only" and filed them as Soft 404; the
+          location pages are indexed and earn ~17% of all clicks, so they are
+          the right pages to vouch for the hubs. Rendered on every location,
+          not just the country hubs, so Oman city pages link too. */}
+      <section className="py-10 border-b">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <p className="text-sm font-medium text-primary mb-1">Product supply guides</p>
+            <p className="font-semibold mb-1">Acids and alkalis delivered to {cityLabel}</p>
+            <p className="text-sm text-muted-foreground mb-4">
+              Specification tables, pack formats from carboy to bulk tanker, and lead times for the products most often ordered on this lane.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {PRODUCT_HUBS.map((hub) => (
+                <Button key={hub.slug} variant="outline" size="sm" asChild>
+                  <LocalizedLink to={`/chemical-supplier/${hub.slug}`}>{hub.label}</LocalizedLink>
+                </Button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Why Choose Us */}
       <section className="py-16">

@@ -20,6 +20,7 @@ import RouteChangeLoader from "./components/RouteChangeLoader";
 import ScrollToTop from "./components/ScrollToTop";
 import { resolveLegacyRedirect } from "./lib/legacyRedirects";
 import { lazyRetry } from "./lib/lazyRetry";
+import { ROUTE_ROOT_ATTR, clearPrerenderSnapshot, getPrerenderSnapshot } from "./lib/prerenderSnapshot";
 
 // Lazy load all page components
 const Index = lazyRetry(() => import("./pages/Index"));
@@ -159,6 +160,28 @@ const RedirectToNonLang = () => {
   return <Navigate to={target + search + hash} replace />;
 };
 
+// Initial-route fallback: the prerendered page itself (see
+// src/lib/prerenderSnapshot.ts). Falls back to the spinner when there is no
+// snapshot — the dev server, the SPA shell for unknown routes, and every
+// navigation after the first.
+const InitialRouteFallback = () => {
+  const html = getPrerenderSnapshot();
+  if (!html) return <Loading />;
+  return <div data-prerender-snapshot dangerouslySetInnerHTML={{ __html: html }} />;
+};
+
+// Mounted inside the Suspense boundary, so its effect runs only once the
+// first route has actually committed — the exact moment the snapshot stops
+// being useful. Without this, a route whose chunk was already cached would
+// never show the fallback, never clear the snapshot, and a later navigation
+// could flash the first page's markup.
+const PrerenderSnapshotGuard = () => {
+  useEffect(() => {
+    clearPrerenderSnapshot();
+  }, []);
+  return null;
+};
+
 const App = () => (
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
@@ -185,7 +208,11 @@ const App = () => (
             <LegacyRedirectHandler />
             <ScrollToTop />
             <RouteChangeLoader />
-            <Suspense fallback={<Loading />}>
+            {/* data-route-root marks the region the prerenderer output is
+                snapshotted from; display:contents keeps it out of layout. */}
+            <div {...{ [ROUTE_ROOT_ATTR]: "" }} style={{ display: "contents" }}>
+            <Suspense fallback={<InitialRouteFallback />}>
+              <PrerenderSnapshotGuard />
               <Routes>
                 {/* Main routes (English default) */}
                 <Route path="/" element={<Index />} />
@@ -287,6 +314,7 @@ const App = () => (
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>
+            </div>
           </ErrorBoundary>
         </AuthProvider>
       </BrowserRouter>

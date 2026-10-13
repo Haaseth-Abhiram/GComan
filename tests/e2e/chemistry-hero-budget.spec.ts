@@ -63,10 +63,19 @@ test.describe('Chemistry hero performance budget', () => {
     await context.close();
   });
 
-  test('product page still prerenders the static hero fallback', async ({ page }) => {
-    await page.goto(PRODUCT_WITH_3D);
+  test('product page still prerenders the static hero fallback', async ({ browser }) => {
     // Present regardless of viewport: it is the server-rendered content, and
     // the 3D canvas only ever replaces it client-side on capable devices.
+    // Pin the "not capable" branch explicitly: on a desktop runner with >=4
+    // cores the 3D scene mounts, the fallback is swapped out mid-assertion
+    // and the text briefly exists twice (Suspense fallback + the scene's own
+    // placeholder), so the test failed on count/visibility rather than on
+    // the behaviour it pins (seen on an 11-core Mac, 2026-10-13; CI's
+    // smaller runner never qualified for 3D, which is why it stayed green).
+    const context = await browser.newContext({ reducedMotion: 'reduce' });
+    const page = await context.newPage();
+    await page.goto(PRODUCT_WITH_3D);
     await expect(page.getByText('Loading interactive molecule')).toBeVisible();
+    await context.close();
   });
 });

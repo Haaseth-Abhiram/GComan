@@ -403,6 +403,22 @@ const ChemicalSuppliersMiddleEast = () => {
                 <p className="text-muted-foreground max-w-2xl mx-auto">Dedicated chemical supply to each GCC market — with country-specific documentation, logistics, and technical support</p>
               </div>
 
+              {/* Product+geo hubs: the pages with spec tables and pack ranges.
+                  Linked here so the Middle East page vouches for them — on
+                  2026-10-13 Google knew the nitric and HCl hubs only from the
+                  sitemap. */}
+              <div className="flex flex-wrap justify-center gap-2">
+                <Button variant="outline" size="sm" asChild>
+                  <Link to="/chemical-supplier/nitric-acid-oman">Nitric acid 68% — GCC supply guide</Link>
+                </Button>
+                <Button variant="outline" size="sm" asChild>
+                  <Link to="/chemical-supplier/hydrochloric-acid-oman">Hydrochloric acid 30–33% — GCC supply guide</Link>
+                </Button>
+                <Button variant="outline" size="sm" asChild>
+                  <Link to="/chemical-supplier/caustic-soda-oman">Caustic soda — GCC supply guide</Link>
+                </Button>
+              </div>
+
               {/* UAE */}
               <div className="grid md:grid-cols-12 gap-8 items-start border-t pt-12">
                 <div className="md:col-span-1 text-4xl">🇦🇪</div>

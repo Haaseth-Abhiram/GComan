@@ -150,9 +150,9 @@ const NitricAcidOman = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Nitric Acid Supplier & Manufacturer Oman | 68% HNO3"
-        description="Nitric acid 68% (HNO3) manufacturer & supplier in Oman. Own production unit, stock held in Muscat. Industrial, food & lab grades. 35kg to IBC & bulk. GCC export. JSRS certified."
-        keywords="nitric acid Oman, nitric acid supplier Oman, nitric acid 68% Oman, HNO3 Oman, nitric acid Muscat, nitric acid price Oman, industrial nitric acid Oman, nitric acid manufacturer Oman, nitric acid Sohar, nitric acid Salalah, nitric acid UAE, nitric acid Saudi Arabia, nitric acid Bahrain, nitric acid Abu Dhabi, stainless steel passivation acid Oman, metal pickling acid Oman, CIP acid Oman, nitric acid supplier GCC"
+        title="Nitric Acid Supplier Oman & GCC | 68% HNO3 Manufacturer"
+        description="Nitric acid 68% (HNO3) manufacturer in Oman, exporting to the UAE, Saudi Arabia, Qatar, Kuwait & Bahrain in 2–7 days. Industrial, food & lab grades, 35 kg carboys to bulk tanker. JSRS certified."
+        keywords="nitric acid Oman, nitric acid supplier Oman, nitric acid supplier UAE, nitric acid supplier Dubai, nitric acid supplier Saudi Arabia, nitric acid supplier Qatar, nitric acid supplier Kuwait, nitric acid supplier Bahrain, nitric acid exporter Middle East, HNO3 supplier GCC, nitric acid 68% Oman, HNO3 Oman, nitric acid Muscat, nitric acid price Oman, industrial nitric acid Oman, nitric acid manufacturer Oman, nitric acid Sohar, nitric acid Salalah, nitric acid UAE, nitric acid Saudi Arabia, nitric acid Bahrain, nitric acid Abu Dhabi, stainless steel passivation acid Oman, metal pickling acid Oman, CIP acid Oman, nitric acid supplier GCC"
         ogTitle="Nitric Acid Manufacturer & Supplier in Oman | 68% HNO3 | GCC Export"
         ogDescription="Nitric acid 68% (HNO3) manufacturer and supplier in Muscat, Oman. Own production unit, stock held locally. Industrial, food-contact and laboratory grades, 35kg carboys to bulk. Export across the GCC."
         ogUrl="https://gcoman.com/chemical-supplier/nitric-acid-oman"

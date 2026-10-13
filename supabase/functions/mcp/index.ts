@@ -4362,8 +4362,8 @@ var lab_chemicals_default = [
         }
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Hydrochloric_acid",
-      guideUrl: "/blog/lab-chemical-safety",
-      guideLabel: "Laboratory chemical safety \u2014 storage, handling and incompatibilities"
+      guideUrl: "/chemical-supplier/hydrochloric-acid-oman",
+      guideLabel: "Hydrochloric Acid Supplier in Oman \u2014 HCl 30\u201333%, carboy to bulk tanker"
     }
   },
   {
@@ -4422,8 +4422,8 @@ var lab_chemicals_default = [
       wikiUrl: "https://en.wikipedia.org/wiki/Nitric_acid",
       seoTitle: "Nitric Acid Lab Grade (HNO3) Supplier in Oman",
       seoDescription: "Laboratory-grade nitric acid (CAS 7697-37-2) ex-stock Muscat, Oman. Analytical digestion, ICP prep & trace-metal work. 2.5 L packs with CoA \u2014 get a quote.",
-      guideUrl: "/blog/lab-chemical-safety",
-      guideLabel: "Laboratory chemical safety \u2014 storage, handling and incompatibilities"
+      guideUrl: "/chemical-supplier/nitric-acid-oman",
+      guideLabel: "Nitric Acid Supplier in Oman \u2014 68% HNO3, industrial, food & lab grades, carboy to bulk tanker"
     }
   },
   {
