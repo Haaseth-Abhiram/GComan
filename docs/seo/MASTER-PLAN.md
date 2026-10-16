@@ -56,7 +56,7 @@ Each hub: `/chemical-supplier/<slug>`, spec table, grades, pack formats, GCC lea
 
 ## Phase 3 — lift the thin tail (5 pages/week)
 
-`npm run audit:product-content` queue: 45 pages < 200 words (tank cleaners, cooling water, agro, RO first). Real specs, CAS, applications, packs. No templated FAQs. Status: open.
+`npm run audit:product-content` queue: 45 pages < 200 words (tank cleaners, cooling water, agro, RO first). Real specs, CAS, applications, packs. No templated FAQs. Descriptions can now use blank lines for paragraphs. **Status:** agro done 2026-10-16 (8 pages, 186–223 words; thin 45 → 37). **Next:** cooling water and RO (standard chemistry, writable from the data); **tank cleaners need the user** — they are proprietary formulations (Enviro Soft 2000, Universal Wash, Metal Bright…) and need the actual composition/TDS before content can be written without guessing.
 
 ## Phase 4 — Arabic product layer
 
@@ -97,3 +97,4 @@ Run `monitoring-search-visibility` (full) plus the product panel (12 products ×
 - 2026-10-16 (session 4): Publish still not done (P0.1). Merged Lovable's main commits into Develop (clean). P0.4 done — all three hubs and the Oman page indexed, Soft 404 19 → 15. P0.3: 7 new indexing requests. P1: EDTA, calcium chloride, TCCA consolidated (sitemap 625); calcium carbonate tried and reverted on evidence. Fixed a CI blind spot: the sitemap gate now fails if an indexable product is missing.
 - 2026-10-16 pm: nitric acid measured on every surface (ledger). Google weak (hub indexed but not top 40 for the head term; #10 for "nitric acid sohar"); Bing #2 / #1 for price; ChatGPT #4; Perplexity #1; Google AI Overview and AI Mode do not mention us. Biggest lever unchanged: Publish (GCC title + hub links from all location pages, incl. the Saudi page ChatGPT hedges on), then citations.
 - 2026-10-16 late: Publish still pending. Found Monday's consolidation primaries were the weakest pages → reverted hypochlorite/citric/caustic-food, re-pointed H2O2 to 50%, added the ≥3× evidence rule; consolidated TEA, ferric chloride, alum, sodium thiosulphate, lye. Sitemap 629. Indexing quota for 10-16 already used.
+- 2026-10-16 evening: Phase 3 started — 8 fertilizer pages deepened, thin 45 → 37. Publish still pending; indexing resumes 10-17.
