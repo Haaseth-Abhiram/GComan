@@ -738,7 +738,7 @@
         "completion fluid Oman",
         "CaCl2 workover Oman"
       ],
-      "longDescription": "Calcium Chloride brine supplier in Oman - Global Chemicals LLC provides high-quality CaCl2 for completion, workover, and drilling fluids in Muscat, Sohar, Duqm, Salalah. Our calcium chloride creates economical, high-density clear brines (up to 1.39 sg) for well control and completion operations. CaCl2 brines are cost-effective, readily available, and compatible with most downhole tools and formations. The clear fluid minimizes formation damage while providing excellent pressure control. Essential for completion, workover, packer fluids, and well servicing operations across Oman's oil & gas fields. Available in multiple concentrations to meet specific density requirements with corrosion inhibitor packages. Calcium chloride (CaCl₂) completion and workover brine is one of the most widely used wellbore fluid systems in Oman's oilfield operations. CaCl₂ brines are prepared at controlled densities by adjusting concentration — a 32% CaCl₂ solution achieves 11.6 lb/gal (1.39 SG), covering the density range required for most Oman reservoir completions. The brine is non-damaging to formation permeability (chloride brines are compatible with most formation minerals), stable across a wide temperature range, and non-flammable. Global Chemicals LLC supplies dry CaCl₂ flakes (77%) and pellets (94%) for on-site brine preparation, as well as pre-mixed CaCl₂ brine at specified densities. Supply to completion and workover contractors; technical specifications and density tables available.",
+      "longDescription": "Calcium Chloride brine supplier in Oman - Global Chemicals LLC provides high-quality CaCl2 for completion, workover, and drilling fluids in Muscat, Sohar, Duqm, Salalah. Our calcium chloride creates economical, high-density clear brines (up to 1.39 sg) for well control and completion operations. CaCl2 brines are cost-effective, readily available, and compatible with most downhole tools and formations. The clear fluid minimizes formation damage while providing excellent pressure control. Essential for completion, workover, packer fluids, and well servicing operations across Oman's oil & gas fields. Available in multiple concentrations to meet specific density requirements with corrosion inhibitor packages. Calcium chloride (CaCl₂) completion and workover brine is one of the most widely used wellbore fluid systems in Oman's oilfield operations. CaCl₂ brines are prepared at controlled densities by adjusting concentration — a 32% CaCl₂ solution achieves 11.6 lb/gal (1.39 SG), covering the density range required for most Oman reservoir completions. The brine is non-damaging to formation permeability (chloride brines are compatible with most formation minerals), stable across a wide temperature range, and non-flammable. Global Chemicals LLC supplies dry CaCl₂ flakes (77%) and pellets (94%) for on-site brine preparation, as well as pre-mixed CaCl₂ brine at specified densities. Supply to completion and workover contractors; technical specifications and density tables available. The same calcium chloride (CAS 10043-52-4) is also supplied as flakes and pellets for de-icing, dust control, concrete acceleration and as a desiccant in wastewater treatment, in 25 kg bags and jumbo bags from Muscat stock.",
       "applications": [
         "Well completion and workover fluids",
         "Clear brine packer fluids",
@@ -1345,7 +1345,8 @@
           "answer": "EDTA Liquid is commonly used for Carbonate scale removal from wellbores, Iron deposit chelation and removal, and Heavy metal control in water systems. Global Chemicals LLC supplies EDTA Liquid across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      "wikiUrl": "https://en.wikipedia.org/wiki/EDTA"
+      "wikiUrl": "https://en.wikipedia.org/wiki/EDTA",
+      "canonicalOverride": "https://gcoman.com/products/soap-detergent/edta-powder-soap"
     }
   },
   {
@@ -1392,7 +1393,8 @@
         "Long shelf life when stored dry",
         "Packaging: 25kg bags, drums, bulk"
       ],
-      "wikiUrl": "https://en.wikipedia.org/wiki/EDTA"
+      "wikiUrl": "https://en.wikipedia.org/wiki/EDTA",
+      "canonicalOverride": "https://gcoman.com/products/soap-detergent/edta-powder-soap"
     }
   },
   {

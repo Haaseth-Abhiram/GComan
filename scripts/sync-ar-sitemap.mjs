@@ -224,6 +224,27 @@ if (reseeded) console.log(`[ar-sitemap] re-seeded lastmod on ${reseeded} /ar twi
 console.log(`[ar-sitemap] hreflang-annotated  : ${annotated}`);
 console.log(`[ar-sitemap] ${entries.length} URLs in → ${kept.length} URLs out`);
 
+// ── coverage: every indexable English product must be in the sitemap ────────
+// The passes above only ever REMOVE English URLs (they are hand-added), so a
+// product that loses its canonicalOverride is never put back. That happened on
+// 2026-10-16 (calcium-carbonate-water) and --check still printed "OK", because
+// the file matched what the script would write. A page missing from the
+// sitemap gets no prerendered HTML at all (see CLAUDE.md), so fail loudly.
+const missingProducts = [];
+for (const file of readdirSync(p('src/data/products')).filter((f) => f.endsWith('.json'))) {
+  for (const prod of readJson(`src/data/products/${file}`)) {
+    if (prod?.details?.canonicalOverride) continue;
+    const loc = `<loc>https://gcoman.com/products/${prod.category}/${prod.id}</loc>`;
+    if (!out.includes(loc)) missingProducts.push(`${prod.category}/${prod.id}`);
+  }
+}
+if (missingProducts.length) {
+  console.error(`\n[ar-sitemap] FAIL: ${missingProducts.length} indexable product(s) have no English <url> in public/sitemap.xml:`);
+  for (const m of missingProducts) console.error(`               /products/${m}`);
+  console.error('             Add the English <url> block by hand (copy a sibling), then rerun this script.');
+  process.exit(1);
+}
+
 if (checkOnly) {
   if (out !== original) {
     console.error('\n[ar-sitemap] FAIL: public/sitemap.xml is out of sync. Run: node scripts/sync-ar-sitemap.mjs');
