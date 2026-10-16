@@ -426,6 +426,9 @@ const ChemicalSuppliersMiddleEast = () => {
                 <Button variant="outline" size="sm" asChild>
                   <Link to="/chemical-supplier/sodium-hypochlorite-oman">Sodium hypochlorite — GCC supply guide</Link>
                 </Button>
+                <Button variant="outline" size="sm" asChild>
+                  <Link to="/chemical-supplier/oilfield-chemicals-oman">Oilfield chemicals — GCC supply guide</Link>
+                </Button>
               </div>
 
               {/* UAE */}

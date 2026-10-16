@@ -6589,7 +6589,9 @@ var oilfield_default = [
           question: "How is acetic acid used in oilfield operations?",
           answer: "As a retarded, low-corrosivity acidising fluid for carbonate formations (often blended with HCl), for scale removal where iron control matters, and as a pH modifier in completion fluids. We supply drummed glacial acetic acid with oilfield documentation under JSRS registration for PDO/OQ contractor procurement."
         }
-      ]
+      ],
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -6641,7 +6643,9 @@ var oilfield_default = [
           answer: "Activated Alumina Desiccant is commonly used for Natural gas dehydration and processing, Compressed air and instrument air drying, and Hydrocarbon stream drying in refineries. Global Chemicals LLC supplies Activated Alumina Desiccant across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Aluminium_oxide"
+      wikiUrl: "https://en.wikipedia.org/wiki/Aluminium_oxide",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -6692,7 +6696,9 @@ var oilfield_default = [
           answer: "Activated carbon is a highly porous adsorbent material used across Oman's oil and gas sector for multiple applications. In gas processing plants, activated carbon guard beds remove heavy hydrocarbons, mercury, and amine degradation products from gas streams ahead of molecular sieve dehydration units, protecting expensive molecular sieves from poisoning and extending their service life. In produced water treatment, activated carbon removes residual hydrocarbons, benzene, toluene, and other BTEX compounds to meet injection water quality specifications or overboard discharge limits. In glycol (TEG/MEG) regeneration systems, activated carbon filters are installed in a slipstream to remove amine degradation products, foaming agents, and colour bodies that accumulate and impair solvent performance. In Oman's HAZMAT and oil spill response context, granular activated carbon is used to adsorb hydrocarbon spills. Global Chemicals LLC supplies coal-based granular activated carbon (GAC) and extruded activated carbon in standard mesh sizes for Oman's gas processing and water treatment applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Activated_carbon"
+      wikiUrl: "https://en.wikipedia.org/wiki/Activated_carbon",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -6737,7 +6743,9 @@ var oilfield_default = [
         "Solubility: Highly soluble in water",
         "Available in 25kg bags, drums"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Ammonium_bifluoride"
+      wikiUrl: "https://en.wikipedia.org/wiki/Ammonium_bifluoride",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -6792,7 +6800,9 @@ var oilfield_default = [
           answer: "Global Chemicals LLC supplies Ammonium Bisulphite in Oman \u2014 Concentration: 40-60% NH4HSO3 \u2014 available in drums, IBCs, and bulk, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Ammonium_bisulfite"
+      wikiUrl: "https://en.wikipedia.org/wiki/Ammonium_bisulfite",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -6847,7 +6857,9 @@ var oilfield_default = [
           answer: "Ammonium Chloride is commonly used for Shale stabilizer in drilling fluids, Completion and workover fluids, and Clay swelling inhibitor. Global Chemicals LLC supplies Ammonium Chloride across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Ammonium_chloride"
+      wikiUrl: "https://en.wikipedia.org/wiki/Ammonium_chloride",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -6902,7 +6914,9 @@ var oilfield_default = [
           answer: "Barium Chloride is commonly used for High-density completion and workover fluids, Well control and pressure management, and Clear brine formulations for drilling. Global Chemicals LLC supplies Barium Chloride across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Barium_chloride"
+      wikiUrl: "https://en.wikipedia.org/wiki/Barium_chloride",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -6959,7 +6973,9 @@ var oilfield_default = [
           answer: "Bentonite Powder is commonly used for Water-based drilling mud formulations, Viscosity and gel strength control, and Fluid loss control in drilling. Global Chemicals LLC supplies Bentonite Powder across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Bentonite"
+      wikiUrl: "https://en.wikipedia.org/wiki/Bentonite",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -7016,7 +7032,9 @@ var oilfield_default = [
           answer: "Borax Powder is commonly used for Crosslinking agent in fracturing fluids, pH buffer in drilling muds, and Corrosion inhibitor in completion fluids. Global Chemicals LLC supplies Borax Powder across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Borax"
+      wikiUrl: "https://en.wikipedia.org/wiki/Borax",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -7063,7 +7081,9 @@ var oilfield_default = [
         "Packaging: 25kg bags, drums, bulk"
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Boric_acid",
-      seoDescription: "Boric acid 99.5% (CAS 10043-35-3) ex-stock Muscat, Oman. Drilling-fluid pH control and high-temperature wellbore stabilisation. Get a quote."
+      seoDescription: "Boric acid 99.5% (CAS 10043-35-3) ex-stock Muscat, Oman. Drilling-fluid pH control and high-temperature wellbore stabilisation. Get a quote.",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -7127,8 +7147,8 @@ var oilfield_default = [
           answer: "Its slow, even evaporation makes it the classic coalescing and flow solvent for water-based and solvent-based coatings, and a workhorse in industrial cleaners and degreasers (it couples oil and water). It also serves in drilling-fluid additives and textile processing. Where a faster tail solvent is needed, pair it with n-butanol or switch to butyl di-glycol."
         }
       ],
-      guideUrl: "/blog/butylene-glycol-guide-oman-gcc",
-      guideLabel: "Butylene & propylene glycol guide \u2014 grades and applications in the GCC"
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -7185,7 +7205,9 @@ var oilfield_default = [
           answer: "Calcium Bromide Powder/Liquid is commonly used for High-density completion fluids (up to 1.84 sg), Clear workover and kill fluids, and Packer fluids in production wells. Global Chemicals LLC supplies Calcium Bromide Powder/Liquid across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Calcium_bromide"
+      wikiUrl: "https://en.wikipedia.org/wiki/Calcium_bromide",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -7241,7 +7263,9 @@ var oilfield_default = [
           answer: "Citric Acid Food Grade is commonly used for Environmentally-friendly well acidizing, Offshore platform cleaning operations, and Food processing equipment cleaning. Global Chemicals LLC supplies Citric Acid Food Grade across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Citric_acid"
+      wikiUrl: "https://en.wikipedia.org/wiki/Citric_acid",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -7296,7 +7320,9 @@ var oilfield_default = [
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Calcium_chloride",
       seoTitle: "Calcium Chloride Brine Supplier in Oman (CaCl2 Oilfield)",
-      seoDescription: "CaCl2 94\u201397% for completion brines to 11.6 ppg, cementing accelerator and dust control. Brine-density guidance, CoA per lot, JSRS-registered supply in Oman."
+      seoDescription: "CaCl2 94\u201397% for completion brines to 11.6 ppg, cementing accelerator and dust control. Brine-density guidance, CoA per lot, JSRS-registered supply in Oman.",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -7354,7 +7380,9 @@ var oilfield_default = [
         }
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Citric_acid",
-      seoTitle: "Citric Acid Liquid Supplier in Oman \u2014 Well Acidizing"
+      seoTitle: "Citric Acid Liquid Supplier in Oman \u2014 Well Acidizing",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -7410,7 +7438,9 @@ var oilfield_default = [
           answer: "Citric Acid Powder is commonly used for Field-prepared acidizing solutions, Matrix acidizing treatments, and Scale removal in wellbores. Global Chemicals LLC supplies Citric Acid Powder across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Citric_acid"
+      wikiUrl: "https://en.wikipedia.org/wiki/Citric_acid",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -7467,7 +7497,9 @@ var oilfield_default = [
           answer: "CMC Carboxymethylcellulose is commonly used for Fluid loss control in water-based drilling muds, Viscosity building and rheology control, and Shale stabilization and wellbore support. Global Chemicals LLC supplies CMC Carboxymethylcellulose across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Carboxymethyl_cellulose"
+      wikiUrl: "https://en.wikipedia.org/wiki/Carboxymethyl_cellulose",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -7525,7 +7557,9 @@ var oilfield_default = [
           answer: "Diesel Exhaust Fluid is commonly used for SCR emission control in diesel vehicles, Oilfield equipment and drilling rigs, and Heavy-duty trucks and transport. Global Chemicals LLC supplies Diesel Exhaust Fluid across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Diesel_exhaust_fluid"
+      wikiUrl: "https://en.wikipedia.org/wiki/Diesel_exhaust_fluid",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -7580,7 +7614,9 @@ var oilfield_default = [
           answer: "Corrosion inhibitors in Oman's oil and gas pipelines are applied by three primary methods: continuous injection (CI) via chemical injection quills installed at wellheads, manifolds, or platform injection points, where inhibitor is dosed proportional to production rate; batch treatment (pigging) where inhibitor solution is pigged through the pipeline as a slug to re-film internal surfaces \u2014 used for long tie-back lines or when continuous injection is impractical; and fall-back / squeeze treatment into the formation or tubing for downhole corrosion control. Continuous injection rates are calculated to maintain a minimum effective inhibitor concentration at the most corrosive point in the system (typically highest water cut, lowest temperature, highest CO\u2082 partial pressure). In PDO and OQ pipeline systems, inhibitor injection rates are monitored against corrosion coupons, ER (electrical resistance) probes, and chemical residual analysis to confirm protection. Global Chemicals LLC provides inhibitor design, field monitoring, and chemical supply for Oman's upstream and midstream operations."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Corrosion_inhibitor"
+      wikiUrl: "https://en.wikipedia.org/wiki/Corrosion_inhibitor",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -7639,7 +7675,9 @@ var oilfield_default = [
           answer: "DEA (Diethanolamine) is commonly used for Natural gas H2S and CO2 removal, Refinery sour gas treatment, and Synthesis gas purification. Global Chemicals LLC supplies DEA (Diethanolamine) across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Diethanolamine"
+      wikiUrl: "https://en.wikipedia.org/wiki/Diethanolamine",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -7756,7 +7794,9 @@ var oilfield_default = [
           answer: "Degreaser HD is commonly used for Drilling rig and equipment cleaning, Wellhead and production equipment degreasing, and Pipeline and valve cleaning. Global Chemicals LLC supplies Degreaser HD across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Cleaning_agent"
+      wikiUrl: "https://en.wikipedia.org/wiki/Cleaning_agent",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -7816,7 +7856,9 @@ var oilfield_default = [
           answer: "Descalant is commonly used for Wellbore scale removal and stimulation, Pipeline and tubing descaling, and Heat exchanger cleaning. Global Chemicals LLC supplies Descalant across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Descaling_agent"
+      wikiUrl: "https://en.wikipedia.org/wiki/Descaling_agent",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -7980,7 +8022,9 @@ var oilfield_default = [
           answer: "Formic Acid is commonly used for Matrix acidizing of carbonate formations, Sandstone acidizing treatments, and Scale removal from wellbores and equipment. Global Chemicals LLC supplies Formic Acid across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Formic_acid"
+      wikiUrl: "https://en.wikipedia.org/wiki/Formic_acid",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -8029,7 +8073,9 @@ var oilfield_default = [
         "Available in drums, IBCs with safety packaging"
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Hydrazine",
-      seoDescription: "Hydrazine hydrate 35/55/80% (CAS 7803-57-8), ex-stock Muscat. Boiler oxygen scavenger at 1-2 ppm per ppm O2. Drums, IBCs \u2014 request a quote."
+      seoDescription: "Hydrazine hydrate 35/55/80% (CAS 7803-57-8), ex-stock Muscat. Boiler oxygen scavenger at 1-2 ppm per ppm O2. Drums, IBCs \u2014 request a quote.",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -8078,7 +8124,9 @@ var oilfield_default = [
         "Packaging: 25kg bags, bulk bags"
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Magnesium_oxide",
-      seoDescription: "Magnesium oxide 85-98% MgO (CAS 1309-48-4), light- and dead-burned grades, ex-stock Muscat. Cement retarder & mud pH buffer. Request a quote."
+      seoDescription: "Magnesium oxide 85-98% MgO (CAS 1309-48-4), light- and dead-burned grades, ex-stock Muscat. Cement retarder & mud pH buffer. Request a quote.",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -8143,7 +8191,9 @@ var oilfield_default = [
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Methyldiethanolamine",
       seoTitle: "MDEA \u2014 Gas Sweetening Amine Supplier, Oman & GCC",
-      seoDescription: "Methyldiethanolamine \u226599% for selective H2S removal and CO2 slip control in amine units \u2014 drums and IBCs with CoA. JSRS-registered supply to Oman gas plants."
+      seoDescription: "Methyldiethanolamine \u226599% for selective H2S removal and CO2 slip control in amine units \u2014 drums and IBCs with CoA. JSRS-registered supply to Oman gas plants.",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -8192,7 +8242,9 @@ var oilfield_default = [
         "Available in drums, IBCs, bulk"
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Monoethanolamine",
-      seoTitle: "MEA Supplier in Oman \u2014 Gas Sweetening Grade"
+      seoTitle: "MEA Supplier in Oman \u2014 Gas Sweetening Grade",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -8313,7 +8365,9 @@ var oilfield_default = [
           answer: "Technical-grade methanol (also called industrial-grade or reagent-grade methanol) is produced to purity specifications of \u226599.85% CH\u2083OH minimum, with controlled limits on water (\u22640.1%), acetone (\u226430 ppm), and residue after evaporation. Technical-grade methanol is suitable for chemical synthesis, solvent applications, gas treatment, fuel cell feedstock, and most industrial process applications. Fuel-grade methanol is produced to lower purity specifications and may contain higher water content, acetaldehyde, and other impurities \u2014 acceptable for combustion but not for precision chemical applications. In Oman's oilfield sector, technical-grade methanol is specified for hydrate inhibition, amine unit solvent make-up, and chemical synthesis feedstock because impurities affect amine solvent degradation and process chemistry. For direct fuel blending (Methanol-to-Gasoline projects), fuel-grade is acceptable. Global Chemicals LLC supplies ASTM Grade A technical-grade methanol for Oman industrial and oilfield applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Methanol"
+      wikiUrl: "https://en.wikipedia.org/wiki/Methanol",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -8371,7 +8425,9 @@ var oilfield_default = [
           answer: "Potassium Carbonate is commonly used for Hot potassium carbonate CO2 removal process, Synthesis gas CO2 scrubbing, and Ammonia plant CO2 capture. Global Chemicals LLC supplies Potassium Carbonate across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Potassium_carbonate"
+      wikiUrl: "https://en.wikipedia.org/wiki/Potassium_carbonate",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -8428,7 +8484,9 @@ var oilfield_default = [
           answer: "Potassium Chloride is commonly used for Shale inhibition in water-based drilling muds, Clay swelling prevention, and Wellbore stability in reactive formations. Global Chemicals LLC supplies Potassium Chloride across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Potassium_chloride"
+      wikiUrl: "https://en.wikipedia.org/wiki/Potassium_chloride",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -8490,7 +8548,9 @@ var oilfield_default = [
           question: "What is KOH used for in oilfield and industrial applications?",
           answer: "Drilling-fluid alkalinity control (KOH-lime and polymer muds where potassium inhibits shale swelling), pH adjustment in produced-water treatment, biodiesel catalysis, liquid-soap saponification, and battery-electrolyte preparation. Potassium chemistry is preferred over sodium wherever shale inhibition or potassium soaps are required."
         }
-      ]
+      ],
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -8547,7 +8607,9 @@ var oilfield_default = [
           answer: "Potassium Iodide is commonly used for Analytical chemistry and iodometric titrations, Oilfield fluid analysis and testing, and Oxidizer detection and measurement. Global Chemicals LLC supplies Potassium Iodide across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Potassium_iodide"
+      wikiUrl: "https://en.wikipedia.org/wiki/Potassium_iodide",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -8602,7 +8664,9 @@ var oilfield_default = [
           answer: "Silica Gel Blue is commonly used for Instrument air and compressed air drying, Natural gas moisture removal, and Equipment and spare parts protection. Global Chemicals LLC supplies Silica Gel Blue across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Silica_gel"
+      wikiUrl: "https://en.wikipedia.org/wiki/Silica_gel",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -8658,7 +8722,9 @@ var oilfield_default = [
           answer: "Silica Gel Orange is commonly used for Instrument air and compressed air systems, Equipment and spare parts protection, and Electrical control panels and switchgear. Global Chemicals LLC supplies Silica Gel Orange across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Silica_gel"
+      wikiUrl: "https://en.wikipedia.org/wiki/Silica_gel",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -8714,7 +8780,9 @@ var oilfield_default = [
           answer: "Silica Gel White is commonly used for Industrial compressed air drying, Natural gas and process gas dehydration, and Bulk packaging and container desiccant. Global Chemicals LLC supplies Silica Gel White across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Silica_gel"
+      wikiUrl: "https://en.wikipedia.org/wiki/Silica_gel",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -8762,7 +8830,9 @@ var oilfield_default = [
         "Packaging: 25kg, 50kg bags, bulk bags"
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Sodium_carbonate",
-      seoDescription: "Soda ash dense 99.2% Na2CO3 (CAS 497-19-8), ex-stock Muscat. Drilling-fluid pH control at 0.5-2 lb/bbl. Bulk bags \u2014 request a quote."
+      seoDescription: "Soda ash dense 99.2% Na2CO3 (CAS 497-19-8), ex-stock Muscat. Drilling-fluid pH control at 0.5-2 lb/bbl. Bulk bags \u2014 request a quote.",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -8808,7 +8878,9 @@ var oilfield_default = [
         "High surface area for fast mixing",
         "Packaging: 25kg, 50kg bags, bulk bags"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_carbonate"
+      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_carbonate",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -8864,7 +8936,9 @@ var oilfield_default = [
           answer: "Sodium Nitrate is commonly used for Drilling fluid corrosion inhibitor component, Explosives and pyrotechnics manufacturing, and Cement set accelerator. Global Chemicals LLC supplies Sodium Nitrate across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_nitrate"
+      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_nitrate",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -8920,7 +8994,9 @@ var oilfield_default = [
           answer: "Sodium Nitrite is commonly used for Corrosion inhibitor in drilling and completion fluids, Packer fluid corrosion protection, and Closed-loop system corrosion control. Global Chemicals LLC supplies Sodium Nitrite across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_nitrite"
+      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_nitrite",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -8967,7 +9043,9 @@ var oilfield_default = [
         "Available in 25L, 60L, 200L drums, IBCs"
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Sodium_thiosulfate",
-      seoDescription: "Sodium thiosulphate liquid 25-50% (CAS 7772-98-7), ex-stock Muscat. Chlorine/oxidiser neutralisation & produced-water treatment. IBCs \u2014 get a quote."
+      seoDescription: "Sodium thiosulphate liquid 25-50% (CAS 7772-98-7), ex-stock Muscat. Chlorine/oxidiser neutralisation & produced-water treatment. IBCs \u2014 get a quote.",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -9080,7 +9158,9 @@ var oilfield_default = [
           answer: "Solvent Naphtha is commonly used for Industrial equipment degreasing and cleaning, Oilfield equipment maintenance, and Paint thinner and dilution. Global Chemicals LLC supplies Solvent Naphtha across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Naphtha"
+      wikiUrl: "https://en.wikipedia.org/wiki/Naphtha",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -9136,7 +9216,9 @@ var oilfield_default = [
         }
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Sodium_silicate",
-      seoTitle: "Sodium Silicate Surfactant Supplier in Oman"
+      seoTitle: "Sodium Silicate Surfactant Supplier in Oman",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -9197,7 +9279,9 @@ var oilfield_default = [
           question: "What grade and pack sizes of THT Gas Odorant (Tetrahydrothiophene) are available in Oman?",
           answer: "Global Chemicals LLC supplies THT Gas Odorant (Tetrahydrothiophene) in Oman \u2014 Purity: \u226599.0% (GC) \u2014 available in 208 L steel drums, nitrogen-blanketed, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
         }
-      ]
+      ],
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -9259,7 +9343,9 @@ var oilfield_default = [
           question: "What is Demulsifier (Crude Oil Emulsion Breaker) used for?",
           answer: "Demulsifier (Crude Oil Emulsion Breaker) is commonly used for Crude dehydration at FWKO and wash-tank stage, Desalter demulsification upstream of refining, and Tank-farm and terminal slop-oil treatment. Global Chemicals LLC supplies Demulsifier (Crude Oil Emulsion Breaker) across Oman and the wider GCC with full SDS documentation to support these applications."
         }
-      ]
+      ],
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   },
   {
@@ -9315,7 +9401,9 @@ var oilfield_default = [
         }
       ],
       seoTitle: "Reverse Demulsifier Supplier in Oman \u2014 Produced Water",
-      seoDescription: "Reverse demulsifier for produced-water deoiling in Oman. Cationic polyamine, 2-20 ppm ahead of flotation, jar-test confirmed. Request a quote."
+      seoDescription: "Reverse demulsifier for produced-water deoiling in Oman. Cationic polyamine, 2-20 ppm ahead of flotation, jar-test confirmed. Request a quote.",
+      guideUrl: "/chemical-supplier/oilfield-chemicals-oman",
+      guideLabel: "Oilfield chemicals in Oman \u2014 the full range by job"
     }
   }
 ];
