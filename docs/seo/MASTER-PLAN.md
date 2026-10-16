@@ -82,7 +82,7 @@ Run `monitoring-search-visibility` (full) plus the product panel (12 products ×
 |---|---|---|---|
 | Soft 404 count | 19 (10-16: **15**) | ≤ 10 | ≤ 5 |
 | Hubs indexed | 1 of 3 (10-16: **3 of 3**) | 3 of 3 | all |
-| "nitric acid supplier oman", Google `gl=om` | absent | top 10 | top 5 |
+| "nitric acid supplier oman", Google `gl=om` | absent (10-16: homepage #17, hub not top 40; hub #10 for "nitric acid sohar") | top 10 | top 5 |
 | Product-page clicks, 90d | ~230 | — | 400+ |
 | Lab / fertilizer / lubricants clicks | 20 / 39 / 97 | — | +50 % |
 | Bing referring domains | 1 | 3 | 6+ |
@@ -93,3 +93,4 @@ Run `monitoring-search-visibility` (full) plus the product panel (12 products ×
 
 - 2026-10-13 (sessions 1–3): diagnosis (nitric, product-level, family-by-family), Soft-404 fix, hub GCC title, hub links, 4 consolidations, contact-form country, 9 indexing requests, reports published. Publish refused by policy → P0.1 with the user.
 - 2026-10-16 (session 4): Publish still not done (P0.1). Merged Lovable's main commits into Develop (clean). P0.4 done — all three hubs and the Oman page indexed, Soft 404 19 → 15. P0.3: 7 new indexing requests. P1: EDTA, calcium chloride, TCCA consolidated (sitemap 625); calcium carbonate tried and reverted on evidence. Fixed a CI blind spot: the sitemap gate now fails if an indexable product is missing.
+- 2026-10-16 pm: nitric acid measured on every surface (ledger). Google weak (hub indexed but not top 40 for the head term; #10 for "nitric acid sohar"); Bing #2 / #1 for price; ChatGPT #4; Perplexity #1; Google AI Overview and AI Mode do not mention us. Biggest lever unchanged: Publish (GCC title + hub links from all location pages, incl. the Saudi page ChatGPT hedges on), then citations.
