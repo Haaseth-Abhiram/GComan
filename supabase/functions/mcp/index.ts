@@ -2480,7 +2480,7 @@ var ethanolamines_default = [
         "TEA 85 supplier Oman",
         "TEA 99 cement grinding aid"
       ],
-      longDescription: "Triethanolamine (TEA) supplier in Oman - Global Chemicals LLC provides industrial-grade TEA for metalworking fluids, cement grinding aids, and manufacturing in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our triethanolamine is a versatile tertiary amine used as an alkalizing agent, emulsifier, and corrosion inhibitor. Essential for formulating metalworking fluids, cement grinding aids, and as a surfactant in industrial cleaners. The viscous liquid neutralizes acids and provides excellent corrosion protection for ferrous metals. Widely used in metalworking industries, cement plants, cosmetic manufacturing, and industrial chemical production across Oman. Also serves in gas treating, textile processing, and as a curing accelerator for epoxy resins.",
+      longDescription: "Triethanolamine (TEA) supplier in Oman - Global Chemicals LLC provides industrial-grade TEA for metalworking fluids, cement grinding aids, and manufacturing in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our triethanolamine is a versatile tertiary amine used as an alkalizing agent, emulsifier, and corrosion inhibitor. Essential for formulating metalworking fluids, cement grinding aids, and as a surfactant in industrial cleaners. The viscous liquid neutralizes acids and provides excellent corrosion protection for ferrous metals. Widely used in metalworking industries, cement plants, cosmetic manufacturing, and industrial chemical production across Oman. Also serves in gas treating, textile processing, and as a curing accelerator for epoxy resins. In water systems the same TEA (CAS 102-71-6) serves as a corrosion inhibitor in coolants and as a pH adjuster.",
       applications: [
         "Metalworking fluid formulation",
         "Cement grinding aid production",
@@ -3881,7 +3881,8 @@ var inorganic_default = [
           question: "What grade and pack sizes of Aluminum Sulfate (Alum) are available in Oman?",
           answer: "Global Chemicals LLC supplies Aluminum Sulfate (Alum) in Oman \u2014 Al2O3 content: 17% minimum \u2014 available in 25kg bags, 1000L IBCs, bulk, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
         }
-      ]
+      ],
+      canonicalOverride: "https://gcoman.com/products/water-treatment/aluminium-sulphate-liquid"
     }
   },
   {
@@ -3937,7 +3938,8 @@ var inorganic_default = [
           question: "What is Ferric Chloride used for?",
           answer: "Ferric Chloride is commonly used for Municipal sewage treatment, Industrial wastewater coagulation, and Phosphorus and heavy metal removal. Global Chemicals LLC supplies Ferric Chloride across Oman and the wider GCC with full SDS documentation to support these applications."
         }
-      ]
+      ],
+      canonicalOverride: "https://gcoman.com/products/water-treatment/ferric-chloride-liquid"
     }
   },
   {
@@ -8866,7 +8868,7 @@ var oilfield_default = [
         "chlorine remover Sohar",
         "hypo solution Oman"
       ],
-      longDescription: "Sodium Thiosulfate Liquid supplier in Oman - Global Chemicals LLC provides liquid sodium thiosulfate for dechlorination, neutralization, and oilfield applications in Muscat, Sohar, Duqm, Salalah. Our sodium thiosulfate solution (Na2S2O3) effectively neutralizes chlorine, chlorine dioxide, and oxidizing biocides in water systems and industrial processes. Essential for treating produced water, neutralizing well treatment chemicals, and dechlorinating process streams. The liquid format allows precise dosing and rapid reaction for fast neutralization. Widely used in oilfield operations to remove residual oxidizers before re-injection, protect reservoirs from oxidizing damage, and in completion fluid treatments. Also serves in analytical chemistry and gold recovery operations across Oman.",
+      longDescription: "Sodium Thiosulfate Liquid supplier in Oman - Global Chemicals LLC provides liquid sodium thiosulfate for dechlorination, neutralization, and oilfield applications in Muscat, Sohar, Duqm, Salalah. Our sodium thiosulfate solution (Na2S2O3) effectively neutralizes chlorine, chlorine dioxide, and oxidizing biocides in water systems and industrial processes. Essential for treating produced water, neutralizing well treatment chemicals, and dechlorinating process streams. The liquid format allows precise dosing and rapid reaction for fast neutralization. Widely used in oilfield operations to remove residual oxidizers before re-injection, protect reservoirs from oxidizing damage, and in completion fluid treatments. Also serves in analytical chemistry and gold recovery operations across Oman. Also supplied as powder for preparing dechlorination solutions in the field and for produced-water treatment.",
       applications: [
         "Chlorine and oxidizer neutralization in oilfields",
         "Produced water treatment before re-injection",
@@ -8943,7 +8945,8 @@ var oilfield_default = [
           answer: "Sodium Thiosulphate Powder is commonly used for Field preparation of dechlorination solutions, Chlorine neutralization in oilfield operations, and Produced water treatment. Global Chemicals LLC supplies Sodium Thiosulphate Powder across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_thiosulfate"
+      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_thiosulfate",
+      canonicalOverride: "https://gcoman.com/products/oilfield/sodium-thiosulphate-liquid"
     }
   },
   {
@@ -12148,7 +12151,8 @@ var tank_cleaners_default = [
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Sodium_hydroxide",
       guideUrl: "/chemical-supplier/caustic-soda-oman",
-      guideLabel: "Caustic Soda Supplier in Oman \u2014 flakes, prills & liquid compared"
+      guideLabel: "Caustic Soda Supplier in Oman \u2014 flakes, prills & liquid compared",
+      canonicalOverride: "https://gcoman.com/products/water-treatment/caustic-soda-liquid"
     }
   },
   {
@@ -12980,7 +12984,7 @@ var water_treatment_default = [
         "water treatment alum Oman",
         "coagulant supplier Oman"
       ],
-      longDescription: "Buy Aluminum Sulphate Liquid in Oman from Global Chemicals LLC. Liquid alum is a widely used coagulant for municipal water treatment, wastewater treatment, and industrial effluent treatment in Muscat, Sohar, Salalah. Our aluminum sulfate liquid offers excellent flocculation performance for turbidity removal and phosphorus precipitation. In Oman, liquid alum is the most widely used coagulant in municipal water treatment plants operated by PAEW and major industrial water treatment facilities. Global Chemicals LLC is a leading supplier of liquid aluminium sulphate (8\u20139% Al2O3) in Muscat, Sohar Industrial Area, Duqm, and Salalah. The liquid form is preferred for automated dosing systems, large treatment plants, and continuous operations where manual bag handling is impractical. We supply in IBC tanks (1,000L) and bulk tanker with dosing pump sizing support, jar test guidance, and technical troubleshooting from our water treatment team. Serving municipal contractors, water bottling plants, and industrial effluent treatment facilities across Oman.",
+      longDescription: "Buy Aluminum Sulphate Liquid in Oman from Global Chemicals LLC. Liquid alum is a widely used coagulant for municipal water treatment, wastewater treatment, and industrial effluent treatment in Muscat, Sohar, Salalah. Our aluminum sulfate liquid offers excellent flocculation performance for turbidity removal and phosphorus precipitation. In Oman, liquid alum is the most widely used coagulant in municipal water treatment plants operated by PAEW and major industrial water treatment facilities. Global Chemicals LLC is a leading supplier of liquid aluminium sulphate (8\u20139% Al2O3) in Muscat, Sohar Industrial Area, Duqm, and Salalah. The liquid form is preferred for automated dosing systems, large treatment plants, and continuous operations where manual bag handling is impractical. We supply in IBC tanks (1,000L) and bulk tanker with dosing pump sizing support, jar test guidance, and technical troubleshooting from our water treatment team. Serving municipal contractors, water bottling plants, and industrial effluent treatment facilities across Oman. Also supplied as powder (alum) for drinking-water clarification, municipal and industrial wastewater treatment, and paper sizing \u2014 the same aluminium sulphate, CAS 10043-01-3.",
       applications: [
         "Municipal water treatment plants",
         "Wastewater treatment coagulation",
@@ -13048,7 +13052,8 @@ var water_treatment_default = [
           answer: "Aluminium Sulphate - Powder is commonly used for Drinking water clarification, Wastewater treatment, and Industrial water treatment. Global Chemicals LLC supplies Aluminium Sulphate - Powder across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Aluminium_sulfate"
+      wikiUrl: "https://en.wikipedia.org/wiki/Aluminium_sulfate",
+      canonicalOverride: "https://gcoman.com/products/water-treatment/aluminium-sulphate-liquid"
     }
   },
   {
@@ -13439,7 +13444,7 @@ var water_treatment_default = [
         "liquid caustic soda Oman"
       ],
       fullDescription: "Caustic Soda Liquid (Sodium Hydroxide) is a strong alkaline solution widely used across Oman for pH adjustment, neutralization, and chemical processing. Our high-purity caustic soda liquid ensures consistent quality for water treatment, chemical manufacturing, and industrial cleaning applications.",
-      longDescription: "Buy Caustic Soda Liquid in Oman from Global Chemicals LLC - the leading supplier of sodium hydroxide in Muscat, Sohar, and Salalah. Our caustic soda liquid is ideal for water treatment, pH control, pulp and paper manufacturing, and industrial cleaning. Available in various concentrations with safe handling and delivery across Oman. Liquid caustic soda (sodium hydroxide solution) is preferred for continuous industrial dosing applications where manual bag handling of flakes or prills would be impractical. In municipal water treatment plants across Oman, liquid caustic (30\u201350% NaOH) is dosed by automated chemical feed pumps to raise pH in desalinated water before distribution \u2014 a critical step that prevents pipe corrosion in Muscat and other urban distribution networks. In industrial applications, liquid caustic is used in oilfield sour gas scrubbing, aluminium surface treatment, textile scouring, and pulp and paper kraft cooking. Global Chemicals LLC supplies liquid caustic soda in 25L jerricans, 200L HDPE drums, 1,000L IBC containers, and bulk tanker for major industrial accounts. Technical and food-grade certificates (E524) provided. Same-day delivery in Muscat.",
+      longDescription: "Buy Caustic Soda Liquid in Oman from Global Chemicals LLC - the leading supplier of sodium hydroxide in Muscat, Sohar, and Salalah. Our caustic soda liquid is ideal for water treatment, pH control, pulp and paper manufacturing, and industrial cleaning. Available in various concentrations with safe handling and delivery across Oman. Liquid caustic soda (sodium hydroxide solution) is preferred for continuous industrial dosing applications where manual bag handling of flakes or prills would be impractical. In municipal water treatment plants across Oman, liquid caustic (30\u201350% NaOH) is dosed by automated chemical feed pumps to raise pH in desalinated water before distribution \u2014 a critical step that prevents pipe corrosion in Muscat and other urban distribution networks. In industrial applications, liquid caustic is used in oilfield sour gas scrubbing, aluminium surface treatment, textile scouring, and pulp and paper kraft cooking. Global Chemicals LLC supplies liquid caustic soda in 25L jerricans, 200L HDPE drums, 1,000L IBC containers, and bulk tanker for major industrial accounts. Technical and food-grade certificates (E524) provided. Same-day delivery in Muscat. The same lye is used for heavy alkaline tank cleaning, organic-residue dissolution and fat and oil saponification.",
       applications: [
         "Water treatment pH adjustment",
         "Wastewater neutralization",
@@ -14091,7 +14096,7 @@ var water_treatment_default = [
         "coagulant Oman",
         "FeCl3 liquid Oman"
       ],
-      longDescription: "Ferric Chloride Liquid 40% supplier in Oman - Global Chemicals LLC provides industrial grade ferric chloride for wastewater treatment, phosphorus removal, and PCB etching in Muscat, Sohar, Salalah. Our FeCl3 offers superior coagulation, wide pH range effectiveness, and excellent phosphorus precipitation for municipal and industrial applications. Ferric chloride 40% liquid (FeCl\u2083) is one of the most effective coagulants available for wastewater treatment \u2014 outperforming alum in many applications due to its effective operation across a wider pH range (4\u201311), superior phosphorus removal performance, and lower residual aluminium concerns. In Oman, ferric chloride is widely used in industrial wastewater treatment \u2014 particularly for phosphorus-rich effluent from food processing plants, dairy operations, and aquaculture facilities. Municipal wastewater treatment plants in Oman increasingly use ferric chloride for enhanced phosphorus removal to meet increasingly stringent effluent standards. Global Chemicals LLC supplies ferric chloride 40% liquid in IBC tanks (1,000L) and bulk tanker. Supply to Muscat, Sohar, Salalah, and Duqm. Jar test support and dosage optimisation assistance available from our water treatment team.",
+      longDescription: "Ferric Chloride Liquid 40% supplier in Oman - Global Chemicals LLC provides industrial grade ferric chloride for wastewater treatment, phosphorus removal, and PCB etching in Muscat, Sohar, Salalah. Our FeCl3 offers superior coagulation, wide pH range effectiveness, and excellent phosphorus precipitation for municipal and industrial applications. Ferric chloride 40% liquid (FeCl\u2083) is one of the most effective coagulants available for wastewater treatment \u2014 outperforming alum in many applications due to its effective operation across a wider pH range (4\u201311), superior phosphorus removal performance, and lower residual aluminium concerns. In Oman, ferric chloride is widely used in industrial wastewater treatment \u2014 particularly for phosphorus-rich effluent from food processing plants, dairy operations, and aquaculture facilities. Municipal wastewater treatment plants in Oman increasingly use ferric chloride for enhanced phosphorus removal to meet increasingly stringent effluent standards. Global Chemicals LLC supplies ferric chloride 40% liquid in IBC tanks (1,000L) and bulk tanker. Supply to Muscat, Sohar, Salalah, and Duqm. Jar test support and dosage optimisation assistance available from our water treatment team. The same ferric chloride (CAS 7705-08-0) is used for industrial wastewater coagulation, phosphorus and heavy-metal removal, and metal etching.",
       applications: [
         "Wastewater coagulation",
         "Phosphorus removal",
@@ -15258,7 +15263,8 @@ var water_treatment_default = [
           answer: "Tri Ethanol Amine is commonly used for Corrosion inhibitor in coolants, pH adjuster in water treatment, and Emulsifier in cosmetics. Global Chemicals LLC supplies Tri Ethanol Amine across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Triethanolamine"
+      wikiUrl: "https://en.wikipedia.org/wiki/Triethanolamine",
+      canonicalOverride: "https://gcoman.com/products/ethanolamines/tea-triethanolamine"
     }
   },
   {
