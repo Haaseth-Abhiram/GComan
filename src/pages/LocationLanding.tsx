@@ -1244,6 +1244,7 @@ const PRODUCT_HUBS: { slug: string; label: string }[] = [
   { slug: 'nitric-acid-oman', label: 'Nitric acid 68%' },
   { slug: 'hydrochloric-acid-oman', label: 'Hydrochloric acid 30–33%' },
   { slug: 'caustic-soda-oman', label: 'Caustic soda flakes & lye' },
+  { slug: 'laboratory-chemicals-oman', label: 'Laboratory chemicals' },
 ];
 
 const COUNTRY_HUBS: { slug: string; country: string; label: string }[] = [
@@ -1590,7 +1591,7 @@ const LocationLanding = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <p className="text-sm font-medium text-primary mb-1">Product supply guides</p>
-            <p className="font-semibold mb-1">Acids and alkalis delivered to {cityLabel}</p>
+            <p className="font-semibold mb-1">Acids, alkalis and lab reagents delivered to {cityLabel}</p>
             <p className="text-sm text-muted-foreground mb-4">
               Specification tables, pack formats from carboy to bulk tanker, and lead times for the products most often ordered on this lane.
             </p>

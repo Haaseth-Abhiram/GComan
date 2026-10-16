@@ -4305,8 +4305,8 @@ var lab_chemicals_default = [
         }
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Sulfuric_acid",
-      guideUrl: "/blog/lab-chemical-safety",
-      guideLabel: "Laboratory chemical safety \u2014 storage, handling and incompatibilities",
+      guideUrl: "/chemical-supplier/laboratory-chemicals-oman",
+      guideLabel: "Laboratory chemicals in Oman \u2014 every reagent, grade and pack size",
       seoDescription: "Sulfuric acid 95-98%, ACS reagent grade (CAS 7664-93-9), ex-stock Muscat, Oman. Titrations, digestion & pH work. CoA per lot \u2014 request a quote."
     }
   },
@@ -4471,7 +4471,9 @@ var lab_chemicals_default = [
         "Available: 500ml, 2.5L, 5L bottles",
         "Suitable for HPLC and analytical work"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Acetic_acid"
+      wikiUrl: "https://en.wikipedia.org/wiki/Acetic_acid",
+      guideUrl: "/chemical-supplier/laboratory-chemicals-oman",
+      guideLabel: "Laboratory chemicals in Oman \u2014 every reagent, grade and pack size"
     }
   },
   {
@@ -4526,7 +4528,9 @@ var lab_chemicals_default = [
           answer: "Phosphoric Acid (Laboratory Grade) is commonly used for Phosphate buffer preparation, HPLC mobile phase acidification, and pH adjustment in analytical methods. Global Chemicals LLC supplies Phosphoric Acid (Laboratory Grade) across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Phosphoric_acid"
+      wikiUrl: "https://en.wikipedia.org/wiki/Phosphoric_acid",
+      guideUrl: "/chemical-supplier/laboratory-chemicals-oman",
+      guideLabel: "Laboratory chemicals in Oman \u2014 every reagent, grade and pack size"
     }
   },
   {
@@ -4575,7 +4579,9 @@ var lab_chemicals_default = [
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Sodium_hydroxide",
       seoTitle: "Sodium Hydroxide Pellets AR Supplier in Oman \u2014 Lab",
-      seoDescription: "Sodium hydroxide pellets, ACS reagent grade 97-99% (CAS 1310-73-2), ex-stock Muscat. For titrations, pH work & saponification. CoA per lot \u2014 get a quote."
+      seoDescription: "Sodium hydroxide pellets, ACS reagent grade 97-99% (CAS 1310-73-2), ex-stock Muscat. For titrations, pH work & saponification. CoA per lot \u2014 get a quote.",
+      guideUrl: "/chemical-supplier/laboratory-chemicals-oman",
+      guideLabel: "Laboratory chemicals in Oman \u2014 every reagent, grade and pack size"
     }
   },
   {
@@ -4633,7 +4639,9 @@ var lab_chemicals_default = [
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Potassium_hydroxide",
       seoTitle: "Potassium Hydroxide Pellets (KOH) AR Grade \u2014 Lab Supplier",
-      seoDescription: "KOH pellets \u226585% AR grade for analysis and synthesis \u2014 500 g and 1 kg lab packs with CoA and lot traceability. Muscat stock; industrial flakes also stocked."
+      seoDescription: "KOH pellets \u226585% AR grade for analysis and synthesis \u2014 500 g and 1 kg lab packs with CoA and lot traceability. Muscat stock; industrial flakes also stocked.",
+      guideUrl: "/chemical-supplier/laboratory-chemicals-oman",
+      guideLabel: "Laboratory chemicals in Oman \u2014 every reagent, grade and pack size"
     }
   },
   {
@@ -4691,8 +4699,8 @@ var lab_chemicals_default = [
         }
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Aqueous_ammonia",
-      guideUrl: "/blog/lab-chemical-safety",
-      guideLabel: "Laboratory chemical safety \u2014 storage, handling and incompatibilities"
+      guideUrl: "/chemical-supplier/laboratory-chemicals-oman",
+      guideLabel: "Laboratory chemicals in Oman \u2014 every reagent, grade and pack size"
     }
   },
   {
@@ -4752,7 +4760,9 @@ var lab_chemicals_default = [
           answer: "Acetone (Laboratory Grade) is commonly used for HPLC mobile phase and sample preparation, Laboratory glassware cleaning, and Lipid and organic compound extraction. Global Chemicals LLC supplies Acetone (Laboratory Grade) across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Acetone"
+      wikiUrl: "https://en.wikipedia.org/wiki/Acetone",
+      guideUrl: "/chemical-supplier/laboratory-chemicals-oman",
+      guideLabel: "Laboratory chemicals in Oman \u2014 every reagent, grade and pack size"
     }
   },
   {
@@ -4805,7 +4815,9 @@ var lab_chemicals_default = [
           answer: "Absolute ethanol (anhydrous ethanol, 200 proof, CAS 64-17-5) is ethanol with water content below 0.1% (99.5%+ purity by GC), produced by azeotropic or molecular sieve dehydration beyond the normal 95.6% ethanol-water azeotrope. The absence of water makes it essential for applications where any water contamination causes problems: DNA/RNA precipitation and washing in molecular biology (water inhibits alcohol precipitation of nucleic acids); Karl Fischer water content titration (absolute ethanol is the titration solvent); dehydration steps in histology tissue processing (serial dilutions from 70% to 100% ethanol dehydrate tissue before paraffin embedding); anhydrous organic synthesis reactions (Grignard, esterification) where water causes side reactions; spectroscopic standards preparation (water has UV and IR absorptions that interfere); and absolute ethanol is the certified vehicle for many pharmaceutical reference standards. For Oman's university chemistry, biology, and medical laboratory sectors, absolute ethanol from Sigma-Aldrich, Merck, or BDH is the preferred choice. Global Chemicals LLC supplies laboratory absolute ethanol with molecular sieve packaging to prevent atmospheric moisture uptake."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Ethanol"
+      wikiUrl: "https://en.wikipedia.org/wiki/Ethanol",
+      guideUrl: "/chemical-supplier/laboratory-chemicals-oman",
+      guideLabel: "Laboratory chemicals in Oman \u2014 every reagent, grade and pack size"
     }
   },
   {
@@ -4861,7 +4873,9 @@ var lab_chemicals_default = [
           answer: "Methanol (Laboratory Grade) is commonly used for HPLC and UHPLC mobile phases, Sample extraction and preparation, and UV-Vis spectroscopy. Global Chemicals LLC supplies Methanol (Laboratory Grade) across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Methanol"
+      wikiUrl: "https://en.wikipedia.org/wiki/Methanol",
+      guideUrl: "/chemical-supplier/laboratory-chemicals-oman",
+      guideLabel: "Laboratory chemicals in Oman \u2014 every reagent, grade and pack size"
     }
   },
   {
@@ -4909,7 +4923,9 @@ var lab_chemicals_default = [
         "Flammable - proper ventilation required"
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Propan-2-ol",
-      seoDescription: "Isopropanol (IPA) 99.5% ACS grade (CAS 67-63-0), ex-stock Muscat. DNA precipitation, HPLC prep & electronics cleaning. CoA \u2014 get a quote."
+      seoDescription: "Isopropanol (IPA) 99.5% ACS grade (CAS 67-63-0), ex-stock Muscat. DNA precipitation, HPLC prep & electronics cleaning. CoA \u2014 get a quote.",
+      guideUrl: "/chemical-supplier/laboratory-chemicals-oman",
+      guideLabel: "Laboratory chemicals in Oman \u2014 every reagent, grade and pack size"
     }
   },
   {
@@ -4955,7 +4971,9 @@ var lab_chemicals_default = [
         "Available: 1L, 2.5L, 4L bottles",
         "Highly flammable - use proper ventilation"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Hexane"
+      wikiUrl: "https://en.wikipedia.org/wiki/Hexane",
+      guideUrl: "/chemical-supplier/laboratory-chemicals-oman",
+      guideLabel: "Laboratory chemicals in Oman \u2014 every reagent, grade and pack size"
     }
   },
   {
@@ -5011,7 +5029,9 @@ var lab_chemicals_default = [
           answer: "Toluene (Laboratory Grade) is commonly used for Organic synthesis and reactions, HPLC and chromatography, and Paint and coating formulation. Global Chemicals LLC supplies Toluene (Laboratory Grade) across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Toluene"
+      wikiUrl: "https://en.wikipedia.org/wiki/Toluene",
+      guideUrl: "/chemical-supplier/laboratory-chemicals-oman",
+      guideLabel: "Laboratory chemicals in Oman \u2014 every reagent, grade and pack size"
     }
   },
   {
@@ -5067,7 +5087,9 @@ var lab_chemicals_default = [
           answer: "Xylene (Laboratory Grade) is commonly used for Histology tissue clearing and processing, Deparaffinization of tissue sections, and Microscope slide preparation. Global Chemicals LLC supplies Xylene (Laboratory Grade) across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Xylene"
+      wikiUrl: "https://en.wikipedia.org/wiki/Xylene",
+      guideUrl: "/chemical-supplier/laboratory-chemicals-oman",
+      guideLabel: "Laboratory chemicals in Oman \u2014 every reagent, grade and pack size"
     }
   },
   {
@@ -5123,7 +5145,9 @@ var lab_chemicals_default = [
           answer: "Chloroform (Laboratory Grade) is commonly used for DNA and RNA extraction (phenol-chloroform method), NMR spectroscopy solvent, and Lipid and fat extraction. Global Chemicals LLC supplies Chloroform (Laboratory Grade) across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Chloroform"
+      wikiUrl: "https://en.wikipedia.org/wiki/Chloroform",
+      guideUrl: "/chemical-supplier/laboratory-chemicals-oman",
+      guideLabel: "Laboratory chemicals in Oman \u2014 every reagent, grade and pack size"
     }
   },
   {
@@ -5170,7 +5194,9 @@ var lab_chemicals_default = [
         "Use with adequate ventilation"
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Dichloromethane",
-      seoDescription: "Dichloromethane 99.5% ACS/HPLC grade (CAS 75-09-2), ex-stock Muscat. Extraction & HPLC mobile phase. CoA per lot, GHS SDS \u2014 get a quote."
+      seoDescription: "Dichloromethane 99.5% ACS/HPLC grade (CAS 75-09-2), ex-stock Muscat. Extraction & HPLC mobile phase. CoA per lot, GHS SDS \u2014 get a quote.",
+      guideUrl: "/chemical-supplier/laboratory-chemicals-oman",
+      guideLabel: "Laboratory chemicals in Oman \u2014 every reagent, grade and pack size"
     }
   },
   {
@@ -5226,7 +5252,9 @@ var lab_chemicals_default = [
           answer: "Ethyl Acetate (Laboratory Grade) is commonly used for Thin-layer chromatography (TLC), Column chromatography mobile phase, and HPLC sample preparation. Global Chemicals LLC supplies Ethyl Acetate (Laboratory Grade) across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Ethyl_acetate"
+      wikiUrl: "https://en.wikipedia.org/wiki/Ethyl_acetate",
+      guideUrl: "/chemical-supplier/laboratory-chemicals-oman",
+      guideLabel: "Laboratory chemicals in Oman \u2014 every reagent, grade and pack size"
     }
   },
   {
@@ -5273,7 +5301,9 @@ var lab_chemicals_default = [
         "Extremely flammable - handle with extreme care"
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Diethyl_ether",
-      seoDescription: "Diethyl ether 99% ACS grade, BHT-stabilised (CAS 60-29-7), ex-stock Muscat. Extraction & Grignard reactions. 500 mL-2.5 L bottles \u2014 get a quote."
+      seoDescription: "Diethyl ether 99% ACS grade, BHT-stabilised (CAS 60-29-7), ex-stock Muscat. Extraction & Grignard reactions. 500 mL-2.5 L bottles \u2014 get a quote.",
+      guideUrl: "/chemical-supplier/laboratory-chemicals-oman",
+      guideLabel: "Laboratory chemicals in Oman \u2014 every reagent, grade and pack size"
     }
   },
   {
@@ -5320,7 +5350,9 @@ var lab_chemicals_default = [
         "Highly flammable - proper ventilation required"
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Petroleum_ether",
-      seoDescription: "Petroleum ether lab grade (CAS 8032-32-4), 40-60\xB0C and 60-80\xB0C boiling ranges, ex-stock Muscat. Extraction & chromatography. CoA included \u2014 get a quote."
+      seoDescription: "Petroleum ether lab grade (CAS 8032-32-4), 40-60\xB0C and 60-80\xB0C boiling ranges, ex-stock Muscat. Extraction & chromatography. CoA included \u2014 get a quote.",
+      guideUrl: "/chemical-supplier/laboratory-chemicals-oman",
+      guideLabel: "Laboratory chemicals in Oman \u2014 every reagent, grade and pack size"
     }
   },
   {
@@ -5366,7 +5398,9 @@ var lab_chemicals_default = [
         "Available: 500g, 1kg, 5kg",
         "Suitable for cell culture applications"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_chloride"
+      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_chloride",
+      guideUrl: "/chemical-supplier/laboratory-chemicals-oman",
+      guideLabel: "Laboratory chemicals in Oman \u2014 every reagent, grade and pack size"
     }
   },
   {
@@ -5412,7 +5446,9 @@ var lab_chemicals_default = [
         "Available: 500g, 1kg, 5kg",
         "Soluble in water"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Potassium_chloride"
+      wikiUrl: "https://en.wikipedia.org/wiki/Potassium_chloride",
+      guideUrl: "/chemical-supplier/laboratory-chemicals-oman",
+      guideLabel: "Laboratory chemicals in Oman \u2014 every reagent, grade and pack size"
     }
   },
   {
@@ -5467,7 +5503,9 @@ var lab_chemicals_default = [
           answer: "Calcium Chloride (Laboratory Grade) is commonly used for Competent cell preparation for transformation, DNA transformation (heat-shock method), and Cell culture media supplement. Global Chemicals LLC supplies Calcium Chloride (Laboratory Grade) across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Calcium_chloride"
+      wikiUrl: "https://en.wikipedia.org/wiki/Calcium_chloride",
+      guideUrl: "/chemical-supplier/laboratory-chemicals-oman",
+      guideLabel: "Laboratory chemicals in Oman \u2014 every reagent, grade and pack size"
     }
   },
   {
@@ -5513,7 +5551,9 @@ var lab_chemicals_default = [
         "Available: 500g, 1kg, 5kg",
         "Effective drying capacity"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Magnesium_sulfate"
+      wikiUrl: "https://en.wikipedia.org/wiki/Magnesium_sulfate",
+      guideUrl: "/chemical-supplier/laboratory-chemicals-oman",
+      guideLabel: "Laboratory chemicals in Oman \u2014 every reagent, grade and pack size"
     }
   },
   {
@@ -5559,7 +5599,9 @@ var lab_chemicals_default = [
         "Assay: Meets specifications",
         "Available: 100g, 500g, 1kg"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Ethylenediaminetetraacetic_acid"
+      wikiUrl: "https://en.wikipedia.org/wiki/Ethylenediaminetetraacetic_acid",
+      guideUrl: "/chemical-supplier/laboratory-chemicals-oman",
+      guideLabel: "Laboratory chemicals in Oman \u2014 every reagent, grade and pack size"
     }
   },
   {
@@ -5608,7 +5650,9 @@ var lab_chemicals_default = [
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Tris",
       seoTitle: "Tris Buffer (Tris Base) Molecular Biology Grade \u2014 Supplier",
-      seoDescription: "Tris base \u226599.8% for Tris-HCl, TAE and TBE buffer prep \u2014 molecular-biology and analytical grade with CoA per lot. In stock Muscat; GCC delivery 2\u20137 days."
+      seoDescription: "Tris base \u226599.8% for Tris-HCl, TAE and TBE buffer prep \u2014 molecular-biology and analytical grade with CoA per lot. In stock Muscat; GCC delivery 2\u20137 days.",
+      guideUrl: "/chemical-supplier/laboratory-chemicals-oman",
+      guideLabel: "Laboratory chemicals in Oman \u2014 every reagent, grade and pack size"
     }
   },
   {
@@ -5664,7 +5708,9 @@ var lab_chemicals_default = [
           answer: "Sodium Thiosulfate (Laboratory Grade) is commonly used for Iodometric titrations, Chlorine and bleach analysis, and Dissolved oxygen determination (Winkler). Global Chemicals LLC supplies Sodium Thiosulfate (Laboratory Grade) across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_thiosulfate"
+      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_thiosulfate",
+      guideUrl: "/chemical-supplier/laboratory-chemicals-oman",
+      guideLabel: "Laboratory chemicals in Oman \u2014 every reagent, grade and pack size"
     }
   },
   {
@@ -5719,7 +5765,9 @@ var lab_chemicals_default = [
           answer: "Potassium Permanganate (Laboratory Grade) is commonly used for Chemical oxygen demand (COD) testing, Redox titrations, and Iron determination in water. Global Chemicals LLC supplies Potassium Permanganate (Laboratory Grade) across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Potassium_permanganate"
+      wikiUrl: "https://en.wikipedia.org/wiki/Potassium_permanganate",
+      guideUrl: "/chemical-supplier/laboratory-chemicals-oman",
+      guideLabel: "Laboratory chemicals in Oman \u2014 every reagent, grade and pack size"
     }
   },
   {
@@ -5765,7 +5813,9 @@ var lab_chemicals_default = [
         "Available: 25g, 100g, 500g",
         "Handle with care - stains skin"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Silver_nitrate"
+      wikiUrl: "https://en.wikipedia.org/wiki/Silver_nitrate",
+      guideUrl: "/chemical-supplier/laboratory-chemicals-oman",
+      guideLabel: "Laboratory chemicals in Oman \u2014 every reagent, grade and pack size"
     }
   },
   {
@@ -5810,7 +5860,9 @@ var lab_chemicals_default = [
         "Available: 100ml, 500ml bottles",
         "Store away from light"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Phenolphthalein"
+      wikiUrl: "https://en.wikipedia.org/wiki/Phenolphthalein",
+      guideUrl: "/chemical-supplier/laboratory-chemicals-oman",
+      guideLabel: "Laboratory chemicals in Oman \u2014 every reagent, grade and pack size"
     }
   },
   {
@@ -5868,7 +5920,9 @@ var lab_chemicals_default = [
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Methyl_orange",
       seoTitle: "Methyl Orange Indicator \u2014 Solution & Powder, Lab Supplier",
-      seoDescription: "Methyl orange pH indicator (3.1\u20134.4 range) as powder and ready 0.1% solution \u2014 ACS grade with CoA. In stock Muscat for labs across Oman and the GCC."
+      seoDescription: "Methyl orange pH indicator (3.1\u20134.4 range) as powder and ready 0.1% solution \u2014 ACS grade with CoA. In stock Muscat for labs across Oman and the GCC.",
+      guideUrl: "/chemical-supplier/laboratory-chemicals-oman",
+      guideLabel: "Laboratory chemicals in Oman \u2014 every reagent, grade and pack size"
     }
   },
   {
@@ -5916,7 +5970,9 @@ var lab_chemicals_default = [
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Bromothymol_blue",
       seoTitle: "Bromothymol Blue (BTB) Indicator \u2014 Lab Grade Supplier",
-      seoDescription: "BTB pH indicator (6.0\u20137.6 range) in powder and 0.04% solution \u2014 for water testing, aquaria and titrations. CoA per lot; Muscat stock, GCC delivery."
+      seoDescription: "BTB pH indicator (6.0\u20137.6 range) in powder and 0.04% solution \u2014 for water testing, aquaria and titrations. CoA per lot; Muscat stock, GCC delivery.",
+      guideUrl: "/chemical-supplier/laboratory-chemicals-oman",
+      guideLabel: "Laboratory chemicals in Oman \u2014 every reagent, grade and pack size"
     }
   },
   {
@@ -5974,7 +6030,9 @@ var lab_chemicals_default = [
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Agar",
       seoTitle: "Bacteriological Agar Powder \u2014 Culture Media Grade Supplier",
-      seoDescription: "Bacteriological-grade agar powder for culture media \u2014 gel strength \u2265800 g/cm\xB2, low pigment, 500 g and 5 kg packs with CoA. Muscat stock, GCC delivery."
+      seoDescription: "Bacteriological-grade agar powder for culture media \u2014 gel strength \u2265800 g/cm\xB2, low pigment, 500 g and 5 kg packs with CoA. Muscat stock, GCC delivery.",
+      guideUrl: "/chemical-supplier/laboratory-chemicals-oman",
+      guideLabel: "Laboratory chemicals in Oman \u2014 every reagent, grade and pack size"
     }
   },
   {
@@ -6030,7 +6088,9 @@ var lab_chemicals_default = [
           answer: "Glucose Anhydrous (Laboratory Grade) is commonly used for Cell culture media formulation (DMEM, RPMI), Bacterial growth media supplement, and Fermentation and bioreactor feeds. Global Chemicals LLC supplies Glucose Anhydrous (Laboratory Grade) across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Glucose"
+      wikiUrl: "https://en.wikipedia.org/wiki/Glucose",
+      guideUrl: "/chemical-supplier/laboratory-chemicals-oman",
+      guideLabel: "Laboratory chemicals in Oman \u2014 every reagent, grade and pack size"
     }
   }
 ];
