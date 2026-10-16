@@ -3403,7 +3403,9 @@ var food_beverage_default = [
           answer: "For fresh produce washing, the internationally recommended sodium hypochlorite concentration is 50\u2013200 ppm free available chlorine (FAC) in the wash water, with typical practice in fresh-cut produce operations using 100\u2013150 ppm FAC. At this concentration, the chlorinated wash kills surface pathogens on vegetables and fruit while leaving residual chlorine well within the safe consumption limit (Codex Alimentarius: max 50 ppm residual after rinsing, EU and UAE food safety standards align). The wash solution must be maintained at pH 6.5\u20137.5 for maximum hypochlorous acid (HOCl) availability \u2014 at pH above 8.0, hypochlorite ion (OCl\u207B) predominates and antimicrobial efficacy drops by 80%. In Oman's hot climate, produce temperatures can be high, which accelerates chlorine degradation and requires more frequent solution replacement. Global Chemicals LLC supplies food-grade sodium hypochlorite with test strips and photometric kits for accurate FAC monitoring in food operations."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_hypochlorite"
+      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_hypochlorite",
+      guideUrl: "/chemical-supplier/sodium-hypochlorite-oman",
+      guideLabel: "Sodium hypochlorite in Oman \u2014 every grade, strength and pack size"
     }
   },
   {
@@ -10691,7 +10693,9 @@ var soap_detergent_default = [
         "Stability: 3\u20136 months at 15\u201320\xB0C away from heat and light"
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Sodium_hypochlorite",
-      seoTitle: "Sodium Hypochlorite 12-15% Supplier in Oman \u2014 Bleach Grade"
+      seoTitle: "Sodium Hypochlorite 12-15% Supplier in Oman \u2014 Bleach Grade",
+      guideUrl: "/chemical-supplier/sodium-hypochlorite-oman",
+      guideLabel: "Sodium hypochlorite in Oman \u2014 every grade, strength and pack size"
     }
   },
   {
@@ -11476,7 +11480,9 @@ var swimming_pool_default = [
         "Compatible with automated dosing systems",
         "Available in 25L, 60L drums, and bulk"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_hypochlorite"
+      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_hypochlorite",
+      guideUrl: "/chemical-supplier/sodium-hypochlorite-oman",
+      guideLabel: "Sodium hypochlorite in Oman \u2014 every grade, strength and pack size"
     }
   },
   {
@@ -11645,8 +11651,8 @@ var swimming_pool_default = [
         }
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Sodium_hypochlorite",
-      guideUrl: "/blog/swimming-pool-chemicals-oman-muscat",
-      guideLabel: "Swimming pool chemicals in Oman \u2014 dosing for hotels, villas and facilities",
+      guideUrl: "/chemical-supplier/sodium-hypochlorite-oman",
+      guideLabel: "Sodium hypochlorite in Oman \u2014 every grade, strength and pack size",
       seoTitle: "Sodium Hypochlorite 12-15% Supplier in Oman \u2014 Pool Grade"
     }
   },
@@ -11702,7 +11708,9 @@ var swimming_pool_default = [
           answer: "Chlorine Liquid is commonly used for Immediate pool disinfection, Emergency chlorine boost, and Automated dosing and feed systems. Global Chemicals LLC supplies Chlorine Liquid across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_hypochlorite"
+      wikiUrl: "https://en.wikipedia.org/wiki/Sodium_hypochlorite",
+      guideUrl: "/chemical-supplier/sodium-hypochlorite-oman",
+      guideLabel: "Sodium hypochlorite in Oman \u2014 every grade, strength and pack size"
     }
   },
   {
@@ -13692,7 +13700,9 @@ var water_treatment_default = [
           answer: "Yes. Sodium hypochlorite at the correct dosage is approved for drinking water disinfection worldwide, including under Oman's national potable water standards and WHO guidelines. The key requirement is maintaining residual chlorine within the range of 0.2\u20130.5 mg/L in distributed water \u2014 sufficient to kill pathogens while remaining below the taste threshold (typically above 0.6 mg/L). The main by-products of concern are trihalomethanes (THMs), formed when chlorine reacts with naturally occurring organic matter. In Oman's desalinated water supply, which has very low organic matter content, THM formation is minimal. The product supplied must be food-grade or potable water grade with NSF or equivalent certification."
         }
       ],
-      seoDescription: "Sodium hypochlorite 12\u201315% (CAS 7681-52-9) ex-stock Muscat, Oman. Water disinfection, tank cleaning & RO sanitisation. Drums, IBCs or bulk \u2014 get a quote."
+      seoDescription: "Sodium hypochlorite 12\u201315% (CAS 7681-52-9) ex-stock Muscat, Oman. Water disinfection, tank cleaning & RO sanitisation. Drums, IBCs or bulk \u2014 get a quote.",
+      guideUrl: "/chemical-supplier/sodium-hypochlorite-oman",
+      guideLabel: "Sodium hypochlorite in Oman \u2014 every grade, strength and pack size"
     }
   },
   {

@@ -46,6 +46,7 @@ const Sitemap = () => {
         { label: 'Nitric Acid Supplier Oman', path: '/chemical-supplier/nitric-acid-oman' },
         { label: 'Laboratory Chemicals Supplier Oman', path: '/chemical-supplier/laboratory-chemicals-oman' },
         { label: 'Fertilizer Supplier Oman', path: '/chemical-supplier/fertilizers-oman' },
+        { label: 'Sodium Hypochlorite Supplier Oman', path: '/chemical-supplier/sodium-hypochlorite-oman' },
         { label: 'Hydrochloric Acid Supplier Oman', path: '/chemical-supplier/hydrochloric-acid-oman' },
         { label: 'Chemical Suppliers Middle East', path: '/chemical-suppliers-middle-east' },
         { label: 'Chemicals Muscat', path: '/chemicals/muscat' },

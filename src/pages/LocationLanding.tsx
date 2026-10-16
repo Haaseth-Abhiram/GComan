@@ -1246,6 +1246,7 @@ const PRODUCT_HUBS: { slug: string; label: string }[] = [
   { slug: 'caustic-soda-oman', label: 'Caustic soda flakes & lye' },
   { slug: 'laboratory-chemicals-oman', label: 'Laboratory chemicals' },
   { slug: 'fertilizers-oman', label: 'Fertilizers' },
+  { slug: 'sodium-hypochlorite-oman', label: 'Sodium hypochlorite' },
 ];
 
 const COUNTRY_HUBS: { slug: string; country: string; label: string }[] = [
