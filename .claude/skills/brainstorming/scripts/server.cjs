@@ -168,6 +168,20 @@ function handleUpgrade(req, socket) {
   const key = req.headers['sec-websocket-key'];
   if (!key) { socket.destroy(); return; }
 
+  // Only accept sockets opened by the page this server itself serves.
+  // Blocks other websites (and non-browser clients without a matching
+  // Origin) from injecting choices into the events file.
+  const allowedOrigins = new Set([
+    'http://' + URL_HOST + ':' + PORT,
+    'http://localhost:' + PORT,
+    'http://127.0.0.1:' + PORT,
+  ]);
+  if (!allowedOrigins.has(req.headers.origin)) {
+    socket.write('HTTP/1.1 403 Forbidden\r\n\r\n');
+    socket.destroy();
+    return;
+  }
+
   const accept = computeAcceptKey(key);
   socket.write(
     'HTTP/1.1 101 Switching Protocols\r\n' +

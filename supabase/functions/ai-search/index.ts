@@ -129,7 +129,31 @@ serve(async (req) => {
       );
     }
 
-    const { query } = await req.json();
+    const { query, turnstileToken } = await req.json();
+
+    // Bot check: required whenever TURNSTILE_SECRET_KEY is configured.
+    const turnstileSecret = Deno.env.get("TURNSTILE_SECRET_KEY");
+    if (turnstileSecret) {
+      let ok = false;
+      if (typeof turnstileToken === "string" && turnstileToken.length > 0 && turnstileToken.length < 4096) {
+        try {
+          const form = new FormData();
+          form.append("secret", turnstileSecret);
+          form.append("response", turnstileToken);
+          if (ip !== "unknown") form.append("remoteip", ip);
+          const res = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", { method: "POST", body: form });
+          ok = Boolean((await res.json()).success);
+        } catch (err) {
+          console.error("Turnstile verify error:", err);
+        }
+      }
+      if (!ok) {
+        return new Response(
+          JSON.stringify({ error: "Security check failed. Please try again." }),
+          { status: 403, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+        );
+      }
+    }
     
     if (!query || typeof query !== "string" || query.trim().length === 0) {
       return new Response(
