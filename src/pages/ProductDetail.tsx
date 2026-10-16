@@ -447,9 +447,15 @@ const ProductDetail = ({ category, rawCategoryProducts }: ProductDetailProps) =>
                 {translatedLongDescription && (
                   <>
                     <h3 className="text-xl font-semibold mb-3 mt-2">{t('products.detailedDescription', { defaultValue: 'Detailed Description' })}</h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {translatedLongDescription}
-                    </p>
+                    {/* Blank lines in the data split the description into
+                        paragraphs; single-paragraph entries render as before. */}
+                    <div className="space-y-3">
+                      {String(translatedLongDescription).split(/\n{2,}/).map((para, i) => (
+                        <p key={i} className="text-muted-foreground leading-relaxed">
+                          {para}
+                        </p>
+                      ))}
+                    </div>
                   </>
                 )}
 
