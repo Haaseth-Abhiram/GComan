@@ -4083,7 +4083,9 @@ var inorganic_default = [
           question: "What grade and pack sizes of Poly Aluminum Chloride (PAC) are available in Oman?",
           answer: "Global Chemicals LLC supplies Poly Aluminum Chloride (PAC) in Oman \u2014 Al2O3 content: 10% (liquid), 28-30% (powder) \u2014 available in 25kg bags, 1000L IBCs, bulk, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
         }
-      ]
+      ],
+      guideUrl: "/chemical-supplier/poly-aluminium-chloride-oman",
+      guideLabel: "Poly aluminium chloride in Oman \u2014 grades, packs and PAC vs alum"
     }
   },
   {
@@ -14775,8 +14777,8 @@ var water_treatment_default = [
           answer: "PAC liquid should be stored in shaded, covered HDPE or FRP tanks away from direct sunlight to minimise temperature-driven degradation. In Oman's summer conditions (ambient temperatures up to 45\xB0C), exposed tanks can reach 50\u201355\xB0C, accelerating hydrolysis and basicity shift in the PAC solution, which reduces coagulation performance. Ideal storage temperature is below 35\xB0C. Shelf life is typically 6\u201312 months from manufacture in correct storage conditions. PAC liquid must not be stored near alkalis (caustic soda, lime) as mixing causes immediate precipitation. Global Chemicals LLC supplies PAC liquid with manufacture date and Al\u2082O\u2083 assay certificate, and can advise on tank sizing and storage arrangements."
         }
       ],
-      guideUrl: "/blog/pac-poly-aluminium-chloride-oman",
-      guideLabel: "PAC (poly aluminium chloride) in Oman \u2014 dosing, jar testing and selection"
+      guideUrl: "/chemical-supplier/poly-aluminium-chloride-oman",
+      guideLabel: "Poly aluminium chloride in Oman \u2014 grades, packs and PAC vs alum"
     }
   },
   {
@@ -14836,8 +14838,8 @@ var water_treatment_default = [
           answer: "Global Chemicals LLC supplies PAC powder (28\u201330% Al\u2082O\u2083) in 25kg polypropylene bags for standard industrial and municipal water treatment customers. Pallet quantities (40 bags per pallet, 1,000 kg) are available for larger accounts with warehousing space. The powder has a shelf life of 24 months in sealed, dry storage conditions \u2014 a significant advantage over PAC liquid (6\u201312 months shelf life) for remote locations and projects with infrequent supply. Custom pack sizes may be available for specific project requirements. Delivery is available to all Oman governorates including interior regions (Al Dakhiliyah, Al Sharqiyah, Al Wusta) and Dhofar."
         }
       ],
-      guideUrl: "/blog/pac-poly-aluminium-chloride-oman",
-      guideLabel: "PAC (poly aluminium chloride) in Oman \u2014 dosing, jar testing and selection",
+      guideUrl: "/chemical-supplier/poly-aluminium-chloride-oman",
+      guideLabel: "Poly aluminium chloride in Oman \u2014 grades, packs and PAC vs alum",
       seoDescription: "PAC powder, 28-30% Al2O3 (CAS 1327-41-9), ex-stock Muscat, Oman. Coagulant for municipal & industrial water. 25 kg bags \u2014 request a quote."
     }
   },

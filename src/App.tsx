@@ -109,6 +109,7 @@ const LaboratoryChemicalsOman = lazyRetry(() => import("./pages/LaboratoryChemic
 const FertilizersOman = lazyRetry(() => import("./pages/FertilizersOman"));
 const SodiumHypochloriteOman = lazyRetry(() => import("./pages/SodiumHypochloriteOman"));
 const OilfieldChemicalsOman = lazyRetry(() => import("./pages/OilfieldChemicalsOman"));
+const PolyAluminiumChlorideOman = lazyRetry(() => import("./pages/PolyAluminiumChlorideOman"));
 const HydrochloricAcidOman = lazyRetry(() => import("./pages/HydrochloricAcidOman"));
 const ThankYou = lazyRetry(() => import("./pages/ThankYou"));
 const NotFound = lazyRetry(() => import("./pages/NotFound"));
@@ -257,6 +258,7 @@ const App = () => (
                 <Route path="/chemical-supplier/fertilizers-oman" element={<FertilizersOman />} />
                 <Route path="/chemical-supplier/sodium-hypochlorite-oman" element={<SodiumHypochloriteOman />} />
                 <Route path="/chemical-supplier/oilfield-chemicals-oman" element={<OilfieldChemicalsOman />} />
+                <Route path="/chemical-supplier/poly-aluminium-chloride-oman" element={<PolyAluminiumChlorideOman />} />
                 <Route path="/chemical-supplier/hydrochloric-acid-oman" element={<HydrochloricAcidOman />} />
                 <Route path="/thank-you" element={<ThankYou />} />
 
@@ -315,6 +317,7 @@ const App = () => (
                   <Route path="chemical-supplier/fertilizers-oman" element={<FertilizersOman />} />
                   <Route path="chemical-supplier/sodium-hypochlorite-oman" element={<SodiumHypochloriteOman />} />
                   <Route path="chemical-supplier/oilfield-chemicals-oman" element={<OilfieldChemicalsOman />} />
+                  <Route path="chemical-supplier/poly-aluminium-chloride-oman" element={<PolyAluminiumChlorideOman />} />
                   <Route path="chemical-supplier/hydrochloric-acid-oman" element={<HydrochloricAcidOman />} />
                   <Route path="thank-you" element={<ThankYou />} />
                   <Route path="chemicals" element={<ChemicalsHub />} />

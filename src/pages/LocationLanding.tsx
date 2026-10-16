@@ -1248,6 +1248,7 @@ const PRODUCT_HUBS: { slug: string; label: string }[] = [
   { slug: 'fertilizers-oman', label: 'Fertilizers' },
   { slug: 'sodium-hypochlorite-oman', label: 'Sodium hypochlorite' },
   { slug: 'oilfield-chemicals-oman', label: 'Oilfield chemicals' },
+  { slug: 'poly-aluminium-chloride-oman', label: 'PAC coagulant' },
 ];
 
 const COUNTRY_HUBS: { slug: string; country: string; label: string }[] = [
