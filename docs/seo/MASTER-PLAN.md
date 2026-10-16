@@ -4,7 +4,7 @@
 
 **To resume:** say **"continue the Number One plan"** (or run `/number-one-plan`). Claude reads this file, checks the live state of the Next-up item, does it, runs the gates, commits to Develop, updates this table, and reports.
 
-**Last updated:** 2026-10-16 (session 5). **Next up: P0.1** (user — still not published). Then P0.3 indexing from 10-17 (after Publish the four new hubs go first: lab, fertilizers, hypochlorite, oilfield), P2.3 lubricants (needs the authorised-brand list), P2.4 PAC.
+**Last updated:** 2026-10-16 (session 5). **Next up: P0.1** (user — still not published). Then P0.3 indexing from 10-17 (after Publish the five new hubs go first: lab, fertilizers, hypochlorite, oilfield, PAC). Phase 2 is complete except P2.3 lubricants (needs the authorised-brand list). Then Phase 3 (needs TDS for proprietary ranges) and Phase 6 measurement.
 
 ## Rules that apply to every item
 
@@ -49,7 +49,7 @@ Each hub: `/chemical-supplier/<slug>`, spec table, grades, pack formats, GCC lea
 | P2.1 | Laboratory chemicals | 2,123 impr, category rank #2 | none — grades and packs were already in `lab-chemicals.json` | **built 2026-10-16** on Develop: `/chemical-supplier/laboratory-chemicals-oman`, table generated from the product data (34 reagents), 5 visible FAQs, linked from all lab products, location pages, Oman/ME pages; e2e spec. Request indexing after Publish |
 | P2.2 | Fertilizers (urea, KCl, DAP, NPK, gypsum) | 39 clicks; urea 25 clicks @5.8 | none — packs were in `agro.json` (origin and minimum order would still improve it) | **built 2026-10-16** on Develop: `/chemical-supplier/fertilizers-oman`, data-driven table + fertigation compatibility table, 5 FAQs, linked from all agro products and location pages; e2e spec. Request indexing after Publish |
 | P2.3 | Lubricants distributor (rebuild the category page) | category 65 clicks + brand pages 29 | which brands are authorised, grade list, pack sizes | open |
-| P2.4 | PAC | weak on evidence: PAC queries 9 impr / 90d, the PAC blog 73 impr / 2 clicks, product pages ~32 impr | none — from data | open, **deprioritised** below oilfield (2026-10-16) |
+| P2.4 | PAC | weak on evidence (PAC queries ~9 impr / 90d) | none — from data | **built 2026-10-16** on Develop: `/chemical-supplier/poly-aluminium-chloride-oman`, grades table + spec-only PAC/alum/ferric comparison, 5 FAQs; PAC product pages link here, hub links the PAC blog. **Flag for the user:** the PAC liquid page names PAEW plants (Ghubrah, Barka, Sohar, Salalah) as users — confirm or remove |
 | P2.5 | Sodium hypochlorite | 272 impr / 7 clicks over 6 grade pages; 5 CRM enquiries | none — from data | **built 2026-10-16** on Develop: `/chemical-supplier/sodium-hypochlorite-oman`, grade table from 4 JSON files, storage/safety, 5 FAQs; each grade keeps its own page and links here. **Flag for the user:** the food-grade page's spec says "EPA registered sanitizer" and the municipal page says "on-site generation available" — confirm or remove |
 | P2.6 | Oilfield chemicals | 47 live pages, 1,335 impr | none — from data (top sellers would still help ordering) | **built 2026-10-16** on Develop: `/chemical-supplier/oilfield-chemicals-oman`, 47 products grouped by job, JSRS section, 5 FAQs, linked from 45 oilfield products + location pages; e2e spec |
 | P2.0 | Price band on the 3 live hubs (B1) | PAA on every SERP; uvwater ranks on price | **the bands** | waiting on user |
@@ -102,3 +102,4 @@ Run `monitoring-search-visibility` (full) plus the product panel (12 products ×
 - 2026-10-16 (session 6): P2.2 fertilizer hub built from agro data. Next hubs: P2.3 lubricants needs the user (which brands are authorised — the site claims Shell/Mobil/Castrol/GP); P2.4 PAC and P2.5 hypochlorite can be built from data.
 - 2026-10-16 (session 7): P2.5 hypochlorite hub built (hypochlorite evidence > PAC). Develop ~26 commits ahead of main.
 - 2026-10-16 (session 8): P2.6 oilfield hub built. Four new hubs now wait on the Publish. Fixed a wrong link (butyl glycol → butylene glycol guide).
+- 2026-10-16 (session 9): P2.4 PAC hub built. Phase 2: 5 of 6 hubs done; only lubricants (user input) left. Develop 30 commits ahead of main.
