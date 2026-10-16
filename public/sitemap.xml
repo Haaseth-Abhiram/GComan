@@ -955,6 +955,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/food-beverage/calcium-lactate"/>
   </url>
   <url>
+    <loc>https://gcoman.com/products/food-beverage/caustic-soda-liquid-food</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/food-beverage/caustic-soda-liquid-food"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/food-beverage/caustic-soda-liquid-food"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/food-beverage/caustic-soda-liquid-food"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/products/food-beverage/citric-acid-anhydrous-food</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/food-beverage/citric-acid-anhydrous-food"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/food-beverage/citric-acid-anhydrous-food"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/food-beverage/citric-acid-anhydrous-food"/>
+  </url>
+  <url>
     <loc>https://gcoman.com/products/food-beverage/ethanol-70</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
@@ -1025,6 +1043,15 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/food-beverage/sodium-bicarbonate-food"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/food-beverage/sodium-bicarbonate-food"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/food-beverage/sodium-bicarbonate-food"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/products/food-beverage/sodium-hypochlorite-food</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/food-beverage/sodium-hypochlorite-food"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/food-beverage/sodium-hypochlorite-food"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/food-beverage/sodium-hypochlorite-food"/>
   </url>
   <url>
     <loc>https://gcoman.com/products/food-beverage/urea-food</loc>
@@ -1657,6 +1684,33 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/oilfield/calcium-chloride-oil"/>
   </url>
   <url>
+    <loc>https://gcoman.com/products/oilfield/citric-acid-food</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/oilfield/citric-acid-food"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/oilfield/citric-acid-food"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/oilfield/citric-acid-food"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/products/oilfield/citric-acid-liquid</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/oilfield/citric-acid-liquid"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/oilfield/citric-acid-liquid"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/oilfield/citric-acid-liquid"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/products/oilfield/citric-acid-powder</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/oilfield/citric-acid-powder"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/oilfield/citric-acid-powder"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/oilfield/citric-acid-powder"/>
+  </url>
+  <url>
     <loc>https://gcoman.com/products/oilfield/cmc</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -1960,6 +2014,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/ro-chemicals/antiscalant-ro"/>
   </url>
   <url>
+    <loc>https://gcoman.com/products/ro-chemicals/citric-acid-liquid-ro</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/ro-chemicals/citric-acid-liquid-ro"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/ro-chemicals/citric-acid-liquid-ro"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/ro-chemicals/citric-acid-liquid-ro"/>
+  </url>
+  <url>
     <loc>https://gcoman.com/products/ro-chemicals/membrane-alka-cleaner</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -2038,13 +2101,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/soap-detergent/glycerine-soap"/>
   </url>
   <url>
-    <loc>https://gcoman.com/products/soap-detergent/hydrogen-peroxide-35</loc>
+    <loc>https://gcoman.com/products/soap-detergent/hydrogen-peroxide-50</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/soap-detergent/hydrogen-peroxide-35"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/soap-detergent/hydrogen-peroxide-35"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/soap-detergent/hydrogen-peroxide-35"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/soap-detergent/hydrogen-peroxide-50"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/soap-detergent/hydrogen-peroxide-50"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/soap-detergent/hydrogen-peroxide-50"/>
   </url>
   <url>
     <loc>https://gcoman.com/products/soap-detergent/labsa</loc>
@@ -2099,6 +2162,15 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/soap-detergent/soda-ash-light-soap"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/soap-detergent/soda-ash-light-soap"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/soap-detergent/soda-ash-light-soap"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/products/soap-detergent/sodium-hypochlorite-12-15-soap</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/soap-detergent/sodium-hypochlorite-12-15-soap"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/soap-detergent/sodium-hypochlorite-12-15-soap"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/soap-detergent/sodium-hypochlorite-12-15-soap"/>
   </url>
   <url>
     <loc>https://gcoman.com/products/soap-detergent/sodium-meta-silicate-pentahydrate</loc>
@@ -3559,6 +3631,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/food-beverage/calcium-lactate"/>
   </url>
   <url>
+    <loc>https://gcoman.com/ar/products/food-beverage/caustic-soda-liquid-food</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/food-beverage/caustic-soda-liquid-food"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/food-beverage/caustic-soda-liquid-food"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/food-beverage/caustic-soda-liquid-food"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/ar/products/food-beverage/citric-acid-anhydrous-food</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/food-beverage/citric-acid-anhydrous-food"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/food-beverage/citric-acid-anhydrous-food"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/food-beverage/citric-acid-anhydrous-food"/>
+  </url>
+  <url>
     <loc>https://gcoman.com/ar/products/food-beverage/ethanol-70</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
@@ -3629,6 +3719,15 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/food-beverage/sodium-bicarbonate-food"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/food-beverage/sodium-bicarbonate-food"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/food-beverage/sodium-bicarbonate-food"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/ar/products/food-beverage/sodium-hypochlorite-food</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/food-beverage/sodium-hypochlorite-food"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/food-beverage/sodium-hypochlorite-food"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/food-beverage/sodium-hypochlorite-food"/>
   </url>
   <url>
     <loc>https://gcoman.com/ar/products/food-beverage/urea-food</loc>
@@ -4225,6 +4324,33 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/oilfield/calcium-chloride-oil"/>
   </url>
   <url>
+    <loc>https://gcoman.com/ar/products/oilfield/citric-acid-food</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/oilfield/citric-acid-food"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/oilfield/citric-acid-food"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/oilfield/citric-acid-food"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/ar/products/oilfield/citric-acid-liquid</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/oilfield/citric-acid-liquid"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/oilfield/citric-acid-liquid"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/oilfield/citric-acid-liquid"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/ar/products/oilfield/citric-acid-powder</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/oilfield/citric-acid-powder"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/oilfield/citric-acid-powder"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/oilfield/citric-acid-powder"/>
+  </url>
+  <url>
     <loc>https://gcoman.com/ar/products/oilfield/cmc</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -4522,6 +4648,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/ro-chemicals/antiscalant-ro"/>
   </url>
   <url>
+    <loc>https://gcoman.com/ar/products/ro-chemicals/citric-acid-liquid-ro</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/ro-chemicals/citric-acid-liquid-ro"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/ro-chemicals/citric-acid-liquid-ro"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/ro-chemicals/citric-acid-liquid-ro"/>
+  </url>
+  <url>
     <loc>https://gcoman.com/ar/products/ro-chemicals/membrane-alka-cleaner</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -4594,13 +4729,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/soap-detergent/glycerine-soap"/>
   </url>
   <url>
-    <loc>https://gcoman.com/ar/products/soap-detergent/hydrogen-peroxide-35</loc>
+    <loc>https://gcoman.com/ar/products/soap-detergent/hydrogen-peroxide-50</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/soap-detergent/hydrogen-peroxide-35"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/soap-detergent/hydrogen-peroxide-35"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/soap-detergent/hydrogen-peroxide-35"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/soap-detergent/hydrogen-peroxide-50"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/soap-detergent/hydrogen-peroxide-50"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/soap-detergent/hydrogen-peroxide-50"/>
   </url>
   <url>
     <loc>https://gcoman.com/ar/products/soap-detergent/labsa</loc>
@@ -4655,6 +4790,15 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/soap-detergent/soda-ash-light-soap"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/soap-detergent/soda-ash-light-soap"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/soap-detergent/soda-ash-light-soap"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/ar/products/soap-detergent/sodium-hypochlorite-12-15-soap</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/soap-detergent/sodium-hypochlorite-12-15-soap"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/soap-detergent/sodium-hypochlorite-12-15-soap"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/soap-detergent/sodium-hypochlorite-12-15-soap"/>
   </url>
   <url>
     <loc>https://gcoman.com/ar/products/soap-detergent/sodium-meta-silicate-pentahydrate</loc>
