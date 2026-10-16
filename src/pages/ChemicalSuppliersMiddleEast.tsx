@@ -420,6 +420,9 @@ const ChemicalSuppliersMiddleEast = () => {
                 <Button variant="outline" size="sm" asChild>
                   <Link to="/chemical-supplier/laboratory-chemicals-oman">Laboratory chemicals — GCC supply guide</Link>
                 </Button>
+                <Button variant="outline" size="sm" asChild>
+                  <Link to="/chemical-supplier/fertilizers-oman">Fertilizers — GCC supply guide</Link>
+                </Button>
               </div>
 
               {/* UAE */}

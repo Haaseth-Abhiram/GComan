@@ -106,6 +106,7 @@ const ChemicalSuppliersMiddleEast = lazyRetry(() => import("./pages/ChemicalSupp
 const CausticSodaOman = lazyRetry(() => import("./pages/CausticSodaOman"));
 const NitricAcidOman = lazyRetry(() => import("./pages/NitricAcidOman"));
 const LaboratoryChemicalsOman = lazyRetry(() => import("./pages/LaboratoryChemicalsOman"));
+const FertilizersOman = lazyRetry(() => import("./pages/FertilizersOman"));
 const HydrochloricAcidOman = lazyRetry(() => import("./pages/HydrochloricAcidOman"));
 const ThankYou = lazyRetry(() => import("./pages/ThankYou"));
 const NotFound = lazyRetry(() => import("./pages/NotFound"));
@@ -251,6 +252,7 @@ const App = () => (
                 <Route path="/chemical-supplier/caustic-soda-oman" element={<CausticSodaOman />} />
                 <Route path="/chemical-supplier/nitric-acid-oman" element={<NitricAcidOman />} />
                 <Route path="/chemical-supplier/laboratory-chemicals-oman" element={<LaboratoryChemicalsOman />} />
+                <Route path="/chemical-supplier/fertilizers-oman" element={<FertilizersOman />} />
                 <Route path="/chemical-supplier/hydrochloric-acid-oman" element={<HydrochloricAcidOman />} />
                 <Route path="/thank-you" element={<ThankYou />} />
 
@@ -306,6 +308,7 @@ const App = () => (
                   <Route path="chemical-supplier/caustic-soda-oman" element={<CausticSodaOman />} />
                   <Route path="chemical-supplier/nitric-acid-oman" element={<NitricAcidOman />} />
                   <Route path="chemical-supplier/laboratory-chemicals-oman" element={<LaboratoryChemicalsOman />} />
+                  <Route path="chemical-supplier/fertilizers-oman" element={<FertilizersOman />} />
                   <Route path="chemical-supplier/hydrochloric-acid-oman" element={<HydrochloricAcidOman />} />
                   <Route path="thank-you" element={<ThankYou />} />
                   <Route path="chemicals" element={<ChemicalsHub />} />

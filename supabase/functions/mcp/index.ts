@@ -154,7 +154,9 @@ var agro_default = [
         "Prill size: 1\u20132.4 mm (prilled), 2\u20134 mm (granular)",
         "Packaging: 25 kg PP bag, 1,000 kg big bag"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Urea"
+      wikiUrl: "https://en.wikipedia.org/wiki/Urea",
+      guideUrl: "/chemical-supplier/fertilizers-oman",
+      guideLabel: "Fertilizers in Oman \u2014 analysis, packs and fertigation compatibility"
     }
   },
   {
@@ -195,7 +197,9 @@ var agro_default = [
         "Granule size: 2\u20134 mm",
         "Packaging: 50 kg bag, 1,000 kg big bag"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Diammonium_phosphate"
+      wikiUrl: "https://en.wikipedia.org/wiki/Diammonium_phosphate",
+      guideUrl: "/chemical-supplier/fertilizers-oman",
+      guideLabel: "Fertilizers in Oman \u2014 analysis, packs and fertigation compatibility"
     }
   },
   {
@@ -237,7 +241,9 @@ var agro_default = [
         "Micronutrient supplementation (chelated) on request",
         "Packaging: 25 kg bag, 1,000 kg big bag"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Fertilizer"
+      wikiUrl: "https://en.wikipedia.org/wiki/Fertilizer",
+      guideUrl: "/chemical-supplier/fertilizers-oman",
+      guideLabel: "Fertilizers in Oman \u2014 analysis, packs and fertigation compatibility"
     }
   },
   {
@@ -281,7 +287,9 @@ var agro_default = [
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Potassium_chloride",
       seoTitle: "Potassium Chloride Fertilizer (MOP 60%) Supplier in Oman",
-      seoDescription: "Potassium chloride fertilizer (MOP 60% K2O) ex-stock Muscat, Oman. For date palms, fertigation & NPK blends. 50 kg bags or bulk \u2014 request a quote today."
+      seoDescription: "Potassium chloride fertilizer (MOP 60% K2O) ex-stock Muscat, Oman. For date palms, fertigation & NPK blends. 50 kg bags or bulk \u2014 request a quote today.",
+      guideUrl: "/chemical-supplier/fertilizers-oman",
+      guideLabel: "Fertilizers in Oman \u2014 analysis, packs and fertigation compatibility"
     }
   },
   {
@@ -322,7 +330,9 @@ var agro_default = [
         "Insolubles: <0.05%",
         "Packaging: 25 kg bag, 1,000 kg big bag"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Calcium_nitrate"
+      wikiUrl: "https://en.wikipedia.org/wiki/Calcium_nitrate",
+      guideUrl: "/chemical-supplier/fertilizers-oman",
+      guideLabel: "Fertilizers in Oman \u2014 analysis, packs and fertigation compatibility"
     }
   },
   {
@@ -386,7 +396,9 @@ var agro_default = [
           answer: "Zinc Sulphate Monohydrate (33% Zn) \u2014 Agricultural is commonly used for Zinc deficiency correction in date palm, citrus, and vegetables, Foliar micronutrient spray (0.2\u20130.5%), and Fertigation micronutrient supplementation. Global Chemicals LLC supplies Zinc Sulphate Monohydrate (33% Zn) \u2014 Agricultural across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      seoTitle: "Zinc Sulphate 33% Zn Supplier in Oman \u2014 Agricultural"
+      seoTitle: "Zinc Sulphate 33% Zn Supplier in Oman \u2014 Agricultural",
+      guideUrl: "/chemical-supplier/fertilizers-oman",
+      guideLabel: "Fertilizers in Oman \u2014 analysis, packs and fertigation compatibility"
     }
   },
   {
@@ -446,7 +458,9 @@ var agro_default = [
           question: "What is the price of agricultural gypsum in Oman?",
           answer: "Pricing depends on volume, bag size and delivery zone \u2014 bulk farm-scale tonnage prices substantially below bagged retail. Request a quote with your tonnage and location; we respond with delivered pricing the same business day."
         }
-      ]
+      ],
+      guideUrl: "/chemical-supplier/fertilizers-oman",
+      guideLabel: "Fertilizers in Oman \u2014 analysis, packs and fertigation compatibility"
     }
   },
   {
@@ -488,7 +502,9 @@ var agro_default = [
         "Packaging: 25 kg bag"
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Humic_substance",
-      seoDescription: "Humic acid, leonardite extract 65-75% humic acids (CAS 1415-93-6), ex-stock Muscat. Fertigation & foliar biostimulant. 25 kg bags \u2014 get a quote."
+      seoDescription: "Humic acid, leonardite extract 65-75% humic acids (CAS 1415-93-6), ex-stock Muscat. Fertigation & foliar biostimulant. 25 kg bags \u2014 get a quote.",
+      guideUrl: "/chemical-supplier/fertilizers-oman",
+      guideLabel: "Fertilizers in Oman \u2014 analysis, packs and fertigation compatibility"
     }
   }
 ];

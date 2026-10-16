@@ -269,6 +269,7 @@ const ChemicalSuppliersOman = () => {
                   { label: 'Nitric Acid Supplier Oman', path: '/chemical-supplier/nitric-acid-oman', note: '68% HNO3 — Industrial, Food & Lab' },
                   { label: 'Hydrochloric Acid Supplier Oman', path: '/chemical-supplier/hydrochloric-acid-oman', note: 'HCl 30–33% — Carboy to Bulk Tanker' },
                   { label: 'Laboratory Chemicals Supplier Oman', path: '/chemical-supplier/laboratory-chemicals-oman', note: 'ACS, HPLC & Molecular-Biology Reagents' },
+                  { label: 'Fertilizer Supplier Oman', path: '/chemical-supplier/fertilizers-oman', note: 'Urea, DAP, MOP, Calcium Nitrate, NPK' },
                   { label: 'Chemical Suppliers Middle East', path: '/chemical-suppliers-middle-east', note: 'Export to UAE, KSA, Qatar & GCC' },
                   { label: 'Water Treatment Chemicals', path: '/products/water-treatment', note: 'PAC, Hypochlorite, Antiscalants' },
                   { label: 'Shell / Mobil / Castrol Lubricants', path: '/products/lubricants', note: 'Authorised Oman Distributor' },
