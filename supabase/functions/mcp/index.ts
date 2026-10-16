@@ -7192,7 +7192,7 @@ var oilfield_default = [
         "completion fluid Oman",
         "CaCl2 workover Oman"
       ],
-      longDescription: "Calcium Chloride brine supplier in Oman - Global Chemicals LLC provides high-quality CaCl2 for completion, workover, and drilling fluids in Muscat, Sohar, Duqm, Salalah. Our calcium chloride creates economical, high-density clear brines (up to 1.39 sg) for well control and completion operations. CaCl2 brines are cost-effective, readily available, and compatible with most downhole tools and formations. The clear fluid minimizes formation damage while providing excellent pressure control. Essential for completion, workover, packer fluids, and well servicing operations across Oman's oil & gas fields. Available in multiple concentrations to meet specific density requirements with corrosion inhibitor packages. Calcium chloride (CaCl\u2082) completion and workover brine is one of the most widely used wellbore fluid systems in Oman's oilfield operations. CaCl\u2082 brines are prepared at controlled densities by adjusting concentration \u2014 a 32% CaCl\u2082 solution achieves 11.6 lb/gal (1.39 SG), covering the density range required for most Oman reservoir completions. The brine is non-damaging to formation permeability (chloride brines are compatible with most formation minerals), stable across a wide temperature range, and non-flammable. Global Chemicals LLC supplies dry CaCl\u2082 flakes (77%) and pellets (94%) for on-site brine preparation, as well as pre-mixed CaCl\u2082 brine at specified densities. Supply to completion and workover contractors; technical specifications and density tables available.",
+      longDescription: "Calcium Chloride brine supplier in Oman - Global Chemicals LLC provides high-quality CaCl2 for completion, workover, and drilling fluids in Muscat, Sohar, Duqm, Salalah. Our calcium chloride creates economical, high-density clear brines (up to 1.39 sg) for well control and completion operations. CaCl2 brines are cost-effective, readily available, and compatible with most downhole tools and formations. The clear fluid minimizes formation damage while providing excellent pressure control. Essential for completion, workover, packer fluids, and well servicing operations across Oman's oil & gas fields. Available in multiple concentrations to meet specific density requirements with corrosion inhibitor packages. Calcium chloride (CaCl\u2082) completion and workover brine is one of the most widely used wellbore fluid systems in Oman's oilfield operations. CaCl\u2082 brines are prepared at controlled densities by adjusting concentration \u2014 a 32% CaCl\u2082 solution achieves 11.6 lb/gal (1.39 SG), covering the density range required for most Oman reservoir completions. The brine is non-damaging to formation permeability (chloride brines are compatible with most formation minerals), stable across a wide temperature range, and non-flammable. Global Chemicals LLC supplies dry CaCl\u2082 flakes (77%) and pellets (94%) for on-site brine preparation, as well as pre-mixed CaCl\u2082 brine at specified densities. Supply to completion and workover contractors; technical specifications and density tables available. The same calcium chloride (CAS 10043-52-4) is also supplied as flakes and pellets for de-icing, dust control, concrete acceleration and as a desiccant in wastewater treatment, in 25 kg bags and jumbo bags from Muscat stock.",
       applications: [
         "Well completion and workover fluids",
         "Clear brine packer fluids",
@@ -7799,7 +7799,8 @@ var oilfield_default = [
           answer: "EDTA Liquid is commonly used for Carbonate scale removal from wellbores, Iron deposit chelation and removal, and Heavy metal control in water systems. Global Chemicals LLC supplies EDTA Liquid across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/EDTA"
+      wikiUrl: "https://en.wikipedia.org/wiki/EDTA",
+      canonicalOverride: "https://gcoman.com/products/soap-detergent/edta-powder-soap"
     }
   },
   {
@@ -7846,7 +7847,8 @@ var oilfield_default = [
         "Long shelf life when stored dry",
         "Packaging: 25kg bags, drums, bulk"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/EDTA"
+      wikiUrl: "https://en.wikipedia.org/wiki/EDTA",
+      canonicalOverride: "https://gcoman.com/products/soap-detergent/edta-powder-soap"
     }
   },
   {
@@ -9891,7 +9893,7 @@ var soap_detergent_default = [
         "metal chelating agent Muscat",
         "EDTA supplier Oman"
       ],
-      longDescription: "EDTA (Ethylenediaminetetraacetic acid) supplier in Oman \u2014 Global Chemicals LLC supplies EDTA powder in disodium (EDTA-2Na) and tetrasodium (EDTA-4Na) salt forms to detergent formulators, water treatment plants, cosmetic manufacturers, and industrial users across Muscat and Oman. EDTA is one of the most widely used chelating (sequestering) agents in industrial chemistry. It works by binding to metal ions \u2014 calcium, magnesium, iron, copper, manganese \u2014 and preventing them from interfering with surfactant performance in hard water, causing discolouration, or catalysing unwanted oxidation reactions. In detergent formulations, EDTA prevents soap scum formation in hard water, stabilises bleach (hydrogen peroxide and hypochlorite) formulations, and enhances surfactant cleaning efficiency. In water treatment, EDTA is used for metal ion control, boiler deposit removal, and as a complexing agent for iron and manganese. In cosmetics and personal care, EDTA acts as a preservative booster and stability enhancer. Available in food-grade (E385 \u2014 Calcium Disodium EDTA) for food and beverage applications. Global Chemicals LLC supplies EDTA powder in 25kg bags. SDS and CoA available.",
+      longDescription: "EDTA (Ethylenediaminetetraacetic acid) supplier in Oman \u2014 Global Chemicals LLC supplies EDTA powder in disodium (EDTA-2Na) and tetrasodium (EDTA-4Na) salt forms to detergent formulators, water treatment plants, cosmetic manufacturers, and industrial users across Muscat and Oman. EDTA is one of the most widely used chelating (sequestering) agents in industrial chemistry. It works by binding to metal ions \u2014 calcium, magnesium, iron, copper, manganese \u2014 and preventing them from interfering with surfactant performance in hard water, causing discolouration, or catalysing unwanted oxidation reactions. In detergent formulations, EDTA prevents soap scum formation in hard water, stabilises bleach (hydrogen peroxide and hypochlorite) formulations, and enhances surfactant cleaning efficiency. In water treatment, EDTA is used for metal ion control, boiler deposit removal, and as a complexing agent for iron and manganese. In cosmetics and personal care, EDTA acts as a preservative booster and stability enhancer. Available in food-grade (E385 \u2014 Calcium Disodium EDTA) for food and beverage applications. Global Chemicals LLC supplies EDTA powder in 25kg bags. SDS and CoA available. One chelant, three forms for three industries: detergent-grade powder for cleaners and personal care, water-softening grade for boiler and cooling systems, and oilfield-grade powder and liquid solution for scale removal and metal control in well treatment \u2014 all EDTA (CAS 60-00-4), supplied in 25 kg bags, drums and IBCs with CoA.",
       applications: [
         "Detergent formulation \u2014 water hardness sequestration and surfactant boosting",
         "Hydrogen peroxide and hypochlorite bleach stabilisation",
@@ -11261,7 +11263,7 @@ var swimming_pool_default = [
         "swimming pool tablets Muscat",
         "trichlor Oman"
       ],
-      longDescription: "Buy Premium Chlorine Tablets in Oman from Global Chemicals LLC. TCCA (Trichloroisocyanuric Acid) chlorine tablets provide slow-dissolving, stabilized chlorine for continuous pool disinfection in Muscat, Sohar, Salalah. Our chlorine tablets contain built-in stabilizer (cyanuric acid) that protects chlorine from UV degradation, making them ideal for outdoor pools in Oman's sunny climate. Each tablet delivers 90% available chlorine for powerful sanitization. Perfect for automatic feeders and floating dispensers. Widely used in residential pools, hotel pools, and swimming clubs throughout Oman. TCCA chlorine tablets (200g, 90% available chlorine) are the most convenient and widely used pool sanitiser format in Oman \u2014 popular with residential pool owners, hotel pool maintenance staff, and FM companies because they require no mixing, no measuring, and slowly release chlorine over 3\u20137 days in automatic feeders or floating dispensers. In Oman's intense sunlight (UV index regularly 10\u201311 in summer), unstabilised chlorine degrades within hours \u2014 the cyanuric acid (CYA) stabiliser built into TCCA tablets prevents UV degradation, maintaining effective chlorine residual between maintenance visits. Global Chemicals LLC supplies TCCA 200g tablets in 5kg, 10kg, and 25kg buckets. Available for retail and bulk supply to pool maintenance companies, hotels, FM contractors, and hardware stores throughout Oman.",
+      longDescription: "Buy Premium Chlorine Tablets in Oman from Global Chemicals LLC. TCCA (Trichloroisocyanuric Acid) chlorine tablets provide slow-dissolving, stabilized chlorine for continuous pool disinfection in Muscat, Sohar, Salalah. Our chlorine tablets contain built-in stabilizer (cyanuric acid) that protects chlorine from UV degradation, making them ideal for outdoor pools in Oman's sunny climate. Each tablet delivers 90% available chlorine for powerful sanitization. Perfect for automatic feeders and floating dispensers. Widely used in residential pools, hotel pools, and swimming clubs throughout Oman. TCCA chlorine tablets (200g, 90% available chlorine) are the most convenient and widely used pool sanitiser format in Oman \u2014 popular with residential pool owners, hotel pool maintenance staff, and FM companies because they require no mixing, no measuring, and slowly release chlorine over 3\u20137 days in automatic feeders or floating dispensers. In Oman's intense sunlight (UV index regularly 10\u201311 in summer), unstabilised chlorine degrades within hours \u2014 the cyanuric acid (CYA) stabiliser built into TCCA tablets prevents UV degradation, maintaining effective chlorine residual between maintenance visits. Global Chemicals LLC supplies TCCA 200g tablets in 5kg, 10kg, and 25kg buckets. Available for retail and bulk supply to pool maintenance companies, hotels, FM contractors, and hardware stores throughout Oman. The same stabilised TCCA tablets (CAS 87-90-1) are used for continuous disinfection in cooling towers, potable-water tanks and municipal water systems, supplied in 200 g and 20 g tablets in 25 kg and 50 kg drums.",
       applications: [
         "Continuous swimming pool sanitization",
         "Automatic chlorine feeder systems",
@@ -13305,7 +13307,8 @@ var water_treatment_default = [
         "Moisture absorption: Excellent hygroscopic properties",
         "Available in 25kg bags and bulk"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Calcium_chloride"
+      wikiUrl: "https://en.wikipedia.org/wiki/Calcium_chloride",
+      canonicalOverride: "https://gcoman.com/products/oilfield/calcium-chloride-oil"
     }
   },
   {
@@ -13717,7 +13720,8 @@ var water_treatment_default = [
           answer: "Chlorine Tablets TCCA or TICA is commonly used for Swimming pool disinfection, Drinking water chlorination, and Industrial water treatment. Global Chemicals LLC supplies Chlorine Tablets TCCA or TICA across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/Trichloroisocyanuric_acid"
+      wikiUrl: "https://en.wikipedia.org/wiki/Trichloroisocyanuric_acid",
+      canonicalOverride: "https://gcoman.com/products/swimming-pool/chlorine-tablet-pool"
     }
   },
   {
@@ -14014,7 +14018,8 @@ var water_treatment_default = [
         "Available in 25kg bags",
         "Excellent chelating capacity"
       ],
-      wikiUrl: "https://en.wikipedia.org/wiki/EDTA"
+      wikiUrl: "https://en.wikipedia.org/wiki/EDTA",
+      canonicalOverride: "https://gcoman.com/products/soap-detergent/edta-powder-soap"
     }
   },
   {
