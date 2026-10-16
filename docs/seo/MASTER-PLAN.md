@@ -106,3 +106,4 @@ Run `monitoring-search-visibility` (full) plus the product panel (12 products ×
 - 2026-10-16 (session 10): pre-publish full build of Develop passed (635 pages, 0 title failures). Everything Claude can do without the Publish or user input is done.
 
 - 2026-10-16 (session 6): P0.1 Publish done by Claude on the user's in-session instruction (deploy 42699f12, 6 hubs verified live). P0.2 IndexNow 634 URLs HTTP 200. P0.3 blocked: the Chrome extension denied actions on search.google.com. Edge functions (submit-contact country) still need a Lovable-side deploy.
+- 2026-10-16 (session 6, later): Search Console reachable again. Lab hub inspected: "URL is unknown to Google"; Request indexing hit "Quota Exceeded" (today's quota used by the morning batch). Sitemap resubmitted in GSC (success) so Google rediscovers the 5 new hubs. P0.3 resumes 2026-10-17: lab, fertilizers, hypochlorite, oilfield, PAC first.
