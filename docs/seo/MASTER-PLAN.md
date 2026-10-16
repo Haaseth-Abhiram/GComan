@@ -49,8 +49,8 @@ Each hub: `/chemical-supplier/<slug>`, spec table, grades, pack formats, GCC lea
 | P2.1 | Laboratory chemicals | 2,123 impr, category rank #2 | none — grades and packs were already in `lab-chemicals.json` | **built 2026-10-16** on Develop: `/chemical-supplier/laboratory-chemicals-oman`, table generated from the product data (34 reagents), 5 visible FAQs, linked from all lab products, location pages, Oman/ME pages; e2e spec. Request indexing after Publish |
 | P2.2 | Fertilizers (urea, KCl, DAP, NPK, gypsum) | 39 clicks; urea 25 clicks @5.8 | none — packs were in `agro.json` (origin and minimum order would still improve it) | **built 2026-10-16** on Develop: `/chemical-supplier/fertilizers-oman`, data-driven table + fertigation compatibility table, 5 FAQs, linked from all agro products and location pages; e2e spec. Request indexing after Publish |
 | P2.3 | Lubricants distributor (rebuild the category page) | category 65 clicks + brand pages 29 | which brands are authorised, grade list, pack sizes | open |
-| P2.4 | PAC | leads ask; Bing #5 | liquid/powder grades, basicity, packs | open |
-| P2.5 | Sodium hypochlorite | Bing #3; 5 pages consolidated | strengths, packs | open |
+| P2.4 | PAC | weak on evidence: PAC queries 9 impr / 90d, the PAC blog 73 impr / 2 clicks, product pages ~32 impr | none — from data | open, **deprioritised** below oilfield (2026-10-16) |
+| P2.5 | Sodium hypochlorite | 272 impr / 7 clicks over 6 grade pages; 5 CRM enquiries | none — from data | **built 2026-10-16** on Develop: `/chemical-supplier/sodium-hypochlorite-oman`, grade table from 4 JSON files, storage/safety, 5 FAQs; each grade keeps its own page and links here. **Flag for the user:** the food-grade page's spec says "EPA registered sanitizer" and the municipal page says "on-site generation available" — confirm or remove |
 | P2.6 | Oilfield chemicals | 41 pages, 1,335 impr | top 10 SKUs by sales | open |
 | P2.0 | Price band on the 3 live hubs (B1) | PAA on every SERP; uvwater ranks on price | **the bands** | waiting on user |
 
@@ -100,3 +100,4 @@ Run `monitoring-search-visibility` (full) plus the product panel (12 products ×
 - 2026-10-16 evening: Phase 3 started — 8 fertilizer pages deepened, thin 45 → 37. Publish still pending; indexing resumes 10-17.
 - 2026-10-16 (session 5): P2.1 lab chemicals hub built from our own data (no user input needed after all). Phase 3: cooling-water and RO pages are 17 proprietary formulations without CAS — need TDS from the user, like tank cleaners. Develop now ~23 commits ahead of main.
 - 2026-10-16 (session 6): P2.2 fertilizer hub built from agro data. Next hubs: P2.3 lubricants needs the user (which brands are authorised — the site claims Shell/Mobil/Castrol/GP); P2.4 PAC and P2.5 hypochlorite can be built from data.
+- 2026-10-16 (session 7): P2.5 hypochlorite hub built (hypochlorite evidence > PAC). Develop ~26 commits ahead of main.
