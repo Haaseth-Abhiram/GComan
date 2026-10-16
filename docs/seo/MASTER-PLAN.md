@@ -4,7 +4,7 @@
 
 **To resume:** say **"continue the Number One plan"** (or run `/number-one-plan`). Claude reads this file, checks the live state of the Next-up item, does it, runs the gates, commits to Develop, updates this table, and reports.
 
-**Last updated:** 2026-10-16 (session 5). **Next up: P0.1** (user — still not published). Then P0.3 indexing from 10-17 (after Publish the five new hubs go first: lab, fertilizers, hypochlorite, oilfield, PAC). Phase 2 is complete except P2.3 lubricants (needs the authorised-brand list). Then Phase 3 (needs TDS for proprietary ranges) and Phase 6 measurement.
+**Last updated:** 2026-10-16 (session 6). **Next up: P0.3** — request Google indexing for the five new hubs (lab, fertilizers, hypochlorite, oilfield, PAC), then the queue. Blocked only on the Chrome extension's permission for search.google.com. Then re-measure nitric acid around 2026-10-20. Phase 2 is complete except P2.3 lubricants (needs the authorised-brand list). Then Phase 3 (needs TDS for proprietary ranges) and Phase 6 measurement.
 
 ## Rules that apply to every item
 
@@ -18,8 +18,8 @@
 
 | # | Item | Owner | Status | Verify by |
 |---|---|---|---|---|
-| P0.1 | Merge Develop → main, click Publish in Lovable, confirm the new `x-deployment-id` | **user** (or authorise Claude) | **open — pre-publish check passed 2026-10-16:** full local `npm run build` of Develop (exit 0, 635 prerendered pages = 634 sitemap + /thank-you, `verify:prerender-titles` 0 failures, all 5 new hubs + nitric GCC title + prerender-snapshot root present, canonicalised variants not prerendered). Production deploy `psr2.3e4b3c2a…1792735460` still serves the old nitric title (2026-10-16). Lovable's 11 bot commits on main (2026-10-12) merged into Develop cleanly, so Develop is now a pure fast-forward of main | `curl -sI https://gcoman.com/ \| grep x-deployment-id` changes |
-| P0.2 | `npm run submit:indexnow` after the Publish | Claude | open (blocked by P0.1) | HTTP 200 in the script output |
+| P0.1 | Merge Develop → main, click Publish in Lovable, confirm the new `x-deployment-id` | Claude (user authorised in-session 2026-10-16) | **done 2026-10-16:** main fast-forwarded 73cd306 → cab895a; Lovable Publish; deploy `psr2.3e4b3c2a…` → `psr2.42699f12…`. Verified live: nitric GCC title, all 5 new hubs with own title + self canonical + FAQPage, consolidated EDTA primary | `curl -sI https://gcoman.com/ \| grep x-deployment-id` changes |
+| P0.2 | `npm run submit:indexnow` after the Publish | Claude | **done 2026-10-16:** `--all`, 634 URLs, HTTP 200 (every page changed: prerender-snapshot fallback) | HTTP 200 in the script output |
 | P0.3 | Request indexing, ~9 URLs/day, in this order: `/products/ro-chemicals/membrane-antiscalant-ro`, `/products/additives`, `/products/oilfield/activated-carbon`, `/products/oilfield/soda-ash-light`, `/products/swimming-pool/chlorine-powder-pool`, `/products/oilfield/calcium-bromide`, `/products/oilfield/descalant`, `/products/ethanolamines/tea-triethanolamine`, `/products/cooling-water/biological-guard-antifouling`, then the 3 lab pages, 6 `/chemicals/*`, 5 blogs from the GSC "Crawled – currently not indexed" list | Claude | **in progress** — done 2026-10-13: nitric hub, HCl hub, `/chemical-suppliers-oman`, TEG, PAC, `/products/water-treatment`, `/products/inorganic`, `/products/soap-detergent`, `/products/oilfield/meg`. Done 2026-10-16: membrane-antiscalant-ro, `/products/additives`, chlorine-powder-pool, calcium-bromide, descalant, tea-triethanolamine, biological-guard-antifouling (+ soda-ash-light and activated-carbon, already indexed). **Left:** the 3 lab pages, 6 `/chemicals/*`, 5 blogs | each shows "Indexing requested" |
 | P0.4 | Re-inspect the four Soft-404 URLs; Pages → Soft 404 count | Claude | **done 2026-10-16** — nitric hub, HCl hub, `/chemical-suppliers-oman`: "URL is on Google"; TEG indexed with issues. Soft 404 19 → **15**; indexed 487 | "URL is on Google" |
 
@@ -104,3 +104,5 @@ Run `monitoring-search-visibility` (full) plus the product panel (12 products ×
 - 2026-10-16 (session 8): P2.6 oilfield hub built. Four new hubs now wait on the Publish. Fixed a wrong link (butyl glycol → butylene glycol guide).
 - 2026-10-16 (session 9): P2.4 PAC hub built. Phase 2: 5 of 6 hubs done; only lubricants (user input) left. Develop 30 commits ahead of main.
 - 2026-10-16 (session 10): pre-publish full build of Develop passed (635 pages, 0 title failures). Everything Claude can do without the Publish or user input is done.
+
+- 2026-10-16 (session 6): P0.1 Publish done by Claude on the user's in-session instruction (deploy 42699f12, 6 hubs verified live). P0.2 IndexNow 634 URLs HTTP 200. P0.3 blocked: the Chrome extension denied actions on search.google.com. Edge functions (submit-contact country) still need a Lovable-side deploy.
