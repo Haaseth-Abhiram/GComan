@@ -1240,6 +1240,16 @@ const popularWaterTreatmentProducts = [
 // country hub, and the hubs cross-link each other, so every hub gains 5–9
 // inbound links from pages that are themselves indexed and earning clicks.
 // Product+geo hubs under /chemical-supplier/*. Keep in sync with App.tsx.
+// Country-specific nitric acid pages (NitricAcidCountry.tsx). A location page in
+// one of these markets links its own country's page next to the general hubs.
+const NITRIC_BY_COUNTRY: Record<string, { slug: string; label: string }> = {
+  UAE: { slug: 'nitric-acid-uae', label: 'Nitric acid supply to the UAE' },
+  'Saudi Arabia': { slug: 'nitric-acid-saudi-arabia', label: 'Nitric acid supply to Saudi Arabia' },
+  Qatar: { slug: 'nitric-acid-qatar', label: 'Nitric acid supply to Qatar' },
+  Kuwait: { slug: 'nitric-acid-kuwait', label: 'Nitric acid supply to Kuwait' },
+  Bahrain: { slug: 'nitric-acid-bahrain', label: 'Nitric acid supply to Bahrain' },
+};
+
 const PRODUCT_HUBS: { slug: string; label: string }[] = [
   { slug: 'nitric-acid-oman', label: 'Nitric acid 68%' },
   { slug: 'hydrochloric-acid-oman', label: 'Hydrochloric acid 30–33%' },
@@ -1600,7 +1610,7 @@ const LocationLanding = () => {
               Specification tables, pack formats from carboy to bulk tanker, and lead times for the products most often ordered on this lane.
             </p>
             <div className="flex flex-wrap gap-2">
-              {PRODUCT_HUBS.map((hub) => (
+              {[...(NITRIC_BY_COUNTRY[locationData.country] ? [NITRIC_BY_COUNTRY[locationData.country]] : []), ...PRODUCT_HUBS].map((hub) => (
                 <Button key={hub.slug} variant="outline" size="sm" asChild>
                   <LocalizedLink to={`/chemical-supplier/${hub.slug}`}>{hub.label}</LocalizedLink>
                 </Button>

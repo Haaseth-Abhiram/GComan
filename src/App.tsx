@@ -105,6 +105,7 @@ const ChemicalSuppliersOman = lazyRetry(() => import("./pages/ChemicalSuppliersO
 const ChemicalSuppliersMiddleEast = lazyRetry(() => import("./pages/ChemicalSuppliersMiddleEast"));
 const CausticSodaOman = lazyRetry(() => import("./pages/CausticSodaOman"));
 const NitricAcidOman = lazyRetry(() => import("./pages/NitricAcidOman"));
+const NitricAcidCountry = lazyRetry(() => import("./pages/NitricAcidCountry"));
 const LaboratoryChemicalsOman = lazyRetry(() => import("./pages/LaboratoryChemicalsOman"));
 const FertilizersOman = lazyRetry(() => import("./pages/FertilizersOman"));
 const SodiumHypochloriteOman = lazyRetry(() => import("./pages/SodiumHypochloriteOman"));
@@ -254,6 +255,11 @@ const App = () => (
                 <Route path="/chemical-suppliers-middle-east" element={<ChemicalSuppliersMiddleEast />} />
                 <Route path="/chemical-supplier/caustic-soda-oman" element={<CausticSodaOman />} />
                 <Route path="/chemical-supplier/nitric-acid-oman" element={<NitricAcidOman />} />
+                <Route path="/chemical-supplier/nitric-acid-uae" element={<NitricAcidCountry country="uae" />} />
+                <Route path="/chemical-supplier/nitric-acid-saudi-arabia" element={<NitricAcidCountry country="saudi-arabia" />} />
+                <Route path="/chemical-supplier/nitric-acid-qatar" element={<NitricAcidCountry country="qatar" />} />
+                <Route path="/chemical-supplier/nitric-acid-kuwait" element={<NitricAcidCountry country="kuwait" />} />
+                <Route path="/chemical-supplier/nitric-acid-bahrain" element={<NitricAcidCountry country="bahrain" />} />
                 <Route path="/chemical-supplier/laboratory-chemicals-oman" element={<LaboratoryChemicalsOman />} />
                 <Route path="/chemical-supplier/fertilizers-oman" element={<FertilizersOman />} />
                 <Route path="/chemical-supplier/sodium-hypochlorite-oman" element={<SodiumHypochloriteOman />} />
@@ -313,6 +319,11 @@ const App = () => (
                   <Route path="chemical-suppliers-middle-east" element={<ChemicalSuppliersMiddleEast />} />
                   <Route path="chemical-supplier/caustic-soda-oman" element={<CausticSodaOman />} />
                   <Route path="chemical-supplier/nitric-acid-oman" element={<NitricAcidOman />} />
+                  <Route path="chemical-supplier/nitric-acid-uae" element={<NitricAcidCountry country="uae" />} />
+                  <Route path="chemical-supplier/nitric-acid-saudi-arabia" element={<NitricAcidCountry country="saudi-arabia" />} />
+                  <Route path="chemical-supplier/nitric-acid-qatar" element={<NitricAcidCountry country="qatar" />} />
+                  <Route path="chemical-supplier/nitric-acid-kuwait" element={<NitricAcidCountry country="kuwait" />} />
+                  <Route path="chemical-supplier/nitric-acid-bahrain" element={<NitricAcidCountry country="bahrain" />} />
                   <Route path="chemical-supplier/laboratory-chemicals-oman" element={<LaboratoryChemicalsOman />} />
                   <Route path="chemical-supplier/fertilizers-oman" element={<FertilizersOman />} />
                   <Route path="chemical-supplier/sodium-hypochlorite-oman" element={<SodiumHypochloriteOman />} />

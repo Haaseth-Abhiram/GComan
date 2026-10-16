@@ -137,13 +137,13 @@ const breadcrumbItems = [
 // Lead times mirror the figures already published on the /chemicals/<city>
 // location pages and the nitric-acid product description, kept consistent
 // site-wide so a buyer never sees two different promises.
-const gccDelivery = [
+const gccDelivery: { country: string; slug?: string; leadTime: string; notes: string }[] = [
   { country: 'Oman', leadTime: 'Same-day (Muscat) / next-day (Sohar)', notes: 'Home market — Ghala stock, no export documentation needed' },
-  { country: 'UAE', leadTime: '2–5 business days', notes: 'Dubai, Abu Dhabi, Sharjah — Certificate of Origin + English/Arabic SDS' },
-  { country: 'Saudi Arabia', leadTime: '4–7 business days', notes: 'Dammam, Jeddah, Riyadh — SASO documentation support' },
-  { country: 'Bahrain', leadTime: '3–5 business days', notes: 'Manama — GCC preferential Certificate of Origin available' },
-  { country: 'Qatar', leadTime: '3–5 business days', notes: 'Doha, Mesaieed — clearance documentation provided' },
-  { country: 'Kuwait', leadTime: '4–6 business days', notes: 'Full customs & Certificate of Origin documentation' },
+  { country: 'UAE', slug: 'nitric-acid-uae', leadTime: '2–5 business days', notes: 'Dubai, Abu Dhabi, Sharjah — Certificate of Origin + English/Arabic SDS' },
+  { country: 'Saudi Arabia', slug: 'nitric-acid-saudi-arabia', leadTime: '4–7 business days', notes: 'Dammam, Jeddah, Riyadh — SASO documentation support' },
+  { country: 'Bahrain', slug: 'nitric-acid-bahrain', leadTime: '3–5 business days', notes: 'Manama — GCC preferential Certificate of Origin available' },
+  { country: 'Qatar', slug: 'nitric-acid-qatar', leadTime: '3–5 business days', notes: 'Doha, Mesaieed — clearance documentation provided' },
+  { country: 'Kuwait', slug: 'nitric-acid-kuwait', leadTime: '4–6 business days', notes: 'Full customs & Certificate of Origin documentation' },
 ];
 
 const NitricAcidOman = () => {
@@ -213,7 +213,13 @@ const NitricAcidOman = () => {
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {gccDelivery.map((d, i) => (
                   <Card key={i} className="p-4 border-border">
-                    <p className="font-semibold text-foreground mb-1">{d.country}</p>
+                    <p className="font-semibold text-foreground mb-1">
+                      {d.slug ? (
+                        <Link to={`/chemical-supplier/${d.slug}`} className="text-primary hover:underline">
+                          Nitric acid supplier {d.country}
+                        </Link>
+                      ) : d.country}
+                    </p>
                     <p className="text-sm text-primary font-medium mb-2">{d.leadTime}</p>
                     <p className="text-xs text-muted-foreground leading-relaxed">{d.notes}</p>
                   </Card>

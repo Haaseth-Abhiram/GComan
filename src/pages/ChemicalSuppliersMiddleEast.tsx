@@ -412,6 +412,21 @@ const ChemicalSuppliersMiddleEast = () => {
                   <Link to="/chemical-supplier/nitric-acid-oman">Nitric acid 68% — GCC supply guide</Link>
                 </Button>
                 <Button variant="outline" size="sm" asChild>
+                  <Link to="/chemical-supplier/nitric-acid-uae">Nitric acid — UAE</Link>
+                </Button>
+                <Button variant="outline" size="sm" asChild>
+                  <Link to="/chemical-supplier/nitric-acid-saudi-arabia">Nitric acid — Saudi Arabia</Link>
+                </Button>
+                <Button variant="outline" size="sm" asChild>
+                  <Link to="/chemical-supplier/nitric-acid-qatar">Nitric acid — Qatar</Link>
+                </Button>
+                <Button variant="outline" size="sm" asChild>
+                  <Link to="/chemical-supplier/nitric-acid-kuwait">Nitric acid — Kuwait</Link>
+                </Button>
+                <Button variant="outline" size="sm" asChild>
+                  <Link to="/chemical-supplier/nitric-acid-bahrain">Nitric acid — Bahrain</Link>
+                </Button>
+                <Button variant="outline" size="sm" asChild>
                   <Link to="/chemical-supplier/hydrochloric-acid-oman">Hydrochloric acid 30–33% — GCC supply guide</Link>
                 </Button>
                 <Button variant="outline" size="sm" asChild>
