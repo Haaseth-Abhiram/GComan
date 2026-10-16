@@ -4,7 +4,7 @@
 
 **To resume:** say **"continue the Number One plan"** (or run `/number-one-plan`). Claude reads this file, checks the live state of the Next-up item, does it, runs the gates, commits to Develop, updates this table, and reports.
 
-**Last updated:** 2026-10-16 (session 4). **Next up: P0.1** (user — still not published) then **P0.3** day 3 (Claude).
+**Last updated:** 2026-10-16 (session 5). **Next up: P0.1** (user — still not published), then P0.3 indexing (Claude, from 10-17) and P2.2 fertilizer hub.
 
 ## Rules that apply to every item
 
@@ -46,7 +46,7 @@ Each hub: `/chemical-supplier/<slug>`, spec table, grades, pack formats, GCC lea
 
 | # | Hub | Why (evidence) | Data needed from the user | Status |
 |---|---|---|---|---|
-| P2.1 | Laboratory chemicals | 2,123 impr, category rank #2 | which grades (AR/ACS/HPLC) and pack sizes are stocked | open |
+| P2.1 | Laboratory chemicals | 2,123 impr, category rank #2 | none — grades and packs were already in `lab-chemicals.json` | **built 2026-10-16** on Develop: `/chemical-supplier/laboratory-chemicals-oman`, table generated from the product data (34 reagents), 5 visible FAQs, linked from all lab products, location pages, Oman/ME pages; e2e spec. Request indexing after Publish |
 | P2.2 | Fertilizers (urea, KCl, DAP, NPK, gypsum) | 39 clicks; urea 25 clicks @5.8 | bag sizes, origin, min order | open |
 | P2.3 | Lubricants distributor (rebuild the category page) | category 65 clicks + brand pages 29 | which brands are authorised, grade list, pack sizes | open |
 | P2.4 | PAC | leads ask; Bing #5 | liquid/powder grades, basicity, packs | open |
@@ -98,3 +98,4 @@ Run `monitoring-search-visibility` (full) plus the product panel (12 products ×
 - 2026-10-16 pm: nitric acid measured on every surface (ledger). Google weak (hub indexed but not top 40 for the head term; #10 for "nitric acid sohar"); Bing #2 / #1 for price; ChatGPT #4; Perplexity #1; Google AI Overview and AI Mode do not mention us. Biggest lever unchanged: Publish (GCC title + hub links from all location pages, incl. the Saudi page ChatGPT hedges on), then citations.
 - 2026-10-16 late: Publish still pending. Found Monday's consolidation primaries were the weakest pages → reverted hypochlorite/citric/caustic-food, re-pointed H2O2 to 50%, added the ≥3× evidence rule; consolidated TEA, ferric chloride, alum, sodium thiosulphate, lye. Sitemap 629. Indexing quota for 10-16 already used.
 - 2026-10-16 evening: Phase 3 started — 8 fertilizer pages deepened, thin 45 → 37. Publish still pending; indexing resumes 10-17.
+- 2026-10-16 (session 5): P2.1 lab chemicals hub built from our own data (no user input needed after all). Phase 3: cooling-water and RO pages are 17 proprietary formulations without CAS — need TDS from the user, like tank cleaners. Develop now ~23 commits ahead of main.
