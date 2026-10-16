@@ -4,7 +4,7 @@
 
 **To resume:** say **"continue the Number One plan"** (or run `/number-one-plan`). Claude reads this file, checks the live state of the Next-up item, does it, runs the gates, commits to Develop, updates this table, and reports.
 
-**Last updated:** 2026-10-13 (session 3 of the plan). **Next up: P0.1** (user) then **P0.3** (Claude).
+**Last updated:** 2026-10-16 (session 4). **Next up: P0.1** (user — still not published) then **P0.3** day 3 (Claude).
 
 ## Rules that apply to every item
 
@@ -18,10 +18,10 @@
 
 | # | Item | Owner | Status | Verify by |
 |---|---|---|---|---|
-| P0.1 | Merge Develop → main, click Publish in Lovable, confirm the new `x-deployment-id` | **user** (or authorise Claude) | **open** — Develop is 8 commits ahead (Soft-404 fix, GCC hub title, hub links, 4 consolidations, contact-form country) | `curl -sI https://gcoman.com/ \| grep x-deployment-id` changes |
+| P0.1 | Merge Develop → main, click Publish in Lovable, confirm the new `x-deployment-id` | **user** (or authorise Claude) | **open** — production deploy `psr2.3e4b3c2a…1792735460` still serves the old nitric title (2026-10-16). Lovable's 11 bot commits on main (2026-10-12) merged into Develop cleanly, so Develop is now a pure fast-forward of main | `curl -sI https://gcoman.com/ \| grep x-deployment-id` changes |
 | P0.2 | `npm run submit:indexnow` after the Publish | Claude | open (blocked by P0.1) | HTTP 200 in the script output |
-| P0.3 | Request indexing, ~9 URLs/day, in this order: `/products/ro-chemicals/membrane-antiscalant-ro`, `/products/additives`, `/products/oilfield/activated-carbon`, `/products/oilfield/soda-ash-light`, `/products/swimming-pool/chlorine-powder-pool`, `/products/oilfield/calcium-bromide`, `/products/oilfield/descalant`, `/products/ethanolamines/tea-triethanolamine`, `/products/cooling-water/biological-guard-antifouling`, then the 3 lab pages, 6 `/chemicals/*`, 5 blogs from the GSC "Crawled – currently not indexed" list | Claude | **in progress** — done 2026-10-13: nitric hub, HCl hub, `/chemical-suppliers-oman`, TEG, PAC, `/products/water-treatment`, `/products/inorganic`, `/products/soap-detergent`, `/products/oilfield/meg` | each shows "Indexing requested" |
-| P0.4 | Re-inspect the four Soft-404 URLs; Pages → Soft 404 count (19 today) | Claude | due **2026-10-20** | "URL is on Google" |
+| P0.3 | Request indexing, ~9 URLs/day, in this order: `/products/ro-chemicals/membrane-antiscalant-ro`, `/products/additives`, `/products/oilfield/activated-carbon`, `/products/oilfield/soda-ash-light`, `/products/swimming-pool/chlorine-powder-pool`, `/products/oilfield/calcium-bromide`, `/products/oilfield/descalant`, `/products/ethanolamines/tea-triethanolamine`, `/products/cooling-water/biological-guard-antifouling`, then the 3 lab pages, 6 `/chemicals/*`, 5 blogs from the GSC "Crawled – currently not indexed" list | Claude | **in progress** — done 2026-10-13: nitric hub, HCl hub, `/chemical-suppliers-oman`, TEG, PAC, `/products/water-treatment`, `/products/inorganic`, `/products/soap-detergent`, `/products/oilfield/meg`. Done 2026-10-16: membrane-antiscalant-ro, `/products/additives`, chlorine-powder-pool, calcium-bromide, descalant, tea-triethanolamine, biological-guard-antifouling (+ soda-ash-light and activated-carbon, already indexed). **Left:** the 3 lab pages, 6 `/chemicals/*`, 5 blogs | each shows "Indexing requested" |
+| P0.4 | Re-inspect the four Soft-404 URLs; Pages → Soft 404 count | Claude | **done 2026-10-16** — nitric hub, HCl hub, `/chemical-suppliers-oman`: "URL is on Google"; TEG indexed with issues. Soft 404 19 → **15**; indexed 487 | "URL is on Google" |
 
 ## Phase 1 — one URL per product (consolidation)
 
@@ -29,14 +29,14 @@ Mechanism: `details.canonicalOverride` on the variant pointing at the primary; t
 
 | # | Chemical (pages) | Proposed primary | Status |
 |---|---|---|---|
-| P1.1 | EDTA (4) | water-treatment/edta-powder-water | open |
+| P1.1 | EDTA (4) | soap-detergent/edta-powder-soap (most impressions) | **done 2026-10-16** (liquid, oilfield powder, water-softening → primary; lab disodium EDTA kept) |
 | P1.2 | Potassium chloride (3) | agro/potassium-chloride-fertilizer (358 impr) — **user confirms** (lab + oilfield are real SKUs) | open |
 | P1.3 | Ethanol (3) | food-beverage/ethanol-70 (171 impr) vs alcohols/ethanol-industrial — **user confirms** | open |
-| P1.4 | Calcium carbonate (3) | calcium-carbonate/calcium-carbonate | open |
-| P1.5 | Corrosion inhibitor (3) + typo category `conrosion-inhibitor` | corrosion-inhibitor/corrosion-inhibitor-general; fix the category slug + redirect | open |
-| P1.6 | Calcium chloride (3) | oilfield/calcium-chloride-oil (203 impr) | open |
-| P1.7 | Chlorine pool forms (3) | swimming-pool/chlorine-tablet-pool (161 impr) | open |
-| P1.8 | Methanol, isopropanol, perchloroethylene, biocide, MDEA, MEG, sodium bicarbonate, and the remaining 2-page splits (22 chemicals) | the page with impressions | open |
+| P1.4 | Calcium carbonate (3) | — | **closed, not consolidating**: water-treatment page (61 impr) beats the base page (23), is a legacy-redirect target and the e2e fixture; food grade is a separate buyer |
+| P1.5 | Corrosion inhibitor (3) + typo category `conrosion-inhibitor` | — | typo: **not in the code** — only an old URL in GSC (1 impression); nothing to fix. Generic inhibitors: open, verify they are the same formulation first |
+| P1.6 | Calcium chloride (3) | oilfield/calcium-chloride-oil (206 impr) | **done 2026-10-16** (water-treatment → primary; lab kept) |
+| P1.7 | Chlorine forms | swimming-pool/chlorine-tablet-pool (162 impr) | **done 2026-10-16** for the true duplicate (water-treatment/chlorine-tablets, same TCCA); tablet / liquid / powder are different chemicals and stay |
+| P1.8 | Remaining splits | the page with impressions | open. Rule learned 2026-10-16: lab-grade pages are separate SKUs and stay; MEG and MDEA are **user decisions** (HANDOFF §8); methanol/IPA are industrial vs lab → stay. Still to check: perchloroethylene, biocide, sodium bicarbonate, corrosion-inhibitor generics (each is a distinct formulation — verify CAS before merging) |
 
 ## Phase 2 — hubs where demand is proven (one per week, hand-written on the nitric model)
 
@@ -80,8 +80,8 @@ Run `monitoring-search-visibility` (full) plus the product panel (12 products ×
 
 | Signal | 2026-10-13 | 2026-10-27 | 2026-12-01 |
 |---|---|---|---|
-| Soft 404 count | 19 | ≤ 10 | ≤ 5 |
-| Hubs indexed | 1 of 3 | 3 of 3 | all |
+| Soft 404 count | 19 (10-16: **15**) | ≤ 10 | ≤ 5 |
+| Hubs indexed | 1 of 3 (10-16: **3 of 3**) | 3 of 3 | all |
 | "nitric acid supplier oman", Google `gl=om` | absent | top 10 | top 5 |
 | Product-page clicks, 90d | ~230 | — | 400+ |
 | Lab / fertilizer / lubricants clicks | 20 / 39 / 97 | — | +50 % |
@@ -92,3 +92,4 @@ Run `monitoring-search-visibility` (full) plus the product panel (12 products ×
 ## Session log
 
 - 2026-10-13 (sessions 1–3): diagnosis (nitric, product-level, family-by-family), Soft-404 fix, hub GCC title, hub links, 4 consolidations, contact-form country, 9 indexing requests, reports published. Publish refused by policy → P0.1 with the user.
+- 2026-10-16 (session 4): Publish still not done (P0.1). Merged Lovable's main commits into Develop (clean). P0.4 done — all three hubs and the Oman page indexed, Soft 404 19 → 15. P0.3: 7 new indexing requests. P1: EDTA, calcium chloride, TCCA consolidated (sitemap 625); calcium carbonate tried and reverted on evidence. Fixed a CI blind spot: the sitemap gate now fails if an indexable product is missing.
