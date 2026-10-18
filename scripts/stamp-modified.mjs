@@ -57,6 +57,30 @@ export function stampModified(html, date) {
   return out;
 }
 
+/**
+ * Keep only the last FAQPage JSON-LD block when a page carries several.
+ *
+ * On /ar routes the page can render once in English before i18next flips to
+ * Arabic; occasionally the English FAQPage Helmet block survives next to the
+ * Arabic one (seen on /ar/chemicals/abu-dhabi in the 2026-10-18 full build,
+ * 1 of 640 pages, not reproducible). Two FAQPage blocks — one describing
+ * questions that are not on the page — is the schema/visible mismatch Google
+ * treats as spam. The last block is the final committed render, so it wins.
+ */
+export function dedupeFaqPage(html) {
+  const faq = [];
+  for (const m of html.matchAll(LD_JSON)) {
+    try {
+      if (JSON.parse(m[2])?.['@type'] === 'FAQPage') faq.push(m[0]);
+    } catch {
+      /* not ours to judge */
+    }
+  }
+  let out = html;
+  for (const block of faq.slice(0, -1)) out = out.replace(block, '');
+  return out;
+}
+
 export function loadLastmod(sitemapPath) {
   return lastmodByRoute(fs.readFileSync(sitemapPath, 'utf-8'));
 }
@@ -80,5 +104,10 @@ if (process.argv.includes('--self-test')) {
   const blog = '<head><script type="application/ld+json">{"@type":"BlogPosting","dateModified":"2026-03-15"}</script><script type="application/ld+json">{"@type":"WebPage"}</script></head>';
   assert.equal(stampModified(blog, '2026-10-16'), blog, 'existing dates win');
   assert.equal(stampModified(page, undefined), page);
+  const twoFaq = '<head><script type="application/ld+json">{"@type":"FAQPage","n":"en"}</script><script type="application/ld+json">{"@type":"FAQPage","n":"ar"}</script></head>';
+  const one = dedupeFaqPage(twoFaq);
+  assert.equal((one.match(/FAQPage/g) || []).length, 1);
+  assert.match(one, /"n":"ar"/);
+  assert.equal(dedupeFaqPage(page), page, 'single FAQPage untouched');
   console.log('stamp-modified self-test: ok');
 }

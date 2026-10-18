@@ -8,7 +8,7 @@ import { imagetools } from "vite-imagetools";
 import { ViteWebfontDownload } from "vite-plugin-webfont-dl";
 import prerender from "@prerenderer/rollup-plugin";
 import { mcpPlugin } from "@lovable.dev/mcp-js/stacks/supabase/vite";
-import { loadLastmod, stampModified } from "./scripts/stamp-modified.mjs";
+import { dedupeFaqPage, loadLastmod, stampModified } from "./scripts/stamp-modified.mjs";
 
 /**
  * Routes that must be prerendered *precisely because* they are noindex.
@@ -132,10 +132,14 @@ export default defineConfig(({ mode }) => ({
       // Stamp each page's git-derived sitemap <lastmod> into its static HTML
       // as WebPage `dateModified` + `article:modified_time` — a freshness
       // signal for the AI crawlers that read only this HTML. See
-      // scripts/stamp-modified.mjs.
+      // scripts/stamp-modified.mjs. Also drops a stale duplicate FAQPage
+      // block left by the en→ar language flip (dedupeFaqPage).
       postProcess(renderedRoute: { originalRoute: string; html: string }) {
         const lastmod = loadLastmodOnce();
-        renderedRoute.html = stampModified(renderedRoute.html, lastmod.get(renderedRoute.originalRoute));
+        renderedRoute.html = stampModified(
+          dedupeFaqPage(renderedRoute.html),
+          lastmod.get(renderedRoute.originalRoute)
+        );
       },
     }) as unknown as PluginOption),
   ].filter(Boolean),
