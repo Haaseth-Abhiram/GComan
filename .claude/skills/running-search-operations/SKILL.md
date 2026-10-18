@@ -139,4 +139,5 @@ Then add a dated note to `docs/seo/visibility-ledger.md`: what moved compared wi
 | Counting the other company (Global Chemicals **& Maintenance Systems**) as us | Only the `gcoman.com` hostname counts |
 | Treating "absent from the top 20 in Egypt" as a failure | Iraq, Jordan and Egypt are export-only lanes. Record them, but they are not targets |
 | A parser picking up `<path>` as `<p>` (it happened on 2026-10-18) | Match `<p(\s\|>)`. Sanity-check any surprising number against the rendered page before reporting it |
+| Calling a drop by comparing a signed-in, personalised reading with an unpersonalised fetch (10-13 "#1 Salalah" vs 10-18 "#4") | Compare only cells read with the same method. When the user asks "are we going down?", build the same-cell table first (`docs/seo/decline-investigation-2026-10-18.md` is the template), then read GSC 28d vs previous |
 | Reporting a fix as live after a Publish when it was an edge function | Check Lovable → Cloud → Edge functions → "Last updated" |
