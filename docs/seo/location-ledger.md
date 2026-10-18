@@ -83,3 +83,10 @@ Append-only. One row per check per run, written by the `running-search-operation
 | 2026-10-18 | maps | chemical supplier | /chemicals/rustaq | — | | X PERT INDUSTRIAL MATERIALS TRDG LLC | rustaq viewport, signed in |
 | 2026-10-18 | maps | chemical supplier | /chemicals/salalah | — | | AL FARZAH TRAD. CO. (L.L.C.) | salalah viewport, signed in |
 | 2026-10-18 | maps | chemical supplier | /chemicals/duqm | — | | Sebacic Oman | duqm viewport, signed in |
+| 2026-10-18 | google | chemical suppliers oman | /chemical-suppliers-oman | 2 | / | omanchem.com | pws=0 gl=om (investigation) |
+| 2026-10-18 | google | chemical suppliers in oman | /chemical-suppliers-oman | 1 | / | gcoman.com | pws=0 gl=om (investigation) |
+| 2026-10-18 | google | chemical company oman | / | 15 | / | omanchem.com | pws=0 gl=om, page 2 (investigation) |
+| 2026-10-18 | google | oman chemical | / | — | | omanchem.com | pws=0 gl=om (investigation) |
+| 2026-10-18 | google | nitric acid supplier oman | /chemical-supplier/nitric-acid-oman | — | | omanchem.com | pws=0 gl=om (investigation) |
+| 2026-10-18 | google | nitric acid sohar | /chemical-supplier/nitric-acid-oman | — (page 2 n/m) | | omanchem.com | pws=0 gl=om (investigation) |
+| 2026-10-18 | google | nitric acid muscat | /chemical-supplier/nitric-acid-oman | 9 | | uvwater.biz | pws=0 gl=om (investigation) |
