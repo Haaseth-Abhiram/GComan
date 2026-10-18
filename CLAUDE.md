@@ -24,15 +24,17 @@ npm run verify:sitemap-health    # CI gate: sitemap.xml is in sync with what <SE
 npm run verify:ar-meta           # CI gate: ar-meta.json matches the full AR translation files
 npm run sync:sitemap-lastmod     # derive each English <lastmod> from git history
 npm run submit:indexnow          # ping IndexNow (Bing/Yandex) with changed URLs
+npm run verify:llms-txt          # CI gate: llms.txt lists every hub + location, no dead links, SKU count right
+npm run verify:live-pages        # production: every location/hub page (+ /ar) as GPTBot sees it — title, canonical, hreflang, visible FAQ, NAP
+npm run panel:locations          # the per-location query panel (Google batches / Bing / Maps) for the Chrome sweep
 
 # Catalogue audits (read dist/ or src/ — see "Scripts in scripts/")
 npm run audit:product-content    # rank product pages by content debt x demand
 npm run audit:internal-links     # link graph in dist/ — run `npm run build` first
 
-# Playwright e2e — 3 modes in playwright.config.ts. Ten spec files in tests/e2e/
-# (loading-flow, legacy-redirects, dosing-calculator, quote-funnel, internal-linking,
-# lazy-arabic-bundle, category-listing, product-seo-surface, caustic-soda-hub,
-# chemistry-hero-budget): targeted coverage of load-bearing flows, not broad assurance.
+# Playwright e2e — 3 modes in playwright.config.ts. Sixteen spec files in tests/e2e/
+# (`ls tests/e2e`; besides the core flows — loading-flow, legacy-redirects, quote-funnel,
+# lazy-arabic-bundle, chemistry-hero-budget — most pin a product/geo hub page): targeted coverage of load-bearing flows, not broad assurance.
 npm run test:e2e          # vite dev server (port 4179, NOT 8080)
 npm run test:e2e:prod     # PROD_BUILD=1 → build:dev + vite preview
 npm run test:e2e:ui       # Playwright UI mode — step through a failing spec
@@ -64,7 +66,7 @@ Use **npm**. `bun.lock` is a leftover from a Lovable trial; canonical lockfile i
 
 ## CI (GitHub Actions)
 
-[.github/workflows/ci.yml](.github/workflows/ci.yml): typecheck + lint + `verify:sitemap-health` + `verify:ar-meta` + `verify:serp-titles` + `build:dev` + Playwright smoke on every push/PR to `Develop`/`main`. It is the **only** quality gate before the Lovable auto-deploy ships to production. Before pushing: `npx tsc -b && npm run lint && npm run verify:sitemap-health && npm run verify:ar-meta && npm run verify:serp-titles && npm run test:e2e`.
+[.github/workflows/ci.yml](.github/workflows/ci.yml): typecheck + lint + `verify:sitemap-health` + `verify:ar-meta` + `verify:serp-titles` + `verify:llms-txt` + `build:dev` + Playwright smoke on every push/PR to `Develop`/`main`. It is the **only** quality gate before the Lovable auto-deploy ships to production. Before pushing: `npx tsc -b && npm run lint && npm run verify:sitemap-health && npm run verify:ar-meta && npm run verify:serp-titles && npm run verify:llms-txt && npm run test:e2e`.
 
 A full-suite e2e run is ~30–50 s. If it reports minutes-long timings or scattered failures, check `uptime` before suspecting the code — load average above ~8 on this 11-core machine starves puppeteer and produces exactly that shape (one run read 60/77 in 1.5 h, then 77/77 in 47 s on an idle machine). Also note `npm run build 2>&1 | tail -1; echo $?` reports the *pipe's* status, not the build's — redirect to a file and check that instead.
 
@@ -169,7 +171,7 @@ Blog articles are inline TypeScript in `src/data/blogArticles.ts` — no CMS. Po
 ## Supabase
 
 - Client: [src/integrations/supabase/](src/integrations/supabase/). Migrations: [supabase/migrations/](supabase/migrations/); one-shot bootstrap `supabase/SUPABASE_DATABASE_SETUP.sql`.
-- Edge functions ([supabase/functions/](supabase/functions/)): `submit-contact` (form → email + Zoho CRM, Turnstile check), `submit-job-application` (resume upload, rate-limited), `subscribe-newsletter` (→ Zoho), `notify-download` (download-gate leads), `ai-search` (LLM product search), `refresh-analytics` (analytics snapshots), `search-console` (admin-only GSC proxy for the dashboard), `check-ar-indexing` (weekly GSC inspection of `/ar/*` sitemap URLs → `ar_index_status`/`ar_index_events` tables), `resync-zoho-leads` (admin-only dry-run/execute backfill for contact submissions whose Zoho push failed — see "Admin dashboard" above), `mcp` (**auto-generated bundle** of `src/lib/mcp/` — see "Public MCP server" above; do not edit directly). Shared: `_shared/zoho-crm.ts` (OAuth/API helpers), `_shared/rate-limit.ts` (DB-backed sliding window).
+- Edge functions ([supabase/functions/](supabase/functions/)): `submit-contact` (form → email + Zoho CRM, Turnstile check), `submit-job-application` (resume upload, rate-limited), `subscribe-newsletter` (→ Zoho), `notify-download` (download-gate leads), `ai-search` (LLM product search), `refresh-analytics` (analytics snapshots), `search-console` (admin-only GSC proxy for the dashboard), `check-ar-indexing` (weekly GSC inspection of `/ar/*` sitemap URLs → `ar_index_status`/`ar_index_events` tables), `resync-zoho-leads` (admin-only dry-run/execute backfill for contact submissions whose Zoho push failed), `mcp` (**auto-generated bundle** of `src/lib/mcp/` — see "Public MCP server" above; do not edit directly). Shared: `_shared/zoho-crm.ts` (OAuth/API helpers), `_shared/rate-limit.ts` (DB-backed sliding window).
 - `submit-contact`/`notify-download`/`subscribe-newsletter` record Zoho push outcome on the row (`zoho_error`/`zoho_synced_at`) instead of silently dropping a failed sync (fixed 2026-09-22) — `resync-zoho-leads` + the admin UI button in `ContactSubmissionsTable.tsx` exist to backfill whatever failed before that fix.
 - Zoho OAuth token refresh: `scripts/zoho-refresh-token.mjs`.
 
@@ -187,14 +189,16 @@ Moved to the **`verifying-seo-pipeline`** skill ([.claude/skills/verifying-seo-p
 
 ## Repo-local Claude skills & workflows
 
-`.claude/skills/` holds 18 skills that load automatically in this directory (16 tracked in git; `auditing-platform-presence` and `verifying-seo-pipeline` were still untracked as of 2026-10-13 — commit them, or they vanish the way the workflow below nearly did). Most are generic engineering workflows (TDD, systematic debugging, writing/executing plans, code review). Four are project-specific and divide the SEO work between them — use the right one instead of improvising:
+`.claude/skills/` holds 20 skills that load automatically in this directory (all tracked in git since 2026-10-18). Most are generic engineering workflows (TDD, systematic debugging, writing/executing plans, code review). Six are project-specific and divide the SEO work between them — use the right one instead of improvising:
 
+- **`running-search-operations`** — the continuous cycle that orchestrates the others: daily (live-page checker → GSC indexing quota → Google location batch), weekly (Bing 41-check panel, Maps, AI engines), monthly, and the post-Publish checklist. Per-location results go to `docs/seo/location-ledger.md`. Agents in `.claude/agents/`: `search-sweeper` (one Chrome engine batch → ledger rows; run one at a time) and `release-verifier` (gates + live checks after a build/Publish; never deploys).
+- **`number-one-plan`** — resumes `docs/seo/MASTER-PLAN.md`, the work queue, one verified item at a time.
 - **`checking-seo-health`** — deep diagnosis inside GSC / GA4 / Lovable / the live site for a periodic or pre/post-deploy check (sitemap submission, crawl/index coverage, Search Console queries, the Arabic-vs-English indexing gap, GA4 swings). Enforces the "four sources, labelled, never blended" rule.
 - **`monitoring-search-visibility`** — the cross-engine scoreboard: is gcoman.com #1 on Google, Maps, AI Overviews/AI Mode, Bing, ChatGPT, Perplexity, Gemini, Copilot for the money queries? Every number read live and appended to `docs/seo/visibility-ledger.md`. Use when the user says a competitor shows above us, or for the weekly check.
 - **`auditing-platform-presence`** — platform-by-platform "is it configured and consistent?" checklist (GBP, GSC, GA4, Bing Webmaster/Places, Wikipedia/Wikidata, social). The website is the source of truth for NAP, hours and coordinates; every platform must match it.
 - **`verifying-seo-pipeline`** — after `npm run build` or a production deploy: the verification commands with expected output, plus the reference for every `scripts/*.mjs` audit/verify tool (what it reads, why it exists).
 
-`.claude/workflows/full-repo-analysis.js` — a saved multi-agent Workflow (12 parallel subsystem deep-reads → adversarial verification of every finding → completeness critic). It is **present on disk but untracked in git** (verified 2026-10-01; an earlier note here wrongly declared it gone). Because nothing in git recovers it, treat it as a local artefact: check it still exists before relying on it, and only run a full-repo audit on explicit user opt-in to multi-agent orchestration.
+`.claude/workflows/full-repo-analysis.js` — a saved multi-agent Workflow (12 parallel subsystem deep-reads → adversarial verification of every finding → completeness critic). Tracked in git since 2026-10-18 (it was untracked and nearly lost before). Still check it exists before relying on it, and only run a full-repo audit on explicit user opt-in to multi-agent orchestration.
 
 ## Reference docs in this repo
 
