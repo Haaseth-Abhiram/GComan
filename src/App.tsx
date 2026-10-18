@@ -10,6 +10,7 @@ import { AuthProvider } from "./contexts/AuthContext";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 import { AdminRoute } from "./components/AdminRoute";
 import CookieConsent from "./components/CookieConsent";
+import RouteChunkBoundary from "./components/RouteChunkBoundary";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { Loading } from "./components/Loading";
 import GoogleAnalytics from "./components/GoogleAnalytics";
@@ -217,6 +218,7 @@ const App = () => (
             {/* data-route-root marks the region the prerenderer output is
                 snapshotted from; display:contents keeps it out of layout. */}
             <div {...{ [ROUTE_ROOT_ATTR]: "" }} style={{ display: "contents" }}>
+            <RouteChunkBoundary>
             <Suspense fallback={<InitialRouteFallback />}>
               <PrerenderSnapshotGuard />
               <Routes>
@@ -340,6 +342,7 @@ const App = () => (
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>
+            </RouteChunkBoundary>
             </div>
           </ErrorBoundary>
         </AuthProvider>
