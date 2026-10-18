@@ -189,3 +189,12 @@ Full report: [`oman-investigation-2026-10-18.md`](./oman-investigation-2026-10-1
 | H6 | Our own URL cannot reach #1 for "chemical suppliers in saudi arabia" from an Oman-only entity | If a Saudi distributor/agent/freight partner exists, their name, city and phone go on the Saudi hub and city pages. **Your call** | you | after Publish |
 | H7 | Saudi 3-week clicks are under the alarm line, but the drop is in un-itemised queries and the Sep 10 titles win the export frame | **Keep the titles.** No retitle | — | weekly |
 | H8 | Bing has us at 3 / 5 / 7 for Jubail / Yanbu / Jeddah; Bing Webmaster still signed out, Bing Places pending | Sign in to Bing Webmaster in the Claude Chrome window; confirm Bing Places is live | you | 2026-11-08 |
+
+**Bing + AI, same evening** — full report: [`bing-ai-audit-2026-10-18.md`](./bing-ai-audit-2026-10-18.md). Bing Webmaster Tools and Bing Places are now signed in (company Google account) in the Claude Chrome window.
+
+| # | Finding | What we do | Owner | Judge it on |
+|---|---|---|---|---|
+| H9 | Bing 3 months: 176 clicks / 2.8K impressions, brand-led; sitemap (657 URLs, 0 errors), IndexNow (646 URLs today) and site scan clean. **1 referring domain** on Bing (tamol.om) | Nothing technical to fix. B3 (listings/links) stands | — | — |
+| H10 | **Copilot cited us 1,300 times in 3 months — 785 of them for "jsrs"**, via the JSRS article. "oman chemical" is the only commercial query cited (14% share) | Leave the JSRS article alone (HANDOFF). Read Bing's Topics Portfolio for opportunity queries on the Sunday run | Claude | Sunday |
+| H11 | Bing Places still **Pending publish** (ETA ≈ 10-23); categories mapped without a "chemical" one | When it publishes, add a chemical supplier/wholesaler category if the picker has it | you (or Claude on a go-ahead) | 2026-10-25 |
+| H12 | Perplexity, ChatGPT and Google AI Mode all answer "best chemical suppliers in Saudi Arabia" with Saudi companies; we're not named. Their sources are ensun and kompass | H5 (ensun) covers it; kompass is paid ($40/yr) | you | listed + 4 weeks |
