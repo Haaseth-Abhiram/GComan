@@ -180,3 +180,12 @@ Full report: [`oman-investigation-2026-10-18.md`](./oman-investigation-2026-10-1
 | H2 | Nizwa, Sur, Barka, Ibri, Seeb, Buraimi: no page, absent on Google, muscatchemical.com #1 — and **zero GSC demand** | No new pages. The Oman page's delivery grid now lists 9 cities with the lead times the site already states (Develop; live on next Publish). **Ibri and Buraimi need your real lead time** | you: 2 lead times | after Publish |
 | H3 | GBP service area already covers all of Oman; **only one category** ("Chemical wholesaler") | Add secondary categories (Edit profile → Business category → Add another category). The permission policy stopped Claude at that step; nothing was saved | you | done + 4 weeks |
 | H4 | yellowpages.om is #3 on both head terms; we are not on it | B3, first in the order: yellowpages.om → lookchem → ensun → cybo → easyoman → recordsmarine | you sign up, Claude fills | listed + 4 weeks |
+
+**KSA, same evening** — full report: [`ksa-investigation-2026-10-18.md`](./ksa-investigation-2026-10-18.md). Page 1 for every Saudi head and city term is Saudi-registered companies plus directories; we're absent on Google except Yanbu #7, and on Bing except Jeddah #7, Jubail #3, Yanbu #5. We are #1 for "chemical exporter from oman to saudi arabia", which has no measurable Saudi demand. 87% of Saudi clicks are in queries GSC doesn't itemise; the itemised ones are "near me" impressions on the city pages at positions 5–9 that don't click. The September fall can't be pinned on the retitle.
+
+| # | Finding | What we do | Owner | Judge it on |
+|---|---|---|---|---|
+| H5 | **ensun.io is #1 on Bing and #2–3 on Google** for the Saudi, Qatar and Kuwait head terms; we're not on it | One free supplier profile covers three countries. You sign up; Claude fills | you + Claude | listed + 4 weeks |
+| H6 | Our own URL cannot reach #1 for "chemical suppliers in saudi arabia" from an Oman-only entity | If a Saudi distributor/agent/freight partner exists, their name, city and phone go on the Saudi hub and city pages. **Your call** | you | after Publish |
+| H7 | Saudi 3-week clicks are under the alarm line, but the drop is in un-itemised queries and the Sep 10 titles win the export frame | **Keep the titles.** No retitle | — | weekly |
+| H8 | Bing has us at 3 / 5 / 7 for Jubail / Yanbu / Jeddah; Bing Webmaster still signed out, Bing Places pending | Sign in to Bing Webmaster in the Claude Chrome window; confirm Bing Places is live | you | 2026-11-08 |
