@@ -61,3 +61,24 @@ Only cells measured **the same way** before and now are compared: Google fetched
 - GSC → Performance → 28 days, compared with the previous period. Read clicks, impressions, average position, and the top queries/pages that lost clicks.
 - Lovable → Analytics → last 7 vs. the previous 7 days: visits and the google.com / chatgpt.com referrers.
 - Bing Webmaster → Search Performance + AI Performance.
+
+## Addendum, 2026-10-18 evening: Search Console read (settles the question)
+
+GSC became reachable after the Publish. Performance, web, **last 28 days (Sep 19 – Oct 16) vs previous 28 (Aug 22 – Sep 18)**:
+
+| Metric | Previous | Last 28 | Move |
+|---|---|---|---|
+| Clicks | 555 | 535 | −20 (−3.6%) |
+| Impressions | 10.7K | 8.87K | −1.8K (−17%) |
+| CTR | 5.2% | 6.0% | up |
+| Average position | 10.3 | 8.4 | better |
+
+**Where the impressions went (by country):** United States 2,280 → 1,080 (−1,200, two thirds of the whole loss; not a market, 13 clicks both periods). Saudi Arabia 819 → 554, clicks 57 → 37. UAE 998 → 929, clicks 50 → 35. **Oman up**: clicks 205 → 218, impressions 2,098 → 2,336. India clicks 95 → 103.
+
+**By page:** homepage flat (clicks 274 → 281, impressions 3,161 → 3,211). Location and hub pages are the loss: clicks 127 → 100, impressions 3,997 → 2,819 (Middle East page 577 → 213, Oman suppliers page clicks 14 → 3, Riyadh 8 → 3, /ar Riyadh 8 → 0, Jeddah 10 → 2, Dammam 21 → 11, Cairo 7 → 2; Kuwait City up 2 → 9). Products: clicks flat (94 → 95), impressions 2,571 → 1,996.
+
+**Timing (weekly, Saturday-start):** whole site clicks 158 / 146 / 133 / 116 / 113 / 125 / **181** (week of Oct 9 is the best week in 90 days). `/chemicals/*` impressions peaked 820 (Aug 28 week) and bottomed 474 (Sep 25 week), now 586. **Saudi Arabia** clicks 16 / 17 / 16 / 14 → 11 / 7 / 11 / 8 from the **week of Sep 18**; UAE noisy and back to 15 clicks the week of Oct 9.
+
+**Most likely cause of the Saudi part:** commit `f6a30e6` (2026-09-10, on main the same day) retitled the GCC city pages into the export frame, e.g. Riyadh "Chemical Supplier Riyadh, Saudi Arabia" → "Chemical Supplier Riyadh | Export from Oman to KSA", Jeddah "… Industrial Chemicals Saudi Arabia" → "… Export from Oman to KSA", Dammam lost "KSA". The Saudi drop starts one recrawl later (week of Sep 18), **before** the spam update began (Sep 24). The lost clicks are mostly anonymised queries; the named ones are "near me" / "chemical shop near me" searches in Saudi cities, which we cannot serve locally. Probable, not proven: the spam update overlaps the later weeks.
+
+**Verdict:** the drop the user saw is real in impressions (−17%) but mostly US noise; clicks −3.6%, concentrated in Saudi "near me" traffic to the Saudi city pages; Oman clicks are up and the latest week is the best in 90 days. **Action: none on the homepage.** Optional, low-risk test: put "Saudi Arabia" back into the Riyadh and Jeddah titles while keeping "from Oman" (≤60 chars), then compare Saudi clicks after 3 weeks. Not done without the user's yes, because the export frame was a deliberate decision that wins the "exporter from Oman to Saudi" queries.
