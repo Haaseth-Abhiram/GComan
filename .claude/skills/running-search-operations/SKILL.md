@@ -24,6 +24,16 @@ One procedure, run on a fixed cadence, that covers **every location page, every 
 2. Read the last 5 rows of `docs/seo/location-ledger.md` and the latest notes in `docs/seo/visibility-ledger.md`.
 3. Read **Next up** in `docs/seo/MASTER-PLAN.md` and the do-NOT-do list in `docs/seo/HANDOFF.md`.
 
+## Who runs what (automation layers)
+
+| Layer | Runs | Covers | Can't do |
+|---|---|---|---|
+| **Cloud routine** `trig_01RBkXsonkWeHj1yjMDb5iKZ` ("gcoman daily search operations"), every day at 09:13 Muscat | Unattended, on the GitHub repo (Develop) | Step 1 machine checks against production; directional WebSearch ranks marked (WS); today's row in `daily-scoreboard.md`; fix PRs to Develop for live-page FAILs | Search Console, Oman-localised Google, Bing rendering, Maps, AI engines (no signed-in browser) |
+| **Chrome run** (this skill in an interactive Claude Code session with the signed-in Chrome; the session cron re-fires it daily but expires after 7 days) | When a session is open | Step 2 GSC (Performance 7d + indexing queue), Step 3 engine sweep, completing today's scoreboard row | Merge to `main` / Publish unless the user asks in-session |
+| **The user** | When a `USER:` to-do appears in the scoreboard | Merge + Publish, sign-ins, directory listings, reviews | — |
+
+Debug the cloud routine with `RemoteTrigger` `list_runs` / `get_run_log` (trigger id above). A local launchd scheduler was tried on 2026-10-18 and blocked as unauthorized persistence. Don't retry it without the user adding that permission themselves.
+
 ## Cadence
 
 | When | Run | Time |
@@ -48,7 +58,8 @@ A `FAIL` on a live page is the top priority: homepage title leaking, wrong canon
 Account `globalchemicalsllc8@gmail.com`, property `https://gcoman.com/` (URL-prefix). URL Inspection works **only through the top search box**; `inspect?id=` URLs return a 404.
 
 1. **Request indexing, about 10 per day.** Take URLs in the order of `MASTER-PLAN.md` P0.3. Inspect each first: skip "URL is on Google", request the rest. "Quota exceeded" means stop for the day and write that in the log.
-2. Weekly: Pages report counts (indexed / not indexed / Soft 404 / crawled-not-indexed / discovered-not-indexed), Manual actions, Sitemaps status.
+2. **Daily, Performance read:** last 7 days vs. the previous period (URL `…/performance/search-analytics?resource_id=https%3A%2F%2Fgcoman.com%2F&num_of_days=7&compare_date=PREV`). Record site clicks, impressions and position, plus the Countries tab for Oman, Saudi Arabia and UAE clicks. Read the table with JS (the second `<table>` holds the compare columns: query, clicks last/prev/diff, impressions last/prev/diff, CTR ×3, position last/prev/diff). `&breakdown=page|country|date` and `&page=*%2Fchemicals%2F` / `&country=sau` work as URL parameters.
+3. Weekly: Pages report counts (indexed / not indexed / Soft 404 / crawled-not-indexed / discovered-not-indexed), Manual actions, Sitemaps status.
 
 ## Step 3: per-location engine sweep
 
@@ -95,6 +106,9 @@ Space fetches 4–6 s apart. At the first CAPTCHA, stop Google for the day and w
 Never write a number you didn't read today. If something wasn't measured, write `n/m`.
 
 ## Step 4: record (append-only)
+
+**First, today's row in `docs/seo/daily-scoreboard.md`** (columns, targets and alarms are defined at the top of that file). If the cloud routine already wrote today's row, append a second row for the same date marked `(Chrome)` with the cells it couldn't read. Never edit its row.
+
 
 Append one row per check to `docs/seo/location-ledger.md`:
 
