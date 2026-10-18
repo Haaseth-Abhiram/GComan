@@ -240,19 +240,39 @@ const ChemicalSuppliersOman = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 text-center">Chemical Delivery Across Oman</h2>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+              {/* Lead times mirror what the page's FAQ and the catalogue already state
+                  (Seeb ships with Muscat; Nizwa, Sur and Barka are the 1–3 day group).
+                  Cities without their own landing page render as plain cards. Oman
+                  investigation 2026-10-18: these cities have no Google presence for us,
+                  but GSC shows zero search demand, so a sentence here beats a thin page. */}
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                 {[
                   { city: 'Muscat', path: '/chemicals/muscat', note: 'Same-day delivery' },
+                  { city: 'Rusayl', path: '/chemicals/rusayl', note: 'Same-day delivery' },
+                  { city: 'Seeb', note: 'Same-day delivery' },
                   { city: 'Sohar', path: '/chemicals/sohar', note: '1-2 day delivery' },
+                  { city: 'Barka', note: '1-3 day delivery' },
+                  { city: 'Nizwa', note: '1-3 day delivery' },
+                  { city: 'Sur', note: '1-3 day delivery' },
                   { city: 'Salalah', path: '/chemicals/salalah', note: '2-3 day delivery' },
                   { city: 'Duqm', path: '/chemicals/duqm', note: '2-3 day delivery' },
-                  { city: 'Rusayl', path: '/chemicals/rusayl', note: 'Same-day delivery' },
-                ].map((loc) => (
-                  <Link key={loc.city} to={loc.path} className="p-4 logo-gradient-border rounded-lg text-center hover:shadow-sm transition-all group">
-                    <p className="font-semibold text-foreground group-hover:text-primary">{loc.city}</p>
-                    <p className="text-xs text-muted-foreground mt-1">{loc.note}</p>
-                  </Link>
-                ))}
+                ].map((loc) => {
+                  const inner = (
+                    <>
+                      <p className="font-semibold text-foreground group-hover:text-primary">{loc.city}</p>
+                      <p className="text-xs text-muted-foreground mt-1">{loc.note}</p>
+                    </>
+                  );
+                  return loc.path ? (
+                    <Link key={loc.city} to={loc.path} className="p-4 logo-gradient-border rounded-lg text-center hover:shadow-sm transition-all group">
+                      {inner}
+                    </Link>
+                  ) : (
+                    <div key={loc.city} className="p-4 logo-gradient-border rounded-lg text-center">
+                      {inner}
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>

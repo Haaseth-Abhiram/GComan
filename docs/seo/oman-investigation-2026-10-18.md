@@ -113,3 +113,16 @@ All readings were taken live on 2026-10-18 with the same methods as the daily sc
 | 8 | **Track it**: the daily scoreboard row now includes these Oman cells; re-read weekly | Claude (daily/weekly runs) | Proof of movement | Ongoing |
 
 **Not recommended:** product × city pages, bulk FAQs, retitling products, homepage changes (HANDOFF do-not list). None of them address causes 1 to 3.
+
+## 8. Status (2026-10-18, late)
+
+| # | Status |
+|---|---|
+| 1 Reviews | **User.** Review link: https://g.page/r/CWLBtunkhjqlEBM/review (also GBP → "Ask for reviews"). 2 reviews today. |
+| 2 Directories | **User creates the account, Claude fills.** Order by SERP weight: yellowpages.om → lookchem → ensun → cybo → easyoman → recordsmarine → Made in Oman Gate. Brownbook and Cybo are already filled up to the account step (`project-registration-queue`). |
+| 3 Oman links | **User.** OCCI directory needs the CR number; the certification body's client list and customers' supplier pages are asks only the user can make. |
+| 4 Hubs | Done today: 6 indexing requests accepted. Daily run re-checks. |
+| 5 Delivery across Oman | **Shipped to Develop:** the "Chemical Delivery Across Oman" grid on /chemical-suppliers-oman now lists 9 cities (added Seeb same-day; Barka, Nizwa, Sur 1–3 days) using lead times the page's own FAQ and the catalogue already state. **Ibri and Buraimi are not on the site anywhere; they need the user's real lead time before they can be added.** Goes live on the next Publish. |
+| 6 GBP | **Service area already covers all of Oman** (plus Qatar, Kuwait, Saudi Arabia, Abu Dhabi), so city-level service areas add nothing: drop that part. **Categories: only "Chemical wholesaler", no secondary categories.** Claude opened the editor in the owner account but the permission policy stopped the category search; nothing was saved. The user adds them in GBP → Edit profile → Business category → Add another category: try "Chemical exporter", "Industrial chemicals wholesaler"/"Chemical plant" (whichever Google offers), "Water treatment supplier", "Lubricants supplier", "Fertilizer supplier". |
+| 7 Title | Unchanged. |
+| 8 Track | In the daily scoreboard. |

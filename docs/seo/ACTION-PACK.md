@@ -167,3 +167,16 @@ A 60-search sweep (Google, Bing, Maps, ChatGPT, Google AI Mode, Perplexity; Oman
 **Reading it in one line:** the only new finding that changes the order of work is G1 — two Request-indexing clicks. Everything else was already in Parts B2–B4.
 
 **Addendum 2026-10-13 (nitric deep-dive):** full country-by-country SERPs, Search Console per-country tables and the Soft-404 diagnosis are in [`nitric-acid-gcc-position-2026-10-13.md`](./nitric-acid-gcc-position-2026-10-13.md). Order of work after it: G1 (four Request-indexing clicks) → G8 (approval) → B1 → B3 (the yellow-pages directories hold a page-1 slot in all six GCC countries) → B2/G3.
+
+---
+
+## PART H — Update 2026-10-18: the Oman investigation
+
+Full report: [`oman-investigation-2026-10-18.md`](./oman-investigation-2026-10-18.md). Headline: **we did not fall.** "chemical suppliers oman" has been #2 (omanchem.com #1) on every unpersonalised reading since 10-11; the "#1" was a signed-in artifact. With "in" we are #1, and that is the phrase Oman actually types (GSC: 45 impressions, position 2.2; the no-"in" version has none). Parts B1–B4 stand. Additions:
+
+| # | Finding | What we do | Owner | Judge it on |
+|---|---|---|---|---|
+| H1 | Oman traffic is the homepage + brand (233 of 675 clicks). City pages and product hubs are indexed but near-invisible; product terms absent on Google (omanchem #1 ×4) while Bing has HCl and nitric at #1 | Nothing new to build. B2 (reviews) and B3 (listings) are the levers; the hubs were only indexed on 10-18 after the Soft-404 fix | — | hubs "on Google" by 10-25 |
+| H2 | Nizwa, Sur, Barka, Ibri, Seeb, Buraimi: no page, absent on Google, muscatchemical.com #1 — and **zero GSC demand** | No new pages. The Oman page's delivery grid now lists 9 cities with the lead times the site already states (Develop; live on next Publish). **Ibri and Buraimi need your real lead time** | you: 2 lead times | after Publish |
+| H3 | GBP service area already covers all of Oman; **only one category** ("Chemical wholesaler") | Add secondary categories (Edit profile → Business category → Add another category). The permission policy stopped Claude at that step; nothing was saved | you | done + 4 weeks |
+| H4 | yellowpages.om is #3 on both head terms; we are not on it | B3, first in the order: yellowpages.om → lookchem → ensun → cybo → easyoman → recordsmarine | you sign up, Claude fills | listed + 4 weeks |
