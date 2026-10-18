@@ -32,7 +32,7 @@ One procedure, run on a fixed cadence, that covers **every location page, every 
 | **Chrome run** (this skill in an interactive Claude Code session with the signed-in Chrome; the session cron re-fires it daily but expires after 7 days) | When a session is open | Step 2 GSC (Performance 7d + indexing queue), Step 3 engine sweep, completing today's scoreboard row | Merge to `main` / Publish unless the user asks in-session |
 | **The user** | When a `USER:` to-do appears in the scoreboard | Merge + Publish, sign-ins, directory listings, reviews | — |
 
-Debug the cloud routine with `RemoteTrigger` `list_runs` / `get_run_log` (trigger id above). A local launchd scheduler was tried on 2026-10-18 and blocked as unauthorized persistence. Don't retry it without the user adding that permission themselves.
+The cloud environment must allow outbound access to gcoman.com, or Step 1 reads `n/m` (first run 2026-10-18: proxy 403). Debug the cloud routine with `RemoteTrigger` `list_runs` / `get_run_log` (trigger id above). A local launchd scheduler was tried on 2026-10-18 and blocked as unauthorized persistence. Don't retry it without the user adding that permission themselves.
 
 ## Cadence
 
@@ -154,4 +154,5 @@ Then add a dated note to `docs/seo/visibility-ledger.md`: what moved compared wi
 | Treating "absent from the top 20 in Egypt" as a failure | Iraq, Jordan and Egypt are export-only lanes. Record them, but they are not targets |
 | A parser picking up `<path>` as `<p>` (it happened on 2026-10-18) | Match `<p(\s\|>)`. Sanity-check any surprising number against the rendered page before reporting it |
 | Calling a drop by comparing a signed-in, personalised reading with an unpersonalised fetch (10-13 "#1 Salalah" vs 10-18 "#4") | Compare only cells read with the same method. When the user asks "are we going down?", build the same-cell table first (`docs/seo/decline-investigation-2026-10-18.md` is the template), then read GSC 28d vs previous |
+| Treating "Indexing request rejected" as a quota problem | Open the live test → screenshot + More info → JavaScript console. On 2026-10-18 it was Googlebot failing a route chunk and getting "Something went wrong" (fixed by `RouteChunkBoundary`, pinned by `tests/e2e/route-chunk-failure.spec.ts`). Run that spec against production with `BASE_URL` after any change to App.tsx's route tree |
 | Reporting a fix as live after a Publish when it was an edge function | Check Lovable → Cloud → Edge functions → "Last updated" |
