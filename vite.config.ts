@@ -8,6 +8,7 @@ import { imagetools } from "vite-imagetools";
 import { ViteWebfontDownload } from "vite-plugin-webfont-dl";
 import prerender from "@prerenderer/rollup-plugin";
 import { mcpPlugin } from "@lovable.dev/mcp-js/stacks/supabase/vite";
+import { loadLastmod, stampModified } from "./scripts/stamp-modified.mjs";
 
 /**
  * Routes that must be prerendered *precisely because* they are noindex.
@@ -47,6 +48,10 @@ const routesFromSitemap = (): string[] => {
   // de-dupe defensively in case one is ever added to the sitemap by mistake
   return Array.from(new Set([...fromSitemap, ...NOINDEX_PRERENDER_ROUTES]));
 };
+
+let lastmodCache: Map<string, string> | undefined;
+const loadLastmodOnce = (): Map<string, string> =>
+  (lastmodCache ??= loadLastmod(path.resolve(__dirname, "public/sitemap.xml")));
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -123,6 +128,14 @@ export default defineConfig(({ mode }) => ({
         // a tight timeout that a loaded build machine can miss while eight
         // tabs spin up at once — same all-or-nothing build abort.
         launchOptions: { protocolTimeout: 180_000 },
+      },
+      // Stamp each page's git-derived sitemap <lastmod> into its static HTML
+      // as WebPage `dateModified` + `article:modified_time` — a freshness
+      // signal for the AI crawlers that read only this HTML. See
+      // scripts/stamp-modified.mjs.
+      postProcess(renderedRoute: { originalRoute: string; html: string }) {
+        const lastmod = loadLastmodOnce();
+        renderedRoute.html = stampModified(renderedRoute.html, lastmod.get(renderedRoute.originalRoute));
       },
     }) as unknown as PluginOption),
   ].filter(Boolean),

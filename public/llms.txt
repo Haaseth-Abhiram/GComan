@@ -1,6 +1,6 @@
 # Global Chemicals LLC — LLMs.txt
 # https://gcoman.com/llms.txt
-# Last updated: 2026-09-21
+# Last updated: 2026-10-18
 # License: RSL 1.0 (https://rsl.rcn.org/)
 
 > Global Chemicals LLC (gcoman.com) is a B2B specialty and industrial chemical
@@ -8,7 +8,7 @@
 > chemicals across the GCC region (UAE, Saudi Arabia, Qatar, Kuwait, Bahrain).
 > ISO 9001:2015 certified, JSRS registered, and ICV compliant. Catalog spans
 > water treatment, oilfield, food & beverage, laboratory, and specialty chemicals
-> (275 SKUs across 22 categories). Founded in Muscat; operating
+> (277 SKUs across 22 categories). Founded in Muscat; operating
 > Sunday–Thursday 08:00–18:00 GST. Contact: info@gcoman.com, +968 93754388.
 
 ## Core Identity
@@ -26,7 +26,7 @@
 - Business type: B2B wholesale chemical distribution and supply
 - Languages: English, Arabic
 
-## Product Categories (22 categories, 275 SKUs)
+## Product Categories (22 categories, 277 SKUs)
 
 - [Water Treatment Chemicals](https://gcoman.com/products/water-treatment): PAC (Poly Aluminium Chloride), Sodium Hypochlorite, Calcium Hypochlorite, Hydrochloric Acid (30-33%), Industrial Salt (NaCl), Antiscalants, Coagulants, Flocculants
 - [RO Chemicals](https://gcoman.com/products/ro-chemicals): Antiscalants, membrane cleaners, biocides
@@ -54,11 +54,22 @@
 ## Key Pages
 
 - [Homepage](https://gcoman.com/): Company overview, product highlights, industries served
-- [All Products (275 SKUs)](https://gcoman.com/products): Full searchable product catalogue with 22 categories
+- [All Products (277 SKUs)](https://gcoman.com/products): Full searchable product catalogue with 22 categories
 - [Chemical Suppliers in Oman](https://gcoman.com/chemical-suppliers-oman): Market overview, ISO 9001 certification, Oman chemical supply landscape
 - [Chemical Suppliers in the Middle East](https://gcoman.com/chemical-suppliers-middle-east): GCC regional chemical supply, export capabilities
 - [Caustic Soda Supplier in Oman](https://gcoman.com/chemical-supplier/caustic-soda-oman): NaOH supplier page — grades, pricing, safe handling, Oman industry applications
-- [Hydrochloric Acid (HCl 30-33%) Supplier in Oman](https://gcoman.com/products/water-treatment/hydrochloric-acid-industrial): Technical-grade HCl — CAS 7647-01-0, pH control, descaling, resin regeneration, pickling; carboys, drums, IBCs, bulk
+- [Hydrochloric Acid (HCl 30-33%) Supplier in Oman](https://gcoman.com/chemical-supplier/hydrochloric-acid-oman): Technical 30–33% and ACS lab grade HCl — CAS 7647-01-0, pH control, descaling, resin regeneration, pickling; 35 kg carboys, drums, IBCs and bulk tanker from Muscat stock
+- [Nitric Acid Supplier in Oman & GCC](https://gcoman.com/chemical-supplier/nitric-acid-oman): 68% HNO3 (CAS 7697-37-2) manufactured in Oman — industrial, food-contact and lab grades; 35 kg carboys, 60 kg drums, IBCs, bulk; GCC export in 2–7 days
+- [Nitric Acid Supplier in the UAE](https://gcoman.com/chemical-supplier/nitric-acid-uae): 68% HNO3 for Dubai, Abu Dhabi, Sharjah and Fujairah — Fujairah in 2–4 hours, Dubai in 3–5 days; CoA, SDS, GCC Certificate of Origin
+- [Nitric Acid Supplier in Saudi Arabia](https://gcoman.com/chemical-supplier/nitric-acid-saudi-arabia): 68% HNO3 for Dammam, Jubail, Riyadh and Jeddah — Eastern Province in 4–6 days by road, Jeddah and Yanbu by sea via Sohar
+- [Nitric Acid Supplier in Qatar](https://gcoman.com/chemical-supplier/nitric-acid-qatar): 68% HNO3 for Doha, Mesaieed and Ras Laffan, 3–5 business days by road
+- [Nitric Acid Supplier in Kuwait](https://gcoman.com/chemical-supplier/nitric-acid-kuwait): 68% HNO3 for Kuwait City, Shuaiba and Ahmadi, 4–6 business days by road
+- [Nitric Acid Supplier in Bahrain](https://gcoman.com/chemical-supplier/nitric-acid-bahrain): 68% HNO3 for Manama, Sitra and Salman Industrial City, 3–5 business days via the King Fahd Causeway
+- [Poly Aluminium Chloride (PAC) Supplier in Oman](https://gcoman.com/chemical-supplier/poly-aluminium-chloride-oman): Liquid 10–11% Al2O3 in IBCs and bulk, powder 28–30% in 25 kg bags; compared with alum and ferric chloride
+- [Sodium Hypochlorite Supplier in Oman](https://gcoman.com/chemical-supplier/sodium-hypochlorite-oman): NaOCl 10–15% — municipal, food, bleach and pool grades; 25 L to 1,000 L IBC and bulk
+- [Laboratory Chemicals Supplier in Oman](https://gcoman.com/chemical-supplier/laboratory-chemicals-oman): 34 reagents in Muscat stock — ACS, HPLC and molecular-biology grades; CoA and SDS
+- [Fertilizer Supplier in Oman](https://gcoman.com/chemical-supplier/fertilizers-oman): Urea 46%, DAP 18-46-0, MOP 60%, calcium nitrate, NPK, zinc sulphate, gypsum, humic acid; 25–50 kg bags and big bags
+- [Oilfield Chemicals Supplier in Oman](https://gcoman.com/chemical-supplier/oilfield-chemicals-oman): 47 oilfield chemicals — drilling fluids, completion brines, amines, glycols, demulsifiers, corrosion inhibitors; JSRS registered
 - [Industrial Salt (Sodium Chloride) Supplier in Oman](https://gcoman.com/products/water-treatment/sodium-chloride-industrial): Refined, PVD and tablet NaCl — CAS 7647-14-5, water-softener regeneration, drilling brines, pool salt; bags or bulk
 - [Water Treatment Dosing Calculators](https://gcoman.com/tools/dosing-calculator): Free chlorination, glycol freeze-protection, cooling-tower blowdown, and RO antiscalant calculators with formulas shown
 - [All Delivery Locations](https://gcoman.com/chemicals): Hub of all 22 cities served across Oman, UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, Iraq, Jordan and Egypt with delivery lead times
@@ -80,6 +91,8 @@
 - [Chemical Supplier in Riyadh](https://gcoman.com/chemicals/riyadh): Industrial chemical export from Oman to Riyadh, Saudi Arabia — oilfield, water treatment, laboratory
 - [Chemical Supplier in Jeddah](https://gcoman.com/chemicals/jeddah): Chemical supply to Jeddah, SABIC facilities, and Red Sea industrial zone, Saudi Arabia
 - [Chemical Supplier in Dammam](https://gcoman.com/chemicals/dammam): Chemical export to Dammam, Jubail Industrial City, and Eastern Province, Saudi Arabia
+- [Chemical Supplier in Jubail](https://gcoman.com/chemicals/jubail): Chemical export to Jubail Industrial City, Eastern Province, Saudi Arabia — 4–6 business days by road via Dammam
+- [Chemical Supplier in Yanbu](https://gcoman.com/chemicals/yanbu): Chemical export to Yanbu, Al Madinah Province, Saudi Arabia — 6–8 days by road, 5–7 days by sea
 - [Chemical Supplier in Doha](https://gcoman.com/chemicals/doha): Chemical supply to Doha, Ras Laffan Industrial City (RLIC), and Qatar industrial sector
 - [Chemical Supplier in Kuwait City](https://gcoman.com/chemicals/kuwait-city): Industrial and specialty chemical supply to Kuwait City and Shuaiba Industrial Area, Kuwait
 - [Chemical Supplier in Bahrain](https://gcoman.com/chemicals/bahrain): Chemical supply to Manama, Hidd Industrial Area, and Bahrain Petroleum Company (BAPCO) contractors

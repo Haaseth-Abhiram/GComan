@@ -11,6 +11,7 @@
     "verify:sitemap-health": "node scripts/sync-ar-sitemap.mjs --check",
     "verify:ar-meta": "node scripts/sync-ar-meta.mjs --check",
     "verify:serp-titles": "node scripts/verify-serp-titles.mjs",
+    "verify:llms-txt": "node scripts/verify-llms-txt.mjs",
     "sync:sitemap-lastmod": "node scripts/sync-sitemap-lastmod.mjs",
     "preview": "vite preview",
     "deploy:cloudflare-worker": "wrangler deploy",

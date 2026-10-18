@@ -135,10 +135,19 @@ Disallow: /
 User-agent: BLEXBot
 Disallow: /
 
-# Training-only crawlers — blocked to preserve content for search, not corpus mining
+# Common Crawl — ALLOWED since 2026-10-18 (GEO audit). Its archive is a primary
+# training source for most foundation models; blocking it meant future models
+# would not know Global Chemicals LLC without a live search — costly for a brand
+# with no Wikipedia page and a same-name competitor. Content is public marketing.
 User-agent: CCBot
-Disallow: /
+Allow: /
+Disallow: /admin
+Disallow: /dev/
+Disallow: /en$
+Disallow: /en/
+Disallow: /login
 
+# Training-only crawlers — blocked
 User-agent: anthropic-ai
 Disallow: /
 

@@ -140,6 +140,13 @@ const STATIC = {
   'chemical-suppliers-oman': ['src/pages/ChemicalSuppliersOman.tsx'],
   'chemical-suppliers-middle-east': ['src/pages/ChemicalSuppliersMiddleEast.tsx'],
   'chemical-supplier/caustic-soda-oman': ['src/pages/CausticSodaOman.tsx'],
+  'chemical-supplier/nitric-acid-oman': ['src/pages/NitricAcidOman.tsx'],
+  'chemical-supplier/hydrochloric-acid-oman': ['src/pages/HydrochloricAcidOman.tsx'],
+  'chemical-supplier/poly-aluminium-chloride-oman': ['src/pages/PolyAluminiumChlorideOman.tsx', 'src/data/products/water-treatment.json', 'src/data/products/inorganic.json'],
+  'chemical-supplier/sodium-hypochlorite-oman': ['src/pages/SodiumHypochloriteOman.tsx', 'src/data/products/water-treatment.json', 'src/data/products/food-beverage.json', 'src/data/products/soap-detergent.json', 'src/data/products/swimming-pool.json'],
+  'chemical-supplier/laboratory-chemicals-oman': ['src/pages/LaboratoryChemicalsOman.tsx', 'src/data/products/lab-chemicals.json'],
+  'chemical-supplier/fertilizers-oman': ['src/pages/FertilizersOman.tsx', 'src/data/products/agro.json'],
+  'chemical-supplier/oilfield-chemicals-oman': ['src/pages/OilfieldChemicalsOman.tsx', 'src/data/products/oilfield.json'],
   'tools/dosing-calculator': ['src/pages/DosingCalculator.tsx'],
   'blog': ['src/pages/Blog.tsx'],
 };
@@ -152,18 +159,21 @@ function lastmodFor(loc) {
   if (seg[0] === 'products') return allProductsDate;
   if (seg[0] === 'blog' && seg.length === 2) return blogDates.get(seg[1]) ?? blogIndexDate;
   if (seg[0] === 'chemicals' && seg.length === 2) return locationDate;
+  // /chemical-supplier/nitric-acid-<country> — all five render from one component
+  if (seg[0] === 'chemical-supplier' && /^nitric-acid-(?!oman$)/.test(seg[1] ?? '')) return newestCommitDate(['src/pages/NitricAcidCountry.tsx']);
   return newestCommitDate(STATIC[p] ?? []);
 }
 
 // ── rewrite the English blocks ─────────────────────────────────────────────
 let xml = readFileSync(SITEMAP, 'utf8');
 let changed = 0, skipped = 0;
+const unresolved = [];
 const samples = [];
 xml = xml.replace(/<url>[\s\S]*?<\/url>/g, (block) => {
   const loc = block.match(/<loc>(.*?)<\/loc>/)?.[1];
   if (!loc || loc.includes('/ar/') || loc.replace(/\/$/, '').endsWith('/ar')) return block;
   const next = lastmodFor(loc);
-  if (!next) { skipped++; return block; }
+  if (!next) { skipped++; unresolved.push(loc); return block; }
   const cur = block.match(/<lastmod>(.*?)<\/lastmod>/)?.[1];
   if (cur === next) return block;
   changed++;
@@ -174,6 +184,12 @@ xml = xml.replace(/<url>[\s\S]*?<\/url>/g, (block) => {
 });
 
 console.log(`[lastmod] english urls updated: ${changed}   unresolved (left as-is): ${skipped}`);
+// An unresolved page keeps a frozen <lastmod> forever (12 product hubs did,
+// found 2026-10-18), so name every one and fail — add it to STATIC.
+if (unresolved.length) {
+  console.error(`[lastmod] no source files mapped for:\n  ${unresolved.join('\n  ')}\n  → add each to STATIC in scripts/sync-sitemap-lastmod.mjs`);
+  process.exitCode = 1;
+}
 if (samples.length) { console.log('[lastmod] sample changes:'); samples.forEach((s) => console.log(s)); }
 
 if (CHECK) {

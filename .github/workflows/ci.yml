@@ -43,6 +43,11 @@ jobs:
       # invisible to tsc/lint/build/e2e. Fix by adding a details.seoTitle.
       - name: Product SERP titles
         run: npm run verify:serp-titles
+      # Fails if llms.txt omits a /chemical-supplier/* hub or /chemicals/*
+      # location page, links to a URL not in the sitemap, or states a stale
+      # SKU count — it drifted silently for a month before 2026-10-18.
+      - name: llms.txt in sync
+        run: npm run verify:llms-txt
       - name: Build (dev mode, no prerender)
         run: npm run build:dev
 
