@@ -86,6 +86,18 @@ const faqs = [
   {
     question: "What safety documentation comes with nitric acid?",
     answer: "Every consignment is supplied with a current GHS-compliant Safety Data Sheet (SDS) in English, Arabic on request, plus a Certificate of Analysis for the batch and a Technical Data Sheet. Nitric acid is a strongly corrosive oxidiser: handle with full acid PPE (face shield, acid-resistant gloves and apron), store vented and cool, keep it away from organics, reducing agents and metals, and use polyethylene or stainless containment. Never store it next to combustible material."
+  },
+  // The two below answer the remaining "People also ask" questions Google
+  // shows under `nitric acid supplier oman` / `nitric acid oman` (read
+  // 2026-10-19: "Where can I get nitric acid", "What is 70% nitric acid used
+  // for"). Both restate facts already on this page; nothing new is claimed.
+  {
+    question: "Where can I buy nitric acid in Oman?",
+    answer: "Global Chemicals LLC holds nitric acid in stock at its Ghala warehouse in Muscat and supplies industrial, food-contact and laboratory grades to companies and institutions across Oman: same-day dispatch in Muscat and Rusayl, next-day to Sohar, and two to three days to Salalah, Duqm, Nizwa and Sur. Send the grade, quantity and delivery address to info@gcoman.com or call +968-93754388 for a quotation; a Certificate of Analysis and GHS Safety Data Sheet accompany every consignment."
+  },
+  {
+    question: "What is 70% nitric acid used for?",
+    answer: "68–70% is concentrated nitric acid (specific gravity 1.42), the strength supplied for laboratory and high-purity work: ICP-MS and AAS sample digestion, trace-metal analysis, petroleum product testing and oxidation steps in synthesis. The 68% technical grade covers the same chemistry at industrial scale: stainless steel pickling and passivation, descaling, nitration feedstock and the acid stage of CIP cleaning. Both are the azeotropic concentrated grade; the difference is purity specification and packaging, not a different chemical."
   }
 ];
 
@@ -257,7 +269,26 @@ const NitricAcidOman = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Nitric Acid Grades Available in Oman</h2>
-              <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">Three grades from one supplier — choose the one that matches your process, pack format and documentation requirements.</p>
+              <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">Three grades from one supplier — choose the one that matches your process, pack format and documentation requirements.</p>
+              {/* Packaging image. Every page-1 competitor carries 2–20 images and
+                  this page carried none (2026-10-19 competitor read). Same
+                  licensed, category-representative IBC image the catalogue uses
+                  (public/images/products/LICENSES.md); the alt text states the
+                  pack range, not a product photo claim. */}
+              <figure className="mb-12 max-w-3xl mx-auto">
+                <img
+                  src="/images/products/liquid-ibc-tank.webp"
+                  alt="1,000 L IBC tote of the kind used to ship 68% nitric acid from Global Chemicals LLC in Muscat, Oman, alongside 35 kg carboys and 60 kg drums"
+                  width={1200}
+                  height={900}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-auto rounded-xl border border-border object-cover aspect-[4/3]"
+                />
+                <figcaption className="text-xs text-muted-foreground text-center mt-2">
+                  Nitric acid 68% ships in 35 kg HDPE carboys, 60 kg drums and 1,000 L IBC totes from Ghala, Muscat; laboratory grade in 500 mL and 2.5 L amber glass.
+                </figcaption>
+              </figure>
               <div className="grid md:grid-cols-3 gap-8">
                 {gradeForms.map((form, i) => {
                   const Icon = form.icon;

@@ -78,6 +78,9 @@ test.describe('Caustic soda hub — product+geo template', () => {
   test('the guide link is opt-in — unrelated products do not show it', async ({ page }) => {
     await page.goto('/products/agro/urea-fertilizer');
     await page.waitForLoadState('networkidle');
-    await expect(page.locator(`a[href="${HUB}"]`)).toHaveCount(0);
+    // Scoped to <main>: since 2026-10-19 the footer links every hub from every
+    // page (site-wide "Supply Guides"), so the page-level count is never 0. The
+    // guard is about the product body's guide link, which stays opt-in.
+    await expect(page.locator('main').locator(`a[href="${HUB}"]`)).toHaveCount(0);
   });
 });

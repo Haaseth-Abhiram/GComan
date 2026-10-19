@@ -269,6 +269,32 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
+            {/* Product+geo hubs (/chemical-supplier/*). Added 2026-10-19: for
+                "nitric acid supplier oman" Google ranked the HOMEPAGE at 18 and
+                the nitric hub nowhere, because the hubs were reachable only from
+                location pages and each other. The footer gives every hub a
+                site-wide internal link with a descriptive anchor, the one
+                on-site lever left (competitor investigation, same date).
+                Keep in sync with PRODUCT_HUBS in LocationLanding.tsx. */}
+            <h3 className="text-lg font-semibold mt-6 mb-4 text-white">{t('footer.supplyGuides', 'Supply Guides')}</h3>
+            <ul className="space-y-2">
+              {[
+                { label: 'Nitric Acid Supplier Oman', path: '/chemical-supplier/nitric-acid-oman' },
+                { label: 'Hydrochloric Acid Supplier Oman', path: '/chemical-supplier/hydrochloric-acid-oman' },
+                { label: 'Caustic Soda Supplier Oman', path: '/chemical-supplier/caustic-soda-oman' },
+                { label: 'Sodium Hypochlorite Supplier Oman', path: '/chemical-supplier/sodium-hypochlorite-oman' },
+                { label: 'PAC Coagulant Supplier Oman', path: '/chemical-supplier/poly-aluminium-chloride-oman' },
+                { label: 'Laboratory Chemicals Oman', path: '/chemical-supplier/laboratory-chemicals-oman' },
+                { label: 'Fertilizer Supplier Oman', path: '/chemical-supplier/fertilizers-oman' },
+                { label: 'Oilfield Chemicals Oman', path: '/chemical-supplier/oilfield-chemicals-oman' },
+              ].map((item) => (
+                <li key={item.path}>
+                  <Link to={item.path} className="text-white/80 hover:text-primary transition-colors text-sm inline-block hover:translate-x-1 rtl:hover:-translate-x-1 transition-all">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Contact Info */}
