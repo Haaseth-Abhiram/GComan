@@ -413,6 +413,29 @@ const CausticSodaOman = () => {
           </div>
         </section>
 
+        {/* Related range — parity with the hydrochloric and nitric hubs
+            (2026-10-19). Hub-to-hub links are the only internal links the
+            acid hubs receive from pages of equal depth. */}
+        <section className="py-12 bg-muted/30 border-t">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-2xl font-bold mb-6">Related Chemicals We Supply in Oman</h2>
+              <div className="flex flex-wrap justify-center gap-3">
+                {[
+                  { label: 'Hydrochloric Acid 30–33%', to: '/chemical-supplier/hydrochloric-acid-oman' },
+                  { label: 'Nitric Acid 68%', to: '/chemical-supplier/nitric-acid-oman' },
+                  { label: 'Sodium Hypochlorite', to: '/chemical-supplier/sodium-hypochlorite-oman' },
+                  { label: 'Laboratory Chemicals', to: '/chemical-supplier/laboratory-chemicals-oman' },
+                ].map((l) => (
+                  <Button key={l.to} asChild variant="outline" size="sm">
+                    <Link to={l.to}>{l.label}</Link>
+                  </Button>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="py-16 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
           <div className="container mx-auto px-4">

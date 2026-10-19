@@ -454,6 +454,30 @@ const NitricAcidOman = () => {
           </div>
         </section>
 
+        {/* Related range — the hydrochloric hub links here, the location pages
+            link here, but until 2026-10-19 this page linked to no sibling hub,
+            so the acid family was one-directional. Passivation Liquid is the
+            finished stainless-steel treatment the passivation FAQ describes. */}
+        <section className="py-12 bg-muted/30 border-t">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-2xl font-bold mb-6">Related Chemicals We Supply in Oman</h2>
+              <div className="flex flex-wrap justify-center gap-3">
+                {[
+                  { label: 'Hydrochloric Acid 30–33%', to: '/chemical-supplier/hydrochloric-acid-oman' },
+                  { label: 'Caustic Soda (NaOH)', to: '/chemical-supplier/caustic-soda-oman' },
+                  { label: 'Laboratory Chemicals', to: '/chemical-supplier/laboratory-chemicals-oman' },
+                  { label: 'Passivation Liquid', to: '/products/tank-cleaners/passivation-liquid' },
+                ].map((l) => (
+                  <Button key={l.to} asChild variant="outline" size="sm">
+                    <Link to={l.to}>{l.label}</Link>
+                  </Button>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="py-16 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
           <div className="container mx-auto px-4">
