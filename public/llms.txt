@@ -1,7 +1,7 @@
 # Global Chemicals LLC — LLMs.txt
 # https://gcoman.com/llms.txt
 # Last updated: 2026-10-18
-# License: RSL 1.0 (https://rsl.rcn.org/)
+# License: RSL 1.0 — https://gcoman.com/license.xml (search, AI indexing, input and training permitted with attribution to Global Chemicals LLC)
 
 > Global Chemicals LLC (gcoman.com) is a B2B specialty and industrial chemical
 > supplier headquartered in Ghala, Muscat, Oman. The company supplies and exports

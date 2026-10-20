@@ -268,7 +268,7 @@ const NitricAcidOman = () => {
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Nitric Acid Grades Available in Oman</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">What Grades of Nitric Acid Are Available in Oman?</h2>
               <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">Three grades from one supplier — choose the one that matches your process, pack format and documentation requirements.</p>
               {/* Packaging image. Every page-1 competitor carries 2–20 images and
                   this page carried none (2026-10-19 competitor read). Same
@@ -389,7 +389,7 @@ const NitricAcidOman = () => {
         <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Nitric Acid Applications in Oman &amp; the GCC</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">What Is Nitric Acid Used for in Oman &amp; the GCC?</h2>
               <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">HNO3 serves metal treatment, water treatment, oil &amp; gas, food processing and laboratory duties — we supply the grade and pack that fits each.</p>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {applications.map((app, i) => {
@@ -465,7 +465,7 @@ const NitricAcidOman = () => {
         <section className="py-12 border-t">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-2xl font-bold text-center mb-8">Nitric Acid Delivery Across Oman</h2>
+              <h2 className="text-2xl font-bold text-center mb-8">How Fast Is Nitric Acid Delivered Across Oman?</h2>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
                 {[
                   { city: 'Muscat', note: 'Same-day' },

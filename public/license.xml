@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  RSL 1.0 (Really Simple Licensing) terms for gcoman.com.
+  Referenced from robots.txt (License: directive), index.html
+  (<link rel="license" type="application/rsl+xml">) and llms.txt.
+  Terms match robots.txt: every search and AI crawler is allowed, and
+  the content may be indexed, used as AI input and trained on, in
+  return for attribution to Global Chemicals LLC (gcoman.com).
+  Spec: https://rslstandard.org/rsl
+-->
+<rsl xmlns="https://rslstandard.org/rsl">
+  <content url="https://gcoman.com/" lastmod="2026-10-20T00:00:00+04:00">
+    <license>
+      <permits type="usage">search ai-index ai-input ai-train</permits>
+      <permits type="user">commercial non-commercial education government personal</permits>
+      <payment type="attribution"/>
+      <legal type="warranty">ownership authority</legal>
+      <legal type="contact">https://gcoman.com/contact</legal>
+    </license>
+  </content>
+</rsl>

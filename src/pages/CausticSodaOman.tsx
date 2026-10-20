@@ -211,7 +211,7 @@ const CausticSodaOman = () => {
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Caustic Soda Forms Available in Oman</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Which Forms of Caustic Soda Are Available in Oman?</h2>
               <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">We stock all three commercial forms of sodium hydroxide — choose the grade and form that matches your process requirements.</p>
               <div className="grid md:grid-cols-3 gap-8">
                 {gradeForms.map((form, i) => {
@@ -317,7 +317,7 @@ const CausticSodaOman = () => {
         <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Caustic Soda Applications in Oman</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">What Is Caustic Soda Used for in Oman?</h2>
               <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">Sodium hydroxide (NaOH) is used across virtually every industrial sector in Oman. Global Chemicals LLC supplies the right grade for every application.</p>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {applications.map((app, i) => {
@@ -393,7 +393,7 @@ const CausticSodaOman = () => {
         <section className="py-12 border-t">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-2xl font-bold text-center mb-8">Caustic Soda Delivery Across Oman</h2>
+              <h2 className="text-2xl font-bold text-center mb-8">How Fast Is Caustic Soda Delivered Across Oman?</h2>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
                 {[
                   { city: 'Muscat', note: 'Same-day' },

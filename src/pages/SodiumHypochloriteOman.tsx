@@ -2,8 +2,9 @@ import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { SEO } from '@/components/SEO';
-import { FAQStructuredData, BreadcrumbStructuredData, SpeakableStructuredData } from '@/components/StructuredData';
+import { FAQStructuredData, BreadcrumbStructuredData, SpeakableStructuredData, VideoStructuredData } from '@/components/StructuredData';
 import { FAQSection } from '@/components/FAQSection';
+import { YouTubeFacade } from '@/components/YouTubeFacade';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { trackSelectContent } from '@/components/GoogleAnalytics';
@@ -83,6 +84,17 @@ const breadcrumbItems = [
   { name: 'Sodium Hypochlorite Supplier Oman', url: 'https://gcoman.com/chemical-supplier/sodium-hypochlorite-oman' },
 ];
 
+// youtube.com/@GlobalChemicalsLLC — "Global Chemicals LLC_ Chlorine", 18 s,
+// published 2023-11-18 (read from the watch page on 2026-10-20).
+const CHLORINE_VIDEO = {
+  id: 'nxa3kbxMbOs',
+  title: 'Global Chemicals LLC: Chlorine',
+  description:
+    'Short clip from the Global Chemicals LLC YouTube channel on chlorine supply in Oman. Global Chemicals LLC supplies sodium hypochlorite (liquid chlorine) from stock in Muscat in municipal, food-contact, bleach-manufacturing and pool grades.',
+  uploadDate: '2023-11-18',
+  durationSeconds: 18,
+};
+
 const SodiumHypochloriteOman = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -100,6 +112,14 @@ const SodiumHypochloriteOman = () => {
       <SpeakableStructuredData
         url="https://gcoman.com/chemical-supplier/sodium-hypochlorite-oman"
         cssSelector={['h1', 'h2', '.speakable']}
+      />
+      <VideoStructuredData
+        videoId={CHLORINE_VIDEO.id}
+        name={CHLORINE_VIDEO.title}
+        description={CHLORINE_VIDEO.description}
+        uploadDate={CHLORINE_VIDEO.uploadDate}
+        durationSeconds={CHLORINE_VIDEO.durationSeconds}
+        pageUrl="https://gcoman.com/chemical-supplier/sodium-hypochlorite-oman"
       />
       <Navigation />
 
@@ -169,6 +189,28 @@ const SodiumHypochloriteOman = () => {
                     ))}
                   </tbody>
                 </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* The one clip on the company's YouTube channel (2026-10-20 GEO re-score:
+            every production hub shipped zero images and no video; multi-modal was
+            the lowest-scoring dimension). Click-to-load, so nothing third-party
+            runs until the visitor presses play. */}
+        <section className="py-14 border-t">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto grid md:grid-cols-5 gap-8 items-center">
+              <div className="md:col-span-2">
+                <h2 className="text-2xl font-bold text-foreground mb-3">Chlorine supply from Muscat, on video</h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  A short clip from the Global Chemicals LLC YouTube channel on chlorine supply in Oman. Sodium
+                  hypochlorite is the liquid form of that chlorine: the same stock, the same Muscat warehouse,
+                  delivered in 25 L containers, 1,000 L IBCs or bulk.
+                </p>
+              </div>
+              <div className="md:col-span-3">
+                <YouTubeFacade videoId={CHLORINE_VIDEO.id} title={CHLORINE_VIDEO.title} />
               </div>
             </div>
           </div>

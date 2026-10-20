@@ -162,4 +162,7 @@ Disallow: /en$
 Disallow: /en/
 Disallow: /login
 
+# RSL 1.0 licence terms (https://rslstandard.org/rsl): attribution in return for search, AI indexing, input and training
+License: https://gcoman.com/license.xml
+
 Sitemap: https://gcoman.com/sitemap.xml

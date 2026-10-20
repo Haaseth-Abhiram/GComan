@@ -221,7 +221,7 @@ const HydrochloricAcidOman = () => {
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Hydrochloric Acid Grades Available in Oman</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">What Grades of Hydrochloric Acid Are Available in Oman?</h2>
               <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">Technical grade for plant duties, ACS reagent grade for the laboratory — both from Muscat stock.</p>
               <div className="grid md:grid-cols-2 gap-8">
                 {gradeForms.map((form, i) => {
@@ -318,7 +318,7 @@ const HydrochloricAcidOman = () => {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Hydrochloric Acid Applications in Oman &amp; the GCC</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">What Is Hydrochloric Acid Used for in Oman &amp; the GCC?</h2>
               <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">HCl is one of the highest-volume industrial acids in the Sultanate — we supply the grade and pack that fits each duty.</p>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {applications.map((app, i) => {
@@ -394,7 +394,7 @@ const HydrochloricAcidOman = () => {
         <section className="py-12 border-t">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-2xl font-bold text-center mb-8">Hydrochloric Acid Delivery Across Oman</h2>
+              <h2 className="text-2xl font-bold text-center mb-8">How Fast Is Hydrochloric Acid Delivered Across Oman?</h2>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
                 {[
                   { city: 'Muscat', note: 'Same-day' },

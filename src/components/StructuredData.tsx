@@ -754,3 +754,44 @@ export const ServiceStructuredData = () => {
   );
 };
 
+
+// =====================================================
+// VIDEO STRUCTURED DATA (one YouTube clip embedded on a page)
+// Pairs with <YouTubeFacade>: the thumbnail is the only third-party request
+// until the visitor clicks play, so nothing here needs consent gating.
+// `publisher` references the site-wide Organization by its index.html @id —
+// never re-declare that entity (same-@id duplicate, see CLAUDE.md).
+// =====================================================
+interface VideoStructuredDataProps {
+  videoId: string;
+  name: string;
+  description: string;
+  /** ISO 8601 date the clip was published on YouTube */
+  uploadDate: string;
+  durationSeconds: number;
+  pageUrl: string;
+}
+
+export const VideoStructuredData = ({ videoId, name, description, uploadDate, durationSeconds, pageUrl }: VideoStructuredDataProps) => {
+  const videoSchema = {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": name,
+    "description": description,
+    "thumbnailUrl": [`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`],
+    "uploadDate": uploadDate,
+    "duration": `PT${durationSeconds}S`,
+    "embedUrl": `https://www.youtube-nocookie.com/embed/${videoId}`,
+    "contentUrl": `https://www.youtube.com/watch?v=${videoId}`,
+    "url": pageUrl,
+    "publisher": { "@id": "https://gcoman.com/#organization" }
+  };
+
+  return (
+    <Helmet defer={false}>
+      <script type="application/ld+json">
+        {JSON.stringify(videoSchema)}
+      </script>
+    </Helmet>
+  );
+};

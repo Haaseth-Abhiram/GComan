@@ -12,7 +12,7 @@
  *   1. every English /chemical-supplier/* and /chemicals/* URL in the sitemap
  *      is listed (these are the pages AI answers should cite);
  *   2. every gcoman.com link in llms.txt is in the sitemap (no dead or
- *      noindex links handed to crawlers) — llms.txt itself excepted;
+ *      noindex links handed to crawlers) — llms.txt and license.xml excepted;
  *   3. every "N SKUs" figure equals the product count in src/data/products/.
  *
  * Usage: node scripts/verify-llms-txt.mjs   (exit 1 on any failure)
@@ -35,7 +35,8 @@ for (const u of sitemapUrls) {
   }
 }
 for (const u of llmsUrls) {
-  if (u.endsWith('/llms.txt')) continue;
+  // llms.txt itself and the RSL licence file are resources, not pages: never in the sitemap
+  if (u.endsWith('/llms.txt') || u.endsWith('/license.xml')) continue;
   if (!sitemapUrls.has(u)) failures.push(`llms.txt links to a URL not in the sitemap: ${u}`);
 }
 
