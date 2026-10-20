@@ -4,7 +4,20 @@
 
 **To resume:** say **"continue the Number One plan"** (or run `/number-one-plan`). Claude reads this file, checks the live state of the Next-up item, does it, runs the gates, commits to Develop, updates this table, and reports.
 
-**Last updated:** 2026-10-16 (session 6). **Next up: P0.3** — request Google indexing for the five new hubs (lab, fertilizers, hypochlorite, oilfield, PAC), then the queue. Blocked only on the Chrome extension's permission for search.google.com. Then re-measure nitric acid around 2026-10-20. Phase 2 is complete except P2.3 lubricants (needs the authorised-brand list). Then Phase 3 (needs TDS for proprietary ranges) and Phase 6 measurement.
+**Last updated:** 2026-10-20 (session 12). **Next up: P0.5 Publish** (user) — Develop is 18 commits ahead of production: footer Supply Guides + city links, nitric hub FAQs + image, related strips, Oman delivery grid, 6 deepened products. After the Publish, Claude runs the post-Publish checklist and requests indexing for the nitric hub. In parallel, the user items that decide Google: **P7.1 work the 28 open website leads**, P5.7 GBP products + categories, P5.6 reviews, P5.5 the four page-1 directories. Claude continues P0.3 (the `/ar` queue, ~10/day from ~12:00 Muscat), P3 (thin tail, 31 left; proprietary ranges need TDS), and the daily run.
+
+**What "number one" needs, surface by surface (read 2026-10-20, `nitric-acid-position-2026-10-20.md`, `daily-scoreboard.md`):**
+
+| Surface | Now | Gap to #1 | Lever (phase item) |
+|---|---|---|---|
+| Google Oman head terms | "in oman" **1**, "suppliers oman" 2, "muscat" 3, "company oman" — | omanchem #1 on 41 sister-site referring domains vs our 1 | P5.3–P5.5 citations, P5.6 reviews, P5.7 GBP; Publish (P0.5) |
+| Google Oman cities | rustaq 2 (city page); muscat 3, duqm 3, salalah 4 = **homepage, not the city page** | wrong URL ranking | footer city links (P2.9, Develop) → Publish |
+| Google product hubs | gcc 1, lab 2 (homepage), nitric 18 (homepage); caustic / HCl / hypochlorite / PAC / fertilizer / oilfield absent | hubs reachable only from location pages until P2.8 | footer Supply Guides (P2.8, Develop) → Publish → request indexing |
+| Google GCC | absent everywhere; nitric country pages 4 days old, Qatar indexed request 10-19 | local directories hold page 1 | P5.5 per-country directories; wait for indexing |
+| Bing | Oman head terms 2 / 2 / 3 / 7; nitric **1+2**, Bahrain **1**, UAE 7 | omanchem #1 | same citations; Bing Places publish (P5.1, ETA 10-23) |
+| Google Maps | Muscat **first** for "nitric acid supplier" and "chemical suppliers in oman" 5; 2 reviews | reviews 2 vs 12–71 | P5.6 reviews, P5.7 GBP products |
+| AI engines | Perplexity Oman **1st**, KSA 4th; ChatGPT varies (3rd / not named); AI Mode not named | AI Mode answers from Maps cards | P5.7 GBP products/categories, P5.6, citations |
+| Inquiries | 72 web leads / 90d, **0 nitric**, 28 unworked | response, not ranking | **P7.1** |
 
 ## Rules that apply to every item
 
@@ -20,8 +33,9 @@
 |---|---|---|---|---|
 | P0.1 | Merge Develop → main, click Publish in Lovable, confirm the new `x-deployment-id` | Claude (user authorised in-session 2026-10-16) | **done 2026-10-16:** main fast-forwarded 73cd306 → cab895a; Lovable Publish; deploy `psr2.3e4b3c2a…` → `psr2.42699f12…`. Verified live: nitric GCC title, all 5 new hubs with own title + self canonical + FAQPage, consolidated EDTA primary | `curl -sI https://gcoman.com/ \| grep x-deployment-id` changes |
 | P0.2 | `npm run submit:indexnow` after the Publish | Claude | **done 2026-10-16:** `--all`, 634 URLs, HTTP 200 (every page changed: prerender-snapshot fallback) | HTTP 200 in the script output |
-| P0.3 | Request indexing, ~9 URLs/day, in this order: `/products/ro-chemicals/membrane-antiscalant-ro`, `/products/additives`, `/products/oilfield/activated-carbon`, `/products/oilfield/soda-ash-light`, `/products/swimming-pool/chlorine-powder-pool`, `/products/oilfield/calcium-bromide`, `/products/oilfield/descalant`, `/products/ethanolamines/tea-triethanolamine`, `/products/cooling-water/biological-guard-antifouling`, then the 3 lab pages, 6 `/chemicals/*`, 5 blogs from the GSC "Crawled – currently not indexed" list | Claude | **in progress** — done 2026-10-13: nitric hub, HCl hub, `/chemical-suppliers-oman`, TEG, PAC, `/products/water-treatment`, `/products/inorganic`, `/products/soap-detergent`, `/products/oilfield/meg`. Done 2026-10-16: membrane-antiscalant-ro, `/products/additives`, chlorine-powder-pool, calcium-bromide, descalant, tea-triethanolamine, biological-guard-antifouling (+ soda-ash-light and activated-carbon, already indexed). **Left:** the 3 lab pages, 6 `/chemicals/*`, 5 blogs | each shows "Indexing requested" |
+| P0.3 | Request indexing, ~9 URLs/day, in this order: `/products/ro-chemicals/membrane-antiscalant-ro`, `/products/additives`, `/products/oilfield/activated-carbon`, `/products/oilfield/soda-ash-light`, `/products/swimming-pool/chlorine-powder-pool`, `/products/oilfield/calcium-bromide`, `/products/oilfield/descalant`, `/products/ethanolamines/tea-triethanolamine`, `/products/cooling-water/biological-guard-antifouling`, then the 3 lab pages, 6 `/chemicals/*`, 5 blogs from the GSC "Crawled – currently not indexed" list | Claude | **in progress** — done 2026-10-13: nitric hub, HCl hub, `/chemical-suppliers-oman`, TEG, PAC, `/products/water-treatment`, `/products/inorganic`, `/products/soap-detergent`, `/products/oilfield/meg`. Done 2026-10-16: membrane-antiscalant-ro, `/products/additives`, chlorine-powder-pool, calcium-bromide, descalant, tea-triethanolamine, biological-guard-antifouling (+ soda-ash-light and activated-carbon, already indexed). **Left:** the 3 lab pages, 6 `/chemicals/*`, 5 blogs. **2026-10-19:** all 5 new hubs confirmed "URL is on Google"; nitric Qatar requested (sitemap now detected); `/ar` queue resumed, 9 requested. **2026-10-20:** Quota Exceeded at 07:30 (window from 11:00); resume `/ar/products/chlorinated/perchloroethylene` ~12:00 Muscat, ~10/day | each shows "Indexing requested" |
 | P0.4 | Re-inspect the four Soft-404 URLs; Pages → Soft 404 count | Claude | **done 2026-10-16** — nitric hub, HCl hub, `/chemical-suppliers-oman`: "URL is on Google"; TEG indexed with issues. Soft 404 19 → **15**; indexed 487 | "URL is on Google" |
+| P0.5 | **Publish #3**: merge Develop → main, Lovable Publish (Develop 18 commits ahead on 2026-10-20: footer Supply Guides + city links, nitric hub FAQs + IBC image, related strips, Oman delivery grid, 6 deepened products, docs). Footer changes show on the homepage footer too (flagged; HANDOFF protects homepage title/content, the footer is shared) | **user** (or Claude on in-session instruction) | open | new `x-deployment-id`; then post-Publish checklist, IndexNow, nitric hub indexing request |
 
 ## Phase 1 — one URL per product (consolidation)
 
@@ -53,10 +67,14 @@ Each hub: `/chemical-supplier/<slug>`, spec table, grades, pack formats, GCC lea
 | P2.5 | Sodium hypochlorite | 272 impr / 7 clicks over 6 grade pages; 5 CRM enquiries | none — from data | **built 2026-10-16** on Develop: `/chemical-supplier/sodium-hypochlorite-oman`, grade table from 4 JSON files, storage/safety, 5 FAQs; each grade keeps its own page and links here. **Flag for the user:** the food-grade page's spec says "EPA registered sanitizer" and the municipal page says "on-site generation available" — confirm or remove |
 | P2.6 | Oilfield chemicals | 47 live pages, 1,335 impr | none — from data (top sellers would still help ordering) | **built 2026-10-16** on Develop: `/chemical-supplier/oilfield-chemicals-oman`, 47 products grouped by job, JSRS section, 5 FAQs, linked from 45 oilfield products + location pages; e2e spec |
 | P2.0 | Price band on the 3 live hubs (B1) | PAA on every SERP; uvwater ranks on price | **the bands** | waiting on user |
+| P2.7 | Nitric acid country pages (uae, saudi-arabia, qatar, kuwait, bahrain) | every GCC #1 is a country-titled page | none | **live 2026-10-16**; Bing Bahrain 1, UAE 7, Dubai 6; Perplexity KSA cites the Saudi page; Google: Qatar indexing requested 10-19, others queued |
+| P2.8 | **Footer "Supply Guides"**: all 8 hubs linked site-wide with descriptive anchors | nitric: homepage 18, hub absent; lab: homepage 2, hub absent — hubs had no site-wide link | none | **on Develop 2026-10-19** (`ce69235`), waits on P0.5 |
+| P2.9 | **Footer "Chemical Supplier by City"**: muscat, sohar, salalah, duqm, rusayl, rustaq | homepage outranks the city page for muscat / duqm / salalah on 10-18 and 10-20 (two consecutive same-method readings); link audit: city pages reachable only from /chemicals and each other | none | **on Develop 2026-10-20** (`22edac5`), gates + 94 e2e green, waits on P0.5 |
+| P2.10 | Nitric hub: 2 PAA FAQs ("where can I buy", "what is 70% used for") + IBC packaging image + related-chemicals strips (nitric, caustic) | PAA list on the SERP; every page-1 competitor has 2–20 images, hub had none | "who can buy / documents" FAQ needs the user's statement | **on Develop 2026-10-19**, waits on P0.5 |
 
 ## Phase 3 — lift the thin tail (5 pages/week)
 
-`npm run audit:product-content` queue: 45 pages < 200 words (tank cleaners, cooling water, agro, RO first). Real specs, CAS, applications, packs. No templated FAQs. Descriptions can now use blank lines for paragraphs. **Status:** agro done 2026-10-16 (8 pages, 186–223 words; thin 45 → 37). **Next:** cooling water and RO (standard chemistry, writable from the data); **tank cleaners need the user** — they are proprietary formulations (Enviro Soft 2000, Universal Wash, Metal Bright…) and need the actual composition/TDS before content can be written without guessing.
+`npm run audit:product-content` queue: 45 pages < 200 words (tank cleaners, cooling water, agro, RO first). Real specs, CAS, applications, packs. No templated FAQs. Descriptions can now use blank lines for paragraphs. **Status:** agro done 2026-10-16 (8 pages, 186–223 words; thin 45 → 37). **2026-10-20:** soda ash light/dense, hydrazine hydrate, magnesium oxide, boric acid, p-xylene deepened to 260–320 words from their own specs (thin 37 → **31**); MgO cementing use corrected to expanding additive. **Next:** the remaining standard-chemistry thin pages (sodium bisulphate, corrosion-inhibitor generics only if CAS is known); cooling water, RO and **tank cleaners need the user** — they are proprietary formulations (Enviro Soft 2000, Universal Wash, Metal Bright…) and need the actual composition/TDS before content can be written without guessing.
 
 ## Phase 4 — Arabic product layer
 
@@ -68,28 +86,40 @@ Each hub: `/chemical-supplier/<slug>`, spec table, grades, pack formats, GCC lea
 |---|---|---|---|
 | P5.1 | Bing Places | done 2026-10-11, pending publish | Bing Maps "chemical suppliers" Muscat, 2026-11-08 |
 | P5.2 | D&B D-U-N-S (check existing records first) | open | `site:dnb.com "Global Chemicals LLC"` |
-| P5.3 | OmanYP ($20) | open | listing page names us |
-| P5.4 | Made in Oman Gate, Metoree, Records Marine, EasyOman, ensun.io | open | `site:` hit naming us |
-| P5.5 | Yellow-pages directories: Oman, UAE, Saudi, Qatar, Kuwait, Bahrain + go4worldbusiness | open (they hold page-1 for products in all six) | listing page |
-| P5.6 | Google reviews → 11, then 20 | 2 today | Maps panel |
-| P5.7 | GBP secondary categories + product Services; website → `https://gcoman.com/` | open | GBP |
+| P5.3 | OmanYP ($20); **omanyellowpagesonline.com / GulfYP (free)** — it ranks #9 for "nitric acid supplier oman" and lists the name-collision company, not us | open — **user signs up** | listing page names us |
+| P5.4 | Made in Oman Gate, Metoree, Records Marine, EasyOman, ensun.io | open — madeinomangate and metoree are referring domains of muscatchemical; **user signs up**, Claude fills | `site:` hit naming us |
+| P5.5 | Yellow-pages directories: Oman, UAE, Saudi, Qatar, Kuwait, Bahrain + **go4worldbusiness** (#5 for "nitric acid supplier oman", free supplier profile) | open (they hold page-1 for products in all six) — **user signs up**, Claude fills | listing page |
+| P5.6 | Google reviews → 11, then 20 (`https://g.page/r/CWLBtunkhjqlEBM/review`) | 2 on 2026-10-20; Maps Muscat already first for "nitric acid supplier" with 2, neighbours carry 12–71 | Maps panel |
+| P5.7 | GBP secondary categories + **Products: "Nitric Acid 68%" (hub URL), HCl, caustic**; website → `https://gcoman.com/` | open — **user** (the category search is blocked for Claude's browser session; service area already all Oman + QA/KW/SA/Abu Dhabi, read 10-18) | GBP; AI Mode names us |
 | P5.8 | Wikidata item (after the Wikipedia unblock; talk page check 2026-10-18) | waiting | `wbsearchentities` |
 | P5.9 | Each live listing URL → Organization `sameAs` in `index.html` | Claude, as each lands | live HTML |
+| P5.10 | Earned Oman links: OCCI member directory (needs CR number), Tender Board supplier registry, JSRS/PDO vendor list if public, customers' approved-supplier pages, certification body's client list | user + Claude | referring domains 1 → 6+ (Bing WMT) |
+| P5.11 | Cloud daily routine: allow gcoman.com in the routine's network access (every cloud row reads 0/64 since 10-18) | **user** | cloud row shows 64/64 |
+
+## Phase 7 — inquiries (added 2026-10-20: ranking without response is wasted)
+
+| # | Item | Owner | Status | Verify |
+|---|---|---|---|---|
+| P7.1 | **Work the 28 website leads in "New – Website Enquiry"** (urea 100,000 MT/month 10-17, solvent naphtha 1 FCL 10-13, acetone 210 L Special Technical Services 10-05, Muscat Engineering Castrol 10-19, NESMA list 10-10…) | **user / sales** | open | Zoho: count of "New – Website Enquiry" < 5 |
+| P7.2 | Zoho `Country` populated on web leads (empty on 71 of 72): `submit-contact` maps the form country to the Lead field. Code exists on Develop since 10-13; **edge functions do not ship on Publish** — needs a Supabase/Lovable-side deploy | user (deploy) | blocked on deploy | next web lead shows Country |
+| P7.3 | Monthly: website leads mentioning nitric / each hub product, by country | Claude | 2026-10-20: 0 nitric of 72 | Zoho search |
 
 ## Phase 6 — measure and extend (monthly; the plan grows here)
 
 Run `monitoring-search-visibility` (full) plus the product panel (12 products × 3 forms, Bing on the hub products, AI Mode + ChatGPT on caustic/hypochlorite/PAC). Compare with the targets below. New evidence → a new row in the phase it belongs to, never a side plan.
 
-| Signal | 2026-10-13 | 2026-10-27 | 2026-12-01 |
-|---|---|---|---|
-| Soft 404 count | 19 (10-16: **15**) | ≤ 10 | ≤ 5 |
-| Hubs indexed | 1 of 3 (10-16: **3 of 3**) | 3 of 3 | all |
-| "nitric acid supplier oman", Google `gl=om` | absent (10-16: homepage #17, hub not top 40; hub #10 for "nitric acid sohar") | top 10 | top 5 |
-| Product-page clicks, 90d | ~230 | — | 400+ |
-| Lab / fertilizer / lubricants clicks | 20 / 39 / 97 | — | +50 % |
-| Bing referring domains | 1 | 3 | 6+ |
-| Leads with a country | 15 of 88 | all new | — |
-| Google head term "chemical suppliers oman" | #2 | #2 | #1 |
+| Signal | 2026-10-13 | 2026-10-20 (read) | 2026-10-27 | 2026-12-01 |
+|---|---|---|---|---|
+| Soft 404 count | 19 (10-16: **15**) | n/m | ≤ 10 | ≤ 5 |
+| Hubs indexed | 1 of 3 (10-16: **3 of 3**) | **13 of 13** incl. 5 new hubs + nitric UAE/SA/KW/BH (Qatar requested) | 3 of 3 | all |
+| "nitric acid supplier oman", Google `gl=om` | absent (10-16: homepage #17, hub not top 40; hub #10 for "nitric acid sohar") | homepage 18, hub absent (10-19); Bing 1, Perplexity 1, Maps Muscat first | top 10 | top 5 |
+| Product-page clicks, 90d | ~230 | n/m | — | 400+ |
+| Lab / fertilizer / lubricants clicks | 20 / 39 / 97 | n/m | — | +50 % |
+| Bing referring domains | 1 | **1** (tamol.om) vs omanchem 41 | 3 | 6+ |
+| Leads with a country | 15 of 88 | **1 of 72** web leads (edge function not deployed) | all new | — |
+| Google head term "chemical suppliers oman" | #2 | #2 ("in oman" **#1**) | #2 | #1 |
+| Site clicks, GSC 7d | — | 171 (prev 132); Oman 77 | — | — |
+| Website leads / month (Zoho) | — | Aug 20, Sep 31, Oct 17 to the 19th; 28 unworked | 0 unworked > 7 days | — |
 
 ## Session log
 
@@ -111,3 +141,5 @@ Run `monitoring-search-visibility` (full) plus the product panel (12 products ×
 - 2026-10-16 (session 6, 16:40): **P2.7 nitric acid country pages** (new item, user asked for #1 on "nitric acid supplier" across the GCC). Investigation: every GCC #1 (Google and Bing) is a page titled for that country (chemstock.ae, deluxechemical, enviroblend, chimisrl/alchemora/gabeco country templates), mostly 190–260 words; our hub covered each country in one table row, so we were absent. Built `NitricAcidCountry.tsx`: /chemical-supplier/nitric-acid-{uae,saudi-arabia,qatar,kuwait,bahrain}, each with its own route, lead times, delivery points, industrial areas, documents and FAQs (site-published facts only); linked from the hub GCC cards, matching /chemicals/* pages, Middle East page, /sitemap. Scope closed at 1 product × 5 countries. Gates + 94/94 e2e. Published (deploy `eb5a4575`), verified live; IndexNow 12 URLs HTTP 200; Bing URL Submission 5 "Success". Google indexing requests queue for 10-17 after the 5 hubs. Off-site lever per country: get listed on the directory pages that themselves rank #1 (yellowpages-uae.com/uae/nitric-acid, bahrainyellowpagesonline, go4worldbusiness Saudi, trademo Kuwait).
 - 2026-10-18 (session 11): GEO audit (62/100, `GEO-ANALYSIS.md`) → on Develop: dateModified stamped into every prerendered page from git-true lastmod (160 stale lastmods fixed; the 12 hubs were unmapped), llms.txt lists all 13 hubs + CI gate, CCBot allowed, stale-English FAQPage dedupe on /ar. New continuous procedure: skill `running-search-operations`, agents `search-sweeper` / `release-verifier`, `verify:live-pages`, `panel:locations`, `location-ledger.md`. First sweep recorded (Google 25 / Bing 41 / Maps 6). P0.3: nitric UAE, Saudi Arabia and Qatar indexing requested; Kuwait, Bahrain and the 5 hubs remain (GSC blocked by the session permission policy). **Publish needed (user)** for the Develop commits 60c29ef…1b9d769.
 - 2026-10-18 (session 11, evening): **Published** — `main` = `3861770`, deploy `eb2e85b1`. Strict live check 64/64 (dateModified on every page), seo-routing 6/6, IndexNow 639 URLs HTTP 200. Still open: P0.3 GSC indexing for nitric Kuwait, nitric Bahrain and the lab / fertilizer / hypochlorite / oilfield / PAC hubs; GSC 28d-vs-previous read for the decline question; Bing WMT (signed out).
+- 2026-10-19 (daily + nitric): position check, cluster review, competitor investigation (`nitric-acid-review-2026-10-19.md`, `nitric-acid-competitors-2026-10-19.md`, ACTION-PACK H13–H15). On Develop: related-chemicals strips, footer Supply Guides (P2.8), 2 PAA FAQs + IBC image (P2.10). GSC: 5 hubs indexed, nitric Qatar + 9 `/ar` requested.
+- 2026-10-20 (session 12, "be number one everywhere, recurring"): daily run (every Google cell = 10-18, no movement); nitric deep check across Oman cities, 5 GCC countries, Maps, Perplexity/ChatGPT, GSC by country, Zoho (`nitric-acid-position-2026-10-20.md`, H16): **Google Oman gives the nitric pages 1 impression in 90 days → 0 nitric inquiries of 72; 28 web leads unworked.** Plan re-sequenced: the surface table above; Phase 7 (inquiries) added; P0.5 Publish #3 is Next up. Done on Develop: P2.9 footer city links (homepage outranked city pages on two readings; link audit confirmed), P3 six standard-chemistry pages deepened (thin 37 → 31). Google fetch method: soft-block after ~25 fetches then CAPTCHA (25 batch + 13 nitric) — the daily cap stands. Recurrence: session cron 09:43 daily (expires ~10-25, re-arm each session), cloud routine 09:13 still blocked on network access (P5.11).
