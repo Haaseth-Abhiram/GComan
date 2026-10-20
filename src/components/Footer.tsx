@@ -295,6 +295,30 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
+            {/* Oman city pages (/chemicals/<city>). Added 2026-10-20: two
+                consecutive readings (10-18, 10-20, Google gl=om) showed the
+                HOMEPAGE ranking for "chemical supplier muscat" (3), "duqm" (3)
+                and "salalah" (4) while the city pages were absent. The link
+                audit found the city pages reachable only from /chemicals and
+                each other. Same lever as the hubs above: one site-wide link
+                each with a city anchor. Slugs come from locationIndex.ts. */}
+            <h3 className="text-lg font-semibold mt-6 mb-4 text-white">{t('footer.omanCities', 'Chemical Supplier by City')}</h3>
+            <ul className="space-y-2">
+              {[
+                { label: 'Chemical Supplier Muscat', path: '/chemicals/muscat' },
+                { label: 'Chemical Supplier Sohar', path: '/chemicals/sohar' },
+                { label: 'Chemical Supplier Salalah', path: '/chemicals/salalah' },
+                { label: 'Chemical Supplier Duqm', path: '/chemicals/duqm' },
+                { label: 'Chemical Supplier Rusayl', path: '/chemicals/rusayl' },
+                { label: 'Chemical Supplier Rustaq', path: '/chemicals/rustaq' },
+              ].map((item) => (
+                <li key={item.path}>
+                  <Link to={item.path} className="text-white/80 hover:text-primary transition-colors text-sm inline-block hover:translate-x-1 rtl:hover:-translate-x-1 transition-all">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Contact Info */}
