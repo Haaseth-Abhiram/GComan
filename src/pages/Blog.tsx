@@ -65,7 +65,7 @@ GCC Export Capabilities
 
 Many Omani businesses also require GCC-wide chemical supply. The best Oman-based suppliers export to UAE (Dubai, Abu Dhabi, Sharjah), Saudi Arabia (Riyadh, Jeddah, Dammam, Yanbu), Qatar (Doha, Ras Laffan Industrial City), Kuwait, and Bahrain. For GCC export, ensure your supplier can provide Certificate of Origin (for customs clearance), packing lists and commercial invoices meeting destination country requirements, MSDS/SDS documentation in English and Arabic, and proper hazardous goods labelling for road freight across GCC borders.
 
-Global Chemicals LLC is a JSRS-certified, ISO 9001:2015 accredited chemical supplier based in Muscat with over 10 years of experience supplying industries across Oman and exporting to all GCC countries. Our product range covers 1,000+ industrial, water treatment, laboratory, oilfield, and specialty chemicals. Contact our team at info@gcoman.com or call +968-93754388 to request a quote or product availability confirmation.`,
+Global Chemicals LLC is a JSRS-certified, ISO 9001:2015 accredited chemical supplier based in Muscat with over 10 years of experience supplying industries across Oman and exporting to all GCC countries. Our product range covers 1,000+ industrial, water treatment, laboratory, oilfield, and specialty chemicals. Contact our team at info@gcoman.com or call +968 9277 2305 to request a quote or product availability confirmation.`,
     author: 'Global Chemicals Editorial Team',
     date: '2026-02-15',
     readTime: '10 min read',
@@ -122,7 +122,7 @@ Storage and Safety in Oman's Climate
 
 All water treatment chemicals must be stored according to their SDS requirements, particularly in summer when ambient temperatures exceed 45°C. Sodium hypochlorite must be stored below 25°C in opaque containers away from direct sunlight. PAC liquid should be stored in HDPE tanks with sun shields. Calcium hypochlorite granules require a cool, dry, well-ventilated warehouse with no organic materials nearby (fire hazard if contaminated).
 
-Global Chemicals LLC supplies the complete range of water treatment chemicals to industrial facilities across Muscat, Sohar, Salalah, Duqm, and all Oman governorates. We provide SDS documentation, dosing recommendations, and technical support for all products. Contact us at +968-93754388 or info@gcoman.com for pricing and availability.`,
+Global Chemicals LLC supplies the complete range of water treatment chemicals to industrial facilities across Muscat, Sohar, Salalah, Duqm, and all Oman governorates. We provide SDS documentation, dosing recommendations, and technical support for all products. Contact us at +968 9277 2305 or info@gcoman.com for pricing and availability.`,
     author: 'Global Chemicals Technical Team',
     date: '2026-02-10',
     readTime: '8 min read',
@@ -197,7 +197,7 @@ How to Source Agricultural Chemicals in Oman
 
 When selecting an agricultural chemical supplier in Oman, verify that they can supply: MAFWR registration certificates for all crop protection products, original manufacturer technical datasheets and SDS documents, batch-specific certificates of analysis confirming stated active ingredient concentrations, proper labelling in Arabic and English as required by Omani law, and after-sales technical support for application rates and scheduling.
 
-Global Chemicals LLC supplies agricultural chemicals including fertilizers, soil conditioners, and irrigation water treatment chemicals to farms and agricultural businesses across Oman. Our products are supported by full technical documentation. Contact us at info@gcoman.com or +968-93754388 to discuss your requirements.`,
+Global Chemicals LLC supplies agricultural chemicals including fertilizers, soil conditioners, and irrigation water treatment chemicals to farms and agricultural businesses across Oman. Our products are supported by full technical documentation. Contact us at info@gcoman.com or +968 9277 2305 to discuss your requirements.`,
     author: 'Business Development Team',
     date: '2026-02-05',
     readTime: '9 min read',
@@ -306,7 +306,7 @@ Lubricant Storage in Oman's Heat
 
 Lubricants must be stored in covered, shaded areas. Storing drums in direct sunlight can cause internal pressure buildup and seal failure on drum bungs. Thermal cycling — from 50°C daytime to 25°C at night — causes water condensation inside partially empty drums. Store drums on their side with bungs at 3 and 9 o'clock positions, or in a temperature-controlled storage area to maximise shelf life (typically 2 years from manufacture date for mineral oils, 3 years for synthetics).
 
-Global Chemicals LLC supplies Shell, Mobil, Castrol, and Total lubricants to industries across Oman including oil & gas, manufacturing, power, ports, and construction. Contact us at +968-93754388 or info@gcoman.com for pricing, technical advice, and bulk supply agreements.`,
+Global Chemicals LLC supplies Shell, Mobil, Castrol, and Total lubricants to industries across Oman including oil & gas, manufacturing, power, ports, and construction. Contact us at +968 9277 2305 or info@gcoman.com for pricing, technical advice, and bulk supply agreements.`,
     author: 'Lubrication Specialists',
     date: '2024-12-10',
     readTime: '8 min read',
@@ -358,7 +358,7 @@ ISO 14001 and Green Procurement in Oman
 
 A growing number of Oman's industrial operators — particularly those in the oil & gas sector and hospitality industry — are implementing ISO 14001 Environmental Management Systems. One key component of ISO 14001 is the identification and control of "significant environmental aspects," which directly includes the purchase and use of hazardous chemicals. Procurement teams at ISO 14001-certified facilities need chemical suppliers who can provide environmental impact data, REACH compliance statements, and product environmental declarations to support their EMS documentation.
 
-Global Chemicals LLC supplies environmentally preferred chemical alternatives including phosphate-free corrosion inhibitors, biodegradable cleaners, and low-hazard biocides across Oman. We can provide REACH compliance documentation and environmental product profiles on request. Contact our technical team at info@gcoman.com or +968-93754388 to discuss sustainable chemical alternatives for your operations.`,
+Global Chemicals LLC supplies environmentally preferred chemical alternatives including phosphate-free corrosion inhibitors, biodegradable cleaners, and low-hazard biocides across Oman. We can provide REACH compliance documentation and environmental product profiles on request. Contact our technical team at info@gcoman.com or +968 9277 2305 to discuss sustainable chemical alternatives for your operations.`,
     author: 'Sustainability Team',
     date: '2024-12-05',
     readTime: '7 min read',
@@ -411,7 +411,7 @@ Reporting and Compliance
 
 Under Oman's Chemical Safety Law and GCC chemical regulations aligned with the Rotterdam Convention, laboratories must maintain records of: all scheduled/controlled chemical receipts and disposals, any chemical accidents or near-misses (reportable to the Ministry of Manpower for occupational incidents), and disposal of hazardous chemical waste (must be collected by licensed hazardous waste contractors — illegal dumping carries significant penalties).
 
-Global Chemicals LLC supplies laboratory chemicals including analytical reagents, HPLC solvents, buffer solutions, AR-grade acids and bases, and laboratory standards to laboratories across Oman. All products are supplied with current SDS and certificates of analysis. Contact our laboratory chemicals team at info@gcoman.com or +968-93754388.`,
+Global Chemicals LLC supplies laboratory chemicals including analytical reagents, HPLC solvents, buffer solutions, AR-grade acids and bases, and laboratory standards to laboratories across Oman. All products are supplied with current SDS and certificates of analysis. Contact our laboratory chemicals team at info@gcoman.com or +968 9277 2305.`,
     author: 'Safety & Compliance Team',
     date: '2024-12-01',
     readTime: '10 min read',
@@ -475,7 +475,7 @@ JSRS Certification: The Key to Oman Oil & Gas Chemical Supply
 
 Suppliers selling chemicals to PDO, OQ, and their contractors must hold current JSRS (Joint Supplier Registration System) certification. JSRS is Oman's pre-qualification system for oil and gas sector supply chain. Without JSRS, a chemical supplier cannot participate in PDO or OQ competitive tenders. Global Chemicals LLC is JSRS-certified and ICV compliant, meeting all pre-qualification requirements for Oman's oil & gas sector supply chain.
 
-Contact our oilfield chemicals team at sales@gcoman.com or +968-93754388 to discuss your production chemical requirements, JSRS documentation, and supply logistics for both onshore field operations and Mina Al Fahal terminal deliveries.`,
+Contact our oilfield chemicals team at sales@gcoman.com or +968 9277 2305 to discuss your production chemical requirements, JSRS documentation, and supply logistics for both onshore field operations and Mina Al Fahal terminal deliveries.`,
     author: 'Oil & Gas Specialists',
     date: '2024-11-28',
     readTime: '9 min read',
@@ -553,7 +553,7 @@ Seasonal Chemical Programme Adjustments
 
 Oman's dramatic seasonal temperature variation — from 15°C winter nights to 50°C summer days — requires chemical programme adjustments throughout the year. In summer: increase biocide frequency (higher water temperatures accelerate microbial growth and biocide consumption); reduce target COC to 3–4 (higher evaporation rates concentrate minerals faster); increase corrosion inhibitor dose (higher chloride levels in summer-concentrated water accelerate corrosion). In winter: Legionella risk reduces slightly with cooler water temperatures, but do not eliminate the biocide programme; scale risk from calcium carbonate decreases (lower temperatures reduce CaCO3 precipitation kinetics).
 
-Global Chemicals LLC supplies cooling tower treatment chemicals — antiscalants, corrosion inhibitors, biocides, and dispersants — to industrial facilities, hotels, hospitals, and commercial buildings across Oman. We offer water testing, LSI calculation, and chemical programme design services. Contact our water treatment team at info@gcoman.com or +968-93754388.`,
+Global Chemicals LLC supplies cooling tower treatment chemicals — antiscalants, corrosion inhibitors, biocides, and dispersants — to industrial facilities, hotels, hospitals, and commercial buildings across Oman. We offer water testing, LSI calculation, and chemical programme design services. Contact our water treatment team at info@gcoman.com or +968 9277 2305.`,
     author: 'Water Treatment Team',
     date: '2024-11-25',
     readTime: '7 min read',
@@ -642,7 +642,7 @@ Caustic soda is classified as a corrosive substance (GHS Hazard Category 1, Skin
 
 Liquid caustic soda (45–50%) must be stored in HDPE or mild steel tanks — never aluminium, zinc, or tin (NaOH dissolves these metals, generating hydrogen gas). Storage temperature should not fall below 12°C (the freezing point of 50% NaOH solution) — insulated or heated storage is required in cooler interior locations. Caustic soda is hygroscopic and will absorb CO2 from air, forming sodium carbonate — keep containers sealed when not in use.
 
-Global Chemicals LLC supplies caustic soda flakes, pearls, and liquid solution to industrial customers across Oman including water treatment plants, food processors, oil & gas facilities, and chemical manufacturers. We hold current stock in Muscat with same-day or next-day delivery available. For pricing and availability, contact us at info@gcoman.com, sales@gcoman.com, or call +968-93754388.`,
+Global Chemicals LLC supplies caustic soda flakes, pearls, and liquid solution to industrial customers across Oman including water treatment plants, food processors, oil & gas facilities, and chemical manufacturers. We hold current stock in Muscat with same-day or next-day delivery available. For pricing and availability, contact us at info@gcoman.com, sales@gcoman.com, or call +968 9277 2305.`,
     author: 'Global Chemicals Technical Team',
     date: '2026-03-15',
     readTime: '8 min read',
@@ -745,7 +745,7 @@ PAC Storage and Handling
 
 Liquid PAC (pH 3.5–5.0, corrosive) must be stored in HDPE or FRP (fibreglass) tanks — never in plain mild steel (corrosion) or concrete (dissolved by acid). Storage above 40°C (common in Oman summer) causes gradual decomposition and colour change (yellow to brown) without necessarily affecting performance, but very long storage above 50°C is not recommended. Keep containers sealed to prevent CO2 absorption. Powder PAC is hygroscopic — store in sealed bags in a cool, dry area. Use within 12 months of manufacture date.
 
-Global Chemicals LLC is a major PAC supplier in Oman, stocking both liquid PAC (10–12% Al2O3) and powder PAC (28–31% Al2O3) at our Muscat warehouse for same-day or next-day delivery. We supply municipal water authorities, industrial facilities, hotels, swimming pools, and food processing plants across Oman and export to UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain. Contact us for competitive bulk pricing at info@gcoman.com or +968-93754388.`,
+Global Chemicals LLC is a major PAC supplier in Oman, stocking both liquid PAC (10–12% Al2O3) and powder PAC (28–31% Al2O3) at our Muscat warehouse for same-day or next-day delivery. We supply municipal water authorities, industrial facilities, hotels, swimming pools, and food processing plants across Oman and export to UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain. Contact us for competitive bulk pricing at info@gcoman.com or +968 9277 2305.`,
     author: 'Global Chemicals Technical Team',
     date: '2026-03-20',
     readTime: '9 min read',
@@ -771,7 +771,7 @@ Global Chemicals LLC is a major PAC supplier in Oman, stocking both liquid PAC (
       },
       {
         question: 'Where can I buy PAC in Oman with same-day delivery?',
-        answer: 'Global Chemicals LLC stocks both liquid PAC (10–12% Al2O3) and powder PAC (28–31% Al2O3) at our Muscat warehouse and offers same-day delivery within Muscat Governorate and next-day delivery to Sohar, Rusayl Industrial Estate, Barka, and Salalah. We supply PAEW-contracted water treatment facilities, industrial effluent plants, hotels, swimming pools, and food processing companies across Oman. Bulk tanker delivery of liquid PAC is available for large municipal facilities. Contact us at info@gcoman.com or +968-93754388 for pricing and availability confirmation.',
+        answer: 'Global Chemicals LLC stocks both liquid PAC (10–12% Al2O3) and powder PAC (28–31% Al2O3) at our Muscat warehouse and offers same-day delivery within Muscat Governorate and next-day delivery to Sohar, Rusayl Industrial Estate, Barka, and Salalah. We supply PAEW-contracted water treatment facilities, industrial effluent plants, hotels, swimming pools, and food processing companies across Oman. Bulk tanker delivery of liquid PAC is available for large municipal facilities. Contact us at info@gcoman.com or +968 9277 2305 for pricing and availability confirmation.',
       },
     ],
     howTo: {
@@ -840,7 +840,7 @@ Global Chemicals LLC prepares all standard export documentation as part of every
 
 How to Get a Quote for UAE Supply
 
-UAE procurement teams can request a quote by emailing sales@gcoman.com with the chemical name (or CAS number), required quantity, delivery address in the UAE, and preferred payment terms. WhatsApp is also available for faster communication on +968-93754388. Our export team typically responds within 4–6 working hours with competitive pricing, lead times, and availability confirmation. Incoterms available: FOB (Muscat), DAP (your UAE premises), or CIF (UAE port).`,
+UAE procurement teams can request a quote by emailing sales@gcoman.com with the chemical name (or CAS number), required quantity, delivery address in the UAE, and preferred payment terms. WhatsApp is also available for faster communication on +968 9277 2305. Our export team typically responds within 4–6 working hours with competitive pricing, lead times, and availability confirmation. Incoterms available: FOB (Muscat), DAP (your UAE premises), or CIF (UAE port).`,
     author: 'Global Chemicals Export Team',
     date: '2026-04-01',
     readTime: '11 min read',
@@ -854,7 +854,7 @@ UAE procurement teams can request a quote by emailing sales@gcoman.com with the 
       supply: ['Chemical specification (name or CAS number)', 'Required quantity (kg or litres)', 'UAE delivery address', 'UAE import permit (if required for restricted chemicals)', 'Valid trade licence for commercial chemical import'],
       steps: [
         { name: 'Identify the chemical specification and quantity needed', text: 'Prepare a clear specification for the chemical required: chemical name (both common name and IUPAC name), CAS registry number, grade (technical, food, laboratory, pharma), and physical form (liquid, powder, granules). For laboratory chemicals, specify the required purity grade (ACS, AR, LR) and brand preference if any. For industrial chemicals, specify the minimum active content percentage and any special requirements (food-grade, REACH-compliant, halal-certified). Minimum order quantities from Global Chemicals LLC Muscat start at 1 unit (drum, bag, or IBC) for stock items.' },
-        { name: 'Request a quote by email or WhatsApp', text: 'Email sales@gcoman.com or send a WhatsApp message to +968-93754388 with your chemical specification, quantity, UAE delivery address (city level is sufficient for initial quote), and preferred incoterms (DAP — Delivered at Place — is the most convenient for UAE buyers, where Global Chemicals LLC handles Oman export and UAE import logistics). Quotes for standard stock items are returned within 4–6 working hours. For non-stock items, a 2–3 business day response time applies while availability and lead time are confirmed.' },
+        { name: 'Request a quote by email or WhatsApp', text: 'Email sales@gcoman.com or send a WhatsApp message to +968 9277 2305 with your chemical specification, quantity, UAE delivery address (city level is sufficient for initial quote), and preferred incoterms (DAP — Delivered at Place — is the most convenient for UAE buyers, where Global Chemicals LLC handles Oman export and UAE import logistics). Quotes for standard stock items are returned within 4–6 working hours. For non-stock items, a 2–3 business day response time applies while availability and lead time are confirmed.' },
         { name: 'Review documentation requirements', text: 'For UAE customs clearance, prepare or request from Global Chemicals LLC: commercial invoice (in USD or AED), packing list, Certificate of Origin (Oman Chamber of Commerce certified — UAE Embassy attestation is generally not required for GCC trade under the GCC Customs Union agreement), Safety Data Sheet (SDS) in English, and Certificate of Analysis (CoA) for the specific production batch. For restricted chemicals (acids, alkalis above certain concentrations, pesticides), a UAE Ministry of Economy import permit may be required — Global Chemicals LLC can advise on whether your specific product requires one.' },
         { name: 'Confirm logistics and lead times', text: 'Road freight from Muscat to Dubai via the Hatta/Al Hili crossing is the standard route — typical transit time is 1–2 business days for Dubai and Sharjah, and 1–2 business days for Abu Dhabi after dispatch. For urgent requirements, air freight from Muscat International Airport to DXB or DWC is available for smaller, high-value shipments — consult Global Chemicals LLC export team for air freight eligibility (not all chemicals are air-freightable due to dangerous goods regulations). For large volumes (5+ tonnes), sea freight via Muttrah Port to Jebel Ali is the most economical option with 3–5 day transit time.' },
         { name: 'Place order and track shipment', text: 'Confirm the order by purchase order (PO) email to sales@gcoman.com or via WhatsApp. Global Chemicals LLC prepares all export documents, books the freight carrier, and shares the tracking reference number, estimated dispatch date, and estimated delivery date once goods are ready. For first-time orders, payment in advance (TT bank transfer) is standard; credit terms of 30–45 days are available for established UAE customers with trade references. Real-time shipment tracking links are shared via WhatsApp for time-sensitive deliveries.' },
@@ -917,7 +917,7 @@ For regulated product categories (certain acids, biocides, agricultural chemical
 
 Getting a Quote for GCC Export
 
-To request a chemical export quote for Saudi Arabia, Qatar, or Kuwait, email our export desk at sales@gcoman.com. Include: chemical name or CAS number, quantity (kg or litres), delivery city, and preferred incoterms. We respond within 24 hours with pricing, lead time, and documentation checklist. WhatsApp quotes are also available on +968-93754388 for faster communication.
+To request a chemical export quote for Saudi Arabia, Qatar, or Kuwait, email our export desk at sales@gcoman.com. Include: chemical name or CAS number, quantity (kg or litres), delivery city, and preferred incoterms. We respond within 24 hours with pricing, lead time, and documentation checklist. WhatsApp quotes are also available on +968 9277 2305 for faster communication.
 
 Global Chemicals LLC ships to all 6 GCC countries from our Muscat warehouse. We are ISO 9001:2015 certified, JSRS registered, and ICV compliant — giving our GCC customers confidence in quality, traceability, and supply continuity.`,
     author: 'Global Chemicals Export Team',
@@ -945,7 +945,7 @@ Global Chemicals LLC ships to all 6 GCC countries from our Muscat warehouse. We 
         { name: 'Understand country-specific import requirements', text: 'Saudi Arabia requires: Saudi Food and Drug Authority (SFDA) approval for food-grade and cosmetic chemicals; Saudi Aramco or SABIC approved vendor qualification for chemicals entering their supply chain; SASO (Saudi Standards, Metrology and Quality Organisation) conformity certificate for some product categories. Qatar requires: Ministry of Public Health permit for restricted substances; MMUP (Ministry of Municipality) approval for construction chemicals. Kuwait requires: Ministry of Commerce import certificate for classified chemicals. Global Chemicals LLC can advise on which of your specific chemicals require pre-import permits for your destination country.' },
         { name: 'Review logistics routing and lead times', text: 'From Muscat, the primary export routes to GCC markets are: Saudi Arabia Eastern Province (Dammam, Al Khobar, Jubail) — GCC road freight via Qatar/Saudi border crossing, 2–4 business days; Saudi Arabia Riyadh — 3–5 business days by road; Jeddah — 5–7 business days by road or 5–7 days by sea via Jebel Ali. Qatar (Doha, Ras Laffan) — road freight via Saudi Arabia, 3–5 business days, or sea freight via Hamad Port, 5–8 days. Kuwait — road freight 5–7 business days via Saudi Arabia or sea via Shuwaikh Port, 7–10 days. For urgent air freight requirements, Global Chemicals LLC can ship from Muscat International Airport.' },
         { name: 'Prepare GCC export documentation', text: 'Standard documentation required for Saudi, Qatar, and Kuwait chemical imports from Oman: commercial invoice with harmonised tariff (HS) code, detailed packing list, Certificate of Origin from Oman Chamber of Commerce (GCC preferential tariff applies to GCC member country exports — 0% duty for qualifying goods), Certificate of Analysis from an accredited laboratory, Material Safety Data Sheet (MSDS/SDS) in English and Arabic, and dangerous goods declaration if the chemical is ADR/IMDG classified. For Saudi Arabia, certain chemicals require SABER electronic conformity certificate. Global Chemicals LLC prepares all standard documents as part of the shipment.' },
-        { name: 'Confirm payment and place the order', text: 'For first orders from Saudi Arabia, Qatar, or Kuwait, payment by advance TT bank transfer (USD or OMR) is standard. For established GCC customers with track record, 30–45 day credit terms or Letter of Credit (LC at sight) can be arranged. To place the order, confirm by PO email to sales@gcoman.com. An order confirmation with commercial invoice, dispatch schedule, and estimated delivery date is sent within 24 hours. Tracking details and shipping documentation (Bill of Lading, Certificate of Origin, CoA) are forwarded electronically on dispatch day. Contact the WhatsApp line +968-93754388 for expedited order handling.' },
+        { name: 'Confirm payment and place the order', text: 'For first orders from Saudi Arabia, Qatar, or Kuwait, payment by advance TT bank transfer (USD or OMR) is standard. For established GCC customers with track record, 30–45 day credit terms or Letter of Credit (LC at sight) can be arranged. To place the order, confirm by PO email to sales@gcoman.com. An order confirmation with commercial invoice, dispatch schedule, and estimated delivery date is sent within 24 hours. Tracking details and shipping documentation (Bill of Lading, Certificate of Origin, CoA) are forwarded electronically on dispatch day. Contact the WhatsApp line +968 9277 2305 for expedited order handling.' },
       ],
     },
   },
@@ -993,7 +993,7 @@ Maintenance Chemicals: Shell, Mobil, and Castrol industrial lubricants, solvents
 
 Contact for Oil and Gas Supply
 
-For PDO, OQ, and oil and gas contractor supply enquiries: email sales@gcoman.com or call +968-93754388. Please include your company name, PDO/OQ contract reference if applicable, chemical name or specification, and required quantity. We prioritise oil and gas sector quotes and respond within 2–4 working hours.`,
+For PDO, OQ, and oil and gas contractor supply enquiries: email sales@gcoman.com or call +968 9277 2305. Please include your company name, PDO/OQ contract reference if applicable, chemical name or specification, and required quantity. We prioritise oil and gas sector quotes and respond within 2–4 working hours.`,
     author: 'Global Chemicals Technical Team',
     date: '2026-03-25',
     readTime: '9 min read',
@@ -1063,7 +1063,7 @@ A CIP program for Oman food plants operating at up to 40°C ambient temperature:
 6. Sanitise with 100–200 mg/L sodium hypochlorite or 100–200 mg/L food-grade peracetic acid
 7. Final flush before production restart
 
-Global Chemicals LLC supplies a comprehensive range of food-grade chemicals to Oman's food and beverage manufacturers in Rusayl, Sohar, Barka, and across the Sultanate. All food-grade products are supplied with FCC/USP certificates, Halal certificates where applicable, Safety Data Sheets in English and Arabic, and batch-specific Certificates of Analysis. Contact us at info@gcoman.com or +968-93754388 for pricing, availability, and technical consultation.`,
+Global Chemicals LLC supplies a comprehensive range of food-grade chemicals to Oman's food and beverage manufacturers in Rusayl, Sohar, Barka, and across the Sultanate. All food-grade products are supplied with FCC/USP certificates, Halal certificates where applicable, Safety Data Sheets in English and Arabic, and batch-specific Certificates of Analysis. Contact us at info@gcoman.com or +968 9277 2305 for pricing, availability, and technical consultation.`,
     author: 'Global Chemicals Technical Team',
     date: '2026-03-28',
     readTime: '10 min read',
@@ -1128,7 +1128,7 @@ Descalers for Emergency Scale Removal
 
 For Oman RO systems that have experienced significant scaling due to antiscalant failure or operational upset, a dedicated descaler — typically a blend of citric acid, EDTA, and anionic surfactants — can remove established mineral deposits from the membrane surface and housing. Descaler treatment is more aggressive than routine acid CIP and should be followed by a thorough water flush and performance testing (permeate flow, salt rejection) before resuming normal operation.
 
-Global Chemicals LLC supplies a full range of RO membrane chemicals to municipal, industrial, and commercial RO operators across Oman, including phosphonate and polyacrylate antiscalants, citric acid CIP agents (liquid and powder), alkaline membrane cleaners, sodium bisulphite for passivation and dechlorination, and specialty membrane descalers. We also stock pH adjustment chemicals, sodium metabisulphite (dechlorination), and biocides for RO pre-treatment. Contact us at info@gcoman.com or +968-93754388 for technical advice and competitive pricing.`,
+Global Chemicals LLC supplies a full range of RO membrane chemicals to municipal, industrial, and commercial RO operators across Oman, including phosphonate and polyacrylate antiscalants, citric acid CIP agents (liquid and powder), alkaline membrane cleaners, sodium bisulphite for passivation and dechlorination, and specialty membrane descalers. We also stock pH adjustment chemicals, sodium metabisulphite (dechlorination), and biocides for RO pre-treatment. Contact us at info@gcoman.com or +968 9277 2305 for technical advice and competitive pricing.`,
     author: 'Global Chemicals Technical Team',
     date: '2026-04-03',
     readTime: '11 min read',
@@ -1195,7 +1195,7 @@ Castrol Optigear Series: Industrial gear oils for enclosed gearboxes in manufact
 
 How to Order Lubricants in Oman
 
-Global Chemicals LLC is an authorised distributor of Shell, Mobil, and Castrol lubricants in Oman. We maintain stock of all major grades at our Muscat warehouse with same-day delivery in Muscat and next-day delivery to Sohar, Rusayl, and other major industrial zones. We supply in packaging from 1-litre bottles and 4-litre packs to 20-litre pails, 208-litre drums, and 1,000-litre IBCs for bulk requirements. For OEM-specified products not listed above, contact our team — we confirm availability within 24 hours. Email info@gcoman.com or call +968-93754388.`,
+Global Chemicals LLC is an authorised distributor of Shell, Mobil, and Castrol lubricants in Oman. We maintain stock of all major grades at our Muscat warehouse with same-day delivery in Muscat and next-day delivery to Sohar, Rusayl, and other major industrial zones. We supply in packaging from 1-litre bottles and 4-litre packs to 20-litre pails, 208-litre drums, and 1,000-litre IBCs for bulk requirements. For OEM-specified products not listed above, contact our team — we confirm availability within 24 hours. Email info@gcoman.com or call +968 9277 2305.`,
     author: 'Global Chemicals Technical Team',
     date: '2026-04-08',
     readTime: '10 min read',
@@ -1260,7 +1260,7 @@ Algaecide: Essential for Oman Pools in Summer
 
 Algae growth is a major challenge in Oman pools exposed to high temperatures and year-round intense sunlight. Even well-chlorinated pools can develop algae on shaded wall sections if algaecide is not applied as a preventive measure. A weekly preventive dose of copper-based or quat algaecide at 10–15 mL per 10,000 litres prevents algae from establishing. For green pool recovery (active algae bloom): shock dose with calcium hypochlorite (100g/10,000L), apply algaecide, brush pool walls and floor, and backwash filter after 24 hours.
 
-Global Chemicals LLC supplies a complete range of swimming pool chemicals to hotels, resorts, villa complexes, schools, and commercial facilities across Muscat, Sohar, Salalah, Duqm, and the wider GCC. Our pool chemical range includes: calcium hypochlorite granules (65–70%), TCCA tablets (standard 200g and jumbo 400g), sodium hypochlorite solution (10–12%), liquid algaecide, pH reducer (sodium bisulphate), pH increaser (soda ash), pool flocculant, and chlorine test kits. We offer same-day delivery in Muscat and next-day delivery to Sohar and Rusayl. Contact us at info@gcoman.com or +968-93754388 for competitive pricing and technical advice.`,
+Global Chemicals LLC supplies a complete range of swimming pool chemicals to hotels, resorts, villa complexes, schools, and commercial facilities across Muscat, Sohar, Salalah, Duqm, and the wider GCC. Our pool chemical range includes: calcium hypochlorite granules (65–70%), TCCA tablets (standard 200g and jumbo 400g), sodium hypochlorite solution (10–12%), liquid algaecide, pH reducer (sodium bisulphate), pH increaser (soda ash), pool flocculant, and chlorine test kits. We offer same-day delivery in Muscat and next-day delivery to Sohar and Rusayl. Contact us at info@gcoman.com or +968 9277 2305 for competitive pricing and technical advice.`,
     author: 'Global Chemicals Technical Team',
     date: '2026-04-10',
     readTime: '11 min read',
@@ -1307,7 +1307,7 @@ GCC desalination and downstream industrial water treatment operate under conditi
 
 Supplying the GCC's Desalination and Industrial Water Sector
 
-Global Chemicals LLC supplies the core chemical categories used across GCC desalination and industrial water treatment — antiscalants and membrane antiscalants for RO systems, biocides for intake and cooling water, Poly Aluminium Chloride for coagulation, corrosion inhibitors for plant infrastructure, and membrane cleaning chemicals for RO maintenance cycles — from our Muscat base, exporting across Oman, the UAE, Saudi Arabia (including Jubail Industrial City and the Eastern Province's Marafiq-served facilities), Qatar, Kuwait, and Bahrain. As a GCC-based supplier, we work within the region's customs union for efficient cross-border delivery, and provide the documentation — Certificate of Origin, GHS-compliant SDS in English and Arabic, Certificate of Analysis — that desalination plant operators and their contractors require for vendor qualification. For product specifications, dosing guidance, or a quote for your facility's water treatment programme, contact our technical team at info@gcoman.com or +968-93754388.`,
+Global Chemicals LLC supplies the core chemical categories used across GCC desalination and industrial water treatment — antiscalants and membrane antiscalants for RO systems, biocides for intake and cooling water, Poly Aluminium Chloride for coagulation, corrosion inhibitors for plant infrastructure, and membrane cleaning chemicals for RO maintenance cycles — from our Muscat base, exporting across Oman, the UAE, Saudi Arabia (including Jubail Industrial City and the Eastern Province's Marafiq-served facilities), Qatar, Kuwait, and Bahrain. As a GCC-based supplier, we work within the region's customs union for efficient cross-border delivery, and provide the documentation — Certificate of Origin, GHS-compliant SDS in English and Arabic, Certificate of Analysis — that desalination plant operators and their contractors require for vendor qualification. For product specifications, dosing guidance, or a quote for your facility's water treatment programme, contact our technical team at info@gcoman.com or +968 9277 2305.`,
     author: 'Global Chemicals Technical Team',
     date: '2026-08-09',
     readTime: '9 min read',
@@ -1413,7 +1413,7 @@ For personal care manufacturers and industrial formulators in Oman, UAE, Saudi A
 - **Technical support**: Formulation guidance, compatibility testing, and dosing recommendations from a local technical team familiar with GCC regulatory requirements.
 - **Reduced working capital**: No need to tie up capital in 20-tonne container inventory awaiting slow-moving product turnover.
 
-Global Chemicals LLC supplies 1,3-butylene glycol (industrial and cosmetic grades) from stock in Muscat, with delivery across Oman and export to all GCC countries. Contact info@gcoman.com or call +968-93754388 for pricing, specifications, and Certificate of Analysis.`,
+Global Chemicals LLC supplies 1,3-butylene glycol (industrial and cosmetic grades) from stock in Muscat, with delivery across Oman and export to all GCC countries. Contact info@gcoman.com or call +968 9277 2305 for pricing, specifications, and Certificate of Analysis.`,
     author: 'Global Chemicals Technical Team',
     date: '2026-07-17',
     readTime: '9 min read',
@@ -1435,7 +1435,7 @@ Global Chemicals LLC supplies 1,3-butylene glycol (industrial and cosmetic grade
       },
       {
         question: 'Where can I buy 1,3-butylene glycol in Oman and GCC?',
-        answer: 'Global Chemicals LLC supplies 1,3-butylene glycol (both industrial and cosmetic grades) from stock in Muscat, Oman. Same-day delivery in Muscat and next-day delivery to Sohar, Rusayl, Duqm, and Salalah industrial areas. Export supply to UAE (Dubai, Abu Dhabi, Sharjah), Saudi Arabia (Riyadh, Jeddah, Dammam), Qatar (Doha, Ras Laffan), Kuwait, and Bahrain typically ships within 3–5 working days. Available in 200 kg drums, 1,000 kg IBCs, and ISO tank bulk. Full documentation package includes SDS in English and Arabic, batch Certificate of Analysis, GSO-conformant labels, and Certificate of Origin for cross-border GCC shipments. Contact info@gcoman.com or +968-93754388 for pricing and availability.',
+        answer: 'Global Chemicals LLC supplies 1,3-butylene glycol (both industrial and cosmetic grades) from stock in Muscat, Oman. Same-day delivery in Muscat and next-day delivery to Sohar, Rusayl, Duqm, and Salalah industrial areas. Export supply to UAE (Dubai, Abu Dhabi, Sharjah), Saudi Arabia (Riyadh, Jeddah, Dammam), Qatar (Doha, Ras Laffan), Kuwait, and Bahrain typically ships within 3–5 working days. Available in 200 kg drums, 1,000 kg IBCs, and ISO tank bulk. Full documentation package includes SDS in English and Arabic, batch Certificate of Analysis, GSO-conformant labels, and Certificate of Origin for cross-border GCC shipments. Contact info@gcoman.com or +968 9277 2305 for pricing and availability.',
       },
     ],
   },
@@ -1512,7 +1512,7 @@ Procurement Advantages for GCC Buyers
 - **Complete compliance pack**: Bilingual SDS, CoA, GSO labelling, end-use documentation support, and customs paperwork prepared for GCC cross-border movement.
 - **Technical support**: Compatibility guidance for stripping baths, cleaning lines, and materials of construction from a local technical team.
 
-Global Chemicals LLC supplies industrial-grade gamma-butyrolactone (GBL) from stock in Muscat to verified industrial buyers, with delivery across Oman and export to the GCC. Contact info@gcoman.com or call +968-93754388 for pricing, specifications, and Certificate of Analysis.`,
+Global Chemicals LLC supplies industrial-grade gamma-butyrolactone (GBL) from stock in Muscat to verified industrial buyers, with delivery across Oman and export to the GCC. Contact info@gcoman.com or call +968 9277 2305 for pricing, specifications, and Certificate of Analysis.`,
     author: 'Global Chemicals Technical Team',
     date: '2026-07-27',
     readTime: '10 min read',
@@ -1534,7 +1534,7 @@ Global Chemicals LLC supplies industrial-grade gamma-butyrolactone (GBL) from st
       },
       {
         question: 'Where can I buy gamma-butyrolactone (GBL) in Oman and GCC?',
-        answer: 'Global Chemicals LLC supplies industrial-grade GBL from stock in Muscat, Oman, in 250 kg drums, 1,000 kg IBCs, and ISO tank bulk. Same-day delivery in Muscat and next-day delivery to Sohar, Rusayl, Duqm, and Salalah, with export supply to UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain typically shipping in 3–5 working days once documentation clears. Every shipment includes a batch Certificate of Analysis, SDS in English and Arabic, GSO-conformant labelling, and Certificate of Origin. Contact info@gcoman.com or +968-93754388.',
+        answer: 'Global Chemicals LLC supplies industrial-grade GBL from stock in Muscat, Oman, in 250 kg drums, 1,000 kg IBCs, and ISO tank bulk. Same-day delivery in Muscat and next-day delivery to Sohar, Rusayl, Duqm, and Salalah, with export supply to UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain typically shipping in 3–5 working days once documentation clears. Every shipment includes a batch Certificate of Analysis, SDS in English and Arabic, GSO-conformant labelling, and Certificate of Origin. Contact info@gcoman.com or +968 9277 2305.',
       },
     ],
   },
@@ -1605,7 +1605,7 @@ Poultry integrators, dairy operations, and feed mills in Oman, UAE, Saudi Arabia
 - **Reduced working capital** — no need to tie up capital in bulk container inventory awaiting slow-moving product turnover.
 - **Local technical support** — dosing recommendations, farm audits, and regulatory guidance from a team familiar with GCC veterinary and feed regulations.
 
-Global Chemicals LLC supplies disinfectants, feed preservatives, feed-grade minerals, and drinking water treatment chemicals to poultry integrators, dairy farms, and feed mills across Oman and the GCC. Contact info@gcoman.com or call +968-93754388 for product specifications, pricing, and Certificate of Analysis.`,
+Global Chemicals LLC supplies disinfectants, feed preservatives, feed-grade minerals, and drinking water treatment chemicals to poultry integrators, dairy farms, and feed mills across Oman and the GCC. Contact info@gcoman.com or call +968 9277 2305 for product specifications, pricing, and Certificate of Analysis.`,
     author: 'Global Chemicals Technical Team',
     date: '2026-07-23',
     readTime: '10 min read',
@@ -1627,7 +1627,7 @@ Global Chemicals LLC supplies disinfectants, feed preservatives, feed-grade mine
       },
       {
         question: 'Where can I buy animal health and feed chemicals in Oman and GCC?',
-        answer: 'Global Chemicals LLC supplies disinfectants, feed preservatives (propionic acid, calcium propionate, formic acid blends), feed-grade minerals (MCP, DCP, choline chloride, zinc oxide), and drinking water treatment chemicals from stock in Muscat. Same-day delivery within Oman (Muscat, Sohar, Barka, Salalah, Duqm) and 3–5 working days to UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain. Available in 25 kg bags, 200 kg drums, and 1,000 kg IBCs. Documentation includes SDS in English and Arabic, batch Certificate of Analysis, GSO-conformant labels, and Certificate of Origin for cross-border shipments. Contact info@gcoman.com or +968-93754388.',
+        answer: 'Global Chemicals LLC supplies disinfectants, feed preservatives (propionic acid, calcium propionate, formic acid blends), feed-grade minerals (MCP, DCP, choline chloride, zinc oxide), and drinking water treatment chemicals from stock in Muscat. Same-day delivery within Oman (Muscat, Sohar, Barka, Salalah, Duqm) and 3–5 working days to UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain. Available in 25 kg bags, 200 kg drums, and 1,000 kg IBCs. Documentation includes SDS in English and Arabic, batch Certificate of Analysis, GSO-conformant labels, and Certificate of Origin for cross-border shipments. Contact info@gcoman.com or +968 9277 2305.',
       },
     ],
   },
@@ -1742,7 +1742,7 @@ MEG is acutely toxic if swallowed (ethylene glycol poisoning) — segregate from
 
 Procurement in Oman and the GCC
 
-Global Chemicals LLC supplies MEG and DEG from stock in Muscat to upstream operators, gas processing facilities, EPC contractors, and chemical management providers across Oman — Muscat, Sohar, Duqm, Salalah, and inland field locations — with 3–5 working day supply to the UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain. Drum, IBC, and ISO tank quantities are available, avoiding the 20-tonne container minimums of direct import and the working capital tied up in slow-moving inventory. Contact info@gcoman.com or +968-93754388 for specifications, pricing, and availability.`,
+Global Chemicals LLC supplies MEG and DEG from stock in Muscat to upstream operators, gas processing facilities, EPC contractors, and chemical management providers across Oman — Muscat, Sohar, Duqm, Salalah, and inland field locations — with 3–5 working day supply to the UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain. Drum, IBC, and ISO tank quantities are available, avoiding the 20-tonne container minimums of direct import and the working capital tied up in slow-moving inventory. Contact info@gcoman.com or +968 9277 2305 for specifications, pricing, and availability.`,
     author: 'Global Chemicals Technical Team',
     date: '2026-08-04',
     readTime: '12 min read',
@@ -1771,7 +1771,7 @@ Global Chemicals LLC supplies MEG and DEG from stock in Muscat to upstream opera
       },
       {
         question: 'Where can I buy MEG and DEG in Oman and the GCC?',
-        answer: 'Global Chemicals LLC supplies fibre-grade and industrial-grade monoethylene glycol (MEG, CAS 107-21-1, ≥99.8% purity) and industrial-grade diethylene glycol (DEG, CAS 111-46-6, ≥99.5% purity) from stock in Muscat. Available in 230 kg drums, 1,000 kg IBCs, and ISO tank bulk, with same-day delivery in Muscat and next-day supply to Sohar, Duqm, and Salalah; 3–5 working days to the UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain. Every consignment ships with a batch Certificate of Analysis, SDS in English and Arabic, GSO-conformant labels, and Certificate of Origin. Contact info@gcoman.com or +968-93754388.',
+        answer: 'Global Chemicals LLC supplies fibre-grade and industrial-grade monoethylene glycol (MEG, CAS 107-21-1, ≥99.8% purity) and industrial-grade diethylene glycol (DEG, CAS 111-46-6, ≥99.5% purity) from stock in Muscat. Available in 230 kg drums, 1,000 kg IBCs, and ISO tank bulk, with same-day delivery in Muscat and next-day supply to Sohar, Duqm, and Salalah; 3–5 working days to the UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain. Every consignment ships with a batch Certificate of Analysis, SDS in English and Arabic, GSO-conformant labels, and Certificate of Origin. Contact info@gcoman.com or +968 9277 2305.',
       },
     ],
   },

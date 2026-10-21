@@ -39,7 +39,7 @@ const BASE = (arg('base') ?? 'https://gcoman.com').replace(/\/$/, '');
 const STRICT_MODIFIED = process.argv.includes('--strict-modified');
 const JSON_OUT = process.argv.includes('--json');
 const UA = 'Mozilla/5.0 (compatible; GPTBot/1.2; +https://openai.com/gptbot)';
-const PHONE = /93754388/;
+const PHONE = /9277[\s-]?2305/;
 const HOME_TITLE = 'Chemical Suppliers in Oman & GCC | Global Chemicals LLC';
 
 const sitemap = readFileSync('public/sitemap.xml', 'utf8');

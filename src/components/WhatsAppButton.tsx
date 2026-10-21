@@ -1,6 +1,6 @@
 import { trackContactClick } from '@/components/GoogleAnalytics';
 
-const PHONE = '96893754388';
+const PHONE = '96892772305';
 const MESSAGE = 'Hello! I would like to inquire about your products.';
 
 /**

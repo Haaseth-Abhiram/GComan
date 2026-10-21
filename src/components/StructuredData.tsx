@@ -51,7 +51,7 @@ export const ProductStructuredData = ({ product, url }: ProductStructuredDataPro
       },
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+968-93754388",
+        "telephone": "+968 9277 2305",
         "contactType": "sales",
         "areaServed": ["OM", "AE", "SA", "QA", "KW", "BH"],
         "availableLanguage": ["en", "ar"]
@@ -632,7 +632,7 @@ export const ContactPageStructuredData = () => {
       "@type": "Organization",
       "@id": "https://gcoman.com/#organization",
       "name": "Global Chemicals LLC",
-      "telephone": "+968-93754388",
+      "telephone": "+968 9277 2305",
       "email": "info@gcoman.com",
       "address": {
         "@type": "PostalAddress",
@@ -653,7 +653,7 @@ export const ContactPageStructuredData = () => {
       "contactPoint": [
         {
           "@type": "ContactPoint",
-          "telephone": "+968-93754388",
+          "telephone": "+968 9277 2305",
           "contactType": "sales",
           "areaServed": ["OM", "AE", "SA", "QA", "KW", "BH"],
           "availableLanguage": ["en", "ar"]

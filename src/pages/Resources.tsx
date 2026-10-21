@@ -1314,7 +1314,7 @@ const Resources = () => {
                 </div>
               </Link>
               <a
-                href="https://wa.me/96893754388"
+                href="https://wa.me/96892772305"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 p-4 bg-background rounded-lg border border-border hover:border-green-500 hover:shadow-md transition-all group"
@@ -1643,7 +1643,7 @@ const Resources = () => {
                         <LocalizedLink to="/contact">Contact Our Team</LocalizedLink>
                       </Button>
                       <Button size="lg" variant="outline" asChild>
-                        <a href="https://wa.me/96893754388">WhatsApp Us</a>
+                        <a href="https://wa.me/96892772305">WhatsApp Us</a>
                       </Button>
                     </div>
                   </section>
@@ -1849,7 +1849,7 @@ const Resources = () => {
                       <LocalizedLink to="/contact">Request Documents</LocalizedLink>
                     </Button>
                     <Button size="lg" variant="outline" asChild>
-                      <a href="https://wa.me/96893754388">Chat on WhatsApp</a>
+                      <a href="https://wa.me/96892772305">Chat on WhatsApp</a>
                     </Button>
                   </CardContent>
                 </Card>

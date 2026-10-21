@@ -429,10 +429,10 @@ const Certifications = () => {
                   Request Certificates
                 </GradientCTA>
                 <a
-                  href="tel:+96893754388"
+                  href="tel:+96892772305"
                   className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-background/80 backdrop-blur border-2 border-primary text-primary hover:bg-primary/10 transition-colors font-semibold"
                 >
-                  Call: +968 93754388
+                  Call: +968 9277 2305
                 </a>
               </div>
             </div>

@@ -179,7 +179,7 @@ const Terms = () => {
               <div className="space-y-2 text-muted-foreground">
                 <p><strong>Global Chemicals LLC</strong></p>
                 <p><strong>Email:</strong> info@gcoman.com</p>
-                <p><strong>Phone:</strong> +968 93754388</p>
+                <p><strong>Phone:</strong> +968 9277 2305</p>
                 <p><strong>Address:</strong> Office-3, Building Number 1737, Near Oman LNG, Ghala, Muscat, Sultanate of Oman</p>
               </div>
             </div>

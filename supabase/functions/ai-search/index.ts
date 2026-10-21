@@ -74,7 +74,7 @@ COMPANY INFO:
 - 10+ years in business, 200+ clients, 270 products across 22 categories
 - Certifications: ISO 9001:2015 certified, JSRS registered (Oman oil & gas), ICV compliant. Do NOT claim any other certification.
 - Authorized distributor of Shell, Mobil, Castrol, and GP (IPOL) lubricants
-- Email: sales@gcoman.com, Phone/WhatsApp: +968 93754388
+- Email: sales@gcoman.com, Phone/WhatsApp: +968 9277 2305
 - Hours: Sunday-Thursday 08:00-18:00 Gulf time
 
 PRODUCT CATEGORIES (22 categories, 270 products):

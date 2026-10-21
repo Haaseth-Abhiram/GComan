@@ -26,7 +26,7 @@ const productsFAQs = [
   },
   {
     question: "Can I buy chemicals in bulk from Global Chemicals LLC in Muscat?",
-    answer: "Yes, Global Chemicals LLC offers bulk chemical supply in Muscat and across Oman. We supply in packaging from 1-litre bottles to 25-litre jerricans, 200-litre drums, and 1,000-litre IBC containers. Volume pricing is available for regular bulk buyers. Contact our sales team at info@gcoman.com or +968-93754388 for bulk quotations."
+    answer: "Yes, Global Chemicals LLC offers bulk chemical supply in Muscat and across Oman. We supply in packaging from 1-litre bottles to 25-litre jerricans, 200-litre drums, and 1,000-litre IBC containers. Volume pricing is available for regular bulk buyers. Contact our sales team at info@gcoman.com or +968 9277 2305 for bulk quotations."
   },
   {
     question: "Are Global Chemicals LLC products supplied with Safety Data Sheets (SDS)?",
@@ -38,7 +38,7 @@ const productsFAQs = [
   },
   {
     question: "What is the delivery time for chemical orders in Oman?",
-    answer: "For Muscat and Rusayl Industrial Area: same-day delivery for orders before 12:00 PM. For Sohar and surrounding areas: next-day delivery. For Salalah, Duqm, Nizwa, Sur: 2–3 business days. Emergency and weekend deliveries can be arranged. Contact us at +968-93754388 for urgent requirements."
+    answer: "For Muscat and Rusayl Industrial Area: same-day delivery for orders before 12:00 PM. For Sohar and surrounding areas: next-day delivery. For Salalah, Duqm, Nizwa, Sur: 2–3 business days. Emergency and weekend deliveries can be arranged. Contact us at +968 9277 2305 for urgent requirements."
   }
 ];
 

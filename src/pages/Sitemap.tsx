@@ -150,10 +150,10 @@ const Sitemap = () => {
                   <ChevronRight className="w-4 h-4" />
                 </Link>
                 <a
-                  href="tel:+96893754388"
+                  href="tel:+96892772305"
                   className="inline-flex items-center gap-2 bg-white text-primary px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors border border-primary"
                 >
-                  Call: +968 93754388
+                  Call: +968 9277 2305
                 </a>
               </div>
             </div>

@@ -586,7 +586,7 @@ const Career = () => {
                         type="tel"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        placeholder="+968 9375 4388"
+                        placeholder="+968 9277 2305"
                         required
                       />
                     </div>
@@ -707,7 +707,7 @@ const Career = () => {
                 <LocalizedLink to="/contact">Contact HR Team</LocalizedLink>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <a href="https://wa.me/96893754388">Chat on WhatsApp</a>
+                <a href="https://wa.me/96892772305">Chat on WhatsApp</a>
               </Button>
             </CardContent>
           </Card>

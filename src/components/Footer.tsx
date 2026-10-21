@@ -333,8 +333,8 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3 rtl:flex-row-reverse">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                <a href="tel:+96893754388" onClick={() => trackContactClick('phone')} className="text-white/80 hover:text-primary transition-colors text-sm ltr-preserve">
-                  +968 93754388
+                <a href="tel:+96892772305" onClick={() => trackContactClick('phone')} className="text-white/80 hover:text-primary transition-colors text-sm ltr-preserve">
+                  +968 9277 2305
                 </a>
               </li>
               <li className="flex items-center gap-3 rtl:flex-row-reverse">
@@ -351,7 +351,7 @@ const Footer = () => {
 
             {/* WhatsApp CTA */}
             <a
-              href="https://wa.me/96893754388"
+              href="https://wa.me/96892772305"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackContactClick('whatsapp')}

@@ -19,7 +19,7 @@ const faqs = [
   },
   {
     question: "What is the price of caustic soda in Oman?",
-    answer: "Caustic soda pricing in Oman depends on grade (technical vs food-grade), form (flakes, prills, liquid), concentration, and volume. Global Chemicals LLC offers competitive pricing with volume discounts for regular buyers. Contact our sales team at info@gcoman.com or +968-93754388 for a current price list and bulk quotation."
+    answer: "Caustic soda pricing in Oman depends on grade (technical vs food-grade), form (flakes, prills, liquid), concentration, and volume. Global Chemicals LLC offers competitive pricing with volume discounts for regular buyers. Contact our sales team at info@gcoman.com or +968 9277 2305 for a current price list and bulk quotation."
   },
   {
     question: "Can you supply food-grade caustic soda in Oman?",
@@ -149,8 +149,8 @@ const CausticSodaOman = () => {
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="gap-2 text-lg px-8">
-                  <a href="tel:+96893754388">
-                    <Phone className="w-5 h-5" /> Call +968 93754388
+                  <a href="tel:+96892772305">
+                    <Phone className="w-5 h-5" /> Call +968 9277 2305
                   </a>
                 </Button>
               </div>
@@ -453,8 +453,8 @@ const CausticSodaOman = () => {
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="gap-2">
-                  <a href="tel:+96893754388">
-                    <Phone className="w-5 h-5" /> Call +968 93754388
+                  <a href="tel:+96892772305">
+                    <Phone className="w-5 h-5" /> Call +968 9277 2305
                   </a>
                 </Button>
               </div>
