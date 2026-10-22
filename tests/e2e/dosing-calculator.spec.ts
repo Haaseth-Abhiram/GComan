@@ -42,6 +42,17 @@ test.describe('Dosing calculators', () => {
     await expect(result).toContainText('7.2 kg/day');
   });
 
+  test('dechlorination: 1 mg/L × 2,400 m³/day @ ratio 2, 38% SBS → 12.63 kg/day, 9.43 L/day', async ({ page }) => {
+    await page.goto('/tools/dosing-calculator');
+    const result = page.locator('[data-result="dechlorination"]');
+    // 1 × 2 × 2400 / 1000 = 4.8 kg/day NaHSO3; / 0.38 = 12.63 kg/day; / 1.34 kg/L = 9.43 L/day
+    await expect(result).toContainText('12.63 kg/day');
+    await expect(result).toContainText('9.43 L/day');
+    await expect(result).toContainText('4.8 kg/day');
+    await page.fill('#dc-flow', '1200');
+    await expect(result).toContainText('6.32 kg/day');
+  });
+
   test('quote CTAs feed the prefilled contact funnel', async ({ page }) => {
     await page.goto('/tools/dosing-calculator');
     const href = await page.locator('[data-calc="chlorination"] a[href^="/contact?product="]').getAttribute('href');

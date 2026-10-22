@@ -12,7 +12,7 @@ import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { trackSelectContent } from '@/components/GoogleAnalytics';
-import { Droplets, Snowflake, Wind, Waves, Calculator } from 'lucide-react';
+import { Droplets, Snowflake, Wind, Waves, Calculator, ShieldCheck } from 'lucide-react';
 
 // The site's first linkable tool (Sprint 4 of the Aug 2026 gap analysis):
 // working dosing calculators with the formulas shown, because transparent
@@ -48,6 +48,17 @@ const GLYCOL_TABLE: Record<'meg' | 'pg', { pct: number; freezeC: number }[]> = {
   ],
 };
 
+// ── Dechlorination (sodium bisulphite) ───────────────────────────────────────
+// Stoichiometry: NaHSO3 + HOCl → NaHSO4 + HCl, i.e. 104.06 g bisulphite per
+// 70.9 g chlorine (as Cl2) = 1.46 mg NaHSO3 per mg Cl2. RO practice adds a
+// margin (1.8–3 mg/mg) because bisulphite also reacts with dissolved oxygen.
+const SBS_THEORETICAL = 1.46;
+const SBS_PRODUCTS: Record<string, { label: string; fraction: number; densityKgL: number | null; quote: string }> = {
+  'sbs-38': { label: 'Sodium bisulphite solution 38%', fraction: 0.38, densityKgL: 1.34, quote: 'Sodium Bisulphite' },
+  'sbs-40': { label: 'Sodium bisulphite solution 40%', fraction: 0.40, densityKgL: 1.36, quote: 'Sodium Bisulphite' },
+  'smbs-97': { label: 'Sodium metabisulphite powder 97% (≈ 1.06 kg NaHSO3 per kg)', fraction: 1.06, densityKgL: null, quote: 'Sodium Metabisulphite' },
+};
+
 const calculatorFAQs = [
   {
     question: 'How do you calculate chlorine dosing for water treatment?',
@@ -68,6 +79,11 @@ const calculatorFAQs = [
     question: 'What is the typical antiscalant dose for an RO plant?',
     answer:
       'Most RO antiscalants dose at 2–4 mg/L into the membrane feed stream — the exact figure comes from a projection run against your feed-water analysis. Feed rate (g/h) = dose (mg/L) × feed flow (m³/h). A 100 m³/h train at 3 mg/L consumes 300 g/h ≈ 7.2 kg/day ≈ 216 kg/month. We run projections free of charge against your water analysis.',
+  },
+  {
+    question: 'How much sodium bisulphite is needed to remove chlorine before RO membranes?',
+    answer:
+      'Theoretically 1.46 mg of sodium bisulphite (NaHSO3) neutralises 1 mg of free chlorine; RO plants dose 1.8–3 mg per mg to keep a margin, because bisulphite also consumes dissolved oxygen. Product feed (kg/day) = chlorine (mg/L) × ratio × flow (m³/day) ÷ (1000 × active fraction). Example: 1 mg/L chlorine in 2,400 m³/day at a 2.0 ratio needs 1 × 2.0 × 2,400 ÷ 1000 = 4.8 kg/day of NaHSO3, which is 4.8 ÷ 0.38 ≈ 12.6 kg/day of 38% solution (≈ 9.4 L/day at 1.34 kg/L). Confirm with an ORP reading or a zero free-chlorine test downstream of the injection point.',
   },
 ];
 
@@ -118,6 +134,19 @@ const DosingCalculator = () => {
     return { gH, kgDay: (gH * 24) / 1000, kgMonth: (gH * 24 * 30) / 1000 };
   }, [roFlow, roDose]);
 
+  // Dechlorination state
+  const [dcFlow, setDcFlow] = useState('2400');
+  const [dcCl, setDcCl] = useState('1');
+  const [dcRatio, setDcRatio] = useState('2');
+  const [dcProduct, setDcProduct] = useState('sbs-38');
+  const dechlor = useMemo(() => {
+    const p = SBS_PRODUCTS[dcProduct];
+    const activeKgDay = (num(dcCl) * num(dcRatio) * num(dcFlow)) / 1000;
+    const productKgDay = activeKgDay / p.fraction;
+    const litresDay = p.densityKgL ? productKgDay / p.densityKgL : null;
+    return { activeKgDay, productKgDay, litresDay, kgMonth: productKgDay * 30, product: p };
+  }, [dcFlow, dcCl, dcRatio, dcProduct]);
+
   // Carry the sized requirement into the quote form. Previously only the
   // product name travelled, so a buyer who had just computed "1,540 kg/month"
   // landed on a form with an empty "Quantity required:" line and had to retype
@@ -131,7 +160,7 @@ const DosingCalculator = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="Water Treatment Dosing Calculators — Chlorine, Glycol, RO"
-        description="Free dosing calculators for water treatment engineers: chlorination feed rates, glycol freeze protection, cooling-tower cycles & blowdown, and RO antiscalant consumption — with the formulas shown."
+        description="Free dosing calculators for water treatment engineers: chlorination, dechlorination (sodium bisulphite), glycol freeze protection, cooling-tower blowdown and RO antiscalant — formulas shown."
         keywords="chlorine dosing calculator, glycol concentration calculator, cooling tower blowdown calculator, antiscalant dosing calculator, water treatment calculator Oman"
         ogUrl={canonical}
         canonical={canonical}
@@ -148,7 +177,7 @@ const DosingCalculator = () => {
             offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
             provider: { '@id': 'https://gcoman.com/#organization' },
             description:
-              'Chlorination feed rate, glycol freeze protection, cooling tower cycles and blowdown, and RO antiscalant dosing calculators for water treatment professionals.',
+              'Chlorination feed rate, sodium bisulphite dechlorination, glycol freeze protection, cooling tower cycles and blowdown, and RO antiscalant dosing calculators for water treatment professionals.',
           })}
         </script>
       </Helmet>
@@ -179,7 +208,7 @@ const DosingCalculator = () => {
                   Water Treatment Dosing Calculators
                 </h1>
                 <p className="text-muted-foreground leading-relaxed">
-                  Four working calculators our technical team uses every day — with the formulas in the open so you
+                  Five working calculators our technical team uses every day — with the formulas in the open so you
                   can check the arithmetic. Results are planning estimates; for a dosing programme matched to your
                   water analysis, send it over and we&apos;ll run it properly, free of charge.
                 </p>
@@ -394,6 +423,70 @@ const DosingCalculator = () => {
               </p>
               <Button asChild size="sm" className="mt-4" onClick={() => trackSelectContent('cta_button', 'calc_quote_ro')}>
                 <Link to={quoteHref('Antiscalant RO', `${fmt(ro.kgMonth)} kg/month (${roFlow} m³/h feed at ${roDose} mg/L) — sized with your dosing calculator`)} rel="nofollow">Get an antiscalant quote + free projection</Link>
+              </Button>
+            </Card>
+
+            {/* ── 5. Dechlorination ── */}
+            <Card className="p-6 lg:col-span-2" data-calc="dechlorination">
+              <div className="flex items-center gap-3 mb-1">
+                <ShieldCheck className="w-6 h-6 text-primary" aria-hidden="true" />
+                <h2 className="text-xl font-bold text-foreground">Dechlorination Before RO (Sodium Bisulphite)</h2>
+              </div>
+              <p className="text-sm text-muted-foreground mb-5">
+                How much bisulphite to feed so no free chlorine reaches polyamide membranes or a discharge point.
+              </p>
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="space-y-1.5">
+                  <Label htmlFor="dc-flow">Water flow (m³/day)</Label>
+                  <Input id="dc-flow" type="number" inputMode="decimal" min="0" value={dcFlow} onChange={(e) => setDcFlow(e.target.value)} />
+                </div>
+                <div className="space-y-1.5">
+                  <Label htmlFor="dc-cl">Free chlorine to remove (mg/L)</Label>
+                  <Input id="dc-cl" type="number" inputMode="decimal" min="0" step="0.1" value={dcCl} onChange={(e) => setDcCl(e.target.value)} />
+                </div>
+                <div className="space-y-1.5">
+                  <Label htmlFor="dc-ratio">Ratio (mg NaHSO3 per mg Cl)</Label>
+                  <Input id="dc-ratio" type="number" inputMode="decimal" min="0" step="0.1" value={dcRatio} onChange={(e) => setDcRatio(e.target.value)} />
+                </div>
+                <div className="space-y-1.5">
+                  <Label>Product</Label>
+                  <Select value={dcProduct} onValueChange={setDcProduct}>
+                    <SelectTrigger><SelectValue /></SelectTrigger>
+                    <SelectContent>
+                      {Object.entries(SBS_PRODUCTS).map(([k, v]) => (
+                        <SelectItem key={k} value={k}>{v.label}</SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+              </div>
+              <div className="mt-5 rounded-lg bg-primary/5 border border-primary/20 p-4" data-result="dechlorination">
+                <div className="flex flex-wrap gap-x-8 gap-y-1">
+                  <div>
+                    <div className="text-2xl font-bold text-foreground">{fmt(dechlor.productKgDay)} kg/day</div>
+                    <div className="text-xs text-muted-foreground">product feed</div>
+                  </div>
+                  {dechlor.litresDay !== null && (
+                    <div>
+                      <div className="text-2xl font-bold text-foreground">{fmt(dechlor.litresDay)} L/day</div>
+                      <div className="text-xs text-muted-foreground">at {dechlor.product.densityKgL} kg/L</div>
+                    </div>
+                  )}
+                  <div>
+                    <div className="text-2xl font-bold text-foreground">{fmt(dechlor.kgMonth, 0)} kg/month</div>
+                    <div className="text-xs text-muted-foreground">≈ 30-day consumption</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-foreground">{fmt(dechlor.activeKgDay)} kg/day</div>
+                    <div className="text-xs text-muted-foreground">as NaHSO3 (active)</div>
+                  </div>
+                </div>
+              </div>
+              <p className="text-xs text-muted-foreground mt-3 font-mono">
+                kg/day = Cl (mg/L) × ratio × flow (m³/day) ÷ (1000 × active fraction) — theoretical ratio {SBS_THEORETICAL}; RO practice 1.8–3
+              </p>
+              <Button asChild size="sm" className="mt-4" onClick={() => trackSelectContent('cta_button', 'calc_quote_dechlorination')}>
+                <Link to={quoteHref(dechlor.product.quote, `${fmt(dechlor.kgMonth)} kg/month (${dcFlow} m³/day, ${dcCl} mg/L Cl at ratio ${dcRatio}, ${dechlor.product.label}) — sized with your dosing calculator`)} rel="nofollow">Get a {dechlor.product.quote} quote</Link>
               </Button>
             </Card>
           </div>
