@@ -9,8 +9,17 @@ import { Badge } from '@/components/ui/badge';
 import { trackSelectContent } from '@/components/GoogleAnalytics';
 import {
   CheckCircle2, Phone, Mail, ArrowRight, Shield, Award, Globe2, Package,
-  Beaker, Factory, Droplets, FlaskConical, Wrench
+  Beaker, Factory, Droplets, FlaskConical, Wrench, Truck, MessageCircle
 } from 'lucide-react';
+
+// WhatsApp deep link for bulk enquiries. Buyers in Oman and the GCC send
+// RFQs on WhatsApp more than through web forms; the prefilled text carries the
+// fields sales needs to price a bulk order (volume, concentration, delivery).
+const BULK_WHATSAPP =
+  'https://wa.me/96892772305?text=' +
+  encodeURIComponent(
+    'Bulk nitric acid enquiry (gcoman.com). Grade/concentration: 68% ___. Monthly volume (tonnes): ___. Pack: IBC / bulk tanker / drums. Delivery location: ___. Company: ___'
+  );
 
 /**
  * Product+geo hub for nitric acid, modelled on CausticSodaOman.tsx.
@@ -58,6 +67,19 @@ const faqs = [
     // Lifted from the live "People also ask" box on `nitric acid supplier oman`.
     question: "How much does nitric acid cost in Oman?",
     answer: "Nitric acid pricing in Oman depends on concentration (68% technical vs 68–70% analytical), grade, pack format, and order volume. Competitors list indicative figures around OMR 70 for a 35 kg can, but real pricing moves with volume — a 1,000 L IBC or bulk tanker lands very differently from single carboys. Global Chemicals LLC quotes volume-tiered pricing and supplies locally in Oman rather than importing, which shortens the supply chain. Contact info@gcoman.com or +968 9277 2305 with your concentration, quantity and delivery location for a current quotation."
+  },
+  // The two below match how bulk buyers phrase the search (Google autocomplete
+  // gl=om, 2026-10-22: "nitric acid bulk price", "bulk nitric acid suppliers",
+  // "wholesale nitric acid", "nitric acid price per ton"). They restate facts
+  // already on this page: own production in Oman, IBC and bulk tanker,
+  // volume-tiered pricing, 24-hour quotes. Hand-written, not templated.
+  {
+    question: "Can you supply nitric acid in bulk?",
+    answer: "Yes. Global Chemicals LLC produces 68% nitric acid at its own unit in Oman and supplies bulk volumes in 1,000 L IBC loads and by bulk tanker, as well as 35 kg carboys and 60 kg drums for smaller users. Plant-scale buyers can agree standing orders with scheduled deliveries. Bulk consignments travel as UN 2031 (Class 8, with an oxidiser subsidiary risk) with the transport documents, Safety Data Sheet and batch Certificate of Analysis, and export loads to the UAE, Saudi Arabia, Qatar, Kuwait and Bahrain carry a Certificate of Origin."
+  },
+  {
+    question: "What is the bulk price of nitric acid per ton in Oman?",
+    answer: "Bulk nitric acid is quoted per tonne against four things: concentration and grade, monthly volume, pack format (IBC or bulk tanker) and delivery point. IBC and tanker loads cost less per kilogram than carboys because packaging and handling fall away, and regular monthly volumes are priced on a volume tier. Because the acid is produced locally there is no import cost in the price. Send your volume, concentration and delivery location to info@gcoman.com, call +968 9277 2305 or send the same details on WhatsApp, and a bulk quotation follows within 24 hours."
   },
   {
     question: "What grades and pack sizes of nitric acid are available in Oman?",
@@ -436,6 +458,64 @@ const NitricAcidOman = () => {
                     <span className="text-sm text-foreground">{item}</span>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Bulk supply — added 2026-10-22 after keyword research: buyers search
+            "nitric acid bulk price", "bulk nitric acid suppliers", "wholesale
+            nitric acid", "nitric acid price per ton", and the page mentioned
+            bulk only in pack lists. Facts restate what this page already claims. */}
+        <section className="py-16 border-t" id="bulk-supply">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl font-bold text-center mb-4 flex items-center justify-center gap-2">
+                <Truck className="w-7 h-7 text-primary" /> Bulk and Wholesale Nitric Acid Supply
+              </h2>
+              <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-10 leading-relaxed speakable">
+                Global Chemicals LLC supplies 68% nitric acid in bulk from its own production unit in Oman: full 1,000 L IBC
+                loads and bulk tanker deliveries for plants, with standing orders and scheduled monthly deliveries for
+                regular users. Because the acid is made locally, bulk buyers in Oman get short lead times and no import
+                cost, and GCC buyers receive it by road in 2–7 days.
+              </p>
+              <div className="grid md:grid-cols-3 gap-6 mb-10">
+                <Card className="p-6">
+                  <h3 className="font-semibold text-foreground mb-2">Who buys in bulk</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Steel pickling and galvanising lines, stainless-steel fabricators and passivation shops, fertilizer
+                    and chemical producers using nitric acid as a feedstock, dairies and beverage plants running daily
+                    CIP, water-treatment and effluent plants, and refinery and oil and gas contractors.
+                  </p>
+                </Card>
+                <Card className="p-6">
+                  <h3 className="font-semibold text-foreground mb-2">Bulk formats and documents</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    1,000 L IBC totes and bulk tanker, alongside 35 kg carboys and 60 kg drums. Every load carries a
+                    batch Certificate of Analysis, a GHS Safety Data Sheet and dangerous-goods transport documents as
+                    UN 2031 (Class 8, oxidiser subsidiary risk); export loads add a Certificate of Origin.
+                  </p>
+                </Card>
+                <Card className="p-6">
+                  <h3 className="font-semibold text-foreground mb-2">How to get a bulk price</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Send the concentration and grade, monthly volume in tonnes, pack format (IBC or tanker) and the
+                    delivery point. Bulk pricing is per tonne on a volume tier, and the quotation follows within 24
+                    hours.
+                  </p>
+                </Card>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button asChild size="lg" className="gap-2" onClick={() => trackSelectContent('cta_button', 'nitric_acid_bulk_whatsapp')}>
+                  <a href={BULK_WHATSAPP} target="_blank" rel="noopener noreferrer nofollow">
+                    <MessageCircle className="w-5 h-5" /> WhatsApp a bulk enquiry
+                  </a>
+                </Button>
+                <Button asChild variant="outline" size="lg" className="gap-2" onClick={() => trackSelectContent('cta_button', 'nitric_acid_bulk_quote')}>
+                  <Link to="/contact?product=Nitric+Acid+68%25+(bulk)" rel="nofollow">
+                    <Mail className="w-5 h-5" /> Request a bulk quotation
+                  </Link>
+                </Button>
               </div>
             </div>
           </div>
