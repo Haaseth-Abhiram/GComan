@@ -196,8 +196,8 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
-        <AuthProvider>
-          <ErrorBoundary>
+        <ErrorBoundary>
+          <AuthProvider>
             <GoogleAnalytics />
             <ZohoSalesIQ />
             <a
