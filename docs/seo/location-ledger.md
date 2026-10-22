@@ -172,3 +172,22 @@ Append-only. One row per check per run, written by the `running-search-operation
 | 2026-10-22 | bing | chemical suppliers in oman | / | 2 | /chemical-suppliers-oman (homepage at 3) | omanchem.com | cc=om |
 | 2026-10-22 | bing | chemical supplier muscat | /chemicals/muscat | 3 |  | muscatchemical.com | cc=om (blog at 4) |
 | 2026-10-22 | bing | chemical company oman | / | 6 |  | omanchem.com | cc=om (was 7) |
+| 2026-10-22 | google | nitric acid supplier oman | /chemical-supplier/nitric-acid-oman | — |  | omanchem.com | pws=0 gl=om (top 9; 10-20 homepage at 18) |
+| 2026-10-22 | google | nitric acid oman | /chemical-supplier/nitric-acid-oman | — |  | omanchem.com | pws=0 gl=om (top 9) |
+| 2026-10-22 | google | nitric acid supplier in muscat | /chemical-supplier/nitric-acid-oman | — |  | omanchem.com | pws=0 gl=om (top 9) |
+| 2026-10-22 | bing | nitric acid supplier oman | /chemical-supplier/nitric-acid-oman | 2 |  | omanchem.com | cc=om (was 1 on 10-20) |
+| 2026-10-22 | bing | nitric acid oman | /chemical-supplier/nitric-acid-oman | 1 | + lab page at 2 | gcoman.com | cc=om (=) |
+| 2026-10-22 | bing | nitric acid price oman | /chemical-supplier/nitric-acid-oman | 1 |  | gcoman.com | cc=om (=) |
+| 2026-10-22 | bing | nitric acid supplier muscat | /chemical-supplier/nitric-acid-oman | 2 |  | muscatchemical.com | cc=om (was —) |
+| 2026-10-22 | bing | nitric acid supplier sohar | /chemical-supplier/nitric-acid-oman | 5 |  | soharchemical.com | cc=om (was 9) |
+| 2026-10-22 | bing | nitric acid supplier salalah | /chemical-supplier/nitric-acid-oman | 3 | /chemicals/salalah | salalahchemical.com | cc=om (was —) |
+| 2026-10-22 | bing | nitric acid supplier uae | /chemical-supplier/nitric-acid-uae | 9 |  | yellowpages-uae.com | cc=ae (was 7) |
+| 2026-10-22 | bing | nitric acid supplier dubai | /chemical-supplier/nitric-acid-uae | — |  | yellowpages-uae.com | cc=ae (was 6) |
+| 2026-10-22 | bing | nitric acid supplier saudi arabia | /chemical-supplier/nitric-acid-saudi-arabia | — |  | chimisrl.com | cc=sa (=) |
+| 2026-10-22 | bing | nitric acid supplier qatar | /chemical-supplier/nitric-acid-qatar | 7 |  | deluxechemical.com | cc=qa (was —) |
+| 2026-10-22 | bing | nitric acid supplier kuwait | /chemical-supplier/nitric-acid-kuwait | — |  | chimisrl.com | cc=kw (=) |
+| 2026-10-22 | bing | nitric acid supplier bahrain | /chemical-supplier/nitric-acid-bahrain | 1 | + /chemicals/bahrain at 6 | gcoman.com | cc=bh (=) |
+| 2026-10-22 | maps | nitric acid supplier | Global Chemicals LLC | 1 organic |  | REDALAB (sponsored) | Muscat 23.588,58.383 11z (=) |
+| 2026-10-22 | maps | nitric acid supplier | Global Chemicals LLC | — |  | Fujairah Chemical | Sohar 24.347,56.709 11z (=) |
+| 2026-10-22 | perplexity | best nitric acid supplier in Oman | — | 1st | "strongest option"; still quotes old phone | gcoman.com | signed in (=) |
+| 2026-10-22 | chatgpt | best nitric acid supplier in Oman | — | 1st | new phone quoted | gcoman.com | logged out (was not named 10-20) |
