@@ -20,7 +20,14 @@ export function isChunkLoadError(err: unknown): boolean {
     msg.includes('Failed to fetch dynamically imported module') ||
     msg.includes('Importing a module script failed') ||
     msg.includes('error loading dynamically imported module') ||
-    msg.includes('Loading chunk')
+    msg.includes('Loading chunk') ||
+    // A null React dispatcher — "Cannot read properties of null (reading
+    // 'useState')" — means the page is running a half-replaced module graph
+    // (two React copies, or chunks from a superseded build). Like a failed
+    // chunk fetch that is a delivery problem rather than an app bug, and one
+    // reload clears it; without this the boundary shows "Something went
+    // wrong" for a page that would simply have worked after a refresh.
+    /Cannot read properties of (null|undefined) \(reading 'use[A-Z]\w*'\)/.test(msg)
   );
 }
 

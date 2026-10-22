@@ -212,10 +212,19 @@ export default defineConfig(({ mode }) => ({
     // Optimize CSS
     cssCodeSplit: true,
   },
-  // Optimize dependencies
+  // Optimize dependencies.
+  // Only deps the app reaches lazily belong here. react / react-dom /
+  // react/jsx-runtime are deliberately NOT listed: naming them as separate
+  // entries made the bundler emit a React copy per entry, so a component could
+  // get a copy whose dispatcher was null — "Cannot read properties of null
+  // (reading 'useState')" thrown from AuthProvider. Vite's scanner pre-bundles
+  // them as one shared graph on its own, and resolve.dedupe above keeps any
+  // later resolver pinned to that same copy.
   optimizeDeps: {
-    include: ["react", "react-dom", "react/jsx-runtime", "react-router-dom", "framer-motion"],
-    // Pre-bundle large dependencies
-    force: mode === "development",
+    include: ["react-router-dom", "@supabase/supabase-js"],
+    // No `force: true` on purpose. Re-bundling on every dev-server start mints
+    // a new dep hash, so a page already open ends up mixing chunks from two
+    // graphs — the same null-dispatcher crash. Vite invalidates this cache
+    // itself when the lockfile or the config changes.
   },
 }));
