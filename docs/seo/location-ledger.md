@@ -145,3 +145,30 @@ Append-only. One row per check per run, written by the `running-search-operation
 | 2026-10-20 | bing | chemical suppliers in oman | / | 2 | | omanchem.com | cc=om (target page at 3) |
 | 2026-10-20 | bing | chemical supplier muscat | /chemicals/muscat | 3 | | muscatchemical.com | cc=om (also 5, 6) |
 | 2026-10-20 | bing | chemical company oman | / | 7 | | omanchem.com | cc=om |
+| 2026-10-22 | google | chemical suppliers oman | /chemical-suppliers-oman | 2 | / | omanchem.com | pws=0 gl=om |
+| 2026-10-22 | google | chemical suppliers in oman | / | 1 |  | gcoman.com | pws=0 gl=om |
+| 2026-10-22 | google | chemical company oman | / | — |  | omanchem.com | pws=0 gl=om (top 7) |
+| 2026-10-22 | google | chemical supplier muscat | /chemicals/muscat | 3 | / | muscatchemical.com | pws=0 gl=om |
+| 2026-10-22 | google | chemical supplier rusayl | /chemicals/rusayl | — |  | gulfyp.com | pws=0 gl=om (top 9) |
+| 2026-10-22 | google | chemical supplier sohar | /chemicals/sohar | — |  | soharchemical.com | pws=0 gl=om (top 9) |
+| 2026-10-22 | google | chemical supplier rustaq | /chemicals/rustaq | 2 | / (was target page on 10-20) | muscatchemical.com | pws=0 gl=om |
+| 2026-10-22 | google | chemical supplier salalah | /chemicals/salalah | 2 | / | salalahchemical.com | pws=0 gl=om (was 4) |
+| 2026-10-22 | google | chemical supplier duqm | /chemicals/duqm | 3 | / | omanchem.com | pws=0 gl=om |
+| 2026-10-22 | google | chemical supplier dubai | /chemicals/dubai | — |  | kemipex.com | pws=0 gl=ae (top 9) |
+| 2026-10-22 | google | chemical supplier abu dhabi | /chemicals/abu-dhabi | — |  | ocetgulf.com | pws=0 gl=ae (top 8) |
+| 2026-10-22 | google | chemical supplier sharjah | /chemicals/sharjah | — |  | oxymedz.com | pws=0 gl=ae (top 8) |
+| 2026-10-22 | google | chemical supplier fujairah | /chemicals/fujairah | — |  | fujairahchemical.com | pws=0 gl=ae (top 7) |
+| 2026-10-22 | google | chemical supplier ras al khaimah | /chemicals/ras-al-khaimah | — |  | yellowpages-uae.com | pws=0 gl=ae (top 8) |
+| 2026-10-22 | google | chemical supplier riyadh | /chemicals/riyadh | — |  | fouz.com.sa | pws=0 gl=sa (top 9) |
+| 2026-10-22 | google | chemical supplier jeddah | /chemicals/jeddah | — |  | fouz.com.sa | pws=0 gl=sa (top 8) |
+| 2026-10-22 | google | chemical supplier dammam | /chemicals/dammam | — |  | fouz.com.sa | pws=0 gl=sa (top 8) |
+| 2026-10-22 | google | chemical supplier jubail | /chemicals/jubail | — |  | schem.com | pws=0 gl=sa (top 8) |
+| 2026-10-22 | google | chemical supplier yanbu | /chemicals/yanbu | — |  | echemi.com | pws=0 gl=sa (top 8; was 7) |
+| 2026-10-22 | google | chemical supplier doha | /chemicals/doha | — |  | deluxechemical.com | pws=0 gl=qa (top 8) |
+| 2026-10-22 | google | chemical supplier kuwait city | /chemicals/kuwait-city | — |  | lookchem.com | pws=0 gl=kw (top 9) |
+| 2026-10-22 | google | chemical supplier bahrain | /chemicals/bahrain | — |  | safic-alcan.com | pws=0 gl=bh (top 9) |
+| 2026-10-22 | google | chemical supplier baghdad | /chemicals/baghdad | n/m |  | n/m | skipped (export-only lane) |
+| 2026-10-22 | bing | chemical suppliers oman | /chemical-suppliers-oman | 2 | / (target at 3) | omanchem.com | cc=om |
+| 2026-10-22 | bing | chemical suppliers in oman | / | 2 | /chemical-suppliers-oman (homepage at 3) | omanchem.com | cc=om |
+| 2026-10-22 | bing | chemical supplier muscat | /chemicals/muscat | 3 |  | muscatchemical.com | cc=om (blog at 4) |
+| 2026-10-22 | bing | chemical company oman | / | 6 |  | omanchem.com | cc=om (was 7) |
