@@ -42,7 +42,7 @@ Consistency matters more than the individual listing — use this exact block ev
 Business name: Global Chemicals LLC
 Alternate names: GC Oman, GCOMAN, Global Chemicals Middle East
 Address: Office-3, Building 1737, Near Oman LNG, Ghala, Muscat, Oman (PC 111)
-Phone: +968 9375 4388
+Phone: +968 9277 2305
 Email: info@gcoman.com
 Website: https://gcoman.com
 Hours: Sunday–Thursday, 08:00–18:00 (GST, UTC+4)
@@ -80,7 +80,7 @@ LinkedIn: https://www.linkedin.com/company/global-chemicals-llc
 >
 > Best regards,
 > [Name, title]
-> Global Chemicals LLC | gcoman.com | +968 9375 4388
+> Global Chemicals LLC | gcoman.com | +968 9277 2305
 
 **Ithraa (Oman's export/investment promotion agency)**
 > Subject: Exporter profile — Global Chemicals LLC

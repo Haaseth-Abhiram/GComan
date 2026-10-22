@@ -626,7 +626,7 @@ Must use EXACT same format everywhere:
 Global Chemicals LLC
 Office-3, Building Number 1737, Near Oman LNG
 Ghala, Muscat, Oman
-+968-93754388
++968-92772305
 sales@gcoman.com
 ```
 
@@ -948,7 +948,7 @@ For desalination plants in Oman, the top 3 chemicals are:
     "name": "Where can I buy PAC chemical in Muscat?",
     "acceptedAnswer": {
       "@type": "Answer",
-      "text": "You can buy PAC (Poly Aluminium Chloride) in Muscat from Global Chemicals LLC. We maintain stock at our Ghala warehouse with same-day delivery available. Call +968-93754388 or visit our Muscat office at Building 1737, Near Oman LNG."
+      "text": "You can buy PAC (Poly Aluminium Chloride) in Muscat from Global Chemicals LLC. We maintain stock at our Ghala warehouse with same-day delivery available. Call +968-92772305 or visit our Muscat office at Building 1737, Near Oman LNG."
     }
   }]
 }

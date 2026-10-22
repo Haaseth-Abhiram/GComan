@@ -15,7 +15,7 @@ One checklist for every external platform that carries gcoman.com's identity. Ea
 |---|---|
 | Name | Global Chemicals LLC |
 | Website | `https://gcoman.com/` (not www, not http) |
-| Phone | +968 9375 4388 |
+| Phone | +968 9277 2305 |
 | Address | Office-3, Building 1737, Near Oman LNG, Ghala, Muscat 111, Oman |
 | Hours | Sun–Thu 08:00–18:00, Fri–Sat closed |
 | Coordinates | 23.5791, 58.3414 (the GBP pin; `index.html` geo + LocalBusiness) |

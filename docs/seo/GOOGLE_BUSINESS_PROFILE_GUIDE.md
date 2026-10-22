@@ -45,9 +45,9 @@ Muscat, Oman
 | **Business Name** | Global Chemicals LLC |
 | **Category (Primary)** | Chemical Supplier *(or Industrial Chemical Supplier)* |
 | **Additional Categories** | - Chemical Wholesaler<br>- Water Treatment Supplier<br>- Laboratory Equipment Supplier |
-| **Phone** | +968-93754388 |
+| **Phone** | +968-92772305 |
 | **Website** | https://www.gcoman.com |
-| **WhatsApp** | +968-93754388 |
+| **WhatsApp** | +968-92772305 |
 
 ### 2.2 Business Description (Critical for SEO)
 
@@ -178,14 +178,14 @@ https://search.google.com/local/writereview?placeid=[YOUR_PLACE_ID]
 
 **For Positive Reviews:**
 ```
-Thank you [Customer Name]! We're delighted to have served [Company Name] with [Product Name]. Looking forward to continuing our partnership. For your next chemical supply needs, contact us at +968-93754388.
+Thank you [Customer Name]! We're delighted to have served [Company Name] with [Product Name]. Looking forward to continuing our partnership. For your next chemical supply needs, contact us at +968-92772305.
 
 - Global Chemicals LLC Team
 ```
 
 **For Negative Reviews:**
 ```
-Thank you for your feedback, [Customer Name]. We apologize for [specific issue]. We've addressed this with our team and would like to make it right. Please contact us directly at sales@gcoman.com or +968-93754388 so we can resolve this immediately.
+Thank you for your feedback, [Customer Name]. We apologize for [specific issue]. We've addressed this with our team and would like to make it right. Please contact us directly at sales@gcoman.com or +968-92772305 so we can resolve this immediately.
 
 - Global Chemicals LLC Team
 ```
@@ -207,7 +207,7 @@ Perfect for:
 ✅ Industrial effluent treatment
 ✅ Swimming pool clarification
 
-📞 Order now: +968-93754388
+📞 Order now: +968-92772305
 🌐 www.gcoman.com/products/water-treatment/pac-powder
 
 #ChemicalSupplier #Oman #Muscat #WaterTreatment
@@ -222,7 +222,7 @@ Limited time offer on all Shell industrial lubricants. Stock up now and save!
 Offer valid until: [Date]
 Min order: 20L
 
-Call now: +968-93754388
+Call now: +968-92772305
 
 #Lubricants #IndustrialChemicals #Oman
 ```
@@ -257,7 +257,7 @@ Available in: 25L, 200L drums, IBCs, bulk tankers
 
 Technical specs & SDS sheet: www.gcoman.com/products/water-treatment/caustic-soda-liquid
 
-📞 +968-93754388
+📞 +968-92772305
 
 #CausticSoda #ChemicalsOman #WaterTreatment
 ```
@@ -289,7 +289,7 @@ A: We accept bank transfers, credit cards, and cash payments. Credit terms avail
 A: We serve all business sizes - from small labs and workshops to large industrial facilities. Minimum order quantities vary by product. Contact us for details.
 
 **Q: Can you supply bulk chemicals for industrial projects?**
-A: Yes, we supply bulk chemicals for large industrial projects, water treatment plants, and oil & gas operations. We have storage capacity and logistics for bulk deliveries. Contact our project sales team at +968-93754388.
+A: Yes, we supply bulk chemicals for large industrial projects, water treatment plants, and oil & gas operations. We have storage capacity and logistics for bulk deliveries. Contact our project sales team at +968-92772305.
 
 ---
 
