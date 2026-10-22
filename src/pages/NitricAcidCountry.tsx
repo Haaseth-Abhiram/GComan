@@ -365,7 +365,7 @@ const NitricAcidCountry = ({ country }: { country: NitricCountryKey }) => {
             <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
               <div>
                 <h2 className="text-2xl font-bold text-foreground mb-3 flex items-center gap-2">
-                  <Truck className="w-6 h-6 text-primary" /> Delivery to {c.inName}
+                  <Truck className="w-6 h-6 text-primary" /> How is nitric acid delivered to {c.inName}?
                 </h2>
                 <p className="text-muted-foreground mb-4">{c.route}</p>
                 <div className="overflow-x-auto rounded-lg border border-border">
@@ -392,7 +392,7 @@ const NitricAcidCountry = ({ country }: { country: NitricCountryKey }) => {
               </div>
               <div>
                 <h2 className="text-2xl font-bold text-foreground mb-3 flex items-center gap-2">
-                  <Factory className="w-6 h-6 text-primary" /> Who uses nitric acid in {c.inName}
+                  <Factory className="w-6 h-6 text-primary" /> Who uses nitric acid in {c.inName}?
                 </h2>
                 <ul className="space-y-2 text-muted-foreground list-disc pl-5">
                   {c.industries.map((i) => (
@@ -407,7 +407,7 @@ const NitricAcidCountry = ({ country }: { country: NitricCountryKey }) => {
         <section className="py-14 border-t bg-muted/20">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">Grades and pack sizes for {c.inName}</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">What nitric acid grades and pack sizes are available for {c.inName}?</h2>
               <div className="overflow-x-auto rounded-lg border border-border bg-background">
                 <table className="w-full text-sm">
                   <thead className="bg-muted/50 text-left">
@@ -431,7 +431,7 @@ const NitricAcidCountry = ({ country }: { country: NitricCountryKey }) => {
                 </table>
               </div>
               <h2 className="text-2xl font-bold text-foreground mt-10 mb-3 flex items-center gap-2">
-                <FileCheck2 className="w-6 h-6 text-primary" /> Documents with every consignment
+                <FileCheck2 className="w-6 h-6 text-primary" /> What documents come with every consignment?
               </h2>
               <p className="text-muted-foreground leading-relaxed max-w-3xl">{c.documents}</p>
             </div>

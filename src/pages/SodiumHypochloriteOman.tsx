@@ -161,7 +161,7 @@ const SodiumHypochloriteOman = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3 flex items-center gap-2">
-                <Droplets className="w-6 h-6 text-primary" /> Grades in stock: strength, use and pack sizes
+                <Droplets className="w-6 h-6 text-primary" /> Which sodium hypochlorite grades are in stock in Oman?
               </h2>
               <p className="text-muted-foreground mb-6 max-w-3xl">
                 Each grade links to its own page with the full specification and dosing guidance.
@@ -220,7 +220,7 @@ const SodiumHypochloriteOman = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-10">
               <div>
-                <h2 className="text-2xl font-bold text-foreground mb-3">Storage in a hot climate</h2>
+                <h2 className="text-2xl font-bold text-foreground mb-3">How should sodium hypochlorite be stored in a hot climate?</h2>
                 <p className="text-muted-foreground leading-relaxed">
                   Hypochlorite slowly breaks down into salt and oxygen, and heat and sunlight speed that up. The 12–15%
                   grade keeps roughly three to six months at 15–20 °C; in an Omani yard in summer it loses strength
@@ -229,7 +229,7 @@ const SodiumHypochloriteOman = () => {
                 </p>
               </div>
               <div>
-                <h2 className="text-2xl font-bold text-foreground mb-3">Safe handling</h2>
+                <h2 className="text-2xl font-bold text-foreground mb-3">How is sodium hypochlorite handled safely?</h2>
                 <p className="text-muted-foreground leading-relaxed">
                   Never mix hypochlorite with acids or acidic cleaners, which releases chlorine gas, or with ammonia,
                   which forms chloramines. Store it away from both, use dedicated pumps and lines, and wear eye and
@@ -243,7 +243,7 @@ const SodiumHypochloriteOman = () => {
         <section className="py-14 border-t">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl font-bold text-foreground mb-3">Delivery across Oman and the GCC</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-3">How fast is sodium hypochlorite delivered across Oman and the GCC?</h2>
               <p className="text-muted-foreground leading-relaxed">
                 Same day within Muscat, next day to Sohar, two to three days to Salalah and Duqm, and by road to the
                 UAE, Saudi Arabia, Qatar, Kuwait and Bahrain with a Certificate of Origin. Related supply guides:{' '}

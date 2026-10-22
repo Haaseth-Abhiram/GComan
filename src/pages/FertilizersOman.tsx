@@ -134,7 +134,7 @@ const FertilizersOman = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3 flex items-center gap-2">
-                <Sprout className="w-6 h-6 text-primary" /> Fertilizers in stock: analysis and pack sizes
+                <Sprout className="w-6 h-6 text-primary" /> Which fertilizers are in stock in Oman?
               </h2>
               <p className="text-muted-foreground mb-6 max-w-3xl">
                 Each product links to its own page with the full specification, application rates and handling notes.
@@ -168,7 +168,7 @@ const FertilizersOman = () => {
         <section className="py-14 border-t bg-muted/20">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">Fertigation: what can go in the same tank</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">Which fertilizers can go in the same fertigation tank?</h2>
               <p className="text-muted-foreground mb-6 max-w-3xl">
                 Most drip-system blockages in Oman's hard irrigation water come from mixing calcium with phosphate or
                 sulphate in the same stock tank. Use a two-tank system and keep these rules.
@@ -200,7 +200,7 @@ const FertilizersOman = () => {
         <section className="py-14 border-t">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl font-bold text-foreground mb-3">Delivery across Oman and the GCC</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-3">How fast are fertilizers delivered across Oman and the GCC?</h2>
               <p className="text-muted-foreground leading-relaxed">
                 Same day within Muscat, next day to Sohar and Al Batinah, two to three days to Salalah and Duqm, and by
                 road to the UAE, Saudi Arabia, Qatar, Kuwait and Bahrain with a Certificate of Origin. See the pages for{' '}

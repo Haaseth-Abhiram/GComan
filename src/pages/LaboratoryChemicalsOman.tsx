@@ -157,7 +157,7 @@ const LaboratoryChemicalsOman = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3 flex items-center gap-2">
-                <FlaskConical className="w-6 h-6 text-primary" /> Reagents in stock: grade, purity and pack sizes
+                <FlaskConical className="w-6 h-6 text-primary" /> Which laboratory reagents are in stock in Muscat?
               </h2>
               <p className="text-muted-foreground mb-8 max-w-3xl">
                 Each reagent links to its own page with the full specification. Grades and packs below are read
@@ -204,7 +204,7 @@ const LaboratoryChemicalsOman = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-10">
               <div>
-                <h2 className="text-2xl font-bold text-foreground mb-3">Who the range is for</h2>
+                <h2 className="text-2xl font-bold text-foreground mb-3">Which laboratories buy from this range?</h2>
                 <p className="text-muted-foreground leading-relaxed">
                   Teaching and research laboratories, hospital and clinical labs, oil and gas QC and production
                   chemistry labs, desalination and water-quality labs, and food and beverage QC. Oilfield and
@@ -213,7 +213,7 @@ const LaboratoryChemicalsOman = () => {
                 </p>
               </div>
               <div>
-                <h2 className="text-2xl font-bold text-foreground mb-3">Documentation and storage</h2>
+                <h2 className="text-2xl font-bold text-foreground mb-3">What documents come with laboratory chemicals?</h2>
                 <p className="text-muted-foreground leading-relaxed">
                   Every batch ships with a certificate of analysis and a GHS safety data sheet. Light-sensitive
                   reagents such as silver nitrate are supplied in amber bottles, and stabilised solvents such as
@@ -228,7 +228,7 @@ const LaboratoryChemicalsOman = () => {
         <section className="py-14 border-t">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl font-bold text-foreground mb-3">Delivery across Oman and the GCC</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-3">How fast are laboratory chemicals delivered across Oman and the GCC?</h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Same day within Muscat, next day to Sohar, two to three days to Salalah and Duqm, and by road to the
                 UAE, Saudi Arabia, Qatar, Kuwait and Bahrain with a Certificate of Origin. See the city pages for{' '}

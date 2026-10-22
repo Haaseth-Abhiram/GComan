@@ -139,7 +139,7 @@ const OilfieldChemicalsOman = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3 flex items-center gap-2">
-                <Factory className="w-6 h-6 text-primary" /> Oilfield chemicals by job
+                <Factory className="w-6 h-6 text-primary" /> Which oilfield chemicals are used for each job?
               </h2>
               <p className="text-muted-foreground mb-8 max-w-3xl">
                 Each product links to its own page with the full specification.
@@ -180,7 +180,7 @@ const OilfieldChemicalsOman = () => {
         <section className="py-14 border-t bg-muted/20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl font-bold text-foreground mb-3">Registration, documentation and delivery</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-3">What registration and documents come with oilfield chemicals?</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Oil and gas operators in Oman buy through JSRS-registered suppliers; we are registered and ISO
                 9001:2015 certified, and supply certificates of analysis and GHS safety data sheets with every batch.

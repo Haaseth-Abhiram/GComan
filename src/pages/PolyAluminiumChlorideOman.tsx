@@ -150,7 +150,7 @@ const PolyAluminiumChlorideOman = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3 flex items-center gap-2">
-                <Droplets className="w-6 h-6 text-primary" /> PAC grades in stock
+                <Droplets className="w-6 h-6 text-primary" /> Which PAC grades are in stock in Oman?
               </h2>
               <div className="overflow-x-auto rounded-lg border border-border mt-6">
                 <table className="w-full text-sm">
