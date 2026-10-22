@@ -196,8 +196,8 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
-        <AuthProvider>
-          <ErrorBoundary>
+        <ErrorBoundary>
+          <AuthProvider>
             <GoogleAnalytics />
             <ZohoSalesIQ />
             <a
@@ -344,8 +344,8 @@ const App = () => (
             </Suspense>
             </RouteChunkBoundary>
             </div>
-          </ErrorBoundary>
-        </AuthProvider>
+          </AuthProvider>
+        </ErrorBoundary>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
