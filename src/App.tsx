@@ -344,8 +344,8 @@ const App = () => (
             </Suspense>
             </RouteChunkBoundary>
             </div>
-          </ErrorBoundary>
-        </AuthProvider>
+          </AuthProvider>
+        </ErrorBoundary>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
