@@ -42,7 +42,7 @@ const customerFAQs = [
   },
   {
     question: "How do I become a customer of Global Chemicals LLC?",
-    answer: "To become a customer, contact us at +968-93754388, email sales@gcoman.com, or fill the inquiry form on our website. Share your chemical requirements, quantities, and delivery location. Our team responds within 24 hours with pricing and availability. For registered suppliers in Oman's oil & gas sector, our JSRS certification streamlines the vendor qualification process."
+    answer: "To become a customer, contact us at +968 9277 2305, email sales@gcoman.com, or fill the inquiry form on our website. Share your chemical requirements, quantities, and delivery location. Our team responds within 24 hours with pricing and availability. For registered suppliers in Oman's oil & gas sector, our JSRS certification streamlines the vendor qualification process."
   }
 ];
 

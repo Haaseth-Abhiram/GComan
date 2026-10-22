@@ -6353,7 +6353,7 @@ var lubricants_default = [
         },
         {
           question: "Can I get Mobil lubricants delivered to Sohar or Salalah from Global Chemicals LLC?",
-          answer: "Yes. Global Chemicals LLC delivers Mobil lubricants to all major industrial locations in Oman including Sohar Port and Freezone (next-day delivery from Muscat), Sohar Industrial Estate, Salalah Port and Free Zone (1\u20132 day delivery), Duqm Refinery and Special Economic Zone, and all PDO field areas in South Oman. We supply in quantities from single 20L cans to full truck loads of 208L drums or 1,000L IBC containers. Contact our sales team for a delivery schedule and bulk pricing at info@gcoman.com or +968-93754388."
+          answer: "Yes. Global Chemicals LLC delivers Mobil lubricants to all major industrial locations in Oman including Sohar Port and Freezone (next-day delivery from Muscat), Sohar Industrial Estate, Salalah Port and Free Zone (1\u20132 day delivery), Duqm Refinery and Special Economic Zone, and all PDO field areas in South Oman. We supply in quantities from single 20L cans to full truck loads of 208L drums or 1,000L IBC containers. Contact our sales team for a delivery schedule and bulk pricing at info@gcoman.com or +968 9277 2305."
         },
         {
           question: "Does Global Chemicals LLC supply Mobil synthetic lubricants for extreme conditions?",
@@ -11464,7 +11464,7 @@ var swimming_pool_default = [
         },
         {
           question: "Where can I buy TCCA chlorine tablets in Muscat with bulk pricing?",
-          answer: "Global Chemicals LLC supplies TCCA 200g chlorine tablets (90% available chlorine) in 5kg, 10kg, and 25kg buckets from our Muscat warehouse with same-day delivery throughout Muscat Governorate. We supply residential pool owners, hotel pool maintenance departments, facility management (FM) companies, and pool maintenance contractors across Oman. Bulk pricing is available for quantities above 100kg. We also supply calcium hypochlorite (65\u201370% granules), sodium hypochlorite liquid, and pH adjustment chemicals for a complete pool chemical programme. Contact us at info@gcoman.com or +968-93754388."
+          answer: "Global Chemicals LLC supplies TCCA 200g chlorine tablets (90% available chlorine) in 5kg, 10kg, and 25kg buckets from our Muscat warehouse with same-day delivery throughout Muscat Governorate. We supply residential pool owners, hotel pool maintenance departments, facility management (FM) companies, and pool maintenance contractors across Oman. Bulk pricing is available for quantities above 100kg. We also supply calcium hypochlorite (65\u201370% granules), sodium hypochlorite liquid, and pH adjustment chemicals for a complete pool chemical programme. Contact us at info@gcoman.com or +968 9277 2305."
         },
         {
           question: "How should chlorine tablets be stored safely in Oman's hot climate?",

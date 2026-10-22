@@ -126,8 +126,8 @@ const OilfieldChemicalsOman = () => {
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="gap-2 text-lg px-8">
-                  <a href="tel:+96893754388">
-                    <Phone className="w-5 h-5" /> Call +968 93754388
+                  <a href="tel:+96892772305">
+                    <Phone className="w-5 h-5" /> Call +968 9277 2305
                   </a>
                 </Button>
               </div>

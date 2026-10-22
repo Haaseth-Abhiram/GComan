@@ -50,18 +50,18 @@ const ThankYou = () => {
             {/* Contact options */}
             <div className="grid sm:grid-cols-2 gap-4 mb-10">
               <a
-                href="tel:+96893754388"
+                href="tel:+96892772305"
                 className="flex items-center justify-center gap-3 p-5 rounded-xl border border-border bg-muted/30 hover:border-primary/40 hover:bg-primary/5 transition-all"
                 onClick={() => trackSelectContent('contact_click', 'phone_thankyou')}
               >
                 <Phone className="w-5 h-5 text-primary" />
                 <div className="text-left">
                   <p className="font-semibold text-foreground text-sm">Call Us</p>
-                  <p className="text-muted-foreground text-sm">+968 93754388</p>
+                  <p className="text-muted-foreground text-sm">+968 9277 2305</p>
                 </div>
               </a>
               <a
-                href="https://wa.me/96893754388"
+                href="https://wa.me/96892772305"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-3 p-5 rounded-xl border border-border bg-muted/30 hover:border-green-500/40 hover:bg-green-500/5 transition-all"

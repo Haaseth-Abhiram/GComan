@@ -216,7 +216,7 @@ const ProductDetail = ({ category, rawCategoryProducts }: ProductDetailProps) =>
 
   // WhatsApp message pre-filled with product name
   const whatsappMessage = encodeURIComponent(`Hi, I'm interested in ${product.title}. Please send me pricing and availability.`);
-  const whatsappUrl = `https://wa.me/96893754388?text=${whatsappMessage}`;
+  const whatsappUrl = `https://wa.me/96892772305?text=${whatsappMessage}`;
 
   // Short category qualifier appended to the SEO title so that cross-category
   // products (e.g. EDTA Powder appearing in oilfield, soap-detergent, and
@@ -623,9 +623,9 @@ const ProductDetail = ({ category, rawCategoryProducts }: ProductDetailProps) =>
                       </a>
                     </Button>
                     <Button asChild variant="ghost" size="lg" className="gap-2" onClick={() => trackContactClick('phone')}>
-                      <a href="tel:+96893754388">
+                      <a href="tel:+96892772305">
                         <Phone className="w-4 h-4" />
-                        Call +968 93754388
+                        Call +968 9277 2305
                       </a>
                     </Button>
                   </div>

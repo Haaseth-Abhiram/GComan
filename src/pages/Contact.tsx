@@ -24,11 +24,11 @@ import { Turnstile, isTurnstileEnabled, type TurnstileHandle } from '@/component
 const contactFAQs = [
   {
     question: "What are Global Chemicals LLC's business hours?",
-    answer: "Our office is open Sunday through Thursday from 8:00 AM to 6:00 PM (Gulf Standard Time). We are closed on Friday and Saturday. For urgent inquiries, you can reach us via WhatsApp at +968-93754388."
+    answer: "Our office is open Sunday through Thursday from 8:00 AM to 6:00 PM (Gulf Standard Time). We are closed on Friday and Saturday. For urgent inquiries, you can reach us via WhatsApp at +968 9277 2305."
   },
   {
     question: "How quickly do you respond to inquiries?",
-    answer: "We typically respond to all inquiries within 24 hours during business days. For urgent requests, we recommend calling our sales team directly at +968-93754388 or using our WhatsApp chat for immediate assistance."
+    answer: "We typically respond to all inquiries within 24 hours during business days. For urgent requests, we recommend calling our sales team directly at +968 9277 2305 or using our WhatsApp chat for immediate assistance."
   },
   {
     question: "Where is Global Chemicals LLC located?",
@@ -36,7 +36,7 @@ const contactFAQs = [
   },
   {
     question: "How can I request a product quotation?",
-    answer: "You can request a quotation by filling out our contact form, calling +968-93754388, emailing sales@gcoman.com, or messaging us on WhatsApp. Please include product names, quantities, and delivery location for accurate pricing."
+    answer: "You can request a quotation by filling out our contact form, calling +968 9277 2305, emailing sales@gcoman.com, or messaging us on WhatsApp. Please include product names, quantities, and delivery location for accurate pricing."
   },
   {
     question: "Do you offer technical consultation?",
@@ -312,7 +312,7 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="Contact Us | Get Quote | Global Chemicals LLC Oman & GCC"
-        description="Contact Global Chemicals LLC — Oman's leading chemical exporter to UAE, Saudi Arabia, Qatar, Kuwait & Bahrain. Call +968-93754388 or email info@gcoman.com. 24-hour response."
+        description="Contact Global Chemicals LLC — Oman's leading chemical exporter to UAE, Saudi Arabia, Qatar, Kuwait & Bahrain. Call +968 9277 2305 or email info@gcoman.com. 24-hour response."
         keywords="contact global chemicals, chemical supplier GCC, request quote chemicals Middle East, chemical inquiry Oman UAE, chemical distributor contact GCC, chemical exporter Oman contact, chemical supplier Dubai, chemical company Saudi Arabia, chemical quote Qatar Kuwait"
         ogTitle="Contact Global Chemicals LLC | Request Quote | Oman & GCC Export"
         ogDescription="Get in touch with a leading GCC chemical exporter based in Muscat, Oman. Phone, email, or WhatsApp. 24-hour response for UAE, Saudi Arabia, Qatar, Kuwait & Bahrain orders."
@@ -355,9 +355,9 @@ const Contact = () => {
                 {
                   icon: Phone,
                   title: t('contact.callUs'),
-                  content: '+968 93754388',
+                  content: '+968 9277 2305',
                   description: t('contact.info.hours'),
-                  link: 'tel:+96893754388',
+                  link: 'tel:+96892772305',
                 },
                 {
                   icon: Mail,
@@ -371,7 +371,7 @@ const Contact = () => {
                   title: t('contact.liveChat'),
                   content: t('contact.whatsappSupport'),
                   description: t('contact.instantAssistance'),
-                  link: 'https://wa.me/96893754388',
+                  link: 'https://wa.me/96892772305',
                 },
                 {
                   icon: MapPin,
@@ -667,13 +667,13 @@ const Contact = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild onClick={() => trackContactClick('phone')}>
-                <a href="tel:+96893754388">
+                <a href="tel:+96892772305">
                   <Phone className="w-5 h-5 ltr:mr-2 rtl:ml-2" />
                   {t('contact.callNow')}
                 </a>
               </Button>
               <Button size="lg" variant="outline" asChild onClick={() => trackContactClick('whatsapp')}>
-                <a href="https://wa.me/96893754388" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/96892772305" target="_blank" rel="noopener noreferrer">
                   <MessageSquare className="w-5 h-5 ltr:mr-2 rtl:ml-2" />
                   {t('contact.whatsappChat')}
                 </a>

@@ -39,7 +39,7 @@ const faqs = [
   },
   {
     question: "How do I get a quote for chemical export to the Middle East?",
-    answer: "Contact our export team by email at sales@gcoman.com, call +968-93754388, or use WhatsApp for fast quotes. Include the chemical name or CAS number, required quantity, delivery country and city, and your preferred incoterms (FOB/CIF/DAP). We typically provide quotes within 24 hours with competitive pricing and lead times."
+    answer: "Contact our export team by email at sales@gcoman.com, call +968 9277 2305, or use WhatsApp for fast quotes. Include the chemical name or CAS number, required quantity, delivery country and city, and your preferred incoterms (FOB/CIF/DAP). We typically provide quotes within 24 hours with competitive pricing and lead times."
   },
   {
     question: "Which regulatory registrations do imported chemicals need in GCC countries?",
@@ -684,8 +684,8 @@ const ChemicalSuppliersMiddleEast = () => {
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="gap-2">
-                  <a href="tel:+96893754388">
-                    <Phone className="w-5 h-5" /> Call +968 93754388
+                  <a href="tel:+96892772305">
+                    <Phone className="w-5 h-5" /> Call +968 9277 2305
                   </a>
                 </Button>
               </div>

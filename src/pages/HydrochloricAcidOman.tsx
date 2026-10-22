@@ -41,7 +41,7 @@ import {
 const faqs = [
   {
     question: "How much does hydrochloric acid cost in Oman?",
-    answer: "Hydrochloric acid pricing in Oman depends on strength (30–33% technical vs 36–38% ACS), pack format and order volume — a bulk tanker load prices very differently from 35 kg carboys. Global Chemicals LLC holds stock in Muscat and quotes volume-tiered pricing. Contact info@gcoman.com or +968-93754388 with your strength, quantity and delivery location for a current quotation."
+    answer: "Hydrochloric acid pricing in Oman depends on strength (30–33% technical vs 36–38% ACS), pack format and order volume — a bulk tanker load prices very differently from 35 kg carboys. Global Chemicals LLC holds stock in Muscat and quotes volume-tiered pricing. Contact info@gcoman.com or +968 9277 2305 with your strength, quantity and delivery location for a current quotation."
   },
   {
     question: "What strengths and pack sizes of hydrochloric acid are available in Oman?",
@@ -161,8 +161,8 @@ const HydrochloricAcidOman = () => {
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="gap-2 text-lg px-8">
-                  <a href="tel:+96893754388">
-                    <Phone className="w-5 h-5" /> Call +968 93754388
+                  <a href="tel:+96892772305">
+                    <Phone className="w-5 h-5" /> Call +968 9277 2305
                   </a>
                 </Button>
               </div>
@@ -452,8 +452,8 @@ const HydrochloricAcidOman = () => {
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="gap-2">
-                  <a href="tel:+96893754388">
-                    <Phone className="w-5 h-5" /> Call +968 93754388
+                  <a href="tel:+96892772305">
+                    <Phone className="w-5 h-5" /> Call +968 9277 2305
                   </a>
                 </Button>
               </div>

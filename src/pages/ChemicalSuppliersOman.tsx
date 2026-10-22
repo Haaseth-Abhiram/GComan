@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     question: "How can I get a quote for chemicals in Oman?",
-    answer: "You can request a quote by calling +968-93754388, emailing info@gcoman.com, using our WhatsApp chat, or filling out the contact form on our website at gcoman.com/contact. Our team typically responds within 24 hours with competitive pricing and technical recommendations."
+    answer: "You can request a quote by calling +968 9277 2305, emailing info@gcoman.com, using our WhatsApp chat, or filling out the contact form on our website at gcoman.com/contact. Our team typically responds within 24 hours with competitive pricing and technical recommendations."
   },
   {
     question: "What certifications does Global Chemicals LLC hold?",
@@ -55,7 +55,7 @@ const faqs = [
   },
   {
     question: "What is the minimum order quantity for chemicals from Global Chemicals LLC in Oman?",
-    answer: "There is no minimum order quantity for most products — we supply from single units (1-litre bottles, 25 kg bags) up to full truck loads. We serve both SMEs needing small quantities and large industrial clients requiring bulk supply. For specialty chemicals, minimum order may apply depending on the supplier — contact our team for specific product minimums at info@gcoman.com or +968-93754388."
+    answer: "There is no minimum order quantity for most products — we supply from single units (1-litre bottles, 25 kg bags) up to full truck loads. We serve both SMEs needing small quantities and large industrial clients requiring bulk supply. For specialty chemicals, minimum order may apply depending on the supplier — contact our team for specific product minimums at info@gcoman.com or +968 9277 2305."
   }
 ];
 
@@ -326,8 +326,8 @@ const ChemicalSuppliersOman = () => {
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="gap-2">
-                  <a href="tel:+96893754388">
-                    <Phone className="w-5 h-5" /> Call +968 93754388
+                  <a href="tel:+96892772305">
+                    <Phone className="w-5 h-5" /> Call +968 9277 2305
                   </a>
                 </Button>
               </div>

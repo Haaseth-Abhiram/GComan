@@ -57,7 +57,7 @@ const faqs = [
   {
     // Lifted from the live "People also ask" box on `nitric acid supplier oman`.
     question: "How much does nitric acid cost in Oman?",
-    answer: "Nitric acid pricing in Oman depends on concentration (68% technical vs 68–70% analytical), grade, pack format, and order volume. Competitors list indicative figures around OMR 70 for a 35 kg can, but real pricing moves with volume — a 1,000 L IBC or bulk tanker lands very differently from single carboys. Global Chemicals LLC quotes volume-tiered pricing and supplies locally in Oman rather than importing, which shortens the supply chain. Contact info@gcoman.com or +968-93754388 with your concentration, quantity and delivery location for a current quotation."
+    answer: "Nitric acid pricing in Oman depends on concentration (68% technical vs 68–70% analytical), grade, pack format, and order volume. Competitors list indicative figures around OMR 70 for a 35 kg can, but real pricing moves with volume — a 1,000 L IBC or bulk tanker lands very differently from single carboys. Global Chemicals LLC quotes volume-tiered pricing and supplies locally in Oman rather than importing, which shortens the supply chain. Contact info@gcoman.com or +968 9277 2305 with your concentration, quantity and delivery location for a current quotation."
   },
   {
     question: "What grades and pack sizes of nitric acid are available in Oman?",
@@ -93,7 +93,7 @@ const faqs = [
   // for"). Both restate facts already on this page; nothing new is claimed.
   {
     question: "Where can I buy nitric acid in Oman?",
-    answer: "Global Chemicals LLC holds nitric acid in stock at its Ghala warehouse in Muscat and supplies industrial, food-contact and laboratory grades to companies and institutions across Oman: same-day dispatch in Muscat and Rusayl, next-day to Sohar, and two to three days to Salalah, Duqm, Nizwa and Sur. Send the grade, quantity and delivery address to info@gcoman.com or call +968-93754388 for a quotation; a Certificate of Analysis and GHS Safety Data Sheet accompany every consignment."
+    answer: "Global Chemicals LLC holds nitric acid in stock at its Ghala warehouse in Muscat and supplies industrial, food-contact and laboratory grades to companies and institutions across Oman: same-day dispatch in Muscat and Rusayl, next-day to Sohar, and two to three days to Salalah, Duqm, Nizwa and Sur. Send the grade, quantity and delivery address to info@gcoman.com or call +968 9277 2305 for a quotation; a Certificate of Analysis and GHS Safety Data Sheet accompany every consignment."
   },
   {
     question: "What is 70% nitric acid used for?",
@@ -201,8 +201,8 @@ const NitricAcidOman = () => {
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="gap-2 text-lg px-8">
-                  <a href="tel:+96893754388">
-                    <Phone className="w-5 h-5" /> Call +968 93754388
+                  <a href="tel:+96892772305">
+                    <Phone className="w-5 h-5" /> Call +968 9277 2305
                   </a>
                 </Button>
               </div>
@@ -526,8 +526,8 @@ const NitricAcidOman = () => {
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="gap-2">
-                  <a href="tel:+96893754388">
-                    <Phone className="w-5 h-5" /> Call +968 93754388
+                  <a href="tel:+96892772305">
+                    <Phone className="w-5 h-5" /> Call +968 9277 2305
                   </a>
                 </Button>
               </div>

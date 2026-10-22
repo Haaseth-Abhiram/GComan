@@ -327,7 +327,7 @@ const locations: Record<string, LocationData> = {
       }
     ],
     metaTitle: 'Chemical Supplier Rustaq | Al Batinah South, Oman',
-    metaDescription: 'Chemical supplier for Rustaq, Oman. Agricultural chemicals, water treatment, food-grade & industrial chemicals. 24–48 hour delivery from Muscat. Call +968-93754388.',
+    metaDescription: 'Chemical supplier for Rustaq, Oman. Agricultural chemicals, water treatment, food-grade & industrial chemicals. 24–48 hour delivery from Muscat. Call +968 9277 2305.',
     metaKeywords: 'chemical supplier Rustaq, chemicals Rustaq Oman, agricultural chemicals Rustaq, water treatment Rustaq, industrial chemicals South Al Batinah, chemical supplier Nakhal Oman',
     relatedGuide: {
       slug: 'agricultural-chemicals-oman-buyers-guide',
@@ -1426,9 +1426,9 @@ const LocationLanding = () => {
                 </LocalizedLink>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <a href="tel:+96893754388">
+                <a href="tel:+96892772305">
                   <Phone className="mr-2 h-4 w-4" />
-                  +968-93754388
+                  +968 9277 2305
                 </a>
               </Button>
             </div>
@@ -1706,7 +1706,7 @@ const LocationLanding = () => {
                 <LocalizedLink to="/contact">{isAr ? 'تواصل معنا' : 'Contact Us'}</LocalizedLink>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <a href="https://wa.me/96893754388" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/96892772305" target="_blank" rel="noopener noreferrer">
                   {isAr ? 'تواصل عبر واتساب' : 'WhatsApp Us'}
                 </a>
               </Button>
@@ -1715,7 +1715,7 @@ const LocationLanding = () => {
             <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
               <span className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
-                +968-93754388
+                +968 9277 2305
               </span>
               <span className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />

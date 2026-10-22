@@ -33,7 +33,7 @@ const homepageFAQs = [
   },
   {
     question: "How can I request a quote for chemical supply to Oman or GCC countries?",
-    answer: "You can request a quote by calling us at +968-93754388, emailing info@gcoman.com (or sales@gcoman.com for export), using our WhatsApp chat, or filling out the contact form on our website. Include the chemical name, quantity, and destination country. Our team typically responds within 24 hours with competitive pricing for both domestic Oman supply and GCC export orders."
+    answer: "You can request a quote by calling us at +968 9277 2305, emailing info@gcoman.com (or sales@gcoman.com for export), using our WhatsApp chat, or filling out the contact form on our website. Include the chemical name, quantity, and destination country. Our team typically responds within 24 hours with competitive pricing for both domestic Oman supply and GCC export orders."
   },
   {
     question: "Does Global Chemicals provide technical support for chemical applications?",
@@ -41,7 +41,7 @@ const homepageFAQs = [
   },
   {
     question: "Is Global Chemicals LLC the same company as Global Chemicals & Maintenance Systems LLC?",
-    answer: "No. Global Chemicals LLC (gcoman.com) is a separate, independent company — a B2B chemical supplier based in Ghala, Muscat, supplying water treatment, oilfield, laboratory, and industrial chemicals across Oman and the GCC. Global Chemicals & Maintenance Systems LLC is a different Oman-registered company. If you were looking for chemical products, industrial lubricants, or laboratory reagents, you're in the right place — contact us at info@gcoman.com or +968-93754388."
+    answer: "No. Global Chemicals LLC (gcoman.com) is a separate, independent company — a B2B chemical supplier based in Ghala, Muscat, supplying water treatment, oilfield, laboratory, and industrial chemicals across Oman and the GCC. Global Chemicals & Maintenance Systems LLC is a different Oman-registered company. If you were looking for chemical products, industrial lubricants, or laboratory reagents, you're in the right place — contact us at info@gcoman.com or +968 9277 2305."
   }
 ];
 
