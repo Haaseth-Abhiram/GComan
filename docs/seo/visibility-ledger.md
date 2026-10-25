@@ -122,3 +122,9 @@ Personalisation caveat: browser is UAE-located and signed in; Maps/AI answers ca
   - **Google-backed engines do not name us:** Gemini (Oman Chemical/MBBT, DubiChem/RXSOL, Salalah Chemical). Google AI Mode was not measurable (CAPTCHA); it did not name us on 10-19.
   - **Brave, the index behind Claude's web search:** absent for nitric. Brave has indexed gcoman.com but none of its nitric pages (`site:` check). We are 3rd for "chemical suppliers oman".
   - **Reading:** Bing-side engines judge the page, and ours is the best in the market. Google and Brave weigh links and discovery, where we have 1 referring domain. The levers are MASTER-PLAN Phase 8.A (listings and earned links), which also give Brave paths to the nitric pages.
+- **2026-10-25 late afternoon (after the user cleared Google's CAPTCHA)**:
+  - **Google AI Mode** now lists Global Chemicals LLC **first** among "Verified Bulk Nitric Acid Suppliers in Oman", ahead of Muscat Chemical. On 10-19 it did not name us. This was read in a signed-in browser, so it may be personalised; re-read signed out on 11-01.
+  - **Google organic is unchanged:** absent from the top 9 for "nitric acid supplier oman" (omanchem 1; go4worldbusiness 7 and omanyellowpagesonline 9 are directories we could be on) and for "bulk nitric acid oman" (uvwater 1).
+  - **Gemini, second wording:** still not named (Oman Chemical, Salalah Chemical).
+  - **Lovable edge functions:** still undeployed ("13 days ago").
+  - **Reading:** AI Mode reads the page, as the Bing-side engines do. Organic ranking and Gemini still follow the link gap (Phase 8.A).

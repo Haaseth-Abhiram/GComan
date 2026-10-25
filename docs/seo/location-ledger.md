@@ -315,3 +315,7 @@ Append-only. One row per check per run, written by the `running-search-operation
 | 2026-10-25 | brave | nitric acid supplier oman | /chemical-supplier/nitric-acid-oman | — |  | omanchem.com | top 9 |
 | 2026-10-25 | brave | chemical suppliers oman | /chemical-suppliers-oman | 3 | / | omanchem.com | top 10 |
 | 2026-10-25 | google ai mode | bulk nitric acid supplier in oman | — | n/m |  | n/m | captcha (/sorry) |
+| 2026-10-25 | google ai mode | bulk nitric acid supplier in oman | — | **1st listed** | "Verified Bulk Nitric Acid Suppliers in Oman: Global Chemicals LLC …", then Muscat Chemical | gcoman.com | udm=50 gl=om, signed-in browser; read after the user cleared the CAPTCHA (was not named 10-19) |
+| 2026-10-25 | gemini | Which company should I contact for bulk nitric acid (IBC or tanker) in Oman? | — | not named |  | Oman Chemical (MBBT); Salalah Chemical | signed in (owner's personal account), second wording |
+| 2026-10-25 | google | nitric acid supplier oman | /chemical-supplier/nitric-acid-oman | — |  | omanchem.com | pws=0 gl=om, navigated (=; top 9 incl. go4worldbusiness 7, omanyellowpagesonline 9) |
+| 2026-10-25 | google | bulk nitric acid oman | /chemical-supplier/nitric-acid-oman | — |  | uvwater.biz | pws=0 gl=om, navigated (top 9) |
