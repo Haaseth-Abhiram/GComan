@@ -4,7 +4,7 @@
 
 **To resume:** say **"continue the Number One plan"** (or run `/number-one-plan`). Claude reads this file, checks the live state of the Next-up item, does it, runs the gates, commits to Develop, updates this table, and reports.
 
-**Last updated:** 2026-10-22 (session 14, after Publish #5). **Next up: P0.3 indexing on 10-23 after 12:00 Muscat** (`/ar/products/cooling-water/*` from biocide-closed-loop-chiller onward), then the daily run. Production `psr2.32d65a42` = main `99dc0b9`; Develop has the seventeenth batch for the next Publish. Phase 3 continues with distinct products only (same-CAS twins wait for the Phase 1 decision), each batch fact-checked before commit. User items, in order: phone number on the social profiles; P7.1 the 28 open website leads; P5.5 page-1 directories; P5.6 reviews; P5.7 GBP products + categories; D-U-N-S; TDS for the 26 proprietary pages. 27 Oct: HANDOFF watch closes → decide on the 320 templated FAQs and the product-template definition-first change. 3 Nov: two-week re-read of the nitric and city cells.
+**Last updated:** 2026-10-25 (session 15). **Next up: Phase 8 (nitric #1 programme).** Claude: P8.F Google read of the nitric country cells on 10-26 and the indexing queue (`/ar/products/corrosion-inhibitor/*`); P8.B post-Publish steps when the user Publishes. User, in order: P8.A accounts (D-U-N-S, go4worldbusiness, ensun.io, yellowpages-uae first), the three P8.C decisions, P8.D reviews, P7.1 the open leads, Publish. Production `psr2.32d65a42`; Develop has product batches 17–19 and the nitric bulk sections for the next Publish. 3 Nov: two-week re-read of the nitric and city cells.
 
 **What "number one" needs, surface by surface (read 2026-10-20, `nitric-acid-position-2026-10-20.md`, `daily-scoreboard.md`):**
 
@@ -108,6 +108,21 @@ Each hub: `/chemical-supplier/<slug>`, spec table, grades, pack formats, GCC lea
 | P7.1 | **Work the 28 website leads in "New – Website Enquiry"** (urea 100,000 MT/month 10-17, solvent naphtha 1 FCL 10-13, acetone 210 L Special Technical Services 10-05, Muscat Engineering Castrol 10-19, NESMA list 10-10…) | **user / sales** | open | Zoho: count of "New – Website Enquiry" < 5 |
 | P7.2 | Zoho `Country` populated on web leads (empty on 71 of 72): `submit-contact` maps the form country to the Lead field. Code exists on Develop since 10-13; **edge functions do not ship on Publish** — needs a Supabase/Lovable-side deploy | user (deploy) | blocked on deploy | next web lead shows Country |
 | P7.3 | Monthly: website leads mentioning nitric / each hub product, by country | Claude | 2026-10-20: 0 nitric of 72 | Zoho search |
+
+## Phase 8 — nitric acid #1, every engine, every GCC country (added 2026-10-25)
+
+The full programme, evidence and targets are in [`nitric-acid-number-one-programme-2026-10-25.md`](./nitric-acid-number-one-programme-2026-10-25.md). Diagnosis in one line: Google indexes all 6 nitric pages but ranks none, because gcoman.com has 1 referring domain on Bing and about 6 on Google against omanchem's 41 (mostly a sister-site group), uvwater's 11 and deluxechemical's 10. The pages are 9–20 days old, and outside Oman engines prefer in-country stockists. Internal links, indexing, content depth and technical health were measured and ruled out.
+
+| # | Item | Owner | Status | Done when |
+|---|---|---|---|---|
+| P8.A | Referring domains 1 → 15 (≥5 to nitric pages): D-U-N-S, go4worldbusiness nitric product, ensun.io, yellowpages-uae, qataroilandgasdirectory, industrial-mall, fyind, gulfleads.ae nitric product, omanyellowpagesonline, madeinomangate, metoree, findglocal, fyndsupplier, theomantoday, OCCI, customers' supplier pages | user signs up → Claude fills (asks before submit) | open | Bing WMT + GSC Links count |
+| P8.B | Publish the bulk sections (hub `49e414b`, countries `b7415e3`), then GSC indexing for the 6 nitric pages; Bing recrawl done 10-25 | user (Publish) → Claude | Bing done; Publish open | live + requested |
+| P8.C1 | Arabic nitric hub (fully translated, "للبيع", "اين يباع", bulk) | **user decision** → Claude | decision | /ar hub indexable |
+| P8.C2 | Indicative price line (hub, UAE, Saudi) | **user gives the number** | decision | live |
+| P8.C3 | Who-can-buy statement | **user gives the wording** | decision | live |
+| P8.D | Reviews 2 → 15 (≥3 naming nitric acid); real carboy/IBC photo on GBP products | user | open | GBP |
+| P8.E | Weekly AI read per country + GCC bulk query, sources logged; new cited directories feed P8.A | Claude (Sundays) | running since 10-25 | ledger rows |
+| P8.F | Google read of the 6 "supplier in <country>" + "supplier gcc / middle east" cells on 10-26; hub two-week read 11-03; monthly GCC nitric impressions in GSC (2 in 28d on 10-25; >50 = Google is testing us) | Claude | scheduled | ledger rows |
 
 ## Phase 6 — measure and extend (monthly; the plan grows here)
 
