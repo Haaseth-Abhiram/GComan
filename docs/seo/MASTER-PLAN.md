@@ -111,7 +111,7 @@ Each hub: `/chemical-supplier/<slug>`, spec table, grades, pack formats, GCC lea
 
 ## Phase 8 — nitric acid #1, every engine, every GCC country (added 2026-10-25)
 
-The full programme, evidence and targets are in [`nitric-acid-number-one-programme-2026-10-25.md`](./nitric-acid-number-one-programme-2026-10-25.md). Diagnosis in one line: Google indexes all 6 nitric pages but ranks none, because gcoman.com has 1 referring domain on Bing and about 6 on Google against omanchem's 41 (mostly a sister-site group), uvwater's 11 and deluxechemical's 10. The pages are 9–20 days old, and outside Oman engines prefer in-country stockists. Internal links, indexing, content depth and technical health were measured and ruled out.
+The full programme, evidence and targets are in [`nitric-acid-number-one-programme-2026-10-25.md`](./nitric-acid-number-one-programme-2026-10-25.md). The shareable strategy page with the live action tracker (owner + status dropdowns the team updates) is the Claude Doc "gcoman Number One Strategy": https://claude.ai/artifact/BQrA7LjjJxfx5vD89Ej8UK. Keep its tracker in sync when an item closes. Diagnosis in one line: Google indexes all 6 nitric pages but ranks none, because gcoman.com has 1 referring domain on Bing and about 6 on Google against omanchem's 41 (mostly a sister-site group), uvwater's 11 and deluxechemical's 10. The pages are 9–20 days old, and outside Oman engines prefer in-country stockists. Internal links, indexing, content depth and technical health were measured and ruled out.
 
 | # | Item | Owner | Status | Done when |
 |---|---|---|---|---|
