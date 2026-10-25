@@ -307,3 +307,11 @@ Append-only. One row per check per run, written by the `running-search-operation
 | 2026-10-25 | perplexity | best nitric acid supplier in Qatar | — | 2nd | "GCC-based supply into Qatar" | Aspect Chemicals | signed in |
 | 2026-10-25 | perplexity | best nitric acid supplier in Kuwait | — | named, below the top 3 | "GCC exporter … from Muscat" | Al Sanea Chemical Products | signed in |
 | 2026-10-25 | perplexity | best nitric acid supplier in Bahrain | — | 3rd | "fast GCC cross-border supply" | CPT Bahrain | signed in |
+| 2026-10-25 | perplexity | bulk nitric acid supplier in Oman | — | 1st | "strongest local option", bulk + IBC; old phone quoted | gcoman.com | signed in, after Publish #6 |
+| 2026-10-25 | copilot (bing.com/copilotsearch AI Mode) | Who is the best bulk nitric acid supplier in Oman | — | 1st | "Global Chemicals LLC is the strongest supplier", quotes the bulk section | gcoman.com | cc=om, not signed in |
+| 2026-10-25 | chatgpt | Who is the best bulk nitric acid supplier in Oman? | — | 1st | then Sohar Chemicals, Oman Chemical | gcoman.com | logged out, after Publish #6 |
+| 2026-10-25 | gemini | Who is the best bulk nitric acid supplier in Oman? | — | not named |  | Oman Chemical (MBBT); then DubiChem/RXSOL, Salalah Chemical | signed in (owner's personal account) |
+| 2026-10-25 | brave (Claude's search index) | bulk nitric acid supplier oman | /chemical-supplier/nitric-acid-oman | — |  | omanchem.com | top 12; site:gcoman.com nitric returns no nitric page (not in Brave's index) |
+| 2026-10-25 | brave | nitric acid supplier oman | /chemical-supplier/nitric-acid-oman | — |  | omanchem.com | top 9 |
+| 2026-10-25 | brave | chemical suppliers oman | /chemical-suppliers-oman | 3 | / | omanchem.com | top 10 |
+| 2026-10-25 | google ai mode | bulk nitric acid supplier in oman | — | n/m |  | n/m | captcha (/sorry) |
