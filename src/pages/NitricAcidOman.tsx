@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import NitricAcidOmanAr from '@/pages/NitricAcidOmanAr';
+import hubAr from '@/i18n/locales/hub-pages-ar.json';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { SEO } from '@/components/SEO';
@@ -181,6 +183,10 @@ const gccDelivery: { country: string; slug?: string; leadTime: string; notes: st
 ];
 
 const NitricAcidOman = () => {
+  // /ar renders a fully Arabic body (NitricAcidOmanAr.tsx); see its header.
+  const { pathname } = useLocation();
+  if (pathname.startsWith('/ar/')) return <NitricAcidOmanAr />;
+  const arMeta = hubAr.hubPages['nitric-acid-oman'];
   return (
     <div className="min-h-screen bg-background">
       <SEO
@@ -191,6 +197,8 @@ const NitricAcidOman = () => {
         ogDescription="Nitric acid 68% (HNO3) manufacturer and supplier in Muscat, Oman. Own production unit, stock held locally. Industrial, food-contact and laboratory grades, 35kg carboys to bulk. Export across the GCC."
         ogUrl="https://gcoman.com/chemical-supplier/nitric-acid-oman"
         canonical="https://gcoman.com/chemical-supplier/nitric-acid-oman"
+        arTitle={arMeta.metaTitle}
+        arDescription={arMeta.metaDescription}
       />
       <FAQStructuredData faqs={faqs} />
       <BreadcrumbStructuredData items={breadcrumbItems} />

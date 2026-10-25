@@ -67,6 +67,16 @@ const translatedLocations = new Set(
     .map(([id]) => id)
 );
 
+// Hand-written product+geo hubs with a full Arabic body (NitricAcidOmanAr.tsx
+// and successors): indexable under /ar only when hub-pages-ar.json carries
+// metaTitle + metaDescription for the slug — the same rule the hub passes to
+// <SEO> as arTitle/arDescription.
+const translatedHubs = new Set(
+  Object.entries(readJson('src/i18n/locales/hub-pages-ar.json').hubPages ?? {})
+    .filter(([, v]) => hasAll(v, 'metaTitle', 'metaDescription'))
+    .map(([slug]) => slug)
+);
+
 // Products whose details.canonicalOverride points at a different URL. Both the
 // EN page and its /ar twin canonicalise away, so neither belongs in the sitemap.
 const canonicalisedProducts = new Set();
@@ -87,6 +97,8 @@ function isIndexable(path) {
     if (arProduct) return translatedProducts.has(arProduct[1]);
     const arLocation = path.match(/^\/ar\/chemicals\/([^/]+)$/);
     if (arLocation) return translatedLocations.has(arLocation[1]);
+    const arHub = path.match(/^\/ar\/chemical-supplier\/([^/]+)$/);
+    if (arHub) return translatedHubs.has(arHub[1]);
     return false; // every other /ar page still renders English prose → noindex
   }
   return !EN_NOINDEX.has(path);
@@ -98,6 +110,8 @@ function arTwinOf(path) {
   if (prod) return translatedProducts.has(prod[1]) ? `/ar${path}` : null;
   const loc = path.match(/^\/chemicals\/([^/]+)$/);
   if (loc) return translatedLocations.has(loc[1]) ? `/ar${path}` : null;
+  const hub = path.match(/^\/chemical-supplier\/([^/]+)$/);
+  if (hub) return translatedHubs.has(hub[1]) ? `/ar${path}` : null;
   return null;
 }
 

@@ -209,6 +209,9 @@
     <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/chemical-supplier/nitric-acid-oman"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/chemical-supplier/nitric-acid-oman"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/chemical-supplier/nitric-acid-oman"/>
   </url>
   <url>
     <loc>https://gcoman.com/chemical-supplier/nitric-acid-qatar</loc>
@@ -2987,6 +2990,15 @@
     <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gcoman.com/ar/chemical-supplier/nitric-acid-oman</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/chemical-supplier/nitric-acid-oman"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/chemical-supplier/nitric-acid-oman"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/chemical-supplier/nitric-acid-oman"/>
   </url>
   <url>
     <loc>https://gcoman.com/ar/chemicals/abu-dhabi</loc>

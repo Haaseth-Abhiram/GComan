@@ -56,3 +56,28 @@ test.describe('Nitric acid country pages — bulk supply', () => {
     });
   }
 });
+
+// Arabic hub (2026-10-25): a full Arabic body, so the /ar render is indexable
+// with its own canonical and reciprocal hreflang — the Arabic SEO model's rule.
+test.describe('Nitric acid hub — Arabic', () => {
+  test('/ar renders the Arabic body, self-canonical, indexable', async ({ page }) => {
+    await page.goto('/ar/chemical-supplier/nitric-acid-oman');
+    await expect(page.getByRole('heading', { level: 1 })).toHaveText('مورد ومصنّع حمض النيتريك في عُمان');
+    await expect(page.getByText('أين يمكن شراء حمض النيتريك في عُمان؟').first()).toBeVisible();
+    await expect
+      .poll(async () => page.locator('link[rel="canonical"]').last().getAttribute('href'))
+      .toBe('https://gcoman.com/ar/chemical-supplier/nitric-acid-oman');
+    const robots = await page.locator('meta[name="robots"]').last().getAttribute('content');
+    expect(robots ?? '').not.toContain('noindex');
+    await expect(page).toHaveTitle(/حمض النيتريك/);
+    const wa = page.locator('#bulk-supply ~ * a[href^="https://wa.me/"], main a[href^="https://wa.me/96892772305"]').first();
+    expect(decodeURIComponent((await wa.getAttribute('href')) ?? '')).toContain('حمض النيتريك بالجملة');
+  });
+
+  test('English hub points to the Arabic twin with hreflang', async ({ page }) => {
+    await page.goto('/chemical-supplier/nitric-acid-oman');
+    await expect
+      .poll(async () => page.locator('link[rel="alternate"][hreflang="ar"]').last().getAttribute('href'))
+      .toBe('https://gcoman.com/ar/chemical-supplier/nitric-acid-oman');
+  });
+});
