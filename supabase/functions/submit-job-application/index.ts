@@ -218,7 +218,7 @@ Deno.serve(async (req) => {
 
     // IP-based rate limiting (defence against rotating-email abuse)
     if (await isRateLimited(supabase, 'submit-job-application', ipAddress, IP_RATE_LIMIT_MAX, IP_RATE_LIMIT_WINDOW_MS)) {
-      console.log('IP rate limit exceeded:', ipAddress);
+      console.log('IP rate limit exceeded');
       return new Response(
         JSON.stringify({ error: 'Too many applications from your network. Please try again later.' }),
         { status: 429, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
@@ -260,7 +260,7 @@ Deno.serve(async (req) => {
     // Rate limiting check
     const rateLimitCheck = await checkRateLimit(supabase, applicationData.email);
     if (!rateLimitCheck.allowed) {
-      console.log('Rate limit exceeded for:', applicationData.email);
+      console.log('Rate limit exceeded for an applicant email');
       return new Response(
         JSON.stringify({ error: rateLimitCheck.error }),
         { status: 429, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
@@ -374,7 +374,7 @@ Deno.serve(async (req) => {
       );
     }
 
-    console.log(`Application submitted successfully for ${applicationData.email}`);
+    console.log('Application submitted successfully');
 
     // Send email notification asynchronously (fire and forget, don't block response)
     (async () => {

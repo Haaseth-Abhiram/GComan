@@ -83,7 +83,7 @@ Deno.serve(async (req) => {
 
     // Rate limiting check (durable, per-IP)
     if (await isRateLimited(supabase, "subscribe-newsletter", clientIP, RATE_LIMIT_MAX)) {
-      console.warn(`[Newsletter] Rate limit exceeded for IP: ${clientIP}`);
+      console.warn('[Newsletter] Rate limit exceeded');
       return new Response(
         JSON.stringify({ success: false, error: "Too many requests. Please try again later." }),
         { status: 429, headers: { ...corsHeaders, "Content-Type": "application/json" } }
@@ -111,7 +111,7 @@ Deno.serve(async (req) => {
       );
     }
 
-    console.log(`[Newsletter] Processing subscription for: ${email}`);
+    console.log('[Newsletter] Processing subscription');
 
     // Check if email already exists
     const { data: existingSubscriber, error: checkError } = await supabase
@@ -130,7 +130,7 @@ Deno.serve(async (req) => {
 
     if (existingSubscriber) {
       if (existingSubscriber.is_active) {
-        console.log(`[Newsletter] Email already subscribed: ${email}`);
+        console.log('[Newsletter] Email already subscribed');
         return new Response(
           JSON.stringify({ success: true, message: "You're already subscribed to our newsletter!" }),
           { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
@@ -139,7 +139,7 @@ Deno.serve(async (req) => {
         // Do NOT reactivate: nothing proves the requester owns this address,
         // so anyone could re-subscribe a person who opted out. The owner can
         // rejoin by contacting us from that mailbox.
-        console.log(`[Newsletter] Reactivation refused for unsubscribed email: ${email}`);
+        console.log('[Newsletter] Reactivation refused for an unsubscribed email');
         return new Response(
           JSON.stringify({
             success: true,
@@ -169,7 +169,7 @@ Deno.serve(async (req) => {
       );
     }
 
-    console.log(`[Newsletter] Successfully subscribed: ${email}`);
+    console.log('[Newsletter] Successfully subscribed');
 
     // Push to Zoho CRM in the background.
     const zohoTask = (async () => {

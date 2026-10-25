@@ -183,7 +183,7 @@ serve(async (req) => {
       || req.headers.get('x-forwarded-for')?.split(',').at(-1)?.trim()
       || 'unknown';
 
-    console.log('Contact form submission from IP:', ipAddress);
+    console.log('Contact form submission received');
 
     // Initialize Supabase client
     const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
@@ -193,7 +193,7 @@ serve(async (req) => {
     // Check rate limit
     const withinRateLimit = await checkRateLimit(supabase, ipAddress);
     if (!withinRateLimit) {
-      console.log('Rate limit exceeded for IP:', ipAddress);
+      console.log('Rate limit exceeded');
       return new Response(
         JSON.stringify({ 
           error: 'Too many submissions. Please try again later.',
@@ -213,7 +213,7 @@ serve(async (req) => {
     // Verify Turnstile (early reject before doing any work)
     const captchaOk = await verifyTurnstile(turnstileToken, ipAddress);
     if (!captchaOk) {
-      console.log('Turnstile verification failed for IP:', ipAddress);
+      console.log('Turnstile verification failed');
       return new Response(
         JSON.stringify({
           error: 'Captcha verification failed. Please refresh and try again.',
@@ -310,7 +310,7 @@ serve(async (req) => {
     // Zoho lead only.
     const leadCountry = country && typeof country === 'string' ? sanitizeInput(country) : null;
 
-    console.log('Inserting contact submission:', { ...sanitizedData, ip_address: '[REDACTED]' });
+    console.log('Inserting contact submission');
 
     // Insert into database
     const { data, error } = await supabase
