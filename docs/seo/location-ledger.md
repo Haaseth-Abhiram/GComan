@@ -297,3 +297,13 @@ Append-only. One row per check per run, written by the `running-search-operation
 | 2026-10-25 | chatgpt | best nitric acid supplier in Oman | — | 1st | "Best first choice"; first pick for bulk; new phone | gcoman.com | logged out (=10-22) |
 | 2026-10-25 | perplexity | Who are the best chemical suppliers in Oman? | — | 1st |  | gcoman.com | signed in |
 | 2026-10-25 | perplexity | best nitric acid supplier in Oman | — | 1st | framed as lab / small-to-medium volumes; bulk pointed to Muscat Chemical; quotes old + new phone | gcoman.com | signed in (=) |
+| 2026-10-25 | chatgpt | best nitric acid supplier in UAE | — | not named |  | Al Fujairah Chemicals | logged out |
+| 2026-10-25 | chatgpt | best nitric acid supplier in Saudi Arabia | — | not named |  | Fouz Chemical Company | logged out |
+| 2026-10-25 | chatgpt | best nitric acid supplier in Qatar | — | not named |  | Unichem Limited WLL | logged out |
+| 2026-10-25 | chatgpt | best nitric acid supplier in Kuwait | — | not named |  | Grey Matter Chemical Company | logged out |
+| 2026-10-25 | chatgpt | best nitric acid supplier in Bahrain | — | not named |  | Super Alloy Chemical | logged out |
+| 2026-10-25 | perplexity | best nitric acid supplier in UAE | — | not named |  | Dubi Chem Marine (dubichem.com) | signed in |
+| 2026-10-25 | perplexity | best nitric acid supplier in Saudi Arabia | — | 3rd | "practical GCC alternative" | Fouz Chemical Company | signed in |
+| 2026-10-25 | perplexity | best nitric acid supplier in Qatar | — | 2nd | "GCC-based supply into Qatar" | Aspect Chemicals | signed in |
+| 2026-10-25 | perplexity | best nitric acid supplier in Kuwait | — | named, below the top 3 | "GCC exporter … from Muscat" | Al Sanea Chemical Products | signed in |
+| 2026-10-25 | perplexity | best nitric acid supplier in Bahrain | — | 3rd | "fast GCC cross-border supply" | CPT Bahrain | signed in |
