@@ -7,7 +7,7 @@ import { FAQSection } from '@/components/FAQSection';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { trackSelectContent } from '@/components/GoogleAnalytics';
-import { Phone, ArrowRight, Truck, FileCheck2, Factory } from 'lucide-react';
+import { Phone, ArrowRight, Truck, FileCheck2, Factory, MessageCircle } from 'lucide-react';
 
 /**
  * Nitric acid, one page per GCC destination market (2026-10-16).
@@ -307,6 +307,21 @@ const OTHER_LABEL: Record<NitricCountryKey, string> = {
   bahrain: 'Bahrain',
 };
 
+/**
+ * Bulk enquiry, prefilled per destination (2026-10-25). Keyword research
+ * (docs/seo/nitric-acid-keywords-2026-10-22.md) showed buyers searching "bulk
+ * nitric acid", "wholesale" and "price per ton"; on 2026-10-25 Perplexity named
+ * us for Saudi Arabia, Qatar, Kuwait and Bahrain but only as a lab / mid-volume
+ * source. The section restates the bulk facts the Oman hub already publishes
+ * (IBC + tanker, UN 2031, per-tonne volume tier, 24-hour quote); no new FAQ
+ * schema is added, so this is not templated FAQ generation.
+ */
+const bulkWhatsApp = (name: string) =>
+  'https://wa.me/96892772305?text=' +
+  encodeURIComponent(
+    `Bulk nitric acid enquiry for ${name} (gcoman.com). Grade/concentration: 68% ___. Monthly volume (tonnes): ___. Pack: IBC / bulk tanker / drums. Delivery city: ___. Company: ___`
+  );
+
 const NitricAcidCountry = ({ country }: { country: NitricCountryKey }) => {
   const c = COUNTRIES[country];
   const url = `https://gcoman.com/chemical-supplier/nitric-acid-${country}`;
@@ -434,6 +449,50 @@ const NitricAcidCountry = ({ country }: { country: NitricCountryKey }) => {
                 <FileCheck2 className="w-6 h-6 text-primary" /> What documents come with every consignment?
               </h2>
               <p className="text-muted-foreground leading-relaxed max-w-3xl">{c.documents}</p>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-14 border-t" id="bulk-supply">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3 flex items-center gap-2">
+                <Truck className="w-6 h-6 text-primary" /> Can you supply bulk nitric acid to {c.inName}?
+              </h2>
+              <p className="text-muted-foreground leading-relaxed max-w-3xl mb-6 speakable">
+                Yes. Global Chemicals LLC supplies 68% nitric acid in bulk to {c.inName} from its own production unit in
+                Oman: full 1,000 L IBC loads, with bulk tanker deliveries quoted on request, and standing orders on a
+                monthly schedule for regular users. Lead times are the same as above ({c.leadTime}).
+              </p>
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
+                <div className="rounded-lg border border-border p-5">
+                  <h3 className="font-semibold text-foreground mb-2">Bulk formats and documents</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    1,000 L IBC totes and bulk tanker, alongside 35 kg carboys and 60 kg drums. Every load carries a batch
+                    Certificate of Analysis, a GHS Safety Data Sheet, a GCC Certificate of Origin and dangerous-goods
+                    transport documents as UN 2031 (Class 8, oxidiser subsidiary risk).
+                  </p>
+                </div>
+                <div className="rounded-lg border border-border p-5">
+                  <h3 className="font-semibold text-foreground mb-2">How to get a bulk price for {c.name}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Send the concentration and grade, monthly volume in tonnes, pack format and the delivery city. Bulk
+                    pricing is per tonne on a volume tier, and the quotation follows within 24 hours.
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button asChild size="lg" className="gap-2" onClick={() => trackSelectContent('cta_button', `nitric_${country}_bulk_whatsapp`)}>
+                  <a href={bulkWhatsApp(c.name)} target="_blank" rel="noopener noreferrer nofollow">
+                    <MessageCircle className="w-5 h-5" /> WhatsApp a bulk enquiry
+                  </a>
+                </Button>
+                <Button asChild variant="outline" size="lg" className="gap-2" onClick={() => trackSelectContent('cta_button', `nitric_${country}_bulk_quote`)}>
+                  <Link to={`/contact?product=${encodeURIComponent(`Nitric Acid 68% bulk (${c.name})`)}`} rel="nofollow">
+                    Request a bulk quotation <ArrowRight className="w-5 h-5" />
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
         </section>

@@ -36,3 +36,23 @@ test.describe('Nitric acid hub — bulk supply', () => {
     expect(faq).toContain('What is the bulk price of nitric acid per ton in Oman?');
   });
 });
+
+// The five GCC country pages carry the same bulk offer, prefilled per country
+// (2026-10-25: Perplexity named us in four of them, but only for lab volumes).
+test.describe('Nitric acid country pages — bulk supply', () => {
+  for (const [slug, name] of [
+    ['uae', 'UAE'],
+    ['saudi-arabia', 'Saudi Arabia'],
+    ['qatar', 'Qatar'],
+    ['kuwait', 'Kuwait'],
+    ['bahrain', 'Bahrain'],
+  ] as const) {
+    test(`${name}: bulk heading and country-specific WhatsApp enquiry`, async ({ page }) => {
+      await page.goto(`/chemical-supplier/nitric-acid-${slug}`);
+      await expect(page.getByRole('heading', { name: /Can you supply bulk nitric acid to/i })).toBeVisible();
+      const wa = page.locator('#bulk-supply a[href^="https://wa.me/96892772305"]');
+      await expect(wa).toHaveCount(1);
+      expect(decodeURIComponent((await wa.getAttribute('href')) ?? '')).toContain(`Bulk nitric acid enquiry for ${name}`);
+    });
+  }
+});
