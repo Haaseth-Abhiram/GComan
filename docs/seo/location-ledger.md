@@ -319,3 +319,33 @@ Append-only. One row per check per run, written by the `running-search-operation
 | 2026-10-25 | gemini | Which company should I contact for bulk nitric acid (IBC or tanker) in Oman? | — | not named |  | Oman Chemical (MBBT); Salalah Chemical | signed in (owner's personal account), second wording |
 | 2026-10-25 | google | nitric acid supplier oman | /chemical-supplier/nitric-acid-oman | — |  | omanchem.com | pws=0 gl=om, navigated (=; top 9 incl. go4worldbusiness 7, omanyellowpagesonline 9) |
 | 2026-10-25 | google | bulk nitric acid oman | /chemical-supplier/nitric-acid-oman | — |  | uvwater.biz | pws=0 gl=om, navigated (top 9) |
+| 2026-10-26 | google | chemical suppliers oman | /chemical-suppliers-oman | 2 | / | omanchem.com | pws=0 gl=om navigated (=) |
+| 2026-10-26 | google | chemical suppliers in oman | / | 1 |  | gcoman.com | pws=0 gl=om navigated (=) |
+| 2026-10-26 | google | chemical supplier muscat | /chemicals/muscat | 3 | / | muscatchemical.com | pws=0 gl=om navigated (=) |
+| 2026-10-26 | google | chemical company oman | / | — |  | omanchem.com | pws=0 gl=om navigated (top 6) (=) |
+| 2026-10-26 | google | nitric acid supplier oman | /chemical-supplier/nitric-acid-oman | — |  | omanchem.com | pws=0 gl=om navigated (=) |
+| 2026-10-26 | google | nitric acid supplier uae | /chemical-supplier/nitric-acid-uae | — |  | tricechemicals.com | pws=0 gl=ae navigated (=) |
+| 2026-10-26 | google | nitric acid supplier saudi arabia | /chemical-supplier/nitric-acid-saudi-arabia | — |  | nassguard.sa | pws=0 gl=sa navigated (=) |
+| 2026-10-26 | google | nitric acid supplier qatar | /chemical-supplier/nitric-acid-qatar | — |  | deluxechemical.com | pws=0 gl=qa navigated (=) |
+| 2026-10-26 | google | nitric acid supplier kuwait | /chemical-supplier/nitric-acid-kuwait | — |  | enviroblend-group.com | pws=0 gl=kw navigated (=) |
+| 2026-10-26 | google | nitric acid supplier bahrain | /chemical-supplier/nitric-acid-bahrain | — |  | bahrainyellowpagesonline.com | pws=0 gl=bh navigated (=) |
+| 2026-10-26 | google | nitric acid supplier gcc | /chemical-supplier/nitric-acid-oman | — |  | iigtchem.com | pws=0 gl=om navigated (first reading) |
+| 2026-10-26 | google | chemical supplier rusayl | /chemicals/rusayl | 9 | / | gulfyp.com | pws=0 gl=om navigated (was —) |
+| 2026-10-26 | google | chemical supplier sohar | /chemicals/sohar | — |  | soharchemical.com | pws=0 gl=om navigated (=) |
+| 2026-10-26 | google | chemical supplier rustaq | /chemicals/rustaq | 2 | / | muscatchemical.com | pws=0 gl=om navigated (=) |
+| 2026-10-26 | google | chemical supplier salalah | /chemicals/salalah | 4 | / | salalahchemical.com | pws=0 gl=om navigated (=) |
+| 2026-10-26 | google | chemical supplier duqm | /chemicals/duqm | 4 | / | omanchem.com | pws=0 gl=om navigated (was 3) |
+| 2026-10-26 | google | chemical supplier dubai | /chemicals/dubai | — |  | kemipex.com | pws=0 gl=ae navigated (=) |
+| 2026-10-26 | google | chemical supplier abu dhabi | /chemicals/abu-dhabi | — |  | ocetgulf.com | pws=0 gl=ae navigated (=) |
+| 2026-10-26 | google | chemical supplier sharjah | /chemicals/sharjah | — |  | oxymedz.com | pws=0 gl=ae navigated (=) |
+| 2026-10-26 | google | chemical supplier riyadh | /chemicals/riyadh | — |  | fouz.com.sa | pws=0 gl=sa navigated (=) |
+| 2026-10-26 | google | chemical supplier jeddah | /chemicals/jeddah | — |  | fouz.com.sa | pws=0 gl=sa navigated (=) |
+| 2026-10-26 | google | chemical supplier dammam | /chemicals/dammam | 4 |  | nassguard.sa | pws=0 gl=sa navigated (was 5; 2nd reading in top 10) |
+| 2026-10-26 | google | chemical supplier doha | /chemicals/doha | — |  | deluxechemical.com | pws=0 gl=qa navigated (=) |
+| 2026-10-26 | google | chemical supplier kuwait city | /chemicals/kuwait-city | — |  | lookchem.com | pws=0 gl=kw navigated (=) |
+| 2026-10-26 | google | fujairah, ras al khaimah, jubail, yanbu, bahrain city, baghdad, amman, cairo, country queries | /chemicals/* | n/m |  | n/m | skipped: 25/day cap spent on head terms + nitric |
+| 2026-10-26 | bing | chemical suppliers oman | /chemical-suppliers-oman | 2 | / (target 3) | omanchem.com | cc=om (=) |
+| 2026-10-26 | bing | chemical suppliers in oman | / | 3 | /chemical-suppliers-oman (homepage absent) | omanchem.com | cc=om (was 2) |
+| 2026-10-26 | bing | chemical supplier muscat | /chemicals/muscat | 5 | /chemical-suppliers-oman at 7 | muscatchemical.com | cc=om (5 on 10-25; 2nd reading outside top 3) |
+| 2026-10-26 | bing | chemical company oman | / | 8 |  | omanchem.com | cc=om (was 7) |
+| 2026-10-26 | bing | nitric acid supplier oman | /chemical-supplier/nitric-acid-oman | — |  | omanchem.com | cc=om (2nd reading absent; recrawl requested 10-25) |
