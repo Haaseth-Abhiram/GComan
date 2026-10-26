@@ -157,6 +157,16 @@ const EXACT_REDIRECTS = new Map<string, string>([
   ['/2021/02/11/contactless-payments-time-has-come', '/blog'],
   ['/2025/10/15/nonwovens-industry-magazine', '/blog'],
 
+  // Dead addresses Google still showed (GSC 90 days, 2026-10-26): guessed or
+  // misspelled category/product paths that served the homepage shell.
+  ['/products/agro/agro-products', '/products/agro'],
+  ['/products/base-chemicals', '/products'],
+  ['/products/industrial-gases', '/products'],
+  ['/products/beverage', '/products/food-beverage'],
+  ['/products/copper-sulphate-liquid', '/products/water-treatment/copper-sulphate-liquid'],
+  ['/products/water-treatment/copper-sulfate-liquid', '/products/water-treatment/copper-sulphate-liquid'],
+  ['/products/conrosion-inhibitor/corrosion-inhibitor-closed-system', '/products/corrosion-inhibitor/corrosion-inhibitor-closed-system'],
+
   // Malformed URLs with domain in path
   ['/gcoman.com/ethanolamines', '/products'],
   ['/gcoman.com/blog', '/blog'],

@@ -108,3 +108,17 @@ test.describe('Legacy URL redirects — static stubs (built site only)', () => {
     expect(html).not.toContain('Chemical Suppliers in Oman &amp; GCC');
   });
 });
+
+// Dead addresses Google still showed (GSC 90 days, 2026-10-26).
+test.describe('Legacy URL redirects — dead guessed paths', () => {
+  for (const [from, to] of [
+    ['/products/beverage', '/products/food-beverage'],
+    ['/products/copper-sulphate-liquid', '/products/water-treatment/copper-sulphate-liquid'],
+    ['/products/conrosion-inhibitor/corrosion-inhibitor-closed-system', '/products/corrosion-inhibitor/corrosion-inhibitor-closed-system'],
+  ] as const) {
+    test(`${from} → ${to}`, async ({ page }) => {
+      await page.goto(from);
+      await expect.poll(() => new URL(page.url()).pathname).toBe(to);
+    });
+  }
+});

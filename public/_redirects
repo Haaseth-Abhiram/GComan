@@ -68,6 +68,15 @@
 # Simple Page Slug Changes (2 URLs)
 /privacy-policy/  /privacy  301
 
+# Dead addresses still shown by Google (GSC, 2026-10-26)
+/products/agro/agro-products  /products/agro  301
+/products/base-chemicals  /products  301
+/products/industrial-gases  /products  301
+/products/beverage  /products/food-beverage  301
+/products/copper-sulphate-liquid  /products/water-treatment/copper-sulphate-liquid  301
+/products/water-treatment/copper-sulfate-liquid  /products/water-treatment/copper-sulphate-liquid  301
+/products/conrosion-inhibitor/corrosion-inhibitor-closed-system  /products/corrosion-inhibitor/corrosion-inhibitor-closed-system  301
+
 # Malformed URLs - Domain in path (2 URLs)
 /gcoman.com/ethanolamines/  /products  301
 /gcoman.com/blog/  /blog  301
