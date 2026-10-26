@@ -138,3 +138,8 @@ Personalisation caveat: browser is UAE-located and signed in; Maps/AI answers ca
   - **GSC 7d:** 158 clicks (prev 171); Saudi 20 (prev 7) is the best Saudi week in the ledger; Oman 64 (77), UAE 11 (14).
   - **Decision (mistake filter):** the Bing Muscat and nitric drops have now held two readings, so they map to a lever. Both pages are indexed, fresh and complete, so the lever is authority (P8.A), not copy.
   - **Blocked:** GSC actions could not run because the extension reconnected into a Chrome profile without the owner account.
+- **2026-10-26 (legacy-URL stubs, Develop)**:
+  - **Bing recrawl landed:** the hub now shows its current title.
+  - **New defect found:** the old WordPress URL `/products/acids/nitric-acid` is indexed and ranked #2 for "gcoman nitric acid supplier oman". To non-JS crawlers it serves the homepage HTML with canonical "/", the standing "unknown URL = homepage" defect, and the only redirect is client-side.
+  - **Fix, on Develop:** the build now writes a static redirect stub (meta refresh + canonical) for all 115 exact legacy URLs. Full build green (756 HTML: 640 prerendered + thank-you + 115 stubs). It ships on the next Publish.
+  - **Measure after Publish:** `curl` the legacy URL and expect a canonical to the lab nitric page; the Bing legacy result should drop within weeks.
