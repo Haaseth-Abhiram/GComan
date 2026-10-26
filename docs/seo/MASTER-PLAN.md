@@ -4,7 +4,7 @@
 
 **To resume:** say **"continue the Number One plan"** (or run `/number-one-plan`). Claude reads this file, checks the live state of the Next-up item, does it, runs the gates, commits to Develop, updates this table, and reports.
 
-**Last updated:** 2026-10-25 (session 16, cloud). **Next up: Phase 8 (nitric #1 programme).** Claude: P8.F Google read of the nitric country cells on 10-26 and the indexing queue (`/ar/products/corrosion-inhibitor/*`); P8.B post-Publish steps when the user Publishes. User, in order: P8.A accounts (D-U-N-S, go4worldbusiness, ensun.io, yellowpages-uae first) **and the four A8 emails (drafted, need CR number + certifier name + recipients)**, the three P8.C decisions, P8.D reviews, P7.1 the open leads, Publish. Production `psr2.32d65a42`; Develop has product batches 17–19 and the nitric bulk sections for the next Publish. 3 Nov: two-week re-read of the nitric and city cells.
+**Last updated:** 2026-10-26 (session 17). **Next up: Phase 8, now waiting on the user.** Done since 10-25: Publish #6 (bulk sections) and Publish #7 (Arabic nitric hub, `psr2.73a2066f`), Bing recrawl, 6 nitric pages requested in GSC. Four AI engines name us 1st for bulk nitric in Oman (ChatGPT, Copilot, Perplexity, Google AI Mode). Google organic, Gemini and Claude (via Brave) still don't. Claude: the GSC queue (/ar nitric hub first, then `/ar/products/corrosion-inhibitor/*`, retry 14:11 today), Sunday 11-01 weekly + AI per country, 11-03 two-week Google read; 10-27 HANDOFF decisions (320 templated FAQs, product-template change). **User, in order: P8.A accounts (go4worldbusiness, ensun.io, dnb.com, yellowpages-uae); deploy the 3 form functions in Lovable (log fix `66c7786` + P7.2 Country field; leads still arrive with Country empty); P7.1 the 32 open leads; P8.D reviews; decisions (who-can-buy line, explosives application on the lab nitric product, indicative price); the four A8 emails (need CR number + certifier name + recipients).**
 
 **What "number one" needs, surface by surface (read 2026-10-20, `nitric-acid-position-2026-10-20.md`, `daily-scoreboard.md`):**
 
@@ -107,7 +107,7 @@ Each hub: `/chemical-supplier/<slug>`, spec table, grades, pack formats, GCC lea
 |---|---|---|---|---|
 | P7.1 | **Work the 28 website leads in "New – Website Enquiry"** (urea 100,000 MT/month 10-17, solvent naphtha 1 FCL 10-13, acetone 210 L Special Technical Services 10-05, Muscat Engineering Castrol 10-19, NESMA list 10-10…) | **user / sales** | open | Zoho: count of "New – Website Enquiry" < 5 |
 | P7.2 | Zoho `Country` populated on web leads (empty on 71 of 72): `submit-contact` maps the form country to the Lead field. Code exists on Develop since 10-13; **edge functions do not ship on Publish** — needs a Supabase/Lovable-side deploy | user (deploy) | blocked on deploy | next web lead shows Country |
-| P7.3 | Monthly: website leads mentioning nitric / each hub product, by country | Claude | 2026-10-20: 0 nitric of 72 | Zoho search |
+| P7.3 | Monthly: website leads mentioning nitric / each hub product, by country | Claude | 2026-10-20: 0 nitric of 72. **2026-10-26: 5 new leads since 10-18 (urea Turkey, a Chinese PAC/PAM manufacturer pitching supply, UK catalogue request, Castrol oil Muscat, a Saudi chat): 0 nitric; Country empty on all 4 form leads (P7.2 still undeployed); open "New – Website Enquiry" 28 → 32** | Zoho search |
 
 ## Phase 8 — nitric acid #1, every engine, every GCC country (added 2026-10-25)
 
