@@ -178,6 +178,15 @@ const PREFIX_REDIRECTS: Array<[string, string]> = [
 ];
 
 /**
+ * The exact-match map as plain pairs, for the build: vite.config.ts writes a
+ * static redirect stub (meta refresh + canonical) at each legacy path so
+ * crawlers that do not run JavaScript stop receiving the homepage HTML there.
+ */
+export function legacyExactRedirects(): Array<[string, string]> {
+  return [...EXACT_REDIRECTS];
+}
+
+/**
  * Returns the destination path for a legacy URL, or null when the path is not
  * a legacy URL. Trailing slashes are ignored for matching; a non-legacy path
  * that only differs by a trailing slash resolves to its canonical no-slash

@@ -9,6 +9,7 @@ import { ViteWebfontDownload } from "vite-plugin-webfont-dl";
 import prerender from "@prerenderer/rollup-plugin";
 import { mcpPlugin } from "@lovable.dev/mcp-js/stacks/supabase/vite";
 import { dedupeFaqPage, loadLastmod, stampModified } from "./scripts/stamp-modified.mjs";
+import { legacyExactRedirects } from "./src/lib/legacyRedirects";
 
 /**
  * Routes that must be prerendered *precisely because* they are noindex.
@@ -49,6 +50,44 @@ const routesFromSitemap = (): string[] => {
   return Array.from(new Set([...fromSitemap, ...NOINDEX_PRERENDER_ROUTES]));
 };
 
+/**
+ * Static redirect stubs for the legacy URLs (2026-10-26).
+ *
+ * Lovable's CDN has no server redirects, so legacy URLs were redirected only
+ * in the app (LegacyRedirectHandler). Crawlers that do not run JavaScript got
+ * the SPA shell instead: the homepage title with canonical "/" at a 200. Bing,
+ * which does render, still kept /products/acids/nitric-acid indexed and ranked
+ * it #2 for "gcoman nitric acid supplier oman" beside the real nitric pages.
+ * This writes dist/<legacy path>/index.html for every EXACT legacy entry: an
+ * instant meta refresh plus a canonical to the destination, which Google and
+ * Bing treat as a permanent redirect. The CDN already serves
+ * dist/<route>/index.html for clean URLs, so no hosting change is needed.
+ * Prefix redirects stay in-app (they cannot be enumerated). Paths that are
+ * prerendered routes are skipped, so a stub can never shadow a real page.
+ */
+const legacyRedirectStubs = (): PluginOption => ({
+  name: "legacy-redirect-stubs",
+  apply: "build",
+  generateBundle() {
+    const live = new Set(routesFromSitemap());
+    const safe = /^\/[A-Za-z0-9_\-./]+$/;
+    for (const [from, to] of legacyExactRedirects()) {
+      if (from === "/" || live.has(from) || !safe.test(from) || !safe.test(to) || from.includes("..")) continue;
+      const abs = `https://gcoman.com${to}`;
+      const html =
+        `<!doctype html><html lang="en"><head><meta charset="utf-8">` +
+        `<title>Moved | Global Chemicals LLC</title>` +
+        `<link rel="canonical" href="${abs}">` +
+        `<meta http-equiv="refresh" content="0; url=${to}">` +
+        `<meta name="viewport" content="width=device-width, initial-scale=1">` +
+        `</head><body><p>This page has moved to <a href="${to}">${abs}</a>.</p>` +
+        `<script>location.replace(${JSON.stringify(to)}+location.search+location.hash)</script>` +
+        `</body></html>`;
+      this.emitFile({ type: "asset", fileName: `${from.slice(1)}/index.html`, source: html });
+    }
+  },
+});
+
 let lastmodCache: Map<string, string> | undefined;
 const loadLastmodOnce = (): Map<string, string> =>
   (lastmodCache ??= loadLastmod(path.resolve(__dirname, "public/sitemap.xml")));
@@ -64,6 +103,7 @@ export default defineConfig(({ mode }) => ({
     // Emits supabase/functions/mcp/index.ts from src/lib/mcp/index.ts so
     // external AI clients (ChatGPT, Claude, Codex, Cursor) can connect via MCP.
     mcpPlugin(),
+    legacyRedirectStubs(),
     mode === "development" && componentTagger(),
     // Gzip compression for production
     mode === "production" && viteCompression({

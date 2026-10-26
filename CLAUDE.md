@@ -156,6 +156,8 @@ Verify production after a deploy: `npm run verify:seo-routing` — note the lega
 
 Edit ALL THREE: `src/lib/legacyRedirects.ts` (**the layer that actually runs**), plus `public/_redirects` and `public/.htaccess` (kept in sync for a future self-hosted setup). Add an e2e case to `tests/e2e/legacy-redirects.spec.ts` for anything load-bearing.
 
+Every EXACT entry in `legacyRedirects.ts` also becomes a static redirect stub at build time (`legacyRedirectStubs()` in `vite.config.ts`, added 2026-10-26): `dist/<legacy path>/index.html` with an instant meta refresh and a canonical to the destination. Without it, crawlers that do not run JavaScript received the homepage shell (canonical "/") at every legacy URL, and Bing kept `/products/acids/nitric-acid` indexed beside the real nitric pages. Stubs are skipped for any path that is a prerendered route; prefix redirects stay in-app only. Nothing to do by hand: adding the exact entry is enough.
+
 ## Product data
 
 Per-category JSON files in `src/data/products/` (22 files, 277 products). `src/data/productLoader.ts` imports them, maps `iconName` strings to Lucide components via `ICON_MAP`, and wraps imports in `safeImport()` (auto-retry + force-reload on stale-chunk errors after deploys). `src/data/products.ts` is a re-export shim — **add products to the JSON files, not there**. Minimum fields: `id` (slug = URL segment), `title`, `description`, `category` (= JSON filename), `iconName`, `details` (CAS, long description, applications…). `details.canonicalOverride` marks a duplicate SKU as canonicalising elsewhere — `sync-ar-sitemap.mjs` prunes those from the sitemap and `audit:internal-links` flags anything still linking to one.

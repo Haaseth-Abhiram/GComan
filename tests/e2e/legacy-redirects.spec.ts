@@ -88,3 +88,23 @@ test.describe('/chemicals hub', () => {
     expect(new URL(page.url()).pathname).toBe('/chemical-supplier/caustic-soda-oman');
   });
 });
+
+// Static redirect stubs (vite.config.ts legacyRedirectStubs, 2026-10-26): on a
+// built site, a crawler that does not run JavaScript must get a redirect page
+// whose canonical is the destination, not the homepage shell (canonical "/").
+// Only meaningful against a build (PROD_BUILD=1 or a BASE_URL deploy); the
+// dev server has no stubs.
+test.describe('Legacy URL redirects — static stubs (built site only)', () => {
+  test.skip(!process.env.PROD_BUILD && !process.env.BASE_URL, 'stubs exist only in a build');
+  test('raw HTML at a legacy URL canonicalises to its destination', async ({ request }) => {
+    // vite preview (PROD_BUILD) only maps a folder's index.html for the
+    // trailing-slash form; Lovable's CDN maps the clean URL itself (as it does
+    // for every prerendered route), so a live check uses the clean path.
+    const path = process.env.BASE_URL ? '/products/acids/nitric-acid' : '/products/acids/nitric-acid/';
+    const res = await request.get(path, { maxRedirects: 0 });
+    const html = await res.text();
+    expect(html).toContain('<link rel="canonical" href="https://gcoman.com/products/lab-chemicals/nitric-acid-lab">');
+    expect(html).toContain('http-equiv="refresh"');
+    expect(html).not.toContain('Chemical Suppliers in Oman &amp; GCC');
+  });
+});
