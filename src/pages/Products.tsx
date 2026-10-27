@@ -749,8 +749,11 @@ const Products = ({ initialCategory, initialProducts }: ProductsProps = {}) => {
           'water-treatment': {
             heading: 'Water Treatment Chemicals Supplier in Oman & GCC',
             body: 'Global Chemicals LLC supplies a comprehensive range of water treatment chemicals to municipal water utilities, industrial plants, hotels, and desalination facilities across Oman and the GCC. Our water treatment portfolio covers coagulants (PAC — Poly Aluminium Chloride, aluminium sulphate), disinfectants (calcium hypochlorite, sodium hypochlorite, chlorine tablets), pH adjustment chemicals (caustic soda flakes, soda ash, sulphuric acid), antiscalants for RO and desalination systems, corrosion inhibitors, biocides, antifoams, and flocculants. All products are supplied with GHS-compliant SDS and CoA. Same-day delivery in Muscat; next-day delivery to Sohar and Salalah. JSRS certified for supply to PDO and OQ water treatment operations.',
-            guideUrl: '/blog/jsrs-chemical-supplier-pdo-oman',
-            guideLabel: 'JSRS supplier qualification guide',
+            // P9.4 (2026-10-27): the GCC hub carries the specs, packs and
+            // per-country lead times this grid cannot; it replaces the JSRS
+            // guide link here (the oilfield category keeps that one).
+            guideUrl: '/chemical-supplier/water-treatment-chemicals-gcc',
+            guideLabel: 'Water treatment chemicals for the UAE, Saudi Arabia and the GCC — specs, packs and lead times',
           },
           'lubricants': {
             heading: 'Shell, Mobil, Castrol & GP Lubricants Supplier in Oman',

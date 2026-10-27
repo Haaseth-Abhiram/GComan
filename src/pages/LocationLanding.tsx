@@ -1259,6 +1259,7 @@ const PRODUCT_HUBS: { slug: string; label: string }[] = [
   { slug: 'sodium-hypochlorite-oman', label: 'Sodium hypochlorite' },
   { slug: 'oilfield-chemicals-oman', label: 'Oilfield chemicals' },
   { slug: 'poly-aluminium-chloride-oman', label: 'PAC coagulant' },
+  { slug: 'water-treatment-chemicals-gcc', label: 'Water treatment chemicals (GCC)' },
 ];
 
 const COUNTRY_HUBS: { slug: string; country: string; label: string }[] = [

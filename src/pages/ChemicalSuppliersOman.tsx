@@ -293,6 +293,7 @@ const ChemicalSuppliersOman = () => {
                   { label: 'Sodium Hypochlorite Supplier Oman', path: '/chemical-supplier/sodium-hypochlorite-oman', note: 'Municipal, Food, Bleach & Pool Grades' },
                   { label: 'Oilfield Chemicals Supplier Oman', path: '/chemical-supplier/oilfield-chemicals-oman', note: 'Drilling, Brines, Gas Treating — JSRS' },
                   { label: 'PAC Supplier Oman', path: '/chemical-supplier/poly-aluminium-chloride-oman', note: 'Poly Aluminium Chloride Liquid & Powder' },
+                  { label: 'Water Treatment Chemicals GCC', path: '/chemical-supplier/water-treatment-chemicals-gcc', note: 'Coagulants, Hypochlorite, RO Antiscalants — UAE, KSA & GCC' },
                   { label: 'Chemical Suppliers Middle East', path: '/chemical-suppliers-middle-east', note: 'Export to UAE, KSA, Qatar & GCC' },
                   { label: 'Water Treatment Chemicals', path: '/products/water-treatment', note: 'PAC, Hypochlorite, Antiscalants' },
                   { label: 'Shell / Mobil / Castrol Lubricants', path: '/products/lubricants', note: 'Authorised Oman Distributor' },
