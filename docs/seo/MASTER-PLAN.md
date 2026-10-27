@@ -135,7 +135,7 @@ The full programme, evidence and targets are in [`nitric-acid-number-one-program
 | P9.5 | Bentonite page upgrade (+ barite if sold) | user confirms barite → Claude | decision | live |
 | P9.6 | Arabic urea/fertilizer page | Claude (+ independent Arabic review) | open | /ar live, indexable |
 | P9.7 | Agent-friendly facts (official contact, authorised status, price basis) on the top 20 product pages | user gives price basis + brands → Claude | decision | live |
-| P9.8 | Synonym wording in bodies: IPA, alum, hydrogen peroxide price | Claude | open | live |
+| P9.8 | Synonym wording in bodies: IPA, alum, hydrogen peroxide price | Claude | **checked 2026-10-27: already present** (isopropanol pages carry "Isopropyl alcohol"/"IPA"; aluminium sulphate pages carry "Alum"/"Alum powder"/"Filter alum"). Hydrogen peroxide price waits on the price decision (P8.C2) | — |
 | P9.9 | Pool chlorine / calcium hypochlorite EN + AR | Claude | open | live |
 | P9.10 | "near me" → Muscat page linking (Abu Dhabi page shows for an Oman query) | Claude | open | Muscat ranks instead |
 | P9.11 | 320 templated FAQs: remove the boilerplate sentence repeated on 147 pages; no new templated FAQs | user yes → Claude | decision | gates green |
