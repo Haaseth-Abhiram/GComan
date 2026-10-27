@@ -369,3 +369,15 @@ Append-only. One row per check per run, written by the `running-search-operation
 | 2026-10-27 | bing | chemical suppliers in oman | / | 2 | target page at 2, homepage at 3 | omanchem.com | cc=om (was 3) |
 | 2026-10-27 | bing | chemical supplier muscat | /chemicals/muscat | 4 | / ; city page at 6 | muscatchemical.com | cc=om (was 5) |
 | 2026-10-27 | bing | chemical company oman | / | 10 |  | omanchem.com | cc=om (was 8) |
+| 2026-10-27 | google | water treatment chemicals suppliers in uae | /products/water-treatment | — |  | emveestech.com | pws=0 gl=ae fetch, top 9 only (P9.4 baseline) |
+| 2026-10-27 | google | water treatment chemicals supplier oman | /products/water-treatment | 2 | / (homepage), category page not in top 9 | innovacorporate.com | pws=0 gl=om fetch, top 9 (P9.4 baseline) |
+| 2026-10-27 | google | calcium hypochlorite supplier uae | /products/water-treatment/calcium-hypochlorite-water | — |  | dutcotennant.com | pws=0 gl=ae fetch, top 9 (P9.9 baseline) |
+| 2026-10-27 | google | urea supplier oman | /chemical-supplier/fertilizers-oman | — |  | omanchem.com | pws=0 gl=om fetch, top 9 (P9.6 baseline) |
+| 2026-10-27 | google | bentonite supplier oman | /products/oilfield/bentonite-powder | — |  | muscatchemical.com | pws=0 gl=om fetch, top 9 (P9.5 baseline) |
+| 2026-10-27 | google | caustic soda suppliers in uae | /chemical-supplier/caustic-soda-oman | — |  | yellowpages-uae.com | pws=0 gl=ae fetch, top 9 (P9.3 baseline) |
+| 2026-10-27 | google | hydrochloric acid supplier uae | /chemical-supplier/hydrochloric-acid-oman | — |  | chemstock.ae | pws=0 gl=ae fetch, top 9 (P9.3 baseline) |
+| 2026-10-27 | google | chemical import permit oman | /blog/buying-industrial-chemicals-oman-gcc-guide | — | guide not yet live | customs.gov.om | pws=0 gl=om fetch, top 9 (P9.2 baseline; SERP is all .gov) |
+| 2026-10-27 | bing | water treatment chemicals supplier oman | /products/water-treatment | 6 | / at 4; category page 6 | omanchem.com | cc=om navigated (P9.4 baseline) |
+| 2026-10-27 | bing | urea supplier oman | /chemical-supplier/fertilizers-oman | — |  | muscatchemical.com | cc=om navigated, only 5 results shown (P9.6 baseline) |
+| 2026-10-27 | bing | bentonite supplier oman | /products/oilfield/bentonite-powder | 3 |  | omanchem.com | cc=om navigated (P9.5 baseline) |
+| 2026-10-27 | bing | chemical import permit oman | /blog/buying-industrial-chemicals-oman-gcc-guide | — | guide not yet live | ea.gov.om | cc=om navigated; top 10 all government (P9.2 baseline) |

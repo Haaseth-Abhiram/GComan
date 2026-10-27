@@ -1032,7 +1032,8 @@ For PDO, OQ, and oil and gas contractor supply enquiries: email sales@gcoman.com
   //  - EA Administrative Decision 50/2023, Regulations for Hazardous Chemicals
   //    (permit for import/export/use/manufacture/sale/distribution; SDS kept;
   //    semi-annual reports): leap.unep.org/en/countries/om/national-legislation/environment-authority-administrative-decision-no-502023-issuing
-  //  - Civil Defence licence for transport and storage: customs.gov.om/en/business-services/permit/permit-to-export-chemicals
+  //  - Civil Defence and Ambulance Authority licence for transport and storage: customs.gov.om/en/business-services/permit/permit-to-export-chemicals
+  //  - Cross-check: gov.om/en/w/get-license-to-import-chemical-materials- (SDS required, 4-step service)
   //  - 5% duty on CIF for most non-GCC goods, 5% VAT: taxsummaries.pwc.com/oman/corporate/other-taxes
   // Fee amounts are deliberately omitted (sources disagree after 50/2023).
   {
@@ -1051,7 +1052,7 @@ What does importing a chemical into Oman involve?
 
 If you import a chemical yourself instead of buying from an Oman-based supplier, the Environment Authority's Permit to Import Chemicals applies. The application is made through the Royal Oman Police Directorate General of Customs Bayan system. According to the Authority's service page, it requires a chemical safety card for the product, a purchase order issued to the buyer where the chemical is a precursor, and an existing Environmental Permit to Handle Hazardous Chemicals (the permit to use or sell). The Authority states a processing time of one working day once every requirement is met, and the permit is valid for one year or until the permitted quantity is used, whichever comes first.
 
-A separate licence from Civil Defence is required to transport or store hazardous chemicals. Importers must also hold a commercial registration with the Ministry of Commerce, Industry and Investment Promotion and membership of the Oman Chamber of Commerce and Industry.
+A separate licence from the Civil Defence and Ambulance Authority is required to transport or store hazardous chemicals. Importers must also hold a commercial registration with the Ministry of Commerce, Industry and Investment Promotion and membership of the Oman Chamber of Commerce and Industry.
 
 This is the main practical reason most Oman plants buy hazardous chemicals from a local stockist: the import permit, customs clearance, Civil Defence-compliant transport and storage are handled by the supplier, and the buyer's own obligation is reduced to the permit for using the chemical at its site.
 
@@ -1063,7 +1064,7 @@ Oman applies the GCC common external tariff: most goods imported from outside th
 |---|---|---|
 | Environmental permit to handle (use or sell) hazardous chemicals | Any company that uses, sells or distributes a hazardous chemical | Environment Authority |
 | Permit to import chemicals | The importer of record | Environment Authority, applied for through Bayan |
-| Transport and storage licence | Whoever transports or stores hazardous chemicals | Civil Defence |
+| Transport and storage licence | Whoever transports or stores hazardous chemicals | Civil Defence and Ambulance Authority |
 | Commercial registration and chamber membership | Every importer | Ministry of Commerce, Industry and Investment Promotion; Oman Chamber of Commerce and Industry |
 | Safety Data Sheet (SDS) | Kept by every permit holder for each chemical | Supplied by the manufacturer or supplier |
 
