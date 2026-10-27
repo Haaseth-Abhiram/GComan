@@ -4,7 +4,7 @@
 
 **To resume:** say **"continue the Number One plan"** (or run `/number-one-plan`). Claude reads this file, checks the live state of the Next-up item, does it, runs the gates, commits to Develop, updates this table, and reports.
 
-**Last updated:** 2026-10-26 (session 17). **Next up: Phase 8, now waiting on the user.** Done since 10-25: Publish #6 (bulk sections) and Publish #7 (Arabic nitric hub, `psr2.73a2066f`), Bing recrawl, 6 nitric pages requested in GSC. Four AI engines name us 1st for bulk nitric in Oman (ChatGPT, Copilot, Perplexity, Google AI Mode). Google organic, Gemini and Claude (via Brave) still don't. Claude: the GSC queue (/ar nitric hub first, then `/ar/products/corrosion-inhibitor/*`, retry 14:11 today), Sunday 11-01 weekly + AI per country, 11-03 two-week Google read; 10-27 HANDOFF decisions (320 templated FAQs, product-template change). **User, in order: P8.A accounts (go4worldbusiness, ensun.io, dnb.com, yellowpages-uae); deploy the 3 form functions in Lovable (log fix `66c7786` + P7.2 Country field; leads still arrive with Country empty); P7.1 the 32 open leads; P8.D reviews; decisions (who-can-buy line, explosives application on the lab nitric product, indicative price); the four A8 emails (need CR number + certifier name + recipients).**
+**Last updated:** 2026-10-27 (session 17). **Next up: Phase 9 (GCC demand gaps) + Phase 8 (authority).** Full check today (`full-audit-2026-10-27.md`): GSC 28d clicks +10%, no manual actions; Maps pack #2 on reviews (2 vs 11); Copilot cites guides (the JSRS guide earns 58%), not product pages; UAE is how GCC buyers phrase demand. Claude next: P9.2 buyer guide, P9.4 water-treatment hub, P9.8/P9.10 small fixes; the indexing queue (`/ar/products/food-beverage/*` onward). Develop is ahead of main by the 7 dead-URL redirects + 16 redirect-target fixes (needs a Publish). User: P8.A listings, P9.1 reviews, decisions P9.3/P9.5/P9.7/P9.11, the 3 form functions, the 32 open leads.
 
 **What "number one" needs, surface by surface (read 2026-10-20, `nitric-acid-position-2026-10-20.md`, `daily-scoreboard.md`):**
 
@@ -123,6 +123,22 @@ The full programme, evidence and targets are in [`nitric-acid-number-one-program
 | P8.D | Reviews 2 → 15 (≥3 naming nitric acid); real carboy/IBC photo on GBP products | user | open | GBP |
 | P8.E | Weekly AI read per country + GCC bulk query, sources logged; new cited directories feed P8.A | Claude (Sundays) | running since 10-25 | ledger rows |
 | P8.F | Google read of the 6 "supplier in <country>" + "supplier gcc / middle east" cells on 10-26; hub two-week read 11-03; monthly GCC nitric impressions in GSC (2 in 28d on 10-25; >50 = Google is testing us) | Claude | scheduled | ledger rows |
+
+## Phase 9 — GCC demand gaps (added 2026-10-27, from `full-audit-2026-10-27.md` + `gcc-keyword-demand-2026-10-27.md`)
+
+| # | Item | Owner | Status | Done when |
+|---|---|---|---|---|
+| P9.1 | Reviews 2 → 15 (Maps pack #1 for "chemical supplier in oman"; we are #2 behind 11 reviews) | user | open | GBP review count |
+| P9.2 | Buyer guide in the JSRS pattern: buying industrial chemicals in Oman/GCC — documents, import rules, bulk ordering | Claude drafts, user fact-checks regulations | open | live + Copilot citations |
+| P9.3 | Caustic soda + HCl country pages for UAE and Saudi Arabia (nitric model) | user confirms export of both → Claude | decision | 4 pages live |
+| P9.4 | GCC water-treatment-chemicals hub | Claude | open | live |
+| P9.5 | Bentonite page upgrade (+ barite if sold) | user confirms barite → Claude | decision | live |
+| P9.6 | Arabic urea/fertilizer page | Claude (+ independent Arabic review) | open | /ar live, indexable |
+| P9.7 | Agent-friendly facts (official contact, authorised status, price basis) on the top 20 product pages | user gives price basis + brands → Claude | decision | live |
+| P9.8 | Synonym wording in bodies: IPA, alum, hydrogen peroxide price | Claude | open | live |
+| P9.9 | Pool chlorine / calcium hypochlorite EN + AR | Claude | open | live |
+| P9.10 | "near me" → Muscat page linking (Abu Dhabi page shows for an Oman query) | Claude | open | Muscat ranks instead |
+| P9.11 | 320 templated FAQs: remove the boilerplate sentence repeated on 147 pages; no new templated FAQs | user yes → Claude | decision | gates green |
 
 ## Phase 6 — measure and extend (monthly; the plan grows here)
 
