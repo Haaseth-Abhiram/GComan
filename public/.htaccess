@@ -46,18 +46,19 @@ RewriteRule ^chemicals/khasab/?$ /chemical-suppliers-oman [R=301,L]
   # Product / service pages
   RewriteRule ^service/calcium-carbonate/?$       /products/water-treatment/calcium-carbonate-water [R=301,L]
   RewriteRule ^service/glycols/?$                 /products/glycols [R=301,L]
-  RewriteRule ^service/soap-detergent-chemicals/?$ /products [R=301,L]
-  RewriteRule ^service/solvents/?$                /products [R=301,L]
-  RewriteRule ^service/chlorinated-solvents/?$    /products [R=301,L]
-  RewriteRule ^service/construction-chemicals/?$  /products [R=301,L]
+  RewriteRule ^service/alcohols/?$             /products/alcohols [R=301,L]
+  RewriteRule ^service/soap-detergent-chemicals/?$ /products/soap-detergent [R=301,L]
+  RewriteRule ^service/solvents/?$                /products/solvents [R=301,L]
+  RewriteRule ^service/chlorinated-solvents/?$    /products/chlorinated [R=301,L]
+  RewriteRule ^service/construction-chemicals/?$  /products/construction [R=301,L]
   RewriteRule ^service/swimming-1/?$              /products/swimming-pool [R=301,L]
   RewriteRule ^service/lubricants-greases/?$      /products/lubricants [R=301,L]
   RewriteRule ^water-waste-water-treatment-chemicals/?$ /products/water-treatment [R=301,L]
   RewriteRule ^swimming-pool-chemicals/?$         /products/swimming-pool [R=301,L]
   RewriteRule ^lubricants-greases/?$              /products/lubricants [R=301,L]
   RewriteRule ^oilfield-refinery/?$               /products/oilfield [R=301,L]
-  RewriteRule ^glycols/?$                         /products [R=301,L]
-  RewriteRule ^product/food-beverages/?$          /products [R=301,L]
+  RewriteRule ^glycols/?$                         /products/glycols [R=301,L]
+  RewriteRule ^product/food-beverages/?$          /products/food-beverage [R=301,L]
   RewriteRule ^products-services/?$               /products [R=301,L]
 
   # Support & contact
@@ -112,14 +113,14 @@ RewriteRule ^chemicals/khasab/?$ /chemical-suppliers-oman [R=301,L]
   RewriteRule ^what-we-supply-2/?$                /products [R=301,L]
 
   # Malformed URLs (domain in path)
-  RewriteRule ^gcoman\.com/ethanolamines/?$       /products [R=301,L]
+  RewriteRule ^gcoman\.com/ethanolamines/?$       /products/ethanolamines [R=301,L]
   RewriteRule ^gcoman\.com/blog/?$                /blog [R=301,L]
 
   # Additional service pages
   RewriteRule ^service/swimming/?$                /products/swimming-pool [R=301,L]
   RewriteRule ^service/laboratories/?$            /products/lab-chemicals [R=301,L]
-  RewriteRule ^service/construction/?$            /products [R=301,L]
-  RewriteRule ^service/inorganic-chemicals/?$     /products [R=301,L]
+  RewriteRule ^service/construction/?$            /products/construction [R=301,L]
+  RewriteRule ^service/inorganic-chemicals/?$     /products/inorganic [R=301,L]
   RewriteRule ^service/container/?$               /products [R=301,L]
   RewriteRule ^service/food-beverage/?$           /industries [R=301,L]
   RewriteRule ^service/personal-care/?$           /industries [R=301,L]
@@ -128,21 +129,21 @@ RewriteRule ^chemicals/khasab/?$ /chemical-suppliers-oman [R=301,L]
   RewriteRule ^service/lubricants-greases-1/?$    /products/lubricants [R=301,L]
   RewriteRule ^service/air-chemical/?$            /products [R=301,L]
   RewriteRule ^service/services/oxide/?$          /products [R=301,L]
-  RewriteRule ^service/ethanolamines/?$           /products [R=301,L]
+  RewriteRule ^service/ethanolamines/?$           /products/ethanolamines [R=301,L]
   RewriteRule ^service/pharmaceutical/?$          /industries [R=301,L]
   RewriteRule ^service/agriculture/?$             /industries [R=301,L]
-  RewriteRule ^service/construction-1/?$          /products [R=301,L]
+  RewriteRule ^service/construction-1/?$          /products/construction [R=301,L]
   RewriteRule ^service/oil-gas-1/?$               /products/oilfield [R=301,L]
   RewriteRule ^service/water-treatment/?$         /products/water-treatment [R=301,L]
 
   # Service categories
-  RewriteRule ^service-category/chlorinated-solvents/?$   /products [R=301,L]
+  RewriteRule ^service-category/chlorinated-solvents/?$   /products/chlorinated [R=301,L]
   RewriteRule ^service-category/oilgas/?$                 /products/oilfield [R=301,L]
-  RewriteRule ^service-category/lab-equipment/?$          /products/lab-chemicals [R=301,L]
-  RewriteRule ^service-category/soap-detergent-chemicals/?$ /products [R=301,L]
+  RewriteRule ^service-category/lab-equipment/?$          /products/lab-equipment [R=301,L]
+  RewriteRule ^service-category/soap-detergent-chemicals/?$ /products/soap-detergent [R=301,L]
 
   # Misc product/industry slugs
-  RewriteRule ^alcohols/?$                        /products [R=301,L]
+  RewriteRule ^alcohols/?$                        /products/alcohols [R=301,L]
   RewriteRule ^refinery/?$                        /products/oilfield [R=301,L]
 
   # --- A4b. Old product URL redirects ---
@@ -214,7 +215,7 @@ RewriteRule ^chemicals/khasab/?$ /chemical-suppliers-oman [R=301,L]
 
   # Old top-level category pages that no longer exist
   RewriteRule ^products/oil-gas/?$                       /products/oilfield [R=301,L]
-  RewriteRule ^products/cleaning-products/?$             /products [R=301,L]
+  RewriteRule ^products/cleaning-products/?$             /products/tank-cleaners [R=301,L]
 
   # --- A4c. WordPress-era prefix catch-alls (specific rules above win first) ---
   RewriteRule ^2021/.*$                                  /blog [R=301,L]

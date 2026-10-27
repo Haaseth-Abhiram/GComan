@@ -9,18 +9,19 @@
 # Product/Service Pages (15 URLs)
 /service/calcium-carbonate/  /products/water-treatment/calcium-carbonate-water  301
 /service/glycols/  /products/glycols  301
-/service/soap-detergent-chemicals/  /products  301
-/service/solvents/  /products  301
-/service/chlorinated-solvents/  /products  301
-/service/construction-chemicals/  /products  301
+/service/alcohols/  /products/alcohols  301
+/service/soap-detergent-chemicals/  /products/soap-detergent  301
+/service/solvents/  /products/solvents  301
+/service/chlorinated-solvents/  /products/chlorinated  301
+/service/construction-chemicals/  /products/construction  301
 /service/swimming-1/  /products/swimming-pool  301
 /service/lubricants-greases/  /products/lubricants  301
 /water-waste-water-treatment-chemicals/  /products/water-treatment  301
 /swimming-pool-chemicals/  /products/swimming-pool  301
 /lubricants-greases/  /products/lubricants  301
 /oilfield-refinery/  /products/oilfield  301
-/glycols/  /products  301
-/product/food-beverages/  /products  301
+/glycols/  /products/glycols  301
+/product/food-beverages/  /products/food-beverage  301
 /products-services/  /products  301
 
 # Support & Contact Pages (3 URLs)
@@ -78,7 +79,7 @@
 /products/conrosion-inhibitor/corrosion-inhibitor-closed-system  /products/corrosion-inhibitor/corrosion-inhibitor-closed-system  301
 
 # Malformed URLs - Domain in path (2 URLs)
-/gcoman.com/ethanolamines/  /products  301
+/gcoman.com/ethanolamines/  /products/ethanolamines  301
 /gcoman.com/blog/  /blog  301
 
 # =====================================
@@ -89,8 +90,8 @@
 # Additional Service Pages (18 URLs)
 /service/swimming/  /products/swimming-pool  301
 /service/laboratories/  /products/lab-chemicals  301
-/service/construction/  /products  301
-/service/inorganic-chemicals/  /products  301
+/service/construction/  /products/construction  301
+/service/inorganic-chemicals/  /products/inorganic  301
 /service/container/  /products  301
 /service/food-beverage/  /industries  301
 /service/personal-care/  /industries  301
@@ -99,21 +100,21 @@
 /service/lubricants-greases-1/  /products/lubricants  301
 /service/air-chemical/  /products  301
 /service/services/oxide/  /products  301
-/service/ethanolamines/  /products  301
+/service/ethanolamines/  /products/ethanolamines  301
 /service/pharmaceutical/  /industries  301
 /service/agriculture/  /industries  301
-/service/construction-1/  /products  301
+/service/construction-1/  /products/construction  301
 /service/oil-gas-1/  /products/oilfield  301
 /service/water-treatment/  /products/water-treatment  301
 
 # Service Categories (4 URLs)
-/service-category/chlorinated-solvents/  /products  301
+/service-category/chlorinated-solvents/  /products/chlorinated  301
 /service-category/oilgas/  /products/oilfield  301
-/service-category/lab-equipment/  /products/lab-chemicals  301
-/service-category/soap-detergent-chemicals/  /products  301
+/service-category/lab-equipment/  /products/lab-equipment  301
+/service-category/soap-detergent-chemicals/  /products/soap-detergent  301
 
 # Product/Industry Pages (6 URLs)
-/alcohols/  /products  301
+/alcohols/  /products/alcohols  301
 /pharmaceutical/  /industries  301
 /manufacturing/  /industries  301
 /refinery/  /products/oilfield  301
@@ -240,7 +241,7 @@
 /products/salts                         /products                                           301
 /products/oxidizers                     /products                                           301
 /products/oil-gas                       /products/oilfield                                  301
-/products/cleaning-products             /products                                           301
+/products/cleaning-products             /products/tank-cleaners                                           301
 
 # =====================================
 # CURRENT SEO REDIRECTS
@@ -608,25 +609,25 @@ https://www.gcoman.com/*      https://gcoman.com/:splat  301!
 
 # Soft 404 fixes — GSC reported pages (2026-05-20)
 /service/oil-gas-1/ /industries/oil-gas 301
-/service/construction-1/ /industries/construction 301
-/service/construction/ /industries/construction 301
-/service-category/lab-equipment/ /industries/laboratory 301
+/service/construction-1/  /products/construction  301
+/service/construction/  /products/construction  301
+/service-category/lab-equipment/  /products/lab-equipment  301
 /service/alcohols/ /products 301
 /chemicals/amman /chemicals-in-amman 301
 /ar/chemicals/kuwait-city /ar/chemicals 301
 /blog/chemical-exporter-oman-uae-dubai /blog 301
 /blog/caustic-soda-supplier-oman /blog 301
 /products/lubricants/mobil-lubricants /products/lubricants 301
-/alcohols/ /products 301
+/alcohols/  /products/alcohols  301
 /service/laboratories/ /industries/laboratory 301
-/service/inorganic-chemicals/ /products 301
+/service/inorganic-chemicals/  /products/inorganic  301
 /service/glycols/ /products 301
-/service/soap-detergent-chemicals/ /products 301
+/service/soap-detergent-chemicals/  /products/soap-detergent  301
 /service/agro-products-2/ /products 301
 /service/lab-equipment/ /industries/laboratory 301
 /service/lubricants-greases-1/ /products/lubricants 301
 /service/lab-chemical/ /industries/laboratory 301
-/service/ethanolamines/ /products 301
+/service/ethanolamines/ /products/ethanolamines 301
 /service/water-treatment-2/ /products/water-treatment 301
 
 # SPA fallback (must be last)
