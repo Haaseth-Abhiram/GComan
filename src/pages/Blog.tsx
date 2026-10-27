@@ -1020,6 +1020,127 @@ For PDO, OQ, and oil and gas contractor supply enquiries: email sales@gcoman.com
       ],
     },
   },
+  // P9.2 (MASTER-PLAN): buyer guide in the JSRS pattern. The JSRS post earns
+  // ~58% of Copilot citations because it answers a procurement question with
+  // checklists and named authorities; this one does the same for "how do I buy
+  // industrial chemicals in Oman / the GCC". Regulatory statements are sourced
+  // (read 2026-10-27) and need the user's fact-check before Publish:
+  //  - Environment Authority, Permit to Import Chemicals (Bayan channel, 1
+  //    working day, 1 year or until quantity used, Chemical Safety Card,
+  //    purchase order for precursors, Environmental Permit to Handle Hazardous
+  //    Chemicals): ea.gov.om/en/authority-services/service-catalogue/service-catalogue/permit-to-import-chemicals/
+  //  - EA Administrative Decision 50/2023, Regulations for Hazardous Chemicals
+  //    (permit for import/export/use/manufacture/sale/distribution; SDS kept;
+  //    semi-annual reports): leap.unep.org/en/countries/om/national-legislation/environment-authority-administrative-decision-no-502023-issuing
+  //  - Civil Defence licence for transport and storage: customs.gov.om/en/business-services/permit/permit-to-export-chemicals
+  //  - 5% duty on CIF for most non-GCC goods, 5% VAT: taxsummaries.pwc.com/oman/corporate/other-taxes
+  // Fee amounts are deliberately omitted (sources disagree after 50/2023).
+  {
+    id: 'buying-industrial-chemicals-oman-gcc-guide',
+    title: 'How to Buy Industrial Chemicals in Oman and the GCC: Permits, Documents and Bulk Orders',
+    excerpt: 'A procurement guide to buying industrial chemicals in Oman and the GCC: environmental permits, the documents to ask for, duty and VAT, and how bulk orders are quoted.',
+    content: `Buying an industrial chemical in Oman is not like buying any other industrial supply. Many chemicals are classed as hazardous, which brings an environmental permit regime, safety documentation, and transport and storage rules that a procurement team has to plan around before the first order. This guide sets out what a buyer in Oman, or a GCC buyer sourcing from Oman, needs to know: which permits apply, which documents a supplier must give you, how duty and VAT work, and how bulk chemical orders are specified and quoted.
+
+Do you need a permit to buy chemicals in Oman?
+
+For hazardous chemicals, usually yes. Oman's Environment Authority regulates hazardous chemicals under Administrative Decision No. 50/2023, which issues the Regulations for Hazardous Chemicals. Under those regulations, importing, exporting, using, manufacturing, selling or distributing a hazardous chemical requires an environmental permit from the Environment Authority. A company that uses a hazardous chemical in its own plant therefore needs its own permit, even when it buys from a local supplier who holds the import permit.
+
+The permit holder also takes on obligations: keep the Safety Data Sheet (SDS) for each chemical, stay within the authorised quantities, report chemical incidents and changes to the facility, and submit periodic reports to the Authority. Non-hazardous chemicals sit outside this regime, which is why the first question to ask about any product is whether it is classified as hazardous. The supplier's SDS answers that question.
+
+What does importing a chemical into Oman involve?
+
+If you import a chemical yourself instead of buying from an Oman-based supplier, the Environment Authority's Permit to Import Chemicals applies. The application is made through the Royal Oman Police Directorate General of Customs Bayan system. According to the Authority's service page, it requires a chemical safety card for the product, a purchase order issued to the buyer where the chemical is a precursor, and an existing Environmental Permit to Handle Hazardous Chemicals (the permit to use or sell). The Authority states a processing time of one working day once every requirement is met, and the permit is valid for one year or until the permitted quantity is used, whichever comes first.
+
+A separate licence from Civil Defence is required to transport or store hazardous chemicals. Importers must also hold a commercial registration with the Ministry of Commerce, Industry and Investment Promotion and membership of the Oman Chamber of Commerce and Industry.
+
+This is the main practical reason most Oman plants buy hazardous chemicals from a local stockist: the import permit, customs clearance, Civil Defence-compliant transport and storage are handled by the supplier, and the buyer's own obligation is reduced to the permit for using the chemical at its site.
+
+How much duty and VAT apply to imported chemicals?
+
+Oman applies the GCC common external tariff: most goods imported from outside the GCC carry a 5% customs duty on the CIF value, although individual tariff lines can differ, so the 12-digit HS code of each chemical should be checked in Bayan before a landed cost is calculated. Oman's VAT rate is 5%. Goods of GCC national origin move between member states without customs duty when they travel with a certificate of origin, which is why chemicals made in Oman reach buyers in the UAE, Saudi Arabia, Qatar, Kuwait and Bahrain without the 5% tariff.
+
+| Requirement | Who needs it | Issued by |
+|---|---|---|
+| Environmental permit to handle (use or sell) hazardous chemicals | Any company that uses, sells or distributes a hazardous chemical | Environment Authority |
+| Permit to import chemicals | The importer of record | Environment Authority, applied for through Bayan |
+| Transport and storage licence | Whoever transports or stores hazardous chemicals | Civil Defence |
+| Commercial registration and chamber membership | Every importer | Ministry of Commerce, Industry and Investment Promotion; Oman Chamber of Commerce and Industry |
+| Safety Data Sheet (SDS) | Kept by every permit holder for each chemical | Supplied by the manufacturer or supplier |
+
+Which documents should a chemical supplier give you?
+
+Every delivery of an industrial chemical should come with documents that let your QA, HSE and finance teams sign it off without chasing the supplier. Ask for these at the quotation stage, not after delivery. The Safety Data Sheet (SDS) is the GHS-format hazard and handling document, and it is the document the Environment Authority expects permit holders to keep; ask for English and Arabic versions if your site's HSE plan requires both. The Certificate of Analysis (CoA) is batch-specific and shows that the delivered lot meets the ordered specification, such as concentration, purity or impurities. The Technical Data Sheet (TDS) gives the product's typical properties and is used to approve a product against a material specification. For cross-border GCC deliveries add the commercial invoice, packing list and a certificate of origin attested by the Oman Chamber of Commerce and Industry, and for food-contact chemicals ask for a Halal certificate where it applies.
+
+For oil and gas buyers there is a separate qualification layer: suppliers to PDO, OQ and their contractors are pre-qualified through JSRS, the Joint Supplier Registration System, together with ISO 9001 and In-Country Value documentation. Our guide to JSRS-certified chemical supply covers that process step by step.
+
+How are bulk chemical orders specified and quoted?
+
+Industrial chemicals are quoted against a small number of variables, and an RFQ that states all of them gets a firm price on the first reply instead of a round of questions. State the chemical name and CAS number, the grade (technical, food or laboratory) and the concentration or purity. Give the quantity per order and the expected monthly or annual volume, because standing volumes are priced differently from spot orders. Name the pack format, the delivery point and the date the material is needed.
+
+Pack format drives the price per kilogram as much as volume does. Liquids are typically supplied in carboys and drums for small users, in 1,000 L IBC totes for plants, and by bulk tanker for continuous consumers; solids come in 25 kg bags and in jumbo bags. Larger packs cost less per kilogram to fill, handle and transport, so a plant that can receive IBCs or tanker loads should say so in the RFQ.
+
+For continuous consumption, a blanket purchase order or annual supply agreement secures pricing and priority stock, and lets the supplier hold a safety stock against your consumption. This matters most for chemicals whose absence stops a process, such as water treatment, corrosion control or CIP chemicals.
+
+How long does delivery take in Oman and across the GCC?
+
+From stock in Muscat, deliveries inside Muscat can usually be made the same day and to Sohar the next day. Road freight to the rest of the GCC typically takes about 2 to 7 business days depending on the destination, with the UAE the shortest route and Saudi Arabia the longest; air freight is used for urgent small quantities. Our Middle East supply page lists the lead time, Incoterms and documents for each destination.
+
+How do you check that a chemical supplier is legitimate?
+
+Ask for the supplier's commercial registration, its environmental permit to handle hazardous chemicals, and its ISO 9001 certificate, and check that its SDS documents carry its own name and contact details. A supplier that holds stock in Oman, issues a batch CoA with every delivery and can name the plant or principal behind each product is a lower risk than a trader who sources only after an order is placed. For oil and gas supply, a current JSRS registration in the right category is the deciding check.
+
+How to request a quotation from Global Chemicals LLC
+
+Global Chemicals LLC is an Oman-registered chemical supplier with stock in Ghala, Muscat, ISO 9001:2015 certification and JSRS registration, supplying industrial, water treatment, oilfield, food-grade and laboratory chemicals across Oman and the GCC. Send the chemical name or CAS number, grade, quantity, pack format and delivery location to sales@gcoman.com or call +968 9277 2305, and we will reply with a quotation, the SDS and a sample CoA.`,
+    author: 'Global Chemicals Technical Team',
+    date: '2026-10-27',
+    readTime: '10 min read',
+    category: 'Industry Guide',
+    tags: ['Chemical Procurement', 'Oman', 'GCC', 'Environment Authority', 'Hazardous Chemicals Permit', 'SDS', 'Bulk Chemicals'],
+    icon: Globe2,
+    faqs: [
+      {
+        question: 'Do I need a permit to buy hazardous chemicals in Oman?',
+        answer: 'Usually yes. Under Environment Authority Administrative Decision No. 50/2023, importing, exporting, using, manufacturing, selling or distributing a hazardous chemical requires an environmental permit from the Environment Authority. A company that uses a hazardous chemical at its own site needs its own permit even when it buys from a local supplier that holds the import permit. Non-hazardous chemicals fall outside this regime; the Safety Data Sheet shows the classification.',
+      },
+      {
+        question: 'How do I get a permit to import chemicals into Oman?',
+        answer: 'The Environment Authority Permit to Import Chemicals is applied for through the Royal Oman Police Directorate General of Customs Bayan system. It requires a chemical safety card, a purchase order issued to the buyer for precursor chemicals, and an existing Environmental Permit to Handle Hazardous Chemicals. The Authority states a processing time of one working day once all requirements are met, and the permit is valid for one year or until the permitted quantity is used. Transporting or storing hazardous chemicals also needs a Civil Defence licence.',
+      },
+      {
+        question: 'What customs duty and VAT apply to chemicals imported into Oman?',
+        answer: 'Most goods imported into Oman from outside the GCC carry the 5% GCC common customs duty on the CIF value, though individual tariff lines can differ, so check the 12-digit HS code in Bayan. Oman VAT is 5%. Goods of GCC national origin travelling with a certificate of origin move between GCC states without customs duty.',
+      },
+      {
+        question: 'Which documents should come with a chemical delivery?',
+        answer: 'A Safety Data Sheet (SDS) in GHS format, a batch-specific Certificate of Analysis (CoA) and, for product approval, a Technical Data Sheet (TDS). Cross-border GCC deliveries add a commercial invoice, a packing list and a certificate of origin attested by the Oman Chamber of Commerce and Industry. Food-contact chemicals may also need a Halal certificate.',
+      },
+      {
+        question: 'What should a bulk chemical RFQ include?',
+        answer: 'The chemical name and CAS number, grade, concentration or purity, quantity per order and expected monthly volume, pack format (drum, 1,000 L IBC, bulk tanker or bags), delivery point and required date. An RFQ with all of these gets a firm price on the first reply.',
+      },
+    ],
+    relatedProducts: [
+      { url: '/chemical-suppliers-oman', label: 'Chemical Suppliers in Oman' },
+      { url: '/chemical-suppliers-middle-east', label: 'GCC Lead Times & Documents' },
+      { url: '/blog/jsrs-chemical-supplier-pdo-oman', label: 'JSRS Supplier Guide' },
+      { url: '/chemical-supplier/nitric-acid-oman', label: 'Nitric Acid (Bulk)' },
+      { url: '/chemical-supplier/caustic-soda-oman', label: 'Caustic Soda (Bulk)' },
+    ],
+    howTo: {
+      name: 'How to Buy an Industrial Chemical in Oman',
+      description: 'Step-by-step procurement guide for buying a hazardous or non-hazardous industrial chemical in Oman, from classification and permits to the RFQ and delivery documents.',
+      totalTime: 'P7D',
+      supply: ['Chemical name and CAS number', 'Required grade and concentration', 'Quantity and expected monthly volume', 'Delivery location and pack format', 'Environment Authority permit to handle hazardous chemicals (for hazardous products)'],
+      steps: [
+        { name: 'Check whether the chemical is hazardous', text: 'Ask the supplier for the Safety Data Sheet (SDS) and read its hazard classification. Hazardous chemicals fall under Environment Authority Administrative Decision No. 50/2023 and need an environmental permit for use, sale or distribution; non-hazardous chemicals do not.' },
+        { name: 'Hold the right permit before ordering', text: 'If the chemical is hazardous, make sure your company holds the Environment Authority permit to handle (use or sell) hazardous chemicals for that product and quantity. If you will import it yourself, apply for the Permit to Import Chemicals through the Bayan system and arrange a Civil Defence licence for transport and storage.' },
+        { name: 'Send a complete RFQ', text: 'Send the chemical name and CAS number, grade, concentration, quantity, expected monthly volume, pack format, delivery point and required date to at least two suppliers, and ask each for the SDS, a sample Certificate of Analysis and the Technical Data Sheet.' },
+        { name: 'Qualify the supplier', text: 'Check the supplier\'s commercial registration, environmental permit, ISO 9001 certificate and, for oil and gas supply, a current JSRS registration in the right category. Prefer a supplier that holds stock in Oman and issues a batch CoA with every delivery.' },
+        { name: 'Place the order and check the delivery', text: 'Issue a purchase order (LPO). On delivery, check the batch CoA against your specification, file the SDS where your permit requires it, and confirm the packaging and labelling match the order. For continuous consumption, move to a blanket order or annual agreement to secure pricing and safety stock.' },
+      ],
+    },
+  },
   {
     id: 'food-grade-chemicals-supplier-oman',
     title: 'Food Grade Chemical Supplier in Oman: HACCP-Compliant Chemicals for Food Manufacturing',
