@@ -143,6 +143,7 @@ const STATIC = {
   'chemical-supplier/nitric-acid-oman': ['src/pages/NitricAcidOman.tsx'],
   'chemical-supplier/hydrochloric-acid-oman': ['src/pages/HydrochloricAcidOman.tsx'],
   'chemical-supplier/water-treatment-chemicals-gcc': ['src/pages/WaterTreatmentChemicalsGcc.tsx'],
+  'chemical-supplier/pool-chlorine-gcc': ['src/pages/PoolChlorineGcc.tsx'],
   'chemical-supplier/poly-aluminium-chloride-oman': ['src/pages/PolyAluminiumChlorideOman.tsx', 'src/data/products/water-treatment.json', 'src/data/products/inorganic.json'],
   'chemical-supplier/sodium-hypochlorite-oman': ['src/pages/SodiumHypochloriteOman.tsx', 'src/data/products/water-treatment.json', 'src/data/products/food-beverage.json', 'src/data/products/soap-detergent.json', 'src/data/products/swimming-pool.json'],
   'chemical-supplier/laboratory-chemicals-oman': ['src/pages/LaboratoryChemicalsOman.tsx', 'src/data/products/lab-chemicals.json'],

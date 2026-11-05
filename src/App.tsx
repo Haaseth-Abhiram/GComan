@@ -108,6 +108,7 @@ const CausticSodaOman = lazyRetry(() => import("./pages/CausticSodaOman"));
 const NitricAcidOman = lazyRetry(() => import("./pages/NitricAcidOman"));
 const NitricAcidCountry = lazyRetry(() => import("./pages/NitricAcidCountry"));
 const WaterTreatmentChemicalsGcc = lazyRetry(() => import("./pages/WaterTreatmentChemicalsGcc"));
+const PoolChlorineGcc = lazyRetry(() => import("./pages/PoolChlorineGcc"));
 const LaboratoryChemicalsOman = lazyRetry(() => import("./pages/LaboratoryChemicalsOman"));
 const FertilizersOman = lazyRetry(() => import("./pages/FertilizersOman"));
 const SodiumHypochloriteOman = lazyRetry(() => import("./pages/SodiumHypochloriteOman"));
@@ -270,6 +271,7 @@ const App = () => (
                 <Route path="/chemical-supplier/poly-aluminium-chloride-oman" element={<PolyAluminiumChlorideOman />} />
                 <Route path="/chemical-supplier/hydrochloric-acid-oman" element={<HydrochloricAcidOman />} />
                 <Route path="/chemical-supplier/water-treatment-chemicals-gcc" element={<WaterTreatmentChemicalsGcc />} />
+                <Route path="/chemical-supplier/pool-chlorine-gcc" element={<PoolChlorineGcc />} />
                 <Route path="/thank-you" element={<ThankYou />} />
 
                 {/* Internal design tool — kept out of sitemap.xml on purpose
@@ -335,6 +337,7 @@ const App = () => (
                   <Route path="chemical-supplier/poly-aluminium-chloride-oman" element={<PolyAluminiumChlorideOman />} />
                   <Route path="chemical-supplier/hydrochloric-acid-oman" element={<HydrochloricAcidOman />} />
                   <Route path="chemical-supplier/water-treatment-chemicals-gcc" element={<WaterTreatmentChemicalsGcc />} />
+                  <Route path="chemical-supplier/pool-chlorine-gcc" element={<PoolChlorineGcc />} />
                   <Route path="thank-you" element={<ThankYou />} />
                   <Route path="chemicals" element={<ChemicalsHub />} />
                   <Route path="tools/dosing-calculator" element={<DosingCalculator />} />

@@ -767,7 +767,10 @@ const Products = ({ initialCategory, initialProducts }: ProductsProps = {}) => {
           },
           'swimming-pool': {
             heading: 'Swimming Pool Chemicals Supplier in Oman — Muscat & Nationwide',
-            body: "Global Chemicals LLC supplies swimming pool treatment chemicals across Oman, serving hotel pools, residential developments, water parks, school facilities, and public pools in Muscat, Sohar, Salalah, and Nizwa. Our pool chemicals range covers chlorine tablets (TCCA 90% — 200g and 500g), calcium hypochlorite granules, sodium hypochlorite 12–15%, algaecides (liquid and tablet), pH reducers (sodium bisulphate), pH raisers (soda ash), stabilisers (cyanuric acid), and complete pool starter kits. Oman's high UV and temperatures require frequent chemical dosing — our team provides free dosing guidance and technical support for all pool types."
+            body: "Global Chemicals LLC supplies swimming pool treatment chemicals across Oman, serving hotel pools, residential developments, water parks, school facilities, and public pools in Muscat, Sohar, Salalah, and Nizwa. Our pool chemicals range covers chlorine tablets (TCCA 90% — 200g and 500g), calcium hypochlorite granules, sodium hypochlorite 12–15%, algaecides (liquid and tablet), pH reducers (sodium bisulphate), pH raisers (soda ash), stabilisers (cyanuric acid), and complete pool starter kits. Oman's high UV and temperatures require frequent chemical dosing — our team provides free dosing guidance and technical support for all pool types.",
+            // P9.9 (2026-11-05): GCC pool-chlorine hub — specs, Gulf pool choice table, per-market lead times.
+            guideUrl: '/chemical-supplier/pool-chlorine-gcc',
+            guideLabel: 'Pool chlorine and calcium hypochlorite for the UAE, Saudi Arabia, Kuwait and the GCC',
           },
           'lab-chemicals': {
             heading: 'Laboratory Chemicals & Reagents Supplier in Oman',

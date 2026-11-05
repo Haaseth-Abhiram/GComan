@@ -56,6 +56,7 @@ const Sitemap = () => {
         { label: 'Poly Aluminium Chloride Supplier Oman', path: '/chemical-supplier/poly-aluminium-chloride-oman' },
         { label: 'Hydrochloric Acid Supplier Oman', path: '/chemical-supplier/hydrochloric-acid-oman' },
         { label: 'Water Treatment Chemicals Supplier GCC', path: '/chemical-supplier/water-treatment-chemicals-gcc' },
+        { label: 'Pool Chlorine Supplier GCC', path: '/chemical-supplier/pool-chlorine-gcc' },
         { label: 'Chemical Suppliers Middle East', path: '/chemical-suppliers-middle-east' },
         { label: 'Chemicals Muscat', path: '/chemicals/muscat' },
         { label: 'Chemicals Sohar', path: '/chemicals/sohar' },

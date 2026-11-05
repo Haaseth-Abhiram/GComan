@@ -285,6 +285,7 @@ const Footer = () => {
                 { label: 'Sodium Hypochlorite Supplier Oman', path: '/chemical-supplier/sodium-hypochlorite-oman' },
                 { label: 'PAC Coagulant Supplier Oman', path: '/chemical-supplier/poly-aluminium-chloride-oman' },
                 { label: 'Water Treatment Chemicals GCC', path: '/chemical-supplier/water-treatment-chemicals-gcc' },
+                { label: 'Pool Chlorine Supplier GCC', path: '/chemical-supplier/pool-chlorine-gcc' },
                 { label: 'Laboratory Chemicals Oman', path: '/chemical-supplier/laboratory-chemicals-oman' },
                 { label: 'Fertilizer Supplier Oman', path: '/chemical-supplier/fertilizers-oman' },
                 { label: 'Oilfield Chemicals Oman', path: '/chemical-supplier/oilfield-chemicals-oman' },
