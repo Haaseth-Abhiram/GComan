@@ -381,3 +381,28 @@ Append-only. One row per check per run, written by the `running-search-operation
 | 2026-10-27 | bing | urea supplier oman | /chemical-supplier/fertilizers-oman | — |  | muscatchemical.com | cc=om navigated, only 5 results shown (P9.6 baseline) |
 | 2026-10-27 | bing | bentonite supplier oman | /products/oilfield/bentonite-powder | 3 |  | omanchem.com | cc=om navigated (P9.5 baseline) |
 | 2026-10-27 | bing | chemical import permit oman | /blog/buying-industrial-chemicals-oman-gcc-guide | — | guide not yet live | ea.gov.om | cc=om navigated; top 10 all government (P9.2 baseline) |
+| 2026-11-05 | google | chemical supplier muscat | /chemicals/muscat | 3 | / (homepage) | muscatchemical.com | pws=0 gl=om fetch, top 9 (batch=today, 25/25, no captcha) |
+| 2026-11-05 | google | chemical supplier rusayl | /chemicals/rusayl | 7 | / (homepage) | gulfyp.com | pws=0 gl=om fetch, top 9 (batch=today, 25/25, no captcha) |
+| 2026-11-05 | google | chemical supplier sohar | /chemicals/sohar | — |  | soharchemical.com | pws=0 gl=om fetch, top 9 (batch=today, 25/25, no captcha) |
+| 2026-11-05 | google | chemical supplier rustaq | /chemicals/rustaq | 1 |  | gcoman.com | pws=0 gl=om fetch, top 9 (batch=today, 25/25, no captcha) |
+| 2026-11-05 | google | chemical supplier salalah | /chemicals/salalah | 5 | / (homepage) | salalahchemical.com | pws=0 gl=om fetch, top 9 (batch=today, 25/25, no captcha) |
+| 2026-11-05 | google | chemical supplier duqm | /chemicals/duqm | 7 | / (homepage) | omanchem.com | pws=0 gl=om fetch, top 9 (batch=today, 25/25, no captcha) |
+| 2026-11-05 | google | chemical supplier dubai | /chemicals/dubai | — |  | kemipex.com | pws=0 gl=ae fetch, top 9 (batch=today, 25/25, no captcha) |
+| 2026-11-05 | google | chemical supplier abu dhabi | /chemicals/abu-dhabi | — |  | yellowpages-uae.com | pws=0 gl=ae fetch, top 9 (batch=today, 25/25, no captcha) |
+| 2026-11-05 | google | chemical supplier sharjah | /chemicals/sharjah | — |  | alkhowahirchemicals.com | pws=0 gl=ae fetch, top 9 (batch=today, 25/25, no captcha) |
+| 2026-11-05 | google | chemical supplier fujairah | /chemicals/fujairah | — |  | fujairahchemical.com | pws=0 gl=ae fetch, top 9 (batch=today, 25/25, no captcha) |
+| 2026-11-05 | google | chemical supplier ras al khaimah | /chemicals/ras-al-khaimah | 4 |  | yellowpages-uae.com | pws=0 gl=ae fetch, top 9 (batch=today, 25/25, no captcha) |
+| 2026-11-05 | google | chemical supplier riyadh | /chemicals/riyadh | — |  | chemadd.com.sa | pws=0 gl=sa fetch, top 9 (batch=today, 25/25, no captcha) |
+| 2026-11-05 | google | chemical supplier jeddah | /chemicals/jeddah | — |  | chemadd.com.sa | pws=0 gl=sa fetch, top 9 (batch=today, 25/25, no captcha) |
+| 2026-11-05 | google | chemical supplier dammam | /chemicals/dammam | — |  | nassguard.sa | pws=0 gl=sa fetch, top 9 (batch=today, 25/25, no captcha) |
+| 2026-11-05 | google | chemical supplier jubail | /chemicals/jubail | — |  | takweenchem.com | pws=0 gl=sa fetch, top 9 (batch=today, 25/25, no captcha) |
+| 2026-11-05 | google | chemical supplier yanbu | /chemicals/yanbu | — |  | yascp.net | pws=0 gl=sa fetch, top 9 (batch=today, 25/25, no captcha) |
+| 2026-11-05 | google | chemical supplier doha | /chemicals/doha | — |  | deluxechemical.com | pws=0 gl=qa fetch, top 9 (batch=today, 25/25, no captcha) |
+| 2026-11-05 | google | chemical supplier kuwait city | /chemicals/kuwait-city | — |  | alsanea.com | pws=0 gl=kw fetch, top 9 (batch=today, 25/25, no captcha) |
+| 2026-11-05 | google | chemical supplier bahrain | /chemicals/bahrain | — |  | safic-alcan.com | pws=0 gl=bh fetch, top 9 (batch=today, 25/25, no captcha) |
+| 2026-11-05 | google | chemical supplier baghdad | /chemicals/baghdad | — |  | primchem-wtc.com | pws=0 gl=iq fetch, top 9 (batch=today, 25/25, no captcha) |
+| 2026-11-05 | google | chemical supplier amman | /chemicals/amman | — |  | abchemjo.com | pws=0 gl=jo fetch, top 9 (batch=today, 25/25, no captcha) |
+| 2026-11-05 | google | chemical supplier cairo | /chemicals/cairo | — |  | yellowpages.com.eg | pws=0 gl=eg fetch, top 9 (batch=today, 25/25, no captcha) |
+| 2026-11-05 | google | chemical suppliers in kuwait | /chemicals/kuwait | — |  | alsanea.com | pws=0 gl=kw fetch, top 9 (batch=today, 25/25, no captcha) |
+| 2026-11-05 | google | chemical suppliers in qatar | /chemicals/qatar | — |  | deluxechemical.com | pws=0 gl=qa fetch, top 9 (batch=today, 25/25, no captcha) |
+| 2026-11-05 | google | chemical suppliers in saudi arabia | /chemicals/saudi-arabia | — |  | chemadd.com.sa | pws=0 gl=sa fetch, top 9 (batch=today, 25/25, no captcha) |
