@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { SEO } from '@/components/SEO';
@@ -8,12 +8,13 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { trackSelectContent } from '@/components/GoogleAnalytics';
 import { Phone, ArrowRight, Truck, FileCheck2, Waves, MessageCircle, Sun } from 'lucide-react';
+import hubAr from '@/i18n/locales/hub-pages-ar.json';
+import PoolChlorineGccAr from './PoolChlorineGccAr';
 
 /**
  * Pool chlorine and calcium hypochlorite, one hub for the GCC export markets
- * (2026-11-05, MASTER-PLAN P9.9, English half; the Arabic body follows as a
- * separate component in the NitricAcidOmanAr.tsx pattern after an
- * independent Arabic review).
+ * (2026-11-05, MASTER-PLAN P9.9). /ar renders PoolChlorineGccAr.tsx, a full
+ * Arabic body, so both versions carry reciprocal hreflang.
  *
  * Why: the 2026-10-27 demand study (docs/seo/gcc-keyword-demand-2026-10-27.md)
  * lists "calcium hypochlorite suppliers in uae", "... in saudi arabia",
@@ -117,6 +118,10 @@ const bulkWhatsApp =
   );
 
 const PoolChlorineGcc = () => {
+  // /ar renders the full Arabic body (PoolChlorineGccAr.tsx); see its header.
+  const { pathname } = useLocation();
+  if (pathname.startsWith('/ar/')) return <PoolChlorineGccAr />;
+  const arMeta = hubAr.hubPages['pool-chlorine-gcc'];
   const breadcrumbItems = [
     { name: 'Home', url: 'https://gcoman.com/' },
     { name: 'Chemical Suppliers Middle East', url: 'https://gcoman.com/chemical-suppliers-middle-east' },
@@ -136,6 +141,8 @@ const PoolChlorineGcc = () => {
         ogDescription={description}
         ogUrl={URL}
         canonical={URL}
+        arTitle={arMeta.metaTitle}
+        arDescription={arMeta.metaDescription}
       />
       <FAQStructuredData faqs={FAQS} />
       <BreadcrumbStructuredData items={breadcrumbItems} />

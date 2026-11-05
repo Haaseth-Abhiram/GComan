@@ -32,3 +32,19 @@ test.describe('Pool chlorine GCC hub', () => {
     await expect(page.locator(`a[href="${HUB}"]`).first()).toHaveCount(1);
   });
 });
+
+test.describe('Pool chlorine GCC hub — Arabic', () => {
+  test('/ar renders the Arabic body, is indexable, and both versions carry hreflang', async ({ page }) => {
+    await page.goto(`/ar${HUB}`);
+    await expect(page.locator('h1')).toContainText('مورد كلور المسابح');
+    await expect(page.getByText('أين أجد كلور مسابح للبيع في الإمارات أو الكويت؟').first()).toBeVisible();
+    const robots = await page.locator('head meta[name="robots"]').first().getAttribute('content');
+    expect(robots ?? '').not.toContain('noindex');
+    const canonical = await page.locator('head link[rel="canonical"]').first().getAttribute('href');
+    expect(canonical).toBe(`https://gcoman.com/ar${HUB}`);
+    await expect(page.locator('head link[rel="alternate"][hreflang="en"]')).toHaveCount(1);
+
+    await page.goto(HUB);
+    await expect(page.locator('head link[rel="alternate"][hreflang="ar"]')).toHaveCount(1);
+  });
+});
