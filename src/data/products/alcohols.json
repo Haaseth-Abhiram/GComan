@@ -134,7 +134,12 @@
         "IPA Muscat",
         "isopropyl alcohol Oman",
         "industrial IPA Sohar",
-        "isopropanol supplier Muscat"
+        "isopropanol supplier Muscat",
+        "isopropyl alcohol supplier in Oman",
+        "IPA supplier Muscat",
+        "isopropyl alcohol suppliers in UAE",
+        "isopropyl alcohol supplier in Qatar",
+        "isopropyl alcohol price in Oman"
       ],
       "longDescription": "Isopropanol (isopropyl alcohol, IPA, 2-propanol, C3H7OH, CAS 67-63-0) is a clear, colourless, fast-evaporating alcohol supplied by Global Chemicals LLC in 99% anhydrous and 70% aqueous grades, boiling point 82 °C, flash point 12 °C and specific gravity 0.786, in 200 L drums, 1,000 L IBCs and bulk from stock in Muscat and Rusayl Industrial Area.\n\nWhich grade. The 99% grade is the cleaning and process solvent: it dissolves oils, flux, fingerprints and light greases, evaporates in seconds and leaves no residue, which is why electronics assemblers clean printed circuit boards and connectors with it, printers clean rollers and blankets, optical and precision workshops clean lenses and parts, and pharmaceutical and cosmetic plants use it for extraction, as a formulation solvent and for equipment wipe-down. It is also a drying agent that displaces water from parts, a coupling solvent in coatings and inks, the base of windshield-washer and de-icing fluids, and a carrier in aerosols. The 70% grade is the disinfectant: that dilution penetrates microbial cell walls better than pure alcohol and evaporates slowly enough to act, so it is the standard for hand sanitiser, surface disinfection in clinics, laboratories and food plants, and sanitising pumps, probes and tools. Both grades are miscible with water and most solvents.\n\nHandling: isopropanol is highly flammable (UN 1219, Class 3), with a flash point below any Omani room temperature, and its vapour is heavier than air. Store drums closed, cool and bunded in a ventilated area away from ignition sources and oxidisers; earth and bond during transfer; use explosion-proof pumps; keep static in mind when wiping plastics. It defats skin and irritates eyes and, in high vapour concentrations, the airways; wear nitrile gloves and goggles and keep exposure within the workplace limit. Every delivery carries a certificate of analysis giving purity, water content and colour, a technical data sheet and a GHS safety data sheet. Reagent and HPLC grades are listed under laboratory chemicals.\n\nDelivery is same day within Muscat and Rusayl, next day to Sohar, Salalah and Duqm, and by road to the UAE, Saudi Arabia, Qatar, Kuwait and Bahrain with a certificate of origin. Request a quote with the grade, pack type and monthly volume.",
       "applications": [
@@ -163,8 +168,20 @@
           "answer": "Isopropanol (IPA, isopropyl alcohol, 2-propanol, CAS 67-63-0) is a versatile solvent and disinfectant used widely across Oman's industrial, electronics, healthcare, and cleaning sectors. Primary applications include: electronics and semiconductor cleaning — IPA is the standard solvent for removing flux residues from circuit boards, cleaning optical components, and degreasing precision components because it evaporates without residue and is safe for most electronic components; surface preparation — IPA at 70–99% is used to clean metal, plastic, and glass surfaces before bonding, coating, or painting; industrial disinfection — 70% IPA (by volume) is an effective bactericide and virucide for surface sanitisation in Oman's food processing plants, pharmaceutical operations, and healthcare facilities; as a fuel additive and antifreeze for aviation fuel systems; and as a solvent in inks, adhesives, and cosmetics. IPA at 70% concentration is more effective as a disinfectant than 99% because the water content facilitates cell membrane penetration. Flash point is 11.7°C (Class IB flammable liquid). Global Chemicals LLC supplies IPA in 1-litre to IBC quantities for Oman."
         },
         {
-          "question": "What grade and pack sizes of Isopropanol (Industrial Grade) are available in Oman?",
-          "answer": "Global Chemicals LLC supplies Isopropanol (Industrial Grade) in Oman — Concentration: 99% or 70% (aqueous) — available in 200L drums, IBCs, bulk, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+          "question": "Where can I buy isopropyl alcohol (IPA) in Oman?",
+          "answer": "Global Chemicals LLC stocks industrial isopropyl alcohol in 99% and 70% grades in Muscat and Rusayl Industrial Area, in 200 L drums, 1,000 L IBCs and bulk, with same-day delivery in Muscat and Rusayl and next-day delivery to Sohar and two to three days to Salalah and Duqm."
+        },
+        {
+          "question": "What decides the price of isopropyl alcohol?",
+          "answer": "The grade (99% or 70%), the pack (drum, IBC or bulk), the volume and the international propylene and solvent market. We quote in Omani rials, or in US dollars or dirhams for export; send the grade, pack type and monthly volume."
+        },
+        {
+          "question": "Do you supply IPA to the UAE, Qatar and Saudi Arabia?",
+          "answer": "Yes. Isopropyl alcohol travels as a Class 3 flammable liquid (UN 1219) by road under ADR from Muscat to the UAE, Saudi Arabia, Qatar, Kuwait and Bahrain, with the safety data sheet, certificate of analysis and certificate of origin."
+        },
+        {
+          "question": "Is isopropanol the same as isopropyl alcohol and IPA?",
+          "answer": "Yes. Isopropanol, isopropyl alcohol, IPA and 2-propanol are names for the same chemical, (CH3)2CHOH, CAS 67-63-0; isopropyl rubbing alcohol is IPA diluted with water, typically to 70%."
         }
       ],
       "wikiUrl": "https://en.wikipedia.org/wiki/Isopropanol",
