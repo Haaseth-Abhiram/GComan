@@ -33,3 +33,24 @@ test.describe('Fertilizer hub', () => {
     await expect(page.locator(`a[href="${HUB}"]`).first()).toHaveCount(1);
   });
 });
+
+// P9.6 (2026-11-08): the /ar render is a full Arabic body led by a urea
+// section, indexable through hub-pages-ar.json. Pins the Arabic H1 and visible
+// urea FAQ, the self canonical, reciprocal hreflang, and that the product
+// table links the indexable /ar product twins.
+test.describe('Fertilizer hub — Arabic', () => {
+  test('/ar renders the Arabic body, is indexable, and both versions carry hreflang', async ({ page }) => {
+    await page.goto(`/ar${HUB}`);
+    await expect(page.locator('h1')).toContainText('مورد الأسمدة في عُمان');
+    await expect(page.getByText('أين أجد يوريا للبيع في عُمان؟').first()).toBeVisible();
+    const robots = await page.locator('head meta[name="robots"]').first().getAttribute('content');
+    expect(robots ?? '').not.toContain('noindex');
+    const canonical = await page.locator('head link[rel="canonical"]').first().getAttribute('href');
+    expect(canonical).toBe(`https://gcoman.com/ar${HUB}`);
+    await expect(page.locator('head link[rel="alternate"][hreflang="en"]')).toHaveCount(1);
+    await expect(page.locator('table a[href="/ar/products/agro/urea-fertilizer"]')).toHaveCount(1);
+
+    await page.goto(HUB);
+    await expect(page.locator('head link[rel="alternate"][hreflang="ar"]')).toHaveCount(1);
+  });
+});

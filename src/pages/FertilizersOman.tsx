@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { SEO } from '@/components/SEO';
@@ -9,6 +9,8 @@ import { Badge } from '@/components/ui/badge';
 import { trackSelectContent } from '@/components/GoogleAnalytics';
 import { Phone, ArrowRight, Sprout } from 'lucide-react';
 import agroProducts from '@/data/products/agro.json';
+import hubAr from '@/i18n/locales/hub-pages-ar.json';
+import FertilizersOmanAr from './FertilizersOmanAr';
 
 /**
  * Fertilizer hub — Phase 2.2 of docs/seo/MASTER-PLAN.md.
@@ -81,6 +83,10 @@ const breadcrumbItems = [
 ];
 
 const FertilizersOman = () => {
+  // /ar renders the full Arabic body (FertilizersOmanAr.tsx, MASTER-PLAN P9.6); see its header.
+  const { pathname } = useLocation();
+  if (pathname.startsWith('/ar/')) return <FertilizersOmanAr />;
+  const arMeta = hubAr.hubPages['fertilizers-oman'];
   return (
     <div className="min-h-screen bg-background">
       <SEO
@@ -91,6 +97,8 @@ const FertilizersOman = () => {
         ogDescription="Urea, DAP, MOP, calcium nitrate, NPK, zinc sulphate, gypsum and humic acid from Muscat stock, with fertigation compatibility guidance and delivery across Oman and the GCC."
         ogUrl="https://gcoman.com/chemical-supplier/fertilizers-oman"
         canonical="https://gcoman.com/chemical-supplier/fertilizers-oman"
+        arTitle={arMeta.metaTitle}
+        arDescription={arMeta.metaDescription}
       />
       <FAQStructuredData faqs={faqs} />
       <BreadcrumbStructuredData items={breadcrumbItems} />
