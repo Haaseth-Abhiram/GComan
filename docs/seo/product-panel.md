@@ -1,6 +1,27 @@
 # Product rank panel (S6 of product-strategy-2026-11-08.md)
 
-63 Google cells (21 products × 3 buyer phrasings), read `pws=0 gl=om` top 9 by the daily cron, **25 per day in this order, wrapping around** (day 1 = cells 1–25, day 2 = 26–50, day 3 = 51–63 then 1–12, …). Record each in `location-ledger.md` as `google | <cell> | <target page> | rank | url | #1 | pws=0 gl=om product panel`. Next start cell is kept in MASTER-PLAN Next up. Bing: the same first-phrasing cells weekly (Sunday), navigated.
+63 Google cells (21 products × 3 buyer phrasings), read `pws=0 gl=om` top 9 by the daily cron, **the 12 revenue cells R1–R12 every day, then 13 rotating cells in order, wrapping around**. Record each in `location-ledger.md` as `google | <cell> | <target page> | rank | url | #1 | pws=0 gl=om product panel`. Next start cell is kept in MASTER-PLAN Next up. Bing: the same first-phrasing cells weekly (Sunday), navigated.
+
+## Revenue cells first (read daily before the rotating cells; `core-products-revenue-strategy-2026-11-08.md`)
+
+| # | Cell | gl |
+|---|---|---|
+| R1 | nitric acid supplier saudi arabia | sa |
+| R2 | nitric acid supplier riyadh | sa |
+| R3 | nitric acid supplier dammam | sa |
+| R4 | sodium hypochlorite supplier uae | ae |
+| R5 | sodium hypochlorite supplier abu dhabi | ae |
+| R6 | sodium hypochlorite supplier dubai | ae |
+| R7 | sodium hypochlorite supplier bahrain | bh |
+| R8 | nitric acid supplier oman | om |
+| R9 | sodium hypochlorite supplier oman | om |
+| R10 | hydrochloric acid supplier oman | om |
+| R11 | hydrochloric acid supplier sohar | om |
+| R12 | caustic soda supplier oman | om |
+
+The rotating cells below fill the rest of the 25 daily reads (13 per day).
+
+## Rotating cells
 
 | # | Cell |
 |---|---|
