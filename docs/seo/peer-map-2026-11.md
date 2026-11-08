@@ -36,7 +36,7 @@ What we already have that matches: `/chemicals/riyadh|jeddah|dammam|jubail|doha|
 
 ## Listing targets (ranked: seen for ≥2 peers or holding page 1 itself)
 
-1. **ensun.io**: Bing #1 for "chemical suppliers in" Saudi Arabia / Qatar / Kuwait; lists Kemipex, Deluxe, Al Sanea. Profiles look crawl-generated; claim/free/link status unverified (429). Check in Chrome.
+1. **ensun.io**: Bing #1 for "chemical suppliers in" Saudi Arabia / Qatar / Kuwait; lists Kemipex, Deluxe, Al Sanea. Profiles look crawl-generated. **Checked in Chrome 11-08: Basic supplier profile is free ("Create or Claim your free supplier profile", 0 €: register/claim, edit crawled data, add products and services)**; ensun Ads is €300/month and not needed. No gcoman profile existed on 10-25, so the user registers (ensun.io → Pricing → Basic → Claim your company), then Claude fills products: nitric acid, caustic soda, sodium hypochlorite, water-treatment and pool chemicals, with the hub URLs.
 2. **yellowpages-uae.com**: page 1 for Abu Dhabi, Sharjah, RAK, "caustic soda suppliers uae"; free business listing; website button only for verified listings.
 3. **reachuae.com**: free "Standard Listing" (unverified). UAE.
 4. **Yello network** (omanyp.com, saudiayp.com…): city category pages; uvwater listed. Usually free (unverified). OM + KSA.
