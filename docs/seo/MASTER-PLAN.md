@@ -140,6 +140,20 @@ The full programme, evidence and targets are in [`nitric-acid-number-one-program
 | P9.10 | "near me" → Muscat page linking (Abu Dhabi page shows for an Oman query) | Claude | open | Muscat ranks instead |
 | P9.11 | 320 templated FAQs: remove the boilerplate sentence repeated on 147 pages; no new templated FAQs | user yes → Claude | decision | gates green |
 
+## Phase 10 — "everywhere": every phrase, every GCC country, every engine (added 2026-11-08, from `gcc-keyword-position-2026-11-08.md`)
+
+**Target (re-read weekly, the job runs until every row is met):** Oman generic phrases #1 on Google, Bing and Maps · Oman product phrases top 3 on Bing and top 10 on Google · every GCC country's "chemical suppliers in <country>" with gcoman on page 1 of Google or Bing, directly or through a listing that holds #1 · AI engines name us for Oman and nitric prompts. **Peer map (ledger, 11-08):** the RXSOL network (omanchem, muscatchemical, soharchemical, salalahchemical, dubichem) holds 23 of ~70 Google #1 cells; the rest are local distributors (kemipex, chemadd, nassguard, deluxechemical, alsanea, uvwater) and directories (yellowpages-uae, ensun.io, gulf yellow pages).
+
+| # | Item | Owner | Status | Done when |
+|---|---|---|---|---|
+| P10.1 | Peer profile: strengths and third-party listings of every non-network #1 domain → listing targets | Claude | **in progress 11-08** (background research) | `peer-map-2026-11.md` committed |
+| P10.2 | GCC listings that hold #1 where we are absent: ensun.io (Bing #1 KSA/QA/KW), yellowpages-uae (UAE), go4worldbusiness, gulf yellow pages, plus whatever P10.1 adds | user signs up → Claude fills | open | profile live with website link |
+| P10.3 | GCC-demand product batches (5 per batch, fact-checked): batch 1 urea fertilizer, hydrogen peroxide 50%, glycerine (soap grade), acetic acid (glacial), isopropanol industrial; next: bentonite, methanol industrial, calcium hypochlorite granules, sulfuric acid (needs user: industrial grade sold?), chlorine products | Claude | batch 1 **on Develop 11-08** | gates green + fact-check clean |
+| P10.4 | Glycerine duplicate pair (`glycerine-water` vs `glycerine-soap`): consolidate via canonicalOverride after a GSC page check | Claude | open | one URL ranks |
+| P10.5 | "chemical company" wording (the dominant UAE/KSA phrasing) in GBP description and every listing | user (GBP) / Claude (listings) | open | present |
+| P10.6 | Acetic acid page: named-customer claims (PDO, OQ, service companies) removed 11-08 as unverified; reinstate only if the user confirms | user | decision | — |
+| P10.7 | Weekly grid: 25 Google cells rotating through panel + `gcc-keyword-position` phrases, Bing panel, Maps, AI prompts; compare against the target line above | Claude (cron) | running | ledger rows weekly |
+
 ## Phase 6 — measure and extend (monthly; the plan grows here)
 
 Run `monitoring-search-visibility` (full) plus the product panel (12 products × 3 forms, Bing on the hub products, AI Mode + ChatGPT on caustic/hypochlorite/PAC). Compare with the targets below. New evidence → a new row in the phase it belongs to, never a side plan.
