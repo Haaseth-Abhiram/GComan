@@ -107,6 +107,7 @@ const ChemicalSuppliersMiddleEast = lazyRetry(() => import("./pages/ChemicalSupp
 const CausticSodaOman = lazyRetry(() => import("./pages/CausticSodaOman"));
 const NitricAcidOman = lazyRetry(() => import("./pages/NitricAcidOman"));
 const NitricAcidCountry = lazyRetry(() => import("./pages/NitricAcidCountry"));
+const SodiumHypochloriteCountry = lazyRetry(() => import("./pages/SodiumHypochloriteCountry"));
 const WaterTreatmentChemicalsGcc = lazyRetry(() => import("./pages/WaterTreatmentChemicalsGcc"));
 const PoolChlorineGcc = lazyRetry(() => import("./pages/PoolChlorineGcc"));
 const LaboratoryChemicalsOman = lazyRetry(() => import("./pages/LaboratoryChemicalsOman"));
@@ -267,6 +268,8 @@ const App = () => (
                 <Route path="/chemical-supplier/laboratory-chemicals-oman" element={<LaboratoryChemicalsOman />} />
                 <Route path="/chemical-supplier/fertilizers-oman" element={<FertilizersOman />} />
                 <Route path="/chemical-supplier/sodium-hypochlorite-oman" element={<SodiumHypochloriteOman />} />
+                <Route path="/chemical-supplier/sodium-hypochlorite-uae" element={<SodiumHypochloriteCountry country="uae" />} />
+                <Route path="/chemical-supplier/sodium-hypochlorite-bahrain" element={<SodiumHypochloriteCountry country="bahrain" />} />
                 <Route path="/chemical-supplier/oilfield-chemicals-oman" element={<OilfieldChemicalsOman />} />
                 <Route path="/chemical-supplier/poly-aluminium-chloride-oman" element={<PolyAluminiumChlorideOman />} />
                 <Route path="/chemical-supplier/hydrochloric-acid-oman" element={<HydrochloricAcidOman />} />
@@ -333,6 +336,8 @@ const App = () => (
                   <Route path="chemical-supplier/laboratory-chemicals-oman" element={<LaboratoryChemicalsOman />} />
                   <Route path="chemical-supplier/fertilizers-oman" element={<FertilizersOman />} />
                   <Route path="chemical-supplier/sodium-hypochlorite-oman" element={<SodiumHypochloriteOman />} />
+                  <Route path="chemical-supplier/sodium-hypochlorite-uae" element={<SodiumHypochloriteCountry country="uae" />} />
+                  <Route path="chemical-supplier/sodium-hypochlorite-bahrain" element={<SodiumHypochloriteCountry country="bahrain" />} />
                   <Route path="chemical-supplier/oilfield-chemicals-oman" element={<OilfieldChemicalsOman />} />
                   <Route path="chemical-supplier/poly-aluminium-chloride-oman" element={<PolyAluminiumChlorideOman />} />
                   <Route path="chemical-supplier/hydrochloric-acid-oman" element={<HydrochloricAcidOman />} />

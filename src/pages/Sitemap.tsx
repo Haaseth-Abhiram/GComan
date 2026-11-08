@@ -52,6 +52,8 @@ const Sitemap = () => {
         { label: 'Laboratory Chemicals Supplier Oman', path: '/chemical-supplier/laboratory-chemicals-oman' },
         { label: 'Fertilizer Supplier Oman', path: '/chemical-supplier/fertilizers-oman' },
         { label: 'Sodium Hypochlorite Supplier Oman', path: '/chemical-supplier/sodium-hypochlorite-oman' },
+        { label: 'Sodium Hypochlorite Supplier UAE', path: '/chemical-supplier/sodium-hypochlorite-uae' },
+        { label: 'Sodium Hypochlorite Supplier Bahrain', path: '/chemical-supplier/sodium-hypochlorite-bahrain' },
         { label: 'Oilfield Chemicals Supplier Oman', path: '/chemical-supplier/oilfield-chemicals-oman' },
         { label: 'Poly Aluminium Chloride Supplier Oman', path: '/chemical-supplier/poly-aluminium-chloride-oman' },
         { label: 'Hydrochloric Acid Supplier Oman', path: '/chemical-supplier/hydrochloric-acid-oman' },

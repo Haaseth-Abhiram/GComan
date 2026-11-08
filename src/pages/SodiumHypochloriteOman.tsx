@@ -222,7 +222,7 @@ const SodiumHypochloriteOman = () => {
               <div>
                 <h2 className="text-2xl font-bold text-foreground mb-3">How should sodium hypochlorite be stored in a hot climate?</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  Hypochlorite slowly breaks down into salt and oxygen, and heat and sunlight speed that up. The 12–15%
+                  Hypochlorite slowly breaks down, mainly into salt and sodium chlorate with some oxygen, and heat, sunlight and metal contamination speed that up. The 12–15%
                   grade keeps roughly three to six months at 15–20 °C; in an Omani yard in summer it loses strength
                   much faster. Store drums and IBCs in the shade or indoors, keep them closed, and order in quantities
                   you will use within weeks. Check available chlorine before dosing stock that has been stored a while.
@@ -246,7 +246,11 @@ const SodiumHypochloriteOman = () => {
               <h2 className="text-2xl font-bold text-foreground mb-3">How fast is sodium hypochlorite delivered across Oman and the GCC?</h2>
               <p className="text-muted-foreground leading-relaxed">
                 Same day within Muscat, next day to Sohar, two to three days to Salalah and Duqm, and by road to the
-                UAE, Saudi Arabia, Qatar, Kuwait and Bahrain with a Certificate of Origin. Related supply guides:{' '}
+                UAE, Saudi Arabia, Qatar, Kuwait and Bahrain with a Certificate of Origin. Country guides with lead
+                times and export documents:{' '}
+                <Link to="/chemical-supplier/sodium-hypochlorite-uae" className="text-primary hover:underline">sodium hypochlorite to the UAE</Link> and{' '}
+                <Link to="/chemical-supplier/sodium-hypochlorite-bahrain" className="text-primary hover:underline">to Bahrain</Link>.
+                Related supply guides:{' '}
                 <Link to="/chemical-supplier/caustic-soda-oman" className="text-primary hover:underline">caustic soda</Link>,{' '}
                 <Link to="/chemical-supplier/hydrochloric-acid-oman" className="text-primary hover:underline">hydrochloric acid</Link>,{' '}
                 <Link to="/products/swimming-pool" className="text-primary hover:underline">swimming pool chemicals</Link> and{' '}

@@ -57,13 +57,13 @@ const COUNTRIES: Record<NitricCountryKey, CountryData> = {
     inName: 'the UAE',
     title: 'Nitric Acid Supplier UAE | 68% HNO3 Delivered from Oman',
     description:
-      'Nitric acid 68% for Dubai, Abu Dhabi, Sharjah & Fujairah from Muscat stock: Fujairah in 2–4 hours, Dubai in 3–5 days. Carboys, drums, IBCs. CoA, SDS, GCC CoO.',
+      'Nitric acid 68% for Dubai, Abu Dhabi, Sharjah & Fujairah from Muscat stock: Fujairah next day, Dubai in 3–5 days. Carboys, drums, IBCs. CoA, SDS, GCC CoO.',
     intro:
-      'Global Chemicals LLC supplies 68% nitric acid (HNO3) to buyers across the United Arab Emirates from stock in Muscat. The UAE is our shortest export lane: the east coast is a few hours by road, and Dubai, Sharjah and Abu Dhabi are three to five business days under GCC customs transit, so UAE plants get a second source that does not depend on Jebel Ali lead times.',
-    leadTime: 'Fujairah 2–4 hours · Dubai, Sharjah, Abu Dhabi 3–5 business days',
-    route: 'By road from Muscat, crossing at Khatm Al Shikla / Hatta or via Al Ain, under GCC customs transit.',
+      'Global Chemicals LLC supplies 68% nitric acid (HNO3) to buyers across the United Arab Emirates from stock in Muscat. The UAE is our shortest export lane: the east coast is the same or next day by road, and Dubai, Sharjah and Abu Dhabi are three to five business days, so UAE plants get a second source that does not depend on Jebel Ali lead times.',
+    leadTime: 'Fujairah same or next day · Dubai, Sharjah, Abu Dhabi 3–5 business days',
+    route: 'By road from Muscat, crossing at Al Wajajah / Hatta, or at Khatm Al Shikla or Mezyad near Al Ain, and cleared at the UAE border under GCC customs procedures.',
     points: [
-      { place: 'Fujairah & east coast', time: '2–4 hours by road' },
+      { place: 'Fujairah & east coast', time: 'same or next day by road' },
       { place: 'Dubai & Sharjah', time: '3–5 business days' },
       { place: 'Abu Dhabi & ICAD', time: '3–5 business days' },
       { place: 'Ras Al Khaimah & northern emirates', time: '3–5 business days' },
@@ -82,7 +82,7 @@ const COUNTRIES: Record<NitricCountryKey, CountryData> = {
       {
         question: 'How fast can you deliver nitric acid to Dubai?',
         answer:
-          'Dubai, Sharjah and Abu Dhabi are three to five business days from Muscat on scheduled departures, with a dedicated truck quoted for urgent loads. Fujairah and the east coast are two to four hours by road, so morning orders there can arrive the same day.',
+          'Dubai, Sharjah and Abu Dhabi are three to five business days from Muscat on scheduled departures, with a dedicated truck quoted for urgent loads. Fujairah and the east coast are the same or next day by road.',
       },
       {
         question: 'Do you deliver nitric acid into UAE free zones?',
@@ -92,7 +92,7 @@ const COUNTRIES: Record<NitricCountryKey, CountryData> = {
       {
         question: 'Is there customs duty on nitric acid shipped from Oman to the UAE?',
         answer:
-          'Oman and the UAE are both in the GCC customs union, so goods of GCC origin accompanied by a GCC Certificate of Origin cross under customs transit without import duty. We issue the certificate with every consignment.',
+          'Oman and the UAE are both in the GCC customs union, so goods of GCC origin accompanied by a GCC Certificate of Origin are cleared free of customs duty; import VAT is still accounted for by the importer. We arrange the GCC Certificate of Origin with every consignment.',
       },
       {
         question: 'Which nitric acid grade do UAE stainless steel fabricators use?',
@@ -229,7 +229,7 @@ const COUNTRIES: Record<NitricCountryKey, CountryData> = {
       {
         question: 'Is nitric acid from Oman duty-free in Kuwait?',
         answer:
-          'Goods of GCC origin travelling with a GCC Certificate of Origin are treated under the GCC customs union. We issue the certificate with every consignment; your importer clears the goods in Kuwait.',
+          'Goods of GCC origin travelling with a GCC Certificate of Origin are cleared under the GCC customs union. We arrange the certificate with every consignment; your importer clears the goods in Kuwait.',
       },
     ],
   },

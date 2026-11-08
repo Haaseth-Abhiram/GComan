@@ -1250,6 +1250,13 @@ const NITRIC_BY_COUNTRY: Record<string, { slug: string; label: string }> = {
   Bahrain: { slug: 'nitric-acid-bahrain', label: 'Nitric acid supply to Bahrain' },
 };
 
+// Country-specific sodium hypochlorite pages (SodiumHypochloriteCountry.tsx):
+// only the markets with invoiced hypochlorite sales.
+const HYPO_BY_COUNTRY: Record<string, { slug: string; label: string }> = {
+  UAE: { slug: 'sodium-hypochlorite-uae', label: 'Sodium hypochlorite supply to the UAE' },
+  Bahrain: { slug: 'sodium-hypochlorite-bahrain', label: 'Sodium hypochlorite supply to Bahrain' },
+};
+
 const PRODUCT_HUBS: { slug: string; label: string }[] = [
   { slug: 'nitric-acid-oman', label: 'Nitric acid 68%' },
   { slug: 'hydrochloric-acid-oman', label: 'Hydrochloric acid 30–33%' },
@@ -1612,7 +1619,7 @@ const LocationLanding = () => {
               Specification tables, pack formats from carboy to bulk tanker, and lead times for the products most often ordered on this lane.
             </p>
             <div className="flex flex-wrap gap-2">
-              {[...(NITRIC_BY_COUNTRY[locationData.country] ? [NITRIC_BY_COUNTRY[locationData.country]] : []), ...PRODUCT_HUBS].map((hub) => (
+              {[...(NITRIC_BY_COUNTRY[locationData.country] ? [NITRIC_BY_COUNTRY[locationData.country]] : []), ...(HYPO_BY_COUNTRY[locationData.country] ? [HYPO_BY_COUNTRY[locationData.country]] : []), ...PRODUCT_HUBS].map((hub) => (
                 <Button key={hub.slug} variant="outline" size="sm" asChild>
                   <LocalizedLink to={`/chemical-supplier/${hub.slug}`}>{hub.label}</LocalizedLink>
                 </Button>
