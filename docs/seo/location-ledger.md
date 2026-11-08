@@ -406,3 +406,31 @@ Append-only. One row per check per run, written by the `running-search-operation
 | 2026-11-05 | google | chemical suppliers in kuwait | /chemicals/kuwait | — |  | alsanea.com | pws=0 gl=kw fetch, top 9 (batch=today, 25/25, no captcha) |
 | 2026-11-05 | google | chemical suppliers in qatar | /chemicals/qatar | — |  | deluxechemical.com | pws=0 gl=qa fetch, top 9 (batch=today, 25/25, no captcha) |
 | 2026-11-05 | google | chemical suppliers in saudi arabia | /chemicals/saudi-arabia | — |  | chemadd.com.sa | pws=0 gl=sa fetch, top 9 (batch=today, 25/25, no captcha) |
+| 2026-11-08 | google | chemical suppliers in uae | /chemicals/uae | — |  | kemipex.com | pws=0 gl=ae fetch, top 9 (batch=today, 18/18, no captcha) |
+| 2026-11-08 | google | chemical suppliers oman | /chemical-suppliers-oman | 2 | / | omanchem.com | pws=0 gl=om fetch, top 9 (batch=today, 18/18, no captcha) |
+| 2026-11-08 | google | chemical suppliers gcc | /chemical-suppliers-middle-east | 1 | / | gcoman.com | pws=0 gl=om fetch, top 9 (batch=today, 18/18, no captcha) |
+| 2026-11-08 | google | caustic soda supplier oman | /chemical-supplier/caustic-soda-oman | — |  | omanchem.com | pws=0 gl=om fetch, top 9 (batch=today, 18/18, no captcha) |
+| 2026-11-08 | google | fertilizer supplier oman | /chemical-supplier/fertilizers-oman | — |  | omanagrifertilizer.com | pws=0 gl=om fetch, top 9 (batch=today, 18/18, no captcha) |
+| 2026-11-08 | google | hydrochloric acid supplier oman | /chemical-supplier/hydrochloric-acid-oman | — |  | omanchem.com | pws=0 gl=om fetch, top 9 (batch=today, 18/18, no captcha) |
+| 2026-11-08 | google | laboratory chemicals supplier oman | /chemical-supplier/laboratory-chemicals-oman | 2 | / | omanchem.com | pws=0 gl=om fetch, top 9 (batch=today, 18/18, no captcha) |
+| 2026-11-08 | google | nitric acid supplier bahrain | /chemical-supplier/nitric-acid-bahrain | — |  | bahrainyellowpagesonline.com | pws=0 gl=bh fetch, top 9 (batch=today, 18/18, no captcha) |
+| 2026-11-08 | google | nitric acid supplier kuwait | /chemical-supplier/nitric-acid-kuwait | — |  | enviroblend-group.com | pws=0 gl=kw fetch, top 9 (batch=today, 18/18, no captcha) |
+| 2026-11-08 | google | nitric acid supplier oman | /chemical-supplier/nitric-acid-oman | — |  | omanchem.com | pws=0 gl=om fetch, top 9 (batch=today, 18/18, no captcha) |
+| 2026-11-08 | google | nitric acid supplier qatar | /chemical-supplier/nitric-acid-qatar | — |  | deluxechemical.com | pws=0 gl=qa fetch, top 9 (batch=today, 18/18, no captcha) |
+| 2026-11-08 | google | nitric acid supplier saudi arabia | /chemical-supplier/nitric-acid-saudi-arabia | — |  | nassguard.sa | pws=0 gl=sa fetch, top 9 (batch=today, 18/18, no captcha) |
+| 2026-11-08 | google | nitric acid supplier uae | /chemical-supplier/nitric-acid-uae | — |  | uaeyellowpagesonline.com | pws=0 gl=ae fetch, top 9 (batch=today, 18/18, no captcha) |
+| 2026-11-08 | google | oilfield chemicals supplier oman | /chemical-supplier/oilfield-chemicals-oman | — |  | muscatchemical.com | pws=0 gl=om fetch, top 9 (batch=today, 18/18, no captcha) |
+| 2026-11-08 | google | poly aluminium chloride supplier oman | /chemical-supplier/poly-aluminium-chloride-oman | — |  | omanchem.com | pws=0 gl=om fetch, top 9 (batch=today, 18/18, no captcha) |
+| 2026-11-08 | google | pool chlorine gcc supplier oman | /chemical-supplier/pool-chlorine-gcc | 4 | / (hub unpublished) | uvwater.biz | pws=0 gl=om fetch, top 9 (batch=today, 18/18, no captcha) |
+| 2026-11-08 | google | sodium hypochlorite supplier oman | /chemical-supplier/sodium-hypochlorite-oman | — |  | muscatchemical.com | pws=0 gl=om fetch, top 9 (batch=today, 18/18, no captcha) |
+| 2026-11-08 | google | water treatment chemicals gcc supplier oman | /chemical-supplier/water-treatment-chemicals-gcc | 4 | / (hub unpublished) | ooiss.com | pws=0 gl=om fetch, top 9 (batch=today, 18/18, no captcha) |
+| 2026-11-08 | bing | nitric acid supplier oman | /chemical-supplier/nitric-acid-oman | — |  | omanchem.com | typed in bing.com (cc=om URL returned no results), top 10 |
+| 2026-11-08 | bing | nitric acid supplier uae | /chemical-supplier/nitric-acid-uae | — |  | tricechemicals.com | session fetch, no cc — directional |
+| 2026-11-08 | bing | nitric acid supplier saudi arabia | /chemical-supplier/nitric-acid-saudi-arabia | — |  | chimisrl.com | session fetch, no cc — directional |
+| 2026-11-08 | bing | nitric acid supplier qatar | /chemical-supplier/nitric-acid-qatar | 2 |  | deluxechemical.com | session fetch, no cc — directional |
+| 2026-11-08 | bing | nitric acid supplier bahrain | /chemical-supplier/nitric-acid-bahrain | — |  | chimisrl.com | session fetch, no cc — directional |
+| 2026-11-08 | bing | nitric acid supplier kuwait | /chemical-supplier/nitric-acid-kuwait | — |  | chimisrl.com | session fetch, no cc — directional |
+| 2026-11-08 | bing | chemical suppliers oman | /chemical-suppliers-oman | 2 | +3 | omanchem.com | session fetch, no cc — directional |
+| 2026-11-08 | bing | chemical supplier muscat | /chemicals/muscat | 4 | +5 | muscatchemical.com | session fetch, no cc — directional |
+| 2026-11-08 | maps | nitric acid supplier | GBP | 1 |  | Global Chemicals LLC | Muscat viewport 23.588,58.383 z12, signed in |
+| 2026-11-08 | maps | chemical suppliers in oman | GBP | 1 |  | Global Chemicals LLC | Muscat viewport 23.588,58.383 z12, signed in |
