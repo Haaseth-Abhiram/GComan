@@ -434,3 +434,10 @@ Append-only. One row per check per run, written by the `running-search-operation
 | 2026-11-08 | bing | chemical supplier muscat | /chemicals/muscat | 4 | +5 | muscatchemical.com | session fetch, no cc — directional |
 | 2026-11-08 | maps | nitric acid supplier | GBP | 1 |  | Global Chemicals LLC | Muscat viewport 23.588,58.383 z12, signed in |
 | 2026-11-08 | maps | chemical suppliers in oman | GBP | 1 |  | Global Chemicals LLC | Muscat viewport 23.588,58.383 z12, signed in |
+| 2026-11-08 | google | chemical company in uae | /chemicals/dubai | — | | basf.com | pws=0 gl=ae fetch, top 9 (keyword investigation, first reading) |
+| 2026-11-08 | google | chemical company in saudi arabia | /chemicals/riyadh | — | | saudichemical.com | pws=0 gl=sa fetch, top 9 (first reading; navigational SERP: Dow, Sadara) |
+| 2026-11-08 | google | chemical supplier in oman (searched from UAE) | / | 1 | | gcoman.com | pws=0 gl=ae fetch, top 9 (first reading) |
+| 2026-11-08 | google | hydrogen peroxide supplier oman | /products/… hydrogen-peroxide-50 | — | | omanchem.com | pws=0 gl=om fetch, top 9 (first reading) |
+| 2026-11-08 | google | sulphuric acid supplier oman | /products/lab-chemicals/sulfuric-acid-lab | — | | omanchem.com | pws=0 gl=om fetch, top 9 (first reading) |
+| 2026-11-08 | google | swimming pool chemicals oman | /chemical-supplier/pool-chlorine-gcc | — | | omanchem.com | pws=0 gl=om fetch, top 9 (first reading; hub live since 16:05 today) |
+| 2026-11-08 | google | glycerin supplier oman | /products/… glycerin | — | | muscatchemical.com | pws=0 gl=om fetch, top 9 (first reading; 25/25 today, no captcha) |
