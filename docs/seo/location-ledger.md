@@ -441,3 +441,37 @@ Append-only. One row per check per run, written by the `running-search-operation
 | 2026-11-08 | google | sulphuric acid supplier oman | /products/lab-chemicals/sulfuric-acid-lab | — | | omanchem.com | pws=0 gl=om fetch, top 9 (first reading) |
 | 2026-11-08 | google | swimming pool chemicals oman | /chemical-supplier/pool-chlorine-gcc | — | | omanchem.com | pws=0 gl=om fetch, top 9 (first reading; hub live since 16:05 today) |
 | 2026-11-08 | google | glycerin supplier oman | /products/… glycerin | — | | muscatchemical.com | pws=0 gl=om fetch, top 9 (first reading; 25/25 today, no captcha) |
+| 2026-11-09 | google | chemical suppliers in oman | — | 1 (/) | | gcoman.com | pws=0 gl=om fetch, top 9; 25/25, no captcha |
+| 2026-11-09 | google | chemical company in oman | — | 3 (/) | | omanchem.com | pws=0 gl=om fetch, top 9; 25/25, no captcha |
+| 2026-11-09 | google | chemical suppliers muscat | — | 3 (/) | | muscatchemical.com | pws=0 gl=om fetch, top 9; 25/25, no captcha |
+| 2026-11-09 | google | chemical suppliers sohar | — | — | | soharchemical.com | pws=0 gl=om fetch, top 9; 25/25, no captcha |
+| 2026-11-09 | google | chemical suppliers in uae | — | — | | kemipex.com | pws=0 gl=ae fetch, top 9; 25/25, no captcha |
+| 2026-11-09 | google | chemical suppliers in saudi arabia | — | — | | fouz.com.sa | pws=0 gl=sa fetch, top 9; 25/25, no captcha |
+| 2026-11-09 | google | nitric acid supplier saudi arabia | — | — | | nassguard.sa | pws=0 gl=sa fetch, top 9; 25/25, no captcha |
+| 2026-11-09 | google | nitric acid supplier riyadh | — | — | | nassguard.sa | pws=0 gl=sa fetch, top 9; 25/25, no captcha |
+| 2026-11-09 | google | nitric acid supplier dammam | — | — | | nassguard.sa | pws=0 gl=sa fetch, top 9; 25/25, no captcha |
+| 2026-11-09 | google | calcium hypochlorite supplier uae | — | — | | dutcotennant.com | pws=0 gl=ae fetch, top 9; 25/25, no captcha |
+| 2026-11-09 | google | calcium hypochlorite supplier dubai | — | — | | dubichem.com | pws=0 gl=ae fetch, top 9; 25/25, no captcha |
+| 2026-11-09 | google | calcium hypochlorite supplier bahrain | — | — | | bahrainyellowpagesonline.com | pws=0 gl=bh fetch, top 9; 25/25, no captcha |
+| 2026-11-09 | google | nitric acid supplier oman | — | — | | omanchem.com | pws=0 gl=om fetch, top 9; 25/25, no captcha |
+| 2026-11-09 | google | sodium hypochlorite supplier oman | — | — | | omanchem.com | pws=0 gl=om fetch, top 9; 25/25, no captcha |
+| 2026-11-09 | google | hydrochloric acid supplier oman | — | — | | omanchem.com | pws=0 gl=om fetch, top 9; 25/25, no captcha |
+| 2026-11-09 | google | caustic soda supplier oman | — | — | | omanchem.com | pws=0 gl=om fetch, top 9; 25/25, no captcha |
+| 2026-11-09 | google | calcium hypochlorite supplier oman | — | — | | omanchem.com | pws=0 gl=om fetch, top 9; 25/25, no captcha |
+| 2026-11-09 | google | urea supplier oman | — | — | | omanchem.com | pws=0 gl=om fetch, top 9; 25/25, no captcha |
+| 2026-11-09 | google | swimming pool chemicals oman | — | — | | omanchem.com | pws=0 gl=om fetch, top 9; 25/25, no captcha |
+| 2026-11-09 | google | water treatment chemicals oman | — | — | | innovacorporate.com | pws=0 gl=om fetch, top 9; 25/25, no captcha |
+| 2026-11-09 | google | lubricants supplier oman | — | — | | mobil.com | pws=0 gl=om fetch, top 9; 25/25, no captcha |
+| 2026-11-09 | google | oilfield chemicals oman | — | — | | ooiss.com | pws=0 gl=om fetch, top 9; 25/25, no captcha |
+| 2026-11-09 | google | laboratory chemicals oman | — | 8 (/) | | omanchem.com | pws=0 gl=om fetch, top 9; 25/25, no captcha |
+| 2026-11-09 | google | chemical suppliers bahrain | — | — | | safetychemical.com | pws=0 gl=bh fetch, top 9; 25/25, no captcha |
+| 2026-11-09 | google | chemical suppliers qatar | — | — | | deluxechemical.com | pws=0 gl=qa fetch, top 9; 25/25, no captcha |
+| 2026-11-09 | bing | chemical suppliers in oman | — | 4 (/chemical-suppliers-oman), 7 (/) | | omanchem.com | cc=om rendered, top 8 |
+| 2026-11-09 | bing | nitric acid supplier saudi arabia | — | — | | chimisrl.com | cc=sa rendered, top 8 |
+| 2026-11-09 | bing | calcium hypochlorite supplier uae | — | — | | hazchem.ae | cc=ae rendered, top 8 |
+| 2026-11-09 | bing | calcium hypochlorite supplier bahrain | — | — | | gobalchemicalsplus.com | cc=bh rendered, top 8 |
+| 2026-11-09 | bing | nitric acid supplier oman | — | — | | omanchem.com | cc=om rendered, top 8 |
+| 2026-11-09 | bing | caustic soda supplier oman | — | 4 (caustic hub) | | omanchem.com | cc=om rendered, top 8 |
+| 2026-11-09 | bing | hydrochloric acid supplier oman | — | 1 (HCl hub), 3 | | gcoman.com | cc=om rendered, top 8 |
+| 2026-11-09 | bing | calcium hypochlorite supplier oman | — | — | | omanchem.com | cc=om rendered, top 8 |
+| 2026-11-09 | maps | chemical suppliers (Muscat 12z) | GBP | 6 | | Green Port Chemical Suppliers In Muscat | signed-in Chrome, Muscat viewport |
