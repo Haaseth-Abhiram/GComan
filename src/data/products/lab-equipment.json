@@ -43,9 +43,9 @@
       "technicalSpecs": [
         "Glass type: Borosilicate 3.3 (ISO 3585, DIN 12217)",
         "Thermal expansion coefficient: 3.3 × 10⁻⁶ K⁻¹",
-        "Temperature resistance: -50°C to +500°C (short term to 550°C)",
-        "Volumetric Class A: ±0.05–0.25ml tolerance (ISO 4788)",
-        "Volumetric Class B: ±0.1–0.5ml tolerance",
+        "Temperature resistance: -50°C to +500°C (maximum working temperature)",
+        "Volumetric Class A: tolerances per ISO 1042 (flasks), ISO 648 (pipettes), ISO 385 (burettes), e.g. 100ml flask ±0.10ml",
+        "Volumetric Class B: approx. twice the Class A tolerance",
         "Autoclavable: Yes (121°C, 1 bar)",
         "Chemical resistance: Excellent (all common lab reagents)",
         "Certifications: ISO, ASTM E438, DIN standards available"
@@ -57,7 +57,7 @@
         },
         {
           "question": "What personal protective equipment (PPE) is required for laboratory chemical handling in Oman?",
-          "answer": "Personal protective equipment selection for laboratory chemical handling in Oman must be matched to the specific chemical hazards — there is no single universal PPE standard. For general laboratory work, the minimum required is: chemical-resistant gloves (nitrile 4-mil or thicker for most solvents and dilute acids; butyl rubber or neoprene for concentrated acids, bases, and ketone solvents), safety goggles with splash guard (not safety spectacles — goggles seal against the face), a laboratory coat in cotton or FR-treated fabric (polyester melts and adheres to skin in fire), and closed-toe shoes. For higher-hazard work — concentrated corrosives, volatile toxic chemicals, carcinogenic substances — a face shield (worn over goggles, not instead of them), chemical-resistant apron, and half-face respirator with appropriate organic vapour or acid gas cartridges are added. Under Oman Ministry of Manpower OSH Decision 286/2008, employers must provide appropriate PPE free of charge and train workers on correct use and limitations. Global Chemicals LLC supplies PPE alongside laboratory chemicals for convenience."
+          "answer": "Personal protective equipment selection for laboratory chemical handling in Oman must be matched to the specific chemical hazards — there is no single universal PPE standard. For general laboratory work, the minimum required is: chemical-resistant gloves (nitrile 4-mil or thicker for most solvents and dilute acids; butyl rubber or neoprene for concentrated acids, bases, and ketone solvents), safety goggles with splash guard (not safety spectacles — goggles seal against the face), a laboratory coat in cotton or FR-treated fabric (polyester melts and adheres to skin in fire), and closed-toe shoes. For higher-hazard work — concentrated corrosives, volatile toxic chemicals, carcinogenic substances — a face shield (worn over goggles, not instead of them), chemical-resistant apron, and half-face respirator with appropriate organic vapour or acid gas cartridges are added. Under Ministerial Decision 286/2008 on occupational safety and health (issued by the former Ministry of Manpower, now the Ministry of Labour), employers must provide appropriate PPE free of charge and train workers on correct use and limitations. Global Chemicals LLC supplies PPE alongside laboratory chemicals for convenience."
         },
         {
           "question": "How should chemical drums and IBCs be handled safely in Oman industrial facilities?",

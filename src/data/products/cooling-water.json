@@ -21,7 +21,7 @@
         "closed circuit inhibitor Sohar",
         "chiller corrosion Oman"
       ],
-      "longDescription": "Closed Loop Corrosion Inhibitor supplier in Oman - Global Chemicals LLC provides specialized corrosion protection for closed-loop cooling systems, chillers, and HVAC applications in Muscat, Sohar, Duqm, Salalah. Our closed loop inhibitor formulation provides long-term corrosion protection for multi-metal systems including steel, copper, aluminum, and stainless steel. The product forms protective films on metal surfaces, prevents galvanic corrosion, and maintains system efficiency. Essential for chilled water systems, district cooling, process cooling loops, and heat pump applications. The inhibitor maintains stable pH, prevents scale formation, and eliminates the need for frequent makeup water. One-time charge provides season-long or multi-year protection. Widely used in commercial buildings, data centers, manufacturing facilities, and district cooling plants across Oman.",
+      "longDescription": "Closed Loop Corrosion Inhibitor supplier in Oman - Global Chemicals LLC provides specialized corrosion protection for closed-loop cooling systems, chillers, and HVAC applications in Muscat, Sohar, Duqm, Salalah. Our closed loop inhibitor formulation provides long-term corrosion protection for multi-metal systems including steel, copper, aluminum, and stainless steel. The product forms protective films on metal surfaces, prevents galvanic corrosion, and maintains system efficiency. Essential for chilled water systems, district cooling, process cooling loops, and heat pump applications. The inhibitor maintains stable pH, prevents scale formation, and suits closed systems where makeup water is minimal. A correctly dosed charge, tested quarterly and topped up after losses, gives long-term protection. Widely used in commercial buildings, data centers, manufacturing facilities, and district cooling plants across Oman.",
       "applications": [
         "Chilled water system protection",
         "District cooling corrosion control",
@@ -44,11 +44,11 @@
       "faqs": [
         {
           "question": "What is a closed-loop corrosion inhibitor and why is it needed in Oman?",
-          "answer": "A closed-loop corrosion inhibitor is a specialty chemical dosed into sealed recirculating water circuits — chilled water systems, hot water heating loops, district cooling secondaries — to prevent metal corrosion in the absence of continuous blowdown. Unlike open cooling towers, closed systems retain the same water indefinitely, so dissolved oxygen, carbon dioxide ingress, and microbiological activity gradually increase corrosivity. In Oman's hot climate, chiller systems run year-round and any corrosion or fouling in the secondary circuit reduces heat transfer efficiency and risks tube leaks. A correctly dosed closed-loop inhibitor forms a protective passivation film on carbon steel, copper, and aluminium surfaces, maintains pH between 8.5 and 10.0, and reduces corrosion rates by over 90%. Global Chemicals LLC supplies closed-loop inhibitors sized for single-building HVAC systems up to large district cooling plants."
+          "answer": "A closed-loop corrosion inhibitor is a specialty chemical dosed into sealed recirculating water circuits — chilled water systems, hot water heating loops, district cooling secondaries — to prevent metal corrosion in the absence of continuous blowdown. Unlike open cooling towers, closed systems retain the same water indefinitely, so dissolved oxygen, carbon dioxide ingress, and microbiological activity gradually increase corrosivity. In Oman's hot climate, chiller systems run year-round and any corrosion or fouling in the secondary circuit reduces heat transfer efficiency and risks tube leaks. A correctly dosed closed-loop inhibitor forms a protective passivation film on carbon steel, copper, and aluminium surfaces, maintains pH between 8.5 and 10.0, and keeps corrosion rates low. Global Chemicals LLC supplies closed-loop inhibitors sized for single-building HVAC systems up to large district cooling plants."
         },
         {
           "question": "How often should a closed-loop chilled water system be topped up with corrosion inhibitor?",
-          "answer": "Closed-loop inhibitor concentration should be tested every three months and topped up whenever the product concentration falls below the minimum effective level, typically 1,000–2,000 ppm for most phosphonate-based formulations. Concentration drops occur through system leaks, component replacements, and makeup water additions — all of which dilute the inhibitor charge. In Oman's district cooling and commercial HVAC sector, systems are often expanded or modified during summer shutdowns, introducing large volumes of untreated makeup water that require immediate inhibitor correction. Global Chemicals LLC recommends establishing a baseline chemical log and using test strips or photometric kits for quick on-site monitoring. An annual drain-and-refill is rarely justified unless microbiological contamination is found; instead, continuous top-up maintenance keeps costs low and ensures uninterrupted corrosion protection."
+          "answer": "Closed-loop inhibitor concentration should be tested every three months and topped up whenever the product concentration falls below the minimum effective level, typically the nitrite or molybdate residual stated on the product data sheet. Concentration drops occur through system leaks, component replacements, and makeup water additions — all of which dilute the inhibitor charge. In Oman's district cooling and commercial HVAC sector, systems are often expanded or modified during summer shutdowns, introducing large volumes of untreated makeup water that require immediate inhibitor correction. Global Chemicals LLC recommends establishing a baseline chemical log and using test strips or photometric kits for quick on-site monitoring. An annual drain-and-refill is rarely justified unless microbiological contamination is found; instead, continuous top-up maintenance keeps costs low and ensures uninterrupted corrosion protection."
         }
       ],
       "wikiUrl": "https://en.wikipedia.org/wiki/Corrosion_inhibitor"
@@ -143,10 +143,10 @@
       "technicalSpecs": [
         "Broad-spectrum biocide formulation",
         "Dosage: 25-100 ppm shock, 10-25 ppm continuous",
-        "Rapid kill rate: <30 minutes",
+        "Fast-acting formulation",
         "Effective against: Bacteria, algae, fungi",
         "pH range: 6-9",
-        "Residual activity: 3-7 days",
+        "Residual activity: depends on system volume and blowdown",
         "Available in 25kg, 200kg drums, IBCs"
       ],
       "wikiUrl": "https://en.wikipedia.org/wiki/Biocide",
@@ -190,7 +190,7 @@
         "Broad-spectrum non-oxidizing biocide",
         "Dosage: 50-150 ppm shock treatment",
         "Maintenance: 15-30 ppm",
-        "Kill time: 15-30 minutes",
+        "Fast-acting knockdown",
         "Effective pH range: 6-9.5",
         "Compatible with inhibitor programs",
         "Available in 25kg, 200kg drums, IBCs"
@@ -294,7 +294,7 @@
       "technicalSpecs": [
         "Active ingredients: Phosphonates and polymers",
         "Dosage: 5-20 ppm depending on hardness",
-        "Effective pH: 7-10",
+        "Effective pH: 7-10 (cooling water); boiler water per programme",
         "Prevents CaCO3 and CaSO4 scale",
         "Disperses calcium and magnesium",
         "Compatible with boiler treatment programs",
@@ -307,7 +307,7 @@
         },
         {
           "question": "How much blowdown is needed for an industrial boiler in Oman?",
-          "answer": "Blowdown rate depends on the boiler's cycles of concentration target, feed water quality, and steam purity requirements. For a typical industrial firetube boiler in Oman operating at 7–10 bar, a cycles of concentration of 8–12 is common, meaning the dissolved solids in boiler water are 8–12 times higher than in feed water. At this concentration, conductivity in the boiler drum typically runs 2,000–4,000 µS/cm. Continuous blowdown of 5–10% of evaporation rate is used for conductivity control, supplemented by intermittent bottom blowdown to remove settled sludge. Excessive blowdown wastes expensive treated feed water and heat; insufficient blowdown allows scale-forming salts and silica to exceed safe limits. Global Chemicals LLC provides boiler water analysis and blowdown optimisation as part of its chemical treatment service, helping customers balance water savings with equipment protection."
+          "answer": "Blowdown rate depends on the boiler's cycles of concentration target, feed water quality, and steam purity requirements. For a typical industrial firetube boiler in Oman operating at 7–10 bar, a cycles of concentration of 8–12 is common, meaning the dissolved solids in boiler water are 8–12 times higher than in feed water. At this concentration, conductivity in the boiler drum typically runs 2,000–4,000 µS/cm. Continuous blowdown of roughly 8–12% of feed water is used for conductivity control, supplemented by intermittent bottom blowdown to remove settled sludge. Excessive blowdown wastes expensive treated feed water and heat; insufficient blowdown allows scale-forming salts and silica to exceed safe limits. Global Chemicals LLC provides boiler water analysis and blowdown optimisation as part of its chemical treatment service, helping customers balance water savings with equipment protection."
         }
       ],
       "wikiUrl": "https://en.wikipedia.org/wiki/Water_softening",
@@ -336,7 +336,7 @@
         "closed system biocide Sohar",
         "chiller antimicrobial Oman"
       ],
-      "longDescription": "Closed Loop Chiller Biocide supplier in Oman - Global Chemicals LLC provides specialized biocides for microbiological control in closed-loop chiller systems in Muscat, Sohar, Duqm, Salalah. Our chiller biocide formulation prevents bacterial contamination, biofilm formation, and microbial-induced fouling in closed chilled water circuits. Even in closed systems, bacteria can proliferate from makeup water introduction and create slime, reduce heat transfer, and cause microbiologically-influenced corrosion. Essential for maintaining system efficiency, preventing biological contamination, and ensuring long-term system reliability. The biocide provides season-long protection with minimal dosing requirements. Particularly important for systems with poor makeup water quality or outdoor cooling towers. Widely used in HVAC systems, data centers, process cooling, and district cooling facilities across Oman.",
+      "longDescription": "Closed Loop Chiller Biocide supplier in Oman - Global Chemicals LLC provides specialized biocides for microbiological control in closed-loop chiller systems in Muscat, Sohar, Duqm, Salalah. Our chiller biocide formulation prevents bacterial contamination, biofilm formation, and microbial-induced fouling in closed chilled water circuits. Even in closed systems, bacteria can proliferate from makeup water introduction and create slime, reduce heat transfer, and cause microbiologically-influenced corrosion. Essential for maintaining system efficiency, preventing biological contamination, and ensuring long-term system reliability. The biocide is re-dosed periodically, guided by microbiological testing of the loop. Particularly important for systems with poor makeup water quality or frequent makeup water additions. Widely used in HVAC systems, data centers, process cooling, and district cooling facilities across Oman.",
       "applications": [
         "Closed chilled water system treatment",
         "HVAC chiller biological control",
@@ -350,7 +350,7 @@
       "technicalSpecs": [
         "Non-oxidizing biocide formulation",
         "Dosage: 50-100 ppm initial, 10-25 ppm maintenance",
-        "Protection duration: 90-180 days",
+        "Re-dose interval: per microbiological testing",
         "pH range: 8-10",
         "Compatible with corrosion inhibitors",
         "Low toxicity formulation",
@@ -359,7 +359,7 @@
       "faqs": [
         {
           "question": "What grade and pack sizes of Biocide For Closed Loop Chiller Water are available in Oman?",
-          "answer": "Global Chemicals LLC supplies Biocide For Closed Loop Chiller Water in Oman — Non-oxidizing biocide formulation — available in 25kg drums, IBCs, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+          "answer": "Global Chemicals LLC supplies Biocide For Closed Loop Chiller Water in Oman — Non-oxidizing biocide formulation — available in 25kg drums, IBCs, with same-day delivery in Muscat, next-day dispatch to Sohar, two to three days to Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
         },
         {
           "question": "What is Biocide For Closed Loop Chiller Water used for?",
@@ -450,7 +450,7 @@
         "complete cooling treatment Sohar",
         "single product treatment Oman"
       ],
-      "longDescription": "Altreat 4000 supplier in Oman - Global Chemicals LLC provides all-in-one cooling water treatment programs for comprehensive system protection in Muscat, Sohar, Duqm, Salalah. Our Altreat 4000 combines corrosion inhibition, scale control, and deposit prevention in a single product, simplifying chemical feed and reducing inventory. The advanced formulation protects multi-metal systems, prevents scale formation, disperses suspended solids, and maintains system cleanliness. Essential for small to medium cooling systems requiring simplified treatment without multiple chemical feeds. The all-in-one approach reduces operator complexity, minimizes chemical handling, and ensures balanced treatment. Provides cost-effective protection for cooling towers, closed loops, and once-through systems. Ideal for commercial buildings, manufacturing facilities, and operations preferring simplified chemical programs. Widely used across Oman for efficient, economical cooling water treatment.",
+      "longDescription": "Altreat 4000 supplier in Oman - Global Chemicals LLC provides all-in-one cooling water treatment programs for comprehensive system protection in Muscat, Sohar, Duqm, Salalah. Our Altreat 4000 combines corrosion inhibition, scale control, and deposit prevention in a single product, simplifying chemical feed and reducing inventory. The advanced formulation protects multi-metal systems, prevents scale formation, disperses suspended solids, and maintains system cleanliness. Essential for small to medium cooling systems requiring simplified treatment without multiple chemical feeds. The all-in-one approach reduces operator complexity, minimizes chemical handling, and ensures balanced treatment. Provides cost-effective protection for open recirculating cooling towers. Ideal for commercial buildings, manufacturing facilities, and operations preferring simplified chemical programs. Widely used across Oman for efficient, economical cooling water treatment.",
       "applications": [
         "Simplified cooling tower treatment",
         "Single-product cooling water programs",
@@ -477,7 +477,7 @@
         },
         {
           "question": "What grade and pack sizes of Altreat 4000 are available in Oman?",
-          "answer": "Global Chemicals LLC supplies Altreat 4000 in Oman — All-in-one: Corrosion + scale + deposit control — available in 25kg, 200kg drums, IBCs, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+          "answer": "Global Chemicals LLC supplies Altreat 4000 in Oman — All-in-one: Corrosion + scale + deposit control — available in 25kg, 200kg drums, IBCs, with same-day delivery in Muscat, next-day dispatch to Sohar, two to three days to Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
         },
         {
           "question": "What is Altreat 4000 used for?",
@@ -531,7 +531,7 @@
       "faqs": [
         {
           "question": "What grade and pack sizes of Corro Guard For Antifoulant for Cooling Water are available in Oman?",
-          "answer": "Global Chemicals LLC supplies Corro Guard For Antifoulant for Cooling Water in Oman — Dual-action: Corrosion inhibitor + dispersant — available in 25kg, 200kg drums, IBCs, with same-day delivery in Muscat, next-day dispatch to Sohar and Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+          "answer": "Global Chemicals LLC supplies Corro Guard For Antifoulant for Cooling Water in Oman — Dual-action: Corrosion inhibitor + dispersant — available in 25kg, 200kg drums, IBCs, with same-day delivery in Muscat, next-day dispatch to Sohar, two to three days to Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
         },
         {
           "question": "What is Corro Guard For Antifoulant for Cooling Water used for?",

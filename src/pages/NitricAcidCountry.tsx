@@ -97,7 +97,7 @@ const COUNTRIES: Record<NitricCountryKey, CountryData> = {
       {
         question: 'Which nitric acid grade do UAE stainless steel fabricators use?',
         answer:
-          'Industrial 68% nitric acid, diluted on site for pickling and passivation. Food and beverage plants use the food-contact 68% grade for CIP at 0.5–2% and 60–70°C, and laboratories use the 68–70% ACS or trace-metal grade in 500 mL or 2.5 L bottles.',
+          'Industrial 68% nitric acid, diluted on site for pickling and passivation. Food and beverage plants use the food-contact 68% grade for CIP at 0.5–1.5% and 50–70°C, and laboratories use the 68–70% ACS or trace-metal grade in 500 mL or 2.5 L bottles.',
       },
     ],
     locationPage: '/chemicals/uae',

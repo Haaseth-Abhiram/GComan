@@ -105,7 +105,7 @@ const faqs = [
   },
   {
     question: "How is nitric acid used for stainless steel passivation?",
-    answer: "Passivation uses nitric acid to dissolve free iron from a stainless steel surface and restore the chromium-oxide layer that gives the steel its corrosion resistance. In practice this follows pickling or fabrication work, and in food and beverage plants it follows the caustic stage of a CIP cycle — a typical CIP acid wash runs a 0.5–2% nitric solution at 60–70°C. The result is a passive, corrosion-resistant surface and, in process plant, one that will not taint product."
+    answer: "Passivation uses nitric acid to dissolve free iron from a stainless steel surface and restore the chromium-oxide layer that gives the steel its corrosion resistance. In practice this follows pickling or fabrication work, and in food and beverage plants it follows the caustic stage of a CIP cycle — a typical CIP acid wash runs a 0.5–1.5% nitric solution at 50–70°C. The result is a passive, corrosion-resistant surface and, in process plant, one that will not taint product."
   },
   {
     question: "What safety documentation comes with nitric acid?",
@@ -140,7 +140,7 @@ const gradeForms = [
     title: "Nitric Acid — Food Contact",
     subtitle: "68% HNO3",
     description: "Food-contact grade for the acid step of CIP (clean-in-place) programmes in dairies, breweries and beverage plants — removing milk stone, beer stone and hard-water scale, then re-passivating the steel.",
-    specs: ["Concentration: 68% HNO3", "Typical CIP dose: 0.5–2% at 60–70°C", "CoA per batch · GHS SDS", "35 kg carboy · 60 kg drum · 1,000 L IBC"],
+    specs: ["Concentration: 68% HNO3", "Typical CIP dose: 0.5–1.5% at 50–70°C", "CoA per batch · GHS SDS", "35 kg carboy · 60 kg drum · 1,000 L IBC"],
     uses: ["CIP acid cleaning cycles", "Milk stone & beer stone removal", "Plate heat exchanger cleaning", "Post-caustic passivation"],
     productLink: "/products/food-beverage/nitric-acid-68"
   },
@@ -398,7 +398,7 @@ const NitricAcidOman = () => {
                       ['Specific gravity', '≈1.41 at 20°C', '1.42'],
                       ['Grade', 'Technical / food-contact', 'ACS · trace-metal (<10 ppb)'],
                       ['Pack formats', '35 kg carboy · 60 kg drum · 1,000 L IBC · bulk', '500 mL · 2.5 L amber glass'],
-                      ['Typical CIP dose', '0.5–2% at 60–70°C', '—'],
+                      ['Typical CIP dose', '0.5–1.5% at 50–70°C', '—'],
                       ['Documentation', 'SDS (GHS) · CoA per batch · TDS', 'SDS · CoA · UN-compliant packaging'],
                       ['Storage', 'Vented, cool; PE or stainless containment', 'Glass, cool environment'],
                     ].map((row, i) => (
