@@ -63,6 +63,19 @@ test.describe('/chemicals hub', () => {
     expect(new URL(page.url()).pathname).toBe('/chemical-suppliers-oman');
   });
 
+  for (const [from, to] of [
+    ['/chemicals/buraimi', '/chemical-suppliers-oman'],
+    ['/products/food-ingredients', '/products/food-beverage'],
+    ['/products/paints-coatings', '/products/solvents'],
+    ['/products/adhesives-sealants', '/products/construction'],
+  ]) {
+    test(`never-built ${from} redirects to ${to} (GSC 2026-11-09)`, async ({ page }) => {
+      await page.goto(from);
+      await page.waitForURL(`**${to}`);
+      expect(new URL(page.url()).pathname).toBe(to);
+    });
+  }
+
   test('/chemicals renders the hub with all city + country links', async ({ page }) => {
     await page.goto('/chemicals');
     await expect(page.locator('h1')).toContainText('Chemical Supply Across Oman');

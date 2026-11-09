@@ -145,6 +145,11 @@
 /chemical-supplier                      /chemicals                              301
 # retired location page -> Oman hub
 /chemicals/khasab                       /chemical-suppliers-oman                301
+# never-built location / category URLs Google still crawls (GSC 2026-11-09)
+/chemicals/buraimi                      /chemical-suppliers-oman                301
+/products/food-ingredients              /products/food-beverage                 301
+/products/paints-coatings               /products/solvents                      301
+/products/adhesives-sealants            /products/construction                  301
 /chemical-suppliers-oman/               /chemical-suppliers-oman                301!
 /chemical-suppliers-middle-east/        /chemical-suppliers-middle-east         301!
 /chemical-supplier/caustic-soda-oman/   /chemical-supplier/caustic-soda-oman    301!

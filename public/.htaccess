@@ -26,6 +26,11 @@ Options -Indexes
 RewriteRule ^chemical-supplier$ /chemicals [R=301,L]
 # retired location page -> Oman hub
 RewriteRule ^chemicals/khasab/?$ /chemical-suppliers-oman [R=301,L]
+# never-built location / category URLs Google still crawls (GSC 2026-11-09)
+RewriteRule ^chemicals/buraimi/?$ /chemical-suppliers-oman [R=301,L]
+RewriteRule ^products/food-ingredients/?$ /products/food-beverage [R=301,L]
+RewriteRule ^products/paints-coatings/?$ /products/solvents [R=301,L]
+RewriteRule ^products/adhesives-sealants/?$ /products/construction [R=301,L]
 
   RewriteBase /
 

@@ -17,6 +17,13 @@ const EXACT_REDIRECTS = new Map<string, string>([
   // A retired location page Google still crawls (GSC Soft 404, last crawl
   // 2026-05-25). Khasab has no page of its own, so send it to the Oman hub.
   ['/chemicals/khasab', '/chemical-suppliers-oman'],
+  // Same story, read in GSC 2026-11-09: never-built location and category URLs
+  // Google still crawls; production served them the homepage shell at 200 with
+  // canonical "/" ("Not found" / "Google chose different canonical").
+  ['/chemicals/buraimi', '/chemical-suppliers-oman'],
+  ['/products/food-ingredients', '/products/food-beverage'],
+  ['/products/paints-coatings', '/products/solvents'],
+  ['/products/adhesives-sealants', '/products/construction'],
 
   // Old /products/acids/* → new categories
   ['/products/acids/citric-acid', '/products/water-treatment/citric-acid-anhydrous'],
