@@ -31,6 +31,10 @@ RewriteRule ^chemicals/buraimi/?$ /chemical-suppliers-oman [R=301,L]
 RewriteRule ^products/food-ingredients/?$ /products/food-beverage [R=301,L]
 RewriteRule ^products/paints-coatings/?$ /products/solvents [R=301,L]
 RewriteRule ^products/adhesives-sealants/?$ /products/construction [R=301,L]
+RewriteRule ^chemicals/barka/?$ /chemical-suppliers-oman [R=301,L]
+RewriteRule ^products/agrochemicals/?$ /products/agro [R=301,L]
+RewriteRule ^products/specialty-chemicals/?$ /products [R=301,L]
+RewriteRule ^products/mining-chemicals/?$ /products [R=301,L]
 
   RewriteBase /
 

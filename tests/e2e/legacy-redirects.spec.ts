@@ -68,6 +68,10 @@ test.describe('/chemicals hub', () => {
     ['/products/food-ingredients', '/products/food-beverage'],
     ['/products/paints-coatings', '/products/solvents'],
     ['/products/adhesives-sealants', '/products/construction'],
+    ['/chemicals/barka', '/chemical-suppliers-oman'],
+    ['/products/agrochemicals', '/products/agro'],
+    ['/products/specialty-chemicals', '/products'],
+    ['/products/mining-chemicals', '/products'],
   ]) {
     test(`never-built ${from} redirects to ${to} (GSC 2026-11-09)`, async ({ page }) => {
       await page.goto(from);
