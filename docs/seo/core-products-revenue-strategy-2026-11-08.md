@@ -24,9 +24,9 @@ Nitric and the chlor-alkali family are about two thirds of revenue, and **most o
 | 2 | sodium hypochlorite supplier uae / abu dhabi / dubai | **`/chemical-supplier/sodium-hypochlorite-uae` (new 11-08)** | no page before today |
 | 3 | sodium hypochlorite supplier bahrain | **`/chemical-supplier/sodium-hypochlorite-bahrain` (new 11-08)** | no page before today |
 | 4 | nitric acid supplier oman / bulk nitric acid | nitric hub + AR hub | Google —, Bing 1, Perplexity 1st, AI Mode 4th |
-| 5 | sodium hypochlorite supplier oman | hypochlorite hub | Google — (muscatchemical), Bing 2 |
-| 6 | hydrochloric acid supplier oman / sohar | HCl hub | Google —, Bing 2 |
-| 7 | caustic soda supplier oman / uae / saudi; صودا كاوية | caustic hub | Google —, Bing 2; UAE/KSA no page |
+| 5 | sodium hypochlorite supplier oman; هيبوكلوريت الصوديوم | hypochlorite hub + **Arabic hub (Develop 11-09)** | Google — (muscatchemical), Bing 2 |
+| 6 | hydrochloric acid supplier oman / sohar / uae / saudi | HCl hub + **`hydrochloric-acid-uae` / `-saudi-arabia` (Develop 11-09)** | Google —, Bing 2 |
+| 7 | caustic soda supplier oman / uae / saudi; صودا كاوية | caustic hub + **`caustic-soda-uae` / `-saudi-arabia` + Arabic hub (Develop 11-09)** | Google —, Bing 2 |
 | 8 | chlor-alkali umbrella ("chlor alkali products supplier", "chlorine products oman") | none | candidate: one umbrella hub linking caustic, hypochlorite, HCl (see `chlor-alkali-position-report-2026-10-05.md`) |
 
 ## 3. What gets these to #1
