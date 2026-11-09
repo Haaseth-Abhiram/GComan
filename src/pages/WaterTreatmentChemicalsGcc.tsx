@@ -65,7 +65,7 @@ type Market = { market: string; points: string; leadTime: string; route: string;
 
 const MARKETS: Market[] = [
   { market: 'UAE', points: 'Dubai, Sharjah, Abu Dhabi, Ras Al Khaimah', leadTime: '3–5 business days; Fujairah and the east coast 2–4 hours', route: 'Road from Muscat via the Hatta and Al Ain lanes under GCC customs transit', link: '/chemicals/uae' },
-  { market: 'Saudi Arabia', points: 'Dammam, Khobar, Jubail; Riyadh; Jeddah, Yanbu', leadTime: 'Eastern Province 4–6 business days; Riyadh 5–7; Jeddah and Yanbu 4–6 days by sea', route: 'Road via the Batha crossing; sea from Sohar Port for the Red Sea coast', link: '/chemicals/saudi-arabia' },
+  { market: 'Saudi Arabia', points: 'Dammam, Khobar, Jubail; Riyadh; Jeddah, Yanbu', leadTime: 'Eastern Province 4–6 business days; Riyadh 5–7; Jeddah and Yanbu by sea, quoted per sailing', route: 'Road via the Batha crossing; sea from Sohar Port for the Red Sea coast', link: '/chemicals/saudi-arabia' },
   { market: 'Qatar', points: 'Doha, Mesaieed, Ras Laffan', leadTime: '3–5 business days; Ras Laffan quoted per load', route: 'Road through Saudi Arabia, entering at Abu Samra', link: '/chemicals/doha' },
   { market: 'Kuwait', points: 'Kuwait City, Shuaiba, Ahmadi', leadTime: '4–6 business days', route: 'Road through Saudi Arabia, entering at Nuwaiseeb', link: '/chemicals/kuwait-city' },
   { market: 'Bahrain', points: 'Manama, Sitra, Salman Industrial City', leadTime: '3–5 business days', route: 'Road through Saudi Arabia over the King Fahd Causeway', link: '/chemicals/bahrain' },

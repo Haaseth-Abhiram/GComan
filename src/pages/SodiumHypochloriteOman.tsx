@@ -254,10 +254,10 @@ const SodiumHypochloriteOman = () => {
               <h2 className="text-2xl font-bold text-foreground mb-3">How fast is sodium hypochlorite delivered across Oman and the GCC?</h2>
               <p className="text-muted-foreground leading-relaxed">
                 Same day within Muscat, next day to Sohar, two to three days to Salalah and Duqm, and by road to the
-                UAE, Saudi Arabia, Qatar, Kuwait and Bahrain with a Certificate of Origin. Country guides with lead
-                times and export documents:{' '}
-                <Link to="/chemical-supplier/sodium-hypochlorite-uae" className="text-primary hover:underline">sodium hypochlorite to the UAE</Link> and{' '}
-                <Link to="/chemical-supplier/sodium-hypochlorite-bahrain" className="text-primary hover:underline">to Bahrain</Link>.
+                UAE, Saudi Arabia, Qatar, Kuwait and Bahrain with a Certificate of Origin. For export loads, solid chlorine
+                carries more chlorine per tonne:{' '}
+                <Link to="/chemical-supplier/calcium-hypochlorite-uae" className="text-primary hover:underline">calcium hypochlorite to the UAE</Link> and{' '}
+                <Link to="/chemical-supplier/calcium-hypochlorite-bahrain" className="text-primary hover:underline">to Bahrain</Link>.
                 Related supply guides:{' '}
                 <Link to="/chemical-supplier/caustic-soda-oman" className="text-primary hover:underline">caustic soda</Link>,{' '}
                 <Link to="/chemical-supplier/hydrochloric-acid-oman" className="text-primary hover:underline">hydrochloric acid</Link>,{' '}

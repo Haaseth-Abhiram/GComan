@@ -107,7 +107,7 @@ const ChemicalSuppliersMiddleEast = lazyRetry(() => import("./pages/ChemicalSupp
 const CausticSodaOman = lazyRetry(() => import("./pages/CausticSodaOman"));
 const NitricAcidOman = lazyRetry(() => import("./pages/NitricAcidOman"));
 const NitricAcidCountry = lazyRetry(() => import("./pages/NitricAcidCountry"));
-const SodiumHypochloriteCountry = lazyRetry(() => import("./pages/SodiumHypochloriteCountry"));
+const CalciumHypochloriteCountry = lazyRetry(() => import("./pages/CalciumHypochloriteCountry"));
 const CausticSodaCountry = lazyRetry(() => import("./pages/CausticSodaCountry"));
 const HydrochloricAcidCountry = lazyRetry(() => import("./pages/HydrochloricAcidCountry"));
 const WaterTreatmentChemicalsGcc = lazyRetry(() => import("./pages/WaterTreatmentChemicalsGcc"));
@@ -270,8 +270,8 @@ const App = () => (
                 <Route path="/chemical-supplier/laboratory-chemicals-oman" element={<LaboratoryChemicalsOman />} />
                 <Route path="/chemical-supplier/fertilizers-oman" element={<FertilizersOman />} />
                 <Route path="/chemical-supplier/sodium-hypochlorite-oman" element={<SodiumHypochloriteOman />} />
-                <Route path="/chemical-supplier/sodium-hypochlorite-uae" element={<SodiumHypochloriteCountry country="uae" />} />
-                <Route path="/chemical-supplier/sodium-hypochlorite-bahrain" element={<SodiumHypochloriteCountry country="bahrain" />} />
+                <Route path="/chemical-supplier/calcium-hypochlorite-uae" element={<CalciumHypochloriteCountry country="uae" />} />
+                <Route path="/chemical-supplier/calcium-hypochlorite-bahrain" element={<CalciumHypochloriteCountry country="bahrain" />} />
                 <Route path="/chemical-supplier/caustic-soda-uae" element={<CausticSodaCountry country="uae" />} />
                 <Route path="/chemical-supplier/caustic-soda-saudi-arabia" element={<CausticSodaCountry country="saudi-arabia" />} />
                 <Route path="/chemical-supplier/hydrochloric-acid-uae" element={<HydrochloricAcidCountry country="uae" />} />
@@ -342,8 +342,8 @@ const App = () => (
                   <Route path="chemical-supplier/laboratory-chemicals-oman" element={<LaboratoryChemicalsOman />} />
                   <Route path="chemical-supplier/fertilizers-oman" element={<FertilizersOman />} />
                   <Route path="chemical-supplier/sodium-hypochlorite-oman" element={<SodiumHypochloriteOman />} />
-                  <Route path="chemical-supplier/sodium-hypochlorite-uae" element={<SodiumHypochloriteCountry country="uae" />} />
-                  <Route path="chemical-supplier/sodium-hypochlorite-bahrain" element={<SodiumHypochloriteCountry country="bahrain" />} />
+                  <Route path="chemical-supplier/calcium-hypochlorite-uae" element={<CalciumHypochloriteCountry country="uae" />} />
+                  <Route path="chemical-supplier/calcium-hypochlorite-bahrain" element={<CalciumHypochloriteCountry country="bahrain" />} />
                   <Route path="chemical-supplier/caustic-soda-uae" element={<CausticSodaCountry country="uae" />} />
                   <Route path="chemical-supplier/caustic-soda-saudi-arabia" element={<CausticSodaCountry country="saudi-arabia" />} />
                   <Route path="chemical-supplier/hydrochloric-acid-uae" element={<HydrochloricAcidCountry country="uae" />} />

@@ -95,7 +95,7 @@ const COUNTRIES: Record<HclCountryKey, CountryData> = {
     locationPage: '/chemicals/uae',
     alsoShipped: [
       { label: 'caustic soda', to: '/chemical-supplier/caustic-soda-uae' },
-      { label: 'sodium hypochlorite', to: '/chemical-supplier/sodium-hypochlorite-uae' },
+      { label: 'calcium hypochlorite', to: '/chemical-supplier/calcium-hypochlorite-uae' },
       { label: 'nitric acid 68%', to: '/chemical-supplier/nitric-acid-uae' },
     ],
   },

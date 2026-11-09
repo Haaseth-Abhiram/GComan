@@ -23,8 +23,8 @@ import hubAr from '@/i18n/locales/hub-pages-ar.json';
  * indexable through scripts/sync-ar-sitemap.mjs.
  *
  * Content rule: every fact restates SodiumHypochloriteOman.tsx, the
- * hypochlorite product JSON (strengths, packs) and SodiumHypochloriteCountry.tsx
- * (UAE / Bahrain lanes). Nothing new is claimed and no price is published.
+ * hypochlorite product JSON (strengths, packs) and the NitricAcidCountry.tsx
+ * UAE / Bahrain lanes. Nothing new is claimed and no price is published.
  * Product links go to the /ar product twins, which are indexable.
  */
 
@@ -214,9 +214,9 @@ const SodiumHypochloriteOmanAr = () => (
             </table>
           </div>
           <p className="text-sm text-muted-foreground mt-4">
-            نورّد أيضاً إلى السعودية وقطر والكويت براً مع شهادة منشأ. التفاصيل بالإنجليزية:{' '}
-            <Link to="/chemical-supplier/sodium-hypochlorite-uae" className="text-primary hover:underline">هيبوكلوريت الصوديوم إلى الإمارات</Link>{' '}
-            و<Link to="/chemical-supplier/sodium-hypochlorite-bahrain" className="text-primary hover:underline">إلى البحرين</Link>.
+            نورّد أيضاً إلى السعودية وقطر والكويت براً مع شهادة منشأ. وللشحنات التصديرية، يحمل الكلور الصلب كمية أكبر من الكلور في كل طن (بالإنجليزية):{' '}
+            <Link to="/chemical-supplier/calcium-hypochlorite-uae" className="text-primary hover:underline">هيبوكلوريت الكالسيوم إلى الإمارات</Link>{' '}
+            و<Link to="/chemical-supplier/calcium-hypochlorite-bahrain" className="text-primary hover:underline">إلى البحرين</Link>.
             وللكلور الصلب للمسابح، انظر{' '}
             <Link to="/ar/chemical-supplier/pool-chlorine-gcc" className="text-primary hover:underline">كلور المسابح</Link>.
           </p>

@@ -59,11 +59,11 @@ const PRODUCTS: ProductRow[] = [
 type Market = { market: string; points: string; leadTime: string; link: string };
 
 const MARKETS: Market[] = [
-  { market: 'UAE', points: 'Dubai, Sharjah, Abu Dhabi, Ras Al Khaimah; Fujairah and the east coast', leadTime: '3–5 business days by road; Fujairah same or next day', link: '/chemicals/uae' },
-  { market: 'Saudi Arabia', points: 'Dammam, Khobar, Jubail; Riyadh; Jeddah, Yanbu', leadTime: 'Eastern Province 4–6 business days; Riyadh 5–7; Jeddah and Yanbu 4–6 days by sea via Sohar', link: '/chemicals/saudi-arabia' },
+  { market: 'UAE', points: 'Dubai, Sharjah, Abu Dhabi, Ras Al Khaimah; Fujairah and the east coast', leadTime: '3–5 business days by road; Fujairah same or next day', link: '/chemical-supplier/calcium-hypochlorite-uae' },
+  { market: 'Saudi Arabia', points: 'Dammam, Khobar, Jubail; Riyadh; Jeddah, Yanbu', leadTime: 'Eastern Province 4–6 business days; Riyadh 5–7; Jeddah and Yanbu by sea via Sohar, quoted per sailing', link: '/chemicals/saudi-arabia' },
   { market: 'Qatar', points: 'Doha, Mesaieed, Lusail and the Pearl', leadTime: '3–5 business days by road', link: '/chemicals/doha' },
   { market: 'Kuwait', points: 'Kuwait City, Salmiya, Shuaiba', leadTime: '4–6 business days by road', link: '/chemicals/kuwait-city' },
-  { market: 'Bahrain', points: 'Manama, Sitra, Amwaj', leadTime: '3–5 business days via the King Fahd Causeway', link: '/chemicals/bahrain' },
+  { market: 'Bahrain', points: 'Manama, Sitra, Amwaj', leadTime: '3–5 business days via the King Fahd Causeway', link: '/chemical-supplier/calcium-hypochlorite-bahrain' },
   { market: 'Oman', points: 'Muscat, Sohar, Salalah, Duqm', leadTime: 'Muscat same day; Sohar next day; Salalah and Duqm 2–3 days', link: '/chemicals/muscat' },
 ];
 
@@ -82,7 +82,7 @@ const FAQS = [
   {
     question: 'Do you supply calcium hypochlorite to the UAE?',
     answer:
-      'Yes. Calcium hypochlorite 65–70% granules in 1 to 50 kg packs and the 65–75% water-treatment grade in 25 kg and 45 kg drums ship from Muscat stock: Dubai, Sharjah, Abu Dhabi and Ras Al Khaimah are three to five business days by road under GCC customs transit, and Fujairah and the east coast two to four hours. Free-zone and hotel deliveries need the consignee and gate details with the order.',
+      'Yes. Calcium hypochlorite 65–70% granules in 1 to 50 kg packs and the 65–75% water-treatment grade in 25 kg and 45 kg drums ship from Muscat stock: Dubai, Sharjah, Abu Dhabi and Ras Al Khaimah are three to five business days by road under GCC customs procedures, and Fujairah and the east coast the same or next day. Free-zone and hotel deliveries need the consignee and gate details with the order.',
   },
   {
     question: 'Which pool chlorine should a hotel in Dubai or Doha use: TCCA tablets, calcium hypochlorite or liquid chlorine?',
@@ -97,7 +97,7 @@ const FAQS = [
   {
     question: 'How is pool chlorine shipped from Oman to the GCC?',
     answer:
-      'Dry calcium hypochlorite travels as UN 1748 and TCCA as UN 2468, both Class 5.1 oxidisers, and sodium hypochlorite solution as UN 1791, Class 8. Loads are segregated from acids, organics and fuels, kept dry and shaded, and carry the GHS Safety Data Sheet in English and Arabic. Calcium hypochlorite and TCCA are never stored or loaded together, because the two react violently when mixed.',
+      'Calcium hypochlorite travels as a Class 5.1 oxidiser under UN 2880 (hydrated) or UN 1748 (dry), or UN 3487 / UN 3485 where it is also classed corrosive (Class 8), as stated in section 14 of its Safety Data Sheet; TCCA travels as UN 2468, also Class 5.1; and sodium hypochlorite solution as UN 1791, Class 8. Loads are segregated from acids, organics and fuels, kept dry and shaded, and carry the GHS Safety Data Sheet in English and Arabic. Calcium hypochlorite and TCCA are never stored or loaded together, because the two react violently when mixed.',
   },
   {
     question: 'Do you have a price list for pool chlorine in bulk?',
@@ -107,7 +107,7 @@ const FAQS = [
   {
     question: 'Can I buy chlorine tablets in Kuwait or Saudi Arabia from you?',
     answer:
-      'Yes. TCCA 200 g and jumbo 3-inch tablets in 5 to 25 kg buckets reach Kuwait City in four to six business days by road, Dammam, Khobar and Jubail in four to six, Riyadh in five to seven, and Jeddah in four to six days by sea via Sohar Port. Every consignment carries a GCC Certificate of Origin, a Certificate of Analysis and the Safety Data Sheet.',
+      'Yes. TCCA 200 g and jumbo 3-inch tablets in 5 to 25 kg buckets reach Kuwait City in four to six business days by road, Dammam, Khobar and Jubail in four to six, Riyadh in five to seven, and Jeddah by sea via Sohar Port, quoted per sailing. Every consignment carries a Certificate of Analysis, the Safety Data Sheet and the export and customs documents.',
   },
 ];
 
@@ -163,7 +163,7 @@ const PoolChlorineGcc = () => {
                 Kuwait, Bahrain and Oman: calcium hypochlorite granules and powder, TCCA tablets in 20 g, 200 g and jumbo
                 sizes, sodium hypochlorite 12–15%, algaecide, pH balancers and dechlorinators. Dubai is three to five
                 business days by road and Kuwait four to six, and every load carries a Certificate of Analysis, a GHS
-                Safety Data Sheet in English and Arabic and a GCC Certificate of Origin.
+                Safety Data Sheet in English and Arabic and the export and customs documents.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="gap-2 text-lg px-8" onClick={() => trackSelectContent('cta_button', 'pool_gcc_quote')}>
@@ -311,8 +311,8 @@ const PoolChlorineGcc = () => {
                 </h2>
                 <p className="text-muted-foreground leading-relaxed">
                   A batch Certificate of Analysis stating available chlorine, a GHS Safety Data Sheet in English and
-                  Arabic, a Technical Data Sheet, a Certificate of Origin attested by the Oman Chamber of Commerce and an
-                  HS-coded commercial invoice. Dry calcium hypochlorite (UN 1748) and TCCA (UN 2468) are Class 5.1
+                  Arabic, a Technical Data Sheet, the export and customs documents and an
+                  HS-coded commercial invoice. Calcium hypochlorite (UN 2880, UN 1748 or the corrosive UN 3487 / 3485, per its Safety Data Sheet) and TCCA (UN 2468) are Class 5.1
                   oxidisers and sodium hypochlorite solution (UN 1791) is Class 8, so loads are segregated from acids,
                   organics and fuels and kept dry and shaded in transit and in your store.
                 </p>

@@ -442,10 +442,10 @@ const ChemicalSuppliersMiddleEast = () => {
                   <Link to="/chemical-supplier/sodium-hypochlorite-oman">Sodium hypochlorite — GCC supply guide</Link>
                 </Button>
                 <Button variant="outline" size="sm" asChild>
-                  <Link to="/chemical-supplier/sodium-hypochlorite-uae">Sodium hypochlorite — UAE</Link>
+                  <Link to="/chemical-supplier/calcium-hypochlorite-uae">Calcium hypochlorite — UAE</Link>
                 </Button>
                 <Button variant="outline" size="sm" asChild>
-                  <Link to="/chemical-supplier/sodium-hypochlorite-bahrain">Sodium hypochlorite — Bahrain</Link>
+                  <Link to="/chemical-supplier/calcium-hypochlorite-bahrain">Calcium hypochlorite — Bahrain</Link>
                 </Button>
                 <Button variant="outline" size="sm" asChild>
                   <Link to="/chemical-supplier/caustic-soda-uae">Caustic soda — UAE</Link>

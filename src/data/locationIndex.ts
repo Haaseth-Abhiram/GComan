@@ -46,7 +46,7 @@ export const locationIndex: LocationCountry[] = [
     countryArabic: 'المملكة العربية السعودية',
     locations: [
       { slug: 'riyadh', city: 'Riyadh', cityArabic: 'الرياض', region: 'Riyadh Region', deliveryTime: '5–7 business days by road or sea' },
-      { slug: 'jeddah', city: 'Jeddah', cityArabic: 'جدة', region: 'Makkah Province', deliveryTime: '5–7 days by road, 4–6 days by sea via Port of Sohar' },
+      { slug: 'jeddah', city: 'Jeddah', cityArabic: 'جدة', region: 'Makkah Province', deliveryTime: '5–7 days by road, or by sea via Port of Sohar (quoted per sailing)' },
       { slug: 'dammam', city: 'Dammam', cityArabic: 'الدمام', region: 'Eastern Province', deliveryTime: '4–6 business days by road' },
       { slug: 'jubail', city: 'Jubail', cityArabic: 'الجبيل', region: 'Eastern Province', deliveryTime: '4–6 business days by road via Dammam' },
       { slug: 'yanbu', city: 'Yanbu', cityArabic: 'ينبع', region: 'Al Madinah Province', deliveryTime: '6–8 days by road, 5–7 days by sea' },

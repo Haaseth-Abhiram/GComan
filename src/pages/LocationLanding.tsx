@@ -1055,7 +1055,7 @@ const locations: Record<string, LocationData> = {
       },
       {
         question: 'Can you supply nitric acid and other industrial acids to Saudi Arabia at short notice?',
-        answer: 'Yes. Food-grade and technical nitric acid 68%, hydrochloric acid 30–33%, and our wider acids range ship from Muscat stock — Dammam in 4–6 days by road, Jeddah and Yanbu in 4–6 days by sea via Sohar Port. When regional supply is disrupted, ex-stock Muscat availability under GCC customs transit gives Saudi buyers a dependable alternative source, with CoA, GHS SDS and Certificate of Origin on every consignment. Contact us for current availability and a same-day quote.'
+        answer: 'Yes. Food-grade and technical nitric acid 68%, hydrochloric acid 30–33%, and our wider acids range ship from Muscat stock — Dammam in 4–6 days by road, Jeddah and Yanbu by sea via Sohar Port, quoted per sailing. When regional supply is disrupted, ex-stock Muscat availability under GCC customs transit gives Saudi buyers a dependable alternative source, with CoA, GHS SDS and Certificate of Origin on every consignment. Contact us for current availability and a same-day quote.'
       }
     ],
     metaTitle: 'Chemical Suppliers in Saudi Arabia — Import from Oman',
@@ -1250,11 +1250,11 @@ const NITRIC_BY_COUNTRY: Record<string, { slug: string; label: string }> = {
   Bahrain: { slug: 'nitric-acid-bahrain', label: 'Nitric acid supply to Bahrain' },
 };
 
-// Country-specific sodium hypochlorite pages (SodiumHypochloriteCountry.tsx):
+// Country-specific calcium hypochlorite pages (CalciumHypochloriteCountry.tsx):
 // only the markets with invoiced hypochlorite sales.
 const HYPO_BY_COUNTRY: Record<string, { slug: string; label: string }> = {
-  UAE: { slug: 'sodium-hypochlorite-uae', label: 'Sodium hypochlorite supply to the UAE' },
-  Bahrain: { slug: 'sodium-hypochlorite-bahrain', label: 'Sodium hypochlorite supply to Bahrain' },
+  UAE: { slug: 'calcium-hypochlorite-uae', label: 'Calcium hypochlorite supply to the UAE' },
+  Bahrain: { slug: 'calcium-hypochlorite-bahrain', label: 'Calcium hypochlorite supply to Bahrain' },
 };
 
 // Caustic soda and hydrochloric acid country pages (CausticSodaCountry.tsx,
