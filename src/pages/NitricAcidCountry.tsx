@@ -61,7 +61,7 @@ const COUNTRIES: Record<NitricCountryKey, CountryData> = {
     intro:
       'Global Chemicals LLC supplies 68% nitric acid (HNO3) to buyers across the United Arab Emirates from stock in Muscat. The UAE is our shortest export lane: the east coast is the same or next day by road, and Dubai, Sharjah and Abu Dhabi are three to five business days, so UAE plants get a second source that does not depend on Jebel Ali lead times.',
     leadTime: 'Fujairah same or next day · Dubai, Sharjah, Abu Dhabi 3–5 business days',
-    route: 'By road from Muscat, crossing at Al Wajajah / Hatta, or at Khatm Al Shikla or Mezyad near Al Ain, and cleared at the UAE border under GCC customs procedures.',
+    route: 'By road from Muscat, mainly through the Al Wajajah–Hatta crossing, and cleared at the UAE border under GCC customs procedures.',
     points: [
       { place: 'Fujairah & east coast', time: 'same or next day by road' },
       { place: 'Dubai & Sharjah', time: '3–5 business days' },
@@ -110,13 +110,12 @@ const COUNTRIES: Record<NitricCountryKey, CountryData> = {
       'Nitric acid 68% for Dammam, Jubail, Riyadh & Jeddah: Eastern Province in 4–6 days by road, Jeddah & Yanbu by sea via Sohar. CoA, SDS, GCC CoO, SASO support.',
     intro:
       'Global Chemicals LLC exports 68% nitric acid (HNO3) to Saudi Arabia from stock in Muscat. The Eastern Province is four to six business days by road and Riyadh five to seven; Red Sea buyers in Jeddah and Yanbu are served by sea through Sohar Port. Most industrial imports need no Saudi agent under the GCC customs union.',
-    leadTime: 'Dammam & Jubail 4–6 business days · Riyadh 5–7 · Jeddah & Yanbu 4–6 by sea',
+    leadTime: 'Dammam & Jubail 4–6 business days · Riyadh 5–7 · Jeddah & Yanbu by sea',
     route: 'By road from Muscat for the Eastern Province and Riyadh; by sea from Sohar Port for Jeddah and Yanbu.',
     points: [
       { place: 'Dammam, Khobar & Jubail', time: '4–6 business days by road' },
       { place: 'Riyadh', time: '5–7 business days by road' },
-      { place: 'Jeddah', time: '4–6 days by sea via Sohar Port' },
-      { place: 'Yanbu', time: '4–6 days by sea via Sohar Port' },
+      { place: 'Jeddah & Yanbu', time: 'by sea via Sohar Port, quoted per sailing' },
     ],
     zones: ['Jubail Industrial City', 'Yanbu Industrial City', 'Dammam 2nd & 3rd Industrial Cities', 'Riyadh 2nd Industrial City', 'Jeddah Industrial City'],
     industries: [
@@ -132,7 +131,7 @@ const COUNTRIES: Record<NitricCountryKey, CountryData> = {
       {
         question: 'How long does nitric acid take from Oman to Dammam or Riyadh?',
         answer:
-          'Dammam, Khobar and Jubail are four to six business days by road from Muscat, and Riyadh five to seven. Jeddah and Yanbu are four to six days by sea from Sohar Port.',
+          'Dammam, Khobar and Jubail are four to six business days by road from Muscat, and Riyadh five to seven. Jeddah and Yanbu are served by sea from Sohar Port, with the transit time quoted for each sailing.',
       },
       {
         question: 'Do I need a Saudi agent to import nitric acid from Oman?',
@@ -143,6 +142,16 @@ const COUNTRIES: Record<NitricCountryKey, CountryData> = {
         question: 'Can you supply nitric acid in IBCs or bulk to Jubail?',
         answer:
           'Yes. Industrial 68% nitric acid ships in 35 kg carboys, 60 kg drums and 1,000 L IBCs, and bulk arrangements are quoted for plant-scale users in Jubail and the Eastern Province.',
+      },
+      {
+        question: 'Do you supply nitric acid to food and feed manufacturers in Saudi Arabia?',
+        answer:
+          'Yes. Food and feed plants use the food-contact 68% grade for the acid stage of clean-in-place, with a Certificate of Analysis for every batch. Full-truck orders can ship in 300 kg (220 L) HDPE drums, as well as 35 kg carboys, 60 kg drums and 1,000 L IBCs; tell us your monthly volume and we plan the loads.',
+      },
+      {
+        question: 'What documents do Saudi procurement teams get for vendor registration and SABER?',
+        answer:
+          'Our ISO 9001:2015 certificate, JSRS registration, commercial registration, sample Certificates of Analysis and the GHS Safety Data Sheet in English and Arabic are available for vendor qualification. Where a consignment needs a SABER conformity certificate, your importer applies on the SASO SABER platform and we supply the test reports and product data it asks for.',
       },
     ],
     locationPage: '/chemicals/saudi-arabia',

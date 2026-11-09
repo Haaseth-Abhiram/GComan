@@ -49,7 +49,7 @@ const categoryFAQs: Record<string, { question: string; answer: string }[]> = {
   glycols: [
     {
       question: "Who supplies glycols in bulk in Oman and the GCC?",
-      answer: "Global Chemicals LLC stocks MEG, DEG, TEG, propylene glycol (industrial and USP), and butyl glycol in our Muscat warehouse for same-day Oman dispatch and scheduled GCC delivery — Fujairah in 2–4 hours by road, Dubai and Abu Dhabi in 3–5 days, Saudi Arabia in 4–7 days. Drum, IBC, and ISO-tank quantities with batch CoA and SDS on every consignment. Request a quote with your grade and volume for same-day pricing.",
+      answer: "Global Chemicals LLC stocks MEG, DEG, TEG, propylene glycol (industrial and USP), and butyl glycol in our Muscat warehouse for same-day Oman dispatch and scheduled GCC delivery — Fujairah the same or next day by road, Dubai and Abu Dhabi in 3–5 days, Saudi Arabia in 4–7 days. Drum, IBC, and ISO-tank quantities with batch CoA and SDS on every consignment. Request a quote with your grade and volume for same-day pricing.",
     },
     {
       question: "What is the difference between MEG, DEG and TEG?",
@@ -861,7 +861,7 @@ const Products = ({ initialCategory, initialProducts }: ProductsProps = {}) => {
             },
             sections: [
               { heading: 'Which glycol do you need?', body: "For closed-loop chilled water and district cooling in the Gulf's ambient temperatures, inhibited MEG at 25–35% is the standard; use PG where incidental food contact or lower toxicity is required (hotels, food plants). For natural-gas dehydration, TEG is the contactor workhorse — we supply both fresh TEG and DEG for blend make-up to operators in Oman's upstream sector. Coatings and cleaner formulators typically want butyl glycol for its evaporation profile. Unsure between grades? Send us the duty specification and our technical team will confirm the right glycol, concentration, and inhibitor package." },
-              { heading: 'Delivery lanes for bulk glycols', body: 'Same-day delivery in Muscat and Rusayl; next-day Sohar and Nizwa; 2–3 days Salalah and Duqm. Cross-border: Fujairah in 2–4 hours by road, Dubai and Abu Dhabi in 3–5 days, Saudi Arabia (Riyadh, Dammam, Jubail) in 4–7 days under GCC customs transit, with sea freight from Sohar Port for Jeddah and Yanbu bulk orders. Full drum, palletised IBC, and ISO-tank quantities.' },
+              { heading: 'Delivery lanes for bulk glycols', body: 'Same-day delivery in Muscat and Rusayl; next-day Sohar and Nizwa; 2–3 days Salalah and Duqm. Cross-border: Fujairah the same or next day by road, Dubai and Abu Dhabi in 3–5 days, Saudi Arabia (Riyadh, Dammam, Jubail) in 4–7 days under GCC customs transit, with sea freight from Sohar Port for Jeddah and Yanbu bulk orders. Full drum, palletised IBC, and ISO-tank quantities.' },
               { heading: 'Documentation and compliance', body: 'Every glycol shipment includes batch CoA (purity, water content, colour APHA), GHS SDS, and — for USP propylene glycol — food-grade compliance documentation compatible with HACCP systems. DEG and MEG are supplied for industrial use with end-use declarations where required by import regulations in the destination GCC state.' },
             ],
           },

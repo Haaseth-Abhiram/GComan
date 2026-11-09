@@ -634,9 +634,9 @@ const locations: Record<string, LocationData> = {
     cityArabic: 'الفجيرة',
     country: 'UAE',
     region: 'Fujairah, United Arab Emirates',
-    description: 'Global Chemicals LLC is ideally positioned to supply Fujairah\'s oil bunkering, maritime, and industrial sectors. Fujairah is the UAE emirate that shares a direct land border with Oman — making Muscat-to-Fujairah road freight the shortest and fastest of all GCC export routes, with same-day delivery possible. We supply water treatment chemicals, maritime chemicals, industrial lubricants, and specialty chemicals to Port of Fujairah operators, oil storage terminals, FFZA companies, and construction projects throughout the emirate.',
+    description: 'Global Chemicals LLC is ideally positioned to supply Fujairah\'s oil bunkering, maritime, and industrial sectors. Fujairah is the UAE emirate that shares a direct land border with Oman — making Muscat-to-Fujairah road freight the shortest and fastest of all GCC export routes, with same- or next-day delivery. We supply water treatment chemicals, maritime chemicals, industrial lubricants, and specialty chemicals to Port of Fujairah operators, oil storage terminals, FFZA companies, and construction projects throughout the emirate.',
     industries: ['Oil Bunkering & Maritime', 'Oil Storage Terminals', 'Construction & Infrastructure', 'Fishing & Aquaculture', 'Manufacturing', 'Fujairah Free Zone (FFZA)', 'Agriculture'],
-    deliveryTime: '2–4 hours by road from Muscat — fastest of all GCC destinations',
+    deliveryTime: 'same or next day by road from Muscat — fastest of all GCC destinations',
     keyClients: ['Port of Fujairah operators', 'ENOC oil storage terminals', 'FFZA (Fujairah Free Zone) companies', 'Construction project sites', 'Maritime service companies'],
     highlights: [
       'Fastest GCC delivery — Oman shares border with Fujairah',
@@ -648,7 +648,7 @@ const locations: Record<string, LocationData> = {
     faqs: [
       {
         question: 'How fast can Global Chemicals LLC deliver chemicals to Fujairah?',
-        answer: 'Fujairah shares a land border with Oman via the Dibba/Khatmat Malaha crossing. Road freight from our Muscat warehouse to Fujairah typically takes 2–4 hours — making same-day delivery possible for orders placed before midday. This is the fastest GCC export route we operate, shorter than any other UAE, Saudi, Qatar, Kuwait, or Bahrain delivery.'
+        answer: 'Fujairah shares a land border with Oman via the Dibba/Khatmat Malaha crossing. Road freight from our Muscat warehouse reaches Fujairah the same or next day, including the dangerous-goods border clearance. This is the fastest GCC export route we operate, shorter than any other UAE, Saudi, Qatar, Kuwait, or Bahrain delivery.'
       },
       {
         question: 'Do you supply chemicals for oil bunkering operations at Port of Fujairah?',
@@ -1068,12 +1068,12 @@ const locations: Record<string, LocationData> = {
     cityArabic: 'الإمارات العربية المتحدة',
     country: 'UAE',
     region: 'Dubai, Abu Dhabi, Sharjah, Fujairah & Ras Al Khaimah',
-    description: 'Global Chemicals LLC supplies chemicals to the United Arab Emirates from our Muscat warehouse — the fastest cross-border lane in our network, with Fujairah reachable in 2–4 hours by road and Dubai and Abu Dhabi in 3–5 business days under GCC customs transit. Importing from Oman gives UAE buyers a second-source supply line at GCC-preferential terms: water treatment and RO chemicals, food-grade products, glycols and solvents, corrosion inhibitors, construction chemicals, and laboratory reagents, all shipped with CoA, GHS SDS in Arabic and English, and HS-coded export documentation. We serve industrial zones across all seven emirates including JAFZA, Dubai Industrial City, ICAD Abu Dhabi, Sharjah SAIF Zone, Fujairah Free Zone, and RAKEZ.',
+    description: 'Global Chemicals LLC supplies chemicals to the United Arab Emirates from our Muscat warehouse — the fastest cross-border lane in our network, with Fujairah reachable the same or next day by road and Dubai and Abu Dhabi in 3–5 business days under GCC customs transit. Importing from Oman gives UAE buyers a second-source supply line at GCC-preferential terms: water treatment and RO chemicals, food-grade products, glycols and solvents, corrosion inhibitors, construction chemicals, and laboratory reagents, all shipped with CoA, GHS SDS in Arabic and English, and HS-coded export documentation. We serve industrial zones across all seven emirates including JAFZA, Dubai Industrial City, ICAD Abu Dhabi, Sharjah SAIF Zone, Fujairah Free Zone, and RAKEZ.',
     industries: ['Water Treatment & RO/Desalination', 'Construction & Infrastructure', 'Manufacturing & Free Zones', 'Food & Beverage Processing', 'Oil & Gas Services', 'Hospitality & Facilities Management', 'Marine & Ports'],
-    deliveryTime: 'Fujairah 2–4 hours by road; Dubai, Sharjah & Abu Dhabi 3–5 business days; Ras Al Khaimah 3–5 days',
+    deliveryTime: 'Fujairah same or next day by road; Dubai, Sharjah & Abu Dhabi 3–5 business days; Ras Al Khaimah 3–5 days',
     keyClients: ['JAFZA and Dubai Industrial City manufacturers', 'Abu Dhabi ICAD industrial operators', 'Sharjah and Ajman factories', 'Fujairah bunkering and marine services', 'RAKEZ manufacturing companies'],
     highlights: [
-      'Fujairah in 2–4 hours — the fastest chemical import lane from Oman',
+      'Fujairah the same or next day — the fastest chemical import lane from Oman',
       'GCC customs transit to all seven emirates, 3–5 day standard delivery',
       'Second-source supply line independent of Jebel Ali congestion',
       'Free-zone delivery experience: JAFZA, ICAD, SAIF, RAKEZ, Fujairah FZ',
@@ -1082,7 +1082,7 @@ const locations: Record<string, LocationData> = {
     faqs: [
       {
         question: 'Can UAE companies import chemicals from Oman easily?',
-        answer: 'Yes — Oman and the UAE are both GCC customs-union members, so most industrial chemicals move across the border under customs transit without duties or a local import agent. Our trucks cross at Khatm Al Shikla/Hatta or via Al Ain daily; Fujairah deliveries take 2–4 hours and Dubai or Abu Dhabi 3–5 business days. It is a practical second-source lane when Jebel Ali lead times or supplier concentration are a concern.'
+        answer: 'Yes — Oman and the UAE are both GCC customs-union members, so most industrial chemicals move across the border under customs transit without duties or a local import agent. Our trucks cross mainly at Al Wajajah–Hatta; Fujairah deliveries arrive the same or next day and Dubai or Abu Dhabi in 3–5 business days. It is a practical second-source lane when Jebel Ali lead times or supplier concentration are a concern.'
       },
       {
         question: 'Which chemicals do you supply to Dubai and Abu Dhabi?',
@@ -1090,7 +1090,7 @@ const locations: Record<string, LocationData> = {
       },
       {
         question: 'How fast is chemical delivery from Oman to the UAE?',
-        answer: 'Fujairah and the east coast: 2–4 hours by road — same-day for morning orders. Dubai, Sharjah and Abu Dhabi: 3–5 business days on scheduled departures, with urgent dedicated-truck options quoted on request. Ras Al Khaimah and the northern emirates: 3–5 business days.'
+        answer: 'Fujairah and the east coast: the same or next day by road. Dubai, Sharjah and Abu Dhabi: 3–5 business days on scheduled departures, with urgent dedicated-truck options quoted on request. Ras Al Khaimah and the northern emirates: 3–5 business days.'
       },
       {
         question: 'Do you deliver to UAE free zones like JAFZA and RAKEZ?',
@@ -1098,11 +1098,11 @@ const locations: Record<string, LocationData> = {
       },
       {
         question: 'Can you supply nitric acid and other industrial acids to the UAE at short notice?',
-        answer: 'Yes. Food-grade and technical nitric acid 68%, hydrochloric acid 30–33%, and our wider acids range ship from Muscat stock — Fujairah in 2–4 hours by road, Dubai, Sharjah and Abu Dhabi in 3–5 business days. When regional supply is tight, ex-stock Muscat availability under GCC customs transit gives UAE buyers a dependable alternative source, with CoA, GHS SDS and Certificate of Origin on every consignment. Contact us for current availability and a same-day quote.'
+        answer: 'Yes. Food-grade and technical nitric acid 68%, hydrochloric acid 30–33%, and our wider acids range ship from Muscat stock — Fujairah the same or next day by road, Dubai, Sharjah and Abu Dhabi in 3–5 business days. When regional supply is tight, ex-stock Muscat availability under GCC customs transit gives UAE buyers a dependable alternative source, with CoA, GHS SDS and Certificate of Origin on every consignment. Contact us for current availability and a same-day quote.'
       }
     ],
     metaTitle: 'Chemical Supplier to UAE & Dubai — Import from Oman',
-    metaDescription: 'Chemical supplier to the UAE from Oman: Fujairah in 2–4 hours, Dubai & Abu Dhabi in 3–5 days under GCC customs. Water treatment, food-grade, glycols & industrial chemicals. Get a quote.',
+    metaDescription: 'Chemical supplier to the UAE from Oman: Fujairah next day, Dubai & Abu Dhabi in 3–5 days under GCC customs. Water treatment, food-grade, glycols & industrial chemicals. Get a quote.',
     metaKeywords: 'chemical supplier in uae, chemical suppliers in uae, industrial chemicals dubai, chemical supplier dubai import, industrial chemical wholesale suppliers in dubai uae, import chemicals from oman to uae, chemical supplier abu dhabi, free zone chemical delivery jafza'
   },
   // Qatar and Kuwait hubs complete the GCC country-hub set (added after the
@@ -1255,6 +1255,19 @@ const NITRIC_BY_COUNTRY: Record<string, { slug: string; label: string }> = {
 const HYPO_BY_COUNTRY: Record<string, { slug: string; label: string }> = {
   UAE: { slug: 'sodium-hypochlorite-uae', label: 'Sodium hypochlorite supply to the UAE' },
   Bahrain: { slug: 'sodium-hypochlorite-bahrain', label: 'Sodium hypochlorite supply to Bahrain' },
+};
+
+// Caustic soda and hydrochloric acid country pages (CausticSodaCountry.tsx,
+// HydrochloricAcidCountry.tsx): only the UAE and Saudi Arabia have one.
+const CHLOR_ALKALI_BY_COUNTRY: Record<string, { slug: string; label: string }[]> = {
+  UAE: [
+    { slug: 'caustic-soda-uae', label: 'Caustic soda supply to the UAE' },
+    { slug: 'hydrochloric-acid-uae', label: 'Hydrochloric acid supply to the UAE' },
+  ],
+  'Saudi Arabia': [
+    { slug: 'caustic-soda-saudi-arabia', label: 'Caustic soda supply to Saudi Arabia' },
+    { slug: 'hydrochloric-acid-saudi-arabia', label: 'Hydrochloric acid supply to Saudi Arabia' },
+  ],
 };
 
 const PRODUCT_HUBS: { slug: string; label: string }[] = [
@@ -1619,7 +1632,7 @@ const LocationLanding = () => {
               Specification tables, pack formats from carboy to bulk tanker, and lead times for the products most often ordered on this lane.
             </p>
             <div className="flex flex-wrap gap-2">
-              {[...(NITRIC_BY_COUNTRY[locationData.country] ? [NITRIC_BY_COUNTRY[locationData.country]] : []), ...(HYPO_BY_COUNTRY[locationData.country] ? [HYPO_BY_COUNTRY[locationData.country]] : []), ...PRODUCT_HUBS].map((hub) => (
+              {[...(NITRIC_BY_COUNTRY[locationData.country] ? [NITRIC_BY_COUNTRY[locationData.country]] : []), ...(HYPO_BY_COUNTRY[locationData.country] ? [HYPO_BY_COUNTRY[locationData.country]] : []), ...(CHLOR_ALKALI_BY_COUNTRY[locationData.country] ?? []), ...PRODUCT_HUBS].map((hub) => (
                 <Button key={hub.slug} variant="outline" size="sm" asChild>
                   <LocalizedLink to={`/chemical-supplier/${hub.slug}`}>{hub.label}</LocalizedLink>
                 </Button>

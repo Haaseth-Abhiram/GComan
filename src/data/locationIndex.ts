@@ -37,7 +37,7 @@ export const locationIndex: LocationCountry[] = [
       { slug: 'dubai', city: 'Dubai', cityArabic: 'دبي', region: 'Dubai', deliveryTime: '3–5 business days by road, 1–2 days by air' },
       { slug: 'abu-dhabi', city: 'Abu Dhabi', cityArabic: 'أبوظبي', region: 'Abu Dhabi', deliveryTime: '3–5 business days by road' },
       { slug: 'sharjah', city: 'Sharjah', cityArabic: 'الشارقة', region: 'Sharjah', deliveryTime: '3–5 business days by road' },
-      { slug: 'fujairah', city: 'Fujairah', cityArabic: 'الفجيرة', region: 'Fujairah', deliveryTime: '2–4 hours by road from Muscat — our fastest GCC lane' },
+      { slug: 'fujairah', city: 'Fujairah', cityArabic: 'الفجيرة', region: 'Fujairah', deliveryTime: 'same or next day by road from Muscat — our fastest GCC lane' },
       { slug: 'ras-al-khaimah', city: 'Ras Al Khaimah', cityArabic: 'رأس الخيمة', region: 'Ras Al Khaimah', deliveryTime: '3–5 business days by road' },
     ],
   },

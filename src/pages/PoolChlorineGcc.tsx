@@ -59,7 +59,7 @@ const PRODUCTS: ProductRow[] = [
 type Market = { market: string; points: string; leadTime: string; link: string };
 
 const MARKETS: Market[] = [
-  { market: 'UAE', points: 'Dubai, Sharjah, Abu Dhabi, Ras Al Khaimah; Fujairah and the east coast', leadTime: '3–5 business days by road; Fujairah 2–4 hours', link: '/chemicals/uae' },
+  { market: 'UAE', points: 'Dubai, Sharjah, Abu Dhabi, Ras Al Khaimah; Fujairah and the east coast', leadTime: '3–5 business days by road; Fujairah same or next day', link: '/chemicals/uae' },
   { market: 'Saudi Arabia', points: 'Dammam, Khobar, Jubail; Riyadh; Jeddah, Yanbu', leadTime: 'Eastern Province 4–6 business days; Riyadh 5–7; Jeddah and Yanbu 4–6 days by sea via Sohar', link: '/chemicals/saudi-arabia' },
   { market: 'Qatar', points: 'Doha, Mesaieed, Lusail and the Pearl', leadTime: '3–5 business days by road', link: '/chemicals/doha' },
   { market: 'Kuwait', points: 'Kuwait City, Salmiya, Shuaiba', leadTime: '4–6 business days by road', link: '/chemicals/kuwait-city' },

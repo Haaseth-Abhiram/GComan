@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { SEO } from '@/components/SEO';
@@ -13,6 +13,8 @@ import waterTreatment from '@/data/products/water-treatment.json';
 import foodBeverage from '@/data/products/food-beverage.json';
 import soapDetergent from '@/data/products/soap-detergent.json';
 import swimmingPool from '@/data/products/swimming-pool.json';
+import hubAr from '@/i18n/locales/hub-pages-ar.json';
+import SodiumHypochloriteOmanAr from './SodiumHypochloriteOmanAr';
 
 /**
  * Sodium hypochlorite hub — Phase 2.5 of docs/seo/MASTER-PLAN.md.
@@ -96,6 +98,10 @@ const CHLORINE_VIDEO = {
 };
 
 const SodiumHypochloriteOman = () => {
+  // /ar renders the full Arabic body (SodiumHypochloriteOmanAr.tsx, MASTER-PLAN P10.15); see its header.
+  const { pathname } = useLocation();
+  if (pathname.startsWith('/ar/')) return <SodiumHypochloriteOmanAr />;
+  const arMeta = hubAr.hubPages['sodium-hypochlorite-oman'];
   return (
     <div className="min-h-screen bg-background">
       <SEO
@@ -106,6 +112,8 @@ const SodiumHypochloriteOman = () => {
         ogDescription="Municipal, food-contact, bleach-manufacturing and pool grades of sodium hypochlorite from Muscat stock, 25 L to bulk, with delivery across Oman and the GCC."
         ogUrl="https://gcoman.com/chemical-supplier/sodium-hypochlorite-oman"
         canonical="https://gcoman.com/chemical-supplier/sodium-hypochlorite-oman"
+        arTitle={arMeta.metaTitle}
+        arDescription={arMeta.metaDescription}
       />
       <FAQStructuredData faqs={faqs} />
       <BreadcrumbStructuredData items={breadcrumbItems} />

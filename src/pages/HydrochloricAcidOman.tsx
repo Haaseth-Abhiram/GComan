@@ -111,8 +111,8 @@ const breadcrumbItems = [
 
 const gccDelivery = [
   { country: 'Oman', leadTime: 'Same-day (Muscat) / next-day (Sohar)', notes: 'Home market — Ghala stock, no export documentation needed' },
-  { country: 'UAE', leadTime: '2–5 business days', notes: 'Dubai, Abu Dhabi, Sharjah — Certificate of Origin + English/Arabic SDS' },
-  { country: 'Saudi Arabia', leadTime: '4–7 business days', notes: 'Dammam, Jeddah, Riyadh — SASO documentation support' },
+  { country: 'UAE', leadTime: '3–5 business days (Fujairah next day)', notes: 'Dubai, Abu Dhabi, Sharjah — Certificate of Origin + English/Arabic SDS', page: '/chemical-supplier/hydrochloric-acid-uae' },
+  { country: 'Saudi Arabia', leadTime: '4–7 business days', notes: 'Dammam, Jeddah, Riyadh — SASO documentation support', page: '/chemical-supplier/hydrochloric-acid-saudi-arabia' },
   { country: 'Bahrain', leadTime: '3–5 business days', notes: 'Manama — GCC preferential Certificate of Origin available' },
   { country: 'Qatar', leadTime: '3–5 business days', notes: 'Doha, Mesaieed — clearance documentation provided' },
   { country: 'Kuwait', leadTime: '4–6 business days', notes: 'Full customs & Certificate of Origin documentation' },
@@ -187,6 +187,11 @@ const HydrochloricAcidOman = () => {
                     <p className="font-semibold text-foreground mb-1">{d.country}</p>
                     <p className="text-sm text-primary font-medium mb-2">{d.leadTime}</p>
                     <p className="text-xs text-muted-foreground leading-relaxed">{d.notes}</p>
+                    {d.page && (
+                      <Link to={d.page} className="text-xs text-primary hover:underline mt-2 inline-block">
+                        Hydrochloric acid supply to {d.country === 'UAE' ? 'the UAE' : d.country} →
+                      </Link>
+                    )}
                   </Card>
                 ))}
               </div>

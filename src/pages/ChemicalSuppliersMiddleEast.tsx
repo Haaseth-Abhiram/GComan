@@ -448,6 +448,18 @@ const ChemicalSuppliersMiddleEast = () => {
                   <Link to="/chemical-supplier/sodium-hypochlorite-bahrain">Sodium hypochlorite — Bahrain</Link>
                 </Button>
                 <Button variant="outline" size="sm" asChild>
+                  <Link to="/chemical-supplier/caustic-soda-uae">Caustic soda — UAE</Link>
+                </Button>
+                <Button variant="outline" size="sm" asChild>
+                  <Link to="/chemical-supplier/caustic-soda-saudi-arabia">Caustic soda — Saudi Arabia</Link>
+                </Button>
+                <Button variant="outline" size="sm" asChild>
+                  <Link to="/chemical-supplier/hydrochloric-acid-uae">Hydrochloric acid — UAE</Link>
+                </Button>
+                <Button variant="outline" size="sm" asChild>
+                  <Link to="/chemical-supplier/hydrochloric-acid-saudi-arabia">Hydrochloric acid — Saudi Arabia</Link>
+                </Button>
+                <Button variant="outline" size="sm" asChild>
                   <Link to="/chemical-supplier/oilfield-chemicals-oman">Oilfield chemicals — GCC supply guide</Link>
                 </Button>
                 <Button variant="outline" size="sm" asChild>

@@ -59,7 +59,7 @@ const COUNTRIES: Record<HypoCountryKey, CountryData> = {
     intro:
       'Global Chemicals LLC supplies sodium hypochlorite (NaOCl) to buyers across the United Arab Emirates from Muscat: 12–15% for water treatment, bleach manufacturing and pools, and food-contact grade for sanitation. The UAE is our shortest export lane: the east coast is the same or next day by road and Abu Dhabi, Dubai and Sharjah three to five business days, short enough to move a product that loses strength in storage.',
     leadTime: 'Fujairah same or next day · Abu Dhabi, Dubai, Sharjah 3–5 business days',
-    route: 'By road from Muscat, crossing at Al Wajajah / Hatta, or at Khatm Al Shikla or Mezyad near Al Ain, and cleared at the UAE border under GCC customs procedures.',
+    route: 'By road from Muscat, mainly through the Al Wajajah–Hatta crossing, and cleared at the UAE border under GCC customs procedures.',
     points: [
       { place: 'Fujairah & east coast', time: 'same or next day by road' },
       { place: 'Abu Dhabi & ICAD', time: '3–5 business days' },
@@ -330,7 +330,15 @@ const SodiumHypochloriteCountry = ({ country }: { country: HypoCountryKey }) => 
                   <Link key={k} to={`/chemical-supplier/sodium-hypochlorite-${k}`} className="text-primary hover:underline">{OTHER_LABEL[k]}</Link>
                 ))}
                 . Also shipped to {c.inName}:{' '}
-                <Link to={`/chemical-supplier/nitric-acid-${country}`} className="text-primary hover:underline">nitric acid 68%</Link>.
+                <Link to={`/chemical-supplier/nitric-acid-${country}`} className="text-primary hover:underline">nitric acid 68%</Link>
+                {country === 'uae' && (
+                  <>
+                    ,{' '}
+                    <Link to="/chemical-supplier/caustic-soda-uae" className="text-primary hover:underline">caustic soda</Link> and{' '}
+                    <Link to="/chemical-supplier/hydrochloric-acid-uae" className="text-primary hover:underline">hydrochloric acid</Link>
+                  </>
+                )}
+                .
               </p>
             </div>
           </div>

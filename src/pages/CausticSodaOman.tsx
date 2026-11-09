@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { SEO } from '@/components/SEO';
@@ -11,11 +11,13 @@ import {
   CheckCircle2, Phone, Mail, ArrowRight, Shield, Award, Globe2, Package,
   Beaker, Factory, Droplets, FlaskConical
 } from 'lucide-react';
+import hubAr from '@/i18n/locales/hub-pages-ar.json';
+import CausticSodaOmanAr from './CausticSodaOmanAr';
 
 const faqs = [
   {
     question: "What forms of caustic soda does Global Chemicals LLC supply in Oman?",
-    answer: "Global Chemicals LLC supplies caustic soda in three forms in Oman: (1) Caustic Soda Flakes — 98–99% NaOH, in 25kg bags and 1,000kg super sacks; (2) Caustic Soda Prills — 99% NaOH, low-dust spherical beads in 25kg bags; (3) Caustic Soda Liquid — 30%, 48%, and 50% NaOH solution in 25L jerricans, 200L drums, and 1,000L IBC containers. Both technical-grade and food-grade (E524) caustic soda are available."
+    answer: "Global Chemicals LLC supplies caustic soda in three forms in Oman: (1) Caustic Soda Flakes — 98–99% NaOH, in 25kg bags and 1,000kg super sacks; (2) Caustic Soda Prills — 99% NaOH, low-dust spherical beads in 25kg bags; (3) Caustic Soda Liquid — 32%, 48%, and 50% NaOH solution in 25L jerricans, 200L drums, and 1,000L IBC containers. Both technical-grade and food-grade (E524) caustic soda are available."
   },
   {
     question: "What is the price of caustic soda in Oman?",
@@ -53,7 +55,7 @@ const gradeForms = [
     title: "Caustic Soda Flakes",
     subtitle: "98–99% NaOH",
     description: "Most widely used form for soap making, water treatment, and industrial pH adjustment. Easy to weigh and dissolve. Available in technical grade and food grade (E524).",
-    specs: ["Purity: 98–99% NaOH", "Na2CO3: ≤0.5%", "NaCl: ≤0.03%", "Packaging: 25kg bag, 1,000kg super sack"],
+    specs: ["Purity: 98–99% NaOH", "Na2CO3: ≤0.8%", "NaCl: ≤0.03%", "Packaging: 25kg bag, 1,000kg super sack"],
     uses: ["Soap & detergent manufacturing", "Water treatment pH adjustment", "Food processing (E524)", "Industrial chemical synthesis"],
     // Points at the water-treatment SKU, which is the canonical one. The
     // soap-detergent twin carries a canonicalOverride to exactly this URL, so
@@ -64,9 +66,9 @@ const gradeForms = [
   {
     icon: Beaker,
     title: "Caustic Soda Liquid",
-    subtitle: "30% / 48% / 50% NaOH",
+    subtitle: "32% / 48% / 50% NaOH",
     description: "Preferred for continuous-dosing applications, automated chemical feed systems, and large industrial operations. Ideal for municipal water treatment plants and food processing CIP systems.",
-    specs: ["Concentration: 30%, 48%, or 50%", "Appearance: Clear, colourless liquid", "SG (50%): 1.52 g/cm³", "Packaging: 25L, 200L, 1000L IBC, bulk"],
+    specs: ["Concentration: 32%, 48%, or 50%", "Appearance: Clear, colourless liquid", "SG (50%): 1.52 g/cm³", "Packaging: 25L, 200L, 1000L IBC, bulk"],
     uses: ["Municipal water treatment", "Swimming pool pH control", "Food processing CIP cleaning", "Pulp & paper manufacturing"],
     productLink: "/products/water-treatment/caustic-soda-liquid"
   },
@@ -75,7 +77,7 @@ const gradeForms = [
     title: "Caustic Soda Prills",
     subtitle: "99% NaOH",
     description: "Low-dust spherical beads with superior flow characteristics. Preferred for automated dispensing, pharmaceutical-adjacent, and precision formulation applications requiring exact NaOH quantities.",
-    specs: ["Purity: 99% NaOH", "Na2CO3: ≤0.4%", "Form: Spherical beads 2–4mm", "Packaging: 25kg PP bag, 500kg big bag"],
+    specs: ["Purity: 99% NaOH", "Na2CO3: ≤0.4%", "Form: Spherical beads 0.5–1.0 mm", "Packaging: 25kg PP bag, 500kg big bag"],
     uses: ["Industrial detergent formulation", "Pharmaceutical applications", "Automated dosing systems", "High-purity chemical synthesis"],
     productLink: "/products/water-treatment/caustic-soda-prills"
   }
@@ -100,24 +102,30 @@ const breadcrumbItems = [
 // corresponding /chemicals/<city> location pages, kept consistent site-wide.
 const gccDelivery = [
   { country: 'Oman', leadTime: 'Same-day (Muscat) / next-day (Sohar)', notes: 'Home market — full stock, no export documentation needed' },
-  { country: 'UAE', leadTime: '3–5 business days', notes: 'Certificate of Origin + Arabic/English SDS provided' },
-  { country: 'Saudi Arabia', leadTime: '4–7 business days (region-dependent)', notes: 'SASO-compliant documentation support for regulated grades' },
+  { country: 'UAE', leadTime: '3–5 business days', notes: 'Certificate of Origin + Arabic/English SDS provided', page: '/chemical-supplier/caustic-soda-uae' },
+  { country: 'Saudi Arabia', leadTime: '4–7 business days (region-dependent)', notes: 'SASO-compliant documentation support for regulated grades', page: '/chemical-supplier/caustic-soda-saudi-arabia' },
   { country: 'Qatar', leadTime: '3–5 business days', notes: 'Ras Laffan/Mesaieed delivery clearance documentation available' },
   { country: 'Kuwait', leadTime: '4–6 business days', notes: 'Full customs & Certificate of Origin documentation' },
   { country: 'Bahrain', leadTime: '3–5 business days', notes: 'GCC preferential Certificate of Origin available' },
 ];
 
 const CausticSodaOman = () => {
+  // /ar renders the full Arabic body (CausticSodaOmanAr.tsx, MASTER-PLAN P10.15); see its header.
+  const { pathname } = useLocation();
+  if (pathname.startsWith('/ar/')) return <CausticSodaOmanAr />;
+  const arMeta = hubAr.hubPages['caustic-soda-oman'];
   return (
     <div className="min-h-screen bg-background">
       <SEO
         title="Caustic Soda Supplier Oman | NaOH Flakes, Prills & Liquid | Global Chemicals LLC"
-        description="Caustic soda (sodium hydroxide) supplier in Oman. Flakes 98–99%, prills 99%, liquid 30–50%. Food-grade & technical. Same-day Muscat delivery. JSRS certified."
+        description="Caustic soda (sodium hydroxide) supplier in Oman. Flakes 98–99%, prills 99%, liquid 32–50%. Food-grade & technical. Same-day Muscat delivery. JSRS certified."
         keywords="caustic soda Oman, caustic soda supplier Muscat, sodium hydroxide Oman, NaOH Oman, caustic soda flakes Oman, caustic soda liquid Oman, caustic soda prills Oman, caustic soda price Oman, food grade caustic soda Oman, caustic soda water treatment Oman, sodium hydroxide supplier Muscat, buy caustic soda Oman, caustic soda 50% Oman, caustic soda Sohar, caustic soda Salalah, lye Oman"
         ogTitle="Caustic Soda Supplier Oman | Flakes, Prills & Liquid NaOH | Global Chemicals LLC"
-        ogDescription="Caustic soda (sodium hydroxide) supplier in Muscat, Oman. Flakes 98–99%, prills 99%, liquid 30–50%. Food-grade & technical. Same-day delivery. JSRS certified."
+        ogDescription="Caustic soda (sodium hydroxide) supplier in Muscat, Oman. Flakes 98–99%, prills 99%, liquid 32–50%. Food-grade & technical. Same-day delivery. JSRS certified."
         ogUrl="https://gcoman.com/chemical-supplier/caustic-soda-oman"
         canonical="https://gcoman.com/chemical-supplier/caustic-soda-oman"
+        arTitle={arMeta.metaTitle}
+        arDescription={arMeta.metaDescription}
       />
       <FAQStructuredData faqs={faqs} />
       <BreadcrumbStructuredData items={breadcrumbItems} />
@@ -137,7 +145,7 @@ const CausticSodaOman = () => {
                 Caustic Soda Supplier in Oman
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground mb-4 max-w-3xl mx-auto leading-relaxed speakable">
-                Global Chemicals LLC is a leading caustic soda (sodium hydroxide — NaOH) supplier in Muscat, Oman, stocking flakes (98–99%), prills (99%), and liquid (30–50%) in both technical and food-grade (E524). Same-day delivery in Muscat. Bulk supply for water treatment, oil & gas, food processing, soap manufacturing, and industrial applications across Oman and the GCC.
+                Global Chemicals LLC is a leading caustic soda (sodium hydroxide — NaOH) supplier in Muscat, Oman, stocking flakes (98–99%), prills (99%), and liquid (32–50%) in both technical and food-grade (E524). Same-day delivery in Muscat. Bulk supply for water treatment, oil & gas, food processing, soap manufacturing, and industrial applications across Oman and the GCC.
               </p>
               <p className="text-base text-muted-foreground mb-8 max-w-2xl mx-auto">
                 <strong>CAS No.:</strong> 1310-73-2 &nbsp;|&nbsp; <strong>Formula:</strong> NaOH &nbsp;|&nbsp; <strong>E Number:</strong> E524 (food-grade)
@@ -177,6 +185,11 @@ const CausticSodaOman = () => {
                     <p className="font-semibold text-foreground mb-1">{d.country}</p>
                     <p className="text-sm text-primary font-medium mb-2">{d.leadTime}</p>
                     <p className="text-xs text-muted-foreground leading-relaxed">{d.notes}</p>
+                    {d.page && (
+                      <Link to={d.page} className="text-xs text-primary hover:underline mt-2 inline-block">
+                        Caustic soda supply to {d.country === 'UAE' ? 'the UAE' : d.country} →
+                      </Link>
+                    )}
                   </Card>
                 ))}
               </div>
@@ -290,9 +303,9 @@ const CausticSodaOman = () => {
                     {[
                       ['Chemical formula', 'NaOH', 'NaOH', 'NaOH'],
                       ['CAS number', '1310-73-2', '1310-73-2', '1310-73-2'],
-                      ['Concentration', '98–99%', '30% · 48% · 50%', '99%'],
-                      ['Appearance', 'White flakes', 'Clear, colourless liquid', 'Spherical beads 2–4 mm'],
-                      ['Na2CO3', '≤0.5%', '—', '≤0.4%'],
+                      ['Concentration', '98–99%', '32% · 48% · 50%', '99%'],
+                      ['Appearance', 'White flakes', 'Clear, colourless liquid', 'Spherical beads 0.5–1.0 mm'],
+                      ['Na2CO3', '≤0.8%', '—', '≤0.4%'],
                       ['NaCl', '≤0.03%', '—', '—'],
                       ['Specific gravity', '—', '1.52 g/cm³ (50%)', '—'],
                       ['Food grade (E524)', 'Available', 'Available', '—'],
