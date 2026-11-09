@@ -2,7 +2,24 @@
 
 User, 2026-11-08: "We are very good to supply sodium hydroxide, sodium hypo, HCl and nitric acid … the chlor-alkali chemicals, we will be able to supply everything. Those product categories we need to be number one … whichever is making the revenues, there we should be number one."
 
-## 1. Where the revenue comes from (Zoho Books, live org, 12 months to 2026-11-08)
+
+> **Correction 2026-11-09 (invoice-LINE analysis, all 145 non-void invoices, 226 lines, OMR 500,381 ex-VAT):** section 1 below was built from invoice-level searches and mis-attributed revenue. The "hypochlorite → UAE/Bahrain" money is **calcium hypochlorite 65–70% in 45 kg drums (India origin)**, OMR ~136.9k (Bahrain 62k, UAE 48k, Oman 27k; 14 export invoices to 5 customers, the only broad repeat export line). **Sodium hypochlorite earned OMR ~4.2k, all Oman.** Caustic soda is OMR ~48k (not 8k), HCl 17k and PAC 46k, but all three are effectively one Sohar customer. Nitric acid OMR 148k = 4 invoices, 2 Saudi customers, **India origin**. Line table: `scratchpad/zoho-lines-12m.csv` (internal, names customers). Consequences applied on Develop: the unpublished sodium hypochlorite UAE/Bahrain pages were replaced by **calcium hypochlorite UAE/Bahrain** pages (`CalciumHypochloriteCountry.tsx`); panel cells R4–R7 now track calcium hypochlorite.
+>
+> | Family (12 m, ex-VAT) | OMR | Invoices / customers | Markets |
+> |---|---|---|---|
+> | Nitric acid 68% | 148,240 | 4 / 2 | KSA 100% |
+> | Calcium hypochlorite 65–70% | 136,906 | 29 / 13 | Bahrain 46%, UAE 35%, Oman 20% |
+> | Caustic soda (mostly 32% liquid) | 48,255 | 29 / 3 | Oman |
+> | PAC 28% | 45,564 | 3 / 2 | Oman |
+> | STPP | 18,235 | 5 / 4 | Oman (ceramics) |
+> | Hydrochloric acid 33% | 17,075 | 13 / 1 | Oman |
+> | Sodium silicate | 10,534 | 2 / 2 | Oman |
+> | Citric acid | 9,293 | 5 / 4 | Oman |
+> | TCCA 90% | 6,552 | 6 / 5 | Bahrain, Oman, UAE |
+> | Paraffin wax, SMBS, lab reagents | 6.3k / 6.2k / 6.0k | | Oman |
+> | Sodium hypochlorite | 3,981 | 2 / 2 | Oman |
+
+## 1. Where the revenue comes from (superseded, see correction above) (Zoho Books, live org, 12 months to 2026-11-08)
 
 147 invoices, **OMR 522,806** total. Product figures are the totals of non-void invoices containing the product (invoice-level, so a mixed invoice counts in full; good for ranking, not for exact product P&L). Customers are internal data and are not to be named on the website.
 

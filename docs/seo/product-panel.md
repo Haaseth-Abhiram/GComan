@@ -9,10 +9,10 @@
 | R1 | nitric acid supplier saudi arabia | sa |
 | R2 | nitric acid supplier riyadh | sa |
 | R3 | nitric acid supplier dammam | sa |
-| R4 | sodium hypochlorite supplier uae | ae |
-| R5 | sodium hypochlorite supplier abu dhabi | ae |
-| R6 | sodium hypochlorite supplier dubai | ae |
-| R7 | sodium hypochlorite supplier bahrain | bh |
+| R4 | calcium hypochlorite supplier uae | ae |
+| R5 | calcium hypochlorite supplier dubai | ae |
+| R6 | calcium hypochlorite 70% uae | ae |
+| R7 | calcium hypochlorite supplier bahrain | bh |
 | R8 | nitric acid supplier oman | om |
 | R9 | sodium hypochlorite supplier oman | om |
 | R10 | hydrochloric acid supplier oman | om |
