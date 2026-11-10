@@ -36,6 +36,28 @@ import { legacyExactRedirects } from "./src/lib/legacyRedirects";
  */
 const NOINDEX_PRERENDER_ROUTES = ["/thank-you"];
 
+/**
+ * Duplicate SKUs (`details.canonicalOverride`, 2026-11-10).
+ *
+ * sync-ar-sitemap.mjs prunes them from the sitemap because they canonicalise
+ * elsewhere, which also dropped them from the prerender list. Non-JS crawlers
+ * then got the SPA shell (homepage title, canonical "/") at all 21 of them,
+ * while Google, which renders, saw the right canonical. Prerendering them
+ * (EN + /ar) puts the real canonical in the raw HTML without listing them.
+ */
+const canonicalOverrideRoutes = (): string[] => {
+  const dir = path.resolve(__dirname, "src/data/products");
+  return fs.readdirSync(dir).filter((f) => f.endsWith(".json")).flatMap((f) => {
+    const data = JSON.parse(fs.readFileSync(path.join(dir, f), "utf-8"));
+    const items: { id: string; details?: { canonicalOverride?: string } }[] =
+      Array.isArray(data) ? data : data.products ?? [];
+    const category = f.replace(/\.json$/, "");
+    return items
+      .filter((p) => p.details?.canonicalOverride)
+      .flatMap((p) => [`/products/${category}/${p.id}`, `/ar/products/${category}/${p.id}`]);
+  });
+};
+
 const routesFromSitemap = (): string[] => {
   const xml = fs.readFileSync(
     path.resolve(__dirname, "public/sitemap.xml"),
@@ -47,7 +69,7 @@ const routesFromSitemap = (): string[] => {
     .map((m) => m[1] || "/")
     .filter((p) => !p.startsWith("/admin") && !p.startsWith("/login"));
   // de-dupe defensively in case one is ever added to the sitemap by mistake
-  return Array.from(new Set([...fromSitemap, ...NOINDEX_PRERENDER_ROUTES]));
+  return Array.from(new Set([...fromSitemap, ...NOINDEX_PRERENDER_ROUTES, ...canonicalOverrideRoutes()]));
 };
 
 /**
