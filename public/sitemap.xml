@@ -2239,24 +2239,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/soap-detergent/sles-70"/>
   </url>
   <url>
-    <loc>https://gcoman.com/products/soap-detergent/soda-ash-dense-soap</loc>
-    <lastmod>2026-11-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/soap-detergent/soda-ash-dense-soap"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/soap-detergent/soda-ash-dense-soap"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/soap-detergent/soda-ash-dense-soap"/>
-  </url>
-  <url>
-    <loc>https://gcoman.com/products/soap-detergent/soda-ash-light-soap</loc>
-    <lastmod>2026-11-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/soap-detergent/soda-ash-light-soap"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/soap-detergent/soda-ash-light-soap"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/soap-detergent/soda-ash-light-soap"/>
-  </url>
-  <url>
     <loc>https://gcoman.com/products/soap-detergent/sodium-hypochlorite-12-15-soap</loc>
     <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
@@ -4847,24 +4829,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/soap-detergent/sles-70"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/soap-detergent/sles-70"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/soap-detergent/sles-70"/>
-  </url>
-  <url>
-    <loc>https://gcoman.com/ar/products/soap-detergent/soda-ash-dense-soap</loc>
-    <lastmod>2026-11-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/soap-detergent/soda-ash-dense-soap"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/soap-detergent/soda-ash-dense-soap"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/soap-detergent/soda-ash-dense-soap"/>
-  </url>
-  <url>
-    <loc>https://gcoman.com/ar/products/soap-detergent/soda-ash-light-soap</loc>
-    <lastmod>2026-11-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/soap-detergent/soda-ash-light-soap"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/soap-detergent/soda-ash-light-soap"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/soap-detergent/soda-ash-light-soap"/>
   </url>
   <url>
     <loc>https://gcoman.com/ar/products/soap-detergent/sodium-hypochlorite-12-15-soap</loc>

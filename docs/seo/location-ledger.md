@@ -475,3 +475,29 @@ Append-only. One row per check per run, written by the `running-search-operation
 | 2026-11-09 | bing | hydrochloric acid supplier oman | — | 1 (HCl hub), 3 | | gcoman.com | cc=om rendered, top 8 |
 | 2026-11-09 | bing | calcium hypochlorite supplier oman | — | — | | omanchem.com | cc=om rendered, top 8 |
 | 2026-11-09 | maps | chemical suppliers (Muscat 12z) | GBP | 6 | | Green Port Chemical Suppliers In Muscat | signed-in Chrome, Muscat viewport |
+| 2026-11-10 | google | nitric acid supplier saudi arabia (R1) | /chemical-supplier/nitric-acid-saudi-arabia | — | | nassguard.sa | pws=0 gl=sa product panel |
+| 2026-11-10 | google | nitric acid supplier riyadh (R2) | /chemical-supplier/nitric-acid-saudi-arabia | — | | nassguard.sa | pws=0 gl=sa product panel |
+| 2026-11-10 | google | nitric acid supplier dammam (R3) | /chemical-supplier/nitric-acid-saudi-arabia | — | | nassguard.sa | pws=0 gl=sa product panel |
+| 2026-11-10 | google | calcium hypochlorite supplier uae (R4) | /chemical-supplier/calcium-hypochlorite-uae | — | | chemstock.ae | pws=0 gl=ae product panel |
+| 2026-11-10 | google | calcium hypochlorite supplier dubai (R5) | /chemical-supplier/calcium-hypochlorite-uae | — | | hazchem.ae | pws=0 gl=ae product panel |
+| 2026-11-10 | google | calcium hypochlorite 70% uae (R6) | /chemical-supplier/calcium-hypochlorite-uae | — | | chemstock.ae | pws=0 gl=ae product panel |
+| 2026-11-10 | google | calcium hypochlorite supplier bahrain (R7) | /chemical-supplier/calcium-hypochlorite-bahrain | — | | bahrainyellowpagesonline.com | pws=0 gl=bh product panel |
+| 2026-11-10 | google | nitric acid supplier oman (R8) | /chemical-supplier/nitric-acid-oman | — | | omanchem.com | pws=0 gl=om product panel |
+| 2026-11-10 | google | sodium hypochlorite supplier oman (R9) | /chemical-supplier/sodium-hypochlorite-oman | — | | muscatchemical.com | pws=0 gl=om product panel |
+| 2026-11-10 | google | hydrochloric acid supplier oman (R10) | /chemical-supplier/hydrochloric-acid-oman | — | | omanchem.com | pws=0 gl=om product panel |
+| 2026-11-10 | google | hydrochloric acid supplier sohar (R11) | /chemical-supplier/hydrochloric-acid-oman | — | | omanchem.com | pws=0 gl=om product panel |
+| 2026-11-10 | google | caustic soda supplier oman (R12) | /chemical-supplier/caustic-soda-oman | — | | omanchem.com | pws=0 gl=om product panel |
+| 2026-11-10 | google | urea supplier oman (2) | /chemical-supplier/fertilizers-oman | — | | omanchem.com | pws=0 gl=om product panel |
+| 2026-11-10 | google | hydrogen peroxide supplier oman (6) | product | — | | omanchem.com | pws=0 gl=om product panel |
+| 2026-11-10 | google | sulphuric acid supplier oman (7) | product | — | | omanchem.com | pws=0 gl=om product panel |
+| 2026-11-10 | google | glycerine supplier oman (8) | product | — | | omanchem.com | pws=0 gl=om product panel |
+| 2026-11-10 | google | isopropyl alcohol supplier oman (9) | product | — | | omanchem.com | pws=0 gl=om product panel |
+| 2026-11-10 | google | methanol supplier oman (10) | product | — | | omanmethanol.com | pws=0 gl=om product panel |
+| 2026-11-10 | google | acetic acid supplier oman (11) | product | — | | muscatchemical.com | pws=0 gl=om product panel |
+| 2026-11-10 | google | calcium chloride supplier oman (12) | product | — | | omanchem.com | pws=0 gl=om product panel |
+| 2026-11-10 | google | calcium hypochlorite supplier oman (13) | product | — | | omanchem.com | pws=0 gl=om product panel |
+| 2026-11-10 | google | poly aluminium chloride supplier oman (14) | product | — | | omanchem.com | pws=0 gl=om product panel |
+| 2026-11-10 | google | bentonite supplier oman (15) | product | — | | omanchem.com | pws=0 gl=om product panel |
+| 2026-11-10 | google | soda ash supplier oman (16) | product | — | | omanchem.com | pws=0 gl=om product panel |
+| 2026-11-10 | google | citric acid supplier oman (17) | product | — | | uvwater.biz | pws=0 gl=om product panel |
+| 2026-11-10 | google | chemical suppliers in oman (ctl) | / | 1 | | gcoman.com | pws=0 gl=om product panel (parser control) |
