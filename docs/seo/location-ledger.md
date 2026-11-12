@@ -526,3 +526,28 @@ Append-only. One row per check per run, written by the `running-search-operation
 | 2026-11-12 | google | buy sulphuric acid in oman (28) | panel target | — | | omanchem.com | pws=0 gl=om product panel, 9 results parsed |
 | 2026-11-12 | google | buy glycerine in oman (29) | panel target | — | | muscatchemical.com | pws=0 gl=om product panel, 9 results parsed |
 | 2026-11-12 | google | buy isopropyl alcohol in oman (30) | panel target | — | | omanchem.com | pws=0 gl=om product panel, 9 results parsed |
+| 2026-11-13 | google | nitric acid supplier saudi arabia (R1) | panel target | — | | nassguard.sa | pws=0 gl=sa product panel, 9 results parsed |
+| 2026-11-13 | google | nitric acid supplier riyadh (R2) | panel target | — | | nassguard.sa | pws=0 gl=sa product panel, 9 results parsed |
+| 2026-11-13 | google | nitric acid supplier dammam (R3) | panel target | — | | nassguard.sa | pws=0 gl=sa product panel, 9 results parsed |
+| 2026-11-13 | google | calcium hypochlorite supplier uae (R4) | panel target | — | | chemstock.ae | pws=0 gl=ae product panel, 9 results parsed |
+| 2026-11-13 | google | calcium hypochlorite supplier dubai (R5) | panel target | — | | hazchem.ae | pws=0 gl=ae product panel, 9 results parsed |
+| 2026-11-13 | google | calcium hypochlorite 70% uae (R6) | panel target | — | | chemstock.ae | pws=0 gl=ae product panel, 9 results parsed |
+| 2026-11-13 | google | calcium hypochlorite supplier bahrain (R7) | panel target | — | | bahrainyellowpagesonline.com | pws=0 gl=bh product panel, 9 results parsed |
+| 2026-11-13 | google | nitric acid supplier oman (R8) | panel target | — | | uvwater.biz | pws=0 gl=om product panel, 9 results parsed |
+| 2026-11-13 | google | sodium hypochlorite supplier oman (R9) | panel target | — | | omanchem.com | pws=0 gl=om product panel, 9 results parsed |
+| 2026-11-13 | google | hydrochloric acid supplier oman (R10) | panel target | — | | innovacorporate.com | pws=0 gl=om product panel, 9 results parsed |
+| 2026-11-13 | google | hydrochloric acid supplier sohar (R11) | panel target | — | | soharchemical.com | pws=0 gl=om product panel, 9 results parsed |
+| 2026-11-13 | google | caustic soda supplier oman (R12) | panel target | — | | omanchem.com | pws=0 gl=om product panel, 9 results parsed |
+| 2026-11-13 | google | buy methanol in oman (31) | panel target | — | | omanmethanol.com | pws=0 gl=om product panel, 9 results parsed |
+| 2026-11-13 | google | buy acetic acid in oman (32) | panel target | — | | muscatchemical.com | pws=0 gl=om product panel, 9 results parsed |
+| 2026-11-13 | google | buy calcium chloride in oman (33) | panel target | — | | uvwater.biz | pws=0 gl=om product panel, 9 results parsed |
+| 2026-11-13 | google | buy calcium hypochlorite in oman (34) | panel target | — | | chemstock.om | pws=0 gl=om product panel, 9 results parsed |
+| 2026-11-13 | google | buy poly aluminium chloride in oman (35) | panel target | — | | omanchem.com | pws=0 gl=om product panel, 9 results parsed |
+| 2026-11-13 | google | buy bentonite in oman (36) | panel target | — | | omanchem.com | pws=0 gl=om product panel, 9 results parsed |
+| 2026-11-13 | google | buy soda ash in oman (37) | panel target | — | | omanchem.com | pws=0 gl=om product panel, 9 results parsed |
+| 2026-11-13 | google | buy citric acid in oman (38) | panel target | — | | talabat.com | pws=0 gl=om product panel, 9 results parsed |
+| 2026-11-13 | google | buy ethylene glycol in oman (39) | panel target | — | | omanchem.com | pws=0 gl=om product panel, 9 results parsed |
+| 2026-11-13 | google | buy corrosion inhibitor in oman (40) | panel target | — | | omanchem.com | pws=0 gl=om product panel, 9 results parsed |
+| 2026-11-13 | google | buy lubricants in oman (41) | panel target | — | | avicenonline.com | pws=0 gl=om product panel, 9 results parsed |
+| 2026-11-13 | google | buy potassium chloride in oman (42) | panel target | — | | omanchem.com | pws=0 gl=om product panel, 9 results parsed |
+| 2026-11-13 | google | nitric acid price oman (43) | panel target | — | | uvwater.biz | pws=0 gl=om product panel, 9 results parsed |
