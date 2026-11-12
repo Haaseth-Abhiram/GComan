@@ -80,6 +80,15 @@ test.describe('/chemicals hub', () => {
     });
   }
 
+  // Repointed 2026-11-10: its old target (water-treatment anhydrous) became a
+  // canonicalOverride duplicate, so the redirect would have landed on a page
+  // that canonicalises elsewhere.
+  test('/products/acids/citric-acid redirects straight to the anhydrous food-grade page', async ({ page }) => {
+    await page.goto('/products/acids/citric-acid');
+    await page.waitForURL('**/products/food-beverage/citric-acid-anhydrous-food');
+    expect(new URL(page.url()).pathname).toBe('/products/food-beverage/citric-acid-anhydrous-food');
+  });
+
   test('/chemicals renders the hub with all city + country links', async ({ page }) => {
     await page.goto('/chemicals');
     await expect(page.locator('h1')).toContainText('Chemical Supply Across Oman');

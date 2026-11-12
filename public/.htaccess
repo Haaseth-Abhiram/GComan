@@ -160,7 +160,7 @@ RewriteRule ^products/mining-chemicals/?$ /products [R=301,L]
   # These 301s fix Soft 404s that Google reports for the old URLs.
 
   # Old /products/acids/* → new equivalents
-  RewriteRule ^products/acids/citric-acid/?$             /products/water-treatment/citric-acid-anhydrous [R=301,L]
+  RewriteRule ^products/acids/citric-acid/?$             /products/food-beverage/citric-acid-anhydrous-food [R=301,L]
   RewriteRule ^products/acids/acetic-acid/?$             /products/oilfield/acetic-acid [R=301,L]
   # Dead addresses still shown by Google (GSC, 2026-10-26)
   RewriteRule ^products/agro/agro-products/?$             /products/agro [R=301,L]

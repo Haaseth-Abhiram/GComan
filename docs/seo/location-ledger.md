@@ -501,3 +501,28 @@ Append-only. One row per check per run, written by the `running-search-operation
 | 2026-11-10 | google | soda ash supplier oman (16) | product | — | | omanchem.com | pws=0 gl=om product panel |
 | 2026-11-10 | google | citric acid supplier oman (17) | product | — | | uvwater.biz | pws=0 gl=om product panel |
 | 2026-11-10 | google | chemical suppliers in oman (ctl) | / | 1 | | gcoman.com | pws=0 gl=om product panel (parser control) |
+| 2026-11-12 | google | nitric acid supplier saudi arabia (R1) | panel target | — | | nassguard.sa | pws=0 gl=sa product panel, 9 results parsed |
+| 2026-11-12 | google | nitric acid supplier riyadh (R2) | panel target | — | | nassguard.sa | pws=0 gl=sa product panel, 9 results parsed |
+| 2026-11-12 | google | nitric acid supplier dammam (R3) | panel target | — | | nassguard.sa | pws=0 gl=sa product panel, 9 results parsed |
+| 2026-11-12 | google | calcium hypochlorite supplier uae (R4) | panel target | — | | chemstock.ae | pws=0 gl=ae product panel, 9 results parsed |
+| 2026-11-12 | google | calcium hypochlorite supplier dubai (R5) | panel target | — | | hazchem.ae | pws=0 gl=ae product panel, 9 results parsed |
+| 2026-11-12 | google | calcium hypochlorite 70% uae (R6) | panel target | — | | chemstock.ae | pws=0 gl=ae product panel, 9 results parsed |
+| 2026-11-12 | google | calcium hypochlorite supplier bahrain (R7) | panel target | — | | bahrainyellowpagesonline.com | pws=0 gl=bh product panel, 9 results parsed |
+| 2026-11-12 | google | nitric acid supplier oman (R8) | panel target | — | | omanchem.com | pws=0 gl=om product panel, 9 results parsed |
+| 2026-11-12 | google | sodium hypochlorite supplier oman (R9) | panel target | — | | omanchlorine.com | pws=0 gl=om product panel, 9 results parsed |
+| 2026-11-12 | google | hydrochloric acid supplier oman (R10) | panel target | — | | omanchem.com | pws=0 gl=om product panel, 9 results parsed |
+| 2026-11-12 | google | hydrochloric acid supplier sohar (R11) | panel target | — | | omanchem.com | pws=0 gl=om product panel, 9 results parsed |
+| 2026-11-12 | google | caustic soda supplier oman (R12) | panel target | — | | omanchem.com | pws=0 gl=om product panel, 9 results parsed |
+| 2026-11-12 | google | ethylene glycol supplier oman (18) | panel target | — | | omanchem.com | pws=0 gl=om product panel, 9 results parsed |
+| 2026-11-12 | google | corrosion inhibitor supplier oman (19) | panel target | — | | omanchem.com | pws=0 gl=om product panel, 9 results parsed |
+| 2026-11-12 | google | lubricants supplier oman (20) | panel target | — | | mobil.com | pws=0 gl=om product panel, 9 results parsed |
+| 2026-11-12 | google | potassium chloride supplier oman (21) | panel target | — | | muscatchemical.com | pws=0 gl=om product panel, 9 results parsed |
+| 2026-11-12 | google | buy nitric acid in oman (22) | panel target | — | | omanchem.com | pws=0 gl=om product panel, 9 results parsed |
+| 2026-11-12 | google | buy urea in oman (23) | panel target | — | | muscatfertilizer.net | pws=0 gl=om product panel, 9 results parsed |
+| 2026-11-12 | google | buy caustic soda in oman (24) | panel target | — | | omanchem.com | pws=0 gl=om product panel, 9 results parsed |
+| 2026-11-12 | google | buy hydrochloric acid in oman (25) | panel target | — | | omanchem.com | pws=0 gl=om product panel, 9 results parsed |
+| 2026-11-12 | google | buy sodium hypochlorite in oman (26) | panel target | — | | omanchlorine.com | pws=0 gl=om product panel, 9 results parsed |
+| 2026-11-12 | google | buy hydrogen peroxide in oman (27) | panel target | — | | gcc.luluhypermarket.com | pws=0 gl=om product panel, 9 results parsed |
+| 2026-11-12 | google | buy sulphuric acid in oman (28) | panel target | — | | omanchem.com | pws=0 gl=om product panel, 9 results parsed |
+| 2026-11-12 | google | buy glycerine in oman (29) | panel target | — | | muscatchemical.com | pws=0 gl=om product panel, 9 results parsed |
+| 2026-11-12 | google | buy isopropyl alcohol in oman (30) | panel target | — | | omanchem.com | pws=0 gl=om product panel, 9 results parsed |

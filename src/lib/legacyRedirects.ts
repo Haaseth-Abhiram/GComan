@@ -30,7 +30,7 @@ const EXACT_REDIRECTS = new Map<string, string>([
   ['/products/mining-chemicals', '/products'],
 
   // Old /products/acids/* → new categories
-  ['/products/acids/citric-acid', '/products/water-treatment/citric-acid-anhydrous'],
+  ['/products/acids/citric-acid', '/products/food-beverage/citric-acid-anhydrous-food'],
   ['/products/acids/acetic-acid', '/products/oilfield/acetic-acid'],
   ['/products/acids/nitric-acid', '/products/lab-chemicals/nitric-acid-lab'],
   ['/products/acids/phosphoric-acid', '/products/lab-chemicals/phosphoric-acid-lab'],
