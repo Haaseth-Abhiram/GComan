@@ -1886,8 +1886,7 @@
         "soda ash Oman",
         "sodium carbonate Oman",
         "soda ash dense Muscat",
-        "soda ash light Oman",
-        "sodium carbonate Oman"
+        "soda ash light Oman"
       ],
       "longDescription": "Soda Ash supplier in Oman - Global Chemicals LLC provides dense and light soda ash for water treatment, glass manufacturing, detergent production, and industrial processes in Muscat, Sohar, Salalah. Our sodium carbonate offers effective pH adjustment, water softening, and alkalinity building. Soda ash (sodium carbonate, Na₂CO₃) is one of the most important industrial alkaline chemicals in Oman — used in water treatment, glass production, detergent manufacturing, and chemical processing. In water treatment, soda ash raises pH and adds alkalinity to treated water, and is used to trim pH and alkalinity after desalination (the calcium for remineralisation comes from lime or limestone). It is also used to raise swimming pool pH (a safer and easier-to-handle alternative to caustic soda for pool operators), and to neutralise acidic industrial effluent. Oman's glass manufacturing sector (serving the construction boom) uses soda ash as a key flux in glass batch formulations. In detergent powder manufacturing, soda ash is the alkaline builder and carrier/filler. Global Chemicals LLC supplies soda ash in both dense and light grades in 25kg bags and 1,000kg big bags. Supply to all Oman regions; export to UAE and GCC.",
       "applications": [
@@ -1903,14 +1902,24 @@
         "Na2CO3 purity: 99.2% min",
         "Grades: Dense (heavy), Light",
         "Appearance: White powder/granules",
-        "Bulk density: 900-1100 kg/m³ (dense)",
+        "Bulk density: 1.0-1.2 kg/L (dense); 0.5-0.6 kg/L (light)",
         "pH (1% solution): 11.3-11.7",
-        "Available in 25kg, 50kg bags"
+        "Available in 25kg, 50kg bags, bulk bags"
       ],
       "wikiUrl": "https://en.wikipedia.org/wiki/Sodium_carbonate",
       "seoDescription": "Soda ash 99.2% Na2CO3 (CAS 497-19-8), dense and light grades, ex-stock Muscat, Oman. Water softening & pH correction. 25 kg bags — get a quote.",
       "guideUrl": "/chemical-supplier/water-treatment-chemicals-gcc",
-      "guideLabel": "Water treatment chemicals for the UAE, Saudi Arabia and the GCC — specs, packs and lead times"
+      "guideLabel": "Water treatment chemicals for the UAE, Saudi Arabia and the GCC — specs, packs and lead times",
+      "faqs": [
+        {
+          "question": "How is soda ash priced in Oman?",
+          "answer": "Soda ash is quoted per order rather than from a fixed price list, because the price depends on the grade (dense or light), the quantity, the packing and the delivery point. Prices also move with the international soda ash market and freight costs. Send Global Chemicals LLC the grade, quantity and delivery location in Oman or the GCC, and our team replies with a quotation within 24 hours."
+        },
+        {
+          "question": "Dense or light soda ash: which grade do I need?",
+          "answer": "Both grades are the same chemical, sodium carbonate (Na2CO3, 99.2% min). Dense soda ash has larger granules and roughly twice the bulk density of light ash (about 1.0–1.2 kg/L against 0.5–0.6 kg/L), so it is less dusty and flows well in dosing equipment and glass batching. Light soda ash is a finer, lower-density powder, often preferred where it is blended or dissolved, such as detergent powders. For water softening and pH correction either grade works; tell us your process and we will recommend one."
+        }
+      ]
     }
   },
   {
