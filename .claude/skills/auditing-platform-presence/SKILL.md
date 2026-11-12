@@ -64,4 +64,6 @@ Prepare everything up to the final click, then hand over exact steps. Never repo
 | Pressing "Sync" in Bing Places and walking away | Sync copies Google's data over Bing's: it wiped the 3 extra categories and 6 services (2026-10-12). After every sync, re-add: Industrial spares & products wholesaler, Laboratory equipment supplier, Cleaning products supplier; services Raw Materials Wholesaler, Disinfectants, Shipping, Industrial Cleaning, Wholesale Supplier, Delivery |
 | Bulk-clicking Bing service chips with JS `.click()` | Only one registers. Click each chip separately |
 | Trusting the GBP LinkedIn link | It held a typo (`global-chemicalls-llc`) until 2026-10-12. Read the URL character by character |
+| Treating Bing's robots.txt tester "1 error" as a real problem | It is line `License:` (the RSL 1.0 licence directive, P2.13). Unknown directives are ignored; the tester shows Bingbot "Allowed". Leave it |
+| Assuming Bing re-read a page after it became indexable | Bing kept `/ar/chemical-supplier/nitric-acid-oman` as "Not indexed due to NOINDEX" from a 10-08 crawl until re-requested on 11-13. After flipping any page to indexable, inspect it in Bing (deep link `urlinspection?siteUrl=…&url=<enc>&urlToInspect=<double-enc>`) and use Request indexing |
 | Changing site coordinates to match a directory | The GBP pin is the reference; directories follow the site |
