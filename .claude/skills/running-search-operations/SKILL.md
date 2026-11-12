@@ -126,6 +126,19 @@ Then add a dated note to `docs/seo/visibility-ledger.md`: what moved compared wi
 | Wrong gcoman URL ranking for a target | Check internal links to the target (`audit:internal-links`) before any copy change |
 | Absent everywhere for a country | Off-site lever (the country directories that hold #1, MASTER-PLAN P5.5), not a new page |
 | New page idea | Only through MASTER-PLAN, after the HANDOFF check. No product × city pages, no bulk FAQs, no retitling |
+| A Google core update is rolling out (check the Search Status Dashboard, `status.search.google.com`) | Keep reading and recording, but act on no ranking move until one full week after the rollout ends; then compare GSC for that week with the week before the rollout started. Mark ledger rows taken during a rollout `(core update)` |
+| Idea: add schema to win a rich result | Check the type still earns one first. FAQ rich results stopped on 2026-05-07 and HowTo is gone; keep existing FAQ/HowTo markup (Google and AI engines still parse it, and visible FAQs feed AI answers) but never add it for a rich result |
+
+## Search landscape (dated; re-check monthly, update this table when it changes)
+
+| Date | Change | What it means here |
+|---|---|---|
+| 2026-11-10 → ~11-24 | **November 2026 core update** (global, all languages; ~2 weeks) | Readings 11-10..~12-01 are noise for attribution. The Phase 9 baseline re-read moves from 11-22 to ~12-01 |
+| 2026-11 | AI Overviews on ~80% of searches; AI Mode/AIO link clicks are not reported separately in GSC | GSC clicks undercount AI influence. Bing WMT → AI Performance is the only first-party citation telemetry; read it weekly |
+| 2026-11 | GSC Performance: multi-select country filter | Read Oman + UAE + Saudi Arabia (+ Bahrain) together for the GCC view |
+| 2026-11 | Google docs: fact-check AI-written content; warning on deceptive authorship | Our fact-check rule stands; never invent author names or credentials |
+| 2026-11 | GBP: WhatsApp button in the local panel; Posts shown higher | `auditing-platform-presence`: WhatsApp set on GBP, a post every < 30 days |
+| 2026-05-07 | FAQ rich results retired (HowTo already gone) | No rich-result reason to add FAQ/HowTo schema; visible FAQs still matter for AI answers |
 
 ## Post-Publish checklist (in this order)
 
@@ -155,4 +168,5 @@ Then add a dated note to `docs/seo/visibility-ledger.md`: what moved compared wi
 | A parser picking up `<path>` as `<p>` (it happened on 2026-10-18) | Match `<p(\s\|>)`. Sanity-check any surprising number against the rendered page before reporting it |
 | Calling a drop by comparing a signed-in, personalised reading with an unpersonalised fetch (10-13 "#1 Salalah" vs 10-18 "#4") | Compare only cells read with the same method. When the user asks "are we going down?", build the same-cell table first (`docs/seo/decline-investigation-2026-10-18.md` is the template), then read GSC 28d vs previous |
 | Treating "Indexing request rejected" as a quota problem | Open the live test → screenshot + More info → JavaScript console. On 2026-10-18 it was Googlebot failing a route chunk and getting "Something went wrong" (fixed by `RouteChunkBoundary`, pinned by `tests/e2e/route-chunk-failure.spec.ts`). Run that spec against production with `BASE_URL` after any change to App.tsx's route tree |
+| Calling a ranking drop (or win) during a core update | Look up the Search Status Dashboard first; wait one full week after the rollout ends |
 | Reporting a fix as live after a Publish when it was an edge function | Check Lovable → Cloud → Edge functions → "Last updated" |

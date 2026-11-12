@@ -26,7 +26,7 @@ One checklist for every external platform that carries gcoman.com's identity. Ea
 
 | # | Platform | Check | How | Pass |
 |---|---|---|---|---|
-| 1 | Google Business Profile | Website, phone, hours, category, pending "Google updates", reviews count, last post | Public: open the cid link, JS `a[data-item-id="authority"]` + hours table. Owner: `business.google.com/u/1/locations` (red dot on pencil = pending update) | Matches table; 0 pending updates; post < 30 days |
+| 1 | Google Business Profile | Website, phone, hours, category, pending "Google updates", reviews count, last post | Public: open the cid link, JS `a[data-item-id="authority"]` + hours table. Owner: `business.google.com/u/1/locations` (red dot on pencil = pending update) | Matches table; 0 pending updates; post < 30 days; WhatsApp button set to +968 9277 2305 (shown in the local panel since 2026-11) |
 | 2 | Google Search Console | Manual actions, security, 28d clicks, indexed pages, sitemap read date, CWV poor URLs | `search.google.com/u/1/search-console?resource_id=https://gcoman.com/` | No issues; clicks ≥ 450; indexed ≥ 430 |
 | 3 | GA4 | Key events fire (`contact_click`, `generate_lead_*`), retention 14 mo | Admin → Events, "streams active" | Events fired in last 28d. Never read traffic trends (consent-blind) |
 | 4 | Bing Webmaster Tools | Errors, sitemaps, indexed count, backlinks, AI Performance citations | `bing.com/webmasters/*?siteUrl=https://gcoman.com/` (property may be `https://www.gcoman.com/`) | 0 errors; sitemap read < 14 d |
