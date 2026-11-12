@@ -32,17 +32,15 @@ const Footer = () => {
     { icon: ThreadsIcon, href: 'https://www.threads.com/@globalchemicalsllc', label: 'Threads' },
   ];
 
-  const quickLinks = [
+  const companyLinks = [
     { labelKey: 'nav.about', path: '/about' },
     { labelKey: 'nav.products', path: '/products' },
     { labelKey: 'nav.industries', path: '/industries' },
-    { labelKey: 'nav.resources', path: '/resources' },
-    { labelKey: 'nav.contact', path: '/contact' },
-    { labelKey: 'nav.careers', path: '/career' },
     { labelKey: 'nav.certifications', path: '/certifications' },
+    { labelKey: 'nav.resources', path: '/resources' },
     { label: 'Dosing Calculators', path: '/tools/dosing-calculator' },
-    { label: 'Chemical Suppliers Oman', path: '/chemical-suppliers-oman' },
-    { label: 'Chemical Suppliers Middle East', path: '/chemical-suppliers-middle-east' },
+    { labelKey: 'nav.careers', path: '/career' },
+    { labelKey: 'nav.contact', path: '/contact' },
   ];
 
   const services = [
@@ -52,7 +50,74 @@ const Footer = () => {
     { labelKey: 'footer.services.laboratoryChemicals', path: '/industries#laboratory' },
     { labelKey: 'footer.services.poolChemicals', path: '/industries#swimming-pool' },
     { labelKey: 'footer.services.constructionChemicals', path: '/industries#construction' },
+    { label: 'Chemical Suppliers Oman', path: '/chemical-suppliers-oman' },
+    { label: 'Chemical Suppliers Middle East', path: '/chemical-suppliers-middle-east' },
   ];
+
+  // Product+geo hubs (/chemical-supplier/*). Added 2026-10-19: for "nitric
+  // acid supplier oman" Google ranked the HOMEPAGE at 18 and the nitric hub
+  // nowhere, because the hubs were reachable only from location pages and each
+  // other. The footer gives every hub a site-wide internal link with a
+  // descriptive anchor. Labels shortened 2026-11-13 (the column heading carries
+  // "supply"); keep in sync with PRODUCT_HUBS in LocationLanding.tsx.
+  const supplyGuides = [
+    { label: 'Nitric Acid Oman', path: '/chemical-supplier/nitric-acid-oman' },
+    { label: 'Hydrochloric Acid Oman', path: '/chemical-supplier/hydrochloric-acid-oman' },
+    { label: 'Caustic Soda Oman', path: '/chemical-supplier/caustic-soda-oman' },
+    { label: 'Sodium Hypochlorite Oman', path: '/chemical-supplier/sodium-hypochlorite-oman' },
+    { label: 'PAC Coagulant Oman', path: '/chemical-supplier/poly-aluminium-chloride-oman' },
+    { label: 'Laboratory Chemicals Oman', path: '/chemical-supplier/laboratory-chemicals-oman' },
+    { label: 'Fertilizers Oman', path: '/chemical-supplier/fertilizers-oman' },
+    { label: 'Oilfield Chemicals Oman', path: '/chemical-supplier/oilfield-chemicals-oman' },
+    { label: 'Water Treatment GCC', path: '/chemical-supplier/water-treatment-chemicals-gcc' },
+    { label: 'Pool Chlorine GCC', path: '/chemical-supplier/pool-chlorine-gcc' },
+  ];
+
+  // Every city page (/chemicals/<city>) keeps one site-wide link: the Oman
+  // ones since 2026-10-20 (the homepage was outranking the city pages), the
+  // GCC ones since the Aug 2026 audit (Sharjah/Fujairah/RAK were orphaned;
+  // pinned by internal-linking.spec.ts). Until 2026-11-13 the Oman cities were
+  // listed twice; grouped by country here so the column stays short.
+  const deliveryGroups: { label: string; cities: { label: string; path: string }[] }[] = [
+    {
+      label: 'Oman',
+      cities: ['muscat', 'sohar', 'salalah', 'duqm', 'rusayl', 'rustaq'].map((slug) => ({
+        label: t(`locations.${slug}`),
+        path: `/chemicals/${slug}`,
+      })),
+    },
+    {
+      label: 'UAE',
+      cities: [
+        { label: 'Dubai', path: '/chemicals/dubai' },
+        { label: 'Abu Dhabi', path: '/chemicals/abu-dhabi' },
+        { label: 'Sharjah', path: '/chemicals/sharjah' },
+        { label: 'Fujairah', path: '/chemicals/fujairah' },
+        { label: 'Ras Al Khaimah', path: '/chemicals/ras-al-khaimah' },
+      ],
+    },
+    {
+      label: 'Saudi Arabia',
+      cities: [
+        { label: 'Riyadh', path: '/chemicals/riyadh' },
+        { label: 'Jeddah', path: '/chemicals/jeddah' },
+        { label: 'Dammam', path: '/chemicals/dammam' },
+        { label: 'Jubail', path: '/chemicals/jubail' },
+        { label: 'Yanbu', path: '/chemicals/yanbu' },
+      ],
+    },
+    {
+      label: 'Qatar · Kuwait · Bahrain',
+      cities: [
+        { label: 'Doha', path: '/chemicals/doha' },
+        { label: 'Kuwait City', path: '/chemicals/kuwait-city' },
+        { label: 'Bahrain', path: '/chemicals/bahrain' },
+      ],
+    },
+  ];
+
+  const linkClass = 'text-white/75 hover:text-primary transition-colors text-sm';
+  const headingClass = 'text-sm font-semibold uppercase tracking-wider text-white mb-4';
 
   const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -144,248 +209,164 @@ const Footer = () => {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 lg:gap-10 mb-12">
-          {/* Company Info */}
-          <div className="space-y-6 md:col-span-2 lg:col-span-1">
+        {/* Five even columns (2026-11-13: the Services column used to stack
+            Services + Supply Guides + a duplicate city list, three times the
+            height of its neighbours). Contact now sits under the brand. */}
+        <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-12 gap-x-6 gap-y-10 mb-12">
+          {/* Company info + contact */}
+          <div className="col-span-2 md:col-span-4 xl:col-span-3 space-y-5">
             <Link
               to="/"
               aria-label="Global Chemicals LLC – Home"
-              className="inline-block bg-white rounded-lg p-4 hover:shadow-lg transition-all"
+              className="inline-block bg-white rounded-lg p-3 hover:shadow-lg transition-all"
             >
               <img
                 src={logo}
                 alt="Global Chemicals LLC Logo"
                 width={180}
                 height={48}
-                className="h-12 w-auto"
+                className="h-10 w-auto"
               />
             </Link>
-            <p className="text-white/80 text-sm leading-relaxed">
+            <p className="text-white/75 text-sm leading-relaxed max-w-sm">
               {t('footer.description')}
             </p>
-
-            {/* Social Media Links */}
-            <div className="space-y-3">
-              <h4 className="text-sm font-semibold text-white">{t('footer.followUs')}</h4>
-              <div className="flex gap-3">
-                {socialLinks.map((social) => {
-                  const Icon = social.icon;
-                  return (
-                    <a
-                      key={social.label}
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={social.label}
-                      className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary flex items-center justify-center transition-all hover:scale-110 group"
-                    >
-                      <Icon className="w-5 h-5 text-white group-hover:text-white" />
-                    </a>
-                  );
-                })}
-              </div>
+            <ul className="space-y-2.5">
+              <li className="flex items-start gap-3">
+                <MapPin className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                <span className="text-white/75 text-sm leading-relaxed">
+                  {t('contact.info.address')}
+                </span>
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone className="w-4 h-4 text-primary flex-shrink-0" />
+                <a href="tel:+96892772305" onClick={() => trackContactClick('phone')} className={`${linkClass} ltr-preserve`}>
+                  +968 9277 2305
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Mail className="w-4 h-4 text-primary flex-shrink-0" />
+                <a href="mailto:info@gcoman.com" onClick={() => trackContactClick('email')} className={linkClass}>
+                  info@gcoman.com
+                </a>
+              </li>
+            </ul>
+            <div className="flex flex-wrap gap-2">
+              <a
+                href="https://wa.me/96892772305"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackContactClick('whatsapp')}
+                className="inline-flex items-center gap-2 px-3 py-1.5 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-lg transition-colors"
+              >
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                {t('footer.whatsappCta')}
+              </a>
+              <a
+                href="https://g.page/r/CWLBtunkhjqlEBM/review"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 hover:bg-white/20 text-white text-sm font-medium rounded-lg transition-colors border border-white/20"
+              >
+                <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
+                Google Review
+              </a>
+            </div>
+            <div className="flex gap-2" aria-label={t('footer.followUs')}>
+              {socialLinks.map((social) => {
+                const Icon = social.icon;
+                return (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.label}
+                    className="w-9 h-9 rounded-full bg-white/10 hover:bg-primary flex items-center justify-center transition-all hover:scale-110"
+                  >
+                    <Icon className="w-4 h-4 text-white" />
+                  </a>
+                );
+              })}
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">{t('footer.quickLinks')}</h3>
+          {/* Company */}
+          <nav className="xl:col-span-2" aria-label={t('footer.company')}>
+            <h3 className={headingClass}>{t('footer.company')}</h3>
             <ul className="space-y-2">
-              {quickLinks.map((item) => (
+              {companyLinks.map((item) => (
                 <li key={item.path}>
-                  <Link
-                    to={item.path}
-                    className="text-white/80 hover:text-primary transition-colors text-sm inline-block hover:translate-x-1 rtl:hover:-translate-x-1 transition-all"
-                  >
+                  <Link to={item.path} className={linkClass}>
                     {'labelKey' in item ? t(item.labelKey) : item.label}
                   </Link>
                 </li>
               ))}
             </ul>
-          </div>
-
-          {/* Locations - We Deliver To */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">
-              <Link to="/chemicals" className="hover:text-primary transition-colors">{t('footer.weDeliverTo')}</Link>
-            </h3>
-            <div className="grid grid-cols-2 gap-x-4 gap-y-2">
-              <div>
-                <p className="text-white/80 text-xs uppercase tracking-wider mb-2">Oman</p>
-                <ul className="space-y-2">
-                  {[
-                    { labelKey: 'locations.muscat', path: '/chemicals/muscat' },
-                    { labelKey: 'locations.sohar', path: '/chemicals/sohar' },
-                    { labelKey: 'locations.salalah', path: '/chemicals/salalah' },
-                    { labelKey: 'locations.duqm', path: '/chemicals/duqm' },
-                    { labelKey: 'locations.rusayl', path: '/chemicals/rusayl' },
-                  ].map((item) => (
-                    <li key={item.path}>
-                      <Link to={item.path} className="text-white/80 hover:text-primary transition-colors text-sm inline-block hover:translate-x-1 rtl:hover:-translate-x-1 transition-all">
-                        {t(item.labelKey)}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <p className="text-white/80 text-xs uppercase tracking-wider mb-2">GCC Export</p>
-                <ul className="space-y-2">
-                  {[
-                    { label: 'Dubai', path: '/chemicals/dubai' },
-                    { label: 'Abu Dhabi', path: '/chemicals/abu-dhabi' },
-                    { label: 'Sharjah', path: '/chemicals/sharjah' },
-                    { label: 'Fujairah', path: '/chemicals/fujairah' },
-                    { label: 'Ras Al Khaimah', path: '/chemicals/ras-al-khaimah' },
-                    { label: 'Riyadh', path: '/chemicals/riyadh' },
-                    { label: 'Jeddah', path: '/chemicals/jeddah' },
-                    { label: 'Dammam', path: '/chemicals/dammam' },
-                    { label: 'Jubail', path: '/chemicals/jubail' },
-                    { label: 'Yanbu', path: '/chemicals/yanbu' },
-                    { label: 'Doha', path: '/chemicals/doha' },
-                    { label: 'Kuwait City', path: '/chemicals/kuwait-city' },
-                    { label: 'Bahrain', path: '/chemicals/bahrain' },
-                  ].map((item) => (
-                    <li key={item.path}>
-                      <Link to={item.path} className="text-white/80 hover:text-primary transition-colors text-sm inline-block hover:translate-x-1 rtl:hover:-translate-x-1 transition-all">
-                        {item.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
+          </nav>
 
           {/* Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">{t('footer.ourServices')}</h3>
+          <nav className="xl:col-span-2" aria-label={t('footer.ourServices')}>
+            <h3 className={headingClass}>{t('footer.ourServices')}</h3>
             <ul className="space-y-2">
               {services.map((item) => (
                 <li key={item.path}>
-                  <Link to={item.path} className="text-white/80 hover:text-primary transition-colors text-sm inline-block hover:translate-x-1 rtl:hover:-translate-x-1 transition-all">
-                    {t(item.labelKey)}
+                  <Link to={item.path} className={linkClass}>
+                    {'labelKey' in item ? t(item.labelKey) : item.label}
                   </Link>
                 </li>
               ))}
             </ul>
-            {/* Product+geo hubs (/chemical-supplier/*). Added 2026-10-19: for
-                "nitric acid supplier oman" Google ranked the HOMEPAGE at 18 and
-                the nitric hub nowhere, because the hubs were reachable only from
-                location pages and each other. The footer gives every hub a
-                site-wide internal link with a descriptive anchor, the one
-                on-site lever left (competitor investigation, same date).
-                Keep in sync with PRODUCT_HUBS in LocationLanding.tsx. */}
-            <h3 className="text-lg font-semibold mt-6 mb-4 text-white">{t('footer.supplyGuides', 'Supply Guides')}</h3>
+          </nav>
+
+          {/* Supply guides (product+geo hubs) */}
+          <nav className="xl:col-span-2" aria-label={t('footer.supplyGuides', 'Supply Guides')}>
+            <h3 className={headingClass}>{t('footer.supplyGuides', 'Supply Guides')}</h3>
             <ul className="space-y-2">
-              {[
-                { label: 'Nitric Acid Supplier Oman', path: '/chemical-supplier/nitric-acid-oman' },
-                { label: 'Hydrochloric Acid Supplier Oman', path: '/chemical-supplier/hydrochloric-acid-oman' },
-                { label: 'Caustic Soda Supplier Oman', path: '/chemical-supplier/caustic-soda-oman' },
-                { label: 'Sodium Hypochlorite Supplier Oman', path: '/chemical-supplier/sodium-hypochlorite-oman' },
-                { label: 'PAC Coagulant Supplier Oman', path: '/chemical-supplier/poly-aluminium-chloride-oman' },
-                { label: 'Water Treatment Chemicals GCC', path: '/chemical-supplier/water-treatment-chemicals-gcc' },
-                { label: 'Pool Chlorine Supplier GCC', path: '/chemical-supplier/pool-chlorine-gcc' },
-                { label: 'Laboratory Chemicals Oman', path: '/chemical-supplier/laboratory-chemicals-oman' },
-                { label: 'Fertilizer Supplier Oman', path: '/chemical-supplier/fertilizers-oman' },
-                { label: 'Oilfield Chemicals Oman', path: '/chemical-supplier/oilfield-chemicals-oman' },
-              ].map((item) => (
+              {supplyGuides.map((item) => (
                 <li key={item.path}>
-                  <Link to={item.path} className="text-white/80 hover:text-primary transition-colors text-sm inline-block hover:translate-x-1 rtl:hover:-translate-x-1 transition-all">
+                  <Link to={item.path} className={linkClass}>
                     {item.label}
                   </Link>
                 </li>
               ))}
             </ul>
-            {/* Oman city pages (/chemicals/<city>). Added 2026-10-20: two
-                consecutive readings (10-18, 10-20, Google gl=om) showed the
-                HOMEPAGE ranking for "chemical supplier muscat" (3), "duqm" (3)
-                and "salalah" (4) while the city pages were absent. The link
-                audit found the city pages reachable only from /chemicals and
-                each other. Same lever as the hubs above: one site-wide link
-                each with a city anchor. Slugs come from locationIndex.ts. */}
-            <h3 className="text-lg font-semibold mt-6 mb-4 text-white">{t('footer.omanCities', 'Chemical Supplier by City')}</h3>
-            <ul className="space-y-2">
-              {[
-                { label: 'Chemical Supplier Muscat', path: '/chemicals/muscat' },
-                { label: 'Chemical Supplier Sohar', path: '/chemicals/sohar' },
-                { label: 'Chemical Supplier Salalah', path: '/chemicals/salalah' },
-                { label: 'Chemical Supplier Duqm', path: '/chemicals/duqm' },
-                { label: 'Chemical Supplier Rusayl', path: '/chemicals/rusayl' },
-                { label: 'Chemical Supplier Rustaq', path: '/chemicals/rustaq' },
-              ].map((item) => (
-                <li key={item.path}>
-                  <Link to={item.path} className="text-white/80 hover:text-primary transition-colors text-sm inline-block hover:translate-x-1 rtl:hover:-translate-x-1 transition-all">
-                    {item.label}
-                  </Link>
-                </li>
+          </nav>
+
+          {/* Locations, grouped by country */}
+          <nav className="xl:col-span-3" aria-label={t('footer.weDeliverTo')}>
+            <h3 className={headingClass}>
+              <Link to="/chemicals" className="hover:text-primary transition-colors">{t('footer.weDeliverTo')}</Link>
+            </h3>
+            <div className="space-y-3">
+              {deliveryGroups.map((group) => (
+                <div key={group.label}>
+                  <p className="text-white/50 text-xs uppercase tracking-wider mb-1">{group.label}</p>
+                  <ul className="flex flex-wrap gap-x-3 gap-y-1">
+                    {group.cities.map((item) => (
+                      <li key={item.path}>
+                        <Link to={item.path} className={linkClass}>
+                          {item.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">{t('nav.contact')}</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-3 rtl:flex-row-reverse">
-                <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                <span className="text-white/80 text-sm leading-relaxed">
-                  {t('contact.info.address')}
-                </span>
-              </li>
-              <li className="flex items-center gap-3 rtl:flex-row-reverse">
-                <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                <a href="tel:+96892772305" onClick={() => trackContactClick('phone')} className="text-white/80 hover:text-primary transition-colors text-sm ltr-preserve">
-                  +968 9277 2305
-                </a>
-              </li>
-              <li className="flex items-center gap-3 rtl:flex-row-reverse">
-                <Mail className="w-5 h-5 text-primary flex-shrink-0" />
-                <a
-                  href="mailto:info@gcoman.com"
-                  onClick={() => trackContactClick('email')}
-                  className="text-white/80 hover:text-primary transition-colors text-sm"
-                >
-                  info@gcoman.com
-                </a>
-              </li>
-            </ul>
-
-            {/* WhatsApp CTA */}
-            <a
-              href="https://wa.me/96892772305"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => trackContactClick('whatsapp')}
-              className="inline-flex items-center gap-2 mt-4 px-4 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-lg transition-colors"
-            >
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-              </svg>
-              {t('footer.whatsappCta')}
-            </a>
-
-            {/* Google Reviews CTA */}
-            <a
-              href="https://g.page/r/CWLBtunkhjqlEBM/review"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 mt-3 px-4 py-2 bg-white/10 hover:bg-white/20 text-white text-sm font-medium rounded-lg transition-colors border border-white/20"
-            >
-              <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-              Leave us a Google Review
-            </a>
-          </div>
+            </div>
+          </nav>
         </div>
 
-        {/* Newsletter Section */}
-        <div className="mb-12 pb-12 border-b border-white/10">
-          <div className="max-w-xl mx-auto text-center">
-            <h3 className="text-xl font-bold mb-3">{t('footer.newsletter')}</h3>
-            <p className="text-white/70 text-sm mb-6">
+        {/* Newsletter + certifications on one row */}
+        <div className="mb-8 pb-8 border-y border-white/10 pt-8 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+          <div className="lg:max-w-md w-full">
+            <h3 className="text-base font-semibold mb-1">{t('footer.newsletter')}</h3>
+            <p className="text-white/70 text-sm mb-3">
               {t('footer.newsletterDesc')}
             </p>
-            <form onSubmit={handleSubscribe} className="flex gap-3 max-w-md mx-auto">
+            <form onSubmit={handleSubscribe} className="flex gap-2">
               <label htmlFor="footer-newsletter-email" className="sr-only">
                 {t('footer.newsletterPlaceholder')}
               </label>
@@ -413,58 +394,37 @@ const Footer = () => {
               </Button>
             </form>
           </div>
-        </div>
 
-        {/* Certifications & Trust Badges */}
-        <div className="mb-8 pb-8 border-b border-white/10">
           {/* Each badge links to /certifications. Without these the page has no
               inbound internal link at all — it is the strongest trust asset on
               the site (JSRS gates PDO tenders) and was orphaned. */}
-          <div className="flex flex-wrap items-center justify-center gap-6 mb-6">
-            <Link
-              to="/certifications"
-              className="flex items-center gap-2 bg-emerald-500/10 px-4 py-2 rounded-lg border border-emerald-500/30 hover:bg-emerald-500/20 hover:border-emerald-500/50 transition-colors"
-            >
-              <div className="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center">
-                <span className="text-emerald-300 font-bold text-xs">JSRS</span>
-              </div>
-              <div className="text-start">
-                <p className="text-white text-sm font-semibold">{t('certifications.jsrs')}</p>
-                <p className="text-white/75 text-xs">{t('certifications.jsrsDesc')}</p>
-              </div>
-            </Link>
-            <Link
-              to="/certifications"
-              className="flex items-center gap-2 bg-blue-500/10 px-4 py-2 rounded-lg border border-blue-500/30 hover:bg-blue-500/20 hover:border-blue-500/50 transition-colors"
-            >
-              <div className="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center">
-                <span className="text-blue-300 font-bold text-xs">ICV</span>
-              </div>
-              <div className="text-start">
-                <p className="text-white text-sm font-semibold">{t('certifications.icv')}</p>
-                <p className="text-white/75 text-xs">{t('certifications.icvDesc')}</p>
-              </div>
-            </Link>
-            <Link
-              to="/certifications"
-              className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg border border-white/20 hover:bg-white/20 hover:border-white/40 transition-colors"
-            >
-              <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
-                <span className="text-white font-bold text-xs">ISO</span>
-              </div>
-              <div className="text-start">
-                <p className="text-white text-sm font-semibold">{t('certifications.iso')}</p>
-                <p className="text-white/75 text-xs">{t('certifications.isoDesc')}</p>
-              </div>
-            </Link>
+          <div className="flex flex-wrap items-center gap-3">
+            {[
+              { abbr: 'JSRS', key: 'jsrs', tone: 'bg-emerald-500/10 border-emerald-500/30 hover:bg-emerald-500/20', text: 'text-emerald-300' },
+              { abbr: 'ICV', key: 'icv', tone: 'bg-blue-500/10 border-blue-500/30 hover:bg-blue-500/20', text: 'text-blue-300' },
+              { abbr: 'ISO', key: 'iso', tone: 'bg-white/10 border-white/20 hover:bg-white/20', text: 'text-white' },
+            ].map((badge) => (
+              <Link
+                key={badge.key}
+                to="/certifications"
+                className={`flex items-center gap-2 px-3 py-2 rounded-lg border transition-colors ${badge.tone}`}
+              >
+                <span className={`font-bold text-xs ${badge.text}`}>{badge.abbr}</span>
+                <span className="text-start">
+                  <span className="block text-white text-sm font-semibold">{t(`certifications.${badge.key}`)}</span>
+                  <span className="block text-white/70 text-xs">{t(`certifications.${badge.key}Desc`)}</span>
+                </span>
+              </Link>
+            ))}
           </div>
-          <p className="text-white/70 text-sm text-center">
-            {t('footer.tagline')}
-          </p>
         </div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col items-center gap-4 text-white/60 text-sm pb-20 md:pb-4 relative z-50">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-white/60 text-sm pb-20 md:pb-4 relative z-50 text-center md:text-start">
+          <div>
+            <p>© {currentYear} {t('footer.companyName')}. {t('footer.copyright')}</p>
+            <p className="text-white/50 text-xs mt-1">{t('footer.tagline')}</p>
+          </div>
           <div className="flex flex-wrap justify-center gap-4 md:gap-6">
             <Link to="/terms" className="hover:text-primary transition-colors relative z-50">
               {t('footer.terms')}
@@ -483,9 +443,6 @@ const Footer = () => {
               {t('footer.cookieSettings', 'Cookie Settings')}
             </button>
           </div>
-          <p className="text-center">
-            © {currentYear} {t('footer.companyName')}. {t('footer.copyright')}
-          </p>
         </div>
       </div>
     </footer>

@@ -292,6 +292,7 @@
   },
   "footer": {
     "companyName": "Global Chemicals LLC",
+    "company": "Company",
     "description": "Leading provider of specialty chemicals, delivering high-quality products and innovative solutions across Oman.",
     "quickLinks": "Quick Links",
     "ourServices": "Our Services",
@@ -333,7 +334,8 @@
     "sohar": "Sohar",
     "salalah": "Salalah",
     "duqm": "Duqm",
-    "rusayl": "Rusayl"
+    "rusayl": "Rusayl",
+    "rustaq": "Rustaq"
   },
   "cta": {
     "title": "Ready to Get Started?",
