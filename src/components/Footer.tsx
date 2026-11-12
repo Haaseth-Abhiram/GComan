@@ -58,19 +58,19 @@ const Footer = () => {
   // acid supplier oman" Google ranked the HOMEPAGE at 18 and the nitric hub
   // nowhere, because the hubs were reachable only from location pages and each
   // other. The footer gives every hub a site-wide internal link with a
-  // descriptive anchor. Labels shortened 2026-11-13 (the column heading carries
-  // "supply"); keep in sync with PRODUCT_HUBS in LocationLanding.tsx.
+  // descriptive anchor (keep the "Supplier" wording: it is the anchor text
+  // the hubs rank for). Keep in sync with PRODUCT_HUBS in LocationLanding.tsx.
   const supplyGuides = [
-    { label: 'Nitric Acid Oman', path: '/chemical-supplier/nitric-acid-oman' },
-    { label: 'Hydrochloric Acid Oman', path: '/chemical-supplier/hydrochloric-acid-oman' },
-    { label: 'Caustic Soda Oman', path: '/chemical-supplier/caustic-soda-oman' },
-    { label: 'Sodium Hypochlorite Oman', path: '/chemical-supplier/sodium-hypochlorite-oman' },
-    { label: 'PAC Coagulant Oman', path: '/chemical-supplier/poly-aluminium-chloride-oman' },
+    { label: 'Nitric Acid Supplier Oman', path: '/chemical-supplier/nitric-acid-oman' },
+    { label: 'Hydrochloric Acid Supplier Oman', path: '/chemical-supplier/hydrochloric-acid-oman' },
+    { label: 'Caustic Soda Supplier Oman', path: '/chemical-supplier/caustic-soda-oman' },
+    { label: 'Sodium Hypochlorite Supplier Oman', path: '/chemical-supplier/sodium-hypochlorite-oman' },
+    { label: 'PAC Coagulant Supplier Oman', path: '/chemical-supplier/poly-aluminium-chloride-oman' },
     { label: 'Laboratory Chemicals Oman', path: '/chemical-supplier/laboratory-chemicals-oman' },
-    { label: 'Fertilizers Oman', path: '/chemical-supplier/fertilizers-oman' },
+    { label: 'Fertilizer Supplier Oman', path: '/chemical-supplier/fertilizers-oman' },
     { label: 'Oilfield Chemicals Oman', path: '/chemical-supplier/oilfield-chemicals-oman' },
-    { label: 'Water Treatment GCC', path: '/chemical-supplier/water-treatment-chemicals-gcc' },
-    { label: 'Pool Chlorine GCC', path: '/chemical-supplier/pool-chlorine-gcc' },
+    { label: 'Water Treatment Chemicals GCC', path: '/chemical-supplier/water-treatment-chemicals-gcc' },
+    { label: 'Pool Chlorine Supplier GCC', path: '/chemical-supplier/pool-chlorine-gcc' },
   ];
 
   // Every city page (/chemicals/<city>) keeps one site-wide link: the Oman
@@ -81,8 +81,10 @@ const Footer = () => {
   const deliveryGroups: { label: string; cities: { label: string; path: string }[] }[] = [
     {
       label: 'Oman',
+      // "Chemical Supplier <City>" anchors (2026-10-20): the homepage was
+      // outranking the city pages for exactly these queries.
       cities: ['muscat', 'sohar', 'salalah', 'duqm', 'rusayl', 'rustaq'].map((slug) => ({
-        label: t(`locations.${slug}`),
+        label: `${t('footer.chemicalSupplier', 'Chemical Supplier')} ${t(`locations.${slug}`)}`,
         path: `/chemicals/${slug}`,
       })),
     },
@@ -212,9 +214,9 @@ const Footer = () => {
         {/* Five even columns (2026-11-13: the Services column used to stack
             Services + Supply Guides + a duplicate city list, three times the
             height of its neighbours). Contact now sits under the brand. */}
-        <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-12 gap-x-6 gap-y-10 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-[1.35fr_0.75fr_1fr_1.15fr_1.35fr] gap-x-8 gap-y-10 mb-12">
           {/* Company info + contact */}
-          <div className="col-span-2 md:col-span-4 xl:col-span-3 space-y-5">
+          <div className="col-span-2 md:col-span-4 xl:col-span-1 space-y-5">
             <Link
               to="/"
               aria-label="Global Chemicals LLC – Home"
@@ -294,7 +296,7 @@ const Footer = () => {
           </div>
 
           {/* Company */}
-          <nav className="xl:col-span-2" aria-label={t('footer.company')}>
+          <nav aria-label={t('footer.company')}>
             <h3 className={headingClass}>{t('footer.company')}</h3>
             <ul className="space-y-2">
               {companyLinks.map((item) => (
@@ -308,7 +310,7 @@ const Footer = () => {
           </nav>
 
           {/* Services */}
-          <nav className="xl:col-span-2" aria-label={t('footer.ourServices')}>
+          <nav aria-label={t('footer.ourServices')}>
             <h3 className={headingClass}>{t('footer.ourServices')}</h3>
             <ul className="space-y-2">
               {services.map((item) => (
@@ -322,7 +324,7 @@ const Footer = () => {
           </nav>
 
           {/* Supply guides (product+geo hubs) */}
-          <nav className="xl:col-span-2" aria-label={t('footer.supplyGuides', 'Supply Guides')}>
+          <nav className="col-span-2 md:col-span-1" aria-label={t('footer.supplyGuides', 'Supply Guides')}>
             <h3 className={headingClass}>{t('footer.supplyGuides', 'Supply Guides')}</h3>
             <ul className="space-y-2">
               {supplyGuides.map((item) => (
@@ -336,7 +338,7 @@ const Footer = () => {
           </nav>
 
           {/* Locations, grouped by country */}
-          <nav className="xl:col-span-3" aria-label={t('footer.weDeliverTo')}>
+          <nav className="col-span-2 md:col-span-1" aria-label={t('footer.weDeliverTo')}>
             <h3 className={headingClass}>
               <Link to="/chemicals" className="hover:text-primary transition-colors">{t('footer.weDeliverTo')}</Link>
             </h3>
