@@ -505,7 +505,17 @@
         }
       ],
       "guideUrl": "/chemical-supplier/caustic-soda-oman",
-      "guideLabel": "Caustic Soda Supplier in Oman — flakes, prills & liquid compared"
+      "guideLabel": "Caustic Soda Supplier in Oman — flakes, prills & liquid compared",
+      "countryGuides": [
+        {
+          "label": "Caustic soda supplier UAE",
+          "url": "/chemical-supplier/caustic-soda-uae"
+        },
+        {
+          "label": "Caustic soda supplier Saudi Arabia",
+          "url": "/chemical-supplier/caustic-soda-saudi-arabia"
+        }
+      ]
     }
   },
   {
@@ -569,7 +579,17 @@
         }
       ],
       "guideUrl": "/chemical-supplier/caustic-soda-oman",
-      "guideLabel": "Caustic Soda Supplier in Oman — flakes, prills & liquid compared"
+      "guideLabel": "Caustic Soda Supplier in Oman — flakes, prills & liquid compared",
+      "countryGuides": [
+        {
+          "label": "Caustic soda supplier UAE",
+          "url": "/chemical-supplier/caustic-soda-uae"
+        },
+        {
+          "label": "Caustic soda supplier Saudi Arabia",
+          "url": "/chemical-supplier/caustic-soda-saudi-arabia"
+        }
+      ]
     }
   },
   {
@@ -638,7 +658,17 @@
         }
       ],
       "guideUrl": "/chemical-supplier/water-treatment-chemicals-gcc",
-      "guideLabel": "Water treatment chemicals for the UAE, Saudi Arabia and the GCC — specs, packs and lead times"
+      "guideLabel": "Water treatment chemicals for the UAE, Saudi Arabia and the GCC — specs, packs and lead times",
+      "countryGuides": [
+        {
+          "label": "Calcium hypochlorite supplier UAE",
+          "url": "/chemical-supplier/calcium-hypochlorite-uae"
+        },
+        {
+          "label": "Calcium hypochlorite supplier Bahrain",
+          "url": "/chemical-supplier/calcium-hypochlorite-bahrain"
+        }
+      ]
     }
   },
   {
@@ -756,7 +786,17 @@
       ],
       "wikiUrl": "https://en.wikipedia.org/wiki/Sodium_hydroxide",
       "guideUrl": "/chemical-supplier/caustic-soda-oman",
-      "guideLabel": "Caustic Soda Supplier in Oman — flakes, prills & liquid compared"
+      "guideLabel": "Caustic Soda Supplier in Oman — flakes, prills & liquid compared",
+      "countryGuides": [
+        {
+          "label": "Caustic soda supplier UAE",
+          "url": "/chemical-supplier/caustic-soda-uae"
+        },
+        {
+          "label": "Caustic soda supplier Saudi Arabia",
+          "url": "/chemical-supplier/caustic-soda-saudi-arabia"
+        }
+      ]
     }
   },
   {
@@ -2505,7 +2545,17 @@
       "seoTitle": "Hydrochloric Acid (HCl 30-33%) Supplier in Oman",
       "seoDescription": "Hydrochloric acid 30–33% (CAS 7647-01-0) ex-stock Muscat, Oman. pH control, descaling, resin regeneration, pickling. Drums, IBCs or bulk — get a quote.",
       "guideUrl": "/chemical-supplier/hydrochloric-acid-oman",
-      "guideLabel": "Hydrochloric Acid Supplier in Oman — HCl 30–33%, carboy to bulk tanker"
+      "guideLabel": "Hydrochloric Acid Supplier in Oman — HCl 30–33%, carboy to bulk tanker",
+      "countryGuides": [
+        {
+          "label": "Hydrochloric acid supplier UAE",
+          "url": "/chemical-supplier/hydrochloric-acid-uae"
+        },
+        {
+          "label": "Hydrochloric acid supplier Saudi Arabia",
+          "url": "/chemical-supplier/hydrochloric-acid-saudi-arabia"
+        }
+      ]
     }
   },
   {

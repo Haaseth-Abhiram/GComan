@@ -602,6 +602,26 @@ const ProductDetail = ({ category, rawCategoryProducts }: ProductDetailProps) =>
                 </Card>
               )}
 
+              {/* GCC country supply pages (/chemical-supplier/<product>-<country>).
+                  Opt-in via details.countryGuides. Added 2026-11-13: all 11
+                  country pages had zero links from their own product pages
+                  (reachable only from the footer and the hubs), the same orphan
+                  pattern the guide link above was built to fix. English only:
+                  none of the country pages has an /ar twin yet. */}
+              {!isArabicRender && product.details?.countryGuides?.length > 0 && (
+                <nav aria-label="GCC country supply pages" className="mb-8 text-sm text-muted-foreground">
+                  <span className="font-medium text-foreground">Supplying to the GCC: </span>
+                  {(product.details.countryGuides as { label: string; url: string }[]).map((g, i) => (
+                    <span key={g.url}>
+                      {i > 0 && ' · '}
+                      <LocalizedLink to={g.url} className="text-primary hover:underline">
+                        {g.label}
+                      </LocalizedLink>
+                    </span>
+                  ))}
+                </nav>
+              )}
+
               {/* CTA Section */}
               <Card className="p-8 bg-gradient-to-br from-primary/5 to-secondary/5 border-primary/20">
                 <div className="text-center">

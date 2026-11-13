@@ -513,7 +513,17 @@
       ],
       "wikiUrl": "https://en.wikipedia.org/wiki/Sodium_hydroxide",
       "guideUrl": "/chemical-supplier/caustic-soda-oman",
-      "guideLabel": "Caustic Soda Supplier in Oman — flakes, prills & liquid compared"
+      "guideLabel": "Caustic Soda Supplier in Oman — flakes, prills & liquid compared",
+      "countryGuides": [
+        {
+          "label": "Caustic soda supplier UAE",
+          "url": "/chemical-supplier/caustic-soda-uae"
+        },
+        {
+          "label": "Caustic soda supplier Saudi Arabia",
+          "url": "/chemical-supplier/caustic-soda-saudi-arabia"
+        }
+      ]
     }
   },
   {
@@ -591,7 +601,29 @@
         }
       ],
       "guideUrl": "/chemical-supplier/nitric-acid-oman",
-      "guideLabel": "Nitric Acid Supplier in Oman — 68% HNO3, industrial, food & lab grades"
+      "guideLabel": "Nitric Acid Supplier in Oman — 68% HNO3, industrial, food & lab grades",
+      "countryGuides": [
+        {
+          "label": "Nitric acid supplier Saudi Arabia",
+          "url": "/chemical-supplier/nitric-acid-saudi-arabia"
+        },
+        {
+          "label": "UAE",
+          "url": "/chemical-supplier/nitric-acid-uae"
+        },
+        {
+          "label": "Qatar",
+          "url": "/chemical-supplier/nitric-acid-qatar"
+        },
+        {
+          "label": "Kuwait",
+          "url": "/chemical-supplier/nitric-acid-kuwait"
+        },
+        {
+          "label": "Bahrain",
+          "url": "/chemical-supplier/nitric-acid-bahrain"
+        }
+      ]
     }
   },
   {
