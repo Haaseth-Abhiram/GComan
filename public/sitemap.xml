@@ -772,6 +772,15 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://gcoman.com/products/construction/construction-sealants</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/construction/construction-sealants"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/construction/construction-sealants"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/construction/construction-sealants"/>
+  </url>
+  <url>
     <loc>https://gcoman.com/products/construction/epoxy-coating</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -779,6 +788,15 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/construction/epoxy-coating"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/construction/epoxy-coating"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/construction/epoxy-coating"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/products/construction/epoxy-resin-hardener</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/construction/epoxy-resin-hardener"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/construction/epoxy-resin-hardener"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/construction/epoxy-resin-hardener"/>
   </url>
   <url>
     <loc>https://gcoman.com/products/construction/mould-releasing-agents</loc>
@@ -3418,6 +3436,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/chlorinated/trichloroethylene"/>
   </url>
   <url>
+    <loc>https://gcoman.com/ar/products/construction/construction-sealants</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/construction/construction-sealants"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/construction/construction-sealants"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/construction/construction-sealants"/>
+  </url>
+  <url>
     <loc>https://gcoman.com/ar/products/construction/epoxy-coating</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -3425,6 +3452,15 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/construction/epoxy-coating"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/construction/epoxy-coating"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/construction/epoxy-coating"/>
+  </url>
+  <url>
+    <loc>https://gcoman.com/ar/products/construction/epoxy-resin-hardener</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/construction/epoxy-resin-hardener"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/construction/epoxy-resin-hardener"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/construction/epoxy-resin-hardener"/>
   </url>
   <url>
     <loc>https://gcoman.com/ar/products/construction/mould-releasing-agents</loc>

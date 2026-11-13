@@ -8,7 +8,7 @@
 > chemicals across the GCC region (UAE, Saudi Arabia, Qatar, Kuwait, Bahrain).
 > ISO 9001:2015 certified, JSRS registered, and ICV compliant. Catalog spans
 > water treatment, oilfield, food & beverage, laboratory, and specialty chemicals
-> (277 SKUs across 22 categories). Founded in Muscat; operating
+> (279 SKUs across 22 categories). Founded in Muscat; operating
 > Sunday–Thursday 08:00–18:00 GST. Contact: info@gcoman.com, +968 9277 2305.
 
 ## Core Identity
@@ -26,7 +26,7 @@
 - Business type: B2B wholesale chemical distribution and supply
 - Languages: English, Arabic
 
-## Product Categories (22 categories, 277 SKUs)
+## Product Categories (22 categories, 279 SKUs)
 
 - [Water Treatment Chemicals](https://gcoman.com/products/water-treatment): PAC (Poly Aluminium Chloride), Sodium Hypochlorite, Calcium Hypochlorite, Hydrochloric Acid (30-33%), Industrial Salt (NaCl), Antiscalants, Coagulants, Flocculants
 - [RO Chemicals](https://gcoman.com/products/ro-chemicals): Antiscalants, membrane cleaners, biocides
@@ -44,7 +44,7 @@
 - [Alcohols](https://gcoman.com/products/alcohols): Methanol, ethanol, IPA
 - [Ethanolamines](https://gcoman.com/products/ethanolamines): MEA, DEA, TEA
 - [Swimming Pool Chemicals](https://gcoman.com/products/swimming-pool): Chlorine tablets, pH adjusters, algaecides
-- [Construction Chemicals](https://gcoman.com/products/construction): Admixtures, curing compounds, bonding agents
+- [Construction Chemicals](https://gcoman.com/products/construction): Epoxy coatings, epoxy resin and hardener, silicone / PU / acrylic sealants, bonding agents, polymer-modified mortar, mould release agents
 - [Agro Chemicals](https://gcoman.com/products/agro): Fertilisers, herbicides, adjuvants
 - [Additives](https://gcoman.com/products/additives): Defoamers, dispersants, surfactants
 - [Calcium Carbonate](https://gcoman.com/products/calcium-carbonate): Ground and precipitated grades
@@ -54,7 +54,7 @@
 ## Key Pages
 
 - [Homepage](https://gcoman.com/): Company overview, product highlights, industries served
-- [All Products (277 SKUs)](https://gcoman.com/products): Full searchable product catalogue with 22 categories
+- [All Products (279 SKUs)](https://gcoman.com/products): Full searchable product catalogue with 22 categories
 - [Chemical Suppliers in Oman](https://gcoman.com/chemical-suppliers-oman): Market overview, ISO 9001 certification, Oman chemical supply landscape
 - [Chemical Suppliers in the Middle East](https://gcoman.com/chemical-suppliers-middle-east): GCC regional chemical supply, export capabilities
 - [Caustic Soda Supplier in Oman](https://gcoman.com/chemical-supplier/caustic-soda-oman): NaOH supplier page — grades, pricing, safe handling, Oman industry applications
