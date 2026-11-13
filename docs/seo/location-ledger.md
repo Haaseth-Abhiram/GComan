@@ -568,3 +568,11 @@ Append-only. One row per check per run, written by the `running-search-operation
 | 2026-11-13 | bing | chemical supplier qatar | panel target | — |  | unichemqatar.com | cc=QA navigated, signed-in Chrome |
 | 2026-11-13 | bing | chemical supplier kuwait | panel target | — |  | lookchem.com | cc=KW navigated, signed-in Chrome |
 | 2026-11-13 | bing | chemical supplier bahrain | panel target | 2 | /chemicals/bahrain | gobalchemicalsplus.com | cc=BH navigated, signed-in Chrome |
+| 2026-11-13 | bing | urea supplier oman | product deep dive | 6 | /chemical-supplier/fertilizers-oman | chimisrl.com | cc=OM navigated |
+| 2026-11-13 | bing | urea fertilizer supplier uae | product deep dive | — |  | chemstock.ae | cc=AE navigated |
+| 2026-11-13 | bing | water treatment chemicals supplier oman | product deep dive | 3 | /products/water-treatment | recordsmarine.com | cc=OM navigated |
+| 2026-11-13 | bing | water treatment chemicals supplier uae | product deep dive | — |  | saffronchemicals.com | cc=AE navigated |
+| 2026-11-13 | bing | water treatment chemicals saudi arabia | product deep dive | — |  | wemsarabia.com | cc=SA navigated |
+| 2026-11-13 | bing | lubricants supplier oman | product deep dive | 1 | /products/lubricants | gcoman.com | cc=OM navigated |
+| 2026-11-13 | bing | swimming pool chemicals oman | product deep dive | 1 | /products/swimming-pool | gcoman.com | cc=OM navigated |
+| 2026-11-13 | bing | epoxy resin supplier oman | product deep dive | 3 | /products/construction/epoxy-coating | omanchem.com | cc=OM navigated |
