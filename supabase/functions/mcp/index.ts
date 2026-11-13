@@ -3159,7 +3159,17 @@ var food_beverage_default = [
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Sodium_hydroxide",
       guideUrl: "/chemical-supplier/caustic-soda-oman",
-      guideLabel: "Caustic Soda Supplier in Oman \u2014 flakes, prills & liquid compared"
+      guideLabel: "Caustic Soda Supplier in Oman \u2014 flakes, prills & liquid compared",
+      countryGuides: [
+        {
+          label: "Caustic soda supplier UAE",
+          url: "/chemical-supplier/caustic-soda-uae"
+        },
+        {
+          label: "Caustic soda supplier Saudi Arabia",
+          url: "/chemical-supplier/caustic-soda-saudi-arabia"
+        }
+      ]
     }
   },
   {
@@ -3237,7 +3247,29 @@ var food_beverage_default = [
         }
       ],
       guideUrl: "/chemical-supplier/nitric-acid-oman",
-      guideLabel: "Nitric Acid Supplier in Oman \u2014 68% HNO3, industrial, food & lab grades"
+      guideLabel: "Nitric Acid Supplier in Oman \u2014 68% HNO3, industrial, food & lab grades",
+      countryGuides: [
+        {
+          label: "Nitric acid supplier Saudi Arabia",
+          url: "/chemical-supplier/nitric-acid-saudi-arabia"
+        },
+        {
+          label: "UAE",
+          url: "/chemical-supplier/nitric-acid-uae"
+        },
+        {
+          label: "Qatar",
+          url: "/chemical-supplier/nitric-acid-qatar"
+        },
+        {
+          label: "Kuwait",
+          url: "/chemical-supplier/nitric-acid-kuwait"
+        },
+        {
+          label: "Bahrain",
+          url: "/chemical-supplier/nitric-acid-bahrain"
+        }
+      ]
     }
   },
   {
@@ -11624,8 +11656,8 @@ var swimming_pool_default = [
         "Comprehensive water testing services"
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Swimming_pool_sanitation",
-      guideUrl: "/blog/swimming-pool-chemicals-oman-muscat",
-      guideLabel: "Swimming pool chemicals in Oman \u2014 dosing for hotels, villas and facilities",
+      guideUrl: "/chemical-supplier/pool-chlorine-gcc",
+      guideLabel: "Pool chlorine for Oman, the UAE, Bahrain and the GCC \u2014 grades, packs and lead times",
       seoDescription: "Swimming pool chemicals in Oman \u2014 sanitisers, pH balancers & algaecides for free chlorine 1-3 ppm, pH 7.2-7.6. Full range \u2014 request a quote."
     }
   },
@@ -11787,8 +11819,18 @@ var swimming_pool_default = [
         }
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Calcium_hypochlorite",
-      guideUrl: "/blog/swimming-pool-chemicals-oman-muscat",
-      guideLabel: "Swimming pool chemicals in Oman \u2014 dosing for hotels, villas and facilities"
+      guideUrl: "/chemical-supplier/pool-chlorine-gcc",
+      guideLabel: "Pool chlorine for Oman, the UAE, Bahrain and the GCC \u2014 grades, packs and lead times",
+      countryGuides: [
+        {
+          label: "Calcium hypochlorite supplier UAE",
+          url: "/chemical-supplier/calcium-hypochlorite-uae"
+        },
+        {
+          label: "Calcium hypochlorite supplier Bahrain",
+          url: "/chemical-supplier/calcium-hypochlorite-bahrain"
+        }
+      ]
     }
   },
   {
@@ -12055,8 +12097,8 @@ var swimming_pool_default = [
         "Packaging: 1kg, 5kg, 10kg, 25kg buckets"
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Trichloroisocyanuric_acid",
-      guideUrl: "/blog/swimming-pool-chemicals-oman-muscat",
-      guideLabel: "Swimming pool chemicals in Oman \u2014 dosing for hotels, villas and facilities"
+      guideUrl: "/chemical-supplier/pool-chlorine-gcc",
+      guideLabel: "Pool chlorine for Oman, the UAE, Bahrain and the GCC \u2014 grades, packs and lead times"
     }
   },
   {
@@ -13708,7 +13750,17 @@ var water_treatment_default = [
         }
       ],
       guideUrl: "/chemical-supplier/caustic-soda-oman",
-      guideLabel: "Caustic Soda Supplier in Oman \u2014 flakes, prills & liquid compared"
+      guideLabel: "Caustic Soda Supplier in Oman \u2014 flakes, prills & liquid compared",
+      countryGuides: [
+        {
+          label: "Caustic soda supplier UAE",
+          url: "/chemical-supplier/caustic-soda-uae"
+        },
+        {
+          label: "Caustic soda supplier Saudi Arabia",
+          url: "/chemical-supplier/caustic-soda-saudi-arabia"
+        }
+      ]
     }
   },
   {
@@ -13772,7 +13824,17 @@ var water_treatment_default = [
         }
       ],
       guideUrl: "/chemical-supplier/caustic-soda-oman",
-      guideLabel: "Caustic Soda Supplier in Oman \u2014 flakes, prills & liquid compared"
+      guideLabel: "Caustic Soda Supplier in Oman \u2014 flakes, prills & liquid compared",
+      countryGuides: [
+        {
+          label: "Caustic soda supplier UAE",
+          url: "/chemical-supplier/caustic-soda-uae"
+        },
+        {
+          label: "Caustic soda supplier Saudi Arabia",
+          url: "/chemical-supplier/caustic-soda-saudi-arabia"
+        }
+      ]
     }
   },
   {
@@ -13841,7 +13903,17 @@ var water_treatment_default = [
         }
       ],
       guideUrl: "/chemical-supplier/water-treatment-chemicals-gcc",
-      guideLabel: "Water treatment chemicals for the UAE, Saudi Arabia and the GCC \u2014 specs, packs and lead times"
+      guideLabel: "Water treatment chemicals for the UAE, Saudi Arabia and the GCC \u2014 specs, packs and lead times",
+      countryGuides: [
+        {
+          label: "Calcium hypochlorite supplier UAE",
+          url: "/chemical-supplier/calcium-hypochlorite-uae"
+        },
+        {
+          label: "Calcium hypochlorite supplier Bahrain",
+          url: "/chemical-supplier/calcium-hypochlorite-bahrain"
+        }
+      ]
     }
   },
   {
@@ -13959,7 +14031,17 @@ var water_treatment_default = [
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Sodium_hydroxide",
       guideUrl: "/chemical-supplier/caustic-soda-oman",
-      guideLabel: "Caustic Soda Supplier in Oman \u2014 flakes, prills & liquid compared"
+      guideLabel: "Caustic Soda Supplier in Oman \u2014 flakes, prills & liquid compared",
+      countryGuides: [
+        {
+          label: "Caustic soda supplier UAE",
+          url: "/chemical-supplier/caustic-soda-uae"
+        },
+        {
+          label: "Caustic soda supplier Saudi Arabia",
+          url: "/chemical-supplier/caustic-soda-saudi-arabia"
+        }
+      ]
     }
   },
   {
@@ -15089,8 +15171,7 @@ var water_treatment_default = [
         "soda ash Oman",
         "sodium carbonate Oman",
         "soda ash dense Muscat",
-        "soda ash light Oman",
-        "sodium carbonate Oman"
+        "soda ash light Oman"
       ],
       longDescription: "Soda Ash supplier in Oman - Global Chemicals LLC provides dense and light soda ash for water treatment, glass manufacturing, detergent production, and industrial processes in Muscat, Sohar, Salalah. Our sodium carbonate offers effective pH adjustment, water softening, and alkalinity building. Soda ash (sodium carbonate, Na\u2082CO\u2083) is one of the most important industrial alkaline chemicals in Oman \u2014 used in water treatment, glass production, detergent manufacturing, and chemical processing. In water treatment, soda ash raises pH and adds alkalinity to treated water, and is used to trim pH and alkalinity after desalination (the calcium for remineralisation comes from lime or limestone). It is also used to raise swimming pool pH (a safer and easier-to-handle alternative to caustic soda for pool operators), and to neutralise acidic industrial effluent. Oman's glass manufacturing sector (serving the construction boom) uses soda ash as a key flux in glass batch formulations. In detergent powder manufacturing, soda ash is the alkaline builder and carrier/filler. Global Chemicals LLC supplies soda ash in both dense and light grades in 25kg bags and 1,000kg big bags. Supply to all Oman regions; export to UAE and GCC.",
       applications: [
@@ -15106,14 +15187,24 @@ var water_treatment_default = [
         "Na2CO3 purity: 99.2% min",
         "Grades: Dense (heavy), Light",
         "Appearance: White powder/granules",
-        "Bulk density: 900-1100 kg/m\xB3 (dense)",
+        "Bulk density: 1.0-1.2 kg/L (dense); 0.5-0.6 kg/L (light)",
         "pH (1% solution): 11.3-11.7",
-        "Available in 25kg, 50kg bags"
+        "Available in 25kg, 50kg bags, bulk bags"
       ],
       wikiUrl: "https://en.wikipedia.org/wiki/Sodium_carbonate",
       seoDescription: "Soda ash 99.2% Na2CO3 (CAS 497-19-8), dense and light grades, ex-stock Muscat, Oman. Water softening & pH correction. 25 kg bags \u2014 get a quote.",
       guideUrl: "/chemical-supplier/water-treatment-chemicals-gcc",
-      guideLabel: "Water treatment chemicals for the UAE, Saudi Arabia and the GCC \u2014 specs, packs and lead times"
+      guideLabel: "Water treatment chemicals for the UAE, Saudi Arabia and the GCC \u2014 specs, packs and lead times",
+      faqs: [
+        {
+          question: "How is soda ash priced in Oman?",
+          answer: "Soda ash is quoted per order rather than from a fixed price list, because the price depends on the grade (dense or light), the quantity, the packing and the delivery point. Prices also move with the international soda ash market and freight costs. Send Global Chemicals LLC the grade, quantity and delivery location in Oman or the GCC, and our team replies with a quotation within 24 hours."
+        },
+        {
+          question: "Dense or light soda ash: which grade do I need?",
+          answer: "Both grades are the same chemical, sodium carbonate (Na2CO3, 99.2% min). Dense soda ash has larger granules and roughly twice the bulk density of light ash (about 1.0\u20131.2 kg/L against 0.5\u20130.6 kg/L), so it is less dusty and flows well in dosing equipment and glass batching. Light soda ash is a finer, lower-density powder, often preferred where it is blended or dissolved, such as detergent powders. For water softening and pH correction either grade works; tell us your process and we will recommend one."
+        }
+      ]
     }
   },
   {
@@ -15699,7 +15790,17 @@ var water_treatment_default = [
       seoTitle: "Hydrochloric Acid (HCl 30-33%) Supplier in Oman",
       seoDescription: "Hydrochloric acid 30\u201333% (CAS 7647-01-0) ex-stock Muscat, Oman. pH control, descaling, resin regeneration, pickling. Drums, IBCs or bulk \u2014 get a quote.",
       guideUrl: "/chemical-supplier/hydrochloric-acid-oman",
-      guideLabel: "Hydrochloric Acid Supplier in Oman \u2014 HCl 30\u201333%, carboy to bulk tanker"
+      guideLabel: "Hydrochloric Acid Supplier in Oman \u2014 HCl 30\u201333%, carboy to bulk tanker",
+      countryGuides: [
+        {
+          label: "Hydrochloric acid supplier UAE",
+          url: "/chemical-supplier/hydrochloric-acid-uae"
+        },
+        {
+          label: "Hydrochloric acid supplier Saudi Arabia",
+          url: "/chemical-supplier/hydrochloric-acid-saudi-arabia"
+        }
+      ]
     }
   },
   {
