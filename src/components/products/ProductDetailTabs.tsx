@@ -2,6 +2,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { ShieldAlert, FileText, AlertTriangle, Mail, Download } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import { useTranslation } from 'react-i18next';
 
 export interface ProductDetailTabsProps {
   productTitle: string;
@@ -19,6 +20,8 @@ export interface ProductDetailTabsProps {
   };
 }
 
+// `label` is the English default; the Arabic comes from products.ghs.<code>
+// in ar.json (hazard / storage text itself is per product, translated by the caller).
 const GHS_PICTOGRAM: Record<string, { src: string; label: string }> = {
   GHS01: { src: '/icons/ghs/ghs01-explosive.svg',  label: 'Explosive' },
   GHS02: { src: '/icons/ghs/ghs02-flammable.svg',  label: 'Flammable' },
@@ -42,6 +45,7 @@ export const ProductDetailTabs = ({
   hazard,
   documents,
 }: ProductDetailTabsProps) => {
+  const { t } = useTranslation();
   const hasHazard =
     !!hazard &&
     ((hazard.ghs && hazard.ghs.length > 0) ||
@@ -64,13 +68,13 @@ export const ProductDetailTabs = ({
           {hasHazard && (
             <TabsTrigger value="safety" className="gap-1.5">
               <ShieldAlert className="h-4 w-4" />
-              <span>Safety</span>
+              <span>{t('products.tabSafety', 'Safety')}</span>
             </TabsTrigger>
           )}
           {hasDocs && (
             <TabsTrigger value="docs" className="gap-1.5">
               <FileText className="h-4 w-4" />
-              <span>Documents</span>
+              <span>{t('products.tabDocuments', 'Documents')}</span>
             </TabsTrigger>
           )}
         </TabsList>
@@ -88,7 +92,7 @@ export const ProductDetailTabs = ({
                         <figure key={code} className="text-center">
                           <img
                             src={p.src}
-                            alt={`${code} — ${p.label}`}
+                            alt={`${code} — ${t(`products.ghs.${code}`, p.label)}`}
                             width={56}
                             height={56}
                             className="h-14 w-14"
@@ -109,7 +113,8 @@ export const ProductDetailTabs = ({
                       tone={hazard.signalWord === 'Danger' ? 'danger' : 'warning'}
                       icon={<AlertTriangle className="h-3.5 w-3.5" />}
                     >
-                      Signal: {hazard.signalWord}
+                      {t('products.signalLabel', 'Signal:')}{' '}
+                      {hazard.signalWord === 'Danger' ? t('products.signalDanger', 'Danger') : t('products.signalWarning', 'Warning')}
                     </Chip>
                   )}
                   {hazard.hazardClass && <Chip tone="muted">{hazard.hazardClass}</Chip>}
@@ -118,7 +123,7 @@ export const ProductDetailTabs = ({
               </div>
               {hazard.storage && (
                 <p className="mt-4 rounded-md border border-border bg-muted/30 p-3 text-sm text-muted-foreground">
-                  <strong className="text-foreground">Storage &amp; handling:</strong> {hazard.storage}
+                  <strong className="text-foreground">{t('products.storageLabel', 'Storage & handling:')}</strong> {hazard.storage}
                 </p>
               )}
             </div>
@@ -137,7 +142,7 @@ export const ProductDetailTabs = ({
                         <a href={url} target="_blank" rel="noopener noreferrer">
                           <span className="flex items-center gap-2 text-sm font-semibold">
                             <Download className="h-4 w-4" />
-                            Download {label}
+                            {t('products.downloadDoc', { label, defaultValue: 'Download {{label}}' })}
                           </span>
                         </a>
                       </Button>
@@ -154,7 +159,7 @@ export const ProductDetailTabs = ({
                       <Link to={href} rel="nofollow">
                         <span className="flex items-center gap-2 text-sm font-semibold">
                           <Mail className="h-4 w-4" />
-                          Request {label}
+                          {t('products.requestDoc', { label, defaultValue: 'Request {{label}}' })}
                         </span>
                       </Link>
                     </Button>

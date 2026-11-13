@@ -207,7 +207,29 @@
     "deliveryBadge": "Same-day Muscat · next-day Sohar, Salalah, Duqm",
     "docsBadge": "SDS + CoA with every batch",
     "quoteBlurbPre": "Get pricing, availability, and technical specifications for",
-    "quoteBlurbPost": ". Our team responds within 24 hours."
+    "quoteBlurbPost": ". Our team responds within 24 hours.",
+    "tabSafety": "Safety",
+    "tabDocuments": "Documents",
+    "signalLabel": "Signal:",
+    "signalDanger": "Danger",
+    "signalWarning": "Warning",
+    "storageLabel": "Storage & handling:",
+    "downloadDoc": "Download {{label}}",
+    "requestDoc": "Request {{label}}",
+    "badgeIso": "ISO 9001 Certified",
+    "badgeDelivery": "Fast Delivery",
+    "badgeExport": "Oman & GCC Export",
+    "ghs": {
+      "GHS01": "Explosive",
+      "GHS02": "Flammable",
+      "GHS03": "Oxidising",
+      "GHS04": "Gas under pressure",
+      "GHS05": "Corrosive",
+      "GHS06": "Acute toxicity",
+      "GHS07": "Health irritant",
+      "GHS08": "Serious health hazard",
+      "GHS09": "Environmental hazard"
+    }
   },
   "industries": {
     "title": "Industries We Serve",

@@ -563,7 +563,13 @@ const ProductDetail = ({ category, rawCategoryProducts }: ProductDetailProps) =>
               {product.details?.hazard && (
                 <ProductDetailTabs
                   productTitle={translatedTitle}
-                  hazard={product.details?.hazard}
+                  hazard={isArabicRender
+                    ? {
+                        ...product.details.hazard,
+                        hazardClass: product.details.hazard.hazardClass && t(`products.${product.id}.hazardClass`, { defaultValue: product.details.hazard.hazardClass }),
+                        storage: product.details.hazard.storage && t(`products.${product.id}.hazardStorage`, { defaultValue: product.details.hazard.storage }),
+                      }
+                    : product.details?.hazard}
                   documents={product.details?.documents}
                 />
               )}
@@ -571,13 +577,13 @@ const ProductDetail = ({ category, rawCategoryProducts }: ProductDetailProps) =>
               {/* Trust Badges */}
               <div className="flex flex-wrap gap-3 mb-6 justify-center">
                 <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-green-500/10 text-green-700 dark:text-green-400 text-sm font-medium border border-green-500/20">
-                  <Shield className="w-4 h-4" /> ISO 9001 Certified
+                  <Shield className="w-4 h-4" /> {t('products.badgeIso', 'ISO 9001 Certified')}
                 </span>
                 <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-blue-500/10 text-blue-700 dark:text-blue-400 text-sm font-medium border border-blue-500/20">
-                  <Truck className="w-4 h-4" /> Fast Delivery
+                  <Truck className="w-4 h-4" /> {t('products.badgeDelivery', 'Fast Delivery')}
                 </span>
                 <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium border border-primary/20">
-                  <Globe className="w-4 h-4" /> Oman & GCC Export
+                  <Globe className="w-4 h-4" /> {t('products.badgeExport', 'Oman & GCC Export')}
                 </span>
               </div>
 
