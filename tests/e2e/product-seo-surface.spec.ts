@@ -75,6 +75,18 @@ test.describe('Product page SEO surface', () => {
     }
   });
 
+  test('Arabic meta description carries the stock / GCC / quote tail (2026-11-13)', async ({ page }) => {
+    // The /ar snippet used to be the bare one-line Arabic label
+    // ("صودا الخبز درجة غذائية…"), with no stock, export or call to action.
+    await page.goto('/ar/products/food-beverage/sodium-bicarbonate-food');
+    const desc = page.locator('head meta[name="description"]').first();
+    await expect(desc).toHaveAttribute('content', /اطلب عرض سعر\.$/, { timeout: 10_000 });
+    const value = (await desc.getAttribute('content')) as string;
+    expect(value).toContain('صودا الخبز');
+    expect(value).toContain('التصدير لدول الخليج');
+    expect(value.length).toBeLessThanOrEqual(155);
+  });
+
   test('related products rotate, so sibling pages do not all link to the same 3', async ({ page }) => {
     // Two products in the same large category must surface different related
     // sets. Under the old `.slice(0, 3)` these were byte-identical.

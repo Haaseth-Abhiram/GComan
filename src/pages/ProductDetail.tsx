@@ -143,11 +143,22 @@ const ProductDetail = ({ category, rawCategoryProducts }: ProductDetailProps) =>
     ? `${tAr(`products.${product.id}.title`)} | مورّد كيماويات في عُمان والخليج`
     : undefined;
   const arRawDescription = hasArabicSeo ? String(tAr(`products.${product.id}.description`)) : '';
-  const arSeoDescription = hasArabicSeo
-    ? (arRawDescription.length <= 155
-        ? arRawDescription
-        : arRawDescription.slice(0, 154).replace(/\s+\S*$/, '') + '…')
-    : undefined;
+  // The Arabic description is a one-line label (median 53 chars; 238 of 279
+  // under 70), so on its own the /ar snippet named neither stock, GCC export nor
+  // a call to action. Append the Arabic form of the English composer's tail
+  // (buildSnippet below), the shorter one when the full tail would pass 155.
+  const composeArSnippet = (raw: string) => {
+    const LIMIT = 155;
+    const lead = `${raw.trim().replace(/[.،؛:\s]+$/, '')}.`;
+    for (const tail of [
+      'التوريد من مخزون مسقط والتصدير لدول الخليج. اطلب عرض سعر.',
+      'التوريد من مخزون مسقط. اطلب عرض سعر.',
+    ]) {
+      if (lead.length + 1 + tail.length <= LIMIT) return `${lead} ${tail}`;
+    }
+    return raw.length <= LIMIT ? raw : raw.slice(0, LIMIT - 1).replace(/\s+\S*$/, '') + '…';
+  };
+  const arSeoDescription = hasArabicSeo ? composeArSnippet(arRawDescription) : undefined;
 
   // SERP snippet.
   // details.seoDescription is a hand-written snippet and always wins (16 products).
