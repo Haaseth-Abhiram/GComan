@@ -419,17 +419,17 @@ const ProductDetail = ({ category, rawCategoryProducts }: ProductDetailProps) =>
                   )}
                   {product.details?.formula && (
                     <span className="inline-flex items-center gap-1.5 rounded-full bg-background border border-border px-3 py-1.5 text-xs font-semibold">
-                      <span className="text-muted-foreground">Formula</span>
+                      <span className="text-muted-foreground">{t('products.formula', 'Formula')}</span>
                       <span className="font-mono text-foreground select-all">{product.details.formula}</span>
                     </span>
                   )}
                   <span className="inline-flex items-center gap-1.5 rounded-full bg-background border border-border px-3 py-1.5 text-xs font-semibold text-muted-foreground">
                     <Truck className="w-3.5 h-3.5 text-primary" />
-                    Same-day Muscat · next-day Sohar, Salalah, Duqm
+                    {t('products.deliveryBadge', 'Same-day Muscat · next-day Sohar, Salalah, Duqm')}
                   </span>
                   <span className="inline-flex items-center gap-1.5 rounded-full bg-background border border-border px-3 py-1.5 text-xs font-semibold text-muted-foreground">
                     <Shield className="w-3.5 h-3.5 text-primary" />
-                    SDS + CoA with every batch
+                    {t('products.docsBadge', 'SDS + CoA with every batch')}
                   </span>
                 </div>
                 <GradientCTA
@@ -638,7 +638,7 @@ const ProductDetail = ({ category, rawCategoryProducts }: ProductDetailProps) =>
                 <div className="text-center">
                   <h2 className="text-2xl font-bold mb-2">{t('products.needMoreInfo', { defaultValue: 'Request a Quote' })}</h2>
                   <p className="text-muted-foreground mb-6">
-                    Get pricing, availability, and technical specifications for <strong>{translatedTitle}</strong>. Our team responds within 24 hours.
+                    {t('products.quoteBlurbPre', 'Get pricing, availability, and technical specifications for')} <strong>{translatedTitle}</strong>{t('products.quoteBlurbPost', '. Our team responds within 24 hours.')}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Button asChild size="lg" className="gap-2" onClick={() => trackSelectContent('cta_button', 'get_quote')}>

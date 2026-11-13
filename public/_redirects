@@ -210,14 +210,14 @@
 /products/alkalis/*                     /products                                           301
 
 # Old /products/salts/* category (salts → water-treatment / lab-chemicals)
-/products/salts/calcium-chloride        /products/water-treatment/calcium-chloride-water    301
+/products/salts/calcium-chloride        /products/oilfield/calcium-chloride-oil             301
 /products/salts/sodium-chloride         /products/lab-chemicals/sodium-chloride-lab         301
 /products/salts/magnesium-sulphate      /products/lab-chemicals/magnesium-sulfate-lab       301
 /products/salts/sodium-sulphate         /products                                           301
 /products/salts/*                       /products                                           301
 
 # Old /products/oxidizers/* category (oxidizers → water-treatment / soap-detergent)
-/products/oxidizers/hydrogen-peroxide   /products/soap-detergent/hydrogen-peroxide-35       301
+/products/oxidizers/hydrogen-peroxide   /products/soap-detergent/hydrogen-peroxide-50       301
 /products/oxidizers/sodium-hypochlorite /products/water-treatment/sodium-hypochlorite       301
 /products/oxidizers/*                   /products                                           301
 

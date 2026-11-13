@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import { SEO } from '@/components/SEO';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Shield } from 'lucide-react';
@@ -6,18 +6,18 @@ import { Shield } from 'lucide-react';
 const Privacy = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Helmet defer={false}>
-        <title>Privacy Policy | Global Chemicals LLC</title>
-        <meta name="description" content="Privacy policy for Global Chemicals LLC. Learn how we collect, use, and protect your personal information when you visit our website or use our services." />
-        <meta name="keywords" content="privacy policy, data protection, Global Chemicals LLC, Oman" />
-        {/* Noindex privacy page - thin legal content, not valuable for search */}
-        <meta name="robots" content="noindex, follow" />
-        <meta property="og:title" content="Privacy Policy | Global Chemicals LLC" />
-        <meta property="og:description" content="Privacy policy for Global Chemicals LLC. Learn how we collect, use, and protect your personal information." />
-        <meta property="og:url" content="https://gcoman.com/privacy" />
-        <meta property="og:image" content="https://gcoman.com/images/og-default.png" />
-        <link rel="canonical" href="https://gcoman.com/privacy" />
-      </Helmet>
+      {/* Noindex: thin legal content. Uses <SEO> so the prerenderer receives
+          'prerender-ready' (the page is in NOINDEX_PRERENDER_ROUTES). */}
+      <SEO
+        title="Privacy Policy | Global Chemicals LLC"
+        description="Privacy policy for Global Chemicals LLC. Learn how we collect, use, and protect your personal information when you visit our website or use our services."
+        keywords="privacy policy, data protection, Global Chemicals LLC, Oman"
+        ogTitle="Privacy Policy | Global Chemicals LLC"
+        ogDescription="Privacy policy for Global Chemicals LLC. Learn how we collect, use, and protect your personal information."
+        ogUrl="https://gcoman.com/privacy"
+        canonical="https://gcoman.com/privacy"
+        noIndex={true}
+      />
       <Navigation />
       
       {/* Hero Section */}

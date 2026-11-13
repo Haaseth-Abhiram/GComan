@@ -186,7 +186,7 @@ RewriteRule ^products/mining-chemicals/?$ /products [R=301,L]
   RewriteRule ^products/alkalis/(.+)$                    /products [R=301,L]
 
   # Old /products/salts/* → new equivalents
-  RewriteRule ^products/salts/calcium-chloride/?$        /products/water-treatment/calcium-chloride-water [R=301,L]
+  RewriteRule ^products/salts/calcium-chloride/?$        /products/oilfield/calcium-chloride-oil [R=301,L]
   RewriteRule ^products/salts/sodium-chloride/?$         /products/lab-chemicals/sodium-chloride-lab [R=301,L]
   RewriteRule ^products/salts/magnesium-sulphate/?$      /products/lab-chemicals/magnesium-sulfate-lab [R=301,L]
   RewriteRule ^products/salts/sodium-sulphate/?$         /products [R=301,L]
@@ -194,7 +194,7 @@ RewriteRule ^products/mining-chemicals/?$ /products [R=301,L]
   RewriteRule ^products/salts/(.+)$                      /products [R=301,L]
 
   # Old /products/oxidizers/* → new equivalents
-  RewriteRule ^products/oxidizers/hydrogen-peroxide/?$   /products/soap-detergent/hydrogen-peroxide-35 [R=301,L]
+  RewriteRule ^products/oxidizers/hydrogen-peroxide/?$   /products/soap-detergent/hydrogen-peroxide-50 [R=301,L]
   RewriteRule ^products/oxidizers/sodium-hypochlorite/?$ /products/water-treatment/sodium-hypochlorite [R=301,L]
   RewriteRule ^products/oxidizers/?$                     /products [R=301,L]
   RewriteRule ^products/oxidizers/(.+)$                  /products [R=301,L]

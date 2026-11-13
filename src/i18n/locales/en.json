@@ -202,7 +202,12 @@
     "featured": "Featured",
     "priceAsc": "Price: Low to High",
     "priceDesc": "Price: High to Low",
-    "getQuote": "Get Quote"
+    "getQuote": "Get Quote",
+    "formula": "Formula",
+    "deliveryBadge": "Same-day Muscat · next-day Sohar, Salalah, Duqm",
+    "docsBadge": "SDS + CoA with every batch",
+    "quoteBlurbPre": "Get pricing, availability, and technical specifications for",
+    "quoteBlurbPost": ". Our team responds within 24 hours."
   },
   "industries": {
     "title": "Industries We Serve",
@@ -320,7 +325,9 @@
       "constructionChemicals": "Construction Chemicals"
     },
     "tagline": "Leading Chemical Supplier serving Muscat, Sohar, Duqm, Salalah, and the Rusayl Industrial Area.",
-    "cookieSettings": "Cookie Settings"
+    "cookieSettings": "Cookie Settings",
+    "pricingPrompt": "Need pricing on a specific chemical?",
+    "pricingPromptDesc": "Send us the product and quantity — our team replies within 24 hours."
   },
   "certifications": {
     "iso": "ISO 9001 Certified",

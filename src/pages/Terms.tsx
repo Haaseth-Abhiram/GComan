@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import { SEO } from '@/components/SEO';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { FileText } from 'lucide-react';
@@ -6,18 +6,18 @@ import { FileText } from 'lucide-react';
 const Terms = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Helmet defer={false}>
-        <title>Terms of Service | Global Chemicals LLC</title>
-        <meta name="description" content="Terms and conditions for Global Chemicals LLC. Review our service terms, user responsibilities, and legal agreements for using our website and services." />
-        <meta name="keywords" content="terms of service, terms and conditions, Global Chemicals LLC, legal, Oman" />
-        {/* Noindex terms page - thin legal content, not valuable for search */}
-        <meta name="robots" content="noindex, follow" />
-        <meta property="og:title" content="Terms of Service | Global Chemicals LLC" />
-        <meta property="og:description" content="Terms and conditions for Global Chemicals LLC. Review our service terms and legal agreements." />
-        <meta property="og:url" content="https://gcoman.com/terms" />
-        <meta property="og:image" content="https://gcoman.com/images/og-default.png" />
-        <link rel="canonical" href="https://gcoman.com/terms" />
-      </Helmet>
+      {/* Noindex: thin legal content. Uses <SEO> so the prerenderer receives
+          'prerender-ready' (the page is in NOINDEX_PRERENDER_ROUTES). */}
+      <SEO
+        title="Terms of Service | Global Chemicals LLC"
+        description="Terms and conditions for Global Chemicals LLC. Review our service terms, user responsibilities, and legal agreements for using our website and services."
+        keywords="terms of service, terms and conditions, Global Chemicals LLC, legal, Oman"
+        ogTitle="Terms of Service | Global Chemicals LLC"
+        ogDescription="Terms and conditions for Global Chemicals LLC. Review our service terms and legal agreements."
+        ogUrl="https://gcoman.com/terms"
+        canonical="https://gcoman.com/terms"
+        noIndex={true}
+      />
       <Navigation />
       
       {/* Hero Section */}

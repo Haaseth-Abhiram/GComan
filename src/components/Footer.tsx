@@ -192,10 +192,10 @@ const Footer = () => {
         <div className="mb-12 pb-12 border-b border-white/10 flex flex-col md:flex-row md:items-center md:justify-between gap-5 text-center md:text-left">
           <div>
             <p className="text-lg font-bold text-white">
-              Need pricing on a specific chemical?
+              {t('footer.pricingPrompt', 'Need pricing on a specific chemical?')}
             </p>
             <p className="text-sm text-white/70 mt-1">
-              Send us the product and quantity — our team replies within 24 hours.
+              {t('footer.pricingPromptDesc', 'Send us the product and quantity — our team replies within 24 hours.')}
             </p>
           </div>
           <Link

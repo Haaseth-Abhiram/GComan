@@ -44,13 +44,13 @@ const EXACT_REDIRECTS = new Map<string, string>([
   ['/products/alkalis/ammonia-solution', '/products/lab-chemicals/ammonia-solution-lab'],
 
   // Old /products/salts/*
-  ['/products/salts/calcium-chloride', '/products/water-treatment/calcium-chloride-water'],
+  ['/products/salts/calcium-chloride', '/products/oilfield/calcium-chloride-oil'],
   ['/products/salts/sodium-chloride', '/products/lab-chemicals/sodium-chloride-lab'],
   ['/products/salts/magnesium-sulphate', '/products/lab-chemicals/magnesium-sulfate-lab'],
   ['/products/salts/sodium-sulphate', '/products'],
 
   // Old /products/oxidizers/*
-  ['/products/oxidizers/hydrogen-peroxide', '/products/soap-detergent/hydrogen-peroxide-35'],
+  ['/products/oxidizers/hydrogen-peroxide', '/products/soap-detergent/hydrogen-peroxide-50'],
   ['/products/oxidizers/sodium-hypochlorite', '/products/water-treatment/sodium-hypochlorite'],
 
   // Old /products/solvents/* (renamed or moved)

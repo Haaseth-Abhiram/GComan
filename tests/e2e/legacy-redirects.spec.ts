@@ -24,6 +24,14 @@ test.describe('Legacy URL redirects — client-side', () => {
     expect(new URL(page.url()).pathname).toBe('/products/water-treatment/caustic-soda-flakes');
   });
 
+  test('legacy URL goes straight to the canonical SKU, not a duplicate (2026-11-13)', async ({ page }) => {
+    // calcium-chloride-water canonicalises to calcium-chloride-oil; redirecting
+    // to the duplicate sent redirect and canonical in different directions.
+    await page.goto('/products/salts/calcium-chloride');
+    await page.waitForURL('**/products/oilfield/calcium-chloride-oil');
+    expect(new URL(page.url()).pathname).toBe('/products/oilfield/calcium-chloride-oil');
+  });
+
   test('date-archive prefix catch-all redirects to blog', async ({ page }) => {
     await page.goto('/2021/06/some-unknown-post');
     await page.waitForURL('**/blog');

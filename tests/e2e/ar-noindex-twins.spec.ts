@@ -18,4 +18,14 @@ test.describe('Noindex /ar twins ship their own head in raw HTML (built site onl
       expect(html).not.toContain('<link rel="canonical" href="https://gcoman.com/"');
     });
   }
+
+  // Footer legal pages (NOINDEX_PRERENDER_ROUTES, 2026-11-13): <SEO noIndex>,
+  // which renders `noindex, nofollow` and the page's own canonical.
+  for (const route of ['/privacy', '/terms', '/ar/privacy', '/ar/terms']) {
+    test(route, async ({ request }) => {
+      const html = await (await request.get(route)).text();
+      expect(html).toMatch(/<meta name="robots" content="noindex, nofollow"/);
+      expect(html).toContain(`<link rel="canonical" href="https://gcoman.com${route}"`);
+    });
+  }
 });

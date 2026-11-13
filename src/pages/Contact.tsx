@@ -56,7 +56,7 @@ const contactSchema = z.object({
   phone: z.string().trim().max(20, "Phone number must be less than 20 characters").optional(),
   company: z.string().trim().max(100, "Company name must be less than 100 characters").optional(),
   subject: z.string().min(1, "Please select a subject"),
-  message: z.string().trim().min(10, "Message must be at least 10 characters").max(5000, "Message must be less than 5000 characters"),
+  message: z.string().trim().min(10, "Message must be at least 10 characters").max(4900, "Message must be less than 4900 characters"),
 });
 
 const Contact = () => {
@@ -237,7 +237,7 @@ const Contact = () => {
       if (quotedProduct) trackGenerateLead(`quote:${quotedProduct.slice(0, 60)}`, 'contact_form');
 
       // Success — redirect to /thank-you for conversion tracking
-      navigate('/thank-you');
+      navigate(isArabicRoute ? '/ar/thank-you' : '/thank-you');
       setIsSubmitting(false);
 
     } catch (error) {

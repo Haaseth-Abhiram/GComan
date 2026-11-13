@@ -96,8 +96,10 @@ async function checkRateLimit(supabase: any, ipAddress: string): Promise<boolean
     .gte('created_at', oneHourAgo);
 
   if (error) {
+    // Fail open: a transient DB error must not turn every visitor away as
+    // "too many submissions" and lose the lead (submit-job-application does the same).
     console.error('Rate limit check error:', error);
-    return false;
+    return true;
   }
 
   // Max 5 submissions per IP per hour
@@ -109,7 +111,8 @@ async function sendEmailNotification(
   supabase: any,
   submissionId: string,
   sanitizedData: any,
-  ipAddress: string
+  ipAddress: string,
+  leadCountry: string | null
 ): Promise<void> {
   try {
     const client = new SMTPClient({
@@ -338,7 +341,7 @@ serve(async (req) => {
     // Fire email notification in the background — do NOT await it.
     // Awaiting it caused SMTP timeouts to propagate as a failed response even
     // though the DB insert had already succeeded and the email was delivered.
-    const emailTask = sendEmailNotification(supabase, data.id, sanitizedData, ipAddress).catch(
+    const emailTask = sendEmailNotification(supabase, data.id, sanitizedData, ipAddress, leadCountry).catch(
       (err) => console.error('Background email notification error:', err)
     );
 

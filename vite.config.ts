@@ -33,8 +33,13 @@ import { legacyExactRedirects } from "./src/lib/legacyRedirects";
  * 657-route link list — which fails the whole build. It is also the far
  * milder case: it is a legitimate link hub, so being crawled is desirable,
  * and an indexed HTML sitemap is low-harm. Left on the JS-only noindex.
+ *
+ * `/privacy` and `/terms` (+ their /ar twins) added 2026-11-13: both are
+ * noindex in the app and linked from the footer of every page, yet a full
+ * crawl of production found non-JS crawlers receiving the SPA shell there
+ * (homepage title, `index, follow`, canonical "/").
  */
-const NOINDEX_PRERENDER_ROUTES = ["/thank-you"];
+const NOINDEX_PRERENDER_ROUTES = ["/thank-you", "/privacy", "/terms", "/ar/privacy", "/ar/terms"];
 
 /**
  * Duplicate SKUs (`details.canonicalOverride`, 2026-11-10).
