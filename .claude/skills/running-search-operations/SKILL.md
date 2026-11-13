@@ -135,6 +135,7 @@ Then add a dated note to `docs/seo/visibility-ledger.md`: what moved compared wi
 |---|---|---|
 | 2026-11-10 → ~11-24 | **November 2026 core update** (global, all languages; ~2 weeks) | Readings 11-10..~12-01 are noise for attribution. The Phase 9 baseline re-read moves from 11-22 to ~12-01 |
 | 2026-11 | AI Overviews on ~80% of searches; AI Mode/AIO link clicks are not reported separately in GSC | GSC clicks undercount AI influence. Bing WMT → AI Performance is the only first-party citation telemetry; read it weekly |
+| 2026-11 | **GSC "Search generative AI features" report** (`/search-console/performance/search-analytics/ai?resource_id=…`, link "Open report" under the Performance chart): the queries where gcoman.com appeared in AI Overviews / AI Mode, with clicks, impressions, position | Read it weekly (Sunday) beside Bing WMT AI Performance: record the top non-brand queries and any conversational/Arabic follow-ups ("where to buy in Oman", "contact number", "whatsapp") — they show what AI users ask about us |
 | 2026-11 | GSC Performance: multi-select country filter | Read Oman + UAE + Saudi Arabia (+ Bahrain) together for the GCC view |
 | 2026-11 | Google docs: fact-check AI-written content; warning on deceptive authorship | Our fact-check rule stands; never invent author names or credentials |
 | 2026-11 | GBP: WhatsApp button in the local panel; Posts shown higher | `auditing-platform-presence`: WhatsApp set on GBP, a post every < 30 days |
