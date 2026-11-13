@@ -22,7 +22,9 @@ function* indexFiles(dir) {
 const bad = [];
 for (const file of indexFiles(DIST)) {
   const route = relative(DIST, file).replace(/\/?index\.html$/, '') || '(home)';
-  if (route === '(home)') continue;
+  // `ar` is the Arabic homepage twin (prerendered since 2026-11-13 as a
+  // noindex route): the homepage title there is correct, not a leak.
+  if (route === '(home)' || route === 'ar') continue;
   const html = readFileSync(file, 'utf8').replace(/<!--[\s\S]*?-->/g, '');
   const m = html.match(/<title[^>]*>([^<]+)<\/title>/);
   const title = (m?.[1] ?? '').replace(/&amp;/g, '&');

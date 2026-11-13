@@ -68,8 +68,22 @@ const routesFromSitemap = (): string[] => {
   )
     .map((m) => m[1] || "/")
     .filter((p) => !p.startsWith("/admin") && !p.startsWith("/login"));
+  // Noindex /ar twins (2026-11-13). An /ar page without Arabic meta renders
+  // `noindex, follow` with an /ar canonical, so sync-ar-sitemap.mjs leaves it
+  // out of the sitemap, which also left it out of this list. Non-JS crawlers
+  // then got the SPA shell at every one of them (homepage title, `index,
+  // follow`, canonical "/"): /ar/about, /ar/contact, /ar/blog, all 22
+  // /ar/products/<category> pages, linked from the Arabic nav and footer on
+  // every Arabic page. Same fix as canonicalOverrideRoutes(): prerender the
+  // twin of every English sitemap URL whose /ar version is not listed.
+  // `/sitemap` stays out for the reason given on NOINDEX_PRERENDER_ROUTES.
+  const listed = new Set(fromSitemap);
+  const arNoindexTwins = fromSitemap
+    .filter((p) => !p.startsWith("/ar") && p !== "/sitemap")
+    .map((p) => (p === "/" ? "/ar" : `/ar${p}`))
+    .filter((p) => !listed.has(p));
   // de-dupe defensively in case one is ever added to the sitemap by mistake
-  return Array.from(new Set([...fromSitemap, ...NOINDEX_PRERENDER_ROUTES, ...canonicalOverrideRoutes()]));
+  return Array.from(new Set([...fromSitemap, ...NOINDEX_PRERENDER_ROUTES, ...canonicalOverrideRoutes(), ...arNoindexTwins]));
 };
 
 /**
