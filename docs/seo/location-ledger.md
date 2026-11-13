@@ -551,3 +551,20 @@ Append-only. One row per check per run, written by the `running-search-operation
 | 2026-11-13 | google | buy lubricants in oman (41) | panel target | — | | avicenonline.com | pws=0 gl=om product panel, 9 results parsed |
 | 2026-11-13 | google | buy potassium chloride in oman (42) | panel target | — | | omanchem.com | pws=0 gl=om product panel, 9 results parsed |
 | 2026-11-13 | google | nitric acid price oman (43) | panel target | — | | uvwater.biz | pws=0 gl=om product panel, 9 results parsed |
+| 2026-11-13 | bing | nitric acid supplier saudi arabia (R1) | panel target | 3 | /chemical-supplier/nitric-acid-saudi-arabia? | chimisrl.com | cc=SA navigated, signed-in Chrome |
+| 2026-11-13 | bing | nitric acid supplier riyadh (R2) | panel target | — |  | sigmaaldrich.com | cc=SA navigated, signed-in Chrome |
+| 2026-11-13 | bing | calcium hypochlorite supplier uae (R4) | panel target | — |  | hazchem.ae | cc=AE navigated, signed-in Chrome |
+| 2026-11-13 | bing | calcium hypochlorite supplier dubai (R5) | panel target | — |  | hazchem.ae | cc=AE navigated, signed-in Chrome |
+| 2026-11-13 | bing | calcium hypochlorite supplier bahrain (R7) | panel target | 2 | /chemical-supplier/calcium-hypochlorite-bahrain | gobalchemicalsplus.com | cc=BH navigated, signed-in Chrome |
+| 2026-11-13 | bing | nitric acid supplier oman (R8) | panel target | 1 |  | gcoman.com | cc=OM navigated, signed-in Chrome |
+| 2026-11-13 | bing | sodium hypochlorite supplier oman (R9) | panel target | 1 | /products/water-treatment/sodium-hypochlorite… (product page, not hub) | gcoman.com | cc=OM navigated, signed-in Chrome |
+| 2026-11-13 | bing | hydrochloric acid supplier oman (R10) | panel target | 1 |  | gcoman.com | cc=OM navigated, signed-in Chrome |
+| 2026-11-13 | bing | caustic soda supplier oman (R12) | panel target | 4 |  | omanchem.com | cc=OM navigated, signed-in Chrome |
+| 2026-11-13 | bing | chemical suppliers in oman | panel target | 2 |  | omanchem.com | cc=OM navigated, signed-in Chrome |
+| 2026-11-13 | bing | chemical supplier uae | panel target | — |  | yellowpages-uae.com | cc=AE navigated, signed-in Chrome |
+| 2026-11-13 | bing | chemical supplier saudi arabia | panel target | — |  | ensun.io | cc=SA navigated, signed-in Chrome |
+| 2026-11-13 | bing | caustic soda supplier uae | panel target | — |  | causticsodaco.com | cc=AE navigated, signed-in Chrome |
+| 2026-11-13 | bing | hydrochloric acid supplier saudi arabia | panel target | — |  | sachlo.com | cc=SA navigated, signed-in Chrome |
+| 2026-11-13 | bing | chemical supplier qatar | panel target | — |  | unichemqatar.com | cc=QA navigated, signed-in Chrome |
+| 2026-11-13 | bing | chemical supplier kuwait | panel target | — |  | lookchem.com | cc=KW navigated, signed-in Chrome |
+| 2026-11-13 | bing | chemical supplier bahrain | panel target | 2 | /chemicals/bahrain | gobalchemicalsplus.com | cc=BH navigated, signed-in Chrome |
