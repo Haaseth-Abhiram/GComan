@@ -1212,10 +1212,10 @@ const locations: Record<string, LocationData> = {
 
 
 const productCategories = [
-  { name: 'Water Treatment Chemicals', icon: Droplets, description: 'PAC, chlorine, antiscalants, biocides', category: 'water-treatment' },
-  { name: 'Industrial Lubricants', icon: Factory, description: 'Shell, Mobil, Castrol oils & greases', category: 'lubricants' },
-  { name: 'Laboratory Chemicals', icon: Beaker, description: 'AR grade, HPLC solvents, reagents', category: 'lab-chemicals' },
-  { name: 'Oil & Gas Chemicals', icon: Building2, description: 'Corrosion inhibitors, demulsifiers', category: 'oilfield' },
+  { name: 'Water Treatment Chemicals', nameAr: 'كيماويات معالجة المياه', icon: Droplets, description: 'PAC, chlorine, antiscalants, biocides', descriptionAr: 'PAC والكلور ومانعات الترسب والمبيدات الحيوية', category: 'water-treatment' },
+  { name: 'Industrial Lubricants', nameAr: 'زيوت التشحيم الصناعية', icon: Factory, description: 'Shell, Mobil, Castrol oils & greases', descriptionAr: 'زيوت وشحوم شل وموبيل وكاسترول', category: 'lubricants' },
+  { name: 'Laboratory Chemicals', nameAr: 'كيماويات المختبرات', icon: Beaker, description: 'AR grade, HPLC solvents, reagents', descriptionAr: 'درجة AR ومذيبات HPLC وكواشف', category: 'lab-chemicals' },
+  { name: 'Oil & Gas Chemicals', nameAr: 'كيماويات النفط والغاز', icon: Building2, description: 'Corrosion inhibitors, demulsifiers', descriptionAr: 'مثبطات التآكل ومزيلات الاستحلاب', category: 'oilfield' },
 ];
 
 // Popular, specific product pages surfaced from location-page prose (FAQs
@@ -1224,11 +1224,11 @@ const productCategories = [
 // and buyers a direct path from a location page to the actual product page,
 // rather than only the generic category listing.
 const popularWaterTreatmentProducts = [
-  { label: 'Poly Aluminium Chloride (PAC)', category: 'water-treatment', slug: 'pac-liquid' },
-  { label: 'Calcium Hypochlorite', category: 'water-treatment', slug: 'calcium-hypochlorite-water' },
-  { label: 'Sodium Hypochlorite', category: 'water-treatment', slug: 'sodium-hypochlorite' },
-  { label: 'Caustic Soda Liquid', category: 'water-treatment', slug: 'caustic-soda-liquid' },
-  { label: 'Antiscalant', category: 'water-treatment', slug: 'antiscalant-water' },
+  { label: 'Poly Aluminium Chloride (PAC)', labelAr: 'بولي كلوريد الألومنيوم (PAC)', category: 'water-treatment', slug: 'pac-liquid' },
+  { label: 'Calcium Hypochlorite', labelAr: 'هيبوكلوريت الكالسيوم', category: 'water-treatment', slug: 'calcium-hypochlorite-water' },
+  { label: 'Sodium Hypochlorite', labelAr: 'هيبوكلوريت الصوديوم', category: 'water-treatment', slug: 'sodium-hypochlorite' },
+  { label: 'Caustic Soda Liquid', labelAr: 'صودا كاوية سائلة', category: 'water-treatment', slug: 'caustic-soda-liquid' },
+  { label: 'Antiscalant', labelAr: 'مانع الترسب', category: 'water-treatment', slug: 'antiscalant-water' },
 ];
 
 // GCC country hubs, keyed by the `country` value used in the locations record.
@@ -1242,53 +1242,53 @@ const popularWaterTreatmentProducts = [
 // Product+geo hubs under /chemical-supplier/*. Keep in sync with App.tsx.
 // Country-specific nitric acid pages (NitricAcidCountry.tsx). A location page in
 // one of these markets links its own country's page next to the general hubs.
-const NITRIC_BY_COUNTRY: Record<string, { slug: string; label: string }> = {
-  UAE: { slug: 'nitric-acid-uae', label: 'Nitric acid supply to the UAE' },
-  'Saudi Arabia': { slug: 'nitric-acid-saudi-arabia', label: 'Nitric acid supply to Saudi Arabia' },
-  Qatar: { slug: 'nitric-acid-qatar', label: 'Nitric acid supply to Qatar' },
-  Kuwait: { slug: 'nitric-acid-kuwait', label: 'Nitric acid supply to Kuwait' },
-  Bahrain: { slug: 'nitric-acid-bahrain', label: 'Nitric acid supply to Bahrain' },
+const NITRIC_BY_COUNTRY: Record<string, { slug: string; label: string; labelAr: string }> = {
+  UAE: { slug: 'nitric-acid-uae', label: 'Nitric acid supply to the UAE', labelAr: 'توريد حمض النيتريك إلى الإمارات' },
+  'Saudi Arabia': { slug: 'nitric-acid-saudi-arabia', label: 'Nitric acid supply to Saudi Arabia', labelAr: 'توريد حمض النيتريك إلى السعودية' },
+  Qatar: { slug: 'nitric-acid-qatar', label: 'Nitric acid supply to Qatar', labelAr: 'توريد حمض النيتريك إلى قطر' },
+  Kuwait: { slug: 'nitric-acid-kuwait', label: 'Nitric acid supply to Kuwait', labelAr: 'توريد حمض النيتريك إلى الكويت' },
+  Bahrain: { slug: 'nitric-acid-bahrain', label: 'Nitric acid supply to Bahrain', labelAr: 'توريد حمض النيتريك إلى البحرين' },
 };
 
 // Country-specific calcium hypochlorite pages (CalciumHypochloriteCountry.tsx):
 // only the markets with invoiced hypochlorite sales.
-const HYPO_BY_COUNTRY: Record<string, { slug: string; label: string }> = {
-  UAE: { slug: 'calcium-hypochlorite-uae', label: 'Calcium hypochlorite supply to the UAE' },
-  Bahrain: { slug: 'calcium-hypochlorite-bahrain', label: 'Calcium hypochlorite supply to Bahrain' },
+const HYPO_BY_COUNTRY: Record<string, { slug: string; label: string; labelAr: string }> = {
+  UAE: { slug: 'calcium-hypochlorite-uae', label: 'Calcium hypochlorite supply to the UAE', labelAr: 'توريد هيبوكلوريت الكالسيوم إلى الإمارات' },
+  Bahrain: { slug: 'calcium-hypochlorite-bahrain', label: 'Calcium hypochlorite supply to Bahrain', labelAr: 'توريد هيبوكلوريت الكالسيوم إلى البحرين' },
 };
 
 // Caustic soda and hydrochloric acid country pages (CausticSodaCountry.tsx,
 // HydrochloricAcidCountry.tsx): only the UAE and Saudi Arabia have one.
-const CHLOR_ALKALI_BY_COUNTRY: Record<string, { slug: string; label: string }[]> = {
+const CHLOR_ALKALI_BY_COUNTRY: Record<string, { slug: string; label: string; labelAr: string }[]> = {
   UAE: [
-    { slug: 'caustic-soda-uae', label: 'Caustic soda supply to the UAE' },
-    { slug: 'hydrochloric-acid-uae', label: 'Hydrochloric acid supply to the UAE' },
+    { slug: 'caustic-soda-uae', label: 'Caustic soda supply to the UAE', labelAr: 'توريد الصودا الكاوية إلى الإمارات' },
+    { slug: 'hydrochloric-acid-uae', label: 'Hydrochloric acid supply to the UAE', labelAr: 'توريد حمض الهيدروكلوريك إلى الإمارات' },
   ],
   'Saudi Arabia': [
-    { slug: 'caustic-soda-saudi-arabia', label: 'Caustic soda supply to Saudi Arabia' },
-    { slug: 'hydrochloric-acid-saudi-arabia', label: 'Hydrochloric acid supply to Saudi Arabia' },
+    { slug: 'caustic-soda-saudi-arabia', label: 'Caustic soda supply to Saudi Arabia', labelAr: 'توريد الصودا الكاوية إلى السعودية' },
+    { slug: 'hydrochloric-acid-saudi-arabia', label: 'Hydrochloric acid supply to Saudi Arabia', labelAr: 'توريد حمض الهيدروكلوريك إلى السعودية' },
   ],
 };
 
-const PRODUCT_HUBS: { slug: string; label: string }[] = [
-  { slug: 'nitric-acid-oman', label: 'Nitric acid 68%' },
-  { slug: 'hydrochloric-acid-oman', label: 'Hydrochloric acid 30–33%' },
-  { slug: 'caustic-soda-oman', label: 'Caustic soda flakes & lye' },
-  { slug: 'laboratory-chemicals-oman', label: 'Laboratory chemicals' },
-  { slug: 'fertilizers-oman', label: 'Fertilizers' },
-  { slug: 'sodium-hypochlorite-oman', label: 'Sodium hypochlorite' },
-  { slug: 'oilfield-chemicals-oman', label: 'Oilfield chemicals' },
-  { slug: 'poly-aluminium-chloride-oman', label: 'PAC coagulant' },
-  { slug: 'water-treatment-chemicals-gcc', label: 'Water treatment chemicals (GCC)' },
-  { slug: 'pool-chlorine-gcc', label: 'Pool chlorine & calcium hypochlorite' },
+const PRODUCT_HUBS: { slug: string; label: string; labelAr: string }[] = [
+  { slug: 'nitric-acid-oman', label: 'Nitric acid 68%', labelAr: 'حمض النيتريك 68%' },
+  { slug: 'hydrochloric-acid-oman', label: 'Hydrochloric acid 30–33%', labelAr: 'حمض الهيدروكلوريك 30–33%' },
+  { slug: 'caustic-soda-oman', label: 'Caustic soda flakes & lye', labelAr: 'رقائق ومحلول الصودا الكاوية' },
+  { slug: 'laboratory-chemicals-oman', label: 'Laboratory chemicals', labelAr: 'كيماويات المختبرات' },
+  { slug: 'fertilizers-oman', label: 'Fertilizers', labelAr: 'الأسمدة' },
+  { slug: 'sodium-hypochlorite-oman', label: 'Sodium hypochlorite', labelAr: 'هيبوكلوريت الصوديوم' },
+  { slug: 'oilfield-chemicals-oman', label: 'Oilfield chemicals', labelAr: 'كيماويات حقول النفط' },
+  { slug: 'poly-aluminium-chloride-oman', label: 'PAC coagulant', labelAr: 'مُخثّر PAC' },
+  { slug: 'water-treatment-chemicals-gcc', label: 'Water treatment chemicals (GCC)', labelAr: 'كيماويات معالجة المياه (الخليج)' },
+  { slug: 'pool-chlorine-gcc', label: 'Pool chlorine & calcium hypochlorite', labelAr: 'كلور المسابح وهيبوكلوريت الكالسيوم' },
 ];
 
-const COUNTRY_HUBS: { slug: string; country: string; label: string }[] = [
-  { slug: 'uae', country: 'UAE', label: 'United Arab Emirates' },
-  { slug: 'saudi-arabia', country: 'Saudi Arabia', label: 'Saudi Arabia' },
-  { slug: 'qatar', country: 'Qatar', label: 'Qatar' },
-  { slug: 'kuwait', country: 'Kuwait', label: 'Kuwait' },
-  { slug: 'bahrain', country: 'Bahrain', label: 'Bahrain' },
+const COUNTRY_HUBS: { slug: string; country: string; label: string; labelAr: string }[] = [
+  { slug: 'uae', country: 'UAE', label: 'United Arab Emirates', labelAr: 'الإمارات العربية المتحدة' },
+  { slug: 'saudi-arabia', country: 'Saudi Arabia', label: 'Saudi Arabia', labelAr: 'المملكة العربية السعودية' },
+  { slug: 'qatar', country: 'Qatar', label: 'Qatar', labelAr: 'قطر' },
+  { slug: 'kuwait', country: 'Kuwait', label: 'Kuwait', labelAr: 'الكويت' },
+  { slug: 'bahrain', country: 'Bahrain', label: 'Bahrain', labelAr: 'البحرين' },
 ];
 
 const LocationLanding = () => {
@@ -1421,7 +1421,7 @@ const LocationLanding = () => {
             <div className="flex items-center gap-2 mb-4">
               <Badge variant="secondary" className="text-sm">
                 <MapPin className="w-3 h-3 mr-1" />
-                {locationData.region}
+                {isAr ? t(`locationPages.${location}.region`, { defaultValue: locationData.region }) : locationData.region}
               </Badge>
               <Badge variant="outline" className="text-sm">
                 {locationData.cityArabic}
@@ -1514,12 +1514,12 @@ const LocationLanding = () => {
                       <div className="p-3 bg-primary/10 rounded-lg w-fit mb-4">
                         <IconComponent className="h-6 w-6 text-primary" />
                       </div>
-                      <CardTitle className="text-lg">{category.name}</CardTitle>
-                      <CardDescription>{category.description}</CardDescription>
+                      <CardTitle className="text-lg">{isAr ? category.nameAr : category.name}</CardTitle>
+                      <CardDescription>{isAr ? category.descriptionAr : category.description}</CardDescription>
                     </CardHeader>
                     <CardContent>
                       <Button variant="link" className="p-0" asChild>
-                        <LocalizedLink to={`/products/${category.category}`}>View Products →</LocalizedLink>
+                        <LocalizedLink to={`/products/${category.category}`}>{isAr ? 'عرض المنتجات ←' : 'View Products →'}</LocalizedLink>
                       </Button>
                     </CardContent>
                   </Card>
@@ -1539,7 +1539,7 @@ const LocationLanding = () => {
                 {popularWaterTreatmentProducts.map((product) => (
                   <Button key={product.slug} variant="outline" size="sm" asChild>
                     <LocalizedLink to={`/products/${product.category}/${product.slug}`}>
-                      {product.label}
+                      {isAr ? product.labelAr : product.label}
                     </LocalizedLink>
                   </Button>
                 ))}
@@ -1550,7 +1550,8 @@ const LocationLanding = () => {
       </section>
 
       {/* Related Guide (optional cross-link, e.g. the GCC desalination pillar) */}
-      {locationData.relatedGuide && (
+      {/* The guides are English-only blog posts, so the card is not shown on /ar. */}
+      {locationData.relatedGuide && !isAr && (
         <section className="py-12 border-b">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
@@ -1581,30 +1582,34 @@ const LocationLanding = () => {
             <div className="max-w-4xl mx-auto">
               <Card className="logo-gradient-border relative">
                 <CardContent className="pt-6">
-                  <p className="text-sm font-medium text-primary mb-1">GCC export network</p>
+                  <p className="text-sm font-medium text-primary mb-1">{isAr ? 'شبكة التصدير الخليجية' : 'GCC export network'}</p>
                   {countryHub ? (
                     <>
-                      <p className="font-semibold">Importing into {countryHub.label} from Oman</p>
+                      <p className="font-semibold">{isAr ? `الاستيراد إلى ${countryHub.labelAr} من عُمان` : `Importing into ${countryHub.label} from Oman`}</p>
                       <p className="text-sm text-muted-foreground mt-1 mb-4">
-                        Country-level lead times, customs documentation and the full range we ship from our Muscat warehouse.
+                        {isAr
+                          ? 'مُدد التوريد على مستوى الدولة، والمستندات الجمركية، والمجموعة الكاملة التي نشحنها من مستودعنا في مسقط.'
+                          : 'Country-level lead times, customs documentation and the full range we ship from our Muscat warehouse.'}
                       </p>
                       <Button variant="outline" asChild className="shrink-0">
                         <LocalizedLink to={`/chemicals/${countryHub.slug}`}>
-                          {countryHub.label} supply guide
+                          {isAr ? `دليل التوريد إلى ${countryHub.labelAr}` : `${countryHub.label} supply guide`}
                           <ChevronRight className="ml-2 h-4 w-4" />
                         </LocalizedLink>
                       </Button>
                     </>
                   ) : (
                     <>
-                      <p className="font-semibold">We also export from Oman to</p>
+                      <p className="font-semibold">{isAr ? 'نصدّر أيضاً من عُمان إلى' : 'We also export from Oman to'}</p>
                       <p className="text-sm text-muted-foreground mt-1 mb-4">
-                        Same ex-stock availability, same documentation pack — delivered across the Gulf.
+                        {isAr
+                          ? 'التوفر نفسه من المخزون وحزمة المستندات نفسها، مع التوصيل في أنحاء الخليج.'
+                          : 'Same ex-stock availability, same documentation pack — delivered across the Gulf.'}
                       </p>
                       <div className="flex flex-wrap gap-2">
                         {siblingHubs.map((hub) => (
                           <Button key={hub.slug} variant="outline" size="sm" asChild>
-                            <LocalizedLink to={`/chemicals/${hub.slug}`}>{hub.label}</LocalizedLink>
+                            <LocalizedLink to={`/chemicals/${hub.slug}`}>{isAr ? hub.labelAr : hub.label}</LocalizedLink>
                           </Button>
                         ))}
                       </div>
@@ -1626,15 +1631,17 @@ const LocationLanding = () => {
       <section className="py-10 border-b">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <p className="text-sm font-medium text-primary mb-1">Product supply guides</p>
-            <p className="font-semibold mb-1">Acids, alkalis, lab reagents and fertilizers delivered to {cityLabel}</p>
+            <p className="text-sm font-medium text-primary mb-1">{isAr ? 'أدلة توريد المنتجات' : 'Product supply guides'}</p>
+            <p className="font-semibold mb-1">{isAr ? `الأحماض والقلويات وكواشف المختبرات والأسمدة مع التوصيل إلى ${cityLabel}` : `Acids, alkalis, lab reagents and fertilizers delivered to ${cityLabel}`}</p>
             <p className="text-sm text-muted-foreground mb-4">
-              Specification tables, pack formats from carboy to bulk tanker, and lead times for the products most often ordered on this lane.
+              {isAr
+                ? 'جداول المواصفات، وأشكال التعبئة من الجراكن إلى الصهاريج السائبة، ومدد التوريد للمنتجات الأكثر طلباً على هذا المسار.'
+                : 'Specification tables, pack formats from carboy to bulk tanker, and lead times for the products most often ordered on this lane.'}
             </p>
             <div className="flex flex-wrap gap-2">
               {[...(NITRIC_BY_COUNTRY[locationData.country] ? [NITRIC_BY_COUNTRY[locationData.country]] : []), ...(HYPO_BY_COUNTRY[locationData.country] ? [HYPO_BY_COUNTRY[locationData.country]] : []), ...(CHLOR_ALKALI_BY_COUNTRY[locationData.country] ?? []), ...PRODUCT_HUBS].map((hub) => (
                 <Button key={hub.slug} variant="outline" size="sm" asChild>
-                  <LocalizedLink to={`/chemical-supplier/${hub.slug}`}>{hub.label}</LocalizedLink>
+                  <LocalizedLink to={`/chemical-supplier/${hub.slug}`}>{isAr ? hub.labelAr : hub.label}</LocalizedLink>
                 </Button>
               ))}
             </div>
@@ -1745,7 +1752,7 @@ const LocationLanding = () => {
               </span>
               <span className="flex items-center gap-2">
                 <Clock className="h-4 w-4" />
-                Sun-Thu: 8AM-6PM
+                {isAr ? t('contact.info.hours') : 'Sun-Thu: 8AM-6PM'}
               </span>
             </div>
           </div>

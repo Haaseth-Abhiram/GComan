@@ -633,6 +633,22 @@ const ProductDetail = ({ category, rawCategoryProducts }: ProductDetailProps) =>
                 </nav>
               )}
 
+              {/* details.bulkAlternative (P10.11, 2026-11-13): a grade page that ranks
+                  for the generic query hands bulk buyers to the industrial SKU.
+                  GSC 3M: "acetic acid supplier" lands on acetic-acid-lab (263
+                  impressions @38) while the drum/IBC page sits at 24 @12.5.
+                  Different grades, so a link, not a canonical. */}
+              {!isArabicRender && product.details?.bulkAlternative && (
+                <p className="mb-8 text-sm text-muted-foreground">
+                  <span className="font-medium text-foreground">
+                    Buying in drums, IBCs or bulk?{' '}
+                  </span>
+                  <LocalizedLink to={product.details.bulkAlternative.url} className="text-primary hover:underline">
+                    {product.details.bulkAlternative.label}
+                  </LocalizedLink>
+                </p>
+              )}
+
               {/* CTA Section */}
               <Card className="p-8 bg-gradient-to-br from-primary/5 to-secondary/5 border-primary/20">
                 <div className="text-center">

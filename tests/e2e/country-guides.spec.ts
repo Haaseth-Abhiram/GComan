@@ -26,3 +26,22 @@ test.describe('Product pages link their GCC country supply pages', () => {
     await expect(page.locator('nav[aria-label="GCC country supply pages"]')).toHaveCount(0);
   });
 });
+
+// details.bulkAlternative (P10.11, 2026-11-13): the lab-grade acetic acid page
+// ranks for "acetic acid supplier" and must hand bulk buyers to the industrial SKU.
+test('acetic acid lab page hands bulk buyers to the industrial page', async ({ page }) => {
+  await page.goto('/products/lab-chemicals/acetic-acid-lab');
+  await expect(page.locator('main a[href="/products/oilfield/acetic-acid"]').first()).toBeVisible();
+});
+
+// Arabic location pages (2026-11-13): the template's cards and guide links used
+// to render in English on every indexable /ar city page.
+test('Arabic city page renders its template blocks in Arabic', async ({ page }) => {
+  await page.goto('/ar/chemicals/jubail');
+  const main = page.locator('main');
+  await expect(main.getByText('شبكة التصدير الخليجية')).toBeVisible();
+  await expect(main.getByText('أدلة توريد المنتجات')).toBeVisible();
+  await expect(main.getByText('المنطقة الشرقية، المملكة العربية السعودية')).toBeVisible();
+  await expect(main.getByText('GCC export network')).toHaveCount(0);
+  await expect(main.getByText('Product supply guides')).toHaveCount(0);
+});

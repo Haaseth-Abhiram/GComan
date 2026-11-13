@@ -223,7 +223,11 @@
       ],
       "wikiUrl": "https://en.wikipedia.org/wiki/Acetic_acid",
       "guideUrl": "/chemical-supplier/laboratory-chemicals-oman",
-      "guideLabel": "Laboratory chemicals in Oman — every reagent, grade and pack size"
+      "guideLabel": "Laboratory chemicals in Oman — every reagent, grade and pack size",
+      "bulkAlternative": {
+        "label": "Industrial glacial acetic acid 99–100% — drums, IBCs and bulk tankers",
+        "url": "/products/oilfield/acetic-acid"
+      }
     }
   },
   {
