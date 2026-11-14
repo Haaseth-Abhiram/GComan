@@ -576,3 +576,28 @@ Append-only. One row per check per run, written by the `running-search-operation
 | 2026-11-13 | bing | lubricants supplier oman | product deep dive | 1 | /products/lubricants | gcoman.com | cc=OM navigated |
 | 2026-11-13 | bing | swimming pool chemicals oman | product deep dive | 1 | /products/swimming-pool | gcoman.com | cc=OM navigated |
 | 2026-11-13 | bing | epoxy resin supplier oman | product deep dive | 3 | /products/construction/epoxy-coating | omanchem.com | cc=OM navigated |
+| 2026-11-14 | google | nitric acid supplier saudi arabia (R1) | /chemical-supplier/nitric-acid-saudi-arabia | — |  | nassguard.sa | pws=0 gl=sa navigated, top 9 (core update) |
+| 2026-11-14 | google | nitric acid supplier riyadh (R2) | /chemical-supplier/nitric-acid-saudi-arabia | — |  | nassguard.sa | pws=0 gl=sa navigated, top 9 (core update) |
+| 2026-11-14 | google | nitric acid supplier dammam (R3) | /chemical-supplier/nitric-acid-saudi-arabia | — |  | nassguard.sa | pws=0 gl=sa navigated, top 9 (core update) |
+| 2026-11-14 | google | calcium hypochlorite supplier uae (R4) | /chemical-supplier/calcium-hypochlorite-uae | — |  | chemstock.ae | pws=0 gl=ae navigated, top 9 (core update) |
+| 2026-11-14 | google | calcium hypochlorite supplier dubai (R5) | /chemical-supplier/calcium-hypochlorite-uae | — |  | hazchem.ae | pws=0 gl=ae navigated, top 9 (core update) |
+| 2026-11-14 | google | calcium hypochlorite 70% uae (R6) | /chemical-supplier/calcium-hypochlorite-uae | — |  | chemstock.ae | pws=0 gl=ae navigated, top 9 (core update) |
+| 2026-11-14 | google | calcium hypochlorite supplier bahrain (R7) | /chemical-supplier/calcium-hypochlorite-bahrain | — |  | aleradahchemicals.com | pws=0 gl=bh navigated, top 9 (core update) |
+| 2026-11-14 | google | nitric acid supplier oman (R8) | /chemical-supplier/nitric-acid-oman | — |  | omanchem.com | pws=0 gl=om navigated, top 9 (core update) |
+| 2026-11-14 | google | sodium hypochlorite supplier oman (R9) | /chemical-supplier/sodium-hypochlorite-oman | — |  | omanchlorine.com | pws=0 gl=om navigated, top 9 (core update) |
+| 2026-11-14 | google | hydrochloric acid supplier oman (R10) | /chemical-supplier/hydrochloric-acid-oman | — |  | omanchlorine.com | pws=0 gl=om navigated, top 9 (core update) |
+| 2026-11-14 | google | hydrochloric acid supplier sohar (R11) | /chemical-supplier/hydrochloric-acid-oman | — |  | soharchemical.com | pws=0 gl=om navigated, top 9 (core update) |
+| 2026-11-14 | google | caustic soda supplier oman (R12) | /chemical-supplier/caustic-soda-oman | — |  | omanchem.com | pws=0 gl=om navigated, top 9 (core update) |
+| 2026-11-14 | google | urea price oman (44) | product panel | — |  | urea-prices.com | pws=0 gl=om navigated, top 9 (core update) |
+| 2026-11-14 | google | caustic soda price oman (45) | product panel | — |  | uvwater.biz | pws=0 gl=om navigated, top 9 (core update) |
+| 2026-11-14 | google | hydrochloric acid price oman (46) | product panel | — |  | omanchem.com | pws=0 gl=om navigated, top 9 (core update) |
+| 2026-11-14 | google | sodium hypochlorite price oman (47) | product panel | — |  | uvwater.biz | pws=0 gl=om navigated, top 9 (core update) |
+| 2026-11-14 | google | hydrogen peroxide price oman (48) | product panel | — |  | gcc.luluhypermarket.com | pws=0 gl=om navigated, top 9 (core update) |
+| 2026-11-14 | google | sulphuric acid price oman (49) | product panel | — |  | omanchem.com | pws=0 gl=om navigated, top 9 (core update) |
+| 2026-11-14 | google | glycerine price oman (50) | product panel | — |  | gcc.luluhypermarket.com | pws=0 gl=om navigated, top 9 (core update) |
+| 2026-11-14 | google | isopropyl alcohol price oman (51) | product panel | — |  | noon.com | pws=0 gl=om navigated, top 9 (core update) |
+| 2026-11-14 | google | methanol price oman (52) | product panel | — |  | shipandbunker.com | pws=0 gl=om navigated, top 9 (core update) |
+| 2026-11-14 | google | acetic acid price oman (53) | product panel | — |  | noon.com | pws=0 gl=om navigated, top 9 (core update) |
+| 2026-11-14 | google | calcium chloride price oman (54) | product panel | — |  | uvwater.biz | pws=0 gl=om navigated, top 9 (core update) |
+| 2026-11-14 | google | calcium hypochlorite price oman (55) | product panel | — |  | noon.com | pws=0 gl=om navigated, top 9 (core update) |
+| 2026-11-14 | google | poly aluminium chloride price oman (56) | product panel | — |  | uvwater.biz | pws=0 gl=om navigated, top 9 (core update) |
