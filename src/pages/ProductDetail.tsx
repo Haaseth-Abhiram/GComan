@@ -339,7 +339,7 @@ const ProductDetail = ({ category, rawCategoryProducts }: ProductDetailProps) =>
               <LocalizedLink to="/products" className="hover:text-primary transition-colors">{t('nav.products')}</LocalizedLink>
               <span>/</span>
               <LocalizedLink to={`/products/${category}`} className="hover:text-primary transition-colors capitalize whitespace-nowrap">
-                {category?.replace(/-/g, ' ')}
+                {isArabicRender ? catLabelLocalized : category?.replace(/-/g, ' ')}
               </LocalizedLink>
               <span>/</span>
               <span className="text-foreground font-medium truncate max-w-[45vw] sm:max-w-none">{translatedTitle}</span>
@@ -437,7 +437,7 @@ const ProductDetail = ({ category, rawCategoryProducts }: ProductDetailProps) =>
                   onClick={() => trackSelectContent('cta_button', 'get_quote_above_fold')}
                   className="flex-shrink-0 self-start sm:self-center"
                 >
-                  Request a Quote
+                  {t('products.requestAQuote', 'Request a Quote')}
                 </GradientCTA>
               </div>
 
@@ -605,7 +605,7 @@ const ProductDetail = ({ category, rawCategoryProducts }: ProductDetailProps) =>
                       <p className="text-sm text-muted-foreground">
                         {t('products.guideIntro', { defaultValue: 'Comparing grades, pack sizes and delivery options?' })}{' '}
                         <span className="text-foreground font-medium">
-                          {product.details.guideLabel || 'Read the full buying guide'}
+                          {(!isArabicRender && product.details.guideLabel) || t('products.guideLabelFallback', 'Read the full buying guide')}
                         </span>
                       </p>
                     </div>
@@ -666,19 +666,19 @@ const ProductDetail = ({ category, rawCategoryProducts }: ProductDetailProps) =>
                     <Button asChild size="lg" className="gap-2" onClick={() => trackSelectContent('cta_button', 'get_quote')}>
                       <LocalizedLink to={`/contact?product=${encodeURIComponent(product.title)}&ref=${encodeURIComponent(`${category}/${productSlug}`)}`}>
                         <Mail className="w-4 h-4" />
-                        Request a Quote
+                        {t('products.requestAQuote', 'Request a Quote')}
                       </LocalizedLink>
                     </Button>
                     <Button asChild size="lg" variant="outline" className="gap-2 border-green-500/50 text-green-700 dark:text-green-400 hover:bg-green-500/10" onClick={() => trackContactClick('whatsapp')}>
                       <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                         <MessageCircle className="w-4 h-4" />
-                        WhatsApp Inquiry
+                        {t('products.whatsappInquiry', 'WhatsApp Inquiry')}
                       </a>
                     </Button>
                     <Button asChild variant="ghost" size="lg" className="gap-2" onClick={() => trackContactClick('phone')}>
                       <a href="tel:+96892772305">
                         <Phone className="w-4 h-4" />
-                        Call +968 9277 2305
+                        {t('products.callNumber', 'Call')} <span dir="ltr">+968 9277 2305</span>
                       </a>
                     </Button>
                   </div>

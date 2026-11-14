@@ -229,7 +229,11 @@
       "GHS07": "Health irritant",
       "GHS08": "Serious health hazard",
       "GHS09": "Environmental hazard"
-    }
+    },
+    "guideLabelFallback": "Read the full buying guide",
+    "whatsappInquiry": "WhatsApp Inquiry",
+    "callNumber": "Call",
+    "requestAQuote": "Request a Quote"
   },
   "industries": {
     "title": "Industries We Serve",
