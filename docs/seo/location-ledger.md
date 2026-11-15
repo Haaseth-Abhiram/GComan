@@ -607,3 +607,52 @@ Append-only. One row per check per run, written by the `running-search-operation
 | 2026-11-15 | maps | chemical supplier | /chemicals/rustaq | — |  | X PERT INDUSTRIAL MATERIALS | rustaq viewport (=) |
 | 2026-11-15 | maps | chemical supplier | /chemicals/salalah | — |  | AL FARZAH TRAD. CO. | salalah viewport (=) |
 | 2026-11-15 | maps | chemical supplier | /chemicals/duqm | — |  | Sebacic Oman | duqm viewport (=) |
+| 2026-11-15 | bing | chemical supplier muscat | /chemicals/muscat | 3 | / (city page not in top 5) | muscatchemical.com | cc=om, 5 results, navigated, setlang=en |
+| 2026-11-15 | bing | chemical supplier rusayl | /chemicals/rusayl | 1 |  | gcoman.com | cc=om, navigated, setlang=en |
+| 2026-11-15 | bing | chemical supplier sohar | /chemicals/sohar | 5 |  | soharchemical.com | cc=om, navigated, setlang=en |
+| 2026-11-15 | bing | chemical supplier rustaq | /chemicals/rustaq | 2 |  | omanchem.com | cc=om, 4 results, navigated, setlang=en |
+| 2026-11-15 | bing | chemical supplier salalah | /chemicals/salalah | 3 |  | salalahchemical.com | cc=om, navigated, setlang=en |
+| 2026-11-15 | bing | chemical supplier duqm | /chemicals/duqm | 1 |  | gcoman.com | cc=om, 6 results, navigated, setlang=en |
+| 2026-11-15 | bing | chemical supplier dubai | /chemicals/dubai | — |  | dubaichemical.com | cc=ae, 6 results, navigated, setlang=en |
+| 2026-11-15 | bing | chemical supplier abu dhabi | /chemicals/abu-dhabi | 2 |  | yellowpages-uae.com | cc=ae, navigated, setlang=en |
+| 2026-11-15 | bing | chemical supplier sharjah | /chemicals/sharjah | — |  | alkhowahirchemicals.ae | cc=ae, navigated, setlang=en |
+| 2026-11-15 | bing | chemical supplier fujairah | /chemicals/fujairah | 9 |  | fujairahchemical.com | cc=ae, navigated, setlang=en |
+| 2026-11-15 | bing | chemical supplier ras al khaimah | /chemicals/ras-al-khaimah | 1 |  | gcoman.com | cc=ae, navigated, setlang=en |
+| 2026-11-15 | bing | chemical supplier riyadh | /chemicals/riyadh | 9 |  | gobalchemicalsplus.com | cc=sa, navigated, setlang=en |
+| 2026-11-15 | bing | chemical supplier jeddah | /chemicals/jeddah | 1 |  | gcoman.com | cc=sa, navigated, setlang=en |
+| 2026-11-15 | bing | chemical supplier dammam | /chemicals/dammam | 5 |  | fouz.com.sa | cc=sa, 9 results, navigated, setlang=en |
+| 2026-11-15 | bing | chemical supplier jubail | /chemicals/jubail | 1 |  | gcoman.com | cc=sa, navigated, setlang=en |
+| 2026-11-15 | bing | chemical supplier yanbu | /chemicals/yanbu | 1 |  | gcoman.com | cc=sa, 9 results, navigated, setlang=en |
+| 2026-11-15 | bing | chemical supplier doha | /chemicals/doha | 2 |  | chemspirechemical.com | cc=qa, 6 results, navigated, setlang=en |
+| 2026-11-15 | bing | chemical supplier kuwait city | /chemicals/kuwait-city | 2 |  | lookchem.com | cc=kw, navigated, setlang=en |
+| 2026-11-15 | bing | chemical supplier bahrain | /chemicals/bahrain | 1 |  | gcoman.com | cc=bh, navigated, setlang=en |
+| 2026-11-15 | bing | chemical supplier baghdad | /chemicals/baghdad | 1 |  | gcoman.com | cc=iq, 2 results, navigated, setlang=en |
+| 2026-11-15 | bing | chemical supplier amman | /chemicals/amman | 1 |  | gcoman.com | cc=jo, 9 results, navigated, setlang=en |
+| 2026-11-15 | bing | chemical supplier cairo | /chemicals/cairo | 1 |  | gcoman.com | cc=eg, navigated, setlang=en |
+| 2026-11-15 | bing | chemical suppliers in kuwait | /chemicals/kuwait | — |  | lookchem.com | cc=kw, navigated, setlang=en |
+| 2026-11-15 | bing | chemical suppliers in qatar | /chemicals/qatar | — |  | ensun.io | cc=qa, 7 results, navigated, setlang=en |
+| 2026-11-15 | bing | chemical suppliers in saudi arabia | /chemicals/saudi-arabia | — |  | ensun.io | cc=sa, 6 results, navigated, setlang=en |
+| 2026-11-15 | bing | chemical suppliers in uae | /chemicals/uae | — |  | yellowpages-uae.com | cc=ae, 8 results, navigated, setlang=en |
+| 2026-11-15 | bing | chemical suppliers oman | /chemical-suppliers-oman | 2 | / (target at 5) | omanchem.com | cc=om, navigated, setlang=en |
+| 2026-11-15 | bing | chemical suppliers gcc | /chemical-suppliers-middle-east | 1 | / (target at 3) | gcoman.com | cc=om, navigated, setlang=en |
+| 2026-11-15 | bing | calcium hypochlorite bahrain supplier oman | /chemical-supplier/calcium-hypochlorite-bahrain | 1 | product page (hub likely 2, cite cut) | gcoman.com | cc=om, 6 results, navigated, setlang=en |
+| 2026-11-15 | bing | calcium hypochlorite uae supplier oman | /chemical-supplier/calcium-hypochlorite-uae | 2 | product page | chemstock.om | cc=om, 6 results, navigated, setlang=en |
+| 2026-11-15 | bing | caustic soda supplier oman | /chemical-supplier/caustic-soda-oman | 2 |  | omanchem.com | cc=om, navigated, setlang=en |
+| 2026-11-15 | bing | caustic soda saudi arabia supplier oman | /chemical-supplier/caustic-soda-saudi-arabia | 1 |  | gcoman.com | cc=om, 7 results, navigated, setlang=en |
+| 2026-11-15 | bing | caustic soda uae supplier oman | /chemical-supplier/caustic-soda-uae | 1 |  | gcoman.com | cc=om, 9 results, navigated, setlang=en |
+| 2026-11-15 | bing | fertilizer supplier oman | /chemical-supplier/fertilizers-oman | 2 |  | muscatfertilizer.net | cc=om, 8 results, navigated, setlang=en |
+| 2026-11-15 | bing | hydrochloric acid supplier oman | /chemical-supplier/hydrochloric-acid-oman | 1 |  | gcoman.com | cc=om, navigated, setlang=en |
+| 2026-11-15 | bing | hydrochloric acid saudi arabia supplier oman | /chemical-supplier/hydrochloric-acid-saudi-arabia | 1 | Oman hub (target likely 2) | gcoman.com | cc=om, 9 results, navigated, setlang=en |
+| 2026-11-15 | bing | hydrochloric acid uae supplier oman | /chemical-supplier/hydrochloric-acid-uae | 1 |  | gcoman.com | cc=om, 7 results, navigated, setlang=en |
+| 2026-11-15 | bing | laboratory chemicals supplier oman | /chemical-supplier/laboratory-chemicals-oman | 1 |  | gcoman.com | cc=om, navigated, setlang=en |
+| 2026-11-15 | bing | nitric acid supplier bahrain | /chemical-supplier/nitric-acid-bahrain | — |  | chimisrl.com | cc=bh, navigated, setlang=en |
+| 2026-11-15 | bing | nitric acid supplier kuwait | /chemical-supplier/nitric-acid-kuwait | — |  | chimisrl.com | cc=kw, 6 results, navigated, setlang=en |
+| 2026-11-15 | bing | nitric acid supplier oman | /chemical-supplier/nitric-acid-oman | — |  | chimisrl.com | cc=om, 7 results, read twice (11-13: 1), navigated, setlang=en |
+| 2026-11-15 | bing | nitric acid supplier qatar | /chemical-supplier/nitric-acid-qatar | 1 |  | gcoman.com | cc=qa, 9 results, navigated, setlang=en |
+| 2026-11-15 | bing | nitric acid supplier saudi arabia | /chemical-supplier/nitric-acid-saudi-arabia | — |  | chimisrl.com | cc=sa (11-13: 3), navigated, setlang=en |
+| 2026-11-15 | bing | nitric acid supplier uae | /chemical-supplier/nitric-acid-uae | — |  | tricechemicals.com | cc=ae, navigated, setlang=en |
+| 2026-11-15 | bing | oilfield chemicals supplier oman | /chemical-supplier/oilfield-chemicals-oman | 1 |  | gcoman.com | cc=om, navigated, setlang=en |
+| 2026-11-15 | bing | poly aluminium chloride supplier oman | /chemical-supplier/poly-aluminium-chloride-oman | 4 |  | omanchem.com | cc=om, 8 results, navigated, setlang=en |
+| 2026-11-15 | bing | pool chlorine gcc supplier oman | /chemical-supplier/pool-chlorine-gcc | 1 | /products/swimming-pool | gcoman.com | cc=om, 7 results, navigated, setlang=en |
+| 2026-11-15 | bing | sodium hypochlorite supplier oman | /chemical-supplier/sodium-hypochlorite-oman | — |  | innovacorporate.com | cc=om (11-13: 1 via product page), navigated, setlang=en |
+| 2026-11-15 | bing | water treatment chemicals gcc supplier oman | /chemical-supplier/water-treatment-chemicals-gcc | 1 | / (hub not in 5) | gcoman.com | cc=om, 5 results, navigated, setlang=en |
