@@ -601,3 +601,9 @@ Append-only. One row per check per run, written by the `running-search-operation
 | 2026-11-14 | google | calcium chloride price oman (54) | product panel | — |  | uvwater.biz | pws=0 gl=om navigated, top 9 (core update) |
 | 2026-11-14 | google | calcium hypochlorite price oman (55) | product panel | — |  | noon.com | pws=0 gl=om navigated, top 9 (core update) |
 | 2026-11-14 | google | poly aluminium chloride price oman (56) | product panel | — |  | uvwater.biz | pws=0 gl=om navigated, top 9 (core update) |
+| 2026-11-15 | maps | chemical supplier | /chemicals/muscat | 4 |  | REDALAB (Muscat) | Muscat 23.588,58.383 12z, signed in (was 5 on 10-25); Green Port 2, StabilityLine 3 (core update) |
+| 2026-11-15 | maps | chemical supplier | /chemicals/rusayl | — |  | Star Modern Industries LLC | rusayl viewport (=) |
+| 2026-11-15 | maps | chemical supplier | /chemicals/sohar | — |  | MAK Sohar Chemical Industries | sohar viewport (=) |
+| 2026-11-15 | maps | chemical supplier | /chemicals/rustaq | — |  | X PERT INDUSTRIAL MATERIALS | rustaq viewport (=) |
+| 2026-11-15 | maps | chemical supplier | /chemicals/salalah | — |  | AL FARZAH TRAD. CO. | salalah viewport (=) |
+| 2026-11-15 | maps | chemical supplier | /chemicals/duqm | — |  | Sebacic Oman | duqm viewport (=) |
