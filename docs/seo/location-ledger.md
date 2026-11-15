@@ -656,3 +656,24 @@ Append-only. One row per check per run, written by the `running-search-operation
 | 2026-11-15 | bing | pool chlorine gcc supplier oman | /chemical-supplier/pool-chlorine-gcc | 1 | /products/swimming-pool | gcoman.com | cc=om, 7 results, navigated, setlang=en |
 | 2026-11-15 | bing | sodium hypochlorite supplier oman | /chemical-supplier/sodium-hypochlorite-oman | — |  | innovacorporate.com | cc=om (11-13: 1 via product page), navigated, setlang=en |
 | 2026-11-15 | bing | water treatment chemicals gcc supplier oman | /chemical-supplier/water-treatment-chemicals-gcc | 1 | / (hub not in 5) | gcoman.com | cc=om, 5 results, navigated, setlang=en |
+| 2026-11-15 | google | nitric acid supplier saudi arabia (R1) | /chemical-supplier/nitric-acid-saudi-arabia | — |  | nassguard.sa | pws=0 gl=sa navigated, top 9 (core update) |
+| 2026-11-15 | google | nitric acid supplier riyadh (R2) | /chemical-supplier/nitric-acid-saudi-arabia | — |  | nassguard.sa | pws=0 gl=sa navigated, top 9 (core update) |
+| 2026-11-15 | google | nitric acid supplier dammam (R3) | /chemical-supplier/nitric-acid-saudi-arabia | — |  | nassguard.sa | pws=0 gl=sa navigated, top 9 (core update) |
+| 2026-11-15 | google | calcium hypochlorite supplier uae (R4) | /chemical-supplier/calcium-hypochlorite-uae | — |  | chemstock.ae | pws=0 gl=ae navigated, top 9 (core update) |
+| 2026-11-15 | google | calcium hypochlorite supplier dubai (R5) | /chemical-supplier/calcium-hypochlorite-uae | — |  | hazchem.ae | pws=0 gl=ae navigated, top 9 (core update) |
+| 2026-11-15 | google | calcium hypochlorite 70% uae (R6) | /chemical-supplier/calcium-hypochlorite-uae | — |  | chemstock.ae | pws=0 gl=ae navigated, top 9 (core update) |
+| 2026-11-15 | google | calcium hypochlorite supplier bahrain (R7) | /chemical-supplier/calcium-hypochlorite-bahrain | — |  | aleradahchemicals.com | pws=0 gl=bh navigated, top 9 (core update) |
+| 2026-11-15 | google | nitric acid supplier oman (R8 = 1) | /chemical-supplier/nitric-acid-oman | — |  | omanchem.com | pws=0 gl=om navigated, top 9 (core update) |
+| 2026-11-15 | google | sodium hypochlorite supplier oman (R9 = 5) | /chemical-supplier/sodium-hypochlorite-oman | — |  | omanchlorine.com | pws=0 gl=om navigated, top 9 (core update) |
+| 2026-11-15 | google | hydrochloric acid supplier oman (R10 = 4) | /chemical-supplier/hydrochloric-acid-oman | — |  | omanchlorine.com | pws=0 gl=om navigated, top 9 (core update) |
+| 2026-11-15 | google | hydrochloric acid supplier sohar (R11) | /chemical-supplier/hydrochloric-acid-oman | — |  | soharchemical.com | pws=0 gl=om navigated, top 9 (core update) |
+| 2026-11-15 | google | caustic soda supplier oman (R12 = 3) | /chemical-supplier/caustic-soda-oman | — |  | omanchem.com | pws=0 gl=om navigated, top 9 (core update) |
+| 2026-11-15 | google | bentonite price oman (57) | product panel | — |  | solarenergyoman.com | pws=0 gl=om navigated, top 9 (core update) |
+| 2026-11-15 | google | soda ash price oman (58) | product panel | — |  | noon.com | pws=0 gl=om navigated, top 9 (core update) |
+| 2026-11-15 | google | citric acid price oman (59) | product panel | — |  | talabat.com | pws=0 gl=om navigated, top 8 (core update) |
+| 2026-11-15 | google | ethylene glycol price oman (60) | product panel | — |  | omanchem.com | pws=0 gl=om navigated, top 9 (core update) |
+| 2026-11-15 | google | corrosion inhibitor price oman (61) | product panel | 8 | /products/corrosion-inhibitor | noon.com | pws=0 gl=om navigated, top 8 (core update) |
+| 2026-11-15 | google | lubricants price oman (62) | product panel | — |  | noon.com | pws=0 gl=om navigated, top 8 (core update) |
+| 2026-11-15 | google | potassium chloride price oman (63) | product panel | — |  | noon.com | pws=0 gl=om navigated, top 9 (core update) |
+| 2026-11-15 | google | urea supplier oman (2) | product panel | — |  | muscatfertilizer.net | pws=0 gl=om navigated, top 9 (core update) |
+| 2026-11-15 | google | hydrogen peroxide supplier oman (6) | product panel | — |  | omanchem.com | pws=0 gl=om navigated, top 9 (core update) |
