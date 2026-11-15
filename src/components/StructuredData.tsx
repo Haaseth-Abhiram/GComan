@@ -130,15 +130,15 @@ export const ArticleStructuredData = ({
     "description": description,
     "url": url,
     "image": image || "https://gcoman.com/images/og-default.png",
+    // Every blog byline is a team ("Global Chemicals Technical Team"…), not a
+    // named person, so it is typed as an Organization (a department of the
+    // company). Typing a team as a Person is invalid authorship markup. Switch
+    // to Person only for a real, named author with real credentials.
     "author": {
-      "@type": "Person",
+      "@type": "Organization",
       "name": author,
       "knowsAbout": ["Industrial Chemicals", "Water Treatment", "Oilfield Chemicals", "Chemical Safety", "GCC Industry"],
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Global Chemicals LLC",
-        "url": "https://gcoman.com"
-      }
+      "parentOrganization": { "@id": "https://gcoman.com/#organization" }
     },
     "publisher": {
       "@type": "Organization",
@@ -210,8 +210,9 @@ export const BlogListingStructuredData = ({
       "description": post.excerpt,
       "datePublished": post.date,
       "author": {
-        "@type": "Person",
-        "name": post.author
+        "@type": "Organization",
+        "name": post.author,
+        "parentOrganization": { "@id": "https://gcoman.com/#organization" }
       },
       "articleSection": post.category
     }))
