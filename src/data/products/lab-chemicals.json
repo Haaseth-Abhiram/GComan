@@ -363,7 +363,7 @@
         "analytical KOH Sohar",
         "lab potassium hydroxide Muscat"
       ],
-      "longDescription": "Laboratory Grade Potassium Hydroxide Pellets supplier in Oman - Global Chemicals LLC provides high-purity KOH pellets for research laboratories and analytical facilities in Muscat, Sohar, Duqm, Salalah. Our ACS-grade potassium hydroxide is essential for biodiesel production research, saponification values, pH adjustment, and electrochemistry. KOH offers higher solubility than NaOH and produces liquid soaps. Widely used in university research labs, petroleum testing facilities, and industrial QC laboratories across Oman. Essential for preparing alcoholic KOH solutions, biodiesel catalysis, and analytical titrations. Lab-grade potassium hydroxide pellets (85%+ purity, low carbonate grade available) are used for saponification value testing in vegetable oil and lubricant QC labs, acid-base titrations, and synthesis of potassium salts. Essential for oilfield lab QC (acid number testing of lubricants per ASTM D664 and D974). Global Chemicals LLC supplies in 500g, 1kg, and 5kg containers with ACS grade CoA and SDS.",
+      "longDescription": "Laboratory Grade Potassium Hydroxide Pellets supplier in Oman - Global Chemicals LLC provides ACS reagent-grade KOH pellets for research laboratories and analytical facilities in Muscat, Sohar, Duqm, Salalah. Our ACS-grade potassium hydroxide is essential for biodiesel production research, saponification values, pH adjustment, and electrochemistry. KOH offers higher solubility than NaOH and produces liquid soaps. Widely used in university research labs, petroleum testing facilities, and industrial QC laboratories across Oman. Essential for preparing alcoholic KOH solutions, biodiesel catalysis, and analytical titrations. Lab-grade potassium hydroxide pellets (85%+ purity, low carbonate grade available) are used for saponification value testing in vegetable oil and lubricant QC labs, acid-base titrations, and synthesis of potassium salts. Also used in petroleum and lubricant QC labs for acid number testing (ASTM D664 and D974). Global Chemicals LLC supplies in 500g, 1kg, and 5kg containers with ACS grade CoA and SDS. Potassium hydroxide is corrosive (UN 1813, Class 8): it causes severe skin burns and eye damage and releases strong heat when dissolved, so add pellets slowly to cold water or alcohol, never the reverse, and wear gloves, goggles or a face shield and a lab coat.",
       "applications": [
         "Biodiesel production and research",
         "Saponification value determination",
@@ -378,9 +378,9 @@
         "Purity: 85-90% (ACS reagent grade)",
         "Form: White pellets",
         "Assay: Meets ACS specifications",
-        "Highly hygroscopic",
+        "Hazard: Corrosive — UN 1813, Class 8; highly hygroscopic",
         "Soluble in water and ethanol",
-        "Low carbonate content",
+        "Low-carbonate grade available",
         "Available: 500g, 1kg, 5kg bottles"
       ],
       "faqs": [
@@ -1549,7 +1549,7 @@
         "chloride titration Sohar",
         "silver nitrate ACS Muscat"
       ],
-      "longDescription": "Laboratory Grade Silver Nitrate supplier in Oman - Global Chemicals LLC provides high-purity AgNO3 for analytical laboratories and research facilities in Muscat, Sohar, Duqm, Salalah. Our ACS-grade silver nitrate is essential for chloride determination (Mohr's method), silver staining of proteins/gels, and as a reagent in organic synthesis. The light-sensitive crystals must be stored in amber bottles. Available as crystals and standardized solutions (0.1N). Widely used in university labs, pharmaceutical testing, water analysis laboratories, and research institutions across Oman. Essential for argentometric titrations and histological silver staining techniques. Laboratory-grade silver nitrate (AgNO₃, 99.8%+, ACS reagent grade) is an essential analytical reagent used in Oman's water quality, food testing, and industrial QC laboratories. Primary applications include chloride determination by Mohr's method (argentometric titration — critical for drinking water chloride analysis per WHO guidelines and Omani drinking-water standards), turbidimetric chloride analysis, antimicrobial coating applications, and qualitative identification of halide ions. In environmental analysis, AgNO₃ is used to test for chloride contamination in soil samples and produced water from oilfield operations. Global Chemicals LLC supplies AgNO₃ ACS grade in light-resistant amber glass containers (25g, 100g, 500g) with CoA and SDS. Stored in light-proof packaging to prevent photodecomposition.",
+      "longDescription": "Laboratory Grade Silver Nitrate supplier in Oman - Global Chemicals LLC provides high-purity AgNO3 for analytical laboratories and research facilities in Muscat, Sohar, Duqm, Salalah. Our ACS-grade silver nitrate is essential for chloride determination (Mohr's method), silver staining of proteins/gels, and as a reagent in organic synthesis. The light-sensitive crystals must be stored in amber bottles. Available as crystals and standardized solutions (0.1N). Widely used in university labs, pharmaceutical testing, water analysis laboratories, and research institutions across Oman. Essential for argentometric titrations and histological silver staining techniques. Laboratory-grade silver nitrate (AgNO₃, 99.8%+, ACS reagent grade) is an essential analytical reagent used in Oman's water quality, food testing, and industrial QC laboratories. Primary applications include chloride determination by Mohr's method (argentometric titration — used to check drinking water against Omani drinking-water standards and the WHO taste-based chloride threshold), turbidimetric chloride analysis, antimicrobial coating applications, and qualitative identification of halide ions. In environmental analysis, AgNO₃ is used to test for chloride contamination in soil samples and produced water from oilfield operations. Global Chemicals LLC supplies AgNO₃ ACS grade in light-resistant amber glass containers (25g, 100g, 500g) with CoA and SDS. Silver nitrate is an oxidiser (UN 1493, Class 5.1) and is corrosive: it causes severe skin burns and eye damage, stains skin and surfaces black, and is very toxic to aquatic life, so wear gloves and goggles, keep it away from organic materials and reducing agents, and never pour residues down the drain.",
       "applications": [
         "Chloride determination (Mohr's, Volhard methods)",
         "Silver staining of proteins and nucleic acids",
@@ -1557,7 +1557,7 @@
         "Organic synthesis reactions",
         "Mirror silvering",
         "Antiseptic preparations",
-        "Photography and film development",
+        "Photographic emulsion preparation",
         "Analytical reagent for halides"
       ],
       "technicalSpecs": [
@@ -1567,7 +1567,7 @@
         "Assay: Meets ACS specifications",
         "Standardized solutions: 0.1N, 0.01N available",
         "Available: 25g, 100g, 500g",
-        "Handle with care - stains skin"
+        "Hazard: Oxidiser (UN 1493, Class 5.1); corrosive; stains skin; very toxic to aquatic life"
       ],
       "wikiUrl": "https://en.wikipedia.org/wiki/Silver_nitrate",
       "guideUrl": "/chemical-supplier/laboratory-chemicals-oman",
