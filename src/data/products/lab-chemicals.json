@@ -201,7 +201,7 @@
         "lab acetic acid Sohar",
         "CH3COOH Muscat"
       ],
-      "longDescription": "Glacial Acetic Acid supplier in Oman - Global Chemicals LLC provides laboratory-grade glacial acetic acid (99.5%+ purity) for research, synthesis, and analytical applications in Muscat, Sohar, Duqm, Salalah. Our high-purity acetic acid is essential for buffer preparation, esterification reactions, chromatography, and organic synthesis. The \"glacial\" designation indicates anhydrous acetic acid that crystallizes at 16.6°C. Widely used in university laboratories, pharmaceutical research, chemical synthesis, and industrial QC facilities across Oman. Essential for HPLC mobile phase preparation, pH adjustment, and acetylation reactions in research institutions. Laboratory-grade glacial acetic acid (99.8%+) is used in biochemistry (protein precipitation, SDS-PAGE gel fixing and destaining), chromatography mobile phase preparation, and chemical synthesis in Oman's research laboratories and food/pharmaceutical QC departments. Supplied in 500mL, 2.5L, and 5L glass containers with CoA and SDS. Global Chemicals LLC serves university labs, hospital labs, and industrial QC across Oman.",
+      "longDescription": "Glacial Acetic Acid supplier in Oman - Global Chemicals LLC provides laboratory-grade glacial acetic acid (99.5%+ purity) for research, synthesis, and analytical applications in Muscat, Sohar, Duqm, Salalah. Our high-purity acetic acid is essential for buffer preparation, esterification reactions, chromatography, and organic synthesis. The \"glacial\" designation indicates anhydrous acetic acid that crystallizes at 16.6°C. Widely used in university laboratories, pharmaceutical research, chemical synthesis, and industrial QC facilities across Oman. Essential for HPLC mobile phase preparation, pH adjustment, and acetylation reactions in research institutions. Laboratory-grade glacial acetic acid is used in biochemistry (protein precipitation, SDS-PAGE gel fixing and destaining), chromatography mobile phase preparation, and chemical synthesis in Oman's research laboratories and food/pharmaceutical QC departments. Glacial acetic acid is corrosive, causing severe skin burns and eye damage, and is a flammable liquid (flash point about 39°C; UN 2789, Class 8 with a Class 3 subsidiary hazard): handle it in a fume hood with gloves and goggles, away from heat, ignition sources and oxidisers. Supplied in 500mL, 2.5L, and 5L glass containers with CoA and SDS. Global Chemicals LLC serves university labs, hospital labs, and industrial QC across Oman.",
       "applications": [
         "HPLC and chromatography mobile phases",
         "Buffer preparation and pH control",
@@ -219,7 +219,8 @@
         "Assay: 99.5% minimum, analytical reagent grade",
         "Water content: <0.5%",
         "Available: 500ml, 2.5L, 5L bottles",
-        "Suitable for HPLC and analytical work"
+        "Suitable for HPLC and analytical work",
+        "Hazard: Corrosive and flammable — UN 2789, Class 8 (3)"
       ],
       "wikiUrl": "https://en.wikipedia.org/wiki/Acetic_acid",
       "guideUrl": "/chemical-supplier/laboratory-chemicals-oman",
