@@ -83,7 +83,7 @@
         "analytical HCl Sohar",
         "lab acid Muscat"
       ],
-      "longDescription": "Laboratory Grade Hydrochloric Acid supplier in Oman - Global Chemicals LLC provides ACS-grade hydrochloric acid for research, analysis, and quality control laboratories in Muscat, Sohar, Duqm, Salalah. Our high-purity HCl is essential for pH adjustment, titrations, sample digestion, and chemical synthesis. Available in various concentrations (36-38% concentrated, 1N, 0.1N standardized solutions) to meet specific laboratory requirements. Widely used in university labs, oilfield laboratories, pharmaceutical QC, and industrial testing facilities across Oman. Essential for metal dissolution, ore analysis, and routine analytical procedures in research institutions. Essential in Oman's oilfield analytical labs for metal dissolution, food testing labs for acid digestion, and university chemistry departments. Global Chemicals LLC supplies standardised solutions (0.1N, 1N) and concentrated 37% grade in 500mL, 2.5L, and 5L bottles. SDS, CoA, and transport documentation provided.",
+      "longDescription": "Laboratory Grade Hydrochloric Acid supplier in Oman - Global Chemicals LLC provides ACS-grade hydrochloric acid for research, analysis, and quality control laboratories in Muscat, Sohar, Duqm, Salalah. Our high-purity HCl is essential for pH adjustment, titrations, sample digestion, and chemical synthesis. Available in various concentrations (36-38% concentrated, 1N, 0.1N standardized solutions) to meet specific laboratory requirements. Widely used in university labs, oilfield laboratories, pharmaceutical QC, and industrial testing facilities across Oman. Used for metal dissolution, ore analysis, and routine analytical procedures, including in Oman's oilfield analytical labs for metal dissolution, food testing labs for acid digestion, and university chemistry departments. Global Chemicals LLC supplies standardised solutions (0.1N, 1N) and concentrated 37% grade in 500mL, 2.5L, and 5L bottles. SDS, CoA, and transport documentation provided. Concentrated hydrochloric acid is corrosive (UN 1789, Class 8): it causes severe skin burns and eye damage, and its fumes irritate the respiratory tract, so open and dilute it in a fume hood, always add acid to water, wear gloves, goggles and a lab coat, and store it away from bases, oxidisers such as bleach (which releases chlorine) and metals.",
       "applications": [
         "pH adjustment and standardization",
         "Acid-base titrations",
@@ -95,13 +95,13 @@
         "Educational laboratory experiments"
       ],
       "technicalSpecs": [
-        "Purity: 36-38% (concentrated), ACS reagent grade",
+        "Concentration: 36-38% HCl (concentrated), ACS reagent grade",
         "Standardized solutions: 0.1N, 1N available",
         "Appearance: Clear, colorless liquid",
         "Assay: Meets ACS specifications",
         "Low non-volatile residue",
         "Available: 500ml, 2.5L, 5L bottles",
-        "Certified analysis provided"
+        "Hazard: Corrosive — UN 1789, Class 8; corrosive fumes"
       ],
       "faqs": [
         {
@@ -871,7 +871,7 @@
         "chloroform ACS Sohar",
         "extraction chloroform Muscat"
       ],
-      "longDescription": "Laboratory Grade Chloroform supplier in Oman - Global Chemicals LLC provides high-purity stabilized chloroform for molecular biology, spectroscopy, and organic synthesis in Muscat, Sohar, Duqm, Salalah. Our ACS-grade chloroform (stabilized with ethanol/amylene) is essential for DNA/RNA extraction, lipid extraction, and as an IR/UV spectroscopy solvent. The dense, non-flammable solvent is ideal for liquid-liquid extraction and phase separation. Widely used in molecular biology labs, pharmaceutical research, university chemistry departments, and analytical facilities across Oman. Essential for phenol-chloroform DNA extraction and routine organic synthesis. Laboratory-grade chloroform (CHCl₃, stabilised with amylene, 99.8%+) is used in Oman's research laboratories for extraction of lipids and natural products, IR and UV spectroscopy solvent (¹H NMR requires deuterated CDCl₃ instead), and DNA/RNA extraction protocols. Controlled and regulated substance in Oman — purchase requires laboratory registration documentation. Global Chemicals LLC supplies chloroform analytical grade in 500mL and 2.5L amber glass bottles with full regulatory compliance documentation, CoA, and SDS. Available to registered university, research, and industrial laboratory accounts.",
+      "longDescription": "Laboratory Grade Chloroform supplier in Oman - Global Chemicals LLC provides high-purity stabilized chloroform for molecular biology, spectroscopy, and organic synthesis in Muscat, Sohar, Duqm, Salalah. Our ACS-grade chloroform (stabilized with ethanol/amylene) is essential for DNA/RNA extraction, lipid extraction, and as an IR/UV spectroscopy solvent. The dense, non-flammable solvent separates cleanly from water, which suits liquid-liquid extraction and phase separation. Widely used in molecular biology labs, pharmaceutical research, university chemistry departments, and analytical facilities across Oman. Essential for phenol-chloroform DNA extraction and routine organic synthesis. Laboratory-grade chloroform (CHCl₃, stabilised with amylene, 99.8%+) is used in Oman's research laboratories for extraction of lipids and natural products, IR and UV spectroscopy solvent (¹H NMR requires deuterated CDCl₃ instead), and DNA/RNA extraction protocols. Controlled and regulated substance in Oman — purchase requires laboratory registration documentation. Global Chemicals LLC supplies chloroform analytical grade in 500mL and 2.5L amber glass bottles with full regulatory compliance documentation, CoA, and SDS. Available to registered university, research, and industrial laboratory accounts. Chloroform is toxic (UN 1888, Class 6.1): it is harmful if swallowed and toxic if inhaled, is suspected of causing cancer and of damaging the unborn child, damages the liver and kidneys on repeated exposure, and slowly forms phosgene when exposed to light and air, which is why it is stabilised and kept in amber bottles. Use it only in a fume hood with nitrile-over-laminate or Viton gloves and goggles, keep bottles closed, cool and dark, and never mix it with strong bases or reactive metals.",
       "applications": [
         "DNA and RNA extraction (phenol-chloroform method)",
         "IR and UV spectroscopy solvent",
@@ -889,7 +889,7 @@
         "Specific gravity: 1.48",
         "Assay: Meets ACS specifications",
         "Available: 500ml, 1L, 2.5L bottles",
-        "Store in amber bottles away from light"
+        "Hazard: Toxic — UN 1888, Class 6.1; store in amber bottles away from light"
       ],
       "faqs": [
         {
