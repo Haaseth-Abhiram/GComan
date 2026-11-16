@@ -599,7 +599,7 @@
         "analytical methanol Sohar",
         "methyl alcohol Muscat"
       ],
-      "longDescription": "HPLC Grade Methanol supplier in Oman - Global Chemicals LLC provides high-purity methanol for analytical laboratories and research facilities in Muscat, Sohar, Duqm, Salalah. Our HPLC/ACS-grade methanol is essential for chromatography mobile phases, sample extraction, and organic synthesis. The low UV cutoff and high purity make it ideal for HPLC, UV spectroscopy, and trace analysis. Available in various grades (HPLC, ACS, spectroscopy) for different analytical requirements. Widely used in pharmaceutical labs, university research facilities, oilfield laboratories, and testing centers across Oman. Essential for reversed-phase HPLC and lipid extraction applications. Laboratory-grade methanol (99.8%+, ACS/HPLC grade) is among the most consumed solvents in Oman's analytical laboratories — used as an HPLC and LC-MS mobile phase solvent, extraction solvent for natural product analysis, transesterification solvent for FAME (fatty acid methyl ester) GC analysis in the food industry, and general laboratory solvent. Serving oilfield analytical labs, university research labs, food testing labs, and pharmaceutical QC facilities. Global Chemicals LLC supplies HPLC-grade and analytical-grade methanol in 1L, 2.5L, and 4L containers with CoA and SDS.",
+      "longDescription": "HPLC Grade Methanol supplier in Oman - Global Chemicals LLC provides high-purity methanol for analytical laboratories and research facilities in Muscat, Sohar, Duqm, Salalah. Our HPLC/ACS-grade methanol is essential for chromatography mobile phases, sample extraction, and organic synthesis. The low UV cutoff and high purity make it ideal for HPLC, UV spectroscopy, and trace analysis. Available in various grades (HPLC, ACS, spectroscopy) for different analytical requirements. Widely used in pharmaceutical labs, university research facilities, oilfield laboratories, and testing centers across Oman. Essential for reversed-phase HPLC and lipid extraction applications. Laboratory-grade methanol (99.8%+, ACS/HPLC grade) is one of the most widely used solvents in analytical laboratories — used as an HPLC and LC-MS mobile phase solvent, extraction solvent for natural product analysis, transesterification solvent for FAME (fatty acid methyl ester) GC analysis in the food industry, and general laboratory solvent. Serving oilfield analytical labs, university research labs, food testing labs, and pharmaceutical QC facilities. Global Chemicals LLC supplies HPLC-grade and analytical-grade methanol in 1L, 2.5L, and 4L containers with CoA and SDS. Methanol is highly flammable and toxic (UN 1230, Class 3 with a 6.1 subsidiary risk): it is toxic if swallowed, inhaled or absorbed through the skin and damages the optic nerve, so use it in a fume hood away from ignition sources, wear butyl-rubber gloves (thin nitrile gloves protect only against brief splashes) and goggles, and store it in a flammables cabinet.",
       "applications": [
         "HPLC and UHPLC mobile phases",
         "Sample extraction and preparation",
@@ -617,7 +617,7 @@
         "UV cutoff: 205 nm (HPLC grade)",
         "Assay: Meets ACS specifications",
         "Available: 1L, 2.5L, 4L bottles",
-        "Toxic - handle with care"
+        "Hazard: Highly flammable and toxic — UN 1230, Class 3 (6.1)"
       ],
       "faqs": [
         {
