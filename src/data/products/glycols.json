@@ -89,11 +89,11 @@
         "glycol suppliers Oman",
         "DEG drums IBC"
       ],
-      "longDescription": "Diethylene glycol (DEG) supplier in Oman — Global Chemicals LLC stocks DEG at ≥99.5% purity in our Muscat warehouse for same-day Oman dispatch and scheduled GCC delivery. DEG is the intermediate chain length in the ethylene glycol series: less volatile than MEG, lighter than TEG. In the Gulf it serves three main duties — unsaturated polyester resin and plasticiser manufacture, natural-gas dehydration blend make-up alongside TEG, and as a solvent-humectant in industrial formulations (printing inks, textile conditioning). Supplied with batch Certificate of Analysis covering purity, water content and colour (APHA), plus GHS-compliant SDS. DEG is strictly an industrial chemical — never for food or pharmaceutical use — and we supply against end-use declarations where destination import rules require them.",
+      "longDescription": "Diethylene glycol (DEG, 2,2'-oxydiethanol, diglycol, C4H10O3, CAS 111-46-6) is a clear, colourless, nearly odourless and hygroscopic liquid supplied by Global Chemicals LLC in resin and plasticiser grade at 99.5% minimum purity by GC, with water at 0.1% maximum by Karl Fischer, colour at 10 APHA maximum, density 1.118 g/cm³ at 20 °C and boiling point 244–245 °C. It is packed in 235 kg drums, 1,000 L IBCs and bulk from stock in Muscat. DEG sits between MEG and TEG in the ethylene glycol series.\n\nResins and polymers: DEG is one of the glycols condensed with maleic and phthalic anhydride to make unsaturated polyester resins, where its ether link gives a more flexible, tougher cured resin than propylene glycol alone. It is a building block for polyester polyols used in polyurethane foams, coatings and elastomers, and reacts with benzoic acid to give diethylene glycol dibenzoate, a plasticiser for PVC and adhesives. It is also a raw material for morpholine and other intermediates.\n\nSolvent and humectant: DEG dissolves dyes, resins and nitrocellulose and holds moisture, so it is used in printing inks, textile lubricants and conditioning agents, and as a component of cement grinding aids. For natural-gas dehydration and hydrate inhibition, see the MEG versus DEG guide linked on this page. DEG is an industrial chemical only. It has caused repeated mass poisonings, with many child victims, when substituted for glycerine or propylene glycol in medicines such as cough syrups, and it has been found in counterfeit toothpaste; it must never be used in food, beverages, medicines, toothpaste or cosmetics. We supply against end-use declarations where destination import rules require them.\n\nHandling and storage: DEG is harmful if swallowed (H302) and may cause damage to the kidneys through prolonged or repeated exposure if swallowed (H373). It is not regulated as dangerous goods for road or sea transport. It has a high flash point and low vapour pressure; store it in closed carbon-steel or stainless tanks or drums, dry and away from strong oxidisers and acids, because it absorbs water from the air. Wear chemical gloves and goggles, and label every container so it cannot be mistaken for glycerine. Every delivery carries a certificate of analysis giving purity, water content and colour, and a GHS safety data sheet.\n\nDelivery is same day within Muscat, next day to Sohar, 2–3 days to Salalah and Duqm, and by road across the GCC with a certificate of origin. Request a quote with the quantity, pack type, end use and delivery site.",
       "applications": [
         "Unsaturated polyester resin (UPR) production",
         "Plasticiser and ester manufacture",
-        "Natural-gas dehydration blend make-up (with TEG)",
+        "Polyester polyols for polyurethanes",
         "Printing-ink and dye solvent-humectant",
         "Textile conditioning and finishing",
         "Cement grinding-aid formulations"
@@ -104,7 +104,8 @@
         "Colour: ≤10 APHA",
         "Density: 1.118 g/cm³ at 20°C",
         "Boiling point: 244–245°C",
-        "Packaging: 235 kg drums, 1,000 L IBC, bulk"
+        "Packaging: 235 kg drums, 1,000 L IBC, bulk",
+        "Hazard: harmful if swallowed, kidney damage on repeated exposure (H302, H373) — not regulated for transport"
       ],
       "faqs": [
         {

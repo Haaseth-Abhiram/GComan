@@ -323,22 +323,23 @@
         "water treatment minerals Muscat",
         "CaCO3 supplier Oman"
       ],
-      "longDescription": "Calcium Carbonate supplier in Oman - Global Chemicals LLC provides high-purity calcium carbonate for water treatment, pH adjustment, and alkalinity control in Muscat, Sohar, Salalah. Our calcium carbonate is ideal for remineralization of RO water, pH buffering, and hardness adjustment. In water treatment, calcium carbonate serves a specialised and critical role in remineralising desalinated water — replacing the calcium and alkalinity stripped by the RO process to create stable, non-corrosive water for distribution. Desalination plants in Oman use calcite (calcium carbonate) contactors or lime/CO2 remineralisation to achieve the Langelier Saturation Index (LSI) required for potable water distribution. Global Chemicals LLC supplies high-purity calcium carbonate powder and pellets for water remineralisation contactors, pH correction in RO permeate, and alkalinity control in treated water. The product is also used in industrial water treatment for neutralising acidic effluent and in aquaculture to maintain optimal water pH for fish and shrimp farming across Oman.",
+      "longDescription": "Calcium carbonate (CaCO3, CAS 471-34-1), the compound that makes up limestone, calcite and chalk, is supplied by Global Chemicals LLC for water treatment as a white powder of 95–98% CaCO3, ground to 200–325 mesh, in 25 kg and 50 kg bags from stock in Muscat. It is only very slightly soluble in pure water, and a 10% slurry has a pH of about 8–10, but it dissolves readily in acids and in water carrying dissolved carbon dioxide.\n\nIn water treatment: water from reverse osmosis and thermal desalination contains almost no calcium or alkalinity and is corrosive to pipes and concrete. Remineralisation puts both back. Carbon dioxide is dosed and the water passes through a contactor bed of calcite, dissolving calcium carbonate as calcium bicarbonate (CaCO3 + CO2 + H2O → Ca(HCO3)2), which raises hardness, alkalinity and pH towards a slightly positive Langelier Saturation Index; lime with carbon dioxide is the other common route. Calcite beds and limestone filters also neutralise acidic well water, and they are largely self-limiting because dissolution slows as the water nears saturation. Contactors and filters need graded granular media; the fine powder on this page suits slurry dosing, neutralisation and hardness adjustment, so tell us which you need. For drinking-water use, specify a grade certified for potable water; the certificate for each grade is available on request.\n\nOther uses: limestone powder neutralises acidic industrial wastewater more slowly than lime, but it does not overshoot to a high pH; with sulphuric acid wastes the gypsum formed can coat the particles and slow the reaction. In aquaculture it is used to raise and steady pond pH and alkalinity for fish and shrimp.\n\nHandling and storage: most safety data sheets do not classify calcium carbonate as hazardous under GHS, and it is not regulated as dangerous goods for transport. The dust is a nuisance that can irritate the eyes and airways, so keep dust down and wear goggles and a dust mask. It reacts with acids, releasing carbon dioxide that can foam and pressurise a closed vessel, so add it gradually to acidic streams and keep it apart from stored acids. Keep bags closed and dry to stop caking. Every delivery carries a certificate of analysis and a GHS safety data sheet.\n\nDelivery is same day within Muscat, next day to Sohar, 2–3 days to Salalah and Duqm, and by road across the GCC with a certificate of origin. Request a quote with the intended use (slurry dosing or contactor bed), quantity and delivery site.",
       "applications": [
-        "RO water remineralization",
-        "pH adjustment in water treatment",
+        "RO and desalinated water remineralisation",
+        "pH correction of soft, acidic water",
         "Alkalinity control",
         "Water hardness adjustment",
-        "Neutralization of acidic water",
-        "Industrial wastewater treatment",
-        "Aquaculture water conditioning"
+        "Neutralisation of acidic well water (limestone filters need granular media — ask)",
+        "Acidic industrial wastewater neutralisation",
+        "Aquaculture pond pH and alkalinity"
       ],
       "technicalSpecs": [
         "CaCO3 purity: 95-98%",
         "Appearance: White powder",
         "Particle size: 200-325 mesh",
         "pH (10% slurry): 8-10",
-        "Available in 25kg, 50kg bags"
+        "Available in 25kg, 50kg bags",
+        "Hazard: not classified under GHS by most suppliers — not regulated for transport"
       ],
       "faqs": [
         {
@@ -347,7 +348,7 @@
         },
         {
           "question": "What is Calcium Carbonate used for?",
-          "answer": "Calcium Carbonate is commonly used for RO water remineralization, pH adjustment in water treatment, and Alkalinity control. Global Chemicals LLC supplies Calcium Carbonate across Oman and the wider GCC with full SDS documentation to support these applications."
+          "answer": "Calcium Carbonate is commonly used for RO and desalinated water remineralisation, pH correction of soft, acidic water, and alkalinity control. Global Chemicals LLC supplies Calcium Carbonate across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
       "wikiUrl": "https://en.wikipedia.org/wiki/Calcium_carbonate"
@@ -931,15 +932,15 @@
         "chelating agent Oman",
         "citric acid food grade Oman"
       ],
-      "longDescription": "Citric Acid Monohydrate supplier in Oman - Global Chemicals LLC provides food grade and technical grade citric acid monohydrate for food processing, beverages, water treatment, and industrial applications in Muscat, Sohar, Salalah. Our monohydrate form offers excellent metal chelation, pH control, and antioxidant properties. Citric acid monohydrate (C₆H₈O₇·H₂O, E330) is the hydrated crystalline form of citric acid — used interchangeably with the anhydrous form in food and pharmaceutical applications, with dosage adjusted for its 8.6% water content. In Oman's water treatment industry, citric acid monohydrate is used for RO membrane cleaning (removing metal oxides and carbonate scale), boiler descaling, and cooling tower deposit removal. In the food industry, it functions as an acidulant, preservative, and flavour enhancer in beverages, confectionery, jams, and processed foods. In pharmaceutical applications, it is a buffer, acidulant, and effervescent formulation component. Global Chemicals LLC supplies citric acid monohydrate (food grade E330, BP/USP pharmaceutical grade) in 25kg bags with a certificate of analysis per batch. Delivery across Oman; export to UAE, Saudi Arabia, and GCC.",
+      "longDescription": "Citric acid monohydrate (hydrated citric acid, C6H8O7·H2O, E330, CAS 5949-29-1) is the crystalline form of citric acid that carries one molecule of water, about 8.6% by weight; the specification allows 7.5–9.0%. Global Chemicals LLC supplies it as a white crystalline powder at 99.5% minimum purity on an anhydrous basis, in food grade (E330), BP/USP pharmaceutical grade and technical grade, in 25 kg bags from stock in Muscat. A 1% solution has a pH of about 2.2.\n\nIn water treatment: citric acid is a standard low-pH cleaner for reverse-osmosis and nanofiltration membranes. A dilute solution recirculated during clean-in-place dissolves calcium carbonate scale, and because citrate holds iron in solution it is also used against iron and other metal-oxide fouling. Follow the membrane manufacturer's limits for concentration, pH and temperature, and run the acid step separately from the alkaline clean. The same properties make it useful for descaling boilers, heat exchangers and cooling-water systems, and for adjusting the pH of cleaning solutions. For dosing, the monohydrate is interchangeable with anhydrous citric acid once its water is allowed for: about 1.09 kg of monohydrate replaces 1 kg of anhydrous acid.\n\nOther uses: in food and beverages it is a widely used acidulant, giving tartness and controlling pH in soft drinks, confectionery, jams and processed foods, and it supports antioxidants by binding trace metals. In pharmaceuticals it is a buffer, acidulant and effervescent component. Cosmetics, detergents and household cleaners use it for pH adjustment and descaling, and as a source of citrate.\n\nHandling and storage: citric acid is classified as causing serious eye irritation (H319), and some safety data sheets also list respiratory irritation from the dust; it is not regulated as dangerous goods for transport. Keep it away from strong bases, oxidising agents, and carbonates and bicarbonates, which react with it to release carbon dioxide. Its solutions corrode carbon steel and some other metals, so mix and store them in plastic or stainless steel. The monohydrate cakes in humid or warm storage, so keep bags closed in a cool, dry store, and avoid raising dust clouds, which, like other fine organic dusts, can be combustible. Wear goggles, gloves and a dust mask. Every batch carries a certificate of analysis, and every delivery a GHS safety data sheet.\n\nDelivery is same day within Muscat, next day to Sohar, 2–3 days to Salalah and Duqm, and by road across the GCC with a certificate of origin. Request a quote with the grade, quantity and delivery site.",
       "applications": [
-        "Food and beverage industry",
+        "RO membrane cleaning (low-pH clean-in-place)",
+        "Descaling of boilers, heat exchangers and cooling systems",
+        "Food processing (acidulant, pH control)",
         "Soft drink acidulant",
         "Pharmaceutical formulations",
-        "Water treatment chelating agent",
         "Cosmetics and toiletries",
-        "Industrial cleaning",
-        "Detergent builder"
+        "Detergents and household cleaners"
       ],
       "technicalSpecs": [
         "Purity: 99.5% min (anhydrous basis)",
@@ -947,7 +948,8 @@
         "Water of crystallization: 7.5-9.0%",
         "pH (1% solution): 2.2",
         "Available in 25kg bags",
-        "Food grade (E330) specification"
+        "Food grade (E330) specification",
+        "Hazard: eye irritant (H319) — not regulated for transport"
       ],
       "faqs": [
         {
@@ -956,7 +958,7 @@
         },
         {
           "question": "What is Citric Acid Monohydrate used for?",
-          "answer": "Citric Acid Monohydrate is commonly used for Food and beverage industry, Soft drink acidulant, and Pharmaceutical formulations. Global Chemicals LLC supplies Citric Acid Monohydrate across Oman and the wider GCC with full SDS documentation to support these applications."
+          "answer": "Citric Acid Monohydrate is commonly used for RO membrane cleaning, descaling of boilers, heat exchangers and cooling systems, and food processing. Global Chemicals LLC supplies Citric Acid Monohydrate across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
       "wikiUrl": "https://en.wikipedia.org/wiki/Citric_acid"
@@ -1587,7 +1589,7 @@
   {
     "id": "paraffin-wax",
     "title": "Paraffin Wax",
-    "description": "Hydrocarbon wax used in water treatment and industrial applications.",
+    "description": "Refined and semi-refined paraffin wax for candles, coatings and compounding.",
     "category": "water-treatment",
     "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
@@ -1605,23 +1607,24 @@
         "candle wax Oman",
         "paraffin wax supplier Oman"
       ],
-      "longDescription": "Paraffin Wax supplier in Oman - Global Chemicals LLC provides fully refined and semi-refined paraffin wax for candles, packaging, coatings, and industrial applications in Muscat, Sohar, Salalah. Our paraffin wax offers various melting points (54-68°C) to suit diverse manufacturing requirements. Paraffin wax has significant demand in Oman's manufacturing and industrial sectors. In candle manufacturing (one of the growing artisanal industries in Oman's SME sector), fully refined paraffin wax is the primary raw material. In packaging, paraffin wax coatings are applied to cardboard cartons used for fresh produce, fish, and poultry export — a major application given Oman's significant seafood export industry (fresh fish, frozen shrimp). In rubber compounding and tyre manufacturing, paraffin wax is used as a processing aid and anti-ozonant. Global Chemicals LLC supplies fully refined paraffin wax (oil content <0.5%, white) in 5kg slabs and 25kg cartons, and semi-refined grades in multiple melting point ranges (56°C, 60°C, 64°C, 68°C) to suit specific manufacturing requirements. SDS and specification sheet provided. Export to UAE, Saudi Arabia, and GCC available.",
+      "longDescription": "Paraffin wax (paraffin, petroleum wax, mineral wax, CAS 8002-74-2) is a white, odourless solid mixture of saturated hydrocarbons refined from petroleum. Global Chemicals LLC supplies it in two grades: fully refined, white with an oil content below 0.5%, and semi-refined, which carries more residual oil. Grades are offered by melting point across about 54–68 °C, with semi-refined grades at 56, 60, 64 and 68 °C. It is packed in 5 kg slabs and 25 kg cartons from stock in Muscat.\n\nCandles and coatings: fully refined paraffin is the usual base wax for pillar, container and tealight candles, and the melting point is chosen to suit the candle type and the climate. Melted wax is applied to paper and corrugated board to make it water- and grease-resistant, for example in waxed cartons for chilled produce and seafood; packaging that touches food needs a wax grade certified for food contact, and the certificate for each grade is available on request. Paraffin is also used to make wood, paper and textiles water-repellent, in polishes and crayons, and to impregnate match splints.\n\nIndustrial compounding: in rubber, paraffin wax blooms to the surface and forms a thin film that shields the compound from ozone cracking under static conditions, and it acts as a processing aid. In hot-melt adhesives and coatings it lowers melt viscosity and controls open time. Fully refined grades are used in cosmetic creams, lipsticks and depilatory waxes, where the formulator specifies the purity required.\n\nHandling and storage: paraffin wax is not classified as hazardous under GHS and is not regulated as dangerous goods for road or sea transport. It is combustible. Molten wax causes severe burns, so melt it in a thermostatically controlled vessel or water bath, never over an open flame, and do not heat it to the point where it smokes, because the vapour can ignite. Never pour water on burning wax; smother the fire. Store slabs and cartons in a cool, dry place out of direct sun, which softens low-melting grades. Every delivery carries a certificate of analysis and a GHS safety data sheet.\n\nDelivery is same day within Muscat, next day to Sohar, 2–3 days to Salalah and Duqm, and by road across the GCC with a certificate of origin. Request a quote with the grade (fully or semi-refined), melting point, quantity and delivery site.",
       "applications": [
         "Candle manufacturing",
         "Wax coating for paper and board",
         "Rubber compounding",
         "Hot melt adhesives",
-        "Cosmetics and personal care",
-        "Waterproofing applications",
-        "Matches and fireworks"
+        "Cosmetics and personal care (fully refined grades)",
+        "Water repellency for wood, paper and textiles",
+        "Polishes, crayons and match splint impregnation"
       ],
       "technicalSpecs": [
         "Melting point: 54-68°C (various grades)",
-        "Appearance: White solid blocks",
+        "Appearance: White solid slabs (fully refined)",
         "Oil content: <0.5% (fully refined)",
-        "Congealing point: 52-70°C",
+        "Congealing point: stated per grade on request",
         "Available in 5kg slabs, 25kg cartons",
-        "Grades: Fully refined, semi-refined"
+        "Grades: Fully refined, semi-refined",
+        "Hazard: not classified under GHS; combustible, molten wax causes burns — not regulated for transport"
       ],
       "faqs": [
         {
@@ -1640,7 +1643,7 @@
   {
     "id": "petroleum-jelly",
     "title": "Petroleum Jelly",
-    "description": "Protective coating and lubricant for water treatment equipment.",
+    "description": "White USP/BP and technical petroleum jelly for ointments, cosmetics and rust protection.",
     "category": "water-treatment",
     "image": "https://gcoman.com/images/products/liquid-ibc-tank.webp",
     "iconName": "Droplets",
@@ -1658,14 +1661,14 @@
         "petroleum jelly USP Oman",
         "petroleum jelly Oman"
       ],
-      "longDescription": "Petroleum Jelly supplier in Oman - Global Chemicals LLC provides USP and technical grade petroleum jelly for pharmaceutical, cosmetic, and industrial applications in Muscat, Sohar, Salalah. Our petroleum jelly offers excellent moisture barrier, skin protection, and lubrication properties. Petroleum jelly (white petrolatum) has broad industrial and pharmaceutical applications across Oman. In pharmaceutical and healthcare, USP/BP grade white petrolatum is used as an ointment base, skin protectant, and excipient in topical pharmaceutical formulations supplied to Oman's hospitals and pharmacies. In personal care and cosmetics manufacturing, petroleum jelly is a key ingredient in lip balms, hand creams, baby products, and skin moisturisers. In industrial applications, petroleum jelly is used as a temporary rust prevention coating for steel parts in transit, cable and pipe joint sealant, and O-ring and gasket lubricant in water treatment equipment. Global Chemicals LLC supplies petroleum jelly in USP/BP (white, pharmaceutical grade) and technical (yellow/white) grades in 1kg jars, 30kg tins, and 180kg drums. Quality documentation provided for pharmaceutical grade.",
+      "longDescription": "Petroleum jelly (petrolatum, white petrolatum, soft paraffin, CAS 8009-03-8) is a soft, semi-solid mixture of mineral oil and microcrystalline and paraffin waxes refined from petroleum. Global Chemicals LLC supplies a white grade to USP and BP specifications and a technical grade in white or yellow, with a melting range of about 38–60 °C. It is packed in drums and pails — 180 kg drums and 30 kg tins — and 1 kg jars, from stock in Muscat.\n\nPharmaceutical and personal care: white petrolatum forms a water-repellent film on the skin that slows moisture loss, which is why it is used as an ointment base and skin protectant in topical medicines, and in lip balms, barrier and hand creams, baby care products and hair preparations. Those uses need the USP or BP grade; the certificate for each grade is available on request, and the formulator remains responsible for the product's own approval.\n\nIndustrial uses: the technical grade gives a temporary rust-preventive film on machined steel parts in storage and transit, and protects battery terminals and electrical connections from moisture. Petroleum jelly compounds fill telecom and power cables to keep water out. It lubricates O-rings, gaskets and valve stems in water equipment and pumps, but it swells natural rubber and EPDM, so use it only on seals of compatible materials such as nitrile, and on EPDM use a silicone grease instead. It is also used to condition and waterproof leather.\n\nHandling and storage: petroleum jelly is not classified as hazardous under GHS and is not regulated as dangerous goods for road or sea transport. It is combustible; keep it away from heat, flames and strong oxidisers, and do not overheat it when melting for blending. Store containers closed in a cool place out of direct sun, which softens the product and can make oil separate. Every delivery carries a certificate of analysis and a GHS safety data sheet.\n\nDelivery is same day within Muscat, next day to Sohar, 2–3 days to Salalah and Duqm, and by road across the GCC with a certificate of origin. Request a quote with the grade (USP, BP or technical), pack size, quantity and delivery site.",
       "applications": [
-        "Pharmaceutical ointments",
+        "Pharmaceutical ointment bases (USP/BP grade)",
         "Cosmetics and skincare",
-        "Skin moisturizer and protectant",
+        "Skin protectant formulations (USP/BP grade)",
         "Rust prevention coating",
-        "Equipment lubrication",
-        "Electrical insulation",
+        "Seal and valve lubrication (nitrile, not EPDM)",
+        "Cable filling and battery terminal protection",
         "Leather conditioning"
       ],
       "technicalSpecs": [
@@ -1674,7 +1677,7 @@
         "Melting point: 38-60°C",
         "Viscosity: 8-9 cSt @ 100°C",
         "Available in drums and pails",
-        "Non-toxic (USP grade)"
+        "Hazard: not classified under GHS; combustible — not regulated for transport"
       ],
       "faqs": [
         {
@@ -1683,7 +1686,7 @@
         },
         {
           "question": "What is Petroleum Jelly used for?",
-          "answer": "Petroleum Jelly is commonly used for Pharmaceutical ointments, Cosmetics and skincare, and Skin moisturizer and protectant. Global Chemicals LLC supplies Petroleum Jelly across Oman and the wider GCC with full SDS documentation to support these applications."
+          "answer": "Petroleum Jelly is commonly used for Pharmaceutical ointment bases (USP/BP grade), Cosmetics and skincare, and Skin protectant formulations (USP/BP grade). Global Chemicals LLC supplies Petroleum Jelly across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
       "wikiUrl": "https://en.wikipedia.org/wiki/Petroleum_jelly",
@@ -1937,23 +1940,24 @@
         "soda ash dense Muscat",
         "soda ash light Oman"
       ],
-      "longDescription": "Soda Ash supplier in Oman - Global Chemicals LLC provides dense and light soda ash for water treatment, glass manufacturing, detergent production, and industrial processes in Muscat, Sohar, Salalah. Our sodium carbonate offers effective pH adjustment, water softening, and alkalinity building. Soda ash (sodium carbonate, Na₂CO₃) is one of the most widely used industrial alkaline chemicals — used in water treatment, glass production, detergent manufacturing, and chemical processing. In water treatment, soda ash raises pH and adds alkalinity to treated water, and is used to trim pH and alkalinity after desalination (the calcium for remineralisation comes from lime or limestone). It is also used to raise swimming pool pH (a safer and easier-to-handle alternative to caustic soda for pool operators), and to neutralise acidic industrial effluent. Oman's glass manufacturing sector (serving the construction boom) uses soda ash as a key flux in glass batch formulations. In detergent powder manufacturing, soda ash is the alkaline builder and carrier/filler. Global Chemicals LLC supplies soda ash in both dense and light grades in 25kg bags and 1,000kg big bags. Supply to all Oman regions; export to UAE and GCC. Soda ash causes serious eye irritation: wear goggles and gloves and avoid breathing the dust.",
+      "longDescription": "Soda ash (sodium carbonate, calcined soda, Na2CO3, CAS 497-19-8) is a white alkaline salt supplied by Global Chemicals LLC at 99.2% minimum Na2CO3 in two grades: dense, as granules with a bulk density of about 1.0–1.2 kg/L, and light, as a finer powder of about 0.5–0.6 kg/L. A 1% solution has a pH of about 11.3–11.7. It is packed in 25 kg bags and 1,000 kg big bags and supplied from stock in Muscat.\n\nIn water treatment: soda ash raises pH and adds carbonate alkalinity. In lime-soda softening, lime removes the carbonate (temporary) hardness and soda ash removes the non-carbonate hardness, precipitating the calcium as calcium carbonate that settles and is filtered out. Plants also dose it to correct low pH and alkalinity in raw and treated water, to trim pH after desalination — it adds alkalinity but no calcium, so the calcium for remineralisation still comes from lime or limestone — and to neutralise acidic effluent before discharge. In swimming pools it raises pH and is easier and safer to handle than caustic soda. Dense ash is less dusty and suits dry feeders; either grade can be dissolved for solution dosing. For drinking-water use, specify a grade certified for potable water; the certificate for each grade is available on request.\n\nOther uses: glass makers use soda ash as the main flux in container and flat glass batches, where dense ash is preferred because it blends with sand without segregating or dusting. Detergent powder manufacturers use it as the alkaline builder and carrier. It is a raw material for sodium silicates, phosphates and other sodium salts, and it is used for pH control in pulp and paper processing.\n\nHandling and storage: soda ash is classified as causing serious eye irritation (H319); it is not regulated as dangerous goods for road or sea transport. It reacts with acids, releasing carbon dioxide and heat, so store it away from acids and never mix the two in a closed container. It absorbs moisture and carbon dioxide from the air and cakes, so keep bags closed, off the floor and in a dry store. Add the powder slowly to stirred water rather than water to the powder, because it warms as it dissolves and can form hard lumps. Wear goggles, gloves and a dust mask, and avoid breathing the dust. Every delivery carries a certificate of analysis and a GHS safety data sheet.\n\nDelivery is same day within Muscat, next day to Sohar, 2–3 days to Salalah and Duqm, and by road across the GCC with a certificate of origin. Request a quote with the grade (dense or light), quantity and delivery site.",
       "applications": [
-        "Water softening",
-        "pH adjustment",
-        "Glass manufacturing",
+        "Lime-soda softening (non-carbonate hardness removal)",
+        "pH and alkalinity correction, including post-desalination trim",
+        "Glass manufacturing (batch flux)",
         "Detergent and soap production",
-        "Paper and pulp industry",
-        "Chemical manufacturing",
-        "Swimming pool pH balance"
+        "Pulp and paper processing (pH control)",
+        "Chemical manufacturing (sodium silicates, phosphates and other sodium salts)",
+        "Swimming pool pH correction"
       ],
       "technicalSpecs": [
         "Na2CO3 purity: 99.2% min",
         "Grades: Dense (heavy), Light",
-        "Appearance: White powder/granules",
+        "Appearance: White granules (dense) / white powder (light)",
         "Bulk density: 1.0-1.2 kg/L (dense); 0.5-0.6 kg/L (light)",
         "pH (1% solution): 11.3-11.7",
-        "Available in 25kg, 50kg bags, bulk bags"
+        "Available in 25kg, 50kg bags, bulk bags",
+        "Hazard: eye irritant (H319) — not regulated for transport"
       ],
       "wikiUrl": "https://en.wikipedia.org/wiki/Sodium_carbonate",
       "seoDescription": "Soda ash 99.2% Na2CO3 (CAS 497-19-8), dense and light grades, ex-stock Muscat, Oman. Water softening & pH correction. 25 kg bags — get a quote.",
@@ -1994,15 +1998,15 @@
         "bicarbonate supplier Oman",
         "baking soda industrial Oman"
       ],
-      "longDescription": "Sodium Bicarbonate supplier in Oman - Global Chemicals LLC provides food grade and technical grade sodium bicarbonate for water treatment, food processing, fire extinguishers, and industrial applications in Muscat, Sohar, Salalah. Our sodium bicarbonate offers pH buffering, alkalinity control, and neutralization. Sodium bicarbonate (NaHCO₃, baking soda) is a mild, safe alkaline chemical with applications in water treatment, food, pharmaceuticals, and industrial processing in Oman. In water treatment, sodium bicarbonate is used to raise carbonate alkalinity (total alkalinity) in swimming pools, preventing pH swing and buffering the pool chemistry. In RO desalination post-treatment, sodium bicarbonate can be used to add alkalinity to permeate alongside lime or soda ash. In Oman's food processing industry, sodium bicarbonate is a leavening agent (raising agent in baked goods) and pH regulator. In pharmaceutical manufacturing, sodium bicarbonate is used in antacid formulations, effervescent tablets, and oral rehydration salts (ORS) — important in Oman's healthcare sector. Global Chemicals LLC supplies sodium bicarbonate in food grade and technical grade in 25kg bags. SDS and CoA available. Export to GCC on request.",
+      "longDescription": "Sodium bicarbonate (sodium hydrogen carbonate, bicarbonate of soda, baking soda, NaHCO3, CAS 144-55-8) is a white crystalline powder supplied by Global Chemicals LLC at 99% minimum NaHCO3, in food grade and technical grade, in 25 kg bags from stock in Muscat. It is a mild alkali: a 1% solution has a pH of about 8.3, and about 9.6 g dissolves in 100 mL of water at 20 °C.\n\nIn water treatment: sodium bicarbonate raises bicarbonate (total) alkalinity with only a small rise in pH, which is what separates it from soda ash and caustic soda. Pool operators use it to bring total alkalinity into range so that pH stops drifting, then correct pH separately. In treated and desalinated water it adds alkalinity and buffering capacity, usually alongside lime or limestone, which supply the calcium. It is also used to restore alkalinity in biological treatment, where nitrification consumes it, and to buffer anaerobic digesters. Because it is a weak alkali, an overdose does not push the pH sharply upwards. For drinking-water use, specify a grade certified for potable water; the certificate for each grade is available on request.\n\nOther uses: food grade is a leavening agent, releasing carbon dioxide when heated or combined with an acid, and a pH regulator. In pharmaceuticals it is used in antacids, effervescent tablets and oral rehydration formulations. Technical grade is injected as a dry sorbent to capture acid gases such as sulphur dioxide and hydrogen chloride from flue gas, forms the base of BC dry-powder fire extinguishers, and is fed to livestock as a rumen buffer.\n\nHandling and storage: most safety data sheets do not classify sodium bicarbonate as hazardous under GHS, and it is not regulated as dangerous goods for transport. The dust can still irritate the eyes and airways, so wear goggles and a dust mask when handling it in quantity. It reacts with acids, releasing carbon dioxide, so do not store it next to acids or mix the two in a closed vessel, and it slowly decomposes on heating. It absorbs moisture and cakes, so keep bags closed in a cool, dry store, and keep food grade apart from technical grade. Every delivery carries a certificate of analysis and a GHS safety data sheet.\n\nDelivery is same day within Muscat, next day to Sohar, 2–3 days to Salalah and Duqm, and by road across the GCC with a certificate of origin. Request a quote with the grade (food or technical), quantity and delivery site.",
       "applications": [
-        "pH buffering in water treatment",
-        "Alkalinity adjustment",
-        "Flue gas desulfurization",
-        "Food processing and baking",
-        "Fire extinguisher powder",
-        "Pharmaceutical manufacturing",
-        "Animal feed supplement"
+        "Alkalinity raise with minimal pH change in water treatment",
+        "Swimming pool total alkalinity adjustment",
+        "Flue gas treatment (dry sorbent for SO2 and HCl)",
+        "Food processing and baking (leavening)",
+        "Dry-powder fire extinguishers",
+        "Pharmaceutical manufacturing (antacids, effervescent tablets)",
+        "Animal feed (rumen buffer)"
       ],
       "technicalSpecs": [
         "NaHCO3 purity: 99% min",
@@ -2010,7 +2014,8 @@
         "pH (1% solution): 8.3",
         "Available in 25kg bags",
         "Food grade and technical grade",
-        "Excellent buffering capacity"
+        "Solubility: about 9.6 g/100 mL water at 20 °C",
+        "Hazard: not classified under GHS by most suppliers — not regulated for transport"
       ],
       "faqs": [
         {
@@ -2019,7 +2024,7 @@
         },
         {
           "question": "What is Sodium Bicarbonate used for?",
-          "answer": "Sodium Bicarbonate is commonly used for pH buffering in water treatment, Alkalinity adjustment, and Flue gas desulfurization. Global Chemicals LLC supplies Sodium Bicarbonate across Oman and the wider GCC with full SDS documentation to support these applications."
+          "answer": "Sodium Bicarbonate is commonly used for raising alkalinity with minimal pH change in water treatment, swimming pool total alkalinity adjustment, and flue gas treatment. Global Chemicals LLC supplies Sodium Bicarbonate across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
       "wikiUrl": "https://en.wikipedia.org/wiki/Sodium_bicarbonate"
@@ -2594,21 +2599,22 @@
         "drilling salt Oman",
         "pool salt Oman"
       ],
-      "longDescription": "Global Chemicals LLC supplies industrial-grade sodium chloride from Muscat stock in the grades Oman's water-treatment and drilling sectors actually use. Refined fine salt (NaCl ≥ 99%) serves general process and brine-making duties. Pure dried vacuum (PVD) salt (≥ 99.9%) and tablet salt are the correct choices for regenerating water-softener resin — protecting RO pre-treatment trains, boiler feedwater systems, commercial laundries and hotel utility plants from hardness scaling. Coarse salt suits brine ponds and general utility applications, and salt-chlorinator swimming pools use granular pool-grade salt. Drilling and well-service contractors use sodium chloride for completion and workover brines — saturated NaCl brine reaches approximately 1.19 s.g. (10 ppg), the workhorse low-density clear brine. We pack in 25 kg and 50 kg PP bags and 1,000 kg big bags, with bulk deliveries for plant-scale users, and same-day dispatch is available within the Muscat metropolitan area from our Ghala warehouse. Every consignment ships with a Certificate of Analysis, a GHS-compliant Safety Data Sheet in English (Arabic on request) and a Technical Data Sheet; Global Chemicals LLC is JSRS-registered and ISO 9001:2015 certified. For food-grade salt, see White Salt (Food Grade) in the Food & Beverage range.",
+      "longDescription": "Industrial salt (sodium chloride, NaCl, CAS 7647-14-5) is supplied by Global Chemicals LLC from stock at its Ghala warehouse in Muscat in four grades: refined fine salt at 99.0% minimum NaCl, pure dried vacuum (PVD) salt at 99.9% minimum, compacted tablet salt and coarse salt, with moisture of 0.5% maximum. It is packed in 25 kg and 50 kg PP bags and 1,000 kg big bags, with bulk deliveries for plant-scale users. Food-grade salt is a separate product, White Salt (Food Grade), in the Food & Beverage range.\n\nIn water treatment: the main use is regenerating ion-exchange water softeners. The resin exchanges the calcium and magnesium in hard water for sodium; once it is exhausted, a strong brine passed through the bed reverses the exchange and the hardness is rinsed to drain. Softeners protect RO pre-treatment, boiler feedwater, laundries and hotel plant rooms from scale. Tablet and PVD salt suit enclosed softener brine tanks because their low insoluble content leaves little sludge and reduces bridging; refined fine salt suits open brine-making tanks. Brine-fed electrochlorinators, which generate sodium hypochlorite on site, also need high-purity salt, because calcium and magnesium deposit on the electrodes. Salt-chlorinator swimming pools use granular salt dosed to the chlorinator maker's target.\n\nOther uses: drilling and well-service contractors use sodium chloride for completion and workover brines; a saturated NaCl brine reaches about 1.19 s.g. (about 10 ppg), and heavier fluids move to calcium chloride. Salt is also a feed for industrial brine processes, an exhausting agent in textile dyeing and a curing salt for hides in leather tanning, and coarse salt serves general utility brines.\n\nHandling and storage: sodium chloride is not classified as hazardous under GHS and is not regulated as dangerous goods for transport, though the dust can irritate the eyes. Brine and damp salt corrode carbon steel and aluminium, so keep it off bare steel and rinse spills from equipment. Salt picks up moisture in humid air and cakes, so store bags closed, off the floor and under cover. Wear gloves and goggles when handling it in bulk. Every consignment ships with a certificate of analysis, a GHS safety data sheet in English (Arabic on request) and a technical data sheet; Global Chemicals LLC is JSRS-registered and ISO 9001:2015 certified.\n\nDelivery is same day within Muscat, next day to Sohar, 2–3 days to Salalah and Duqm, and by road across the GCC with a certificate of origin. Request a quote with the grade, quantity and delivery site.",
       "applications": [
         "Water-softener resin regeneration (PVD and tablet salt)",
+        "Brine for on-site electrochlorination (sodium hypochlorite generation)",
+        "Salt-chlorinator swimming pools (granular pool salt)",
         "Completion and workover brines for drilling and well services",
         "Brine feed for industrial chemical processing",
-        "Salt-chlorinator swimming pools (granular pool salt)",
-        "Textile dyeing and leather tanning",
-        "General utility brines and process applications"
+        "Textile dyeing and leather tanning"
       ],
       "technicalSpecs": [
         "NaCl content: ≥ 99.0% (refined) / ≥ 99.9% (PVD)",
         "Moisture: ≤ 0.5%",
         "Grades: refined fine, PVD, tablet, coarse",
         "Appearance: white crystals / compacted tablets",
-        "Packaging: 25 kg & 50 kg PP bags, 1,000 kg big bags, bulk"
+        "Packaging: 25 kg & 50 kg PP bags, 1,000 kg big bags, bulk",
+        "Hazard: not classified under GHS — not regulated for transport"
       ],
       "faqs": [
         {

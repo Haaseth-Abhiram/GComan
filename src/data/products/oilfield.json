@@ -2672,24 +2672,25 @@
         "water glass Sohar",
         "silicate drilling Oman"
       ],
-      "longDescription": "Sodium Silicate & Surfactants supplier in Oman - Global Chemicals LLC provides sodium silicate solutions and specialty surfactants for drilling, cementing, and industrial applications in Muscat, Sohar, Duqm, Salalah. Our sodium silicate (water glass) serves as a cement accelerator, shale stabilizer, and lost circulation material in drilling operations. Available in alkaline and neutral grades to meet specific pH requirements. Surfactants enhance drilling fluid performance by reducing surface tension, improving wetting properties, and stabilizing foam systems. Essential for water-based drilling muds, cement slurries, and wellbore stabilization. The versatile chemicals also find use in soil stabilization, grouting, and industrial applications across Oman's oil & gas and construction sectors.",
+      "longDescription": "Sodium silicate (water glass, liquid glass, soluble silicate, CAS 1344-09-8) is a clear to cloudy aqueous solution of sodium oxide and silica, supplied by Global Chemicals LLC in drums, IBCs and bulk from stock in Muscat. Grades are defined by the weight ratio of SiO2 to Na2O, typically 2.0–3.3: the alkaline grade at a ratio of about 2.0 (pH 12–13) and the neutral grade at about 3.3 (pH about 11). A higher ratio means more silica and less alkali: lower pH and faster gelling with acids or calcium. Sodium silicate itself is an inorganic alkaline salt, not a surfactant; the anionic, nonionic and cationic surfactants used beside it are supplied separately.\n\nOilfield: in silicate drilling fluids the dissolved silicate enters shale pores and micro-fractures, where the lower pH and calcium and magnesium in the pore water make it gel and precipitate, sealing the rock against water and pressure. Silicate muds need a high pH and are incompatible with acids and calcium-based additives. In well cementing sodium silicate reacts with the lime in cement to form a gel that holds extra water, so it extends and lightens slurries and can shorten thickening time; dose to laboratory tests. Pumped with a setting agent such as calcium chloride, it forms gel plugs for lost circulation and water shut-off.\n\nIndustry: silicate with a hardener forms silica gel in soil and rock, sealing and stabilising ground in grouting. It is a detergent and cleaner builder that buffers alkalinity, suspends soil and protects metals and glazes, a deflocculant that thins clay slips in ceramics, and an adhesive and binder for paperboard, foundry sand cores and refractories.\n\nHandling and storage: classification depends on the ratio and strength. Neutral-ratio solutions are usually skin and eye irritants (H315, H319) and not dangerous goods; alkaline-ratio solutions can cause serious eye damage or skin burns (H318 or H314) and may be shipped as UN 3266, corrosive liquid, basic, inorganic, n.o.s., Class 8 — follow SDS section 14 for each grade. It gels on contact with acids, giving off heat; it attacks aluminium, zinc and galvanised steel. Keep containers closed and use steel or plastic tanks. Wash spills off before they dry hard. Wear goggles and alkali-resistant gloves. Every delivery carries a certificate of analysis and a GHS safety data sheet.\n\nDelivery is same day within Muscat, next day to Sohar, 2–3 days to Salalah and Duqm, and by road across the GCC with a certificate of origin. Request a quote with the grade (alkaline or neutral), quantity, pack type and delivery site.",
       "applications": [
-        "Cement accelerator in oil well cementing",
-        "Shale stabilization in drilling fluids",
-        "Lost circulation material for severe losses",
-        "Drilling fluid surfactant and wetting agent",
-        "Soil grouting and stabilization",
-        "Wellbore strengthening applications",
-        "Foam drilling fluid stabilization",
+        "Cement slurry extender in oil well cementing",
+        "Shale inhibition in silicate drilling fluids",
+        "Gel plugs for lost circulation and water shut-off",
+        "Detergent and cleaner builder",
+        "Soil grouting and stabilization (with a hardener)",
+        "Adhesive and binder for board, foundry cores and refractories",
+        "Clay deflocculant for ceramic slips",
         "Industrial cleaning formulations"
       ],
       "technicalSpecs": [
         "Sodium silicate grades: Alkaline (ratio ~2.0, pH 12-13), Neutral (ratio ~3.3, pH ~11)",
         "SiO2/Na2O ratio: 2.0-3.3 typical",
         "Appearance: Clear to cloudy liquid",
-        "Surfactant types: Anionic, nonionic, cationic",
-        "Compatible with most drilling fluid systems",
-        "Available in drums, IBCs, bulk"
+        "Surfactants (separate products, not sodium silicate): anionic, nonionic, cationic",
+        "Ratio = SiO2:Na2O by weight; higher ratio = lower alkalinity, faster gelling",
+        "Available in drums, IBCs, bulk",
+        "Hazard: neutral grade irritant (H315, H319); alkaline grade may be corrosive (H318/H314, UN 3266 Class 8 per SDS section 14)"
       ],
       "faqs": [
         {
@@ -2698,7 +2699,7 @@
         },
         {
           "question": "What is Surfactant, Sodium Silicate Alkaline and Neutral used for?",
-          "answer": "Surfactant, Sodium Silicate Alkaline and Neutral is commonly used for Cement accelerator in oil well cementing, Shale stabilization in drilling fluids, and Lost circulation material for severe losses. Global Chemicals LLC supplies Surfactant, Sodium Silicate Alkaline and Neutral across Oman and the wider GCC with full SDS documentation to support these applications."
+          "answer": "Surfactant, Sodium Silicate Alkaline and Neutral is commonly used for Cement slurry extender in oil well cementing, Shale inhibition in silicate drilling fluids, and Gel plugs for lost circulation and water shut-off. Global Chemicals LLC supplies Surfactant, Sodium Silicate Alkaline and Neutral across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
       "wikiUrl": "https://en.wikipedia.org/wiki/Sodium_silicate",
