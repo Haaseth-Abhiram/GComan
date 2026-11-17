@@ -168,7 +168,7 @@
       "faqs": [
         {
           "question": "How is activated carbon used in oil and gas operations in Oman?",
-          "answer": "Activated carbon is a highly porous adsorbent material used across Oman's oil and gas sector for multiple applications. In gas processing plants, activated carbon guard beds remove heavy hydrocarbons, mercury, and amine degradation products from gas streams ahead of molecular sieve dehydration units, protecting expensive molecular sieves from poisoning and extending their service life. In produced water treatment, activated carbon removes residual hydrocarbons, benzene, toluene, and other BTEX compounds to meet injection water quality specifications or overboard discharge limits. In glycol (TEG/MEG) regeneration systems, activated carbon filters are installed in a slipstream to remove amine degradation products, foaming agents, and colour bodies that accumulate and impair solvent performance. In Oman's HAZMAT and oil spill response context, granular activated carbon is used to adsorb hydrocarbon spills. Global Chemicals LLC supplies coal-based granular activated carbon (GAC) and extruded activated carbon in standard mesh sizes for Oman's gas processing and water treatment applications."
+          "answer": "Activated carbon is a highly porous adsorbent material used across Oman's oil and gas sector for multiple applications. In gas processing plants, activated carbon guard beds remove heavy hydrocarbons and carried-over amine or glycol from gas streams ahead of molecular sieve dehydration units, protecting the sieve and extending its service life; mercury removal needs a sulphur-impregnated grade, not plain carbon. In produced water treatment, activated carbon removes residual hydrocarbons, benzene, toluene, and other BTEX compounds to meet injection water quality specifications or overboard discharge limits. In amine and glycol (TEG/MEG) systems, activated carbon filters are installed in a slipstream to remove degradation products, dissolved hydrocarbons, foaming agents and colour bodies that accumulate and impair solvent performance. Global Chemicals LLC supplies coal-based granular activated carbon (GAC) and extruded activated carbon in standard mesh sizes for Oman's gas processing and water treatment applications."
         }
       ],
       "wikiUrl": "https://en.wikipedia.org/wiki/Activated_carbon",
@@ -270,7 +270,7 @@
       "faqs": [
         {
           "question": "What is ammonium bisulphite and what is its application in oilfield water treatment?",
-          "answer": "Ammonium bisulphite (ABS, NH₄HSO₃) is an oxygen scavenger used in Oman's oilfield water injection systems to remove dissolved oxygen from injection water before it is pumped into reservoirs. Dissolved oxygen is highly corrosive — even at concentrations of 50–100 ppb, it accelerates pitting corrosion of carbon steel pipelines, flowlines, and injection wellbores, causing premature failure. At typical injection water oxygen levels of 0.5–2.0 mg/L entering the treatment train, ammonium bisulphite is dosed at about 6.2 mg/L (as 100% NH₄HSO₃) per mg/L of oxygen, the stoichiometric ratio, plus a small excess to ensure rapid and complete oxygen removal. The reaction is: NH₄HSO₃ + ½O₂ → NH₄HSO₄. Residual ABS concentration in treated water is typically maintained at 5–20 ppm as measured by colorimetric test kits. Ammonium bisulphite is preferred over sodium sulphite for Oman oilfield applications because of its higher reactivity at ambient temperature, lower pH effect, and lower cost per unit of oxygen removed. Global Chemicals LLC supplies liquid ammonium bisulphite for Oman water injection operations."
+          "answer": "Ammonium bisulphite (ABS, NH₄HSO₃) is an oxygen scavenger used in Oman's oilfield water injection systems to remove dissolved oxygen from injection water before it is pumped into reservoirs. Dissolved oxygen is highly corrosive — even at concentrations of 50–100 ppb, it accelerates pitting corrosion of carbon steel pipelines, flowlines, and injection wellbores, causing premature failure. At typical injection water oxygen levels of 0.5–2.0 mg/L entering the treatment train, ammonium bisulphite is dosed at about 6.2 mg/L (as 100% NH₄HSO₃) per mg/L of oxygen, the stoichiometric ratio, plus a small excess to ensure rapid and complete oxygen removal. The reaction is: NH₄HSO₃ + ½O₂ → NH₄HSO₄. Residual ABS concentration in treated water is typically maintained at 5–20 ppm as measured by colorimetric test kits. Ammonium bisulphite is widely used in oilfield water injection because it is supplied as a concentrated liquid that needs no make-up and, unlike sodium sulphite, adds no sodium salts to the water. Global Chemicals LLC supplies liquid ammonium bisulphite for Oman water injection operations."
         },
         {
           "question": "What grade and pack sizes of Ammonium Bisulphite are available in Oman?",
@@ -342,7 +342,7 @@
   {
     "id": "barium-chloride",
     "title": "Barium Chloride",
-    "description": "Heavy metal salt for brine formulation and drilling applications.",
+    "description": "Soluble barium salt for sulphate removal, laboratory sulphate analysis and heat-treatment salt baths.",
     "category": "oilfield",
     "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "Factory",
@@ -352,14 +352,13 @@
       "alternativeNames": [
         "Barium dichloride",
         "Barium chloride dihydrate",
-        "BaCl2 brine",
         "Barium chloride solution"
       ],
       "seoKeywords": [
         "barium chloride Oman",
-        "brine formulation Muscat",
-        "drilling chemical Oman",
-        "completion fluid Sohar",
+        "sulphate removal Oman",
+        "sulphate test reagent Oman",
+        "barium chloride dihydrate Muscat",
         "BaCl2 Oman"
       ],
       "longDescription": "Barium chloride dihydrate (BaCl2·2H2O, CAS 10326-27-9; anhydrous 10361-37-2) is a white crystalline salt supplied by Global Chemicals LLC at 99% minimum purity, with a solubility of 37 g per 100 mL of water at 25 °C, in 25 kg bags and as a prepared solution in drums, from stock in Muscat. Because soluble barium is toxic, it is sold to registered industrial and laboratory accounts with a safety data sheet and handling guidance to support the customer's workplace risk assessment.\n\nIts main duty in Oman is sulphate removal. Barium ions precipitate sulphate as barium sulphate, the least soluble common sulphate, and that reaction is used two ways. In the laboratory and in pilot work it is used to measure and demonstrate sulphate precipitation; full-scale injection-water sulphate removal is done with nanofiltration membranes, not with barium, because barium in injection water is itself what forms barite scale. In industrial wastewater, dosing barium chloride takes sulphate out of effluent that would otherwise exceed discharge limits or attack concrete. The dose must be matched to the measured sulphate, because any excess leaves soluble barium in the treated effluent, which is itself toxic and subject to discharge limits.\n\nIn the laboratory it is the classic reagent for the sulphate test and for gravimetric sulphate determination, and a standard for barium analysis. In metal treatment, molten barium chloride is a bath salt for heat treatment and case hardening of steel. It is also an intermediate for other barium compounds and pigments. In the oilfield its role is water analysis rather than brine density: a saturated solution reaches only about 1.28 sg, so calcium chloride or calcium bromide remain the usual heavy brines.\n\nHandling: barium chloride is toxic if swallowed and harmful if inhaled as dust. Keep it locked, dry and labelled, wear gloves, goggles and a dust mask, never let it near food or drinking water, and treat spills as hazardous waste; sulphate solutions render spills insoluble and less hazardous. Every lot carries a certificate of analysis and a GHS safety data sheet.\n\nDelivery is same day within Muscat, next day to Sohar, 2–3 days to Salalah and Duqm, to the interior fields by arrangement, and by road across the GCC with a certificate of origin. Request a quote with the quantity and intended use.",

@@ -192,7 +192,7 @@ const FAQS = [
   {
     question: 'Are your RO antiscalants certified for drinking water?',
     answer:
-      'Ask for the NSF/ANSI 60 certificate with the quotation: certification is held per product grade, so the grade quoted for a potable-water plant is confirmed against its certificate before supply. The RO antiscalant is dosed at 2–5 ppm in the RO feed; the membrane antiscalant grade runs 3–8 ppm, inhibits silica up to 200 ppm and holds an LSI of up to +3.0. Each batch ships with its Certificate of Analysis and Safety Data Sheet.',
+      'NSF/ANSI 60 certification applies per product grade, not to the range as a whole. For a potable-water plant, ask us to confirm with the quotation whether the grade offered is certified and to send its certificate. The RO antiscalant is dosed at 2–5 ppm in the RO feed; the membrane antiscalant grade runs 3–8 ppm, inhibits silica up to 200 ppm and holds an LSI of up to +3.0. Each batch ships with its Certificate of Analysis and Safety Data Sheet.',
   },
 ];
 
@@ -420,7 +420,7 @@ const WaterTreatmentChemicalsGcc = () => {
                 <p className="text-muted-foreground leading-relaxed">
                   A batch Certificate of Analysis, a GHS Safety Data Sheet in English and Arabic, a Technical Data Sheet,
                   a Certificate of Origin attested by the Oman Chamber of Commerce and an HS-coded commercial invoice.
-                  For potable-water plants, the NSF/ANSI 60 certificate of the antiscalant grade quoted is provided on request. For Saudi Arabia we support the
+                  For potable-water plants, ask us to confirm with the quotation whether the antiscalant grade offered holds NSF/ANSI 60 certification. For Saudi Arabia we support the
                   SASO conformity paperwork your importer files, and for every regulated product (hypochlorite, caustic
                   soda, ferric chloride) permit guidance is given per destination before shipment. ISO 9001:2015 and JSRS
                   registration documents are available for vendor qualification.

@@ -36,12 +36,12 @@ const supplyOf = (p: P) =>
   (specList(p).find((l) => /^(packaging|available)/i.test(l)) ?? 'On request').replace(/^(packaging|available(?: in| forms| concentrations| grades| types)?):?\s*/i, '');
 
 const GROUPS: { title: string; ids: string[] }[] = [
-  { title: 'Drilling fluid chemicals', ids: ['bentonite-powder', 'cmc', 'potassium-chloride', 'soda-ash-dense', 'potassium-hydroxide', 'ammonium-chloride', 'formic-acid', 'barium-chloride', 'surfactant-sodium-silicate', 'magnesium-oxide'] },
+  { title: 'Drilling fluid chemicals', ids: ['bentonite-powder', 'cmc', 'potassium-chloride', 'soda-ash-dense', 'potassium-hydroxide', 'ammonium-chloride', 'formic-acid', 'surfactant-sodium-silicate', 'magnesium-oxide'] },
   { title: 'Completion and workover brines', ids: ['calcium-chloride-oil', 'calcium-bromide'] },
   { title: 'Well stimulation and scale removal', ids: ['citric-acid-liquid', 'citric-acid-powder', 'acetic-acid', 'ammonium-bifluoride', 'descalant'] },
   { title: 'Gas treating, dehydration and odorisation', ids: ['mea', 'dea', 'mdea', 'potassium-carbonate', 'meg', 'deg', 'methanol-tech', 'tht-gas-odorant', 'activated-alumina-desiccant', 'silica-gel-white', 'silica-gel-blue', 'silica-gel-orange'] },
   { title: 'Production chemicals', ids: ['corrosion-inhibitor', 'demulsifier-oilfield', 'reverse-demulsifier', 'ammonium-bisulphite', 'sodium-nitrite'] },
-  { title: 'Water, boiler and dechlorination', ids: ['hydrazine-hydrate', 'sodium-thiosulphate-liquid', 'activated-carbon'] },
+  { title: 'Water, boiler and dechlorination', ids: ['hydrazine-hydrate', 'sodium-thiosulphate-liquid', 'activated-carbon', 'barium-chloride'] },
   { title: 'Cleaning and solvents', ids: ['degreaser-hd', 'solvent-naphtha', 'butyl-glycol'] },
 ];
 
