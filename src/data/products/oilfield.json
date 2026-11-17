@@ -358,16 +358,16 @@
         "completion fluid Sohar",
         "BaCl2 Oman"
       ],
-      "longDescription": "Barium chloride dihydrate (BaCl2·2H2O, CAS 10326-27-9; anhydrous 10361-37-2) is a white crystalline salt supplied by Global Chemicals LLC at 99% minimum purity, with a solubility of 37 g per 100 mL of water at 25 °C, in 25 kg bags and as a prepared solution in drums, from stock in Muscat. Because soluble barium is toxic, it is sold to registered industrial and laboratory accounts with a safety data sheet, a COSHH-style assessment and handling guidance.\n\nIts main duty in Oman is sulphate removal. Barium ions precipitate sulphate as barium sulphate, the least soluble common sulphate, and that reaction is used two ways. In the laboratory and in pilot work it is used to measure and demonstrate sulphate precipitation; full-scale injection-water sulphate removal is done with nanofiltration membranes, not with barium, because barium in injection water is itself what forms barite scale. In industrial wastewater, dosing barium chloride takes sulphate out of effluent that would otherwise exceed discharge limits or attack concrete.\n\nIn the laboratory it is the classic reagent for the sulphate test and for gravimetric sulphate determination, and a standard for barium analysis. In metal treatment, molten barium chloride is the bath salt for heat treatment and case hardening of steel. It is also an intermediate for other barium compounds and pigments. In the oilfield it appears in some specialised completion-fluid formulations, but its routine role is water chemistry rather than density: a saturated solution reaches only about 1.28 sg, so calcium chloride or calcium bromide remain the usual heavy brines.\n\nHandling: barium chloride is toxic if swallowed or inhaled as dust. Keep it locked, dry and labelled, wear gloves, goggles and a dust mask, never let it near food or drinking water, and treat spills as hazardous waste; sulphate solutions render spills insoluble and less hazardous. Every lot carries a certificate of analysis and a GHS safety data sheet.\n\nDelivery is same day within Muscat, next day to Sohar, 2–3 days to Salalah and Duqm, to the interior fields by arrangement, and by road across the GCC with a certificate of origin. Request a quote with the quantity and intended use.",
+      "longDescription": "Barium chloride dihydrate (BaCl2·2H2O, CAS 10326-27-9; anhydrous 10361-37-2) is a white crystalline salt supplied by Global Chemicals LLC at 99% minimum purity, with a solubility of 37 g per 100 mL of water at 25 °C, in 25 kg bags and as a prepared solution in drums, from stock in Muscat. Because soluble barium is toxic, it is sold to registered industrial and laboratory accounts with a safety data sheet and handling guidance to support the customer's workplace risk assessment.\n\nIts main duty in Oman is sulphate removal. Barium ions precipitate sulphate as barium sulphate, the least soluble common sulphate, and that reaction is used two ways. In the laboratory and in pilot work it is used to measure and demonstrate sulphate precipitation; full-scale injection-water sulphate removal is done with nanofiltration membranes, not with barium, because barium in injection water is itself what forms barite scale. In industrial wastewater, dosing barium chloride takes sulphate out of effluent that would otherwise exceed discharge limits or attack concrete. The dose must be matched to the measured sulphate, because any excess leaves soluble barium in the treated effluent, which is itself toxic and subject to discharge limits.\n\nIn the laboratory it is the classic reagent for the sulphate test and for gravimetric sulphate determination, and a standard for barium analysis. In metal treatment, molten barium chloride is a bath salt for heat treatment and case hardening of steel. It is also an intermediate for other barium compounds and pigments. In the oilfield its role is water analysis rather than brine density: a saturated solution reaches only about 1.28 sg, so calcium chloride or calcium bromide remain the usual heavy brines.\n\nHandling: barium chloride is toxic if swallowed and harmful if inhaled as dust. Keep it locked, dry and labelled, wear gloves, goggles and a dust mask, never let it near food or drinking water, and treat spills as hazardous waste; sulphate solutions render spills insoluble and less hazardous. Every lot carries a certificate of analysis and a GHS safety data sheet.\n\nDelivery is same day within Muscat, next day to Sohar, 2–3 days to Salalah and Duqm, to the interior fields by arrangement, and by road across the GCC with a certificate of origin. Request a quote with the quantity and intended use.",
       "applications": [
-        "Specialised completion-fluid formulations",
-        "Well control and pressure management",
-        "Clear brine formulations for drilling",
-        "Packer fluids in oil & gas wells",
-        "Sulfate removal in produced water",
-        "Wastewater treatment",
-        "Chemical synthesis and laboratory reagent",
-        "Heat treatment salt baths"
+        "Sulphate removal from industrial wastewater",
+        "Laboratory sulphate test reagent",
+        "Gravimetric sulphate determination",
+        "Standard for barium analysis",
+        "Sulphate precipitation in pilot studies",
+        "Heat-treatment salt baths for steel",
+        "Case hardening of steel",
+        "Barium compound and pigment intermediate"
       ],
       "technicalSpecs": [
         "Purity: 99% minimum (dihydrate)",
@@ -375,7 +375,8 @@
         "Appearance: White crystalline solid",
         "Solubility: 37g/100ml water at 25°C",
         "Available in powder and solution forms",
-        "Packaging: 25kg bags, drums, bulk"
+        "Packaging: 25kg bags, drums, bulk",
+        "Hazard: Toxic — UN 1564, Class 6.1"
       ],
       "faqs": [
         {
@@ -416,7 +417,7 @@
         "drilling grade bentonite Sohar",
         "API bentonite Oman"
       ],
-      "longDescription": "Bentonite powder is sodium montmorillonite clay (CAS 1302-78-9) milled to 200 mesh, supplied by Global Chemicals LLC in API 13A drilling grade and a technical grade, in 25 kg bags and 1,000 kg big bags from stock in Muscat. The API grade is tested to the API 13A method: a viscometer dial reading of at least 30 at 600 rpm, a filtrate of 15 mL or less in 30 minutes, moisture below 12% and a fine particle size, so a drilling fluid built on it gives predictable viscosity, gel strength and filter cake from the first batch.\n\nIn water-based drilling mud, bentonite does four jobs. It builds viscosity and gel strength so the mud suspends drill cuttings and carries them to surface and holds weighting material when circulation stops. It forms a thin, low-permeability filter cake on permeable formations that limits fluid loss and supports the borehole wall. It lubricates and cools the bit, and it provides the base to which polymers, lignosulphonates and weighting agents are added. Spud muds typically run 50–70 kg of bentonite per cubic metre of fresh water; prehydrate the clay in fresh water for several hours before adding salt or other chemicals, because bentonite yields poorly in saline or hard water, and add soda ash to treat out calcium first.\n\nBeyond the oilfield, the same clay is the slurry for diaphragm walls, bored piles and horizontal directional drilling, the grout for sealing boreholes and monitoring wells, and the liner material for ponds, lagoons and landfills, where its swelling on contact with water closes the pores of the soil. Geotechnical and water-well drillers use it at lower concentrations for the same filter-cake effect.\n\nBentonite is not classified as dangerous goods, but its dust can contain respirable crystalline silica, so wear a dust mask when mixing. Keep bags dry and off the ground, because wet clay swells in the bag and will not disperse. Every lot carries a certificate of analysis to the API 13A tests and a safety data sheet. Delivery is same day within Muscat, next day to Sohar, 2–3 days to Salalah and Duqm, to the interior drilling locations by arrangement, and by road across the GCC. Request a quote with the grade, tonnage and location.",
+      "longDescription": "Bentonite powder is sodium montmorillonite clay (CAS 1302-78-9) milled to a fine powder, supplied by Global Chemicals LLC in API 13A drilling grade and a technical grade, in 25 kg bags and 1,000 kg big bags from stock in Muscat. The API grade is tested to the API 13A bentonite requirements: a viscometer dial reading of at least 30 at 600 rpm, a yield point to plastic viscosity ratio of no more than 3, a filtrate of no more than 15 mL in the 30-minute test, no more than 4% residue on a 75 µm (200 mesh) sieve, with moisture reported on the certificate of analysis, so a drilling fluid built on it gives predictable viscosity, gel strength and filter cake from the first batch.\n\nIn water-based drilling mud, bentonite does three jobs. It builds viscosity and gel strength so the mud suspends drill cuttings and carries them to surface and holds weighting material when circulation stops. It forms a thin, low-permeability filter cake on permeable formations that limits fluid loss and supports the borehole wall. And it provides the base to which polymers, lignosulphonates and weighting agents are added. Spud muds typically run 50–70 kg of bentonite per cubic metre of fresh water; prehydrate the clay in fresh water for several hours before adding salt or other chemicals, because bentonite yields poorly in saline or hard water, and add soda ash to treat out calcium first.\n\nBeyond the oilfield, the same clay is the slurry for diaphragm walls, bored piles and horizontal directional drilling, the grout for sealing boreholes and monitoring wells, and the liner material for ponds, lagoons and landfills, where its swelling on contact with water closes the pores of the soil. Geotechnical and water-well drillers use it at lower concentrations for the same filter-cake effect.\n\nBentonite is not classified as dangerous goods, but its dust can contain respirable crystalline silica, so wear a dust mask when mixing. Keep bags dry and off the ground, because wet clay swells in the bag and will not disperse. Every lot carries a certificate of analysis, to the API 13A tests for the API grade, and a safety data sheet. Delivery is same day within Muscat, next day to Sohar, 2–3 days to Salalah and Duqm, to the interior drilling locations by arrangement, and by road across the GCC. Request a quote with the grade, tonnage and location.",
       "applications": [
         "Water-based drilling mud formulations",
         "Viscosity and gel strength control",
@@ -424,22 +425,22 @@
         "Wellbore stabilization and support",
         "Filter cake formation",
         "Geotechnical drilling and grouting",
-        "Civil engineering applications",
+        "Diaphragm-wall, bored-pile and HDD slurries",
         "Pond and lagoon sealing"
       ],
       "technicalSpecs": [
         "API 13A specification grade",
-        "Yield: approx. 90 bbl/ton of 15 cP mud (typical)",
+        "Yield point/plastic viscosity ratio: 3 maximum",
         "Viscometer dial reading at 600 rpm: 30 minimum",
-        "Fluid loss: <15 ml/30min",
-        "Moisture content: <12%",
-        "Mesh size: 200 mesh minimum",
+        "Filtrate volume: 15 mL maximum (30 min)",
+        "Moisture: reported on each certificate of analysis",
+        "Residue on 75 µm (200 mesh) sieve: 4% maximum",
         "Packaging: 25kg bags, bulk bags"
       ],
       "faqs": [
         {
           "question": "What grade and pack sizes of Bentonite Powder are available in Oman?",
-          "answer": "Global Chemicals LLC supplies Bentonite Powder in Oman — Moisture content: <12% — available in 25kg bags, bulk bags, with same-day delivery in Muscat, next-day dispatch to Sohar, 2–3 day delivery to Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
+          "answer": "Global Chemicals LLC supplies Bentonite Powder in Oman — API 13A specification grade — available in 25kg bags, bulk bags, with same-day delivery in Muscat, next-day dispatch to Sohar, 2–3 day delivery to Salalah, and export across the GCC. Contact us for current pricing and a Certificate of Analysis."
         },
         {
           "question": "What is Bentonite Powder used for?",
@@ -475,12 +476,12 @@
         "borax oilfield Sohar",
         "sodium tetraborate Oman"
       ],
-      "longDescription": "Borax (sodium tetraborate decahydrate, Na2B4O7·10H2O, CAS 1303-96-4) is a white crystalline powder supplied by Global Chemicals LLC with 11.3% boron, solubility of 5 g per 100 mL of water at 20 °C and pH 9.0–9.5 in 1% solution, in 25 kg and 50 kg bags and bulk from stock in Muscat, for oilfield service companies, glass and ceramic makers, metalworkers and formulators across Oman and the GCC.\n\nIn the oilfield, borax is the classic crosslinker of guar-based fracturing fluids. Added to a hydrated guar or hydroxypropyl-guar gel at around 0.5–2 lb per 1,000 gallons, with the pH raised to 9–10, borate ions link the polymer chains into a strong, elastic gel that carries proppant into the fracture; the link is reversible with temperature and shear, so the gel heals after pumping through perforations and breaks cleanly when the pH falls or a breaker acts. Delayed and high-temperature systems control the release of borate to time the crosslink. Borax also buffers the pH of drilling muds and acts as a corrosion inhibitor in some completion and packer fluids. The oilfield chemicals guide linked on this page lists the gel, breaker and buffer products used alongside it.\n\nIndustrial uses: a flux in glass, glass fibre, enamels and ceramic glazes, where boron lowers the melting point and raises chemical and thermal resistance; a flux for brazing, soldering and forge welding, dissolving oxides from the joint; a buffer and mild alkali in detergents, cleaners and cosmetics; a fire retardant for cellulose insulation, wood and textiles; a micronutrient boron source for crops that show boron deficiency; and the starting material for boric acid and other boron compounds.\n\nHandling and storage: borax is low in acute toxicity but is classified as toxic for reproduction in the European Union, so avoid ingestion and dust, wear gloves, goggles and a dust mask, and keep it out of food and children's products. Store bags closed and dry; the decahydrate loses water in hot, dry storage and cakes in humid air. Every lot carries a certificate of analysis giving assay, boron content and insolubles, and a GHS safety data sheet.\n\nDelivery is same day within Muscat, next day to Sohar, 2–3 days to Salalah and Duqm, to the interior fields by arrangement, and by road across the GCC with a certificate of origin. Request a quote with the quantity, pack size and intended use.",
+      "longDescription": "Borax (sodium tetraborate decahydrate, Na2B4O7·10H2O, CAS 1303-96-4) is a white crystalline powder supplied by Global Chemicals LLC with 11.3% boron, solubility of 5 g per 100 mL of water at 20 °C and pH 9.0–9.5 in 1% solution, in 25 kg and 50 kg bags and bulk from stock in Muscat, for oilfield service companies, glass and ceramic makers, metalworkers and formulators across Oman and the GCC.\n\nIn the oilfield, borax is the classic crosslinker of guar-based fracturing fluids. Added to a hydrated guar or hydroxypropyl-guar gel, with the pH raised to 9–10, borate ions link the polymer chains into a strong, elastic gel that carries proppant into the fracture; the link is reversible with temperature and shear, so the gel heals after pumping through perforations and breaks cleanly when the pH falls or a breaker acts. The borate crosslink weakens as temperature rises, so plain borax suits moderate well temperatures; delayed and higher-temperature systems use controlled borate release and a higher pH to time and hold the crosslink. The crosslinker loading for each job is set by laboratory testing against the guar loading, pH and bottom-hole temperature. Borax also buffers the pH of drilling muds and acts as a corrosion inhibitor in some completion and packer fluids. The oilfield chemicals guide linked on this page lists the gel, breaker and buffer products used alongside it.\n\nIndustrial uses: a flux in glass, glass fibre, enamels and ceramic glazes, where boron lowers the melting point and raises chemical and thermal resistance; a flux for brazing, soldering and forge welding, dissolving oxides from the joint; a buffer and mild alkali in detergents, cleaners and cosmetics; a fire retardant for cellulose insulation, wood and textiles; a micronutrient boron source for crops that show boron deficiency; and the starting material for boric acid and other boron compounds.\n\nHandling and storage: borax is low in acute toxicity but is classified as toxic for reproduction in the European Union, so avoid ingestion and dust, wear gloves, goggles and a dust mask, and keep it out of food and children's products. Store bags closed and dry; the decahydrate loses water in hot, dry storage and cakes in humid air. Every lot carries a certificate of analysis giving assay, boron content and insolubles, and a GHS safety data sheet.\n\nDelivery is same day within Muscat, next day to Sohar, 2–3 days to Salalah and Duqm, to the interior fields by arrangement, and by road across the GCC with a certificate of origin. Request a quote with the quantity, pack size and intended use.",
       "applications": [
         "Crosslinking agent in fracturing fluids",
         "pH buffer in drilling muds",
         "Corrosion inhibitor in completion fluids",
-        "Guar gum crosslinker for high-temp fracturing",
+        "Buffer and mild alkali in detergents and cleaners",
         "Glass and ceramic manufacturing",
         "Welding flux and brazing",
         "Boron compound production",
@@ -492,7 +493,7 @@
         "Appearance: White crystalline powder",
         "Solubility: 5g/100ml water at 20°C",
         "pH (1% solution): 9.0-9.5",
-        "Typical dosage: 0.5-2 lb/1000 gal in fracturing",
+        "Dosage in fracturing: set by laboratory testing for each fluid design",
         "Packaging: 25kg, 50kg bags, bulk"
       ],
       "faqs": [
@@ -533,28 +534,28 @@
         "H3BO3 Sohar",
         "boric acid industrial Oman"
       ],
-      "longDescription": "Boric acid (H3BO3, CAS 10043-35-3) is a weak, temperature-stable acid supplied by Global Chemicals LLC from Muscat stock at 99.5% minimum purity, as white crystalline powder or flakes. It dissolves at 5.7 g per 100 mL of water at 25°C, more at higher temperature, and a 0.1 M solution reads about pH 5.1, a saturated one about pH 4.1. Because it is a very weak acid (pKa 9.24) it buffers over a wide range without attacking steel, which is what makes it useful downhole.\n\nIn oilfield fluids. Boric acid and borate salts are the boron source for borate-crosslinked fracturing fluids, where the crosslink forms as pH rises and breaks again as it falls, giving a fluid that carries proppant and then cleans up. In water-based drilling and completion fluids it acts as a pH buffer and as a mild corrosion inhibitor, and it stays effective at the bottom-hole temperatures that break down organic additives. It also inhibits bacterial growth in stored mud.\n\nOther uses. Borosilicate glass and glazes, where boron lowers the melting point and thermal expansion; flame retardants for cellulose and timber; nuclear reactors, where the boron-10 isotope absorbs neutrons; and as the starting material for borax, boron esters and other boron compounds.\n\nHandling. Boric acid has low acute toxicity but is classified as toxic to reproduction under GHS and CLP, so plants handle it with dust control, gloves and a particle mask, and keep it out of food and feed areas. It is non-flammable and stable in storage when kept dry; it loses water above 100°C to form metaboric acid.\n\nWhat to specify when you order. Purity (technical 99.5% or higher), form (granular or powder), and pack: 25 kg bags, drums or bulk bags. A certificate of analysis accompanies each lot and the SDS is available on request. Muscat stock ships the same day in the capital area and next day to Sohar.",
+      "longDescription": "Boric acid (H3BO3, CAS 10043-35-3) is a weak acid supplied by Global Chemicals LLC from Muscat stock at 99.5% minimum purity, as white crystalline granules or powder. It dissolves at 5.7 g per 100 mL of water at 25°C, more at higher temperature, and a 0.1 M solution reads about pH 5.1, a saturated one about pH 4.1. Because it is a very weak acid (pKa 9.24), boric acid with its borate salts buffers most effectively around pH 8–10, the alkaline range of many water-based well fluids, which is what makes it useful downhole.\n\nIn oilfield fluids. Boric acid and borate salts are the boron source for borate-crosslinked fracturing fluids, where the crosslink forms as pH rises and breaks again as it falls, giving a fluid that carries proppant and then cleans up. In water-based drilling and completion fluids it acts as a pH buffer and as a mild corrosion inhibitor, and it stays effective at the bottom-hole temperatures that break down organic additives.\n\nOther uses. Borosilicate glass and glazes, where boron lowers the melting point and thermal expansion; flame retardants for cellulose and timber; nuclear reactors, where the boron-10 isotope absorbs neutrons; and as the starting material for borax, boron esters and other boron compounds.\n\nHandling. Boric acid has low acute toxicity but is classified as toxic to reproduction under GHS and CLP, so plants handle it with dust control, gloves and a particle mask, and keep it out of food and feed areas. It is non-flammable and stable in storage when kept dry; when heated above about 140°C it loses water to form metaboric acid.\n\nWhat to specify when you order. Purity (technical 99.5% or higher), form (granular or powder), and pack: 25 kg bags, drums or bulk bags. A certificate of analysis accompanies each lot and the SDS is available on request. Muscat stock ships the same day in the capital area and next day to Sohar.",
       "applications": [
         "pH control in drilling fluids",
         "Corrosion inhibitor in completion fluids",
-        "High-temperature wellbore stabilizer",
-        "Biocide in drilling mud systems",
+        "Boron source for borate-crosslinked fracturing fluids",
+        "pH buffer in water-based completion fluids",
         "Neutron absorber in nuclear reactor coolant",
         "Glass and ceramic manufacturing",
         "Flame retardant production",
-        "Chemical intermediate and catalyst"
+        "Starting material for borax and other boron compounds"
       ],
       "technicalSpecs": [
         "Purity: 99.5% minimum",
-        "Appearance: White crystalline powder or flakes",
+        "Appearance: White crystalline granules or powder",
         "Molecular weight: 61.83 g/mol",
         "Solubility: 5.7g/100ml water at 25°C",
         "pH: ~5.1 (0.1 M), ~4 (saturated)",
-        "Temperature stable - ideal for high-temp wells",
+        "Stability: non-flammable, stable when stored dry",
         "Packaging: 25kg bags, drums, bulk"
       ],
       "wikiUrl": "https://en.wikipedia.org/wiki/Boric_acid",
-      "seoDescription": "Boric acid 99.5% (CAS 10043-35-3) ex-stock Muscat, Oman. Drilling-fluid pH control and high-temperature wellbore stabilisation. Get a quote.",
+      "seoDescription": "Boric acid 99.5% (CAS 10043-35-3) ex-stock Muscat, Oman. Drilling-fluid pH buffer and boron source for borate frac fluids. Get a quote.",
       "guideUrl": "/chemical-supplier/oilfield-chemicals-oman",
       "guideLabel": "Oilfield chemicals in Oman — the full range by job"
     }
@@ -2385,23 +2386,23 @@
         "chile saltpeter Sohar",
         "sodium nitrate industrial Oman"
       ],
-      "longDescription": "Sodium nitrate (NaNO3, CAS 7631-99-4) is a white crystalline oxidising salt supplied by Global Chemicals LLC at 99% minimum purity, solubility 91 g per 100 mL at 25 °C and melting point 308 °C, in 25 kg and 50 kg bags and bulk from stock in Muscat, to industrial accounts across Oman; it is an oxidiser (UN 1498, Class 5.1) and is sold with the handling guidance below.\n\nIndustrial uses. Glass makers add it to the batch as a fining and oxidising agent that removes bubbles and colour from flat, container and specialty glass. Heat-treatment shops use it in molten salt baths, alone or with potassium nitrate and sodium nitrite, for tempering, annealing and bluing steel at 300–550 °C, and the same nitrate mixtures are the heat-transfer and thermal-storage salts of solar-thermal and process plants. Chemical producers use it as an oxidant and a nitrate source in synthesis, in dyes, enamels and pharmaceuticals; concrete producers as a set accelerator and corrosion-inhibiting admixture; and the fertilizer trade as a fast-acting nitrate nitrogen source at 16% N for crops that prefer nitrate in alkaline soils. In the oilfield it appears as a component of some corrosion-inhibitor and brine formulations and, with sodium nitrite, in passivation blends; the oilfield chemicals guide linked on this page lists the related products. Supply for explosives or pyrotechnic manufacture is restricted to licensed accounts.\n\nHandling and storage: sodium nitrate is not flammable itself but makes everything flammable burn fiercely, so store it in a dry, cool, well-ventilated place away from fuels, oils, organic matter, reducing agents, acids and finely divided metals, on pallets and never on wooden or oil-stained floors. Keep bags sealed, because it absorbs moisture and cakes. The dust irritates eyes and airways, and the salt is harmful if swallowed; wear gloves, goggles and a dust mask, and keep it out of food and feed unless the food grade is specified. Every lot carries a certificate of analysis giving assay, chloride and moisture, and a GHS safety data sheet.\n\nDelivery is same day within Muscat, next day to Sohar, two to three days to Salalah and Duqm, and by road across the GCC with a certificate of origin. Request a quote with the quantity, pack size and intended use.",
+      "longDescription": "Sodium nitrate (NaNO3, CAS 7631-99-4) is a white crystalline oxidising salt supplied by Global Chemicals LLC at 99% minimum purity, solubility 91 g per 100 mL at 25 °C and melting point 308 °C, in 25 kg and 50 kg bags and bulk from stock in Muscat, to industrial accounts across Oman; it is an oxidiser (UN 1498, Class 5.1) and is sold with the handling guidance below.\n\nIndustrial uses. Glass makers add it to the batch as a fining and oxidising agent that helps remove bubbles and control colour in flat, container and specialty glass. Heat-treatment shops use it in molten salt baths, alone or with potassium nitrate and sodium nitrite, for tempering, annealing and bluing steel at 300–550 °C, and the same nitrate mixtures are the heat-transfer and thermal-storage salts of solar-thermal and process plants. Chemical producers use it as an oxidant and a nitrate source in synthesis, in dyes, enamels and pharmaceuticals; concrete producers as a component of some set-accelerating admixtures; and the fertilizer trade as a fast-acting nitrate nitrogen source at 16% N for crops that prefer nitrate in alkaline soils. In the oilfield it appears as a component of some corrosion-inhibitor and brine formulations and, with sodium nitrite, in passivation blends; the oilfield chemicals guide linked on this page lists the related products. Supply for explosives or pyrotechnic manufacture is restricted to licensed accounts.\n\nHandling and storage: sodium nitrate is not flammable itself but makes combustible materials burn fiercely, so store it in a dry, cool, well-ventilated place away from fuels, oils, organic matter, reducing agents, acids and finely divided metals, on non-combustible pallets and never on wooden or oil-stained floors. Keep bags sealed, because it absorbs moisture and cakes. The dust irritates eyes and airways, and the salt is harmful if swallowed; wear gloves, goggles and a dust mask, and keep it out of food and feed. Every lot carries a certificate of analysis giving assay, chloride and moisture, and a GHS safety data sheet.\n\nDelivery is same day within Muscat, next day to Sohar, two to three days to Salalah and Duqm, and by road across the GCC with a certificate of origin. Request a quote with the quantity, pack size and intended use.",
       "applications": [
-        "Drilling fluid corrosion inhibitor component",
-        "Explosives and pyrotechnics manufacturing",
-        "Cement set accelerator",
+        "Corrosion-inhibitor and brine formulation component",
+        "Passivation blends with sodium nitrite",
+        "Set-accelerating concrete admixtures",
         "Chemical synthesis oxidizing agent",
-        "Glass manufacturing flux",
+        "Glass fining and oxidising agent",
         "Heat transfer salt formulations",
         "Metal treatment processes",
-        "Fertilizer production"
+        "Nitrate nitrogen fertilizer (16% N)"
       ],
       "technicalSpecs": [
         "Purity: 99% minimum",
         "Appearance: White crystalline powder",
         "Solubility: 91g/100ml water at 25°C",
         "Melting point: 308°C",
-        "Strong oxidizer - handle with care",
+        "Hazard: Oxidiser — UN 1498, Class 5.1",
         "Packaging: 25kg, 50kg bags, bulk"
       ],
       "faqs": [
@@ -2411,7 +2412,7 @@
         },
         {
           "question": "What is Sodium Nitrate used for?",
-          "answer": "Sodium Nitrate is commonly used for Drilling fluid corrosion inhibitor component, Explosives and pyrotechnics manufacturing, and Cement set accelerator. Global Chemicals LLC supplies Sodium Nitrate across Oman and the wider GCC with full SDS documentation to support these applications."
+          "answer": "Sodium Nitrate is commonly used for glass fining, heat-treatment and heat-transfer salt baths, and nitrate nitrogen fertilizer. Global Chemicals LLC supplies Sodium Nitrate across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
       "wikiUrl": "https://en.wikipedia.org/wiki/Sodium_nitrate",
