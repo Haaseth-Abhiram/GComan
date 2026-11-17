@@ -244,24 +244,25 @@
         "ammonium bisulphite oilfield Sohar",
         "deoxygenation chemical Oman"
       ],
-      "longDescription": "Ammonium Bisulfite supplier in Oman - Global Chemicals LLC provides high-quality ammonium bisulfite solution for oxygen scavenging, chlorine neutralization, and reducing applications in Muscat, Sohar, Duqm. Our ammonium bisulfite (NH4HSO3) effectively removes dissolved oxygen from water systems, preventing corrosion in boilers, pipelines, and oilfield operations. The solution acts as a powerful reducing agent and dechlorination chemical. Essential for protecting equipment and enhancing operational efficiency in refineries, power plants, and industrial facilities. Available in various concentrations (40%, 60%) for different applications across Oman with technical dosing support. Ammonium bisulphite (NH₄HSO₃) is a well-established oxygen scavenger used in Oman's oilfield injection water systems — applied to water injection wellheads to remove dissolved oxygen before it enters the formation and causes corrosion of wellbore tubulars and iron sulphide precipitation that can plug formation pores. In Oman's oilfield water injection projects, water injection corrosion management is critical — ammonium bisulphite is one of the primary bulk oxygen scavengers used alongside corrosion inhibitors and biocides. Global Chemicals LLC supplies ammonium bisulphite 40–45% solution in IBC containers and bulk tanker for water injection facilities. Supply contracts and technical support available.",
+      "longDescription": "Ammonium bisulphite (ammonium bisulfite, ammonium hydrogen sulphite, ABS, NH4HSO3, CAS 10192-30-0) is a clear to pale yellow aqueous solution supplied by Global Chemicals LLC at 40–60% NH4HSO3, pH 3.5–5.0 and a specific gravity of about 1.2–1.4 depending on strength, in drums, IBCs and bulk tanker from stock in Muscat. It is a liquid sulphite oxygen scavenger and reducing agent that needs no make-up before continuous dosing.\n\nOxygen scavenging in water injection: dissolved oxygen in injection water pits carbon-steel flowlines, tubulars and wellbores even at tens of parts per billion, and oxidises dissolved iron into solids that plug filters and formation pores. Bisulphite reacts with it to form bisulphate (NH4HSO3 + ½O2 → NH4HSO4). The stoichiometric need is about 6.2 mg of NH4HSO3 (100% basis) per mg of dissolved oxygen, so the product dose follows from the oxygen left after deaeration and the solution strength, plus a small excess, confirmed by measuring residual sulphite or downstream oxygen. Injection programmes run it alongside corrosion inhibitors and biocides; inject oxidising biocides at a separate point, because bisulphite reduces chlorine as readily as oxygen and the two cancel out.\n\nOther uses: dechlorination, at about 1.4 mg of NH4HSO3 per mg of free chlorine; oxygen removal from hydrotest and pipeline preservation water and from drilling fluids, completion brines and packer fluids; and as a reducing agent in chemical processes. The ammonium ion adds nitrogen to the water, so check discharge limits before using it on water that leaves the site.\n\nHandling and storage: ammonium bisulphite solution is commonly shipped as UN 2693, Bisulphites, aqueous solution, n.o.s., Class 8, packing group III; section 14 of the SDS confirms the entry for each lot. It is harmful if swallowed and irritates or damages the eyes and skin, and on contact with acids, or when heated, it releases sulphur dioxide, which irritates the airways and can trigger asthma in sensitive people. Keep it away from acids and from oxidisers, including hypochlorite. It loses strength on contact with air, so keep drums closed and bulk tanks sealed or nitrogen-blanketed. Use HDPE, FRP or 316 stainless steel; it corrodes carbon steel and copper alloys. Wear goggles or a face shield and chemical gloves. Every delivery carries a certificate of analysis giving NH4HSO3 content and a GHS safety data sheet.\n\nDelivery is same day within Muscat, next day to Sohar, 2–3 days to Salalah and Duqm, and by road across the GCC with a certificate of origin. Request a quote with the concentration, pack and quantity.",
       "applications": [
-        "Oxygen scavenging in boiler water",
+        "Oxygen scavenging in water injection systems",
         "Corrosion prevention in oilfield water systems",
         "Chlorine neutralization and dechlorination",
         "Reducing agent in chemical processes",
         "Pipeline corrosion control",
-        "Water treatment applications",
-        "Flue gas desulfurization",
-        "Photography and textile processing"
+        "Hydrotest and pipeline preservation water",
+        "Oxygen scavenging in drilling fluids",
+        "Completion brines and packer fluids"
       ],
       "technicalSpecs": [
         "Concentration: 40-60% NH4HSO3",
         "Appearance: Clear to pale yellow liquid",
         "pH: 3.5-5.0",
         "Specific gravity: approx. 1.2-1.4 (concentration dependent)",
-        "Dosage: 10-50 ppm for oxygen scavenging",
-        "Available in drums, IBCs, and bulk"
+        "Dose: approx. 6.2 mg/L NH4HSO3 (100% basis) per mg/L dissolved oxygen, plus a small excess",
+        "Available in drums, IBCs, and bulk",
+        "Hazard: Corrosive — UN 2693, Class 8; releases SO2 with acids"
       ],
       "faqs": [
         {
@@ -1119,15 +1120,15 @@
         "DEA gas treatment Sohar",
         "amine gas treating Oman"
       ],
-      "longDescription": "Diethanolamine (DEA) supplier in Oman - Global Chemicals LLC provides high-purity DEA for gas treating and acid gas removal in Muscat, Sohar, Duqm, Salalah. Our diethanolamine is a secondary amine that effectively removes H2S and CO2 from natural gas, refinery gases, and synthesis gas streams. DEA offers balanced performance between MEA and MDEA with moderate selectivity for H2S over CO2. Essential for gas processing plants, refineries, and petrochemical facilities requiring reliable acid gas removal. DEA provides lower corrosion rates than MEA while offering better CO2 absorption than MDEA. The compound is regenerable with moderate heat requirements. Widely used across Oman's oil & gas industry for meeting gas specifications and protecting equipment from acid gas corrosion.",
+      "longDescription": "Diethanolamine (DEA, 2,2'-iminodiethanol, bis(2-hydroxyethyl)amine, C4H11NO2, CAS 111-42-2) is a secondary alkanolamine supplied by Global Chemicals LLC at 99% minimum purity as a clear, colourless to pale yellow viscous liquid with a molecular weight of 105.14 g/mol, boiling point 268 °C and specific gravity 1.097 at 20 °C as a supercooled liquid, in drums, IBCs, ISO tanks and bulk from stock in Muscat. Pure DEA melts at about 28 °C, so it can set solid in drums and lines on cool nights; warm drums gently in a hot room and keep tanks and lines heated or traced.\n\nGas treating: in a 25–30% aqueous solution DEA absorbs hydrogen sulphide and carbon dioxide from natural gas, refinery gas and synthesis gas, and gives them up again when the rich solution is heated in the regenerator. As a secondary amine it binds acid gas less tightly than MEA, so it needs less regeneration heat and runs at a higher solution strength with lower corrosion. It also resists the irreversible degradation by carbonyl sulphide and carbon disulphide that consumes MEA in refinery service, and it is used for liquid–liquid treating of LPG and NGL. It removes both H2S and CO2 with little selectivity; where CO2 should slip, MDEA is the usual choice, and DEA is blended with MDEA in mixed-amine systems to adjust CO2 pickup. CO2 degradation products are managed with filtration, carbon beds and, where needed, vacuum reclaiming.\n\nDEA is also the activator in hot potassium carbonate CO2 removal at ammonia and hydrogen plants, a component of glycol–amine treating units, and, outside gas treating, a raw material for alkanolamide surfactants, corrosion inhibitors and metalworking fluids.\n\nHandling and storage: DEA is harmful if swallowed, irritates the skin, causes serious eye damage and may damage the liver, kidneys and blood through prolonged or repeated exposure; it is combustible, with a flash point well above 100 °C, and is generally not regulated as dangerous goods for road or sea transport. With nitrites and other nitrosating agents it can form N-nitrosodiethanolamine, a carcinogen, so keep it away from nitrite-based corrosion inhibitors, as well as from strong acids and oxidisers. It absorbs water and carbon dioxide from the air, so keep drums sealed and tanks nitrogen-blanketed. Use carbon steel or stainless steel; it attacks copper, brass, zinc and aluminium. Wear goggles or a face shield and chemical gloves. Every delivery carries a certificate of analysis giving purity, water content and colour, and a GHS safety data sheet.\n\nDelivery is same day within Muscat, next day to Sohar, 2–3 days to Salalah and Duqm, and by road across the GCC with a certificate of origin. Request a quote with the quantity, pack type and schedule.",
       "applications": [
         "Natural gas H2S and CO2 removal",
         "Refinery sour gas treatment",
         "Synthesis gas purification",
         "LPG and NGL sweetening",
-        "Ammonia plant CO2 capture",
+        "Activator in hot potassium carbonate CO2 removal",
         "Mixed amine systems",
-        "Tail gas treating",
+        "Surfactant and metalworking fluid manufacture",
         "Mixed glycol–amine treating units"
       ],
       "technicalSpecs": [
@@ -1135,10 +1136,11 @@
         "Appearance: Clear colorless to pale yellow viscous liquid",
         "Molecular weight: 105.14 g/mol",
         "Boiling point: 268°C",
-        "Specific gravity: 1.097 at 20°C",
+        "Specific gravity: 1.097 at 20°C (supercooled liquid)",
         "Typical solution strength: 25-30% DEA",
-        "Moderate heat of regeneration",
-        "Available in drums, IBCs, ISO tanks, bulk"
+        "Melting point: approx. 28°C (heat drums and lines in cool weather)",
+        "Available in drums, IBCs, ISO tanks, bulk",
+        "Hazard: Harmful, causes serious eye damage (H302, H315, H318, H373) — not regulated for transport"
       ],
       "faqs": [
         {

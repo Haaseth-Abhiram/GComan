@@ -1042,24 +1042,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gcoman.com/products/ethanolamines/mdea-methyldiethanolamine</loc>
-    <lastmod>2026-11-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/ethanolamines/mdea-methyldiethanolamine"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/ethanolamines/mdea-methyldiethanolamine"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/ethanolamines/mdea-methyldiethanolamine"/>
-  </url>
-  <url>
-    <loc>https://gcoman.com/products/ethanolamines/mea-monoethanolamine</loc>
-    <lastmod>2026-11-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/ethanolamines/mea-monoethanolamine"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/ethanolamines/mea-monoethanolamine"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/ethanolamines/mea-monoethanolamine"/>
-  </url>
-  <url>
     <loc>https://gcoman.com/products/ethanolamines/tea-triethanolamine</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -2830,15 +2812,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/water-treatment/hydrated-lime"/>
   </url>
   <url>
-    <loc>https://gcoman.com/products/water-treatment/hydrazine-hydrate-water</loc>
-    <lastmod>2026-11-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/water-treatment/hydrazine-hydrate-water"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/water-treatment/hydrazine-hydrate-water"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/water-treatment/hydrazine-hydrate-water"/>
-  </url>
-  <url>
     <loc>https://gcoman.com/products/water-treatment/hydrochloric-acid-industrial</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -3677,24 +3650,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/corrosion-inhibitor/sodium-molybdate"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/corrosion-inhibitor/sodium-molybdate"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/corrosion-inhibitor/sodium-molybdate"/>
-  </url>
-  <url>
-    <loc>https://gcoman.com/ar/products/ethanolamines/mdea-methyldiethanolamine</loc>
-    <lastmod>2026-11-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/ethanolamines/mdea-methyldiethanolamine"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/ethanolamines/mdea-methyldiethanolamine"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/ethanolamines/mdea-methyldiethanolamine"/>
-  </url>
-  <url>
-    <loc>https://gcoman.com/ar/products/ethanolamines/mea-monoethanolamine</loc>
-    <lastmod>2026-11-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/ethanolamines/mea-monoethanolamine"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/ethanolamines/mea-monoethanolamine"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/ethanolamines/mea-monoethanolamine"/>
   </url>
   <url>
     <loc>https://gcoman.com/ar/products/ethanolamines/tea-triethanolamine</loc>
@@ -5387,15 +5342,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/water-treatment/hydrated-lime"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/water-treatment/hydrated-lime"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/water-treatment/hydrated-lime"/>
-  </url>
-  <url>
-    <loc>https://gcoman.com/ar/products/water-treatment/hydrazine-hydrate-water</loc>
-    <lastmod>2026-11-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://gcoman.com/products/water-treatment/hydrazine-hydrate-water"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://gcoman.com/ar/products/water-treatment/hydrazine-hydrate-water"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gcoman.com/products/water-treatment/hydrazine-hydrate-water"/>
   </url>
   <url>
     <loc>https://gcoman.com/ar/products/water-treatment/hydrochloric-acid-industrial</loc>
