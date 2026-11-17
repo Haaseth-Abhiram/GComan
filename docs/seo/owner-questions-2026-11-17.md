@@ -72,3 +72,18 @@ Every open business fact from the Arabic batches 7–24 and the water / oil & ga
 - Propylene glycol: keep "breweries" in the coolant list?
 - SHMP CAS 68915-31-1 or 10124-56-8.
 - Thinner 402: composition on the TDS; one grade for epoxy, PU and alkyd?
+
+## E. Added after the last 8 water / oil pages (17 Nov evening)
+
+| Product | Question |
+|---|---|
+| Potassium iodide | USP or food/feed grade stocked, with what documents? |
+| Silica gel orange | Which indicator dye (from the SDS)? Any grade approved for food or pharma packs? Bulk density? |
+| Silica gel blue | Cobalt content and SDS classification; is 180 °C the supplier's regeneration maximum? |
+| Silica gel white | Food-contact grade available? |
+| Citric acid RO cleaner | Ready-to-use 2–3% solution or a concentrate? What buffer gives pH 3–4? Food-grade lot? |
+| Calcium bromide | Blend ceiling with calcium chloride (about 1.81 sg / 15.1 lb/gal)? |
+| Sodium molybdate | SDS classification (some list irritant) |
+| Diesel exhaust fluid | Does the CoA report ISO 22241-1 density, refractive index and biuret? |
+| Lubricants blog post and category page | Both state "authorised distributor of Shell, Mobil and Castrol" (and GP). Confirm, or tell us the correct wording (question A3) |
+
