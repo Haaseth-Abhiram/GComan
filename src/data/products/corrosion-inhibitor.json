@@ -331,24 +331,24 @@
         "Na2MoO4 Sohar",
         "molybdate corrosion control Oman"
       ],
-      "longDescription": "Sodium molybdate dihydrate (Na2MoO4·2H2O, CAS 10102-40-6) is a white crystalline powder supplied by Global Chemicals LLC at 99% purity in 25 kg bags and drums from stock in Muscat, as the anodic corrosion inhibitor of choice for closed cooling and chilled-water systems where nitrite or chromate are not wanted. It has low toxicity, is not classified as hazardous for transport, and is often chosen for systems that serve food, pharmaceutical and potable-water facilities.\n\nHow it protects. In the presence of dissolved oxygen, molybdate adsorbs on steel at the anodic sites and forms a thin, insoluble ferric molybdate film that stops iron dissolving. Typical treatment holds 100–500 mg/L of molybdate as MoO4 in closed loops, at pH 8.0–10.0, often blended with nitrite, azoles for copper and silicate or phosphonate for mixed metals; the molybdate residual is easy to test in the field, which makes dosing control simple. Because it is anodic, under-dosing gives localised pitting rather than protection, so residuals are checked and topped up rather than assumed, and losses to leaks and make-up water are replaced. In open cooling towers it is used at low levels in phosphate-free programmes where discharge limits matter.\n\nWhere it is used in Oman: chilled-water loops of district cooling, hotels, malls and hospitals; closed process-cooling circuits in factories and power plants; heating and hot-water loops; hydrostatic test and lay-up water for new pipelines and vessels; food, beverage and pharmaceutical plant utilities; and engine and heat-transfer coolants. It is also a molybdenum micronutrient for legumes and some vegetables in fertiliser blends, and a reagent in laboratory phosphate analysis.\n\nHandling and storage: sodium molybdate is low in hazard; avoid dust and ingestion, wear gloves and safety glasses, and keep bags closed and dry. Molybdenum is regulated in some wastewater discharges, so check local limits before draining treated loop water. Every lot carries a certificate of analysis giving assay and molybdenum content, and a safety data sheet; our water-treatment team supplies test kits and dosing calculations for closed systems.\n\nDelivery is same day within Muscat, next day to Sohar, two to three days to Salalah and Duqm, and by road across the GCC with a certificate of origin. Request a quote with the quantity and system volume.",
+      "longDescription": "Sodium molybdate dihydrate (Na2MoO4·2H2O, CAS 10102-40-6) is a white crystalline powder supplied by Global Chemicals LLC at 99% purity in 25 kg bags and drums from stock in Muscat, as the chromate-free anodic corrosion inhibitor for closed cooling and chilled-water systems, used on its own or together with nitrite. It has low acute toxicity and is not classified as dangerous goods for transport, but it is an industrial water-treatment chemical for closed, non-potable circuits: it is not a drinking-water treatment and must not be dosed into potable water or into water that contacts food or product.\n\nHow it protects. In the presence of dissolved oxygen, molybdate adsorbs on steel at the anodic sites and forms a thin, insoluble ferric molybdate film that stops iron dissolving. Typical treatment holds 100–500 mg/L of molybdate as MoO4 in closed loops, at pH 8.0–10.0, often blended with nitrite, azoles for copper and silicate or phosphonate for mixed metals; the molybdate residual is easy to test in the field, which makes dosing control simple. Because it is anodic, under-dosing gives localised pitting rather than protection, so residuals are checked and topped up rather than assumed, and losses to leaks and make-up water are replaced. In open cooling towers it is used at low levels in phosphate-free programmes where phosphate discharge is restricted, subject to any local limit on molybdenum itself.\n\nWhere it is used in Oman: chilled-water loops of district cooling, hotels, malls and hospitals; closed process-cooling circuits in factories and power plants; heating and hot-water loops; hydrostatic test and lay-up water for new pipelines and vessels; closed utility cooling circuits in food, beverage and pharmaceutical plants, with no contact with product or potable water; and engine and heat-transfer coolants. It is also a molybdenum micronutrient for legumes and some vegetables in fertiliser blends, and a reagent in laboratory phosphate analysis.\n\nHandling and storage: sodium molybdate has low acute toxicity and most suppliers do not classify it as hazardous under GHS, although some safety data sheets list irritation, so follow the SDS supplied with the lot; avoid dust and ingestion, wear gloves and safety glasses, and keep bags closed and dry. Molybdenum is regulated in some wastewater discharges, so check local limits before draining treated loop water. Every lot carries a certificate of analysis giving assay and molybdenum content, and a safety data sheet; our water-treatment team supplies test kits and dosing calculations for closed systems.\n\nDelivery is same day within Muscat, next day to Sohar, two to three days to Salalah and Duqm, and by road across the GCC with a certificate of origin. Request a quote with the quantity and system volume.",
       "applications": [
-        "Environmentally-friendly corrosion inhibition",
-        "Food-grade cooling water treatment",
-        "Pharmaceutical water system protection",
-        "Potable water system corrosion control",
+        "District cooling and HVAC chilled-water loops",
+        "Closed process-cooling circuit treatment",
+        "Closed utility cooling loops in food and pharmaceutical plants (no product contact)",
+        "Heating and hot-water closed loops",
         "Chromate-free cooling water programs",
         "Closed-loop chiller treatment",
-        "Non-toxic corrosion prevention",
-        "Green chemistry water treatment"
+        "Engine and heat-transfer coolants",
+        "Hydrostatic test and lay-up water treatment"
       ],
       "technicalSpecs": [
         "Purity: 99% sodium molybdate dihydrate",
-        "Dosage: 100-500 ppm in closed systems",
+        "Dosage: 100-500 ppm as molybdate (MoO4) in closed systems",
         "Anodic corrosion inhibitor",
         "pH range: 8.0-10.0",
-        "Non-toxic, non-hazardous",
-        "Environmentally acceptable",
+        "Hazard: low acute toxicity; not classified as hazardous under GHS by most suppliers; not dangerous goods for transport; the SDS governs",
+        "Not for potable water; molybdenum discharge is regulated - check local limits",
         "Appearance: White crystalline powder",
         "Available in 25kg bags, drums"
       ],
@@ -359,7 +359,7 @@
         },
         {
           "question": "What is Sodium Molybdate used for?",
-          "answer": "Sodium Molybdate is commonly used for Environmentally-friendly corrosion inhibition, Food-grade cooling water treatment, and Pharmaceutical water system protection. Global Chemicals LLC supplies Sodium Molybdate across Oman and the wider GCC with full SDS documentation to support these applications."
+          "answer": "Sodium Molybdate is commonly used for District cooling and HVAC chilled-water loops, Closed process-cooling circuit treatment, and Closed utility cooling loops in food and pharmaceutical plants (no product contact). Global Chemicals LLC supplies Sodium Molybdate across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
       "wikiUrl": "https://en.wikipedia.org/wiki/Sodium_molybdate"
