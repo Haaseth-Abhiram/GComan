@@ -702,3 +702,28 @@ Append-only. One row per check per run, written by the `running-search-operation
 | 2026-11-16 | google | citric acid supplier oman (17) | product panel | — |  | uvwater.biz | pws=0 gl=om navigated, top 9 (core update) |
 | 2026-11-16 | google | ethylene glycol supplier oman (18) | product panel | — |  | omanchem.com | pws=0 gl=om navigated, top 9 (core update) |
 | 2026-11-16 | google | corrosion inhibitor supplier oman (19) | product panel | — |  | omanchem.com | pws=0 gl=om navigated, top 9 (core update) |
+| 2026-11-17 | google | nitric acid supplier saudi arabia (R1) | /chemical-supplier/nitric-acid-saudi-arabia | — |  | nassguard.sa | pws=0 gl=sa navigated, top 9 (core update) |
+| 2026-11-17 | google | nitric acid supplier riyadh (R2) | /chemical-supplier/nitric-acid-saudi-arabia | — |  | nassguard.sa | pws=0 gl=sa fetched, top 9 (core update) |
+| 2026-11-17 | google | nitric acid supplier dammam (R3) | /chemical-supplier/nitric-acid-saudi-arabia | — |  | nassguard.sa | pws=0 gl=sa fetched, top 9 (core update) |
+| 2026-11-17 | google | calcium hypochlorite supplier uae (R4) | /chemical-supplier/calcium-hypochlorite-uae | — |  | chemstock.ae | pws=0 gl=ae fetched, top 9 (core update) |
+| 2026-11-17 | google | calcium hypochlorite supplier dubai (R5) | /chemical-supplier/calcium-hypochlorite-uae | — |  | hazchem.ae | pws=0 gl=ae fetched, top 9 (core update) |
+| 2026-11-17 | google | calcium hypochlorite 70% uae (R6) | /chemical-supplier/calcium-hypochlorite-uae | — |  | chemstock.ae | pws=0 gl=ae fetched, top 9 (core update) |
+| 2026-11-17 | google | calcium hypochlorite supplier bahrain (R7) | /chemical-supplier/calcium-hypochlorite-bahrain | — |  | aleradahchemicals.com | pws=0 gl=bh fetched, top 9 (core update) |
+| 2026-11-17 | google | nitric acid supplier oman (R8) | /chemical-supplier/nitric-acid-oman | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-17 | google | sodium hypochlorite supplier oman (R9) | /chemical-supplier/sodium-hypochlorite-oman | — |  | omanchlorine.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-17 | google | hydrochloric acid supplier oman (R10) | /chemical-supplier/hydrochloric-acid-oman | — |  | omanchlorine.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-17 | google | hydrochloric acid supplier sohar (R11) | /chemical-supplier/hydrochloric-acid-oman | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-17 | google | caustic soda supplier oman (R12) | /chemical-supplier/caustic-soda-oman | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-17 | google | lubricants supplier oman (20) | product panel | — |  | mobil.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-17 | google | potassium chloride supplier oman (21) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-17 | google | buy nitric acid in oman (22) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-17 | google | buy urea in oman (23) | product panel | — |  | muscatfertilizer.net | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-17 | google | buy caustic soda in oman (24) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-17 | google | buy hydrochloric acid in oman (25) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-17 | google | buy sodium hypochlorite in oman (26) | product panel | — |  | omanchlorine.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-17 | google | buy hydrogen peroxide in oman (27) | product panel | — |  | gcc.luluhypermarket.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-17 | google | buy sulphuric acid in oman (28) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-17 | google | buy glycerine in oman (29) | product panel | — |  | gcc.luluhypermarket.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-17 | google | buy isopropyl alcohol in oman (30) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-17 | google | buy methanol in oman (31) | product panel | — |  | omanmethanol.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-17 | google | buy acetic acid in oman (32) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
