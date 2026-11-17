@@ -77,30 +77,31 @@
         "cooling tower algaecide Sohar",
         "algae inhibitor Oman"
       ],
-      "longDescription": "Algae Control solution supplier in Oman - Global Chemicals LLC provides effective algaecides for cooling towers, open recirculating systems, and industrial water systems in Muscat, Sohar, Duqm, Salalah. Our algae control formulation prevents and eliminates green algae, blue-green algae (cyanobacteria), and other photosynthetic organisms that reduce heat transfer efficiency and promote fouling. The non-oxidizing algaecide provides long-lasting protection without contributing to corrosion or scale formation. Essential for maintaining clean heat transfer surfaces, preventing slime formation, and ensuring optimal cooling tower performance. Algae control improves system efficiency, reduces biofouling, and extends equipment life. Particularly important in Oman's sunny climate where algae growth is accelerated. Widely used in power plants, refineries, industrial facilities, and commercial cooling systems.",
+      "longDescription": "Algae Control from Global Chemicals LLC is a non-oxidising quaternary ammonium algaecide based on didecyldimethylammonium chloride (DDAC, CAS 7173-51-5), a cationic surfactant biocide for cooling towers and open recirculating water systems, supplied as a liquid in 25 kg and 200 kg drums and IBCs from stock in Muscat. It is effective against green and blue-green algae (cyanobacteria) and works across the pH 6–9 range of most cooling water programmes.\n\nHow it works: the positively charged quaternary ammonium cation adsorbs onto the negatively charged cell walls of algae and bacteria, disrupts their membranes and leaks the cell contents, and its surfactant action helps loosen slime and biofilm from fill, distribution decks, basins and heat-exchanger surfaces. Because it does not rely on oxidation, it adds no oxidising corrosion load and is not consumed by ammonia the way chlorine is, although heavy oil, organic or suspended-solids loading adsorbs quats and raises the dose needed.\n\nUsing it well: dose to the product label and confirm by monitoring, typically a higher initial or slug dose followed by lower maintenance doses, with algae and bacteria counts and visual inspection showing whether the programme is working. Most programmes alternate or combine it with an oxidising biocide such as chlorine or bromine so organisms cannot adapt to one mode of action. Quats can foam, so have an antifoam ready. They are inactivated by anionic surfactants and can react with some anionic dispersants and polymers, so feed them separately and check compatibility with the scale and corrosion inhibitor in use. Where biocides must be registered or approved locally, the buyer should confirm the product's status for the intended use before purchase.\n\nHandling and storage: the classification depends on the DDAC content and solvent, so the SDS for each lot governs. Concentrated DDAC products are typically toxic or harmful if swallowed depending on strength (H301 or H302), cause severe skin burns and eye damage (H314) and are very toxic to aquatic life with long-lasting effects (H400 with H410 or H411), and usually travel as Class 8 corrosives, such as UN 1903 Disinfectant, liquid, corrosive, n.o.s., or UN 2920 Corrosive liquid, flammable, n.o.s. for alcohol-based grades; the UN number in SDS section 14 governs. Store drums closed in a cool, shaded area away from anionic chemicals and oxidisers, prevent release to drains and the sea, and wear chemical gloves, goggles and a face shield.\n\nEvery delivery carries a certificate of analysis and a GHS safety data sheet. Delivery is same day within Muscat, next day to Sohar, 2–3 days to Salalah and Duqm, and by road across the GCC with a certificate of origin. Request a quote with the system volume, pack type and quantity.",
       "applications": [
         "Cooling tower algae prevention",
         "Open recirculating system treatment",
-        "Heat exchanger fouling prevention",
-        "Green algae elimination",
+        "Heat exchanger biofouling control",
+        "Green algae control",
         "Blue-green algae (cyanobacteria) control",
-        "Fill media algae prevention",
+        "Fill media and distribution deck treatment",
         "Basin and sump algae treatment",
-        "Slime and biofilm prevention"
+        "Slime and biofilm control alongside oxidising biocides"
       ],
       "technicalSpecs": [
-        "Type: Non-oxidizing quaternary compound",
-        "Dosage: 10-50 ppm initial, 5-10 ppm maintenance",
+        "Type: Non-oxidising quaternary ammonium compound (DDAC, CAS 7173-51-5)",
+        "Dosage: 10-50 ppm initial, 5-10 ppm maintenance as typical guidance; follow the product label and confirm by testing",
         "Effective against: Green and blue-green algae",
         "pH range: 6-9",
-        "Compatible with corrosion inhibitors",
-        "Long-lasting residual activity",
-        "Available in 25kg, 200kg drums, IBCs"
+        "Incompatible with anionic surfactants; check compatibility with anionic dispersants and polymers",
+        "May foam at slug doses; keep antifoam available",
+        "Available in 25kg, 200kg drums, IBCs",
+        "Hazard: Corrosive and very toxic to aquatic life (H301 or H302, H314, H400 with H410 or H411 for concentrates) — usually Class 8, e.g. UN 1903, or UN 2920 for alcohol-based grades; SDS section 14 governs"
       ],
       "faqs": [
         {
           "question": "Why is algae a particular problem in cooling towers in Oman?",
-          "answer": "Oman's year-round sunshine, high ambient temperatures, and open cooling tower design create ideal conditions for rapid algae growth. Cooling tower basins receive natural light, warm water (often 30–45°C in summer), and atmospheric carbon dioxide — exactly the nutrients photosynthetic algae need. Green algae colonise tower fill, distribution decks, basin walls, and spray nozzles, reducing water flow, blocking fill channels, and dramatically decreasing cooling efficiency. Algae biomass also provides a food source and shelter for heterotrophic bacteria, promoting biofilm and increasing Legionella risk. Non-oxidising algaecides such as quaternary ammonium compounds interrupt algae cell respiration and reproduction without the corrosion risks associated with chlorine shock. For Oman's coastal and inland industrial sites, Global Chemicals LLC recommends monthly algaecide treatments combined with regular basin inspection to prevent algae from establishing in warm months."
+          "answer": "Oman's year-round sunshine, high ambient temperatures, and open cooling tower design create ideal conditions for rapid algae growth. Cooling tower basins receive natural light, warm water (often 30–45°C in summer), and atmospheric carbon dioxide — exactly the nutrients photosynthetic algae need. Green algae colonise tower fill, distribution decks, basin walls, and spray nozzles, reducing water flow, blocking fill channels, and dramatically decreasing cooling efficiency. Algae biomass also provides a food source and shelter for heterotrophic bacteria, promoting biofilm and increasing Legionella risk. Non-oxidising algaecides such as quaternary ammonium compounds disrupt algae cell membranes without the oxidising corrosion load of chlorine shock. For Oman's coastal and inland industrial sites, Global Chemicals LLC recommends a scheduled algaecide programme, dosed to the product label and alternated with an oxidising biocide, combined with regular basin inspection to prevent algae from establishing in warm months."
         }
       ],
       "wikiUrl": "https://en.wikipedia.org/wiki/Algaecide",

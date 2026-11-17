@@ -89,26 +89,27 @@
         "TEA 85 supplier Oman",
         "TEA 99 cement grinding aid"
       ],
-      "longDescription": "Triethanolamine (TEA) supplier in Oman - Global Chemicals LLC provides industrial-grade TEA for metalworking fluids, cement grinding aids, and manufacturing in Muscat, Sohar, Duqm, Salalah, Rusayl Industrial Area. Our triethanolamine is a versatile tertiary amine used as an alkalizing agent, emulsifier, and corrosion inhibitor. Essential for formulating metalworking fluids, cement grinding aids, and as a surfactant in industrial cleaners. The viscous liquid neutralizes acids and provides excellent corrosion protection for ferrous metals. Widely used in metalworking industries, cement plants, cosmetic manufacturing, and industrial chemical production across Oman. Also serves in gas treating, textile processing, and as a curing accelerator for epoxy resins. In water systems the same TEA (CAS 102-71-6) serves as a corrosion inhibitor in coolants and as a pH adjuster.",
+      "longDescription": "Triethanolamine (TEA, trolamine, 2,2',2''-nitrilotriethanol, C6H15NO3, CAS 102-71-6) is a tertiary alkanolamine supplied by Global Chemicals LLC as TEA 99% (99% minimum purity) and TEA 85%, a clear, colourless to pale yellow, viscous and hygroscopic liquid with a molecular weight of 149.19 g/mol, boiling point about 335 °C and specific gravity about 1.12, in 215 kg drums, IBCs and bulk from stock in Muscat. It is mildly alkaline, with a pH of about 10–11 in dilute solution, and TEA 99 solidifies at about 21 °C.\n\nCement and surfactants. In cement mills TEA is one of the most widely used grinding aids: added in very small amounts to the clinker, it reduces agglomeration and coating of the fine particles on balls and liners, so the mill produces more cement of a given fineness for the same energy, and it can improve early strength in many cements. TEA also neutralises fatty acids and sulphonic acids to form TEA soaps and salts, such as TEA stearate and TEA lauryl sulphate, used as emulsifiers in cleaners, polishes, textile auxiliaries and personal-care products.\n\nMetalworking, cosmetics and other uses. In water-miscible cutting and grinding fluids TEA provides reserve alkalinity, helps emulsify the oil phase and protects ferrous parts against rust. In cosmetics it adjusts pH in creams, lotions and gels. Like other alkanolamines, it can form nitrosamines in the presence of nitrites or other nitrosating agents, so cosmetic and metalworking formulations should exclude them, and cosmetic rules limit its use and secondary-amine content. It is also an accelerator in epoxy and polyurethane systems, a minor component of some gas-treating blends and a corrosion inhibitor in coolant formulations.\n\nHandling and storage: TEA 99% is generally not classified as hazardous or is classified as an eye irritant, depending on the producer's SDS; it is not regulated as dangerous goods for transport. The 85% grade's balance, usually mainly diethanolamine and depending on the producer, can change its classification, so check the SDS for each grade. Because TEA 99 freezes at about 21 °C, drums kept in air-conditioned stores may need gentle warming before pumping. Keep containers closed, as it absorbs water and carbon dioxide from the air, avoid copper and its alloys, store away from strong acids and oxidisers, and wear gloves and goggles.\n\nEvery delivery carries a certificate of analysis giving assay, water content and colour, and a GHS safety data sheet. Delivery is same day within Muscat, next day to Sohar, 2–3 days to Salalah and Duqm, and by road across the GCC with a certificate of origin. Request a quote with the grade, pack type and quantity.",
       "applications": [
+        "Cement grinding aid formulation",
         "Metalworking fluid formulation",
-        "Cement grinding aid production",
-        "Industrial cleaner and detergent",
-        "Cosmetic and personal care products",
-        "Gas sweetening applications",
-        "Textile processing chemicals",
-        "Epoxy resin curing agent",
-        "Corrosion inhibitor formulations"
+        "Surfactant neutraliser (TEA soaps and salts)",
+        "Cosmetic and personal care pH adjustment",
+        "Industrial cleaner and polish emulsifier",
+        "Textile auxiliary formulation",
+        "Epoxy and polyurethane accelerator",
+        "Coolant corrosion inhibitor formulation"
       ],
       "technicalSpecs": [
-        "Purity: 99% minimum",
-        "Appearance: Clear, colorless to pale yellow viscous liquid",
+        "Purity: 99% minimum (TEA 99); TEA 85 also available",
+        "Appearance: Clear, colourless to pale yellow viscous liquid",
         "Molecular weight: 149.19 g/mol",
-        "Boiling point: 335°C",
-        "Specific gravity: 1.124",
-        "Viscosity: High (hygroscopic)",
-        "pH: 10-11 (neutralizer)",
-        "Available in 215kg drums, IBCs, bulk"
+        "Boiling point: about 335°C",
+        "Specific gravity: about 1.12 at 20°C",
+        "Freezing point: about 21°C (TEA 99); hygroscopic",
+        "pH: about 10–11 (dilute aqueous solution)",
+        "Available in 215kg drums, IBCs, bulk",
+        "Hazard: Not dangerous goods for transport; eye irritant or not classified per SDS"
       ],
       "faqs": [
         {
