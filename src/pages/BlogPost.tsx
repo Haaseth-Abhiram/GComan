@@ -19,7 +19,33 @@ import { ReadingProgress } from '@/components/ReadingProgress';
    A heading is short, spans a single sentence, and carries no terminal
    punctuation (question marks are common and intentional). */
 const isHeadingLine = (text: string) =>
-  text.length <= 100 && !/[.,;:]$/.test(text) && !text.includes('. ');
+  text.length <= 100 && !/[.,;:]$/.test(text) && !text.includes('. ') && !text.includes('**');
+
+/* Seven posts are written with markdown bullets ("- item", "1. item") and
+   **bold**. Rendered verbatim, the asterisks and dashes shipped as literal
+   text, and every short bullet passed isHeadingLine: the MEG-vs-DEG guide
+   published "- Purity (GC): ≥99.8%" and 14 more spec bullets as <h2>s and
+   table-of-contents entries (found 2026-11-17). These helpers turn bullet runs
+   into real lists, a line that is only **bold** into an <h3> sub-heading, and
+   inline **bold** into <strong>. */
+const BULLET = /^[-•]\s+/;
+const NUMBERED = /^\d+[.)]\s+/;
+const isBulletLine = (t: string) => BULLET.test(t);
+const isNumberedLine = (t: string) => NUMBERED.test(t);
+/** A line that is exactly one **bold** run: a sub-heading inside a section. */
+const subHeadingOf = (t: string) => {
+  const m = /^\*\*([^*]+)\*\*:?$/.exec(t);
+  return m ? m[1].trim() : null;
+};
+/** Render inline **bold** as <strong>; any stray asterisks are dropped. */
+const renderInline = (text: string) =>
+  text.split(/(\*\*[^*]+\*\*)/g).map((part, i) =>
+    part.startsWith('**') && part.endsWith('**') && part.length > 4 ? (
+      <strong key={i}>{part.slice(2, -2)}</strong>
+    ) : (
+      part.replace(/\*\*/g, '')
+    ),
+  );
 
 const slugifyHeading = (text: string) =>
   text
@@ -47,13 +73,28 @@ const isTableDivider = (t: string) => /^\|[\s:|-]+\|$/.test(t) && t.includes('-'
 const splitRow = (t: string) =>
   t.slice(1, -1).split('|').map((c) => c.trim());
 
-type Block = { kind: 'line'; text: string } | { kind: 'table'; rows: string[][] };
+type Block =
+  | { kind: 'line'; text: string }
+  | { kind: 'table'; rows: string[][] }
+  | { kind: 'list'; ordered: boolean; items: string[] };
 
 /** Group raw content lines into renderable blocks, folding pipe runs into tables. */
 const toBlocks = (content: string): Block[] => {
   const lines = content.split('\n').map((l) => l.trim()).filter(Boolean);
   const blocks: Block[] = [];
   for (let i = 0; i < lines.length; i++) {
+    if (isBulletLine(lines[i]) || isNumberedLine(lines[i])) {
+      const ordered = isNumberedLine(lines[i]);
+      const marker = ordered ? NUMBERED : BULLET;
+      const items: string[] = [];
+      while (i < lines.length && marker.test(lines[i])) {
+        items.push(lines[i].replace(marker, ''));
+        i++;
+      }
+      i--; // the for-loop will advance past the last consumed line
+      blocks.push({ kind: 'list', ordered, items });
+      continue;
+    }
     if (!isTableRow(lines[i])) {
       blocks.push({ kind: 'line', text: lines[i] });
       continue;
@@ -129,7 +170,7 @@ const BlogPost = () => {
         canonical={canonicalUrl}
         author={post.author}
         publishedTime={post.date}
-        modifiedTime={post.date}
+        modifiedTime={post.updated ?? post.date}
         articleSection={post.category}
         articleTags={post.tags}
       />
@@ -139,7 +180,7 @@ const BlogPost = () => {
         url={canonicalUrl}
         author={post.author}
         publishedDate={post.date}
-        modifiedDate={post.date}
+        modifiedDate={post.updated ?? post.date}
         category={post.category}
         keywords={post.tags}
         about={[post.category, 'Oman', 'Chemical Industry', 'GCC']}
@@ -205,6 +246,11 @@ const BlogPost = () => {
               <span className="flex items-center gap-1.5">
                 <Calendar className="h-4 w-4" />
                 {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                {post.updated && post.updated !== post.date && (
+                  <span className="ml-1">
+                    · Updated {new Date(post.updated).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                  </span>
+                )}
               </span>
               <span className="flex items-center gap-1.5">
                 <Clock className="h-4 w-4" />
@@ -261,12 +307,24 @@ const BlogPost = () => {
                         </div>
                       );
                     }
+                    if (block.kind === 'list') {
+                      const ListTag = block.ordered ? 'ol' : 'ul';
+                      return (
+                        <ListTag key={i}>
+                          {block.items.map((item, n) => (
+                            <li key={n}>{renderInline(item)}</li>
+                          ))}
+                        </ListTag>
+                      );
+                    }
+                    const subHeading = subHeadingOf(block.text);
+                    if (subHeading) return <h3 key={i}>{subHeading}</h3>;
                     return isHeadingLine(block.text) ? (
                       <h2 key={i} id={slugifyHeading(block.text)} className="scroll-mt-28">
                         {block.text}
                       </h2>
                     ) : (
-                      <p key={i}>{block.text}</p>
+                      <p key={i}>{renderInline(block.text)}</p>
                     );
                   })}
                 </div>

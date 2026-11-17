@@ -23,6 +23,8 @@ export interface BlogPost {
   content: string;
   author: string;
   date: string;
+  /** ISO date of the last substantive edit. Drives dateModified and the visible "Updated" label; omit when the post is unchanged since `date`. */
+  updated?: string;
   readTime: string;
   category: string;
   tags: string[];
@@ -45,29 +47,55 @@ export const blogPosts: BlogPost[] = [
     id: 'top-chemical-suppliers-oman-2026',
     title: 'Top Chemical Suppliers in Oman 2026: Industry Guide',
     excerpt: 'Compare Oman\'s leading chemical suppliers in 2026 — capabilities, certifications, product ranges, and service quality to pick the right partner.',
-    content: `Oman's chemical supply industry is one of the most strategically significant in the Gulf region, serving a diverse base of industries from oil & gas and water treatment to manufacturing, agriculture, and construction. In 2026, the sector continues to grow as Vision 2040 drives industrial diversification and reduces reliance on hydrocarbon revenues. Choosing the right chemical supplier in Oman is therefore a critical procurement decision for any business operating in the sultanate.
+    content: `The right chemical supplier in Oman is registered on JSRS for oil and gas work, runs an ISO 9001:2015 quality system, ships every batch with a Certificate of Analysis and a Safety Data Sheet, holds stock inside the country, and delivers to Muscat, Sohar, Duqm and Salalah within one to three days.
 
-What Makes a Reliable Chemical Supplier in Oman?
+Oman's chemical supply market serves oil and gas, water treatment, manufacturing, agriculture and construction, and it keeps growing as Vision 2040 pushes industrial diversification. This guide sets out what to check, what documents to ask for, and what delivery performance to expect, so a procurement team can compare suppliers on evidence instead of claims.
 
-The best chemical suppliers in Oman share several key characteristics. First, they must hold JSRS (Joint Supplier Registration System) certification — the mandatory pre-qualification required for supply contracts with Petroleum Development Oman (PDO), OQ, and other national energy companies. Without JSRS registration, a supplier cannot bid for major oil & gas contracts. Second, ISO 9001:2015 certification confirms that quality management systems meet international standards. Third, ICV (In-Country Value) compliance supports Oman's national manufacturing and employment goals. When evaluating suppliers, procurement teams should request copies of all three certificates.
+What should you check before choosing a chemical supplier in Oman?
 
-Product Range and Technical Support
+Ask every supplier for the same evidence and compare the answers side by side. The table lists the checks that matter most and the document that proves each one.
 
-A full-service chemical supplier in Oman should carry more than one or two product lines. The most capable distributors stock water treatment chemicals (PAC, calcium hypochlorite, antiscalants, coagulants), industrial lubricants from international brands (Shell, Mobil, Castrol, Total), laboratory chemicals (analytical grade, HPLC solvents, buffer solutions), oilfield production chemicals (corrosion inhibitors, scale inhibitors, demulsifiers), food-grade chemicals for the hospitality and food processing sectors, and agricultural chemicals including fertilizers and crop protection products.
+| What to check | Why it matters | Evidence to ask for |
+|---|---|---|
+| JSRS registration | Oil and gas operators in Oman buy through the Joint Supplier Registration System | JSRS registration certificate and number |
+| ISO 9001:2015 | Shows a documented quality management system | Current certificate from an accredited body |
+| In-Country Value (ICV) | Operators score local employment, sourcing and spend | ICV plan or declaration |
+| Batch quality | Confirms the delivered lot meets the specification | Certificate of Analysis for each batch |
+| Safety documents | Needed for safe handling, storage and transport | GHS Safety Data Sheet and Technical Data Sheet |
+| Stock in Oman | Decides how fast an urgent order can be filled | Warehouse location and stock confirmation |
+| Export paperwork | Needed to clear GCC borders | Certificate of Origin, HS-coded invoice, packing list |
 
-Technical support is equally important. A reputable chemical supplier should provide Safety Data Sheets (SDS/MSDS), Certificates of Analysis (CoA), Technical Data Sheets (TDS), and be able to advise on dosing, handling, storage, and compatibility with your existing processes.
+Why does JSRS registration matter?
 
-Key Industrial Zones and Supply Logistics
+JSRS, the Joint Supplier Registration System, is the registration system used by Petroleum Development Oman (PDO), OQ and other operators to pre-qualify vendors. A supplier that is not registered cannot be awarded most oil and gas supply contracts, so check the registration is current before you spend time on a technical evaluation. Registration confirms the company's legal and commercial standing; it does not replace product approval, so ask for the Certificate of Analysis and data sheets as well.
 
-Chemical suppliers serving Oman must be able to reach all major industrial zones efficiently. These include Rusayl Industrial Estate and Al Mazyunah in Muscat governorate, the Port of Sohar and Sohar Industrial Port (critical for petrochemical and steel industries), the Duqm Special Economic Zone where major oil refinery and LNG projects are expanding, and Salalah in Dhofar governorate serving agriculture and fisheries industries. Reliable same-day or next-day delivery to Muscat and within 48 hours to Sohar, Salalah, and Duqm is the benchmark to expect from a tier-one supplier.
+Which product ranges should a full-service supplier carry?
 
-GCC Export Capabilities
+A supplier that covers several ranges saves separate vendor approvals and deliveries. The main ranges bought in Oman are water treatment chemicals (PAC, calcium hypochlorite, antiscalants, coagulants), oilfield chemicals (corrosion inhibitors, scale inhibitors, demulsifiers, glycols and amines), laboratory chemicals (analytical grade reagents and solvents), industrial lubricants, food-grade chemicals, and fertilizers and other agricultural chemicals. Ask whether each product is held in stock or ordered on demand, because that decides the lead time.
 
-Many Omani businesses also require GCC-wide chemical supply. The best Oman-based suppliers export to UAE (Dubai, Abu Dhabi, Sharjah), Saudi Arabia (Riyadh, Jeddah, Dammam, Yanbu), Qatar (Doha, Ras Laffan Industrial City), Kuwait, and Bahrain. For GCC export, ensure your supplier can provide Certificate of Origin (for customs clearance), packing lists and commercial invoices meeting destination country requirements, MSDS/SDS documentation in English and Arabic, and proper hazardous goods labelling for road freight across GCC borders.
+Technical support matters as much as the range. A capable supplier advises on dosing, handling, storage and compatibility with your process, and answers a technical question in hours, not days.
 
-Global Chemicals LLC is a JSRS-certified, ISO 9001:2015 accredited chemical supplier based in Muscat with over 10 years of experience supplying industries across Oman and exporting to all GCC countries. Our product range covers 1,000+ industrial, water treatment, laboratory, oilfield, and specialty chemicals. Contact our team at info@gcoman.com or call +968 9277 2305 to request a quote or product availability confirmation.`,
+How fast should delivery be to Oman's industrial zones?
+
+Lead time depends on where the stock sits. For a supplier holding stock in Muscat, these are reasonable benchmarks to hold them to.
+
+| Destination | Typical industries | Benchmark lead time |
+|---|---|---|
+| Muscat and Rusayl Industrial City | Manufacturing, water treatment, food processing | Same day or next day |
+| Sohar Port and Freezone | Petrochemicals, metals, refining | Next day |
+| Duqm Special Economic Zone | Refining, petrochemicals, port and dry dock | 2 to 3 days |
+| Salalah and Dhofar | Free zone industry, agriculture, fisheries | 2 to 3 days |
+
+Can an Oman supplier export to the rest of the GCC?
+
+Yes. Suppliers based in Oman deliver by road to the UAE, Saudi Arabia, Qatar, Kuwait and Bahrain. For export, check that the supplier provides a Certificate of Origin, a commercial invoice and packing list that meet the destination country's rules, Safety Data Sheets in English and Arabic, and correct dangerous goods labelling and documents for road freight across GCC borders.
+
+Where does Global Chemicals LLC fit?
+
+Global Chemicals LLC is a JSRS-registered, ISO 9001:2015 certified chemical supplier based in Muscat, supplying industries across Oman and exporting to the GCC. The catalogue covers 275+ products across water treatment, oilfield, laboratory, food-grade, agricultural and industrial chemicals. Email info@gcoman.com or call +968 9277 2305 to request a quote or confirm stock.`,
     author: 'Global Chemicals Editorial Team',
     date: '2026-02-15',
+    updated: '2026-11-17',
     readTime: '10 min read',
     category: 'Industry Guide',
     tags: ['Chemical Suppliers', 'Oman', 'Industry Guide', 'JSRS', 'ISO 9001'],
@@ -1757,7 +1785,9 @@ Global Chemicals LLC supplies disinfectants, feed preservatives, feed-grade mine
     id: 'meg-vs-deg-gas-dehydration-oman-gcc',
     title: 'MEG vs DEG for Gas Dehydration: Technical Comparison for Oman & GCC Operations',
     excerpt: 'Monoethylene glycol (MEG) vs diethylene glycol (DEG) for natural gas dehydration and hydrate inhibition — thermal stability, dew point performance, regeneration, losses, and procurement in Oman and the GCC.',
-    content: `Natural gas leaving the wellhead is water-saturated. Left untreated, that water condenses in pipelines, forms hydrates at high pressure and low temperature, and accelerates internal corrosion when combined with CO2 or H2S. Two glycols dominate the field response across Oman's upstream operations and the wider GCC: monoethylene glycol (MEG, CAS 107-21-1) and diethylene glycol (DEG, CAS 111-46-6). They are not interchangeable, and choosing the wrong one leaves either dew point margin or regeneration efficiency on the table.
+    content: `MEG or DEG? Use MEG where glycol is injected into a wellhead or flowline to stop hydrates forming, because it gives the most hydrate depression per kilogram and can be reclaimed from salty water. Use DEG, or more often TEG, in a contactor tower that dries gas, because it loses less to vapour and regenerates to higher purity.
+
+Natural gas leaving the wellhead is water-saturated. Left untreated, that water condenses in pipelines, forms hydrates at high pressure and low temperature, and accelerates internal corrosion when combined with CO2 or H2S. Two glycols dominate the field response across Oman's upstream operations and the wider GCC: monoethylene glycol (MEG, CAS 107-21-1) and diethylene glycol (DEG, CAS 111-46-6). They are not interchangeable, and choosing the wrong one leaves either dew point margin or regeneration efficiency on the table.
 
 The Two Roles: Hydrate Inhibition vs Absorption Dehydration
 
@@ -1860,13 +1890,14 @@ Both are supplied with a batch Certificate of Analysis, SDS in English and Arabi
 
 Handling and Safety Notes
 
-MEG is acutely toxic if swallowed (ethylene glycol poisoning) — segregate from any food-grade or potable-water handling area and label clearly in English and Arabic. DEG carries a similar oral toxicity warning. Both are combustible (flash points 111 °C and 143 °C respectively), hygroscopic, and should be stored in sealed carbon steel or stainless steel tanks with a dry nitrogen or desiccant-breather blanket. In coastal Oman and UAE humidity, an unblanketed glycol tank will absorb enough atmospheric water to move a lean glycol off specification within weeks. Use nitrile gloves and splash goggles for transfer operations; both glycols are readily absorbed and cause eye irritation.
+MEG is harmful if swallowed and can cause fatal ethylene glycol poisoning (ethylene glycol poisoning) — segregate from any food-grade or potable-water handling area and label clearly in English and Arabic. DEG carries a similar oral toxicity warning. Both are combustible (flash points 111 °C and 143 °C respectively), hygroscopic, and should be stored in sealed carbon steel or stainless steel tanks with a dry nitrogen or desiccant-breather blanket. In coastal Oman and UAE humidity, an unblanketed glycol tank will absorb enough atmospheric water to move a lean glycol off specification within weeks. Use nitrile gloves and splash goggles for transfer operations; both glycols are readily absorbed and cause eye irritation.
 
 Procurement in Oman and the GCC
 
 Global Chemicals LLC supplies MEG and DEG from stock in Muscat to upstream operators, gas processing facilities, EPC contractors, and chemical management providers across Oman — Muscat, Sohar, Duqm, Salalah, and inland field locations — with 3–5 working day supply to the UAE, Saudi Arabia, Qatar, Kuwait, and Bahrain. Drum, IBC, and ISO tank quantities are available, avoiding the 20-tonne container minimums of direct import and the working capital tied up in slow-moving inventory. Contact info@gcoman.com or +968 9277 2305 for specifications, pricing, and availability.`,
     author: 'Global Chemicals Technical Team',
     date: '2026-08-04',
+    updated: '2026-11-17',
     readTime: '12 min read',
     category: 'Oil & Gas',
     tags: ['MEG', 'DEG', 'Gas Dehydration', 'Hydrate Inhibition', 'Oilfield', 'Glycol', 'Oman', 'GCC'],
