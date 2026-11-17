@@ -39,7 +39,7 @@ const EXACT_REDIRECTS = new Map<string, string>([
 
   // Old /products/alkalis/*
   ['/products/alkalis/caustic-soda', '/products/water-treatment/caustic-soda-flakes'],
-  ['/products/alkalis/caustic-potash', '/products/water-treatment/potassium-hydroxide-water'],
+  ['/products/alkalis/caustic-potash', '/products/inorganic/caustic-potash'],
   ['/products/alkalis/sodium-carbonate', '/products/water-treatment/soda-ash-water'],
   ['/products/alkalis/ammonia-solution', '/products/lab-chemicals/ammonia-solution-lab'],
 
@@ -63,9 +63,9 @@ const EXACT_REDIRECTS = new Map<string, string>([
   // Old /products/glycols/* (renamed slugs)
   ['/products/glycols/mono-ethylene-glycol', '/products/glycols/meg-ethylene-glycol'],
   ['/products/glycols/monoethylene-glycol', '/products/glycols/meg-ethylene-glycol'],
-  ['/products/glycols/diethylene-glycol', '/products/water-treatment/deg-water'],
+  ['/products/glycols/diethylene-glycol', '/products/glycols/deg-diethylene-glycol'],
   ['/products/glycols/meg', '/products/glycols/meg-ethylene-glycol'],
-  ['/products/glycols/deg', '/products/water-treatment/deg-water'],
+  ['/products/glycols/deg', '/products/glycols/deg-diethylene-glycol'],
 
   // Old /products/alcohols/* (renamed slugs)
   ['/products/alcohols/ethanol', '/products/alcohols/ethanol-industrial'],

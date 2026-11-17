@@ -204,7 +204,7 @@
 
 # Old /products/alkalis/* category (alkalis → water-treatment / lab-chemicals)
 /products/alkalis/caustic-soda          /products/water-treatment/caustic-soda-flakes       301
-/products/alkalis/caustic-potash        /products/water-treatment/potassium-hydroxide-water 301
+/products/alkalis/caustic-potash        /products/inorganic/caustic-potash 301
 /products/alkalis/sodium-carbonate      /products/water-treatment/soda-ash-water            301
 /products/alkalis/ammonia-solution      /products/lab-chemicals/ammonia-solution-lab        301
 /products/alkalis/*                     /products                                           301
@@ -234,9 +234,9 @@
 # Old slugs in /products/glycols/* that were renamed
 /products/glycols/mono-ethylene-glycol  /products/glycols/meg-ethylene-glycol               301
 /products/glycols/monoethylene-glycol   /products/glycols/meg-ethylene-glycol               301
-/products/glycols/diethylene-glycol     /products/water-treatment/deg-water                 301
+/products/glycols/diethylene-glycol     /products/glycols/deg-diethylene-glycol                 301
 /products/glycols/meg                   /products/glycols/meg-ethylene-glycol               301
-/products/glycols/deg                   /products/water-treatment/deg-water                 301
+/products/glycols/deg                   /products/glycols/deg-diethylene-glycol                 301
 
 # Old slugs in /products/alcohols/* that were renamed
 /products/alcohols/ethanol              /products/alcohols/ethanol-industrial               301

@@ -1872,7 +1872,7 @@ Global Chemicals LLC supplies MEG and DEG from stock in Muscat to upstream opera
     tags: ['MEG', 'DEG', 'Gas Dehydration', 'Hydrate Inhibition', 'Oilfield', 'Glycol', 'Oman', 'GCC'],
     icon: Factory,
     relatedProducts: [
-      { url: '/products/water-treatment/deg-water', label: 'DEG (Diethylene Glycol) — Industrial Solvent Grade' },
+      { url: '/products/glycols/deg-diethylene-glycol', label: 'DEG (Diethylene Glycol) — Resin & Plasticiser Grade' },
     ],
     faqs: [
       {

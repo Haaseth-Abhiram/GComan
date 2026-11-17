@@ -179,7 +179,7 @@ RewriteRule ^products/mining-chemicals/?$ /products [R=301,L]
 
   # Old /products/alkalis/* → new equivalents
   RewriteRule ^products/alkalis/caustic-soda/?$          /products/water-treatment/caustic-soda-flakes [R=301,L]
-  RewriteRule ^products/alkalis/caustic-potash/?$        /products/water-treatment/potassium-hydroxide-water [R=301,L]
+  RewriteRule ^products/alkalis/caustic-potash/?$        /products/inorganic/caustic-potash [R=301,L]
   RewriteRule ^products/alkalis/sodium-carbonate/?$      /products/water-treatment/soda-ash-water [R=301,L]
   RewriteRule ^products/alkalis/ammonia-solution/?$      /products/lab-chemicals/ammonia-solution-lab [R=301,L]
   RewriteRule ^products/alkalis/?$                       /products [R=301,L]
@@ -212,9 +212,9 @@ RewriteRule ^products/mining-chemicals/?$ /products [R=301,L]
   # Old glycol slugs that were renamed
   RewriteRule ^products/glycols/mono-ethylene-glycol/?$  /products/glycols/meg-ethylene-glycol [R=301,L]
   RewriteRule ^products/glycols/monoethylene-glycol/?$   /products/glycols/meg-ethylene-glycol [R=301,L]
-  RewriteRule ^products/glycols/diethylene-glycol/?$     /products/water-treatment/deg-water [R=301,L]
+  RewriteRule ^products/glycols/diethylene-glycol/?$     /products/glycols/deg-diethylene-glycol [R=301,L]
   RewriteRule ^products/glycols/meg/?$                   /products/glycols/meg-ethylene-glycol [R=301,L]
-  RewriteRule ^products/glycols/deg/?$                   /products/water-treatment/deg-water [R=301,L]
+  RewriteRule ^products/glycols/deg/?$                   /products/glycols/deg-diethylene-glycol [R=301,L]
 
   # Old alcohol slugs that were renamed (e.g. ethanol → ethanol-industrial)
   RewriteRule ^products/alcohols/ethanol/?$              /products/alcohols/ethanol-industrial [R=301,L]
