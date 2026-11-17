@@ -50,7 +50,7 @@ const PRODUCTS: ProductRow[] = [
   { name: 'Polyelectrolyte (flocculant)', spec: 'Anionic, cationic and non-ionic; 0.1–10 ppm', packs: '25 kg bags · emulsion', link: '/products/water-treatment/polyelectrolyte' },
   { name: 'Sodium hypochlorite', spec: '12–15% available chlorine', packs: 'Drums · 1,000 L IBC · bulk', link: '/products/water-treatment/sodium-hypochlorite' },
   { name: 'Calcium hypochlorite', spec: '65–75% available chlorine, granular', packs: '25 kg and 45 kg drums', link: '/products/water-treatment/calcium-hypochlorite-water' },
-  { name: 'RO antiscalant', spec: '2–5 ppm in RO feed, NSF/ANSI 60; membrane grade 3–8 ppm, LSI to +3.0', packs: '25 kg · 200 kg drums · IBC', link: '/products/ro-chemicals/antiscalant-ro' },
+  { name: 'RO antiscalant', spec: '2–5 ppm in RO feed; membrane grade 3–8 ppm, LSI to +3.0', packs: '25 kg · 200 kg drums · IBC', link: '/products/ro-chemicals/antiscalant-ro' },
   { name: 'RO membrane cleaners', spec: 'Citric (acid), alkaline and general-fouling cleaners, 1–3% solutions', packs: '25 kg · 200 kg drums · IBC', link: '/products/ro-chemicals/membrane-cleaner-ro' },
   { name: 'Sodium metabisulphite (dechlorination)', spec: '96% min Na2S2O5', packs: '25 kg bags', link: '/products/water-treatment/sodium-metabisulphite' },
   { name: 'Caustic soda (lye and flakes)', spec: 'Liquid 32%, 48% or 50% NaOH; flakes 98–99%', packs: 'IBC · bulk; 25 kg bags', link: '/products/water-treatment/caustic-soda-liquid' },
@@ -59,6 +59,89 @@ const PRODUCTS: ProductRow[] = [
   { name: 'Corrosion inhibitor (boiler and cooling)', spec: 'Phosphate, molybdate and organic programmes; 10–50 ppm', packs: 'Drums · IBC', link: '/products/water-treatment/corrosion-inhibitor-water' },
   { name: 'Biocide (water treatment grade)', spec: 'Oxidising and non-oxidising; 10–50 ppm', packs: 'Drums', link: '/products/water-treatment/biocide-water' },
   { name: 'Antifoam', spec: 'Silicone and non-silicone; 10–100 ppm', packs: 'Drums', link: '/products/water-treatment/antifoam-water' },
+];
+
+// The rest of the water-treatment range, so every live SKU in these four
+// categories has a hub link (360° audit 2026-11-17: 50 products had none).
+// Canonical SKUs only; regenerate from the category JSON files when products
+// are added or canonicalised.
+type RangeGroup = { title: string; category: string; items: { name: string; link: string }[] };
+const RANGE: RangeGroup[] = [
+  {
+    title: 'Water treatment',
+    category: '/products/water-treatment',
+    items: [
+      { name: "Activated Carbon (Water Treatment Grade)", link: '/products/water-treatment/activated-carbon-water' },
+      { name: "Antiscalant", link: '/products/water-treatment/antiscalant-water' },
+      { name: "Calcium Carbonate (Water Treatment Grade)", link: '/products/water-treatment/calcium-carbonate-water' },
+      { name: "Caustic Soda Flakes", link: '/products/water-treatment/caustic-soda-flakes' },
+      { name: "Caustic Soda Prills", link: '/products/water-treatment/caustic-soda-prills' },
+      { name: "Citric Acid Monohydrate", link: '/products/water-treatment/citric-acid-monohydrate' },
+      { name: "Copper Sulphate Liquid", link: '/products/water-treatment/copper-sulphate-liquid' },
+      { name: "DEG (Diethylene Glycol) — Industrial Solvent Grade", link: '/products/water-treatment/deg-water' },
+      { name: "Ethanol 99%", link: '/products/water-treatment/ethanol-99' },
+      { name: "Ferrous Sulphate", link: '/products/water-treatment/ferrous-sulphate' },
+      { name: "Glycerine (Pharmaceutical & Food Grade)", link: '/products/water-treatment/glycerine-water' },
+      { name: "Hydrochloric Acid (HCl 30-33%)", link: '/products/water-treatment/hydrochloric-acid-industrial' },
+      { name: "Industrial Salt (Sodium Chloride)", link: '/products/water-treatment/sodium-chloride-industrial' },
+      { name: "MPG (Monopropylene Glycol)", link: '/products/water-treatment/mpg-water' },
+      { name: "Paraffin Wax", link: '/products/water-treatment/paraffin-wax' },
+      { name: "Petroleum Jelly", link: '/products/water-treatment/petroleum-jelly' },
+      { name: "Potassium Hydroxide (Water Treatment Grade)", link: '/products/water-treatment/potassium-hydroxide-water' },
+      { name: "Sodium Bicarbonate", link: '/products/water-treatment/sodium-bicarbonate-water' },
+      { name: "Sodium Bisulphate / Bisulphite", link: '/products/water-treatment/sodium-bisulphate-bisulphite' },
+      { name: "Sodium Hexametaphosphate", link: '/products/water-treatment/sodium-hexametaphosphate' },
+      { name: "Sodium Meta Silicate", link: '/products/water-treatment/sodium-meta-silicate' },
+      { name: "Sodium Sulphite", link: '/products/water-treatment/sodium-sulphite' },
+      { name: "Sulphamic Acid", link: '/products/water-treatment/sulphamic-acid' },
+      { name: "TSP (Tri Sodium Phosphate)", link: '/products/water-treatment/tsp-water' },
+    ],
+  },
+  {
+    title: 'RO membrane chemicals',
+    category: '/products/ro-chemicals',
+    items: [
+      { name: "Citric Acid Liquid (RO Membrane Cleaning Grade)", link: '/products/ro-chemicals/citric-acid-liquid-ro' },
+      { name: "Membrane Alka Cleaner", link: '/products/ro-chemicals/membrane-alka-cleaner' },
+      { name: "Membrane Antiscalant RO", link: '/products/ro-chemicals/membrane-antiscalant-ro' },
+      { name: "RO Membrane Descaler (RO 222)", link: '/products/ro-chemicals/ro-222-descaler' },
+      { name: "RO Passivation", link: '/products/ro-chemicals/ro-passivation' },
+      { name: "Sodium Hydroxide Based Alkaleen Cleaner", link: '/products/ro-chemicals/sodium-hydroxide-alkaleen' },
+    ],
+  },
+  {
+    title: 'Cooling water and boiler treatment',
+    category: '/products/cooling-water',
+    items: [
+      { name: "Algae Control", link: '/products/cooling-water/algae-control' },
+      { name: "Altreat 4000", link: '/products/cooling-water/altreat-4000' },
+      { name: "Antifouling Liquid", link: '/products/cooling-water/antifouling-liquid' },
+      { name: "Biocide (Cooling Tower Grade)", link: '/products/cooling-water/biocide-cooling' },
+      { name: "Biocide For Closed Loop Chiller Water", link: '/products/cooling-water/biocide-closed-loop-chiller' },
+      { name: "Biofilm & Legionella Control Biocide (Biological Guard)", link: '/products/cooling-water/biological-guard-antifouling' },
+      { name: "Boiler & Cooling Tower Scale Inhibitor (Hardness Control Treatment)", link: '/products/cooling-water/hardness-control-boiler' },
+      { name: "Cool Water Treat Corrosion Inhibitor", link: '/products/cooling-water/cool-water-treat-corrosion' },
+      { name: "Corro Guard For Antifoulant for Cooling Water", link: '/products/cooling-water/corro-guard-antifoulant' },
+      { name: "Corrosion Inhibitor Closed Loop", link: '/products/cooling-water/corrosion-inhibitor-closed-loop' },
+      { name: "Microbiological Control for Cooling Towers (Micro Biocid)", link: '/products/cooling-water/micro-biocid-cooling-water' },
+    ],
+  },
+  {
+    title: 'Corrosion inhibitors and oxygen scavengers',
+    category: '/products/corrosion-inhibitor',
+    items: [
+      { name: "Corrosion Inhibitor (General Industrial Grade)", link: '/products/corrosion-inhibitor/corrosion-inhibitor-general' },
+      { name: "Corrosion Inhibitor Closed Cooling System", link: '/products/corrosion-inhibitor/corrosion-inhibitor-closed-system' },
+      { name: "Corrosion Inhibitor Closed Cooling System Molybdate", link: '/products/corrosion-inhibitor/corrosion-inhibitor-molybdate' },
+      { name: "Corrosion Inhibitor For Gas Compressor", link: '/products/corrosion-inhibitor/corrosion-inhibitor-gas-compressor' },
+      { name: "Corrosion Inhibitor For Metal Rust Preventive", link: '/products/corrosion-inhibitor/corrosion-inhibitor-rust-preventive' },
+      { name: "Corrosion Inhibitor For Multi Metal Cooling Water", link: '/products/corrosion-inhibitor/corrosion-inhibitor-multi-metal' },
+      { name: "High-Temperature Corrosion Inhibitor (Corrosion Inhibitor 2000)", link: '/products/corrosion-inhibitor/corrosion-inhibitor-2000' },
+      { name: "Oxygen Scavenger", link: '/products/corrosion-inhibitor/oxygen-scavenger' },
+      { name: "Ph Booster Cum Corrosion Inhibitor", link: '/products/corrosion-inhibitor/ph-booster-corrosion-inhibitor' },
+      { name: "Sodium Molybdate", link: '/products/corrosion-inhibitor/sodium-molybdate' },
+    ],
+  }
 ];
 
 type Market = { market: string; points: string; leadTime: string; route: string; link: string };
@@ -113,7 +196,7 @@ const FAQS = [
   {
     question: 'Are your RO antiscalants certified for drinking water?',
     answer:
-      'Yes. The RO antiscalants are NSF/ANSI 60 certified for potable water, dosed at 2–5 ppm in the RO feed; the membrane antiscalant grade runs 3–8 ppm, inhibits silica up to 200 ppm and holds an LSI of up to +3.0. Each batch ships with its Certificate of Analysis and Safety Data Sheet.',
+      'Ask for the NSF/ANSI 60 certificate with the quotation: certification is held per product grade, so the grade quoted for a potable-water plant is confirmed against its certificate before supply. The RO antiscalant is dosed at 2–5 ppm in the RO feed; the membrane antiscalant grade runs 3–8 ppm, inhibits silica up to 200 ppm and holds an LSI of up to +3.0. Each batch ships with its Certificate of Analysis and Safety Data Sheet.',
   },
 ];
 
@@ -225,6 +308,26 @@ const WaterTreatmentChemicalsGcc = () => {
                 <Link to="/chemical-supplier/hydrochloric-acid-oman" className="text-primary hover:underline">hydrochloric acid</Link>.
                 Dosing: <Link to="/tools/dosing-calculator" className="text-primary hover:underline">chlorine and dechlorination calculator</Link>.
               </p>
+              <h3 className="text-xl font-semibold text-foreground mt-10 mb-3">The full water treatment range</h3>
+              <p className="text-muted-foreground mb-4">
+                Every other water treatment, RO, cooling-water and corrosion-control product we supply from Muscat stock, by category.
+              </p>
+              <div className="grid md:grid-cols-2 gap-6">
+                {RANGE.map((g) => (
+                  <div key={g.title}>
+                    <h4 className="font-semibold text-foreground mb-2">
+                      <Link to={g.category} className="hover:underline">{g.title}</Link>
+                    </h4>
+                    <ul className="space-y-1 text-sm">
+                      {g.items.map((i) => (
+                        <li key={i.link}>
+                          <Link to={i.link} className="text-primary hover:underline">{i.name}</Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -321,7 +424,7 @@ const WaterTreatmentChemicalsGcc = () => {
                 <p className="text-muted-foreground leading-relaxed">
                   A batch Certificate of Analysis, a GHS Safety Data Sheet in English and Arabic, a Technical Data Sheet,
                   a Certificate of Origin attested by the Oman Chamber of Commerce and an HS-coded commercial invoice.
-                  The RO antiscalants carry NSF/ANSI 60 certification for potable water. For Saudi Arabia we support the
+                  For potable-water plants, the NSF/ANSI 60 certificate of the antiscalant grade quoted is provided on request. For Saudi Arabia we support the
                   SASO conformity paperwork your importer files, and for every regulated product (hypochlorite, caustic
                   soda, ferric chloride) permit guidance is given per destination before shipment. ISO 9001:2015 and JSRS
                   registration documents are available for vendor qualification.
