@@ -727,3 +727,29 @@ Append-only. One row per check per run, written by the `running-search-operation
 | 2026-11-17 | google | buy isopropyl alcohol in oman (30) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
 | 2026-11-17 | google | buy methanol in oman (31) | product panel | — |  | omanmethanol.com | pws=0 gl=om fetched, top 9 (core update) |
 | 2026-11-17 | google | buy acetic acid in oman (32) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-18 | google | chemical suppliers oman | /chemical-suppliers-oman | **1** |  | gcoman.com | pws=0 gl=om navigated (core update) |
+| 2026-11-18 | google | nitric acid supplier saudi arabia (R1) | product panel | — |  | nassguard.sa | pws=0 gl=sa fetched, top 9 (core update) |
+| 2026-11-18 | google | nitric acid supplier riyadh (R2) | product panel | — |  | nassguard.sa | pws=0 gl=sa fetched, top 9 (core update) |
+| 2026-11-18 | google | nitric acid supplier dammam (R3) | product panel | — |  | nassguard.sa | pws=0 gl=sa fetched, top 9 (core update) |
+| 2026-11-18 | google | calcium hypochlorite supplier uae (R4) | product panel | — |  | chemstock.ae | pws=0 gl=ae fetched, top 9 (core update) |
+| 2026-11-18 | google | calcium hypochlorite supplier dubai (R5) | product panel | — |  | hazchem.ae | pws=0 gl=ae fetched, top 9 (core update) |
+| 2026-11-18 | google | calcium hypochlorite 70% uae (R6) | product panel | — |  | chemstock.ae | pws=0 gl=ae fetched, top 9 (core update) |
+| 2026-11-18 | google | calcium hypochlorite supplier bahrain (R7) | product panel | — |  | aleradahchemicals.com | pws=0 gl=bh fetched, top 9 (core update) |
+| 2026-11-18 | google | nitric acid supplier oman (R8) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-18 | google | sodium hypochlorite supplier oman (R9) | product panel | — |  | omanchlorine.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-18 | google | hydrochloric acid supplier oman (R10) | product panel | — |  | omanchlorine.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-18 | google | hydrochloric acid supplier sohar (R11) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-18 | google | caustic soda supplier oman (R12) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-18 | google | buy calcium chloride in oman (33) | product panel | — |  | madeinomangate.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-18 | google | buy calcium hypochlorite in oman (34) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-18 | google | buy poly aluminium chloride in oman (35) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-18 | google | buy bentonite in oman (36) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-18 | google | buy soda ash in oman (37) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-18 | google | buy citric acid in oman (38) | product panel | — |  | talabat.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-18 | google | buy ethylene glycol in oman (39) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-18 | google | buy corrosion inhibitor in oman (40) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-18 | google | buy lubricants in oman (41) | product panel | — |  | avicenonline.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-18 | google | buy potassium chloride in oman (42) | product panel | — |  | noon.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-18 | google | nitric acid price oman (43) | product panel | — |  | uvwater.biz | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-18 | google | urea price oman (44) | product panel | — |  | urea-prices.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-18 | google | caustic soda price oman (45) | product panel | — |  | uvwater.biz | pws=0 gl=om fetched, top 9 (core update) |
