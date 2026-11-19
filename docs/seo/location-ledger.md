@@ -753,3 +753,28 @@ Append-only. One row per check per run, written by the `running-search-operation
 | 2026-11-18 | google | nitric acid price oman (43) | product panel | — |  | uvwater.biz | pws=0 gl=om fetched, top 9 (core update) |
 | 2026-11-18 | google | urea price oman (44) | product panel | — |  | urea-prices.com | pws=0 gl=om fetched, top 9 (core update) |
 | 2026-11-18 | google | caustic soda price oman (45) | product panel | — |  | uvwater.biz | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-19 | google | chemical supplier in oman | /chemical-suppliers-oman | **1** |  | gcoman.com | pws=0 gl=om navigated (core update) |
+| 2026-11-19 | google | nitric acid supplier saudi arabia (R1) | product panel | — |  | nassguard.sa | pws=0 gl=sa fetched, top 9 (core update) |
+| 2026-11-19 | google | nitric acid supplier riyadh (R2) | product panel | — |  | nassguard.sa | pws=0 gl=sa fetched, top 9 (core update) |
+| 2026-11-19 | google | nitric acid supplier dammam (R3) | product panel | — |  | nassguard.sa | pws=0 gl=sa fetched, top 9 (core update) |
+| 2026-11-19 | google | calcium hypochlorite supplier uae (R4) | product panel | — |  | chemstock.ae | pws=0 gl=ae fetched, top 9 (core update) |
+| 2026-11-19 | google | calcium hypochlorite supplier dubai (R5) | product panel | — |  | hazchem.ae | pws=0 gl=ae fetched, top 9 (core update) |
+| 2026-11-19 | google | calcium hypochlorite 70% uae (R6) | product panel | — |  | chemstock.ae | pws=0 gl=ae fetched, top 9 (core update) |
+| 2026-11-19 | google | calcium hypochlorite supplier bahrain (R7) | product panel | — |  | aleradahchemicals.com | pws=0 gl=bh fetched, top 9 (core update) |
+| 2026-11-19 | google | nitric acid supplier oman (R8) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-19 | google | sodium hypochlorite supplier oman (R9) | product panel | — |  | omanchlorine.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-19 | google | hydrochloric acid supplier oman (R10) | product panel | — |  | omanchlorine.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-19 | google | hydrochloric acid supplier sohar (R11) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-19 | google | caustic soda supplier oman (R12) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-19 | google | hydrochloric acid price oman (46) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-19 | google | sodium hypochlorite price oman (47) | product panel | — |  | uvwater.biz | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-19 | google | hydrogen peroxide price oman (48) | product panel | — |  | gcc.luluhypermarket.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-19 | google | sulphuric acid price oman (49) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-19 | google | glycerine price oman (50) | product panel | — |  | gcc.luluhypermarket.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-19 | google | isopropyl alcohol price oman (51) | product panel | — |  | noon.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-19 | google | methanol price oman (52) | product panel | — |  | hospitalshop.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-19 | google | acetic acid price oman (53) | product panel | — |  | muscatchemical.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-19 | google | calcium chloride price oman (54) | product panel | — |  | uvwater.biz | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-19 | google | calcium hypochlorite price oman (55) | product panel | — |  | noon.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-19 | google | poly aluminium chloride price oman (56) | product panel | — |  | uvwater.biz | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-19 | google | bentonite price oman (57) | product panel | — |  | solarenergyoman.com | pws=0 gl=om fetched, top 9 (core update) |
