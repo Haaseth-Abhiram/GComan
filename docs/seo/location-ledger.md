@@ -805,3 +805,8 @@ Append-only. One row per check per run, written by the `running-search-operation
 | 2026-11-22 | google | isopropyl alcohol supplier oman (9) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
 | 2026-11-22 | google | methanol supplier oman (10) | product panel | — |  | omanmethanol.com | pws=0 gl=om fetched, top 9 (core update) |
 | 2026-11-22 | maps | chemical suppliers in oman | GBP | **3** |  | Green Port Chemical Suppliers In Muscat | Muscat 23.588,58.383 12z, signed in |
+| 2026-11-22 | bing | chemical suppliers in oman | /chemical-suppliers-oman | 2 |  | omanchem.com | cc=om navigated (11-13: 2) |
+| 2026-11-22 | bing | nitric acid supplier oman | /chemical-supplier/nitric-acid-oman | 20 | /products/acids/nitric-acid (legacy stub) | omanchem.com | cc=om navigated, top 20 (11-13: 1; 11-15: —) |
+| 2026-11-22 | bing | sodium hypochlorite supplier oman | /chemical-supplier/sodium-hypochlorite-oman | — |  | muscatchemical.com | cc=om navigated, top 10 (11-13: 1 via product page; 11-15: —) |
+| 2026-11-22 | bing | hydrochloric acid supplier oman | /chemical-supplier/hydrochloric-acid-oman | **1** | also 4: /products/water-treatment/… | gcoman.com | cc=om navigated (11-13: 1) |
+| 2026-11-22 | bing | caustic soda supplier oman | /chemical-supplier/caustic-soda-oman | 4 |  | muscatchemical.com | cc=om navigated (11-13: 4) |
