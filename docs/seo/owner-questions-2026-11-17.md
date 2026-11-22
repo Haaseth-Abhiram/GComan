@@ -87,3 +87,13 @@ Every open business fact from the Arabic batches 7–24 and the water / oil & ga
 | Diesel exhaust fluid | Does the CoA report ISO 22241-1 density, refractive index and biuret? |
 | Lubricants blog post and category page | Both state "authorised distributor of Shell, Mobil and Castrol" (and GP). Confirm, or tell us the correct wording (question A3) |
 
+
+## F. Added 22 Nov (old-template rewrites, batch 1)
+
+| Product | Question |
+|---|---|
+| Ethanol 70% (food) | Is there a food-grade specification for it, and from which source? |
+| Sodium hypochlorite (food) | Is a concentration certificate issued with each lot? 60 L pack real? Do we supply chlorine test strips / photometer kits (an FAQ says so)? |
+| NaOH pellets (lab) | Do the standardised 0.1 N / 1 N solutions and a low-carbonate grade exist? Can "AR" stay in the page title without an ACS/AR certificate? |
+| Caustic potash | Food grade E525 obtainable? KOH delivery times (same-day Muscat, GCC 2–7 days, Sohar export) still current? |
+| All five | CoA with every lot? |
