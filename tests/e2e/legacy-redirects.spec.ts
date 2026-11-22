@@ -137,7 +137,7 @@ test.describe('Legacy URL redirects — static stubs (built site only)', () => {
     const path = process.env.BASE_URL ? '/products/acids/nitric-acid' : '/products/acids/nitric-acid/';
     const res = await request.get(path, { maxRedirects: 0 });
     const html = await res.text();
-    expect(html).toContain('<link rel="canonical" href="https://gcoman.com/products/lab-chemicals/nitric-acid-lab">');
+    expect(html).toContain('<link rel="canonical" href="https://gcoman.com/chemical-supplier/nitric-acid-oman">');
     expect(html).toContain('http-equiv="refresh"');
     expect(html).not.toContain('Chemical Suppliers in Oman &amp; GCC');
   });

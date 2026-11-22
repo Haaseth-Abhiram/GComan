@@ -196,7 +196,7 @@
 # Old /products/acids/* category (acids → lab-chemicals / water-treatment / oilfield)
 /products/acids/citric-acid             /products/food-beverage/citric-acid-anhydrous-food    301
 /products/acids/acetic-acid             /products/oilfield/acetic-acid                     301
-/products/acids/nitric-acid             /products/lab-chemicals/nitric-acid-lab             301
+/products/acids/nitric-acid             /chemical-supplier/nitric-acid-oman             301
 /products/acids/phosphoric-acid         /products/lab-chemicals/phosphoric-acid-lab         301
 /products/acids/hydrochloric-acid       /products/lab-chemicals/hydrochloric-acid-lab       301
 /products/acids/sulfuric-acid           /products/lab-chemicals/sulfuric-acid-lab           301

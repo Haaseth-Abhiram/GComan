@@ -32,7 +32,10 @@ const EXACT_REDIRECTS = new Map<string, string>([
   // Old /products/acids/* → new categories
   ['/products/acids/citric-acid', '/products/food-beverage/citric-acid-anhydrous-food'],
   ['/products/acids/acetic-acid', '/products/oilfield/acetic-acid'],
-  ['/products/acids/nitric-acid', '/products/lab-chemicals/nitric-acid-lab'],
+  // Repointed 2026-11-22: Bing kept this legacy URL as our only nitric result
+  // (position 20) four weeks after the stub shipped, and sent its signal to the
+  // lab-grade page. The industrial buyer's page is the Oman nitric hub.
+  ['/products/acids/nitric-acid', '/chemical-supplier/nitric-acid-oman'],
   ['/products/acids/phosphoric-acid', '/products/lab-chemicals/phosphoric-acid-lab'],
   ['/products/acids/hydrochloric-acid', '/products/lab-chemicals/hydrochloric-acid-lab'],
   ['/products/acids/sulfuric-acid', '/products/lab-chemicals/sulfuric-acid-lab'],
