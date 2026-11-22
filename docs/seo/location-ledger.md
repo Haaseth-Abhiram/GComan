@@ -778,3 +778,30 @@ Append-only. One row per check per run, written by the `running-search-operation
 | 2026-11-19 | google | calcium hypochlorite price oman (55) | product panel | — |  | noon.com | pws=0 gl=om fetched, top 9 (core update) |
 | 2026-11-19 | google | poly aluminium chloride price oman (56) | product panel | — |  | uvwater.biz | pws=0 gl=om fetched, top 9 (core update) |
 | 2026-11-19 | google | bentonite price oman (57) | product panel | — |  | solarenergyoman.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-20 | google | chemical supplier in muscat | /chemicals/muscat | **1** | / (homepage) | gcoman.com | pws=0 gl=om navigated (core update) |
+| 2026-11-22 | google | chemical suppliers in oman | /chemical-suppliers-oman | **1** | / (homepage) | gcoman.com | pws=0 gl=om navigated (core update) |
+| 2026-11-22 | google | nitric acid supplier saudi arabia (R1) | product panel | — |  | nassguard.sa | pws=0 gl=sa fetched, top 9 (core update) |
+| 2026-11-22 | google | nitric acid supplier riyadh (R2) | product panel | — |  | nassguard.sa | pws=0 gl=sa fetched, top 9 (core update) |
+| 2026-11-22 | google | nitric acid supplier dammam (R3) | product panel | — |  | nassguard.sa | pws=0 gl=sa fetched, top 9 (core update) |
+| 2026-11-22 | google | calcium hypochlorite supplier uae (R4) | product panel | — |  | chemstock.ae | pws=0 gl=ae fetched, top 9 (core update) |
+| 2026-11-22 | google | calcium hypochlorite supplier dubai (R5) | product panel | — |  | hazchem.ae | pws=0 gl=ae fetched, top 9 (core update) |
+| 2026-11-22 | google | calcium hypochlorite 70% uae (R6) | product panel | — |  | chemstock.ae | pws=0 gl=ae fetched, top 9 (core update) |
+| 2026-11-22 | google | calcium hypochlorite supplier bahrain (R7) | product panel | — |  | oozechem.com | pws=0 gl=bh fetched, top 9 (core update) |
+| 2026-11-22 | google | nitric acid supplier oman (R8) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-22 | google | sodium hypochlorite supplier oman (R9) | product panel | — |  | omanchlorine.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-22 | google | hydrochloric acid supplier oman (R10) | product panel | — |  | omanchlorine.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-22 | google | hydrochloric acid supplier sohar (R11) | product panel | — |  | soharchemical.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-22 | google | caustic soda supplier oman (R12) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-22 | google | soda ash price oman (58) | product panel | — |  | noon.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-22 | google | citric acid price oman (59) | product panel | — |  | talabat.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-22 | google | ethylene glycol price oman (60) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-22 | google | corrosion inhibitor price oman (61) | product panel | — |  | noon.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-22 | google | lubricants price oman (62) | product panel | — |  | noon.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-22 | google | potassium chloride price oman (63) | product panel | — |  | noon.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-22 | google | urea supplier oman (2) | product panel | — |  | muscatfertilizer.net | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-22 | google | hydrogen peroxide supplier oman (6) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-22 | google | sulphuric acid supplier oman (7) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-22 | google | glycerine supplier oman (8) | product panel | — |  | sebacic.co | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-22 | google | isopropyl alcohol supplier oman (9) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-22 | google | methanol supplier oman (10) | product panel | — |  | omanmethanol.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-22 | maps | chemical suppliers in oman | GBP | **3** |  | Green Port Chemical Suppliers In Muscat | Muscat 23.588,58.383 12z, signed in |
