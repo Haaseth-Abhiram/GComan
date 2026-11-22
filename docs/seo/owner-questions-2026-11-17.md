@@ -106,3 +106,13 @@ Every open business fact from the Arabic batches 7–24 and the water / oil & ga
 | Tris base | 99.8% or 99.9%? Molecular-biology (DNase/RNase-free) grade really stocked? (the page title says so) 5 kg pack? |
 | Magnesium sulphate (lab) | Both anhydrous and heptahydrate in 500 g / 1 kg / 5 kg? DNase-free grade real? |
 | HCl (lab), ammonia (lab), MgSO4 | ACS reagent grade: do lots come with an ACS certificate? 0.1 N / 1 N HCl in all three bottle sizes? |
+
+## H. Added 22 Nov (old-template rewrites, batch 3)
+
+| Product | Question |
+|---|---|
+| Sodium bicarbonate (food) | Does it meet USP / BP / FCC / JECFA? CoA issued? |
+| Urea (food/feed) | Food grade really (E927b specification)? The page title says "Food Grade" |
+| Caustic soda liquid (food) | Codex / FCC compliant; which documents come with it? Is "test kit support" (FAQ) a real service? |
+| Calcium carbonate (food) | Precipitated, ground, or both? E170 / FCC compliant; CoA issued? |
+| Metasilicate pentahydrate | pH of a 1% solution from the supplier's data sheet (page now says about 12.6) |
