@@ -810,3 +810,28 @@ Append-only. One row per check per run, written by the `running-search-operation
 | 2026-11-22 | bing | sodium hypochlorite supplier oman | /chemical-supplier/sodium-hypochlorite-oman | — |  | muscatchemical.com | cc=om navigated, top 10 (11-13: 1 via product page; 11-15: —) |
 | 2026-11-22 | bing | hydrochloric acid supplier oman | /chemical-supplier/hydrochloric-acid-oman | **1** | also 4: /products/water-treatment/… | gcoman.com | cc=om navigated (11-13: 1) |
 | 2026-11-22 | bing | caustic soda supplier oman | /chemical-supplier/caustic-soda-oman | 4 |  | muscatchemical.com | cc=om navigated (11-13: 4) |
+| 2026-11-23 | google | chemical supplier in oman | /chemical-suppliers-oman | **1** | / (homepage) | gcoman.com | pws=0 gl=om navigated |
+| 2026-11-23 | google | nitric acid supplier saudi arabia (R1) | product panel | — |  | nassguard.sa | pws=0 gl=sa fetched, top 9 (core update) |
+| 2026-11-23 | google | nitric acid supplier riyadh (R2) | product panel | — |  | nassguard.sa | pws=0 gl=sa fetched, top 9 (core update) |
+| 2026-11-23 | google | nitric acid supplier dammam (R3) | product panel | — |  | nassguard.sa | pws=0 gl=sa fetched, top 9 (core update) |
+| 2026-11-23 | google | calcium hypochlorite supplier uae (R4) | product panel | — |  | chemstock.ae | pws=0 gl=ae fetched, top 9 (core update) |
+| 2026-11-23 | google | calcium hypochlorite supplier dubai (R5) | product panel | — |  | hazchem.ae | pws=0 gl=ae fetched, top 9 (core update) |
+| 2026-11-23 | google | calcium hypochlorite 70% uae (R6) | product panel | — |  | chemstock.ae | pws=0 gl=ae fetched, top 9 (core update) |
+| 2026-11-23 | google | calcium hypochlorite supplier bahrain (R7) | product panel | — |  | oozechem.com | pws=0 gl=bh fetched, top 9 (core update) |
+| 2026-11-23 | google | nitric acid supplier oman (R8) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-23 | google | sodium hypochlorite supplier oman (R9) | product panel | — |  | omanchlorine.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-23 | google | hydrochloric acid supplier oman (R10) | product panel | — |  | omanchlorine.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-23 | google | hydrochloric acid supplier sohar (R11) | product panel | **4** | /chemical-supplier/hydrochloric-acid-oman | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-23 | google | caustic soda supplier oman (R12) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-23 | google | acetic acid supplier oman (11) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-23 | google | calcium chloride supplier oman (12) | product panel | — |  | omanchlorine.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-23 | google | calcium hypochlorite supplier oman (13) | product panel | — |  | chemstock.om | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-23 | google | poly aluminium chloride supplier oman (14) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-23 | google | bentonite supplier oman (15) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-23 | google | soda ash supplier oman (16) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-23 | google | citric acid supplier oman (17) | product panel | — |  | uvwater.biz | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-23 | google | ethylene glycol supplier oman (18) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-23 | google | corrosion inhibitor supplier oman (19) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-23 | google | lubricants supplier oman (20) | product panel | — |  | oomco.om | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-23 | google | potassium chloride supplier oman (21) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
+| 2026-11-23 | google | buy nitric acid in oman (22) | product panel | — |  | omanchem.com | pws=0 gl=om fetched, top 9 (core update) |
