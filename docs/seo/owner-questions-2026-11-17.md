@@ -126,3 +126,13 @@ Every open business fact from the Arabic batches 7–24 and the water / oil & ga
 | Citric acid anhydrous | Is powder sold in bulk / by the pallet as well as 25 kg bags or cartons? CoA with every batch? |
 | Methanol technical | Drums, IBCs, ISO tanks and bulk all supplied? |
 | KOH pellets (lab) | AR / ACS grade really? (page title says "AR Grade") Low-carbonate grade real? |
+
+## J. Added 23 Nov (old-template rewrites, batch 5)
+
+| Product | Question |
+|---|---|
+| Hexane (lab) | True n-hexane or mixed hexanes, at what n-hexane %? ACS / HPLC grades really available? (the lab hub says HPLC hexane) |
+| Dichloromethane (lab) | ACS / HPLC grade? Which stabiliser (amylene or methanol/ethanol)? Is "laboratory account registration" required? |
+| Phenolphthalein | ACS indicator specification real? Powder and tablets both stocked? |
+| KCl (lab) | ACS grade, cell-culture suitability, "low in sodium and heavy metals" real? |
+| Propylene glycol (food) | USP / EP / FCC documentation real? E1520 compliance? 99.5% or 99.8% (the MPG page says 99.8%)? Title says "USP" |
