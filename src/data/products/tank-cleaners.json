@@ -154,7 +154,7 @@
   {
     "id": "methanol-tech-grade-cleaner",
     "title": "Methanol Tech Grade (Tank Cleaning)",
-    "description": "Technical grade methanol for industrial cleaning and degreasing.",
+    "description": "Technical grade methanol for drying and solvent flushing of tanks, vessels and pipelines.",
     "category": "tank-cleaners",
     "image": "https://gcoman.com/images/products/chemical-drums.webp",
     "iconName": "SprayCan",
@@ -175,16 +175,16 @@
         "technical methanol cleaner Sohar",
         "MeOH tank cleaner Oman"
       ],
-      "longDescription": "Technical Grade Methanol supplier in Oman - Global Chemicals LLC provides industrial methanol for tank cleaning, degreasing, and solvent applications in Muscat, Sohar, Duqm, Salalah. Our technical methanol (CH3OH) is an effective polar solvent for removing water, glycol and polar organic residues from storage tanks and equipment. The fast-evaporating properties ensure rapid drying with no residue, making it ideal for tank changeovers and equipment cleaning. Used for drying vessels and lines after water washing or hydrotest, cleaning process vessels, and solvent flushing operations. Methanol provides excellent solvency with complete miscibility in water and most organic solvents. Widely used in refineries, chemical plants, terminals, and industrial maintenance operations across Oman. Available in technical grade meeting industrial specifications.",
+      "longDescription": "Methanol (methyl alcohol, CH3OH, CAS 67-56-1) is the simplest alcohol. This listing is the technical grade, 99% minimum: a clear, colourless liquid boiling at 64.7 °C with a flash point of 11 °C, supplied in drums, IBCs, ISO tanks and bulk for refineries, gas plants, terminals, pipeline and commissioning contractors and maintenance teams that use it to dry and solvent-flush tanks, vessels and lines.\n\nIts value in cleaning comes from mixing with water in all proportions and evaporating quickly without residue. After hydrotesting or water washing, a methanol rinse, or a methanol slug driven between pigs, takes up the remaining film of water so the line or vessel dries much faster than with air alone; in gas pipelines and plant this also removes free water that would otherwise form hydrates at start-up. It dissolves glycols and other polar residues, so it is used to flush them out before a product changeover, and as a final rinse to remove water before equipment goes into dry service. It is a poor solvent for oils, greases, waxes and heavy hydrocarbon deposits: those need an alkaline detergent, a hydrocarbon solvent or a dedicated tank cleaner, with methanol used, if at all, only for the final drying stage.\n\nThe site lists several grades of the same chemical: this technical grade for cleaning and drying, a technical grade for gas hydrate inhibition in the oilfield range, an industrial grade of 99.85% minimum with water below 0.1%, and a laboratory grade in 1 L to 4 L bottles. Where drying is the aim, methanol with less water leaves less water behind, so ask for the water content on the certificate. It is a far more dangerous solvent than its mild smell suggests, and its use in tanks and vessels belongs under a permit system with gas testing, not in open parts washing.\n\nHandling and storage: methanol is highly flammable and toxic (H225, H301, H311, H331, H370): toxic if swallowed, in contact with skin or if inhaled, and damaging to the optic nerve and central nervous system; small amounts swallowed can cause blindness or death, and it is absorbed through the skin. It travels as UN 1230, Class 3 with subsidiary hazard 6.1. The vapour is heavier than air and flammable between about 6% and 36% in air, and methanol burns with a nearly invisible flame in daylight. Never let anyone enter a tank where it has been used until the space has been ventilated, gas-tested and released under a confined-space permit; earth and bond containers and pumps, use spark-free tools and explosion-protected equipment, and collect washings as hazardous waste. Wear butyl-rubber gloves (nitrile protects only briefly), goggles and protective clothing, with respiratory protection where vapour is not controlled. Keep it away from oxidisers, strong acids, alkali metals, aluminium and magnesium, and store it closed in a cool, ventilated, bunded flammables area.\n\nIt is supplied in drums, IBCs, ISO tanks and bulk with a safety data sheet. Ask for the certificate of analysis, including water content, with your quote, stating pack type and volume.",
       "applications": [
         "Tank cleaning and residue removal",
         "Vessel and pipeline drying after hydrotest",
-        "Equipment degreasing and cleaning",
+        "Final solvent rinse to remove water from equipment",
         "Solvent flushing operations",
-        "Tank pre-entry preparation",
+        "Pipeline dewatering with methanol slugs between pigs",
         "Pipeline cleaning",
         "Process vessel maintenance",
-        "Parts washing and decontamination"
+        "Flushing glycol and polar residues before changeover"
       ],
       "technicalSpecs": [
         "Purity: 99%+ technical grade",
@@ -193,7 +193,7 @@
         "Flash point: 11°C (highly flammable)",
         "Rapid evaporation rate",
         "Complete water miscibility",
-        "Excellent solvent properties",
+        "Hazard: highly flammable and toxic — UN 1230, Class 3 (6.1)",
         "Available in drums, IBCs, ISO tanks, bulk"
       ],
       "faqs": [
@@ -203,7 +203,7 @@
         },
         {
           "question": "What is Methanol Tech Grade used for?",
-          "answer": "Methanol Tech Grade is commonly used for Tank cleaning and residue removal, vessel and pipeline drying after hydrotest, and Equipment degreasing and cleaning. Global Chemicals LLC supplies Methanol Tech Grade across Oman and the wider GCC with full SDS documentation to support these applications."
+          "answer": "Methanol Tech Grade is commonly used for Tank cleaning and residue removal, vessel and pipeline drying after hydrotest, and solvent flushing operations. Global Chemicals LLC supplies Methanol Tech Grade across Oman and the wider GCC with full SDS documentation to support these applications."
         }
       ],
       "wikiUrl": "https://en.wikipedia.org/wiki/Methanol"
