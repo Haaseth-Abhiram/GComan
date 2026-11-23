@@ -116,3 +116,13 @@ Every open business fact from the Arabic batches 7–24 and the water / oil & ga
 | Caustic soda liquid (food) | Codex / FCC compliant; which documents come with it? Is "test kit support" (FAQ) a real service? |
 | Calcium carbonate (food) | Precipitated, ground, or both? E170 / FCC compliant; CoA issued? |
 | Metasilicate pentahydrate | pH of a 1% solution from the supplier's data sheet (page now says about 12.6) |
+
+## I. Added 22–23 Nov (old-template rewrites, batch 4)
+
+| Product | Question |
+|---|---|
+| Paraffin oil (construction) | Is a food-grade option really available (spec line)? Which viscosity grades are stocked? |
+| Potassium sorbate | 99% minimum and Muscat stock still correct? |
+| Citric acid anhydrous | Is powder sold in bulk / by the pallet as well as 25 kg bags or cartons? CoA with every batch? |
+| Methanol technical | Drums, IBCs, ISO tanks and bulk all supplied? |
+| KOH pellets (lab) | AR / ACS grade really? (page title says "AR Grade") Low-carbonate grade real? |
