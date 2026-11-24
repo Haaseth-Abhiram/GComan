@@ -618,6 +618,12 @@ const Login = () => {
                 )}
               </div>
 
+              <div className="text-center text-sm">
+                <Link to="/proposal-tracker/login" className="inline-flex items-center gap-1 font-medium text-primary hover:underline">
+                  Proposal Tracker login (Admin / Engineers)
+                </Link>
+              </div>
+
               <div className="lg:hidden pt-4">
                 <Link to="/" className="flex items-center justify-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
                   <ArrowLeft className="h-4 w-4" />

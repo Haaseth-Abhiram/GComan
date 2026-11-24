@@ -129,12 +129,20 @@ const Navigation = () => {
                 </button>
               </div>
             ) : (
+              <>
               <Link
                 to={withLangPrefix(prefix, '/login')}
                 className="text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 Login
               </Link>
+              <Link
+                to="/proposal-tracker/login"
+                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
+                Proposal Login
+              </Link>
+              </>
             )}
           </div>
         </div>
@@ -320,6 +328,7 @@ const Navigation = () => {
                   </button>
                 </>
               ) : (
+                <>
                 <Link
                   to={withLangPrefix(prefix, '/login')}
                   onClick={() => setIsOpen(false)}
@@ -327,6 +336,14 @@ const Navigation = () => {
                 >
                   Login
                 </Link>
+                <Link
+                  to="/proposal-tracker/login"
+                  onClick={() => setIsOpen(false)}
+                  className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1"
+                >
+                  Proposal Login
+                </Link>
+                </>
               )}
             </div>
           </div>
