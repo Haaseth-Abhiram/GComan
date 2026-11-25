@@ -107,7 +107,7 @@ export interface DbState {
 /** What the signed-in user is allowed to see. */
 export interface DbView extends DbState { me: (Subject & { name: string }) | null }
 
-const KEY = 'gc-portal-db-v10'; // v9: RFQ source; v8: email log; v7: local-date seeds + alert fields (reseeds demo data)
+const KEY = 'gc-portal-db-v11'; // v11: demo data removed (forces browsers holding v10 sample data to start empty); // v9: RFQ source; v8: email log; v7: local-date seeds + alert fields (reseeds demo data)
 const uid = () => (crypto.randomUUID ? crypto.randomUUID() : String(Date.now() + Math.random()));
 const nowIso = () => new Date().toISOString();
 /** Local calendar date as YYYY-MM-DD (toISOString would be UTC and can be a day off near midnight). */
