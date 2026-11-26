@@ -106,7 +106,7 @@ const ProposalTracker = () => {
           </header>
           <main className="flex-1 p-4 md:p-6 overflow-auto">
             <div className="rounded-md border border-amber-300 bg-amber-50 px-4 py-2 text-sm text-amber-900 mb-6">
-              Prototype — fake login; data is stored in this browser only (not a database).
+              Prototype — your login is real, but proposal data is stored in this browser only (not the database yet).
             </div>
             <div key={pathname} className="animate-in fade-in slide-in-from-bottom-2 duration-300">
             <Routes>

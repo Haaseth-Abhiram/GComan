@@ -12,6 +12,7 @@ import { Eye, EyeOff, Mail, Lock, ArrowLeft } from 'lucide-react';
 import { z } from 'zod';
 import logo from '@/assets/global-chemicals-logo.svg';
 import { supabase } from '@/integrations/supabase/client';
+import { destinationForUser } from '@/proposal-tracker/lib/accounts';
 
 
 // Validation schemas
@@ -90,17 +91,38 @@ const Login = () => {
   const nextParam = searchParams.get('next');
   const safeNext = nextParam && nextParam.startsWith('/') && !nextParam.startsWith('//') ? nextParam : '/';
 
+  // One login page for everyone: admins go to /admin, proposal engineers to
+  // /proposal-tracker, everyone else to ?next= or the homepage. A disabled
+  // engineer is signed straight back out.
+  const goAfterSignIn = async (userId: string, greet: boolean) => {
+    const dest = await destinationForUser(userId).catch(() => null);
+    if (dest === 'disabled') {
+      await supabase.auth.signOut();
+      toast({
+        title: "Account disabled",
+        description: "Your proposal engineer account has been disabled. Please contact your administrator.",
+        variant: "destructive",
+      });
+      return;
+    }
+    if (greet) {
+      toast({ title: "Login successful!", description: "Welcome back to Global Chemicals LLC" });
+    }
+    navigate(nextParam ? safeNext : (dest ?? safeNext));
+  };
+
   // Check if user is already logged in
   useEffect(() => {
     if (isRecoveryMode) return;
     const checkAuth = async () => {
       const { data: { session } } = await supabase.auth.getSession();
       if (session) {
-        navigate(safeNext);
+        void goAfterSignIn(session.user.id, false);
       }
     };
     checkAuth();
-  }, [navigate, isRecoveryMode, safeNext]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- run once per mode change; goAfterSignIn is recreated each render
+  }, [isRecoveryMode]);
 
   const handleNewPasswordSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -165,7 +187,13 @@ const Login = () => {
           lowerMessage.includes('failed to fetch') ||
           lowerMessage.includes('network error');
 
-        if (rawMessage.includes('Invalid login credentials')) {
+        if (lowerMessage.includes('banned')) {
+          toast({
+            title: "Account disabled",
+            description: "Your account has been disabled. Please contact your administrator.",
+            variant: "destructive"
+          });
+        } else if (rawMessage.includes('Invalid login credentials')) {
           toast({
             title: "Login failed",
             description: "Invalid email or password. Please try again.",
@@ -190,11 +218,7 @@ const Login = () => {
       }
 
       if (data.session) {
-        toast({
-          title: "Login successful!",
-          description: "Welcome back to Global Chemicals LLC",
-        });
-        navigate(safeNext);
+        await goAfterSignIn(data.session.user.id, true);
       }
 
     } catch (error) {
@@ -225,6 +249,7 @@ const Login = () => {
     try {
       // Validate input
       signupSchema.parse(signupData);
+
 
       // Create account with backend
       const { data, error } = await supabase.auth.signUp({
@@ -274,11 +299,11 @@ const Login = () => {
           title: "Account created successfully!",
           description: "Welcome to Global Chemicals LLC",
         });
-        navigate(safeNext);
+        await goAfterSignIn(data.session.user.id, false);
       } else {
         toast({
           title: "Account created!",
-          description: "Please check your email to confirm your account.",
+          description: "Please check your email to confirm your account, then sign in.",
         });
         setIsLogin(true);
         setSignupData({ name: '', email: '', password: '', confirmPassword: '' });
@@ -421,8 +446,8 @@ const Login = () => {
                 {isLogin ? 'Sign In to Your Account' : 'Create Your Account'}
               </CardTitle>
               <CardDescription className="text-center">
-                {isLogin 
-                  ? 'Enter your credentials to access your account' 
+                {isLogin
+                  ? 'Enter your credentials to access your account'
                   : 'Sign up to get started with Global Chemicals LLC'
                 }
               </CardDescription>
@@ -616,12 +641,6 @@ const Login = () => {
                     </Button>
                   </p>
                 )}
-              </div>
-
-              <div className="text-center text-sm">
-                <Link to="/proposal-tracker/login" className="inline-flex items-center gap-1 font-medium text-primary hover:underline">
-                  Proposal Tracker login (Admin / Engineers)
-                </Link>
               </div>
 
               <div className="lg:hidden pt-4">

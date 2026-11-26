@@ -1,3 +1,4 @@
+import { useTrackerBase } from '@/proposal-tracker/lib/base';
 import { Link } from 'react-router-dom';
 import { EngineerName } from '@/proposal-tracker/components/tracker/common';
 import { Eye } from 'lucide-react';
@@ -11,6 +12,7 @@ import { DataTable, PageHeader, daysUntil, fmtDate, useActor, type Column } from
 
 /** Admin: every proposal engineer with their workload at a glance. */
 const Engineers = () => {
+  const base = useTrackerBase();
   const actor = useActor();
   const db = useDb();
   if (!can(actor, 'rfq.viewAll')) return <PageHeader title="Engineers" description="Only Admins can view all engineers." />;
@@ -33,7 +35,7 @@ const Engineers = () => {
     { header: 'Overdue', cell: (e) => num(stats(e).overdue, true) },
     { header: 'Open tasks', cell: (e) => num(stats(e).openTasks), hideOnMobile: true },
     { header: 'Last daily update', cell: (e) => (stats(e).last ? fmtDate(stats(e).last!.date) : '—'), hideOnMobile: true, className: 'whitespace-nowrap' },
-    { header: 'Actions', cell: (e) => <Button asChild size="icon" variant="outline" title="View" aria-label="View"><Link to={`/proposal-tracker/engineers/${e.id}`}><Eye className="h-4 w-4" /></Link></Button> },
+    { header: 'Actions', cell: (e) => <Button asChild size="icon" variant="outline" title="View" aria-label="View"><Link to={`${base}/engineers/${e.id}`}><Eye className="h-4 w-4" /></Link></Button> },
   ];
 
   return (

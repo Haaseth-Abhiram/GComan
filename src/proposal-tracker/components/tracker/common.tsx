@@ -1,3 +1,4 @@
+import { useTrackerBase } from '@/proposal-tracker/lib/base';
 import { useMemo, useState, type ReactNode } from 'react';
 import { format, parseISO } from 'date-fns';
 import { Inbox, ChevronLeft, ChevronRight, Search } from 'lucide-react';
@@ -26,13 +27,14 @@ export const useActor = (): { id: string; role: Role; name: string; grants: Perm
 };
 /** An employee's name. For Admin, an engineer's name is a link to all of that engineer's projects. */
 export const EngineerName = ({ id }: { id?: string | null }) => {
+  const base = useTrackerBase();
   const actor = useActor();
   const { employees } = useDb();
   const e = employees.find((x) => x.id === id);
   if (!e) return <>—</>;
   if (e.role === 'engineer' && can(actor, 'rfq.viewAll')) {
     return (
-      <Link to={`/proposal-tracker/engineers/${e.id}`} title={`Open ${e.name}'s projects`} className="text-primary hover:underline underline-offset-2">
+      <Link to={`${base}/engineers/${e.id}`} title={`Open ${e.name}'s projects`} className="text-primary hover:underline underline-offset-2">
         {e.name}
       </Link>
     );

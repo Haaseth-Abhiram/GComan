@@ -1,3 +1,4 @@
+import { useTrackerBase } from '@/proposal-tracker/lib/base';
 import { useMemo } from 'react';
 import { EngineerName } from '@/proposal-tracker/components/tracker/common';
 import { Link, useNavigate } from 'react-router-dom';
@@ -25,6 +26,7 @@ const actIcon: Record<Activity['kind'], typeof Inbox> = {
 };
 
 const Dashboard = () => {
+  const base = useTrackerBase();
   const { user } = useAuth();
   const db = useDb();
   const name = useEmployeeName();
@@ -36,16 +38,16 @@ const Dashboard = () => {
   const r1 = useReveal();
   const r2 = useReveal();
   const r3 = useReveal();
-  const rfqLink = (id: string) => `/proposal-tracker/rfqs?view=${id}`;
+  const rfqLink = (id: string) => `${base}/rfqs?view=${id}`;
 
   const count = (s: string) => rfqs.filter((r) => r.status === s).length;
   const cards = [
-    { label: 'Total RFQs', value: rfqs.length, icon: FileStack, tone: 'bg-blue-500/10 text-blue-600', hint: scoped ? 'All registered RFQs' : 'RFQs assigned to you', to: '/proposal-tracker/rfqs' },
-    { label: 'Engineers', value: db.employees.filter((e) => e.role === 'engineer').length, icon: Users, tone: 'bg-teal-500/10 text-teal-600', hint: 'Proposal engineers', to: '/proposal-tracker/engineers' },
-    { label: 'Assigned RFQs', value: rfqs.filter((r) => r.primaryEngineerId).length, icon: UserCheck, tone: 'bg-indigo-500/10 text-indigo-600', hint: 'With a primary engineer', to: scoped ? '/proposal-tracker/assignment' : '/proposal-tracker/my-proposals' },
-    { label: 'In Progress', value: count('In Progress'), icon: FileText, tone: 'bg-sky-500/10 text-sky-600', hint: 'Proposals being prepared', to: '/proposal-tracker/rfqs?status=In%20Progress' },
-    { label: 'Submitted', value: count('Submitted'), icon: Send, tone: 'bg-purple-500/10 text-purple-600', hint: 'Awaiting customer decision', to: '/proposal-tracker/rfqs?status=Submitted' },
-    { label: 'Overdue', value: rfqs.filter(isOverdue).length, icon: AlarmClock, tone: 'bg-orange-500/10 text-orange-600', hint: 'Past deadline, not submitted', to: '/proposal-tracker/rfqs?status=Overdue' },
+    { label: 'Total RFQs', value: rfqs.length, icon: FileStack, tone: 'bg-blue-500/10 text-blue-600', hint: scoped ? 'All registered RFQs' : 'RFQs assigned to you', to: `${base}/rfqs` },
+    { label: 'Engineers', value: db.employees.filter((e) => e.role === 'engineer').length, icon: Users, tone: 'bg-teal-500/10 text-teal-600', hint: 'Proposal engineers', to: `${base}/engineers` },
+    { label: 'Assigned RFQs', value: rfqs.filter((r) => r.primaryEngineerId).length, icon: UserCheck, tone: 'bg-indigo-500/10 text-indigo-600', hint: 'With a primary engineer', to: scoped ? `${base}/assignment` : `${base}/my-proposals` },
+    { label: 'In Progress', value: count('In Progress'), icon: FileText, tone: 'bg-sky-500/10 text-sky-600', hint: 'Proposals being prepared', to: `${base}/rfqs?status=In%20Progress` },
+    { label: 'Submitted', value: count('Submitted'), icon: Send, tone: 'bg-purple-500/10 text-purple-600', hint: 'Awaiting customer decision', to: `${base}/rfqs?status=Submitted` },
+    { label: 'Overdue', value: rfqs.filter(isOverdue).length, icon: AlarmClock, tone: 'bg-orange-500/10 text-orange-600', hint: 'Past deadline, not submitted', to: `${base}/rfqs?status=Overdue` },
   ];
   const chart = RFQ_STATUSES.map((s) => ({ name: s, value: count(s) })).filter((x) => x.value > 0);
   const recent = [...rfqs].sort((a, b) => b.receivedDate.localeCompare(a.receivedDate)).slice(0, 6);
@@ -81,7 +83,7 @@ const Dashboard = () => {
               <ResponsiveContainer width="100%" height={290}>
                 <PieChart>
                   <Pie data={chart} dataKey="value" nameKey="name" innerRadius={62} outerRadius={95} paddingAngle={3} className="cursor-pointer"
-                    onClick={(d: { name: string }) => navigate(`/proposal-tracker/rfqs?status=${encodeURIComponent(d.name)}`)}>
+                    onClick={(d: { name: string }) => navigate(`${base}/rfqs?status=${encodeURIComponent(d.name)}`)}>
                     {chart.map((s) => <Cell key={s.name} fill={COLORS[s.name]} />)}
                   </Pie>
                   <Tooltip contentStyle={{ backgroundColor: 'hsl(var(--background))', border: '1px solid hsl(var(--border))', borderRadius: 8 }} />
@@ -182,7 +184,7 @@ const Dashboard = () => {
                     <TableCell className="hidden sm:table-cell">{w.m.pending}</TableCell>
                     <TableCell className="hidden sm:table-cell">{w.m.submitted}</TableCell>
                     <TableCell>{w.m.overdue > 0 ? <Badge variant="outline" className="bg-red-100 text-red-700 border-red-200">{w.m.overdue}</Badge> : 0}</TableCell>
-                    <TableCell><Link to={`/proposal-tracker/engineers/${w.id}`} className="text-primary underline text-sm">View</Link></TableCell>
+                    <TableCell><Link to={`${base}/engineers/${w.id}`} className="text-primary underline text-sm">View</Link></TableCell>
                   </TableRow>
                 ))}
               </TableBody>

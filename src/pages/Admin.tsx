@@ -1,4 +1,8 @@
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
+import { lazyRetry } from '@/lib/lazyRetry';
+
+// Lazy: keeps the tracker prototype out of the main admin bundle.
+const ProposalTrackerAdmin = lazyRetry(() => import('@/components/admin/ProposalTrackerAdmin'));
 import { useNavigate, Routes, Route, Link } from 'react-router-dom';
 import { useUserRole } from '@/hooks/useUserRole';
 import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
@@ -603,6 +607,14 @@ const Admin = () => {
                 <Route path="/ar-indexing" element={<ArabicIndexingMonitor />} />
                 <Route path="/search-console" element={<SearchConsoleDashboard />} />
                 <Route path="/seo-languages" element={<LanguageSeoComparison />} />
+                <Route
+                  path="/proposal-tracker/*"
+                  element={
+                    <Suspense fallback={<Loader2 className="h-6 w-6 animate-spin text-primary" />}>
+                      <ProposalTrackerAdmin />
+                    </Suspense>
+                  }
+                />
 
 
               </Routes>

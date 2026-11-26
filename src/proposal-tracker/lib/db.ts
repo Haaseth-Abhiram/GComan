@@ -116,13 +116,8 @@ export const todayStr = () => localDate(new Date());
 const off = (n: number) => { const d = new Date(); d.setDate(d.getDate() + n); return localDate(d); };
 const ago = (h: number) => new Date(Date.now() - h * 3_600_000).toISOString();
 
-// Demo roster: engineer codes P1..P10 are DATA. Nothing in the app logic refers to a specific engineer;
-// every screen is driven by the signed-in user's id.
-const ENGINEER_ROSTER: Array<[string, string]> = [
-  ['P1', 'Khalid Al Balushi'], ['P2', 'Fatma Al Harthi'], ['P3', 'Salim Al Rawahi'], ['P4', 'Aisha Al Busaidi'],
-  ['P5', 'Hamad Al Kindi'], ['P6', 'Mariam Al Lawati'], ['P7', 'Yousuf Al Habsi'], ['P8', 'Noor Al Siyabi'],
-  ['P9', 'Said Al Mahrouqi'], ['P10', 'Huda Al Farsi'],
-];
+// Engineers are NOT seeded: they are real accounts in the Supabase table
+// proposal_engineers, added by the admin, and copied in here by syncEngineers().
 const engId = (n: number) => `e-p${n}`;
 
 function seed(): DbState {
@@ -130,7 +125,6 @@ function seed(): DbState {
   const y = new Date().getFullYear();
   const employees: Employee[] = [
     { id: 'e-admin', code: 'ADM', name: 'Admin Demo', email: 'admin.demo@gcoman.com', role: 'admin' },
-    ...ENGINEER_ROSTER.map(([code, name]): Employee => ({ id: `e-${code.toLowerCase()}`, code, name, email: `${code.toLowerCase()}.demo@gcoman.com`, role: 'engineer' })),
   ];
 
   // [customer, project, receivedOffset, deadlineOffset, status, primary#, supporting#, progress, priority, pending, costing]
@@ -654,3 +648,24 @@ export const findLoginById = (id: string | null): LoginIdentity | null => {
 };
 /** Demo convenience only: the login page lists the seeded accounts. */
 export const listDemoLogins = (): LoginIdentity[] => state.employees.map(toIdentity);
+
+// ---------------------------------------------------------------------------
+// Engineer accounts come from Supabase (proposal_engineers); this copies them
+// into the local tracker store so assignments and labels use the real people.
+// ---------------------------------------------------------------------------
+const LEGACY_DEMO_ENGINEER = /^e-p\d+$/; // the old hard-coded P1..P10 demo records
+
+/**
+ * 'replace' (admin view, full list): engineers become exactly `engineers`.
+ * 'upsert'  (an engineer's own browser): add or refresh just these records.
+ * Either way the old demo engineers are removed. No-op when nothing changed.
+ */
+export function syncEngineers(engineers: Array<Pick<Employee, 'id' | 'code' | 'name' | 'email'>>, mode: 'replace' | 'upsert') {
+  const incoming: Employee[] = engineers.map((e) => ({ id: e.id, code: e.code, name: e.name, email: e.email, role: 'engineer' }));
+  const ids = new Set(incoming.map((e) => e.id));
+  const kept = state.employees.filter((e) =>
+    !ids.has(e.id) && !LEGACY_DEMO_ENGINEER.test(e.id) && (mode === 'upsert' || e.role !== 'engineer'));
+  const next = [...kept, ...incoming];
+  if (JSON.stringify(next) === JSON.stringify(state.employees)) return;
+  commit({ ...state, employees: next });
+}

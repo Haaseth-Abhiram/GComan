@@ -335,6 +335,42 @@ export type Database = {
         }
         Relationships: []
       }
+      proposal_engineers: {
+        Row: {
+          active: boolean
+          code: string
+          created_at: string
+          created_by: string | null
+          email: string
+          id: string
+          name: string
+          updated_at: string
+          user_id: string | null
+        }
+        Insert: {
+          active?: boolean
+          code: string
+          created_at?: string
+          created_by?: string | null
+          email: string
+          id?: string
+          name: string
+          updated_at?: string
+          user_id?: string | null
+        }
+        Update: {
+          active?: boolean
+          code?: string
+          created_at?: string
+          created_by?: string | null
+          email?: string
+          id?: string
+          name?: string
+          updated_at?: string
+          user_id?: string | null
+        }
+        Relationships: []
+      }
       site_analytics_snapshots: {
         Row: {
           avg_bounce_rate: number
@@ -410,6 +446,19 @@ export type Database = {
     }
     Functions: {
       add_admin_role: { Args: { user_email: string }; Returns: string }
+      admin_create_engineer: {
+        Args: { _code: string; _email: string; _name: string; _password: string }
+        Returns: string
+      }
+      admin_delete_engineer: { Args: { _engineer_id: string }; Returns: undefined }
+      admin_set_engineer_active: {
+        Args: { _active: boolean; _engineer_id: string }
+        Returns: undefined
+      }
+      admin_set_engineer_password: {
+        Args: { _engineer_id: string; _password: string }
+        Returns: undefined
+      }
       has_role: {
         Args: {
           _role: Database["public"]["Enums"]["app_role"]

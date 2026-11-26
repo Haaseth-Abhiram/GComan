@@ -1,3 +1,4 @@
+import { useTrackerBase } from '@/proposal-tracker/lib/base';
 import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ArrowLeft, Eye, NotebookPen } from 'lucide-react';
@@ -16,6 +17,7 @@ import type { Rfq } from '@/proposal-tracker/lib/db';
  * and the data layer would not return another engineer's records to them anyway.
  */
 const EngineerDetail = () => {
+  const base = useTrackerBase();
   const { id = '' } = useParams();
   const actor = useActor();
   const db = useDb();
@@ -47,14 +49,14 @@ const EngineerDetail = () => {
     { header: 'Status', cell: (r) => <StatusBadge status={r.status} /> },
     {
       header: 'Actions',
-      cell: (r) => <Button asChild size="icon" variant="outline" title="View" aria-label="View"><Link to={`/proposal-tracker/rfqs?view=${r.id}`}><Eye className="h-4 w-4" /></Link></Button>,
+      cell: (r) => <Button asChild size="icon" variant="outline" title="View" aria-label="View"><Link to={`${base}/rfqs?view=${r.id}`}><Eye className="h-4 w-4" /></Link></Button>,
     },
   ];
 
   return (
     <>
       {can(actor, 'rfq.viewAll') && (
-        <Link to="/proposal-tracker/engineers" className="inline-flex items-center gap-1 text-sm text-primary mb-4"><ArrowLeft className="h-4 w-4" />All engineers</Link>
+        <Link to={`${base}/engineers`} className="inline-flex items-center gap-1 text-sm text-primary mb-4"><ArrowLeft className="h-4 w-4" />All engineers</Link>
       )}
       <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
         <div>
@@ -62,7 +64,7 @@ const EngineerDetail = () => {
           <p className="text-sm text-muted-foreground mt-1">{emp.code} · Projects this engineer is working on</p>
         </div>
         {can(actor, 'rfq.viewAll') && (
-          <Button asChild variant="outline" size="sm"><Link to={`/proposal-tracker/daily-updates?engineer=${emp.id}`}><NotebookPen className="h-4 w-4 mr-1" />Daily updates</Link></Button>
+          <Button asChild variant="outline" size="sm"><Link to={`${base}/daily-updates?engineer=${emp.id}`}><NotebookPen className="h-4 w-4 mr-1" />Daily updates</Link></Button>
         )}
       </div>
       <div className="flex flex-wrap gap-2 mb-4" data-testid="engineer-summary" role="group" aria-label="Filter projects">
