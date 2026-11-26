@@ -91,3 +91,11 @@ export async function deleteEngineer(id: string) {
   const { error } = await supabase.rpc('admin_delete_engineer', { _engineer_id: id });
   check(error);
 }
+
+// ---- The signed-in engineer -------------------------------------------------
+
+/** Changes the signed-in engineer's own password (current password required). */
+export async function changeMyPassword(current: string, next: string) {
+  const { error } = await supabase.rpc('engineer_change_password', { _current: current, _new: next });
+  check(error);
+}

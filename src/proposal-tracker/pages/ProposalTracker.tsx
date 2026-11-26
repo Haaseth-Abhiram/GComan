@@ -1,7 +1,10 @@
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { format, formatDistanceToNow } from 'date-fns';
-import { Bell, ChevronDown, LogOut, RotateCcw } from 'lucide-react';
+import { Bell, ChevronDown, KeyRound, LogOut, RotateCcw } from 'lucide-react';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { useToast } from '@/hooks/use-toast';
+import { ChangePasswordForm } from '@/proposal-tracker/components/tracker/ChangePasswordForm';
 import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
 import { ProposalTrackerSidebar } from '@/proposal-tracker/components/shell/ProposalTrackerSidebar';
 import { Badge } from '@/components/ui/badge';
@@ -36,6 +39,8 @@ import { useNotices } from '@/proposal-tracker/lib/notifications';
 
 const ProposalTracker = () => {
   const { user, signOut } = useAuth();
+  const { toast } = useToast();
+  const [changingPassword, setChangingPassword] = useState(false);
   const db = useDb();
   const actor = useActor();
   const { pathname } = useLocation();
@@ -100,9 +105,19 @@ const ProposalTracker = () => {
                 </DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 {can(actor, 'permissions.manage') && <DropdownMenuItem onClick={() => resetDemoData(actor)} className="cursor-pointer"><RotateCcw className="h-4 w-4 mr-2" />Reset demo data</DropdownMenuItem>}
+                {user!.role === 'engineer' && <DropdownMenuItem onClick={() => setChangingPassword(true)} className="cursor-pointer"><KeyRound className="h-4 w-4 mr-2" />Change password</DropdownMenuItem>}
                 <DropdownMenuItem onClick={() => void signOut()} className="cursor-pointer"><LogOut className="h-4 w-4 mr-2" />Sign out</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
+            <Dialog open={changingPassword} onOpenChange={setChangingPassword}>
+              <DialogContent className="max-w-md">
+                <DialogHeader>
+                  <DialogTitle>Change password</DialogTitle>
+                  <DialogDescription>Use this new password the next time you sign in.</DialogDescription>
+                </DialogHeader>
+                <ChangePasswordForm onDone={() => { setChangingPassword(false); toast({ title: 'Password changed', description: 'Use your new password next time you sign in.' }); }} />
+              </DialogContent>
+            </Dialog>
           </header>
           <main className="flex-1 p-4 md:p-6 overflow-auto">
             <div className="rounded-md border border-amber-300 bg-amber-50 px-4 py-2 text-sm text-amber-900 mb-6">

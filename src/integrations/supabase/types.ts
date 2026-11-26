@@ -343,6 +343,7 @@ export type Database = {
           created_by: string | null
           email: string
           id: string
+          must_change_password: boolean
           name: string
           updated_at: string
           user_id: string | null
@@ -354,6 +355,7 @@ export type Database = {
           created_by?: string | null
           email: string
           id?: string
+          must_change_password?: boolean
           name: string
           updated_at?: string
           user_id?: string | null
@@ -365,6 +367,7 @@ export type Database = {
           created_by?: string | null
           email?: string
           id?: string
+          must_change_password?: boolean
           name?: string
           updated_at?: string
           user_id?: string | null
@@ -453,6 +456,10 @@ export type Database = {
       admin_delete_engineer: { Args: { _engineer_id: string }; Returns: undefined }
       admin_set_engineer_active: {
         Args: { _active: boolean; _engineer_id: string }
+        Returns: undefined
+      }
+      engineer_change_password: {
+        Args: { _current: string; _new: string }
         Returns: undefined
       }
       admin_set_engineer_password: {

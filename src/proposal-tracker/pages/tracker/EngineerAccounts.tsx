@@ -46,7 +46,7 @@ const PasswordField = ({ id, value, onChange }: { id: string; value: string; onC
 const CredentialsDialog = ({ creds, onClose }: { creds: { name: string; email: string; password: string } | null; onClose: () => void }) => {
   const [copied, setCopied] = useState(false);
   const text = creds
-    ? `Hello ${creds.name},\n\nYour Proposal Tracker login for Global Chemicals LLC:\n\nLogin page: ${LOGIN_URL}\nEmail: ${creds.email}\nPassword: ${creds.password}\n\nPlease keep these details private.`
+    ? `Hello ${creds.name},\n\nYour Proposal Tracker login for Global Chemicals LLC:\n\nLogin page: ${LOGIN_URL}\nEmail: ${creds.email}\nTemporary password: ${creds.password}\n\nYou will be asked to choose your own password the first time you sign in. Please keep these details private.`
     : '';
   const copy = async () => {
     try {
@@ -156,7 +156,7 @@ const EngineerAccounts = () => {
         <CardHeader>
           <CardTitle className="text-base">Add engineer</CardTitle>
           <CardDescription>
-            The login works straight away. Password: {PASSWORD_RULE}. Use the ↻ button to generate one.
+            The login works straight away. The password is temporary: the engineer must choose their own at first sign-in. Password: {PASSWORD_RULE}. Use the ↻ button to generate one.
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -211,9 +211,11 @@ const EngineerAccounts = () => {
                     <TableCell>{e.name}</TableCell>
                     <TableCell>{e.email}</TableCell>
                     <TableCell>
-                      {e.active
-                        ? <Badge className="bg-emerald-600 hover:bg-emerald-600">Active</Badge>
-                        : <Badge variant="secondary">Disabled</Badge>}
+                      {!e.active
+                        ? <Badge variant="secondary">Disabled</Badge>
+                        : e.must_change_password
+                          ? <Badge variant="outline" className="border-amber-400 text-amber-700" title="Still using the password you gave them">Temporary password</Badge>
+                          : <Badge className="bg-emerald-600 hover:bg-emerald-600">Active</Badge>}
                     </TableCell>
                     <TableCell className="text-right whitespace-nowrap space-x-1">
                       <Button variant="ghost" size="sm" title="Rename" onClick={() => { setRenaming(e); setNewName(e.name); }}>
@@ -269,7 +271,7 @@ const EngineerAccounts = () => {
         <DialogContent>
           <DialogHeader>
             <DialogTitle>Reset password for {resetting?.name}</DialogTitle>
-            <DialogDescription>Their old password stops working immediately. Send them the new one.</DialogDescription>
+            <DialogDescription>Their old password stops working immediately. Send them the new one; they'll be asked to choose their own when they next sign in.</DialogDescription>
           </DialogHeader>
           <div className="space-y-2">
             <Label htmlFor="reset-password">New password</Label>

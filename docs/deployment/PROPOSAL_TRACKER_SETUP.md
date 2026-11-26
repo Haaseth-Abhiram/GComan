@@ -65,13 +65,23 @@ Admin dashboard → **Proposal Tracker → Engineer Accounts**:
 
 Passwords: 8+ characters with an uppercase letter, a lowercase letter and a number.
 
+### Engineers' own passwords
+
+The password the admin sets (on Add or Reset password) is **temporary**. At
+the engineer's first sign-in the tracker shows "Choose your own password"
+and won't open until they set one (they confirm with the temporary password).
+After that they can change it any time from the profile menu (top right) →
+**Change password**. The admin's list shows "Temporary password" until the
+engineer has chosen their own. Migration:
+`supabase/migrations/20261126130000_engineer_change_password.sql` (already
+applied to the test project).
+
 ## 4. Known limits (prototype)
 
 - **Proposal data (RFQs, tasks, follow-ups, approvals, daily updates) is still
   stored in each browser's localStorage**, not the database. Two people on
   different machines do not see each other's proposals yet. Logins and the
   engineer list *are* shared (database).
-- Engineers can't change their own password; the admin resets it.
 - "Forgot password?" relies on email, which isn't configured on the test project.
-- Production: the migration above has only been applied to the **test**
-  project. It must be applied to the production database before this ships.
+- Production: the migrations above have only been applied to the **test**
+  project. They must be applied to the production database before this ships.
