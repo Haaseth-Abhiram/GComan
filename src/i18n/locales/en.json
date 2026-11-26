@@ -352,6 +352,8 @@
     },
     "tagline": "Leading Chemical Supplier serving Muscat, Sohar, Duqm, Salalah, and the Rusayl Industrial Area.",
     "cookieSettings": "Cookie Settings",
+    "poweredBy": "Powered by",
+    "poweredByAria": "Powered by Zyllo Tech (opens in a new tab)",
     "pricingPrompt": "Need pricing on a specific chemical?",
     "pricingPromptDesc": "Send us the product and quantity — our team replies within 24 hours."
   },

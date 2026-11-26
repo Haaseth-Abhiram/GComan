@@ -10,6 +10,7 @@ import { trackContactClick } from '@/components/GoogleAnalytics';
 import { openCookieSettings } from '@/lib/consent';
 import { safeImport } from '@/lib/lazyRetry';
 import logo from '@/assets/global-chemicals-logo.svg';
+import PoweredByZylloTech from '@/components/PoweredByZylloTech';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -427,6 +428,7 @@ const Footer = () => {
             <p>© {currentYear} {t('footer.companyName')}. {t('footer.copyright')}</p>
             <p className="text-white/50 text-xs mt-1">{t('footer.tagline')}</p>
           </div>
+          <div className="flex flex-col items-center md:items-end gap-3">
           <div className="flex flex-wrap justify-center gap-4 md:gap-6">
             <Link to="/terms" className="hover:text-primary transition-colors relative z-50">
               {t('footer.terms')}
@@ -444,6 +446,8 @@ const Footer = () => {
             >
               {t('footer.cookieSettings', 'Cookie Settings')}
             </button>
+          </div>
+          <PoweredByZylloTech />
           </div>
         </div>
       </div>

@@ -113,8 +113,14 @@ export default {
           "0%, 100%": { backgroundPosition: "0% 50%" },
           "50%": { backgroundPosition: "100% 50%" },
         },
+        // Zyllo Tech badge: a light segment travelling around the infinity loop
+        "infinity-trace": {
+          from: { strokeDashoffset: "0" },
+          to: { strokeDashoffset: "-100" },
+        },
       },
       animation: {
+        "infinity-trace": "infinity-trace 1.6s linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.6s ease-out",
