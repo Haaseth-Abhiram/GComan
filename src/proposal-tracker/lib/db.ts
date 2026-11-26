@@ -117,7 +117,8 @@ const off = (n: number) => { const d = new Date(); d.setDate(d.getDate() + n); r
 const ago = (h: number) => new Date(Date.now() - h * 3_600_000).toISOString();
 
 // Engineers are NOT seeded: they are real accounts in the Supabase table
-// proposal_engineers, added by the admin, and copied in here by syncEngineers().
+// employees with the Proposal Engineer role, added by the admin (Employees page)
+// and copied in here by syncEngineers().
 const engId = (n: number) => `e-p${n}`;
 
 function seed(): DbState {
@@ -650,7 +651,8 @@ export const findLoginById = (id: string | null): LoginIdentity | null => {
 export const listDemoLogins = (): LoginIdentity[] => state.employees.map(toIdentity);
 
 // ---------------------------------------------------------------------------
-// Engineer accounts come from Supabase (proposal_engineers); this copies them
+// Engineers are real employees in Supabase (employees table, Proposal Engineer
+// role, tracker code P#); this copies them
 // into the local tracker store so assignments and labels use the real people.
 // ---------------------------------------------------------------------------
 const LEGACY_DEMO_ENGINEER = /^e-p\d+$/; // the old hard-coded P1..P10 demo records

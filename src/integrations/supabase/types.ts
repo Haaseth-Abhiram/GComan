@@ -215,6 +215,71 @@ export type Database = {
         }
         Relationships: []
       }
+      employees: {
+        Row: {
+          active: boolean
+          created_at: string
+          created_by: string | null
+          department: string | null
+          designation: string | null
+          email: string
+          employee_code: string
+          full_name: string
+          id: string
+          joined_on: string | null
+          must_change_password: boolean
+          phone: string | null
+          proposal_code: string | null
+          reporting_manager_id: string | null
+          updated_at: string
+          user_id: string | null
+        }
+        Insert: {
+          active?: boolean
+          created_at?: string
+          created_by?: string | null
+          department?: string | null
+          designation?: string | null
+          email: string
+          employee_code: string
+          full_name: string
+          id?: string
+          joined_on?: string | null
+          must_change_password?: boolean
+          phone?: string | null
+          proposal_code?: string | null
+          reporting_manager_id?: string | null
+          updated_at?: string
+          user_id?: string | null
+        }
+        Update: {
+          active?: boolean
+          created_at?: string
+          created_by?: string | null
+          department?: string | null
+          designation?: string | null
+          email?: string
+          employee_code?: string
+          full_name?: string
+          id?: string
+          joined_on?: string | null
+          must_change_password?: boolean
+          phone?: string | null
+          proposal_code?: string | null
+          reporting_manager_id?: string | null
+          updated_at?: string
+          user_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "employees_reporting_manager_id_fkey"
+            columns: ["reporting_manager_id"]
+            isOneToOne: false
+            referencedRelation: "employees"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       job_applications: {
         Row: {
           cover_letter: string
@@ -335,45 +400,6 @@ export type Database = {
         }
         Relationships: []
       }
-      proposal_engineers: {
-        Row: {
-          active: boolean
-          code: string
-          created_at: string
-          created_by: string | null
-          email: string
-          id: string
-          must_change_password: boolean
-          name: string
-          updated_at: string
-          user_id: string | null
-        }
-        Insert: {
-          active?: boolean
-          code: string
-          created_at?: string
-          created_by?: string | null
-          email: string
-          id?: string
-          must_change_password?: boolean
-          name: string
-          updated_at?: string
-          user_id?: string | null
-        }
-        Update: {
-          active?: boolean
-          code?: string
-          created_at?: string
-          created_by?: string | null
-          email?: string
-          id?: string
-          must_change_password?: boolean
-          name?: string
-          updated_at?: string
-          user_id?: string | null
-        }
-        Relationships: []
-      }
       site_analytics_snapshots: {
         Row: {
           avg_bounce_rate: number
@@ -449,23 +475,18 @@ export type Database = {
     }
     Functions: {
       add_admin_role: { Args: { user_email: string }; Returns: string }
-      admin_create_engineer: {
-        Args: { _code: string; _email: string; _name: string; _password: string }
-        Returns: string
-      }
-      admin_delete_engineer: { Args: { _engineer_id: string }; Returns: undefined }
-      admin_set_engineer_active: {
-        Args: { _active: boolean; _engineer_id: string }
+      admin_create_employee: { Args: { _p: Json }; Returns: string }
+      admin_delete_employee: { Args: { _id: string }; Returns: undefined }
+      admin_list_employees: { Args: Record<PropertyKey, never>; Returns: Json }
+      admin_set_employee_active: {
+        Args: { _active: boolean; _id: string }
         Returns: undefined
       }
-      engineer_change_password: {
-        Args: { _current: string; _new: string }
+      admin_set_employee_password: {
+        Args: { _id: string; _password: string }
         Returns: undefined
       }
-      admin_set_engineer_password: {
-        Args: { _engineer_id: string; _password: string }
-        Returns: undefined
-      }
+      admin_update_employee: { Args: { _id: string; _p: Json }; Returns: undefined }
       has_role: {
         Args: {
           _role: Database["public"]["Enums"]["app_role"]
@@ -477,6 +498,15 @@ export type Database = {
         Args: { p_ip: string; p_window: string }
         Returns: number
       }
+      my_change_password: {
+        Args: { _current: string; _new: string }
+        Returns: undefined
+      }
+      portal_my_employee_id: { Args: Record<PropertyKey, never>; Returns: string }
+      portal_password_problem: { Args: { _p: string }; Returns: string }
+      rbac_can: { Args: { _perm: string }; Returns: boolean }
+      rbac_my_access: { Args: Record<PropertyKey, never>; Returns: Json }
+      rbac_require: { Args: { _perm: string }; Returns: undefined }
     }
     Enums: {
       app_role: "admin" | "moderator" | "user"

@@ -6,8 +6,7 @@ import { TrackerAuthBridge } from '@/proposal-tracker/contexts/TrackerAuthContex
 import { TrackerBaseContext } from '@/proposal-tracker/lib/base';
 import { setSessionOverride } from '@/proposal-tracker/lib/session';
 import { findLoginByEmail, listDemoLogins, syncEngineers, type LoginIdentity } from '@/proposal-tracker/lib/db';
-import { listEngineers } from '@/proposal-tracker/lib/accounts';
-import EngineerAccounts, { ENGINEER_ACCOUNTS_QUERY } from '@/proposal-tracker/pages/tracker/EngineerAccounts';
+import { EMPLOYEES_QUERY, listEmployees } from '@/portal/lib/employees';
 import { PageHeader } from '@/proposal-tracker/components/tracker/common';
 import Dashboard from '@/proposal-tracker/pages/tracker/Dashboard';
 import Engineers from '@/proposal-tracker/pages/tracker/Engineers';
@@ -46,12 +45,19 @@ const ProposalTrackerAdmin = () => {
   setSessionOverride(identity?.id ?? null);
   useEffect(() => () => setSessionOverride(null), []);
 
-  // Engineers are real accounts (Supabase); copy the active ones into the
-  // browser-local tracker so assignment lists and labels show the real people.
-  const { data: accounts } = useQuery({ queryKey: ENGINEER_ACCOUNTS_QUERY, queryFn: listEngineers });
+  // Engineers are real employees (Supabase) with the Proposal Engineer role;
+  // copy the active ones into the browser-local tracker so assignment lists
+  // and labels show the real people.
+  const { data: employees } = useQuery({ queryKey: EMPLOYEES_QUERY, queryFn: listEmployees });
   useEffect(() => {
-    if (accounts) syncEngineers(accounts.filter((a) => a.active), 'replace');
-  }, [accounts]);
+    if (!employees) return;
+    syncEngineers(
+      employees
+        .filter((e) => e.active && e.proposal_code && e.roles.includes('proposal_engineer'))
+        .map((e) => ({ id: e.id, code: e.proposal_code!, name: e.full_name, email: e.email })),
+      'replace',
+    );
+  }, [employees]);
 
   if (!identity) {
     return <p className="text-sm text-muted-foreground">The tracker has no Admin employee record to act as.</p>;
@@ -66,7 +72,8 @@ const ProposalTrackerAdmin = () => {
         <Routes>
           <Route path="/" element={<><PageHeader title="Proposal Tracker" /><Dashboard /></>} />
           <Route path="/engineers" element={<Engineers />} />
-          <Route path="/accounts" element={<EngineerAccounts />} />
+          {/* Engineer logins are managed with every other employee now. */}
+          <Route path="/accounts" element={<Navigate to="/admin/employees" replace />} />
           <Route path="/engineers/:id" element={<EngineerDetail />} />
           <Route path="/rfqs" element={<RfqRegister />} />
           <Route path="/assignment" element={<Assignment />} />

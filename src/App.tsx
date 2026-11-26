@@ -95,6 +95,7 @@ const Certifications = lazyRetry(() => import("./pages/Certifications"));
 const Login = lazyRetry(() => import("./pages/Login"));
 const Admin = lazyRetry(() => import("./pages/Admin"));
 const TrackerApp = lazyRetry(() => import("./proposal-tracker/TrackerApp"));
+const PortalApp = lazyRetry(() => import("./portal/PortalApp"));
 const Blog = lazyRetry(() => import("./pages/Blog"));
 const BlogPost = lazyRetry(() => import("./pages/BlogPost"));
 const Privacy = lazyRetry(() => import("./pages/Privacy"));
@@ -255,6 +256,7 @@ const App = () => (
                   </AdminRoute>
                 } />
                 <Route path="/proposal-tracker/*" element={<TrackerApp />} />
+                <Route path="/portal/*" element={<PortalApp />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/blog/:slug" element={<BlogPost />} />
                 <Route path="/privacy" element={<Privacy />} />

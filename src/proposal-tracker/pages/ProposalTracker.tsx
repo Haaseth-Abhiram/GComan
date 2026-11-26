@@ -1,10 +1,10 @@
 import { useEffect, useMemo, useState } from 'react';
-import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { Routes, Route, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { format, formatDistanceToNow } from 'date-fns';
-import { Bell, ChevronDown, KeyRound, LogOut, RotateCcw } from 'lucide-react';
+import { Bell, ChevronDown, KeyRound, LayoutGrid, LogOut, RotateCcw } from 'lucide-react';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { useToast } from '@/hooks/use-toast';
-import { ChangePasswordForm } from '@/proposal-tracker/components/tracker/ChangePasswordForm';
+import { ChangePasswordForm } from '@/portal/components/ChangePasswordForm';
 import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
 import { ProposalTrackerSidebar } from '@/proposal-tracker/components/shell/ProposalTrackerSidebar';
 import { Badge } from '@/components/ui/badge';
@@ -44,6 +44,7 @@ const ProposalTracker = () => {
   const db = useDb();
   const actor = useActor();
   const { pathname } = useLocation();
+  const navigate = useNavigate();
   const scrolled = useScrolled();
   const name = user!.name;
   const initials = name.split(/\s+/).slice(0, 2).map((p) => p[0]?.toUpperCase()).join('');
@@ -105,6 +106,7 @@ const ProposalTracker = () => {
                 </DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 {can(actor, 'permissions.manage') && <DropdownMenuItem onClick={() => resetDemoData(actor)} className="cursor-pointer"><RotateCcw className="h-4 w-4 mr-2" />Reset demo data</DropdownMenuItem>}
+                {user!.role === 'engineer' && <DropdownMenuItem onClick={() => navigate('/portal')} className="cursor-pointer"><LayoutGrid className="h-4 w-4 mr-2" />Employee portal</DropdownMenuItem>}
                 {user!.role === 'engineer' && <DropdownMenuItem onClick={() => setChangingPassword(true)} className="cursor-pointer"><KeyRound className="h-4 w-4 mr-2" />Change password</DropdownMenuItem>}
                 <DropdownMenuItem onClick={() => void signOut()} className="cursor-pointer"><LogOut className="h-4 w-4 mr-2" />Sign out</DropdownMenuItem>
               </DropdownMenuContent>

@@ -3,6 +3,9 @@ import { lazyRetry } from '@/lib/lazyRetry';
 
 // Lazy: keeps the tracker prototype out of the main admin bundle.
 const ProposalTrackerAdmin = lazyRetry(() => import('@/components/admin/ProposalTrackerAdmin'));
+const EmployeesAdmin = lazyRetry(() => import('@/components/admin/EmployeesAdmin'));
+const AttendanceAdmin = lazyRetry(() => import('@/components/admin/AttendanceAdmin'));
+const LeaveAdmin = lazyRetry(() => import('@/components/admin/LeaveAdmin'));
 import { useNavigate, Routes, Route, Link } from 'react-router-dom';
 import { useUserRole } from '@/hooks/useUserRole';
 import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
@@ -612,6 +615,30 @@ const Admin = () => {
                   element={
                     <Suspense fallback={<Loader2 className="h-6 w-6 animate-spin text-primary" />}>
                       <ProposalTrackerAdmin />
+                    </Suspense>
+                  }
+                />
+                <Route
+                  path="/employees"
+                  element={
+                    <Suspense fallback={<Loader2 className="h-6 w-6 animate-spin text-primary" />}>
+                      <EmployeesAdmin />
+                    </Suspense>
+                  }
+                />
+                <Route
+                  path="/attendance"
+                  element={
+                    <Suspense fallback={<Loader2 className="h-6 w-6 animate-spin text-primary" />}>
+                      <AttendanceAdmin />
+                    </Suspense>
+                  }
+                />
+                <Route
+                  path="/leave"
+                  element={
+                    <Suspense fallback={<Loader2 className="h-6 w-6 animate-spin text-primary" />}>
+                      <LeaveAdmin />
                     </Suspense>
                   }
                 />

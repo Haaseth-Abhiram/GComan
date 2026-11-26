@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { FileText, Briefcase, Download, LayoutDashboard, Home, BarChart3, Mail, FolderOpen, Globe, Search, Languages, Users, ClipboardList, UserPlus, NotebookPen, ShieldCheck, Send, KeyRound, UserCog } from 'lucide-react';
+import { FileText, Briefcase, Download, LayoutDashboard, Home, BarChart3, Mail, FolderOpen, Globe, Search, Languages, Users, ClipboardList, UserPlus, NotebookPen, ShieldCheck, Send, KeyRound, UserCog, CalendarClock, CalendarDays } from 'lucide-react';
 import { useLocation, Link } from 'react-router-dom';
 import {
   Sidebar,
@@ -30,7 +30,6 @@ const TRACKER = '/admin/proposal-tracker';
 const trackerItems = [
   { title: 'Tracker Dashboard',   url: TRACKER,                       icon: LayoutDashboard },
   { title: 'Engineers',           url: `${TRACKER}/engineers`,        icon: Users },
-  { title: 'Engineer Accounts',   url: `${TRACKER}/accounts`,         icon: UserCog },
   { title: 'RFQ Register',        url: `${TRACKER}/rfqs`,             icon: ClipboardList },
   { title: 'Engineer Assignment', url: `${TRACKER}/assignment`,       icon: UserPlus },
   { title: 'Daily Updates',       url: `${TRACKER}/daily-updates`,    icon: NotebookPen },
@@ -38,6 +37,13 @@ const trackerItems = [
   { title: 'Proposal Submission', url: `${TRACKER}/submissions`,      icon: Send },
   { title: 'Tracker Reports',     url: `${TRACKER}/reports`,          icon: BarChart3 },
   { title: 'Permissions',         url: `${TRACKER}/permissions`,      icon: KeyRound },
+];
+
+// Employee Portal administration (see src/components/admin/EmployeesAdmin.tsx).
+const peopleItems = [
+  { title: 'Employees', url: '/admin/employees', icon: UserCog },
+  { title: 'Attendance', url: '/admin/attendance', icon: CalendarClock },
+  { title: 'Leave', url: '/admin/leave', icon: CalendarDays },
 ];
 
 const quickLinks = [
@@ -134,6 +140,33 @@ export function AdminSidebar() {
                           {item.count}
                         </Badge>
                       )}
+                    </Link>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+
+        <SidebarSeparator className="my-4" />
+
+        <SidebarGroup>
+          <SidebarGroupLabel className="text-xs uppercase tracking-wider text-muted-foreground mb-2">
+            Employee Portal
+          </SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu className="space-y-1">
+              {peopleItems.map((item) => (
+                <SidebarMenuItem key={item.title}>
+                  <SidebarMenuButton
+                    asChild
+                    isActive={location.pathname.startsWith(item.url)}
+                    className="h-10 rounded-lg transition-all duration-200"
+                    tooltip={item.title}
+                  >
+                    <Link to={item.url} className="flex items-center gap-3">
+                      <item.icon className="h-4 w-4" />
+                      <span className="font-medium flex-1">{item.title}</span>
                     </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>

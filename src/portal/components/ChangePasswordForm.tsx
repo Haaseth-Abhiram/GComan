@@ -3,7 +3,7 @@ import { Eye, EyeOff, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { changeMyPassword, isValidPassword, PASSWORD_RULE } from '@/proposal-tracker/lib/accounts';
+import { changeMyPassword, isValidPassword, PASSWORD_RULE } from '@/portal/lib/access';
 
 /** Current + new + confirm. Used for the forced first-login change and from the profile menu. */
 export const ChangePasswordForm = ({ currentLabel = 'Current password', submitLabel = 'Change password', onDone }: {

@@ -12,7 +12,7 @@ import { Eye, EyeOff, Mail, Lock, ArrowLeft } from 'lucide-react';
 import { z } from 'zod';
 import logo from '@/assets/global-chemicals-logo.svg';
 import { supabase } from '@/integrations/supabase/client';
-import { destinationForUser } from '@/proposal-tracker/lib/accounts';
+import { destinationForUser } from '@/portal/lib/access';
 
 
 // Validation schemas
@@ -91,16 +91,16 @@ const Login = () => {
   const nextParam = searchParams.get('next');
   const safeNext = nextParam && nextParam.startsWith('/') && !nextParam.startsWith('//') ? nextParam : '/';
 
-  // One login page for everyone: admins go to /admin, proposal engineers to
-  // /proposal-tracker, everyone else to ?next= or the homepage. A disabled
-  // engineer is signed straight back out.
+  // One login page for everyone: admins go to /admin, employees (including
+  // proposal engineers) to the Employee Portal at /portal, everyone else to
+  // ?next= or the homepage. A disabled employee is signed straight back out.
   const goAfterSignIn = async (userId: string, greet: boolean) => {
     const dest = await destinationForUser(userId).catch(() => null);
     if (dest === 'disabled') {
       await supabase.auth.signOut();
       toast({
         title: "Account disabled",
-        description: "Your proposal engineer account has been disabled. Please contact your administrator.",
+        description: "Your employee account has been disabled. Please contact your administrator.",
         variant: "destructive",
       });
       return;

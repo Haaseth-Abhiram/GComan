@@ -1,4 +1,4 @@
-# Proposal Engineer Tracker — local setup and how logins work
+# Employee Portal & Proposal Tracker — local setup and how logins work
 
 Branch: `intern`. This is for anyone (e.g. a co-worker) who needs to run the
 site locally and get exactly the same behaviour.
@@ -29,10 +29,9 @@ VITE_TURNSTILE_SITE_KEY=...      # may be blank
 
 Without it the marketing pages render, but login, admin and every form fail.
 
-Everyone on the team uses the same test database, so engineers added by one
-admin are visible to everyone. The database change for engineer accounts
-(`supabase/migrations/20261126120000_proposal_engineers.sql`) is **already
-applied to the test project**; nothing to run. `.env.db.local` (database
+Everyone on the team uses the same test database, so employees added by one
+admin are visible to everyone. The database changes listed in section 4 are
+**already applied to the test project**; nothing to run. `.env.db.local` (database
 password, also git-ignored) is only needed by whoever applies future
 migrations.
 
@@ -46,37 +45,106 @@ There is **one** login page: `/login`. Where you land depends on the account:
 
 | Account | Lands on |
 |---|---|
-| Admin (has the `admin` role in `user_roles`) | `/admin`, including the Proposal Tracker admin modules in the sidebar |
-| Active proposal engineer | `/proposal-tracker`, showing only their own work |
-| Disabled engineer | stopped with "Account disabled" |
+| Website admin (has the `admin` role in `user_roles`) | `/admin` (counts as Super Admin: can do everything) |
+| Active employee | the Employee Portal, `/portal` |
+| Disabled employee | stopped with "Account disabled" |
 | Any other website account | the homepage |
 
-### Managing engineers (admin)
+Proposal engineers are **employees with the Proposal Engineer role**. They
+land on `/portal` like everyone else and open the tracker from there (the
+"Proposal Tracker" card / menu). The tracker's profile menu has a link back
+to the portal. Employees without the role can't open the tracker.
 
-Admin dashboard → **Proposal Tracker → Engineer Accounts**:
+### Roles
 
-- **Add**: code (P1, P2…), name, email, password (↻ generates one). The login
-  works immediately. A ready-to-send message with the credentials appears
-  once; send it to the engineer yourself (no emails are sent by the system).
-- **Reset password**: sets a new one; the old one stops working at once.
-- **Disable / Enable**: a disabled engineer is signed out and cannot sign in.
-- **Delete**: removes the engineer and their login permanently.
-- The email is the login and can't be edited; delete and re-add instead.
+| Role | How you get it | What it gives |
+|---|---|---|
+| Super Admin | being a website admin | everything, including the Employees page |
+| Employee | automatic for every active employee | the Employee Portal |
+| Manager | automatic when someone reports to you | "My team" in the portal (later: approving leave and reports) |
+| Proposal Engineer | ticked by the admin on the employee | the Proposal Tracker (needs a tracker code P1, P2…) |
+
+Every rule is checked in the database (`rbac_*` functions), not only hidden
+in the screens.
+
+### Managing employees (admin)
+
+Admin dashboard → **Employee Portal → Employees**:
+
+- **Add employee**: Employee ID (GC001, GC002… suggested), name, email,
+  temporary password (↻ generates one), department, designation, phone,
+  joining date, who they report to, and the Proposal Engineer role with its
+  tracker code. The login works immediately. A ready-to-send message with
+  the credentials appears once; send it yourself (the system sends no email).
+- **Edit**: everything except the email (the login). To change the email,
+  delete and re-add.
+- **Reset password**: sets a new temporary one; the old one stops working.
+- **Disable / Enable**: a disabled employee is signed out and cannot sign in.
+- **Delete**: removes the employee and their login permanently.
 
 Passwords: 8+ characters with an uppercase letter, a lowercase letter and a number.
 
-### Engineers' own passwords
+### Employees' own passwords
 
 The password the admin sets (on Add or Reset password) is **temporary**. At
-the engineer's first sign-in the tracker shows "Choose your own password"
-and won't open until they set one (they confirm with the temporary password).
-After that they can change it any time from the profile menu (top right) →
-**Change password**. The admin's list shows "Temporary password" until the
-engineer has chosen their own. Migration:
-`supabase/migrations/20261126130000_engineer_change_password.sql` (already
-applied to the test project).
+the first sign-in the portal (or tracker) shows "Choose your own password"
+and won't open until they set one. After that they can change it any time
+under **My profile** (portal) or the tracker's profile menu → **Change
+password**. The admin's list shows "Temporary password" until then.
 
-## 4. Known limits (prototype)
+### Attendance
+
+Rules (Oman time; stored in the `attendance_settings` table, one row):
+
+| Rule | Value |
+|---|---|
+| Office hours | 9:45 AM – 7:00 PM |
+| Late | first punch-in of the day after 10:00 AM |
+| Day status | under 4 h worked = Absent · 4 h+ = Half day · 4 h+ and worked until 7:00 PM = Present |
+| Automatic punch-out | 8:00 PM (a session started after 8 PM closes at midnight) |
+| Weekly off | Friday |
+
+- **Employees** (portal): after login on a working day a "Punch in" screen
+  appears ("Not now" skips it for the day). Home shows today's status with a
+  Punch in / Punch out button; several sessions a day are fine. **Attendance**
+  shows each month and lets them request a correction (today or the last 30
+  days, one pending request per day, no future or overlapping times).
+- **Admin** → Employee Portal → **Attendance**: Daily (who is in / out / not
+  in), By employee (month), Late, Missed punch-out, and Corrections
+  (approve, or reject with a reason). Punch times are never edited directly;
+  they change only through an approved correction.
+- Forgotten punch-outs are closed at 8:00 PM the next time anyone opens
+  attendance (no scheduled job needed; the result is the same).
+
+### Leave
+
+- **Leave types** (admin → Leave → Leave types; add more or change days any
+  time): Casual 12, Sick 12, Emergency 6 days a year, Unpaid (no limit). All
+  allow half days (single date only).
+- **Holidays**: the admin enters them (Leave → Holidays). Weekly off days and
+  holidays are never counted as leave. Adding or removing a holiday recounts
+  any leave covering that date automatically.
+- **Approval**: with a manager — manager reviews → admin approves → manager
+  gives final approval. Without a manager the admin decides alone. The admin
+  can act in place of the manager. Rejecting needs a reason. Nobody decides
+  their own request. The employee can cancel until someone has approved.
+- **Balances**: pending requests count against the balance. The admin can
+  change one employee's days for a year (Leave → Balances, click a number).
+- On a holiday or a full day of approved leave the punch-in screen is not shown.
+
+## 4. Database changes (all applied to the test project)
+
+| Migration | What it does |
+|---|---|
+| `20261126120000_proposal_engineers.sql` | first engineer accounts (superseded) |
+| `20261126130000_engineer_change_password.sql` | engineers choose their own password (superseded) |
+| `20261126140000_employee_portal_foundation.sql` | `employees` table, roles & permissions (`rbac_*`), employee admin functions; moves engineers into `employees` (same ids) and drops `proposal_engineers` |
+| `20261126150000_attendance.sql` | attendance: settings, punch sessions, correction requests, `att_*` functions |
+| `20261126160000_leave.sql` | leave: types, per-employee allowances, holidays, requests + approval chain, `leave_*` functions; attendance learns about holidays/leave |
+
+Apply them in this order on any other database (production included).
+
+## 5. Known limits (prototype)
 
 - **Proposal data (RFQs, tasks, follow-ups, approvals, daily updates) is still
   stored in each browser's localStorage**, not the database. Two people on
@@ -85,3 +153,6 @@ applied to the test project).
 - "Forgot password?" relies on email, which isn't configured on the test project.
 - Production: the migrations above have only been applied to the **test**
   project. They must be applied to the production database before this ships.
+- Coming next (Employee Portal steps 4+): moving proposal data into the
+  database, one daily report, notifications and the admin inbox. Scheduled jobs (`pg_cron`) are available on
+  the test project but not enabled yet.
