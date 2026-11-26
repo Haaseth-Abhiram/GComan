@@ -25,11 +25,6 @@ export interface EmployeeRow {
   created_at: string;
 }
 
-/** Roles an admin can give on the Employees page. Employee and Manager are automatic. */
-export const ASSIGNABLE_ROLES = [
-  { key: 'proposal_engineer', name: 'Proposal Engineer', description: 'Works on proposals in the Proposal Tracker. Needs a tracker code (P1, P2…).' },
-] as const;
-
 export interface EmployeeInput {
   employee_code: string;
   full_name: string;

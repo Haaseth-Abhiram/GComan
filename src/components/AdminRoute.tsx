@@ -1,6 +1,6 @@
 import { Navigate } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
-import { useUserRole } from '@/hooks/useUserRole';
+import { useMyAccess } from '@/portal/lib/useMyAccess';
 
 interface AdminRouteProps {
   children: React.ReactNode;
@@ -8,7 +8,9 @@ interface AdminRouteProps {
 
 export const AdminRoute = ({ children }: AdminRouteProps) => {
   const { user, isLoading: authLoading } = useAuth();
-  const { isAdmin, isLoading: roleLoading } = useUserRole();
+  // Super Admins, or anyone whose roles give an admin-area permission (see Settings).
+  const { data: access, isLoading: roleLoading } = useMyAccess();
+  const isAdmin = !!access?.admin_pages;
 
   if (authLoading || roleLoading) {
     return (

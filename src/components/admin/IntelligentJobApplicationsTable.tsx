@@ -20,6 +20,7 @@ import {
   Loader2, FileSpreadsheet, Search, Eye, Download, Star, Mail, Phone, Linkedin, ExternalLink, AlertCircle,
 } from 'lucide-react';
 import { exportToExcel } from '@/lib/exportToExcel';
+import { useCan } from '@/portal/lib/useCan';
 import { ResumePdfPreview } from './ResumePdfPreview';
 
 type JobApplication = Tables<'job_applications'>;
@@ -40,6 +41,10 @@ const statusColor: Record<string, string> = {
 const prospectStars: Record<string, number> = { low: 1, medium: 2, high: 3, top: 4 };
 
 export const IntelligentJobApplicationsTable = () => {
+  const can = useCan();
+  const canDownload = can('website.jobs.download');
+  const canEdit = can('website.jobs.edit');
+  const canNotes = can('website.jobs.notes');
   const [apps, setApps] = useState<JobApplication[]>([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState('');
@@ -114,6 +119,8 @@ export const IntelligentJobApplicationsTable = () => {
       URL.revokeObjectURL(previewBlobUrl);
       setPreviewBlobUrl(null);
     }
+    // No CV permission: don't fetch the file at all (the storage rules would refuse anyway).
+    if (!canDownload) return;
     setPreviewLoading(true);
     try {
       // Download as blob so we can render inline regardless of Content-Disposition
@@ -237,10 +244,10 @@ export const IntelligentJobApplicationsTable = () => {
                 Filter by designation, experience, status, prospect rating. Click a row to read the resume and record HR decisions.
               </CardDescription>
             </div>
-            <Button variant="outline" size="sm" onClick={handleExport} disabled={!filtered.length}>
+            {can('website.jobs.export') && <Button variant="outline" size="sm" onClick={handleExport} disabled={!filtered.length}>
               <FileSpreadsheet className="h-4 w-4 mr-2" />
               Export Excel ({filtered.length})
-            </Button>
+            </Button>}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-3 mt-4">
@@ -396,12 +403,16 @@ export const IntelligentJobApplicationsTable = () => {
                           <ExternalLink className="h-3 w-3 mr-1" /> Open
                         </Button>
                       )}
-                      <Button variant="ghost" size="sm" onClick={() => downloadResume(selected)}>
+                      {canDownload && <Button variant="ghost" size="sm" onClick={() => downloadResume(selected)}>
                         <Download className="h-3 w-3 mr-1" /> Download
-                      </Button>
+                      </Button>}
                     </div>
                   </div>
-                  {previewLoading ? (
+                  {!canDownload ? (
+                    <div className="flex-1 flex items-center justify-center text-sm text-muted-foreground p-4 text-center">
+                      You don't have permission to open CVs.
+                    </div>
+                  ) : previewLoading ? (
                     <div className="flex-1 flex items-center justify-center">
                       <Loader2 className="h-6 w-6 animate-spin text-primary" />
                     </div>
@@ -434,7 +445,7 @@ export const IntelligentJobApplicationsTable = () => {
                   <div className="grid grid-cols-2 gap-3">
                     <div>
                       <label className="text-xs font-semibold uppercase text-muted-foreground">Status</label>
-                      <Select value={draftStatus} onValueChange={setDraftStatus}>
+                      <Select value={draftStatus} onValueChange={setDraftStatus} disabled={!canEdit}>
                         <SelectTrigger className="mt-1"><SelectValue /></SelectTrigger>
                         <SelectContent>
                           {STATUS_OPTIONS.map(s => (
@@ -445,7 +456,7 @@ export const IntelligentJobApplicationsTable = () => {
                     </div>
                     <div>
                       <label className="text-xs font-semibold uppercase text-muted-foreground">Prospect</label>
-                      <Select value={draftProspect} onValueChange={setDraftProspect}>
+                      <Select value={draftProspect} onValueChange={setDraftProspect} disabled={!canEdit}>
                         <SelectTrigger className="mt-1"><SelectValue /></SelectTrigger>
                         <SelectContent>
                           {PROSPECT_OPTIONS.map(p => (
@@ -456,7 +467,7 @@ export const IntelligentJobApplicationsTable = () => {
                     </div>
                   </div>
 
-                  <div>
+                  {canNotes && <div>
                     <label className="text-xs font-semibold uppercase text-muted-foreground">HR Decision Notes</label>
                     <Textarea
                       value={draftNotes}
@@ -465,16 +476,16 @@ export const IntelligentJobApplicationsTable = () => {
                       placeholder="Strengths, concerns, interview feedback, next steps…"
                       className="mt-1"
                     />
-                  </div>
+                  </div>}
                 </div>
               </div>
 
               <DialogFooter>
                 <Button variant="outline" onClick={closeCandidate}>Cancel</Button>
-                <Button onClick={saveDecision} disabled={saving}>
+                {(canEdit || canNotes) && <Button onClick={saveDecision} disabled={saving}>
                   {saving && <Loader2 className="h-4 w-4 mr-2 animate-spin" />}
                   Save Decision
-                </Button>
+                </Button>}
               </DialogFooter>
             </>
           )}

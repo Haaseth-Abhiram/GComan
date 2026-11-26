@@ -6,8 +6,72 @@ const ProposalTrackerAdmin = lazyRetry(() => import('@/components/admin/Proposal
 const EmployeesAdmin = lazyRetry(() => import('@/components/admin/EmployeesAdmin'));
 const AttendanceAdmin = lazyRetry(() => import('@/components/admin/AttendanceAdmin'));
 const LeaveAdmin = lazyRetry(() => import('@/components/admin/LeaveAdmin'));
-import { useNavigate, Routes, Route, Link } from 'react-router-dom';
-import { useUserRole } from '@/hooks/useUserRole';
+const SettingsAdmin = lazyRetry(() => import('@/components/admin/SettingsAdmin'));
+
+/** Shown when someone opens an admin page their roles don't allow. */
+const NoAccess = () => (
+  <div className="py-16 text-center text-sm text-muted-foreground">You don't have permission to open this page. Ask a Super Admin.</div>
+);
+
+/** First admin page this person may open (for people who aren't Super Admins). */
+const ADMIN_PAGES: [string, string][] = [
+  ['website.contacts.view', '/admin/contacts'], ['website.jobs.view', '/admin/jobs'],
+  ['website.downloads.view', '/admin/downloads'], ['website.newsletter.view', '/admin/newsletter'],
+  ['website.indexing.view', '/admin/ar-indexing'], ['portal.employees.view', '/admin/employees'],
+  ['portal.attendance.view', '/admin/attendance'], ['portal.leave.view', '/admin/leave'],
+];
+const firstAdminPage = (a: MyAccess | undefined) =>
+  ADMIN_PAGES.find(([p]) => can(a, p))?.[1] ?? '/admin/settings';
+
+/**
+ * Dashboard for people who aren't Super Admins but may see lead counts: only
+ * the lead types they can open (the full dashboard also needs Search Console,
+ * which is Super Admin only).
+ */
+const LeadsOverview = ({ access }: { access: MyAccess | undefined }) => {
+  const [counts, setCounts] = useState<Record<string, { total: number; week: number }>>({});
+  const items = [
+    { perm: 'website.contacts.view', table: 'contact_submissions', label: 'Contact Forms', url: '/admin/contacts', icon: FileText },
+    { perm: 'website.jobs.view', table: 'job_applications', label: 'Job Applications', url: '/admin/jobs', icon: Briefcase },
+    { perm: 'website.downloads.view', table: 'download_leads', label: 'Download Leads', url: '/admin/downloads', icon: Download },
+  ] as const;
+  const shown = items.filter((i) => can(access, i.perm));
+  useEffect(() => {
+    const since = new Date(Date.now() - 7 * 86_400_000).toISOString();
+    void Promise.all(shown.map(async (i) => {
+      const [t, w] = await Promise.all([
+        supabase.from(i.table).select('*', { count: 'exact', head: true }),
+        supabase.from(i.table).select('*', { count: 'exact', head: true }).gte('created_at', since),
+      ]);
+      return [i.table, { total: t.count ?? 0, week: w.count ?? 0 }] as const;
+    })).then((rows) => setCounts(Object.fromEntries(rows)));
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- the permission set is fixed for this render
+  }, [shown.length]);
+  return (
+    <div className="space-y-6">
+      <h1 className="text-2xl font-bold">Leads overview</h1>
+      {!shown.length ? <p className="text-sm text-muted-foreground">You can't open any lead pages yet.</p> : (
+        <div className="grid gap-4 md:grid-cols-3">
+          {shown.map((i) => (
+            <Link key={i.table} to={i.url}>
+              <Card className="hover:border-primary/50 transition-colors">
+                <CardContent className="p-6">
+                  <i.icon className="h-5 w-5 text-primary mb-3" />
+                  <p className="text-sm text-muted-foreground">{i.label}</p>
+                  <p className="text-3xl font-bold">{counts[i.table]?.total ?? '—'}</p>
+                  <p className="text-xs text-muted-foreground">{counts[i.table]?.week ?? 0} in the last 7 days</p>
+                </CardContent>
+              </Card>
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+import { useNavigate, Routes, Route, Link, Navigate } from 'react-router-dom';
+import { useMyAccess } from '@/portal/lib/useMyAccess';
+import { can, type MyAccess } from '@/portal/lib/access';
 import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
 import { AdminSidebar } from '@/components/admin/AdminSidebar';
 import { ContactSubmissionsTable } from '@/components/admin/ContactSubmissionsTable';
@@ -555,7 +619,11 @@ const AdminOverview = () => {
 
 const Admin = () => {
   const navigate = useNavigate();
-  const { isAdmin, isLoading } = useUserRole();
+  // Super Admins (website admins) see everything; anyone else whose roles give an
+  // admin-area permission sees only the pages those permissions allow.
+  const { data: access, isLoading } = useMyAccess();
+  const isAdmin = !!access?.admin_pages;
+  const isSuper = !!access?.is_super_admin;
 
   useEffect(() => {
     if (!isLoading && !isAdmin) {
@@ -601,13 +669,18 @@ const Admin = () => {
             </header>
             <main className="flex-1 p-4 md:p-6 overflow-auto">
               <Routes>
-                <Route path="/" element={<AdminOverview />} />
-                <Route path="/contacts" element={<ContactSubmissionsTable />} />
-                <Route path="/jobs" element={<ResumesWorkspace />} />
-                <Route path="/resumes" element={<ResumesWorkspace />} />
-                <Route path="/downloads" element={<DownloadLeadsTable />} />
-                <Route path="/newsletter" element={<NewsletterSubscribersTable />} />
-                <Route path="/ar-indexing" element={<ArabicIndexingMonitor />} />
+                {/* Every page is checked against its own permission (the database checks again). */}
+                <Route path="/" element={isSuper ? <AdminOverview />
+                  : can(access, 'website.dashboard.view') ? <LeadsOverview access={access} />
+                    : <Navigate to={firstAdminPage(access)} replace />} />
+                <Route path="/contacts" element={can(access, 'website.contacts.view') ? <ContactSubmissionsTable /> : <NoAccess />} />
+                <Route path="/jobs" element={can(access, 'website.jobs.view') ? <ResumesWorkspace /> : <NoAccess />} />
+                <Route path="/resumes" element={can(access, 'website.jobs.view') ? <ResumesWorkspace /> : <NoAccess />} />
+                <Route path="/downloads" element={can(access, 'website.downloads.view') ? <DownloadLeadsTable /> : <NoAccess />} />
+                <Route path="/newsletter" element={can(access, 'website.newsletter.view') ? <NewsletterSubscribersTable /> : <NoAccess />} />
+                <Route path="/ar-indexing" element={can(access, 'website.indexing.view') ? <ArabicIndexingMonitor /> : <NoAccess />} />
+                {/* Search Console pages and the tracker admin run through Super-Admin-only edge functions / browser data. */}
+                {isSuper && (<>
                 <Route path="/search-console" element={<SearchConsoleDashboard />} />
                 <Route path="/seo-languages" element={<LanguageSeoComparison />} />
                 <Route
@@ -618,30 +691,40 @@ const Admin = () => {
                     </Suspense>
                   }
                 />
+                </>)}
                 <Route
                   path="/employees"
-                  element={
+                  element={can(access, 'portal.employees.view') ? (
                     <Suspense fallback={<Loader2 className="h-6 w-6 animate-spin text-primary" />}>
                       <EmployeesAdmin />
                     </Suspense>
-                  }
+                  ) : <NoAccess />}
                 />
                 <Route
                   path="/attendance"
-                  element={
+                  element={can(access, 'portal.attendance.view') ? (
                     <Suspense fallback={<Loader2 className="h-6 w-6 animate-spin text-primary" />}>
                       <AttendanceAdmin />
                     </Suspense>
-                  }
+                  ) : <NoAccess />}
                 />
                 <Route
                   path="/leave"
-                  element={
+                  element={can(access, 'portal.leave.view') ? (
                     <Suspense fallback={<Loader2 className="h-6 w-6 animate-spin text-primary" />}>
                       <LeaveAdmin />
                     </Suspense>
-                  }
+                  ) : <NoAccess />}
                 />
+                <Route
+                  path="/settings/*"
+                  element={can(access, 'settings.users.view') || can(access, 'settings.roles.view') || can(access, 'settings.audit.view') ? (
+                    <Suspense fallback={<Loader2 className="h-6 w-6 animate-spin text-primary" />}>
+                      <SettingsAdmin />
+                    </Suspense>
+                  ) : <NoAccess />}
+                />
+                <Route path="*" element={<NoAccess />} />
 
 
               </Routes>

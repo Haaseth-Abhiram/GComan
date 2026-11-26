@@ -8,7 +8,7 @@ import { createContext, useCallback, useContext, useEffect, useRef, useState } f
 import { Link, Navigate, NavLink, Route, Routes, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { useQuery } from '@tanstack/react-query';
-import { ArrowRight, CalendarClock, CalendarDays, ClipboardList, Home, Loader2, LogOut, User, Users } from 'lucide-react';
+import { ArrowRight, CalendarClock, CalendarDays, ClipboardList, Home, Loader2, LogOut, ShieldCheck, User, Users } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -214,6 +214,7 @@ const Shell = () => {
               <NavLink to="/proposal-tracker" className={navClass}><ClipboardList className="h-4 w-4" />Proposal Tracker</NavLink>
             )}
             <NavLink to="/portal/profile" className={navClass}><User className="h-4 w-4" />My profile</NavLink>
+            {access.admin_pages && <NavLink to="/admin" className={navClass}><ShieldCheck className="h-4 w-4" />Admin panel</NavLink>}
           </nav>
           <div className="flex items-center gap-2">
             <span className="hidden md:inline text-sm text-muted-foreground">{employee.full_name}</span>

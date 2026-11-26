@@ -11,7 +11,8 @@ export type RoleKey = 'super_admin' | 'manager' | 'proposal_engineer' | 'employe
 
 export type Permission =
   | 'portal.employees.view' | 'portal.employees.create' | 'portal.employees.edit' | 'portal.employees.delete'
-  | 'emp.portal.view' | 'team.members.view' | 'proposal.tracker.view' | (string & {});
+  | 'emp.portal.view' | 'team.members.view' | 'proposal.tracker.view'
+  | 'settings.users.view' | 'settings.users.edit' | 'settings.roles.view' | 'settings.roles.edit' | (string & {});
 
 export interface MyEmployee {
   id: string;
@@ -30,8 +31,12 @@ export interface MyEmployee {
 
 export interface MyAccess {
   is_super_admin: boolean;
+  /** May open the admin panel (Super Admin, or any admin-area permission). */
+  admin_pages?: boolean;
   roles: { key: RoleKey; name: string; area: 'admin' | 'portal' }[];
   permissions: Permission[];
+  /** Data scope per resource: none | own | team | department | all. */
+  scopes?: Record<string, 'none' | 'own' | 'team' | 'department' | 'all'>;
   employee: MyEmployee | null;
 }
 

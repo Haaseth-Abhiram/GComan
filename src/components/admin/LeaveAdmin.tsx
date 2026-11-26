@@ -16,6 +16,7 @@ import {
   AlertDialogHeader, AlertDialogTitle,
 } from '@/components/ui/alert-dialog';
 import { useToast } from '@/hooks/use-toast';
+import { useCan } from '@/portal/lib/useCan';
 import { fmtDate } from '@/portal/lib/attendance';
 import { LeaveStatusBadge, LeaveSteps, leaveDates } from '@/portal/components/Leave';
 import {
@@ -48,6 +49,7 @@ const whoseTurn = (r: LeaveRequest) =>
       : r.status === 'manager_final' ? `Final approval by ${r.manager?.full_name ?? 'manager'} (you can act instead)` : STATUS_TEXT[r.status];
 
 const RequestsTab = () => {
+  const canDecide = useCan()('portal.leave.approve');
   const [filter, setFilter] = useState<'action' | 'pending' | 'all'>('action');
   const [year, setYear] = useState(thisYear());
   const { data = [], isLoading, error } = useQuery({ queryKey: [...KEY, 'requests', filter, year], queryFn: () => fetchAdminLeave(filter, year) });
@@ -91,7 +93,7 @@ const RequestsTab = () => {
                       <LeaveSteps r={r} />
                       {open && <div className="text-xs font-medium text-amber-700">{whoseTurn(r)}</div>}
                     </div>
-                    {open ? (
+                    {open && canDecide ? (
                       <div className="flex gap-2">
                         <Button size="sm" disabled={decide.isPending} onClick={() => decide.mutate({ r, action: 'approve', comment: '' })}><Check className="h-4 w-4 mr-1" />Approve</Button>
                         <Button size="sm" variant="outline" disabled={decide.isPending} onClick={() => { setRejecting(r); setComment(''); }}><X className="h-4 w-4 mr-1" />Reject</Button>
@@ -124,6 +126,7 @@ const RequestsTab = () => {
 // ---- Balances ----------------------------------------------------------------------------
 
 const BalancesTab = () => {
+  const canEdit = useCan()('portal.leave.allowances');
   const [year, setYear] = useState(thisYear());
   const { data, isLoading, error } = useQuery({ queryKey: [...KEY, 'balances', year], queryFn: () => fetchAdminBalances(year) });
   const [editing, setEditing] = useState<{ empId: string; empName: string; typeId: string; typeName: string; days: string; overridden: boolean } | null>(null);
@@ -168,7 +171,7 @@ const BalancesTab = () => {
                         return (
                           <TableCell key={t.id} className="text-center">
                             <button type="button" className="rounded px-2 py-1 hover:bg-muted text-sm"
-                              disabled={b.entitled === null}
+                              disabled={b.entitled === null || !canEdit}
                               title={b.entitled === null ? 'No yearly limit' : `Allowance ${fmtDays(b.entitled)} · used ${fmtDays(b.used)} · pending ${fmtDays(b.pending)}`}
                               onClick={() => setEditing({ empId: e.id, empName: e.full_name, typeId: b.id, typeName: b.name, days: String(b.entitled ?? ''), overridden: b.overridden })}>
                               <span className="font-semibold">{b.remaining === null ? '∞' : fmtDays(b.remaining)}</span>
@@ -213,6 +216,7 @@ const BalancesTab = () => {
 const emptyType: Partial<LeaveType> = { code: '', name: '', description: '', days_per_year: null, paid: true, allow_half_day: true, active: true };
 
 const TypesTab = () => {
+  const canEdit = useCan()('portal.leave.types');
   const { data = [], isLoading, error } = useQuery({ queryKey: [...KEY, 'types'], queryFn: fetchLeaveTypes });
   const [editing, setEditing] = useState<(Partial<LeaveType> & { daysText: string }) | null>(null);
   const invalidate = useInvalidate();
@@ -230,7 +234,7 @@ const TypesTab = () => {
           <CardTitle className="text-base">Leave types</CardTitle>
           <CardDescription>Days per year apply to everyone unless changed for one employee under Balances.</CardDescription>
         </div>
-        <Button onClick={() => open(emptyType)}><Plus className="h-4 w-4 mr-2" />Add leave type</Button>
+        {canEdit && <Button onClick={() => open(emptyType)}><Plus className="h-4 w-4 mr-2" />Add leave type</Button>}
       </CardHeader>
       <CardContent>
         {isLoading ? <Spinner /> : error ? <p className="text-sm text-destructive">{(error as Error).message}</p> : (
@@ -255,7 +259,7 @@ const TypesTab = () => {
                     <TableCell>{t.allow_half_day ? 'Yes' : 'No'}</TableCell>
                     <TableCell>{t.active ? <Badge className="bg-emerald-600 hover:bg-emerald-600">Active</Badge> : <Badge variant="secondary">Hidden</Badge>}</TableCell>
                     <TableCell className="text-right">
-                      <Button variant="ghost" size="sm" onClick={() => open(t)}><Pencil className="h-4 w-4" /><span className="sr-only">Edit {t.name}</span></Button>
+                      {canEdit && <Button variant="ghost" size="sm" onClick={() => open(t)}><Pencil className="h-4 w-4" /><span className="sr-only">Edit {t.name}</span></Button>}
                     </TableCell>
                   </TableRow>
                 ))}
@@ -314,6 +318,7 @@ const TypesTab = () => {
 // ---- Holidays ---------------------------------------------------------------------------------
 
 const HolidaysTab = () => {
+  const canEdit = useCan()('portal.leave.holidays');
   const [year, setYear] = useState(thisYear());
   const { data = [], isLoading, error } = useQuery({ queryKey: [...KEY, 'holidays', year], queryFn: () => fetchHolidays(year) });
   const [editing, setEditing] = useState<{ date: string; name: string; old: string | null } | null>(null);
@@ -340,7 +345,7 @@ const HolidaysTab = () => {
         </div>
         <div className="flex items-center gap-3">
           <YearPicker year={year} setYear={setYear} />
-          <Button onClick={() => setEditing({ date: `${year}-01-01`, name: '', old: null })}><Plus className="h-4 w-4 mr-2" />Add holiday</Button>
+          {canEdit && <Button onClick={() => setEditing({ date: `${year}-01-01`, name: '', old: null })}><Plus className="h-4 w-4 mr-2" />Add holiday</Button>}
         </div>
       </CardHeader>
       <CardContent>
@@ -353,10 +358,10 @@ const HolidaysTab = () => {
                     <div className="font-medium">{h.name}</div>
                     <div className="text-sm text-muted-foreground">{fmtDate(h.date, { weekday: 'long', day: '2-digit', month: 'long', year: 'numeric' })}</div>
                   </div>
-                  <div className="flex gap-1">
+                  {canEdit && <div className="flex gap-1">
                     <Button variant="ghost" size="sm" onClick={() => setEditing({ date: h.date, name: h.name, old: h.date })}><Pencil className="h-4 w-4" /><span className="sr-only">Edit {h.name}</span></Button>
                     <Button variant="ghost" size="sm" className="text-destructive hover:text-destructive" onClick={() => setDeleting(h)}><Trash2 className="h-4 w-4" /><span className="sr-only">Delete {h.name}</span></Button>
-                  </div>
+                  </div>}
                 </li>
               ))}
             </ul>

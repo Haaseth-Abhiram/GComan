@@ -132,6 +132,47 @@ Rules (Oman time; stored in the `attendance_settings` table, one row):
   change one employee's days for a year (Leave → Balances, click a number).
 - On a holiday or a full day of approved leave the punch-in screen is not shown.
 
+### Settings · Roles & Permissions (one place for all access)
+
+Admin → Administration → **Settings** (tabs: People, Roles, Audit log).
+
+- **Roles**: create, rename, activate/deactivate, delete (people
+  holding it must be moved to another role first). Open a role to tick its
+  permissions in a **Module → Page → Tab → Action/Field/Widget** tree (search,
+  filters, Expand/Collapse all, Select/Deselect all, per-module and per-page
+  bulk ticks), set its **data access**, preview what it can do, then **Save
+  changes** (or Cancel). Sensitive permissions ask for confirmation; leaving
+  with unsaved changes asks first.
+- **Data access** per role (and per person): Employees / Attendance / Leave →
+  no access · own · team (reporting line) · department · all.
+- **People**: roles, Super Admin, personal **Allow / Deny** exceptions, personal
+  data access, and **effective permissions** showing where each one comes from.
+- **Audit log**: every role, permission, scope, exception and Super Admin
+  change with who, when, old → new.
+
+Precedence: Super Admin → personal deny → personal allow → active roles →
+**denied by default**. Everything is checked in the database (functions and
+table policies), not only hidden on screen; screens refresh access every 30 s
+and on focus. Safety: nobody changes their own access; non-Super-Admins can
+only give permissions and data access they have themselves and never Settings
+permissions; built-in roles can't be deleted; at least one Super Admin remains.
+
+Not covered yet: Search Console / AR vs EN SEO / "Run check" / Zoho re-send stay
+Super Admin only (their edge functions check the website admin flag and can
+only change when republished). Proposal Tracker permissions arrive with step 4
+(its data still lives in each browser).
+
+**Adding a permission (developers):** add a row to `rbac_permissions` in a new
+migration (key `module.page.action`, plus `grp`, `page`, `tab`, `action_label`,
+`kind`, `sensitive`, `description`, `sort_order`), check it in the database
+function or policy with `rbac_require('<key>')` / `rbac_can('<key>')`, and in the
+screen with `useCan()('<key>')` or `<Can perm="<key>">`. It appears in Settings
+automatically and nobody has it until it is granted.
+
+Tests: `psql "$SUPABASE_DB_URL" -At -f supabase/tests/rbac_permissions_test.sql`
+(40 checks, runs in a rolled-back transaction). Rollback of the two latest
+migrations: `supabase/rollback/20261126180000_rbac_down.sql`.
+
 ## 4. Database changes (all applied to the test project)
 
 | Migration | What it does |
@@ -141,6 +182,9 @@ Rules (Oman time; stored in the `attendance_settings` table, one row):
 | `20261126140000_employee_portal_foundation.sql` | `employees` table, roles & permissions (`rbac_*`), employee admin functions; moves engineers into `employees` (same ids) and drops `proposal_engineers` |
 | `20261126150000_attendance.sql` | attendance: settings, punch sessions, correction requests, `att_*` functions |
 | `20261126160000_leave.sql` | leave: types, per-employee allowances, holidays, requests + approval chain, `leave_*` functions; attendance learns about holidays/leave |
+| `20261126170000_settings_roles.sql` | Settings: custom roles, role permissions, user roles, `rbac_admin_*` functions (no ready-made admin roles) |
+| `20261126180000_rbac_core.sql` | Roles & Permissions engine: hierarchy, role active flag, personal overrides, data scopes, audit log, full catalogue, Settings functions |
+| `20261126180100_rbac_enforcement.sql` | Data scopes inside Employees/Attendance/Leave functions and policies; finer employee/leave permissions; website & leads data moved to permissions |
 
 Apply them in this order on any other database (production included).
 

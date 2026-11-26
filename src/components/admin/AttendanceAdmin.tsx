@@ -12,6 +12,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { useToast } from '@/hooks/use-toast';
+import { useCan } from '@/portal/lib/useCan';
 import { CorrectionSummary, DayFlags, StatusBadge } from '@/portal/components/Attendance';
 import {
   addDays, decideCorrection, fetchAdminAttendance, fetchAdminCorrections, fmtClock, fmtDate, fmtMinutes, fmtTime,
@@ -236,6 +237,7 @@ const CORR_STATUS: Record<Correction['status'], string> = {
 };
 
 const CorrectionsTab = () => {
+  const canDecide = useCan()('portal.attendance.approve');
   const [status, setStatus] = useState<'pending' | 'all'>('pending');
   const { data = [], isLoading, error } = useQuery({ queryKey: ['admin', 'attendance', 'corrections', status], queryFn: () => fetchAdminCorrections(status) });
   const [rejecting, setRejecting] = useState<Correction | null>(null);
@@ -277,7 +279,7 @@ const CorrectionsTab = () => {
                       <div className="text-xs text-muted-foreground">{c.status === 'approved' ? 'Approved' : 'Rejected'} by {c.decided_by ?? '—'}{c.decision_comment ? ` · ${c.decision_comment}` : ''}</div>
                     )}
                   </div>
-                  {c.status === 'pending' ? (
+                  {c.status === 'pending' && canDecide ? (
                     <div className="flex gap-2">
                       <Button size="sm" disabled={decide.isPending} onClick={() => decide.mutate({ c, action: 'approved', comment: '' })}><Check className="h-4 w-4 mr-1" />Approve</Button>
                       <Button size="sm" variant="outline" disabled={decide.isPending} onClick={() => { setRejecting(c); setComment(''); }}><X className="h-4 w-4 mr-1" />Reject</Button>

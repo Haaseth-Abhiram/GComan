@@ -12,12 +12,14 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { format } from 'date-fns';
 import { Loader2, FileSpreadsheet, Search, MailX, MailCheck } from 'lucide-react';
 import { exportToExcel } from '@/lib/exportToExcel';
+import { useCan } from '@/portal/lib/useCan';
 import { useToast } from '@/hooks/use-toast';
 import { DateRangeFilter, inDateRange, loadDateRange, DateRange } from './DateRangeFilter';
 
 type Subscriber = Tables<'newsletter_subscribers'>;
 
 export const NewsletterSubscribersTable = () => {
+  const can = useCan();
   const { toast } = useToast();
   const [subs, setSubs] = useState<Subscriber[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -115,10 +117,10 @@ export const NewsletterSubscribersTable = () => {
               {activeCount} active · {subs.length - activeCount} unsubscribed · {subs.length} total
             </CardDescription>
           </div>
-          <Button variant="outline" size="sm" onClick={handleExport} disabled={!filtered.length}>
+          {can('website.newsletter.export') && <Button variant="outline" size="sm" onClick={handleExport} disabled={!filtered.length}>
             <FileSpreadsheet className="h-4 w-4 mr-2" />
             Export Excel ({filtered.length})
-          </Button>
+          </Button>}
         </div>
         <div className="flex flex-col md:flex-row gap-3 mt-4 md:items-end">
           <div className="relative flex-1">
@@ -182,7 +184,7 @@ export const NewsletterSubscribersTable = () => {
                       )}
                     </TableCell>
                     <TableCell>
-                      <Button
+                      {can('website.newsletter.edit') && <Button
                         variant="outline"
                         size="sm"
                         disabled={busyId === s.id}
@@ -190,7 +192,7 @@ export const NewsletterSubscribersTable = () => {
                       >
                         {busyId === s.id && <Loader2 className="h-3 w-3 mr-1 animate-spin" />}
                         {s.is_active ? 'Unsubscribe' : 'Re-subscribe'}
-                      </Button>
+                      </Button>}
                     </TableCell>
                   </TableRow>
                 ))

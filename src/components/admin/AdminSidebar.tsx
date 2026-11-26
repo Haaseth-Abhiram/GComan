@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { FileText, Briefcase, Download, LayoutDashboard, Home, BarChart3, Mail, FolderOpen, Globe, Search, Languages, Users, ClipboardList, UserPlus, NotebookPen, ShieldCheck, Send, KeyRound, UserCog, CalendarClock, CalendarDays } from 'lucide-react';
+import { FileText, Briefcase, Download, LayoutDashboard, Home, BarChart3, Mail, FolderOpen, Globe, Search, Languages, Users, ClipboardList, UserPlus, NotebookPen, ShieldCheck, Send, KeyRound, UserCog, CalendarClock, CalendarDays, Settings } from 'lucide-react';
 import { useLocation, Link } from 'react-router-dom';
 import {
   Sidebar,
@@ -17,6 +17,8 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { supabase } from '@/integrations/supabase/client';
 import gcLogo from '@/assets/gc-icon.webp';
+import { useMyAccess } from '@/portal/lib/useMyAccess';
+import { can } from '@/portal/lib/access';
 
 interface NewCounts {
   contacts: number;
@@ -40,10 +42,14 @@ const trackerItems = [
 ];
 
 // Employee Portal administration (see src/components/admin/EmployeesAdmin.tsx).
+// Each item shows only for people whose roles give one of the listed permissions.
 const peopleItems = [
-  { title: 'Employees', url: '/admin/employees', icon: UserCog },
-  { title: 'Attendance', url: '/admin/attendance', icon: CalendarClock },
-  { title: 'Leave', url: '/admin/leave', icon: CalendarDays },
+  { title: 'Employees', url: '/admin/employees', icon: UserCog, perms: ['portal.employees.view'] },
+  { title: 'Attendance', url: '/admin/attendance', icon: CalendarClock, perms: ['portal.attendance.view'] },
+  { title: 'Leave', url: '/admin/leave', icon: CalendarDays, perms: ['portal.leave.view'] },
+];
+const adminItems = [
+  { title: 'Settings', url: '/admin/settings', icon: Settings, perms: ['settings.users.view', 'settings.roles.view', 'settings.audit.view'] },
 ];
 
 const quickLinks = [
@@ -53,9 +59,14 @@ const quickLinks = [
 
 export function AdminSidebar() {
   const location = useLocation();
+  const { data: access } = useMyAccess();
+  // Website, SEO and Proposal Tracker admin pages are for Super Admins (website admins) only.
+  const isSuper = !!access?.is_super_admin;
+  const visible = <T extends { perms: string[] }>(items: T[]) => items.filter((i) => i.perms.some((p) => can(access, p)));
   const [counts, setCounts] = useState<NewCounts>({ contacts: 0, jobs: 0, downloads: 0, newsletter: 0 });
 
   useEffect(() => {
+    if (!access?.admin_pages) return;  // counts only include what the person may see (database rules)
     let cancelled = false;
     const load = async () => {
       const sevenDaysAgo = new Date();
@@ -82,25 +93,26 @@ export function AdminSidebar() {
     };
     load();
     return () => { cancelled = true; };
-  }, [location.pathname]);
+  }, [location.pathname, access?.admin_pages]);
 
   const isActive = (path: string) => {
     if (path === '/admin') return location.pathname === '/admin';
     return location.pathname.startsWith(path);
   };
 
+  // Each item shows for people with its permission; SEO pages need Super Admin
+  // (they run through Super-Admin-only edge functions).
   const mainItems = [
-    { title: 'Dashboard',        url: '/admin',            icon: LayoutDashboard, count: 0 },
-    { title: 'Contact Forms',    url: '/admin/contacts',   icon: FileText,        count: counts.contacts },
-    { title: 'Job Applications', url: '/admin/jobs',       icon: Briefcase,       count: counts.jobs },
-    { title: 'Resume Folders',   url: '/admin/resumes',    icon: FolderOpen,      count: 0 },
-    { title: 'Download Leads',   url: '/admin/downloads',  icon: Download,        count: counts.downloads },
-    { title: 'Newsletter',       url: '/admin/newsletter', icon: Mail,            count: counts.newsletter },
-    { title: 'Search Console',   url: '/admin/search-console', icon: Search,     count: 0 },
-    { title: 'Index Coverage',   url: '/admin/ar-indexing', icon: Globe,          count: 0 },
-    { title: 'AR vs EN SEO',     url: '/admin/seo-languages', icon: Languages,    count: 0 },
-
-  ];
+    { title: 'Dashboard',        url: '/admin',            icon: LayoutDashboard, count: 0, perms: ['website.dashboard.view'] },
+    { title: 'Contact Forms',    url: '/admin/contacts',   icon: FileText,        count: counts.contacts, perms: ['website.contacts.view'] },
+    { title: 'Job Applications', url: '/admin/jobs',       icon: Briefcase,       count: counts.jobs, perms: ['website.jobs.view'] },
+    { title: 'Resume Folders',   url: '/admin/resumes',    icon: FolderOpen,      count: 0, perms: ['website.jobs.download'] },
+    { title: 'Download Leads',   url: '/admin/downloads',  icon: Download,        count: counts.downloads, perms: ['website.downloads.view'] },
+    { title: 'Newsletter',       url: '/admin/newsletter', icon: Mail,            count: counts.newsletter, perms: ['website.newsletter.view'] },
+    { title: 'Search Console',   url: '/admin/search-console', icon: Search,     count: 0, perms: [] as string[] },
+    { title: 'Index Coverage',   url: '/admin/ar-indexing', icon: Globe,          count: 0, perms: ['website.indexing.view'] },
+    { title: 'AR vs EN SEO',     url: '/admin/seo-languages', icon: Languages,    count: 0, perms: [] as string[] },
+  ].filter((i) => isSuper || i.perms.some((p) => can(access, p)));
 
   return (
     <Sidebar collapsible="icon" className="border-r border-border/50">
@@ -115,6 +127,7 @@ export function AdminSidebar() {
       </div>
 
       <SidebarContent className="px-2 py-4">
+        {mainItems.length > 0 && (<>
         <SidebarGroup>
           <SidebarGroupLabel className="text-xs uppercase tracking-wider text-muted-foreground mb-2">
             Lead Management
@@ -149,14 +162,16 @@ export function AdminSidebar() {
         </SidebarGroup>
 
         <SidebarSeparator className="my-4" />
+        </>)}
 
+        {visible(peopleItems).length > 0 && (<>
         <SidebarGroup>
           <SidebarGroupLabel className="text-xs uppercase tracking-wider text-muted-foreground mb-2">
             Employee Portal
           </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu className="space-y-1">
-              {peopleItems.map((item) => (
+              {visible(peopleItems).map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton
                     asChild
@@ -176,7 +191,38 @@ export function AdminSidebar() {
         </SidebarGroup>
 
         <SidebarSeparator className="my-4" />
+        </>)}
 
+        {visible(adminItems).length > 0 && (<>
+        <SidebarGroup>
+          <SidebarGroupLabel className="text-xs uppercase tracking-wider text-muted-foreground mb-2">
+            Administration
+          </SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu className="space-y-1">
+              {visible(adminItems).map((item) => (
+                <SidebarMenuItem key={item.title}>
+                  <SidebarMenuButton
+                    asChild
+                    isActive={location.pathname.startsWith(item.url)}
+                    className="h-10 rounded-lg transition-all duration-200"
+                    tooltip={item.title}
+                  >
+                    <Link to={item.url} className="flex items-center gap-3">
+                      <item.icon className="h-4 w-4" />
+                      <span className="font-medium flex-1">{item.title}</span>
+                    </Link>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+
+        <SidebarSeparator className="my-4" />
+        </>)}
+
+        {isSuper && (<>
         <SidebarGroup>
           <SidebarGroupLabel className="text-xs uppercase tracking-wider text-muted-foreground mb-2">
             Proposal Tracker
@@ -223,6 +269,7 @@ export function AdminSidebar() {
         </SidebarGroup>
 
         <SidebarSeparator className="my-4" />
+        </>)}
 
         <SidebarGroup>
           <SidebarGroupLabel className="text-xs uppercase tracking-wider text-muted-foreground mb-2">

@@ -2,8 +2,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { ResumesFolderBrowser } from './ResumesFolderBrowser';
 import { IntelligentJobApplicationsTable } from './IntelligentJobApplicationsTable';
 import { Brain, FolderArchive } from 'lucide-react';
+import { useCan } from '@/portal/lib/useCan';
 
 export const ResumesWorkspace = () => {
+  // The Resume Library lists the CV files themselves, so it needs the CV permission.
+  const canFiles = useCan()('website.jobs.download');
   return (
     <div className="space-y-4">
       <div>
@@ -18,16 +21,16 @@ export const ResumesWorkspace = () => {
           <TabsTrigger value="applications" className="gap-2">
             <Brain className="h-4 w-4" /> Applications
           </TabsTrigger>
-          <TabsTrigger value="library" className="gap-2">
+          {canFiles && <TabsTrigger value="library" className="gap-2">
             <FolderArchive className="h-4 w-4" /> Resume Library
-          </TabsTrigger>
+          </TabsTrigger>}
         </TabsList>
         <TabsContent value="applications" className="mt-4">
           <IntelligentJobApplicationsTable />
         </TabsContent>
-        <TabsContent value="library" className="mt-4">
+        {canFiles && <TabsContent value="library" className="mt-4">
           <ResumesFolderBrowser />
-        </TabsContent>
+        </TabsContent>}
       </Tabs>
     </div>
   );

@@ -17,11 +17,13 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { format } from 'date-fns';
 import { Loader2, FileSpreadsheet, Search } from 'lucide-react';
 import { exportToExcel } from '@/lib/exportToExcel';
+import { useCan } from '@/portal/lib/useCan';
 import { DateRangeFilter, inDateRange, loadDateRange, DateRange } from './DateRangeFilter';
 
 type DownloadLead = Tables<'download_leads'>;
 
 export const DownloadLeadsTable = () => {
+  const can = useCan();
   const [leads, setLeads] = useState<DownloadLead[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [search, setSearch] = useState('');
@@ -107,10 +109,10 @@ export const DownloadLeadsTable = () => {
             <CardTitle>Download Leads</CardTitle>
             <CardDescription>Users who downloaded brochures and resources</CardDescription>
           </div>
-          <Button variant="outline" size="sm" onClick={handleExport} disabled={!filtered.length}>
+          {can('website.downloads.export') && <Button variant="outline" size="sm" onClick={handleExport} disabled={!filtered.length}>
             <FileSpreadsheet className="h-4 w-4 mr-2" />
             Export Excel ({filtered.length})
-          </Button>
+          </Button>}
         </div>
         <div className="flex flex-col md:flex-row gap-3 mt-4 md:items-end">
           <div className="relative flex-1">

@@ -1,5 +1,8 @@
 import { useEffect, useState, useCallback } from 'react';
 import { supabase } from '@/integrations/supabase/client';
+import { useCan } from '@/portal/lib/useCan';
+import { useMyAccess } from '@/portal/lib/useMyAccess';
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -32,6 +35,9 @@ interface EventRow {
 }
 
 export function ArabicIndexingMonitor() {
+  const can = useCan();
+  // "Run check" calls a Super-Admin-only edge function.
+  const isSuper = !!useMyAccess().data?.is_super_admin;
   const [rows, setRows] = useState<StatusRow[]>([]);
   const [events, setEvents] = useState<EventRow[]>([]);
   const [loading, setLoading] = useState(true);
@@ -89,10 +95,10 @@ export function ArabicIndexingMonitor() {
             {lastRun && ` Last run ${format(new Date(lastRun), 'dd MMM yyyy HH:mm')}.`}
           </p>
         </div>
-        <Button onClick={runCheck} disabled={running}>
+        {isSuper && <Button onClick={runCheck} disabled={running}>
           <RefreshCw className={`h-4 w-4 mr-2 ${running ? 'animate-spin' : ''}`} />
           {running ? 'Checking…' : 'Run check now'}
-        </Button>
+        </Button>}
       </div>
 
       {unacked.length > 0 && (
@@ -110,7 +116,7 @@ export function ArabicIndexingMonitor() {
                 <span className="truncate">{ev.url}</span>
                 <div className="flex items-center gap-2 shrink-0">
                   <span className="text-muted-foreground">{format(new Date(ev.created_at), 'dd MMM')}</span>
-                  <Button size="sm" variant="ghost" onClick={() => acknowledge(ev.id)}>Dismiss</Button>
+                  {can('website.indexing.edit') && <Button size="sm" variant="ghost" onClick={() => acknowledge(ev.id)}>Dismiss</Button>}
                 </div>
               </div>
             ))}

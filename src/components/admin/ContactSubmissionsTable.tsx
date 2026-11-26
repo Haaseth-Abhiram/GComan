@@ -29,6 +29,9 @@ import { format } from 'date-fns';
 import { Loader2, Eye, Mail, MailCheck, MailX, AlertCircle, FileSpreadsheet, Search, ExternalLink, CheckCircle2, XCircle, CircleDashed, Trash2, RefreshCw } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 import { exportToExcel } from '@/lib/exportToExcel';
+import { useCan } from '@/portal/lib/useCan';
+import { useMyAccess } from '@/portal/lib/useMyAccess';
+
 import { DateRangeFilter, inDateRange, loadDateRange, DateRange } from './DateRangeFilter';
 
 interface ContactSubmission {
@@ -52,6 +55,8 @@ interface ContactSubmission {
 const ZOHO_LEAD_URL = (id: string) => `https://crm.zoho.com/crm/EntityInfo.do?module=Leads&id=${id}`;
 
 export const ContactSubmissionsTable = () => {
+  const can = useCan();
+  const isSuper = !!useMyAccess().data?.is_super_admin;
   const [submissions, setSubmissions] = useState<ContactSubmission[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [selectedSubmission, setSelectedSubmission] = useState<ContactSubmission | null>(null);
@@ -312,7 +317,7 @@ export const ContactSubmissionsTable = () => {
             <div className="flex items-center gap-2">
               {/* Backfill for submissions that never reached Zoho. Always runs a
                   dry run first — the second click is what actually writes. */}
-              <Button
+              {isSuper && <Button
                 variant="outline"
                 size="sm"
                 onClick={handleResync}
@@ -325,11 +330,11 @@ export const ContactSubmissionsTable = () => {
                   <RefreshCw className="h-4 w-4 mr-2" />
                 )}
                 {resyncPreview ? `Push ${resyncPreview.wouldPush} to Zoho` : 'Check CRM sync'}
-              </Button>
-              <Button variant="outline" size="sm" onClick={handleExport} disabled={!filtered.length}>
+              </Button>}
+              {can('website.contacts.export') && <Button variant="outline" size="sm" onClick={handleExport} disabled={!filtered.length}>
                 <FileSpreadsheet className="h-4 w-4 mr-2" />
                 Export Excel ({filtered.length})
-              </Button>
+              </Button>}
             </div>
           </div>
           <div className="flex flex-col md:flex-row gap-3 mt-4 md:items-end">
@@ -406,14 +411,14 @@ export const ContactSubmissionsTable = () => {
                             <Eye className="h-4 w-4 mr-1" />
                             View
                           </Button>
-                          <Button
+                          {can('website.contacts.delete') && <Button
                             variant="outline"
                             size="sm"
                             className="text-destructive hover:text-destructive"
                             onClick={() => setDeleteTarget(submission)}
                           >
                             <Trash2 className="h-4 w-4" />
-                          </Button>
+                          </Button>}
                         </div>
                       </TableCell>
                     </TableRow>
@@ -514,7 +519,7 @@ export const ContactSubmissionsTable = () => {
               </div>
             </div>
           )}
-          {selectedSubmission && (
+          {selectedSubmission && can('website.contacts.delete') && (
             <div className="flex justify-end pt-2">
               <Button
                 variant="destructive"
