@@ -1,5 +1,17 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ],
+  "build": {
+    "env": {
+      "VITE_SUPABASE_URL": "https://dugllvupvcfdpddktrbt.supabase.co",
+      "VITE_SUPABASE_PROJECT_ID": "dugllvupvcfdpddktrbt",
+      "VITE_SUPABASE_PUBLISHABLE_KEY": "sb_publishable_VhD7gF1F6dOG0VNcJmrdwQ_rBEbkb-O"
+    }
+  }
 }
