@@ -44,6 +44,7 @@ const trackerItems = [
 // Employee Portal administration (see src/components/admin/EmployeesAdmin.tsx).
 // Each item shows only for people whose roles give one of the listed permissions.
 const peopleItems = [
+  { title: 'Overview', url: '/admin/employee-portal', icon: LayoutDashboard, perms: ['portal.attendance.view'] },
   { title: 'Employees', url: '/admin/employees', icon: UserCog, perms: ['portal.employees.view'] },
   { title: 'Attendance', url: '/admin/attendance', icon: CalendarClock, perms: ['portal.attendance.view'] },
   { title: 'Leave', url: '/admin/leave', icon: CalendarDays, perms: ['portal.leave.view'] },

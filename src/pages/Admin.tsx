@@ -10,6 +10,7 @@ const SettingsAdmin = lazyRetry(() => import('@/components/admin/SettingsAdmin')
 const ReportsAdmin = lazyRetry(() => import('@/components/admin/ReportsAdmin'));
 const ProjectsAdmin = lazyRetry(() => import('@/components/admin/ProjectsAdmin'));
 const NotificationsAdmin = lazyRetry(() => import('@/components/admin/NotificationsAdmin'));
+const TeamOverview = lazyRetry(() => import('@/portal/components/TeamOverview').then((m) => ({ default: m.TeamOverview })));
 
 /** Shown when someone opens an admin page their roles don't allow. */
 const NoAccess = () => (
@@ -676,6 +677,14 @@ const Admin = () => {
                   }
                 />
                 </>)}
+                <Route
+                  path="/employee-portal"
+                  element={access && can(access, 'portal.attendance.view') ? (
+                    <Suspense fallback={<Loader2 className="h-6 w-6 animate-spin text-primary" />}>
+                      <TeamOverview access={access} />
+                    </Suspense>
+                  ) : <NoAccess />}
+                />
                 <Route
                   path="/employees"
                   element={can(access, 'portal.employees.view') ? (

@@ -20,6 +20,7 @@ import { ForcedPasswordChange } from '@/portal/components/ForcedPasswordChange';
 import { AttendancePage, PunchInGate, TodayAttendanceCard, useAttendanceMe } from '@/portal/components/Attendance';
 import { LeavePage } from '@/portal/components/Leave';
 import { PortalShell } from '@/portal/components/PortalShell';
+import { TeamOverview } from '@/portal/components/TeamOverview';
 import { DailyReportPage } from '@/portal/components/DailyReport';
 import { NoticeList, NotificationsPage } from '@/portal/components/Notifications';
 import { MyProjectsPage, ProjectPage, Progress, TaskLine } from '@/portal/components/Projects';
@@ -197,6 +198,8 @@ const HomePanels = () => {
 
 const HomePage = () => {
   const { access, employee } = usePortal();
+  // People who may see everyone's attendance get the company overview for today.
+  if (can(access, 'portal.attendance.view')) return <TeamOverview access={access} />;
   const hour = new Date().getHours();
   const greeting = hour < 12 ? 'Good morning' : hour < 17 ? 'Good afternoon' : 'Good evening';
   return (

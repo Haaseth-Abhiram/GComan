@@ -17,6 +17,7 @@ const PAGES: [path: string, section: string, title: string][] = [
   ['/admin/ar-indexing', 'Lead Management', 'Index Coverage'],
   ['/admin/seo-languages', 'Lead Management', 'AR vs EN SEO'],
   ['/admin/proposal-tracker', 'Proposal Tracker', 'Proposal Tracker'],
+  ['/admin/employee-portal', 'Employee Portal', 'Overview'],
   ['/admin/employees', 'Employee Portal', 'Employees'],
   ['/admin/attendance', 'Employee Portal', 'Attendance'],
   ['/admin/leave', 'Employee Portal', 'Leave'],
