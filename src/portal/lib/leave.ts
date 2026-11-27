@@ -28,6 +28,7 @@ export interface LeaveRequest {
   start_date: string;
   end_date: string;
   half_day: boolean;
+  half_session?: 'first' | 'second' | null;
   days: number;
   reason: string;
   status: LeaveStatus;
@@ -48,6 +49,7 @@ export interface Holiday { date: string; name: string }
 export interface LeaveOverview {
   year: number;
   today: string;
+  half_sessions?: boolean;   // the database can store first / second half
   weekly_off: number[];
   manager: { id: string; full_name: string } | null;
   balances: LeaveBalance[];
@@ -77,8 +79,12 @@ const rpc = async <T,>(fn: string, args?: Record<string, unknown>): Promise<T> =
 export const fetchLeaveOverview = (year?: number) => rpc<LeaveOverview>('leave_overview', { _year: year ?? null });
 export const previewLeave = (v: { type: string; from: string; to: string; half: boolean }) =>
   rpc<number>('leave_preview', { _type: v.type, _from: v.from, _to: v.to, _half: v.half });
-export const applyLeave = (v: { type: string; from: string; to: string; half: boolean; reason: string }) =>
-  rpc<LeaveRequest>('leave_apply', { _type: v.type, _from: v.from, _to: v.to, _half: v.half, _reason: v.reason });
+export const applyLeave = (v: { type: string; from: string; to: string; half: boolean; session?: 'first' | 'second' | null; reason: string }) =>
+  rpc<LeaveRequest>('leave_apply', {
+    _type: v.type, _from: v.from, _to: v.to, _half: v.half, _reason: v.reason,
+    // Only sent when chosen, so full days also work on a database without this field.
+    ...(v.half && v.session ? { _half_session: v.session } : {}),
+  });
 export const cancelLeave = (id: string) => rpc<void>('leave_cancel', { _id: id });
 
 // Manager
@@ -105,6 +111,7 @@ export const saveHoliday = (date: string, name: string, oldDate?: string | null)
 export const deleteHoliday = (date: string) => rpc<number>('leave_admin_delete_holiday', { _date: date });
 
 // Display
+export const HALF_TEXT = { first: 'First half', second: 'Second half' } as const;
 export const STATUS_TEXT: Record<LeaveStatus, string> = {
   manager_review: 'Waiting for manager',
   admin_review: 'Waiting for admin',

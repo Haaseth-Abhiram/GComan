@@ -45,15 +45,15 @@ const ProposalTrackerAdmin = () => {
   setSessionOverride(identity?.id ?? null);
   useEffect(() => () => setSessionOverride(null), []);
 
-  // Engineers are real employees (Supabase) with the Proposal Engineer role;
-  // copy the active ones into the browser-local tracker so assignment lists
-  // and labels show the real people.
+  // Engineers are real employees (Supabase) with Proposal Tracker access (a
+  // tracker code); copy the active ones into the browser-local tracker so
+  // assignment lists and labels show the real people.
   const { data: employees } = useQuery({ queryKey: EMPLOYEES_QUERY, queryFn: listEmployees });
   useEffect(() => {
     if (!employees) return;
     syncEngineers(
       employees
-        .filter((e) => e.active && e.proposal_code && e.roles.includes('proposal_engineer'))
+        .filter((e) => e.active && e.proposal_code)
         .map((e) => ({ id: e.id, code: e.proposal_code!, name: e.full_name, email: e.email })),
       'replace',
     );

@@ -74,7 +74,8 @@ const UserDetail = () => {
     u.is_self ? 'This is you. Nobody can change their own access; ask another administrator.' :
       !ov.can_edit_users ? 'You can view people but not change their access.' :
         !u.employee_id ? 'This login has no employee record, so it holds no roles. Add them on the Employees page first.' : null;
-  const exceptionsLocked = readOnly ?? (detail?.is_super_admin ? 'A Super Admin already has every permission.' : null);
+  const exceptionsLocked = readOnly ?? (detail?.is_super_admin ? 'A Super Admin already has every permission.'
+    : !ov?.is_super_admin ? 'Only a Super Admin can change personal permissions.' : null);
 
   /** Why this exception can't be changed at all (or null). */
   const lockFor = (p: RbacPermission) => {
@@ -140,7 +141,7 @@ const UserDetail = () => {
   return (
     <div className="space-y-4 pb-24">
       <div>
-        <Button variant="ghost" size="sm" className="-ml-2 mb-1" onClick={back}><ArrowLeft className="h-4 w-4 mr-1" />People</Button>
+        <Button variant="ghost" size="sm" className="-ml-2 mb-1" onClick={back}><ArrowLeft className="h-4 w-4 mr-1" />Users &amp; Roles</Button>
         <h1 className="text-2xl font-bold flex items-center gap-2">
           {u.full_name}
           {detail.is_super_admin && <Badge className="bg-primary hover:bg-primary"><ShieldCheck className="h-3 w-3 mr-1" />Super Admin</Badge>}
@@ -156,7 +157,7 @@ const UserDetail = () => {
         <Card>
           <CardHeader className="pb-3">
             <CardTitle className="text-base">Roles</CardTitle>
-            <CardDescription>Their permissions are everything their active roles allow, plus personal exceptions.</CardDescription>
+            <CardDescription>Their permissions are everything their roles allow, plus personal exceptions.</CardDescription>
           </CardHeader>
           <CardContent className="space-y-3">
             {ov.is_super_admin && !u.is_self && (
@@ -170,15 +171,20 @@ const UserDetail = () => {
             )}
             {assignable.map((r) => (
               <div key={r.key} className="flex items-start gap-2">
-                <Checkbox id={`r-${r.key}`} className="mt-0.5" checked={roles.includes(r.key)} disabled={!!readOnly || (!r.active && !roles.includes(r.key))}
+                <Checkbox id={`r-${r.key}`} className="mt-0.5" checked={roles.includes(r.key)} disabled={!!readOnly || (r.key === 'admin' && !ov.is_super_admin)}
                   onCheckedChange={(c) => setRoles(c === true ? [...roles, r.key] : roles.filter((x) => x !== r.key))} />
                 <div>
-                  <Label htmlFor={`r-${r.key}`}>{r.name}{!r.active && <span className="text-muted-foreground"> (inactive)</span>}</Label>
-                  <p className="text-xs text-muted-foreground">{r.description || `${r.permissions.length} permissions`}</p>
+                  <Label htmlFor={`r-${r.key}`}>{r.name}</Label>
+                  <p className="text-xs text-muted-foreground">{r.description}{r.key === 'admin' && !ov.is_super_admin && ' Only a Super Admin can change it.'}</p>
                 </div>
               </div>
             ))}
             {autoRoles.length > 0 && <p className="text-xs text-muted-foreground">Also given automatically by the system: {autoRoles.map((r) => r.name).join(', ')}.</p>}
+            {u.employee_id && (
+              <p className="text-xs text-muted-foreground">
+                Proposal Tracker access: <strong>{u.proposal_code ? `on (${u.proposal_code})` : 'off'}</strong>. Change it on the Employees page.
+              </p>
+            )}
           </CardContent>
         </Card>
 

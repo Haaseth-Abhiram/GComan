@@ -3,7 +3,7 @@
  * audit log (migrations 20261126170000 + 20261126180000/180100). The database
  * enforces every rule; these calls only read and request changes.
  */
-import { supabase } from '@/integrations/supabase/client';
+import { rpc } from '@/portal/lib/rpc';
 
 export type Scope = 'none' | 'own' | 'team' | 'department' | 'all';
 export const SCOPE_LABEL: Record<Scope, string> = {
@@ -14,9 +14,7 @@ export interface RbacRole {
   key: string;
   name: string;
   description: string;
-  implicit: boolean;   // automatic (Super Admin, Employee, Manager)
-  builtin: boolean;    // can't be deleted or deactivated
-  active: boolean;
+  implicit: boolean;   // automatic (Super Admin, Manager, Employee); Admin is assigned
   users: number;
   permissions: string[];
   scopes: Record<string, Scope>;
@@ -74,7 +72,7 @@ export interface AuditEntry {
   at: string;
   actor: string | null;
   actor_name: string | null;
-  entity: 'role' | 'role_permission' | 'user_role' | 'user_override' | 'role_scope' | 'user_scope' | 'super_admin';
+  entity: 'role' | 'role_permission' | 'user_role' | 'user_override' | 'role_scope' | 'user_scope' | 'super_admin' | 'user_email';
   action: 'created' | 'changed' | 'removed';
   role_key: string | null;
   role_name: string | null;
@@ -88,24 +86,19 @@ export interface AuditEntry {
 }
 export interface AssignableRole { key: string; name: string; description: string; sensitive: boolean }
 
-const rpc = async <T,>(fn: string, args?: Record<string, unknown>): Promise<T> => {
-  const { data, error } = await (supabase.rpc as unknown as (f: string, a?: Record<string, unknown>) =>
-    Promise<{ data: unknown; error: { message: string } | null }>)(fn, args);
-  if (error) throw new Error(error.message);
-  return data as T;
-};
-
 export const RBAC_KEY = ['admin', 'rbac'];
 
-// Roles
-export const fetchRbacOverview = () => rpc<RbacOverview>('rbac_admin_overview');
+// Roles (four fixed ones: only their permissions can change)
+/** Set per person on the Employees page, not through roles or exceptions. */
+const PERSON_SWITCHES = ['proposal.tracker.view'];
+export const fetchRbacOverview = async () => {
+  const ov = await rpc<RbacOverview>('rbac_admin_overview');
+  return { ...ov, permissions: ov.permissions.filter((p) => !PERSON_SWITCHES.includes(p.key)) };
+};
 export const saveRole = (key: string | null, name: string, description: string) =>
   rpc<string>('rbac_admin_save_role', { _key: key, _name: name, _description: description });
 export const saveRoleAccess = (role: string, perms: string[], scopes: Record<string, Scope | ''>) =>
   rpc<{ added: string[]; removed: string[] }>('rbac_admin_save_role_access', { _role: role, _perms: perms, _scopes: scopes });
-export const setRoleActive = (role: string, active: boolean) => rpc<void>('rbac_admin_set_role_active', { _role: role, _active: active });
-/** reassign: role key to move people to, '-' to just remove it from them, or null when nobody has it. */
-export const deleteRole = (key: string, reassign: string | null) => rpc<number>('rbac_admin_delete_role', { _key: key, _reassign: reassign });
 
 // People
 export const fetchRbacUsers = () => rpc<RbacUser[]>('rbac_admin_users');
@@ -114,6 +107,8 @@ export const setUserRoles = (userId: string, roles: string[]) => rpc<void>('rbac
 export const setSuperAdmin = (userId: string, on: boolean) => rpc<void>('rbac_admin_set_super_admin', { _user: userId, _on: on });
 export const setUserOverrides = (userId: string, overrides: UserOverride[], scopes: Record<string, Scope | ''>) =>
   rpc<void>('rbac_admin_set_user_overrides', { _user: userId, _overrides: overrides, _scopes: scopes });
+/** Super Admin only: the email a person signs in with. Returns the saved email. */
+export const changeUserEmail = (userId: string, email: string) => rpc<string>('rbac_admin_change_email', { _user: userId, _email: email });
 export const fetchAssignableRoles = () => rpc<AssignableRole[]>('rbac_assignable_roles');
 
 // Audit

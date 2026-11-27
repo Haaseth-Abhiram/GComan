@@ -3,9 +3,9 @@
  *
  * Sign-in happens on the website's single /login page (Supabase auth). This
  * provider reads that session and the user's access (rbac_my_access): only an
- * active employee with the Proposal Engineer role (permission
- * proposal.tracker.view) and a tracker code gets a tracker identity. The
- * admin side uses TrackerAuthBridge below instead.
+ * active employee with Proposal Tracker access (permission
+ * proposal.tracker.view, switched on per person) and a tracker code gets a
+ * tracker identity. The admin side uses TrackerAuthBridge below instead.
  *
  * Proposal data is still browser-local (lib/db.ts), so the engineer's record
  * is copied into it and the data layer's session key is set to their id.
@@ -30,7 +30,7 @@ const toUser = (a: LoginIdentity): TrackerUser => ({ ...a, user_metadata: { name
 interface AuthContextType {
   user: TrackerUser | null;
   isLoading: boolean;
-  /** Has a website session (even if not a proposal engineer). */
+  /** Has a website session (even without tracker access). */
   isSignedIn: boolean;
   /** Signed in with a temporary (admin-set) password: must choose their own first. */
   mustChangePassword: boolean;

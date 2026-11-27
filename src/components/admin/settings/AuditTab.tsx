@@ -34,6 +34,7 @@ const describe = (a: AuditEntry, ov: RbacOverview) => {
       return `Personal ${String(n.effect)}: “${perm}” for ${who}${n.reason ? ` (${String(n.reason)})` : ''}`;
     case 'role_scope': return `${role} · ${res} access: ${scopeText(o.scope)} → ${scopeText(n.scope)}`;
     case 'user_scope': return `${who} · personal ${res} access: ${scopeText(o.scope)} → ${a.action === 'removed' ? 'follow roles' : scopeText(n.scope)}`;
+    case 'user_email': return `Changed the sign-in email of ${who}: ${String(o.email)} → ${String(n.email)}`;
     case 'super_admin': return a.action === 'created' ? `Made ${who} a Super Admin` : `Removed Super Admin from ${who}`;
     default: return `${a.entity} ${a.action}`;
   }

@@ -1,19 +1,24 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Separator } from '@/components/ui/separator';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { useToast } from '@/hooks/use-toast';
-import { Eye, EyeOff, Mail, Lock, ArrowLeft } from 'lucide-react';
+import { Eye, EyeOff, Mail, Lock, ArrowLeft, FlaskConical, ShieldCheck, UserRound, ClipboardList } from 'lucide-react';
 import { z } from 'zod';
 import logo from '@/assets/global-chemicals-logo.svg';
 import { supabase } from '@/integrations/supabase/client';
 import { destinationForUser } from '@/portal/lib/access';
+import { usePortalTheme } from '@/portal/theme/usePortalTheme';
 
+
+const HIGHLIGHTS = [
+  { icon: ShieldCheck, label: 'Secure access' },
+  { icon: UserRound, label: 'Employee portal' },
+  { icon: ClipboardList, label: 'Orders & documents' },
+];
 
 // Validation schemas
 const loginSchema = z.object({
@@ -51,6 +56,7 @@ const arrivedViaRecoveryLink =
   typeof window !== 'undefined' && window.location.hash.includes('type=recovery');
 
 const Login = () => {
+  usePortalTheme();
   const { toast } = useToast();
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
@@ -370,292 +376,220 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary/5 via-background to-background flex items-center justify-center p-4">
+    <div className="relative isolate flex min-h-screen flex-col items-center justify-center overflow-hidden bg-[#0a1029] px-4 py-20 sm:px-6">
       <Helmet defer={false}>
         <title>Login | Global Chemicals LLC</title>
         <meta name="description" content="Login to Global Chemicals LLC customer portal. Access orders, invoices, technical docs & account info securely." />
         <meta name="robots" content="noindex, nofollow" />
         <link rel="canonical" href="https://gcoman.com/login" />
       </Helmet>
-      <div className="w-full max-w-6xl grid lg:grid-cols-2 gap-8 items-center">
-        {/* Left Side - Branding */}
-        <div className="hidden lg:flex flex-col justify-center space-y-8 animate-fade-in">
-          <Link to="/" className="inline-flex items-center gap-2 group mb-8">
-            <ArrowLeft className="h-5 w-5 transition-transform group-hover:-translate-x-1" />
-            <span className="text-sm font-medium">Back to Home</span>
-          </Link>
-          
-          <div className="space-y-6">
-            <img
-              src={logo}
-              alt="Global Chemicals LLC"
-              width={200}
-              height={64}
-              className="h-16 w-auto"
-            />
-            <div>
-              <h1 className="text-4xl font-bold text-foreground mb-4">
-                Welcome to Global Chemicals LLC
-              </h1>
-              <p className="text-lg text-muted-foreground">
-                Your trusted partner for premium chemical solutions across Oman
-              </p>
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute -right-32 -top-32 h-[28rem] w-[28rem] rounded-full bg-[#f1592a]/25 blur-[130px]" />
+        <div className="absolute -bottom-32 -left-32 h-[28rem] w-[28rem] rounded-full bg-[#223f96]/60 blur-[130px]" />
+      </div>
+
+      <Link
+        to="/"
+        className="group absolute left-4 top-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold text-white backdrop-blur-md transition-colors hover:bg-white/10 sm:left-6"
+      >
+        <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-0.5" aria-hidden="true" />
+        Back to Home
+      </Link>
+
+      <div className="w-full max-w-md animate-fade-in">
+        <div className="flex flex-col items-center text-center">
+          <span className="rounded-2xl bg-white px-5 py-3 shadow-2xl shadow-black/40">
+            <img src={logo} alt="Global Chemicals LLC" width={180} height={52} className="h-12 w-auto" />
+          </span>
+          <span className="mt-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold text-[#ff8a5c]">
+            <FlaskConical className="h-3.5 w-3.5" aria-hidden="true" />
+            Premium chemical solutions across Oman
+          </span>
+        </div>
+
+        <div className="mt-7 rounded-[1.75rem] bg-gradient-to-br from-[#f1592a] via-[#ffb08f]/60 to-[#3f63c9] p-[2px] shadow-2xl shadow-black/60">
+          <div className="rounded-[1.65rem] bg-[#0d1433] p-6 sm:p-8">
+            <div className="mx-auto flex w-full max-w-[15rem] rounded-full border border-white/10 bg-white/5 p-1">
+              {([[true, 'Sign In'], [false, 'Sign Up']] as const).map(([value, text]) => (
+                <button
+                  key={text}
+                  type="button"
+                  aria-pressed={isLogin === value}
+                  onClick={() => setIsLogin(value)}
+                  className={`flex-1 rounded-full py-1.5 text-xs font-semibold transition-all ${isLogin === value ? 'bg-gradient-to-r from-[#f1592a] to-[#3f63c9] text-white' : 'text-white/55 hover:text-white'}`}
+                >
+                  {text}
+                </button>
+              ))}
             </div>
-            
-            <div className="space-y-4 pt-8">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Mail className="h-6 w-6 text-primary" />
+
+            <h1 className="mt-6 text-center text-2xl font-bold text-white">
+              {isLogin ? 'Sign In to Your Account' : 'Create Your Account'}
+            </h1>
+            <p className="mt-1.5 text-center text-sm text-white/60">
+              {isLogin ? 'Enter your credentials to access your account' : 'Sign up to get started with Global Chemicals LLC'}
+            </p>
+
+            {isLogin ? (
+              // Login Form
+              <form onSubmit={handleLoginSubmit} className="mt-6 space-y-4">
+                  <div className="space-y-1.5">
+                    <Label htmlFor="login-email" className="text-white/80">Email Address</Label>
+                    <div className="relative">
+                      <Mail className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-white/40" aria-hidden="true" />
+                      <Input
+                        id="login-email"
+                        type="email"
+                        autoComplete="email"
+                        placeholder="you@example.com"
+                        value={loginData.email}
+                        onChange={(e) => setLoginData({ ...loginData, email: e.target.value })}
+                        className="pl-10 border-white/20 bg-white/[0.08] text-white placeholder:text-white/30 focus-visible:border-[#f1592a]/60 focus-visible:ring-[#f1592a]/40 focus-visible:ring-offset-0"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div className="space-y-1.5">
+                    <div className="flex items-center justify-between">
+                      <Label htmlFor="login-password" className="text-white/80">Password</Label>
+                      <button type="button" className="text-xs font-semibold text-[#ff8a5c] hover:underline" onClick={() => setShowResetDialog(true)}>
+                        Forgot password?
+                      </button>
+                    </div>
+                    <div className="relative">
+                      <Lock className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-white/40" aria-hidden="true" />
+                      <Input
+                        id="login-password"
+                        type={showPassword ? "text" : "password"}
+                        autoComplete="current-password"
+                        placeholder="••••••••"
+                        value={loginData.password}
+                        onChange={(e) => setLoginData({ ...loginData, password: e.target.value })}
+                        className="pl-10 pr-10 border-white/20 bg-white/[0.08] text-white placeholder:text-white/30 focus-visible:border-[#f1592a]/60 focus-visible:ring-[#f1592a]/40 focus-visible:ring-offset-0"
+                        required
+                      />
+                      <button
+                        type="button"
+                        onClick={() => setShowPassword(!showPassword)}
+                        aria-label={showPassword ? 'Hide password' : 'Show password'}
+                        className="absolute right-3 top-1/2 -translate-y-1/2 text-white/40 transition-colors hover:text-white"
+                      >
+                        {showPassword ? <EyeOff className="h-4 w-4" aria-hidden="true" /> : <Eye className="h-4 w-4" aria-hidden="true" />}
+                      </button>
+                    </div>
+                  </div>
+
+                <Button type="submit" className="w-full bg-gradient-to-r from-[#f1762a] to-[#f1592a] font-semibold text-white shadow-[0_18px_28px_-12px_rgba(241,89,42,0.6)] transition-all hover:-translate-y-0.5" size="lg" disabled={isLoading}>
+                  {isLoading ? 'Signing in...' : 'Sign In'}
+                </Button>
+              </form>
+            ) : (
+              // Signup Form
+              <form onSubmit={handleSignupSubmit} className="mt-6 space-y-4">
+                  <div className="space-y-1.5">
+                    <Label htmlFor="signup-name" className="text-white/80">Full Name</Label>
+                    <div className="relative">
+                      <Input
+                        id="signup-name"
+                        type="text"
+                        autoComplete="name"
+                        placeholder="John Doe"
+                        value={signupData.name}
+                        onChange={(e) => setSignupData({ ...signupData, name: e.target.value })}
+                        className="border-white/20 bg-white/[0.08] text-white placeholder:text-white/30 focus-visible:border-[#f1592a]/60 focus-visible:ring-[#f1592a]/40 focus-visible:ring-offset-0"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div className="space-y-1.5">
+                    <Label htmlFor="signup-email" className="text-white/80">Email Address</Label>
+                    <div className="relative">
+                      <Mail className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-white/40" aria-hidden="true" />
+                      <Input
+                        id="signup-email"
+                        type="email"
+                        autoComplete="email"
+                        placeholder="you@example.com"
+                        value={signupData.email}
+                        onChange={(e) => setSignupData({ ...signupData, email: e.target.value })}
+                        className="pl-10 border-white/20 bg-white/[0.08] text-white placeholder:text-white/30 focus-visible:border-[#f1592a]/60 focus-visible:ring-[#f1592a]/40 focus-visible:ring-offset-0"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div className="space-y-1.5">
+                    <Label htmlFor="signup-password" className="text-white/80">Password</Label>
+                    <div className="relative">
+                      <Lock className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-white/40" aria-hidden="true" />
+                      <Input
+                        id="signup-password"
+                        type={showPassword ? "text" : "password"}
+                        autoComplete="new-password"
+                        placeholder="••••••••"
+                        value={signupData.password}
+                        onChange={(e) => setSignupData({ ...signupData, password: e.target.value })}
+                        className="pl-10 pr-10 border-white/20 bg-white/[0.08] text-white placeholder:text-white/30 focus-visible:border-[#f1592a]/60 focus-visible:ring-[#f1592a]/40 focus-visible:ring-offset-0"
+                        required
+                      />
+                      <button
+                        type="button"
+                        onClick={() => setShowPassword(!showPassword)}
+                        aria-label={showPassword ? 'Hide password' : 'Show password'}
+                        className="absolute right-3 top-1/2 -translate-y-1/2 text-white/40 transition-colors hover:text-white"
+                      >
+                        {showPassword ? <EyeOff className="h-4 w-4" aria-hidden="true" /> : <Eye className="h-4 w-4" aria-hidden="true" />}
+                      </button>
+                    </div>
+                    <p className="text-xs text-white/45">Must be at least 8 characters with uppercase, lowercase, and number</p>
+                  </div>
+
+                  <div className="space-y-1.5">
+                    <Label htmlFor="signup-confirm" className="text-white/80">Confirm Password</Label>
+                    <div className="relative">
+                      <Lock className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-white/40" aria-hidden="true" />
+                      <Input
+                        id="signup-confirm"
+                        type={showConfirmPassword ? "text" : "password"}
+                        autoComplete="new-password"
+                        placeholder="••••••••"
+                        value={signupData.confirmPassword}
+                        onChange={(e) => setSignupData({ ...signupData, confirmPassword: e.target.value })}
+                        className="pl-10 pr-10 border-white/20 bg-white/[0.08] text-white placeholder:text-white/30 focus-visible:border-[#f1592a]/60 focus-visible:ring-[#f1592a]/40 focus-visible:ring-offset-0"
+                        required
+                      />
+                      <button
+                        type="button"
+                        onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                        aria-label={showConfirmPassword ? 'Hide password' : 'Show password'}
+                        className="absolute right-3 top-1/2 -translate-y-1/2 text-white/40 transition-colors hover:text-white"
+                      >
+                        {showConfirmPassword ? <EyeOff className="h-4 w-4" aria-hidden="true" /> : <Eye className="h-4 w-4" aria-hidden="true" />}
+                      </button>
+                    </div>
+                  </div>
+
+                <Button type="submit" className="w-full bg-gradient-to-r from-[#f1762a] to-[#f1592a] font-semibold text-white shadow-[0_18px_28px_-12px_rgba(241,89,42,0.6)] transition-all hover:-translate-y-0.5" size="lg" disabled={isLoading}>
+                  {isLoading ? 'Creating account...' : 'Create Account'}
+                </Button>
+              </form>
+            )}
+
+            <div className="mt-6 grid grid-cols-3 gap-2 border-t border-white/10 pt-5">
+              {HIGHLIGHTS.map((item) => (
+                <div key={item.label} className="flex flex-col items-center gap-1 text-center">
+                  <item.icon className="h-4 w-4 text-[#ff8a5c]" aria-hidden="true" />
+                  <span className="text-[10.5px] font-medium leading-tight text-white/55">{item.label}</span>
                 </div>
-                <div>
-                  <h3 className="font-semibold mb-1">Secure Access</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Your data is protected with enterprise-grade security
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Lock className="h-6 w-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-1">Customer Portal</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Access orders, invoices, and technical documentation
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
 
-        {/* Right Side - Auth Forms */}
-        <div className="w-full max-w-md mx-auto animate-fade-in" style={{ animationDelay: '100ms' }}>
-          <Card className="logo-gradient-border shadow-xl">
-            <CardHeader className="space-y-4">
-              <div className="lg:hidden flex justify-center mb-4">
-                <img
-                  src={logo}
-                  alt="Global Chemicals LLC"
-                  width={150}
-                  height={48}
-                  className="h-12 w-auto"
-                />
-              </div>
-              <CardTitle className="text-2xl text-center">
-                {isLogin ? 'Sign In to Your Account' : 'Create Your Account'}
-              </CardTitle>
-              <CardDescription className="text-center">
-                {isLogin
-                  ? 'Enter your credentials to access your account'
-                  : 'Sign up to get started with Global Chemicals LLC'
-                }
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              {isLogin ? (
-                // Login Form
-                <form onSubmit={handleLoginSubmit} className="space-y-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="login-email">Email Address</Label>
-                    <div className="relative">
-                      <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                      <Input
-                        id="login-email"
-                        type="email"
-                        placeholder="you@example.com"
-                        value={loginData.email}
-                        onChange={(e) => setLoginData({ ...loginData, email: e.target.value })}
-                        className="pl-10"
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <div className="flex items-center justify-between">
-                      <Label htmlFor="login-password">Password</Label>
-                      <Button
-                        type="button"
-                        variant="link"
-                        className="px-0 text-xs"
-                        onClick={() => setShowResetDialog(true)}
-                      >
-                        Forgot password?
-                      </Button>
-                    </div>
-                    <div className="relative">
-                      <Lock className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                      <Input
-                        id="login-password"
-                        type={showPassword ? "text" : "password"}
-                        placeholder="••••••••"
-                        value={loginData.password}
-                        onChange={(e) => setLoginData({ ...loginData, password: e.target.value })}
-                        className="pl-10 pr-10"
-                        required
-                      />
-                      <Button
-                        type="button"
-                        variant="ghost"
-                        size="sm"
-                        className="absolute right-0 top-0 h-full px-3 hover:bg-transparent"
-                        onClick={() => setShowPassword(!showPassword)}
-                      >
-                        {showPassword ? (
-                          <EyeOff className="h-4 w-4 text-muted-foreground" />
-                        ) : (
-                          <Eye className="h-4 w-4 text-muted-foreground" />
-                        )}
-                      </Button>
-                    </div>
-                  </div>
-
-                  <Button type="submit" className="w-full" size="lg" disabled={isLoading}>
-                    {isLoading ? 'Signing in...' : 'Sign In'}
-                  </Button>
-                </form>
-              ) : (
-                // Signup Form
-                <form onSubmit={handleSignupSubmit} className="space-y-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="signup-name">Full Name</Label>
-                    <Input
-                      id="signup-name"
-                      type="text"
-                      placeholder="John Doe"
-                      value={signupData.name}
-                      onChange={(e) => setSignupData({ ...signupData, name: e.target.value })}
-                      required
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="signup-email">Email Address</Label>
-                    <div className="relative">
-                      <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                      <Input
-                        id="signup-email"
-                        type="email"
-                        placeholder="you@example.com"
-                        value={signupData.email}
-                        onChange={(e) => setSignupData({ ...signupData, email: e.target.value })}
-                        className="pl-10"
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="signup-password">Password</Label>
-                    <div className="relative">
-                      <Lock className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                      <Input
-                        id="signup-password"
-                        type={showPassword ? "text" : "password"}
-                        placeholder="••••••••"
-                        value={signupData.password}
-                        onChange={(e) => setSignupData({ ...signupData, password: e.target.value })}
-                        className="pl-10 pr-10"
-                        required
-                      />
-                      <Button
-                        type="button"
-                        variant="ghost"
-                        size="sm"
-                        className="absolute right-0 top-0 h-full px-3 hover:bg-transparent"
-                        onClick={() => setShowPassword(!showPassword)}
-                      >
-                        {showPassword ? (
-                          <EyeOff className="h-4 w-4 text-muted-foreground" />
-                        ) : (
-                          <Eye className="h-4 w-4 text-muted-foreground" />
-                        )}
-                      </Button>
-                    </div>
-                    <p className="text-xs text-muted-foreground">
-                      Must be at least 8 characters with uppercase, lowercase, and number
-                    </p>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="signup-confirm">Confirm Password</Label>
-                    <div className="relative">
-                      <Lock className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                      <Input
-                        id="signup-confirm"
-                        type={showConfirmPassword ? "text" : "password"}
-                        placeholder="••••••••"
-                        value={signupData.confirmPassword}
-                        onChange={(e) => setSignupData({ ...signupData, confirmPassword: e.target.value })}
-                        className="pl-10 pr-10"
-                        required
-                      />
-                      <Button
-                        type="button"
-                        variant="ghost"
-                        size="sm"
-                        className="absolute right-0 top-0 h-full px-3 hover:bg-transparent"
-                        onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                      >
-                        {showConfirmPassword ? (
-                          <EyeOff className="h-4 w-4 text-muted-foreground" />
-                        ) : (
-                          <Eye className="h-4 w-4 text-muted-foreground" />
-                        )}
-                      </Button>
-                    </div>
-                  </div>
-
-                  <Button type="submit" className="w-full" size="lg" disabled={isLoading}>
-                    {isLoading ? 'Creating account...' : 'Create Account'}
-                  </Button>
-                </form>
-              )}
-
-              <Separator />
-
-              <div className="text-center text-sm">
-                {isLogin ? (
-                  <p className="text-muted-foreground">
-                    Don't have an account?{' '}
-                    <Button
-                      type="button"
-                      variant="link"
-                      className="px-1"
-                      onClick={() => setIsLogin(false)}
-                    >
-                      Sign up
-                    </Button>
-                  </p>
-                ) : (
-                  <p className="text-muted-foreground">
-                    Already have an account?{' '}
-                    <Button
-                      type="button"
-                      variant="link"
-                      className="px-1"
-                      onClick={() => setIsLogin(true)}
-                    >
-                      Sign in
-                    </Button>
-                  </p>
-                )}
-              </div>
-
-              <div className="lg:hidden pt-4">
-                <Link to="/" className="flex items-center justify-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  <ArrowLeft className="h-4 w-4" />
-                  Back to Home
-                </Link>
-              </div>
-            </CardContent>
-          </Card>
-
-          <p className="text-center text-xs text-muted-foreground mt-6 px-4">
-            By continuing, you agree to our Terms of Service and Privacy Policy
-          </p>
-        </div>
+        <p className="mt-5 px-4 text-center text-xs text-white/40">
+          By continuing, you agree to our Terms of Service and Privacy Policy
+        </p>
       </div>
 
       {/* Password Reset Dialog */}

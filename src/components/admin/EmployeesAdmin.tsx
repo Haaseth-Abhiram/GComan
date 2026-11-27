@@ -1,12 +1,13 @@
 import { useMemo, useState } from 'react';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
-import { Check, Copy, Eye, EyeOff, KeyRound, Loader2, Pencil, RefreshCw, Search, Trash2, UserPlus } from 'lucide-react';
+import { Briefcase, Check, Contact, Copy, Eye, EyeOff, KeyRound, Loader2, Pencil, RefreshCw, Search, ShieldCheck, Trash2, UserPlus, UserRound } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Badge } from '@/components/ui/badge';
 import { Checkbox } from '@/components/ui/checkbox';
+import { Switch } from '@/components/ui/switch';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
@@ -14,14 +15,17 @@ import {
   AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter,
   AlertDialogHeader, AlertDialogTitle,
 } from '@/components/ui/alert-dialog';
+import { ChoiceBar, FormBody, FormDialogContent, FormFooter, FormHeader, FormSection, Required } from '@/components/admin/FormDialog';
 import { useToast } from '@/hooks/use-toast';
 import { generatePassword, isValidPassword, PASSWORD_RULE } from '@/portal/lib/access';
 import { useCan } from '@/portal/lib/useCan';
 import { RBAC_KEY, fetchAssignableRoles, type AssignableRole } from '@/portal/lib/rbac';
 import {
-  EMPLOYEES_QUERY, createEmployee, deleteEmployee, listEmployees, nextEmployeeCode, nextProposalCode,
-  setEmployeeActive, setEmployeePassword, updateEmployee, type EmployeeInput, type EmployeeRow,
+  EMPLOYEES_QUERY, createEmployee, deleteEmployee, listEmployees, nextEmployeeCode,
+  setEmployeeActive, setEmployeePassword, setWorkDetails, updateEmployee, EMPLOYMENT_TYPES, type EmployeeInput, type EmployeeRow,
 } from '@/portal/lib/employees';
+import { RoleChip } from '@/portal/theme/ui';
+import { EmployeeProfileDialog } from '@/portal/components/ProfileCards';
 
 const LOGIN_URL = 'https://gcoman.com/login';
 const NO_MANAGER = 'none';
@@ -83,115 +87,151 @@ const CredentialsDialog = ({ creds, onClose }: { creds: { name: string; email: s
 type FormState = EmployeeInput & { email: string; password: string };
 const emptyForm = (list: EmployeeRow[]): FormState => ({
   employee_code: nextEmployeeCode(list), full_name: '', email: '', password: '', phone: '', department: '',
-  designation: '', joined_on: '', reporting_manager_id: '', proposal_code: '', roles: [],
+  designation: '', joined_on: '', reporting_manager_id: '', proposal_access: false, proposal_code: '', employment_type: '', work_location: '', roles: [],
 });
 const formFrom = (e: EmployeeRow): FormState => ({
   employee_code: e.employee_code, full_name: e.full_name, email: e.email, password: '', phone: e.phone ?? '',
   department: e.department ?? '', designation: e.designation ?? '', joined_on: e.joined_on ?? '',
-  reporting_manager_id: e.reporting_manager_id ?? '', proposal_code: e.proposal_code ?? '', roles: e.roles,
+  reporting_manager_id: e.reporting_manager_id ?? '', proposal_access: !!e.proposal_code, proposal_code: e.proposal_code ?? '', employment_type: e.employment_type ?? '', work_location: e.work_location ?? '', roles: e.roles,
 });
 
-/** Add / edit form. Email and password only when adding. */
-const ROLE_HINT: Record<string, string> = {
-  proposal_engineer: 'Works on proposals in the Proposal Tracker. Needs a tracker code (P1, P2…).',
-};
+/** Live checklist for the temporary password; mirrors isValidPassword. */
+const PASSWORD_CHECKS: { text: string; ok: (p: string) => boolean }[] = [
+  { text: '8+ characters', ok: (p) => p.length >= 8 },
+  { text: 'Uppercase', ok: (p) => /[A-Z]/.test(p) },
+  { text: 'Lowercase', ok: (p) => /[a-z]/.test(p) },
+  { text: 'Number', ok: (p) => /[0-9]/.test(p) },
+];
 
+/** Add / edit form. Email and password only when adding. */
 const EmployeeForm = ({ mode, form, setForm, list, editingId, assignable, canPersonal }: {
   mode: 'add' | 'edit';
   form: FormState;
   setForm: (f: FormState) => void;
   list: EmployeeRow[];
   editingId?: string;
-  /** Roles from Settings → Roles & Permissions (everything except the automatic ones). */
+  /** Roles you can give by hand (Admin, Manager). */
   assignable: AssignableRole[];
   canPersonal: boolean;
 }) => {
   const set = (k: keyof FormState) => (e: React.ChangeEvent<HTMLInputElement>) => setForm({ ...form, [k]: e.target.value });
   const managers = list.filter((e) => e.active && e.id !== editingId);
-  const toggleRole = (key: string, on: boolean) => {
-    const roles = on ? [...form.roles, key] : form.roles.filter((r) => r !== key);
-    const proposal_code = key === 'proposal_engineer' && on && !form.proposal_code ? nextProposalCode(list) : form.proposal_code;
-    setForm({ ...form, roles, proposal_code });
-  };
+  const toggleRole = (key: string, on: boolean) =>
+    setForm({ ...form, roles: on ? [...form.roles, key] : form.roles.filter((r) => r !== key) });
   return (
-    <div className="grid gap-4 sm:grid-cols-2">
-      <div className="space-y-2">
-        <Label htmlFor="emp-code">Employee ID</Label>
-        <Input id="emp-code" value={form.employee_code} onChange={set('employee_code')} required />
-      </div>
-      <div className="space-y-2">
-        <Label htmlFor="emp-name">Full name</Label>
-        <Input id="emp-name" value={form.full_name} onChange={set('full_name')} required />
-      </div>
-      {mode === 'add' && (
-        <>
+    <>
+      <FormSection icon={UserRound} title="Basic details" hint={mode === 'add' ? 'Who they are and how they sign in.' : 'Who they are.'}>
+        <div className="space-y-2">
+          <Label htmlFor="emp-name">Full name<Required /></Label>
+          <Input id="emp-name" value={form.full_name} onChange={set('full_name')} required />
+        </div>
+        <div className="space-y-2">
+          <Label htmlFor="emp-code">Employee ID<Required /></Label>
+          <Input id="emp-code" value={form.employee_code} onChange={set('employee_code')} required />
+        </div>
+        {mode === 'add' && (
           <div className="space-y-2">
-            <Label htmlFor="emp-email">Email (their login)</Label>
-            <Input id="emp-email" type="email" autoComplete="off" value={form.email} onChange={set('email')} required />
+            <Label htmlFor="emp-email">Email (their login)<Required /></Label>
+            <Input id="emp-email" type="email" autoComplete="off" value={form.email} onChange={set('email')} required placeholder="name@company.com" />
           </div>
+        )}
+        {/* Personal details need their own permission (the database ignores them otherwise). */}
+        {canPersonal && (
           <div className="space-y-2">
-            <Label htmlFor="emp-password">Temporary password</Label>
+            <Label htmlFor="emp-phone">Phone</Label>
+            <Input id="emp-phone" type="tel" value={form.phone} onChange={set('phone')} />
+          </div>
+        )}
+        {mode === 'add' && (
+          <div className="space-y-2 sm:col-span-2">
+            <Label htmlFor="emp-password">Temporary password<Required /></Label>
             <PasswordField id="emp-password" value={form.password} onChange={(v) => setForm({ ...form, password: v })} />
+            <ul className="flex flex-wrap gap-1.5" aria-label="Password requirements">
+              {PASSWORD_CHECKS.map(({ text, ok }) => {
+                const met = ok(form.password);
+                return (
+                  <li key={text} className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[11px] font-medium transition-colors ${met ? 'bg-emerald-50 text-emerald-700' : 'bg-[#f1f3f8] text-muted-foreground'}`}>
+                    {met ? <Check className="h-3 w-3" aria-hidden="true" /> : <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-current opacity-50" />}
+                    {text}<span className="sr-only">{met ? ' (met)' : ' (not met)'}</span>
+                  </li>
+                );
+              })}
+            </ul>
+            <p className="text-xs text-muted-foreground">Use ↻ to generate one.</p>
           </div>
-        </>
-      )}
-      <div className="space-y-2">
-        <Label htmlFor="emp-dept">Department</Label>
-        <Input id="emp-dept" value={form.department} onChange={set('department')} placeholder="e.g. Sales" />
-      </div>
-      <div className="space-y-2">
-        <Label htmlFor="emp-desig">Designation</Label>
-        <Input id="emp-desig" value={form.designation} onChange={set('designation')} placeholder="e.g. Proposal Engineer" />
-      </div>
-      {/* Personal details need their own permission (the database ignores them otherwise). */}
-      {canPersonal && (<>
-      <div className="space-y-2">
-        <Label htmlFor="emp-phone">Phone</Label>
-        <Input id="emp-phone" type="tel" value={form.phone} onChange={set('phone')} />
-      </div>
-      <div className="space-y-2">
-        <Label htmlFor="emp-joined">Joining date</Label>
-        <Input id="emp-joined" type="date" value={form.joined_on} onChange={set('joined_on')} />
-      </div>
-      </>)}
-      <div className="space-y-2 sm:col-span-2">
-        <Label htmlFor="emp-manager">Reports to</Label>
-        <Select value={form.reporting_manager_id || NO_MANAGER}
-          onValueChange={(v) => setForm({ ...form, reporting_manager_id: v === NO_MANAGER ? '' : v })}>
-          <SelectTrigger id="emp-manager"><SelectValue /></SelectTrigger>
-          <SelectContent>
-            <SelectItem value={NO_MANAGER}>No manager (the admin approves directly)</SelectItem>
-            {managers.map((m) => <SelectItem key={m.id} value={m.id}>{m.full_name} ({m.employee_code})</SelectItem>)}
-          </SelectContent>
-        </Select>
-        <p className="text-xs text-muted-foreground">The person chosen here becomes a Manager automatically and will approve this employee's leave.</p>
-      </div>
-      <div className="space-y-3 sm:col-span-2 rounded-md border p-3">
-        <p className="text-sm font-medium">Roles</p>
-        <p className="text-xs text-muted-foreground">Everyone is an Employee. Extra roles:</p>
-        {!assignable.length && <p className="text-xs text-muted-foreground">No other roles yet. Create them in Settings → Roles &amp; Permissions.</p>}
-        {assignable.map((r) => {
-          const on = form.roles.includes(r.key);
-          return (
-            <div key={r.key} className="space-y-2">
-              <div className="flex items-start gap-2">
-                <Checkbox id={`role-${r.key}`} checked={on} onCheckedChange={(c) => toggleRole(r.key, c === true)} className="mt-0.5" />
-                <div>
-                  <Label htmlFor={`role-${r.key}`}>{r.name}</Label>
-                  <p className="text-xs text-muted-foreground">{ROLE_HINT[r.key] ?? r.description}</p>
-                </div>
-              </div>
-              {r.key === 'proposal_engineer' && on && (
-                <div className="ml-6 max-w-[160px] space-y-1">
-                  <Label htmlFor="emp-pcode">Tracker code</Label>
-                  <Input id="emp-pcode" value={form.proposal_code} onChange={set('proposal_code')} required />
-                </div>
-              )}
+        )}
+      </FormSection>
+
+      <FormSection icon={Briefcase} title="Job details" hint="Where they work and who they report to.">
+        <div className="space-y-2">
+          <Label htmlFor="emp-dept">Department</Label>
+          <Input id="emp-dept" value={form.department} onChange={set('department')} placeholder="e.g. Sales" />
+        </div>
+        <div className="space-y-2">
+          <Label htmlFor="emp-desig">Designation</Label>
+          <Input id="emp-desig" value={form.designation} onChange={set('designation')} placeholder="e.g. Sales Executive" />
+        </div>
+        <div className="space-y-2 sm:col-span-2">
+          <Label>Employment type</Label>
+          <ChoiceBar label="Employment type" options={EMPLOYMENT_TYPES} value={form.employment_type} columns="grid-cols-2 sm:grid-cols-4"
+            onPick={(key) => setForm({ ...form, employment_type: form.employment_type === key ? '' : key })} />
+        </div>
+        <div className="space-y-2">
+          <Label htmlFor="emp-location">Work location</Label>
+          <Input id="emp-location" maxLength={120} value={form.work_location} onChange={set('work_location')} placeholder="e.g. Sohar office" />
+        </div>
+        {canPersonal && (
+          <div className="space-y-2">
+            <Label htmlFor="emp-joined">Joining date</Label>
+            <Input id="emp-joined" type="date" value={form.joined_on} onChange={set('joined_on')} />
+          </div>
+        )}
+        <div className="space-y-2 sm:col-span-2">
+          <Label htmlFor="emp-manager">Reports to</Label>
+          <Select value={form.reporting_manager_id || NO_MANAGER}
+            onValueChange={(v) => setForm({ ...form, reporting_manager_id: v === NO_MANAGER ? '' : v })}>
+            <SelectTrigger id="emp-manager"><SelectValue /></SelectTrigger>
+            <SelectContent>
+              <SelectItem value={NO_MANAGER}>No manager (the admin approves directly)</SelectItem>
+              {managers.map((m) => <SelectItem key={m.id} value={m.id}>{m.full_name} ({m.employee_code})</SelectItem>)}
+            </SelectContent>
+          </Select>
+          <p className="text-xs text-muted-foreground">The person chosen here becomes a Manager automatically and will approve this employee's leave.</p>
+        </div>
+      </FormSection>
+
+      <FormSection icon={ShieldCheck} title="Role and access" hint="What this person is allowed to do.">
+        <p className="text-xs text-muted-foreground sm:col-span-2">
+          Everyone is an <strong>Employee</strong>. Someone with people reporting to them is also a <strong>Manager</strong>.
+          Super Admin is set in Settings → Users &amp; Roles.
+        </p>
+        {assignable.map((r) => (
+          <Label key={r.key} htmlFor={`role-${r.key}`}
+            className={`flex cursor-pointer items-start gap-3 rounded-xl border p-3 font-normal leading-normal transition-colors sm:col-span-2 ${form.roles.includes(r.key) ? 'border-[#f1592a] bg-[#fff7f3]' : 'hover:border-[#223f96]/40'}`}>
+            <Checkbox id={`role-${r.key}`} aria-label={r.name} checked={form.roles.includes(r.key)} onCheckedChange={(c) => toggleRole(r.key, c === true)} className="mt-0.5" />
+            <span>
+              <span className="block text-sm font-medium">{r.name}</span>
+              <span className="block text-xs text-muted-foreground">{r.description}{r.sensitive && ' Only a Super Admin can give or remove it.'}</span>
+            </span>
+          </Label>
+        ))}
+        <div className={`space-y-3 rounded-xl border p-3 transition-colors sm:col-span-2 ${form.proposal_access ? 'border-[#f1592a] bg-[#fff7f3]' : ''}`}>
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <Label htmlFor="emp-proposal">Proposal Tracker access</Label>
+              <p className="text-xs text-muted-foreground">Lets this person work on proposals in the Proposal Tracker.</p>
             </div>
-          );
-        })}
-      </div>
-    </div>
+            <Switch id="emp-proposal" checked={form.proposal_access} onCheckedChange={(on) => setForm({ ...form, proposal_access: on })} />
+          </div>
+          {form.proposal_access && (
+            <div className="max-w-[220px] space-y-1">
+              <Label htmlFor="emp-pcode">Tracker code</Label>
+              <Input id="emp-pcode" className="bg-white" value={form.proposal_code} onChange={set('proposal_code')} placeholder="Next free code" />
+            </div>
+          )}
+        </div>
+      </FormSection>
+    </>
   );
 };
 
@@ -216,6 +256,7 @@ const EmployeesAdmin = () => {
   const [newPassword, setNewPassword] = useState('');
   const [deleting, setDeleting] = useState<EmployeeRow | null>(null);
   const [busyId, setBusyId] = useState<string | null>(null);
+  const [profileOf, setProfileOf] = useState<EmployeeRow | null>(null);
 
   const refresh = () => qc.invalidateQueries({ queryKey: EMPLOYEES_QUERY });
   const fail = (e: unknown) => toast({ title: 'Could not save', description: e instanceof Error ? e.message : String(e), variant: 'destructive' });
@@ -250,7 +291,9 @@ const EmployeesAdmin = () => {
     }
     setSaving(true);
     try {
-      await createEmployee(adding);
+      const id = await createEmployee(adding);
+      // The login exists from here on, so a failure below must not hide the new password.
+      if (adding.employment_type || adding.work_location.trim()) await setWorkDetails(id, adding).catch(fail);
       setCreds({ name: adding.full_name.trim(), email: adding.email.trim().toLowerCase(), password: adding.password });
       setAdding(null);
       await refresh();
@@ -267,6 +310,9 @@ const EmployeesAdmin = () => {
     setSaving(true);
     try {
       await updateEmployee(editing.row.id, editing.form);
+      if (editing.form.employment_type !== (editing.row.employment_type ?? '') || editing.form.work_location !== (editing.row.work_location ?? '')) {
+        await setWorkDetails(editing.row.id, editing.form);
+      }
       toast({ title: 'Employee updated', description: editing.form.full_name });
       setEditing(null);
       await refresh();
@@ -296,7 +342,7 @@ const EmployeesAdmin = () => {
         <div>
           <h1 className="text-2xl font-bold">Employees</h1>
           <p className="text-sm text-muted-foreground">
-            Everyone who signs in to the Employee Portal. Proposal engineers are employees with the Proposal Engineer role.
+            Everyone who signs in to the Employee Portal, with their role.
           </p>
         </div>
         {can('portal.employees.create') && <Button onClick={() => setAdding(emptyForm(list))}><UserPlus className="h-4 w-4 mr-2" />Add employee</Button>}
@@ -324,7 +370,7 @@ const EmployeesAdmin = () => {
                     <TableHead>Email</TableHead>
                     <TableHead>Department</TableHead>
                     <TableHead>Reports to</TableHead>
-                    <TableHead>Roles</TableHead>
+                    <TableHead>Role</TableHead>
                     <TableHead>Status</TableHead>
                     <TableHead className="text-right">Actions</TableHead>
                   </TableRow>
@@ -342,9 +388,10 @@ const EmployeesAdmin = () => {
                       <TableCell>{e.manager_name ?? '—'}</TableCell>
                       <TableCell>
                         <div className="flex flex-wrap gap-1">
-                          {e.roles.map((k) => <Badge key={k} variant="secondary">{roleName(k)}{k === 'proposal_engineer' && e.proposal_code ? ` ${e.proposal_code}` : ''}</Badge>)}
-                          {e.reports_count > 0 && <Badge variant="secondary">Manager ({e.reports_count})</Badge>}
-                          {!e.roles.length && !e.reports_count && <span className="text-xs text-muted-foreground">Employee</span>}
+                          {e.roles.map((k) => <RoleChip key={k} role={{ key: k, name: roleName(k) }} />)}
+                          {e.reports_count > 0 && <RoleChip role={{ key: 'manager', name: `Manager (${e.reports_count})` }} />}
+                          {!e.roles.length && !e.reports_count && <RoleChip role={{ key: 'employee', name: 'Employee' }} />}
+                          {e.proposal_code && <Badge variant="outline" title="Proposal Tracker access">Tracker {e.proposal_code}</Badge>}
                         </div>
                       </TableCell>
                       <TableCell>
@@ -355,6 +402,9 @@ const EmployeesAdmin = () => {
                             : <Badge className="bg-emerald-600 hover:bg-emerald-600">Active</Badge>}
                       </TableCell>
                       <TableCell className="text-right whitespace-nowrap space-x-1">
+                        {(can('portal.employees.documents') || can('portal.employees.personal')) && <Button variant="ghost" size="sm" title="Profile and documents" onClick={() => setProfileOf(e)}>
+                          <Contact className="h-4 w-4" /><span className="sr-only">Profile and documents of {e.full_name}</span>
+                        </Button>}
                         {can('portal.employees.edit') && <Button variant="ghost" size="sm" title="Edit" onClick={() => setEditing({ row: e, form: formFrom(e) })}>
                           <Pencil className="h-4 w-4" /><span className="sr-only">Edit {e.full_name}</span>
                         </Button>}
@@ -383,46 +433,45 @@ const EmployeesAdmin = () => {
       </Card>
 
       <CredentialsDialog creds={creds} onClose={() => setCreds(null)} />
+      <EmployeeProfileDialog employee={profileOf} canDocuments={can('portal.employees.documents')} onClose={() => setProfileOf(null)} />
 
       {/* Add */}
       <Dialog open={!!adding} onOpenChange={(o) => !o && setAdding(null)}>
-        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
-          <form onSubmit={submitAdd} className="space-y-4">
-            <DialogHeader>
-              <DialogTitle>Add employee</DialogTitle>
-              <DialogDescription>
-                The login works straight away. The password is temporary: they must choose their own at first sign-in. Password: {PASSWORD_RULE}. Use ↻ to generate one.
-              </DialogDescription>
-            </DialogHeader>
-            {adding && <EmployeeForm mode="add" form={adding} setForm={setAdding} list={list} assignable={assignable} canPersonal={can('portal.employees.personal')} />}
-            <DialogFooter>
+        <FormDialogContent>
+          <form onSubmit={submitAdd} className="flex min-h-0 flex-1 flex-col">
+            <FormHeader icon={UserPlus} title="Add employee"
+              description="The login works straight away. They choose their own password at first sign-in." />
+            <FormBody>
+              {adding && <EmployeeForm mode="add" form={adding} setForm={setAdding} list={list} assignable={assignable} canPersonal={can('portal.employees.personal')} />}
+            </FormBody>
+            <FormFooter>
               <Button type="button" variant="outline" onClick={() => setAdding(null)}>Cancel</Button>
-              <Button type="submit" disabled={saving}>{saving && <Loader2 className="h-4 w-4 mr-2 animate-spin" />}Add employee</Button>
-            </DialogFooter>
+              <Button type="submit" disabled={saving}>
+                {saving ? <Loader2 className="h-4 w-4 mr-2 animate-spin" /> : <UserPlus className="h-4 w-4 mr-2" />}Add employee
+              </Button>
+            </FormFooter>
           </form>
-        </DialogContent>
+        </FormDialogContent>
       </Dialog>
 
       {/* Edit */}
       <Dialog open={!!editing} onOpenChange={(o) => !o && setEditing(null)}>
-        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
-          <form onSubmit={submitEdit} className="space-y-4">
-            <DialogHeader>
-              <DialogTitle>Edit {editing?.row.full_name}</DialogTitle>
-              <DialogDescription>
-                Login email: {editing?.row.email}. The email can't be changed; to use a different one, delete the employee and add them again.
-              </DialogDescription>
-            </DialogHeader>
-            {editing && (
-              <EmployeeForm mode="edit" form={editing.form} setForm={(f) => setEditing({ ...editing, form: f })} assignable={assignable} canPersonal={can('portal.employees.personal')}
-                list={list} editingId={editing.row.id} />
-            )}
-            <DialogFooter>
+        <FormDialogContent>
+          <form onSubmit={submitEdit} className="flex min-h-0 flex-1 flex-col">
+            <FormHeader icon={Pencil} title={`Edit ${editing?.row.full_name ?? ''}`}
+              description={<>Login email: {editing?.row.email}. A Super Admin can change it in Settings → Users &amp; Roles → Change email.</>} />
+            <FormBody>
+              {editing && (
+                <EmployeeForm mode="edit" form={editing.form} setForm={(f) => setEditing({ ...editing, form: f })} assignable={assignable} canPersonal={can('portal.employees.personal')}
+                  list={list} editingId={editing.row.id} />
+              )}
+            </FormBody>
+            <FormFooter>
               <Button type="button" variant="outline" onClick={() => setEditing(null)}>Cancel</Button>
               <Button type="submit" disabled={saving}>{saving && <Loader2 className="h-4 w-4 mr-2 animate-spin" />}Save</Button>
-            </DialogFooter>
+            </FormFooter>
           </form>
-        </DialogContent>
+        </FormDialogContent>
       </Dialog>
 
       {/* Reset password */}

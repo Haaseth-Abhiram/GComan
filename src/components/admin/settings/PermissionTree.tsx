@@ -1,5 +1,5 @@
 /**
- * The permission tree used by the role editor and the person screen:
+ * The permission tree used on the person screen:
  *   Module → Page → (Tab ›) Action / Field / Widget
  * Each module and page can be expanded or collapsed; the caller supplies the
  * control for every permission and (optionally) the bulk controls.

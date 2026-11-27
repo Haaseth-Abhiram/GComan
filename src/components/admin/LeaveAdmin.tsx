@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
-import { Check, ChevronLeft, ChevronRight, Loader2, Pencil, Plus, Trash2, X } from 'lucide-react';
+import { useMutation, useQueries, useQuery, useQueryClient } from '@tanstack/react-query';
+import { Check, ChevronLeft, ChevronRight, Loader2, Palmtree, Pencil, Plus, Trash2, X } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -18,14 +18,16 @@ import {
 import { useToast } from '@/hooks/use-toast';
 import { useCan } from '@/portal/lib/useCan';
 import { fmtDate } from '@/portal/lib/attendance';
+import { whenText } from '@/portal/lib/notifications';
 import { LeaveStatusBadge, LeaveSteps, leaveDates } from '@/portal/components/Leave';
 import {
   STATUS_TEXT, adminDecide, deleteHoliday, fetchAdminBalances, fetchAdminLeave, fetchHolidays, fetchLeaveTypes, fmtDays,
-  saveHoliday, saveLeaveType, setAllowance, type Holiday, type LeaveRequest, type LeaveType,
+  saveHoliday, saveLeaveType, setAllowance, type Holiday, type LeaveBalance, type LeaveRequest, type LeaveType,
 } from '@/portal/lib/leave';
 
 const KEY = ['admin', 'leave'];
-const thisYear = () => Number(new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Muscat' }).slice(0, 4));
+const today = () => new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Muscat' });
+const thisYear = () => Number(today().slice(0, 4));
 const Spinner = () => <div className="flex justify-center py-10"><Loader2 className="h-6 w-6 animate-spin text-primary" /></div>;
 
 const YearPicker = ({ year, setYear }: { year: number; setYear: (y: number) => void }) => (
@@ -43,91 +45,133 @@ const useInvalidate = () => {
 
 // ---- Requests ----------------------------------------------------------------------------
 
-const whoseTurn = (r: LeaveRequest) =>
-  r.status === 'admin_review' ? 'Your approval'
-    : r.status === 'manager_review' ? `Waiting for ${r.manager?.full_name ?? 'manager'} (you can act instead)`
-      : r.status === 'manager_final' ? `Final approval by ${r.manager?.full_name ?? 'manager'} (you can act instead)` : STATUS_TEXT[r.status];
+type Filter = 'action' | 'manager_review' | 'manager_final' | 'approved' | 'rejected' | 'cancelled' | 'all';
+const FILTERS: [Filter, string][] = [
+  ['action', 'Waiting for you'], ['manager_review', 'Manager review'], ['manager_final', 'Manager approval'],
+  ['approved', 'Approved'], ['rejected', 'Rejected'], ['cancelled', 'Cancelled'], ['all', 'All'],
+];
+/** Still moving through the approval steps: listed whatever the year. */
+const OPEN: Filter[] = ['action', 'manager_review', 'manager_final'];
+const useRequests = (filter: Filter, year: number) => {
+  const open = OPEN.includes(filter);
+  const q = useQuery({
+    queryKey: [...KEY, 'requests', open ? 'pending' : 'year', open ? null : year],
+    queryFn: () => fetchAdminLeave(open ? 'pending' : 'all', year),
+  });
+  const wanted = filter === 'action' ? 'admin_review' : filter;
+  return { ...q, list: (q.data ?? []).filter((r) => filter === 'all' || r.status === wanted) };
+};
 
-const RequestsTab = () => {
-  const canDecide = useCan()('portal.leave.approve');
-  const [filter, setFilter] = useState<'action' | 'pending' | 'all'>('action');
-  const [year, setYear] = useState(thisYear());
-  const { data = [], isLoading, error } = useQuery({ queryKey: [...KEY, 'requests', filter, year], queryFn: () => fetchAdminLeave(filter, year) });
-  const [rejecting, setRejecting] = useState<LeaveRequest | null>(null);
+const RequestItem = ({ r, canDecide, balance }: { r: LeaveRequest; canDecide: boolean; balance: LeaveBalance | undefined }) => {
+  const [reviewing, setReviewing] = useState(false);
   const [comment, setComment] = useState('');
   const invalidate = useInvalidate();
   const { toast } = useToast();
   const decide = useMutation({
-    mutationFn: (v: { r: LeaveRequest; action: 'approve' | 'reject'; comment: string }) => adminDecide(v.r.id, v.action, v.comment),
-    onSuccess: (r) => {
-      toast({ title: STATUS_TEXT[r.status], description: `${r.employee.full_name} · ${leaveDates(r)}` });
-      setRejecting(null);
+    mutationFn: (action: 'approve' | 'reject') => adminDecide(r.id, action, comment),
+    onSuccess: (x) => {
+      toast({ title: STATUS_TEXT[x.status], description: `${x.employee.full_name} · ${leaveDates(x)}` });
+      setReviewing(false);
+      setComment('');
       void invalidate();
     },
     onError: (e: Error) => toast({ title: 'Could not save', description: e.message, variant: 'destructive' }),
   });
+  const manager = r.manager?.full_name ?? 'the manager';
+  const open = r.status === 'manager_review' || r.status === 'admin_review' || r.status === 'manager_final';
+  return (
+    <li className="py-4">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-start">
+        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#223f96] text-xs font-bold text-white" aria-hidden="true">
+          {r.employee.full_name.split(/\s+/).slice(0, 2).map((w) => w[0]).join('').toUpperCase()}
+        </span>
+        <div className="min-w-0 flex-1 text-sm">
+          <p className="font-semibold text-[#101a3a]">{r.employee.full_name} <span className="font-mono text-[11px] font-normal text-muted-foreground">{r.employee.employee_code}</span></p>
+          <p className="mt-1 flex flex-wrap items-center gap-2">
+            <Badge variant="outline" className="border-violet-300 text-violet-700">{r.type.name}</Badge>
+            <span>{leaveDates(r)}</span><span className="font-semibold">· {fmtDays(r.days)} day{Number(r.days) === 1 ? '' : 's'}</span>
+          </p>
+          <p className="mt-2 break-words border-l-2 border-[#f1592a]/50 pl-2.5 text-xs italic">“{r.reason}”</p>
+          <p className="mt-1.5 text-[11px] text-muted-foreground">Applied {whenText(r.created_at)}{r.manager && ` · Reporting manager: ${r.manager.full_name}`}</p>
+          {balance && balance.entitled !== null && (
+            <p className="mt-2 inline-block rounded-lg bg-[#f5f8ff] px-2.5 py-1 text-xs text-[#223f96]">
+              {balance.name} balance {r.start_date.slice(0, 4)}: {fmtDays(balance.entitled)} allowed · {fmtDays(balance.used)} approved · {fmtDays(balance.pending)} pending ·{' '}
+              <strong>{fmtDays(balance.remaining)} left</strong>
+            </p>
+          )}
+          <div className="mt-1.5"><LeaveSteps r={r} /></div>
+          {r.status === 'manager_review' && <p className="mt-1 text-xs font-medium text-amber-700">Step 1: waiting for {manager} to review it and send it to you.</p>}
+          {r.status === 'manager_final' && <p className="mt-1 text-xs font-medium text-amber-700">You approved it; {manager} gives the final approval.</p>}
+        </div>
+        <div className="flex flex-wrap items-center gap-2 sm:justify-end">
+          <LeaveStatusBadge status={r.status} />
+          {open && canDecide && !reviewing && (
+            <Button size="sm" variant={r.status === 'admin_review' ? 'default' : 'outline'} onClick={() => setReviewing(true)}>
+              {r.status === 'admin_review' ? 'Review' : r.status === 'manager_review' ? 'Decide now' : 'Decide instead'}
+            </Button>
+          )}
+        </div>
+      </div>
+      {open && canDecide && reviewing && (
+        <div className="mt-3 space-y-2 rounded-xl border border-[#dce6f7] p-4 sm:ml-[52px]">
+          <Label htmlFor={`fb-${r.id}`}>Your review / feedback</Label>
+          <Textarea id={`fb-${r.id}`} rows={3} autoFocus maxLength={500} value={comment} onChange={(e) => setComment(e.target.value)} placeholder="Optional to approve, required to reject." />
+          <p className="flex justify-between gap-2 text-[11px] text-muted-foreground">
+            <span>
+              {r.status === 'manager_final' ? `This is the final decision, made instead of ${manager}.`
+                : r.status === 'manager_review' ? `${manager} has not reviewed it yet. Deciding now skips that review; if you approve, they still give the final approval.`
+                  : 'If a manager is set, Approve sends it to them for the final approval; otherwise your approval is final.'}
+              {' '}The employee sees your feedback.
+            </span>
+            <span className="tabular-nums">{comment.length}/500</span>
+          </p>
+          <div className="flex flex-wrap gap-2">
+            <Button size="sm" disabled={decide.isPending} onClick={() => decide.mutate('approve')}><Check className="h-4 w-4 mr-1" />Approve</Button>
+            <Button size="sm" variant="destructive" disabled={decide.isPending || !comment.trim()} onClick={() => decide.mutate('reject')}><X className="h-4 w-4 mr-1" />Reject</Button>
+            <Button size="sm" variant="outline" onClick={() => setReviewing(false)}>Cancel</Button>
+          </div>
+        </div>
+      )}
+    </li>
+  );
+};
+
+const RequestsTab = ({ year }: { year: number }) => {
+  const canDecide = useCan()('portal.leave.approve');
+  const [filter, setFilter] = useState<Filter>('action');
+  const { list, isLoading, error } = useRequests(filter, year);
+  // A request's balance is the one of the year it falls in, so load each year shown.
+  const years = [...new Set(list.map((r) => Number(r.start_date.slice(0, 4))))].sort();
+  const balances = useQueries({ queries: years.map((y) => ({ queryKey: [...KEY, 'balances', y], queryFn: () => fetchAdminBalances(y) })) });
+  const balanceOf = (r: LeaveRequest) => balances[years.indexOf(Number(r.start_date.slice(0, 4)))]?.data
+    ?.employees.find((e) => e.id === r.employee.id)?.balances.find((b) => b.id === r.type.id);
   return (
     <Card>
-      <CardHeader className="flex flex-row flex-wrap items-center justify-between gap-3 space-y-0">
-        <div className="flex gap-1">
-          <Button size="sm" variant={filter === 'action' ? 'default' : 'outline'} onClick={() => setFilter('action')}>Needs your approval</Button>
-          <Button size="sm" variant={filter === 'pending' ? 'default' : 'outline'} onClick={() => setFilter('pending')}>All pending</Button>
-          <Button size="sm" variant={filter === 'all' ? 'default' : 'outline'} onClick={() => setFilter('all')}>All</Button>
+      <CardHeader>
+        <CardTitle className="text-base">Leave applications{OPEN.includes(filter) ? '' : ` — ${year}`}</CardTitle>
+        <CardDescription>
+          Order: 1) the reporting manager reviews and sends it to you, 2) you approve or reject, 3) the manager gives the final approval.
+          Without a manager your decision is final.
+        </CardDescription>
+        <div className="flex flex-wrap gap-2 pt-2" role="group" aria-label="Filter by status">
+          {FILTERS.map(([k, text]) => <Button key={k} size="sm" variant={filter === k ? 'default' : 'outline'} aria-pressed={filter === k} onClick={() => setFilter(k)}>{text}</Button>)}
         </div>
-        {filter === 'all' && <YearPicker year={year} setYear={setYear} />}
       </CardHeader>
       <CardContent>
         {isLoading ? <Spinner /> : error ? <p className="text-sm text-destructive">{(error as Error).message}</p>
-          : !data.length ? <p className="py-8 text-center text-sm text-muted-foreground">Nothing here.</p> : (
-            <ul className="divide-y">
-              {data.map((r) => {
-                const open = r.status === 'manager_review' || r.status === 'admin_review' || r.status === 'manager_final';
-                return (
-                  <li key={r.id} className="py-3 flex flex-wrap items-start justify-between gap-3">
-                    <div className="space-y-1 text-sm">
-                      <div className="font-medium">
-                        {r.employee.full_name} <span className="text-muted-foreground">({r.employee.employee_code})</span> · {r.type.name} · {fmtDays(r.days)} day{Number(r.days) === 1 ? '' : 's'}
-                      </div>
-                      <div>{leaveDates(r)}</div>
-                      <div className="text-muted-foreground">“{r.reason}”</div>
-                      <LeaveSteps r={r} />
-                      {open && <div className="text-xs font-medium text-amber-700">{whoseTurn(r)}</div>}
-                    </div>
-                    {open && canDecide ? (
-                      <div className="flex gap-2">
-                        <Button size="sm" disabled={decide.isPending} onClick={() => decide.mutate({ r, action: 'approve', comment: '' })}><Check className="h-4 w-4 mr-1" />Approve</Button>
-                        <Button size="sm" variant="outline" disabled={decide.isPending} onClick={() => { setRejecting(r); setComment(''); }}><X className="h-4 w-4 mr-1" />Reject</Button>
-                      </div>
-                    ) : <LeaveStatusBadge status={r.status} />}
-                  </li>
-                );
-              })}
-            </ul>
-          )}
+          : !list.length ? <div className="flex flex-col items-center gap-2 py-8 text-sm text-muted-foreground"><Palmtree className="h-6 w-6" />No leave applications here.</div>
+            : <ul className="divide-y">{list.map((r) => <RequestItem key={r.id} r={r} canDecide={canDecide} balance={balanceOf(r)} />)}</ul>}
       </CardContent>
-      <Dialog open={!!rejecting} onOpenChange={(o) => !o && setRejecting(null)}>
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle>Reject leave</DialogTitle>
-            <DialogDescription>{rejecting?.employee.full_name} · {rejecting && leaveDates(rejecting)}. The employee will see your reason.</DialogDescription>
-          </DialogHeader>
-          <Textarea maxLength={500} value={comment} onChange={(e) => setComment(e.target.value)} placeholder="Reason" />
-          <DialogFooter>
-            <Button variant="outline" onClick={() => setRejecting(null)}>Cancel</Button>
-            <Button variant="destructive" disabled={!comment.trim() || decide.isPending}
-              onClick={() => rejecting && decide.mutate({ r: rejecting, action: 'reject', comment })}>Reject</Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
     </Card>
   );
 };
 
 // ---- Balances ----------------------------------------------------------------------------
 
-const BalancesTab = () => {
+const BalancesTab = ({ year }: { year: number }) => {
   const canEdit = useCan()('portal.leave.allowances');
-  const [year, setYear] = useState(thisYear());
+  const defaults = useQuery({ queryKey: [...KEY, 'types'], queryFn: fetchLeaveTypes });
+  const defaultOf = (id: string) => defaults.data?.find((t) => t.id === id)?.days_per_year;
   const { data, isLoading, error } = useQuery({ queryKey: [...KEY, 'balances', year], queryFn: () => fetchAdminBalances(year) });
   const [editing, setEditing] = useState<{ empId: string; empName: string; typeId: string; typeName: string; days: string; overridden: boolean } | null>(null);
   const invalidate = useInvalidate();
@@ -142,10 +186,9 @@ const BalancesTab = () => {
     <Card>
       <CardHeader className="flex flex-row flex-wrap items-center justify-between gap-3 space-y-0">
         <div>
-          <CardTitle className="text-base">Balances</CardTitle>
-          <CardDescription>Remaining days (pending requests included). Click a number to change one employee's allowance for this year.</CardDescription>
+          <CardTitle className="text-base">Leave balances — {year}</CardTitle>
+          <CardDescription>Remaining = yearly days − approved − pending. Click a number to give one employee more or fewer days this year.</CardDescription>
         </div>
-        <YearPicker year={year} setYear={setYear} />
       </CardHeader>
       <CardContent>
         {isLoading ? <Spinner /> : error ? <p className="text-sm text-destructive">{(error as Error).message}</p>
@@ -155,7 +198,11 @@ const BalancesTab = () => {
                 <TableHeader>
                   <TableRow>
                     <TableHead>Employee</TableHead>
-                    {types.map((t) => <TableHead key={t.id} className="text-center">{t.name}</TableHead>)}
+                    {types.map((t) => (
+                      <TableHead key={t.id}>{t.name}
+                        {defaultOf(t.id) != null && <span className="block text-[10px] font-medium normal-case tracking-normal opacity-70">default {fmtDays(defaultOf(t.id)!)} / year</span>}
+                      </TableHead>
+                    ))}
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -169,15 +216,23 @@ const BalancesTab = () => {
                         const b = e.balances.find((x) => x.id === t.id);
                         if (!b) return <TableCell key={t.id} />;
                         return (
-                          <TableCell key={t.id} className="text-center">
-                            <button type="button" className="rounded px-2 py-1 hover:bg-muted text-sm"
-                              disabled={b.entitled === null || !canEdit}
-                              title={b.entitled === null ? 'No yearly limit' : `Allowance ${fmtDays(b.entitled)} · used ${fmtDays(b.used)} · pending ${fmtDays(b.pending)}`}
-                              onClick={() => setEditing({ empId: e.id, empName: e.full_name, typeId: b.id, typeName: b.name, days: String(b.entitled ?? ''), overridden: b.overridden })}>
-                              <span className="font-semibold">{b.remaining === null ? '∞' : fmtDays(b.remaining)}</span>
-                              {b.entitled !== null && <span className="text-xs text-muted-foreground"> / {fmtDays(b.entitled)}</span>}
-                              {b.overridden && <span className="ml-1 text-xs text-sky-700">*</span>}
-                            </button>
+                          <TableCell key={t.id}>
+                            {b.entitled === null ? (
+                              <span className="text-xs text-muted-foreground"><strong>{fmtDays(b.used)}</strong> taken{Number(b.pending) ? ` · ${fmtDays(b.pending)} pending` : ''}</span>
+                            ) : (
+                              <button type="button" className="rounded-lg px-2 py-1 text-left hover:bg-muted" disabled={!canEdit}
+                                title={canEdit ? 'Click to change the yearly days' : undefined}
+                                onClick={() => setEditing({ empId: e.id, empName: e.full_name, typeId: b.id, typeName: b.name, days: String(b.entitled ?? ''), overridden: b.overridden })}>
+                                <span className={`block text-sm font-bold tabular-nums ${Number(b.remaining) < 0 ? 'text-red-600' : ''}`}>
+                                  {fmtDays(b.remaining)} <span className="text-xs font-normal text-muted-foreground">of {fmtDays(b.entitled)} left</span>
+                                  {canEdit && <Pencil className="ml-1 inline h-3 w-3 text-muted-foreground" aria-hidden="true" />}
+                                </span>
+                                <span className="flex items-center gap-1 text-[11px] text-muted-foreground">
+                                  {fmtDays(b.used)} used{Number(b.pending) ? ` · ${fmtDays(b.pending)} pending` : ''}
+                                  {b.overridden && <Badge variant="outline" className="border-orange-300 px-1.5 py-0 text-[10px] text-orange-700">custom</Badge>}
+                                </span>
+                              </button>
+                            )}
                           </TableCell>
                         );
                       })}
@@ -185,7 +240,6 @@ const BalancesTab = () => {
                   ))}
                 </TableBody>
               </Table>
-              <p className="mt-2 text-xs text-muted-foreground">* allowance changed for this employee.</p>
             </div>
           )}
       </CardContent>
@@ -201,7 +255,9 @@ const BalancesTab = () => {
               onChange={(e) => editing && setEditing({ ...editing, days: e.target.value })} />
           </div>
           <DialogFooter className="gap-2">
-            {editing?.overridden && <Button variant="ghost" disabled={save.isPending} onClick={() => save.mutate(null)}>Use the default</Button>}
+            {editing?.overridden && <Button variant="ghost" disabled={save.isPending} onClick={() => save.mutate(null)}>
+              Reset to default{defaultOf(editing.typeId) != null ? ` (${fmtDays(defaultOf(editing.typeId)!)})` : ''}
+            </Button>}
             <Button variant="outline" onClick={() => setEditing(null)}>Cancel</Button>
             <Button disabled={save.isPending || editing?.days === ''} onClick={() => save.mutate(Number(editing!.days))}>Save</Button>
           </DialogFooter>
@@ -317,9 +373,8 @@ const TypesTab = () => {
 
 // ---- Holidays ---------------------------------------------------------------------------------
 
-const HolidaysTab = () => {
+const HolidaysTab = ({ year }: { year: number }) => {
   const canEdit = useCan()('portal.leave.holidays');
-  const [year, setYear] = useState(thisYear());
   const { data = [], isLoading, error } = useQuery({ queryKey: [...KEY, 'holidays', year], queryFn: () => fetchHolidays(year) });
   const [editing, setEditing] = useState<{ date: string; name: string; old: string | null } | null>(null);
   const [deleting, setDeleting] = useState<Holiday | null>(null);
@@ -340,31 +395,34 @@ const HolidaysTab = () => {
     <Card>
       <CardHeader className="flex flex-row flex-wrap items-center justify-between gap-3 space-y-0">
         <div>
-          <CardTitle className="text-base">Holidays</CardTitle>
-          <CardDescription>Public and company holidays. Leave that covers a holiday is recounted automatically.</CardDescription>
+          <CardTitle className="text-base">Company holidays — {year}</CardTitle>
+          <CardDescription>Employees see these under Leave and on their attendance calendar. They are not counted as leave or absent days; leave covering one is recounted.</CardDescription>
         </div>
-        <div className="flex items-center gap-3">
-          <YearPicker year={year} setYear={setYear} />
-          {canEdit && <Button onClick={() => setEditing({ date: `${year}-01-01`, name: '', old: null })}><Plus className="h-4 w-4 mr-2" />Add holiday</Button>}
-        </div>
+        {canEdit && <Button onClick={() => setEditing({ date: `${year}-01-01`, name: '', old: null })}><Plus className="h-4 w-4 mr-2" />Add holiday</Button>}
       </CardHeader>
       <CardContent>
         {isLoading ? <Spinner /> : error ? <p className="text-sm text-destructive">{(error as Error).message}</p>
           : !data.length ? <p className="py-8 text-center text-sm text-muted-foreground">No holidays for {year} yet.</p> : (
-            <ul className="divide-y">
-              {data.map((h) => (
-                <li key={h.date} className="py-2 flex items-center justify-between gap-3">
-                  <div>
-                    <div className="font-medium">{h.name}</div>
-                    <div className="text-sm text-muted-foreground">{fmtDate(h.date, { weekday: 'long', day: '2-digit', month: 'long', year: 'numeric' })}</div>
-                  </div>
-                  {canEdit && <div className="flex gap-1">
-                    <Button variant="ghost" size="sm" onClick={() => setEditing({ date: h.date, name: h.name, old: h.date })}><Pencil className="h-4 w-4" /><span className="sr-only">Edit {h.name}</span></Button>
-                    <Button variant="ghost" size="sm" className="text-destructive hover:text-destructive" onClick={() => setDeleting(h)}><Trash2 className="h-4 w-4" /><span className="sr-only">Delete {h.name}</span></Button>
-                  </div>}
-                </li>
-              ))}
-            </ul>
+            <div className="overflow-x-auto">
+              <Table className="min-w-[520px]">
+                <TableHeader><TableRow><TableHead>Date</TableHead><TableHead>Day</TableHead><TableHead>Holiday</TableHead><TableHead><span className="sr-only">Actions</span></TableHead></TableRow></TableHeader>
+                <TableBody>
+                  {data.map((h) => (
+                    <TableRow key={h.date}>
+                      <TableCell className="whitespace-nowrap font-semibold">{fmtDate(h.date, { day: '2-digit', month: 'short', year: 'numeric' })}</TableCell>
+                      <TableCell>{fmtDate(h.date, { weekday: 'long' })}</TableCell>
+                      <TableCell>{h.name}{h.date < today() && <Badge variant="secondary" className="ml-2">Past</Badge>}</TableCell>
+                      <TableCell className="whitespace-nowrap text-right">
+                        {canEdit && <>
+                          <Button variant="ghost" size="sm" onClick={() => setEditing({ date: h.date, name: h.name, old: h.date })}><Pencil className="h-4 w-4" /><span className="sr-only">Edit {h.name}</span></Button>
+                          <Button variant="ghost" size="sm" className="text-destructive hover:text-destructive" onClick={() => setDeleting(h)}><Trash2 className="h-4 w-4" /><span className="sr-only">Delete {h.name}</span></Button>
+                        </>}
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </div>
           )}
       </CardContent>
       <Dialog open={!!editing} onOpenChange={(o) => !o && setEditing(null)}>
@@ -414,27 +472,28 @@ const HolidaysTab = () => {
 // ---- Page --------------------------------------------------------------------------------------
 
 const LeaveAdmin = () => {
-  const { data: action = [] } = useQuery({ queryKey: [...KEY, 'requests', 'action', thisYear()], queryFn: () => fetchAdminLeave('action') });
+  const [year, setYear] = useState(thisYear());
+  const { list: waiting } = useRequests('action', year);
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-bold">Leave</h1>
-        <p className="text-sm text-muted-foreground">
-          With a manager: manager reviews → you approve → manager gives final approval. Without a manager you decide alone.
-          Weekly off days and holidays are not counted.
-        </p>
+        <h1 className="flex items-center gap-2 text-2xl font-bold"><Palmtree className="h-5 w-5" />Leave Management</h1>
+        <p className="text-sm text-muted-foreground">Approve or reject leave applications, see every employee's leave balance, and manage leave types and company holidays.</p>
       </div>
-      <Tabs defaultValue="requests">
-        <TabsList className="flex-wrap h-auto">
-          <TabsTrigger value="requests">Requests{action.length ? <Badge className="ml-2 h-5 px-1.5">{action.length}</Badge> : null}</TabsTrigger>
-          <TabsTrigger value="balances">Balances</TabsTrigger>
-          <TabsTrigger value="types">Leave types</TabsTrigger>
-          <TabsTrigger value="holidays">Holidays</TabsTrigger>
-        </TabsList>
-        <TabsContent value="requests"><RequestsTab /></TabsContent>
-        <TabsContent value="balances"><BalancesTab /></TabsContent>
+      <Tabs defaultValue="requests" className="space-y-4">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <TabsList className="flex-wrap h-auto">
+            <TabsTrigger value="requests">Leave requests{waiting.length ? <Badge className="ml-2 h-5 px-1.5">{waiting.length}</Badge> : null}</TabsTrigger>
+            <TabsTrigger value="balances">Leave balances</TabsTrigger>
+            <TabsTrigger value="types">Leave types</TabsTrigger>
+            <TabsTrigger value="holidays">Holidays</TabsTrigger>
+          </TabsList>
+          <YearPicker year={year} setYear={setYear} />
+        </div>
+        <TabsContent value="requests"><RequestsTab year={year} /></TabsContent>
+        <TabsContent value="balances"><BalancesTab year={year} /></TabsContent>
         <TabsContent value="types"><TypesTab /></TabsContent>
-        <TabsContent value="holidays"><HolidaysTab /></TabsContent>
+        <TabsContent value="holidays"><HolidaysTab year={year} /></TabsContent>
       </Tabs>
     </div>
   );

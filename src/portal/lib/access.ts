@@ -7,7 +7,7 @@
  */
 import { supabase } from '@/integrations/supabase/client';
 
-export type RoleKey = 'super_admin' | 'manager' | 'proposal_engineer' | 'employee' | (string & {});
+export type RoleKey = 'super_admin' | 'admin' | 'manager' | 'employee';
 
 export type Permission =
   | 'portal.employees.view' | 'portal.employees.create' | 'portal.employees.edit' | 'portal.employees.delete'

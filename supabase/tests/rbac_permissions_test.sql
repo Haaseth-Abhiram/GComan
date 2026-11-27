@@ -42,14 +42,11 @@ SELECT user_id AS rep FROM employees WHERE id = :'rep_emp' \gset
 SELECT user_id AS ops FROM employees WHERE id = :'ops_emp' \gset
 SELECT user_id AS setadm FROM employees WHERE id = :'setadm_emp' \gset
 
--- Role "T Sales Lead": employees + attendance view, department scope.
-SELECT pg_temp.as_user(:'super', $q$ SELECT rbac_admin_save_role(NULL, 'T Sales Lead Role', 'test') $q$) AS lead_role \gset
-SELECT CASE WHEN r LIKE 'ERROR:%' THEN 'FAIL setup: ' || r END FROM (SELECT pg_temp.as_user(:'super', format($q$ SELECT rbac_admin_save_role_access(%L, ARRAY['portal.employees.view','portal.attendance.view'], '{"employees":"department","attendance":"department"}')::text $q$, :'lead_role')) AS r) x;
-SELECT CASE WHEN r LIKE 'ERROR:%' THEN 'FAIL setup: ' || r END FROM (SELECT pg_temp.as_user(:'super', format($q$ SELECT rbac_admin_set_user_roles(%L, ARRAY[%L])::text $q$, :'lead', :'lead_role')) AS r) x;
--- Role "T Settings Admin": may manage users & roles, plus employees + attendance view (all).
-SELECT pg_temp.as_user(:'super', $q$ SELECT rbac_admin_save_role(NULL, 'T Settings Role', 'test') $q$) AS set_role \gset
-SELECT CASE WHEN r LIKE 'ERROR:%' THEN 'FAIL setup: ' || r END FROM (SELECT pg_temp.as_user(:'super', format($q$ SELECT rbac_admin_save_role_access(%L, ARRAY['settings.users.view','settings.users.edit','settings.roles.view','settings.roles.edit','portal.employees.view','portal.attendance.view'], '{"employees":"all","attendance":"all"}')::text $q$, :'set_role')) AS r) x;
-SELECT CASE WHEN r LIKE 'ERROR:%' THEN 'FAIL setup: ' || r END FROM (SELECT pg_temp.as_user(:'super', format($q$ SELECT rbac_admin_set_user_roles(%L, ARRAY[%L])::text $q$, :'setadm', :'set_role')) AS r) x;
+-- Sales lead: employees + attendance view, department scope (personal permissions).
+\set lead_perms '[{"key":"portal.employees.view","effect":"allow"},{"key":"portal.attendance.view","effect":"allow"}]'
+SELECT CASE WHEN r LIKE 'ERROR:%' THEN 'FAIL setup: ' || r END FROM (SELECT pg_temp.as_user(:'super', format($q$ SELECT rbac_admin_set_user_overrides(%L, %L, '{"employees":"department","attendance":"department"}')::text $q$, :'lead', :'lead_perms')) AS r) x;
+-- Settings admin: may manage users & roles, plus employees + attendance view (all).
+SELECT CASE WHEN r LIKE 'ERROR:%' THEN 'FAIL setup: ' || r END FROM (SELECT pg_temp.as_user(:'super', format($q$ SELECT rbac_admin_set_user_overrides(%L, '[{"key":"settings.users.view","effect":"allow"},{"key":"settings.users.edit","effect":"allow"},{"key":"settings.roles.view","effect":"allow"},{"key":"settings.roles.edit","effect":"allow"},{"key":"portal.employees.view","effect":"allow"},{"key":"portal.attendance.view","effect":"allow"}]', '{"employees":"all","attendance":"all"}')::text $q$, :'setadm')) AS r) x;
 
 -- ---- 1. Deny by default ------------------------------------------------------------
 SELECT pg_temp.expect('plain employee cannot view contacts', pg_temp.as_user(:'rep', $q$ SELECT count(*)::text FROM contact_submissions $q$), '0');
@@ -69,52 +66,71 @@ SELECT pg_temp.expect('phone hidden from sales lead', pg_temp.as_user(:'lead', f
 SELECT pg_temp.expect('phone visible to Super Admin', pg_temp.as_user(:'super', format($q$ SELECT e->>'phone' FROM jsonb_array_elements(admin_list_employees()) e WHERE e->>'id' = %L $q$, :'rep_emp')), '+968 1111');
 
 -- ---- 4. Personal overrides: allow and explicit deny ---------------------------------------
-SELECT CASE WHEN r LIKE 'ERROR:%' THEN 'FAIL setup: ' || r END FROM (SELECT pg_temp.as_user(:'super', format($q$ SELECT rbac_admin_set_user_overrides(%L, '[{"key":"website.contacts.view","effect":"allow"}]', '{}')::text $q$, :'rep')) AS r) x;
+SELECT CASE WHEN r LIKE 'ERROR:%' THEN 'FAIL setup: ' || r END FROM (SELECT pg_temp.as_user(:'super', format($q$ SELECT rbac_admin_set_user_overrides(%L, '[{"key":"website.contacts.view","effect":"allow"},{"key":"emp.leave.create","effect":"deny"}]', '{}')::text $q$, :'rep')) AS r) x;
 SELECT pg_temp.expect('allow override grants contacts view', pg_temp.as_user(:'rep', $q$ SELECT rbac_can('website.contacts.view')::text $q$), 'true');
-SELECT CASE WHEN r LIKE 'ERROR:%' THEN 'FAIL setup: ' || r END FROM (SELECT pg_temp.as_user(:'super', format($q$ SELECT rbac_admin_set_user_overrides(%L, '[{"key":"portal.employees.view","effect":"deny"}]', '{}')::text $q$, :'lead')) AS r) x;
-SELECT pg_temp.expect('deny override beats role permission', pg_temp.as_user(:'lead', $q$ SELECT rbac_can('portal.employees.view')::text $q$), 'false');
-SELECT pg_temp.refused('denied user cannot call the function', pg_temp.as_user(:'lead', $q$ SELECT admin_list_employees()::text $q$));
-SELECT CASE WHEN r LIKE 'ERROR:%' THEN 'FAIL setup: ' || r END FROM (SELECT pg_temp.as_user(:'super', format($q$ SELECT rbac_admin_set_user_overrides(%L, '[]', '{}')::text $q$, :'lead')) AS r) x;
-SELECT pg_temp.expect('removing the override restores access', pg_temp.as_user(:'lead', $q$ SELECT rbac_can('portal.employees.view')::text $q$), 'true');
+SELECT pg_temp.expect('deny override beats role permission', pg_temp.as_user(:'rep', $q$ SELECT rbac_can('emp.leave.create')::text $q$), 'false');
+SELECT CASE WHEN r LIKE 'ERROR:%' THEN 'FAIL setup: ' || r END FROM (SELECT pg_temp.as_user(:'super', format($q$ SELECT rbac_admin_set_user_overrides(%L, '[{"key":"website.contacts.view","effect":"allow"}]', '{}')::text $q$, :'rep')) AS r) x;
+SELECT pg_temp.expect('removing the deny restores access', pg_temp.as_user(:'rep', $q$ SELECT rbac_can('emp.leave.create')::text $q$), 'true');
 
 -- ---- 5. Revocation takes effect immediately (active session) --------------------------------
-SELECT CASE WHEN r LIKE 'ERROR:%' THEN 'FAIL setup: ' || r END FROM (SELECT pg_temp.as_user(:'super', format($q$ SELECT rbac_admin_set_role_active(%L, false)::text $q$, :'lead_role')) AS r) x;
-SELECT pg_temp.expect('inactive role gives nothing', pg_temp.as_user(:'lead', $q$ SELECT rbac_can('portal.attendance.view')::text $q$), 'false');
-SELECT CASE WHEN r LIKE 'ERROR:%' THEN 'FAIL setup: ' || r END FROM (SELECT pg_temp.as_user(:'super', format($q$ SELECT rbac_admin_set_role_active(%L, true)::text $q$, :'lead_role')) AS r) x;
+SELECT CASE WHEN r LIKE 'ERROR:%' THEN 'FAIL setup: ' || r END FROM (SELECT pg_temp.as_user(:'super', format($q$ SELECT rbac_admin_set_user_overrides(%L, '[]', '{}')::text $q$, :'lead')) AS r) x;
+SELECT pg_temp.expect('revoked permission gives nothing', pg_temp.as_user(:'lead', $q$ SELECT rbac_can('portal.attendance.view')::text $q$), 'false');
+SELECT pg_temp.refused('revoked user cannot call the function', pg_temp.as_user(:'lead', $q$ SELECT admin_list_employees()::text $q$));
 
 -- ---- 6. Privilege escalation ------------------------------------------------------------------
-SELECT pg_temp.refused('non-super cannot grant Settings permissions', pg_temp.as_user(:'setadm', format($q$ SELECT rbac_admin_save_role_access(%L, ARRAY['portal.employees.view','settings.roles.edit'], '{}')::text $q$, :'lead_role')));
-SELECT pg_temp.refused('non-super cannot grant what they lack', pg_temp.as_user(:'setadm', format($q$ SELECT rbac_admin_save_role_access(%L, ARRAY['portal.employees.view','website.contacts.delete'], '{}')::text $q$, :'lead_role')));
-SELECT pg_temp.refused('cannot change own role', pg_temp.as_user(:'setadm', format($q$ SELECT rbac_admin_save_role_access(%L, ARRAY['settings.users.view'], '{}')::text $q$, :'set_role')));
+SELECT pg_temp.refused('non-super cannot grant Settings permissions', pg_temp.as_user(:'setadm', $q$ SELECT rbac_admin_save_role_access('manager', ARRAY['settings.roles.edit'], '{}')::text $q$));
+SELECT pg_temp.refused('non-super cannot grant what they lack', pg_temp.as_user(:'setadm', $q$ SELECT rbac_admin_save_role_access('manager', ARRAY['website.contacts.delete'], '{}')::text $q$));
+SELECT pg_temp.refused('cannot change own role', pg_temp.as_user(:'setadm', $q$ SELECT rbac_admin_save_role_access('employee', ARRAY[]::text[], '{}')::text $q$));
 SELECT pg_temp.refused('cannot change own roles', pg_temp.as_user(:'setadm', format($q$ SELECT rbac_admin_set_user_roles(%L, ARRAY[]::text[])::text $q$, :'setadm')));
 SELECT pg_temp.refused('cannot give self personal permissions', pg_temp.as_user(:'setadm', format($q$ SELECT rbac_admin_set_user_overrides(%L, '[{"key":"website.contacts.view","effect":"allow"}]', '{}')::text $q$, :'setadm')));
-SELECT pg_temp.refused('non-super cannot hand out a Settings role', pg_temp.as_user(:'setadm', format($q$ SELECT rbac_admin_set_user_roles(%L, ARRAY[%L])::text $q$, :'rep', :'set_role')));
+SELECT pg_temp.refused('non-super cannot hand out the Admin role', pg_temp.as_user(:'setadm', format($q$ SELECT rbac_admin_set_user_roles(%L, ARRAY['admin'])::text $q$, :'rep')));
 SELECT pg_temp.refused('non-super cannot make a Super Admin', pg_temp.as_user(:'setadm', format($q$ SELECT rbac_admin_set_super_admin(%L, true)::text $q$, :'rep')));
 SELECT pg_temp.refused('non-super cannot allow a permission they lack', pg_temp.as_user(:'setadm', format($q$ SELECT rbac_admin_set_user_overrides(%L, '[{"key":"website.contacts.delete","effect":"allow"}]', '{}')::text $q$, :'rep')));
-SELECT pg_temp.expect('non-super CAN give a role within their own permissions', (SELECT CASE WHEN r LIKE 'ERROR:%' THEN r ELSE 'ok' END FROM (SELECT pg_temp.as_user(:'setadm', format($q$ SELECT rbac_admin_set_user_roles(%L, ARRAY[%L])::text $q$, :'ops', :'lead_role')) AS r) x), 'ok');
+SELECT pg_temp.refused('only a Super Admin gives personal permissions', pg_temp.as_user(:'setadm', format($q$ SELECT rbac_admin_set_user_overrides(%L, '[{"key":"portal.attendance.view","effect":"allow"}]', '{}')::text $q$, :'ops')));
 SELECT pg_temp.refused('Super Admin role cannot be edited', pg_temp.as_user(:'super', $q$ SELECT rbac_admin_save_role_access('super_admin', ARRAY[]::text[], '{}')::text $q$));
 SELECT pg_temp.refused('last Super Admin cannot remove themselves', pg_temp.as_user(:'super', format($q$ SELECT rbac_admin_set_super_admin(%L, false)::text $q$, :'super')));
-SELECT pg_temp.refused('built-in role cannot be deleted', pg_temp.as_user(:'super', $q$ SELECT rbac_admin_delete_role('employee')::text $q$));
-SELECT pg_temp.refused('built-in role cannot be deactivated', pg_temp.as_user(:'super', $q$ SELECT rbac_admin_set_role_active('proposal_engineer', false)::text $q$));
 
--- ---- 7. Delete a role that is in use: reassignment required ------------------------------------
-SELECT pg_temp.refused('delete in-use role without reassignment', pg_temp.as_user(:'super', format($q$ SELECT rbac_admin_delete_role(%L)::text $q$, :'lead_role')));
-SELECT pg_temp.as_user(:'super', $q$ SELECT rbac_admin_save_role(NULL, 'T Copy Role', 'test') $q$) AS copy_role \gset
-SELECT CASE WHEN r LIKE 'ERROR:%' THEN 'FAIL setup: ' || r END FROM (SELECT pg_temp.as_user(:'super', format($q$ SELECT rbac_admin_save_role_access(%L, ARRAY['portal.employees.view','portal.attendance.view'], '{"employees":"department","attendance":"department"}')::text $q$, :'copy_role')) AS r) x;
-SELECT pg_temp.expect('delete with reassignment moves 2 people', pg_temp.as_user(:'super', format($q$ SELECT rbac_admin_delete_role(%L, %L)::text $q$, :'lead_role', :'copy_role')), '2');
-SELECT pg_temp.expect('moved person keeps department access', pg_temp.as_user(:'lead', $q$ SELECT rbac_can('portal.employees.view')::text $q$), 'true');
+-- ---- 7. Four roles, the Admin role and the Proposal Tracker switch --------------------------------
+SELECT pg_temp.expect('exactly four roles', (SELECT string_agg(key, ',' ORDER BY sort_order) FROM rbac_roles), 'super_admin,admin,manager,employee');
+SELECT CASE WHEN r LIKE 'ERROR:%' THEN 'FAIL setup: ' || r END FROM (SELECT pg_temp.as_user(:'super', format($q$ SELECT rbac_admin_set_user_roles(%L, ARRAY['admin'])::text $q$, :'lead')) AS r) x;
+SELECT CASE WHEN r LIKE 'ERROR:%' THEN 'FAIL setup: ' || r END FROM (SELECT pg_temp.as_user(:'super', format($q$ SELECT rbac_admin_set_user_roles(%L, ARRAY['admin'])::text $q$, :'rep')) AS r) x;
+SELECT pg_temp.expect('Admin manages employees', pg_temp.as_user(:'lead', $q$ SELECT rbac_can('portal.employees.create')::text $q$), 'true');
+SELECT pg_temp.expect('Admin can open Users & Roles editing', pg_temp.as_user(:'lead', $q$ SELECT rbac_can('settings.users.edit')::text $q$), 'true');
+SELECT pg_temp.expect('Admin cannot change role permissions', pg_temp.as_user(:'lead', $q$ SELECT rbac_can('settings.roles.edit')::text $q$), 'false');
+SELECT pg_temp.expect('Admin gives the Manager role', pg_temp.as_user(:'lead', format($q$ SELECT rbac_admin_set_user_roles(%L, ARRAY['manager'])::text $q$, :'ops')), '');
+SELECT pg_temp.expect('the assigned manager has team permissions', pg_temp.as_user(:'ops', $q$ SELECT rbac_can('team.leave.view')::text $q$), 'true');
+SELECT pg_temp.refused('Admin cannot make someone an Admin', pg_temp.as_user(:'lead', format($q$ SELECT rbac_admin_set_user_roles(%L, ARRAY['manager','admin'])::text $q$, :'ops')));
+SELECT pg_temp.expect('Admin removes the Manager role', pg_temp.as_user(:'lead', format($q$ SELECT rbac_admin_set_user_roles(%L, ARRAY[]::text[])::text $q$, :'ops')), '');
+SELECT pg_temp.expect('team permissions are gone', pg_temp.as_user(:'ops', $q$ SELECT rbac_can('team.leave.view')::text $q$), 'false');
+SELECT pg_temp.refused('plain employee cannot give Manager', pg_temp.as_user(:'ops', format($q$ SELECT rbac_admin_set_user_roles(%L, ARRAY['manager'])::text $q$, :'ops')));
+SELECT pg_temp.refused('Admin cannot reset another Admin password', pg_temp.as_user(:'lead', format($q$ SELECT admin_set_employee_password(%L, 'Test1234y')::text $q$, :'rep_emp')));
+SELECT CASE WHEN r LIKE 'ERROR:%' THEN 'FAIL setup: ' || r END FROM (SELECT pg_temp.as_user(:'super', format($q$ SELECT rbac_admin_set_user_roles(%L, ARRAY[]::text[])::text $q$, :'rep')) AS r) x;
+SELECT pg_temp.expect('tracker off by default', pg_temp.as_user(:'ops', $q$ SELECT rbac_can('proposal.tracker.view')::text $q$), 'false');
+SELECT CASE WHEN r LIKE 'ERROR:%' THEN 'FAIL setup: ' || r END FROM (SELECT pg_temp.as_user(:'super', format($q$ SELECT admin_update_employee(%L, '{"employee_code":"T3","full_name":"T Ops Staff","department":"Operations","proposal_access":true,"roles":[]}')::text $q$, :'ops_emp')) AS r) x;
+SELECT pg_temp.expect('tracker on after the switch', pg_temp.as_user(:'ops', $q$ SELECT rbac_can('proposal.tracker.view')::text $q$), 'true');
+
+-- ---- Change sign-in email (Super Admin only) ------------------------------------------------
+SELECT pg_temp.refused('Admin cannot change an email', pg_temp.as_user(:'lead', format($q$ SELECT rbac_admin_change_email(%L, 'x@rbac.test') $q$, :'ops')));
+SELECT pg_temp.refused('anonymous cannot change an email', pg_temp.as_user(NULL, format($q$ SELECT rbac_admin_change_email(%L, 'x@rbac.test') $q$, :'ops')));
+SELECT pg_temp.refused('cannot change own email', pg_temp.as_user(:'super', format($q$ SELECT rbac_admin_change_email(%L, 'x@rbac.test') $q$, :'super')));
+SELECT pg_temp.refused('email already in use', pg_temp.as_user(:'super', format($q$ SELECT rbac_admin_change_email(%L, 'T.REP@rbac.test') $q$, :'ops')));
+SELECT pg_temp.refused('invalid email', pg_temp.as_user(:'super', format($q$ SELECT rbac_admin_change_email(%L, 'nope') $q$, :'ops')));
+SELECT pg_temp.expect('Super Admin changes an email', pg_temp.as_user(:'super', format($q$ SELECT rbac_admin_change_email(%L, ' T.New@rbac.test ') $q$, :'ops')), 't.new@rbac.test');
+SELECT pg_temp.expect('login, identity and employee record all updated', (SELECT u.email || '|' || (i.identity_data->>'email') || '|' || e.email FROM auth.users u JOIN auth.identities i ON i.user_id = u.id JOIN employees e ON e.user_id = u.id WHERE u.id = :'ops'), 't.new@rbac.test|t.new@rbac.test|t.new@rbac.test');
+SELECT pg_temp.expect('email change is in the audit log', (SELECT count(*)::text FROM rbac_audit_log WHERE entity = 'user_email' AND user_id = :'ops'), '1');
 
 -- ---- 8. Website data via permissions; field guard on HR notes ---------------------------------
 INSERT INTO job_applications (name, email, phone, position, experience, cover_letter, resume_path, status) VALUES ('T Applicant', 't.app@rbac.test', '+968 0000', 'Tester', '1', 'test', 'none.pdf', 'new') RETURNING id AS app \gset
 SELECT CASE WHEN r LIKE 'ERROR:%' THEN 'FAIL setup: ' || r END FROM (SELECT pg_temp.as_user(:'super', format($q$ SELECT rbac_admin_set_user_overrides(%L, '[{"key":"website.jobs.view","effect":"allow"},{"key":"website.jobs.edit","effect":"allow"}]', '{}')::text $q$, :'ops')) AS r) x;
 SELECT pg_temp.expect('jobs editor can change status', pg_temp.as_user(:'ops', format($q$ WITH u AS (UPDATE job_applications SET status = 'reviewed' WHERE id = %L RETURNING 1) SELECT count(*)::text FROM u $q$, :'app')), '1');
 SELECT pg_temp.refused('jobs editor without notes permission cannot change HR notes', pg_temp.as_user(:'ops', format($q$ WITH u AS (UPDATE job_applications SET hr_notes = 'x' WHERE id = %L RETURNING 1) SELECT count(*)::text FROM u $q$, :'app')));
+SELECT CASE WHEN r LIKE 'ERROR:%' THEN 'FAIL setup: ' || r END FROM (SELECT pg_temp.as_user(:'super', format($q$ SELECT rbac_admin_set_user_overrides(%L, '[{"key":"website.contacts.view","effect":"allow"}]', '{}')::text $q$, :'rep')) AS r) x;
 SELECT pg_temp.expect('rep (contacts only) sees no applications', pg_temp.as_user(:'rep', $q$ SELECT count(*)::text FROM job_applications $q$), '0');
 SELECT pg_temp.expect('Super Admin still sees applications', pg_temp.as_user(:'super', $q$ SELECT (count(*) > 0)::text FROM job_applications $q$), 'true');
 
 -- ---- 9. Audit log ------------------------------------------------------------------------------------
 SELECT pg_temp.expect('audit rows recorded with the actor', (SELECT (count(*) > 10)::text FROM rbac_audit_log WHERE actor = :'super' AND at > now() - interval '5 minutes'), 'true');
-SELECT pg_temp.refused('audit log hidden from a non-viewer', pg_temp.as_user(:'lead', $q$ SELECT rbac_admin_audit()::text $q$));
+SELECT pg_temp.refused('audit log hidden from a non-viewer', pg_temp.as_user(:'ops', $q$ SELECT rbac_admin_audit()::text $q$));
 SELECT pg_temp.expect('no secrets in audit values', (SELECT count(*)::text FROM rbac_audit_log WHERE (old_value::text || new_value::text) ~* 'password|token'), '0');
 
 ROLLBACK;

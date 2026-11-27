@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { FileText, Briefcase, Download, LayoutDashboard, Home, BarChart3, Mail, FolderOpen, Globe, Search, Languages, Users, ClipboardList, UserPlus, NotebookPen, ShieldCheck, Send, KeyRound, UserCog, CalendarClock, CalendarDays, Settings } from 'lucide-react';
+import { FileText, Briefcase, Download, LayoutDashboard, Home, BarChart3, Mail, FolderOpen, Globe, Search, Languages, Users, ClipboardList, UserPlus, NotebookPen, ShieldCheck, Send, KeyRound, UserCog, CalendarClock, CalendarDays, Settings, FolderKanban, Bell } from 'lucide-react';
 import { useLocation, Link } from 'react-router-dom';
 import {
   Sidebar,
@@ -47,6 +47,9 @@ const peopleItems = [
   { title: 'Employees', url: '/admin/employees', icon: UserCog, perms: ['portal.employees.view'] },
   { title: 'Attendance', url: '/admin/attendance', icon: CalendarClock, perms: ['portal.attendance.view'] },
   { title: 'Leave', url: '/admin/leave', icon: CalendarDays, perms: ['portal.leave.view'] },
+  { title: 'Daily Reports', url: '/admin/reports', icon: NotebookPen, perms: ['portal.reports.view'] },
+  { title: 'Projects', url: '/admin/projects', icon: FolderKanban, perms: ['portal.projects.view'] },
+  { title: 'Notifications', url: '/admin/notifications', icon: Bell, perms: ['portal.notifications.create'] },
 ];
 const adminItems = [
   { title: 'Settings', url: '/admin/settings', icon: Settings, perms: ['settings.users.view', 'settings.roles.view', 'settings.audit.view'] },
@@ -118,10 +121,12 @@ export function AdminSidebar() {
     <Sidebar collapsible="icon" className="border-r border-border/50">
       <div className="p-4 border-b border-border/50">
         <Link to="/admin" className="flex items-center gap-3">
-          <img src={gcLogo} alt="Global Chemicals Admin" width={32} height={32} className="h-8 w-8" />
+          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white p-1 shadow-lg group-data-[collapsible=icon]:h-8 group-data-[collapsible=icon]:w-8">
+            <img src={gcLogo} alt="Global Chemicals Admin" width={32} height={32} className="h-full w-full object-contain" />
+          </span>
           <div className="group-data-[collapsible=icon]:hidden">
-            <p className="font-bold text-sm">Global Chemicals</p>
-            <p className="text-xs text-muted-foreground">Admin Panel</p>
+            <p className="text-sm font-extrabold uppercase tracking-tight text-white">Global Chemicals</p>
+            <p className="text-[9px] font-semibold uppercase tracking-[0.16em] text-muted-foreground">Admin Panel</p>
           </div>
         </Link>
       </div>

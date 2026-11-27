@@ -3,9 +3,9 @@
  * punch-in screen shown after login, and the My attendance page (history +
  * correction requests).
  */
-import { Fragment, useMemo, useState } from 'react';
+import { Fragment, useEffect, useMemo, useState } from 'react';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
-import { AlertTriangle, ChevronLeft, ChevronRight, Clock, Loader2, LogIn, LogOut, Pencil, Plus } from 'lucide-react';
+import { AlertTriangle, Clock, Loader2, LogIn, LogOut, Pencil, Plus, Timer } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -18,9 +18,14 @@ import { useToast } from '@/hooks/use-toast';
 import {
   ATTENDANCE_ME_QUERY, STATUS_CLASS, STATUS_LABEL, addDays, cancelCorrection, fetchAttendanceMe, fetchMyAttendance,
   fmtClock, fmtDate, fmtMinutes, fmtTime, hhmm, monthRange, punchIn, punchOut, requestCorrection,
-  type AttendanceDay, type AttendanceRules, type AttendanceSession, type Correction, type DayStatus,
+  type AttendanceDay, type AttendanceMe, type AttendanceRules, type AttendanceSession, type Correction, type DayStatus,
 } from '@/portal/lib/attendance';
-import logo from '@/assets/global-chemicals-logo.svg';
+import { CalendarGrid, MonthChooser, MonthTotals, calendarDays } from '@/portal/components/AttendanceCalendar';
+import { fetchLeaveOverview } from '@/portal/lib/leave';
+import { NOTICES_KEY } from '@/portal/lib/notifications';
+import { rpc } from '@/portal/lib/rpc';
+import { FullScreen, LoadingScreen } from '@/portal/theme/ui';
+import { Link } from 'react-router-dom';
 
 export const StatusBadge = ({ status }: { status: DayStatus }) => (
   <Badge variant="outline" className={STATUS_CLASS[status]}>{STATUS_LABEL[status]}</Badge>
@@ -34,7 +39,7 @@ export const DayFlags = ({ day }: { day: Pick<AttendanceDay, 'is_late' | 'auto_o
   </span>
 );
 
-const usePunch = () => {
+export const usePunch = () => {
   const qc = useQueryClient();
   const { toast } = useToast();
   return useMutation({
@@ -46,6 +51,7 @@ const usePunch = () => {
           ? { title: 'Already punched out', description: `You were punched out automatically at ${fmtTime(s.punch_out_at)}.` }
           : { title: 'Punched out', description: `At ${fmtTime(s.punch_out_at)}.` });
       void qc.invalidateQueries({ queryKey: ['portal', 'attendance'] });
+      void qc.invalidateQueries({ queryKey: NOTICES_KEY });   // a punch creates a notification
     },
     onError: (e: Error) => {
       toast({ title: 'Could not save', description: e.message, variant: 'destructive' });
@@ -54,8 +60,8 @@ const usePunch = () => {
   });
 };
 
-export const useAttendanceMe = () =>
-  useQuery({ queryKey: ATTENDANCE_ME_QUERY, queryFn: fetchAttendanceMe, refetchInterval: 60_000 });
+export const useAttendanceMe = (enabled = true) =>
+  useQuery({ queryKey: ATTENDANCE_ME_QUERY, queryFn: fetchAttendanceMe, refetchInterval: 60_000, refetchOnMount: 'always', enabled });
 
 /** Rules line, e.g. "Office 9:45 AM – 7:00 PM · late after 10:00 AM · auto punch-out 8:00 PM". */
 const RulesLine = ({ rules }: { rules: AttendanceRules }) => (
@@ -115,53 +121,109 @@ export const TodayAttendanceCard = () => {
 
 /** Current local time 'HH:MM' in the company timezone. */
 const nowHHMM = (tz: string) => new Date().toLocaleTimeString('en-GB', { timeZone: tz, hour: '2-digit', minute: '2-digit', hour12: false });
-const GATE_KEY = (employeeId: string, d: string) => `gc-portal-punch-gate-skipped-${employeeId}-${d}`;
 
-/**
- * After login on a working day with no punch yet (and before the automatic
- * punch-out time), show a full-page "Punch in" screen first. "Not now" skips
- * it for that employee for the rest of the day in this browser tab.
- */
-export const PunchInGate = ({ employeeId, name, children }: { employeeId: string; name: string; children: React.ReactNode }) => {
-  const { data: me, isLoading } = useAttendanceMe();
+/** "27 Nov 2026, 06:05 pm" in the company timezone. */
+const dateTime = (iso: string, tz: string) =>
+  `${new Date(iso).toLocaleDateString('en-GB', { timeZone: tz, day: '2-digit', month: 'short', year: 'numeric' })}, ${fmtTime(iso, tz)}`;
+
+/** The full screen asking to punch in, with the last punch out. */
+const PunchInScreen = ({ name, me, onSignOut, adminPages }: {
+  name: string; me: AttendanceMe; onSignOut: () => void; adminPages: boolean;
+}) => {
   const punch = usePunch();
-  const [skippedNow, setSkipped] = useState(false);
-  const skipped = skippedNow || (!!me && (() => {
-    try { return sessionStorage.getItem(GATE_KEY(employeeId, me.today)) === '1'; } catch { return false; }
-  })());
-  if (isLoading) return <div className="min-h-[50vh] flex items-center justify-center"><Loader2 className="h-6 w-6 animate-spin text-primary" /></div>;
-  const show = me && !skipped && !me.is_weekly_off && me.today_sessions.length === 0
-    && nowHHMM(me.rules.timezone) < me.rules.auto_punch_out;
-  if (!show) return <>{children}</>;
-  const late = nowHHMM(me.rules.timezone) > me.rules.late_after;
+  // The latest finished session of the last 30 days (also today's).
+  const recent = useQuery({
+    queryKey: ['portal', 'attendance', 'last', me.today],
+    queryFn: () => fetchMyAttendance(addDays(me.today, -30), me.today), refetchOnMount: 'always',
+  });
+  const last = (recent.data?.sessions ?? []).filter((s) => s.punch_out_at).sort((a, b) => b.punch_out_at!.localeCompare(a.punch_out_at!))[0];
+  const off = me.day_off && !me.day_off.half_day ? me.day_off : null;
+  const late = !off && !me.today_sessions.length && nowHHMM(me.rules.timezone) > me.rules.late_after;
   return (
-    <div className="min-h-[70vh] flex items-center justify-center">
-      <Card className="w-full max-w-md text-center shadow-lg">
-        <CardHeader className="space-y-3">
-          <img src={logo} alt="Global Chemicals LLC" width={150} height={48} className="h-12 w-auto mx-auto" />
-          <CardTitle className="text-2xl">Good to see you, {name.split(' ')[0]}</CardTitle>
-          <CardDescription>{fmtDate(me.today)} · it is {fmtTime(new Date().toISOString(), me.rules.timezone)}</CardDescription>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          {late && (
-            <p className="text-sm text-orange-700 bg-orange-50 border border-orange-200 rounded-md px-3 py-2 flex items-center gap-2 justify-center">
-              <AlertTriangle className="h-4 w-4" />Punching in now is after {fmtClock(me.rules.late_after)} and will be marked late.
+    <FullScreen>
+      <div className="mx-auto w-full max-w-sm overflow-hidden rounded-3xl border border-[#e7e9ee] bg-white text-center shadow-[0_30px_70px_-30px_rgba(16,26,58,0.5)]">
+        <div className="relative overflow-hidden bg-gradient-to-br from-[#101a3a] via-[#182a68] to-[#223f96] px-6 pb-12 pt-6 text-white">
+          <div aria-hidden="true" className="pointer-events-none absolute -right-10 -top-16 h-44 w-44 rounded-full bg-[#f1592a]/45 blur-[60px]" />
+          <p className="relative text-[11px] font-semibold uppercase tracking-[0.14em] text-white/75">
+            {fmtDate(me.today, { weekday: 'long' })}, {fmtDate(me.today, { day: '2-digit', month: 'short', year: 'numeric' })}
+          </p>
+          <p className="relative mt-1 text-sm font-semibold text-white/90">Employee Portal</p>
+        </div>
+        <div className="relative -mt-9 flex justify-center">
+          <span className="flex h-[72px] w-[72px] items-center justify-center rounded-2xl bg-gradient-to-br from-[#f1762a] to-[#f1592a] text-white shadow-[0_12px_24px_-8px_rgba(241,89,42,0.7)] ring-4 ring-white">
+            <Clock className="h-8 w-8" aria-hidden="true" />
+          </span>
+        </div>
+        <div className="space-y-4 px-6 pb-6 pt-4">
+          <div>
+            <h1 className="text-2xl font-bold tracking-tight text-[#101a3a]">Hi {name}</h1>
+            <p className="mt-1 text-sm text-muted-foreground">Punch in to start your day.</p>
+          </div>
+          {last && (last.auto_punched_out ? (
+            <p className="flex items-start gap-2 rounded-xl border border-violet-200 bg-violet-50 px-3.5 py-2.5 text-left text-xs leading-relaxed text-violet-800">
+              <Timer className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
+              <span>You did not punch out last time, so you were punched out automatically at {dateTime(last.punch_out_at!, me.rules.timezone)}.</span>
+            </p>
+          ) : (
+            <p className="inline-flex items-center gap-1.5 rounded-full bg-[#f6f7fb] px-3 py-1 text-xs text-muted-foreground ring-1 ring-inset ring-[#e7e9ee]">
+              <LogOut className="h-3.5 w-3.5" aria-hidden="true" />Last punch out: {dateTime(last.punch_out_at!, me.rules.timezone)}
+            </p>
+          ))}
+          {off && (
+            <p className="rounded-xl border border-sky-200 bg-sky-50 px-3.5 py-2.5 text-left text-xs leading-relaxed text-sky-900">
+              {off.kind === 'holiday' ? `Today is a holiday (${off.name}).` : off.kind === 'leave' ? `You are on ${off.name} today.` : 'Today is your weekly off.'}
+              {' '}Punching in records attendance for today.
             </p>
           )}
-          <Button size="lg" className="w-full" disabled={punch.isPending} onClick={() => punch.mutate('in')}>
+          {late && (
+            <p className="flex items-start gap-2 rounded-xl border border-orange-200 bg-orange-50 px-3.5 py-2.5 text-left text-sm text-orange-800">
+              <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />Punching in now is after {fmtClock(me.rules.late_after)} and will be marked late.
+            </p>
+          )}
+          <Button size="lg" className="w-full" autoFocus disabled={punch.isPending} onClick={() => punch.mutate('in')}>
             {punch.isPending ? <Loader2 className="h-5 w-5 mr-2 animate-spin" /> : <LogIn className="h-5 w-5 mr-2" />}Punch in
           </Button>
-          <Button variant="ghost" className="w-full" onClick={() => {
-            try { sessionStorage.setItem(GATE_KEY(employeeId, me.today), '1'); } catch { /* ignore */ }
-            setSkipped(true);
-          }}>
-            Not now
-          </Button>
-          <RulesLine rules={me.rules} />
-        </CardContent>
-      </Card>
-    </div>
+          <Button variant="outline" className="w-full" disabled={punch.isPending} onClick={onSignOut}>Sign out</Button>
+          {adminPages && (
+            <Button asChild variant="link" className="w-full"><Link to="/admin">Open the admin panel without punching in</Link></Button>
+          )}
+        </div>
+      </div>
+    </FullScreen>
   );
+};
+
+/**
+ * As in the Zyllo portal: the portal is open only while punched in. Signing in
+ * without an open session (a new day, or after punching out) shows the punch-in
+ * screen, and so does punching out.
+ */
+export const PunchInGate = ({ name, onSignOut, adminPages, children }: {
+  name: string; onSignOut: () => void; adminPages: boolean; children: React.ReactNode;
+}) => {
+  const { data: me, isFetchedAfterMount, refetch, isFetching } = useAttendanceMe();
+  // A tab left open past the automatic punch-out: check again right after it.
+  const autoOutAt = me?.open_session?.auto_punch_out_at;
+  useEffect(() => {
+    if (!autoOutAt) return undefined;
+    const t = setTimeout(() => void refetch(), Math.max(0, new Date(autoOutAt).getTime() - Date.now() + 2000));
+    return () => clearTimeout(t);
+  }, [autoOutAt, refetch]);
+  // Never decide on a cached answer (it could belong to an earlier sign-in).
+  if (!isFetchedAfterMount) return <LoadingScreen />;
+  if (!me) {
+    return (
+      <FullScreen>
+        <div className="mx-auto max-w-sm space-y-3 rounded-2xl border border-red-200 bg-white p-6 text-center shadow-sm">
+          <p className="text-sm text-red-700">Could not check your attendance. Please try again.</p>
+          <Button className="w-full" disabled={isFetching} onClick={() => void refetch()}>Try again</Button>
+          <Button variant="outline" className="w-full" onClick={onSignOut}>Sign out</Button>
+        </div>
+      </FullScreen>
+    );
+  }
+  if (me.open_session) return <>{children}</>;
+  return <PunchInScreen name={name} me={me} onSignOut={onSignOut} adminPages={adminPages} />;
 };
 
 // ---- My attendance page --------------------------------------------------------------
@@ -265,6 +327,11 @@ export const AttendancePage = () => {
   const [month, setMonth] = useState<string | null>(null);
   const current = month ?? today?.slice(0, 7);
   const range = current ? monthRange(`${current}-01`) : null;
+  const year = current ? Number(current.slice(0, 4)) : 0;
+  // Holidays and approved leave colour the calendar; without leave access it just shows punches.
+  const leave = useQuery({ queryKey: ['portal', 'leave', 'year', year], queryFn: () => fetchLeaveOverview(year), enabled: !!year, retry: false });
+  const since = useQuery({ queryKey: ['portal', 'attendance', 'since'], queryFn: () => rpc<string | null>('att_my_since'), retry: false });
+  const [selected, setSelected] = useState<string | null>(null);
   const { data, isLoading, error } = useQuery({
     queryKey: ['portal', 'attendance', 'month', current],
     queryFn: () => fetchMyAttendance(range!.from, range!.to),
@@ -285,21 +352,13 @@ export const AttendancePage = () => {
     for (const s of data?.sessions ?? []) by.set(s.work_date, [...(by.get(s.work_date) ?? []), s]);
     return (d: string) => by.get(d) ?? [];
   }, [data]);
-  const totals = useMemo(() => {
-    const t = { present: 0, half_day: 0, absent: 0, late: 0 };
-    for (const d of data?.days ?? []) {
-      if (d.status in t) t[d.status as 'present' | 'half_day' | 'absent'] += 1;
-      if (d.is_late) t.late += 1;
-    }
-    return t;
-  }, [data]);
-
-  if (!today || !current) return <Loader2 className="h-5 w-5 animate-spin" />;
-  const shiftMonth = (n: number) => {
-    const [y, m] = current.split('-').map(Number);
-    const d = new Date(Date.UTC(y, m - 1 + n, 1));
-    setMonth(d.toISOString().slice(0, 7));
-  };
+  if (!today || !current || !me) return <Loader2 className="h-5 w-5 animate-spin" />;
+  const calendar = calendarDays({
+    month: current, today, since: since.data ?? null, weeklyOff: me.rules.weekly_off, rows: data?.days ?? [],
+    holidays: leave.data?.holidays ?? [],
+    leave: (leave.data?.requests ?? []).filter((r) => r.status === 'approved').map((r) => ({ start_date: r.start_date, end_date: r.end_date, half_day: r.half_day, name: r.type.name })),
+  });
+  const picked = calendar.find((d) => d.date === selected) ?? null;
   const pendingDays = new Set((data?.corrections ?? []).filter((c) => c.status === 'pending').map((c) => c.work_date));
   const canCorrect = (d: string) => d <= today && d >= addDays(today, -30);
 
@@ -313,18 +372,38 @@ export const AttendancePage = () => {
       </div>
 
       <Card>
-        <CardHeader className="flex flex-row items-center justify-between gap-2 space-y-0">
-          <div className="flex items-center gap-2">
-            <Button variant="outline" size="icon" aria-label="Previous month" onClick={() => shiftMonth(-1)}><ChevronLeft className="h-4 w-4" /></Button>
-            <CardTitle className="text-base min-w-[140px] text-center">{fmtDate(`${current}-01`, { month: 'long', year: 'numeric' })}</CardTitle>
-            <Button variant="outline" size="icon" aria-label="Next month" disabled={current >= today.slice(0, 7)} onClick={() => shiftMonth(1)}><ChevronRight className="h-4 w-4" /></Button>
-          </div>
-          <div className="hidden sm:flex flex-wrap gap-2 text-xs">
-            <Badge variant="outline" className={STATUS_CLASS.present}>Present {totals.present}</Badge>
-            <Badge variant="outline" className={STATUS_CLASS.half_day}>Half day {totals.half_day}</Badge>
-            <Badge variant="outline" className={STATUS_CLASS.absent}>Absent {totals.absent}</Badge>
-            <Badge variant="outline" className="border-orange-300 text-orange-700">Late {totals.late}</Badge>
-          </div>
+        <CardHeader>
+          <CardTitle className="text-base">{fmtDate(`${current}-01`, { month: 'long', year: 'numeric' })}</CardTitle>
+          <CardDescription>Monthly summary and calendar. Choose a day to see its punches.</CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-5">
+          <MonthChooser month={current} today={today} onChange={(m) => { setMonth(m); setSelected(null); }} />
+          <MonthTotals days={calendar} />
+          <CalendarGrid days={calendar} today={today} selected={selected} onSelect={(d) => setSelected(d === selected ? null : d)} />
+          {picked && (
+            <div className="flex flex-wrap items-start justify-between gap-3 rounded-xl border p-4" aria-live="polite">
+              <div className="text-sm">
+                <p className="font-bold text-[#101a3a]">{fmtDate(picked.date)}{picked.note && <span className="font-normal text-muted-foreground"> · {picked.note}</span>}</p>
+                {sessionsOf(picked.date).map((s) => (
+                  <p key={s.id}>{fmtTime(s.punch_in_at)} – {s.punch_out_at ? fmtTime(s.punch_out_at) : 'still in'}{s.auto_punched_out && <span className="text-rose-700"> (automatic punch-out)</span>}</p>
+                ))}
+                {!sessionsOf(picked.date).length && <p className="text-muted-foreground">No punches on this day.</p>}
+              </div>
+              {canCorrect(picked.date) && !pendingDays.has(picked.date) && (
+                <Button size="sm" variant="outline" onClick={() => {
+                  const first = sessionsOf(picked.date)[0];
+                  setDraft({ date: picked.date, sessionId: first?.id ?? null, current: first, in: hhmm(first?.punch_in_at), out: hhmm(first?.punch_out_at), reason: '' });
+                }}>Request correction</Button>
+              )}
+            </div>
+          )}
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-base">Attendance history</CardTitle>
+          <CardDescription>Every punch in and punch out of the month.</CardDescription>
         </CardHeader>
         <CardContent>
           {isLoading ? <div className="flex justify-center py-8"><Loader2 className="h-5 w-5 animate-spin" /></div>

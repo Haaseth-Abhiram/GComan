@@ -2,6 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
 import { ChangePasswordForm } from '@/portal/components/ChangePasswordForm';
+import { FullScreen } from '@/portal/theme/ui';
 import logo from '@/assets/global-chemicals-logo.svg';
 
 /**
@@ -16,8 +17,9 @@ export const ForcedPasswordChange = ({ name, onDone, onSignOut }: {
 }) => {
   const { toast } = useToast();
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary/5 via-background to-background flex items-center justify-center p-4">
-      <Card className="w-full max-w-md logo-gradient-border shadow-xl">
+    <FullScreen>
+      <Card className="mx-auto w-full max-w-md overflow-hidden shadow-xl">
+        <div className="h-1.5 bg-gradient-to-r from-[#f1762a] via-[#f1592a] to-[#223f96]" aria-hidden="true" />
         <CardHeader className="space-y-3 text-center">
           <img src={logo} alt="Global Chemicals LLC" width={150} height={48} className="h-12 w-auto mx-auto" />
           <CardTitle className="text-2xl">Choose your own password</CardTitle>
@@ -37,6 +39,6 @@ export const ForcedPasswordChange = ({ name, onDone, onSignOut }: {
           <Button variant="ghost" className="w-full" onClick={onSignOut}>Sign out</Button>
         </CardContent>
       </Card>
-    </div>
+    </FullScreen>
   );
 };

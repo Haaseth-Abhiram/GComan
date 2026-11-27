@@ -1,11 +1,11 @@
 /**
  * Admin → Settings: the centralized Roles & Permissions module.
- *   /admin/settings?tab=users|roles|audit   lists
- *   /admin/settings/roles/:roleKey          role editor (permissions + data access)
+ *   /admin/settings?tab=users|roles|audit   Users & Roles, Roles & Permissions, Audit log
+ *   /admin/settings?tab=roles&role=admin    one role's switches
  *   /admin/settings/users/:userId           one person (roles, exceptions, effective access)
  * Every rule is enforced by the database (rbac_* functions and table policies).
  */
-import { Route, Routes, useSearchParams } from 'react-router-dom';
+import { Navigate, Route, Routes, useParams, useSearchParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import { Loader2 } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -15,10 +15,12 @@ import { RBAC_KEY, fetchRbacOverview } from '@/portal/lib/rbac';
 import RolesTab from '@/components/admin/settings/RolesTab';
 import UsersTab from '@/components/admin/settings/UsersTab';
 import AuditTab from '@/components/admin/settings/AuditTab';
-import RoleEditor from '@/components/admin/settings/RoleEditor';
 import UserDetail from '@/components/admin/settings/UserDetail';
 
 const NoAccess = () => <p className="py-16 text-center text-sm text-muted-foreground">You don't have permission to open this page.</p>;
+
+/** Old links to one role open it on the Roles & Permissions tab. */
+const OldRoleLink = () => <Navigate to={`/admin/settings?tab=roles&role=${useParams().roleKey ?? ''}`} replace />;
 
 const SettingsHome = () => {
   const { data: me } = useMyAccess();
@@ -44,8 +46,8 @@ const SettingsHome = () => {
         : error || !ov ? <p className="text-sm text-destructive">{(error as Error)?.message}</p> : (
           <Tabs value={tab} onValueChange={(t) => setParams({ tab: t }, { replace: true })}>
             <TabsList>
-              {tabs.includes('users') && <TabsTrigger value="users">People</TabsTrigger>}
-              {tabs.includes('roles') && <TabsTrigger value="roles">Roles</TabsTrigger>}
+              {tabs.includes('users') && <TabsTrigger value="users">Users &amp; Roles</TabsTrigger>}
+              {tabs.includes('roles') && <TabsTrigger value="roles">Roles &amp; Permissions</TabsTrigger>}
               {tabs.includes('audit') && <TabsTrigger value="audit">Audit log</TabsTrigger>}
             </TabsList>
             {tabs.includes('users') && <TabsContent value="users"><UsersTab ov={ov} /></TabsContent>}
@@ -62,7 +64,7 @@ const SettingsAdmin = () => {
   return (
     <Routes>
       <Route index element={<SettingsHome />} />
-      <Route path="roles/:roleKey" element={can(me, 'settings.roles.view') ? <RoleEditor /> : <NoAccess />} />
+      <Route path="roles/:roleKey" element={<OldRoleLink />} />
       <Route path="users/:userId" element={can(me, 'settings.users.view') ? <UserDetail /> : <NoAccess />} />
       <Route path="*" element={<SettingsHome />} />
     </Routes>

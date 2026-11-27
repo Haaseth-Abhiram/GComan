@@ -7,6 +7,9 @@ const EmployeesAdmin = lazyRetry(() => import('@/components/admin/EmployeesAdmin
 const AttendanceAdmin = lazyRetry(() => import('@/components/admin/AttendanceAdmin'));
 const LeaveAdmin = lazyRetry(() => import('@/components/admin/LeaveAdmin'));
 const SettingsAdmin = lazyRetry(() => import('@/components/admin/SettingsAdmin'));
+const ReportsAdmin = lazyRetry(() => import('@/components/admin/ReportsAdmin'));
+const ProjectsAdmin = lazyRetry(() => import('@/components/admin/ProjectsAdmin'));
+const NotificationsAdmin = lazyRetry(() => import('@/components/admin/NotificationsAdmin'));
 
 /** Shown when someone opens an admin page their roles don't allow. */
 const NoAccess = () => (
@@ -19,6 +22,8 @@ const ADMIN_PAGES: [string, string][] = [
   ['website.downloads.view', '/admin/downloads'], ['website.newsletter.view', '/admin/newsletter'],
   ['website.indexing.view', '/admin/ar-indexing'], ['portal.employees.view', '/admin/employees'],
   ['portal.attendance.view', '/admin/attendance'], ['portal.leave.view', '/admin/leave'],
+  ['portal.reports.view', '/admin/reports'], ['portal.projects.view', '/admin/projects'],
+  ['portal.notifications.create', '/admin/notifications'],
 ];
 const firstAdminPage = (a: MyAccess | undefined) =>
   ADMIN_PAGES.find(([p]) => can(a, p))?.[1] ?? '/admin/settings';
@@ -49,7 +54,7 @@ const LeadsOverview = ({ access }: { access: MyAccess | undefined }) => {
   }, [shown.length]);
   return (
     <div className="space-y-6">
-      <h1 className="text-2xl font-bold">Leads overview</h1>
+      <Hero eyebrow="Admin" title="Leads overview" subtitle="New enquiries and applications your role can open" />
       {!shown.length ? <p className="text-sm text-muted-foreground">You can't open any lead pages yet.</p> : (
         <div className="grid gap-4 md:grid-cols-3">
           {shown.map((i) => (
@@ -72,8 +77,12 @@ const LeadsOverview = ({ access }: { access: MyAccess | undefined }) => {
 import { useNavigate, Routes, Route, Link, Navigate } from 'react-router-dom';
 import { useMyAccess } from '@/portal/lib/useMyAccess';
 import { can, type MyAccess } from '@/portal/lib/access';
-import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
+import { SidebarProvider } from '@/components/ui/sidebar';
 import { AdminSidebar } from '@/components/admin/AdminSidebar';
+import { AdminTopbar } from '@/components/admin/AdminTopbar';
+import { DatabaseNotice } from '@/portal/components/DatabaseNotice';
+import { Hero, LoadingScreen } from '@/portal/theme/ui';
+import { usePortalTheme } from '@/portal/theme/usePortalTheme';
 import { ContactSubmissionsTable } from '@/components/admin/ContactSubmissionsTable';
 import { DownloadLeadsTable } from '@/components/admin/DownloadLeadsTable';
 import { ResumesWorkspace } from '@/components/admin/ResumesWorkspace';
@@ -89,7 +98,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { 
   Loader2, FileText, Briefcase, Download, TrendingUp, Users, Eye, 
-  RefreshCw, Calendar, Clock, Globe,
+  RefreshCw, Calendar, Clock,
   BarChart3, Activity, MousePointerClick
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
@@ -257,25 +266,16 @@ const AdminOverview = () => {
   return (
     <div className="space-y-6">
       {/* Header with refresh */}
-      <div className="flex items-center justify-between">
-        <div>
-          <h1 className="text-2xl font-bold">Dashboard Overview</h1>
-          <p className="text-sm text-muted-foreground flex items-center gap-2 mt-1">
-            <Clock className="h-3 w-3" />
-            Last updated: {format(lastUpdated, 'MMM d, yyyy h:mm a')}
-          </p>
-        </div>
-        <Button 
-          variant="outline" 
-          size="sm" 
-          onClick={fetchStats}
-          disabled={isLoading}
-          className="gap-2"
-        >
+      <Hero
+        eyebrow="Admin"
+        title="Dashboard Overview"
+        subtitle={<span className="inline-flex items-center gap-2"><Clock className="h-3 w-3" />Last updated: {format(lastUpdated, 'MMM d, yyyy h:mm a')}</span>}
+      >
+        <Button size="sm" onClick={fetchStats} disabled={isLoading} className="gap-2">
           <RefreshCw className={`h-4 w-4 ${isLoading ? 'animate-spin' : ''}`} />
           Refresh
         </Button>
-      </div>
+      </Hero>
 
       {/* Primary stats — Google Search Console (real) + real submission counts */}
       {gscError && (
@@ -624,6 +624,7 @@ const Admin = () => {
   const { data: access, isLoading } = useMyAccess();
   const isAdmin = !!access?.admin_pages;
   const isSuper = !!access?.is_super_admin;
+  usePortalTheme();
 
   useEffect(() => {
     if (!isLoading && !isAdmin) {
@@ -631,16 +632,7 @@ const Admin = () => {
     }
   }, [isAdmin, isLoading, navigate]);
 
-  if (isLoading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-background">
-        <div className="text-center">
-          <Loader2 className="h-10 w-10 animate-spin text-primary mx-auto" />
-          <p className="mt-4 text-muted-foreground">Loading admin panel...</p>
-        </div>
-      </div>
-    );
-  }
+  if (isLoading) return <LoadingScreen label="Loading admin panel…" />;
 
   if (!isAdmin) {
     return null;
@@ -654,20 +646,12 @@ const Admin = () => {
         noIndex={true}
       />
       <SidebarProvider>
-        <div className="min-h-screen flex w-full bg-muted/30">
+        <div className="min-h-screen flex w-full bg-[#f6f7fb]">
           <AdminSidebar />
           <div className="flex-1 flex flex-col min-w-0">
-            <header className="h-14 border-b bg-background flex items-center px-4 sticky top-0 z-10">
-              <SidebarTrigger />
-              <div className="ml-4 flex items-center gap-3">
-                <h2 className="text-base font-semibold">Admin Dashboard</h2>
-                <Badge variant="secondary" className="hidden sm:inline-flex">
-                  <Globe className="h-3 w-3 mr-1" />
-                  gcoman.com
-                </Badge>
-              </div>
-            </header>
-            <main className="flex-1 p-4 md:p-6 overflow-auto">
+            <AdminTopbar access={access} />
+            <main id="main-content" className="flex-1 p-4 sm:p-6 lg:p-8 overflow-auto">
+              <DatabaseNotice />
               <Routes>
                 {/* Every page is checked against its own permission (the database checks again). */}
                 <Route path="/" element={isSuper ? <AdminOverview />
@@ -713,6 +697,30 @@ const Admin = () => {
                   element={can(access, 'portal.leave.view') ? (
                     <Suspense fallback={<Loader2 className="h-6 w-6 animate-spin text-primary" />}>
                       <LeaveAdmin />
+                    </Suspense>
+                  ) : <NoAccess />}
+                />
+                <Route
+                  path="/reports"
+                  element={can(access, 'portal.reports.view') ? (
+                    <Suspense fallback={<Loader2 className="h-6 w-6 animate-spin text-primary" />}>
+                      <ReportsAdmin />
+                    </Suspense>
+                  ) : <NoAccess />}
+                />
+                <Route
+                  path="/projects/*"
+                  element={can(access, 'portal.projects.view') ? (
+                    <Suspense fallback={<Loader2 className="h-6 w-6 animate-spin text-primary" />}>
+                      <ProjectsAdmin />
+                    </Suspense>
+                  ) : <NoAccess />}
+                />
+                <Route
+                  path="/notifications"
+                  element={can(access, 'portal.notifications.create') ? (
+                    <Suspense fallback={<Loader2 className="h-6 w-6 animate-spin text-primary" />}>
+                      <NotificationsAdmin />
                     </Suspense>
                   ) : <NoAccess />}
                 />
