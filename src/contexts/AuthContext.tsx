@@ -1,9 +1,8 @@
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 // Type-only: erased at build time, so it does not pull the SDK into the bundle.
 import type { User, Session } from '@supabase/supabase-js';
-import { useNavigate } from 'react-router-dom';
-import { useToast } from '@/hooks/use-toast';
 import { safeImport } from '@/lib/lazyRetry';
+import { signOutAndReload } from '@/lib/signOut';
 
 interface AuthContextType {
   user: User | null;
@@ -18,8 +17,6 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<User | null>(null);
   const [session, setSession] = useState<Session | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-  const navigate = useNavigate();
-  const { toast } = useToast();
 
   useEffect(() => {
     // The Supabase SDK is ~150 KB and used to sit in the entry bundle because
@@ -69,25 +66,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     };
   }, []);
 
-  const signOut = async () => {
-    try {
-      const { supabase } = await safeImport(() => import('@/integrations/supabase/client'));
-      const { error } = await supabase.auth.signOut();
-      if (error) throw error;
-      
-      toast({
-        title: "Logged out successfully",
-        description: "You have been logged out of your account",
-      });
-      navigate('/');
-    } catch (error) {
-      toast({
-        title: "Error signing out",
-        description: "Please try again",
-        variant: "destructive"
-      });
-    }
-  };
+  // The admin panel goes to the sign-in page; the public website to the home page.
+  const signOut = () => signOutAndReload(window.location.pathname.startsWith('/admin') ? '/login' : '/');
 
   return (
     <AuthContext.Provider value={{ user, session, signOut, isLoading }}>

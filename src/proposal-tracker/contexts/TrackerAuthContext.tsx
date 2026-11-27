@@ -12,6 +12,7 @@
  */
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 import { supabase } from '@/integrations/supabase/client';
+import { signOutAndReload } from '@/lib/signOut';
 import type { Role } from '@/proposal-tracker/lib/permissions';
 import { syncEngineers, type LoginIdentity } from '@/proposal-tracker/lib/db';
 import { can, fetchMyAccess } from '@/portal/lib/access';
@@ -98,7 +99,7 @@ export const TrackerAuthProvider = ({ children }: { children: ReactNode }) => {
   const signOut = async () => {
     setSessionKey(null);
     setUser(null);
-    await supabase.auth.signOut();
+    await signOutAndReload('/login');
   };
 
   return (

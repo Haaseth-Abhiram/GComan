@@ -14,6 +14,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
+import { signOutAndReload } from '@/lib/signOut';
 import { can, fetchMyAccess, type MyAccess, type MyEmployee } from '@/portal/lib/access';
 import { ChangePasswordForm } from '@/portal/components/ChangePasswordForm';
 import { ForcedPasswordChange } from '@/portal/components/ForcedPasswordChange';
@@ -329,16 +330,14 @@ const PortalApp = () => {
     return () => subscription.unsubscribe();
   }, [refresh]);
 
-  const signOut = useCallback(async () => {
-    await supabase.auth.signOut();
-    navigate('/login', { replace: true });
-  }, [navigate]);
+  const signOut = useCallback(() => signOutAndReload('/login'), []);
 
   useEffect(() => {
     if (load.state !== 'disabled') return;
     toast({ title: 'Account disabled', description: 'Please contact your administrator.', variant: 'destructive' });
-    void signOut();
-  }, [load.state, signOut, toast]);
+    // Stays in the app (no reload) so the message above remains visible.
+    void supabase.auth.signOut().then(() => navigate('/login', { replace: true }));
+  }, [load.state, navigate, toast]);
 
   const head = (
     <Helmet defer={false}>
