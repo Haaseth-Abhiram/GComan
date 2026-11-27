@@ -181,7 +181,11 @@ export default defineConfig(({ mode }) => ({
     // Soft 404 / "Crawled — currently not indexed" before JS finishes.
     // Prerender resolves Helmet head tags + JSON-LD + body content into
     // each route's static HTML.
-    mode === "production" && (prerender({
+    // Skipped on Vercel (which sets VERCEL=1): its build machine has no Chrome
+    // for puppeteer, and the build failed with "Could not find Chrome". The
+    // Vercel copy is a plain SPA (see the rewrite in vercel.json); production
+    // on Lovable and CI still prerender.
+    mode === "production" && !process.env.VERCEL && (prerender({
       routes: process.env.PRERENDER_ROUTES
         ? process.env.PRERENDER_ROUTES.split(',')
         : routesFromSitemap(),
